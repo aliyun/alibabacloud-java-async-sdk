@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQuotaApplicationTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListQuotaApplicationTemplatesResponseBody</p>
@@ -18,7 +24,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("QuotaApplicationTemplates")
-    private java.util.List < QuotaApplicationTemplates> quotaApplicationTemplates;
+    private java.util.List<QuotaApplicationTemplates> quotaApplicationTemplates;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,6 +48,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -59,7 +69,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
     /**
      * @return quotaApplicationTemplates
      */
-    public java.util.List < QuotaApplicationTemplates> getQuotaApplicationTemplates() {
+    public java.util.List<QuotaApplicationTemplates> getQuotaApplicationTemplates() {
         return this.quotaApplicationTemplates;
     }
 
@@ -80,12 +90,26 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < QuotaApplicationTemplates> quotaApplicationTemplates; 
+        private java.util.List<QuotaApplicationTemplates> quotaApplicationTemplates; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListQuotaApplicationTemplatesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.quotaApplicationTemplates = model.quotaApplicationTemplates;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The maximum number of records returned for the query.
+         * <p>The maximum number of records returned for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,10 +117,13 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that marks the position at which the query ends.
-         * <p>
+         * <p>The token that marks the position at which the query ends.</p>
+         * <blockquote>
+         * <p>An empty value indicates that all data is returned.</p>
+         * </blockquote>
          * 
-         * > An empty value indicates that all data is returned.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -104,15 +131,18 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The queried quota templates.
+         * <p>The information about quota templates.</p>
          */
-        public Builder quotaApplicationTemplates(java.util.List < QuotaApplicationTemplates> quotaApplicationTemplates) {
+        public Builder quotaApplicationTemplates(java.util.List<QuotaApplicationTemplates> quotaApplicationTemplates) {
             this.quotaApplicationTemplates = quotaApplicationTemplates;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,7 +150,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records returned for the query.
+         * <p>The total number of records returned for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -133,6 +166,12 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListQuotaApplicationTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotaApplicationTemplatesResponseBody</p>
+     */
     public static class Period extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
@@ -171,15 +210,31 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             private String periodUnit; 
             private Integer periodValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Period model) {
+                this.periodUnit = model.periodUnit;
+                this.periodValue = model.periodValue;
+            } 
+
             /**
-             * The unit of the calculation cycle. Valid values:
-             * <p>
+             * <p>The unit of the calculation cycle. Valid values:</p>
+             * <ul>
+             * <li><p>second</p>
+             * </li>
+             * <li><p>minute</p>
+             * </li>
+             * <li><p>hour</p>
+             * </li>
+             * <li><p>day</p>
+             * </li>
+             * <li><p>week</p>
+             * </li>
+             * </ul>
              * 
-             * *   second
-             * *   minute
-             * *   hour
-             * *   day
-             * *   week
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -187,7 +242,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the calculation cycle.
+             * <p>The value of the calculation cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodValue(Integer periodValue) {
                 this.periodValue = periodValue;
@@ -201,9 +259,15 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotaApplicationTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotaApplicationTemplatesResponseBody</p>
+     */
     public static class QuotaApplicationTemplates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicableRange")
-        private java.util.List < Float > applicableRange;
+        private java.util.List<Float> applicableRange;
 
         @com.aliyun.core.annotation.NameInMap("ApplicableType")
         private String applicableType;
@@ -212,7 +276,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         private Float desireValue;
 
         @com.aliyun.core.annotation.NameInMap("Dimensions")
-        private java.util.Map < String, ? > dimensions;
+        private java.util.Map<String, ?> dimensions;
 
         @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
@@ -276,7 +340,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         /**
          * @return applicableRange
          */
-        public java.util.List < Float > getApplicableRange() {
+        public java.util.List<Float> getApplicableRange() {
             return this.applicableRange;
         }
 
@@ -297,7 +361,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         /**
          * @return dimensions
          */
-        public java.util.Map < String, ? > getDimensions() {
+        public java.util.Map<String, ?> getDimensions() {
             return this.dimensions;
         }
 
@@ -379,10 +443,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Float > applicableRange; 
+            private java.util.List<Float> applicableRange; 
             private String applicableType; 
             private Float desireValue; 
-            private java.util.Map < String, ? > dimensions; 
+            private java.util.Map<String, ?> dimensions; 
             private String effectiveTime; 
             private String envLanguage; 
             private String expireTime; 
@@ -395,20 +459,46 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             private String quotaDescription; 
             private String quotaName; 
 
+            private Builder() {
+            } 
+
+            private Builder(QuotaApplicationTemplates model) {
+                this.applicableRange = model.applicableRange;
+                this.applicableType = model.applicableType;
+                this.desireValue = model.desireValue;
+                this.dimensions = model.dimensions;
+                this.effectiveTime = model.effectiveTime;
+                this.envLanguage = model.envLanguage;
+                this.expireTime = model.expireTime;
+                this.id = model.id;
+                this.noticeType = model.noticeType;
+                this.period = model.period;
+                this.productCode = model.productCode;
+                this.quotaActionCode = model.quotaActionCode;
+                this.quotaCategory = model.quotaCategory;
+                this.quotaDescription = model.quotaDescription;
+                this.quotaName = model.quotaName;
+            } 
+
             /**
-             * None
+             * <p>None.</p>
              */
-            public Builder applicableRange(java.util.List < Float > applicableRange) {
+            public Builder applicableRange(java.util.List<Float> applicableRange) {
                 this.applicableRange = applicableRange;
                 return this;
             }
 
             /**
-             * The type of the adjustable value. Valid values:
-             * <p>
+             * <p>The type of the adjustable value. Valid values:</p>
+             * <ul>
+             * <li><p>continuous</p>
+             * </li>
+             * <li><p>discontinuous</p>
+             * </li>
+             * </ul>
              * 
-             * *   continuous
-             * *   discontinuous
+             * <strong>example:</strong>
+             * <p>continuous</p>
              */
             public Builder applicableType(String applicableType) {
                 this.applicableType = applicableType;
@@ -416,7 +506,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The requested value of the quota.
+             * <p>The requested value of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>802</p>
              */
             public Builder desireValue(Float desireValue) {
                 this.desireValue = desireValue;
@@ -424,18 +517,22 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The quota dimensions.
-             * <p>
+             * <p>The quota dimensions.</p>
+             * <p>Format: {&quot;regionId&quot;:&quot;Region&quot;}.</p>
              * 
-             * Format: {"regionId":"Region"}.
+             * <strong>example:</strong>
+             * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
              */
-            public Builder dimensions(java.util.Map < String, ? > dimensions) {
+            public Builder dimensions(java.util.Map<String, ?> dimensions) {
                 this.dimensions = dimensions;
                 return this;
             }
 
             /**
-             * The start time of the validity period of the quota. The value is displayed in UTC.
+             * <p>The start time of the validity period of the quota. The value is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-28T06:07:00Z</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -443,11 +540,16 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the quota alert notification. Valid values:
-             * <p>
+             * <p>The language of the quota alert notification. Valid values:</p>
+             * <ul>
+             * <li><p>zh: Chinese</p>
+             * </li>
+             * <li><p>en: English</p>
+             * </li>
+             * </ul>
              * 
-             * *   zh: Chinese
-             * *   en: English
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder envLanguage(String envLanguage) {
                 this.envLanguage = envLanguage;
@@ -455,7 +557,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the validity period of the quota. The value is displayed in UTC.
+             * <p>The end time of the validity period of the quota. The value is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-29T06:07:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -463,7 +568,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the quota template.
+             * <p>The ID of the quota template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -471,11 +579,16 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Quota Center sends a notification about the application result. Valid values:
-             * <p>
+             * <p>Indicates whether Quota Center sends a notification about the application result. Valid values:</p>
+             * <ul>
+             * <li><p>0: no</p>
+             * </li>
+             * <li><p>3: yes</p>
+             * </li>
+             * </ul>
              * 
-             * *   0: no
-             * *   3: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder noticeType(Integer noticeType) {
                 this.noticeType = noticeType;
@@ -483,7 +596,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The calculation cycle of the quota.
+             * <p>The calculation cycle of the quota.</p>
              */
             public Builder period(Period period) {
                 this.period = period;
@@ -491,7 +604,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the Alibaba Cloud service name.
+             * <p>The abbreviation of the Alibaba Cloud service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -499,7 +615,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the quota.
+             * <p>The ID of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>q_security-groups</p>
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;
@@ -507,12 +626,18 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the quota. Valid values:
-             * <p>
+             * <p>The type of the quota. Valid values:</p>
+             * <ul>
+             * <li><p>CommonQuota: general quota</p>
+             * </li>
+             * <li><p>FlowControl: API rate limit</p>
+             * </li>
+             * <li><p>WhiteListLabel: privilege</p>
+             * </li>
+             * </ul>
              * 
-             * *   CommonQuota: general quota
-             * *   FlowControl: API rate limit
-             * *   WhiteListLabel: privilege
+             * <strong>example:</strong>
+             * <p>CommonQuota</p>
              */
             public Builder quotaCategory(String quotaCategory) {
                 this.quotaCategory = quotaCategory;
@@ -520,7 +645,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the quota.
+             * <p>The description of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The maximum number of security groups that can be created by the current account.</p>
              */
             public Builder quotaDescription(String quotaDescription) {
                 this.quotaDescription = quotaDescription;
@@ -528,7 +656,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the quota.
+             * <p>The name of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Maximum Number of Security Groups</p>
              */
             public Builder quotaName(String quotaName) {
                 this.quotaName = quotaName;

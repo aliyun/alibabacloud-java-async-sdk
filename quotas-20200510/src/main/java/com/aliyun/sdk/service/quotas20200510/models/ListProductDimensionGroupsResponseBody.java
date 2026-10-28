@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductDimensionGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProductDimensionGroupsResponseBody</p>
  */
 public class ListProductDimensionGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DimensionGroups")
-    private java.util.List < DimensionGroups> dimensionGroups;
+    private java.util.List<DimensionGroups> dimensionGroups;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,10 +48,14 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dimensionGroups
      */
-    public java.util.List < DimensionGroups> getDimensionGroups() {
+    public java.util.List<DimensionGroups> getDimensionGroups() {
         return this.dimensionGroups;
     }
 
@@ -78,22 +88,36 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DimensionGroups> dimensionGroups; 
+        private java.util.List<DimensionGroups> dimensionGroups; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListProductDimensionGroupsResponseBody model) {
+            this.dimensionGroups = model.dimensionGroups;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The dimension groups.
+         * <p>The dimension groups.</p>
          */
-        public Builder dimensionGroups(java.util.List < DimensionGroups> dimensionGroups) {
+        public Builder dimensionGroups(java.util.List<DimensionGroups> dimensionGroups) {
             this.dimensionGroups = dimensionGroups;
             return this;
         }
 
         /**
-         * The maximum number of records that are returned for the query.
+         * <p>The maximum number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +125,10 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that marks the position at which the query ends. An empty value indicates that all data is returned.
+         * <p>The token that marks the position where the returned query results end. An empty value indicates that all data is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +136,10 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>057D210F-F2FC-5329-A536-26C16628BB09</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records that are returned for the query.
+         * <p>The total number of entries that match the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,9 +163,15 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductDimensionGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductDimensionGroupsResponseBody</p>
+     */
     public static class DimensionGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DimensionKeys")
-        private java.util.List < String > dimensionKeys;
+        private java.util.List<String> dimensionKeys;
 
         @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
@@ -161,7 +200,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
         /**
          * @return dimensionKeys
          */
-        public java.util.List < String > getDimensionKeys() {
+        public java.util.List<String> getDimensionKeys() {
             return this.dimensionKeys;
         }
 
@@ -187,21 +226,34 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > dimensionKeys; 
+            private java.util.List<String> dimensionKeys; 
             private String groupCode; 
             private String groupName; 
             private String productCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(DimensionGroups model) {
+                this.dimensionKeys = model.dimensionKeys;
+                this.groupCode = model.groupCode;
+                this.groupName = model.groupName;
+                this.productCode = model.productCode;
+            } 
+
             /**
-             * The key of the dimension group.
+             * <p>The keys of the dimension group.</p>
              */
-            public Builder dimensionKeys(java.util.List < String > dimensionKeys) {
+            public Builder dimensionKeys(java.util.List<String> dimensionKeys) {
                 this.dimensionKeys = dimensionKeys;
                 return this;
             }
 
             /**
-             * The code of the dimension group.
+             * <p>The code of the dimension group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>entconsole_zjzp4d****</p>
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -209,7 +261,10 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dimension group.
+             * <p>The name of the dimension group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Resource sharing</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -217,7 +272,10 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The service code.
+             * <p>The code of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>entconsole</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;

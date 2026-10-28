@@ -20,144 +20,239 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-      * The ID of the alert.
-      *
+     * <b>description</b> :
+     * <p>The quota alerting feature has been upgraded and this API operation will be deprecated. Use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a> to create alert rules for the new version of quota alerting.
+     * For more information about how to use API operations to manage the new version of quota alerting, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage new quota alerts by using API operations</a>.</p>
+     * 
+     * @param request the request parameters of CreateQuotaAlarm  CreateQuotaAlarmRequest
+     * @return CreateQuotaAlarmResponse
      */
     CompletableFuture<CreateQuotaAlarmResponse> createQuotaAlarm(CreateQuotaAlarmRequest request);
 
     /**
-      * In this example, the operation is called to submit an application to increase the value of a quota whose ID is `q_security-groups` and whose name is Maximum Number of Security Groups. The quota belongs to Elastic Compute Service (ECS). The expected value of the quota is `804`, the application reason is `Scale Out`, and the ID of the region to which the quota belongs is `cn-hangzhou`.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>After you create a quota increase request, you can call the <a href="https://help.aliyun.com/document_detail/440568.html">ListQuotaApplications</a> operation to view the approval result. If the value of <code>Status</code> is <code>Agree</code>, the request is approved.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateQuotaApplication  CreateQuotaApplicationRequest
+     * @return CreateQuotaApplicationResponse
      */
     CompletableFuture<CreateQuotaApplicationResponse> createQuotaApplication(CreateQuotaApplicationRequest request);
 
     /**
-      * ### [](#)QPS limit
-      * You can add a maximum of 10 quota items to a quota template at a time.
-      *
+     * <b>description</b> :
+     * <h3>Limits</h3>
+     * <p>A single application can include a maximum of 10 quota items.</p>
+     * 
+     * @param request the request parameters of CreateQuotaApplicationsForTemplate  CreateQuotaApplicationsForTemplateRequest
+     * @return CreateQuotaApplicationsForTemplateResponse
      */
     CompletableFuture<CreateQuotaApplicationsForTemplateResponse> createQuotaApplicationsForTemplate(CreateQuotaApplicationsForTemplateRequest request);
 
     /**
-      * ### [](#)Prerequisites
-      * You must set the `ServiceStatus` parameter to `1`. This ensures that the quota template is enabled.
-      * You can call the [GetQuotaTemplateServiceStatus](~~450407~~) operation to query the status of a quota template. If the `ServiceStatus` parameter is set to `0` or `-1`, you must call the [ModifyQuotaTemplateServiceStatus](~~450406~~) operation to set the ServiceStatus parameter to `1`.
-      *
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the status of the quota template is enabled (that is, <code>ServiceStatus</code> is <code>1</code>).
+     * Call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of the quota template. If the <code>ServiceStatus</code> of the quota template is <code>0</code> (not configured) or <code>-1</code> (disabled), call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to change the status to <code>1</code> (enabled).</p>
+     * <h3>Usage notes</h3>
+     * <p>After you create a quota template, you can call the <a href="https://help.aliyun.com/document_detail/2584864.html">ListQuotaApplicationsForTemplate</a> operation to view the approval result. If <code>Status</code> is displayed as <code>Agree</code>, the application is approved.</p>
+     * 
+     * @param request the request parameters of CreateTemplateQuotaItem  CreateTemplateQuotaItemRequest
+     * @return CreateTemplateQuotaItemResponse
      */
     CompletableFuture<CreateTemplateQuotaItemResponse> createTemplateQuotaItem(CreateTemplateQuotaItemRequest request);
 
     /**
-      * In this example, the operation is called to delete a quota alert whose ID is `6b512ab7-da3a-4142-b529-2b2a9294****`.
-      *
+     * <b>description</b> :
+     * <p>The quota alerting feature has been upgraded, and this API operation will be deprecated soon. This API operation can only delete legacy quota usage alerts. To delete new-version quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513295.html">DeleteMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513294.html">DeleteMetricRuleTargets</a>.
+     * For more information about managing new-version quota alerts by using API operations, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage new-version quota alerts by using API operations</a>.</p>
+     * 
+     * @param request the request parameters of DeleteQuotaAlarm  DeleteQuotaAlarmRequest
+     * @return DeleteQuotaAlarmResponse
      */
     CompletableFuture<DeleteQuotaAlarmResponse> deleteQuotaAlarm(DeleteQuotaAlarmRequest request);
 
+    /**
+     * @param request the request parameters of DeleteTemplateQuotaItem  DeleteTemplateQuotaItemRequest
+     * @return DeleteTemplateQuotaItemResponse
+     */
     CompletableFuture<DeleteTemplateQuotaItemResponse> deleteTemplateQuotaItem(DeleteTemplateQuotaItemRequest request);
 
     /**
-      * In this example, the operation is called to query the details of a quota whose ID is `q_security-groups` and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The query result shows the details of the quota. The details include the name, ID, description, quota value, used quota, unit, and dimension of the quota. In this example, the quota name is `Maximum Number of Security Groups`. The quota ID is `q_security-groups`. The description is `The maximum number of security groups that can be created for the current account`. The quota value is `801`. The used quota is `26`. The quota unit is `Number of security groups`. The quota dimension is `{"regionId":"cn-hangzhou"}`.
-      *
+     * @param request the request parameters of GetProductQuota  GetProductQuotaRequest
+     * @return GetProductQuotaResponse
      */
     CompletableFuture<GetProductQuotaResponse> getProductQuota(GetProductQuotaRequest request);
 
     /**
-      * In this example, the operation is called to query the details of a quota dimension whose key is `regionId`. The quota dimension belongs to Elastic Compute Service (ECS) Quotas by Instance Type whose service code is ecs-spec. The following query results are returned:
-      * *   The values of the quota dimension include `cn-shenzhen`, `cn-beijing`, and `cn-hangzhou`.
-      * *   The name of the quota dimension is `region`.
-      *
+     * @param request the request parameters of GetProductQuotaDimension  GetProductQuotaDimensionRequest
+     * @return GetProductQuotaDimensionResponse
      */
     CompletableFuture<GetProductQuotaDimensionResponse> getProductQuotaDimension(GetProductQuotaDimensionRequest request);
 
     /**
-      * In this example, the operation is called to query the details of a quota alert whose ID is `78d7e436-4b25-4897-84b5-d7b656bb****`. The details of the alert are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert was created.
-      *
+     * <b>description</b> :
+     * <p>The quota alert feature has been upgraded. This API operation will be deprecated soon. This API operation can only query the details of legacy quota usage alerts. To query the details of new-version quota usage alerts, use the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to use API operations to manage new-version quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new-version quota alerts</a>.</p>
+     * 
+     * @param request the request parameters of GetQuotaAlarm  GetQuotaAlarmRequest
+     * @return GetQuotaAlarmResponse
      */
     CompletableFuture<GetQuotaAlarmResponse> getQuotaAlarm(GetQuotaAlarmRequest request);
 
     /**
-      * In this example, the operation is called to query the details about an application whose ID is `d314d6ae-867d-484c-9009-3d421a80****`. The query result shows the details about the application. The details include the application ID, application time, expected quota value, and application result.
-      *
+     * @param request the request parameters of GetQuotaApplication  GetQuotaApplicationRequest
+     * @return GetQuotaApplicationResponse
      */
     CompletableFuture<GetQuotaApplicationResponse> getQuotaApplication(GetQuotaApplicationRequest request);
 
     /**
-      * ### [](#)Prerequisites
-      * Make sure that you have created an application for quota increase. For more information, see [CreateQuotaApplication](~~440566~~).
-      *
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure that you have created a quota increase application. For more information, see <a href="https://help.aliyun.com/document_detail/440566.html">CreateQuotaApplication</a>.</p>
+     * 
+     * @param request the request parameters of GetQuotaApplicationApproval  GetQuotaApplicationApprovalRequest
+     * @return GetQuotaApplicationApprovalResponse
      */
     CompletableFuture<GetQuotaApplicationApprovalResponse> getQuotaApplicationApproval(GetQuotaApplicationApprovalRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>The default status of a quota template is unset (that is, <code>ServiceStatus</code> is <code>0</code>). You can use the features of the quota template only when its status is enabled (that is, <code>ServiceStatus</code> is <code>1</code>).</p>
+     * 
+     * @param request the request parameters of GetQuotaTemplateServiceStatus  GetQuotaTemplateServiceStatusRequest
+     * @return GetQuotaTemplateServiceStatusResponse
+     */
     CompletableFuture<GetQuotaTemplateServiceStatusResponse> getQuotaTemplateServiceStatus(GetQuotaTemplateServiceStatusRequest request);
 
+    /**
+     * @param request the request parameters of GetQuotaUtilizationOverview  GetQuotaUtilizationOverviewRequest
+     * @return GetQuotaUtilizationOverviewResponse
+     */
+    CompletableFuture<GetQuotaUtilizationOverviewResponse> getQuotaUtilizationOverview(GetQuotaUtilizationOverviewRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>The quota alert feature has been upgraded and this API operation will be deprecated. This API operation can only query the history of legacy quota usage alerts. To query the history of new quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513275.html">DescribeAlertLogCount</a> and <a href="https://help.aliyun.com/document_detail/2513276.html">DescribeAlertLogList</a>. For more information about how to use API operations to manage new quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alerts</a>.</p>
+     * 
+     * @param request the request parameters of ListAlarmHistories  ListAlarmHistoriesRequest
+     * @return ListAlarmHistoriesResponse
+     */
     CompletableFuture<ListAlarmHistoriesResponse> listAlarmHistories(ListAlarmHistoriesRequest request);
 
     /**
-      * In this example, the operation is called to query the quotas on which a Container Service for Kubernetes (ACK) quota whose ID is `q_i5uzm3` depends. This quota is the maximum number of nodes that can be created in an ACK cluster. The query result indicates that the specified quota depends on the following three quotas:
-      * *   An Elastic Compute Service (ECS) quota whose ID is `q_elastic-network-interfaces`. This quota is the maximum number of ENIs (Secondary ENIs) that can be owned by an Alibaba Cloud account. The quota is available in the following regions: `cn-shenzhen`, `cn-beijing`, and `cn-hangzhou`.
-      * *   A Server Load Balancer (SLB) quota whose ID is `q_fh20b0`. This quota is the number of servers that can be attached to the backend of an SLB instance.
-      * *   An SLB quota whose ID is `q_3mmbsp`. This quota is the number of SLB instances that can be owned by an Alibaba Cloud account.
-      *
+     * @param request the request parameters of ListDependentQuotas  ListDependentQuotasRequest
+     * @return ListDependentQuotasResponse
      */
     CompletableFuture<ListDependentQuotasResponse> listDependentQuotas(ListDependentQuotasRequest request);
 
     /**
-      * This topic provides an example on how to call the ListProductDimensionGroups operation to query the dimension groups of Object Storage Service (OSS). In this example, a dimension group is returned. The group name is `OSS_Group`, the group code is `oss_wf1ngqmd7q`, and the group key is `chargeType`.
-      *
+     * @param request the request parameters of ListProductDimensionGroups  ListProductDimensionGroupsRequest
+     * @return ListProductDimensionGroupsResponse
      */
     CompletableFuture<ListProductDimensionGroupsResponse> listProductDimensionGroups(ListProductDimensionGroupsRequest request);
 
     /**
-      * In this example, the operation is called to query the quota dimensions that are supported by Elastic Compute Service (ECS). The query results show all the quota dimensions that are supported by ECS.
-      *
+     * @param request the request parameters of ListProductQuotaDimensions  ListProductQuotaDimensionsRequest
+     * @return ListProductQuotaDimensionsResponse
      */
     CompletableFuture<ListProductQuotaDimensionsResponse> listProductQuotaDimensions(ListProductQuotaDimensionsRequest request);
 
     /**
-      * In this example, the operation is called to query the quotas whose instance type is `ecs.g5.2xlarge`. The quotas belong to Elastic Compute Service (ECS) Quotas by Instance Type. The query result includes the name, ID, unit, dimensions, and cycle of each quota.
-      *
+     * @param request the request parameters of ListProductQuotas  ListProductQuotasRequest
+     * @return ListProductQuotasResponse
      */
     CompletableFuture<ListProductQuotasResponse> listProductQuotas(ListProductQuotasRequest request);
 
     /**
-      * The services in the query result are the same as the services listed in [Alibaba Cloud services that support Quota Center](~~182368~~).
-      *
+     * <b>description</b> :
+     * <p>The query results are the same as those in <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services supported by Quota Center</a>.</p>
+     * 
+     * @param request the request parameters of ListProducts  ListProductsRequest
+     * @return ListProductsResponse
      */
     CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>The quota alert feature has been upgraded. This API operation is scheduled for deprecation and queries only earlier-version quota usage alerts. To query new-version quota usage alerts, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to manage new-version quota alerts using API operations, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new-version quota alerts</a>.</p>
+     * 
+     * @param request the request parameters of ListQuotaAlarms  ListQuotaAlarmsRequest
+     * @return ListQuotaAlarmsResponse
+     */
     CompletableFuture<ListQuotaAlarmsResponse> listQuotaAlarms(ListQuotaAlarmsRequest request);
 
+    /**
+     * @param request the request parameters of ListQuotaApplicationTemplates  ListQuotaApplicationTemplatesRequest
+     * @return ListQuotaApplicationTemplatesResponse
+     */
     CompletableFuture<ListQuotaApplicationTemplatesResponse> listQuotaApplicationTemplates(ListQuotaApplicationTemplatesRequest request);
 
     /**
-      * In this example, the operation is called to query the details of an application that is submitted to increase a quota whose ID is `q_i5uzm3` and whose name is Maximum Number of Nodes. This quota belongs to Container Service for Kubernetes (ACK). The query result shows the details of the application. The details include the application ID, application time, requested quota, and application result. In this example, the application ID is `b926571d-cc09-4711-b547-58a615f0****`. The application time is `2021-01-15T09:13:53Z`. The expected quota value is `101`. The application result is `Agree`.
-      *
+     * @param request the request parameters of ListQuotaApplications  ListQuotaApplicationsRequest
+     * @return ListQuotaApplicationsResponse
      */
     CompletableFuture<ListQuotaApplicationsResponse> listQuotaApplications(ListQuotaApplicationsRequest request);
 
+    /**
+     * @param request the request parameters of ListQuotaApplicationsDetailForTemplate  ListQuotaApplicationsDetailForTemplateRequest
+     * @return ListQuotaApplicationsDetailForTemplateResponse
+     */
     CompletableFuture<ListQuotaApplicationsDetailForTemplateResponse> listQuotaApplicationsDetailForTemplate(ListQuotaApplicationsDetailForTemplateRequest request);
 
+    /**
+     * @param request the request parameters of ListQuotaApplicationsForTemplate  ListQuotaApplicationsForTemplateRequest
+     * @return ListQuotaApplicationsForTemplateResponse
+     */
     CompletableFuture<ListQuotaApplicationsForTemplateResponse> listQuotaApplicationsForTemplate(ListQuotaApplicationsForTemplateRequest request);
 
     /**
-      * ### [](#)Prerequisites
-      * A resource directory is enabled. For more information, see [EnableResourceDirectory](~~604185~~).
-      * ### [](#)Usage notes
-      * If the `ServiceStatus` parameter is set to `0` or `-1`, you can call this operation to set the parameter to `1`. Then, you can call the [CreateTemplateQuotaItem](~~450615~~) operation to create a quota template.
-      *
+     * @param request the request parameters of ListQuotaUtilizationReport  ListQuotaUtilizationReportRequest
+     * @return ListQuotaUtilizationReportResponse
+     */
+    CompletableFuture<ListQuotaUtilizationReportResponse> listQuotaUtilizationReport(ListQuotaUtilizationReportRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>A resource directory is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/604185.html">EnableResourceDirectory</a>.</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>If the <code>ServiceStatus</code> parameter is set to <code>0</code> or <code>-1</code>, you can call this operation to set the parameter to <code>1</code>. Then, you can call the <a href="https://help.aliyun.com/document_detail/450615.html">CreateTemplateQuotaItem</a> operation to create a quota template.</p>
+     * 
+     * @param request the request parameters of ModifyQuotaTemplateServiceStatus  ModifyQuotaTemplateServiceStatusRequest
+     * @return ModifyQuotaTemplateServiceStatusResponse
      */
     CompletableFuture<ModifyQuotaTemplateServiceStatusResponse> modifyQuotaTemplateServiceStatus(ModifyQuotaTemplateServiceStatusRequest request);
 
+    /**
+     * @param request the request parameters of ModifyTemplateQuotaItem  ModifyTemplateQuotaItemRequest
+     * @return ModifyTemplateQuotaItemResponse
+     */
     CompletableFuture<ModifyTemplateQuotaItemResponse> modifyTemplateQuotaItem(ModifyTemplateQuotaItemRequest request);
 
     /**
-      * >  You can call this operation to enable the approval reminder feature for quota applications that support this feature. To check whether this feature is supported, you can view the value of `SupportReminder` in the GetQuotaApplicationApproval operation. If the value of SupportReminder is `true`, this feature is supported.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation applies only to quota applications that support reminders. In the GetQuotaApplicationApproval response, the <code>SupportReminder</code> parameter for these applications is <code>true</code>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of RemindQuotaApplicationApproval  RemindQuotaApplicationApprovalRequest
+     * @return RemindQuotaApplicationApprovalResponse
      */
     CompletableFuture<RemindQuotaApplicationApprovalResponse> remindQuotaApplicationApproval(RemindQuotaApplicationApprovalRequest request);
 
     /**
-      * In this example, the operation is called to modify the information about a quota alert whose ID is `a2efa7fc-832f-47bb-8054-39e28012****` and whose name is `rules`. The alert threshold is changed from `150` to `160`.
-      *
+     * @param request the request parameters of StartQuotaUtilizationReport  StartQuotaUtilizationReportRequest
+     * @return StartQuotaUtilizationReportResponse
+     */
+    CompletableFuture<StartQuotaUtilizationReportResponse> startQuotaUtilizationReport(StartQuotaUtilizationReportRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is deprecated because the quota alert feature has been upgraded. To modify information about new quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a>. For more information about using API operations to manage new quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alerts</a>.</p>
+     * 
+     * @param request the request parameters of UpdateQuotaAlarm  UpdateQuotaAlarmRequest
+     * @return UpdateQuotaAlarmResponse
      */
     CompletableFuture<UpdateQuotaAlarmResponse> updateQuotaAlarm(UpdateQuotaAlarmRequest request);
 

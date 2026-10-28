@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQuotaApplicationsRequest} extends {@link RequestModel}
  *
  * <p>ListQuotaApplicationsRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListQuotaApplicationsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < Dimensions> dimensions;
+    private java.util.List<Dimensions> dimensions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("KeyWord")
@@ -64,7 +70,7 @@ public class ListQuotaApplicationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -72,7 +78,7 @@ public class ListQuotaApplicationsRequest extends Request {
     /**
      * @return dimensions
      */
-    public java.util.List < Dimensions> getDimensions() {
+    public java.util.List<Dimensions> getDimensions() {
         return this.dimensions;
     }
 
@@ -126,7 +132,7 @@ public class ListQuotaApplicationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListQuotaApplicationsRequest, Builder> {
-        private java.util.List < Dimensions> dimensions; 
+        private java.util.List<Dimensions> dimensions; 
         private String keyWord; 
         private Integer maxResults; 
         private String nextToken; 
@@ -152,16 +158,23 @@ public class ListQuotaApplicationsRequest extends Request {
         } 
 
         /**
-         * The quota dimensions.
+         * <p>The quota dimensions.
+         * The dimensions are properties of a quota item. A combination of dimensions (Dimensions) and a quota ID (QuotaActionCode) uniquely identifies a quota item.</p>
+         * <blockquote>
+         * <p>Some cloud services require dimensions. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The <code>Requisite</code> response parameter indicates whether a dimension is required.</p>
+         * </blockquote>
          */
-        public Builder dimensions(java.util.List < Dimensions> dimensions) {
+        public Builder dimensions(java.util.List<Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
         }
 
         /**
-         * The keyword that you want to use to search for the application.
+         * <p>The keyword for searching quota increase applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster</p>
          */
         public Builder keyWord(String keyWord) {
             this.putBodyParameter("KeyWord", keyWord);
@@ -170,10 +183,11 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * The maximum number of records that can be returned for the query.
-         * <p>
+         * <p>The maximum number of records to return in this query.</p>
+         * <p>Valid values: 1 to 200. Default value: 30.</p>
          * 
-         * Valid values: 1 to 200. Default value: 30.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -182,7 +196,10 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
+         * <p>The token that marks the position from which you want to start the query. Leave this parameter empty to query from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -191,7 +208,10 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
+         * <p>The abbreviation of the cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>csk</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -200,7 +220,10 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * The ID of the quota.
+         * <p>The quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q_i5uzm3</p>
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -209,12 +232,15 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * The type of the quota. Valid values:
-         * <p>
+         * <p>The quota category. Valid values:</p>
+         * <ul>
+         * <li>CommonQuota: general quota.</li>
+         * <li>FlowControl: API rate limit.</li>
+         * <li>WhiteListLabel: privilege.</li>
+         * </ul>
          * 
-         * *   CommonQuota: general quota
-         * *   FlowControl: API rate limit
-         * *   WhiteListLabel: whitelist quota
+         * <strong>example:</strong>
+         * <p>CommonQuota</p>
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);
@@ -223,13 +249,20 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * The status of the application. Valid values:
-         * <p>
+         * <p>The approval status of the quota increase application. Valid values:</p>
+         * <ul>
+         * <li><p>Disagree: Rejected.</p>
+         * </li>
+         * <li><p>Agree: Approved.</p>
+         * </li>
+         * <li><p>Process: Under review.</p>
+         * </li>
+         * <li><p>Cancel: Closed.</p>
+         * </li>
+         * </ul>
          * 
-         * *   Disagree: rejects the application.
-         * *   Agree: approves the application.
-         * *   Process: reviews the application.
-         * *   Cancel: cancels the application.
+         * <strong>example:</strong>
+         * <p>Agree</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -244,6 +277,12 @@ public class ListQuotaApplicationsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListQuotaApplicationsRequest} extends {@link TeaModel}
+     *
+     * <p>ListQuotaApplicationsRequest</p>
+     */
     public static class Dimensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -282,11 +321,22 @@ public class ListQuotaApplicationsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of the dimension.
-             * <p>
+             * <p>The key of the quota dimension.</p>
+             * <blockquote>
+             * <p><code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> must be specified together. The valid values of N depend on the number of dimensions supported by the cloud service. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The length of the returned array is the value of N.</p>
+             * </blockquote>
              * 
-             * >  The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * <strong>example:</strong>
+             * <p>regionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -294,10 +344,13 @@ public class ListQuotaApplicationsRequest extends Request {
             }
 
             /**
-             * The value of the dimension.
-             * <p>
+             * <p>The value of the quota dimension.</p>
+             * <blockquote>
+             * <p><code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> must be specified together. The valid values of N depend on the number of dimensions supported by the cloud service. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The length of the returned array is the value of N.</p>
+             * </blockquote>
              * 
-             * >  The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;

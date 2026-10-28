@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQuotaApplicationTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListQuotaApplicationTemplatesRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListQuotaApplicationTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < Dimensions> dimensions;
+    private java.util.List<Dimensions> dimensions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
@@ -58,7 +64,7 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -66,7 +72,7 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
     /**
      * @return dimensions
      */
-    public java.util.List < Dimensions> getDimensions() {
+    public java.util.List<Dimensions> getDimensions() {
         return this.dimensions;
     }
 
@@ -113,7 +119,7 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListQuotaApplicationTemplatesRequest, Builder> {
-        private java.util.List < Dimensions> dimensions; 
+        private java.util.List<Dimensions> dimensions; 
         private String id; 
         private Integer maxResults; 
         private String nextToken; 
@@ -137,16 +143,19 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         } 
 
         /**
-         * The quota dimensions.
+         * <p>The quota dimensions.</p>
          */
-        public Builder dimensions(java.util.List < Dimensions> dimensions) {
+        public Builder dimensions(java.util.List<Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
         }
 
         /**
-         * The ID of the quota item.
+         * <p>The ID of the quota item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1****</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -155,7 +164,10 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         }
 
         /**
-         * The maximum number of records that can be returned for the query. Valid values: 1 to 100. Default value: 30.
+         * <p>The maximum number of records that can be returned for the query. Valid values: 1 to 100. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -164,10 +176,13 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         }
 
         /**
-         * The token that marks the position from which you want to start the query.
-         * <p>
+         * <p>The token that marks the position from which you want to start the query.</p>
+         * <blockquote>
+         * <p>If you leave this parameter empty, the query starts from the beginning.</p>
+         * </blockquote>
          * 
-         * > If you leave this parameter empty, the query starts from the beginning.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -176,10 +191,13 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <blockquote>
+         * <p>To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <code>ProductCode</code> in the response.</p>
+         * </blockquote>
          * 
-         * >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](~~440555~~) operation and check the value of `ProductCode` in the response.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -188,7 +206,10 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the quota.
+         * <p>The ID of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q_security-groups</p>
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -197,12 +218,18 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         }
 
         /**
-         * The type of the quota. Valid values:
-         * <p>
+         * <p>The quota type. Valid values:</p>
+         * <ul>
+         * <li><p>CommonQuota: general quota.</p>
+         * </li>
+         * <li><p>WhiteListLabel: whitelist quota.</p>
+         * </li>
+         * <li><p>FlowControl: API rate limit.</p>
+         * </li>
+         * </ul>
          * 
-         * *   CommonQuota: general quota
-         * *   WhiteListLabel: privilege
-         * *   FlowControl: API rate limit
+         * <strong>example:</strong>
+         * <p>CommonQuota</p>
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);
@@ -217,6 +244,12 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListQuotaApplicationTemplatesRequest} extends {@link TeaModel}
+     *
+     * <p>ListQuotaApplicationTemplatesRequest</p>
+     */
     public static class Dimensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -255,15 +288,27 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of the dimension.
-             * <p>
+             * <p>The key of the dimension.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+             * </li>
+             * <li><p>You must specify both Key and Value for each quota dimension.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * 
-             * *   You must specify both Key and Value for each quota dimension.
+             * <strong>example:</strong>
+             * <p>regionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -271,14 +316,18 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
             }
 
             /**
-             * The value of the dimension.
-             * <p>
+             * <p>The value of the dimension.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+             * </li>
+             * <li><p>You must specify both Key and Value for each quota dimension.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * 
-             * *   You must specify both Key and Value for each quota dimension.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;

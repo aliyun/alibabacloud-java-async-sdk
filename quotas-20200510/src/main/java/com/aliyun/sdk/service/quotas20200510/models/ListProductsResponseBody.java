@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProductsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListProductsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("ProductInfo")
-    private java.util.List < ProductInfo> productInfo;
+    private java.util.List<ProductInfo> productInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,6 +48,10 @@ public class ListProductsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -59,7 +69,7 @@ public class ListProductsResponseBody extends TeaModel {
     /**
      * @return productInfo
      */
-    public java.util.List < ProductInfo> getProductInfo() {
+    public java.util.List<ProductInfo> getProductInfo() {
         return this.productInfo;
     }
 
@@ -80,12 +90,26 @@ public class ListProductsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < ProductInfo> productInfo; 
+        private java.util.List<ProductInfo> productInfo; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListProductsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.productInfo = model.productInfo;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The maximum number of records that are returned for the query.
+         * <p>The maximum number of entries returned for this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +117,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that marks the position at which the query ends. An empty value indicates that all data is returned.
+         * <p>The token that marks the position of the returned query data. An empty value indicates that all data has been queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,15 +128,18 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the Alibaba Cloud service.
+         * <p>The information about the Alibaba Cloud service.</p>
          */
-        public Builder productInfo(java.util.List < ProductInfo> productInfo) {
+        public Builder productInfo(java.util.List<ProductInfo> productInfo) {
             this.productInfo = productInfo;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1DA9C136-11BC-4C39-ADC6-B86276128072</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records that are returned for the query.
+         * <p>The total number of entries returned for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListProductsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductsResponseBody</p>
+     */
     public static class ProductInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommonQuotaSupport")
         private String commonQuotaSupport;
@@ -264,12 +303,33 @@ public class ListProductsResponseBody extends TeaModel {
             private String secondCategoryNameEn; 
             private String whiteListLabelQuotaSupport; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductInfo model) {
+                this.commonQuotaSupport = model.commonQuotaSupport;
+                this.dynamic = model.dynamic;
+                this.flowControlSupport = model.flowControlSupport;
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+                this.productNameEn = model.productNameEn;
+                this.secondCategoryId = model.secondCategoryId;
+                this.secondCategoryName = model.secondCategoryName;
+                this.secondCategoryNameEn = model.secondCategoryNameEn;
+                this.whiteListLabelQuotaSupport = model.whiteListLabelQuotaSupport;
+            } 
+
             /**
-             * Indicates whether the Alibaba Cloud service supports general quotas. Valid values:
-             * <p>
+             * <p>Specifies whether general quotas are supported. Valid values:</p>
+             * <ul>
+             * <li><p>support: Supported.</p>
+             * </li>
+             * <li><p>unsupport: Not supported.</p>
+             * </li>
+             * </ul>
              * 
-             * *   support: The Alibaba Cloud service supports general quotas.
-             * *   unsupport: The Alibaba Cloud service does not support general quotas.
+             * <strong>example:</strong>
+             * <p>support</p>
              */
             public Builder commonQuotaSupport(String commonQuotaSupport) {
                 this.commonQuotaSupport = commonQuotaSupport;
@@ -277,11 +337,17 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Alibaba Cloud service supports dynamic quota adjustment. Valid values:
-             * <p>
+             * <p><notice><strong>[Deprecated]</strong> We recommend that you do not use this parameter.</notice></p>
+             * <p>Specifies whether dynamic quota adjustment is supported. Valid values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * </li>
+             * <li><p>false</p>
+             * </li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dynamic(Boolean dynamic) {
                 this.dynamic = dynamic;
@@ -289,11 +355,16 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Alibaba Cloud service supports API rate limits. Valid values:
-             * <p>
+             * <p>Specifies whether API rate limits are supported. Valid values:</p>
+             * <ul>
+             * <li><p>support: Supported.</p>
+             * </li>
+             * <li><p>unsupport: Not supported.</p>
+             * </li>
+             * </ul>
              * 
-             * *   support: The Alibaba Cloud service supports API rate limits.
-             * *   unsupport: The Alibaba Cloud service does not support API rate limits.
+             * <strong>example:</strong>
+             * <p>unsupport</p>
              */
             public Builder flowControlSupport(String flowControlSupport) {
                 this.flowControlSupport = flowControlSupport;
@@ -301,7 +372,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the Alibaba Cloud service name.
+             * <p>The abbreviation of the Alibaba Cloud service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -309,7 +383,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud service.
+             * <p>The name of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Elastic Compute Service (ECS)</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -317,7 +394,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The English name of the Alibaba Cloud service.
+             * <p>The English name of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Elastic Compute Service</p>
              */
             public Builder productNameEn(String productNameEn) {
                 this.productNameEn = productNameEn;
@@ -325,7 +405,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service category.
+             * <p>The ID of the service category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder secondCategoryId(Long secondCategoryId) {
                 this.secondCategoryId = secondCategoryId;
@@ -333,7 +416,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service category.
+             * <p>The name of the service category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Elastic Compute</p>
              */
             public Builder secondCategoryName(String secondCategoryName) {
                 this.secondCategoryName = secondCategoryName;
@@ -341,7 +427,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The English name of the service category.
+             * <p>The English name of the service category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Elastic Compute</p>
              */
             public Builder secondCategoryNameEn(String secondCategoryNameEn) {
                 this.secondCategoryNameEn = secondCategoryNameEn;
@@ -349,11 +438,16 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Alibaba Cloud service supports whitelist quotas. Valid values:
-             * <p>
+             * <p>Specifies whether privileges are supported. Valid values:</p>
+             * <ul>
+             * <li><p>support: Supported.</p>
+             * </li>
+             * <li><p>unsupport: Not supported.</p>
+             * </li>
+             * </ul>
              * 
-             * *   support: The Alibaba Cloud service supports whitelist quotas.
-             * *   unsupport: The Alibaba Cloud service does not support whitelist quotas.
+             * <strong>example:</strong>
+             * <p>support</p>
              */
             public Builder whiteListLabelQuotaSupport(String whiteListLabelQuotaSupport) {
                 this.whiteListLabelQuotaSupport = whiteListLabelQuotaSupport;

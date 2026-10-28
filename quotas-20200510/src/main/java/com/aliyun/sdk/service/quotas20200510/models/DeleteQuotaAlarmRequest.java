@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteQuotaAlarmRequest} extends {@link RequestModel}
  *
  * <p>DeleteQuotaAlarmRequest</p>
@@ -29,7 +35,7 @@ public class DeleteQuotaAlarmRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,10 +60,14 @@ public class DeleteQuotaAlarmRequest extends Request {
         } 
 
         /**
-         * The ID of the quota alert.
-         * <p>
+         * <p>The ID of the quota alert.</p>
+         * <blockquote>
+         * <p>For more information about how to obtain the ID of a quota alert, see <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListQuotaAlarms](~~440561~~) operation to obtain the ID of a quota alert.
+         * <strong>example:</strong>
+         * <p>6b512ab7-da3a-4142-b529-2b2a9294****</p>
          */
         public Builder alarmId(String alarmId) {
             this.putBodyParameter("AlarmId", alarmId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQuotaTemplateServiceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetQuotaTemplateServiceStatusResponseBody</p>
@@ -30,6 +36,10 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
         private String requestId; 
         private TemplateServiceStatus templateServiceStatus; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetQuotaTemplateServiceStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.templateServiceStatus = model.templateServiceStatus;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the quota template.
+         * <p>The status of the quota template.</p>
          */
         public Builder templateServiceStatus(TemplateServiceStatus templateServiceStatus) {
             this.templateServiceStatus = templateServiceStatus;
@@ -70,6 +91,12 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQuotaTemplateServiceStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQuotaTemplateServiceStatusResponseBody</p>
+     */
     public static class TemplateServiceStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
         private String resourceDirectoryId;
@@ -108,8 +135,19 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
             private String resourceDirectoryId; 
             private Integer serviceStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(TemplateServiceStatus model) {
+                this.resourceDirectoryId = model.resourceDirectoryId;
+                this.serviceStatus = model.serviceStatus;
+            } 
+
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-pG****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -117,11 +155,18 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the quota template. Valid values:
-             * <p>
+             * <p>The status of the quota template. Valid values:</p>
+             * <ul>
+             * <li><p>-1: Disabled.</p>
+             * </li>
+             * <li><p>1: Enabled.</p>
+             * </li>
+             * <li><p>0: Unset.</p>
+             * </li>
+             * </ul>
              * 
-             * *   \-1: The quota template is disabled.
-             * *   1: The quota template is enabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serviceStatus(Integer serviceStatus) {
                 this.serviceStatus = serviceStatus;

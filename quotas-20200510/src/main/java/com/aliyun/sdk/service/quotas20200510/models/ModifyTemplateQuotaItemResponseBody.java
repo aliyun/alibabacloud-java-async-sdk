@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTemplateQuotaItemResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyTemplateQuotaItemResponseBody</p>
@@ -30,6 +36,10 @@ public class ModifyTemplateQuotaItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -48,8 +58,19 @@ public class ModifyTemplateQuotaItemResponseBody extends TeaModel {
         private String id; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyTemplateQuotaItemResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Id.
+         * <p>The ID of the quota template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1****</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -57,7 +78,10 @@ public class ModifyTemplateQuotaItemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

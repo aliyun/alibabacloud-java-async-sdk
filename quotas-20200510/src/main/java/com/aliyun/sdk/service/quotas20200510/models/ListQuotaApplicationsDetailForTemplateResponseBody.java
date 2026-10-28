@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQuotaApplicationsDetailForTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>ListQuotaApplicationsDetailForTemplateResponseBody</p>
@@ -18,7 +24,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("QuotaApplications")
-    private java.util.List < QuotaApplications> quotaApplications;
+    private java.util.List<QuotaApplications> quotaApplications;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,6 +48,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -59,7 +69,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
     /**
      * @return quotaApplications
      */
-    public java.util.List < QuotaApplications> getQuotaApplications() {
+    public java.util.List<QuotaApplications> getQuotaApplications() {
         return this.quotaApplications;
     }
 
@@ -80,12 +90,26 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < QuotaApplications> quotaApplications; 
+        private java.util.List<QuotaApplications> quotaApplications; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListQuotaApplicationsDetailForTemplateResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.quotaApplications = model.quotaApplications;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The maximum number of records that can be returned for the query.
+         * <p>The maximum number of records returned for the current query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +117,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         }
 
         /**
-         * The token that marks the position from which you want to start the query.
+         * <p>The token that marks the position from which the next query starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,15 +128,18 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         }
 
         /**
-         * The details of the quota increase application.
+         * <p>A list of quota application details.</p>
          */
-        public Builder quotaApplications(java.util.List < QuotaApplications> quotaApplications) {
+        public Builder quotaApplications(java.util.List<QuotaApplications> quotaApplications) {
             this.quotaApplications = quotaApplications;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         }
 
         /**
-         * The total number of records that are returned for the query.
+         * <p>The total number of records returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link ListQuotaApplicationsDetailForTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotaApplicationsDetailForTemplateResponseBody</p>
+     */
     public static class Period extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
@@ -168,8 +207,19 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             private String periodUnit; 
             private Integer periodValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Period model) {
+                this.periodUnit = model.periodUnit;
+                this.periodValue = model.periodValue;
+            } 
+
             /**
-             * The unit of the calculation cycle of the quota.
+             * <p>The unit of the calculation cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>second</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -177,7 +227,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The value of the calculation cycle of the quota.
+             * <p>The value of the calculation cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodValue(Integer periodValue) {
                 this.periodValue = periodValue;
@@ -191,6 +244,12 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotaApplicationsDetailForTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotaApplicationsDetailForTemplateResponseBody</p>
+     */
     public static class QuotaApplications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliyunUid")
         private String aliyunUid;
@@ -244,7 +303,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         private String quotaDescription;
 
         @com.aliyun.core.annotation.NameInMap("QuotaDimension")
-        private java.util.Map < String, String > quotaDimension;
+        private java.util.Map<String, String> quotaDimension;
 
         @com.aliyun.core.annotation.NameInMap("QuotaName")
         private String quotaName;
@@ -413,7 +472,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         /**
          * @return quotaDimension
          */
-        public java.util.Map < String, String > getQuotaDimension() {
+        public java.util.Map<String, String> getQuotaDimension() {
             return this.quotaDimension;
         }
 
@@ -463,14 +522,45 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             private String quotaArn; 
             private String quotaCategory; 
             private String quotaDescription; 
-            private java.util.Map < String, String > quotaDimension; 
+            private java.util.Map<String, String> quotaDimension; 
             private String quotaName; 
             private String quotaUnit; 
             private String reason; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(QuotaApplications model) {
+                this.aliyunUid = model.aliyunUid;
+                this.applicationId = model.applicationId;
+                this.applyTime = model.applyTime;
+                this.approveValue = model.approveValue;
+                this.auditReason = model.auditReason;
+                this.batchQuotaApplicationId = model.batchQuotaApplicationId;
+                this.desireValue = model.desireValue;
+                this.effectiveTime = model.effectiveTime;
+                this.envLanguage = model.envLanguage;
+                this.expireTime = model.expireTime;
+                this.noticeType = model.noticeType;
+                this.period = model.period;
+                this.productCode = model.productCode;
+                this.quotaActionCode = model.quotaActionCode;
+                this.quotaArn = model.quotaArn;
+                this.quotaCategory = model.quotaCategory;
+                this.quotaDescription = model.quotaDescription;
+                this.quotaDimension = model.quotaDimension;
+                this.quotaName = model.quotaName;
+                this.quotaUnit = model.quotaUnit;
+                this.reason = model.reason;
+                this.status = model.status;
+            } 
+
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>175376458581****</p>
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -478,7 +568,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the quota increase application.
+             * <p>The ID of the quota increase request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b926571d-cc09-4711-b547-58a615f0****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -486,7 +579,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The time when the quota increase application was submitted. The value is displayed in UTC.
+             * <p>The UTC time when the quota increase request was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-15T09:13:53Z</p>
              */
             public Builder applyTime(String applyTime) {
                 this.applyTime = applyTime;
@@ -494,7 +590,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The quota value that is approved.
+             * <p>The approved quota value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder approveValue(Double approveValue) {
                 this.approveValue = approveValue;
@@ -502,7 +601,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The approval result of the quota increase application.
+             * <p>The reason for the approval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Agree</p>
              */
             public Builder auditReason(String auditReason) {
                 this.auditReason = auditReason;
@@ -510,7 +612,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the quota application batch.
+             * <p>The ID of the quota application batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
              */
             public Builder batchQuotaApplicationId(String batchQuotaApplicationId) {
                 this.batchQuotaApplicationId = batchQuotaApplicationId;
@@ -518,7 +623,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The requested value of the quota.
+             * <p>The requested quota value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder desireValue(Double desireValue) {
                 this.desireValue = desireValue;
@@ -526,7 +634,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The start time of the validity period of the quota. The value is displayed in UTC.
+             * <p>The UTC time when the new quota value takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-15T11:46:25Z</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -534,11 +645,16 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The language of the quota alert notification. Valid values:
-             * <p>
+             * <p>The language of the alert notification. Valid values:</p>
+             * <ul>
+             * <li><p>zh: Chinese.</p>
+             * </li>
+             * <li><p>en: English.</p>
+             * </li>
+             * </ul>
              * 
-             * *   zh: Chinese
-             * *   en: English
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder envLanguage(String envLanguage) {
                 this.envLanguage = envLanguage;
@@ -546,7 +662,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The end time of the validity period of the quota. The value is displayed in UTC.
+             * <p>The UTC time when the new quota value expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-17T11:46:25Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -554,11 +673,16 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * Indicates whether Quota Center sends a notification about the application result. Valid values:
-             * <p>
+             * <p>Indicates whether a notification is sent for the quota increase request. Valid values:</p>
+             * <ul>
+             * <li><p>0: No.</p>
+             * </li>
+             * <li><p>3: Yes.</p>
+             * </li>
+             * </ul>
              * 
-             * *   0: no
-             * *   3: yes
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder noticeType(Integer noticeType) {
                 this.noticeType = noticeType;
@@ -566,7 +690,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The calculation cycle of the quota.
+             * <p>The calculation cycle of the quota.</p>
              */
             public Builder period(Period period) {
                 this.period = period;
@@ -574,7 +698,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The abbreviation of the Alibaba Cloud service name.
+             * <p>The abbreviation of the Alibaba Cloud service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -582,7 +709,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The quota ID.
+             * <p>The quota ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.n1.large</p>
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;
@@ -590,7 +720,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the quota.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:quotas:<em>:120886317861</em>***:quota/csk/q_i5uzm3</p>
              */
             public Builder quotaArn(String quotaArn) {
                 this.quotaArn = quotaArn;
@@ -598,12 +731,18 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The quota type. Valid values:
-             * <p>
+             * <p>The quota type. Valid values:</p>
+             * <ul>
+             * <li><p>CommonQuota (default): General quota.</p>
+             * </li>
+             * <li><p>WhiteListLabel: Privilege quota.</p>
+             * </li>
+             * <li><p>FlowControl: API rate limit quota.</p>
+             * </li>
+             * </ul>
              * 
-             * *   CommonQuota (default): general quota
-             * *   WhiteListLabel: privilege
-             * *   FlowControl: API rate limit
+             * <strong>example:</strong>
+             * <p>CommonQuota</p>
              */
             public Builder quotaCategory(String quotaCategory) {
                 this.quotaCategory = quotaCategory;
@@ -611,7 +750,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The description of the quota.
+             * <p>The description of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The maximum number of nodes in a cluster</p>
              */
             public Builder quotaDescription(String quotaDescription) {
                 this.quotaDescription = quotaDescription;
@@ -619,15 +761,18 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The quota dimensions.
+             * <p>The quota dimensions.</p>
              */
-            public Builder quotaDimension(java.util.Map < String, String > quotaDimension) {
+            public Builder quotaDimension(java.util.Map<String, String> quotaDimension) {
                 this.quotaDimension = quotaDimension;
                 return this;
             }
 
             /**
-             * The quota name.
+             * <p>The name of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Maximum Number of Nodes</p>
              */
             public Builder quotaName(String quotaName) {
                 this.quotaName = quotaName;
@@ -635,7 +780,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The unit of the quota.
+             * <p>The unit of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GiB</p>
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;
@@ -643,7 +791,10 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The reason for the quota increase application.
+             * <p>The reason for the quota increase request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Maximum Number of Nodes</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -651,13 +802,20 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
             }
 
             /**
-             * The approval status of the quota increase application. Valid values:
-             * <p>
+             * <p>The approval status of the quota increase request. Valid values:</p>
+             * <ul>
+             * <li><p>Disagree: The request is rejected.</p>
+             * </li>
+             * <li><p>Agree: The request is approved.</p>
+             * </li>
+             * <li><p>Process: The request is in review.</p>
+             * </li>
+             * <li><p>Cancel: The request is closed.</p>
+             * </li>
+             * </ul>
              * 
-             * *   Disagree: The application is rejected.
-             * *   Agree: The application is approved.
-             * *   Process: The application is pending approval.
-             * *   Cancel: The application is canceled.
+             * <strong>example:</strong>
+             * <p>Agree</p>
              */
             public Builder status(String status) {
                 this.status = status;

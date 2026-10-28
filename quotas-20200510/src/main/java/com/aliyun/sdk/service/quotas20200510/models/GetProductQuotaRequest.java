@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProductQuotaRequest} extends {@link RequestModel}
  *
  * <p>GetProductQuotaRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetProductQuotaRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < Dimensions> dimensions;
+    private java.util.List<Dimensions> dimensions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProductCode")
@@ -40,7 +46,7 @@ public class GetProductQuotaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -48,7 +54,7 @@ public class GetProductQuotaRequest extends Request {
     /**
      * @return dimensions
      */
-    public java.util.List < Dimensions> getDimensions() {
+    public java.util.List<Dimensions> getDimensions() {
         return this.dimensions;
     }
 
@@ -67,7 +73,7 @@ public class GetProductQuotaRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetProductQuotaRequest, Builder> {
-        private java.util.List < Dimensions> dimensions; 
+        private java.util.List<Dimensions> dimensions; 
         private String productCode; 
         private String quotaActionCode; 
 
@@ -83,19 +89,30 @@ public class GetProductQuotaRequest extends Request {
         } 
 
         /**
-         * The quota dimensions.
+         * <p>The quota dimensions.
+         * The properties of the quota item. The combination of dimensions and QuotaActionCode determines a unique quota item.</p>
+         * <blockquote>
+         * <p>Dimensions are required for some cloud services. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the quota dimensions of a cloud service and check whether a dimension is required. The Requisite response parameter indicates whether the dimension is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;regionId\&quot;:\&quot;cn-beijing\&quot;}</p>
          */
-        public Builder dimensions(java.util.List < Dimensions> dimensions) {
+        public Builder dimensions(java.util.List<Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
+         * <p>The abbreviated name of the cloud service.</p>
+         * <blockquote>
+         * <p>For more information about how to obtain the abbreviated name of a cloud service, see the ProductCode parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -104,7 +121,14 @@ public class GetProductQuotaRequest extends Request {
         }
 
         /**
-         * The ID of the quota.
+         * <p>The quota ID.</p>
+         * <blockquote>
+         * <p>For more information about how to obtain the quota ID of a specified cloud service, see the QuotaActionCode parameter in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q_security-groups</p>
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -119,6 +143,12 @@ public class GetProductQuotaRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetProductQuotaRequest} extends {@link TeaModel}
+     *
+     * <p>GetProductQuotaRequest</p>
+     */
     public static class Dimensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -157,12 +187,22 @@ public class GetProductQuotaRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of the dimension.
-             * <p>
+             * <p>The key of the quota dimension.</p>
+             * <blockquote>
+             * <p>You must specify both Dimensions.N.Key and Dimensions.N.Value. The value range of N depends on the number of dimensions supported by the cloud service. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the quota dimensions supported by the cloud service. The length of the returned array is the maximum value of N.</p>
+             * </blockquote>
              * 
-             * >- The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * >- If you call the operation to query the details of a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the `Dimensions.N.Key` and `Dimensions.N.Value` parameters at the same time. The following cloud services support dimensions: ECS whose service code is ecs, Enterprise Distributed Application Service (EDAS) whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and Auto Scaling (ESS) whose service code is ess.
+             * <strong>example:</strong>
+             * <p>regionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -170,11 +210,13 @@ public class GetProductQuotaRequest extends Request {
             }
 
             /**
-             * The value of the dimension.
-             * <p>
+             * <p>The value of the quota dimension.</p>
+             * <blockquote>
+             * <p>You must specify both Dimensions.N.Key and Dimensions.N.Value. The value range of N depends on the number of dimensions supported by the cloud service. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the quota dimensions supported by the cloud service. The length of the returned array is the maximum value of N.</p>
+             * </blockquote>
              * 
-             * > - The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * > - If you call the operation to query the details of a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the `Dimensions.N.Key` and `Dimensions.N.Value` parameters at the same time. The following cloud services support dimensions: ECS whose service code is ecs, EDAS whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and ESS whose service code is ess.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;

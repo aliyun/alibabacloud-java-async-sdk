@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyQuotaTemplateServiceStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyQuotaTemplateServiceStatusRequest</p>
@@ -29,7 +35,7 @@ public class ModifyQuotaTemplateServiceStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,11 +60,17 @@ public class ModifyQuotaTemplateServiceStatusRequest extends Request {
         } 
 
         /**
-         * The status of the quota template. Valid values:
-         * <p>
+         * <p>The status of the quota template. Valid values:</p>
+         * <ul>
+         * <li><p>-1: The quota template is disabled.</p>
+         * </li>
+         * <li><p>1: The quota template is enabled.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   \-1: The quota template is disabled.
-         * *   1: The quota template is enabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceStatus(Integer serviceStatus) {
             this.putBodyParameter("ServiceStatus", serviceStatus);

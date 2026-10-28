@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQuotaApplicationApprovalRequest} extends {@link RequestModel}
  *
  * <p>GetQuotaApplicationApprovalRequest</p>
@@ -28,7 +34,7 @@ public class GetQuotaApplicationApprovalRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -53,10 +59,11 @@ public class GetQuotaApplicationApprovalRequest extends Request {
         } 
 
         /**
-         * The quota application ID.
-         * <p>
+         * <p>The ID of the quota application.</p>
+         * <p>For information about how to obtain the ID of a quota application, see <a href="https://help.aliyun.com/document_detail/440568.html">ListQuotaApplications</a>.</p>
          * 
-         * For more information about how to obtain the ID of a quota application, see [ListQuotaApplications](~~440568~~).
+         * <strong>example:</strong>
+         * <p>d314d6ae-867d-484c-9009-3d42****</p>
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);

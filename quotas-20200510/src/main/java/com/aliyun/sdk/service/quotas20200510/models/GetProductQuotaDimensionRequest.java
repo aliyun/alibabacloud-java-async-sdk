@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProductQuotaDimensionRequest} extends {@link RequestModel}
  *
  * <p>GetProductQuotaDimensionRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetProductQuotaDimensionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DependentDimensions")
-    private java.util.List < DependentDimensions> dependentDimensions;
+    private java.util.List<DependentDimensions> dependentDimensions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DimensionKey")
@@ -39,7 +45,7 @@ public class GetProductQuotaDimensionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -47,7 +53,7 @@ public class GetProductQuotaDimensionRequest extends Request {
     /**
      * @return dependentDimensions
      */
-    public java.util.List < DependentDimensions> getDependentDimensions() {
+    public java.util.List<DependentDimensions> getDependentDimensions() {
         return this.dependentDimensions;
     }
 
@@ -66,7 +72,7 @@ public class GetProductQuotaDimensionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetProductQuotaDimensionRequest, Builder> {
-        private java.util.List < DependentDimensions> dependentDimensions; 
+        private java.util.List<DependentDimensions> dependentDimensions; 
         private String dimensionKey; 
         private String productCode; 
 
@@ -82,16 +88,22 @@ public class GetProductQuotaDimensionRequest extends Request {
         } 
 
         /**
-         * The information about quota dimensions.
+         * <p>The quota dimensions on which the target quota dimension depends.</p>
          */
-        public Builder dependentDimensions(java.util.List < DependentDimensions> dependentDimensions) {
+        public Builder dependentDimensions(java.util.List<DependentDimensions> dependentDimensions) {
             this.putBodyParameter("DependentDimensions", dependentDimensions);
             this.dependentDimensions = dependentDimensions;
             return this;
         }
 
         /**
-         * The key of the quota dimension.
+         * <p>The key of the target quota dimension.</p>
+         * <blockquote>
+         * <p>If the target quota dimension has dependent quota dimensions, you must specify the keys and values of the dependent quota dimensions at the same time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>zoneId</p>
          */
         public Builder dimensionKey(String dimensionKey) {
             this.putBodyParameter("DimensionKey", dimensionKey);
@@ -100,10 +112,14 @@ public class GetProductQuotaDimensionRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
+         * <p>The abbreviation of the cloud service.</p>
+         * <blockquote>
+         * <p>For more information about how to obtain the abbreviation of a cloud service, see the ProductCode parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * <strong>example:</strong>
+         * <p>disk</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -118,6 +134,12 @@ public class GetProductQuotaDimensionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetProductQuotaDimensionRequest} extends {@link TeaModel}
+     *
+     * <p>GetProductQuotaDimensionRequest</p>
+     */
     public static class DependentDimensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -156,11 +178,25 @@ public class GetProductQuotaDimensionRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DependentDimensions model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of the quota dimension on which the quota dimension that you want to query is dependent.
-             * <p>
+             * <p>The key of the quota dimension on which the target quota dimension depends.</p>
+             * <blockquote>
+             * <ul>
+             * <li>The value of N depends on the number of quota dimensions on which the target quota dimension depends.</li>
+             * <li>You must specify the key and value of a dependent quota dimension at the same time.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * > The value range of N varies based on the number of quota dimensions that are supported by the specified Alibaba Cloud service.
+             * <strong>example:</strong>
+             * <p>regionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -168,10 +204,16 @@ public class GetProductQuotaDimensionRequest extends Request {
             }
 
             /**
-             * The value of the quota dimension on which the quota dimension that you want to query is dependent.
-             * <p>
+             * <p>The value of the quota dimension on which the target quota dimension depends.</p>
+             * <blockquote>
+             * <ul>
+             * <li>The value of N depends on the number of quota dimensions on which the target quota dimension depends.</li>
+             * <li>You must specify the key and value of a dependent quota dimension at the same time.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * > The value range of N varies based on the number of quota dimensions that are supported by the specified Alibaba Cloud service.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAlarmHistoriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAlarmHistoriesResponseBody</p>
  */
 public class ListAlarmHistoriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AlarmHistories")
-    private java.util.List < AlarmHistories> alarmHistories;
+    private java.util.List<AlarmHistories> alarmHistories;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,10 +48,14 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alarmHistories
      */
-    public java.util.List < AlarmHistories> getAlarmHistories() {
+    public java.util.List<AlarmHistories> getAlarmHistories() {
         return this.alarmHistories;
     }
 
@@ -78,22 +88,36 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AlarmHistories> alarmHistories; 
+        private java.util.List<AlarmHistories> alarmHistories; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAlarmHistoriesResponseBody model) {
+            this.alarmHistories = model.alarmHistories;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The details of the quota alert records.
+         * <p>The details of the quota alert history records.</p>
          */
-        public Builder alarmHistories(java.util.List < AlarmHistories> alarmHistories) {
+        public Builder alarmHistories(java.util.List<AlarmHistories> alarmHistories) {
             this.alarmHistories = alarmHistories;
             return this;
         }
 
         /**
-         * The maximum number of records that are returned for the query.
+         * <p>The maximum number of entries returned for the current query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +125,10 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that marks the position at which the query ends. An empty value indicates that all data is returned.
+         * <p>The token that marks the position of the returned query data. An empty value indicates that all data has been queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +136,10 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB38DDF9-B1E0-48C1-9966-19C443C2841E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records that are returned for the query.
+         * <p>The total number of entries returned for the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAlarmHistoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlarmHistoriesResponseBody</p>
+     */
     public static class AlarmHistories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmName")
         private String alarmName;
@@ -138,7 +177,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("NotifyChannels")
-        private java.util.List < String > notifyChannels;
+        private java.util.List<String> notifyChannels;
 
         @com.aliyun.core.annotation.NameInMap("NotifyTarget")
         private String notifyTarget;
@@ -195,7 +234,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         /**
          * @return notifyChannels
          */
-        public java.util.List < String > getNotifyChannels() {
+        public java.util.List<String> getNotifyChannels() {
             return this.notifyChannels;
         }
 
@@ -244,7 +283,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         public static final class Builder {
             private String alarmName; 
             private String createTime; 
-            private java.util.List < String > notifyChannels; 
+            private java.util.List<String> notifyChannels; 
             private String notifyTarget; 
             private String productCode; 
             private String quotaActionCode; 
@@ -252,8 +291,26 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             private Float threshold; 
             private Float thresholdPercent; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlarmHistories model) {
+                this.alarmName = model.alarmName;
+                this.createTime = model.createTime;
+                this.notifyChannels = model.notifyChannels;
+                this.notifyTarget = model.notifyTarget;
+                this.productCode = model.productCode;
+                this.quotaActionCode = model.quotaActionCode;
+                this.quotaUsage = model.quotaUsage;
+                this.threshold = model.threshold;
+                this.thresholdPercent = model.thresholdPercent;
+            } 
+
             /**
-             * The name of the quota alert.
+             * <p>The name of the quota alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>q_security-groups alarm</p>
              */
             public Builder alarmName(String alarmName) {
                 this.alarmName = alarmName;
@@ -261,7 +318,10 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the quota alert rule was created.
+             * <p>The time when the quota alert was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-24T09:20:09Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -269,15 +329,18 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The notification methods of the quota alert.
+             * <p>The notification channels for the quota alert.</p>
              */
-            public Builder notifyChannels(java.util.List < String > notifyChannels) {
+            public Builder notifyChannels(java.util.List<String> notifyChannels) {
                 this.notifyChannels = notifyChannels;
                 return this;
             }
 
             /**
-             * The quota alert contact.
+             * <p>The notification recipients of the quota alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accountContact</p>
              */
             public Builder notifyTarget(String notifyTarget) {
                 this.notifyTarget = notifyTarget;
@@ -285,7 +348,10 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the Alibaba Cloud service name.
+             * <p>The abbreviation of the cloud service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -293,7 +359,10 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The quota ID.
+             * <p>The quota ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>q_security-groups</p>
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;
@@ -301,7 +370,10 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The used quota.
+             * <p>The quota usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31</p>
              */
             public Builder quotaUsage(Float quotaUsage) {
                 this.quotaUsage = quotaUsage;
@@ -309,7 +381,10 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold to trigger quota alerts.
+             * <p>The value of the quota alert threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -317,7 +392,10 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the quota alert threshold.
+             * <p>The percentage of the quota alert threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder thresholdPercent(Float thresholdPercent) {
                 this.thresholdPercent = thresholdPercent;

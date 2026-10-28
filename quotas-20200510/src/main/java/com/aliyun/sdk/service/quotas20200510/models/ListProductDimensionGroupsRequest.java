@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductDimensionGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListProductDimensionGroupsRequest</p>
@@ -40,7 +46,7 @@ public class ListProductDimensionGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +89,11 @@ public class ListProductDimensionGroupsRequest extends Request {
         } 
 
         /**
-         * The maximum number of records that can be returned for the query. Valid values: 1 to 200. Default value: 30.
+         * <p>The maximum number of records to return for the query.
+         * Valid values: 1 to 200. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -92,7 +102,10 @@ public class ListProductDimensionGroupsRequest extends Request {
         }
 
         /**
-         * The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
+         * <p>The token that marks the position from which to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -101,10 +114,14 @@ public class ListProductDimensionGroupsRequest extends Request {
         }
 
         /**
-         * The service code.
-         * <p>
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <blockquote>
+         * <p>For information about how to obtain the abbreviation of an Alibaba Cloud service name, see the \<code>ProductCode\\</code> parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * <strong>example:</strong>
+         * <p>entconsole</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

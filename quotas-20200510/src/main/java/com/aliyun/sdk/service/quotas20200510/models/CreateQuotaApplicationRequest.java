@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQuotaApplicationRequest} extends {@link RequestModel}
  *
  * <p>CreateQuotaApplicationRequest</p>
@@ -22,7 +28,7 @@ public class CreateQuotaApplicationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < Dimensions> dimensions;
+    private java.util.List<Dimensions> dimensions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EffectiveTime")
@@ -82,7 +88,7 @@ public class CreateQuotaApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -104,7 +110,7 @@ public class CreateQuotaApplicationRequest extends Request {
     /**
      * @return dimensions
      */
-    public java.util.List < Dimensions> getDimensions() {
+    public java.util.List<Dimensions> getDimensions() {
         return this.dimensions;
     }
 
@@ -167,7 +173,7 @@ public class CreateQuotaApplicationRequest extends Request {
     public static final class Builder extends Request.Builder<CreateQuotaApplicationRequest, Builder> {
         private String auditMode; 
         private Float desireValue; 
-        private java.util.List < Dimensions> dimensions; 
+        private java.util.List<Dimensions> dimensions; 
         private String effectiveTime; 
         private String envLanguage; 
         private String expireTime; 
@@ -197,13 +203,13 @@ public class CreateQuotaApplicationRequest extends Request {
         } 
 
         /**
-         * The mode in which you want the application to be reviewed. Valid values:
-         * <p>
+         * <blockquote>
+         * <p>Notice: This parameter is deprecated and is not recommended.</p>
+         * </blockquote>
+         * <p>The quota review mode.</p>
          * 
-         * *   Sync: The application is reviewed in a synchronous manner. Quota Center automatically reviews the application. The result is returned immediately after you submit the application. However, the chance of an approval for an application that is reviewed in Sync mode is lower than the chance of an approval for an application that is reviewed in Async mode. The validity period of the new quota value is 1 hour.
-         * *   Async: The application is reviewed in an asynchronous manner. An Alibaba Cloud support engineer reviews the application. The chance of an approval for an application that is reviewed in Async mode is higher than the chance of an approval for an application that is reviewed in Sync mode. The validity period of the new quota value is one month.
-         * 
-         * > This parameter is available only for ECS Quotas by Instance Type.
+         * <strong>example:</strong>
+         * <p>Sync</p>
          */
         public Builder auditMode(String auditMode) {
             this.putBodyParameter("AuditMode", auditMode);
@@ -212,14 +218,17 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * The requested value of the quota.
-         * <p>
+         * <p>The requested quota value.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Set the requested quota value based on the <code>TotalUsage</code> (quota usage) and <code>ApplicableRange</code> (applicable range of the quota) of the target quota in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</li>
+         * <li>Quota increase requests are reviewed by the technical support of each cloud service. To increase the chances of approval, provide a reasonable requested value and a detailed reason when you submit the request.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   You can specify the DesireValue parameter based on the values of the `TotalUsage` and `ApplicableRange` parameters that are returned by the [ListProductQuotas](~~440554~~) operation.
-         * 
-         * *   Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit an application to increase the value of the quota.
+         * <strong>example:</strong>
+         * <p>804</p>
          */
         public Builder desireValue(Float desireValue) {
             this.putBodyParameter("DesireValue", desireValue);
@@ -228,19 +237,27 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * The quota dimensions.
+         * <p>The quota dimensions.
+         * The dimensions are attributes of the quota. The combination of dimensions (Dimensions) and quota ID (QuotaActionCode) uniquely identifies a quota.</p>
+         * <blockquote>
+         * <p>Some cloud services require dimensions. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The <code>Requisite</code> response parameter indicates whether a dimension is required.</p>
+         * </blockquote>
          */
-        public Builder dimensions(java.util.List < Dimensions> dimensions) {
+        public Builder dimensions(java.util.List<Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
         }
 
         /**
-         * The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
-         * <p>
+         * <p>The UTC time when the quota takes effect.
+         * This parameter is applicable only to privileges (WhiteListLabel). </p>
+         * <blockquote>
+         * <p>If you do not specify an effective period, the default value is 99 years from the start time of the current quota.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify an end time, the default end time is 99 years after the quota application is submitted.
+         * <strong>example:</strong>
+         * <p>2021-01-19T09:25:56Z</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putBodyParameter("EffectiveTime", effectiveTime);
@@ -249,11 +266,10 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * The language of the quota alert notification. Valid values:
-         * <p>
+         * <p>The language of the quota alert notification.</p>
          * 
-         * *   zh (default value): Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder envLanguage(String envLanguage) {
             this.putBodyParameter("EnvLanguage", envLanguage);
@@ -262,10 +278,14 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
-         * <p>
+         * <p>The UTC time when the quota expires.
+         * This parameter is applicable only to privileges (WhiteListLabel). </p>
+         * <blockquote>
+         * <p>If you do not specify an expiration time, the default value is the submission time.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify a start time, the default start time is the time when the quota application is submitted.
+         * <strong>example:</strong>
+         * <p>2021-01-20T09:25:56Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.putBodyParameter("ExpireTime", expireTime);
@@ -274,11 +294,14 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to send a notification about the application result. Valid values:
-         * <p>
+         * <p>Specifies whether to send a notification about the request result. Valid values:</p>
+         * <ul>
+         * <li>0 (default): does not send a notification.</li>
+         * <li>3: sends a notification.</li>
+         * </ul>
          * 
-         * *   0 (default value): sends a notification about the application result.
-         * *   3: A notification about the application result is sent.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder noticeType(Integer noticeType) {
             this.putBodyParameter("NoticeType", noticeType);
@@ -287,10 +310,14 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
+         * <p>The abbreviation of the cloud service name.</p>
+         * <blockquote>
+         * <p>For information about how to obtain the abbreviation of a cloud service name, see <code>ProductCode</code> in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  To query the abbreviation of an Alibaba Cloud service name, check the `ProductCode` parameter that is described in [ListProductQuotas](~~440554~~).
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -299,10 +326,14 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * The quota ID.
-         * <p>
+         * <p>The quota ID.</p>
+         * <blockquote>
+         * <p>For information about how to obtain the quota ID of a cloud service, see <code>QuotaActionCode</code> in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  To query the quota ID of an Alibaba Cloud service, check the `QuotaActionCode` parameter that is described in [ListProductQuotas](~~440554~~).
+         * <strong>example:</strong>
+         * <p>q_security-groups</p>
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -311,12 +342,11 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * The type of the quota.
-         * <p>
+         * <p>The quota type.</p>
+         * <p>Default value: CommonQuota.</p>
          * 
-         * *   CommonQuota (default value): general quota
-         * *   FlowControl: API rate limit
-         * *   WhiteListLabel: whitelist quota
+         * <strong>example:</strong>
+         * <p>CommonQuota</p>
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);
@@ -325,10 +355,14 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * The reason for the application.
-         * <p>
+         * <p>The reason for the quota increase request.</p>
+         * <blockquote>
+         * <p>Quota increase requests are reviewed by the technical support of each cloud service. To increase the chances of approval, provide a reasonable requested value and a detailed reason when you submit the request.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit an application to increase the value of the quota.
+         * <strong>example:</strong>
+         * <p>Scale Out</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("Reason", reason);
@@ -343,6 +377,12 @@ public class CreateQuotaApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateQuotaApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateQuotaApplicationRequest</p>
+     */
     public static class Dimensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -381,15 +421,22 @@ public class CreateQuotaApplicationRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of the dimension.
-             * <p>
+             * <p>The key of the quota dimension.</p>
+             * <blockquote>
+             * <p><code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> must be specified together. The valid values of N depend on the number of dimensions supported by the cloud service. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The length of the returned array is the value of N.</p>
+             * </blockquote>
              * 
-             * > 
-             * 
-             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * 
-             * *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
+             * <strong>example:</strong>
+             * <p>regionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -397,14 +444,13 @@ public class CreateQuotaApplicationRequest extends Request {
             }
 
             /**
-             * The value of the dimension.
-             * <p>
+             * <p>The value of the quota dimension.</p>
+             * <blockquote>
+             * <p><code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> must be specified together. The valid values of N depend on the number of dimensions supported by the cloud service. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The length of the returned array is the value of N.</p>
+             * </blockquote>
              * 
-             * > 
-             * 
-             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * 
-             * *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;

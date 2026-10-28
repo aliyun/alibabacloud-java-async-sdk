@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQuotaApplicationsDetailForTemplateRequest} extends {@link RequestModel}
  *
  * <p>ListQuotaApplicationsDetailForTemplateRequest</p>
@@ -63,7 +69,7 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -151,7 +157,10 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud account that is used to submit the quota increase application.
+         * <p>The Alibaba Cloud account for which the quota increase is requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135048337611****</p>
          */
         public Builder aliyunUid(String aliyunUid) {
             this.putBodyParameter("AliyunUid", aliyunUid);
@@ -160,7 +169,10 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the quota application batch.
+         * <p>The ID of the quota application batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
          */
         public Builder batchQuotaApplicationId(String batchQuotaApplicationId) {
             this.putBodyParameter("BatchQuotaApplicationId", batchQuotaApplicationId);
@@ -169,10 +181,11 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends Request {
         }
 
         /**
-         * The maximum number of records that can be returned for the query.
-         * <p>
+         * <p>The maximum number of records to return for the current query.</p>
+         * <p>Valid values: 1 to 100. Default value: 30.</p>
          * 
-         * Valid values: 1 to 100. Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -181,10 +194,13 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends Request {
         }
 
         /**
-         * The token that marks the position from which you want to start the query.
-         * <p>
+         * <p>The token that marks the position from which the query starts.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the query starts from the beginning.</p>
+         * </blockquote>
          * 
-         * >  An empty value indicates that the query starts from the beginning.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -193,10 +209,13 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <blockquote>
+         * <p>For more information about how to obtain the abbreviation of an Alibaba Cloud service name, see the <code>ProductCode</code> parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
+         * </blockquote>
          * 
-         * >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](~~440555~~) operation and check the value of `ProductCode` in the response.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -205,7 +224,10 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends Request {
         }
 
         /**
-         * The quota ID.
+         * <p>The quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c5.large</p>
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -214,12 +236,18 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends Request {
         }
 
         /**
-         * The quota type. Valid values:
-         * <p>
+         * <p>The quota type. Valid values:</p>
+         * <ul>
+         * <li><p>CommonQuota: General quota.</p>
+         * </li>
+         * <li><p>FlowControl: API rate limit quota.</p>
+         * </li>
+         * <li><p>WhiteListLabel: Privilege quota.</p>
+         * </li>
+         * </ul>
          * 
-         * *   CommonQuota: general quota
-         * *   FlowControl: API rate limit
-         * *   WhiteListLabel: privilege
+         * <strong>example:</strong>
+         * <p>CommonQuota</p>
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);
@@ -228,13 +256,20 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends Request {
         }
 
         /**
-         * The approval state of the quota increase application. Valid values:
-         * <p>
+         * <p>The approval status of the quota increase request. Valid values:</p>
+         * <ul>
+         * <li><p>Disagree: The request is rejected.</p>
+         * </li>
+         * <li><p>Agree: The request is approved.</p>
+         * </li>
+         * <li><p>Process: The request is in review.</p>
+         * </li>
+         * <li><p>Cancel: The request is closed.</p>
+         * </li>
+         * </ul>
          * 
-         * *   Disagree: The application is rejected.
-         * *   Agree: The application is approved.
-         * *   Process: The application is in review.
-         * *   Cancel: The application is canceled.
+         * <strong>example:</strong>
+         * <p>Agree</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductsRequest} extends {@link RequestModel}
  *
  * <p>ListProductsRequest</p>
@@ -34,7 +40,7 @@ public class ListProductsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,10 +74,11 @@ public class ListProductsRequest extends Request {
         } 
 
         /**
-         * The maximum number of records that can be returned for the query.
-         * <p>
+         * <p>The maximum number of entries to return for this query.</p>
+         * <p>Valid values: 1 to 200. Default value: 30.</p>
          * 
-         * Valid values: 1 to 200. Default value: 30.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -80,7 +87,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
+         * <p>The token that marks the position from which the query starts. An empty value indicates that the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);

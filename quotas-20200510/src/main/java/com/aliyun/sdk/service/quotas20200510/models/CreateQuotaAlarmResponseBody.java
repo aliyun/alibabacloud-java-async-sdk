@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQuotaAlarmResponseBody} extends {@link TeaModel}
  *
  * <p>CreateQuotaAlarmResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateQuotaAlarmResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alarmId
      */
@@ -48,8 +58,19 @@ public class CreateQuotaAlarmResponseBody extends TeaModel {
         private String alarmId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateQuotaAlarmResponseBody model) {
+            this.alarmId = model.alarmId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AlarmId.
+         * <p>The alert ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18b3be23-b7b0-4d45-91bc-d0c331aa****</p>
          */
         public Builder alarmId(String alarmId) {
             this.alarmId = alarmId;
@@ -57,7 +78,10 @@ public class CreateQuotaAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD219E2B-E687-45EE-B5F3-61FB730551B1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

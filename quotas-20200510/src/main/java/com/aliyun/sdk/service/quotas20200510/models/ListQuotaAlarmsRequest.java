@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQuotaAlarmsRequest} extends {@link RequestModel}
  *
  * <p>ListQuotaAlarmsRequest</p>
@@ -34,7 +40,7 @@ public class ListQuotaAlarmsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("QuotaDimensions")
-    private java.util.List < QuotaDimensions> quotaDimensions;
+    private java.util.List<QuotaDimensions> quotaDimensions;
 
     private ListQuotaAlarmsRequest(Builder builder) {
         super(builder);
@@ -54,7 +60,7 @@ public class ListQuotaAlarmsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +103,7 @@ public class ListQuotaAlarmsRequest extends Request {
     /**
      * @return quotaDimensions
      */
-    public java.util.List < QuotaDimensions> getQuotaDimensions() {
+    public java.util.List<QuotaDimensions> getQuotaDimensions() {
         return this.quotaDimensions;
     }
 
@@ -107,7 +113,7 @@ public class ListQuotaAlarmsRequest extends Request {
         private String nextToken; 
         private String productCode; 
         private String quotaActionCode; 
-        private java.util.List < QuotaDimensions> quotaDimensions; 
+        private java.util.List<QuotaDimensions> quotaDimensions; 
 
         private Builder() {
             super();
@@ -124,7 +130,10 @@ public class ListQuotaAlarmsRequest extends Request {
         } 
 
         /**
-         * The name of the alert.
+         * <p>The name of the quota usage alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q_hvnoqv alarm</p>
          */
         public Builder alarmName(String alarmName) {
             this.putBodyParameter("AlarmName", alarmName);
@@ -133,10 +142,11 @@ public class ListQuotaAlarmsRequest extends Request {
         }
 
         /**
-         * The maximum number of records that you want to return for the query.
-         * <p>
+         * <p>The maximum number of records to return.</p>
+         * <p>Valid values: 1 to 200. Default value: 30.</p>
          * 
-         * Valid values: 1 to 200. Default value: 30.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -145,10 +155,13 @@ public class ListQuotaAlarmsRequest extends Request {
         }
 
         /**
-         * The token that marks the position from which you want to start the query.
-         * <p>
+         * <p>The token that specifies the start point of the query.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the query starts from the beginning.</p>
+         * </blockquote>
          * 
-         * > An empty value indicates that the query starts from the beginning.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -157,10 +170,13 @@ public class ListQuotaAlarmsRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <blockquote>
+         * <p>To obtain the abbreviation of an Alibaba Cloud service name, see the <code>ProductCode</code> parameter in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+         * </blockquote>
          * 
-         * >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](~~440554~~) operation and check the value of `ProductCode` in the response.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -169,14 +185,18 @@ public class ListQuotaAlarmsRequest extends Request {
         }
 
         /**
-         * The quota ID.
-         * <p>
+         * <p>The quota ID.</p>
+         * <blockquote>
+         * <ul>
+         * <li><p>To obtain the quota ID of an Alibaba Cloud service, see the <code>QuotaActionCode</code> parameter in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+         * </li>
+         * <li><p>If you specify this parameter, you must also specify <code>ProductCode</code>.</p>
+         * </li>
+         * </ul>
+         * </blockquote>
          * 
-         * > 
-         * 
-         * *   To obtain the quota ID of a cloud service, call the [ListProductQuotas](~~440554~~) operation and check the value of `QuotaActionCode` in the response.
-         * 
-         * *   If you specify this parameter, you must specify `ProductCode`.
+         * <strong>example:</strong>
+         * <p>q_hvnoqv</p>
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -185,9 +205,9 @@ public class ListQuotaAlarmsRequest extends Request {
         }
 
         /**
-         * The quota dimensions.
+         * <p>The quota dimensions.</p>
          */
-        public Builder quotaDimensions(java.util.List < QuotaDimensions> quotaDimensions) {
+        public Builder quotaDimensions(java.util.List<QuotaDimensions> quotaDimensions) {
             this.putBodyParameter("QuotaDimensions", quotaDimensions);
             this.quotaDimensions = quotaDimensions;
             return this;
@@ -200,6 +220,12 @@ public class ListQuotaAlarmsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListQuotaAlarmsRequest} extends {@link TeaModel}
+     *
+     * <p>ListQuotaAlarmsRequest</p>
+     */
     public static class QuotaDimensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -238,15 +264,27 @@ public class ListQuotaAlarmsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(QuotaDimensions model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of the dimension.
-             * <p>
+             * <p>The key of the quota dimension.</p>
+             * <blockquote>
+             * <ul>
+             * <li><p>The number of key-value pairs that you can specify for the quota dimensions varies based on the Alibaba Cloud service.</p>
+             * </li>
+             * <li><p>If you set <code>ProductCode</code> to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>, you must specify both the key and value for the quota dimension.</p>
+             * </li>
+             * </ul>
+             * </blockquote>
              * 
-             * > 
-             * 
-             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * 
-             * *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
+             * <strong>example:</strong>
+             * <p>regionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,14 +292,18 @@ public class ListQuotaAlarmsRequest extends Request {
             }
 
             /**
-             * The value of the dimension.
-             * <p>
+             * <p>The value of the quota dimension.</p>
+             * <blockquote>
+             * <ul>
+             * <li><p>The number of key-value pairs that you can specify for the quota dimensions varies based on the Alibaba Cloud service.</p>
+             * </li>
+             * <li><p>If you set <code>ProductCode</code> to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>, you must specify both the key and value for the quota dimension.</p>
+             * </li>
+             * </ul>
+             * </blockquote>
              * 
-             * > 
-             * 
-             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * 
-             * *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;

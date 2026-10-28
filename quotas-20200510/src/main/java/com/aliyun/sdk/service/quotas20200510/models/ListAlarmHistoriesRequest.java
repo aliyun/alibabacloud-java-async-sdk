@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAlarmHistoriesRequest} extends {@link RequestModel}
  *
  * <p>ListAlarmHistoriesRequest</p>
@@ -58,7 +64,7 @@ public class ListAlarmHistoriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,7 +143,10 @@ public class ListAlarmHistoriesRequest extends Request {
         } 
 
         /**
-         * The ID of the alert.
+         * <p>The alert ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18b3be23-b7b0-4d45-91bc-d0c331aa****</p>
          */
         public Builder alarmId(String alarmId) {
             this.putBodyParameter("AlarmId", alarmId);
@@ -146,7 +155,10 @@ public class ListAlarmHistoriesRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
+         * <p>The end time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20201024</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -155,7 +167,10 @@ public class ListAlarmHistoriesRequest extends Request {
         }
 
         /**
-         * The keyword that is used for the query.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Quantity</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -164,10 +179,11 @@ public class ListAlarmHistoriesRequest extends Request {
         }
 
         /**
-         * The maximum number of records that can be returned for the query.
-         * <p>
+         * <p>The maximum number of entries to return for the current query.</p>
+         * <p>Valid values: 1 to 200. Default value: 30.</p>
          * 
-         * Valid values: 1 to 200. Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -176,7 +192,10 @@ public class ListAlarmHistoriesRequest extends Request {
         }
 
         /**
-         * The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
+         * <p>The token that specifies the starting position of the query. An empty value indicates that the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -185,10 +204,13 @@ public class ListAlarmHistoriesRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
+         * <p>The abbreviation of the cloud service name.</p>
+         * <blockquote>
+         * <p>For more information about the cloud services that support Quota Center, see <a href="https://help.aliyun.com/document_detail/182368.html">Cloud services that support Quota Center</a>.</p>
+         * </blockquote>
          * 
-         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -197,7 +219,10 @@ public class ListAlarmHistoriesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
+         * <p>The start time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20201020</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

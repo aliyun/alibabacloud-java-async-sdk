@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductQuotaDimensionsRequest} extends {@link RequestModel}
  *
  * <p>ListProductQuotaDimensionsRequest</p>
@@ -45,7 +51,7 @@ public class ListProductQuotaDimensionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,10 +103,11 @@ public class ListProductQuotaDimensionsRequest extends Request {
         } 
 
         /**
-         * The maximum number of records that can be returned for the query.
-         * <p>
+         * <p>The maximum number of entries to return for this query.</p>
+         * <p>Valid values: 1 to 200. Default value: 30.</p>
          * 
-         * Valid values: 1 to 200. Default value: 30.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -109,7 +116,10 @@ public class ListProductQuotaDimensionsRequest extends Request {
         }
 
         /**
-         * The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
+         * <p>The pagination token that specifies the starting position of the query. If you leave this parameter empty, the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -118,10 +128,14 @@ public class ListProductQuotaDimensionsRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
+         * <p>The abbreviated name of the cloud service.</p>
+         * <blockquote>
+         * <p>For more information about how to obtain the abbreviated name of a cloud service, see <code>ProductCode</code> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * <strong>example:</strong>
+         * <p>disk</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -130,11 +144,19 @@ public class ListProductQuotaDimensionsRequest extends Request {
         }
 
         /**
-         * The type of the quota. Valid values:
-         * <p>
+         * <p>The quota category. Valid values:</p>
+         * <ul>
+         * <li><p>FlowControl: API rate limits.</p>
+         * </li>
+         * <li><p>CommonQuota: general quotas. This is the default value.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Privileges (WhiteListLabel) do not have quota dimensions.</p>
+         * </blockquote>
          * 
-         * *   FlowControl: API rate limit.
-         * *   CommonQuota: general quota. This is the default value.
+         * <strong>example:</strong>
+         * <p>CommonQuota</p>
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);

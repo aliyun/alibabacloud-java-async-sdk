@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTemplateQuotaItemRequest} extends {@link RequestModel}
  *
  * <p>CreateTemplateQuotaItemRequest</p>
@@ -18,7 +24,7 @@ public class CreateTemplateQuotaItemRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < Dimensions> dimensions;
+    private java.util.List<Dimensions> dimensions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EffectiveTime")
@@ -71,7 +77,7 @@ public class CreateTemplateQuotaItemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -86,7 +92,7 @@ public class CreateTemplateQuotaItemRequest extends Request {
     /**
      * @return dimensions
      */
-    public java.util.List < Dimensions> getDimensions() {
+    public java.util.List<Dimensions> getDimensions() {
         return this.dimensions;
     }
 
@@ -141,7 +147,7 @@ public class CreateTemplateQuotaItemRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateTemplateQuotaItemRequest, Builder> {
         private Float desireValue; 
-        private java.util.List < Dimensions> dimensions; 
+        private java.util.List<Dimensions> dimensions; 
         private String effectiveTime; 
         private String envLanguage; 
         private String expireTime; 
@@ -168,14 +174,17 @@ public class CreateTemplateQuotaItemRequest extends Request {
         } 
 
         /**
-         * The requested value of the quota.
-         * <p>
+         * <p>The requested quota value.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Set the requested quota value based on the <code>TotalUsage</code> (quota usage) and <code>ApplicableRange</code> (applicable range for the quota item) of the target quota in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</li>
+         * <li>Quota applications are reviewed by the technical support team of each cloud service. To increase the approval rate, specify a reasonable requested value and provide a detailed reason when you apply for a quota increase.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   You can specify DesireValue based on the values of `TotalUsage` and `ApplicableRange` in the response to the [ListProductQuotas](~~440554~~) operation.
-         * 
-         * *   Applications are reviewed by the technical support team for each cloud service. To increase the success rate of your application, specify a reasonable quota value and a detailed reason.
+         * <strong>example:</strong>
+         * <p>804</p>
          */
         public Builder desireValue(Float desireValue) {
             this.putBodyParameter("DesireValue", desireValue);
@@ -184,19 +193,23 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The quota dimensions.
+         * <p>The quota dimensions.</p>
          */
-        public Builder dimensions(java.util.List < Dimensions> dimensions) {
+        public Builder dimensions(java.util.List<Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
         }
 
         /**
-         * The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
-         * <p>
+         * <p>The UTC time when the quota takes effect.
+         * This parameter applies only to privileges (WhiteListLabel). </p>
+         * <blockquote>
+         * <p>An empty value indicates that the quota takes effect immediately.</p>
+         * </blockquote>
          * 
-         * > If you leave this parameter empty, the quota takes effect immediately.
+         * <strong>example:</strong>
+         * <p>2021-01-19T09:25:56Z</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putBodyParameter("EffectiveTime", effectiveTime);
@@ -205,11 +218,14 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The language of the quota alert notification. Valid values:
-         * <p>
+         * <p>The language of the quota alert notification. Valid values:</p>
+         * <ul>
+         * <li>zh (default): Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
          * 
-         * *   zh (default value): Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder envLanguage(String envLanguage) {
             this.putBodyParameter("EnvLanguage", envLanguage);
@@ -218,10 +234,14 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
-         * <p>
+         * <p>The UTC time when the quota expires.
+         * This parameter applies only to privileges (WhiteListLabel). </p>
+         * <blockquote>
+         * <p>An empty value indicates that no UTC expiration time is specified.</p>
+         * </blockquote>
          * 
-         * > If you leave this parameter empty, no end time is specified.
+         * <strong>example:</strong>
+         * <p>2021-01-20T09:25:56Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.putBodyParameter("ExpireTime", expireTime);
@@ -230,11 +250,14 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * Specifies whether to send a notification about the application result. Valid values:
-         * <p>
+         * <p>Specifies whether to send a notification for the quota application result. Valid values:</p>
+         * <ul>
+         * <li>0 (default): No.</li>
+         * <li>3: Yes.</li>
+         * </ul>
          * 
-         * *   0 (default value): no
-         * *   3: yes
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder noticeType(Long noticeType) {
             this.putBodyParameter("NoticeType", noticeType);
@@ -243,10 +266,14 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
+         * <p>The abbreviation of the cloud service.</p>
+         * <blockquote>
+         * <p>For information about how to obtain the abbreviation of a cloud service, see <code>ProductCode</code> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](~~440555~~) operation and check the value of `ProductCode` in the response.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -255,10 +282,14 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The quota ID.
-         * <p>
+         * <p>The quota ID.</p>
+         * <blockquote>
+         * <p>For information about how to obtain the quota ID of a cloud service, see <code>QuotaActionCode</code> in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  To obtain the quota ID of an Alibaba Cloud service, call the [ListProductQuotas](~~440554~~) operation and check the value of `QuotaActionCode` in the response.
+         * <strong>example:</strong>
+         * <p>q_security-groups</p>
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -267,12 +298,15 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The quota type. Valid values:
-         * <p>
+         * <p>The quota category. Valid values:</p>
+         * <ul>
+         * <li>CommonQuota: general quota.</li>
+         * <li>WhiteListLabel: privilege.</li>
+         * <li>FlowControl: API rate limit.</li>
+         * </ul>
          * 
-         * *   CommonQuota: general quota
-         * *   WhiteListLabel: privilege
-         * *   FlowControl: API rate limit
+         * <strong>example:</strong>
+         * <p>CommonQuota</p>
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);
@@ -287,6 +321,12 @@ public class CreateTemplateQuotaItemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTemplateQuotaItemRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTemplateQuotaItemRequest</p>
+     */
     public static class Dimensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -325,15 +365,25 @@ public class CreateTemplateQuotaItemRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of the dimension.
-             * <p>
+             * <p>The key of the quota dimension.</p>
+             * <blockquote>
+             * <ul>
+             * <li>The value range of N depends on the number of dimensions supported by the cloud service.</li>
+             * <li>If <code>ProductCode</code> is <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>, you must specify both the key and the value of the quota dimension.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * > 
-             * 
-             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * 
-             * *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
+             * <strong>example:</strong>
+             * <p>regionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -341,14 +391,16 @@ public class CreateTemplateQuotaItemRequest extends Request {
             }
 
             /**
-             * The value of the dimension.
-             * <p>
+             * <p>The value of the quota dimension.</p>
+             * <blockquote>
+             * <ul>
+             * <li>The value range of N depends on the number of dimensions supported by the cloud service.</li>
+             * <li>If <code>ProductCode</code> is <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>, you must specify both the key and the value of the quota dimension.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * > 
-             * 
-             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * 
-             * *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;

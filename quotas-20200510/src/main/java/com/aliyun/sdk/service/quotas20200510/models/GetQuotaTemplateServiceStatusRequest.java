@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQuotaTemplateServiceStatusRequest} extends {@link RequestModel}
  *
  * <p>GetQuotaTemplateServiceStatusRequest</p>
@@ -28,7 +34,7 @@ public class GetQuotaTemplateServiceStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -53,7 +59,10 @@ public class GetQuotaTemplateServiceStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the resource directory.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-pG****</p>
          */
         public Builder resourceDirectoryId(String resourceDirectoryId) {
             this.putBodyParameter("ResourceDirectoryId", resourceDirectoryId);

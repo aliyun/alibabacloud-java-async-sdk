@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductQuotaDimensionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProductQuotaDimensionsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("QuotaDimensions")
-    private java.util.List < QuotaDimensions> quotaDimensions;
+    private java.util.List<QuotaDimensions> quotaDimensions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,6 +48,10 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -59,7 +69,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     /**
      * @return quotaDimensions
      */
-    public java.util.List < QuotaDimensions> getQuotaDimensions() {
+    public java.util.List<QuotaDimensions> getQuotaDimensions() {
         return this.quotaDimensions;
     }
 
@@ -80,12 +90,26 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < QuotaDimensions> quotaDimensions; 
+        private java.util.List<QuotaDimensions> quotaDimensions; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListProductQuotaDimensionsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.quotaDimensions = model.quotaDimensions;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The maximum number of records that are returned for the query.
+         * <p>The maximum number of entries returned for this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +117,10 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that marks the position at which the query ends. An empty value indicates that all data is returned.
+         * <p>The pagination token that indicates the position of the returned data. If this parameter is not returned, it indicates that all data has been queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,15 +128,18 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The quota dimensions.
+         * <p>The quota dimensions.</p>
          */
-        public Builder quotaDimensions(java.util.List < QuotaDimensions> quotaDimensions) {
+        public Builder quotaDimensions(java.util.List<QuotaDimensions> quotaDimensions) {
             this.quotaDimensions = quotaDimensions;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ED584FB-ECBF-4A2A-969D-F54D25EFABF9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records that are returned for the query.
+         * <p>The total number of entries returned for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductQuotaDimensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductQuotaDimensionsResponseBody</p>
+     */
     public static class DependentDimensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -168,8 +207,19 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DependentDimensions model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of the quota dimension on which the quota dimension that you want to query is dependent.
+             * <p>The key of the quota dimension on which the target quota dimension depends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +227,10 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the quota dimension on which the quota dimension that you want to query is dependent.
+             * <p>The value of the quota dimension on which the target quota dimension depends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,9 +244,15 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProductQuotaDimensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductQuotaDimensionsResponseBody</p>
+     */
     public static class DimensionValueDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DependentDimensions")
-        private java.util.List < DependentDimensions> dependentDimensions;
+        private java.util.List<DependentDimensions> dependentDimensions;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -218,7 +277,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         /**
          * @return dependentDimensions
          */
-        public java.util.List < DependentDimensions> getDependentDimensions() {
+        public java.util.List<DependentDimensions> getDependentDimensions() {
             return this.dependentDimensions;
         }
 
@@ -237,20 +296,32 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DependentDimensions> dependentDimensions; 
+            private java.util.List<DependentDimensions> dependentDimensions; 
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DimensionValueDetail model) {
+                this.dependentDimensions = model.dependentDimensions;
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * The quota dimensions on which the quota dimension that you want to query is dependent.
+             * <p>The quota dimensions on which the target quota dimension depends.</p>
              */
-            public Builder dependentDimensions(java.util.List < DependentDimensions> dependentDimensions) {
+            public Builder dependentDimensions(java.util.List<DependentDimensions> dependentDimensions) {
                 this.dependentDimensions = dependentDimensions;
                 return this;
             }
 
             /**
-             * The name of the quota dimension.
+             * <p>The name of the quota dimension value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -258,7 +329,10 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the quota dimension.
+             * <p>The value of the quota dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -272,18 +346,24 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProductQuotaDimensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductQuotaDimensionsResponseBody</p>
+     */
     public static class QuotaDimensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DependentDimensions")
-        private java.util.List < String > dependentDimensions;
+        private java.util.List<String> dependentDimensions;
 
         @com.aliyun.core.annotation.NameInMap("DimensionKey")
         private String dimensionKey;
 
         @com.aliyun.core.annotation.NameInMap("DimensionValueDetail")
-        private java.util.List < DimensionValueDetail> dimensionValueDetail;
+        private java.util.List<DimensionValueDetail> dimensionValueDetail;
 
         @com.aliyun.core.annotation.NameInMap("DimensionValues")
-        private java.util.List < String > dimensionValues;
+        private java.util.List<String> dimensionValues;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -311,7 +391,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         /**
          * @return dependentDimensions
          */
-        public java.util.List < String > getDependentDimensions() {
+        public java.util.List<String> getDependentDimensions() {
             return this.dependentDimensions;
         }
 
@@ -325,14 +405,14 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         /**
          * @return dimensionValueDetail
          */
-        public java.util.List < DimensionValueDetail> getDimensionValueDetail() {
+        public java.util.List<DimensionValueDetail> getDimensionValueDetail() {
             return this.dimensionValueDetail;
         }
 
         /**
          * @return dimensionValues
          */
-        public java.util.List < String > getDimensionValues() {
+        public java.util.List<String> getDimensionValues() {
             return this.dimensionValues;
         }
 
@@ -351,29 +431,50 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > dependentDimensions; 
+            private java.util.List<String> dependentDimensions; 
             private String dimensionKey; 
-            private java.util.List < DimensionValueDetail> dimensionValueDetail; 
-            private java.util.List < String > dimensionValues; 
+            private java.util.List<DimensionValueDetail> dimensionValueDetail; 
+            private java.util.List<String> dimensionValues; 
             private String name; 
             private Boolean requisite; 
 
+            private Builder() {
+            } 
+
+            private Builder(QuotaDimensions model) {
+                this.dependentDimensions = model.dependentDimensions;
+                this.dimensionKey = model.dimensionKey;
+                this.dimensionValueDetail = model.dimensionValueDetail;
+                this.dimensionValues = model.dimensionValues;
+                this.name = model.name;
+                this.requisite = model.requisite;
+            } 
+
             /**
-             * The quota dimensions on which the quota dimension that you want to query is dependent.
+             * <p>The quota dimensions on which the target quota dimension depends.</p>
              */
-            public Builder dependentDimensions(java.util.List < String > dependentDimensions) {
+            public Builder dependentDimensions(java.util.List<String> dependentDimensions) {
                 this.dependentDimensions = dependentDimensions;
                 return this;
             }
 
             /**
-             * The key of the quota dimension. Valid values:
-             * <p>
+             * <p>The key of the quota dimension. Valid values:</p>
+             * <ul>
+             * <li><p>regionId: the region ID.</p>
+             * </li>
+             * <li><p>zoneId: the zone ID.</p>
+             * </li>
+             * <li><p>chargeType: the billing method.</p>
+             * </li>
+             * <li><p>networkType: the network type.</p>
+             * </li>
+             * <li><p>resourceType: the resource type.</p>
+             * </li>
+             * </ul>
              * 
-             * *   regionId: the region ID.
-             * *   zoneId: the zone ID.
-             * *   chargeType: the billing method.
-             * *   networkType: the network type.
+             * <strong>example:</strong>
+             * <p>zoneId</p>
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -381,23 +482,26 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the dimension value.
+             * <p>The details of the quota dimension value.</p>
              */
-            public Builder dimensionValueDetail(java.util.List < DimensionValueDetail> dimensionValueDetail) {
+            public Builder dimensionValueDetail(java.util.List<DimensionValueDetail> dimensionValueDetail) {
                 this.dimensionValueDetail = dimensionValueDetail;
                 return this;
             }
 
             /**
-             * The dimension values.
+             * <p>The list of quota dimension values.</p>
              */
-            public Builder dimensionValues(java.util.List < String > dimensionValues) {
+            public Builder dimensionValues(java.util.List<String> dimensionValues) {
                 this.dimensionValues = dimensionValues;
                 return this;
             }
 
             /**
-             * The name of the quota dimension.
+             * <p>The name of the quota dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zone</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -405,11 +509,16 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the quota dimension is required when you query quota dimensions. Valid values:
-             * <p>
+             * <p>Specifies whether the quota dimension is required when you query quota dimensions. Valid values:</p>
+             * <ul>
+             * <li><p>true: The quota dimension is required.</p>
+             * </li>
+             * <li><p>false: The quota dimension is optional.</p>
+             * </li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder requisite(Boolean requisite) {
                 this.requisite = requisite;

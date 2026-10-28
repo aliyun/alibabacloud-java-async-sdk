@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductQuotasRequest} extends {@link RequestModel}
  *
  * <p>ListProductQuotasRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListProductQuotasRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < Dimensions> dimensions;
+    private java.util.List<Dimensions> dimensions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("GroupCode")
@@ -74,7 +80,7 @@ public class ListProductQuotasRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +88,7 @@ public class ListProductQuotasRequest extends Request {
     /**
      * @return dimensions
      */
-    public java.util.List < Dimensions> getDimensions() {
+    public java.util.List<Dimensions> getDimensions() {
         return this.dimensions;
     }
 
@@ -150,7 +156,7 @@ public class ListProductQuotasRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListProductQuotasRequest, Builder> {
-        private java.util.List < Dimensions> dimensions; 
+        private java.util.List<Dimensions> dimensions; 
         private String groupCode; 
         private String keyWord; 
         private Integer maxResults; 
@@ -180,16 +186,19 @@ public class ListProductQuotasRequest extends Request {
         } 
 
         /**
-         * The quota dimensions.
+         * <p>The quota dimensions.</p>
          */
-        public Builder dimensions(java.util.List < Dimensions> dimensions) {
+        public Builder dimensions(java.util.List<Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
         }
 
         /**
-         * The code of the dimension group.
+         * <p>The code of the dimension group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>entconsole_w1j3ms****</p>
          */
         public Builder groupCode(String groupCode) {
             this.putBodyParameter("GroupCode", groupCode);
@@ -198,7 +207,13 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * The keyword that you want to use to search for the quotas.
+         * <p>The search keyword for the quota.</p>
+         * <blockquote>
+         * <p>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). The search scope includes <code>QuotaName</code> and <code>QuotaActionCode</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>security</p>
          */
         public Builder keyWord(String keyWord) {
             this.putBodyParameter("KeyWord", keyWord);
@@ -207,10 +222,11 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * The maximum number of records that can be returned for the query.
-         * <p>
+         * <p>The maximum number of entries to return in a single request.</p>
+         * <p>Valid values: 1 to 100. Default value: 30.</p>
          * 
-         * Valid values: 1 to 100. Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -219,7 +235,14 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
+         * <p>The token used to retrieve the next page of results.</p>
+         * <ul>
+         * <li>Leave this parameter empty for the first request or when no more results are available.</li>
+         * <li>If more results are available, set this parameter to the NextToken value returned when you invoke the previous API call.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -228,10 +251,14 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
+         * <p>The abbreviation of the cloud service.</p>
+         * <blockquote>
+         * <p>For more information about how to obtain the abbreviation of a cloud service, see <code>ProductCode</code> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](~~440555~~) operation and check the value of the `ProductCode` parameter.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -240,7 +267,10 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * The quota ID.
+         * <p>The ID of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q_security-groups</p>
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -249,12 +279,11 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * The type of the quota. Valid values:
-         * <p>
+         * <p>The quota category.</p>
+         * <p>Default value: CommonQuota.</p>
          * 
-         * *   CommonQuota (default value): general quota
-         * *   FlowControl: API rate limit
-         * *   WhiteListLabel: whitelist quota
+         * <strong>example:</strong>
+         * <p>FlowControl</p>
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);
@@ -263,14 +292,13 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * The field based on which you want to sort the returned records. Valid values:
-         * <p>
+         * <p>The sorting method supported by the quota.</p>
+         * <blockquote>
+         * <p>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). If no Settings are specified, it is left empty.</p>
+         * </blockquote>
          * 
-         * *   TIME: The returned records are sorted by the last update time.
-         * *   TOTAL: The returned records are sorted by the usage of the total quota.
-         * *   RESERVED: The returned records are sorted by the usage of the reserved quota.
-         * 
-         * >  This parameter is available only for quotas that belong to ECS Quotas by Instance Type. You can leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>TIME</p>
          */
         public Builder sortField(String sortField) {
             this.putBodyParameter("SortField", sortField);
@@ -279,13 +307,13 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the returned records. Valid values:
-         * <p>
+         * <p>The sorting method supported by the quota.</p>
+         * <blockquote>
+         * <p>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). If no Settings are specified, it is left empty.</p>
+         * </blockquote>
          * 
-         * *   Ascending: ascending order
-         * *   Descending: descending order
-         * 
-         * >  This parameter is available only for quotas that belong to ECS Quotas by Instance Type. You can leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>Ascending</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putBodyParameter("SortOrder", sortOrder);
@@ -300,6 +328,12 @@ public class ListProductQuotasRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductQuotasRequest} extends {@link TeaModel}
+     *
+     * <p>ListProductQuotasRequest</p>
+     */
     public static class Dimensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -338,11 +372,22 @@ public class ListProductQuotasRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of the dimension.
-             * <p>
+             * <p>The key of the quota dimension.</p>
+             * <blockquote>
+             * <p>The value range of N depends on the number of dimensions supported by the corresponding cloud service.</p>
+             * </blockquote>
              * 
-             * >  The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * <strong>example:</strong>
+             * <p>regionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -350,10 +395,13 @@ public class ListProductQuotasRequest extends Request {
             }
 
             /**
-             * The value of the dimension.
-             * <p>
+             * <p>The value of the quota dimension.</p>
+             * <blockquote>
+             * <p>The value range of N depends on the number of dimensions supported by the corresponding cloud service.</p>
+             * </blockquote>
              * 
-             * >  The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;

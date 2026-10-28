@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateQuotaAlarmRequest} extends {@link RequestModel}
  *
  * <p>UpdateQuotaAlarmRequest</p>
@@ -56,7 +62,7 @@ public class UpdateQuotaAlarmRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -126,10 +132,14 @@ public class UpdateQuotaAlarmRequest extends Request {
         } 
 
         /**
-         * The ID of the quota alert.
-         * <p>
+         * <p>The ID of the quota alert.</p>
+         * <blockquote>
+         * <p>For more information about how to obtain the ID of a quota alert, see <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListQuotaAlarms](~~440561~~) operation to obtain the ID of a quota alert.
+         * <strong>example:</strong>
+         * <p>a2efa7fc-832f-47bb-8054-39e28012****</p>
          */
         public Builder alarmId(String alarmId) {
             this.putBodyParameter("AlarmId", alarmId);
@@ -138,10 +148,14 @@ public class UpdateQuotaAlarmRequest extends Request {
         }
 
         /**
-         * The name of the quota alert.
-         * <p>
+         * <p>The name of the quota alert.</p>
+         * <blockquote>
+         * <p>For more information about how to obtain the name of a quota alert, see <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListQuotaAlarms](~~440561~~) operation to obtain the name of a quota alert.
+         * <strong>example:</strong>
+         * <p>rules</p>
          */
         public Builder alarmName(String alarmName) {
             this.putBodyParameter("AlarmName", alarmName);
@@ -150,13 +164,19 @@ public class UpdateQuotaAlarmRequest extends Request {
         }
 
         /**
-         * The numeric value of the alert threshold. Valid values:
-         * <p>
+         * <p>The numeric value of the alert threshold. Valid values:</p>
+         * <ul>
+         * <li><p>If you set <code>ThresholdType</code> to <code>used</code>, an alert is triggered when the used quota is greater than or equal to this value. The alert threshold must be greater than the current used quota.</p>
+         * </li>
+         * <li><p>If you set <code>ThresholdType</code> to <code>usable</code>, an alert is triggered when the usable quota is less than or equal to this value. The alert threshold must be less than the current usable quota.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>You must set either Threshold or ThresholdPercent.</p>
+         * </blockquote>
          * 
-         * *   If you set the `ThresholdType` parameter to `used`, you will receive an alert notification when the used quota is greater than or equal to the preset alert threshold. The alert threshold must be greater than the current used quota.
-         * *   If you set the `ThresholdType` parameter to `usable`, you will receive an alert notification when the available quota is less than or equal to the preset alert threshold. The alert threshold must be less than the current available quota.
-         * 
-         * > You must set one of the Threshold and ThresholdPercent parameters.
+         * <strong>example:</strong>
+         * <p>160</p>
          */
         public Builder threshold(Float threshold) {
             this.putBodyParameter("Threshold", threshold);
@@ -165,13 +185,19 @@ public class UpdateQuotaAlarmRequest extends Request {
         }
 
         /**
-         * The percentage of the alert threshold. Valid values:
-         * <p>
+         * <p>The percentage of the alert threshold. Valid values:</p>
+         * <ul>
+         * <li><p>If you set <code>ThresholdType</code> to <code>used</code>, an alert is triggered when the percentage of the used quota is greater than or equal to this value. The value must be in the range of (50%, 100%].</p>
+         * </li>
+         * <li><p>If you set <code>ThresholdType</code> to <code>usable</code>, an alert is triggered when the percentage of the usable quota is less than or equal to this value. The value must be in the range of (0%, 50%].</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>You must set either Threshold or ThresholdPercent.</p>
+         * </blockquote>
          * 
-         * *   If you set `ThresholdType` to `used`, you receive an alert notification when the used quota is greater than or equal to the preset percentage of the alert threshold. Value range: (50%, 100%].
-         * *   If you set `ThresholdType` to `usable`, you receive an alert notification when the available quota is less than or equal to the preset percentage of the alert threshold. Value range: (0%, 50%].
-         * 
-         * >  You must set one of Threshold and ThresholdPercent.
+         * <strong>example:</strong>
+         * <p>51</p>
          */
         public Builder thresholdPercent(Float thresholdPercent) {
             this.putBodyParameter("ThresholdPercent", thresholdPercent);
@@ -180,11 +206,16 @@ public class UpdateQuotaAlarmRequest extends Request {
         }
 
         /**
-         * The type of the quota alert. Valid values:
-         * <p>
+         * <p>The type of the quota alert. Valid values:</p>
+         * <ul>
+         * <li><p>used (default): The alert is triggered based on the used quota.</p>
+         * </li>
+         * <li><p>usable: The alert is triggered based on the usable quota.</p>
+         * </li>
+         * </ul>
          * 
-         * *   used (default): The alert is created for the used quota.
-         * *   usable: The alert is created for the available quota.
+         * <strong>example:</strong>
+         * <p>usable</p>
          */
         public Builder thresholdType(String thresholdType) {
             this.putBodyParameter("ThresholdType", thresholdType);
@@ -193,7 +224,10 @@ public class UpdateQuotaAlarmRequest extends Request {
         }
 
         /**
-         * The webhook URL. Quota Center sends alert notifications to the specified URL by using HTTP POST requests.
+         * <p>The webhook URL. Quota Center sends alert notifications to this URL using an HTTP POST request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://alert.aliyun.com/callback">https://alert.aliyun.com/callback</a></p>
          */
         public Builder webHook(String webHook) {
             this.putBodyParameter("WebHook", webHook);

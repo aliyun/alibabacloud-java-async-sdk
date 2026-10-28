@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQuotaApplicationsForTemplateRequest} extends {@link RequestModel}
  *
  * <p>ListQuotaApplicationsForTemplateRequest</p>
@@ -63,7 +69,7 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -151,7 +157,13 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         } 
 
         /**
-         * The UTC time when the quota application ends.
+         * <p>The end of the time range to query. The value is in UTC.</p>
+         * <blockquote>
+         * <p>The interval between <code>ApplyStartTime</code> and <code>ApplyEndTime</code> must be 7 days or less. If you do not set these two parameters, quota applications submitted within the last 7 days are queried.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-22T16:00:00Z</p>
          */
         public Builder applyEndTime(String applyEndTime) {
             this.putBodyParameter("ApplyEndTime", applyEndTime);
@@ -160,7 +172,13 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * The UTC time when the quota application starts.
+         * <p>The beginning of the time range to query. The value is in UTC.</p>
+         * <blockquote>
+         * <p>The interval between <code>ApplyStartTime</code> and <code>ApplyEndTime</code> must be 7 days or less. If you do not set these two parameters, quota applications submitted within the last 7 days are queried.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-22T16:00:00Z</p>
          */
         public Builder applyStartTime(String applyStartTime) {
             this.putBodyParameter("ApplyStartTime", applyStartTime);
@@ -169,7 +187,10 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the quota application batch.
+         * <p>The ID of the batch quota application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
          */
         public Builder batchQuotaApplicationId(String batchQuotaApplicationId) {
             this.putBodyParameter("BatchQuotaApplicationId", batchQuotaApplicationId);
@@ -178,10 +199,11 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request.
-         * <p>
+         * <p>The maximum number of results to return for a single request.</p>
+         * <p>Valid values: 1 to 100. Default value: 30.</p>
          * 
-         * Valid values: 1 to 100. Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -190,10 +212,13 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * The token that marks the position from which you want to start the query.
-         * <p>
+         * <p>The token that marks the start of the data to read.</p>
+         * <blockquote>
+         * <p>If you do not set this parameter, the query starts from the beginning.</p>
+         * </blockquote>
          * 
-         * >  An empty value indicates that the query starts from the beginning.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -202,10 +227,13 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
+         * <p>The abbreviation of the Alibaba Cloud service.</p>
+         * <blockquote>
+         * <p>For more information about how to obtain the abbreviation of an Alibaba Cloud service, see the <code>ProductCode</code> parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
+         * </blockquote>
          * 
-         * >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](~~440555~~) operation and check the value of `ProductCode` in the response.
+         * <strong>example:</strong>
+         * <p>ecs-spec</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -214,7 +242,10 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * The quota ID.
+         * <p>The quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.2xlarge</p>
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -223,12 +254,18 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * The quota type. Valid values:
-         * <p>
+         * <p>The type of the quota. Valid values:</p>
+         * <ul>
+         * <li><p>CommonQuota: general quota.</p>
+         * </li>
+         * <li><p>FlowControl: API rate limit.</p>
+         * </li>
+         * <li><p>WhiteListLabel: privilege.</p>
+         * </li>
+         * </ul>
          * 
-         * *   CommonQuota: general quota
-         * *   FlowControl: API rate limit
-         * *   WhiteListLabel: privilege
+         * <strong>example:</strong>
+         * <p>CommonQuota</p>
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);

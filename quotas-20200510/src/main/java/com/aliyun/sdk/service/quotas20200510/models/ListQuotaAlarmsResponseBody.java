@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQuotaAlarmsResponseBody} extends {@link TeaModel}
  *
  * <p>ListQuotaAlarmsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("QuotaAlarms")
-    private java.util.List < QuotaAlarms> quotaAlarms;
+    private java.util.List<QuotaAlarms> quotaAlarms;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,6 +48,10 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -59,7 +69,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
     /**
      * @return quotaAlarms
      */
-    public java.util.List < QuotaAlarms> getQuotaAlarms() {
+    public java.util.List<QuotaAlarms> getQuotaAlarms() {
         return this.quotaAlarms;
     }
 
@@ -80,12 +90,26 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < QuotaAlarms> quotaAlarms; 
+        private java.util.List<QuotaAlarms> quotaAlarms; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListQuotaAlarmsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.quotaAlarms = model.quotaAlarms;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The maximum number of records that are returned for the query.
+         * <p>The maximum number of records returned for the current query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,10 +117,13 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that marks the position at which the query ends.
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <blockquote>
+         * <p>If this parameter is empty, all results have been returned.</p>
+         * </blockquote>
          * 
-         * > An empty value indicates that all data is returned.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -104,15 +131,18 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the quota alert.
+         * <p>The details of the quota usage alerts.</p>
          */
-        public Builder quotaAlarms(java.util.List < QuotaAlarms> quotaAlarms) {
+        public Builder quotaAlarms(java.util.List<QuotaAlarms> quotaAlarms) {
             this.quotaAlarms = quotaAlarms;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87F3B755-3BD2-4C76-B36A-93247002918C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,7 +150,10 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of quota alerts.
+         * <p>The total number of quota usage alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -133,6 +166,12 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListQuotaAlarmsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotaAlarmsResponseBody</p>
+     */
     public static class QuotaAlarms extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmId")
         private String alarmId;
@@ -147,7 +186,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         private Boolean exceedThreshold;
 
         @com.aliyun.core.annotation.NameInMap("NotifyChannels")
-        private java.util.List < String > notifyChannels;
+        private java.util.List<String> notifyChannels;
 
         @com.aliyun.core.annotation.NameInMap("NotifyTarget")
         private String notifyTarget;
@@ -159,7 +198,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         private String quotaActionCode;
 
         @com.aliyun.core.annotation.NameInMap("QuotaDimensions")
-        private java.util.Map < String, ? > quotaDimensions;
+        private java.util.Map<String, ?> quotaDimensions;
 
         @com.aliyun.core.annotation.NameInMap("QuotaUsage")
         private Float quotaUsage;
@@ -236,7 +275,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         /**
          * @return notifyChannels
          */
-        public java.util.List < String > getNotifyChannels() {
+        public java.util.List<String> getNotifyChannels() {
             return this.notifyChannels;
         }
 
@@ -264,7 +303,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         /**
          * @return quotaDimensions
          */
-        public java.util.Map < String, ? > getQuotaDimensions() {
+        public java.util.Map<String, ?> getQuotaDimensions() {
             return this.quotaDimensions;
         }
 
@@ -315,11 +354,11 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             private String alarmName; 
             private String createTime; 
             private Boolean exceedThreshold; 
-            private java.util.List < String > notifyChannels; 
+            private java.util.List<String> notifyChannels; 
             private String notifyTarget; 
             private String productCode; 
             private String quotaActionCode; 
-            private java.util.Map < String, ? > quotaDimensions; 
+            private java.util.Map<String, ?> quotaDimensions; 
             private Float quotaUsage; 
             private Float quotaValue; 
             private Float threshold; 
@@ -327,8 +366,32 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             private String thresholdType; 
             private String webHook; 
 
+            private Builder() {
+            } 
+
+            private Builder(QuotaAlarms model) {
+                this.alarmId = model.alarmId;
+                this.alarmName = model.alarmName;
+                this.createTime = model.createTime;
+                this.exceedThreshold = model.exceedThreshold;
+                this.notifyChannels = model.notifyChannels;
+                this.notifyTarget = model.notifyTarget;
+                this.productCode = model.productCode;
+                this.quotaActionCode = model.quotaActionCode;
+                this.quotaDimensions = model.quotaDimensions;
+                this.quotaUsage = model.quotaUsage;
+                this.quotaValue = model.quotaValue;
+                this.threshold = model.threshold;
+                this.thresholdPercent = model.thresholdPercent;
+                this.thresholdType = model.thresholdType;
+                this.webHook = model.webHook;
+            } 
+
             /**
-             * The ID of the alert.
+             * <p>The alert ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a2efa7fc-832f-47bb-8054-39e28012****</p>
              */
             public Builder alarmId(String alarmId) {
                 this.alarmId = alarmId;
@@ -336,7 +399,10 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert event.
+             * <p>The alert name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>q_hvnoqv alarm</p>
              */
             public Builder alarmName(String alarmName) {
                 this.alarmName = alarmName;
@@ -344,7 +410,10 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the quota alert was created.
+             * <p>The time when the quota usage alert was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-27T07:23:34Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -352,11 +421,16 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert threshold was reached. Valid values:
-             * <p>
+             * <p>Indicates whether the quota usage exceeds the alert threshold. Valid values:</p>
+             * <ul>
+             * <li><p>false</p>
+             * </li>
+             * <li><p>true</p>
+             * </li>
+             * </ul>
              * 
-             * *   false
-             * *   true
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder exceedThreshold(Boolean exceedThreshold) {
                 this.exceedThreshold = exceedThreshold;
@@ -364,15 +438,21 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The alert notification methods.
+             * <p>The notification channels of the quota alert.</p>
              */
-            public Builder notifyChannels(java.util.List < String > notifyChannels) {
+            public Builder notifyChannels(java.util.List<String> notifyChannels) {
                 this.notifyChannels = notifyChannels;
                 return this;
             }
 
             /**
-             * The alert contact. The value is accountContact.
+             * <p>The notification object of the alert.</p>
+             * <blockquote>
+             * <p>The value can only be accountContact, which specifies the contacts of the account.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>accountContact</p>
              */
             public Builder notifyTarget(String notifyTarget) {
                 this.notifyTarget = notifyTarget;
@@ -380,7 +460,10 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the Alibaba Cloud service name.
+             * <p>The abbreviation of the Alibaba Cloud service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>config</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -388,7 +471,10 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the quota.
+             * <p>The quota ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>q_hvnoqv</p>
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;
@@ -396,15 +482,21 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The quota dimensions.
+             * <p>The quota dimensions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
              */
-            public Builder quotaDimensions(java.util.Map < String, ? > quotaDimensions) {
+            public Builder quotaDimensions(java.util.Map<String, ?> quotaDimensions) {
                 this.quotaDimensions = quotaDimensions;
                 return this;
             }
 
             /**
-             * The used quota.
+             * <p>The used quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73</p>
              */
             public Builder quotaUsage(Float quotaUsage) {
                 this.quotaUsage = quotaUsage;
@@ -412,7 +504,10 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the quota.
+             * <p>The quota value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder quotaValue(Float quotaValue) {
                 this.quotaValue = quotaValue;
@@ -420,7 +515,10 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The numeric value of the alert threshold.
+             * <p>The numeric value of the alert threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -428,7 +526,10 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the alert threshold.
+             * <p>The percentage of the alert threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder thresholdPercent(Float thresholdPercent) {
                 this.thresholdPercent = thresholdPercent;
@@ -436,11 +537,16 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the quota alert. Valid values:
-             * <p>
+             * <p>The type of the quota alert. Valid values:</p>
+             * <ul>
+             * <li><p>used: an alert for the used quota.</p>
+             * </li>
+             * <li><p>usable: an alert for the available quota.</p>
+             * </li>
+             * </ul>
              * 
-             * *   used: The alert is created for the used quota.
-             * *   usable: The alert is created for the available quota.
+             * <strong>example:</strong>
+             * <p>used</p>
              */
             public Builder thresholdType(String thresholdType) {
                 this.thresholdType = thresholdType;
@@ -448,7 +554,10 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URL.
+             * <p>The webhook URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com/webhook">https://www.aliyun.com/webhook</a></p>
              */
             public Builder webHook(String webHook) {
                 this.webHook = webHook;
