@@ -106,7 +106,7 @@ public class EditEndUserStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status Code</br></p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class EditEndUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success or not</br></p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -128,10 +128,10 @@ public class EditEndUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Message</br></p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,7 +139,7 @@ public class EditEndUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Message</br></p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -150,7 +150,7 @@ public class EditEndUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</br></p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>

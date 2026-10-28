@@ -149,7 +149,8 @@ public class CustomerQuotaRecordListRequest extends Request {
         } 
 
         /**
-         * <p>End Date Format: yyyy-MM-dd</p>
+         * <p>The end date.
+         * Format: yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +163,7 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * <p>Customer UID</p>
+         * <p>The UID of the customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,10 +176,12 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * <p>Multilingual Parameters, the default language is English.</br>
-         * en: English</br>
-         * zh: Chinese</br>
-         * ja: Japanese </br></p>
+         * <p>The language. Default value: en. Valid values:</p>
+         * <ul>
+         * <li>en: English.</li>
+         * <li>zh: Chinese.</li>
+         * <li>ja: Japanese.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -190,10 +193,12 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * <p>Operation Type Enum</br>
-         * all All types</br>
-         * quota_create Create quota</br>
-         * quota_amount_adjust Adjust the amount of quota</br></p>
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li>all: All.</li>
+         * <li>quota_create: Create.</li>
+         * <li>quota_amount_adjust: Quota adjustment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +211,7 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * <p>Pagination, current page number, starting from 1.</p>
+         * <p>The page number. Pages start from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +224,7 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * <p>Pagination, record number on each page. Maximum 100.</p>
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +237,8 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * <p>Start Date Format: yyyy-MM-dd</p>
+         * <p>The start date.
+         * Format: yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

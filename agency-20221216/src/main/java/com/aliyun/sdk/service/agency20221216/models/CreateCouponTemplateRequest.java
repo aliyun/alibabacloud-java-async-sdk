@@ -250,6 +250,14 @@ public class CreateCouponTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The accepted language.
+         * Default value: None.
+         * Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese.</li>
+         * <li>en-US: English.</li>
+         * <li>ja: Japanese.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,6 +270,11 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
+         * <p>The applicable products.</p>
+         * <ul>
+         * <li>All Products: All products.</li>
+         * <li>Custom: Custom products.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,6 +287,11 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
+         * <p>The party that bears the coupon cost.</p>
+         * <ul>
+         * <li>Partner: Borne by the partner.</li>
+         * <li>Alibaba Cloud: Borne by Alibaba Cloud.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +304,11 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * CouponDescription.
+         * <p>The remark for the coupon.
+         * The field length is limited to 100 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Coupon remark</p>
          */
         public Builder couponDescription(String couponDescription) {
             this.putQueryParameter("CouponDescription", couponDescription);
@@ -295,7 +317,12 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * Expireddate.
+         * <p>The end time of the effective period.
+         * Format: yyyy-MM-dd.
+         * Example: 2024-08-26.<br>This parameter is required when the validity period is set to Custom Timeframe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-26</p>
          */
         public Builder expireddate(String expireddate) {
             this.putQueryParameter("Expireddate", expireddate);
@@ -304,6 +331,11 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of coupons that each person can claim.</p>
+         * <ul>
+         * <li>Limited to 1: Limited to one coupon.</li>
+         * <li>Unlimited: Unlimited.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,7 +348,7 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The list of product codes.</p>
          */
         public Builder productType(java.util.List<String> productType) {
             String productTypeShrink = shrink(productType, "ProductType", "json");
@@ -326,7 +358,10 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * PurchaseType.
+         * <p>The order type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder purchaseType(String purchaseType) {
             this.putQueryParameter("PurchaseType", purchaseType);
@@ -335,7 +370,12 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
+         * <p>The reason for the template application.
+         * The field length is limited to 100 characters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reason for template application</p>
          */
         public Builder reasonForApplication(String reasonForApplication) {
             this.putQueryParameter("ReasonForApplication", reasonForApplication);
@@ -344,7 +384,12 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template name.
+         * The field length is limited to 30 characters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template name</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -353,7 +398,12 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * Vailddate.
+         * <p>The start time of the effective period.
+         * Format: yyyy-MM-dd.
+         * Example: 2024-08-26.<br>This parameter is required when the validity period is set to Custom Timeframe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-26</p>
          */
         public Builder vailddate(String vailddate) {
             this.putQueryParameter("Vailddate", vailddate);
@@ -362,7 +412,12 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * Vaildperioddays.
+         * <p>The duration of the relative time in days.
+         * The value must be a positive integer.
+         * This parameter is required when the validity period is set to Validity Duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder vaildperioddays(String vaildperioddays) {
             this.putQueryParameter("Vaildperioddays", vaildperioddays);
@@ -371,6 +426,11 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
+         * <p>The validity period of the coupon.</p>
+         * <ul>
+         * <li>Validity Duration: From the date of issuance.</li>
+         * <li>Custom Timeframe: Custom time period.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -383,6 +443,8 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
+         * <p>The denomination of the coupon.
+         * The value must be an integer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

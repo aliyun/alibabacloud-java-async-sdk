@@ -106,7 +106,10 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -337,7 +346,14 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicableProducts.
+             * <p>The applicable products.</p>
+             * <ul>
+             * <li>All Products: All products.</li>
+             * <li>Custom: Custom products.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder applicableProducts(String applicableProducts) {
                 this.applicableProducts = applicableProducts;
@@ -345,7 +361,14 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CostBearer.
+             * <p>The party that bears the coupon cost.</p>
+             * <ul>
+             * <li>Partner: Borne by the partner.</li>
+             * <li>Alibaba Cloud: Borne by Alibaba Cloud.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Partner</p>
              */
             public Builder costBearer(String costBearer) {
                 this.costBearer = costBearer;
@@ -353,7 +376,10 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CouponTemplateID.
+             * <p>The ID of the coupon template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111</p>
              */
             public Builder couponTemplateID(Long couponTemplateID) {
                 this.couponTemplateID = couponTemplateID;
@@ -361,7 +387,10 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-02 16:15:31</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -369,7 +398,11 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Expireddate.
+             * <p>The end time of the effective period.
+             * Format: yyyy-MM-dd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01</p>
              */
             public Builder expireddate(String expireddate) {
                 this.expireddate = expireddate;
@@ -377,7 +410,7 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * <p>The list of product codes.</p>
              */
             public Builder productType(java.util.List<String> productType) {
                 this.productType = productType;
@@ -385,7 +418,19 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the coupon template. Valid values:</p>
+             * <ul>
+             * <li>CREATED: Created.</li>
+             * <li>APPROVING: Under review.</li>
+             * <li>APPROVED: Approved.</li>
+             * <li>UNAPPROVED: Unapproved.</li>
+             * <li>ABANDONED: Abandoned.</li>
+             * <li>EXPIRED: Expired.</li>
+             * <li>EXHAUSTED: Exhausted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>APPROVED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -393,7 +438,10 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The name of the coupon template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template name</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -401,7 +449,11 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Vailddate.
+             * <p>The start time of the effective period.
+             * Format: yyyy-MM-dd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01</p>
              */
             public Builder vailddate(String vailddate) {
                 this.vailddate = vailddate;
@@ -409,7 +461,10 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Vaildperioddays.
+             * <p>The duration of the relative time in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder vaildperioddays(String vaildperioddays) {
                 this.vaildperioddays = vaildperioddays;
@@ -417,7 +472,14 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ValidUntil.
+             * <p>The validity period of the coupon.</p>
+             * <ul>
+             * <li>Validity Duration: From the date of issuance.</li>
+             * <li>Custom Timeframe: Custom time period.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Validity Duration</p>
              */
             public Builder validUntil(String validUntil) {
                 this.validUntil = validUntil;
@@ -425,7 +487,10 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The denomination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;

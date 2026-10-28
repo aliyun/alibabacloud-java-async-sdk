@@ -132,7 +132,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the response. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -156,7 +162,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +173,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2103a30617045934095083027d88c5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +184,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful. Valid values: True and False. This parameter indicates only the success of the API call and does not indicate the success of subsequent business operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +195,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -215,6 +233,9 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EligibleForDiscount")
         private String eligibleForDiscount;
 
+        @com.aliyun.core.annotation.NameInMap("EligibleForPerformance")
+        private String eligibleForPerformance;
+
         @com.aliyun.core.annotation.NameInMap("EndMonth")
         private String endMonth;
 
@@ -239,6 +260,7 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             this.commodityName = builder.commodityName;
             this.eligibleForCommission = builder.eligibleForCommission;
             this.eligibleForDiscount = builder.eligibleForDiscount;
+            this.eligibleForPerformance = builder.eligibleForPerformance;
             this.endMonth = builder.endMonth;
             this.productCampaign = builder.productCampaign;
             this.productCode = builder.productCode;
@@ -291,6 +313,13 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         }
 
         /**
+         * @return eligibleForPerformance
+         */
+        public String getEligibleForPerformance() {
+            return this.eligibleForPerformance;
+        }
+
+        /**
          * @return endMonth
          */
         public String getEndMonth() {
@@ -338,6 +367,7 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             private String commodityName; 
             private String eligibleForCommission; 
             private String eligibleForDiscount; 
+            private String eligibleForPerformance; 
             private String endMonth; 
             private String productCampaign; 
             private String productCode; 
@@ -354,6 +384,7 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
                 this.commodityName = model.commodityName;
                 this.eligibleForCommission = model.eligibleForCommission;
                 this.eligibleForDiscount = model.eligibleForDiscount;
+                this.eligibleForPerformance = model.eligibleForPerformance;
                 this.endMonth = model.endMonth;
                 this.productCampaign = model.productCampaign;
                 this.productCode = model.productCode;
@@ -363,7 +394,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualStartMonth.
+             * <p>The actual start month in the yyyymm format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“202502”</p>
              */
             public Builder actualStartMonth(String actualStartMonth) {
                 this.actualStartMonth = actualStartMonth;
@@ -371,7 +405,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“oceanbase_obpre_public_intl”</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -379,7 +416,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityName.
+             * <p>The commodity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“ApsaraDB for OceanBase Pre”</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -387,7 +427,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * EligibleForCommission.
+             * <p>Specifies whether the commodity is eligible for commission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yes</p>
              */
             public Builder eligibleForCommission(String eligibleForCommission) {
                 this.eligibleForCommission = eligibleForCommission;
@@ -395,7 +438,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * EligibleForDiscount.
+             * <p>Specifies whether the commodity is eligible for discounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yes</p>
              */
             public Builder eligibleForDiscount(String eligibleForDiscount) {
                 this.eligibleForDiscount = eligibleForDiscount;
@@ -403,7 +449,21 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * EndMonth.
+             * <p>Specifies whether the commodity is counted towards performance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yes</p>
+             */
+            public Builder eligibleForPerformance(String eligibleForPerformance) {
+                this.eligibleForPerformance = eligibleForPerformance;
+                return this;
+            }
+
+            /**
+             * <p>The actual end month in the yyyymm format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“202509”</p>
              */
             public Builder endMonth(String endMonth) {
                 this.endMonth = endMonth;
@@ -411,7 +471,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCampaign.
+             * <p>Specifies whether the commodity is a product line incentive commodity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yes</p>
              */
             public Builder productCampaign(String productCampaign) {
                 this.productCampaign = productCampaign;
@@ -419,7 +482,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“oceanbase”</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -427,7 +493,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“ApsaraDB for OceanBase”</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -435,7 +504,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * SevenCoreProducts.
+             * <p>Specifies whether the product is a core product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yes</p>
              */
             public Builder sevenCoreProducts(String sevenCoreProducts) {
                 this.sevenCoreProducts = sevenCoreProducts;
@@ -443,7 +515,10 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The display status of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“ONLINE”</p>
              */
             public Builder status(String status) {
                 this.status = status;

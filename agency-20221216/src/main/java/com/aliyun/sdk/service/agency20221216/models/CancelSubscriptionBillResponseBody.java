@@ -106,7 +106,7 @@ public class CancelSubscriptionBillResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class CancelSubscriptionBillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data that is returned.</p>
+         * <p>The data returned.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -128,10 +128,10 @@ public class CancelSubscriptionBillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>Successful</p>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,7 +139,7 @@ public class CancelSubscriptionBillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>210e876f16704666020714468dab35</p>

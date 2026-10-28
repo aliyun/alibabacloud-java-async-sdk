@@ -132,7 +132,10 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +162,10 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -164,7 +173,10 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,10 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -298,7 +316,10 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationSheetId.
+             * <p>The ID of the application form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d54ca949-9b88-4514-add3-c6029c4027f4</p>
              */
             public Builder applicationSheetId(String applicationSheetId) {
                 this.applicationSheetId = applicationSheetId;
@@ -306,7 +327,10 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationTime.
+             * <p>The application time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-21 11:24</p>
              */
             public Builder applicationTime(String applicationTime) {
                 this.applicationTime = applicationTime;
@@ -314,7 +338,18 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalStatus.
+             * <p>The approval status. Valid values:</p>
+             * <ul>
+             * <li>1: Revoked.</li>
+             * <li>2: Under review.</li>
+             * <li>3: Rejected.</li>
+             * <li>4: Approved.</li>
+             * <li>5: Approved but issuance failed.</li>
+             * <li>8: Pending.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder approvalStatus(String approvalStatus) {
                 this.approvalStatus = approvalStatus;
@@ -322,7 +357,10 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
             }
 
             /**
-             * T2PartnerName.
+             * <p>The name of the secondary distributor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test account</p>
              */
             public Builder t2PartnerName(String t2PartnerName) {
                 this.t2PartnerName = t2PartnerName;
@@ -330,7 +368,10 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
             }
 
             /**
-             * T2PartnerUid.
+             * <p>The UID of the secondary distributor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5248516956402795</p>
              */
             public Builder t2PartnerUid(Long t2PartnerUid) {
                 this.t2PartnerUid = t2PartnerUid;
@@ -338,7 +379,10 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAmount.
+             * <p>The requested amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder totalAmount(String totalAmount) {
                 this.totalAmount = totalAmount;

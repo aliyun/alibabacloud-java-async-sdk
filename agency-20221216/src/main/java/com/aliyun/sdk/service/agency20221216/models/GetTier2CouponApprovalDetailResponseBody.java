@@ -93,7 +93,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code. A value of 200 indicates success. Other values indicate error codes. For more information, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b9a079e17691387754512757e6a1b</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +244,14 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicableProducts.
+             * <p>The applicable products. Valid values:</p>
+             * <ul>
+             * <li>UNIVERSAL: All products.</li>
+             * <li>A specific commodity code.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UNIVERSAL</p>
              */
             public Builder applicableProducts(String applicableProducts) {
                 this.applicableProducts = applicableProducts;
@@ -243,7 +259,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationTime.
+             * <p>The timestamp when the application was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-21 11:24</p>
              */
             public Builder applicationTime(String applicationTime) {
                 this.applicationTime = applicationTime;
@@ -251,7 +270,15 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * <p>The order type for which the coupon is used. Valid values:</p>
+             * <ul>
+             * <li>ALL: Alibaba Cloud subscription.</li>
+             * <li>BILLING: Alibaba Cloud pay-as-you-go bills.</li>
+             * <li>ALL,BILLING: Alibaba Cloud subscription and pay-as-you-go bills.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL,BILLING</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -259,7 +286,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * T2PartnerName.
+             * <p>The name of the tier-2 distributor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test account</p>
              */
             public Builder t2PartnerName(String t2PartnerName) {
                 this.t2PartnerName = t2PartnerName;
@@ -267,7 +297,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * T2PartnerUid.
+             * <p>The UID of the tier-2 distributor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5248516846402795</p>
              */
             public Builder t2PartnerUid(Long t2PartnerUid) {
                 this.t2PartnerUid = t2PartnerUid;
@@ -275,7 +308,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ValidUntil.
+             * <p>The validity period, which can be a number of valid days or a valid time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-21 ~ 2199-12-31</p>
              */
             public Builder validUntil(String validUntil) {
                 this.validUntil = validUntil;
@@ -342,7 +378,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * NominalValue.
+             * <p>The denomination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder nominalValue(String nominalValue) {
                 this.nominalValue = nominalValue;
@@ -350,7 +389,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * <p>The UID of the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1703016242044705</p>
              */
             public Builder uid(Long uid) {
                 this.uid = uid;
@@ -482,7 +524,7 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicantInfo.
+             * <p>The basic information of the application.</p>
              */
             public Builder applicantInfo(ApplicantInfo applicantInfo) {
                 this.applicantInfo = applicantInfo;
@@ -490,7 +532,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationReason.
+             * <p>The reason for the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reason for application</p>
              */
             public Builder applicationReason(String applicationReason) {
                 this.applicationReason = applicationReason;
@@ -498,7 +543,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationSheetId.
+             * <p>The ID of the application form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0b9a079e17691387754512757e6a1b</p>
              */
             public Builder applicationSheetId(String applicationSheetId) {
                 this.applicationSheetId = applicationSheetId;
@@ -506,7 +554,18 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalStatus.
+             * <p>The approval status. Valid values:</p>
+             * <ul>
+             * <li>1: Revoked.</li>
+             * <li>2: Under review.</li>
+             * <li>3: Rejected.</li>
+             * <li>4: Approved.</li>
+             * <li>5: Approved but issuance failed.</li>
+             * <li>8: Pending.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder approvalStatus(String approvalStatus) {
                 this.approvalStatus = approvalStatus;
@@ -514,7 +573,7 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CouponReceiptUidList.
+             * <p>The list of customer UIDs that receive the coupons.</p>
              */
             public Builder couponReceiptUidList(java.util.List<CouponReceiptUidList> couponReceiptUidList) {
                 this.couponReceiptUidList = couponReceiptUidList;
@@ -522,7 +581,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RemainingQuota.
+             * <p>The estimated remaining quota of PoC coupon benefits for new partner customers after the coupons are issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20.00</p>
              */
             public Builder remainingQuota(String remainingQuota) {
                 this.remainingQuota = remainingQuota;
@@ -530,7 +592,10 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAmount.
+             * <p>The requested amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder totalAmount(String totalAmount) {
                 this.totalAmount = totalAmount;

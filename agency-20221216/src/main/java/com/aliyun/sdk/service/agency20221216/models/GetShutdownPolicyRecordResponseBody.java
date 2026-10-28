@@ -132,7 +132,10 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the customer was created. If the value is true, the Message contains the CID.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -156,7 +162,10 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +173,10 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210e876f16704666020714468dab35</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +184,10 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +195,10 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -285,7 +303,18 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPolicy.
+             * <p>The current policy. Valid values:</p>
+             * <ul>
+             * <li>immediatelyStop: immediate shutdown upon overdue payment.</li>
+             * <li>delayStop: deferred shutdown quota applied.</li>
+             * <li>noStop: no shutdown upon overdue payment.
+             * [_single.resp.200.props.Data.items.CurrentPolicy.enum.immediatelyStop ]Immediate shutdown upon overdue payment.
+             * [_single.resp.200.props.Data.items.CurrentPolicy.enum.noStop ]No shutdown upon overdue payment.
+             * [_single.resp.200.props.Data.items.CurrentPolicy.enum.delayStop ]Deferred shutdown quota applied.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>noStop</p>
              */
             public Builder currentPolicy(String currentPolicy) {
                 this.currentPolicy = currentPolicy;
@@ -293,7 +322,15 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
             }
 
             /**
-             * OperationPath.
+             * <p>The method by which the operation was initiated. Valid values:</p>
+             * <ul>
+             * <li>API: API.</li>
+             * <li>ACPN: ACPN.</li>
+             * <li>ALIYUN_BIZ: Alibaba Cloud internal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACPN</p>
              */
             public Builder operationPath(String operationPath) {
                 this.operationPath = operationPath;
@@ -301,7 +338,10 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTime.
+             * <p>The operation time (UTC+8).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-15 10:34:36</p>
              */
             public Builder operationTime(String operationTime) {
                 this.operationTime = operationTime;
@@ -309,7 +349,10 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111111111</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -317,7 +360,18 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
             }
 
             /**
-             * PreviousPolicy.
+             * <p>The policy before the change. Valid values:</p>
+             * <ul>
+             * <li>immediatelyStop: immediate shutdown upon overdue payment.</li>
+             * <li>delayStop: deferred shutdown quota applied.</li>
+             * <li>noStop: no shutdown upon overdue payment.
+             * [_single.resp.200.props.Data.items.PreviousPolicy.enum.immediatelyStop ]Immediate shutdown upon overdue payment.
+             * [_single.resp.200.props.Data.items.PreviousPolicy.enum.noStop ]No shutdown upon overdue payment.
+             * [_single.resp.200.props.Data.items.PreviousPolicy.enum.delayStop ]Deferred shutdown quota applied.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>immediatelyStop</p>
              */
             public Builder previousPolicy(String previousPolicy) {
                 this.previousPolicy = previousPolicy;

@@ -90,6 +90,7 @@ public class ProcessApprovalRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the application form.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,11 @@ public class ProcessApprovalRequest extends Request {
         }
 
         /**
+         * <p>The approval action. Valid values:</p>
+         * <ul>
+         * <li>Approve: approved.</li>
+         * <li>Reject: rejected.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +120,11 @@ public class ProcessApprovalRequest extends Request {
         }
 
         /**
+         * <p>The approval comments.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>同意</p>
          */
         public Builder approvalComments(String approvalComments) {
             this.putQueryParameter("ApprovalComments", approvalComments);

@@ -106,10 +106,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status Code. Error Code:</p>
-         * <ul>
-         * <li>3057 InviteId is empty</li>
-         * </ul>
+         * <p>The status code. Error code: 3057: InviteId is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -120,7 +117,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -128,10 +125,10 @@ public class GetInviteStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,7 +136,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+         * <p>The request ID. Alibaba Cloud uses this ID for error tracking.</p>
          * 
          * <strong>example:</strong>
          * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
@@ -150,7 +147,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+         * <p>Indicates whether the API call is successful. Valid values: true and false. This parameter does not indicate whether subsequent business operations are successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -284,11 +281,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time that Distribution Customer successfully associated with Distributor.</br>
-             * This value will be empty if there is no existing association.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-02-13</p>
+             * AssociationSuccessTime.
              */
             public Builder associationSuccessTime(String associationSuccessTime) {
                 this.associationSuccessTime = associationSuccessTime;
@@ -296,10 +289,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Distribution Customer&quot;s CID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1234567890123</p>
+             * Cid.
              */
             public Builder cid(Long cid) {
                 this.cid = cid;
@@ -307,10 +297,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of email been sent out.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-02-12</p>
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -318,10 +305,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent organization ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1093238769140523</p>
+             * ParentId.
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -329,16 +313,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Invitation Status:</p>
-             * <ul>
-             * <li>0 No visit on registration URL</li>
-             * <li>1 Successful Registration</li>
-             * <li>2 Unsuccessful Registration</li>
-             * <li>3 Registration URL have been visited, but no submitted sheet/ticket.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -346,15 +321,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Account Type:</p>
-             * <ul>
-             * <li>1 Agency&quot;s End User</li>
-             * <li>2 Reseller&quot;s End User</li>
-             * <li>5 T2 Reseller Partner</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * SubAccountType.
              */
             public Builder subAccountType(String subAccountType) {
                 this.subAccountType = subAccountType;
@@ -362,10 +329,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Distribution Customer&quot;s UID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1234567890123</p>
+             * Uid.
              */
             public Builder uid(Long uid) {
                 this.uid = uid;
@@ -458,11 +422,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Result Code. Value Range:</p>
-             * <ul>
-             * <li>200 OK</li>
-             * <li>1109 system error</li>
-             * </ul>
+             * <p>The status code. Error code: 3057: InviteId is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -473,7 +433,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of Invitation Status result</p>
+             * InviteStatusList.
              */
             public Builder inviteStatusList(InviteStatusList inviteStatusList) {
                 this.inviteStatusList = inviteStatusList;
@@ -481,10 +441,10 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message returned.</p>
+             * <p>The message.</p>
              * 
              * <strong>example:</strong>
-             * <p>success</p>
+             * <p>Success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -492,7 +452,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+             * <p>Indicates whether the API call is successful. Valid values: true and false. This parameter does not indicate whether subsequent business operations are successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

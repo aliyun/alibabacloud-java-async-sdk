@@ -157,7 +157,10 @@ public class GetCommissionableProductsRequest extends Request {
         } 
 
         /**
-         * CommodityCodeList.
+         * <p>The commodity codes. Separate multiple codes with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;oceanbase_obpre_public_intl,savingplan_common_public_intl&quot;</p>
          */
         public Builder commodityCodeList(String commodityCodeList) {
             this.putQueryParameter("CommodityCodeList", commodityCodeList);
@@ -166,7 +169,10 @@ public class GetCommissionableProductsRequest extends Request {
         }
 
         /**
-         * FiscalYear.
+         * <p>The fiscal year. If this parameter is left empty, the current fiscal year is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“FY26”</p>
          */
         public Builder fiscalYear(String fiscalYear) {
             this.putQueryParameter("FiscalYear", fiscalYear);
@@ -175,7 +181,7 @@ public class GetCommissionableProductsRequest extends Request {
         }
 
         /**
-         * ListShowStatusList.
+         * <p>The list of display statuses for commission-eligible commodities.</p>
          */
         public Builder listShowStatusList(java.util.List<String> listShowStatusList) {
             String listShowStatusListShrink = shrink(listShowStatusList, "ListShowStatusList", "simple");
@@ -185,7 +191,10 @@ public class GetCommissionableProductsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number. Pages start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -194,7 +203,10 @@ public class GetCommissionableProductsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,7 +215,10 @@ public class GetCommissionableProductsRequest extends Request {
         }
 
         /**
-         * PipCodeList.
+         * <p>The product codes. Separate multiple codes with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;oceanbase&quot;</p>
          */
         public Builder pipCodeList(String pipCodeList) {
             this.putQueryParameter("PipCodeList", pipCodeList);
@@ -212,7 +227,10 @@ public class GetCommissionableProductsRequest extends Request {
         }
 
         /**
-         * RealEndMonth.
+         * <p>The actual end month in the yyyymm format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“202509”</p>
          */
         public Builder realEndMonth(String realEndMonth) {
             this.putQueryParameter("RealEndMonth", realEndMonth);
@@ -221,7 +239,10 @@ public class GetCommissionableProductsRequest extends Request {
         }
 
         /**
-         * RealStartMonth.
+         * <p>The actual start month in the yyyymm format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“202502”</p>
          */
         public Builder realStartMonth(String realStartMonth) {
             this.putQueryParameter("RealStartMonth", realStartMonth);

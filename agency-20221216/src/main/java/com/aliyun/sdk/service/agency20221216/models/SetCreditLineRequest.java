@@ -75,7 +75,7 @@ public class SetCreditLineRequest extends Request {
         } 
 
         /**
-         * <p>New Credit Line</p>
+         * <p>The new credit limit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class SetCreditLineRequest extends Request {
         }
 
         /**
-         * <p>The UID of Sub Account.</p>
+         * <p>The UID of the sub-account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

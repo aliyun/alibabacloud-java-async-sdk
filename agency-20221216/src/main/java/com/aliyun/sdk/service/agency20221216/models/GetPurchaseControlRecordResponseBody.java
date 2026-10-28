@@ -132,7 +132,13 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. Value range:</p>
+         * <ul>
+         * <li>200: OK.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +146,7 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +154,10 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -156,7 +165,10 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -175,7 +187,10 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -183,7 +198,10 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -275,7 +293,14 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * ChangedType.
+             * <p>The change type. Valid values:</p>
+             * <ul>
+             * <li>ban: new purchases are prohibited.</li>
+             * <li>cancelBan: the purchase prohibition is canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ban</p>
              */
             public Builder changedType(String changedType) {
                 this.changedType = changedType;
@@ -283,7 +308,10 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
             }
 
             /**
-             * OperationPath.
+             * <p>The method by which the operation was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACPN</p>
              */
             public Builder operationPath(String operationPath) {
                 this.operationPath = operationPath;
@@ -291,7 +319,10 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTime.
+             * <p>The operation time (UTC+8).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-15 10:34:36</p>
              */
             public Builder operationTime(String operationTime) {
                 this.operationTime = operationTime;
@@ -299,7 +330,10 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>292828565558721922</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;

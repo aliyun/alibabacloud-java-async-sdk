@@ -118,7 +118,10 @@ public class ListExportTasksRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The ID of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12343</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -127,7 +130,15 @@ public class ListExportTasksRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li>en: English.</li>
+         * <li>zh: Chinese.</li>
+         * <li>ja: Japanese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -136,6 +147,7 @@ public class ListExportTasksRequest extends Request {
         }
 
         /**
+         * <p>The current page number. Pages start from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +160,7 @@ public class ListExportTasksRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +173,11 @@ public class ListExportTasksRequest extends Request {
         }
 
         /**
+         * <p>The export scenario code. Valid values:</p>
+         * <ul>
+         * <li>intlCustomerQuotaRecord: Customer management, quota transaction export.</li>
+         * <li>intlExportUsageDeductHistory: Customer management, deduction detail export.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

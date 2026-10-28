@@ -132,6 +132,7 @@ public class QueryAutomaticWriteOffChangeRecordsRequest extends Request {
         } 
 
         /**
+         * <p>The customer UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +145,11 @@ public class QueryAutomaticWriteOffChangeRecordsRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end date.
+         * Format: yyyy-MM-dd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-20</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -153,7 +158,15 @@ public class QueryAutomaticWriteOffChangeRecordsRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language. If you do not specify this parameter, English is used by default. Valid values:</p>
+         * <ul>
+         * <li>en: English.</li>
+         * <li>zh: Chinese.</li>
+         * <li>ja: Japanese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -162,6 +175,7 @@ public class QueryAutomaticWriteOffChangeRecordsRequest extends Request {
         }
 
         /**
+         * <p>The page number. Pages start from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +188,7 @@ public class QueryAutomaticWriteOffChangeRecordsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +201,11 @@ public class QueryAutomaticWriteOffChangeRecordsRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start date.
+         * Format: yyyy-MM-dd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-20</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

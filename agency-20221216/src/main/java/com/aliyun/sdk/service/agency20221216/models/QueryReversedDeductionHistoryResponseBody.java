@@ -132,7 +132,10 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the returned result. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +162,10 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -164,7 +173,10 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,10 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asda1231as</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -272,7 +290,10 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * OffsetAmount.
+             * <p>The offset amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.00</p>
              */
             public Builder offsetAmount(String offsetAmount) {
                 this.offsetAmount = offsetAmount;
@@ -280,7 +301,10 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * OperationSubmitType.
+             * <p>The method used to initiate the operation, such as API or ACPN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACPN</p>
              */
             public Builder operationSubmitType(String operationSubmitType) {
                 this.operationSubmitType = operationSubmitType;
@@ -288,7 +312,10 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTime.
+             * <p>The operation time. Format: YYYY-MM-DD HH:mm:ss UTC+8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-01 10:22:11 UTC+8</p>
              */
             public Builder operationTime(String operationTime) {
                 this.operationTime = operationTime;
@@ -296,7 +323,10 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * OperationUid.
+             * <p>The UID of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132</p>
              */
             public Builder operationUid(String operationUid) {
                 this.operationUid = operationUid;

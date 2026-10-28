@@ -93,7 +93,10 @@ public class ExportReversedDeductionHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the response. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ExportReversedDeductionHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ExportReversedDeductionHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class ExportReversedDeductionHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asfasd123</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class ExportReversedDeductionHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * Cost.
+             * <p>The estimated duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cost(Integer cost) {
                 this.cost = cost;
@@ -191,7 +203,10 @@ public class ExportReversedDeductionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2131</p>
              */
             public Builder id(Long id) {
                 this.id = id;

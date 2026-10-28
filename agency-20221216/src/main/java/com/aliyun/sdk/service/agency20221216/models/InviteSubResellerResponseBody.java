@@ -106,7 +106,7 @@ public class InviteSubResellerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Result code.</p>
+         * <p>The result code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class InviteSubResellerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Message.</p>
+         * <p>message</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class InviteSubResellerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
@@ -139,7 +139,7 @@ public class InviteSubResellerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>邀请结果信息</p>
+         * <p>The invitation result information.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -147,7 +147,7 @@ public class InviteSubResellerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -229,7 +229,7 @@ public class InviteSubResellerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Validity period of the registration URL, in days</p>
+             * <p>The validity period of the registration URL, in days.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -240,7 +240,7 @@ public class InviteSubResellerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Invitation ID, used for querying the invitation status</p>
+             * <p>The invitation ID, which is used to query the invitation status.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -251,7 +251,7 @@ public class InviteSubResellerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>T2 Reseller registration URL</p>
+             * <p>The registration URL of the T2 Reseller.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://agency-intl.console.aliyun.com/customer/register?intl=true&fxinfo=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">http://agency-intl.console.aliyun.com/customer/register?intl=true&amp;fxinfo=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</a></p>
@@ -347,7 +347,7 @@ public class InviteSubResellerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Error code, 200 OK</p>
+             * <p>The error code. A value of 200 indicates success.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -358,7 +358,7 @@ public class InviteSubResellerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Prompt message, explanation of the code</p>
+             * <p>The prompt message that describes the code.</p>
              * 
              * <strong>example:</strong>
              * <p>成功</p>
@@ -369,7 +369,7 @@ public class InviteSubResellerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returned invitation result information</p>
+             * <p>The invitation result details.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -377,7 +377,7 @@ public class InviteSubResellerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Always true</p>
+             * <p>Always true.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

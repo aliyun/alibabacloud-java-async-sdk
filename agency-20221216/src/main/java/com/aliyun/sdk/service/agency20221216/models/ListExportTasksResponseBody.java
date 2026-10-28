@@ -132,7 +132,10 @@ public class ListExportTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the returned result. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class ListExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class ListExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +162,10 @@ public class ListExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -164,7 +173,10 @@ public class ListExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,10 @@ public class ListExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asda1231as</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class ListExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -311,7 +329,10 @@ public class ListExportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-01 10:22:11</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -319,7 +340,10 @@ public class ListExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>511376624869_quota_2023-06-22_2023-12-21_all_2023122121310057</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -327,7 +351,10 @@ public class ListExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID of the export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12355</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -335,7 +362,10 @@ public class ListExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The prompt message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -343,7 +373,10 @@ public class ListExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The display status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Export Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -351,7 +384,15 @@ public class ListExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * <p>The status code of the task. Valid values:</p>
+             * <ul>
+             * <li>2: Exporting.</li>
+             * <li>3: Export successful.</li>
+             * <li>-1: Export failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -359,7 +400,10 @@ public class ListExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The download URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>//aliyun-eco-market-servic-singapore.oss-ap-southeast-1.aliyuncs.com/511376624869_quota_2023-06-22_2023-12-21_all_2023122121310057</p>
              */
             public Builder url(String url) {
                 this.url = url;

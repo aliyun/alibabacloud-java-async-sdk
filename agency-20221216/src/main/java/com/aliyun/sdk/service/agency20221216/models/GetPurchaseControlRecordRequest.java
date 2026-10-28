@@ -104,6 +104,7 @@ public class GetPurchaseControlRecordRequest extends Request {
         } 
 
         /**
+         * <p>The customer UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +117,10 @@ public class GetPurchaseControlRecordRequest extends Request {
         }
 
         /**
-         * OperationTime.
+         * <p>The start time. If left empty, data from the last six months is returned. The time format is yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-15 10:34:36</p>
          */
         public Builder operationTime(String operationTime) {
             this.putQueryParameter("OperationTime", operationTime);
@@ -125,6 +129,7 @@ public class GetPurchaseControlRecordRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +142,7 @@ public class GetPurchaseControlRecordRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -134,10 +134,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
-     * You can call this operation to cancel the subscription to only one type of bill at a time.
-     * After the subscription to a type of bill is canceled, bills of this type are no longer pushed to the specified Object Storage Service (OSS) bucket.
-     * **This topic is published only on the international site (alibabacloud.com).</p>
+     * <p>Make sure that the caller is an international Alibaba Cloud master reseller partner.
+     * You can unsubscribe from one type of bill file at a time.
+     * After the corresponding bill type is unsubscribed, files are no longer pushed to the specified OSS space.
+     * <strong>This content is published only on the international site.</strong></p>
      * 
      * @param request the request parameters of CancelSubscriptionBill  CancelSubscriptionBillRequest
      * @return CancelSubscriptionBillResponse
@@ -157,6 +157,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Ensure that the current calling account is a distribution partner. 
+     * <notice>Available only on the international site.</notice></p>
+     * 
      * @param request the request parameters of CouponApprovalStatusList  CouponApprovalStatusListRequest
      * @return CouponApprovalStatusListResponse
      */
@@ -211,6 +215,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The caller must be a channel master distributor partner or a channel distributor partner on the Alibaba Cloud International Website.</p>
+     * 
      * @param request the request parameters of CustomerQuotaRecordList  CustomerQuotaRecordListRequest
      * @return CustomerQuotaRecordListResponse
      */
@@ -229,10 +236,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Note that sometimes you may find that the customer\&quot;s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\&quot;s usage. This phenomenon occurs because a refund is generated while the customer\&quot;s credit is full, thereby triggered additional increasing on the customer\&quot;s credit.
-     * For example, if the customer\&quot;s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.</p>
-     * 
      * @param request the request parameters of DeductOutstandingBalance  DeductOutstandingBalanceRequest
      * @return DeductOutstandingBalanceResponse
      */
@@ -251,6 +254,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Make sure that the current caller is a distribution partner. 
+     * <notice>Available only on the China site.</notice>.</p>
+     * 
      * @param request the request parameters of DeleteCouponTemplate  DeleteCouponTemplateRequest
      * @return DeleteCouponTemplateResponse
      */
@@ -270,8 +277,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
-     * **This content is only published on the international site. **</p>
+     * <p>The caller must be an Alibaba Cloud international channel master distributor partner or an Alibaba Cloud international channel distributor partner.
+     * <strong>This content is published only on the China site (Chinese).</strong>.</p>
      * 
      * @param request the request parameters of EditEndUserStatus  EditEndUserStatusRequest
      * @return EditEndUserStatusResponse
@@ -292,8 +299,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
-     * **This content is only published on the international site. **</p>
+     * <p>The caller must be an Alibaba Cloud reseller partner.
+     * <strong>This content is published only on the China site.</strong>.</p>
      * 
      * @param request the request parameters of EditNewBuyStatus  EditNewBuyStatusRequest
      * @return EditNewBuyStatusResponse
@@ -314,8 +321,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
-     * **This content is only published on the international site. **</p>
+     * <p>The caller must be an Alibaba Cloud international channel distributor partner or an Alibaba Cloud international channel reseller partner.
+     * <strong>This content is published only on the Chinese site.</strong>.</p>
      * 
      * @param request the request parameters of EditZeroCreditShutdown  EditZeroCreditShutdownRequest
      * @return EditZeroCreditShutdownResponse
@@ -336,7 +343,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Caller must be a Partner from International Site, either Distribution or Reseller will do.</p>
+     * <p>The caller must be an Alibaba Cloud international site channel master distributor partner or an Alibaba Cloud international site channel distributor partner.</p>
      * 
      * @param request the request parameters of ExportCustomerQuotaRecord  ExportCustomerQuotaRecordRequest
      * @return ExportCustomerQuotaRecordResponse
@@ -392,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Ensure that the current calling account is a distribution partner. 
+     * <notice>Available only on the international site.</notice></p>
+     * 
      * @param request the request parameters of GetCommissionableProducts  GetCommissionableProductsRequest
      * @return GetCommissionableProductsResponse
      */
@@ -410,6 +421,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Ensure that the current calling account is a distribution partner. 
+     * <notice>Available only on the International site</p>
+     * 
      * @param request the request parameters of GetCouponTemplateDetail  GetCouponTemplateDetailRequest
      * @return GetCouponTemplateDetailResponse
      */
@@ -464,6 +479,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The caller must be an Alibaba Cloud International site channel master distributor partner or an Alibaba Cloud International site channel distributor partner.</p>
+     * 
      * @param request the request parameters of GetCustomerOrders  GetCustomerOrdersRequest
      * @return GetCustomerOrdersResponse
      */
@@ -536,6 +554,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The caller must be an Alibaba Cloud international site channel master distributor partner or an Alibaba Cloud international site channel distributor partner.</p>
+     * 
      * @param request the request parameters of GetPurchaseControlRecord  GetPurchaseControlRecordRequest
      * @return GetPurchaseControlRecordResponse
      */
@@ -554,6 +575,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The caller must be an Alibaba Cloud international site channel master distributor partner or an Alibaba Cloud international site channel distributor partner.
+     * <strong>This content is published only on the international site.</strong>.</p>
+     * 
      * @param request the request parameters of GetShutdownPolicyRecord  GetShutdownPolicyRecordRequest
      * @return GetShutdownPolicyRecordResponse
      */
@@ -608,9 +633,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The current API request rate for the Cloud Product has not been disclosed.</p>
-     * 
      * @param request the request parameters of InviteSubAccount  InviteSubAccountRequest
      * @return InviteSubAccountResponse
      */
@@ -631,12 +653,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>The API caller must be a channel general distributor partner of Alibaba Cloud International.</li>
-     * <li>The system automatically determines if the invitation is cross-regional based on whether the <code>registerNation</code> parameter is within the T1 contract coverage area (the contract coverage area can be queried using the ListCountries API).</li>
+     * <li>The caller of this operation must be a channel master reseller partner on Alibaba Cloud International Website.</li>
+     * <li>The system automatically determines whether the invitation is cross-region based on whether the RegisterNation parameter falls within the T1 contract coverage area. You can call the ListCountries operation to query the contract coverage area.</li>
      * </ol>
      * <ul>
-     * <li>If it\&quot;s a cross-regional invitation, a cross-regional approval process will be initiated. After approval by Alibaba Cloud, an invitation registration email will be sent to the invited email address.</li>
-     * <li>If it\&quot;s not a cross-regional invitation, an invitation registration email will be sent directly.</li>
+     * <li>If the invitation is cross-region, a cross-region invitation approval process is initiated. After Alibaba Cloud approves the request, an invitation registration email is sent to the specified email address.</li>
+     * <li>If the invitation is not cross-region, an invitation registration email is sent directly.</li>
      * </ul>
      * 
      * @param request the request parameters of InviteSubReseller  InviteSubResellerRequest
@@ -675,9 +697,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The current API request rate for cloud products has not been disclosed.</p>
-     * 
      * @param request the request parameters of ListCountries  ListCountriesRequest
      * @return ListCountriesResponse
      */
@@ -697,8 +716,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>确保当前调用账号身份为分销伙伴 
-     * <notice>仅国际提供</p>
+     * <p>Ensure that the current calling account is a distribution partner. 
+     * <notice>Available only on the international site.</notice></p>
      * 
      * @param request the request parameters of ListCouponUsage  ListCouponUsageRequest
      * @return ListCouponUsageResponse
@@ -809,7 +828,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Caller must be a Partner from International Site, either Distribution or Reseller will do.</p>
+     * <p>The caller must be an Alibaba Cloud International site channel master distributor partner or an Alibaba Cloud International site channel distributor partner.</p>
      * 
      * @param request the request parameters of QuotaListExportPaged  QuotaListExportPagedRequest
      * @return QuotaListExportPagedResponse
@@ -902,33 +921,33 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Make sure that you are a distributor of the Alibaba Cloud international ecosystem.</p>
      * <ul>
-     * <li>You can call this operation to subscribe to only one type of bill at a time.</li>
-     * <li>After the subscription to a type of bill is generated, the bill for the previous day is pushed on a daily basis from the next day. On the fifth day of each month, the full-data bill for the previous month is pushed.</li>
-     * <li>A daily bill may be delayed. The delayed bill is pushed the next day after it is generated. The delayed bill may contain the bill data that is delayed until the previous day. We recommend that you query the full-data bill for the previous month at the beginning of each month.</li>
-     * <li>Your account must be granted the <a href="https://ram.console.aliyun.com/?spm=api-workbench.API%20Document.0.0.68c71e0fhmTSJp#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission.</li>
-     * <li>The following file name formats are supported for bills:</li>
+     * <li>Ensure that the caller is an Alibaba Cloud international master reseller partner.</li>
+     * <li>A user can subscribe to one type of bill file at a time.</li>
+     * <li>After subscription, bill files generated on the previous day are pushed daily starting from the next day. On the 5th of each month, full bill files for the previous billing cycle are pushed.</li>
+     * <li>Bill files generated on a daily basis may be delayed. Delayed bill files are pushed the day after they are generated and may include bills that were delayed from earlier days. Pull the full files for the previous month at the beginning of each month.</li>
+     * <li>Grant the <a href="https://ram.console.aliyun.com/?spm=api-workbench.API%20Document.0.0.68c71e0fhmTSJp#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission to the subscribing user.</li>
+     * <li>File names.</li>
      * </ul>
-     * <pre><code>BillingItemDetailForBillingPeriod
+     * <pre><code class="language-.">BillingItemDetailForBillingPeriod   (Billing item detail)
      *   
-     * File name format of a daily bill: UID_PartnerBillingItemDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_BillingItemDetail_20190310_0001_01. 
+     * Daily push file name format: UID_PartnerBillingItemDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_BillingItemDetail_20190310_0001_01.
      *   
-     * File name format of a monthly full-data bill: UID_PartnerBillingItemDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetail_201903_0001_01. 
-     * InstanceDetailForBillingPeriod
+     * Full file name format at the beginning of the next month: UID_PartnerBillingItemDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetail_201903_0001_01.
+     * InstanceDetailForBillingPeriod  (Instance bill detail)
      *  
-     *  File name format of a daily bill: UID_PartnerInstanceDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_InstanceDetail_20190310_0001_01. 
+     *  Daily push file name format: UID_PartnerInstanceDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_InstanceDetail_20190310_0001_01.
      *   
-     * File name format of a monthly full-data bill: UID_PartnerInstanceDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetail_201903_1999-0001_01. 
-     * BillingItemDetailMonthly
+     * Full file name format at the beginning of the next month: UID_PartnerInstanceDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetail_201903_1999-0001_01.
+     * BillingItemDetailMonthly   (Billing item monthly bill)
      *   
-     * File name format of a daily bill: UID_PartnerBillingItemDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
-     * InstanceDetailMonthly
+     * Daily push file name format: UID_PartnerBillingItemDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetailMonthly_201903_0001_01. This file is updated daily with full data from the beginning of the month to the current day, until the 5th of the next month.
+     * InstanceDetailMonthly  (Instance monthly bill)
      *   
-     * File name format of a daily bill: UID_PartnerInstanceDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
-     * The fileNo field exists only when the number of bill rows reaches the maximum rows in a single bill file and the bill is split into multiple files.
+     * Daily push file name format: UID_PartnerInstanceDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetailMonthly_201903_0001_01. This file is updated daily with full data from the beginning of the month to the current day, until the 5th of the next month.
+     * fileNo exists only when the number of bill rows reaches the split threshold and the file is split.
      * </code></pre>
-     * <p>**This topic is published only on the international site (alibabacloud.com).</p>
+     * <p><strong>This content is published only on the Chinese site.</strong>.</p>
      * 
      * @param request the request parameters of SubscriptionBill  SubscriptionBillRequest
      * @return SubscriptionBillResponse

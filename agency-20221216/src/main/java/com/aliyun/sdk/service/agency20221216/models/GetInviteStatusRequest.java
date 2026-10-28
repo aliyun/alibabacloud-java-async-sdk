@@ -60,8 +60,7 @@ public class GetInviteStatusRequest extends Request {
         } 
 
         /**
-         * <p>inviteId list</br>
-         * <code>Sub-levels &lt;= 5</code></p>
+         * <p>inviteId list</p>
          * <p>This parameter is required.</p>
          */
         public Builder inviteStatusList(java.util.List<InviteStatusList> inviteStatusList) {
@@ -117,7 +116,7 @@ public class GetInviteStatusRequest extends Request {
             } 
 
             /**
-             * <p>Invitation ID, From interface InviteSubAccount</p>
+             * <p>The invitation ID, which is obtained from the InviteSubAccount operation.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>

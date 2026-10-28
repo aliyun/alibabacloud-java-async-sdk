@@ -119,11 +119,9 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error Code, Candidate Value：</p>
-         * <ul>
-         * <li>200: OK</li>
-         * <li>1109: System error</li>
-         * </ul>
+         * <p>The error code. Valid values:
+         * 200: OK.
+         * 1109: System error.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -134,7 +132,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of Invitation Information</p>
+         * InviteInfoList.
          */
         public Builder inviteInfoList(InviteInfoList inviteInfoList) {
             this.inviteInfoList = inviteInfoList;
@@ -142,10 +140,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Message information</p>
+         * <p>The message information.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -153,7 +151,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Pagination Information</p>
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -161,7 +159,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+         * <p>The request ID. Alibaba Cloud uses this ID for error tracking.</p>
          * 
          * <strong>example:</strong>
          * <p>23309219-4A34-589D-A3E0-9B2A3BFFD24F</p>
@@ -172,7 +170,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+         * <p>Indicates whether the current API call itself is successful. Valid values: True and False. This does not indicate the success of subsequent business operations.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -280,10 +278,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of Customer who are to be invited.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>My Client</p>
+             * AccountNickname.
              */
             public Builder accountNickname(String accountNickname) {
                 this.accountNickname = accountNickname;
@@ -291,10 +286,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Email of Customer who are to be invited.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:12345@qq.com">12345@qq.com</a></p>
+             * Email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -302,10 +294,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of email been sent out.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2023-05-10</p>
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -313,10 +302,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Invitation ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>190</p>
+             * InviteId.
              */
             public Builder inviteId(Long inviteId) {
                 this.inviteId = inviteId;
@@ -324,16 +310,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Invitation Status:</p>
-             * <ul>
-             * <li>0 No visit on registration URL</li>
-             * <li>1 Successful Registration</li>
-             * <li>2 Unsuccessful Registration</li>
-             * <li>3 Registration URL have been visited, but no submitted sheet/ticket.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -467,7 +444,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Pagination, current page.</p>
+             * <p>The current page number for pagination.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -478,7 +455,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Pagination, record number on each page.</p>
+             * <p>The number of records per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -489,7 +466,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Pagination, page volume in total.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>

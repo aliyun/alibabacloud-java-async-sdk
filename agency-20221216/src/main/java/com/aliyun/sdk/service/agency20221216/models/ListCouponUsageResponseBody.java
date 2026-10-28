@@ -106,7 +106,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>接口状态码</p>
+         * <p>The status code of the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回数据</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,10 +125,10 @@ public class ListCouponUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>接口返回提示信息</p>
+         * <p>The message returned by the API operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>成功</p>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,7 +136,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页信息</p>
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -144,7 +144,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>接口请求id返回问题提供查询使用</p>
+         * <p>The request ID. You can provide this ID for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
@@ -317,7 +317,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>阿里云账号</p>
+             * <p>The Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:oqevfbveuadcrduzmf@ttirv.net">oqevfbveuadcrduzmf@ttirv.net</a></p>
@@ -328,7 +328,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>优惠券面额</p>
+             * <p>The face value of the coupon.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -339,7 +339,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>余额</p>
+             * <p>The remaining balance.</p>
              * 
              * <strong>example:</strong>
              * <p>0.01</p>
@@ -350,7 +350,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>优惠券id</p>
+             * <p>The ID of the coupon.</p>
              * 
              * <strong>example:</strong>
              * <p>59226280</p>
@@ -361,7 +361,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>优惠券模版id</p>
+             * <p>The ID of the coupon template.</p>
              * 
              * <strong>example:</strong>
              * <p>503802</p>
@@ -372,7 +372,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>优惠券有效期</p>
+             * <p>The validity period of the coupon.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-06 00:00:00 ~ 2023-04-07 00:00:00</p>
@@ -383,7 +383,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>优惠券发放时间</p>
+             * <p>The time when the coupon was issued. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-06 19:32:10</p>
@@ -394,11 +394,11 @@ public class ListCouponUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>优惠券状态 </br>
-             * AVAILABLE 正常 </br>
-             * EXHAUSTED 已用完 </br>
-             * EXPIRED 已过期 </br>
-             * ABANDONED 已作废 </br></p>
+             * <p>The coupon status. Valid values:</br>
+             * AVAILABLE: Normal.</br>
+             * EXHAUSTED: Used up.</br>
+             * EXPIRED: Expired.</br>
+             * ABANDONED: Voided.</br></p>
              * 
              * <strong>example:</strong>
              * <p>AVAILABLE</p>
@@ -409,7 +409,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>二级分销商Uid</p>
+             * <p>The UID of the T2 partner.</p>
              * 
              * <strong>example:</strong>
              * <p>5248516956402795</p>
@@ -420,7 +420,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阿里云uid</p>
+             * <p>The UID of the Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>1647668856741998</p>
@@ -503,7 +503,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>分页，当前页</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -514,7 +514,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>分页，每页数量</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -525,7 +525,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>分页，总量</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>

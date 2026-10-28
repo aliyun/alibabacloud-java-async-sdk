@@ -134,6 +134,7 @@ public class QueryReversedDeductionHistoryRequest extends Request {
         } 
 
         /**
+         * <p>The end date. Format: yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +147,15 @@ public class QueryReversedDeductionHistoryRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li>en: English.</li>
+         * <li>zh: Chinese.</li>
+         * <li>ja: Japanese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -155,6 +164,7 @@ public class QueryReversedDeductionHistoryRequest extends Request {
         }
 
         /**
+         * <p>The page number. Pages start from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +177,7 @@ public class QueryReversedDeductionHistoryRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +190,7 @@ public class QueryReversedDeductionHistoryRequest extends Request {
         }
 
         /**
+         * <p>The start date. Format: yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +203,7 @@ public class QueryReversedDeductionHistoryRequest extends Request {
         }
 
         /**
+         * <p>The customer UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,9 +106,11 @@ public class InviteSubAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error Code: </br>
-         * • 200 OK</br>
-         * • 1109 System Error</br></p>
+         * <p>The fault code. Valid values:</p>
+         * <ul>
+         * <li>200: OK.</li>
+         * <li>1109: System Error.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -119,10 +121,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Message</br></p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +132,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID, Alibaba Cloud will track errors with this ID.</p>
+         * <p>The request ID. Alibaba Cloud uses this ID for fault tracking.</p>
          * 
          * <strong>example:</strong>
          * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
@@ -141,7 +143,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of invitation sending results</p>
+         * Results.
          */
         public Builder results(Results results) {
             this.results = results;
@@ -149,7 +151,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Candidate Values: True/False, this value states if the current API calling action is successful. It does not guarantee the success of subsequent business operations.</p>
+         * <p>Indicates whether the current API invocation is successful. Valid values: True and False. This does not indicate whether the subsequent business operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -231,10 +233,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Valid days of registration URL, count on daily basis.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>15</p>
+             * Days.
              */
             public Builder days(Integer days) {
                 this.days = days;
@@ -242,10 +241,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Invitation ID, The invitation status tracking code.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12345</p>
+             * InviteId.
              */
             public Builder inviteId(Long inviteId) {
                 this.inviteId = inviteId;
@@ -253,10 +249,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>URL for Partner Customer Registration.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://agency-intl.console.aliyun.com/customer/register?intl=true&fxinfo=-4uT%2FMWHnnUdvr5GXVd1AYK8luTnGgH3M7Y3lSCd5M1fxRwAkViTWtDJDpckh0HL">http://agency-intl.console.aliyun.com/customer/register?intl=true&amp;fxinfo=-4uT%2FMWHnnUdvr5GXVd1AYK8luTnGgH3M7Y3lSCd5M1fxRwAkViTWtDJDpckh0HL</a></p>
+             * RegUrl.
              */
             public Builder regUrl(String regUrl) {
                 this.regUrl = regUrl;
@@ -349,7 +342,11 @@ public class InviteSubAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Error Code, 200 OK</p>
+             * <p>The fault code. Valid values:</p>
+             * <ul>
+             * <li>200: OK.</li>
+             * <li>1109: System Error.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -360,10 +357,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Message, Notes of Code</p>
+             * <p>The message returned.</p>
              * 
              * <strong>example:</strong>
-             * <p>success</p>
+             * <p>成功</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -371,7 +368,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returning Message of Invitation Results</p>
+             * Result.
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -379,7 +376,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Always true.</p>
+             * <p>Indicates whether the current API invocation is successful. Valid values: True and False. This does not indicate whether the subsequent business operation is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -436,7 +433,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Returning Message of Invitation Results</p>
+             * Result.
              */
             public Builder result(java.util.List<ResultsResult> result) {
                 this.result = result;

@@ -93,7 +93,10 @@ public class QueryAutomaticWriteOffChangeRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the response. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class QueryAutomaticWriteOffChangeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of query results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class QueryAutomaticWriteOffChangeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class QueryAutomaticWriteOffChangeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8cd24f2917797624314748873d0096</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -209,7 +218,10 @@ public class QueryAutomaticWriteOffChangeRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChangeContent.
+             * <p>The content of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable automatic write-off and select 500 USD</p>
              */
             public Builder changeContent(String changeContent) {
                 this.changeContent = changeContent;
@@ -217,7 +229,10 @@ public class QueryAutomaticWriteOffChangeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OperateId.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12312312</p>
              */
             public Builder operateId(String operateId) {
                 this.operateId = operateId;
@@ -225,7 +240,10 @@ public class QueryAutomaticWriteOffChangeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OperateSource.
+             * <p>The description of the operation source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API</p>
              */
             public Builder operateSource(String operateSource) {
                 this.operateSource = operateSource;
@@ -233,7 +251,10 @@ public class QueryAutomaticWriteOffChangeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTime.
+             * <p>The time of the operation. Format: YYYY-MM-DD HH:mm:ss UTC+8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-15 10:34:36 UTC+8</p>
              */
             public Builder operationTime(String operationTime) {
                 this.operationTime = operationTime;

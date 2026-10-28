@@ -103,7 +103,7 @@ public class GetAccountInfoRequest extends Request {
         } 
 
         /**
-         * <p>Pagination, current page.</p>
+         * <p>The current page number for pagination.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * <p>Pagination, record number on each page, maximum 20.</p>
+         * <p>The number of entries per page for pagination. Maximum value: 20.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * <p>Account UID of Distribution Customer. This parameter and the UserType parameter must have one filled. If this parameter is empty, then check all Distribution Customer accounts of the selected UserType.</p>
+         * <p>The UID of the distribution customer account. Either this parameter or the UserType parameter must be specified. If this parameter is empty, all distribution customer accounts of the specified UserType are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1215848086704806</p>
@@ -141,11 +141,11 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * <p>Distribution Customer&quot;s Account Type:</p>
+         * <p>The type of the distribution customer account. Valid values:</p>
          * <ul>
-         * <li>1 End User</li>
-         * <li>2 Enterprise</li>
-         * <li>3 T2 Partner</li>
+         * <li>1: End user.</li>
+         * <li>2: Enterprise customer. </li>
+         * <li>3: T2 partner.</li>
          * </ul>
          * 
          * <strong>example:</strong>

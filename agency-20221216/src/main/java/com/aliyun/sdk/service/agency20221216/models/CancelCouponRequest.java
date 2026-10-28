@@ -60,6 +60,7 @@ public class CancelCouponRequest extends Request {
         } 
 
         /**
+         * <p>The coupon ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -133,7 +139,10 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +150,7 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -220,7 +229,10 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
             } 
 
             /**
-             * CouponTemplateId.
+             * <p>The ID of the coupon template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5075915</p>
              */
             public Builder couponTemplateId(Long couponTemplateId) {
                 this.couponTemplateId = couponTemplateId;
@@ -228,7 +240,10 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-05 18:24:07</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -236,7 +251,10 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * Uidlist.
+             * <p>The UIDs to which the coupons are issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111,2222</p>
              */
             public Builder uidlist(String uidlist) {
                 this.uidlist = uidlist;

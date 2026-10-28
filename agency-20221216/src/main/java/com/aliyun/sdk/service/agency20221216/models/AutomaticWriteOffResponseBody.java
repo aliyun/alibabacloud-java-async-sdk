@@ -104,7 +104,10 @@ public class AutomaticWriteOffResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the configuration is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -112,7 +115,10 @@ public class AutomaticWriteOffResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +126,10 @@ public class AutomaticWriteOffResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6fc1309b17543600398356606d0096</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

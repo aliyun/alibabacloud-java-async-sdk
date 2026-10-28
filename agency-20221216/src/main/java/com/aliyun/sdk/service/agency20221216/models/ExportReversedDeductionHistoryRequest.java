@@ -104,6 +104,7 @@ public class ExportReversedDeductionHistoryRequest extends Request {
         } 
 
         /**
+         * <p>The end date. Format: yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class ExportReversedDeductionHistoryRequest extends Request {
         }
 
         /**
+         * <p>The UID for which the reversed deduction details are exported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,15 @@ public class ExportReversedDeductionHistoryRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language of the exported content. Valid values:</p>
+         * <ul>
+         * <li>en: English.</li>
+         * <li>zh: Chinese.</li>
+         * <li>ja: Japanese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -137,6 +147,7 @@ public class ExportReversedDeductionHistoryRequest extends Request {
         }
 
         /**
+         * <p>The start date. Format: yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

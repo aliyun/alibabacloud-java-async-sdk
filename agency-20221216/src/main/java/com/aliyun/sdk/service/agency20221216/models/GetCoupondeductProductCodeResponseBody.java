@@ -106,7 +106,11 @@ public class GetCoupondeductProductCodeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. Valid values:
+         * 200: OK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +118,7 @@ public class GetCoupondeductProductCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +126,10 @@ public class GetCoupondeductProductCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +148,10 @@ public class GetCoupondeductProductCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +204,10 @@ public class GetCoupondeductProductCodeResponseBody extends TeaModel {
             } 
 
             /**
-             * ProductType.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code1</p>
              */
             public Builder productType(Object productType) {
                 this.productType = productType;

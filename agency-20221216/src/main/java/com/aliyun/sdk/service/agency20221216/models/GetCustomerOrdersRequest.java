@@ -232,7 +232,10 @@ public class GetCustomerOrdersRequest extends Request {
         } 
 
         /**
-         * CustomerAccount.
+         * <p>The customer account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_123</p>
          */
         public Builder customerAccount(String customerAccount) {
             this.putQueryParameter("CustomerAccount", customerAccount);
@@ -241,7 +244,10 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
-         * CustomerManager.
+         * <p>The account manager.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myBd</p>
          */
         public Builder customerManager(String customerManager) {
             this.putQueryParameter("CustomerManager", customerManager);
@@ -250,7 +256,10 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
-         * CustomerUid.
+         * <p>The customer UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder customerUid(Long customerUid) {
             this.putQueryParameter("CustomerUid", customerUid);
@@ -259,6 +268,7 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
+         * <p>The end time. This parameter is used in combination with TimeType. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,7 +281,10 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>209335720330622</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -280,7 +293,15 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
-         * OrderSource.
+         * <p>The order source. Valid values:</p>
+         * <ul>
+         * <li>0: Regular customer.</li>
+         * <li>1: Enterprise customer.</li>
+         * <li>2: Tier-2 distributor.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder orderSource(Integer orderSource) {
             this.putQueryParameter("OrderSource", orderSource);
@@ -289,7 +310,15 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
-         * OrderStatus.
+         * <p>The order status. Valid values:</p>
+         * <ul>
+         * <li>1: Unpaid.</li>
+         * <li>2: Canceled.</li>
+         * <li>3: Paid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder orderStatus(Integer orderStatus) {
             this.putQueryParameter("OrderStatus", orderStatus);
@@ -298,7 +327,18 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The order type. Valid values:</p>
+         * <ul>
+         * <li>BUY: New purchase.</li>
+         * <li>UPGRADE: Upgrade.</li>
+         * <li>DOWNGRADE: Downgrade.</li>
+         * <li>RENEW: Renewal.</li>
+         * <li>REFUND: Refund.</li>
+         * <li>OTHERS: Others.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RENEW</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -307,6 +347,7 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,6 +360,7 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -331,7 +373,10 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product detail code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vm_intl</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -340,6 +385,7 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
+         * <p>The start time. This parameter is used in combination with TimeType. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -352,6 +398,11 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
+         * <p>The time type used as the basis for the query. This is not a date or time value. Valid values:</p>
+         * <ul>
+         * <li>1: Payment time.</li>
+         * <li>2: Order placement time.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

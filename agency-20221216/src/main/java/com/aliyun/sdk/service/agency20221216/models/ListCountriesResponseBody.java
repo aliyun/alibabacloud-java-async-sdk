@@ -106,10 +106,10 @@ public class ListCountriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error Code</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>200: OK</li>
-         * <li>1109: System error</li>
+         * <li>200: OK.</li>
+         * <li>1109: System error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of Region Code</p>
+         * <p>The list of region codes.</p>
          */
         public Builder data(java.util.List<String> data) {
             this.data = data;
@@ -129,10 +129,10 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Message information</p>
+         * <p>The message information.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -140,7 +140,7 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+         * <p>The request ID. Alibaba Cloud uses this ID for error tracking.</p>
          * 
          * <strong>example:</strong>
          * <p>A747A00F-E096-5244-88B3-3E474BAE3AE4</p>
@@ -151,7 +151,7 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+         * <p>Indicates whether the current API call itself is successful. Valid values: True and False. This does not indicate the success of subsequent business operations.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

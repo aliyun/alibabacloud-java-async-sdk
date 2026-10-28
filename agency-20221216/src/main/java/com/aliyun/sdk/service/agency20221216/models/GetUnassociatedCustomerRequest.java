@@ -75,7 +75,7 @@ public class GetUnassociatedCustomerRequest extends Request {
         } 
 
         /**
-         * <p>Pagination, current page.</p>
+         * <p>The current page number for pagination.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetUnassociatedCustomerRequest extends Request {
         }
 
         /**
-         * <p>Pagination, record number on each page.</p>
+         * <p>The number of records per page for pagination.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

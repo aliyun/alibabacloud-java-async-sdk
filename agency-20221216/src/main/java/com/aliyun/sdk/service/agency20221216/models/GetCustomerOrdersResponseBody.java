@@ -158,7 +158,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,7 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -174,7 +177,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message. The value is the same as the Code parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -182,7 +188,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>The message. The value is the same as the Code parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -190,7 +199,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -198,7 +210,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -217,7 +232,14 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>200: OK.</li>
+         * <li>201: Parameter error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +247,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -447,7 +472,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomerAccount.
+             * <p>The customer account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_123</p>
              */
             public Builder customerAccount(String customerAccount) {
                 this.customerAccount = customerAccount;
@@ -455,7 +483,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerManager.
+             * <p>The account manager.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myBd</p>
              */
             public Builder customerManager(String customerManager) {
                 this.customerManager = customerManager;
@@ -463,7 +494,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerNo.
+             * <p>The customer UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder customerNo(Long customerNo) {
                 this.customerNo = customerNo;
@@ -471,7 +505,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>236414227150922</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -479,7 +516,15 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * OrderSource.
+             * <p>The order source. Valid values:</p>
+             * <ul>
+             * <li>0: Regular customer.</li>
+             * <li>1: Enterprise customer.</li>
+             * <li>2: Tier-2 distributor.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder orderSource(String orderSource) {
                 this.orderSource = orderSource;
@@ -487,7 +532,15 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * OrderStatus.
+             * <p>The order status. Valid values:</p>
+             * <ul>
+             * <li>1: Unpaid.</li>
+             * <li>2: Canceled.</li>
+             * <li>3: Paid.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
@@ -495,7 +548,18 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * <p>The order type. Valid values:</p>
+             * <ul>
+             * <li>BUY: New purchase.</li>
+             * <li>UPGRADE: Upgrade.</li>
+             * <li>DOWNGRADE: Downgrade.</li>
+             * <li>RENEW: Renewal.</li>
+             * <li>REFUND: Refund.</li>
+             * <li>OTHERS: Others.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BUY</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -503,7 +567,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalCost.
+             * <p>The original order price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.92</p>
              */
             public Builder originalCost(Double originalCost) {
                 this.originalCost = originalCost;
@@ -511,7 +578,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentMethod.
+             * <p>The payment method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3:32</p>
              */
             public Builder paymentMethod(String paymentMethod) {
                 this.paymentMethod = paymentMethod;
@@ -519,7 +589,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentTime.
+             * <p>The payment time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-13 13:02:02</p>
              */
             public Builder paymentTime(String paymentTime) {
                 this.paymentTime = paymentTime;
@@ -527,7 +600,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * PretaxCost.
+             * <p>The payable amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.92</p>
              */
             public Builder pretaxCost(Double pretaxCost) {
                 this.pretaxCost = pretaxCost;
@@ -535,7 +611,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * ProductDetail.
+             * <p>The product details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -543,7 +622,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * <p>The product detail code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>snapshot</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -551,7 +633,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * TimeToOrder.
+             * <p>The order placement time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-13 13:02:02</p>
              */
             public Builder timeToOrder(String timeToOrder) {
                 this.timeToOrder = timeToOrder;

@@ -132,7 +132,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +162,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -164,7 +173,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -311,7 +329,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
             } 
 
             /**
-             * IssuerAccount.
+             * <p>The issuing account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder issuerAccount(String issuerAccount) {
                 this.issuerAccount = issuerAccount;
@@ -319,7 +340,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * IssuerUid.
+             * <p>The UID of the issuing account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5432738203821334</p>
              */
             public Builder issuerUid(String issuerUid) {
                 this.issuerUid = issuerUid;
@@ -327,7 +351,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * Note.
+             * <p>The approval comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Approved</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -335,7 +362,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S00000101-100040</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -343,7 +373,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The name of the coupon template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template name</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -351,7 +384,19 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateStatus.
+             * <p>The status of the coupon template. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: application revoked</li>
+             * <li><strong>2</strong>: under review</li>
+             * <li><strong>3</strong>: review rejected</li>
+             * <li><strong>4</strong>: review approved</li>
+             * <li><strong>5</strong>: review approved but issuance failed</li>
+             * <li><strong>6</strong>: automatically approved</li>
+             * <li><strong>7</strong>: automatically approved but issuance failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder templateStatus(Long templateStatus) {
                 this.templateStatus = templateStatus;
@@ -359,7 +404,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * TimeOfRequest.
+             * <p>The application time. The format is YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-02 09:46:59</p>
              */
             public Builder timeOfRequest(String timeOfRequest) {
                 this.timeOfRequest = timeOfRequest;
