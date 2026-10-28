@@ -33,10 +33,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This is an asynchronous operation. After the request is successful, the KVCacheStore enters the Creating state. You can call GetKVCacheStore or ListKVCacheStores to query the KVCacheStore status. The KVCacheStore becomes available when its status changes to Available.</p>
+     * <p>This is an asynchronous operation. After the request is successful, the KVCacheStore enters the Creating state. You can call GetKVCacheStore or ListKVCacheStores to query the KVCacheStore status. The KVCacheStore is available after the status changes to Available.</p>
      * <ul>
-     * <li>To ensure idempotence in case of network exceptions, use ClientToken. If you call the operation with the same ClientToken and the same request parameters, the same KVCacheStore ID and order ID are returned. If the request parameters change, an IdempotentParameterMismatch error is returned.</li>
-     * <li>Creating a KVCacheStore generates an order. The response includes OrderId, which you can view in the Expenses and Costs console. For more information, refer to View and manage orders.</li>
+     * <li>To ensure idempotency in case of network exceptions, use ClientToken. If you call this operation with the same ClientToken and the same request parameters, the same KVCacheStore ID and order ID are returned. If the request parameters change, an IdempotentParameterMismatch error is returned.</li>
+     * <li>When a KVCacheStore is created, an order is generated at the same time. The OrderId is returned in the response. You can view the order in the Expenses and Costs console. For more information, see View and manage orders.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateKVCacheStore  CreateKVCacheStoreRequest
@@ -72,7 +72,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This is an asynchronous operation. A return status of Detaching indicates that the request has been accepted. Call ListKVCacheStoreAttachInfo to query mount records. When no record corresponding to the specified KvcsId and VscId is found, the unmount operation is complete.</p>
+     * <p>This operation is asynchronous. A return value of Detaching indicates that the request has been accepted. Call ListKVCacheStoreAttachInfo to query attachment records. If no record is found for the specified KvcsId and VscId, the detachment is complete.</p>
      * 
      * @param request the request parameters of DetachKVCacheStore  DetachKVCacheStoreRequest
      * @return DetachKVCacheStoreResponse
@@ -87,11 +87,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation has no KVCacheStore status restrictions. If a KVCacheStore is in the Creating state, an empty list is returned.</p>
+     * <p>This operation has no status restrictions on KVCacheStore. If a KVCacheStore is in the Creating state, an empty list is returned.</p>
      * <ul>
-     * <li>A KVCacheStore can be mounted to multiple VSCs, so each KVCacheStore may return multiple mount records.</li>
-     * <li>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</li>
-     * <li>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</li>
+     * <li>A KVCacheStore can be mounted to multiple VSCs. Multiple mount records may be returned for each KVCacheStore.</li>
+     * <li>This operation supports batch queries. You can query up to 100 KVCacheStores in a single call.</li>
+     * <li>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are provided, cursor-based pagination takes precedence.</li>
      * </ul>
      * 
      * @param request the request parameters of ListKVCacheStoreAttachInfo  ListKVCacheStoreAttachInfoRequest
@@ -101,7 +101,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries available HpnZones by KVCacheStore. Use this operation to query available HPN cluster IDs before scaling or migrating a KVCacheStore.</p>
+     * <p>This operation queries available HpnZones by KVCacheStore instance. It is used to query optional HPN cluster IDs before scaling or migrating a KVCacheStore instance.</p>
      * 
      * @param request the request parameters of ListKVCacheStoreAvailableHpnZones  ListKVCacheStoreAvailableHpnZonesRequest
      * @return ListKVCacheStoreAvailableHpnZonesResponse

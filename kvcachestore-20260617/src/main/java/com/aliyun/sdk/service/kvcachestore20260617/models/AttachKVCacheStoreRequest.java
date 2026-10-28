@@ -26,6 +26,10 @@ public class AttachKVCacheStoreRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -39,6 +43,7 @@ public class AttachKVCacheStoreRequest extends Request {
         super(builder);
         this.arns = builder.arns;
         this.clientToken = builder.clientToken;
+        this.instanceType = builder.instanceType;
         this.regionId = builder.regionId;
         this.resourceIds = builder.resourceIds;
     }
@@ -71,6 +76,13 @@ public class AttachKVCacheStoreRequest extends Request {
     }
 
     /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -87,6 +99,7 @@ public class AttachKVCacheStoreRequest extends Request {
     public static final class Builder extends Request.Builder<AttachKVCacheStoreRequest, Builder> {
         private java.util.List<Arns> arns; 
         private String clientToken; 
+        private String instanceType; 
         private String regionId; 
         private java.util.List<ResourceIds> resourceIds; 
 
@@ -98,6 +111,7 @@ public class AttachKVCacheStoreRequest extends Request {
             super(request);
             this.arns = request.arns;
             this.clientToken = request.clientToken;
+            this.instanceType = request.instanceType;
             this.regionId = request.regionId;
             this.resourceIds = request.resourceIds;
         } 
@@ -120,6 +134,18 @@ public class AttachKVCacheStoreRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>The VSC instance type. Valid values: EFLO, ECS, and INNER_ECS. Default value: EFLO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 
@@ -244,11 +270,7 @@ public class AttachKVCacheStoreRequest extends Request {
             }
 
             /**
-             * <p>The role type. Valid values:</p>
-             * <ul>
-             * <li>service</li>
-             * <li>user</li>
-             * </ul>
+             * <p>The role type. Valid values: service and user.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

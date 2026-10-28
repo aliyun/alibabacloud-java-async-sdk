@@ -43,6 +43,10 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VscId")
+    private String vscId;
+
     private ListKVCacheStoreAttachInfoRequest(Builder builder) {
         super(builder);
         this.kvcsIds = builder.kvcsIds;
@@ -51,6 +55,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.vscId = builder.vscId;
     }
 
     public static Builder builder() {
@@ -108,6 +113,13 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return vscId
+     */
+    public String getVscId() {
+        return this.vscId;
+    }
+
     public static final class Builder extends Request.Builder<ListKVCacheStoreAttachInfoRequest, Builder> {
         private java.util.List<String> kvcsIds; 
         private Long maxResults; 
@@ -115,6 +127,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String vscId; 
 
         private Builder() {
             super();
@@ -128,10 +141,11 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.vscId = request.vscId;
         } 
 
         /**
-         * <p>The list of KVCacheStore KvcsIds to query. You can specify up to 100 IDs.</p>
+         * <p>The list of KvcsIds of the KVCacheStores to query. You can specify up to 100 KvcsIds.</p>
          * <p>This parameter is required.</p>
          */
         public Builder kvcsIds(java.util.List<String> kvcsIds) {
@@ -141,7 +155,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per query. Valid values: 1 to 500.</p>
+         * <p>The maximum number of entries to return in a single call. Valid values: 1 to 500.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +168,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If NextToken is specified, the PageSize and PageNumber request parameters become ineffective, and TotalCount in the response is invalid.</p>
+         * <p>The query token. Set the value to the NextToken value returned from the last call to this operation. You do not need to specify this parameter for the first call. If NextToken is specified, the PageSize and PageNumber request parameters become invalid, and the TotalCount value in the response is invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>your-client-token</p>
@@ -166,7 +180,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The page number for a paged query. Used together with PageSize. If the specified page number exceeds the total number of pages, the last page of data is returned.</p>
+         * <p>The page number for a paging query. This parameter is used together with PageSize. If the specified page number exceeds the total number of pages, the last page is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -178,7 +192,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query.</p>
+         * <p>The number of entries per page for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -199,6 +213,18 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the compute-side VSC. If you specify this parameter, the mount records are filtered by the specified VSC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsc-dhag651dsda</p>
+         */
+        public Builder vscId(String vscId) {
+            this.putQueryParameter("VscId", vscId);
+            this.vscId = vscId;
             return this;
         }
 

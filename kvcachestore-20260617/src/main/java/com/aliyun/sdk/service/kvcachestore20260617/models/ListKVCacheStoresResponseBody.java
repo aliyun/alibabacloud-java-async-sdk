@@ -145,7 +145,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of KVCacheStore instances. Each element contains the following fields: KvcsId, Name, Status, ExtraStatus, RegionId, ZoneId, HpnZone, Type, Capacity, PaymentType, MountPointId, CreateTime, and Description.</p>
+         * <p>The list of KVCacheStore instances. Each element contains the following parameters: KvcsId, Name, Status, ExtraStatus, RegionId, ZoneId, HpnZone, Type, Capacity, PaymentType, MountPointId, CreateTime, and Description.</p>
          */
         public Builder KVCacheStores(java.util.List<KVCacheStores> KVCacheStores) {
             this.KVCacheStores = KVCacheStores;
@@ -153,7 +153,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per pagination request.</p>
+         * <p>The maximum number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -197,7 +197,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages. This value is returned only for page number-based pagination.</p>
+         * <p>The total number of pages. This parameter is returned only for page number-based pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -208,7 +208,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. A request ID is returned regardless of whether the API call succeeds.</p>
+         * <p>The request ID. A request ID is returned regardless of whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>56AC37CD-388E-5D21-951B-C50D16D8E812</p>
@@ -219,7 +219,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instances. This value is returned only for page number-based pagination. For cursor-based pagination, the value is -1.</p>
+         * <p>The total number of instances. This parameter is returned only for page number-based pagination. For cursor-based pagination, the value is -1.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -538,7 +538,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The storage capacity. Unit: GiB.</p>
+             * <p>The storage capacity, in GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -604,7 +604,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file system-level mount point ID. Instances under the same file system share this mount point. For more information, call ListKVCacheInstanceAttachInfo.</p>
+             * <p>The file system-level mount point ID. Instances under the same file system share this mount point. For more information, use the ListKVCacheInstanceAttachInfo operation.</p>
              * 
              * <strong>example:</strong>
              * <p>mp-xxxxx</p>

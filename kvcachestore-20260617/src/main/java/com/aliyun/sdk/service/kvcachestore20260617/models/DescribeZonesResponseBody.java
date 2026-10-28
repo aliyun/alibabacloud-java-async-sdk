@@ -67,7 +67,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID. The request ID is returned regardless of whether the API call is successful.</p>
+         * <p>The request ID. This ID is returned regardless of whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>6AA27F1A-A62C-59C3-BCC7-D1DFA4E7EEA0</p>
@@ -78,7 +78,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of zones.</p>
+         * <p>The list of available zones.</p>
          */
         public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
