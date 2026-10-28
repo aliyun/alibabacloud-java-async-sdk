@@ -101,7 +101,7 @@ public class DescribeDocParserJobResultRequest extends Request {
         } 
 
         /**
-         * <p>The task ID (DtsJobId) returned when the document parsing task was created.</p>
+         * <p>The task ID (DtsJobId) returned when the document parsing task is created.</p>
          * 
          * <strong>example:</strong>
          * <p>dts-20250729-y0zz3t13h7d****</p>
@@ -113,7 +113,7 @@ public class DescribeDocParserJobResultRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the DTS RagFlow instance.</p>
+         * <p>The instance ID of the DTS RagFlow.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsgbe12he619iy801</p>

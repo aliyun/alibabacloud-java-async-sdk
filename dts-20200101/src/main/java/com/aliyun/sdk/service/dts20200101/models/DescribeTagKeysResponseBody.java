@@ -119,7 +119,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The tag type.</p>
+         * <p>The tag category.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -130,7 +130,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

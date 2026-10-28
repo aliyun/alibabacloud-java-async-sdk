@@ -145,7 +145,7 @@ public class ModifySynchronizationObjectRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be discontinued.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will soon be deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -166,7 +166,7 @@ public class ModifySynchronizationObjectRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region ID. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -178,7 +178,7 @@ public class ModifySynchronizationObjectRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -192,8 +192,8 @@ public class ModifySynchronizationObjectRequest extends Request {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong>: forward.</li>
-         * <li><strong>Reverse</strong>: reverse.</li>
+         * <li><strong>Forward</strong>: Forward.</li>
+         * <li><strong>Reverse</strong>: Reverse.</li>
          * </ul>
          * <blockquote>
          * <ul>
@@ -214,7 +214,7 @@ public class ModifySynchronizationObjectRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID.</p>
+         * <p>Instance ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class ModifySynchronizationObjectRequest extends Request {
         }
 
         /**
-         * <p>The modified synchronization objects. The value is a JSON string that supports certain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">Synchronization object configuration</a>.</p>
+         * <p>The modified synchronization objects. The value is a JSON string and supports specific regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">Synchronization object configuration</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

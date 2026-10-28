@@ -145,7 +145,7 @@ public class CreateMigrationJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be discontinued.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -157,7 +157,7 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Generate a value from your client to ensure that the value is unique among different requests. The <strong>ClientToken</strong> parameter supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>Ensures the idempotence of the request. You can generate the value on your client to ensure that it is unique across different requests. The <strong>ClientToken</strong> parameter supports only ASCII characters and can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -169,7 +169,7 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * <p>The specification of the data migration instance. Valid values: <strong>small</strong>, <strong>medium</strong>, <strong>large</strong>, <strong>xlarge</strong>, and <strong>2xlarge</strong>.</p>
+         * <p>The specifications of the data migration instance. Valid values: <strong>small</strong>, <strong>medium</strong>, <strong>large</strong>, <strong>xlarge</strong>, and <strong>2xlarge</strong>.</p>
          * <blockquote>
          * <ul>
          * <li>For the test performance of each specification, see <a href="https://help.aliyun.com/document_detail/26606.html">Data migration specifications</a>.</li>
@@ -199,7 +199,7 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * <p>The region of the data migration instance, which is the region of the destination database instance. For more information, see the supported <a href="https://help.aliyun.com/document_detail/141033.html">region list</a>.</p>
+         * <p>The region where the data migration instance resides. This is the region where the destination database instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * <p>The region of the data migration instance. You do not need to specify this parameter. This parameter will be discontinued.</p>
+         * <p>The region where the data migration instance resides. You do not need to specify this parameter because it will be deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -224,7 +224,7 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>

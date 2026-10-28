@@ -130,7 +130,7 @@ public class StopMigrationJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be discontinued.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter is about to be deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -142,7 +142,7 @@ public class StopMigrationJobRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Generate a value from your client to ensure uniqueness across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -188,7 +188,7 @@ public class StopMigrationJobRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>

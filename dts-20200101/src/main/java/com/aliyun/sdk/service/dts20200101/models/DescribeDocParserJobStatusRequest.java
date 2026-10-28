@@ -101,7 +101,7 @@ public class DescribeDocParserJobStatusRequest extends Request {
         } 
 
         /**
-         * <p>The task ID (DtsJobId) returned when the document parsing task was created.</p>
+         * <p>The task ID (DtsJobId) returned when the document parsing task is created.</p>
          * 
          * <strong>example:</strong>
          * <p>dts-20250729-l3m1213ye7l****</p>

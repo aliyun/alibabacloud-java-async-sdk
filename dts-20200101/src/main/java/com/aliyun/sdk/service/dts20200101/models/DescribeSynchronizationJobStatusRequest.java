@@ -144,7 +144,7 @@ public class DescribeSynchronizationJobStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be discontinued.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -156,7 +156,7 @@ public class DescribeSynchronizationJobStatusRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. <strong>ClientToken</strong> supports only ASCII characters and can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -177,7 +177,7 @@ public class DescribeSynchronizationJobStatusRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the data synchronization instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -189,7 +189,7 @@ public class DescribeSynchronizationJobStatusRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -203,11 +203,12 @@ public class DescribeSynchronizationJobStatusRequest extends Request {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong>: forward.</li>
-         * <li><strong>Reverse</strong>: reverse.</li>
+         * <li><strong>Forward</strong>: Forward.</li>
+         * <li><strong>Reverse</strong>: Reverse.</li>
          * </ul>
          * <blockquote>
-         * <p>Default value: <strong>Forward</strong>. The value <strong>Reverse</strong> takes effect only when the synchronization topology of the data synchronization instance is two-way synchronization.</p>
+         * <p>Default value: <strong>Forward</strong>.
+         * This parameter takes effect only when the synchronization topology of the data synchronization instance is two-way synchronization and you set this parameter to <strong>Reverse</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -220,7 +221,7 @@ public class DescribeSynchronizationJobStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID.</p>
+         * <p>Instance ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

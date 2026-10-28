@@ -208,10 +208,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether latency monitoring is enabled. Valid values:</p>
+         * <p>Indicates whether the latency status is monitored. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong>: enabled.</li>
-         * <li><strong>disable</strong>: disabled.</li>
+         * <li><strong>enable</strong>: Yes.</li>
+         * <li><strong>disable</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The threshold that triggers a latency alert. Unit: seconds.</p>
+         * <p>The threshold for triggering a latency alert. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -234,7 +234,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -245,7 +245,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -256,7 +256,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The mobile phone number of the contact for error alerts.</p>
+         * <p>The mobile phone number of the contact for abnormal alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>1361234****,1371234****</p>
@@ -267,10 +267,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether error status monitoring is enabled. Valid values:</p>
+         * <p>Indicates whether the abnormal status is monitored. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong>: enabled.</li>
-         * <li><strong>disable</strong>: disabled.</li>
+         * <li><strong>enable</strong>: Yes.</li>
+         * <li><strong>disable</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>210ec20e16055205968635339d****</p>
@@ -293,7 +293,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -306,8 +306,8 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong>: forward.</li>
-         * <li><strong>Reverse</strong>: reverse.</li>
+         * <li><strong>Forward</strong>: Forward.</li>
+         * <li><strong>Reverse</strong>: Reverse.</li>
          * </ul>
          * <blockquote>
          * <p>Default value: <strong>Forward</strong>.</p>

@@ -186,7 +186,7 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be deprecated.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter is about to be deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -198,9 +198,9 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>The mobile phone numbers of contacts for latency alerts. Separate multiple mobile phone numbers with commas (,).</p>
-         * <p>This parameter is supported only on the China site (aliyun.com) and supports only Chinese mainland mobile phone numbers. You can specify up to 10 mobile phone numbers.
-         * The China site does not support phone alerts. You can configure alert rules for DTS tasks only in the CloudMonitor console.</p>
+         * <p>The mobile phone numbers of the contacts to receive latency alerts. Separate multiple mobile phone numbers with commas (,).</p>
+         * <p>This parameter is supported only on the China site. Only mobile phone numbers in the Chinese mainland are supported, and you can specify up to 10 mobile phone numbers.
+         * The international site does not support mobile phone alerts. You can only configure alert rules for DTS tasks by using CloudMonitor.</p>
          * 
          * <strong>example:</strong>
          * <p>1361234****,1371234****</p>
@@ -214,8 +214,8 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         /**
          * <p>Specifies whether to monitor the latency status. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong>: yes.</li>
-         * <li><strong>disable</strong>: no.</li>
+         * <li><strong>enable</strong>: Yes.</li>
+         * <li><strong>disable</strong>: No.</li>
          * </ul>
          * <blockquote>
          * <ul>
@@ -236,9 +236,9 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>The threshold for triggering a latency alert. Unit: seconds. The value must be an integer. Set the threshold based on your business requirements. To avoid latency fluctuations caused by network conditions or database loads, set the threshold to 10 seconds or more.</p>
+         * <p>The threshold for triggering a latency alert. The value must be an integer in seconds. You can set the threshold based on your business requirements. Set the threshold to 10 seconds or more to avoid alert fluctuations caused by network issues or database loads.</p>
          * <blockquote>
-         * <p>This parameter is required when <strong>DelayAlertStatus</strong> is set to <strong>enable</strong>.</p>
+         * <p>This parameter is required when the <strong>DelayAlertStatus</strong> parameter is set to <strong>enable</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -251,9 +251,9 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>The mobile phone numbers of contacts for exception alerts. Separate multiple mobile phone numbers with commas (,).</p>
-         * <p>This parameter is supported only on the China site (aliyun.com) and supports only Chinese mainland mobile phone numbers. You can specify up to 10 mobile phone numbers.
-         * The international site does not support phone alerts. You can configure alert rules for DTS tasks only in the CloudMonitor console.</p>
+         * <p>The mobile phone numbers of the contacts to receive abnormal status alerts. Separate multiple mobile phone numbers with commas (,).</p>
+         * <p>This parameter is supported only on the China site. Only mobile phone numbers in the Chinese mainland are supported, and you can specify up to 10 mobile phone numbers.
+         * The international site does not support mobile phone alerts. You can only configure alert rules for DTS tasks by using CloudMonitor.</p>
          * 
          * <strong>example:</strong>
          * <p>1361234****,1371234****</p>
@@ -265,10 +265,10 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to monitor the exception status. Valid values:</p>
+         * <p>Specifies whether to monitor the abnormal status. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong>: yes.</li>
-         * <li><strong>disable</strong>: no.</li>
+         * <li><strong>enable</strong>: Yes.</li>
+         * <li><strong>disable</strong>: No.</li>
          * </ul>
          * <blockquote>
          * <ul>
@@ -277,7 +277,7 @@ public class ConfigureMigrationJobAlertRequest extends Request {
          * </blockquote>
          * <ul>
          * <li>You must specify at least one of this parameter and the <strong>DelayAlertStatus</strong> parameter.</li>
-         * <li>After you enable the exception status monitoring feature, an alert is triggered when an exception is detected.</li>
+         * <li>After the abnormal status monitoring feature is enabled, an alert is triggered if an exception is detected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,7 +312,7 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the data migration instance resides. For more information, see the supported region list.</p>
+         * <p>The ID of the region where the data migration instance resides. For more information, see the list of supported regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -324,7 +324,7 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>

@@ -132,7 +132,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The dynamic error code. This parameter will be deprecated.</p>
+         * <p>The dynamic error code. This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>403</p>
@@ -143,9 +143,9 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+         * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> error message.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -168,7 +168,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>
@@ -201,7 +201,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

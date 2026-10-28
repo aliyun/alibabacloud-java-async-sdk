@@ -115,7 +115,7 @@ public class PromoteToMasterRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gad-bp162d4tp0500****</p>
@@ -127,7 +127,7 @@ public class PromoteToMasterRequest extends Request {
         }
 
         /**
-         * <p>Primary instance ID.</p>
+         * <p>The instance ID of the primary instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp1756****</p>
@@ -139,7 +139,7 @@ public class PromoteToMasterRequest extends Request {
         }
 
         /**
-         * <p>Region ID. Specify this parameter to indicate the region where the instance resides. For more information, see the list of supported regions.</p>
+         * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see the list of supported regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -151,7 +151,7 @@ public class PromoteToMasterRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -163,7 +163,7 @@ public class PromoteToMasterRequest extends Request {
         }
 
         /**
-         * <p>Secondary instance ID.</p>
+         * <p>The instance ID of the secondary instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp1756****</p>

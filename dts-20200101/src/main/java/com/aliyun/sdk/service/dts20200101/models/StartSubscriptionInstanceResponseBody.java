@@ -106,7 +106,7 @@ public class StartSubscriptionInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned when the call fails.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -117,7 +117,7 @@ public class StartSubscriptionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the call fails.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -150,7 +150,7 @@ public class StartSubscriptionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID. This parameter is about to be deprecated.</p>
+         * <p>The ID of the task. This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>11****</p>

@@ -119,7 +119,7 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The consumer group ID. You can pass this ID to the downstream client to consume the change tracking data.</p>
+         * <p>The ID of the consumer group. You can specify this ID when a downstream client consumes change tracking data.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsor2y66j4219****</p>
@@ -130,7 +130,7 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -141,7 +141,7 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -174,7 +174,7 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

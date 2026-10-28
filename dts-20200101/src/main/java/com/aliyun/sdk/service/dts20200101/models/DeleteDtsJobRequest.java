@@ -143,7 +143,7 @@ public class DeleteDtsJobRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the data migration, synchronization, or subscribe instance.</p>
+         * <p>The data migration, data synchronization, or subscribe instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsl3m1213ye7l****</p>
@@ -155,7 +155,7 @@ public class DeleteDtsJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data migration, synchronization, or change tracking task.</p>
+         * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
          * 
          * <strong>example:</strong>
          * <p>l3m1213ye7l****</p>
@@ -167,7 +167,7 @@ public class DeleteDtsJobRequest extends Request {
         }
 
         /**
-         * <p>The node type of the DTS instance. Valid values:</p>
+         * <p>The task type of the DTS instance. Valid values:</p>
          * <ul>
          * <li><strong>MIGRATION</strong>: data migration.</li>
          * <li><strong>SYNC</strong>: data synchronization.</li>
@@ -184,7 +184,7 @@ public class DeleteDtsJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the data migration or synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region ID of the data migration or data synchronization instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -196,7 +196,7 @@ public class DeleteDtsJobRequest extends Request {
         }
 
         /**
-         * <p>A special business-specific field. You do not need to pass this parameter.</p>
+         * <p>The field reserved for special business scenarios. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek26lwshij****</p>
@@ -210,8 +210,8 @@ public class DeleteDtsJobRequest extends Request {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong>: forward.</li>
-         * <li><strong>Reverse</strong>: reverse.</li>
+         * <li><strong>Forward</strong>: forward synchronization.</li>
+         * <li><strong>Reverse</strong>: reverse synchronization.</li>
          * </ul>
          * <blockquote>
          * <ul>
@@ -219,7 +219,7 @@ public class DeleteDtsJobRequest extends Request {
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>You can set this parameter to <strong>Reverse</strong> to release the reverse synchronization link only if the topology of the data synchronization instance is two-way synchronization.</li>
+         * <li>You can set this parameter to <strong>Reverse</strong> to release the reverse synchronization link only when the synchronization topology of the data synchronization instance is two-way.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class DeleteDtsJobRequest extends Request {
         }
 
         /**
-         * <p>A special business-specific field. You do not need to pass this parameter.</p>
+         * <p>The field reserved for special business scenarios. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

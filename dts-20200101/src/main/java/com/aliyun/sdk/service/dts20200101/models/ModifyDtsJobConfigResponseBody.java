@@ -54,7 +54,7 @@ public class ModifyDtsJobConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>068FA72F-4800-4A54-90BB-94806068****</p>

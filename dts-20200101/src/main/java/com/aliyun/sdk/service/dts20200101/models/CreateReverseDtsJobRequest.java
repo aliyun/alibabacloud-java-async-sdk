@@ -125,7 +125,7 @@ public class CreateReverseDtsJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization or migration task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
+         * <p>The ID of the synchronization or migration task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class CreateReverseDtsJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. This is a global parameter that does not need to be specified for this operation.</p>
+         * <p>The ID of the resource group. This is a global parameter and is not required for this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -150,10 +150,10 @@ public class CreateReverseDtsJobRequest extends Request {
         }
 
         /**
-         * <p>The password of the shard in a MongoDB sharded cluster instance.</p>
+         * <p>The password of the shard in the MongoDB sharded cluster instance.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is available and required only when the source database instance is a MongoDB sharded cluster instance.</li>
+         * <li>This parameter is available and required only when the source database instance is a MongoDB database with a sharded cluster architecture.</li>
          * </ul>
          * </blockquote>
          * <ul>
@@ -170,7 +170,7 @@ public class CreateReverseDtsJobRequest extends Request {
         }
 
         /**
-         * <p>The account of the shard in a MongoDB sharded cluster instance.</p>
+         * <p>The username of the shard in the MongoDB sharded cluster instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstest</p>

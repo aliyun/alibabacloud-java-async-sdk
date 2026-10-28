@@ -144,13 +144,13 @@ public class DescribeTagKeysRequest extends Request {
         } 
 
         /**
-         * <p>The tag type. Valid values:</p>
+         * <p>The tag category. Valid values:</p>
          * <ul>
          * <li><strong>System</strong>: tags created by the system.</li>
          * <li><strong>Custom</strong>: tags added by users.</li>
          * </ul>
          * <blockquote>
-         * <p>If this parameter is left empty, publicly visible tags are returned by default.</p>
+         * <p>If this parameter is left empty, public tags are returned by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. This parameter is used together with PageSize. Default value: 1.</p>
+         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. This parameter is typically used in combination with PageSize. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -175,7 +175,7 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * <p>The number of tag keys to return on each page. Default value: 20.</p>
+         * <p>The number of entries to return on each page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -187,7 +187,7 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -199,7 +199,7 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>

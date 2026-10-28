@@ -130,7 +130,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -141,7 +141,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -152,7 +152,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0A47C784-70EF-4111-8677-369CAA00****</p>

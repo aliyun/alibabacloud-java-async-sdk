@@ -227,7 +227,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>Ensures the idempotency of the request. Generate a parameter value from your client to make sure that the value is unique among different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>Ensures the idempotency of the request. Generate a value on your client and ensure that the value is unique across different requests. <strong>ClientToken</strong> supports only ASCII characters and can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -239,7 +239,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data migration or data synchronization task.</p>
+         * <p>The ID of the migration or synchronization task.</p>
          * 
          * <strong>example:</strong>
          * <p>k2gm967v16f****</p>
@@ -251,7 +251,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The end timestamp, in milliseconds.</p>
+         * <p>The end timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642476194000</p>
@@ -263,7 +263,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>Default value: <strong>ALIYUN</strong>.</p>
+         * <p>The environment. Default value: <strong>ALIYUN</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN</p>
@@ -275,13 +275,14 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
+         * <p>Specifies the metric name. Valid values:</p>
          * <ul>
          * <li><strong>InternetOut</strong>: outbound Internet traffic, in bytes.</li>
          * <li><strong>diskusage_utilization</strong>: disk usage.</li>
          * <li><strong>IntranetInRate</strong>: inbound internal network traffic, in bytes.</li>
          * <li><strong>InternetIn</strong>: inbound Internet traffic, in bytes.</li>
-         * <li><strong>cpu_total</strong>: CPU utilization.</li>
-         * <li><strong>memory_usedutilization</strong>: memory utilization.</li>
+         * <li><strong>cpu_total</strong>: CPU usage.</li>
+         * <li><strong>memory_usedutilization</strong>: memory usage.</li>
          * <li><strong>IntranetOutRate</strong>: outbound internal network traffic, in bytes.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -296,7 +297,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query a cluster or a node. Valid values:</p>
+         * <p>Specifies the query target. Valid values:</p>
          * <ul>
          * <li><strong>CLUSTER</strong>: cluster.</li>
          * <li><strong>NODE</strong>: node.</li>
@@ -321,7 +322,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The observation value. If <strong>MetricType</strong> is set to <strong>NODE</strong>, the value is <strong>nodeid</strong>.</p>
+         * <p>The observation value. If <strong>MetricType</strong> is <strong>NODE</strong>, the value is the <strong>nodeid</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -346,7 +347,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -358,7 +359,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The start timestamp, in milliseconds.</p>
+         * <p>The start timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642476144000</p>

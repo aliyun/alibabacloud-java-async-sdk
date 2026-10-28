@@ -106,7 +106,7 @@ public class CreateSubscriptionInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -117,7 +117,7 @@ public class CreateSubscriptionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -128,7 +128,7 @@ public class CreateSubscriptionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>4E9564C5-F99D-4176-A6BA-2D7F2DC8****</p>
@@ -150,7 +150,7 @@ public class CreateSubscriptionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

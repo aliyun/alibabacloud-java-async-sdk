@@ -168,7 +168,7 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data validation task.</p>
+         * <p>The ID of the verification task.</p>
          * 
          * <strong>example:</strong>
          * <p>z9p104ib23***</p>
@@ -182,9 +182,9 @@ public class DescribeCheckJobsRequest extends Request {
         /**
          * <p>The data validation method. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: full data validation.</li>
-         * <li><strong>2</strong>: incremental data validation.</li>
-         * <li><strong>3</strong>: all.</li>
+         * <li><strong>1</strong>: Full data validation.</li>
+         * <li><strong>2</strong>: Incremental data validation.</li>
+         * <li><strong>3</strong>: All.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data migration instance. You can call the <strong>DescribeMigrationJobs</strong> operation to query the ID.</p>
+         * <p>The ID of the data migration instance. You can call the <strong>DescribeMigrationJobs</strong> operation to query the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsz9p104ib23e972e</p>
@@ -209,7 +209,7 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * <p>The name of the data migration or data synchronization task.</p>
+         * <p>The name of the data migration or synchronization task.</p>
          * 
          * <strong>example:</strong>
          * <p>zwy_test</p>
@@ -233,7 +233,7 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -245,7 +245,7 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>

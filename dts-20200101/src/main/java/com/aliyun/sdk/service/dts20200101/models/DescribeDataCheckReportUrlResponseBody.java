@@ -127,7 +127,7 @@ public class DescribeDataCheckReportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned when the call fails.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -138,7 +138,7 @@ public class DescribeDataCheckReportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the call fails.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>
@@ -160,7 +160,7 @@ public class DescribeDataCheckReportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>AF2DE23-B692-5B85-90B7-44B6F4D8****</p>
@@ -171,7 +171,7 @@ public class DescribeDataCheckReportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -142,7 +142,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * <p>The data verification method. Currently, only the value <strong>1</strong> is supported, which indicates full verification.</p>
+         * <p>The data validation method. Valid values: <strong>1</strong>: full validation. Currently, only <strong>1</strong> is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DTS task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to obtain the ID.</p>
+         * <p>The ID of the DTS task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to obtain the task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * <p>The name of the table in the source database to be verified.</p>
+         * <p>The name of the table to be verified in the source database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

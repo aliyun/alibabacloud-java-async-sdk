@@ -106,7 +106,7 @@ public class CreateMigrationJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -117,7 +117,7 @@ public class CreateMigrationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -139,7 +139,7 @@ public class CreateMigrationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C166D79D-436B-45F0-B5A5-25E1959F****</p>

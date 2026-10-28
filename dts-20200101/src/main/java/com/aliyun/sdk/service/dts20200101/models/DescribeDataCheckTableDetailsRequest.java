@@ -186,8 +186,8 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         /**
          * <p>The data validation method. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: full data validation.</li>
-         * <li><strong>2</strong>: incremental data validation.</li>
+         * <li><strong>1</strong>: full verification.</li>
+         * <li><strong>2</strong>: incremental verification.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -201,7 +201,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data migration or data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+         * <p>The ID of the data migration or synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than <strong>0</strong> and less than or equal to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -226,7 +226,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -238,7 +238,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz4us4iruleja</p>
@@ -264,8 +264,8 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         /**
          * <p>The status of the verification result. Valid values:</p>
          * <ul>
-         * <li><strong>-1</strong> (default): all statuses.</li>
-         * <li><strong>6</strong>: tables with inconsistent data.</li>
+         * <li><strong>-1</strong>: all statuses. This is the default value.</li>
+         * <li><strong>6</strong>: tables that contain inconsistent data.</li>
          * </ul>
          * 
          * <strong>example:</strong>

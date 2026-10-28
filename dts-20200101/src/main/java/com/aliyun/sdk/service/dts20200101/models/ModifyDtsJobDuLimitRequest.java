@@ -117,7 +117,7 @@ public class ModifyDtsJobDuLimitRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the DTS migration, synchronization, or change tracking task.</p>
+         * <p>The ID of the DTS data migration, data synchronization, or change tracking task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ModifyDtsJobDuLimitRequest extends Request {
         }
 
         /**
-         * <p>The DU upper limit of the task.</p>
+         * <p>The DU limit for the task.</p>
          * <blockquote>
          * <p>The minimum value is <strong>1</strong>.</p>
          * </blockquote>

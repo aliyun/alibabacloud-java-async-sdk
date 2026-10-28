@@ -213,7 +213,7 @@ public class PreCheckCreateGadOrderRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the active geo-redundancy instance group.</p>
+         * <p>The ID of the global active instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>gad-bp1i99e8l7913****</p>
@@ -225,7 +225,10 @@ public class PreCheckCreateGadOrderRequest extends Request {
         }
 
         /**
-         * MasterDatabaseName.
+         * <p>The name of the primary database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo1</p>
          */
         public Builder masterDatabaseName(String masterDatabaseName) {
             this.putQueryParameter("MasterDatabaseName", masterDatabaseName);
@@ -270,7 +273,7 @@ public class PreCheckCreateGadOrderRequest extends Request {
         }
 
         /**
-         * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -282,7 +285,7 @@ public class PreCheckCreateGadOrderRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfntftbiobqyky</p>
@@ -294,7 +297,10 @@ public class PreCheckCreateGadOrderRequest extends Request {
         }
 
         /**
-         * SlaveDatabaseName.
+         * <p>The name of the secondary database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo1</p>
          */
         public Builder slaveDatabaseName(String slaveDatabaseName) {
             this.putQueryParameter("SlaveDatabaseName", slaveDatabaseName);
@@ -303,7 +309,7 @@ public class PreCheckCreateGadOrderRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the database instance that assumes the secondary role.</p>
+         * <p>The instance ID of the secondary database.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp17562h64****</p>
@@ -315,7 +321,7 @@ public class PreCheckCreateGadOrderRequest extends Request {
         }
 
         /**
-         * <p>The region of the database instance that assumes the secondary role.</p>
+         * <p>The region of the secondary database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -327,7 +333,10 @@ public class PreCheckCreateGadOrderRequest extends Request {
         }
 
         /**
-         * SlaveEngineArchType.
+         * <p>The architecture type of the secondary database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder slaveEngineArchType(String slaveEngineArchType) {
             this.putQueryParameter("SlaveEngineArchType", slaveEngineArchType);

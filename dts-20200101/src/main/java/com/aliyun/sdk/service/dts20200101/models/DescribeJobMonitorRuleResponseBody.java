@@ -171,7 +171,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter will be deprecated.</p>
+         * <p>The error code. This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -193,9 +193,9 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+         * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the <strong>ErrMessage</strong> parameter.</p>
          * <blockquote>
-         * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -240,7 +240,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The monitoring rule information of the DTS task.</p>
+         * <p>The monitoring rules of the DTS task.</p>
          */
         public Builder monitorRules(java.util.List<MonitorRules> monitorRules) {
             this.monitorRules = monitorRules;
@@ -259,10 +259,10 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -431,7 +431,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The threshold that triggers a latency alert. Unit: seconds.</p>
+             * <p>The threshold that triggers a latency alert, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -455,9 +455,9 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
             /**
              * <p>The task type of the DTS instance. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: data migration or data synchronization task.</li>
-             * <li><strong>full_check</strong>: associated full data validation task.</li>
-             * <li><strong>etl_check</strong>: associated incremental data validation task.</li>
+             * <li><strong>normal</strong>: Data migration or data synchronization task.</li>
+             * <li><strong>full_check</strong>: Associated full data check task.</li>
+             * <li><strong>etl_check</strong>: Associated incremental data check task.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -480,9 +480,9 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical period of the incremental data validation task. Unit: minutes.</p>
+             * <p>The statistical period of the incremental data check task, in minutes.</p>
              * <blockquote>
-             * <p>Valid values: 1, 5, 10, and 30 minutes.</p>
+             * <p>Valid values are 1, 5, 10, and 30.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -494,7 +494,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phone numbers of the contacts to be notified when an alert is triggered. Multiple phone numbers are separated by commas (,).</p>
+             * <p>The mobile phone numbers of the contacts to be notified after an alert is triggered. Separate multiple mobile phone numbers with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>1361234****,1371234****</p>
@@ -507,8 +507,8 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the monitoring rule is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>Y</strong>: enabled.</li>
-             * <li><strong>N</strong>: disabled.</li>
+             * <li><strong>Y</strong>: The monitoring rule is enabled.</li>
+             * <li><strong>N</strong>: The monitoring rule is disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -520,7 +520,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of periods for the incremental data validation task.</p>
+             * <p>The number of periods for the incremental data check task.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -533,10 +533,10 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
             /**
              * <p>The type of the monitoring rule. Valid values:</p>
              * <ul>
-             * <li><strong>delay</strong>: latency alert.</li>
-             * <li><strong>error</strong>: anomaly alert.</li>
-             * <li><strong>full_timeout</strong>: alert for the runtime of the full data module.</li>
-             * <li><strong>warn</strong>: notification alert (the task succeeded but the result did not meet expectations).</li>
+             * <li><strong>delay</strong>: Latency alerting.</li>
+             * <li><strong>error</strong>: Anomaly alert.</li>
+             * <li><strong>full_timeout</strong>: Full module execution duration alerting.</li>
+             * <li><strong>warn</strong>: Notification alerting (the node is executed successfully, but the result does not meet expectations).</li>
              * </ul>
              * 
              * <strong>example:</strong>

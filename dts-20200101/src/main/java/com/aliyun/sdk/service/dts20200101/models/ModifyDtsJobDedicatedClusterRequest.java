@@ -127,7 +127,7 @@ public class ModifyDtsJobDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The task ID. You can specify multiple task IDs in a JSON array. Separate the IDs with commas (,).</p>
+         * <p>The task IDs. The value can be a JSON array that contains multiple task IDs. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;dtsxxxx01&quot;, &quot;dtsxxx02&quot;]</p>
@@ -148,9 +148,9 @@ public class ModifyDtsJobDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The region in which the DTS instance resides.</p>
+         * <p>The region where the DTS instance resides.</p>
          * <blockquote>
-         * <p>For the regions supported by dedicated clusters, see <a href="https://help.aliyun.com/document_detail/417481.html">DTS dedicated cluster</a>.</p>
+         * <p>For more information about the regions supported by dedicated clusters, see <a href="https://help.aliyun.com/document_detail/417481.html">DTS dedicated clusters</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class ModifyDtsJobDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>

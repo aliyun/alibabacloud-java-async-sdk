@@ -171,7 +171,7 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data migration or synchronization task.</p>
+         * <p>The ID of the migration or synchronization task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
-         * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -213,7 +213,7 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2mjc4qlnog6q</p>
@@ -227,7 +227,7 @@ public class SummaryJobDetailRequest extends Request {
         /**
          * <p>The type of schema definition. Valid values:</p>
          * <ul>
-         * <li><strong>before</strong>: schema migration or initial schema synchronization.</li>
+         * <li><strong>before</strong>: schema migration or initial schema synchronization for databases and tables.</li>
          * <li><strong>after</strong>: DDL operations during incremental data migration or synchronization.</li>
          * </ul>
          * 
@@ -241,7 +241,7 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
-         * <p>The synchronization direction. Valid values:</p>
+         * <p>The direction of the synchronization link. Valid values:</p>
          * <ul>
          * <li><strong>Forward</strong>: forward.</li>
          * <li><strong>Reverse</strong>: reverse.</li>
@@ -252,7 +252,7 @@ public class SummaryJobDetailRequest extends Request {
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>You can set this parameter to <strong>Reverse</strong> to release the reverse synchronization link only when the topology of the data synchronization instance is two-way synchronization.</li>
+         * <li>You can set this parameter to <strong>Reverse</strong> to release the reverse synchronization link only when the synchronization topology of the data synchronization instance is two-way.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,10 +265,10 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the node is a seamless integration (zero-ETL) node. Valid values:</p>
+         * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The node is a seamless integration node.</li>
-         * <li><strong>false</strong>: The node is not a seamless integration node.</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -145,7 +145,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The dynamic error code associated with this request.</p>
+         * <p>The dynamic error code related to the request.</p>
          * 
          * <strong>example:</strong>
          * <p>403</p>
@@ -156,7 +156,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message associated with this request.</p>
+         * <p>The dynamic error message related to the request.</p>
          * 
          * <strong>example:</strong>
          * <p>present environment is not support,so skip.</p>
@@ -167,7 +167,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned when the specified ETL task ID is invalid and the corresponding task cannot be found.</p>
+         * <p>The error code returned if the specified ETL task ID is invalid and the corresponding task cannot be found.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidJobId</p>
@@ -178,7 +178,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the specified ETL task ID is invalid and the corresponding task cannot be found. The task may have been deleted.</p>
+         * <p>The error message returned if the specified ETL task ID is invalid and the corresponding task cannot be found. The task may have been deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified dts job id %s is not exists.</p>
@@ -189,7 +189,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The array of ETL task running log objects.</p>
+         * <p>The array of running log objects for the ETL task.</p>
          */
         public Builder etlRunningLogs(java.util.List<EtlRunningLogs> etlRunningLogs) {
             this.etlRunningLogs = etlRunningLogs;
@@ -219,7 +219,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. A value of false indicates a failure.</p>
+         * <p>Indicates whether the request was successful. false is returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -340,7 +340,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the ETL task running status.</p>
+             * <p>The description of the running status of the ETL task.</p>
              * 
              * <strong>example:</strong>
              * <p>Starting DTS-ETL...</p>
@@ -351,7 +351,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status, which indicates the name of the module that generated the log, such as the transformation module of the ETL task.</p>
+             * <p>The status, which indicates the name of the module that generates the log, such as the transformation module of the ETL task.</p>
              * 
              * <strong>example:</strong>
              * <p>DTS-ETL</p>
@@ -395,7 +395,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>123123******12131</p>

@@ -129,9 +129,9 @@ public class StopDedicatedClusterRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The dedicated cluster ID.</p>
          * <blockquote>
-         * <p>You must specify either <strong>InstanceId</strong> or <strong>DedicatedClusterId</strong>.</p>
+         * <p>You must specify either the <strong>InstanceId</strong> or <strong>DedicatedClusterId</strong> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class StopDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The dedicated cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>dtscluster_test_001</p>
@@ -158,7 +158,7 @@ public class StopDedicatedClusterRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You must specify either <strong>InstanceId</strong> or <strong>DedicatedClusterId</strong>.</p>
+         * <p>You must specify either the <strong>InstanceId</strong> or <strong>DedicatedClusterId</strong> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class StopDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The region in which the instance resides.</p>
+         * <p>The region where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -192,10 +192,10 @@ public class StopDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. This is a global parameter that does not need to be specified for this operation.</p>
+         * <p>The resource group ID. This is a global parameter and is not required for this API operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>资源组ID，全局参数，当前API无需传入。</p>
+         * <p>The resource group ID. This is a global parameter and is not required for this API operation</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

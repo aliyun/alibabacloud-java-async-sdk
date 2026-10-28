@@ -200,12 +200,12 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The task code. Specify this parameter to query a specific subtask type of the DTS task. Valid values:</p>
+         * <p>The task code. Set this parameter to specify the type of the subtask for the DTS task to query. Valid values:</p>
          * <ul>
-         * <li><strong>01</strong>: precheck.</li>
-         * <li><strong>02</strong>: schema migration or initial schema synchronization.</li>
-         * <li><strong>03</strong>: full data migration or initial full data synchronization.</li>
-         * <li><strong>04</strong>: incremental data migration or incremental data synchronization.</li>
+         * <li><strong>01</strong>: Precheck.</li>
+         * <li><strong>02</strong>: Database and table structure migration or initialization.</li>
+         * <li><strong>03</strong>: Full data migration or initialization.</li>
+         * <li><strong>04</strong>: Incremental data migration or synchronization.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -219,7 +219,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The filter. Performs a fuzzy match on table names.</p>
+         * <p>The filter condition used to perform a fuzzy match on table names.</p>
          * 
          * <strong>example:</strong>
          * <p>dewuprop</p>
@@ -231,7 +231,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Valid values: an integer greater than <strong>0</strong> and less than or equal to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -243,7 +243,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -255,7 +255,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -267,7 +267,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz4us4iruleja</p>
@@ -279,7 +279,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The filter. Filters tables, views, and functions in schema migration.</p>
+         * <p>The filter condition for schema migration. Valid values: tables, views, and functions.</p>
          * 
          * <strong>example:</strong>
          * <p>View</p>
@@ -291,10 +291,10 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The type of schema definition. Valid values:</p>
+         * <p>The type of the schema definition. Valid values:</p>
          * <ul>
-         * <li><strong>before</strong>: schema migration or initial schema synchronization.</li>
-         * <li><strong>after</strong>: DDL operations during incremental data migration or incremental data synchronization.</li>
+         * <li><strong>before</strong>: Schema migration or initial schema synchronization.</li>
+         * <li><strong>after</strong>: DDL operations in incremental data migration or synchronization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
+         * <p>Specifies whether the task is a seamless integration (Zero-ETL) task. Valid values:</p>
          * <ul>
          * <li><strong>false</strong>: No.</li>
          * <li><strong>true</strong>: Yes.</li>

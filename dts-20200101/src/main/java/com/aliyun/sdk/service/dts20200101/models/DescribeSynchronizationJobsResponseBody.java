@@ -264,7 +264,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of records that have been synchronized during initial full data synchronization.</p>
+             * <p>The number of records for which initial full data synchronization is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>200001</p>
@@ -277,10 +277,10 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             /**
              * <p>The status of initial full data synchronization. Valid values:</p>
              * <ul>
-             * <li><strong>NotStarted</strong>: not started.</li>
-             * <li><strong>Migrating</strong>: in progress.</li>
-             * <li><strong>Failed</strong>: failed.</li>
-             * <li><strong>Finished</strong>: completed.</li>
+             * <li><strong>NotStarted</strong>: The initial synchronization is not started.</li>
+             * <li><strong>Migrating</strong>: The initial synchronization is in progress.</li>
+             * <li><strong>Failed</strong>: The initial synchronization failed.</li>
+             * <li><strong>Finished</strong>: The initial synchronization is completed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -377,9 +377,9 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The synchronization latency of incremental data synchronization.</p>
+             * <p>The incremental data synchronization latency.</p>
              * <blockquote>
-             * <p>This parameter has been discontinued.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -393,11 +393,11 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             /**
              * <p>The error message returned when incremental data synchronization fails.</p>
              * <blockquote>
-             * <p>This parameter has been discontinued.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>任务失败太久无法恢复</p>
+             * <p>The task has failed for too long to be recovered</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -407,7 +407,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             /**
              * <p>The progress of incremental data synchronization.</p>
              * <blockquote>
-             * <p>This parameter has been discontinued.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -421,7 +421,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             /**
              * <p>The status of incremental data synchronization.</p>
              * <blockquote>
-             * <p>This parameter has been discontinued.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -577,7 +577,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the destination instance.</p>
+             * <p>The destination instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>RDS</p>
@@ -669,7 +669,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The volume of data synchronized per second, in MB/s.</p>
+             * <p>The traffic of data synchronized per second, in MB/s.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -778,8 +778,8 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             /**
              * <p>The check result. Valid values:</p>
              * <ul>
-             * <li><strong>Success</strong>: passed.</li>
-             * <li><strong>Failed</strong>: failed.</li>
+             * <li><strong>Success</strong>: The check item passed.</li>
+             * <li><strong>Failed</strong>: The check item failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -793,7 +793,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             /**
              * <p>The error message returned when the precheck fails.</p>
              * <blockquote>
-             * <p>This parameter is returned only when the value of the <strong>CheckStatus</strong> parameter is <strong>Failed</strong>.</p>
+             * <p>This parameter is returned only when the <strong>CheckStatus</strong> parameter is set to <strong>Failed</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -816,9 +816,9 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The repair method when the precheck fails.</p>
+             * <p>The solution for a failed precheck item.</p>
              * <blockquote>
-             * <p>This parameter is returned only when the value of the <strong>CheckStatus</strong> parameter is <strong>Failed</strong>.</p>
+             * <p>This parameter is returned only when the <strong>CheckStatus</strong> parameter is set to <strong>Failed</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -902,7 +902,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The execution details of each precheck item.</p>
+             * <p>The execution status of each precheck item.</p>
              */
             public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
@@ -923,8 +923,8 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             /**
              * <p>The precheck result. Valid values:</p>
              * <ul>
-             * <li><strong>Success</strong>: passed.</li>
-             * <li><strong>Failed</strong>: failed.</li>
+             * <li><strong>Success</strong>: The check item passed.</li>
+             * <li><strong>Failed</strong>: The check item failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1220,7 +1220,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tables for which initial schema synchronization has been completed.</p>
+             * <p>The number of tables for which initial schema synchronization is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1233,10 +1233,10 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             /**
              * <p>The status of initial schema synchronization. Valid values:</p>
              * <ul>
-             * <li><strong>NotStarted</strong>: not started.</li>
-             * <li><strong>Migrating</strong>: in progress.</li>
-             * <li><strong>Failed</strong>: failed.</li>
-             * <li><strong>Finished</strong>: completed.</li>
+             * <li><strong>NotStarted</strong>: The initial synchronization is not started.</li>
+             * <li>**Migrating **: The initial synchronization is in progress.</li>
+             * <li>**Failed **: The initial synchronization failed.</li>
+             * <li><strong>Finished</strong>: The initial synchronization is completed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1447,7 +1447,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the database to which the objects are mapped in the destination database.</p>
+             * <p>The mapped name of the database to be synchronized in the destination database.</p>
              * 
              * <strong>example:</strong>
              * <p>newdtstestdatabase</p>
@@ -1469,7 +1469,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tables that are excluded from the database to be synchronized. These tables are not synchronized.</p>
+             * <p>The tables excluded from the database to be synchronized. These tables are not synchronized.</p>
              */
             public Builder tableExcludes(java.util.List<TableExcludes> tableExcludes) {
                 this.tableExcludes = tableExcludes;
@@ -1898,7 +1898,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the synchronization task was created, in the format of <i>yyyy-MM-dd HH:mm:ss</i>.0 (UTC+8).</p>
+             * <p>The time when the data synchronization task was created. The time is displayed in the <i>yyyy-MM-dd HH:mm:ss</i>.0 format in UTC+8.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-28 17:34:53.0</p>
@@ -1909,7 +1909,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether initial full data synchronization is performed. Valid values:</p>
+             * <p>Specifies whether to perform initial full data synchronization. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: Yes.</li>
              * <li><strong>false</strong>: No.</li>
@@ -1934,7 +1934,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             /**
              * <p>The status of incremental data synchronization.</p>
              * <blockquote>
-             * <p>This parameter set and its contained parameters have been discontinued.</p>
+             * <p><strong>[Deprecated]</strong> This parameter collection and its sub-parameters are deprecated.</p>
              * </blockquote>
              */
             public Builder dataSynchronizationStatus(DataSynchronizationStatus dataSynchronizationStatus) {
@@ -1973,9 +1973,9 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the synchronization instance, in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * <p>The expiration time of the data synchronization instance. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
              * <blockquote>
-             * <p>This parameter is returned only when the value of the <strong>PayType</strong> parameter is <strong>PrePaid</strong>.</p>
+             * <p>This parameter is returned only when the <strong>PayType</strong> parameter is set to <strong>PrePaid</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1987,7 +1987,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the synchronization instance was created, in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * <p>The time when the data synchronization instance was created. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-28T09:36:32Z</p>
@@ -1998,7 +1998,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the synchronization task was created, in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * <p>The time when the data synchronization task was created. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-28T09:34:53Z</p>
@@ -2009,10 +2009,10 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the synchronization instance. Valid values:</p>
+             * <p>The billing method of the data synchronization instance. Valid values:</p>
              * <ul>
-             * <li><strong>PrePaid</strong>: subscription.</li>
-             * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+             * <li><strong>PrePaid</strong>: Subscription.</li>
+             * <li><strong>PostPaid</strong>: Pay-as-you-go.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2024,7 +2024,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overview information of the synchronization link.</p>
+             * <p>The overview of the synchronization link.</p>
              */
             public Builder performance(Performance performance) {
                 this.performance = performance;
@@ -2048,18 +2048,18 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the synchronization instance. Valid values:</p>
+             * <p>The status of the data synchronization instance. Valid values:</p>
              * <ul>
-             * <li><strong>NotStarted</strong>: not started.</li>
-             * <li><strong>Prechecking</strong>: running the precheck.</li>
-             * <li><strong>PrecheckFailed</strong>: precheck failed.</li>
-             * <li><strong>Initializating</strong>: performing initial synchronization.</li>
-             * <li><strong>InitializeFailed</strong>: initial synchronization failed.</li>
-             * <li><strong>Synchronizing</strong>: synchronizing.</li>
-             * <li><strong>Failed</strong>: synchronization failed.</li>
-             * <li><strong>Suspending</strong>: paused.</li>
-             * <li><strong>Modifying</strong>: modifying synchronization objects.</li>
-             * <li><strong>Finished</strong>: completed.</li>
+             * <li><strong>NotStarted</strong>: The instance is not started.</li>
+             * <li><strong>Prechecking</strong>: The precheck is in progress.</li>
+             * <li><strong>PrecheckFailed</strong>: The precheck failed.</li>
+             * <li>**Initializating **: The initial synchronization is in progress.</li>
+             * <li><strong>InitializeFailed</strong>: The initial synchronization failed.</li>
+             * <li>**Synchronizing **: The synchronization is in progress.</li>
+             * <li><strong>Failed</strong>: The synchronization failed.</li>
+             * <li><strong>Suspending</strong>: The instance is suspended.</li>
+             * <li><strong>Modifying</strong>: The synchronization objects are being modified.</li>
+             * <li><strong>Finished</strong>: The synchronization is completed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2071,7 +2071,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether initial schema synchronization is performed. Valid values:</p>
+             * <p>Specifies whether to perform initial schema synchronization. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: Yes.</li>
              * <li><strong>false</strong>: No.</li>
@@ -2096,8 +2096,8 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             /**
              * <p>The synchronization direction. Valid values:</p>
              * <ul>
-             * <li><strong>Forward</strong>: forward.</li>
-             * <li><strong>Reverse</strong>: reverse.</li>
+             * <li><strong>Forward</strong>: Forward.</li>
+             * <li><strong>Reverse</strong>: Reverse.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2109,7 +2109,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification of the synchronization link.</p>
+             * <p>The specifications of the synchronization link.</p>
              * 
              * <strong>example:</strong>
              * <p>large</p>
@@ -2131,10 +2131,10 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the synchronization instance.</p>
+             * <p>The name of the data synchronization instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>MySQL同步</p>
+             * <p>MySQL synchronization</p>
              */
             public Builder synchronizationJobName(String synchronizationJobName) {
                 this.synchronizationJobName = synchronizationJobName;
@@ -2150,7 +2150,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag collection.</p>
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

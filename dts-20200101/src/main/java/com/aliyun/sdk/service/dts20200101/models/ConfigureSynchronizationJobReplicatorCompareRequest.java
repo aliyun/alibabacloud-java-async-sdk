@@ -158,7 +158,7 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be discontinued.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -170,7 +170,7 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -191,7 +191,7 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
         }
 
         /**
-         * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region ID. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -203,7 +203,7 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -217,8 +217,8 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong>: forward.</li>
-         * <li><strong>Reverse</strong>: reverse.</li>
+         * <li><strong>Forward</strong>: forward synchronization.</li>
+         * <li><strong>Reverse</strong>: reverse synchronization.</li>
          * </ul>
          * <blockquote>
          * <ul>
@@ -226,7 +226,7 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>You need to specify this parameter only if the synchronization topology of the data synchronization instance is two-way synchronization.</li>
+         * <li>This parameter is required only when the synchronization topology of the data synchronization instance is two-way synchronization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -252,7 +252,7 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
         }
 
         /**
-         * <p>Specifies whether to enable full image matching. Valid values:</p>
+         * <p>Specifies whether to enable the full-image matching switch. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: enabled.</li>
          * <li><strong>false</strong>: disabled.</li>

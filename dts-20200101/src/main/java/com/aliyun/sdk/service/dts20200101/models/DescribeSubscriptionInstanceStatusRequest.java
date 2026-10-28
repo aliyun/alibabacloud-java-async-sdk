@@ -116,7 +116,7 @@ public class DescribeSubscriptionInstanceStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -149,7 +149,7 @@ public class DescribeSubscriptionInstanceStatusRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -161,7 +161,7 @@ public class DescribeSubscriptionInstanceStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a> operation to query the instance ID.</p>
+         * <p>Instance ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a> operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

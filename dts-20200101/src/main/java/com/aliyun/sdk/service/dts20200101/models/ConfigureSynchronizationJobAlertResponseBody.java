@@ -115,7 +115,7 @@ public class ConfigureSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>8EEE7858-7D41-4EDF-9435-AEED2A34****</p>
@@ -126,7 +126,7 @@ public class ConfigureSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

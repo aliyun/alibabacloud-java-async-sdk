@@ -116,7 +116,7 @@ public class DeleteSynchronizationJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be deprecated.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -161,7 +161,7 @@ public class DeleteSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID.</p>
+         * <p>Instance ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

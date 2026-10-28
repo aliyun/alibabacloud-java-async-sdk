@@ -145,7 +145,7 @@ public class DescribeSubscriptionMetaRequest extends Request {
         }
 
         /**
-         * <p>The region in which the change tracking instance resides.</p>
+         * <p>The region where the change tracking instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -182,9 +182,9 @@ public class DescribeSubscriptionMetaRequest extends Request {
         }
 
         /**
-         * <p>The IDs of all change tracking subtasks in the distributed change tracking task. Separate multiple IDs with commas (,).</p>
+         * <p>The IDs of all change tracking subtasks under the distributed change tracking task. Separate multiple subtask IDs with commas (,).</p>
          * <blockquote>
-         * <p>You must specify at least one of this parameter and <strong>Topics</strong>. We recommend that you specify this parameter.</p>
+         * <p>You must specify at least one of this parameter and the <strong>Topics</strong> parameter. We recommend that you specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -198,9 +198,9 @@ public class DescribeSubscriptionMetaRequest extends Request {
         }
 
         /**
-         * <p>All topics of the distributed change tracking task. Separate multiple topics with commas (,).</p>
+         * <p>All change tracking topics under the distributed change tracking task. Separate multiple topics with commas (,).</p>
          * <blockquote>
-         * <p>You must specify at least one of this parameter and <strong>SubMigrationJobIds</strong>. We recommend that you specify <strong>SubMigrationJobIds</strong>.</p>
+         * <p>You must specify at least one of this parameter and the <strong>SubMigrationJobIds</strong> parameter. We recommend that you specify the <strong>SubMigrationJobIds</strong> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,7 @@ public class ModifyDedicatedClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>dtscluster_h3fl1cs217sx952</p>
@@ -174,7 +174,7 @@ public class ModifyDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

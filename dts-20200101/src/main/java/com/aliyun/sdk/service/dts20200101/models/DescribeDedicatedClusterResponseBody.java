@@ -390,7 +390,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the dedicated cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsCluster****</p>
@@ -401,7 +401,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The name of the dedicated cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>daily_test</p>
@@ -412,7 +412,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The disk utilization.</p>
+         * <p>The disk usage.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -456,7 +456,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned when the call fails.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -467,7 +467,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the call fails.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>
@@ -489,7 +489,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time.</p>
+         * <p>The completion time.</p>
          * 
          * <strong>example:</strong>
          * <p>1645200000000</p>
@@ -511,7 +511,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The memory utilization.</p>
+         * <p>The memory usage.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -522,7 +522,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of nodes in the cluster.</p>
+         * <p>The number of nodes in the dedicated cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -544,7 +544,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region in which the instance resides.</p>
+         * <p>The region where the instance is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -555,7 +555,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
@@ -566,16 +566,16 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster status. Valid values:</p>
+         * <p>The status of the dedicated cluster. Valid values:</p>
          * <ul>
-         * <li><strong>init</strong>: initialization.</li>
-         * <li><strong>schedule</strong>: pending scheduling.</li>
-         * <li><strong>running</strong>: running.</li>
-         * <li><strong>upgrade</strong>: upgrading.</li>
-         * <li><strong>downgrade</strong>: downgrading.</li>
-         * <li><strong>locked</strong>: locked.</li>
-         * <li><strong>releasing</strong>: being released.</li>
-         * <li><strong>released</strong>: released.</li>
+         * <li><strong>init</strong>: initializing</li>
+         * <li><strong>schedule</strong>: pending scheduling</li>
+         * <li><strong>running</strong>: running</li>
+         * <li><strong>upgrade</strong>: upgrading</li>
+         * <li><strong>downgrade</strong>: downgrading</li>
+         * <li><strong>locked</strong>: locked</li>
+         * <li><strong>releasing</strong>: releasing</li>
+         * <li><strong>released</strong>: released</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -609,7 +609,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total disk size, in GB.</p>
+         * <p>The total disk size in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -620,7 +620,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total memory size, in GB.</p>
+         * <p>The total memory size in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>256</p>
@@ -642,7 +642,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The used disk size, in GB.</p>
+         * <p>The used disk size in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -664,7 +664,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The used memory size, in GB.</p>
+         * <p>The used memory size in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>

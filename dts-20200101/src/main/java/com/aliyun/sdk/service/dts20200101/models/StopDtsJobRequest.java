@@ -129,7 +129,7 @@ public class StopDtsJobRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the data migration, data synchronization, or subscribe instance.</p>
+         * <p>The ID of the data migration, data synchronization, or subscribe instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsl3m1213ye7l****</p>
@@ -153,7 +153,7 @@ public class StopDtsJobRequest extends Request {
         }
 
         /**
-         * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -165,7 +165,7 @@ public class StopDtsJobRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2jr35xnjh7i</p>
@@ -179,8 +179,8 @@ public class StopDtsJobRequest extends Request {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong>: forward.</li>
-         * <li><strong>Reverse</strong>: reverse.</li>
+         * <li><strong>Forward</strong>: Forward synchronization.</li>
+         * <li><strong>Reverse</strong>: Reverse synchronization.</li>
          * </ul>
          * <blockquote>
          * <ul>
@@ -188,7 +188,7 @@ public class StopDtsJobRequest extends Request {
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>You can set this parameter to <strong>Reverse</strong> to stop the reverse synchronization link only if the topology of the data synchronization instance is two-way synchronization.</li>
+         * <li>You can specify <strong>Reverse</strong> to stop the reverse synchronization link only when the topology of the data synchronization instance is two-way.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class StopDtsJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the node is a seamless integration (zero-ETL) node. Valid values:</p>
+         * <p>Specifies whether the task is a seamless integration (Zero-ETL) task. Valid values:</p>
          * <ul>
          * <li><strong>false</strong>: No.</li>
          * <li><strong>true</strong>: Yes.</li>

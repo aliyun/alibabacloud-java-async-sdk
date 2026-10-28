@@ -115,7 +115,7 @@ public class ModifyGadInstanceNameRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the active geo-redundancy instance group.</p>
+         * <p>The instance ID of the active-active instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp1i99e8l7913****</p>
@@ -127,7 +127,7 @@ public class ModifyGadInstanceNameRequest extends Request {
         }
 
         /**
-         * <p>The instance name of the active geo-redundancy instance group.</p>
+         * <p>The name of the active-active instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6b0m001ir8mr9i9</p>
@@ -148,7 +148,7 @@ public class ModifyGadInstanceNameRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the task. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The ID of the region where the task resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -160,7 +160,7 @@ public class ModifyGadInstanceNameRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek26mat2ldb4oy</p>

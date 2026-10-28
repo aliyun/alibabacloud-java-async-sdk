@@ -197,7 +197,7 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The CPU alert threshold, in percentage.</p>
+         * <p>The CPU alert threshold. Unit: percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -219,7 +219,7 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The disk alert threshold, in percentage.</p>
+         * <p>The disk alert threshold. Unit: percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -230,7 +230,7 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The DU alert threshold, in percentage.</p>
+         * <p>The DU alert threshold. Unit: percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>46</p>
@@ -241,7 +241,7 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call fails.</p>
+         * <p>The error code returned when an error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -252,7 +252,7 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call fails.</p>
+         * <p>The error message returned when an error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>
@@ -274,7 +274,7 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The memory alert threshold, in percentage.</p>
+         * <p>The memory alert threshold. Unit: percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -287,8 +287,8 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         /**
          * <p>The alert switch. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enabled.</li>
-         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -300,7 +300,7 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The phone numbers that receive alerts. If there are multiple phone numbers, they are separated by commas (,).</p>
+         * <p>The phone numbers that receive alert notifications. If multiple phone numbers are specified, separate them with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>186****7653</p>

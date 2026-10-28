@@ -171,7 +171,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IP whitelist of the destination adapted for VPC NAT.</p>
+         * <p>The IP address whitelist adapted for the destination VPC NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
@@ -193,7 +193,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the <strong>ErrMessage</strong> response parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Type</p>
@@ -204,7 +204,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -215,7 +215,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>
@@ -237,7 +237,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP whitelist. Multiple IP addresses are separated by commas (,).</p>
+         * <p>The IP address whitelist. Multiple IP addresses are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>10.151.12.0/24,47.102.181.0/24,47.101.109.0/24,120.55.129.0/24,11.115.103.0/24,47.102.234.0/24</p>
@@ -259,7 +259,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP whitelist of the source adapted for VPC NAT.</p>
+         * <p>The IP address whitelist adapted for the source VPC NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>

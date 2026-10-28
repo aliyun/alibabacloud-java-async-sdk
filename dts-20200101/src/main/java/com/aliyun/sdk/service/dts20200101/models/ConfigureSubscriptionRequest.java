@@ -595,9 +595,9 @@ public class ConfigureSubscriptionRequest extends Request {
         } 
 
         /**
-         * <p>The start time of change tracking, in the format of a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the change tracking task. The value is a UNIX timestamp in seconds.</p>
          * <blockquote>
-         * <p>You can use a search engine to find a UNIX timestamp converter.</p>
+         * <p>You can use a search engine to obtain a UNIX timestamp converter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -610,7 +610,7 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The objects to be tracked, in JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
+         * <p>The objects to be tracked. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Specify the objects to be migrated, synchronized, or tracked</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -623,7 +623,7 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DTS dedicated cluster. This parameter is used to schedule the change tracking task to the specified DTS dedicated cluster.</p>
+         * <p>The ID of the dedicated DTS cluster. This parameter is used to schedule the change tracking task to a specified dedicated DTS cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>dtscluster_atyl3b5214uk***</p>
@@ -637,8 +637,8 @@ public class ConfigureSubscriptionRequest extends Request {
         /**
          * <p>Specifies whether to monitor the latency status. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: monitors the latency status.</li>
-         * <li><strong>false</strong>: does not monitor the latency status.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -651,14 +651,14 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The mobile phone numbers for receiving latency alerts. Separate multiple phone numbers with commas (,).</p>
+         * <p>The mobile phone numbers of the contacts to receive latency alerts. Separate multiple mobile phone numbers with commas (,).</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is supported only on the China site (aliyun.com). Only Chinese mainland phone numbers are supported, and you can specify up to 10 phone numbers.</li>
+         * <li>This parameter is supported only on the China site. Only mobile phone numbers in the Chinese mainland are supported, and you can specify up to 10 mobile phone numbers.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>The China site (Chinese mainland) does not support phone alerts. You can only <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in CloudMonitor</a>.</li>
+         * <li>The international site does not support mobile phone alerts. You can only <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks by using CloudMonitor</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -671,7 +671,7 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The threshold for triggering latency alerts. Unit: seconds. The value must be an integer. Set the threshold based on your business requirements. To avoid alert fluctuations caused by network conditions or database loads, set the threshold to 10 seconds or more.</p>
+         * <p>The threshold for triggering a latency alert. The value must be an integer in seconds. You can set the threshold based on your business requirements. Set the threshold to 10 seconds or more to avoid latency fluctuations caused by network or database loads.</p>
          * <blockquote>
          * <p>This parameter is required when <strong>DelayNotice</strong> is set to <strong>true</strong>.</p>
          * </blockquote>
@@ -688,8 +688,8 @@ public class ConfigureSubscriptionRequest extends Request {
         /**
          * <p>The environment tag of the DTS instance. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal</li>
-         * <li><strong>online</strong>: online.</li>
+         * <li><strong>normal</strong>: <strong>Normal</strong>.</li>
+         * <li><strong>online</strong>: <strong>Online</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -702,7 +702,7 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the change tracking instance. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the instance ID.</p>
+         * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsy0zz3t13h7d****</p>
@@ -714,7 +714,7 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
+         * <p>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>y0zz3t13h7d****</p>
@@ -728,12 +728,12 @@ public class ConfigureSubscriptionRequest extends Request {
         /**
          * <p>The name of the change tracking task.</p>
          * <blockquote>
-         * <p>Specify a descriptive name that makes it easy to identify the task. The name does not need to be unique.</p>
+         * <p>Specify a name that reflects the business purpose to facilitate subsequent identification. The name does not need to be unique.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>MySQL订阅</p>
+         * <p>MySQL change tracking</p>
          */
         public Builder dtsJobName(String dtsJobName) {
             this.putQueryParameter("DtsJobName", dtsJobName);
@@ -742,10 +742,10 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to monitor the error status. Valid values:</p>
+         * <p>Specifies whether to monitor the exception status. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: monitors the error status.</li>
-         * <li><strong>false</strong>: does not monitor the error status.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -758,14 +758,14 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The mobile phone numbers for receiving error alerts. Separate multiple phone numbers with commas (,).</p>
+         * <p>The mobile phone numbers of the contacts to receive exception alerts. Separate multiple mobile phone numbers with commas (,).</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is supported only on the China site (aliyun.com). Only Chinese mainland phone numbers are supported, and you can specify up to 10 phone numbers.</li>
+         * <li>This parameter is supported only on the China site. Only mobile phone numbers in the Chinese mainland are supported, and you can specify up to 10 mobile phone numbers.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>The China site (Chinese mainland) does not support phone alerts. You can only <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in CloudMonitor</a>.</li>
+         * <li>The international site does not support mobile phone alerts. You can only <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks by using CloudMonitor</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -778,10 +778,10 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of DUs for a serverless instance. Valid values: 2, 4, 8, and 16.
+         * <p>The maximum number of DUs for the serverless instance. Valid values: 2, 4, 8, and 16.
          * &lt;props=&quot;intl&quot;&gt;</p>
          * <blockquote>
-         * <p>This feature is currently not supported. Do not specify this parameter..</p>
+         * <p>This feature is not supported. Do not specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -794,10 +794,10 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of DTS Units (DUs) for a serverless instance. Valid values: 1, 2, 4, 8, and 16.
+         * <p>The minimum number of DUs for the serverless instance. Valid values: 1, 2, 4, 8, and 16.
          * &lt;props=&quot;intl&quot;&gt;</p>
          * <blockquote>
-         * <p>This feature is currently not supported. Do not specify this parameter..</p>
+         * <p>This feature is not supported. Do not specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -810,7 +810,7 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The region in which the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -823,7 +823,7 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The reserved parameter of DTS, in JSON format. You can specify this parameter to add information about the source and destination databases, such as the data storage format of the destination Kafka database or the CEN instance ID. For more information, see the <a href="https://help.aliyun.com/document_detail/176470.html">Reserve metric description</a>.</p>
+         * <p>The reserved parameters of DTS. The value is a JSON string. You can specify this parameter to supplement the information about the source and destination databases, such as the data storage format of the destination Kafka database and the CEN instance ID. For more information, see the metric description in <a href="https://help.aliyun.com/document_detail/176470.html">Reserve metric description</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{      &quot;srcInstanceId&quot;: &quot;cen-9kqshqum*******&quot;  }</p>
@@ -835,7 +835,7 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -859,9 +859,9 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The engine type of the source database. Valid values: <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and <strong>Oracle</strong>.</p>
+         * <p>The type of the source database. Valid values: <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and <strong>Oracle</strong>.</p>
          * <blockquote>
-         * <p>This parameter is required if the source database is a self-managed database.</p>
+         * <p>If the source database is a self-managed database, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -889,9 +889,9 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the source instance.</p>
+         * <p>The source instance ID.</p>
          * <blockquote>
-         * <p>This parameter is active and required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</p>
+         * <p>This parameter is active and required only when the instance type of the source database is ApsaraDB RDS for MySQL, PolarDB-X 1.0, or PolarDB for MySQL.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -906,14 +906,14 @@ public class ConfigureSubscriptionRequest extends Request {
         /**
          * <p>The instance type of the source database. Valid values:</p>
          * <ul>
-         * <li><strong>RDS</strong>: ApsaraDB RDS instance.</li>
-         * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster.</li>
-         * <li><strong>DRDS</strong>: PolarDB-X 1.0 instance.</li>
-         * <li><strong>LocalInstance</strong>: self-managed database with a public IP address.</li>
-         * <li><strong>ECS</strong>: self-managed database hosted on an ECS instance.</li>
-         * <li><strong>Express</strong>: self-managed database connected over Express Connect.</li>
-         * <li><strong>CEN</strong>: self-managed database connected over Cloud Enterprise Network (CEN).</li>
-         * <li><strong>dg</strong>: self-managed database connected over Database Gateway.</li>
+         * <li><strong>RDS</strong>: ApsaraDB RDS.</li>
+         * <li><strong>PolarDB</strong>: PolarDB for MySQL.</li>
+         * <li><strong>DRDS</strong>: PolarDB-X 1.0.</li>
+         * <li><strong>LocalInstance</strong>: A self-managed database with a public IP address.</li>
+         * <li><strong>ECS</strong>: A self-managed database hosted on Elastic Compute Service (ECS).</li>
+         * <li><strong>Express</strong>: A self-managed database connected over an Express Connect circuit.</li>
+         * <li><strong>CEN</strong>: A self-managed database connected over a Cloud Enterprise Network (CEN) instance.</li>
+         * <li><strong>dg</strong>: A self-managed database connected over a database gateway.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -926,9 +926,9 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The SID of the Oracle database.</p>
+         * <p>The system ID (SID) of the Oracle database.</p>
          * <blockquote>
-         * <p>This parameter is available and required only when the source database is a self-managed Oracle database that is not a Real Application Cluster (RAC) instance.</p>
+         * <p>This parameter is available and required only when the source database is a self-managed Oracle database and the Oracle database is not a Real Application Cluster (RAC) instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -941,9 +941,9 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the account to which the source instance belongs.</p>
+         * <p>The Alibaba Cloud account ID to which the source instance belongs.</p>
          * <blockquote>
-         * <p>This parameter is active and required only when you configure cross-Alibaba Cloud account change tracking. You must subscribe to the task.</p>
+         * <p>This parameter is available and required only when you configure a change tracking task across Alibaba Cloud accounts.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -956,7 +956,7 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The password of the database account for the source instance.</p>
+         * <p>The password of the database account of the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Test123456</p>
@@ -968,7 +968,7 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The service port of the source database.</p>
+         * <p>The service port number of the source database.</p>
          * <blockquote>
          * <p>This parameter is available and required only when the source database is a self-managed database.</p>
          * </blockquote>
@@ -983,9 +983,9 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The region of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region where the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * <blockquote>
-         * <p>If the source instance is a self-managed database with a public IP address, you can set this parameter to <strong>cn-hangzhou</strong> or the region ID closest to the self-managed database.</p>
+         * <p>If the source instance is a self-managed database with a public IP address, you can set this parameter to <strong>cn-hangzhou</strong> or the ID of the region that is closest to the self-managed database.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -998,9 +998,9 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The authorized role of the source instance. If the source instance and the change tracking task belong to different Alibaba Cloud accounts, specify this parameter to allow the Alibaba Cloud account that owns the change tracking task to access the source instance.</p>
+         * <p>The RAM role that is authorized to access the source instance. If the source instance and the change tracking task belong to different Alibaba Cloud accounts, you must specify this parameter to authorize the Alibaba Cloud account that owns the change tracking task to access the source instance.</p>
          * <blockquote>
-         * <p>For more information about the permissions and authorization methods required for the role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration or synchronization</a>.</p>
+         * <p>For more information about the required permissions and authorization methods, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration or synchronization</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1015,7 +1015,7 @@ public class ConfigureSubscriptionRequest extends Request {
         /**
          * <p>The database account of the source instance.</p>
          * <blockquote>
-         * <p>The permissions required for change tracking vary depending on the database type. For more information, see the account permissions section in <a href="https://help.aliyun.com/document_detail/212653.html">Prepare database accounts for change tracking</a>.</p>
+         * <p>The required permissions vary based on the database to be tracked. For more information, see the permissions required for the database account in <a href="https://help.aliyun.com/document_detail/212653.html">Prepare the database accounts for change tracking</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1028,9 +1028,9 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The path of the CA certificate when the source database uses an SSL connection.</p>
+         * <p>The path of the CA certificate when the source database is connected over SSL.</p>
          * <blockquote>
-         * <p>This feature is currently not supported. Do not specify this parameter.</p>
+         * <p>This feature is not supported. Do not specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1043,9 +1043,9 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The key of the CA certificate when the source database uses an SSL connection.</p>
+         * <p>The password of the CA certificate when the source database is connected over SSL.</p>
          * <blockquote>
-         * <p>This feature is currently not supported. Do not specify this parameter.</p>
+         * <p>This feature is not supported. Do not specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1058,9 +1058,9 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The path of the client certificate when the source database uses an SSL connection.</p>
+         * <p>The path of the client certificate when the source database is connected over SSL.</p>
          * <blockquote>
-         * <p>This feature is currently not supported. Do not specify this parameter.</p>
+         * <p>This feature is not supported. Do not specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1073,9 +1073,9 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The path of the client certificate private key when the source database uses an SSL connection.</p>
+         * <p>The path of the private key of the client certificate when the source database is connected over SSL.</p>
          * <blockquote>
-         * <p>This feature is currently not supported. Do not specify this parameter.</p>
+         * <p>This feature is not supported. Do not specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1088,9 +1088,9 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The password of the client certificate private key when the source database uses an SSL connection.</p>
+         * <p>The password of the private key of the client certificate when the source database is connected over SSL.</p>
          * <blockquote>
-         * <p>This feature is currently not supported. Do not specify this parameter.</p>
+         * <p>This feature is not supported. Do not specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1103,10 +1103,10 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to track DDL data. Valid values:</p>
+         * <p>Specifies whether to track DDL statements. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default): tracks DDL data.</li>
-         * <li><strong>false</strong>: does not track DDL data.</li>
+         * <li><strong>true</strong>: Yes. This is the default value.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1119,10 +1119,10 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to track DML data. Valid values:</p>
+         * <p>Specifies whether to track DML statements. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default): tracks DML data.</li>
-         * <li><strong>false</strong>: does not track DML data.</li>
+         * <li><strong>true</strong>: Yes. This is the default value.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1135,14 +1135,14 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The network type of the change tracking task. The only valid value is <strong>vpc</strong>, which indicates virtual private cloud (VPC).</p>
+         * <p>The network type of the change tracking task. Set the value to <strong>vpc</strong>, which specifies a virtual private cloud (VPC).</p>
          * <blockquote>
          * <ul>
-         * <li>If you specify this parameter, the change tracking task is defined as the new version. You must also correctly set the <strong>SubscriptionInstanceVPCId</strong> and <strong>SubscriptionInstanceVSwitchID</strong> parameters. If you do not specify this parameter, the change tracking task is defined as the legacy version.</li>
+         * <li>If you specify this parameter, the change tracking task is defined as a new version. You must also correctly set the <strong>SubscriptionInstanceVPCId</strong> and <strong>SubscriptionInstanceVSwitchID</strong> parameters. If you do not specify this parameter, the change tracking task is defined as a legacy version.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>Legacy change tracking tasks support tracking data from self-managed MySQL, ApsaraDB RDS for MySQL, and PolarDB-X 1.0. New-version change tracking tasks support tracking data from self-managed MySQL, ApsaraDB RDS for MySQL, PolarDB for MySQL, and Oracle.</li>
+         * <li>Legacy change tracking tasks support tracking data from self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. New change tracking tasks support tracking data from self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

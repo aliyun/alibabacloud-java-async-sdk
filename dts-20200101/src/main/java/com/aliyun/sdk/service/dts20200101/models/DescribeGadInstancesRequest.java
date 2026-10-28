@@ -171,7 +171,10 @@ public class DescribeGadInstancesRequest extends Request {
         } 
 
         /**
-         * DbEngineTypes.
+         * <p>The list of database engine types. Separate multiple types with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL,PostgreSQL,SQLServer</p>
          */
         public Builder dbEngineTypes(String dbEngineTypes) {
             this.putQueryParameter("DbEngineTypes", dbEngineTypes);
@@ -234,7 +237,7 @@ public class DescribeGadInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Specify this parameter to query instances in a specific region. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -258,7 +261,10 @@ public class DescribeGadInstancesRequest extends Request {
         }
 
         /**
-         * SlaveDbInstanceId.
+         * <p>The ID of the secondary database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-a1b2c3d4e5f6g7h8i</p>
          */
         public Builder slaveDbInstanceId(String slaveDbInstanceId) {
             this.putQueryParameter("SlaveDbInstanceId", slaveDbInstanceId);

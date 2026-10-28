@@ -385,11 +385,11 @@ public class DescribeConnectionStatusRequest extends Request {
         /**
          * <p>This parameter is required only when <strong>SourceEndpointEngineName</strong> is set to <strong>Oracle</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>SID</strong>: non-cluster architecture.</li>
-         * <li><strong>RAC</strong>: Real Application Cluster architecture.</li>
+         * <li><strong>SID</strong>: Non-cluster architecture.</li>
+         * <li><strong>RAC</strong>: Cluster architecture.</li>
          * </ul>
          * <blockquote>
-         * <p>The type of this parameter is String, and this parameter is optional.</p>
+         * <p>The value must be of the String type. This parameter is optional.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -402,15 +402,15 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * <p>The name of the database to be migrated to or the name of the authentication database.</p>
+         * <p>The name of the destination database or the authentication database.</p>
          * <blockquote>
          * <ul>
          * <li>This parameter is available and required only when <strong>DestinationEndpointEngineName</strong> is set to <strong>PostgreSQL</strong>, <strong>DRDS</strong>, or <strong>MongoDB</strong>, or when <strong>DestinationEndpointInstanceType</strong> is set to <strong>PolarDB_o</strong>.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>When <strong>DestinationEndpointEngineName</strong> is set to <strong>PostgreSQL</strong> or <strong>DRDS</strong>, specify the name of the database to be migrated. When the value is <strong>MongoDB</strong>, specify the name of the authentication database for the database account.</li>
-         * <li>When <strong>DestinationEndpointInstanceType</strong> is set to <strong>PolarDB_o</strong>, specify the name of the database to be migrated.</li>
+         * <li>If <strong>DestinationEndpointEngineName</strong> is set to <strong>PostgreSQL</strong> or <strong>DRDS</strong>, specify the name of the database to be migrated. If it is set to <strong>MongoDB</strong>, specify the name of the authentication database for the database account.</li>
+         * <li>If <strong>DestinationEndpointInstanceType</strong> is set to <strong>PolarDB_o</strong>, specify the name of the database to be migrated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -423,7 +423,7 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * <p>The database type of the destination database. Valid values: <strong>MySQL</strong>, <strong>DRDS</strong>, <strong>SQLServer</strong>, <strong>PostgreSQL</strong>, <strong>PPAS</strong>, <strong>MongoDB</strong>, and <strong>Redis</strong>.</p>
+         * <p>The database engine type of the destination database. Valid values: <strong>MySQL</strong>, <strong>DRDS</strong>, <strong>SQLServer</strong>, <strong>PostgreSQL</strong>, <strong>PPAS</strong>, <strong>MongoDB</strong>, and <strong>Redis</strong>.</p>
          * <blockquote>
          * <p>This parameter is available and required only when <strong>DestinationEndpointInstanceType</strong> is set to <strong>RDS</strong>, <strong>DRDS</strong>, <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
          * </blockquote>
@@ -465,23 +465,23 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * <p>The type of the destination instance. Valid values:</p>
+         * <p>The instance type of the destination database. Valid values:</p>
          * <blockquote>
          * <ul>
-         * <li><strong>ECS</strong>: self-managed database hosted on an ECS instance.</li>
+         * <li><strong>ECS</strong>: Self-managed database hosted on ECS.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li><strong>LocalInstance</strong>: self-managed database with a public IP address.</li>
+         * <li><strong>LocalInstance</strong>: Self-managed database with a public IP address.</li>
          * <li><strong>RDS</strong>: ApsaraDB RDS instance.</li>
          * <li><strong>DRDS</strong>: PolarDB-X instance.</li>
          * <li><strong>MongoDB</strong>: ApsaraDB for MongoDB instance.</li>
          * <li><strong>Redis</strong>: ApsaraDB for Redis instance.</li>
          * <li><strong>PetaData</strong>: HybridDB for MySQL instance.</li>
          * <li><strong>POLARDB</strong>: PolarDB for MySQL cluster.</li>
-         * <li><strong>PolarDB_o</strong>: PolarDB for PostgreSQL (Oracle-Compatible) cluster.</li>
-         * <li><strong>AnalyticDB</strong>: AnalyticDB for MySQL V3.0 or V2.0.</li>
-         * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL.</li>
+         * <li><strong>PolarDB_o</strong>: PolarDB for Oracle cluster.</li>
+         * <li><strong>AnalyticDB</strong>: AnalyticDB for MySQL cluster of version 3.0 or 2.0.</li>
+         * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL instance.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -497,11 +497,11 @@ public class DescribeConnectionStatusRequest extends Request {
         /**
          * <p>This parameter is required only when <strong>DestinationEndpointEngineName</strong> is set to <strong>Oracle</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>SID</strong>: non-cluster architecture.</li>
-         * <li><strong>RAC</strong>: Real Application Cluster architecture.</li>
+         * <li><strong>SID</strong>: Non-cluster architecture.</li>
+         * <li><strong>RAC</strong>: Cluster architecture.</li>
          * </ul>
          * <blockquote>
-         * <p>The type of this parameter is String, and this parameter is optional.</p>
+         * <p>The value must be of the String type. This parameter is optional.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -514,7 +514,7 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * <p>The password of the destination database account.</p>
+         * <p>The password of the database account for the destination database.</p>
          * 
          * <strong>example:</strong>
          * <p>Test123456</p>
@@ -526,7 +526,7 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * <p>The service port of the source database.</p>
+         * <p>The service port of the destination database.</p>
          * <blockquote>
          * <p>This parameter is available and required only when <strong>SourceEndpointInstanceType</strong> is set to <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
          * </blockquote>
@@ -541,7 +541,7 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * <p>The region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region where the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -565,7 +565,7 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region where the DTS instance resides. For details, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -577,7 +577,7 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -591,8 +591,8 @@ public class DescribeConnectionStatusRequest extends Request {
         /**
          * <p>This parameter is required only when <strong>SourceEndpointEngineName</strong> is set to <strong>Oracle</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>SID</strong>: non-cluster architecture.</li>
-         * <li><strong>RAC</strong>: Real Application Cluster architecture.</li>
+         * <li><strong>SID</strong>: Non-cluster architecture.</li>
+         * <li><strong>RAC</strong>: Cluster architecture.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter is optional.</p>
@@ -608,15 +608,15 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * <p>The name of the database to be migrated or the name of the authentication database.</p>
+         * <p>The name of the database to be migrated or the authentication database.</p>
          * <blockquote>
          * <ul>
          * <li>This parameter is available and required only when <strong>SourceEndpointEngineName</strong> is set to <strong>PostgreSQL</strong> or <strong>MongoDB</strong>, or when <strong>SourceEndpointInstanceType</strong> is set to <strong>PolarDB_o</strong>.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>When <strong>SourceEndpointEngineName</strong> is set to <strong>PostgreSQL</strong> or <strong>DRDS</strong>, specify the name of the database to be migrated. When the value is <strong>MongoDB</strong>, specify the name of the authentication database for the database account.</li>
-         * <li>When <strong>SourceEndpointInstanceType</strong> is set to <strong>PolarDB_o</strong>, specify the name of the database to be migrated.</li>
+         * <li>If <strong>SourceEndpointEngineName</strong> is set to <strong>PostgreSQL</strong> or <strong>DRDS</strong>, specify the name of the database to be migrated. If it is set to <strong>MongoDB</strong>, specify the name of the authentication database for the database account.</li>
+         * <li>If <strong>SourceEndpointInstanceType</strong> is set to <strong>PolarDB_o</strong>, specify the name of the database to be migrated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -674,13 +674,13 @@ public class DescribeConnectionStatusRequest extends Request {
          * <p>The type of the source instance. Valid values:</p>
          * <ul>
          * <li><strong>RDS</strong>: ApsaraDB RDS instance.</li>
-         * <li><strong>LocalInstance</strong>: self-managed database with a public IP address.</li>
-         * <li><strong>ECS</strong>: self-managed database hosted on an ECS instance.</li>
-         * <li><strong>Express</strong>: self-managed database connected over Express Connect.</li>
-         * <li><strong>dg</strong>: self-managed database connected over Database Gateway.</li>
+         * <li><strong>LocalInstance</strong>: Self-managed database.</li>
+         * <li><strong>ECS</strong>: Self-managed database hosted on Elastic Compute Service (ECS).</li>
+         * <li><strong>Express</strong>: Self-managed database connected over Express Connect.</li>
+         * <li><strong>dg</strong>: Self-managed database connected over Database Gateway.</li>
          * <li><strong>MongoDB</strong>: ApsaraDB for MongoDB instance.</li>
          * <li><strong>POLARDB</strong>: PolarDB for MySQL cluster.</li>
-         * <li><strong>PolarDB_o</strong>: PolarDB for PostgreSQL (Oracle-Compatible) cluster.</li>
+         * <li><strong>PolarDB_o</strong>: PolarDB for Oracle cluster.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -694,7 +694,7 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * <p>The SID of the Oracle database.</p>
+         * <p>The system ID (SID) of the Oracle database.</p>
          * <blockquote>
          * <p>This parameter is available and required only when <strong>SourceEndpointEngineName</strong> is set to <strong>Oracle</strong> and the Oracle database is a non-RAC instance.</p>
          * </blockquote>
@@ -709,7 +709,7 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * <p>The password of the source database account.</p>
+         * <p>The password of the database account for the source database.</p>
          * 
          * <strong>example:</strong>
          * <p>Test123456</p>
@@ -736,7 +736,7 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * <p>The region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region where the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

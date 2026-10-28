@@ -116,7 +116,7 @@ public class StartSubscriptionInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be deprecated.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>

@@ -119,7 +119,7 @@ public class ListJobStepResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class ListJobStepResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -160,7 +160,7 @@ public class ListJobStepResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,7 +240,7 @@ public class ListJobStepResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Error code.</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -251,7 +251,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>URL of the help document.</p>
+             * <p>The URL of the help document.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -321,7 +321,7 @@ public class ListJobStepResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Error code.</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -332,7 +332,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>URL of the help document.</p>
+             * <p>The URL of the help document.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -571,7 +571,7 @@ public class ListJobStepResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the sub-job was started, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * <p>The time when the subtask was started. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-02T02:00:21Z</p>
@@ -582,7 +582,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Sub-task step identity.</p>
+             * <p>The identifier of the subtask step.</p>
              * 
              * <strong>example:</strong>
              * <p>03</p>
@@ -593,7 +593,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the sub-job was created, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * <p>The time when the subtask was created. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-09-20T02:13:12Z</p>
@@ -604,7 +604,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Error message.</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>UncaughtException:java.lang.NullPointerException</p>
@@ -615,7 +615,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Error message.</p>
+             * <p>The fault information.</p>
              */
             public Builder errorDetails(java.util.List<SubJobStepsErrorDetails> errorDetails) {
                 this.errorDetails = errorDetails;
@@ -623,7 +623,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>End time of the sub-task, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * <p>The time when the subtask was finished. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-15T02:15:14Z</p>
@@ -634,7 +634,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Incremental data latency, in milliseconds.</p>
+             * <p>The incremental data latency, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -645,7 +645,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Incremental data latency, in seconds.</p>
+             * <p>The incremental data latency, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -656,7 +656,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Job ID.</p>
+             * <p>The ID of the job step.</p>
              * 
              * <strong>example:</strong>
              * <p>mj3z9w9s10am68o_0004_0000</p>
@@ -667,15 +667,15 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Sub-job step information. Valid values are as follows:</p>
+             * <p>The subtask step information. Valid values:</p>
              * <ul>
-             * <li>Precheck: precheck phase</li>
-             * <li>Incremental data service: incremental data collection phase</li>
-             * <li>dts.step.struct.load: schema migration phase</li>
-             * <li>dts.step.data.load: full migration phase</li>
-             * <li>etl-check: extract, transform, and load (ETL) phase</li>
-             * <li>Consistency validation: data verification phase</li>
-             * <li>Synchronization: incremental synchronization phase</li>
+             * <li>Precheck: The precheck phase.</li>
+             * <li>Incremental data service: The incremental data collection phase.</li>
+             * <li>dts.step.struct.load: The schema migration phase.</li>
+             * <li>dts.step.data.load: The full data migration phase.</li>
+             * <li>etl-check: The ETL phase.</li>
+             * <li>Consistency check: The data validation phase.</li>
+             * <li>Synchronization: The incremental synchronization phase.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -687,7 +687,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the sub-job was updated, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * <p>The time when the subtask was modified. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-08-22T02:04:35Z</p>
@@ -709,7 +709,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Progress of the sub-job step.</p>
+             * <p>The progress of the subtask step.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -720,7 +720,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Serial number of the sub-task step. Indicates the task execution order; the smaller the numeric value, the earlier the execution order.</p>
+             * <p>The sequence number of the subtask step. A smaller value indicates an earlier execution order.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -731,15 +731,15 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status of the sub-task step. Valid values:</p>
+             * <p>The status of the subtask step. Valid values:</p>
              * <ul>
-             * <li>Failed: failed.</li>
-             * <li>Pause: paused.</li>
-             * <li>Schedule: scheduled.</li>
-             * <li>Init: initialization.</li>
-             * <li>Running: synchronizing.</li>
-             * <li>Catched: waiting for synchronization.</li>
-             * <li>Finished: ended.</li>
+             * <li>Failed: Failed.</li>
+             * <li>Pause: Paused.</li>
+             * <li>Schedule: Scheduled.</li>
+             * <li>Init: Initialized.</li>
+             * <li>Running: Synchronizing.</li>
+             * <li>Catched: Waiting for synchronization.</li>
+             * <li>Finished: Finished.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1018,7 +1018,7 @@ public class ListJobStepResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The job start time, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * <p>The time when the task was started. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-04-11T09:33:23Z</p>
@@ -1029,7 +1029,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task step identity.</p>
+             * <p>The identifier of the task step.</p>
              * 
              * <strong>example:</strong>
              * <p>01</p>
@@ -1040,7 +1040,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job creation time, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * <p>The time when the task was created. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-11-28T17:13:51Z</p>
@@ -1062,7 +1062,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message.</p>
+             * <p>The fault information.</p>
              */
             public Builder errorDetails(java.util.List<ErrorDetails> errorDetails) {
                 this.errorDetails = errorDetails;
@@ -1070,7 +1070,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task end time, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * <p>The time when the task was finished. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-15T02:15:14Z</p>
@@ -1081,7 +1081,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Incremental data latency, in milliseconds.</p>
+             * <p>The incremental data latency, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1092,7 +1092,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Incremental data latency, in seconds.</p>
+             * <p>The incremental data latency, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -1103,7 +1103,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task step ID.</p>
+             * <p>The ID of the task step.</p>
              * 
              * <strong>example:</strong>
              * <p>l02c1f7h179****</p>
@@ -1114,19 +1114,19 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task step information. Valid values:</p>
+             * <p>The task step information. Valid values:</p>
              * <ul>
-             * <li>Precheck: precheck phase</li>
-             * <li>Incremental data service: incremental data collection phase</li>
-             * <li>dts.step.struct.load: schema migration phase</li>
-             * <li>dts.step.data.load: full migration phase</li>
-             * <li>etl-check: extract, transform, and load phase</li>
-             * <li>Consistency validation: data verification phase</li>
-             * <li>Synchronization: incremental synchronization phase</li>
+             * <li>Precheck: The precheck phase.</li>
+             * <li>Incremental data service: The incremental data collection phase.</li>
+             * <li>dts.step.struct.load: The schema migration phase.</li>
+             * <li>dts.step.data.load: The full data migration phase.</li>
+             * <li>etl-check: The ETL phase.</li>
+             * <li>Consistency check: The data validation phase.</li>
+             * <li>Synchronization: The incremental synchronization phase.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>预检查</p>
+             * <p>Precheck</p>
              */
             public Builder jobStepName(String jobStepName) {
                 this.jobStepName = jobStepName;
@@ -1134,7 +1134,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was updated, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * <p>The time when the task was modified. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-03T02:26:14Z</p>
@@ -1145,7 +1145,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the acceleration feature should be provided.</p>
+             * <p>Indicates whether the acceleration feature is required.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1167,7 +1167,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task step serial number. Indicates the task execution order. A smaller value indicates an earlier execution order.</p>
+             * <p>The sequence number of the task step. A smaller value indicates an earlier execution order.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1178,7 +1178,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task step status.</p>
+             * <p>The status of the task step.</p>
              * 
              * <strong>example:</strong>
              * <p>○ Finished</p>
@@ -1189,7 +1189,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sub-jobs.</p>
+             * <p>The number of subtasks.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1200,7 +1200,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Step information of the sub-job.</p>
+             * <p>The step information of the subtask.</p>
              */
             public Builder subJobSteps(java.util.List<SubJobSteps> subJobSteps) {
                 this.subJobSteps = subJobSteps;
@@ -1208,10 +1208,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Used to distinguish between the Redis full and incremental phases. Valid values:</p>
+             * <p>The phase type used to distinguish between the full data and incremental data phases for Redis. Valid values:</p>
              * <ul>
-             * <li>full: Full phase</li>
-             * <li>inc: Incremental phase</li>
+             * <li>full: The full data phase.</li>
+             * <li>inc: The incremental data phase.</li>
              * </ul>
              * 
              * <strong>example:</strong>

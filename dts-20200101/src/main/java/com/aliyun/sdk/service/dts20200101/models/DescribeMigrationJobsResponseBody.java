@@ -145,7 +145,7 @@ public class DescribeMigrationJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -156,7 +156,7 @@ public class DescribeMigrationJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>The error message returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -186,7 +186,7 @@ public class DescribeMigrationJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records that can be displayed on the current page.</p>
+         * <p>The maximum number of entries that can be displayed on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

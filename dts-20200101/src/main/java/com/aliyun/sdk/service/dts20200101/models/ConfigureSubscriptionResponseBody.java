@@ -132,7 +132,7 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID of the subscribe instance.</p>
+         * <p>The change tracking instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsy0zz3t13h7d****</p>
@@ -154,7 +154,7 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -165,7 +165,7 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>

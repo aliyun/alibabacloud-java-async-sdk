@@ -197,7 +197,7 @@ public class ModifyGadInstanceNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the task was created, in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+         * <p>The time when the task was created. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-28 17:34:53.0</p>
@@ -219,9 +219,9 @@ public class ModifyGadInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which replaces <strong>%s</strong> in the <strong>ErrMessage</strong> response parameter.</p>
+         * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the <strong>ErrMessage</strong> parameter.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified request parameter <strong>DtsJobId</strong> is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -233,7 +233,7 @@ public class ModifyGadInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -244,7 +244,7 @@ public class ModifyGadInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -266,7 +266,7 @@ public class ModifyGadInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The active geo-redundancy instance group ID.</p>
+         * <p>The ID of the active-active instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp162d4tp0500****</p>
@@ -277,7 +277,7 @@ public class ModifyGadInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2zehh163694qs5c3v</p>
@@ -288,7 +288,7 @@ public class ModifyGadInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the instance. For more information, see Supported regions.</p>
+         * <p>The ID of the region where the instance resides. For more information, see the supported regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -299,7 +299,7 @@ public class ModifyGadInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>4D0ADAD5-DD97-41B6-B78F-D1961AB1****</p>
@@ -310,7 +310,7 @@ public class ModifyGadInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -321,7 +321,7 @@ public class ModifyGadInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

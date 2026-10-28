@@ -34,7 +34,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</p>
+     * <p>You can preconfigure settings in the console as needed and then preview the OpenAPI parameters for the configurations to help you fill in the request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ConfigureSubscription  ConfigureSubscriptionRequest
@@ -46,7 +46,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</p>
      * <blockquote>
-     * <p>In the <strong>Advanced Settings</strong> step of the console, move the pointer over the <strong>Next: Save the task and perform a precheck</strong> button, and then click <strong>Preview OpenAPI parameters</strong> in the tooltip to view the parameter information for configuring this instance by using API operations.</p>
+     * <p>In the <strong>Advanced Settings</strong> step of the console, move the pointer over the <strong>Save Task and Precheck</strong> button, and then click <strong>Preview OpenAPI Call</strong> in the tooltip to view the parameter settings for configuring the instance by using API operations.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ConfigureSubscriptionInstance  ConfigureSubscriptionInstanceRequest
@@ -65,11 +65,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</p>
      * <blockquote>
      * <ul>
-     * <li>After this operation is called, the data synchronization instance automatically starts and performs a precheck. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the instance.</li>
+     * <li>After this operation is called, the data synchronization instance automatically starts and runs a precheck. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the instance.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>If the data synchronization instance fails to start, the precheck may have failed. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the data synchronization instance, obtain the error message of the precheck failure, and adjust the parameters. After the adjustment, you can call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization instance.</li>
+     * <li>If the data synchronization instance fails to start, the precheck may have failed. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the data synchronization instance, obtain the error message for the precheck failure, and adjust the parameters. After the adjustment, you can call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization instance.</li>
      * </ul>
      * 
      * @param request the request parameters of ConfigureSynchronizationJob  ConfigureSynchronizationJobRequest
@@ -123,10 +123,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+     * <li>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of the cloud database DTS product.
      * &lt;props=&quot;intl&quot;&gt;</li>
-     * <li>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</li>
-     * <li>Nodes on a dedicated cluster support only the workflow of configuring a node before purchasing an instance. You can invoke the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a node.</li>
+     * <li>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/data-transmission-service/pricing">pricing</a> of the cloud database DTS product.</li>
+     * <li>For nodes in a dedicated cluster, you must configure the node before you purchase the instance. You can invoke the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure the node.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDtsInstance  CreateDtsInstanceRequest
@@ -135,12 +135,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDtsInstanceResponse> createDtsInstance(CreateDtsInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateGadInstance  CreateGadInstanceRequest
+     * @return CreateGadInstanceResponse
+     */
+    CompletableFuture<CreateGadInstanceResponse> createGadInstance(CreateGadInstanceRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>DTS currently supports the following alert metrics: <strong>Latency</strong>, <strong>Migration Status</strong>, and <strong>Full Migration Duration</strong>:</p>
+     * <p>When NeedCreateSlave is set to true, the following additional parameters are required: DbInstanceClass, DbInstanceStorage, DbInstanceStorageType, ZoneId, ZoneIdSlave1, ZoneIdSlave2, VpcId, VSwitchId, SecurityIPList, PayType, Port, Amount, AutoRenew, Period, UsedTime, Category, EngineVersion, DbInstanceDescription, and AutoCreateProxy. These parameters have the same meanings as those in the CreateDBInstance operation.</p>
+     * 
+     * @param request the request parameters of CreateGadOrder  CreateGadOrderRequest
+     * @return CreateGadOrderResponse
+     */
+    CompletableFuture<CreateGadOrderResponse> createGadOrder(CreateGadOrderRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Data Transmission Service (DTS) currently supports the following monitoring metrics: <strong>latency</strong>, <strong>migration status</strong>, and <strong>full run duration</strong>:</p>
      * <ul>
-     * <li><strong>Latency</strong>: Monitors incremental data migration latency. An alert is triggered when the migration latency, synchronization latency, or change tracking latency exceeds the specified threshold (in seconds).</li>
-     * <li><strong>Migration Status</strong>: Monitors the task status. An alert is triggered when the task status is <strong>Error</strong> or <strong>Recovered</strong>.</li>
-     * <li><strong>Full Migration Duration</strong>: Monitors the duration of full data migration. An alert is triggered when the duration exceeds the specified threshold (in hours).</li>
+     * <li><strong>Latency</strong>: Monitors the latency of incremental data migration. An alert is triggered when the migration latency, synchronization latency, or change tracking latency exceeds the specified threshold in seconds.</li>
+     * <li><strong>Migration status</strong>: Monitors the status of the task. An alert is triggered when the task status is <strong>Abnormal</strong> or <strong>Recovered</strong>.</li>
+     * <li><strong>Full run duration</strong>: Monitors the duration of the full run. An alert is triggered when the duration exceeds the specified threshold in hours.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateJobMonitorRule  CreateJobMonitorRuleRequest
@@ -156,9 +171,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The reverse task created by calling this operation immediately starts a precheck. After the precheck is passed, incremental data collection begins, but the incremental data write module does not run. You must call the <strong>StartReverseWriter</strong> operation to start it.</p>
+     * <p>A reverse task created by calling this operation immediately undergoes a precheck. After the precheck is passed, incremental data collection starts, but the incremental data writer does not run. You must call the <strong>StartReverseWriter</strong> operation to start the incremental data writer.</p>
      * <blockquote>
-     * <p>The created reverse task is a synchronization task that contains only the incremental write module.</p>
+     * <p>A created reverse task is always a synchronization task and includes only the incremental data writer.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateReverseDtsJob  CreateReverseDtsJobRequest
@@ -193,7 +208,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling this API operation. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>You cannot release subscription DTS instances by calling API operations. You can release them by unsubscribing from the instances. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph></p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteDtsJob  DeleteDtsJobRequest
@@ -204,13 +219,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling API operations. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling API operations. You can release them by unsubscribing from the instances. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release DTS instances</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph></p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteDtsJobs  DeleteDtsJobsRequest
      * @return DeleteDtsJobsResponse
      */
     CompletableFuture<DeleteDtsJobsResponse> deleteDtsJobs(DeleteDtsJobsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteGadInstance  DeleteGadInstanceRequest
+     * @return DeleteGadInstanceResponse
+     */
+    CompletableFuture<DeleteGadInstanceResponse> deleteGadInstance(DeleteGadInstanceRequest request);
 
     /**
      * @param request the request parameters of DeleteMigrationJob  DeleteMigrationJobRequest
@@ -310,10 +331,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation has rate limits. Calls that exceed the limits are rejected.</p>
+     * <p>This operation has call limits. Calls that exceed the limits are rejected.</p>
      * <ul>
-     * <li>The cumulative call threshold per region is 100 calls per second.</li>
-     * <li>The call threshold per account per region is 5 calls per second.</li>
+     * <li>The cumulative call limit per region is 100 calls per second.</li>
+     * <li>The call limit per account per region is 5 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeDocParserJobResult  DescribeDocParserJobResultRequest
@@ -323,7 +344,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation has call frequency limits. Calls that exceed the limits are rejected.</p>
+     * <p>This operation has a limit on the number of calls. Calls that exceed the limit are rejected.</p>
      * <ul>
      * <li>The cumulative call threshold for a single region is 200 calls per second.</li>
      * <li>The call threshold for a single account in a single region is 20 calls per second.</li>
@@ -348,10 +369,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation has rate limits. Calls that exceed the limits are rejected.</p>
+     * <p>This operation has limits on the number of calls. Calls that exceed the limits are rejected.</p>
      * <ul>
-     * <li>The cumulative threshold for calls in a single region is 160 calls per second.</li>
-     * <li>The threshold for calls by a single account in a single region is 40 calls per second.</li>
+     * <li>The cumulative threshold for calls allowed in a single region is 160 calls per second.</li>
+     * <li>The threshold for calls allowed per account in a single region is 40 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeDtsJobDetail  DescribeDtsJobDetailRequest
@@ -395,6 +416,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeFullProcessListResponse
      */
     CompletableFuture<DescribeFullProcessListResponse> describeFullProcessList(DescribeFullProcessListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeGadInstanceDbMembers  DescribeGadInstanceDbMembersRequest
+     * @return DescribeGadInstanceDbMembersResponse
+     */
+    CompletableFuture<DescribeGadInstanceDbMembersResponse> describeGadInstanceDbMembers(DescribeGadInstanceDbMembersRequest request);
+
+    /**
+     * @param request the request parameters of DescribeGadInstanceDetail  DescribeGadInstanceDetailRequest
+     * @return DescribeGadInstanceDetailResponse
+     */
+    CompletableFuture<DescribeGadInstanceDetailResponse> describeGadInstanceDetail(DescribeGadInstanceDetailRequest request);
+
+    /**
+     * @param request the request parameters of DescribeGadInstanceDtsMembers  DescribeGadInstanceDtsMembersRequest
+     * @return DescribeGadInstanceDtsMembersResponse
+     */
+    CompletableFuture<DescribeGadInstanceDtsMembersResponse> describeGadInstanceDtsMembers(DescribeGadInstanceDtsMembersRequest request);
 
     /**
      * @param request the request parameters of DescribeGadInstances  DescribeGadInstancesRequest
@@ -478,12 +517,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Because a PolarDB-X 1.0 change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a PolarDB-X 1.0 change tracking task.
+     * <li>Because a PolarDB-X 1.0 change tracking task is a distributed change tracking task, each attached ApsaraDB RDS for MySQL instance corresponds to a change tracking subtask. You can call this operation to query the information about the change tracking subtasks.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query information such as the instance ID and consumer group ID of the PolarDB-X 1.0 change tracking task.
      * &lt;props=&quot;intl&quot;&gt;</li>
-     * <li>Because a DRDS change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a DRDS change tracking task.
-     * .</li>
+     * <li>Because a DRDS change tracking task is a distributed change tracking task, each attached ApsaraDB RDS for MySQL instance corresponds to a change tracking subtask. You can call this operation to query the information about the change tracking subtasks.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query information such as the instance ID and consumer group ID of the DRDS change tracking task.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSubscriptionMeta  DescribeSubscriptionMetaRequest
@@ -555,7 +593,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>The unit node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database connected through Cloud Enterprise Network (CEN).</li>
-     * <li>This operation initializes a built-in account named rdsdt_dtsacct in a unit node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform synchronization tasks.</li>
+     * <li>This operation initializes a built-in account named rdsdt_dtsacct in a unit node of a global active-active database cluster. DTS uses this account to connect to the node and perform synchronization tasks.</li>
      * </ul>
      * 
      * @param request the request parameters of InitDtsRdsInstance  InitDtsRdsInstanceRequest
@@ -577,7 +615,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>***.</p>
+     * <hr>
      * 
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -604,7 +642,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only the overcommit ratio can be modified.</p>
+     * <p>Currently, only the oversubscription ratio can be modified.</p>
      * 
      * @param request the request parameters of ModifyDedicatedCluster  ModifyDedicatedClusterRequest
      * @return ModifyDedicatedClusterResponse
@@ -620,7 +658,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After a migration task is changed from a dedicated cluster to a public cluster, the billing method of the task changes to pay-as-you-go, and billing starts.</p>
+     * <p>After a data migration task is changed from running in a dedicated cluster to running in a public cluster, the billing method of the task changes to pay-as-you-go, and billing starts.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyDtsJobDedicatedCluster  ModifyDtsJobDedicatedClusterRequest
@@ -631,8 +669,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>DTS instances in a dedicated cluster must support specification changes. By changing the resources consumed by a task at runtime, you can dynamically adjust the number of schedulable tasks in the current cluster, thereby deducting or releasing the total number of DUs in the cluster.</li>
-     * <li>Before modifying the DU upper limit of a task, ensure that sufficient resources are available.</li>
+     * <li>DTS instances in dedicated clusters support specification upgrades and downgrades. By changing the resources consumed during task execution, you can dynamically adjust the number of schedulable tasks in the cluster, which deducts or releases the total DUs of the cluster.</li>
+     * <li>Before modifying the DU limit for a task, ensure that sufficient resources are available.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDtsJobDuLimit  ModifyDtsJobDuLimitRequest
@@ -684,7 +722,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can perform the required preconfigurations in the console and then preview the corresponding OpenAPI parameter information to help you fill in the request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</p>
+     * <p>You can preconfigure settings in the console as needed and preview the OpenAPI parameters for the configurations to help you fill in the request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifySubscription  ModifySubscriptionRequest
@@ -725,7 +763,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After the configuration of a data synchronization or change tracking task is cleared, the original task is deleted. DTS creates a new unconfigured task. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to reconfigure the task.</p>
+     * <p>After you clear the configurations of a data synchronization or change tracking task, the original task is deleted and DTS creates an unconfigured task. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to reconfigure the task.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ResetDtsJob  ResetDtsJobRequest
@@ -736,7 +774,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After you reset the configuration of a data synchronization task, the original synchronization task is released. You must call the <strong>ConfigureSynchronizationJob</strong> operation to reconfigure the synchronization task before you can start the task.</p>
+     * <p>After you clear the configuration of a data synchronization task, the original synchronization task is released. To start the task again, you must call the <strong>ConfigureSynchronizationJob</strong> operation to reconfigure the synchronization task.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ResetSynchronizationJob  ResetSynchronizationJobRequest
@@ -862,12 +900,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>When you call this operation, the synchronization task must be in the Synchronizing state.</li>
+     * <li>When you call this operation, the data synchronization task must be in the Synchronizing state.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>A synchronization task cannot be paused for more than 6 hours. Otherwise, the task cannot be restarted.</li>
-     * <li>DTS continues to charge fees for a pay-as-you-go synchronization task even if the task is paused. This is because DTS only pauses writing data to the destination instance but continues to pull logs from the source instance to ensure quick resumption when the task is restarted. Therefore, the task still consumes resources such as bandwidth of the source database.</li>
+     * <li>You can suspend a data synchronization task for up to 6 hours. If the suspension exceeds 6 hours, the task cannot be restarted.</li>
+     * <li>You are still charged for a pay-as-you-go data synchronization task even when it is suspended. This is because DTS only stops writing data to the destination database but continues to pull logs from the source database to ensure fast recovery after the task is restarted. As a result, the task still consumes resources such as the bandwidth of the source database.</li>
      * </ul>
      * 
      * @param request the request parameters of SuspendSynchronizationJob  SuspendSynchronizationJobRequest
@@ -924,10 +962,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
      * &lt;props=&quot;intl&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</p>
      * <ul>
-     * <li>To avoid resource waste, confirm the payment method transformation before you perform the operation.</li>
-     * <li>Data migration instances support only the pay-as-you-go billing method. No transformation is required.
+     * <li>To prevent resource waste, confirm the billing method change before you proceed.</li>
+     * <li>Data migration instances support only the pay-as-you-go billing method and do not require billing method changes.
      * &lt;props=&quot;china&quot;&gt;</li>
-     * <li>Serverless instances do not support payment method transformation.</li>
+     * <li>Serverless instances do not support billing method changes.</li>
      * </ul>
      * 
      * @param request the request parameters of TransferPayType  TransferPayTypeRequest
@@ -938,7 +976,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After a tag is unbound from an instance, the tag is automatically deleted if it is not bound to any other instance.</p>
+     * <p>If a tag is removed from an instance and is not attached to any other instances, the tag is automatically deleted.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UntagResources  UntagResourcesRequest
@@ -948,14 +986,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of ApsaraDB DTS.
-     * &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of ApsaraDB DTS.
-     * Before you begin:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of ApsaraDB DTS before you call this operation.
+     * &lt;props=&quot;intl&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of ApsaraDB DTS before you call this operation.
+     * When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>The database type of both the source instance and the destination instance of the data synchronization node must be <strong>MySQL</strong>.</li>
+     * <li>The database engines of the source instance and destination instance for the data synchronization node must be <strong>MySQL</strong>.</li>
      * <li>The synchronization topology of the data synchronization node must be <strong>one-way synchronization</strong>.</li>
-     * <li>The data synchronization node must be in the <strong>Synchronizing</strong> state.</li>
-     * <li>During the upgrade, data synchronization may experience a latency of approximately 5 seconds. Perform this operation during off-peak hours.</li>
+     * <li>The status of the data synchronization node must be <strong>Synchronizing</strong>.</li>
+     * <li>Data synchronization may be delayed by about 5 seconds while the upgrade takes effect. Perform this operation during off-peak hours.</li>
      * </ul>
      * 
      * @param request the request parameters of UpgradeTwoWay  UpgradeTwoWayRequest
@@ -965,10 +1003,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;If the <strong>source or destination instance</strong> is a <strong>self-managed database</strong> or a <strong>third-party ApsaraDB database</strong>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/84900.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database for migration, synchronization, or subscribe</a>.
-     * &lt;props=&quot;intl&quot;&gt;If the <strong>source or destination instance</strong> is a <strong>self-managed database</strong> or a <strong>third-party ApsaraDB database</strong>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;If the <strong>source or destination instance</strong> is a <strong>self-managed database</strong> or a <strong>third-party cloud database</strong>, you must call this operation to query the IP addresses of DTS servers, and then add the queried IP addresses to the security settings of the source or destination instance, such as the firewall of the database. For more information, see <a href="https://help.aliyun.com/document_detail/84900.html">IP address whitelist required when you migrate, synchronize, or subscribe to a local database</a>.
+     * &lt;props=&quot;intl&quot;&gt;If the <strong>source or destination instance</strong> is a <strong>self-managed database</strong> or a <strong>third-party cloud database</strong>, you must call this operation to query the IP addresses of DTS servers, and then add the queried IP addresses to the security settings of the source or destination instance, such as the firewall of the database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the IP address whitelist of a self-managed database</a>.</p>
      * <blockquote>
-     * <p>If the <strong>source or destination database</strong> is an <strong>Alibaba Cloud database instance</strong> (such as ApsaraDB RDS or ApsaraDB for MongoDB) or a <strong>self-managed database hosted on ECS</strong>, the system automatically adds the IP addresses of DTS servers to the security settings of the instance when you click <strong>Authorize Whitelist and Proceed to Next Step</strong> during the configuration of the source or destination instance. You do not need to manually add the IP addresses.</p>
+     * <p>If the <strong>source or destination database</strong> is an <strong>Alibaba Cloud database instance</strong> (such as ApsaraDB RDS or MongoDB) or a <strong>self-managed database on an ECS instance</strong>, the system automatically adds the IP addresses of DTS servers to the security settings of the instance when you configure the source or destination instance information and click <strong>Authorize Whitelist and Proceed to Next Step</strong>. You do not need to manually add the IP addresses.</p>
      * </blockquote>
      * 
      * @param request the request parameters of WhiteIpList  WhiteIpListRequest

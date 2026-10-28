@@ -132,7 +132,7 @@ public class ConvertInstanceResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The backend error code, which increments numerically.</p>
+         * <p>The backend error code, which is an incrementing number.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -143,9 +143,9 @@ public class ConvertInstanceResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+         * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>For example, if <strong>The Value of Input Parameter %s is not valid</strong> is returned and DynamicMessage returns DtsJobId, the request parameter DtsJobId that you specified is invalid.</p>
+         * <p>If <strong>The Value of Input Parameter %s is not valid</strong> is returned and the DynamicMessage parameter returns DtsJobId, it indicates that the specified DtsJobId request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class ConvertInstanceResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -168,7 +168,7 @@ public class ConvertInstanceResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>

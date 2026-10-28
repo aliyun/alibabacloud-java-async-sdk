@@ -185,10 +185,10 @@ public class ListDedicatedClusterRequest extends Request {
         } 
 
         /**
-         * <p>The sort column when the response contains multiple DTS dedicated cluster instances. Valid values:</p>
+         * <p>The sort field when the response contains multiple DTS dedicated cluster instances. Valid values:</p>
          * <ul>
-         * <li><strong>gmtCreated</strong>: creation time.</li>
-         * <li><strong>orderCount</strong>: number of nodes.</li>
+         * <li><strong>gmtCreated</strong>: Creation time.</li>
+         * <li><strong>orderCount</strong>: Number of nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,8 +203,8 @@ public class ListDedicatedClusterRequest extends Request {
         /**
          * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li><strong>asc</strong>: ascending order. This is the default value.</li>
-         * <li><strong>desc</strong>: descending order.</li>
+         * <li><strong>asc</strong>: Ascending order. This is the default value.</li>
+         * <li><strong>desc</strong>: Descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class ListDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be an integer greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -238,7 +238,7 @@ public class ListDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The number of clusters to display per page.</p>
+         * <p>The number of clusters to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -252,7 +252,7 @@ public class ListDedicatedClusterRequest extends Request {
         /**
          * <p>The specific content of the query condition.</p>
          * <blockquote>
-         * <p>You must first specify the <strong>Type</strong> parameter to define the query key.</p>
+         * <p>You must specify <strong>Type</strong> to define the query key.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class ListDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The region ID. This parameter is used as a query condition.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -291,14 +291,14 @@ public class ListDedicatedClusterRequest extends Request {
         /**
          * <p>The cluster status. Valid values:</p>
          * <ul>
-         * <li><strong>init</strong>: initializing.</li>
-         * <li><strong>schedule</strong>: pending scheduling.</li>
-         * <li><strong>running</strong>: running.</li>
-         * <li><strong>upgrade</strong>: upgrading.</li>
-         * <li><strong>downgrade</strong>: downgrading.</li>
-         * <li><strong>locked</strong>: locked.</li>
-         * <li><strong>releasing</strong>: being released.</li>
-         * <li><strong>released</strong>: released.</li>
+         * <li><strong>init</strong>: Initializing.</li>
+         * <li><strong>schedule</strong>: Pending scheduling.</li>
+         * <li><strong>running</strong>: Running.</li>
+         * <li><strong>upgrade</strong>: Upgrading.</li>
+         * <li><strong>downgrade</strong>: Downgrading.</li>
+         * <li><strong>locked</strong>: Locked.</li>
+         * <li><strong>releasing</strong>: Releasing.</li>
+         * <li><strong>released</strong>: Released.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -313,12 +313,12 @@ public class ListDedicatedClusterRequest extends Request {
         /**
          * <p>The query key. Valid values:</p>
          * <ul>
-         * <li><strong>NAME</strong>: cluster name.</li>
-         * <li><strong>INSTANCE</strong>: cluster instance ID.</li>
-         * <li><strong>DEDICATEDCLUSTERID</strong>: dedicated cluster ID.</li>
+         * <li><strong>NAME</strong>: The cluster name.</li>
+         * <li><strong>INSTANCE</strong>: The cluster instance ID.</li>
+         * <li><strong>DEDICATEDCLUSTERID</strong>: The dedicated cluster ID.</li>
          * </ul>
          * <blockquote>
-         * <p>You must also specify the <strong>Params</strong> parameter to provide the specific content of the query condition.</p>
+         * <p>You must specify <strong>Params</strong> to define the query condition.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

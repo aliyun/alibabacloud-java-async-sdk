@@ -200,7 +200,7 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -212,10 +212,10 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>The mobile phone numbers of contacts for latency alerts. Separate multiple phone numbers with commas (,).</p>
+         * <p>The mobile phone numbers of the contacts to receive latency alerts. Separate multiple mobile phone numbers with commas (,).</p>
          * <p>Note
-         * This parameter is supported only on the China site (aliyun.com) and only Chinese mainland phone numbers are supported. You can specify up to 10 phone numbers.
-         * China site (Chinese mainland) does not support phone alerts on the China site. You can configure alert rules for DTS tasks only in the CloudMonitor console.</p>
+         * This parameter is currently only supported on the China site. Only mobile phone numbers in the Chinese mainland are supported, and you can specify up to 10 mobile phone numbers.
+         * The international site does not support SMS alerts. You can only configure alert rules for DTS tasks by using CloudMonitor.</p>
          * 
          * <strong>example:</strong>
          * <p>1361234****,1371234****</p>
@@ -229,8 +229,8 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         /**
          * <p>Specifies whether to monitor the latency status. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong>: yes.</li>
-         * <li><strong>disable</strong>: no.</li>
+         * <li><strong>enable</strong>: yes</li>
+         * <li><strong>disable</strong>: no</li>
          * </ul>
          * <blockquote>
          * <ul>
@@ -251,9 +251,9 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>The threshold for triggering a latency alert. Unit: seconds. The value must be an integer. Set the threshold based on your business requirements. We recommend that you set the threshold to 10 seconds or more to avoid alert fluctuations caused by network issues or database loads.</p>
+         * <p>The threshold for triggering a latency alert. Unit: seconds. The value must be an integer. You can set the threshold based on your business requirements. Set the threshold to 10 seconds or more to avoid latency fluctuations caused by network issues or database loads.</p>
          * <blockquote>
-         * <p>This parameter is required when <strong>DelayAlertStatus</strong> is set to <strong>enable</strong>.</p>
+         * <p>This parameter is required when the <strong>DelayAlertStatus</strong> parameter is set to <strong>enable</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -266,10 +266,10 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>The mobile phone numbers of contacts for exception alerts. Separate multiple phone numbers with commas (,).</p>
+         * <p>The mobile phone numbers of the contacts to receive abnormal status alerts. Separate multiple mobile phone numbers with commas (,).</p>
          * <p>Note
-         * This parameter is supported only on the China site (aliyun.com) and only Chinese mainland phone numbers are supported. You can specify up to 10 phone numbers.
-         * The China site does not support phone alerts on the international site (alibabacloud.com). You can configure alert rules for DTS tasks only in the CloudMonitor console.</p>
+         * This parameter is currently only supported on the China site. Only mobile phone numbers in the Chinese mainland are supported, and you can specify up to 10 mobile phone numbers.
+         * The international site does not support SMS alerts. You can only configure alert rules for DTS tasks by using CloudMonitor.</p>
          * 
          * <strong>example:</strong>
          * <p>1361234****,1371234****</p>
@@ -281,10 +281,10 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to monitor the exception status. Valid values:</p>
+         * <p>Specifies whether to monitor the abnormal status. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong>: yes.</li>
-         * <li><strong>disable</strong>: no.</li>
+         * <li><strong>enable</strong>: yes</li>
+         * <li><strong>disable</strong>: no</li>
          * </ul>
          * <blockquote>
          * <ul>
@@ -293,7 +293,7 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
          * </blockquote>
          * <ul>
          * <li>You must specify at least one of this parameter and the <strong>DelayAlertStatus</strong> parameter.</li>
-         * <li>After you enable exception status monitoring, an alert is triggered when an exception is detected.</li>
+         * <li>After the abnormal status monitoring feature is enabled, an alert is triggered if an exception is detected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -341,8 +341,8 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong>: forward.</li>
-         * <li><strong>Reverse</strong>: reverse.</li>
+         * <li><strong>Forward</strong>: forward</li>
+         * <li><strong>Reverse</strong>: reverse</li>
          * </ul>
          * <blockquote>
          * <p>Default value: <strong>Forward</strong>.</p>
@@ -358,7 +358,7 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>Instance ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query instance ID.</p>
+         * <p>Instance ID of the data synchronization instance. You can query instance ID by calling the DescribeSynchronizationJobs operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

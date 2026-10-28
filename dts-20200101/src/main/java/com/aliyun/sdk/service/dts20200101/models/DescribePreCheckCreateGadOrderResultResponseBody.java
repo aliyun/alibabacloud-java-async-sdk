@@ -208,9 +208,9 @@ public class DescribePreCheckCreateGadOrderResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> response parameter.</p>
+         * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the error message of the <strong>ErrMessage</strong> parameter.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified request parameter <strong>DtsJobId</strong> is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class DescribePreCheckCreateGadOrderResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -233,7 +233,7 @@ public class DescribePreCheckCreateGadOrderResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -255,7 +255,7 @@ public class DescribePreCheckCreateGadOrderResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID of the GAD instance group.</p>
+         * <p>The instance ID of the global active database (GAD) instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>gad-bp1i99e8l7913****</p>
@@ -274,7 +274,7 @@ public class DescribePreCheckCreateGadOrderResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The overall precheck result.</p>
+         * <p>The overall result of the precheck.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -285,7 +285,7 @@ public class DescribePreCheckCreateGadOrderResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region ID. You can set this parameter to specify the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -296,7 +296,7 @@ public class DescribePreCheckCreateGadOrderResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>92E1E99D-5224-4AD3-8C94-23A3516B****</p>
@@ -307,7 +307,7 @@ public class DescribePreCheckCreateGadOrderResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -127,7 +127,7 @@ public class SwitchPhysicalDtsJobToCloudRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data migration or synchronization task. You can call the <strong>DescribeDtsJobs</strong> operation to query the ID.</p>
+         * <p>The ID of the data migration or synchronization instance. You can call the <strong>describedtsjobs</strong> operation to query the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>l5512es7w15****</p>
@@ -151,7 +151,7 @@ public class SwitchPhysicalDtsJobToCloudRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz4us4iruleja</p>
@@ -165,8 +165,8 @@ public class SwitchPhysicalDtsJobToCloudRequest extends Request {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong>: forward.</li>
-         * <li><strong>Reverse</strong>: reverse.</li>
+         * <li><strong>Forward</strong>: Forward.</li>
+         * <li><strong>Reverse</strong>: Reverse.</li>
          * </ul>
          * <blockquote>
          * <ul>
@@ -174,7 +174,7 @@ public class SwitchPhysicalDtsJobToCloudRequest extends Request {
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>You can set this parameter to <strong>Reverse</strong> to release the reverse synchronization link only when the topology of the data synchronization instance is two-way synchronization.</li>
+         * <li>You can specify <strong>Reverse</strong> to release the reverse synchronization link only when the topology of the data synchronization instance is two-way.</li>
          * </ul>
          * 
          * <strong>example:</strong>

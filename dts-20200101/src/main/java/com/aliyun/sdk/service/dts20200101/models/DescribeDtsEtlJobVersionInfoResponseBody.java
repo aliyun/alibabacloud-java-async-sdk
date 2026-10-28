@@ -192,7 +192,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error code associated with this request.</p>
+         * <p>The dynamic error code associated with the request.</p>
          * 
          * <strong>example:</strong>
          * <p>403</p>
@@ -203,7 +203,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message associated with this request.</p>
+         * <p>The dynamic error message associated with the request.</p>
          * 
          * <strong>example:</strong>
          * <p>present environment is not support,so skip</p>
@@ -214,7 +214,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned when the specified ETL task ID is invalid and the corresponding task cannot be found.</p>
+         * <p>The error code returned when the specified ETL task ID is incorrect and the corresponding task cannot be found.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidJobId</p>
@@ -225,7 +225,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the specified ETL task ID is invalid and the corresponding task cannot be found. The task may have been deleted.</p>
+         * <p>The error message returned when the specified ETL task ID is incorrect and the corresponding task cannot be found. The task may have been deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified dts job id %s is not exists.</p>
@@ -258,7 +258,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -280,7 +280,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. A value of false indicates a failure.</p>
+         * <p>Indicates whether the request was successful. If the request fails, false is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -291,7 +291,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -475,7 +475,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator ID.</p>
+             * <p>The ID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>10000000</p>
@@ -508,7 +508,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ETL task ID.</p>
+             * <p>The ID of the ETL task.</p>
              * 
              * <strong>example:</strong>
              * <p>l5512es7w15****</p>
@@ -541,7 +541,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The safe checkpoint, which indicates the current position of the ETL task.</p>
+             * <p>The security checkpoint, which is the current checkpoint of the ETL task.</p>
              * 
              * <strong>example:</strong>
              * <p>1637230117000</p>

@@ -171,7 +171,7 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The dynamic error code. This parameter will be deprecated.</p>
+         * <p>The dynamic error code. This parameter is deprecated and will be phased out.</p>
          * 
          * <strong>example:</strong>
          * <p>403</p>
@@ -182,9 +182,9 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the %s placeholder in the ErrMessage response parameter.</p>
+         * <p>The dynamic error message, which is used to replace %s in the error message returned by the ErrMessage parameter.</p>
          * <blockquote>
-         * <p>If ErrMessage returns The Value of Input Parameter %s is not valid and DynamicMessage returns JobId, the value of the JobId request parameter is invalid.</p>
+         * <p>If the ErrMessage parameter returns The Value of Input Parameter %s is not valid and the DynamicMessage parameter returns JobId, the JobId request parameter is invalid.</p>
          * </blockquote>
          */
         public Builder dynamicMessage(String dynamicMessage) {
@@ -193,7 +193,7 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -204,7 +204,7 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -226,7 +226,7 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the active geo-redundancy instance group.</p>
+         * <p>The ID of the global active instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp162d4tp0500****</p>
@@ -237,7 +237,7 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region in which the instance resides. For more information, see Supported regions.</p>
+         * <p>The ID of the region where the instance resides. For more information, see the list of supported regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -248,7 +248,7 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C166D79D-436B-45F0-B5A5-25E1959F****</p>
@@ -259,11 +259,7 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
-         * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
-         * </ul>
+         * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -274,7 +270,7 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The precheck task ID.</p>
+         * <p>The ID of the precheck task.</p>
          * 
          * <strong>example:</strong>
          * <p>z2v12jfo309****</p>

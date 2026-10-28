@@ -102,14 +102,14 @@ public class SuspendDtsJobsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the migration or synchronization tasks.</p>
+         * <p>The IDs of the data migration and synchronization tasks.</p>
          * <blockquote>
          * <ul>
-         * <li>Separate multiple task IDs with commas (,).</li>
+         * <li>If you specify multiple task IDs, separate them with commas (,).</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>Call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to obtain the DTS task IDs.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the DTS task IDs.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -123,7 +123,7 @@ public class SuspendDtsJobsRequest extends Request {
         }
 
         /**
-         * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -135,7 +135,7 @@ public class SuspendDtsJobsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -147,7 +147,7 @@ public class SuspendDtsJobsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
+         * <p>Specifies whether the node is a seamless integration (zero-ETL) node. Valid values:</p>
          * <ul>
          * <li><strong>false</strong>: No.</li>
          * <li><strong>true</strong>: Yes.</li>

@@ -129,9 +129,9 @@ public class StartDtsJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+         * <p>Instance ID of the data migration, data synchronization, or change tracking instance.</p>
          * <blockquote>
-         * <p>You can query the instance ID by invoking <a href="https://help.aliyun.com/document_detail/208139.html">Query the list of data migration instances and details of each instance</a>, <a href="https://help.aliyun.com/document_detail/49442.html">Query the list of change tracking instances and details of each instance</a>, or <a href="https://help.aliyun.com/document_detail/49454.html">Query the list of data synchronization instances and details of each instance</a>.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/208139.html">Query data migration instances and their details</a>, <a href="https://help.aliyun.com/document_detail/49442.html">Query change tracking instances and their details</a>, or <a href="https://help.aliyun.com/document_detail/49454.html">Query data synchronization instances and their details</a> operations to query instance ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class StartDtsJobRequest extends Request {
         }
 
         /**
-         * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -168,7 +168,7 @@ public class StartDtsJobRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2ilvoxlrdcby</p>
@@ -182,9 +182,9 @@ public class StartDtsJobRequest extends Request {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong>: forward. This is the default value.</li>
-         * <li><strong>Reverse</strong>: reverse.<blockquote>
-         * <p>You can set this parameter to <strong>Reverse</strong> to start the reverse synchronization link only when the topology of the data synchronization instance is two-way synchronization.</p>
+         * <li><strong>Forward</strong>: Forward synchronization. This is the default value.</li>
+         * <li><strong>Reverse</strong>: Reverse synchronization.<blockquote>
+         * <p>You can set this parameter to <strong>Reverse</strong> to start the reverse synchronization link only when the topology of the data synchronization instance is two-way.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -199,10 +199,10 @@ public class StartDtsJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the node is a zero-ETL node. Valid values:</p>
+         * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: no.</li>
-         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * <li><strong>true</strong>: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>

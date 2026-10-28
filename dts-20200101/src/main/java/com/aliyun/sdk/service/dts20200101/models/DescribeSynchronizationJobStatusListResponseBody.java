@@ -145,7 +145,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -156,7 +156,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -178,7 +178,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of synchronization instances displayed on one page.</p>
+         * <p>The number of synchronization instances returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -189,7 +189,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1413460B-138A-48D1-836C-B24EDDC1****</p>
@@ -200,7 +200,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -211,7 +211,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status list of synchronization jobs.</p>
+         * <p>The list of synchronization job statuses.</p>
          */
         public Builder synchronizationJobListStatusList(java.util.List<SynchronizationJobListStatusList> synchronizationJobListStatusList) {
             this.synchronizationJobListStatusList = synchronizationJobListStatusList;
@@ -219,7 +219,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of synchronization instances that were queried.</p>
+         * <p>The total number of queried synchronization instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -301,9 +301,9 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp of the latest synchronized data, in UNIX timestamp format.</p>
+             * <p>The timestamp when the latest data record is synchronized. The value is a UNIX timestamp.</p>
              * <blockquote>
-             * <p>You can use a search engine to find a UNIX timestamp converter.</p>
+             * <p>You can use a search engine to find a UNIX timestamp conversion tool.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -315,18 +315,18 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The synchronization status of the synchronization instance in this direction. Valid values:</p>
+             * <p>The synchronization status of the synchronization instance in the specified direction. Valid values:</p>
              * <ul>
-             * <li><strong>NotStarted</strong>: not started.</li>
-             * <li><strong>Prechecking</strong>: running a precheck.</li>
-             * <li><strong>PrecheckFailed</strong>: precheck failed.</li>
-             * <li><strong>Initializing</strong>: performing initial synchronization.</li>
-             * <li><strong>InitializeFailed</strong>: initial synchronization failed.</li>
-             * <li><strong>Synchronizing</strong>: synchronizing.</li>
-             * <li><strong>Failed</strong>: synchronization failed.</li>
-             * <li><strong>Suspending</strong>: paused.</li>
-             * <li><strong>Modifying</strong>: modifying synchronization objects.</li>
-             * <li><strong>Finished</strong>: completed.</li>
+             * <li><strong>NotStarted</strong>: Not started.</li>
+             * <li><strong>Prechecking</strong>: Prechecking.</li>
+             * <li><strong>PrecheckFailed</strong>: Precheck failed.</li>
+             * <li><strong>Initializing</strong>: Initial synchronization.</li>
+             * <li><strong>InitializeFailed</strong>: Initial synchronization failed.</li>
+             * <li><strong>Synchronizing</strong>: Synchronizing.</li>
+             * <li><strong>Failed</strong>: Failed.</li>
+             * <li><strong>Suspending</strong>: Suspending.</li>
+             * <li><strong>Modifying</strong>: Modifying synchronization objects.</li>
+             * <li><strong>Finished</strong>: Finished.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -340,8 +340,8 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
             /**
              * <p>The synchronization direction. Valid values:</p>
              * <ul>
-             * <li><strong>Forward</strong>: forward.</li>
-             * <li><strong>Reverse</strong>: reverse.</li>
+             * <li><strong>Forward</strong>: Forward.</li>
+             * <li><strong>Reverse</strong>: Reverse.</li>
              * </ul>
              * 
              * <strong>example:</strong>
