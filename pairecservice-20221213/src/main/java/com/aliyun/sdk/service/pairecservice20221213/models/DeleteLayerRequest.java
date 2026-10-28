@@ -87,7 +87,7 @@ public class DeleteLayerRequest extends Request {
         } 
 
         /**
-         * <p>Layer ID, which can be obtained by calling the ListLayers API.</p>
+         * <p>The layer ID. You can call the ListLayers operation to obtain the layer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -108,7 +108,7 @@ public class DeleteLayerRequest extends Request {
         }
 
         /**
-         * <p>Instance ID, which can be obtained by calling the ListInstances API.</p>
+         * <p>The instance ID. You can call the ListInstances operation to obtain the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-cn-abcdefg1234</p>

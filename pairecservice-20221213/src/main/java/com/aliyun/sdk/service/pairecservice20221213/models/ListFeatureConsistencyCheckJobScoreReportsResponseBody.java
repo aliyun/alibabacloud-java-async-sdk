@@ -115,7 +115,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         }
 
         /**
-         * <p>A list of score difference reports.</p>
+         * <p>The score comparison report.</p>
          */
         public Builder reportsOfScoreDiff(java.util.List<ReportsOfScoreDiff> reportsOfScoreDiff) {
             this.reportsOfScoreDiff = reportsOfScoreDiff;
@@ -123,7 +123,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F0AB6527-093F-5C44-B3BD-42C8C210C619</p>
@@ -242,7 +242,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
             }
 
             /**
-             * <p>The request ID recorded in the log.</p>
+             * <p>The request ID.</p>
              * 
              * <strong>example:</strong>
              * <p>323</p>
@@ -275,7 +275,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
             }
 
             /**
-             * <p>The score difference details.</p>
+             * <p>The score comparison details.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>

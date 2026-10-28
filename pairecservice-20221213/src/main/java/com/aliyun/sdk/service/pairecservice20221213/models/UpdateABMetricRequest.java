@@ -334,7 +334,7 @@ public class UpdateABMetricRequest extends Request {
         } 
 
         /**
-         * <p>The ABTest metric ID.</p>
+         * <p>The ID of the AB test metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -356,7 +356,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to aggregate by user dimension when calculating significance. Two aggregation methods are supported: by user and by sample.</p>
+         * <p>Specifies whether to aggregate data by user dimension when calculating significance. There are two logic types: by user and by sample.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -368,7 +368,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>The metric definition.</p>
+         * <p>The definition of the metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -381,7 +381,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>The denominator used in significance calculation.</p>
+         * <p>The denominator for significance calculation.</p>
          * 
          * <strong>example:</strong>
          * <p>pv</p>
@@ -393,11 +393,11 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>The metric description.</p>
+         * <p>The description of the metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pv 指标</p>
+         * <p>PV metric</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -406,7 +406,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+         * <p>Instance ID of the instance. You can obtain instance ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -419,7 +419,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the current metric follows a binomial distribution when the metric type is a derived metric. If set to true, the mean and variance of the metric are calculated based on the binomial distribution.</p>
+         * <p>Specifies whether the current metric follows a binomial distribution when the metric type is a derived metric. If yes, the mean and variance of the metric are calculated based on the binomial distribution.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -431,7 +431,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>The left metric ID of the derived metric.</p>
+         * <p>The ID of the left metric for the derived metric.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -443,7 +443,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>The metric name.</p>
+         * <p>The name of the metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -468,7 +468,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>The numerator used in significance calculation.</p>
+         * <p>The numerator for significance calculation.</p>
          * 
          * <strong>example:</strong>
          * <p>click</p>
@@ -482,14 +482,10 @@ public class UpdateABMetricRequest extends Request {
         /**
          * <p>The operator for derived metric calculation. Valid values:</p>
          * <ul>
-         * <li><p>Plus: addition</p>
-         * </li>
-         * <li><p>Minus: subtraction</p>
-         * </li>
-         * <li><p>Multiplication: multiplication</p>
-         * </li>
-         * <li><p>Division: division</p>
-         * </li>
+         * <li>Plus: addition</li>
+         * <li>Minus: subtraction</li>
+         * <li>Multiplication: multiplication</li>
+         * <li>Division: division</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -504,10 +500,8 @@ public class UpdateABMetricRequest extends Request {
         /**
          * <p>Specifies whether the metric is a real-time metric. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true: yes</li>
+         * <li>false: no</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -521,7 +515,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data source for the write-back data table. You can obtain it by calling the ListInstanceResources operation.</p>
+         * <p>The ID of the data source for the data table write-back. You can obtain the ID by calling the ListInstanceResources operation.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -533,7 +527,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>The right metric ID of the derived metric.</p>
+         * <p>The ID of the right metric for the derived metric.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -545,7 +539,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>The scene ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</p>
+         * <p>The ID of the scene. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -570,7 +564,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>The data table ID. You can obtain it by calling the ListTableMetas operation.</p>
+         * <p>The ID of the data table. You can obtain the ID by calling the ListTableMetas operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -583,12 +577,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * <p>The metric type. Valid values:</p>
+         * <p>The type of the metric. Valid values:</p>
          * <ul>
-         * <li><p>Single: single metric.</p>
-         * </li>
-         * <li><p>Derived: derived metric.</p>
-         * </li>
+         * <li>Single: single metric</li>
+         * <li>Derived: derived metric</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

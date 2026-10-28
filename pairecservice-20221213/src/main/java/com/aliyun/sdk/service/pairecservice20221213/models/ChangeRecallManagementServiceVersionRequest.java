@@ -101,7 +101,7 @@ public class ChangeRecallManagementServiceVersionRequest extends Request {
         } 
 
         /**
-         * <p>The recall management service ID.</p>
+         * <p>The ID of the recall management service.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -134,7 +134,7 @@ public class ChangeRecallManagementServiceVersionRequest extends Request {
         }
 
         /**
-         * <p>The recall management service version ID.</p>
+         * <p>The version ID of the recall management service.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

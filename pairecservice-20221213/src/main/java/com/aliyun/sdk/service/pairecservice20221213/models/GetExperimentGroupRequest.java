@@ -89,7 +89,7 @@ public class GetExperimentGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the experiment group. You can call the <code>ListExperimentGroups</code> operation to obtain this ID.</p>
+         * <p>The ID of the experiment group. You can obtain the ID by calling the ListExperimentGroups operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the <code>ListInstances</code> operation to obtain this ID.</p>
+         * <p>Instance ID of the instance. You can obtain instance ID by calling the ListInstances operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

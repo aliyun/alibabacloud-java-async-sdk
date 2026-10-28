@@ -89,7 +89,7 @@ public class GetLaboratoryRequest extends Request {
         } 
 
         /**
-         * <p>The laboratory ID. You can obtain this ID by calling the ListLaboratories operation.</p>
+         * <p>The ID of the laboratory. You can call the ListLaboratories operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetLaboratoryRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can obtain this ID by calling the ListInstances operation.</p>
+         * <p>Instance ID of the instance. You can call the ListInstances operation to obtain instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -134,7 +134,7 @@ public class ListInstanceResourceSchemasRequest extends Request {
         }
 
         /**
-         * <p>Filters schemas by a name prefix.</p>
+         * <p>The prefix used to filter schema names.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

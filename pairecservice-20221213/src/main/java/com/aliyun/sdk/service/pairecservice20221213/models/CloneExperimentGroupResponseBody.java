@@ -78,7 +78,7 @@ public class CloneExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, used for tracking and troubleshooting.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>12A65C6C-AFA1-59B2-9A66-A9E0BB73F0E5</p>

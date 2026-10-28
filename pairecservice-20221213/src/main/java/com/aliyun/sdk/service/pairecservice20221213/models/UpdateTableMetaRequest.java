@@ -178,7 +178,7 @@ public class UpdateTableMetaRequest extends Request {
         } 
 
         /**
-         * <p>The table meta ID.</p>
+         * <p>The ID of the data table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
-         * <p>The description of the data table.</p>
+         * <p>The description of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a test table</p>
@@ -212,7 +212,7 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
-         * <p>The fields of the data table.</p>
+         * <p>The list of table fields.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
@@ -235,13 +235,13 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
-         * <p>The module to which the data table belongs.</p>
+         * <p>The module of the data table.</p>
          * <ul>
-         * <li><p>ABTest: a data table for A/B testing.</p>
+         * <li><p>ABTest: experiment data table.</p>
          * </li>
-         * <li><p>ExperimentTool: a data table for experiment tools.</p>
+         * <li><p>ExperimentTool: experiment tool table.</p>
          * </li>
-         * <li><p>DataDiagnosis: a data table for data diagnosis.</p>
+         * <li><p>DataDiagnosis: data diagnosis.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -422,7 +422,7 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the field is a dimension field.</p>
+             * <p>Specifies whether the field is a dimension field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -434,7 +434,7 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the field is a partition field.</p>
+             * <p>Specifies whether the field is a partition field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -446,11 +446,11 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
-             * <p>The business meaning of the field.</p>
+             * <p>The meaning of the field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>名称字段</p>
+             * <p>Name field</p>
              */
             public Builder meaning(String meaning) {
                 this.meaning = meaning;
@@ -458,7 +458,7 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
-             * <p>The field name.</p>
+             * <p>The name of the field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -470,7 +470,7 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
-             * <p>The data type of the field.</p>
+             * <p>The type of the field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

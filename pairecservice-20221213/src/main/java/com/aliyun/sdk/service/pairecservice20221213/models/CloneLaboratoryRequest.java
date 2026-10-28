@@ -119,7 +119,7 @@ public class CloneLaboratoryRequest extends Request {
         } 
 
         /**
-         * <p>The laboratory ID. To obtain this ID, call the <code>ListLaboratories</code> operation.</p>
+         * <p>The ID of the laboratory. You can call the ListLaboratories operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,12 @@ public class CloneLaboratoryRequest extends Request {
         }
 
         /**
-         * <p>The destination environment. Valid values: Daily, Pre (pre-release), and Prod (production).</p>
+         * <p>The runtime environment. Valid values:</p>
+         * <ul>
+         * <li>Daily: daily environment.</li>
+         * <li>Pre: pre-release environment.</li>
+         * <li>Prod: production environment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +172,7 @@ public class CloneLaboratoryRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. To obtain this ID, call the <code>ListInstances</code> operation.</p>
+         * <p>Instance ID of the instance. You can call the ListInstances operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

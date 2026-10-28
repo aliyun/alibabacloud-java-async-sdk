@@ -115,7 +115,7 @@ public class QueryRecallManagementTableRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The recall management table ID.</p>
+         * <p>The table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -148,7 +148,7 @@ public class QueryRecallManagementTableRecordsRequest extends Request {
         }
 
         /**
-         * <p>The primary keys of the records to retrieve.</p>
+         * <p>The primary keys for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;1001&quot;,&quot;1002&quot;]</p>
@@ -160,7 +160,7 @@ public class QueryRecallManagementTableRecordsRequest extends Request {
         }
 
         /**
-         * <p>The recall management table version ID. If you omit this parameter, the API uses the currently published version.</p>
+         * <p>The version ID of the recall management table. Default value: the current published version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

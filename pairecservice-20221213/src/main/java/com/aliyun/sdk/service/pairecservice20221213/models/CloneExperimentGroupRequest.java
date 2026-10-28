@@ -119,7 +119,7 @@ public class CloneExperimentGroupRequest extends Request {
         } 
 
         /**
-         * <p>The experiment group ID. You can get this ID by calling the ListExperimentGroups operation.</p>
+         * <p>The ID of the experiment group. You can call the ListExperimentGroups operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,12 @@ public class CloneExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The target environment for the experiment group. ● Daily: Daily environment ● Pre: pre-release environment ● Prod: production environment</p>
+         * <p>The target environment. Valid values:</p>
+         * <ul>
+         * <li>Daily: daily environment.</li>
+         * <li>Pre: staging environment.</li>
+         * <li>Prod: production environment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +159,7 @@ public class CloneExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can get this ID by calling the ListInstances operation.</p>
+         * <p>Instance ID of the instance. You can call the ListInstances operation to obtain instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +172,7 @@ public class CloneExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The layer ID. You can get this ID by calling the ListLayers operation.</p>
+         * <p>The ID of the layer. You can call the ListLayers operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

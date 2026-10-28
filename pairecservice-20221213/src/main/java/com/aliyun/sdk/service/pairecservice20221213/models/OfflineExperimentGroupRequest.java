@@ -89,7 +89,7 @@ public class OfflineExperimentGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the experiment group. You can obtain this ID by calling the ListExperimentGroups operation.</p>
+         * <p>The ID of the experiment group. You can obtain the ID by calling the ListExperimentGroups operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

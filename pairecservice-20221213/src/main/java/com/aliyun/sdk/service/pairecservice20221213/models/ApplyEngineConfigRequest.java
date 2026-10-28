@@ -108,7 +108,7 @@ public class ApplyEngineConfigRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can obtain this by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> API.</p>
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-cn-***test</p>

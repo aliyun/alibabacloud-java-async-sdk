@@ -102,7 +102,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the feature consistency check job. To obtain the job ID, see <a href="https://help.aliyun.com/document_detail/2557561.html">ListFeatureConsistencyCheckJobs</a>.</p>
+         * <p>The ID of the feature consistency check job report. The ID of the feature consistency check job. To obtain the job ID, see <a href="https://help.aliyun.com/document_detail/2557561.html">ListFeatureConsistencyCheckJobs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsRequest extends Request {
         }
 
         /**
-         * <p>A list of request IDs to exclude from the feature comparison.</p>
+         * <p>The list of request IDs to exclude during feature comparison.</p>
          */
         public Builder excludeRequestIds(java.util.List<String> excludeRequestIds) {
             String excludeRequestIdsShrink = shrink(excludeRequestIds, "ExcludeRequestIds", "json");
@@ -134,7 +134,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. To obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * <p>The ID of the instance. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-cn-********</p>

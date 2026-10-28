@@ -67,7 +67,7 @@ public class QueryRecallManagementTableRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of the retrieved records.</p>
+         * <p>The data list.</p>
          */
         public Builder records(java.util.List<java.util.Map<String, ?>> records) {
             this.records = records;

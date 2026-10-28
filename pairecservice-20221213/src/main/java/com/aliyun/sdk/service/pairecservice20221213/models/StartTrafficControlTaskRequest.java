@@ -102,7 +102,7 @@ public class StartTrafficControlTaskRequest extends Request {
         } 
 
         /**
-         * <p>The traffic control task ID.</p>
+         * <p>The ID of the traffic shaping task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,12 @@ public class StartTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The target environment. Valid values:</p>
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li>Daily: the daily environment.</li>
+         * <li>Pre: the staging environment.</li>
+         * <li>Prod: the production environment.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Pre</p>

@@ -108,7 +108,7 @@ public class DeleteRecallManagementServiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-cn-test123</p>

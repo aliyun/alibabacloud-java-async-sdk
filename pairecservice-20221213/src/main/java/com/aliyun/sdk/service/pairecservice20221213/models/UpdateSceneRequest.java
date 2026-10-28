@@ -129,7 +129,7 @@ public class UpdateSceneRequest extends Request {
         } 
 
         /**
-         * <p>The scene ID. To obtain the ID, call the <code>ListScenes</code> API.</p>
+         * <p>The ID of the scene. You can call the ListScenes operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -150,7 +150,7 @@ public class UpdateSceneRequest extends Request {
         }
 
         /**
-         * <p>The scene description.</p>
+         * <p>The description of the scene.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a test.</p>
@@ -162,7 +162,7 @@ public class UpdateSceneRequest extends Request {
         }
 
         /**
-         * <p>The flows.</p>
+         * <p>The list of flows.</p>
          */
         public Builder flows(java.util.List<Flows> flows) {
             this.putBodyParameter("Flows", flows);
@@ -171,7 +171,7 @@ public class UpdateSceneRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. To obtain the ID, call the <code>ListInstances</code> API.</p>
+         * <p>Instance ID of the instance. You can call the ListInstances operation to obtain instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-cn-abcdefg1234</p>
@@ -183,7 +183,7 @@ public class UpdateSceneRequest extends Request {
         }
 
         /**
-         * <p>The scene name.</p>
+         * <p>The name of the scene.</p>
          * 
          * <strong>example:</strong>
          * <p>scene1</p>
@@ -254,7 +254,7 @@ public class UpdateSceneRequest extends Request {
             } 
 
             /**
-             * <p>The flow code.</p>
+             * <p>The code of the flow.</p>
              * 
              * <strong>example:</strong>
              * <p>liuliang1</p>
@@ -265,10 +265,10 @@ public class UpdateSceneRequest extends Request {
             }
 
             /**
-             * <p>The flow name.</p>
+             * <p>The name of the flow.</p>
              * 
              * <strong>example:</strong>
-             * <p>流量1</p>
+             * <p>Flow 1</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;

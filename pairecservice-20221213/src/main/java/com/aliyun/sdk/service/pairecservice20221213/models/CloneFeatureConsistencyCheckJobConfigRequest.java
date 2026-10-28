@@ -89,7 +89,7 @@ public class CloneFeatureConsistencyCheckJobConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the source feature consistency check job configuration. To get the ID, call <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
+         * <p>The feature consistency check configuration ID. For more information about how to obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class CloneFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. To get the ID, call <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * <p>The instance ID. For more information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

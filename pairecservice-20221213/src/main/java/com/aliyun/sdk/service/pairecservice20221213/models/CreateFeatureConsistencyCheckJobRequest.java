@@ -128,14 +128,11 @@ public class CreateFeatureConsistencyCheckJobRequest extends Request {
         }
 
         /**
-         * <p>The environment where the job runs. Valid values:</p>
+         * <p>The runtime environment. Valid values:</p>
          * <ul>
-         * <li><p>Daily: the daily environment</p>
-         * </li>
-         * <li><p>Pre: the pre-production environment</p>
-         * </li>
-         * <li><p>Prod: the production environment</p>
-         * </li>
+         * <li>Daily: daily environment</li>
+         * <li>Pre: staging environment</li>
+         * <li>Prod: production environment</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -149,7 +146,7 @@ public class CreateFeatureConsistencyCheckJobRequest extends Request {
         }
 
         /**
-         * <p>The feature consistency check job configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a> operation to obtain this ID.</p>
+         * <p>The feature consistency check job configuration ID. For information about how to obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +159,7 @@ public class CreateFeatureConsistencyCheckJobRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can obtain the instance ID on the <a href="https://help.aliyun.com/document_detail/2411819.html">Instances</a> page.</p>
+         * <p>The instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +172,7 @@ public class CreateFeatureConsistencyCheckJobRequest extends Request {
         }
 
         /**
-         * <p>The sampling duration, in minutes.</p>
+         * <p>The sampling duration in minutes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

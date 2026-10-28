@@ -104,7 +104,7 @@ public class DeleteSubCrowdRequest extends Request {
         } 
 
         /**
-         * <p>The crowd ID. You can obtain this ID by calling the <code>ListCrowds</code> operation.</p>
+         * <p>The crowd ID. You can obtain the ID by calling the ListCrowds operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DeleteSubCrowdRequest extends Request {
         }
 
         /**
-         * <p>The subcrowd ID. You can obtain this ID by calling the <code>ListSubCrowds</code> operation.</p>
+         * <p>The sub-crowd ID. You can obtain the ID by calling the ListSubCrowds operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class DeleteSubCrowdRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can obtain this ID by calling the <code>ListInstances</code> operation.</p>
+         * <p>The instance ID. You can obtain the ID by calling the ListInstances operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

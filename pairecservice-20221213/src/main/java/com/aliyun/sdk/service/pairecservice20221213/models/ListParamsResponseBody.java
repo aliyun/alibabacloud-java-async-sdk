@@ -210,7 +210,7 @@ public class ListParamsResponseBody extends TeaModel {
              * <p>The environment to which the parameter belongs. Valid values:</p>
              * <ul>
              * <li>Daily: daily environment</li>
-             * <li>Prepub: pre-release environment</li>
+             * <li>Prepub: staging environment</li>
              * <li>Product: production environment</li>
              * </ul>
              * 
@@ -223,7 +223,7 @@ public class ListParamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The time is formatted in ISO 8601 and includes the time zone offset.</p>
+             * <p>The update time. The time follows the ISO 8601 standard and includes the time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -234,7 +234,7 @@ public class ListParamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter name.</p>
+             * <p>The name of the parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>home</p>
@@ -256,7 +256,7 @@ public class ListParamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter value.</p>
+             * <p>The value of the parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>house</p>

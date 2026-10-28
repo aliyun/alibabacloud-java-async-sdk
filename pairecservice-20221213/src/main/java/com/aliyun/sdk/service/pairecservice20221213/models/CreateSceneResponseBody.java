@@ -67,7 +67,7 @@ public class CreateSceneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>FCF741D8-9C30-578E-807F-B935487DB34A</p>
@@ -78,7 +78,7 @@ public class CreateSceneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The scene ID.</p>
+         * <p>The scenario ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

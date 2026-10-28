@@ -111,7 +111,7 @@ public class CloneExperimentRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. Call the ListInstances operation to get the instance ID.</p>
+         * <p>The instance ID. You can obtain the instance ID by calling the ListInstances operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

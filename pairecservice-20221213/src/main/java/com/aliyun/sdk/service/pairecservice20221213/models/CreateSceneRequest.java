@@ -124,7 +124,7 @@ public class CreateSceneRequest extends Request {
         }
 
         /**
-         * <p>The scene description.</p>
+         * <p>The scenario description.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a test.</p>
@@ -136,7 +136,7 @@ public class CreateSceneRequest extends Request {
         }
 
         /**
-         * <p>The flows.</p>
+         * <p>The traffic list.</p>
          */
         public Builder flows(java.util.List<Flows> flows) {
             this.putBodyParameter("Flows", flows);
@@ -157,7 +157,7 @@ public class CreateSceneRequest extends Request {
         }
 
         /**
-         * <p>The scene name.</p>
+         * <p>The scenario name.</p>
          * 
          * <strong>example:</strong>
          * <p>scene1</p>
@@ -228,7 +228,7 @@ public class CreateSceneRequest extends Request {
             } 
 
             /**
-             * <p>The flow code.</p>
+             * <p>The traffic code.</p>
              * 
              * <strong>example:</strong>
              * <p>liuliang1</p>
@@ -239,10 +239,10 @@ public class CreateSceneRequest extends Request {
             }
 
             /**
-             * <p>The flow name.</p>
+             * <p>The traffic name.</p>
              * 
              * <strong>example:</strong>
-             * <p>流量1</p>
+             * <p>Traffic 1</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;

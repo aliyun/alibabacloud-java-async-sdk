@@ -78,13 +78,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Use this API to change the version of a recall management service. Ensure that the provided <code>RecallManagementServiceId</code>, <code>InstanceId</code>, and target <code>RecallManagementServiceVersionId</code> are valid, and that you have the required permissions for these resources.</p>
+     * <h2>Request description</h2>
+     * <p>You can call this API to change the version of a specific recall management service. Ensure that the provided <code>RecallManagementServiceId</code>, <code>InstanceId</code>, and target <code>RecallManagementServiceVersionId</code> are valid and that you have the required permissions to manage these resources.</p>
      * <ul>
-     * <li><strong>RecallManagementServiceId</strong>: The unique identifier of the recall management service.</li>
-     * <li><strong>InstanceId</strong>: The instance ID associated with the recall management service.</li>
-     * <li><strong>RecallManagementServiceVersionId</strong>: The target version ID to switch to.
-     * Note: Before changing the version, confirm that the new version is fully tested and ready for production.</li>
+     * <li><strong>RecallManagementServiceId</strong>: The unique identifier of the recall management service whose version you want to change.</li>
+     * <li><strong>InstanceId</strong>: Instance ID of the instance associated with the recall management service.</li>
+     * <li><strong>RecallManagementServiceVersionId</strong>: Instance ID of the target version to switch to.
+     * Note: Before you change the version, ensure that the new version has been fully tested and is ready to go live.</li>
      * </ul>
      * 
      * @param request the request parameters of ChangeRecallManagementServiceVersion  ChangeRecallManagementServiceVersionRequest
@@ -161,8 +161,30 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation validates a traffic control task expression for a specific instance and table. Provide the correct <code>InstanceId</code>, <code>TableMetaId</code>, and <code>Expression</code> parameters.</p>
+     * <h2>Request description</h2>
+     * <p>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</p>
+     * 
+     * @param request the request parameters of CheckRecallManagementService  CheckRecallManagementServiceRequest
+     * @return CheckRecallManagementServiceResponse
+     */
+    @Override
+    public CompletableFuture<CheckRecallManagementServiceResponse> checkRecallManagementService(CheckRecallManagementServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CheckRecallManagementService").setMethod(HttpMethod.POST).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}/action/check").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckRecallManagementServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckRecallManagementServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API operation checks the validity of a traffic control task expression for a specified instance and data table. Make sure that the <code>InstanceId</code>, <code>TableMetaId</code>, and <code>Expression</code> parameters are accurate to correctly perform the validation.</p>
      * 
      * @param request the request parameters of CheckTrafficControlTaskExpression  CheckTrafficControlTaskExpressionRequest
      * @return CheckTrafficControlTaskExpressionResponse
@@ -274,7 +296,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API clones an existing traffic control task to another specified instance. Ensure that the <code>InstanceId</code> you provide is valid and that you have the required permissions for the target instance.
+     * <p>You can use this API to clone an existing traffic shaping task to another specified instance. Make sure that the <code>InstanceId</code> you provide is valid and that you have the required permissions to perform operations on the instance.
      * Note: The cloning process does not affect the status or configuration of the original task.</p>
      * 
      * @param request the request parameters of CloneTrafficControlTask  CloneTrafficControlTaskRequest
@@ -643,14 +665,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use this API to create a new version of a recall management service.</li>
-     * <li>To create a new version from an existing one, specify the source recall management service version ID.</li>
-     * <li>You can configure detailed recall rules, such as the recall name, description, priority, and recall type.</li>
-     * <li>Configure operators such as filter, trigger, feature extraction, and join.</li>
-     * <li>The merge configuration specifies how to merge multiple recall results and supports two merge methods: weight-based and alternating.</li>
-     * <li>All configuration items are optional.</li>
+     * <li>This operation allows you to create a new version for a specific recall management service.</li>
+     * <li>You can create a new version based on an existing version by specifying the source recall management service version ID.</li>
+     * <li>You can configure detailed recall rules, including but not limited to the recall name, description, priority, and recall type.</li>
+     * <li>The operation provides flexible operator configuration options, such as filtering, triggering, feature extraction, and join operations, to meet various business requirements.</li>
+     * <li>The merge configuration allows you to specify how to merge multiple recall results. Two merge methods are supported: weight and alternate.</li>
+     * <li>All configuration items are optional. Specify them as needed.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRecallManagementServiceVersion  CreateRecallManagementServiceVersionRequest
@@ -1118,7 +1140,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation deletes a recall management service based on the RecallManagementServiceId and InstanceId. Before you call this API, ensure you have the correct information for the service to be deleted.</p>
+     * <p>This API operation deletes a specific recall management service based on the provided recall management service ID and instance ID. Make sure that you have obtained the information about the service to be deleted before you call this operation.</p>
      * 
      * @param request the request parameters of DeleteRecallManagementService  DeleteRecallManagementServiceRequest
      * @return DeleteRecallManagementServiceResponse
@@ -1139,8 +1161,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This operation deletes a specific version of a recall management service. You must provide the recall management service ID, the recall management service version ID, and the instance ID. This operation is irreversible, so back up all critical data before proceeding.</p>
+     * <h2>Request description</h2>
+     * <p>This operation allows you to delete a specific version of a recall management service by providing the recall management service ID, recall management service version ID, and instance ID. Back up important data before calling this operation because the deletion is irreversible.</p>
      * 
      * @param request the request parameters of DeleteRecallManagementServiceVersion  DeleteRecallManagementServiceVersionRequest
      * @return DeleteRecallManagementServiceVersionResponse
@@ -1187,11 +1209,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>The required <strong>path parameter</strong> <code>RecallManagementTableId</code> specifies the ID of the recall management table to delete.</li>
-     * <li>The required <strong>query parameter</strong> <code>InstanceId</code> specifies the ID of the instance.</li>
-     * <li>A successful operation returns a <code>RequestId</code> in the response body for request tracking.</li>
+     * <li>The <strong>path parameter</strong> <code>RecallManagementTableId</code> is required and specifies instance ID of the data table to delete.</li>
+     * <li>The <strong>query parameter</strong> <code>InstanceId</code> is also required and specifies instance ID of the instance on which the operation is performed.</li>
+     * <li>After a successful execution, a response body containing the request ID (<code>RequestId</code>) is returned, which can be used to track the request.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteRecallManagementTable  DeleteRecallManagementTableRequest
@@ -1321,11 +1343,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>TrafficControlTargetId</strong> is a required path parameter that specifies the traffic control target to delete.</li>
-     * <li><strong>InstanceId</strong> is a required query parameter that specifies the instance ID for this operation.</li>
-     * <li>A successful response includes a <code>RequestId</code> field to track the request.</li>
+     * <li><strong>TrafficControlTargetId</strong> is a required path parameter used as the identity of the specific traffic control target to delete.</li>
+     * <li><strong>InstanceId</strong> is a required query parameter that specifies the instance ID to execute the operation.</li>
+     * <li>A successful response returns a <code>RequestId</code> field for tracking the request.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteTrafficControlTarget  DeleteTrafficControlTargetRequest
@@ -1347,11 +1369,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API uses <code>TrafficControlTaskId</code> and <code>InstanceId</code> to delete a traffic control task.</li>
-     * <li>Ensure the <code>TrafficControlTaskId</code> and <code>InstanceId</code> are correct, or the operation may fail.</li>
-     * <li>This operation is irreversible. Proceed with caution.</li>
+     * <li>This API locates and deletes a specific traffic control task by providing the <code>TrafficControlTaskId</code> and <code>InstanceId</code>.</li>
+     * <li>Ensure that the provided <code>TrafficControlTaskId</code> and <code>InstanceId</code> are correct. Otherwise, the deletion may fail.</li>
+     * <li>Once the deletion is complete, the related data cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteTrafficControlTask  DeleteTrafficControlTaskRequest
@@ -1447,11 +1469,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API generates Flink code for a specified traffic control task ID, instance ID, and environment type.</li>
-     * <li>The <code>Environment</code> parameter accepts three values: <code>Daily</code> for the daily environment, <code>Pre</code> for the pre-release environment, and <code>Prod</code> for the production environment.</li>
-     * <li>Check the <code>PreNeedConfig</code> field in the response. A <code>true</code> value indicates that necessary configuration information might be missing in the pre-release environment. If this occurs, add or adjust the required settings.</li>
+     * <li>This API operation generates the corresponding Flink code based on the specified traffic control task ID, instance ID, and environment type.</li>
+     * <li>The Environment parameter supports three values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment). Make sure to select the correct value to meet your requirements.</li>
+     * <li>Check the PreNeedConfig field in the response. If the value is true, it indicates that required configuration information may be missing in the pre-release environment. Adjust or supplement the relevant settings as needed.</li>
      * </ul>
      * 
      * @param request the request parameters of GenerateTrafficControlTaskCode  GenerateTrafficControlTaskCodeRequest
@@ -2366,8 +2388,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>To retrieve a list of all schemas for a specified resource, provide the instance ID (InstanceId) and resource ID (ResourceId). Use the optional SchemaName parameter to filter the schemas by a name prefix.</p>
+     * <h2>Request description</h2>
+     * <p>Provide the instance ID (InstanceId) and resource ID (ResourceId) to retrieve a list of all schemas for the instance resource. You can use the optional SchemaName parameter to filter results by name prefix and locate the required schemas more precisely.</p>
      * 
      * @param request the request parameters of ListInstanceResourceSchemas  ListInstanceResourceSchemasRequest
      * @return ListInstanceResourceSchemasResponse
@@ -3025,8 +3047,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API retrieves records from a specific recall management table using the provided primary keys. You must provide a valid <code>InstanceId</code> and <code>RecallManagementTableId</code>, and a non-empty <code>PrimaryKeys</code> list. If you specify <code>RecallManagementTableVersionId</code>, the API returns records from that version; otherwise, it uses the currently published version.</p>
+     * <h2>Request description</h2>
+     * <p>This operation retrieves data records from a specific recall management table based on the specified primary keys. Ensure that the provided <code>InstanceId</code> and <code>RecallManagementTableId</code> are valid and that the <code>PrimaryKeys</code> list is not empty. If <code>RecallManagementTableVersionId</code> is specified, data of that version is returned. Otherwise, the current published version is used by default.</p>
      * 
      * @param request the request parameters of QueryRecallManagementTableRecords  QueryRecallManagementTableRecordsRequest
      * @return QueryRecallManagementTableRecordsResponse
@@ -3087,8 +3109,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to query the deployment result of a traffic control task specified by TrafficControlTaskId for a given instance ID and environment. Make sure that the specified InstanceId is associated with your account and that the Environment parameter value is valid (Daily for daily environment, Pre for staging environment, Prod for production environment). All request parameters are required.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to query the deployment results of a traffic control task with a specific TrafficControlTaskId for a given instance ID and environment. Make sure that the provided InstanceId is associated with your account and the Environment parameter value meets your expectations (Daily: daily environment, Pre: staging environment, Prod: production environment). All request parameters are required.</p>
      * 
      * @param request the request parameters of QueryTrafficControlTaskDeployResult  QueryTrafficControlTaskDeployResultRequest
      * @return QueryTrafficControlTaskDeployResultResponse
@@ -3138,13 +3160,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Use this API to release a traffic control task for a specific instance and environment (Daily, Pre, or Prod). Your request must include the <code>TrafficControlTaskId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters.</p>
+     * <h2>Request description</h2>
+     * <p>This API allows you to publish a traffic control task for a specific instance ID and environment (daily, staging, or production). Make sure to correctly specify the <code>TrafficControlTaskId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters in the request.</p>
      * <ul>
-     * <li><code>TrafficControlTaskId</code>: The unique ID of the traffic control task.</li>
-     * <li><code>InstanceId</code>: The ID of the target instance.</li>
-     * <li><code>Environment</code>: The execution environment for the traffic control task. Valid values: <code>Daily</code>, <code>Pre</code>, and <code>Prod</code>.
-     * The request succeeds only if all required parameters are provided correctly. A successful response includes a <code>RequestId</code>.</li>
+     * <li><code>TrafficControlTaskId</code>: the unique identifier of the traffic control task to be published.</li>
+     * <li><code>InstanceId</code>: the ID of the target instance to which the traffic control settings will be applied.</li>
+     * <li><code>Environment</code>: the environment in which the traffic control task is executed. Valid values: Daily (daily environment), Pre (staging environment), and Prod (production environment). Select an environment based on your business requirements.
+     * Note: The request is processed and a RequestId is returned in the response only when all required fields are correctly provided.</li>
      * </ul>
      * 
      * @param request the request parameters of ReleaseTrafficControlTask  ReleaseTrafficControlTaskRequest
@@ -3298,12 +3320,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request details</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation starts the traffic control task identified by <code>TrafficControlTaskId</code>.</li>
+     * <li>This API operation starts the traffic shaping task identified by the specified <code>TrafficControlTaskId</code>.</li>
      * <li><code>InstanceId</code> specifies the target instance.</li>
-     * <li><code>Environment</code> specifies the target environment. Valid values: Daily, Pre, and Prod.</li>
-     * <li>Ensure that all required parameters are set correctly before you call this operation. The specified <code>TrafficControlTaskId</code> must exist in the system.</li>
+     * <li>The <code>Environment</code> parameter defines the target environment for this operation (daily, staging, or production).</li>
+     * <li>Ensure that all required parameters are correctly configured before you call this operation. Specifically, the <code>TrafficControlTaskId</code> must exist in the system.</li>
      * </ul>
      * 
      * @param request the request parameters of StartTrafficControlTask  StartTrafficControlTaskRequest
@@ -3449,13 +3471,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation allows you to update the attributes of a specified ABTest metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <code>ABMetricId</code> before calling this operation.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation allows you to update the properties of a specified AB test metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <code>ABMetricId</code> before calling this operation.</p>
      * <ul>
      * <li><code>NeedSignificance</code>: Specifies whether to perform significance analysis on the current metric. Default value: <code>false</code>.</li>
-     * <li><code>AggregationByUser</code>: When significance calculation is enabled, specifies whether to aggregate data by user or by sample. Default value: <code>false</code> (by sample).</li>
-     * <li><code>Numerator</code> and <code>Denominator</code>: The specific definitions of the numerator and denominator used in significance calculation.</li>
-     * <li><code>IsBinomialDistribution</code>: Valid only for derived metrics. Specifies whether the metric follows a binomial distribution, which affects subsequent data processing logic.
+     * <li><code>AggregationByUser</code>: When significance calculation is selected, specifies whether to aggregate data by user or by sample. Default value: <code>false</code> (by sample).</li>
+     * <li><code>Numerator</code> and <code>Denominator</code>: Represent the specific definitions of the numerator and denominator when performing significance calculation.</li>
+     * <li><code>IsBinomialDistribution</code>: Valid only for derived metrics. Indicates whether the metric follows a binomial distribution, which affects subsequent data processing logic.
      * Note: You do not need to provide all fields at the same time. Include only the parameters whose values you want to change in the request body.</li>
      * </ul>
      * 

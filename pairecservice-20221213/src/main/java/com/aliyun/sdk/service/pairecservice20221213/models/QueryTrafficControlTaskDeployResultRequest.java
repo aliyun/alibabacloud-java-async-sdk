@@ -122,12 +122,7 @@ public class QueryTrafficControlTaskDeployResultRequest extends Request {
         }
 
         /**
-         * <p>The environment. Valid values:</p>
-         * <ul>
-         * <li>Daily: daily environment.</li>
-         * <li>Pre: staging environment.</li>
-         * <li>Prod: production environment.</li>
-         * </ul>
+         * <p>The environment. Valid values: Daily (daily environment), Pre (staging environment), and Prod (production environment).</p>
          * 
          * <strong>example:</strong>
          * <p>Daily</p>

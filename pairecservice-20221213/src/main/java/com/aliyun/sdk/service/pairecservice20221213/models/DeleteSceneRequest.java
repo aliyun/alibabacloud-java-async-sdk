@@ -87,7 +87,7 @@ public class DeleteSceneRequest extends Request {
         } 
 
         /**
-         * <p>Scenario ID, which can be obtained by calling the ListScenes API.</p>
+         * <p>The ID of the scenario. You can call the ListScenes operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -108,7 +108,7 @@ public class DeleteSceneRequest extends Request {
         }
 
         /**
-         * <p>Instance ID, which can be obtained by calling the ListInstances API.</p>
+         * <p>Instance ID of the instance. You can call the ListInstances operation to obtain instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-cn-abcdefg1234</p>

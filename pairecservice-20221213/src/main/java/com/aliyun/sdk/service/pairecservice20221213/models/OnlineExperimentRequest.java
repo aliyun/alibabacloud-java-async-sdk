@@ -88,7 +88,7 @@ public class OnlineExperimentRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the experiment, which you can obtain by calling the ListExperiments API.</p>
+         * <p>The experiment ID. You can obtain it by calling the ListExperiments operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class OnlineExperimentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance, which you can obtain by calling the ListInstances API.</p>
+         * <p>The instance ID. You can obtain it by calling the ListInstances operation.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-cn-abcdefg1234</p>

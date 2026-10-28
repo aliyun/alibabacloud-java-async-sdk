@@ -116,7 +116,7 @@ public class ListInstanceResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+         * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class ListInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>The category of the resource. Valid values:</p>
+         * <p>The resource category. Valid values:</p>
          * <ul>
          * <li><p>DataManagement</p>
          * </li>
@@ -158,8 +158,8 @@ public class ListInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>The group of the resource.</p>
-         * <p>If <code>Category</code> is <code>DataManagement</code>, valid values are:</p>
+         * <p>The resource group.</p>
+         * <p>If the resource category is DataManagement, valid values are:</p>
          * <ul>
          * <li><p>storage</p>
          * </li>
@@ -170,7 +170,7 @@ public class ListInstanceResourcesRequest extends Request {
          * <li><p>modeltrain</p>
          * </li>
          * </ul>
-         * <p>If <code>Category</code> is <code>Engine</code>, valid values are:</p>
+         * <p>If the resource category is Engine, valid values are:</p>
          * <ul>
          * <li><p>feature</p>
          * </li>
@@ -181,7 +181,7 @@ public class ListInstanceResourcesRequest extends Request {
          * <li><p>recengine</p>
          * </li>
          * </ul>
-         * <p>If <code>Category</code> is <code>Monitor</code>, valid values are:</p>
+         * <p>If the resource category is Monitor, valid values are:</p>
          * <ul>
          * <li><p>logs</p>
          * </li>
@@ -203,7 +203,7 @@ public class ListInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. If specified, only resources of this type are returned.</p>
+         * <p>The resource type filter. Valid values:</p>
          * <ul>
          * <li><p>Hologres</p>
          * </li>
@@ -219,9 +219,9 @@ public class ListInstanceResourcesRequest extends Request {
          * </li>
          * <li><p>DataHub</p>
          * </li>
-         * <li><p>ApsaraMQ for Kafka</p>
+         * <li><p>Kafka</p>
          * </li>
-         * <li><p>Realtime Compute for Apache Flink</p>
+         * <li><p>Flinkvvp</p>
          * </li>
          * <li><p>ACR</p>
          * </li>
@@ -233,9 +233,9 @@ public class ListInstanceResourcesRequest extends Request {
          * </li>
          * <li><p>MaxCompute</p>
          * </li>
-         * <li><p>Graph Compute Service</p>
+         * <li><p>GraphCompute</p>
          * </li>
-         * <li><p>ApsaraDB for Redis</p>
+         * <li><p>Redis</p>
          * </li>
          * </ul>
          * 

@@ -87,7 +87,7 @@ public class DeleteTrafficControlTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the traffic control task.</p>
+         * <p>The traffic control task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -108,7 +108,7 @@ public class DeleteTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-1324***</p>

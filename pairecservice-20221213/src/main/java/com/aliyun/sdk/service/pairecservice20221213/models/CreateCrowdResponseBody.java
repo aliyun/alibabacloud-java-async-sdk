@@ -67,7 +67,7 @@ public class CreateCrowdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The crowd ID.</p>
+         * <p>The ID of the crowd.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -78,7 +78,7 @@ public class CreateCrowdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>

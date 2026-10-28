@@ -323,16 +323,12 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The method for targeting traffic to the experiment group. Valid values:</p>
+         * <p>The type of traffic targeting for the experiment group. Valid values:</p>
          * <ul>
-         * <li><p><code>All</code>: all traffic</p>
-         * </li>
-         * <li><p><code>Filter</code>: traffic that matches the filter</p>
-         * </li>
-         * <li><p><code>CrowdId</code>: traffic from the specified crowd</p>
-         * </li>
-         * <li><p><code>Random</code>: a random percentage of traffic</p>
-         * </li>
+         * <li>All: All traffic.</li>
+         * <li>Filter: Traffic that uses filter conditions.</li>
+         * <li>CrowdId: Traffic targeted by a specified crowd ID.</li>
+         * <li>Random: Random traffic based on a percentage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -355,7 +351,7 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user IDs for debugging, separated by commas.</p>
+         * <p>The debug users. Separate multiple users with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>1124512470******,1124512471******,1124512472******</p>
@@ -377,7 +373,7 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The distribution duration.</p>
+         * <p>The time period for traffic distribution.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -388,9 +384,11 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The traffic distribution method.
-         * ● <code>UserId</code>: Distributes traffic by user ID.
-         * ● <code>TimeDuration</code>: Distributes traffic by time period.</p>
+         * <p>The traffic distribution method. Valid values:</p>
+         * <ul>
+         * <li>UserId: User ID.</li>
+         * <li>TimeDuration: Time period.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>UserId</p>
@@ -401,7 +399,7 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The filter.</p>
+         * <p>The filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>gender=female</p>
@@ -412,7 +410,7 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The bucket IDs that correspond to the <code>RandomFlow</code> percentage. This parameter is returned only when <code>CrowdTargetType</code> is set to <code>Random</code>.</p>
+         * <p>The specific bucket numbers returned based on the RandomFlow value when the traffic targeting type is Random.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3,4</p>
@@ -456,7 +454,7 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether an A/B test is required.</p>
+         * <p>Indicates whether an AB experiment group is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -467,7 +465,7 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The owner of the experiment group.</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>1124512470******</p>
@@ -478,7 +476,7 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The percentage of traffic from 0 to 100 that is randomly allocated to this experiment group. This parameter is returned only when <code>CrowdTargetType</code> is set to <code>Random</code>.</p>
+         * <p>The percentage of random traffic used to match the experiment group when the traffic targeting type is Random. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -489,7 +487,7 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>BDB621CB-A81E-5D39-8793-39A365CBCC74</p>
@@ -500,7 +498,7 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The reserved bucket IDs.</p>
+         * <p>The reserved bucket numbers.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3,4</p>
@@ -522,10 +520,12 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the experiment group. Valid values:
-         * ● <code>Offline</code>: The experiment group is not launched.
-         * ● <code>Online</code>: The experiment group is launched.
-         * ● <code>Pushed</code>: The experiment group is fully launched.</p>
+         * <p>The status of the experiment group. Valid values:</p>
+         * <ul>
+         * <li>Offline: Not online.</li>
+         * <li>Online: Online.</li>
+         * <li>Pushed: Fully rolled out.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Offline</p>

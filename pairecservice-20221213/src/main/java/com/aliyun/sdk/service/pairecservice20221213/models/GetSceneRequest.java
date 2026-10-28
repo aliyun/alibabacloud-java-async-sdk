@@ -87,7 +87,7 @@ public class GetSceneRequest extends Request {
         } 
 
         /**
-         * <p>The scene ID. You can get this ID by calling the ListScenes operation.</p>
+         * <p>The scenario ID. You can obtain this ID by calling the ListScenes operation.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -108,7 +108,7 @@ public class GetSceneRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can get this ID by calling the ListInstances operation.</p>
+         * <p>The instance ID. You can obtain this ID by calling the ListInstances operation.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-cn-abcdefg1234</p>

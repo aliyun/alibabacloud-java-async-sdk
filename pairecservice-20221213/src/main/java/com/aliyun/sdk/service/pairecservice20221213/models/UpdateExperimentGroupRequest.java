@@ -288,7 +288,7 @@ public class UpdateExperimentGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the experiment group. You can obtain this ID by calling the ListExperimentGroups API.</p>
+         * <p>The ID of the experiment group. You can call the ListExperimentGroups operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +322,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the crowd for crowd targeting. You can obtain this ID by calling the ListCrowds API.</p>
+         * <p>The ID of the specified crowd for crowd targeting. You can call the ListCrowds operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -334,16 +334,12 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of crowd targeting for the experiment group. Valid values:</p>
+         * <p>The type of traffic targeting for the experiment group. Valid values:</p>
          * <ul>
-         * <li><p>All: all traffic</p>
-         * </li>
-         * <li><p>Filter: traffic that matches the filter condition</p>
-         * </li>
-         * <li><p>CrowdId: traffic from the specified crowd ID</p>
-         * </li>
-         * <li><p>Random: a random percentage of traffic</p>
-         * </li>
+         * <li>All: All traffic.</li>
+         * <li>Filter: Traffic that uses filter conditions.</li>
+         * <li>CrowdId: Traffic specified by a crowd ID.</li>
+         * <li>Random: Random traffic based on a percentage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -356,7 +352,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the debug crowd. You can obtain this ID by calling the ListCrowds API.</p>
+         * <p>The ID of the debug crowd. You can call the ListCrowds operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -368,7 +364,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>A comma-separated list of UIDs for debug users. The UIDs can belong to Alibaba Cloud main accounts or sub-accounts.</p>
+         * <p>The debug users. The value must be the UID of an Alibaba Cloud account or RAM user. Separate multiple UIDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>user1,user2,user3</p>
@@ -393,7 +389,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The time duration for traffic distribution.</p>
+         * <p>The time period for traffic distribution.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -405,7 +401,9 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The distribution type. ● UserId: Distributes traffic by user ID. ● TimeDuration: Distributes traffic by time duration.</p>
+         * <p>The traffic distribution method. Valid values:
+         * ● UserId: User ID.
+         * ● TimeDuration: Time period.</p>
          * 
          * <strong>example:</strong>
          * <p>UserId</p>
@@ -417,7 +415,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The filter condition for crowd targeting.</p>
+         * <p>The filter conditions specified for crowd targeting.</p>
          * 
          * <strong>example:</strong>
          * <p>gender=male</p>
@@ -429,7 +427,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can obtain this ID by calling the ListInstances API.</p>
+         * <p>Instance ID of the instance. You can call the ListInstances operation to obtain instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -442,7 +440,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the layer. You can obtain this ID by calling the ListLayers API.</p>
+         * <p>The ID of the layer. You can call the ListLayers operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -480,7 +478,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>If CrowdTargetType is set to Random, this parameter specifies the percentage of traffic (from 0 to 100) to route to the experiment group.</p>
+         * <p>The percentage of random traffic used to match the experiment group when the traffic targeting type is set to Random. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -492,7 +490,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The reserved buckets.</p>
+         * <p>The reserved bucket numbers.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3</p>

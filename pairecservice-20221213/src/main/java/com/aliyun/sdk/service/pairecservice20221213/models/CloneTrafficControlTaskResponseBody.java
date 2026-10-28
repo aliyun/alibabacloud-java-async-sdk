@@ -67,7 +67,7 @@ public class CloneTrafficControlTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
@@ -78,7 +78,7 @@ public class CloneTrafficControlTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Traffic control task ID.</p>
+         * <p>The ID of the traffic shaping task.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

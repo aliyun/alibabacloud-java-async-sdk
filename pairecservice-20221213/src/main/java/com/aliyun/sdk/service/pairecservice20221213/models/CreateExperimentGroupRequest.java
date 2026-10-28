@@ -294,7 +294,7 @@ public class CreateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the crowd for crowd targeting. You can obtain this ID by calling the ListCrowds operation.</p>
+         * <p>The ID of the specified crowd for crowd targeting. You can call the ListCrowds operation to obtain the crowd ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -306,16 +306,12 @@ public class CreateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The crowd targeting type for the experiment group. Valid values:</p>
+         * <p>The type of traffic targeting for the experiment group. Valid values:</p>
          * <ul>
-         * <li><p><code>All</code>: All traffic</p>
-         * </li>
-         * <li><p><code>Filter</code>: Traffic that matches the filter condition</p>
-         * </li>
-         * <li><p><code>CrowdId</code>: Traffic from a specific crowd</p>
-         * </li>
-         * <li><p><code>Random</code>: A random percentage of traffic</p>
-         * </li>
+         * <li>All: All traffic.</li>
+         * <li>Filter: Traffic that uses filter conditions.</li>
+         * <li>CrowdId: Traffic specified by a crowd ID.</li>
+         * <li>Random: Random traffic based on a percentage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -328,7 +324,7 @@ public class CreateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the debug crowd. You can obtain this ID by calling the ListCrowds operation.</p>
+         * <p>The ID of the debug crowd. You can call the ListCrowds operation to obtain the crowd ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -340,7 +336,7 @@ public class CreateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The UIDs of the debug users. The value must be the UID of an Alibaba Cloud account or a RAM user. Separate multiple UIDs with a comma.</p>
+         * <p>The debug users. The users must be the UIDs of Alibaba Cloud accounts or RAM users. Separate multiple UIDs with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>1124512470******,1124512471******,1124512472******</p>
@@ -364,7 +360,7 @@ public class CreateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The time duration for traffic distribution.</p>
+         * <p>The time period for traffic distribution.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -376,7 +372,11 @@ public class CreateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The distribution type. Valid values: <code>UserId</code> (by user ID) and <code>TimeDuration</code> (by time duration).</p>
+         * <p>The traffic distribution method. Valid values:</p>
+         * <ul>
+         * <li>UserId: User ID.</li>
+         * <li>TimeDuration: Time period.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>UserId</p>
@@ -388,7 +388,7 @@ public class CreateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The filter condition for crowd targeting.</p>
+         * <p>The filter conditions for crowd targeting.</p>
          * 
          * <strong>example:</strong>
          * <p>gender=male</p>
@@ -400,7 +400,7 @@ public class CreateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can obtain this ID by calling the ListInstances operation.</p>
+         * <p>The ID of the instance. You can call the ListInstances operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -413,7 +413,7 @@ public class CreateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the layer. You can obtain this ID by calling the ListLayers operation.</p>
+         * <p>The ID of the layer. You can call the ListLayers operation to obtain the layer ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -439,7 +439,7 @@ public class CreateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to create an A/A experiment group.</p>
+         * <p>Specifies whether an AA experiment group is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -452,7 +452,7 @@ public class CreateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>The percentage of traffic to randomly allocate to this experiment group. This parameter is used only when <code>CrowdTargetType</code> is set to <code>Random</code>. Valid values: 0 to 100.</p>
+         * <p>The percentage of random traffic used to match the experiment group when the traffic targeting type is Random. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -464,7 +464,7 @@ public class CreateExperimentGroupRequest extends Request {
         }
 
         /**
-         * <p>A comma-separated list of reserved bucket numbers.</p>
+         * <p>The reserved bucket numbers.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3</p>

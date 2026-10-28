@@ -89,7 +89,7 @@ public class OfflineExperimentRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the experiment. You can get this ID by calling the ListExperiments API.</p>
+         * <p>The ID of the experiment. You can call the ListExperiments operation to obtain the experiment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class OfflineExperimentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can get this ID by calling the ListInstances API.</p>
+         * <p>The ID of the instance. You can call the ListInstances operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

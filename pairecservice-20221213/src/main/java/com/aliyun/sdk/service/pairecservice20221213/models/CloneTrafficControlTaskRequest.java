@@ -87,7 +87,7 @@ public class CloneTrafficControlTaskRequest extends Request {
         } 
 
         /**
-         * <p>Traffic control task ID</p>
+         * <p>The ID of the traffic shaping task.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -108,7 +108,7 @@ public class CloneTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec_123****</p>

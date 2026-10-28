@@ -80,7 +80,7 @@ public class ListScenesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The unique identifier for the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>B8987BF7-6028-5B17-80E0-251B7BD67BBA</p>
@@ -99,7 +99,7 @@ public class ListScenesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of scenes.</p>
+         * <p>The total number of elements in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -168,7 +168,7 @@ public class ListScenesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the flow.</p>
+             * <p>The flow code.</p>
              * 
              * <strong>example:</strong>
              * <p>liuliang1</p>
@@ -179,10 +179,10 @@ public class ListScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the flow.</p>
+             * <p>The flow name.</p>
              * 
              * <strong>example:</strong>
-             * <p>流量1</p>
+             * <p>Flow 1</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -275,7 +275,7 @@ public class ListScenesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the scene.</p>
+             * <p>The scene description.</p>
              * 
              * <strong>example:</strong>
              * <p>This is a test.</p>
@@ -286,7 +286,7 @@ public class ListScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of flows associated with the scene.</p>
+             * <p>The list of flows.</p>
              */
             public Builder flows(java.util.List<Flows> flows) {
                 this.flows = flows;
@@ -294,7 +294,7 @@ public class ListScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the scene.</p>
+             * <p>The scene name.</p>
              * 
              * <strong>example:</strong>
              * <p>scene1</p>
@@ -305,7 +305,7 @@ public class ListScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the scene.</p>
+             * <p>The scene ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

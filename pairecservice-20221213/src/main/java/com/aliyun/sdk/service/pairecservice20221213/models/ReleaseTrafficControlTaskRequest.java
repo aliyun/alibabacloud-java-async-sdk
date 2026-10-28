@@ -101,7 +101,7 @@ public class ReleaseTrafficControlTaskRequest extends Request {
         } 
 
         /**
-         * <p>The traffic control task ID.</p>
+         * <p>The ID of the traffic control task.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -122,7 +122,7 @@ public class ReleaseTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The execution environment for the traffic control task. Valid values: <code>Daily</code>, <code>Pre</code>, and <code>Prod</code>.</p>
+         * <p>The environment. Valid values: Daily (daily environment), Pre (staging environment), and Prod (production environment).</p>
          * 
          * <strong>example:</strong>
          * <p>Daily</p>

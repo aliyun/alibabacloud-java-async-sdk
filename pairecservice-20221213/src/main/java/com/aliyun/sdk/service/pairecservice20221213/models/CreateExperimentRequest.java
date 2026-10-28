@@ -211,7 +211,7 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the debug crowd. Call the ListCrowds operation to obtain this ID.</p>
+         * <p>The debug crowd ID. You can call the ListCrowds operation to obtain the debug crowd ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -223,7 +223,7 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>The UIDs of Alibaba Cloud accounts or RAM users for debugging. Separate multiple UIDs with a comma.</p>
+         * <p>The debug users. The value must be the UID of an Alibaba Cloud account or RAM user. Separate multiple UIDs with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>1124512470******,1124512471******,1124512472******</p>
@@ -235,7 +235,7 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>The experiment description.</p>
+         * <p>The description of the experiment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the experiment group. Call the ListExperimentGroups operation to obtain this ID.</p>
+         * <p>The experiment group ID. You can call the ListExperimentGroups operation to obtain the experiment group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>The traffic distribution percentage.</p>
+         * <p>The traffic allocation percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -273,7 +273,7 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. Call the ListInstances operation to obtain this ID.</p>
+         * <p>The instance ID. You can call the ListInstances operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>The experiment name.</p>
+         * <p>The name of the experiment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -299,7 +299,11 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>The experiment type. Valid values:<br>● <code>Baseline</code>: Indicates a baseline experiment.<br>● <code>Normal</code>: Indicates a normal experiment.<br><br></p>
+         * <p>The type of the experiment. Valid values:</p>
+         * <ul>
+         * <li>Baseline: baseline experiment.</li>
+         * <li>Normal: normal experiment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

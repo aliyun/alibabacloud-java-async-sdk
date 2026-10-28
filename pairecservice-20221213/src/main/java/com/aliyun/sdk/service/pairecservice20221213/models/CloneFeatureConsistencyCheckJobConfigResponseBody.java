@@ -67,7 +67,7 @@ public class CloneFeatureConsistencyCheckJobConfigResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The ID of the new feature consistency check job configuration.</p>
+         * <p>The new feature consistency check configuration ID after cloning.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
