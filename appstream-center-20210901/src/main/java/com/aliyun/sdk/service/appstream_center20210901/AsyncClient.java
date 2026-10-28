@@ -45,25 +45,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This operation manages user authorization for a delivery group at the application level. The authorization result applies only to the application specified by AppId and does not affect the authorization of other applications in the delivery group. To authorize users for an entire delivery group, call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation.</p>
+     * <p>This operation manages user authorization for an app instance group at the application level. The authorization result applies only to the application specified by AppId and does not affect the authorization relationships of other applications in the app instance group. To authorize users for the entire app instance group, call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation.</p>
      * <h2>Before you begin</h2>
      * <ul>
-     * <li>The delivery group is created, and <strong>the application specified by AppId is deployed in the image used by the delivery group</strong>. Otherwise, the error code <code>InvalidAppId.NotFound</code> is returned.</li>
-     * <li>The delivery group <strong>has not been added to a delivery group set that is in effect</strong>. A delivery group that has been added to a set cannot be authorized individually. You must authorize it through the set. Otherwise, the error code <code>InvalidAppInstanceGroup.AuthorizeBlockedBySet</code> is returned.</li>
-     * <li>If the workspace to which the delivery group belongs is an Active Directory (AD) workspace, <strong>you must specify UserMeta</strong>, with <code>UserMeta.Type</code> set to <code>ad</code> and <code>UserMeta.AdDomain</code> matching the AD domain bound to the workspace.</li>
-     * <li>If the delivery group has been authorized through user groups and mixed authorization of users and user groups is not supported, you cannot authorize by user. Otherwise, the error code <code>AuthAppInstanceGroup.MixNotSupported</code> is returned.</li>
+     * <li>The app instance group is created, and <strong>the application specified by AppId is deployed in the image used by the app instance group</strong>. Otherwise, the error code <code>InvalidAppId.NotFound</code> is returned.</li>
+     * <li>The app instance group <strong>is not added to an active app instance group set</strong>. App instance groups added to a set cannot be authorized individually and must be authorized through the set. Otherwise, the error code <code>InvalidAppInstanceGroup.AuthorizeBlockedBySet</code> is returned.</li>
+     * <li>If the workspace to which the app instance group belongs is an AD workspace, <strong>UserMeta must be specified</strong>, the value of UserMeta.Type must be ad, and the value of UserMeta.AdDomain must be the same as the AD domain bound to the workspace.</li>
+     * <li>If the app instance group is already authorized through a user group and mixed authorization of users and user groups is not supported, you cannot authorize individual users. Otherwise, the error code <code>AuthAppInstanceGroup.MixNotSupported</code> is returned.</li>
      * </ul>
      * <h2>Parameter description</h2>
      * <ul>
-     * <li><strong>At least one of AuthorizeUserIds and UnAuthorizeUserIds must be specified.</strong> You can also specify both. If both are empty, this invocation does not change any authorization.</li>
-     * <li>When adding authorizations, the sum of the currently authorized users for the application and the users to be added cannot exceed the authorized user quota for the application. If the quota is exceeded, the error code <code>ExceedAppAuthUserQuota</code> is returned. Removing authorizations is not subject to quota limits.</li>
+     * <li><strong>You must specify at least one of AuthorizeUserIds and UnAuthorizeUserIds</strong>, or specify both. If both are empty, the system does not change any authorization relationships when you invoke this operation.</li>
+     * <li>When adding authorization, the sum of the current number of authorized users for the application and the number of newly added users cannot exceed the authorized user quota for the application. If the quota is exceeded, the error code <code>ExceedAppAuthUserQuota</code> is returned. Removing authorization is not subject to the quota limit.</li>
      * </ul>
      * <h2>Call sequence</h2>
      * <ol>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the delivery group ID (AppInstanceGroupId) and the application IDs of deployed applications in the delivery group (AppId in the Apps list).</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the app instance group ID (AppInstanceGroupId) and the application IDs of the applications deployed in the app instance group (AppId in the Apps list).</li>
      * <li>Call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the usernames of the users to be authorized or unauthorized.</li>
      * <li>Call this operation to complete the authorization change.<blockquote>
-     * <p>After the authorization is changed, the selected users receive a notification email. It typically takes about 2 minutes for the change to take effect on the client.</p>
+     * <p>After the authorization is changed, the selected users will receive a notification email. It generally takes about 2 minutes for the changes to take effect on the terminal.</p>
      * </blockquote>
      * </li>
      * </ol>
@@ -75,8 +75,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can batch create model templates under a model provider template in the Wuying Agent Management Center. Multiple models can be added at a time, and one of them can be specified as the default model. Existing models are automatically skipped and not created again.
-     * Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * <p>You can create multiple model templates under a model provider template in the Wuying Agent Management Center. You can add multiple models at a time and specify one of them as the default model. Existing models are automatically skipped to prevent duplicate model creation.
+     * Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</p>
      * 
      * @param request the request parameters of BatchCreateLlmTemplates  BatchCreateLlmTemplatesRequest
      * @return BatchCreateLlmTemplatesResponse
@@ -85,9 +85,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can assign a model group to the resources that belong to agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for agents within the resource group to execute tasks.
-     * When an agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the agent runtime setting.
-     * Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</p>
+     * <p>You can authorize a model group for the resources to which agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent belong in the Wuying Agent Management Center. The model group serves as the inference engine for agents in the resource group to execute tasks.
+     * If an agent runtime is configured with a model group and its resource group is also configured with a model group, the model group bound to the resource group takes effect. This means that the resource group settings take precedence over the agent runtime settings.
+     * Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</p>
      * 
      * @param request the request parameters of ConfigResourceGroupModelTemplate  ConfigResourceGroupModelTemplateRequest
      * @return ConfigResourceGroupModelTemplateResponse
@@ -96,8 +96,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can configure third-party channels for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. These channels serve as extended Agent communication methods beyond the AgentIM channel.
-     * Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * <p>You can configure third-party channels for agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. These channels serve as extended agent communication methods in addition to the AgentIM channel.
+     * Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</p>
      * 
      * @param request the request parameters of ConfigRuntimeChannel  ConfigRuntimeChannelRequest
      * @return ConfigRuntimeChannelResponse
@@ -106,8 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can authorize model groups for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. The model groups serve as inference engines for Agent task execution.
-     * Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</p>
+     * <p>You can authorize model groups for agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center to serve as inference engines for agent task execution.
+     * Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</p>
      * 
      * @param request the request parameters of ConfigRuntimeModelTemplate  ConfigRuntimeModelTemplateRequest
      * @return ConfigRuntimeModelTemplateResponse
@@ -128,24 +128,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Before you begin</h2>
      * <ul>
-     * <li>Prepare an available office network, image, and instance type in the target business region. Make sure that the account has the required browser configurations and resource quotas.</li>
-     * <li>Specify <code>CloudBrowserName</code> and <code>BizRegionId</code>. Set <code>OsType</code> to <code>Windows</code>.</li>
-     * <li>Authorized users must be created in advance and must match the account type. Authorized user groups must belong to the current account and match the account type of the office network.</li>
-     * <li><strong><code>Users</code> and <code>UserGroupIds</code> cannot both be non-empty.</strong></li>
+     * <li>Prepare available office networks, images, and specifications in the target business region, and ensure that your account has the corresponding browser configurations and resource quotas.</li>
+     * <li>Specify CloudBrowserName and BizRegionId. You must set OsType to Windows.</li>
+     * <li>The authorized users must be created in advance and match the account type. The authorized user groups must belong to the current account and match the account type of the office network.</li>
+     * <li><strong>Users and UserGroupIds cannot be specified at the same time.</strong></li>
      * </ul>
      * <h2>MAU billing parameters</h2>
      * <ul>
-     * <li>Set <code>ChargeType</code> to <code>PostPaid</code>.</li>
-     * <li><strong>Set <code>SubPayType</code> to <code>mau</code> explicitly. Omitting this field does not enable MAU billing.</strong></li>
-     * <li>Set <code>ChargeResourceMode</code> to <code>AppInstance</code>.</li>
-     * <li>Do not specify <code>Period</code>, <code>PeriodUnit</code>, <code>AppPackageType</code>, <code>AutoPay</code>, <code>AutoRenew</code>, or <code>NodePool</code>.</li>
+     * <li>Set ChargeType to PostPaid.</li>
+     * <li><strong>You must explicitly set SubPayType to mau. Omitting this parameter does not enable MAU billing.</strong></li>
+     * <li>Set ChargeResourceMode to AppInstance.</li>
+     * <li>You do not need to specify Period, PeriodUnit, AppPackageType, AutoPay, AutoRenew, or NodePool.</li>
      * </ul>
-     * <h2>Post-call processing</h2>
-     * <p><strong>A successful response does not indicate that the browser resources are ready.</strong> After creation, query the browser group status and confirm that the group is connectable before use.
+     * <h2>Post-processing</h2>
+     * <p><strong>A successful API response does not indicate that the browser resources are ready.</strong> After creation, query the status of the browser group and use it only after confirming that it is connectable.
      * This operation creates a new cloud browser group. You do not need to create a delivery group in advance.</p>
-     * <h2>Example description</h2>
-     * <p>The example values of fields are provided to demonstrate how to specify the fields. Replace resource identifiers with actual values under your account. Capacity examples do not represent default values or upper limits.
-     * An example value of <code>-</code> indicates that the field does not need to be specified. Omit the corresponding parameter when you call the operation. Do not pass the character <code>-</code>.</p>
+     * <h2>Example descriptions</h2>
+     * <p>Field examples demonstrate how to specify parameters. Replace resource identifiers with actual values under your current account. Capacity examples do not represent default values or upper limits.
+     * An example value of - indicates that the parameter is not required. When calling the API, omit the corresponding parameter instead of passing the - character.</p>
      * 
      * @param request the request parameters of CreateBrowserInstanceGroup  CreateBrowserInstanceGroupRequest
      * @return CreateBrowserInstanceGroupResponse
@@ -166,8 +166,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can create a model provider template under Model Templates in the WUYING Agent Management Center. This template is used to configure connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot) that an Agent can invoke. After model creation, the model provider template is automatically associated with the specified model template.
-     * Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before you invoke this operation.</p>
+     * <p>You can create a model provider template for model creation under the model templates in the Wuying Agent Management Center to configure the connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot AI) that can be invoked by agents. The created model provider template is automatically associated with the specified model template.
+     * Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</p>
      * 
      * @param request the request parameters of CreateModelProviderTemplate  CreateModelProviderTemplateRequest
      * @return CreateModelProviderTemplateResponse
@@ -220,10 +220,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can delete only custom images that belong to your account.</li>
-     * <li>For images associated with WUYING Cloud Computer Pool, WUYING Cloud Application, or WUYING Workspace product lines, ensure that no WUYING instances are using the image before you delete it.</li>
-     * <li>If a WUYING Cloud Desktop template references an image, the template is also deleted when the image is deleted.</li>
-     * <li>For images that span multiple regions, deleting the image removes the image from all regions.</li>
+     * <li>Only custom images that belong to your account can be deleted.</li>
+     * <li>For images associated with WUYING Workspace pools, WUYING Cloud Apps, or WUYING Workstations, ensure that no WUYING instances are using the image before you delete it.</li>
+     * <li>If a WUYING Cloud Desktop template references the image, the template is also deleted when you delete the image.</li>
+     * <li>If the image is available in multiple regions, deleting the image removes it from all regions.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteImage  DeleteImageRequest
@@ -233,8 +233,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can delete a model template that has been created under a model service provider template in the WUYING Agent Management Center. Before deletion, ensure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After deletion, the model configurations of associated cloud computers are automatically refreshed.
-     * Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * <p>You can delete a model template created under a model service provider template in the Wuying Agent Management Center. Before you delete the template, make sure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After the deletion, the model configurations of associated cloud computers are automatically refreshed. Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</p>
      * 
      * @param request the request parameters of DeleteLlmTemplate  DeleteLlmTemplateRequest
      * @return DeleteLlmTemplateResponse
@@ -243,8 +242,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can delete a model provider template that has been created under model templates in the WUYING Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system preset type provider (such as WUYING credit package). After deletion, the associated models and key configurations are also removed.
-     * Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * <p>You can delete a model provider template created under model templates in the Wuying Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system-preset provider, such as the Wuying credit package. After deletion, the associated models and key configurations are also cleared.
+     * Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</p>
      * 
      * @param request the request parameters of DeleteModelProviderTemplate  DeleteModelProviderTemplateRequest
      * @return DeleteModelProviderTemplateResponse
@@ -253,8 +252,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can delete a model group that has been created in the WUYING Agent Management Center. Before deletion, ensure that the template has not been authorized to any resource. Otherwise, the deletion fails. After deletion, the model providers and models under the model group are also removed.
-     * Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * <p>You can delete a model group created in the Wuying Agent Management Center. Before you delete the model group, make sure that the template is not authorized for any resources. Otherwise, the deletion fails. After the model group is deleted, the model providers and models in the model group are also removed.
+     * Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</p>
      * 
      * @param request the request parameters of DeleteModelTemplate  DeleteModelTemplateRequest
      * @return DeleteModelTemplateResponse
@@ -263,7 +262,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a cloud graphics workstation.</p>
+     * <p>Deletes a workstation.</p>
      * 
      * @param request the request parameters of DeleteWuyingServer  DeleteWuyingServerRequest
      * @return DeleteWuyingServerResponse
@@ -296,15 +295,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes the query usage for the monthly active user (MAU) billing scenario.</p>
+     * <p>This topic describes how to use the query operation in the monthly active user (MAU) billing scenario.</p>
      * <h2>Before you begin</h2>
-     * <p>Obtain the cloud browser group ID under the current account. Call <code>ListBrowserInstanceGroup</code> to retrieve the ID.</p>
-     * <h2>Response</h2>
-     * <p>The response includes the current configuration, status, and authorization statistics of the browser group. The details return up to 20 bookmarks and 20 website access entries. To retrieve the complete lists, call <code>ListBrowserBookmarks</code> and <code>ListBrowserRestrictedURLs</code>.</p>
+     * <p>Obtain the ID of a cloud browser group within the current account. You can call <code>ListBrowserInstanceGroup</code> to obtain the ID.</p>
+     * <h2>Response content</h2>
+     * <p>Returns the current configuration, status, and authorization statistics of the browser group. The bookmark and website access lists in the details return up to the first 20 entries each. To query the complete lists, call <code>ListBrowserBookmarks</code> and <code>ListBrowserRestrictedURLs</code> respectively.</p>
      * <h2>What to do next</h2>
-     * <p>This operation only queries configurations and does not modify resources. After you read the returned status, perform the connection or management operation that corresponds to the status.</p>
+     * <p>This operation only queries the configuration and does not modify resources. After reading the returned status, perform connection or management operations that match the status.</p>
      * <h2>Example description</h2>
-     * <p>The <code>-</code> value in the examples indicates that the field is not applicable or not returned in the current scenario. It is not an actual string returned by the operation. Sample resource IDs are masked. Use the actual query results when you call this operation.</p>
+     * <p>In the examples, <code>-</code> indicates that the current scenario does not apply or the field is not returned. It is not a string actually returned by the operation. Examples of common resource IDs are masked. Use the actual query results.</p>
      * 
      * @param request the request parameters of GetBrowserInstanceGroup  GetBrowserInstanceGroupRequest
      * @return GetBrowserInstanceGroupResponse
@@ -396,7 +395,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After you enable the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</p>
+     * <p>You can query the details of the model configuration currently bound to a specified cloud desktop in the Wuying Agent Management Center, including the model group, the list of model providers, and their associated model information. When the risk information mode is enabled, you can also identify discrepancies between the actual configuration of the end user and the configuration delivered by the administrator.</p>
      * 
      * @param request the request parameters of GetRuntimeModelConfig  GetRuntimeModelConfigRequest
      * @return GetRuntimeModelConfigResponse
@@ -567,15 +566,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes how to use this operation in the monthly active user (MAU) billing scenario.</p>
+     * <p>This topic describes how paged query cloud browser groups in the monthly active user (MAU) billing scenario.</p>
      * <h2>Query conditions</h2>
-     * <p>You can filter by browser group identity, name, business region, office network, set, authorized user group, and status. Only one status value can be specified at a time.</p>
-     * <h2>Paging</h2>
-     * <p>Use <code>PageNumber</code> and <code>PageSize</code> for paging. Use the returned <code>TotalCount</code> to determine whether to continue querying the next page.</p>
+     * <p>You can filter cloud browser groups by browser group ID, name, business region, office network, set, authorized user group, and status. You can specify only one status value at a time for status filtering.</p>
+     * <h2>Pagination</h2>
+     * <p>Use PageNumber and PageSize paged query data by page. You can determine whether paged query the next page based on the returned TotalCount.</p>
      * <h2>What to do next</h2>
-     * <p>To view the detailed configuration of a single browser group, invoke <code>GetBrowserInstanceGroup</code> with the returned identity.</p>
+     * <p>To view the detailed configurations of a single browser group, call GetBrowserInstanceGroup by using the returned ID.</p>
      * <h2>Example notes</h2>
-     * <p>The <code>-</code> in the examples indicates that the field is not applicable or not returned in the current scenario. It is not an actual character string returned by the operation. Resource identities in the examples are masked. Use the actual query results in your environment.</p>
+     * <p>The hyphen (<code>-</code>) in the examples indicates that the field is not applicable or not returned in the current scenario, and is not an actual string returned by the API operation. The common resource IDs in the examples are desensitized. Use the actual query results when you use the API operation.</p>
      * 
      * @param request the request parameters of ListBrowserInstanceGroup  ListBrowserInstanceGroupRequest
      * @return ListBrowserInstanceGroupResponse
@@ -596,8 +595,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can query the list of model templates under a model provider template in the WUYING Agent Management Center with paging. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically pinned to the top.
-     * Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * <p>You can use paging to perform a paged query of the model template list under a model provider template in the Wuying Agent Management Center. You can filter the results by model group ID, model provider template ID, model template ID, and model encoding. When you query by the model group dimension, the default model is automatically pinned to the top.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
      * 
      * @param request the request parameters of ListLlmTemplates  ListLlmTemplatesRequest
      * @return ListLlmTemplatesResponse
@@ -836,7 +835,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the attributes of a Wuying Cloud Browser.</p>
+     * <p>Modifies the attributes of a Wuying cloud browser.</p>
      * 
      * @param request the request parameters of ModifyBrowserInstanceGroup  ModifyBrowserInstanceGroupRequest
      * @return ModifyBrowserInstanceGroupResponse
@@ -863,6 +862,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyNodePoolAttributeResponse
      */
     CompletableFuture<ModifyNodePoolAttributeResponse> modifyNodePoolAttribute(ModifyNodePoolAttributeRequest request);
+
+    /**
+     * @param request the request parameters of ModifyShareImage  ModifyShareImageRequest
+     * @return ModifyShareImageResponse
+     */
+    CompletableFuture<ModifyShareImageResponse> modifyShareImage(ModifyShareImageRequest request);
 
     /**
      * @param request the request parameters of ModifyTenantConfig  ModifyTenantConfigRequest
@@ -916,11 +921,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Workspace.</p>
+     * <p>Make sure you understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and pricing</a> of WUYING Workspace before calling this operation.</p>
      * <blockquote>
      * <p>Prerequisites:</p>
      * <ul>
-     * <li>The delivery group must be in the PUBLISHED state, and ChargeType must be set to PrePaid.</li>
+     * <li>The delivery group must be in the PUBLISHED state and ChargeType must be PrePaid.</li>
      * </ul>
      * </blockquote>
      * 
@@ -1018,32 +1023,32 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Before you begin</h2>
-     * <p>When calling this operation with a RAM user or STS credential, the <code>appstreaming:UntagResources</code> permission is required.
-     * The resources from which you want to unbind tags must belong to the current Alibaba Cloud account. <strong>This operation currently supports only delivery group resources.</strong> You can set <code>ResourceType</code> only to <code>APPINSTANCEGROUP</code>. You can obtain delivery group IDs by calling <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a>, and query tags that are bound to a resource by calling <a href="~~ListTagResources~~">ListTagResources</a>.</p>
-     * <h2>Parameter description</h2>
+     * <h2>Prerequisites</h2>
+     * <p>To call this operation as a RAM user or by using STS credentials, you must have the <code>appstreaming:UntagResources</code> permission.
+     * The resources to be untagged must belong to the current Alibaba Cloud account. <strong>This operation currently supports only app instance group resources</strong>. You must set <code>ResourceType</code> to <code>APPINSTANCEGROUP</code>. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and call the <a href="~~ListTagResources~~">ListTagResources</a> operation to query the tags bound to the resources.</p>
+     * <h2>Metric description</h2>
      * <ul>
-     * <li>You can unbind tags from up to <strong>50 resources</strong> in a single request. Duplicate resource IDs are automatically deduplicated.</li>
-     * <li><strong>Specify at least one of <code>TagKey.N</code> and <code>All</code>.</strong> If neither is specified, or if <code>TagKey.N</code> is not specified and <code>All</code> is set to <code>false</code>, the error code <code>InvalidParameter.TagKeyListOrAll</code> is returned.<ul>
-     * <li>If <code>TagKey.N</code> is specified: only the tags that correspond to the specified tag keys are unbound. You can specify up to 20 tag keys at a time. The <code>All</code> parameter is ignored.</li>
-     * <li>If <code>TagKey.N</code> is not specified and <code>All=true</code>: all custom tags on the resource are unbound, including Wuying system tags that start with <code>System/</code> and were attached by calling <a href="~~TagResources~~">TagResources</a>.</li>
+     * <li>A single request can detach labels from up to <strong>50 resources</strong>. Duplicate resource IDs are automatically deduplicated.</li>
+     * <li><strong>You must specify at least one of <code>TagKey.N</code> and <code>All</code></strong>: If neither is specified, or if <code>TagKey.N</code> is not specified and <code>All</code> is set to <code>false</code>, the operation returns the error code <code>InvalidParameter.TagKeyListOrAll</code>.<ul>
+     * <li>If <code>TagKey.N</code> is specified: Only the labels corresponding to these label keys are detached. A maximum of 20 label keys can be specified in a single request. In this case, the <code>All</code> parameter is ignored.</li>
+     * <li>If <code>TagKey.N</code> is not specified and <code>All</code> is set to <code>true</code>: All custom labels on the resources are detached, including Wuying system labels that start with <code>System/</code> and were attached by calling the <a href="~~TagResources~~">TagResources</a> operation.</li>
      * </ul>
      * </li>
-     * <li>If a specified tag key does not exist on the resource, the tag key is skipped and no error is returned.</li>
-     * <li>Tag keys that start with <code>System/</code> are Wuying system tags. Only <code>System/Scheduler/GRAYSCALE</code> and <code>System/Scheduler/STOP_NEW_USER_CONNECTION</code> are supported. If you specify other tag keys that start with <code>System/</code>, the error code <code>InvalidTagPolicy.KeyInvalid</code> or <code>InvalidTag.SystemKeyNotAllow</code> is returned.</li>
+     * <li>If a specified label key does not exist on a resource, the label key is skipped and no fault is returned.</li>
+     * <li>Label keys that start with <code>System/</code> are Wuying system labels. Only <code>System/Scheduler/GRAYSCALE</code> and <code>System/Scheduler/STOP_NEW_USER_CONNECTION</code> are supported. If you specify other label keys that start with <code>System/</code>, the operation returns the error code <code>InvalidTagPolicy.KeyInvalid</code> or <code>InvalidTag.SystemKeyNotAllow</code>.</li>
      * </ul>
      * <h2>Execution results</h2>
      * <ul>
-     * <li><strong>If any specified delivery group does not exist or does not belong to the current account, the entire request fails</strong> with the error code <code>InvalidAppInstanceGroup.NotFound</code>, and no tags are unbound from any resource.</li>
-     * <li>On success, the response contains only <code>RequestId</code> and does not return tag details.</li>
-     * <li>When multiple resources are specified and only some fail to have tags unbound, the operation still returns success and the response does not contain failure details. Call <a href="~~ListTagResources~~">ListTagResources</a> to verify the unbinding results. When only one resource is specified and the unbinding fails, the operation returns the corresponding error code directly.</li>
+     * <li><strong>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</strong>, and the operation returns the error code <code>InvalidAppInstanceGroup.NotFound</code>. No resources are untagged.</li>
+     * <li>If the untagging is successful, the response contains only <code>RequestId</code> and does not return tag details.</li>
+     * <li>If multiple resources are specified and the untagging fails for only some of the resources, the operation still returns a success response, and the response does not contain failure details. Call the <a href="~~ListTagResources~~">ListTagResources</a> operation to verify the untagging results. If only one resource is specified and the untagging fails, the operation directly returns the corresponding error code.</li>
      * </ul>
      * <h2>Call sequence</h2>
      * <ol>
-     * <li>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain delivery group IDs. To check which tag keys are bound to a resource, call <a href="~~ListTagResources~~">ListTagResources</a>.</li>
-     * <li>Call this operation with <code>ResourceType=APPINSTANCEGROUP</code> and <code>ResourceId.N</code>, and specify <code>TagKey.N</code> or <code>All=true</code> to indicate the tags to unbind.</li>
-     * <li>To rebind tags, call <a href="~~TagResources~~">TagResources</a>.
-     * The masked identifiers in the examples are for format demonstration purposes only. Replace them with your actual identifiers when making calls.</li>
+     * <li>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID. To confirm the tag keys bound to the resources, call the <a href="~~ListTagResources~~">ListTagResources</a> operation.</li>
+     * <li>Call this operation, specify <code>ResourceType=APPINSTANCEGROUP</code> and <code>ResourceId.N</code>, and specify <code>TagKey.N</code> or set <code>All=true</code> to indicate the tags to be removed.</li>
+     * <li>To rebind tags, call the <a href="~~TagResources~~">TagResources</a> operation.
+     * The masked identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</li>
      * </ol>
      * 
      * @param request the request parameters of UntagResources  UntagResourcesRequest

@@ -22,6 +22,10 @@ public class ListLlmTemplatesRequest extends Request {
     private Integer bizType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LlmCode")
     private String llmCode;
 
@@ -52,6 +56,7 @@ public class ListLlmTemplatesRequest extends Request {
     private ListLlmTemplatesRequest(Builder builder) {
         super(builder);
         this.bizType = builder.bizType;
+        this.language = builder.language;
         this.llmCode = builder.llmCode;
         this.llmTemplateIds = builder.llmTemplateIds;
         this.modelTemplateId = builder.modelTemplateId;
@@ -79,6 +84,13 @@ public class ListLlmTemplatesRequest extends Request {
      */
     public Integer getBizType() {
         return this.bizType;
+    }
+
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
     }
 
     /**
@@ -132,6 +144,7 @@ public class ListLlmTemplatesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListLlmTemplatesRequest, Builder> {
         private Integer bizType; 
+        private String language; 
         private String llmCode; 
         private java.util.List<String> llmTemplateIds; 
         private String modelTemplateId; 
@@ -147,6 +160,7 @@ public class ListLlmTemplatesRequest extends Request {
         private Builder(ListLlmTemplatesRequest request) {
             super(request);
             this.bizType = request.bizType;
+            this.language = request.language;
             this.llmCode = request.llmCode;
             this.llmTemplateIds = request.llmTemplateIds;
             this.modelTemplateId = request.modelTemplateId;
@@ -169,7 +183,26 @@ public class ListLlmTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The model code used for filtering. Fuzzy match is supported.</p>
+         * <p>The display language of the model. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Simplified Chinese.</li>
+         * <li>en-US: English.</li>
+         * <li>ja-JP: Japanese.</li>
+         * <li>zh-TW: Traditional Chinese.
+         * Default value: zh-CN. Currently, zh-TW returns Simplified Chinese, and ja-JP returns English. If the model is not included in Alibaba Cloud Model Studio or the English text is missing, the original source text is retained without automatic translation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
+            return this;
+        }
+
+        /**
+         * <p>The model code for filtering. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3.6-plus</p>
@@ -181,7 +214,7 @@ public class ListLlmTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The model template IDs used for filtering.</p>
+         * <p>The model template IDs for filtering.</p>
          */
         public Builder llmTemplateIds(java.util.List<String> llmTemplateIds) {
             String llmTemplateIdsShrink = shrink(llmTemplateIds, "LlmTemplateIds", "json");
@@ -191,7 +224,7 @@ public class ListLlmTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the associated model group.</p>
+         * <p>The associated model group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mt-xxxx</p>
@@ -203,7 +236,7 @@ public class ListLlmTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Both 0 and 1 return the same result.</p>
+         * <p>The page number. Pages start from 1. A value of 0 returns the same result as 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -227,7 +260,7 @@ public class ListLlmTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the model provider template.</p>
+         * <p>The model provider template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mpt-xxxx</p>
@@ -241,10 +274,10 @@ public class ListLlmTemplatesRequest extends Request {
         /**
          * <p>Specifies whether to query smart models. Valid values:</p>
          * <ul>
-         * <li>true: Only LLMs under system preset smart models are returned. In this case, BizType is required.</li>
-         * <li>false: Smart model filtering is not applied.</li>
+         * <li>true: Only LLMs under system-preset smart models are returned. In this case, BizType is required.</li>
+         * <li>false: Smart models are not specifically filtered.
+         * Default value: false.</li>
          * </ul>
-         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

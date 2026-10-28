@@ -188,7 +188,7 @@ public class RenewAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic payment.</p>
+         * <p>Specifies whether to enable automatic payment. If RenewMode is set to RENEW_SPECIFIED_NODE_COUNT or RENEW_SPECIFIED_NODE_IDS, this parameter must be set to false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -200,7 +200,7 @@ public class RenewAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The numeric part of the resource purchase duration. This parameter is used together with PeriodUnit to specify the complete purchase duration.</p>
+         * <p>The numeric part of the resource purchase duration. Use this parameter together with <code>PeriodUnit</code> to specify the full purchase duration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class RenewAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The unit part of the resource purchase duration. This parameter is used together with Period to specify the complete purchase duration. Valid combinations of Period and PeriodUnit:</p>
+         * <p>The unit part of the resource purchase duration. Use this parameter together with <code>Period</code> to specify the full purchase duration. The valid combinations of <code>Period</code> and <code>PeriodUnit</code> are as follows:</p>
          * <ul>
          * <li>1 Week (1 week)</li>
          * <li>1 Month (1 month)</li>
@@ -225,7 +225,7 @@ public class RenewAppInstanceGroupRequest extends Request {
          * <li>3 Year (3 years)</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is invalid. If the request parameters do not match the combinations listed above, such as <code>2 Week</code>, the call to this operation succeeds, but an error occurs during the order placement phase.</p>
+         * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is not. If the request parameters do not match the combinations listed above, such as <code>2 Week</code>, the operation call succeeds but an error occurs during order placement.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -252,7 +252,7 @@ public class RenewAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The promotion ID. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation.</p>
+         * <p>The promotion ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>17440009****</p>

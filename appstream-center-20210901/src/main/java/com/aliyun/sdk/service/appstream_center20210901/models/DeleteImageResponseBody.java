@@ -108,8 +108,8 @@ public class DeleteImageResponseBody extends TeaModel {
         /**
          * <p>The status code. Valid values:</p>
          * <ul>
-         * <li><code>200</code>: Succeeded.</li>
-         * <li><code>400</code>: Failed.</li>
+         * <li><code>200</code>: Success.</li>
+         * <li><code>400</code>: Error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class DeleteImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

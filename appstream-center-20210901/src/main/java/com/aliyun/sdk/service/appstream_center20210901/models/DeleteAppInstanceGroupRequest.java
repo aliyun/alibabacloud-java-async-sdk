@@ -75,7 +75,7 @@ public class DeleteAppInstanceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The delivery group ID.</p>
+         * <p>The ID of the delivery group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

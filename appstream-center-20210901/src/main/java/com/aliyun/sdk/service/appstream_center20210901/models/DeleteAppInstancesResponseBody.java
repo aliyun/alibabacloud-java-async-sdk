@@ -203,7 +203,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the deletion is triggered successfully.</p>
+             * <p>Indicates whether the deletion is successfully triggered.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

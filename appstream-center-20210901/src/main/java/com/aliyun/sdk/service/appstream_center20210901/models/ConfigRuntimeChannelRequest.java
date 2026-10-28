@@ -162,7 +162,7 @@ public class ConfigRuntimeChannelRequest extends Request {
         } 
 
         /**
-         * <p>The Agent platform.</p>
+         * <p>The agent platform.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -174,11 +174,11 @@ public class ConfigRuntimeChannelRequest extends Request {
         }
 
         /**
-         * <p>The Agent provider.</p>
+         * <p>The agent provider.</p>
          * <ul>
-         * <li>JVS Computer: set to OpenClaw.</li>
-         * <li>OpenClaw: set to OpenClaw.</li>
-         * <li>Hermes Agent: set to HermesAgent.</li>
+         * <li>JVS Computer: Set to OpenClaw.</li>
+         * <li>OpenClaw: Set to OpenClaw.</li>
+         * <li>Hermes Agent: Set to HermesAgent.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -205,9 +205,9 @@ public class ConfigRuntimeChannelRequest extends Request {
         }
 
         /**
-         * <p>The channel configuration JSON string.</p>
+         * <p>The JSON string for channel configuration.</p>
          * <ul>
-         * <li>Simple configuration mode example:</li>
+         * <li>Example of the simple configuration mode:</li>
          * </ul>
          * <pre><code class="language-json">{
          *     &quot;appKey&quot;: &quot;abc&quot;,
@@ -215,7 +215,7 @@ public class ConfigRuntimeChannelRequest extends Request {
          * }
          * </code></pre>
          * <ul>
-         * <li>Custom configuration mode example:</li>
+         * <li>Example of the custom configuration mode:</li>
          * </ul>
          * <pre><code class="language-json">{
          *   &quot;enabled&quot;: true,
@@ -251,10 +251,10 @@ public class ConfigRuntimeChannelRequest extends Request {
 
         /**
          * <p>The channel name.</p>
-         * <p>If you leave this parameter empty, the system automatically uses the value of Code as the name.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the value of Code as the name.</p>
          * 
          * <strong>example:</strong>
-         * <p>钉钉</p>
+         * <p>DingTalk</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -273,7 +273,7 @@ public class ConfigRuntimeChannelRequest extends Request {
         }
 
         /**
-         * <p>The Agent runtime type.</p>
+         * <p>The agent runtime type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

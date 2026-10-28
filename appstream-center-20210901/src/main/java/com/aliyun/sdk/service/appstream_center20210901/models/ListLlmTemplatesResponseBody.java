@@ -114,7 +114,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the current query results.</p>
+         * <p>The page number of the returned query results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,7 +216,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum multiplier. An empty value indicates no upper limit. For example, Min=1 with an empty Max is displayed as 1x and above.</p>
+             * <p>The maximum multiplier. An empty value indicates no upper limit. For example, if Min is 1 and Max is empty, it is displayed as starting from 1x.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -227,7 +227,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum multiplier. When equal to Max, it is a fixed multiplier. For example, Min=Max=2 is displayed as 2x.</p>
+             * <p>The minimum multiplier. When it is equal to Max, it is a fixed multiplier. For example, if Min and Max are both 2, it is displayed as 2x.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -396,7 +396,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price name, such as Input, Output, or Image Generation.</p>
+             * <p>The price name, such as input, output, or image generation.</p>
              * 
              * <strong>example:</strong>
              * <p>Input</p>
@@ -407,7 +407,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price unit, such as per image or per thousand tokens.</p>
+             * <p>The price unit, such as per image or per 1,000 tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>per million tokens</p>
@@ -477,7 +477,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of prices within this range.</p>
+             * <p>The list of prices within the range.</p>
              */
             public Builder prices(java.util.List<Prices> prices) {
                 this.prices = prices;
@@ -751,7 +751,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credit consumption multiplier (rate). An empty value indicates that the model does not participate in credit-based billing.</p>
+             * <p>The credit consumption multiplier. An empty value indicates that the model does not participate in credit billing.</p>
              */
             public Builder creditMultiplier(CreditMultiplier creditMultiplier) {
                 this.creditMultiplier = creditMultiplier;
@@ -786,7 +786,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this is the default model under the associated model group.</p>
+             * <p>Indicates whether the model is the default model in the associated model group.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -819,7 +819,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model information, such as context window size and maximum input/output tokens.</p>
+             * <p>The model information, such as the context window size and the maximum number of input/output tokens.</p>
              */
             public Builder modelInfo(java.util.Map<String, ?> modelInfo) {
                 this.modelInfo = modelInfo;
@@ -838,7 +838,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of pricing information.</p>
+             * <p>The list of price information.</p>
              */
             public Builder prices(java.util.List<DataPrices> prices) {
                 this.prices = prices;
@@ -846,7 +846,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the model provider template.</p>
+             * <p>The model provider template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mpt-xxxx</p>
@@ -857,7 +857,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publish time in ISO 8601 format, such as 2026-03-04T06:25:17.000+00:00.</p>
+             * <p>The published time in ISO 8601 format, such as 2026-03-04T06:25:17.000+00:00.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-04T06:25:17.000+00:00</p>
@@ -868,7 +868,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization scope of the model group. Valid values: ALL_USER (all users), USER_MIXED (specified users and user groups), and RESOURCE_MIXED (specified resources). Returned only when SmartModel is true.</p>
+             * <p>The authorization scope of the associated model group. Valid values: ALL_USER (all users), USER_MIXED (specified users and user groups), and RESOURCE_MIXED (specified resources). This parameter is returned only when SmartModel is true.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL_USER</p>
@@ -879,7 +879,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of routing policies configured under this model tier. Returned only when SmartModel is true. Returns 0 for tiers with no configured policies.</p>
+             * <p>The number of route policies configured for the model tier. This parameter is returned only when SmartModel is true. If no policies are configured for the tier, 0 is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

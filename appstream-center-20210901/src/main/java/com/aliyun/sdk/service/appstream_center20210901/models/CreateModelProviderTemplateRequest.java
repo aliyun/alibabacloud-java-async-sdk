@@ -190,7 +190,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The Agent platform.</p>
+         * <p>The agent platform.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -202,7 +202,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * <p>The Agent provider name.</p>
+         * <p>The name of the agent provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * <p>The model provider configuration in JSON format, which contains connection information such as baseUrl, apiKey, and api. The apiKey is encrypted after creation. When ProviderType is set to WuyingCredit, this parameter is not required because the configuration is copied from the system template.</p>
+         * <p>The JSON configuration of the model provider, which includes connection information such as baseUrl, apiKey, and api. The apiKey is encrypted and stored after creation. When ProviderType is WuyingCredit, this parameter is not required and will be copied from the system template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class CreateModelProviderTemplateRequest extends Request {
          * <p>The description of the model provider template.</p>
          * 
          * <strong>example:</strong>
-         * <p>阿里云百炼服务商</p>
+         * <p>Alibaba Cloud Bailian provider</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -257,7 +257,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the WUYING secure proxy. This parameter must be set to true when ProviderType is set to WuyingCredit.</p>
+         * <p>Specifies whether to enable the Wuying secure proxy. This parameter must be set to true when ProviderType is WuyingCredit.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -269,7 +269,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the associated model template.</p>
+         * <p>The ID of the associated model group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class CreateModelProviderTemplateRequest extends Request {
          * <p>The name of the model provider template.</p>
          * 
          * <strong>example:</strong>
-         * <p>阿里云百炼</p>
+         * <p>Alibaba Cloud Bailian</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -294,7 +294,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * <p>The model provider name. The name must be unique within the same model template. The naming rules vary based on the value of ProviderType. For more information, see the description of ProviderType.</p>
+         * <p>The name of the model provider. The name must be unique within the same model template. The naming conventions vary based on the ProviderType. For more information, see the description of ProviderType.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -307,11 +307,11 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * <p>The model provider type. Different types impose different constraints on ProviderName and Config. Valid values:</p>
+         * <p>The type of the model provider. Different types have different constraints on ProviderName and Config:</p>
          * <ul>
-         * <li>WuyingCredit: WUYING credit plan. ProviderName must be set to wuying-credit. The template is created by copying from a system template, and Config is not required.</li>
-         * <li>Managed: managed provider. System-reserved names such as wuying-credit cannot be used. Config is required.</li>
-         * <li>Custom: user-defined provider. ProviderName must start with the prefix provider-. Config is required.</li>
+         * <li>WuyingCredit: Wuying credit package. The ProviderName must be wuying-credit. The template is created by copying from a system template, and Config is not required.</li>
+         * <li>Managed: Managed provider. System-reserved names such as wuying-credit cannot be used, and Config is required.</li>
+         * <li>Custom: Custom provider. The ProviderName must start with the provider- prefix, and Config is required.</li>
          * </ul>
          * 
          * <strong>example:</strong>

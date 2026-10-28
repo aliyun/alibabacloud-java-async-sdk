@@ -99,7 +99,7 @@ public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -240,10 +240,10 @@ public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Agent runtime ID. The ID mapping is as follows:</p>
-             * <p>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</p>
-             * <p>OpenClaw: cloud computer ID, in the format of ecd-xxxx.</p>
-             * <p>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</p>
+             * <p>The agent runtime ID. The ID mappings are as follows:</p>
+             * <p>JVS Computer: the JVS Computer ID, in the format of jvs-xxxx.</p>
+             * <p>OpenClaw: the cloud desktop ID, in the format of ecd-xxxx.</p>
+             * <p>Hermes Agent: the Hermes Agent ID, in the format of jvs-xxxx.</p>
              * 
              * <strong>example:</strong>
              * <p>jvs-xxxxxxxx</p>

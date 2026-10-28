@@ -54,7 +54,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID, which can be used to troubleshoot issues.</p>
+         * <p>The request ID. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

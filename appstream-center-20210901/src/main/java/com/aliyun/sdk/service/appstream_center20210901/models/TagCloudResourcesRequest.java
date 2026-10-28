@@ -89,7 +89,7 @@ public class TagCloudResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The list of resource IDs. A maximum of 50 IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</p>
+         * <p>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("ResourceIds", resourceIds);
@@ -113,17 +113,17 @@ public class TagCloudResourcesRequest extends Request {
         /**
          * <p>The list of tags. System tags and custom tags are supported.</p>
          * <ul>
-         * <li><p>System tag enumeration values:</p>
+         * <li><p>Valid values for system tags:</p>
          * <ul>
          * <li><code>System/Scheduler/GRAYSCALE</code>: canary release tag</li>
-         * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tag that prevents newly bound users in a delivery group from establishing connections</li>
+         * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tag that prevents newly bound users from connecting to the app instance group</li>
          * </ul>
          * </li>
-         * <li><p>Custom tags: A maximum of 20 custom tags can be created.</p>
+         * <li><p>Custom tags: You can create up to 20 custom tags.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>Each tag key on the same resource can have only one tag value. If you add a tag key that already exists, the corresponding tag value is updated to the new value.</p>
+         * <p>A tag key on a resource can map to only one tag value. If you add a tag with an existing key, the tag value is updated to the new value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -195,7 +195,7 @@ public class TagCloudResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. Tags are case-sensitive. The key must be 1 to 128 characters in length.</p>
+             * <p>The tag key. It is case-sensitive and must be 1 to 128 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class TagCloudResourcesRequest extends Request {
             }
 
             /**
-             * <p>The tag value. Tags are case-sensitive. The value must be 1 to 128 characters in length.</p>
+             * <p>The tag value. It is case-sensitive and must be 1 to 128 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

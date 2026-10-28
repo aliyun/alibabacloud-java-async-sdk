@@ -228,7 +228,7 @@ public class ListBrowserInstanceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The browser group set ID for exact match queries of active members in the set.</p>
+         * <p>The ID of the browser group set. This parameter is used to query the valid members of the set by exact match.</p>
          * 
          * <strong>example:</strong>
          * <p>set-3jm9d0abc00example</p>
@@ -240,7 +240,7 @@ public class ListBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Filters browser groups by business region.</p>
+         * <p>Filters cloud browser groups by business region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -252,7 +252,7 @@ public class ListBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The cloud browser group ID for exact match queries.</p>
+         * <p>The ID of the cloud browser group. This parameter is used for exact match.</p>
          * 
          * <strong>example:</strong>
          * <p>big-0c7loey7fzjq****</p>
@@ -264,7 +264,7 @@ public class ListBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The browser group name. Fuzzy match is supported.</p>
+         * <p>The name of the browser group. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Office</p>
@@ -276,7 +276,7 @@ public class ListBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Performs a contains match by browser group name or ID.</p>
+         * <p>Filters cloud browser groups by name or ID based on partial match.</p>
          * 
          * <strong>example:</strong>
          * <p>Office</p>
@@ -288,7 +288,7 @@ public class ListBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Excludes browser groups that are authorized to the specified user groups.</p>
+         * <p>Excludes cloud browser groups that are authorized to the specified user groups.</p>
          */
         public Builder excludedUserGroupIds(java.util.List<String> excludedUserGroupIds) {
             this.putBodyParameter("ExcludedUserGroupIds", excludedUserGroupIds);
@@ -297,7 +297,7 @@ public class ListBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Filters browser groups by office network ID.</p>
+         * <p>Filters cloud browser groups by the ID of the office network to which they belong.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-843734****</p>
@@ -309,7 +309,7 @@ public class ListBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The page number, starting from page 1.</p>
+         * <p>The page number. Pages start from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -321,7 +321,7 @@ public class ListBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -333,8 +333,8 @@ public class ListBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Filters by browser group status.</p>
-         * <p><strong>Limit:</strong> Only one status value can be specified at a time.</p>
+         * <p>Filters cloud browser groups by status.</p>
+         * <p><strong>Limit:</strong> You can specify only one status at a time.</p>
          */
         public Builder status(java.util.List<String> status) {
             this.putBodyParameter("Status", status);
@@ -343,7 +343,7 @@ public class ListBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The tag filter parameters. This parameter is not supported in customer-facing scenarios. Do not specify this parameter.</p>
+         * <p>The tag filtering parameter. This parameter is not supported in customer-facing scenarios. Do not specify this parameter.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -352,12 +352,12 @@ public class ListBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Filters by version of the browser.</p>
+         * <p>Filters cloud browser groups by browser version. Valid values:</p>
          * <ul>
          * <li><code>Basic</code>: Basic Edition.</li>
          * <li><code>Pro</code>: Premium Edition.</li>
          * </ul>
-         * <p>Use <code>Pro</code> to query MAU browser groups.</p>
+         * <p>Use <code>Pro</code> when you query MAU browser groups.</p>
          * 
          * <strong>example:</strong>
          * <p>Pro</p>
@@ -369,7 +369,7 @@ public class ListBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Filters by authorized user group IDs.</p>
+         * <p>Filters cloud browser groups by the IDs of authorized user groups.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
