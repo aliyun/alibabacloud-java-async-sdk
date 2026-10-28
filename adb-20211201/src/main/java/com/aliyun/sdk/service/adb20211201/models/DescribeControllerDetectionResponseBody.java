@@ -104,7 +104,7 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried detection items and detection results.</p>
+         * <p>The list of detection items and results.</p>
          */
         public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
@@ -205,7 +205,7 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the detection result.</p>
+             * <p>The detection result message.</p>
              * 
              * <strong>example:</strong>
              * <p>A CPU increase is detected on the access node.</p>
@@ -219,7 +219,7 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
              * <p>The name of the detection item.</p>
              * 
              * <strong>example:</strong>
-             * <p>CPU增高检测</p>
+             * <p>CPU usage spike detection</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -227,7 +227,7 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the detection result. Valid values:</p>
+             * <p>The status of the detection result. Valid values:</p>
              * <ul>
              * <li>NORMAL</li>
              * <li>WARNING</li>

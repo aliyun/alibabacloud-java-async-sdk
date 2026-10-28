@@ -103,7 +103,7 @@ public class QueryFormationInstsByTaskIDRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> to query available region IDs.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query available region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

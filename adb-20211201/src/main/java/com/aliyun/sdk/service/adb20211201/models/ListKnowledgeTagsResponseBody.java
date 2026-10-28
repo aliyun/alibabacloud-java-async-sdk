@@ -262,7 +262,7 @@ public class ListKnowledgeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prompt message.</p>
+             * <p>The message.</p>
              * 
              * <strong>example:</strong>
              * <p>Successful</p>
@@ -273,10 +273,10 @@ public class ListKnowledgeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <p>Indicates whether the request is successful. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The request was successful.</li>
-             * <li><strong>false</strong>: The request failed.</li>
+             * <li><strong>true</strong>: Successful.</li>
+             * <li><strong>false</strong>: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class ListKnowledgeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list details.</p>
+             * <p>The details of the list.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

@@ -117,7 +117,10 @@ public class DescribeAdbMySqlColumnsRequest extends Request {
         } 
 
         /**
-         * Catalog.
+         * <p>The name of the external data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder catalog(String catalog) {
             this.putQueryParameter("Catalog", catalog);
@@ -129,7 +132,7 @@ public class DescribeAdbMySqlColumnsRequest extends Request {
          * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
          * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster IDs of all clusters in a specified region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in the target region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -159,7 +162,7 @@ public class DescribeAdbMySqlColumnsRequest extends Request {
         }
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>adb_demo</p>
@@ -171,7 +174,7 @@ public class DescribeAdbMySqlColumnsRequest extends Request {
         }
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

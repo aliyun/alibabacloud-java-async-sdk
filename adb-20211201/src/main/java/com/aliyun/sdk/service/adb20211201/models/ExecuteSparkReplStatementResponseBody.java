@@ -67,7 +67,7 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -261,7 +261,7 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account that owns the cluster.</p>
+             * <p>The Alibaba Cloud account to which the cluster belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>17108278707****</p>
@@ -272,7 +272,7 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code that is executed.</p>
+             * <p>The executed code.</p>
              * 
              * <strong>example:</strong>
              * <p>print(1+1)</p>
@@ -283,12 +283,12 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code execution status. Valid values:</p>
+             * <p>The execution status of the code. Valid values:</p>
              * <ul>
-             * <li>CANCELLED</li>
-             * <li>RUNNING</li>
-             * <li>SUCCEEDED</li>
-             * <li>ERROR</li>
+             * <li>CANCELLED: The execution is canceled.</li>
+             * <li>RUNNING: The execution is in progress.</li>
+             * <li>SUCCEEDED: The execution is successful.</li>
+             * <li>ERROR: The execution failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -300,7 +300,7 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code type. Valid values:</p>
+             * <p>The type of the code. Valid values:</p>
              * <ul>
              * <li>SCALA</li>
              * <li>PYTHON</li>
@@ -315,7 +315,7 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The column names.</p>
+             * <p>The array of column names.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -323,7 +323,7 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the execution. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The end time. The time is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1730968125000</p>
@@ -345,7 +345,7 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code execution result, which is a JSON string that conforms to Apache Livy.</p>
+             * <p>The code execution result. It is a JSON-formatted string that follows the Apache Livy output standard.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;text/plain&quot;: 2}</p>
@@ -356,10 +356,10 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution result type, which is in the JSON format. Valid values:</p>
+             * <p>The serialization format of the execution result. The structure is a JSON object. Valid values:</p>
              * <ul>
-             * <li>TEXT: the text content that conforms to Apache Livy.</li>
-             * <li>TABLE: the table content that conforms to Apache Livy.</li>
+             * <li>TEXT: The output is text content that follows the Apache Livy standard.</li>
+             * <li>TABLE: The output is table content that follows the Apache Livy standard.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -371,7 +371,7 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the execution. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The start time. The time is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1730968125000</p>

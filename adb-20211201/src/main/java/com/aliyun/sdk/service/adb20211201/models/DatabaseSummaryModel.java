@@ -158,7 +158,7 @@ public class DatabaseSummaryModel extends TeaModel {
         } 
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-05 13:17:55</p>
@@ -169,7 +169,7 @@ public class DatabaseSummaryModel extends TeaModel {
         }
 
         /**
-         * CreatedBySource.
+         * <p>The creation source of the database.</p>
          */
         public Builder createdBySource(String createdBySource) {
             this.createdBySource = createdBySource;
@@ -177,7 +177,7 @@ public class DatabaseSummaryModel extends TeaModel {
         }
 
         /**
-         * CreatedByUser.
+         * <p>The user who created the database.</p>
          */
         public Builder createdByUser(String createdByUser) {
             this.createdByUser = createdByUser;
@@ -185,7 +185,7 @@ public class DatabaseSummaryModel extends TeaModel {
         }
 
         /**
-         * DbType.
+         * <p>The database type.</p>
          */
         public Builder dbType(String dbType) {
             this.dbType = dbType;
@@ -193,7 +193,7 @@ public class DatabaseSummaryModel extends TeaModel {
         }
 
         /**
-         * <p>Description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -204,7 +204,7 @@ public class DatabaseSummaryModel extends TeaModel {
         }
 
         /**
-         * Location.
+         * <p>The data storage location of the database.</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -212,7 +212,7 @@ public class DatabaseSummaryModel extends TeaModel {
         }
 
         /**
-         * <p>Owner.</p>
+         * <p>The owner.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -223,7 +223,7 @@ public class DatabaseSummaryModel extends TeaModel {
         }
 
         /**
-         * <p>logical database name.</p>
+         * <p>The logical database name.</p>
          * 
          * <strong>example:</strong>
          * <p>testSchema</p>
@@ -234,7 +234,7 @@ public class DatabaseSummaryModel extends TeaModel {
         }
 
         /**
-         * <p>Update time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-05 13:17:55</p>

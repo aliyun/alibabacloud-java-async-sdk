@@ -22,9 +22,14 @@ public class DescribeEssdCacheConfigRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     private DescribeEssdCacheConfigRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class DescribeEssdCacheConfigRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeEssdCacheConfigRequest, Builder> {
         private String DBClusterId; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class DescribeEssdCacheConfigRequest extends Request {
         private Builder(DescribeEssdCacheConfigRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -69,6 +83,18 @@ public class DescribeEssdCacheConfigRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the region where the instance resides. The value must be the same as the region of the instance specified by DBClusterId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

@@ -145,7 +145,7 @@ public class DescribeSparkAppDiagnosisInfoRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>zh</p>
+         * <p>PYTHON</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

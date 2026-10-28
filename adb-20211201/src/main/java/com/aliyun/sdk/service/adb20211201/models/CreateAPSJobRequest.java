@@ -218,7 +218,7 @@ public class CreateAPSJobRequest extends Request {
         } 
 
         /**
-         * <p>The name of the synchronization job.</p>
+         * <p>The name of the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * <p>The objects to be synchronized.</p>
+         * <p>The list of synchronization objects.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the database account of the destination cluster.</p>
+         * <p>The instance ID of the destination database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +257,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * <p>The password of the database account of the destination cluster.</p>
+         * <p>The password of the destination instance.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -269,7 +269,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the database account of the destination cluster.</p>
+         * <p>The username of the destination instance.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -281,7 +281,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * <p>The partitions.</p>
+         * <p>The list of partitions.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -295,7 +295,7 @@ public class CreateAPSJobRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -309,7 +309,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source instance or cluster.</p>
+         * <p>The instance ID of the source database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +322,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * <p>The password of the database account of the source instance.</p>
+         * <p>The password of the source endpoint.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -334,7 +334,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the source instance.</p>
+         * <p>The region of the source database.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -346,7 +346,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the database account of the source instance.</p>
+         * <p>The username of the source endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -358,7 +358,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * <p>The mode of the destination table.</p>
+         * <p>The destination table mode.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

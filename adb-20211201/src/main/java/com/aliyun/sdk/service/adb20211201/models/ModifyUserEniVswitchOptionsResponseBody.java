@@ -135,7 +135,7 @@ public class ModifyUserEniVswitchOptionsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Success</p>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;

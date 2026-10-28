@@ -145,7 +145,7 @@ public class AddKnowledgeFileRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+         * <p>The AnalyticDB for MySQL cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class AddKnowledgeFileRequest extends Request {
         }
 
         /**
-         * <p>The file location. Currently, only OSS paths are supported.</p>
+         * <p>The file location. Only OSS paths are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class AddKnowledgeFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the path is a directory.</p>
+         * <p>Specifies whether the path is a folder.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -195,7 +195,10 @@ public class AddKnowledgeFileRequest extends Request {
         }
 
         /**
-         * <p>The confidence level or weight of the file.</p>
+         * <p>The credibility or weight of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);

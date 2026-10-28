@@ -145,7 +145,7 @@ public class OperatorNode extends TeaModel {
         } 
 
         /**
-         * children.
+         * <p>The child operator queue.</p>
          */
         public Builder children(java.util.List<OperatorNode> children) {
             this.children = children;
@@ -153,7 +153,10 @@ public class OperatorNode extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder id(Integer id) {
             this.id = id;
@@ -161,7 +164,10 @@ public class OperatorNode extends TeaModel {
         }
 
         /**
-         * levelWidth.
+         * <p>The total number of nodes at the tree level of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder levelWidth(Integer levelWidth) {
             this.levelWidth = levelWidth;
@@ -169,7 +175,10 @@ public class OperatorNode extends TeaModel {
         }
 
         /**
-         * nodeDepth.
+         * <p>The level of the operator in the tree.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder nodeDepth(Integer nodeDepth) {
             this.nodeDepth = nodeDepth;
@@ -177,7 +186,10 @@ public class OperatorNode extends TeaModel {
         }
 
         /**
-         * nodeName.
+         * <p>The operator name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TableScan</p>
          */
         public Builder nodeName(String nodeName) {
             this.nodeName = nodeName;
@@ -185,7 +197,10 @@ public class OperatorNode extends TeaModel {
         }
 
         /**
-         * nodeWidth.
+         * <p>The left-to-right position of the node at the corresponding level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder nodeWidth(Integer nodeWidth) {
             this.nodeWidth = nodeWidth;
@@ -193,7 +208,10 @@ public class OperatorNode extends TeaModel {
         }
 
         /**
-         * parentId.
+         * <p>The parent operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder parentId(Integer parentId) {
             this.parentId = parentId;
@@ -201,7 +219,7 @@ public class OperatorNode extends TeaModel {
         }
 
         /**
-         * stats.
+         * <p>The operator statistics information.</p>
          */
         public Builder stats(Stats stats) {
             this.stats = stats;
@@ -306,7 +324,10 @@ public class OperatorNode extends TeaModel {
             } 
 
             /**
-             * bytes.
+             * <p>The data volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -314,7 +335,10 @@ public class OperatorNode extends TeaModel {
             }
 
             /**
-             * outputRows.
+             * <p>The number of output rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
@@ -322,7 +346,7 @@ public class OperatorNode extends TeaModel {
             }
 
             /**
-             * parameters.
+             * <p>The operator parameters.</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -330,7 +354,10 @@ public class OperatorNode extends TeaModel {
             }
 
             /**
-             * peakMemory.
+             * <p>The maximum memory size consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -338,7 +365,10 @@ public class OperatorNode extends TeaModel {
             }
 
             /**
-             * timeCost.
+             * <p>The execution time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder timeCost(Long timeCost) {
                 this.timeCost = timeCost;

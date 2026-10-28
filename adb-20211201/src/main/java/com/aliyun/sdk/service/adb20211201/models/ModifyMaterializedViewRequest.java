@@ -256,10 +256,10 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
-         * <p>Enable the refresh delay alert. Valid values:</p>
+         * <p>Specifies whether to enable alerting for refresh latency. Valid values:</p>
          * <ul>
-         * <li>true: Enables alert.</li>
-         * <li>false: Disables alert.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,10 +272,10 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to send alerts when the refresh task fails. Valid values:</p>
+         * <p>Specifies whether to enable alerting for refresh task failures. Valid values:</p>
          * <ul>
-         * <li>true: Send alerts.</li>
-         * <li>false: Alerts disabled.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource group to which the materialized view is bound.</p>
+         * <p>The name of the resource group bound to the materialized view.</p>
          * 
          * <strong>example:</strong>
          * <p>res_1</p>
@@ -300,7 +300,7 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
-         * <p>Refresh delay tolerance (in minutes).</p>
+         * <p>The refresh latency tolerance in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -330,10 +330,10 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable query rewrite. Valid values:</p>
+         * <p>Specifies whether to enable the rewrite feature. Valid values:</p>
          * <ul>
-         * <li>true: Enables query rewrite.</li>
-         * <li>false: Disables query rewrite.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>

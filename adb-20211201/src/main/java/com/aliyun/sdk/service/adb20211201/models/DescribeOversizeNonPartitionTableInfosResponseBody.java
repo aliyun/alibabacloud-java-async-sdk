@@ -143,7 +143,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         }
 
         /**
-         * <p>The queried detection items and detection results.</p>
+         * <p>The list of check items and check results.</p>
          */
         public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
@@ -189,7 +189,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         }
 
         /**
-         * <p>The queried oversized non-partitioned tables.</p>
+         * <p>The information about unreasonable non-partitioned tables.</p>
          */
         public Builder tables(java.util.List<Tables> tables) {
             this.tables = tables;
@@ -197,7 +197,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -279,7 +279,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The information about the detection result.</p>
+             * <p>The check result message.</p>
              * 
              * <strong>example:</strong>
              * <p>Multiple oversized non-partitioned tables are detected.</p>
@@ -290,7 +290,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * <p>The name of the detection item.</p>
+             * <p>The name of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>Oversized non-partitioned table</p>
@@ -301,7 +301,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * <p>The severity level of the detection result.</p>
+             * <p>The status of the check result.</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL
@@ -464,7 +464,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The data size of the table. Unit: bytes.</p>
+             * <p>The size of table data. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2921132457984</p>
@@ -475,7 +475,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * <p>The data size of regular indexes. Unit: bytes.</p>
+             * <p>The size of normal index data. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -497,7 +497,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * <p>The data size of the primary key index. Unit: bytes.</p>
+             * <p>The size of the primary key index. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -541,9 +541,9 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * <p>The percentage of the table size. Unit: %.</p>
+             * <p>The tablespace proportion. Unit: %.</p>
              * <blockquote>
-             * <p> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</p>
+             * <p>Calculation formula: Tablespace proportion = (Total data size of the table / Total data size of the instance) × 100.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

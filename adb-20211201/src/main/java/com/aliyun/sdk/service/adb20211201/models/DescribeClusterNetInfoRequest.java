@@ -88,10 +88,10 @@ public class DescribeClusterNetInfoRequest extends Request {
         } 
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;The ID of an Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
          * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of clusters in a specific region, including cluster IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of clusters in a specified region, including the cluster ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -107,10 +107,8 @@ public class DescribeClusterNetInfoRequest extends Request {
         /**
          * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><p><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</p>
-         * </li>
-         * <li><p><strong>ClickHouse</strong>: the wide table engine.</p>
-         * </li>
+         * <li><strong>AnalyticDB</strong> (default): AnalyticDB for MySQL.</li>
+         * <li><strong>Clickhouse</strong>: wide table engine.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +121,10 @@ public class DescribeClusterNetInfoRequest extends Request {
         }
 
         /**
-         * ResourceGroupName.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

@@ -101,7 +101,7 @@ public class SetSparkAppLogRootPathRequest extends Request {
         }
 
         /**
-         * <p>The path of Object Storage Service (OSS) logs.</p>
+         * <p>The OSS log path.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://testBucketname/to/log</p>
@@ -113,7 +113,7 @@ public class SetSparkAppLogRootPathRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the default OSS log path.</p>
+         * <p>Specifies whether to use the default OSS path.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -499,7 +499,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
              * <p>The queried primary key fields.</p>
              * 
              * <strong>example:</strong>
-             * <p>id,date</p>
+             * <p>2</p>
              */
             public Builder primaryKeyColumns(String primaryKeyColumns) {
                 this.primaryKeyColumns = primaryKeyColumns;
@@ -510,7 +510,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
              * <p>The number of primary key fields.</p>
              * 
              * <strong>example:</strong>
-             * <p>2</p>
+             * <p>3</p>
              */
             public Builder primaryKeyCount(Integer primaryKeyCount) {
                 this.primaryKeyCount = primaryKeyCount;

@@ -89,7 +89,7 @@ public class DescribeApsProgressRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class DescribeApsProgressRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The ID of the data link task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

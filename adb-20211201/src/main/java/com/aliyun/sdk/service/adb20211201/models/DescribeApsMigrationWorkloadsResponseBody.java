@@ -106,7 +106,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried migration workloads.</p>
+         * <p>The list of migration workloads.</p>
          */
         public Builder migrationWorkloads(java.util.List<MigrationWorkloads> migrationWorkloads) {
             this.migrationWorkloads = migrationWorkloads;
@@ -125,7 +125,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -147,7 +147,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -333,7 +333,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of AnalyticDB compute units (ACUs).</p>
+             * <p>The number of ACUs.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -346,7 +346,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was created.</p>
+             * <p>The time when the task was created. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-21T02:15:16Z</p>
@@ -370,7 +370,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job ID.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -392,7 +392,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the migration job was modified.</p>
+             * <p>The time when the task was modified. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-21T02:15:16Z</p>
@@ -403,7 +403,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workload.</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
              * <p>TEST-001</p>
@@ -414,7 +414,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS URL.</p>
+             * <p>The OSS address.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://******</p>
@@ -447,7 +447,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-type of the workload.</p>
+             * <p>The subtask type.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

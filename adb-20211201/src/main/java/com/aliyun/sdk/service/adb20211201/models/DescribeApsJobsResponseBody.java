@@ -158,7 +158,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried APS jobs.</p>
+         * <p>The list of APS tasks.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -171,7 +171,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The backend error code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -182,7 +182,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code. A value of 200 indicates that the request was successful.</p>
+         * <p>The HTTP status code returned for the request. A value of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -193,10 +193,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Valid values:</p>
+         * <p>The additional information about the call result. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, a success message is returned.****</li>
-         * <li>If the request failed, an error message is returned.</li>
+         * <li>If the request is successful, <strong>Success</strong> is returned. </li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,10 +241,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -429,7 +429,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The job ID.</p>
+             * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>aps-******</p>
@@ -440,7 +440,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the APS job.</p>
+             * <p>The name of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>data-sync-******</p>
@@ -451,7 +451,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the APS job was created.</p>
+             * <p>The creation time in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-06-28 15:00:04</p>
@@ -473,7 +473,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination cluster ID.</p>
+             * <p>The destination instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>amv-*******</p>
@@ -498,7 +498,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
              * <p>The progress.</p>
              * 
              * <strong>example:</strong>
-             * <p>30: progress 30%</p>
+             * <p>30: 30% progress</p>
              */
             public Builder projress(String projress) {
                 this.projress = projress;
@@ -506,7 +506,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source instance or cluster.</p>
+             * <p>The source instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-******</p>
@@ -517,7 +517,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the APS job.</p>
+             * <p>The status of the task.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -530,7 +530,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the task.</p>
+             * <p>The status of the subtask.</p>
              * 
              * <strong>example:</strong>
              * <ul>

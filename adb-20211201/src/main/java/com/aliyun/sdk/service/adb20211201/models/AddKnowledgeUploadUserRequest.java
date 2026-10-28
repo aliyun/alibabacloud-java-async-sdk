@@ -23,8 +23,11 @@ public class AddKnowledgeUploadUserRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    private String fileId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileLocation")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String fileLocation;
 
     @com.aliyun.core.annotation.Query
@@ -35,6 +38,7 @@ public class AddKnowledgeUploadUserRequest extends Request {
     private AddKnowledgeUploadUserRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.fileId = builder.fileId;
         this.fileLocation = builder.fileLocation;
         this.users = builder.users;
     }
@@ -60,6 +64,13 @@ public class AddKnowledgeUploadUserRequest extends Request {
     }
 
     /**
+     * @return fileId
+     */
+    public String getFileId() {
+        return this.fileId;
+    }
+
+    /**
      * @return fileLocation
      */
     public String getFileLocation() {
@@ -75,6 +86,7 @@ public class AddKnowledgeUploadUserRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddKnowledgeUploadUserRequest, Builder> {
         private String DBClusterId; 
+        private String fileId; 
         private String fileLocation; 
         private String users; 
 
@@ -85,6 +97,7 @@ public class AddKnowledgeUploadUserRequest extends Request {
         private Builder(AddKnowledgeUploadUserRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.fileId = request.fileId;
             this.fileLocation = request.fileLocation;
             this.users = request.users;
         } 
@@ -103,8 +116,19 @@ public class AddKnowledgeUploadUserRequest extends Request {
         }
 
         /**
-         * <p>The location of the knowledge base document.</p>
-         * <p>This parameter is required.</p>
+         * <p>The ID of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3214123</p>
+         */
+        public Builder fileId(String fileId) {
+            this.putQueryParameter("FileId", fileId);
+            this.fileId = fileId;
+            return this;
+        }
+
+        /**
+         * <p>The path of the knowledge base document.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucketName/path/to/file.pdf</p>
@@ -116,7 +140,7 @@ public class AddKnowledgeUploadUserRequest extends Request {
         }
 
         /**
-         * <p>The JSON string of the authorized user array.</p>
+         * <p>The JSON string of the authorized users array.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

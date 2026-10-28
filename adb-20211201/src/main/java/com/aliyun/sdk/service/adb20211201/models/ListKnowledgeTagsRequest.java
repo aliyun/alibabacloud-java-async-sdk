@@ -23,13 +23,17 @@ public class ListKnowledgeTagsRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    private String fileId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileLocation")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String fileLocation;
 
     private ListKnowledgeTagsRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.fileId = builder.fileId;
         this.fileLocation = builder.fileLocation;
     }
 
@@ -54,6 +58,13 @@ public class ListKnowledgeTagsRequest extends Request {
     }
 
     /**
+     * @return fileId
+     */
+    public String getFileId() {
+        return this.fileId;
+    }
+
+    /**
      * @return fileLocation
      */
     public String getFileLocation() {
@@ -62,6 +73,7 @@ public class ListKnowledgeTagsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListKnowledgeTagsRequest, Builder> {
         private String DBClusterId; 
+        private String fileId; 
         private String fileLocation; 
 
         private Builder() {
@@ -71,11 +83,12 @@ public class ListKnowledgeTagsRequest extends Request {
         private Builder(ListKnowledgeTagsRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.fileId = request.fileId;
             this.fileLocation = request.fileLocation;
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL instance.</p>
+         * <p>The ADB instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,8 +101,19 @@ public class ListKnowledgeTagsRequest extends Request {
         }
 
         /**
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2112314</p>
+         */
+        public Builder fileId(String fileId) {
+            this.putQueryParameter("FileId", fileId);
+            this.fileId = fileId;
+            return this;
+        }
+
+        /**
          * <p>The location of the knowledge base document.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket/doc.pdf</p>

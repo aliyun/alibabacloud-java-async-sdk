@@ -171,10 +171,10 @@ public class DescribeMvRecommendSubTasksRequest extends Request {
         } 
 
         /**
-         * <p>A static value. This parameter cannot be modified.</p>
+         * <p>A fixed value. This value cannot be modified.</p>
          * 
          * <strong>example:</strong>
-         * <p>Modification is not supported.</p>
+         * <p>Not modifiable</p>
          */
         public Builder actionInner(String actionInner) {
             this.putQueryParameter("ActionInner", actionInner);
@@ -195,10 +195,10 @@ public class DescribeMvRecommendSubTasksRequest extends Request {
         }
 
         /**
-         * <p>A static value. This parameter cannot be modified.</p>
+         * <p>A fixed value. This value cannot be modified.</p>
          * 
          * <strong>example:</strong>
-         * <p>Modification is not supported.</p>
+         * <p>Not modifiable</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -207,20 +207,16 @@ public class DescribeMvRecommendSubTasksRequest extends Request {
         }
 
         /**
-         * <p>The sorting criteria.
-         * Valid values for \<code>Type\\</code>:</p>
+         * <p>The sort field.
+         * Valid values for the sort order:</p>
          * <ul>
-         * <li><p>Asc</p>
-         * </li>
-         * <li><p>Desc</p>
-         * </li>
+         * <li>Asc</li>
+         * <li>Desc</li>
          * </ul>
-         * <p>Valid values for \<code>Field\\</code>:</p>
+         * <p>Valid values for the sort field:</p>
          * <ul>
-         * <li><p>StartTime</p>
-         * </li>
-         * <li><p>EndTime</p>
-         * </li>
+         * <li>StartTime</li>
+         * <li>EndTime</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -269,7 +265,7 @@ public class DescribeMvRecommendSubTasksRequest extends Request {
         }
 
         /**
-         * <p>The subtask ID.</p>
+         * <p>The ID of the subtask.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

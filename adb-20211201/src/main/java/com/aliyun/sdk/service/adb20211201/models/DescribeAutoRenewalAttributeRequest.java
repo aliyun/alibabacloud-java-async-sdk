@@ -172,7 +172,7 @@ public class DescribeAutoRenewalAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The cluster IDs.</p>
+         * <p>The list of cluster IDs.</p>
          */
         public Builder DBClusterId(java.util.List<String> DBClusterId) {
             String DBClusterIdShrink = shrink(DBClusterId, "DBClusterId", "json");
@@ -200,7 +200,7 @@ public class DescribeAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * <p>The page number. A positive integer greater than 0 and not exceeding the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -212,9 +212,9 @@ public class DescribeAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned on each page. Valid values:</p>
+         * <p>The number of entries to return on each page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong>(Default)</li>
+         * <li><strong>30</strong> (default)</li>
          * <li><strong>50</strong></li>
          * <li><strong>100</strong></li>
          * </ul>

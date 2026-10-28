@@ -713,7 +713,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The bucket ID.</p>
+         * <p>The bucket number.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -765,7 +765,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The time when the table was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-05 13:17:55</p>
@@ -776,7 +776,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * CreatedBySource.
+         * <p>The creation source of the table.</p>
          */
         public Builder createdBySource(String createdBySource) {
             this.createdBySource = createdBySource;
@@ -784,7 +784,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * CreatedByUser.
+         * <p>The user who created the table.</p>
          */
         public Builder createdByUser(String createdByUser) {
             this.createdByUser = createdByUser;
@@ -803,7 +803,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The name of the logical database.</p>
+         * <p>The logical database name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -814,7 +814,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the dictionary is encrypted.</p>
+         * <p>Indicates whether encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -844,7 +844,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether DFS is allowed.</p>
+         * <p>Indicates whether DFS is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -874,7 +874,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the index is a full index.</p>
+         * <p>Indicates whether full indexing is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -885,7 +885,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the table is a full-text index dictionary.</p>
+         * <p>Indicates whether it is a full-text index dictionary.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -915,7 +915,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The information about the partition key column.</p>
+         * <p>The partition column information.</p>
          * 
          * <strong>example:</strong>
          * <p>colName</p>
@@ -956,7 +956,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The name of the physical database.</p>
+         * <p>The physical database name.</p>
          * 
          * <strong>example:</strong>
          * <p>physicalDatabaseName</p>
@@ -967,7 +967,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The name of the physical table.</p>
+         * <p>The physical table name.</p>
          * 
          * <strong>example:</strong>
          * <p>physicalTableName</p>
@@ -989,7 +989,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The raw table name.</p>
+         * <p>The original table name.</p>
          * 
          * <strong>example:</strong>
          * <p>RawTableName</p>
@@ -1038,7 +1038,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether to route all indexes.</p>
+         * <p>Indicates whether all indexes are routed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1060,7 +1060,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The description of the storage.</p>
+         * <p>The storage description.</p>
          */
         public Builder sd(StorageDescriptorModel sd) {
             this.sd = sd;
@@ -1079,7 +1079,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The information about the subpartition column.</p>
+         * <p>The subpartition column information.</p>
          * 
          * <strong>example:</strong>
          * <p>SubpartitionColumn</p>
@@ -1112,7 +1112,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The name of the table engine.</p>
+         * <p>The table engine name.</p>
          * 
          * <strong>example:</strong>
          * <p>hive</p>
@@ -1123,7 +1123,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The name of the logical table.</p>
+         * <p>The logical table name.</p>
          * 
          * <strong>example:</strong>
          * <p>tableName</p>
@@ -1167,7 +1167,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The time when the table was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-05 13:17:55</p>
@@ -1178,7 +1178,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The normalized SQL statement that is used to create the view.</p>
+         * <p>The normalized result of the SQL statement used to create the view.</p>
          * 
          * <strong>example:</strong>
          * <p>ViewExpandedText</p>
@@ -1189,7 +1189,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The SQL statement used to create the view.</p>
+         * <p>The SQL statement entered when creating the view.</p>
          * 
          * <strong>example:</strong>
          * <p>ViewOriginalText</p>
@@ -1200,7 +1200,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The security mode of the view.</p>
+         * <p>The view safe mode pattern.</p>
          * 
          * <strong>example:</strong>
          * <p>ViewSecurityMode</p>

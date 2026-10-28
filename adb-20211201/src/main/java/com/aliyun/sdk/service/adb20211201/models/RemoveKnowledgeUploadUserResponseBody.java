@@ -170,7 +170,7 @@ public class RemoveKnowledgeUploadUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The location of the knowledge base file.</p>
+             * <p>The address of the knowledge base file.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://bucketName/path/to/file.pdf</p>
@@ -181,7 +181,7 @@ public class RemoveKnowledgeUploadUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prompt message.</p>
+             * <p>The message.</p>
              * 
              * <strong>example:</strong>
              * <p>Successful</p>
@@ -192,7 +192,7 @@ public class RemoveKnowledgeUploadUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of users that were successfully deleted.</p>
+             * <p>The number of successfully deleted users.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -203,10 +203,10 @@ public class RemoveKnowledgeUploadUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <p>Indicates whether the request is successful. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The request was successful.</li>
-             * <li><strong>false</strong>: The request failed.</li>
+             * <li><strong>true</strong>: Successful.</li>
+             * <li><strong>false</strong>: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

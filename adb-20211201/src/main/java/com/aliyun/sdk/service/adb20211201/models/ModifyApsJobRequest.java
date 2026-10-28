@@ -104,7 +104,7 @@ public class ModifyApsJobRequest extends Request {
         } 
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ModifyApsJobRequest extends Request {
         }
 
         /**
-         * <p>The objects to be synchronized.</p>
+         * <p>The list of synchronization objects.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ModifyApsJobRequest extends Request {
         }
 
         /**
-         * <p>The partitions.</p>
+         * <p>The list of partitions.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

@@ -397,7 +397,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The Simple Log Service (SLS) information for the data source to be created.</p>
+         * <p>The Simple Log Service (SLS) information.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -613,7 +613,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The MetaStore endpoint.</p>
+             * <p>The metastore endpoint.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -716,7 +716,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The assigned Kafka topic name.</p>
+             * <p>The name of the allocated Kafka topic.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -877,7 +877,7 @@ public class CreateApsDatasoureRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether cross-account access is enabled. Valid values:</p>
+             * <p>Specifies whether cross-account access is used. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: The current network instance is a cross-account resource.</li>
              * <li><strong>false</strong>: The current network instance is a resource within the current account.</li>
@@ -903,7 +903,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The UID of the cross-account.</p>
+             * <p>The cross-account UID.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789*</p>
@@ -914,7 +914,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The custom RDS endpoint.</p>
+             * <p>The endpoint of the private custom RDS instance.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -1150,7 +1150,7 @@ public class CreateApsDatasoureRequest extends Request {
             } 
 
             /**
-             * <p>The read-only instance endpoint.</p>
+             * <p>The endpoint of the read-only instance.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -1327,7 +1327,7 @@ public class CreateApsDatasoureRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether cross-account access is enabled.</p>
+             * <p>Specifies whether cross-account access is used.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1338,7 +1338,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The role name for cross-account access.</p>
+             * <p>The name of the cross-account role.</p>
              * 
              * <strong>example:</strong>
              * <p>yyy</p>
@@ -1349,7 +1349,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The UID of the cross-account.</p>
+             * <p>The cross-account UID.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxx</p>
@@ -1382,7 +1382,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>sls logstore。</p>
+             * <p>The Simple Log Service Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>test-store</p>

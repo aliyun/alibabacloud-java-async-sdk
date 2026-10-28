@@ -132,7 +132,7 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The API status or POP error code.</p>
+         * <p>The API status code or POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -154,7 +154,7 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed resource usage of the cluster.</p>
+         * <p>The detailed usage of cluster resources.</p>
          * 
          * <strong>example:</strong>
          * <p>69</p>
@@ -165,7 +165,7 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned. A value of 200 indicates that the request was successful.</p>
+         * <p>The HTTP status code returned by the request. A value of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -176,10 +176,10 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information of the call result. Valid values:</p>
+         * <p>The additional information about the call result. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, <strong>Success</strong> is returned. </li>
-         * <li>If the request failed, a specific error code is returned.</li>
+         * <li>If the request is normal, <strong>Success</strong> is returned. </li>
+         * <li>If the request is abnormal, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>

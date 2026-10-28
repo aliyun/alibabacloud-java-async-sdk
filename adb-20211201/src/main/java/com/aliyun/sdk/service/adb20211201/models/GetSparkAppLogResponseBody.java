@@ -67,7 +67,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried log.</p>
+         * <p>The log details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,8 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+             * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>amv-clusterxxx</p>
@@ -181,7 +182,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the log.</p>
+             * <p>The log content.</p>
              * 
              * <strong>example:</strong>
              * <p>22/04/22 15:30:49 INFO Utils: Start the dump task because s202206061441hz22a35ab000****-0001 app end, the interval is 238141ms;22/04/22 15:30:49 INFO AbstractConnector: Stopped Spark@5e774d9d{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}</p>
@@ -192,7 +193,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of log entries. A value of 0 indicates that no valid logs are returned.</p>
+             * <p>The number of log lines. A value of 0 indicates that no valid logs exist.</p>
              * 
              * <strong>example:</strong>
              * <p>3517972480</p>
@@ -203,7 +204,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert message returned for the request, such as task execution failure or insufficient resources. If no alert occurs, null is returned.</p>
+             * <p>The alert information, such as task execution failure or insufficient resources. If no alerts are triggered, an empty value is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>WARNING:  log file maybe deleted, please check oss path: oss://TestBucketName/applog/</p>

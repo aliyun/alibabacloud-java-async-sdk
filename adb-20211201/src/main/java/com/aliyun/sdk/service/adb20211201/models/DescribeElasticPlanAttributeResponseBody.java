@@ -67,7 +67,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried scaling plan.</p>
+         * <p>The elastic plan.</p>
          */
         public Builder elasticPlan(ElasticPlan elasticPlan) {
             this.elasticPlan = elasticPlan;
@@ -75,7 +75,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>A5C433C2-001F-58E3-99F5-3274C14DF8BD</p>
@@ -235,10 +235,15 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether <strong>Default Proportional Scaling for EIUs</strong> is enabled. Valid values: true: Default Proportional Scaling for EIUs is enabled. If you set this parameter to true, storage resources are scaled along with computing resources. false: Default Proportional Scaling for EIUs is not enabled.</p>
-             * <blockquote>
-             * <p> You can enable Default Proportional Scaling for EIUs for only a single scaling plan of a cluster. After you enable a scaling plan of the Default Proportional Scaling for EIUs type, you cannot enable scaling plans of other types.</p>
+             * <p>Indicates whether <strong>proportional default elastic scaling for the storage acceleration service (EIU)</strong> is enabled.
+             * Valid values:</p>
+             * <ul>
+             * <li>true: Enabled. After this feature is enabled, storage resources scale in or out along with the elastic scaling of compute resources.</li>
+             * <li>false: Disabled.<blockquote>
+             * <p>Only one storage elastic plan with proportional default elastic scaling for the storage acceleration service (EIU) can be enabled for the entire cluster. After this type of elastic plan is enabled, no other storage elastic plans can be enabled.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -249,7 +254,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A CORN expression that indicates the scaling cycle and time for the scaling plan.</p>
+             * <p>The cron expression, which indicates the scaling cycle and scaling time of the elastic plan.</p>
              * 
              * <strong>example:</strong>
              * <p>0 20 14 * * ?</p>
@@ -260,7 +265,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the scaling plan.</p>
+             * <p>The name of the elastic plan.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -271,7 +276,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the scaling plan is enabled.</p>
+             * <p>Indicates whether the elastic plan is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -282,9 +287,9 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the scaling plan.</p>
+             * <p>The end time.</p>
              * <blockquote>
-             * <p> The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -296,7 +301,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource group used by the scaling plan.</p>
+             * <p>The name of the resource group to which the elastic plan belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -307,9 +312,9 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the scaling plan.</p>
+             * <p>The start time.</p>
              * <blockquote>
-             * <p> The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -321,7 +326,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of elastic resources after scaling.</p>
+             * <p>The target specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>32ACU</p>
@@ -332,7 +337,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the scaling plan.</p>
+             * <p>The type of the elastic plan.</p>
              * 
              * <strong>example:</strong>
              * <p>EXECUTOR</p>

@@ -99,7 +99,7 @@ public class GetLakeStorageRequest extends Request {
         }
 
         /**
-         * <p>The lake storage ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <ul>

@@ -119,7 +119,7 @@ public class CreateAPSJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The job ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>aps-bj1xxxxxx</p>
@@ -130,7 +130,7 @@ public class CreateAPSJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code or the error code.</p>
+         * <p>The operation status code or POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidInput</p>
@@ -141,7 +141,7 @@ public class CreateAPSJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * <p>The HTTP status code returned. A value of 200 indicates that the request was sent successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,10 +152,10 @@ public class CreateAPSJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Valid values:</p>
+         * <p>The additional information about the call result. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, a success message is returned.****</li>
-         * <li>If the request failed, an error message is returned.</li>
+         * <li>If the request is normal, <strong>OK</strong> is returned.                                </li>
+         * <li>If the request is abnormal, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class CreateAPSJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>D1B8ED33-5E9B-512D-B188-1579ED6xxx</p>
@@ -178,10 +178,10 @@ public class CreateAPSJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

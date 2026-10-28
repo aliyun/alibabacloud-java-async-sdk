@@ -104,7 +104,7 @@ public class UpdateFormationCrawlerRequest extends Request {
         } 
 
         /**
-         * <p>The JSON string that contains the complete configuration of the crawler. This is the most important parameter. For more information about the internal JSON structure, see the CrawlerInfo structure definition section.</p>
+         * <p>The JSON string that contains the complete configuration information of the crawler. This is the core parameter. For more information about the internal JSON structure, see the CrawlerInfo structure definition section.</p>
          * <p>This parameter is required.</p>
          */
         public Builder crawlerInfo(String crawlerInfo) {

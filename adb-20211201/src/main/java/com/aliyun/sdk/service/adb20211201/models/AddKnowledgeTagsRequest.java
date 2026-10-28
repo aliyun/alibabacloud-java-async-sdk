@@ -23,8 +23,11 @@ public class AddKnowledgeTagsRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    private String fileId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileLocation")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String fileLocation;
 
     @com.aliyun.core.annotation.Query
@@ -34,6 +37,7 @@ public class AddKnowledgeTagsRequest extends Request {
     private AddKnowledgeTagsRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.fileId = builder.fileId;
         this.fileLocation = builder.fileLocation;
         this.tags = builder.tags;
     }
@@ -59,6 +63,13 @@ public class AddKnowledgeTagsRequest extends Request {
     }
 
     /**
+     * @return fileId
+     */
+    public String getFileId() {
+        return this.fileId;
+    }
+
+    /**
      * @return fileLocation
      */
     public String getFileLocation() {
@@ -74,6 +85,7 @@ public class AddKnowledgeTagsRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddKnowledgeTagsRequest, Builder> {
         private String DBClusterId; 
+        private String fileId; 
         private String fileLocation; 
         private String tags; 
 
@@ -84,6 +96,7 @@ public class AddKnowledgeTagsRequest extends Request {
         private Builder(AddKnowledgeTagsRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.fileId = request.fileId;
             this.fileLocation = request.fileLocation;
             this.tags = request.tags;
         } 
@@ -102,8 +115,16 @@ public class AddKnowledgeTagsRequest extends Request {
         }
 
         /**
+         * FileId.
+         */
+        public Builder fileId(String fileId) {
+            this.putQueryParameter("FileId", fileId);
+            this.fileId = fileId;
+            return this;
+        }
+
+        /**
          * <p>The location of the knowledge base document.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucketName/path/to/file.pdf</p>

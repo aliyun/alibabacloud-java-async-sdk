@@ -204,7 +204,7 @@ public class DescribeBackupsRequest extends Request {
         } 
 
         /**
-         * <p>The backup set ID.</p>
+         * <p>The ID of the backup set.</p>
          * 
          * <strong>example:</strong>
          * <p>1679758862</p>
@@ -219,7 +219,7 @@ public class DescribeBackupsRequest extends Request {
          * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
          * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specific region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in the specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -233,7 +233,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the \<code>yyyy-MM-ddTHH:mmZ\\</code> format.</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mmZ format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,7 +264,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the integer data type. Default value: 1.</p>
+         * <p>The page number. Valid values: positive integers that are greater than 0 and do not exceed the maximum value of the Integer data type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -276,14 +276,11 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><p>30</p>
-         * </li>
-         * <li><p>50</p>
-         * </li>
-         * <li><p>100</p>
-         * </li>
+         * <li>30</li>
+         * <li>50</li>
+         * <li>100</li>
          * </ul>
          * <p>Default value: 30.</p>
          * 
@@ -297,7 +294,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query only cross-region backups. Set the value to true to query only cross-region backups. Set the value to false to query only local backups.</p>
+         * <p>Specifies whether to query only cross-region backups. If you set this parameter to true, only cross-region backups are queried. If you set this parameter to false, only local backups are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -327,7 +324,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the \<code>yyyy-MM-ddTHH:mmZ\\</code> format.</p>
+         * <p>The start time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -103,7 +103,10 @@ public class DescribeAdbMySqlTablesRequest extends Request {
         } 
 
         /**
-         * Catalog.
+         * <p>The name of the external data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder catalog(String catalog) {
             this.putQueryParameter("Catalog", catalog);
@@ -128,7 +131,7 @@ public class DescribeAdbMySqlTablesRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of a specified cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of the specified cluster.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -142,7 +145,7 @@ public class DescribeAdbMySqlTablesRequest extends Request {
         }
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>adb_demo</p>

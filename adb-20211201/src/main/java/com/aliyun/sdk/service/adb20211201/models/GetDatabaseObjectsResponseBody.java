@@ -114,7 +114,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value is a positive integer. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -152,7 +152,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -247,7 +247,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried databases.</p>
+             * <p>The result array.</p>
              */
             public Builder databaseSummaryModels(java.util.List<DatabaseSummaryModel> databaseSummaryModels) {
                 this.databaseSummaryModels = databaseSummaryModels;
@@ -255,7 +255,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+             * <p>The page number. The value must be greater than 0 and no greater than the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -283,7 +283,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

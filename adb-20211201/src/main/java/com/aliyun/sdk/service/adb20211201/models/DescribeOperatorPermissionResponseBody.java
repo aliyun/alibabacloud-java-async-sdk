@@ -106,7 +106,7 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the permissions take effect.</p>
+         * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-25T03:35:02Z</p>
@@ -128,7 +128,7 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the permissions expire.</p>
+         * <p>The expiration time of the authorization. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-10T02:19:00Z</p>
@@ -139,7 +139,7 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried permissions.</p>
+         * <p>The authorization details.</p>
          * 
          * <strong>example:</strong>
          * <p>Control,Data</p>

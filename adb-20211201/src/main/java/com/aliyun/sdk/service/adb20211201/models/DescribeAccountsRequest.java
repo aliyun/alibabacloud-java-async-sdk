@@ -118,7 +118,7 @@ public class DescribeAccountsRequest extends Request {
         /**
          * <p>The database account.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, information about all database accounts is returned.</p>
+         * <p>If you do not specify this parameter, the information about all database accounts is returned by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster can be of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
          * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
@@ -147,8 +147,8 @@ public class DescribeAccountsRequest extends Request {
         /**
          * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
-         * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+         * <li><strong>AnalyticDB</strong> (default): AnalyticDB for MySQL engine</li>
+         * <li><strong>Clickhouse</strong>: wide-table engine</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,6 +171,9 @@ public class DescribeAccountsRequest extends Request {
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

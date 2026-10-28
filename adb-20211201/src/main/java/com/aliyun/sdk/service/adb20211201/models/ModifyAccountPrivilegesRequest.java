@@ -183,8 +183,8 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-         * &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * PromqlInsertPrivileges.
+         * <p>The list of PromQL write permissions.</p>
          */
         public Builder promqlInsertPrivileges(java.util.List<String> promqlInsertPrivileges) {
             String promqlInsertPrivilegesShrink = shrink(promqlInsertPrivileges, "PromqlInsertPrivileges", "json");
@@ -207,7 +207,10 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * PromqlSelectNodePercentage.
+         * <p>The percentage of PromQL query nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.6</p>
          */
         public Builder promqlSelectNodePercentage(Double promqlSelectNodePercentage) {
             this.putQueryParameter("PromqlSelectNodePercentage", promqlSelectNodePercentage);
@@ -216,7 +219,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * PromqlSelectPrivileges.
+         * <p>The list of PromQL query permissions.</p>
          */
         public Builder promqlSelectPrivileges(java.util.List<String> promqlSelectPrivileges) {
             String promqlSelectPrivilegesShrink = shrink(promqlSelectPrivileges, "PromqlSelectPrivileges", "json");
@@ -239,7 +242,10 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * ResourceGroupName.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);
@@ -320,7 +326,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             } 
 
             /**
-             * <p>The column to which permissions are granted. This parameter is required when the privilege level is column.</p>
+             * <p>The authorized column. This parameter is required when the permission level is column.</p>
              * 
              * <strong>example:</strong>
              * <p>column1</p>
@@ -331,7 +337,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * <p>The database to which permissions are granted. This parameter is required when the privilege level is database, table, or column.</p>
+             * <p>The authorized database. This parameter is required when the permission level is database, table, or column.</p>
              * 
              * <strong>example:</strong>
              * <p>tsdb1</p>
@@ -342,7 +348,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * <p>The table to which permissions are granted. This parameter is required when the privilege level is table or column.</p>
+             * <p>The authorized table. This parameter is required when the permission level is table or column.</p>
              * 
              * <strong>example:</strong>
              * <p>table1</p>
@@ -425,7 +431,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             } 
 
             /**
-             * <p>The privilege object, which is a tuple of database, table, and column.</p>
+             * <p>The permission object, which is a triplet of database, table, and column.</p>
              */
             public Builder privilegeObject(PrivilegeObject privilegeObject) {
                 this.privilegeObject = privilegeObject;
@@ -433,7 +439,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * <p>The privilege level, obtained from the <code>DescribeEnabledPrivileges</code> operation.</p>
+             * <p>The permission level obtained from the <code>DescribeEnabledPrivileges</code> operation.</p>
              * 
              * <strong>example:</strong>
              * <p>Global</p>

@@ -181,7 +181,7 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prompt message.</p>
+             * <p>The message.</p>
              * 
              * <strong>example:</strong>
              * <p>recall 5 files</p>
@@ -192,7 +192,7 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recall results.</p>
+             * <p>The retrieval results.</p>
              */
             public Builder results(java.util.List<java.util.Map<String, ?>> results) {
                 this.results = results;

@@ -132,10 +132,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
-         * <blockquote>
-         * <p> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
-         * </blockquote>
+         * <p>The details of the access denial. This field is returned only when RAM authentication fails.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -154,7 +151,11 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the view.</p>
+         * <p>The type of the source for the original chart. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: basic view</li>
+         * <li><strong>Advanced</strong>: advanced view</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Basic</p>
@@ -166,9 +167,6 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The cluster ID.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>amv-bp198m028ih55xxxx</p>
@@ -179,10 +177,10 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:</p>
+         * <p>Indicates whether the keys completed in the original monitoring view are populated when you view the monitoring view. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,7 +203,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the monitoring view.</p>
+         * <p>The details of the monitoring view.</p>
          */
         public Builder viewDetail(ViewDetail viewDetail) {
             this.viewDetail = viewDetail;
@@ -213,7 +211,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the view.</p>
+         * <p>The name of the monitoring view.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom-All metrics-2 columns-Linked</p>
@@ -321,16 +319,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the multi-cluster feature is enabled. Valid values:</p>
-             * <ul>
-             * <li><p>true</p>
-             * </li>
-             * <li><p>false</p>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * EnableAutoMc.
              */
             public Builder enableAutoMc(Boolean enableAutoMc) {
                 this.enableAutoMc = enableAutoMc;
@@ -338,10 +327,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine of the cluster. Valid values:</p>
-             * <ul>
-             * <li>AnalyticDB</li>
-             * </ul>
+             * <p>The list of applicable cluster engines.</p>
              */
             public Builder engine(java.util.List<String> engine) {
                 this.engine = engine;
@@ -349,14 +335,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource group. Valid values:</p>
-             * <ul>
-             * <li><strong>Interactive</strong></li>
-             * <li><strong>Job</strong></li>
-             * </ul>
-             * <blockquote>
-             * <p> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
-             * </blockquote>
+             * <p>The list of applicable resource group types.</p>
              */
             public Builder groupType(java.util.List<String> groupType) {
                 this.groupType = groupType;
@@ -364,7 +343,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the metric.</p>
+             * <p>The key of the metric.</p>
              * 
              * <strong>example:</strong>
              * <p>AnalyticDB_CPU</p>
@@ -375,10 +354,10 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to select the metric. Valid values:</p>
+             * <p>Indicates whether the metric is selected. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -451,10 +430,10 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             /**
              * <p>The name of the metric category. Valid values:</p>
              * <ul>
-             * <li><strong>Node</strong></li>
-             * <li><strong>DiskData</strong></li>
-             * <li><strong>WorkLoad</strong></li>
-             * <li><strong>ResourceGroup</strong></li>
+             * <li><strong>Node</strong>: node resource metrics</li>
+             * <li><strong>DiskData</strong>: disk metrics</li>
+             * <li><strong>WorkLoad</strong>: workload metrics</li>
+             * <li><strong>ResourceGroup</strong>: resource group metrics</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -466,7 +445,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metrics.</p>
+             * <p>The list of metrics.</p>
              */
             public Builder keys(java.util.List<Keys> keys) {
                 this.keys = keys;
@@ -546,7 +525,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The metric category.</p>
+             * <p>The list of metric categories.</p>
              */
             public Builder categories(java.util.List<Categories> categories) {
                 this.categories = categories;
@@ -554,10 +533,10 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the filter interaction feature. Valid values:</p>
+             * <p>Indicates whether it is a linkage chart. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -569,7 +548,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of charts to display in each row.</p>
+             * <p>The number of charts displayed in each row.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

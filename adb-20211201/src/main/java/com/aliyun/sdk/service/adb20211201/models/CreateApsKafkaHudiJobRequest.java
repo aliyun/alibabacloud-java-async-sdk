@@ -460,8 +460,8 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         } 
 
         /**
-         * <p>The RAM role of a trusted entity that is an Alibaba Cloud account. For more information about how to create a RAM role, see Create a RAM role for a trusted Alibaba Cloud account.
-         * The Alibaba Cloud account that owns the AnalyticDB for MySQL cluster must be added as a trusted account to the RAM role.</p>
+         * <p>The RAM role whose trusted entity is an Alibaba Cloud account. For more information about how to create a RAM role, see Create a RAM role for a trusted Alibaba Cloud account.
+         * In the RAM role, the Alibaba Cloud account to which AnalyticDB for MySQL belongs must be configured as a trusted account for the Alibaba Cloud account to which the Kafka instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>aps</p>
@@ -485,7 +485,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The advanced configuration.</p>
+         * <p>The advanced configurations.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -512,7 +512,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to view the cluster IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters in the destination region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (3.0) clusters in the specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -538,9 +538,11 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The valid values and their descriptions are as follows:
-         * Single: The source is a single-line JSON record.
-         * Multi: The source is a JSON array. A single JSON record is returned as the output.</p>
+         * <p>The data output format. Valid values:</p>
+         * <ul>
+         * <li>Single: The source is a single-line JSON record.</li>
+         * <li>Multi: The source is a JSON array. A single JSON record must be output.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Single</p>
@@ -564,7 +566,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined name of the database.</p>
+         * <p>The custom database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -577,7 +579,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The configuration for full synchronization.</p>
+         * <p>The full synchronization configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>2ACU</p>
@@ -589,7 +591,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The Hudi configuration for the destination.</p>
+         * <p>The destination Hudi configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>hoodie.keep.min.commits=20</p>
@@ -601,7 +603,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The configuration for incremental synchronization.</p>
+         * <p>The incremental synchronization configurations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -614,13 +616,15 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The number of nested JSON layers to parse. Valid values:
-         * 0: No parsing is performed.
-         * 1: One layer is parsed.
-         * 2: Two layers are parsed.
-         * 3: Three layers are parsed.
-         * 4: Four layers are parsed.
-         * By default, one layer is parsed. For more information about the JSON parsing policy for nested data, see JSON parsing levels and schema field inference examples.</p>
+         * <p>The nesting parse level for JSON. Valid values:</p>
+         * <ul>
+         * <li>0: No parsing.</li>
+         * <li>1: Parse one level.</li>
+         * <li>2: Parse two levels.</li>
+         * <li>3: Parse three levels.</li>
+         * <li>4: Parse four levels.
+         * Default value: 1. For more information about the JSON nesting parse strategy, see JSON parse levels and schema field inference examples.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -632,7 +636,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Kafka instance. Obtain the ID from the Kafka console.</p>
+         * <p>Instance ID of the Kafka instance. You can obtain instance ID in the Kafka console.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -644,7 +648,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Kafka topic. Obtain the ID from the Kafka console.</p>
+         * <p>The ID of the Kafka topic. You can obtain the ID in the Kafka console.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -668,7 +672,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to consume in a single batch.</p>
+         * <p>The maximum number of messages to consume per trigger.</p>
          * 
          * <strong>example:</strong>
          * <p>50000</p>
@@ -680,7 +684,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The destination lakehouse address. This must be a complete OSS path.</p>
+         * <p>The destination lakehouse address, which is a complete OSS path.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-xx-zzz/yyy/</p>
@@ -714,16 +718,16 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The primary key settings. This parameter supports the UUID policy and the mapping policy. The policies are described as follows.
-         * UUID policy: &quot;Strategy&quot;: &quot;uuid&quot;.
-         * Mapping policy:
+         * <p>The primary key settings, including the UUID strategy and the mapping strategy. Details:
+         * UUID strategy: &quot;Strategy&quot;: &quot;uuid&quot;.
+         * Mapping strategy:
          * &quot;Strategy&quot;: &quot;mapping&quot;,
          * &quot;Values&quot;:[
-         * &quot;f1&quot;,
-         * &quot;f2&quot;
+         *  &quot;f1&quot;,
+         *  &quot;f2&quot;
          * ],
          * &quot;RecordVersionField&quot;,&quot;xxx&quot;
-         * \<code>RecordVersionField\\</code> specifies the Hudi record version.</p>
+         * RecordVersionField specifies the Hudi record version.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;Strategy&quot;: &quot;mapping&quot;</p>
@@ -773,10 +777,12 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The initial consumer offset for Kafka.
-         * Valid values:
-         * begin_cursor, end_cursor, and timestamp.
-         * These values correspond to the earliest offset, the latest offset, and a specified time.</p>
+         * <p>The starting consumption offset for Kafka. Valid values:</p>
+         * <ul>
+         * <li>begin_cursor: The earliest offset.</li>
+         * <li>end_cursor: The latest offset.</li>
+         * <li>timestamp: A specified time.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -789,7 +795,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined name of the table.</p>
+         * <p>The custom table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -802,7 +808,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The generation rule for the destination.</p>
+         * <p>The destination generation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -814,7 +820,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The type of the destination.</p>
+         * <p>The destination type.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>

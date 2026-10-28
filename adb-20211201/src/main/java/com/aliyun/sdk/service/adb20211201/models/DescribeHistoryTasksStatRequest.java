@@ -202,7 +202,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         } 
 
         /**
-         * <p>Minimum task execution time, used to filter tasks with execution time greater than this value, in seconds. Default 0, meaning no limit</p>
+         * <p>The minimum execution duration of the task, in seconds. This parameter is used to filter tasks whose execution duration is greater than the specified value. Default value: 0, which indicates no limit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,7 +214,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>Query start time.</p>
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-********</p>
@@ -239,7 +239,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +252,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy*****</p>
@@ -273,17 +273,24 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>The state of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>Scheduled</strong></li>
-         * <li><strong>Running</strong></li>
-         * <li><strong>Succeed</strong></li>
-         * <li><strong>Failed</strong>: The task failed.</li>
-         * <li><strong>Cancelling</strong></li>
-         * <li><strong>Canceled</strong></li>
-         * <li><strong>Waiting</strong></li>
+         * <li><p><strong>Scheduled</strong>: Pending execution.</p>
+         * </li>
+         * <li><p><strong>Running</strong>: Running.</p>
+         * </li>
+         * <li><p><strong>Succeed</strong>: Succeeded.</p>
+         * </li>
+         * <li><p><strong>Failed</strong>: Failed.</p>
+         * </li>
+         * <li><p><strong>Cancelling</strong>: Cancelling.</p>
+         * </li>
+         * <li><p><strong>Canceled</strong>: Canceled.</p>
+         * </li>
+         * <li><p><strong>Waiting</strong>: Waiting for the scheduled time.</p>
+         * </li>
          * </ul>
-         * <p>Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.</p>
+         * <p>Separate multiple values with commas (,). By default, this parameter is left empty, which indicates that all statuses are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Scheduled</p>
@@ -295,7 +302,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>Task ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1564657730</p>
@@ -307,7 +314,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>Task type.</p>
+         * <p>The task type.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>
@@ -319,7 +326,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>Maximum task execution time, used to filter tasks with execution time not less than this value, in seconds. Default 0, meaning no limit</p>
+         * <p>The maximum execution duration of the task, in seconds. This parameter is used to filter tasks whose execution duration is less than or equal to the specified value. Default value: 0, which indicates no limit.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -331,7 +338,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>Represents tasks whose start time is before this time.</p>
+         * <p>The end time of the query. Only tasks whose start time is earlier than the specified end time are returned. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

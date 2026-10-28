@@ -80,7 +80,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The API status or POP error code.</p>
+         * <p>The API status code or POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -207,7 +207,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of elastic ACU resources.</p>
+             * <p>The number of elastic ACUs.</p>
              * 
              * <strong>example:</strong>
              * <p>16ACU</p>
@@ -218,7 +218,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of reserved ACU resources.</p>
+             * <p>The number of reserved ACUs.</p>
              * 
              * <strong>example:</strong>
              * <p>16ACU</p>
@@ -229,7 +229,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of spot instance ACU resources.</p>
+             * <p>The number of spot instance ACUs.</p>
              * 
              * <strong>example:</strong>
              * <p>16ACU</p>
@@ -251,7 +251,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of ACU resources.</p>
+             * <p>The total number of ACUs.</p>
              * 
              * <strong>example:</strong>
              * <p>32ACU</p>
@@ -394,7 +394,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the job. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
+             * <p>The end time of the job. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-23T16:00:00Z</p>
@@ -416,7 +416,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the job. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
+             * <p>The start time of the job. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-22T16:00:00Z</p>
@@ -438,7 +438,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * SparkAppName.
+             * <p>The name of the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SparkTest</p>
              */
             public Builder sparkAppName(String sparkAppName) {
                 this.sparkAppName = sparkAppName;
@@ -446,7 +449,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the hot pool is used.</p>
+             * <p>Indicates whether the cache pool is used.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -593,7 +596,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
+             * <p>The end time. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-23T16:00:00Z</p>
@@ -634,7 +637,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
+             * <p>The start time. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-22T16:00:00Z</p>

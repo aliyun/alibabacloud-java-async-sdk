@@ -67,7 +67,10 @@ public class SparkOperatorInfo extends TeaModel {
         } 
 
         /**
-         * MetricValue.
+         * <p>The metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder metricValue(Long metricValue) {
             this.metricValue = metricValue;
@@ -75,7 +78,10 @@ public class SparkOperatorInfo extends TeaModel {
         }
 
         /**
-         * OperatorName.
+         * <p>The operator name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TableScan</p>
          */
         public Builder operatorName(byte[] operatorName) {
             this.operatorName = operatorName;

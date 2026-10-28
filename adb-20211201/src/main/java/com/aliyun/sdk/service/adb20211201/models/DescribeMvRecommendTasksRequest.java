@@ -143,10 +143,10 @@ public class DescribeMvRecommendTasksRequest extends Request {
         } 
 
         /**
-         * <p>A static field. This parameter cannot be modified.</p>
+         * <p>A fixed value. This parameter cannot be modified.</p>
          * 
          * <strong>example:</strong>
-         * <p>Modification is not supported.</p>
+         * <p>Not modifiable</p>
          */
         public Builder actionInner(String actionInner) {
             this.putQueryParameter("ActionInner", actionInner);
@@ -167,10 +167,10 @@ public class DescribeMvRecommendTasksRequest extends Request {
         }
 
         /**
-         * <p>A static field. This parameter cannot be modified.</p>
+         * <p>A fixed value. This parameter cannot be modified.</p>
          * 
          * <strong>example:</strong>
-         * <p>Modification is not supported.</p>
+         * <p>Not modifiable</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);

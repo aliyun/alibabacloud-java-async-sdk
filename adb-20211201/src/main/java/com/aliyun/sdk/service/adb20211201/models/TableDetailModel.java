@@ -210,7 +210,7 @@ public class TableDetailModel extends TeaModel {
         } 
 
         /**
-         * <p>External data source.</p>
+         * <p>The external data source.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -221,7 +221,7 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * <p>Column information.</p>
+         * <p>The column information.</p>
          */
         public Builder columns(java.util.List<ColDetailModel> columns) {
             this.columns = columns;
@@ -229,7 +229,7 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-05 13:17:55</p>
@@ -240,7 +240,7 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * CreatedBySource.
+         * <p>The creation source of the table.</p>
          */
         public Builder createdBySource(String createdBySource) {
             this.createdBySource = createdBySource;
@@ -248,7 +248,7 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * CreatedByUser.
+         * <p>The user who created the table.</p>
          */
         public Builder createdByUser(String createdByUser) {
             this.createdByUser = createdByUser;
@@ -256,7 +256,7 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * <p>Description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>Description</p>
@@ -267,7 +267,10 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * Location.
+         * <p>The storage location of the table data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://**************</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -275,7 +278,7 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * <p>Owner.</p>
+         * <p>The owner.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -286,7 +289,7 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The table property parameters.</p>
          */
         public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
@@ -294,7 +297,7 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * <p>Logical database name.</p>
+         * <p>The logical database name.</p>
          * 
          * <strong>example:</strong>
          * <p>schemaName</p>
@@ -305,7 +308,7 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * <p>Logical table name.</p>
+         * <p>The logical table name.</p>
          * 
          * <strong>example:</strong>
          * <p>tableName</p>
@@ -316,7 +319,7 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * <p>Table type.</p>
+         * <p>The table type.</p>
          * 
          * <strong>example:</strong>
          * <p>PHYSICAL_SCHEMA_NAME</p>
@@ -327,7 +330,7 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * <p>Update time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-05 13:17:55</p>

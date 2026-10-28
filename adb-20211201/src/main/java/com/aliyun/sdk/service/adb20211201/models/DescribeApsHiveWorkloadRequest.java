@@ -114,7 +114,7 @@ public class DescribeApsHiveWorkloadRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The data link task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

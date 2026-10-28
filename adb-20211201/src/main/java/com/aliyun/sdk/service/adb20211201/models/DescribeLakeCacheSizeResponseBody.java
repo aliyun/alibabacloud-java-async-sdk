@@ -80,7 +80,7 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. The value 200 indicates that the request is successful.</p>
+         * <p>The status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -207,7 +207,7 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the lake cache space. Unit: GB.</p>
+             * <p>The size of the lake storage acceleration cache space, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -229,7 +229,7 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data that occupies the lake cache space. Unit: GB.</p>
+             * <p>The used capacity of the lake storage cache space, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -240,7 +240,7 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the lake cache feature is enabled.</p>
+             * <p>Indicates whether lake storage acceleration is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -251,7 +251,7 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The clusters that share the lake cache space.</p>
+             * <p>The list of instances that share the lake storage cache space.</p>
              */
             public Builder instances(java.util.List<String> instances) {
                 this.instances = instances;

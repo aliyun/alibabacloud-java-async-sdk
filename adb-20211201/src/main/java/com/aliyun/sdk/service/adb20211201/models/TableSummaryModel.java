@@ -197,7 +197,7 @@ public class TableSummaryModel extends TeaModel {
         } 
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-05 13:17:55</p>
@@ -208,7 +208,7 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * CreatedBySource.
+         * <p>The creation source of the table or view.</p>
          */
         public Builder createdBySource(String createdBySource) {
             this.createdBySource = createdBySource;
@@ -216,7 +216,7 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * CreatedByUser.
+         * <p>The user who created the table or view.</p>
          */
         public Builder createdByUser(String createdByUser) {
             this.createdByUser = createdByUser;
@@ -224,7 +224,7 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * <p>Description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>descrtiption</p>
@@ -235,7 +235,7 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * MvDetailModel.
+         * <p>The materialized view details.</p>
          */
         public Builder mvDetailModel(OpenStructMvDetailModel mvDetailModel) {
             this.mvDetailModel = mvDetailModel;
@@ -243,7 +243,7 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * <p>Owner.</p>
+         * <p>The owner.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -254,7 +254,7 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * <p>SQL for creating the table or view.</p>
+         * <p>The SQL statement used to create the table or view.</p>
          * 
          * <strong>example:</strong>
          * <p>create table(a varchar)</p>
@@ -265,7 +265,7 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * <p>Logical database name.</p>
+         * <p>The logical database name.</p>
          * 
          * <strong>example:</strong>
          * <p>schemaName</p>
@@ -276,7 +276,7 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * <p>Logical table name or logical view name.</p>
+         * <p>The logical table name or logical view name.</p>
          * 
          * <strong>example:</strong>
          * <p>tableName</p>
@@ -287,7 +287,7 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * <p>Table size in bytes.</p>
+         * <p>The table size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -298,7 +298,7 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * <p>Table or view type.</p>
+         * <p>The table or view type.</p>
          * 
          * <strong>example:</strong>
          * <p>PHYSICAL_SCHEMA_NAME</p>
@@ -309,7 +309,7 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * <p>Update time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-05 13:17:55</p>

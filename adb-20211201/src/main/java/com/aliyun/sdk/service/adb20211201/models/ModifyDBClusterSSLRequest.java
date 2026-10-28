@@ -28,12 +28,15 @@ public class ModifyDBClusterSSLRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableSSL")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableSSL;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLEnabled")
+    private String SSLEnabled;
 
     private ModifyDBClusterSSLRequest(Builder builder) {
         super(builder);
@@ -41,6 +44,7 @@ public class ModifyDBClusterSSLRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.enableSSL = builder.enableSSL;
         this.regionId = builder.regionId;
+        this.SSLEnabled = builder.SSLEnabled;
     }
 
     public static Builder builder() {
@@ -84,11 +88,19 @@ public class ModifyDBClusterSSLRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return SSLEnabled
+     */
+    public String getSSLEnabled() {
+        return this.SSLEnabled;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBClusterSSLRequest, Builder> {
         private String connectionString; 
         private String DBClusterId; 
         private Boolean enableSSL; 
         private String regionId; 
+        private String SSLEnabled; 
 
         private Builder() {
             super();
@@ -100,10 +112,11 @@ public class ModifyDBClusterSSLRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.enableSSL = request.enableSSL;
             this.regionId = request.regionId;
+            this.SSLEnabled = request.SSLEnabled;
         } 
 
         /**
-         * <p>The private or public endpoint for which the server certificate needs to be created or updated.</p>
+         * <p>The internal or public endpoint for which to create or update a server certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-***********.ads.aliyuncs.com</p>
@@ -128,12 +141,11 @@ public class ModifyDBClusterSSLRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable SSL encryption. Valid values:</p>
+         * <p>Specifies whether to enable SSL connection encryption. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enabled</li>
-         * <li><strong>false</strong>: disabled</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -153,6 +165,23 @@ public class ModifyDBClusterSSLRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The SSL operation. This parameter and EnableSSL are mutually exclusive. Valid values:</p>
+         * <ul>
+         * <li>Enable: Enables SSL.</li>
+         * <li>Disable: Disables SSL.</li>
+         * <li>Update: Updates the validity period of an enabled SSL certificate and retains the current endpoint bound to the certificate. When you set this parameter to Update, do not specify ConnectionString, or specify an endpoint that is the same as the current endpoint bound to the certificate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Update</p>
+         */
+        public Builder SSLEnabled(String SSLEnabled) {
+            this.putQueryParameter("SSLEnabled", SSLEnabled);
+            this.SSLEnabled = SSLEnabled;
             return this;
         }
 

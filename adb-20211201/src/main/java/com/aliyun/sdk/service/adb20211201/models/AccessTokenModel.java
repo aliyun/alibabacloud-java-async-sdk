@@ -106,7 +106,10 @@ public class AccessTokenModel extends TeaModel {
         } 
 
         /**
-         * AccessToken.
+         * <p>The access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -114,7 +117,7 @@ public class AccessTokenModel extends TeaModel {
         }
 
         /**
-         * Comment.
+         * <p>The comment for the access token.</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -122,7 +125,7 @@ public class AccessTokenModel extends TeaModel {
         }
 
         /**
-         * CreatedAt.
+         * <p>The creation time of the access token.</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -130,7 +133,7 @@ public class AccessTokenModel extends TeaModel {
         }
 
         /**
-         * ExpiredAt.
+         * <p>The expiration time of the access token.</p>
          */
         public Builder expiredAt(String expiredAt) {
             this.expiredAt = expiredAt;
@@ -138,7 +141,7 @@ public class AccessTokenModel extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the access token.</p>
          */
         public Builder status(String status) {
             this.status = status;

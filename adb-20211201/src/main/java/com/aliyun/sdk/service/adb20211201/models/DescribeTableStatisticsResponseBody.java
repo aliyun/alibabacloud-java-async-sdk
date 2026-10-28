@@ -162,7 +162,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -184,7 +184,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The names of databases.</p>
+         * <p>The list of database names.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;adb_platform\&quot;, \&quot;adb_ai\&quot;, \&quot;adb_data\&quot;]</p>
@@ -195,7 +195,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>693</p>

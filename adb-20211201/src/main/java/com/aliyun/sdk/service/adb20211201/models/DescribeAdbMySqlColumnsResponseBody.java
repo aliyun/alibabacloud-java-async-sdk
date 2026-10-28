@@ -153,8 +153,8 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         /**
          * <p>The additional information about the call result. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, <strong>Success</strong> is returned. </li>
-         * <li>If the request failed, a specific error code is returned.</li>
+         * <li>If the request is successful, <strong>Success</strong> is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>A9F013CD-0222-595E-8157-445969B97F03</p>
@@ -177,7 +177,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>adb_demo</p>
@@ -188,7 +188,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: The call was successful.</li>
          * <li><strong>false</strong>: The call failed.</li>
@@ -203,7 +203,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -296,7 +296,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The column name.</p>
+             * <p>The name of the column.</p>
              * 
              * <strong>example:</strong>
              * <p>id</p>

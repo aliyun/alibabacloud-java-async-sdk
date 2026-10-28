@@ -163,7 +163,7 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends Request {
          * <p>The name of the client.</p>
          * 
          * <strong>example:</strong>
-         * <p>Dataworks。</p>
+         * <p>DataWorks</p>
          */
         public Builder agency(String agency) {
             this.putBodyParameter("Agency", agency);

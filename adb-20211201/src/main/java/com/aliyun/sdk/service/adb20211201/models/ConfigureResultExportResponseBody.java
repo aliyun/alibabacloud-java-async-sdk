@@ -130,7 +130,7 @@ public class ConfigureResultExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The path where the result sets are stored.</p>
+         * <p>The configured result set export information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ConfigureResultExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. A value of 200 indicates that the request is successful.</p>
+         * <p>The HTTP status code. A status code of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,10 +149,10 @@ public class ConfigureResultExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Valid values:</p>
+         * <p>The additional information about the call result. Description:</p>
          * <ul>
-         * <li>OK is returned if the request is normal.</li>
-         * <li>The specific error code is returned if the request is abnormal,</li>
+         * <li>If the request is normal, OK is returned.</li>
+         * <li>If the request is abnormal, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class ConfigureResultExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -175,10 +175,10 @@ public class ConfigureResultExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class ConfigureResultExportResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS path where the result sets are stored.</p>
+             * <p>The OSS path where the export results are stored.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://testBucketName/data_result</p>
@@ -272,7 +272,7 @@ public class ConfigureResultExportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource group that runs the job.</p>
+             * <p>The name of the resource group in which the export SQL statement is executed.</p>
              * 
              * <strong>example:</strong>
              * <p>aps</p>
@@ -283,7 +283,7 @@ public class ConfigureResultExportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the OSS file. Unit: days. Minimum: 1 day, maximum: 30 days.</p>
+             * <p>The expiration time of the OSS file. Unit: days. The minimum value is 1 day and the maximum value is 30 days.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -366,7 +366,7 @@ public class ConfigureResultExportResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The expiration time of the Logstore temporarily generated during the result set export. Unit: days. The Logstore is automatically deleted after it expires. Minimum value: 1 day. Maximum value: 30 days.</p>
+             * <p>The expiration time of the temporary Logstore generated for result set export. Unit: days. The Logstore is automatically deleted after expiration. The minimum value is 1 day and the maximum value is 30 days.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -377,7 +377,7 @@ public class ConfigureResultExportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource group that runs the job.</p>
+             * <p>The name of the resource group in which the export SQL statement is executed.</p>
              * 
              * <strong>example:</strong>
              * <p>aps</p>
@@ -473,8 +473,8 @@ public class ConfigureResultExportResponseBody extends TeaModel {
             /**
              * <p>The export type. Valid values:</p>
              * <ul>
-             * <li>SLS: Indicates that the export destination is SLS.</li>
-             * <li>OSS: Indicates that the export destination is OSS.</li>
+             * <li>SLS: Exports data to SLS.</li>
+             * <li>OSS: Exports data to OSS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -486,7 +486,7 @@ public class ConfigureResultExportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS configuration if the destination is of the OSS type.</p>
+             * <p>The OSS export information configured when the export destination is OSS.</p>
              */
             public Builder ossInfo(OssInfo ossInfo) {
                 this.ossInfo = ossInfo;
@@ -494,7 +494,7 @@ public class ConfigureResultExportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SLS configuration if the destination is of the SLS type.</p>
+             * <p>The SLS configuration information when the export destination is SLS.</p>
              */
             public Builder slsInfo(SlsInfo slsInfo) {
                 this.slsInfo = slsInfo;

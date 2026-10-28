@@ -67,7 +67,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried job.</p>
+         * <p>The workload information.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -407,7 +407,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy to handle tables with the same name in the destination cluster.</p>
+             * <p>The handling strategy when a database or table with the same name exists at the destination.</p>
              * 
              * <strong>example:</strong>
              * <p>Intercept</p>
@@ -418,7 +418,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workload was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -453,7 +453,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data source.</p>
+             * <p>The data source name.</p>
              * 
              * <strong>example:</strong>
              * <p>sls-******</p>
@@ -464,7 +464,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the E-MapReduce (EMR) cluster.</p>
+             * <p>The EMR cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -477,7 +477,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of AnalyticDB compute units (ACUs) required for migration.</p>
+             * <p>The number of ACUs required for migration.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>
@@ -488,7 +488,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the Hive Metastore.</p>
+             * <p>The Hive metastore URL.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -501,7 +501,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Object Storage Service (OSS) URL of the AnalyticDB for MySQL cluster data.</p>
+             * <p>The OSS address.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://******</p>
@@ -512,7 +512,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tasks that are allowed in parallel.</p>
+             * <p>The degree of parallelism.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -534,7 +534,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group to which the SQL statement belongs.</p>
+             * <p>The resource pool to which the SQL statement belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -545,7 +545,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the workload.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>COMPLETED</p>
@@ -556,7 +556,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expression that manually matches the source database table whitelist.</p>
+             * <p>The whitelist expression for manually matching source databases and tables.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -567,7 +567,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Manually match the blacklist expressions for source database tables.</p>
+             * <p>The blacklist expression for manually matching source databases and tables.</p>
              * 
              * <strong>example:</strong>
              * <p>def</p>
@@ -589,7 +589,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the vSwitch.</p>
+             * <p>The vSwitch name.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-******</p>
@@ -600,7 +600,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job ID.</p>
+             * <p>The data link task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aps-******</p>
@@ -611,7 +611,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workload.</p>
+             * <p>The workload name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -622,7 +622,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workload.</p>
+             * <p>The workload name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

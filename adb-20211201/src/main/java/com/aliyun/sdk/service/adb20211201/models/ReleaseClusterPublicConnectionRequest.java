@@ -88,8 +88,8 @@ public class ReleaseClusterPublicConnectionRequest extends Request {
         } 
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+         * &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -104,10 +104,8 @@ public class ReleaseClusterPublicConnectionRequest extends Request {
         /**
          * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><p><strong>AnalyticDB</strong> (Default): AnalyticDB for MySQL.</p>
-         * </li>
-         * <li><p><strong>ClickHouse</strong>: a wide table engine.</p>
-         * </li>
+         * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+         * <li><strong>Clickhouse</strong>: the wide-table engine.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,7 +118,10 @@ public class ReleaseClusterPublicConnectionRequest extends Request {
         }
 
         /**
-         * ResourceGroupName.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

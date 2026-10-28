@@ -175,7 +175,7 @@ public class DescribeBadSqlDetectionRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of all AnalyticDB for MySQL clusters in a specific region, including the cluster ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -189,7 +189,7 @@ public class DescribeBadSqlDetectionRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+         * <p>The end time of the query, which must be later than the start time. Format: <i>yyyy-MM-ddTHH:mmZ</i> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-17T02:16Z</p>
@@ -201,9 +201,9 @@ public class DescribeBadSqlDetectionRequest extends Request {
         }
 
         /**
-         * <p>The language. Valid values:</p>
+         * <p>The language configuration. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: simplified Chinese.</li>
+         * <li><strong>zh</strong>: Simplified Chinese (default).</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
@@ -237,7 +237,7 @@ public class DescribeBadSqlDetectionRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -269,7 +269,7 @@ public class DescribeBadSqlDetectionRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+         * <p>The start time of the query. Format: <i>yyyy-MM-ddTHH:mmZ</i> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-23T02:18Z</p>

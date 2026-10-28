@@ -143,7 +143,7 @@ public class UpdateFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is processed successfully.</p>
+         * <p>Indicates whether the request was processed successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -165,10 +165,10 @@ public class UpdateFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information about the call result. Valid values:</p>
+         * <p>The additional information about the call result.</p>
          * <ul>
-         * <li>If the request is successful, OK is returned.</li>
-         * <li>If the request fails, a specific error code is returned.</li>
+         * <li>If the request is normal, OK is returned.</li>
+         * <li>If an exception occurs, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,10 +191,10 @@ public class UpdateFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Successful.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

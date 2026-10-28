@@ -106,7 +106,7 @@ public class UserSummaryModel extends TeaModel {
         } 
 
         /**
-         * AccessTokens.
+         * <p>The list of access tokens for the user.</p>
          */
         public Builder accessTokens(java.util.List<AccessTokenModel> accessTokens) {
             this.accessTokens = accessTokens;
@@ -122,7 +122,10 @@ public class UserSummaryModel extends TeaModel {
         }
 
         /**
-         * RamUser.
+         * <p>The ID of the associated Alibaba Cloud RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1444832459****</p>
          */
         public Builder ramUser(String ramUser) {
             this.ramUser = ramUser;
@@ -130,7 +133,7 @@ public class UserSummaryModel extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The user status.</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -138,7 +141,10 @@ public class UserSummaryModel extends TeaModel {
         }
 
         /**
-         * UserName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

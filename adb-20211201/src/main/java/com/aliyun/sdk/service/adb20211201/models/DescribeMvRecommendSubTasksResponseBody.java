@@ -136,7 +136,7 @@ public class DescribeMvRecommendSubTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -242,7 +242,7 @@ public class DescribeMvRecommendSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of materialized view recommendation task executions.</p>
+             * <p>The execution list of the materialized view recommendation task.</p>
              */
             public Builder mvRecommendSubTaskModels(java.util.List<OpenStructMvRecommendSubTaskModel> mvRecommendSubTaskModels) {
                 this.mvRecommendSubTaskModels = mvRecommendSubTaskModels;

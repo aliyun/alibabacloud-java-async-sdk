@@ -67,7 +67,7 @@ public class SubmitSparkLogAnalyzeTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the Spark log analysis task.</p>
+         * <p>The details of the Spark log analysis task.</p>
          */
         public Builder data(SparkAnalyzeLogTask data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class SubmitSparkLogAnalyzeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1DF5AF5B-C803-1861-A0FF-63666A557709</p>

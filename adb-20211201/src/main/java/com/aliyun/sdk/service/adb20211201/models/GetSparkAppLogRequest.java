@@ -117,9 +117,9 @@ public class GetSparkAppLogRequest extends Request {
         } 
 
         /**
-         * <p>The Spark application ID.</p>
+         * <p>The application ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query the Spark application ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query the ID of the Spark application.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -133,9 +133,10 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in the target region.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -148,7 +149,7 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * <p>The number of log entries to return. Valid values: 1 to 500. Default value: 300.</p>
+         * <p>The number of log lines. Valid values: 1 to 500. Default value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -160,7 +161,7 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number for reading logs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -172,7 +173,7 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of data rows per page.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>

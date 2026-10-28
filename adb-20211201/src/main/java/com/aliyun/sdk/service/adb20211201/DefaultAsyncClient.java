@@ -140,7 +140,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For a list of service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of AllocateClusterPublicConnection  AllocateClusterPublicConnectionRequest
      * @return AllocateClusterPublicConnectionResponse
@@ -161,7 +161,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoints of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of ApplyAdviceById  ApplyAdviceByIdRequest
      * @return ApplyAdviceByIdResponse
@@ -182,7 +182,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of AttachUserENI  AttachUserENIRequest
      * @return AttachUserENIResponse
@@ -203,7 +203,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of BatchApplyAdviceByIdList  BatchApplyAdviceByIdListRequest
      * @return BatchApplyAdviceByIdListResponse
@@ -224,7 +224,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the current service endpoint, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of BindAccount  BindAccountRequest
      * @return BindAccountResponse
@@ -245,7 +245,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of BindDBResourceGroupWithUser  BindDBResourceGroupWithUserRequest
      * @return BindDBResourceGroupWithUserResponse
@@ -285,9 +285,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.<blockquote>
-     * <p>If you encounter a 409 error when initiating requests from China North 1 (Qingdao), China South 1 (Shenzhen), China South 3 (Guangzhou), or Hong Kong (China), contact technical support.</p>
+     * <li>The public endpoint for the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -344,7 +344,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of CheckBindRamUser  CheckBindRamUserRequest
      * @return CheckBindRamUserResponse
@@ -383,7 +383,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the service endpoint, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoint</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of CheckSampleDataSet  CheckSampleDataSetRequest
      * @return CheckSampleDataSetResponse
@@ -447,7 +447,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of CreateAPSJob  CreateAPSJobRequest
      * @return CreateAPSJobResponse
@@ -468,7 +468,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
      * 
      * @param request the request parameters of CreateAccount  CreateAccountRequest
      * @return CreateAccountResponse
@@ -507,7 +507,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of CreateApsDatasoure  CreateApsDatasoureRequest
      * @return CreateApsDatasoureResponse
@@ -626,7 +626,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
      * @return CreateDBClusterResponse
@@ -647,7 +647,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * @param request the request parameters of CreateDBResourceGroup  CreateDBResourceGroupRequest
      * @return CreateDBResourceGroupResponse
@@ -874,7 +874,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of DeleteAccount  DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -1258,7 +1258,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of DescribeAccountAllPrivileges  DescribeAccountAllPrivilegesRequest
      * @return DescribeAccountAllPrivilegesResponse
@@ -1321,7 +1321,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration information of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of DescribeAccounts  DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -1343,8 +1343,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeAdbMySqlColumns  DescribeAdbMySqlColumnsRequest
@@ -1385,8 +1385,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeAdbMySqlSchemas  DescribeAdbMySqlSchemasRequest
@@ -1427,8 +1427,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeAdbMySqlTables  DescribeAdbMySqlTablesRequest
@@ -1450,7 +1450,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of DescribeAdviceServiceEnabled  DescribeAdviceServiceEnabledRequest
      * @return DescribeAdviceServiceEnabledResponse
@@ -1689,8 +1689,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>SQL audit logs can be queried only when SQL audit is enabled, and only logs from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only logs generated after re-enabling can be queried. SQL audit logs do not record <strong>INSERT INTO VALUES</strong>, <strong>REPLACE INTO VALUES</strong>, or <strong>UPSERT INTO VALUES</strong> operations.</li>
-     * <li>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</li>
+     * <li>SQL audit logs can be queried only when SQL Audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL Audit is disabled and then re-enabled, only SQL audit logs generated after the re-enablement can be queried. SQL audit logs do not record <strong>INSERT INTO VALUES</strong>, <strong>REPLACE INTO VALUES</strong>, or <strong>UPSERT INTO VALUES</strong> operations.</li>
+     * <li>For the current service endpoint, see <a href="https://help.aliyun.com/document_detail/612373.html">Service endpoints</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeAuditLogRecords  DescribeAuditLogRecordsRequest
@@ -1769,7 +1769,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints for this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -1829,7 +1829,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of DescribeClusterNetInfo  DescribeClusterNetInfoRequest
      * @return DescribeClusterNetInfoResponse
@@ -2035,11 +2035,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>Warning: 目前该功能处于内测阶段，控制台界面展示及API调用接口尚未稳定，可能持续变化。</p>
-     * </blockquote>
-     * 
      * @param request the request parameters of DescribeDBClusterSSL  DescribeDBClusterSSLRequest
      * @return DescribeDBClusterSSLResponse
      */
@@ -2059,7 +2054,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
      * 
      * @param request the request parameters of DescribeDBClusterSpaceSummary  DescribeDBClusterSpaceSummaryRequest
      * @return DescribeDBClusterSpaceSummaryResponse
@@ -2122,7 +2117,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration endpoints</a>.</p>
      * 
      * @param request the request parameters of DescribeDBResourceGroup  DescribeDBResourceGroupRequest
      * @return DescribeDBResourceGroupResponse
@@ -2227,7 +2222,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of DescribeElasticPlanAttribute  DescribeElasticPlanAttributeRequest
      * @return DescribeElasticPlanAttributeResponse
@@ -2269,7 +2264,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of DescribeElasticPlanSpecifications  DescribeElasticPlanSpecificationsRequest
      * @return DescribeElasticPlanSpecificationsResponse
@@ -2390,7 +2385,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Only supports viewing tasks within the last 30 days.</p>
+     * <p>You can view only tasks from the last 30 days.</p>
      * 
      * @param request the request parameters of DescribeHistoryTasks  DescribeHistoryTasksRequest
      * @return DescribeHistoryTasksResponse
@@ -2468,7 +2463,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration information of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
+     * <p>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
      * 
      * @param request the request parameters of DescribeJobResourceUsage  DescribeJobResourceUsageRequest
      * @return DescribeJobResourceUsageResponse
@@ -2755,9 +2750,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Global public endpoint: <code>adb.aliyuncs.com</code>.</li>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code> (e.g., <code>adb.cn-hangzhou.aliyuncs.com</code>).</li>
-     * <li>Regional VPC endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code> (e.g., <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>).</li>
+     * <li>Central public endpoint: <code>adb.aliyuncs.com</code>.</li>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional VPC endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSQLPatterns  DescribeSQLPatternsRequest
@@ -2881,9 +2876,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSparkCodeLog  DescribeSparkCodeLogRequest
@@ -2989,7 +2984,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
      * 
      * @param request the request parameters of DescribeSqlPattern  DescribeSqlPatternRequest
      * @return DescribeSqlPatternResponse
@@ -3204,7 +3199,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of DescribeUserQuota  DescribeUserQuotaRequest
      * @return DescribeUserQuotaResponse
@@ -3300,7 +3295,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of DisableElasticPlan  DisableElasticPlanRequest
      * @return DisableElasticPlanResponse
@@ -3416,15 +3411,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>地域的公网接入地址：<code>adb.&lt;region-id&gt;.aliyuncs.com</code>。示例：<code>adb.cn-hangzhou.aliyuncs.com</code>。</li>
-     * <li>地域的VPC接入地址：<code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>。示例：<code>adb-vpc.cn-hangzhou.aliyuncs.com</code>。<blockquote>
-     * <p>如果华北1（青岛）、华南1（深圳）、华南3（广州）、中国香港发起请求时，遇到409错误，请联系技术支持。</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request the request parameters of ExecuteSparkWarehouseBatchSQL  ExecuteSparkWarehouseBatchSQLRequest
      * @return ExecuteSparkWarehouseBatchSQLResponse
      */
@@ -3485,7 +3471,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The API diagnostic report contains all the permissions required by the current user for ADB Spark-related features. The scope of the permission check may exceed the minimum requirements of your business. This API is used for quick initialization of the ADB Spark environment. To configure fine-grained permissions, <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">refer to the ADB Spark fine-grained permission configuration documentation.</a></p>
+     * <p>The diagnostic report for this API indicates whether the current user has all the permissions required for ADB Spark features. The scope of the checked permissions may exceed the minimum business requirements. This diagnostic report is used for quick environment initialization of ADB Spark. To configure fine-grained permissions, refer to <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</p>
      * 
      * @param request the request parameters of GetADBSparkNecessaryRAMPermissions  GetADBSparkNecessaryRAMPermissionsRequest
      * @return GetADBSparkNecessaryRAMPermissionsResponse
@@ -3524,9 +3510,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of GetDatabaseObjects  GetDatabaseObjectsRequest
@@ -3572,7 +3558,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetKnowledgeRecallResponse> getKnowledgeRecall(GetKnowledgeRecallRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetKnowledgeRecall").setMethod(HttpMethod.POST).setPathRegex("/knowledge/recall").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetKnowledgeRecall").setMethod(HttpMethod.POST).setPathRegex("/knowledge/recall").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetKnowledgeRecallResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -3645,10 +3631,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 error when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -3699,10 +3685,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -3726,11 +3712,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/612447.html">PreloadSparkAppMetrics</a> operation to preload the metrics of a Spark application.</p>
      * <ul>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * <li>Before invoking this operation, invoke the <a href="https://help.aliyun.com/document_detail/612447.html">PreloadSparkAppMetrics</a> operation to preload the metric data of the Spark node. Otherwise, the invocation will be failed.</li>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 fault when initiating requests in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -3754,10 +3740,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -4148,8 +4134,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of GetViewObjects  GetViewObjectsRequest
@@ -4524,15 +4510,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>地域的公网接入地址：<code>adb.&lt;region-id&gt;.aliyuncs.com</code>。示例：<code>adb.cn-hangzhou.aliyuncs.com</code>。</li>
-     * <li>地域的VPC接入地址：<code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>。示例：<code>adb-vpc.cn-hangzhou.aliyuncs.com</code>。<blockquote>
-     * <p>如果华北1（青岛）、华南1（深圳）、华南3（广州）、中国香港发起请求时，遇到409错误，请联系技术支持。</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request the request parameters of ListSparkWarehouseBatchSQL  ListSparkWarehouseBatchSQLRequest
      * @return ListSparkWarehouseBatchSQLResponse
      */
@@ -4591,7 +4568,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
+     * <p>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
      * 
      * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
@@ -4612,7 +4589,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of ModifyAccountPrivileges  ModifyAccountPrivilegesRequest
      * @return ModifyAccountPrivilegesResponse
@@ -4658,7 +4635,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of ModifyApsJob  ModifyApsJobRequest
      * @return ModifyApsJobResponse
@@ -4835,14 +4812,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Before you begin</h3>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>During scaling, <code>submit job</code> for submitting asynchronous tasks is disabled. If your business depends on this feature, schedule the scaling operation during an appropriate time window.</li>
-     * <li>Scaling operations redistribute and migrate data. The migration duration is proportional to the data volume, and the service is not interrupted during scaling. When you scale down a cluster from a large specification to a small specification, data migration typically takes several hours or even tens of hours. Exercise caution when you scale down a cluster with a large data volume.</li>
-     * <li>If the cluster has loaded a built-in dataset, make sure that the cluster has at least 24 ACUs of storage reserved resources during scale-down. Otherwise, the built-in dataset cannot be used.</li>
-     * <li>Transient connections may occur near the end of scaling. Scale during off-peak hours, or make sure that your application has an automatic reconnection mechanism.</li>
-     * <li>You cannot perform an Upgrade/Downgrade from Data Lakehouse Edition to Data Warehouse Edition. You can perform an Upgrade/Downgrade from Data Warehouse Edition to Data Lakehouse Edition. For details, refer to the documentation about changing Data Warehouse Edition to Data Lakehouse Edition.</li>
-     * <li>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</li>
+     * <li>During scaling, the <code>submit job</code> command for submitting asynchronous tasks is disabled. If your business relies on this feature, execute the scaling operation during off-peak hours based on your business requirements.</li>
+     * <li>Scaling operations redistribute and migrate data. The migration duration is proportional to the data volume, and services are not interrupted during scaling. When you scale down a cluster from large specifications to small specifications, data migration typically takes several hours or even dozens of hours. Exercise caution when scaling down clusters with large data volumes.</li>
+     * <li>If the cluster has built-in datasets loaded, ensure that the cluster has at least 24 ACUs of reserved storage resources when you scale down the cluster. Otherwise, the built-in datasets become unavailable.</li>
+     * <li>Transient connections may occur when the scaling operation is about to complete. Execute scaling operations during off-peak hours or ensure that your applications have an automatic reconnection mechanism.</li>
+     * <li>You cannot change a Data Lakehouse Edition cluster to a Data Warehouse Edition cluster. You can change a Data Warehouse Edition cluster to a Data Lakehouse Edition cluster. For more information, see Change a Data Warehouse Edition cluster to a Data Lakehouse Edition cluster.</li>
+     * <li>For the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBCluster  ModifyDBClusterRequest
@@ -4960,7 +4937,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of ModifyDBResourceGroup  ModifyDBResourceGroupRequest
      * @return ModifyDBResourceGroupResponse
@@ -5237,7 +5214,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>Refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a> for the service registration endpoint of the current service.</p>
      * 
      * @param request the request parameters of ReleaseClusterPublicConnection  ReleaseClusterPublicConnectionRequest
      * @return ReleaseClusterPublicConnectionResponse
@@ -5330,7 +5307,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
@@ -5405,10 +5382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 fault when making requests in the China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China) regions, contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -5579,10 +5556,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * <li>The public endpoint for the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 fault when initiating requests in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>

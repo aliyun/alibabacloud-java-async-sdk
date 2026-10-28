@@ -394,7 +394,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The auto-stop interval, in minutes (m).</p>
+         * <p>The automatic stop interval, in minutes (m).</p>
          * 
          * <strong>example:</strong>
          * <p>5m</p>
@@ -510,7 +510,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The GPU time-based elastic plan.</p>
+         * <p>The GPU time-sharing elastic plan.</p>
          */
         public Builder gpuElasticPlan(GpuElasticPlan gpuElasticPlan) {
             String gpuElasticPlanShrink = shrink(gpuElasticPlan, "GpuElasticPlan", "json");
@@ -542,7 +542,7 @@ public class CreateDBResourceGroupRequest extends Request {
          * <ul>
          * <li><strong>Interactive</strong></li>
          * <li><strong>Job</strong><blockquote>
-         * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Introduction to resource groups (Data Lakehouse Edition)</a>.</p>
+         * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -574,8 +574,8 @@ public class CreateDBResourceGroupRequest extends Request {
         /**
          * <p>The maximum reserved computing resources, in ACUs.</p>
          * <ul>
-         * <li>If the resource group type is Interactive, the maximum reserved computing resources are the unallocated resources of the cluster, in increments of 16 ACUs.</li>
-         * <li>If the resource group type is Job, the maximum reserved computing resources are the unallocated resources of the cluster, in increments of 8 ACUs.</li>
+         * <li>If the resource group type is Interactive, the maximum reserved computing resources are the current unallocated resources of the cluster, with a step size of 16 ACUs.</li>
+         * <li>If the resource group type is Job, the maximum reserved computing resources are the current unallocated resources of the cluster, with a step size of 8 ACUs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -682,9 +682,9 @@ public class CreateDBResourceGroupRequest extends Request {
         /**
          * <p>The scaling policy of the resource group. Valid values:</p>
          * <ul>
-         * <li>AutoScaling: enables the AutoScaling auto-scaling policy.</li>
-         * <li>Disable: disables auto-scaling.</li>
-         * <li>MultiCluster: enables the MultiCluster auto-scaling policy.</li>
+         * <li>AutoScaling: enables the AutoScaling automatic scaling policy.</li>
+         * <li>Disable: disables automatic scaling.</li>
+         * <li>MultiCluster: enables the MultiCluster automatic scaling policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -709,7 +709,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the destination resource group.</p>
+         * <p>The name of the target resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -908,7 +908,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The authentication node specification ([0-9+]ACU).</p>
+             * <p>The node specifications of authentication nodes ([0-9+]ACU).</p>
              * 
              * <strong>example:</strong>
              * <p>8ACU</p>
@@ -930,7 +930,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The insert node specification ([0-9+]ACU).</p>
+             * <p>The node specifications of insert nodes ([0-9+]ACU).</p>
              * 
              * <strong>example:</strong>
              * <p>8ACU</p>
@@ -963,7 +963,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The query node specification ([0-9+]ACU).</p>
+             * <p>The node specifications of query nodes ([0-9+]ACU).</p>
              * 
              * <strong>example:</strong>
              * <p>8ACU</p>
@@ -1007,7 +1007,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The storage node specification ([0-9+]ACU).</p>
+             * <p>The node specifications of storage nodes ([0-9+]ACU).</p>
              * 
              * <strong>example:</strong>
              * <p>8ACU</p>
@@ -1077,7 +1077,7 @@ public class CreateDBResourceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The end time as a cron expression. The interval must be at least 1 hour.</p>
+             * <p>The end time, specified as a cron expression. The interval must be at least 1 hour.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 3 * * ?</p>
@@ -1088,7 +1088,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The start time as a cron expression. The interval must be at least 1 hour.</p>
+             * <p>The start time, specified as a cron expression. The interval must be at least 1 hour.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 2 * * ?</p>
@@ -1456,7 +1456,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The specification of the worker node.</p>
+             * <p>The node specifications of the worker node.</p>
              * 
              * <strong>example:</strong>
              * <p>xlarge</p>
@@ -1491,6 +1491,9 @@ public class CreateDBResourceGroupRequest extends Request {
      * <p>CreateDBResourceGroupRequest</p>
      */
     public static class RayConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthToken")
+        private String authToken;
+
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
@@ -1519,6 +1522,7 @@ public class CreateDBResourceGroupRequest extends Request {
         private java.util.List<WorkerGroups> workerGroups;
 
         private RayConfig(Builder builder) {
+            this.authToken = builder.authToken;
             this.category = builder.category;
             this.enableUserEni = builder.enableUserEni;
             this.headAllocateUnit = builder.headAllocateUnit;
@@ -1536,6 +1540,13 @@ public class CreateDBResourceGroupRequest extends Request {
 
         public static RayConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return authToken
+         */
+        public String getAuthToken() {
+            return this.authToken;
         }
 
         /**
@@ -1602,6 +1613,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         public static final class Builder {
+            private String authToken; 
             private String category; 
             private Boolean enableUserEni; 
             private String headAllocateUnit; 
@@ -1616,6 +1628,7 @@ public class CreateDBResourceGroupRequest extends Request {
             } 
 
             private Builder(RayConfig model) {
+                this.authToken = model.authToken;
                 this.category = model.category;
                 this.enableUserEni = model.enableUserEni;
                 this.headAllocateUnit = model.headAllocateUnit;
@@ -1628,11 +1641,22 @@ public class CreateDBResourceGroupRequest extends Request {
             } 
 
             /**
+             * <p>The Ray authentication token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KnDC43ClfXqv&amp;P*s</p>
+             */
+            public Builder authToken(String authToken) {
+                this.authToken = authToken;
+                return this;
+            }
+
+            /**
              * <p>The Ray cluster type. Valid values:</p>
              * <ul>
-             * <li><p>BASIC: the basic type, which is non-highly available.</p>
+             * <li><p>BASIC: basic type, non-high-availability.</p>
              * </li>
-             * <li><p>HIGH_AVAILABILITY: the highly available type.</p>
+             * <li><p>HIGH_AVAILABILITY: high-availability type.</p>
              * </li>
              * </ul>
              * 
@@ -1645,7 +1669,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable user Elastic Network Interface (ENI) connectivity.</p>
+             * <p>Specifies whether to enable user ENI connectivity.</p>
              */
             public Builder enableUserEni(Boolean enableUserEni) {
                 this.enableUserEni = enableUserEni;
@@ -1675,7 +1699,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The specification of the head node.</p>
+             * <p>The node specifications of the head node.</p>
              * 
              * <strong>example:</strong>
              * <p>xlarge</p>
@@ -1705,7 +1729,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * UserDefinedRequirements.
+             * <p>The custom Python dependencies for RayCluster. The content follows the requirements.txt format, with one pip dependency per line. A maximum of 200 lines are supported, and each line can be up to 512 characters in length. Version constraints, extras, PEP 440 direct URLs, and # comments are supported. Shell metacharacters are not supported. This parameter applies only to AI resource groups of the RayCluster type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>numpy==1.24.0</p>
              */
             public Builder userDefinedRequirements(String userDefinedRequirements) {
                 this.userDefinedRequirements = userDefinedRequirements;
@@ -1820,7 +1847,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The name of the destination resource group.</p>
+             * <p>The name of the target resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>job</p>

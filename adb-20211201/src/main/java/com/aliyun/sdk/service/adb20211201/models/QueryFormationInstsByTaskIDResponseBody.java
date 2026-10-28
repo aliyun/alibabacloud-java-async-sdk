@@ -209,7 +209,7 @@ public class QueryFormationInstsByTaskIDResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. OK is returned if the request was successful.</p>
+         * <p>The message. The value is OK when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -253,7 +253,7 @@ public class QueryFormationInstsByTaskIDResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -463,7 +463,7 @@ public class QueryFormationInstsByTaskIDResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created.</p>
+             * <p>The creation time of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-15T07:24:58Z</p>
@@ -542,8 +542,8 @@ public class QueryFormationInstsByTaskIDResponseBody extends TeaModel {
             /**
              * <p>The task source. Valid values:</p>
              * <ul>
-             * <li><strong>system</strong>: system.</li>
-             * <li><strong>custom</strong>: custom.</li>
+             * <li><strong>system</strong>: System.</li>
+             * <li><strong>custom</strong>: Custom.</li>
              * </ul>
              * 
              * <strong>example:</strong>

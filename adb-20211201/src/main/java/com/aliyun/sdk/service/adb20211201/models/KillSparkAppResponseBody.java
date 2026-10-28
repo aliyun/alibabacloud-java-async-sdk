@@ -197,7 +197,7 @@ public class KillSparkAppResponseBody extends TeaModel {
              * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>LAKEHOUSE-1-1</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -208,7 +208,7 @@ public class KillSparkAppResponseBody extends TeaModel {
              * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>amv-bp11q28kvl688****</p>
+             * <p>amv-bp1c3em7b2e****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -219,7 +219,7 @@ public class KillSparkAppResponseBody extends TeaModel {
              * <p>The error message returned.</p>
              * 
              * <strong>example:</strong>
-             * <p>[Advisor] Advisor feature is not available for instance: amv-bp11q28kvl688****</p>
+             * <p>[Advisor] Advisor feature is not available for instance: am-2ze292w4fyglwxxxx</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -243,7 +243,7 @@ public class KillSparkAppResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>KILLED</p>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
