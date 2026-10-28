@@ -142,7 +142,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of instance IDs.</p>
+         * <p>The array of instance IDs.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -164,7 +164,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of tag keys.</p>
+         * <p>The array of tag keys.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

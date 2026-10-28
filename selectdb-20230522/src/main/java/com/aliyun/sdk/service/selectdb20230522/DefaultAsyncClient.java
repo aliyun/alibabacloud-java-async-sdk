@@ -160,9 +160,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Only instances deployed in cross-zone redundancy mode support this operation. The following conditions must also be met:</p>
+     * <p>Only instances deployed in zone-disaster recovery mode support this operation. The following conditions must be met:</p>
      * <ul>
-     * <li>The two clusters are in different zones.</li>
+     * <li>The clusters must be located in different zones.</li>
      * <li>The billing methods of the clusters must be the same.</li>
      * </ul>
      * 
@@ -242,10 +242,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Only instances with cross-zone redundancy support this operation, and the following conditions must be met:</p>
+     * <p>Only zone-disaster recovery instances support this operation. The following conditions must be met:</p>
      * <ul>
      * <li>The minor engine version of the instance is 4.0.7 or later.</li>
-     * <li>The primary and secondary clusters are in different zones.</li>
+     * <li>The primary and standby clusters are deployed in different zones.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateVirtualCluster  CreateVirtualClusterRequest
@@ -303,7 +303,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Subscription instances cannot be deleted.</p>
+     * <p>You cannot delete subscription instances.</p>
      * 
      * @param request the request parameters of DeleteDBInstance  DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
@@ -344,7 +344,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Only the virtual cluster is deleted. The associated primary/secondary clusters are <strong>not</strong> deleted.</li>
+     * <li>Only the virtual cluster is deleted. The bound primary and secondary clusters are <strong>not</strong> deleted.</li>
      * </ul>
      * </blockquote>
      * 
@@ -832,9 +832,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can modify the primary cluster separately.</li>
-     * <li>You can modify the secondary cluster separately.</li>
-     * <li>You can switch between the primary and secondary clusters.<blockquote>
+     * <li>Supports modifying the primary cluster separately.</li>
+     * <li>Supports modifying the secondary cluster separately.</li>
+     * <li>Supports switching between the primary and secondary clusters.<blockquote>
      * <p>Warning: Modifying both the primary and secondary clusters to other clusters at the same time is not supported.</p>
      * </blockquote>
      * </li>

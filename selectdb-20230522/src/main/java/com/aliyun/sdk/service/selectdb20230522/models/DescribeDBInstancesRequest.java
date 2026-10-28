@@ -184,7 +184,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances. Separate multiple instance IDs with commas (,).</p>
+         * <p>The instance IDs. Separate multiple instance IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213cjv****</p>
@@ -198,18 +198,12 @@ public class DescribeDBInstancesRequest extends Request {
         /**
          * <p>The status of the instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>CREATING</strong>: Creating.</p>
-         * </li>
-         * <li><p><strong>ACTIVATION</strong>: Running.</p>
-         * </li>
-         * <li><p><strong>RESOURCE_CHANGING</strong>: Changing specifications.</p>
-         * </li>
-         * <li><p><strong>ORDER_PREPARING</strong>: Confirming the order.</p>
-         * </li>
-         * <li><p><strong>READONLY_RESOURCE_CHANGING</strong>: Changing resources (the instance is locked for writing).</p>
-         * </li>
-         * <li><p><strong>DELETING</strong>: Deleting.</p>
-         * </li>
+         * <li><strong>CREATING</strong>: Creating.</li>
+         * <li><strong>ACTIVATION</strong>: Running.</li>
+         * <li><strong>RESOURCE_CHANGING</strong>: Changing specifications.</li>
+         * <li><strong>ORDER_PREPARING</strong>: Confirming order.</li>
+         * <li><strong>READONLY_RESOURCE_CHANGING</strong>: Changing resources (the instance is locked for write operations).</li>
+         * <li><strong>DELETING</strong>: Deleting.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,7 +230,7 @@ public class DescribeDBInstancesRequest extends Request {
         /**
          * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong> (default)</li>
+         * <li><strong>30</strong>: Default value.</li>
          * <li><strong>50</strong></li>
          * <li><strong>100</strong></li>
          * </ul>
@@ -264,7 +258,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-4690g37929****</p>

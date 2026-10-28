@@ -225,7 +225,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
              * <p>The zone description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Beijing H Zone</p>
+             * <p>Beijing Zone H</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -288,7 +288,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether VPC is enabled.</p>
+             * <p>Indicates whether the VPC is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -299,7 +299,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether VPC is available.</p>
+             * <p>Indicates whether the VPC is available.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing-h</p>

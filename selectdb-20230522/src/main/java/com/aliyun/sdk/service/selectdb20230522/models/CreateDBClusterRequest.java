@@ -352,6 +352,9 @@ public class CreateDBClusterRequest extends Request {
 
         /**
          * <p>The node type of the cluster. This parameter takes effect only in Serverless mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base</p>
          */
         public Builder clusterNodeType(String clusterNodeType) {
             this.putQueryParameter("ClusterNodeType", clusterNodeType);

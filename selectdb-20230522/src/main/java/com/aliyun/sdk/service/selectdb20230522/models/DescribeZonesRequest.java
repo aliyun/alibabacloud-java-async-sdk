@@ -89,8 +89,8 @@ public class DescribeZonesRequest extends Request {
 
         /**
          * <ul>
-         * <li>If you do not specify the <strong>MaxResults</strong> request parameter, paged queries are not performed. The <strong>MaxResults</strong> value in the response indicates the total number of entries.</li>
-         * <li>If you specify the <strong>MaxResults</strong> request parameter, paged queries are performed. The <strong>MaxResults</strong> value in the response indicates the number of entries in the current query batch.</li>
+         * <li>If you do not specify the <strong>MaxResults</strong> request parameter, you do not need to query data in batches. The value of the <strong>MaxResults</strong> response parameter indicates the total number of list entries.</li>
+         * <li>If you specify the <strong>MaxResults</strong> request parameter, you must query data in batches. The value of the <strong>MaxResults</strong> response parameter indicates the number of list entries in the current batch.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>40831b4f-d91d-4796-9589-ad306ec528d5</p>

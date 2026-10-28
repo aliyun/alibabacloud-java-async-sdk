@@ -106,7 +106,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>failed</p>
@@ -125,7 +125,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+         * <p>The dynamic code. This parameter is not used and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -136,7 +136,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+         * <p>The dynamic message. This parameter is not used and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>An error occurred while processing your request.</p>

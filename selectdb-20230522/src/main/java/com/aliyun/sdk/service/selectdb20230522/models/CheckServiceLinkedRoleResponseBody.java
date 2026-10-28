@@ -67,7 +67,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the service-linked role has been created.</p>
+         * <p>Indicates whether the service-linked role is created.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>

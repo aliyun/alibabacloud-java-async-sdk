@@ -78,7 +78,7 @@ public class DeleteElasticRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the rule was deleted.</p>
+         * <p>Indicates whether the deletion was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

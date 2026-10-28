@@ -197,7 +197,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The promotion rule description.</p>
+             * <p>The description of the promotion rule.</p>
              * 
              * <strong>example:</strong>
              * <p>789asdf</p>
@@ -211,7 +211,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
              * <p>The coupon description.</p>
              * 
              * <strong>example:</strong>
-             * <p>General coupon can deduct 100</p>
+             * <p>General coupon with a deduction of 100</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -230,7 +230,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon code.</p>
+             * <p>The coupon ID.</p>
              * 
              * <strong>example:</strong>
              * <p>732211480132</p>
@@ -350,7 +350,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon codes.</p>
+             * <p>The coupon ID.</p>
              */
             public Builder optionalPromotions(java.util.List<OptionalPromotions> optionalPromotions) {
                 this.optionalPromotions = optionalPromotions;
@@ -358,7 +358,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit price results of billing items.</p>
+             * <p>The unit price results of billable items.</p>
              */
             public Builder pricingRules(java.util.Map<String, String> pricingRules) {
                 this.pricingRules = pricingRules;
@@ -366,7 +366,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated refund amount when converting a subscription cluster to a pay-as-you-go cluster under a subscription instance.</p>
+             * <p>The estimated refund amount when a subscription cluster under a subscription instance is changed to a pay-as-you-go cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>-100</p>
@@ -377,7 +377,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trade amount.</p>
+             * <p>The amount.</p>
              * 
              * <strong>example:</strong>
              * <p>1.76</p>

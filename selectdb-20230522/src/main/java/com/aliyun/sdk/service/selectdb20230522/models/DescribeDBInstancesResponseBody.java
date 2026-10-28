@@ -116,7 +116,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong> (default)</li>
+         * <li><strong>30</strong>: Default value.</li>
          * <li><strong>50</strong></li>
          * <li><strong>100</strong></li>
          * </ul>
@@ -261,6 +261,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The name of the FE cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-demo12345-fe</p>
              */
             public Builder dbClusterId(String dbClusterId) {
                 this.dbClusterId = dbClusterId;
@@ -302,6 +305,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The status of the FE cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVATION</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -589,6 +595,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("TdeEnabled")
+        private Boolean tdeEnabled;
+
         @com.aliyun.core.annotation.NameInMap("TenantClusterId")
         private String tenantClusterId;
 
@@ -647,6 +656,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.storageSize = builder.storageSize;
             this.storageType = builder.storageType;
             this.tags = builder.tags;
+            this.tdeEnabled = builder.tdeEnabled;
             this.tenantClusterId = builder.tenantClusterId;
             this.tenantToken = builder.tenantToken;
             this.tenantUserId = builder.tenantUserId;
@@ -917,6 +927,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tdeEnabled
+         */
+        public Boolean getTdeEnabled() {
+            return this.tdeEnabled;
+        }
+
+        /**
          * @return tenantClusterId
          */
         public String getTenantClusterId() {
@@ -1002,6 +1019,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private Long storageSize; 
             private String storageType; 
             private java.util.List<Tags> tags; 
+            private Boolean tdeEnabled; 
             private String tenantClusterId; 
             private String tenantToken; 
             private String tenantUserId; 
@@ -1050,6 +1068,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
                 this.storageSize = model.storageSize;
                 this.storageType = model.storageType;
                 this.tags = model.tags;
+                this.tdeEnabled = model.tdeEnabled;
                 this.tenantClusterId = model.tenantClusterId;
                 this.tenantToken = model.tenantToken;
                 this.tenantUserId = model.tenantUserId;
@@ -1060,7 +1079,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance edition. Default value: basic.</p>
+             * <p>The edition of the instance. Default value: basic.</p>
              * 
              * <strong>example:</strong>
              * <p>basic</p>
@@ -1073,8 +1092,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             /**
              * <p>The billing method of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-             * <li><strong>Prepaid</strong>: subscription</li>
+             * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+             * </li>
+             * <li><p><strong>Prepaid</strong>: subscription</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1167,9 +1188,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the cluster, in ISO 8601 format with time zone information.</p>
+             * <p>The expiration time of the cluster. The time is displayed in ISO 8601 format and includes the time zone.</p>
              * <blockquote>
-             * <p>This parameter is returned only for <strong>Prepaid</strong> (subscription) clusters. For <strong>Postpaid</strong> (pay-as-you-go) clusters, an empty value is returned.</p>
+             * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). For clusters whose billing method is <strong>Postpaid</strong> (pay-as-you-go), an empty value is returned.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1181,7 +1202,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of FE clusters.</p>
+             * <p>The FE cluster list.</p>
              */
             public Builder FEClusterList(java.util.List<FEClusterList> FEClusterList) {
                 this.FEClusterList = FEClusterList;
@@ -1211,7 +1232,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance usage type.</p>
+             * <p>The usage type of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Instance</p>
@@ -1224,8 +1245,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the instance is deleted. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The instance is deleted.</li>
-             * <li><strong>fasle</strong>: The instance is not deleted.</li>
+             * <li><p><strong>true</strong>: deleted</p>
+             * </li>
+             * <li><p><strong>fasle</strong>: not deleted</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1270,7 +1293,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter that is not currently returned. The time format does not apply.</p>
+             * <p>Reserved parameter. Not returned. Therefore, the time format does not apply.</p>
              * 
              * <strong>example:</strong>
              * <p>Reserved parameter. Not returned</p>
@@ -1292,7 +1315,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter that is not currently returned. The time format does not apply.</p>
+             * <p>Reserved parameter. Not returned. Therefore, the time format does not apply.</p>
              * 
              * <strong>example:</strong>
              * <p>Reserved parameter. Not returned</p>
@@ -1355,7 +1378,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>Reserved parameter. Not returned</p>
@@ -1377,7 +1400,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of RDS capacity units (RCUs) in the automatic scaling range of the instance.</p>
+             * <p>The maximum value of the automatic scaling range for the RDS Capacity Unit (RCU) of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1388,7 +1411,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of RDS capacity units (RCUs) in the automatic scaling range of the instance.</p>
+             * <p>The minimum value of the automatic scaling range for the RDS Capacity Unit (RCU) of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1402,7 +1425,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * <p>The redundant field.</p>
              * 
              * <strong>example:</strong>
-             * <p>Null</p>
+             * <p>Empty</p>
              */
             public Builder scaleReplica(Long scaleReplica) {
                 this.scaleReplica = scaleReplica;
@@ -1423,18 +1446,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             /**
              * <p>The status of the instance. Valid values:</p>
              * <ul>
-             * <li><p><strong>CREATING</strong>: Creating.</p>
-             * </li>
-             * <li><p><strong>ACTIVATION</strong>: Running.</p>
-             * </li>
-             * <li><p><strong>RESOURCE_CHANGING</strong>: Changing specifications.</p>
-             * </li>
-             * <li><p><strong>ORDER_PREPARING</strong>: Confirming the order.</p>
-             * </li>
-             * <li><p><strong>READONLY_RESOURCE_CHANGING</strong>: Changing resources (the instance is locked for writing).</p>
-             * </li>
-             * <li><p><strong>DELETING</strong>: Deleting.</p>
-             * </li>
+             * <li><strong>CREATING</strong>: Creating.</li>
+             * <li><strong>ACTIVATION</strong>: Running.</li>
+             * <li><strong>RESOURCE_CHANGING</strong>: Changing specifications.</li>
+             * <li><strong>ORDER_PREPARING</strong>: Confirming order.</li>
+             * <li><strong>READONLY_RESOURCE_CHANGING</strong>: Changing resources (the instance is locked for write operations).</li>
+             * <li><strong>DELETING</strong>: Deleting.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1446,7 +1463,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage capacity.</p>
+             * <p>The storage space size.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1472,6 +1489,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether TDE is enabled.</p>
+             */
+            public Builder tdeEnabled(Boolean tdeEnabled) {
+                this.tdeEnabled = tdeEnabled;
                 return this;
             }
 
@@ -1542,7 +1567,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint.</p>
+             * <p>The connection endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>Not returned</p>

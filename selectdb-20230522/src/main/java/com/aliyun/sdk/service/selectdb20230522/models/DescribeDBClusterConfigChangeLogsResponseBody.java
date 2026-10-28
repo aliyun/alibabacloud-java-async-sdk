@@ -106,7 +106,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>failed</p>
@@ -125,7 +125,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+         * <p>The dynamic code. This parameter is not in use and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -136,7 +136,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+         * <p>The dynamic message. This parameter is not in use and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>An error occurred while processing your request.</p>
@@ -281,7 +281,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The task creation time (GMT).</p>
+             * <p>The time when the task was created (GMT).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-10-11T08:53:32Z</p>
@@ -292,7 +292,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task modification time (GMT).</p>
+             * <p>The time when the task was modified (GMT).</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-08T10:08Z</p>

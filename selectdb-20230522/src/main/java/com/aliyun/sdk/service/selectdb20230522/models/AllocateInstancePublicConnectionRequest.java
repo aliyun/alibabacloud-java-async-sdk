@@ -119,7 +119,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The prefix of the target endpoint, which is the prefix part of the <strong>ConnectionString</strong> parameter.</p>
+         * <p>The prefix of the target endpoint, which is the prefix of the <strong>ConnectionString</strong> parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

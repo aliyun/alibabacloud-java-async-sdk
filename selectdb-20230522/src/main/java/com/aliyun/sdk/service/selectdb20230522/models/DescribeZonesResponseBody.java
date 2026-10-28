@@ -93,7 +93,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result list.</p>
+         * <p>The list of results.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -101,7 +101,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of rows per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -112,7 +112,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query. An empty value indicates that no more results exist.</p>
+         * <p>The token used to start the next query. If NextToken is empty, no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>40831b4f-d91d-4796-9589-ad306ec528d5</p>

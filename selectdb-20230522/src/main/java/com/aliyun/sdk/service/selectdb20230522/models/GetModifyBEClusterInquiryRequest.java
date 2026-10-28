@@ -259,7 +259,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * <p>The billing type.</p>
+         * <p>The billing method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +322,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the price for converting the cluster billing type.</p>
+         * <p>Specifies whether to query the pricing for changing the billing method of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -371,7 +371,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * <p>The coupon code.</p>
+         * <p>The coupon ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123412345</p>

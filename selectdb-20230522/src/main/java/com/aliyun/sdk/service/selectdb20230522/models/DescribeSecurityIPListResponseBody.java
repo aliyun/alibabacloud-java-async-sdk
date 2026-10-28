@@ -246,7 +246,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address whitelist of the instance. Multiple IP addresses are separated by commas (,).</p>
+             * <p>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>127.0.XX.XX</p>
