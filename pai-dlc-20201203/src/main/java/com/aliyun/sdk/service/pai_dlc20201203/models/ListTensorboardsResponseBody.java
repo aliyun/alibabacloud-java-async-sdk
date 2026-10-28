@@ -91,7 +91,7 @@ public class ListTensorboardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list and details of Tensorboard instances.</p>
+         * <p>The list and details of TensorBoard instances.</p>
          */
         public Builder tensorboards(java.util.List<Tensorboard> tensorboards) {
             this.tensorboards = tensorboards;
@@ -99,7 +99,7 @@ public class ListTensorboardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of data sources that match the specified conditions.</p>
+         * <p>The total number of data sources that meet the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

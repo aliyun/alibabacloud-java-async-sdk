@@ -99,7 +99,7 @@ public class ListJobSanityCheckResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of check results that match the filter conditions.</p>
+         * <p>The total number of health check results that meet the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

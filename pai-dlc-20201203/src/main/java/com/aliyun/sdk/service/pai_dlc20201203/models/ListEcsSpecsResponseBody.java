@@ -80,7 +80,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of ECS specifications.</p>
+         * <p>The list of ECS instance types.</p>
          */
         public Builder ecsSpecs(java.util.List<EcsSpec> ecsSpecs) {
             this.ecsSpecs = ecsSpecs;
@@ -99,7 +99,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that match the filter conditions.</p>
+         * <p>The total number of entries that meet the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

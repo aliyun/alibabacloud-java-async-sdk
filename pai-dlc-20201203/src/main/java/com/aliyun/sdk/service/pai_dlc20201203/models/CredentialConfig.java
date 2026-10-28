@@ -81,6 +81,9 @@ public class CredentialConfig extends TeaModel {
 
         /**
          * <p>The role identity key injected into environment variables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder aliyunEnvRoleKey(String aliyunEnvRoleKey) {
             this.aliyunEnvRoleKey = aliyunEnvRoleKey;
@@ -96,7 +99,7 @@ public class CredentialConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable credential injection.</p>
+         * <p>Specifies whether credential injection is enabled.</p>
          */
         public Builder enableCredentialInject(Boolean enableCredentialInject) {
             this.enableCredentialInject = enableCredentialInject;

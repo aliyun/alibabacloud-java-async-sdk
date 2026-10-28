@@ -106,7 +106,10 @@ public class QuotaConfig extends TeaModel {
         } 
 
         /**
-         * AllowedMaxPriority.
+         * <p>The maximum allowed priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder allowedMaxPriority(Integer allowedMaxPriority) {
             this.allowedMaxPriority = allowedMaxPriority;
@@ -114,7 +117,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * EnableDLC.
+         * <p>Specifies whether DLC is enabled.</p>
          */
         public Builder enableDLC(Boolean enableDLC) {
             this.enableDLC = enableDLC;
@@ -122,7 +125,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * EnableDSW.
+         * <p>Specifies whether DSW is enabled.</p>
          */
         public Builder enableDSW(Boolean enableDSW) {
             this.enableDSW = enableDSW;
@@ -130,7 +133,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * EnableTideResource.
+         * <p>Specifies whether to use tide resources.</p>
          */
         public Builder enableTideResource(Boolean enableTideResource) {
             this.enableTideResource = enableTideResource;
@@ -138,7 +141,10 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * ResourceLevel.
+         * <p>The resource level (L0, L1).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L0</p>
          */
         public Builder resourceLevel(String resourceLevel) {
             this.resourceLevel = resourceLevel;

@@ -116,7 +116,7 @@ public class UpdateTensorboardRequest extends Request {
         } 
 
         /**
-         * <p>Tensorboard ID. For more information about how to get a Tensorboard ID, see <a href="">ListTensorboards</a>.</p>
+         * <p>The TensorBoard ID. For more information about how to obtain the TensorBoard ID, see <a href="https://help.aliyun.com/document_detail/459689.html">ListTensorboards</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,12 +129,10 @@ public class UpdateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>Visibility of the task. Valid values:</p>
+         * <p>The visibility of the task. Valid values:</p>
          * <ul>
-         * <li><p>PUBLIC: Visible to all users in this workspace.</p>
-         * </li>
-         * <li><p>PRIVATE: Visible only to you and administrators in this workspace.</p>
-         * </li>
+         * <li>PUBLIC: The task is visible to all users in the workspace.</li>
+         * <li>PRIVATE: The task is visible only to you and administrators in the workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +145,7 @@ public class UpdateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>Maximum runtime. Unit: minutes.</p>
+         * <p>The maximum running duration in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -159,7 +157,10 @@ public class UpdateTensorboardRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The scheduling priority of the TensorBoard task. Valid values: 1 to 9. A value of 1 indicates the lowest priority, and a value of 9 indicates the highest priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -168,7 +169,7 @@ public class UpdateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>Workspace ID. For more information about how to get a workspace ID, see <a href="">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>380</p>

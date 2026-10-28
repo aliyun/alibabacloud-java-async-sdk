@@ -67,7 +67,7 @@ public class TokenSettings extends TeaModel {
         } 
 
         /**
-         * EnableCrossAccountAccess.
+         * <p>Specifies whether cross-account access through sharing links is allowed.</p>
          */
         public Builder enableCrossAccountAccess(Boolean enableCrossAccountAccess) {
             this.enableCrossAccountAccess = enableCrossAccountAccess;
@@ -75,7 +75,7 @@ public class TokenSettings extends TeaModel {
         }
 
         /**
-         * EnableLogDownloadJob.
+         * <p>Specifies whether task logs can be downloaded through sharing links.</p>
          */
         public Builder enableLogDownloadJob(Boolean enableLogDownloadJob) {
             this.enableLogDownloadJob = enableLogDownloadJob;

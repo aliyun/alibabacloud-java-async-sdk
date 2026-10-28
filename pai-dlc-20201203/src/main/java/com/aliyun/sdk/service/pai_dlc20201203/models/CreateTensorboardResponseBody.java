@@ -126,7 +126,7 @@ public class CreateTensorboardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Tensorboard ID。</p>
+         * <p>The TensorBoard ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tbxxxxxxxx</p>

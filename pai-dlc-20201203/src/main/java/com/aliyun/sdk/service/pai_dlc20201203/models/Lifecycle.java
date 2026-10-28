@@ -67,7 +67,7 @@ public class Lifecycle extends TeaModel {
         } 
 
         /**
-         * PostStart.
+         * <p>The post-start action.</p>
          */
         public Builder postStart(PostStart postStart) {
             this.postStart = postStart;
@@ -75,7 +75,7 @@ public class Lifecycle extends TeaModel {
         }
 
         /**
-         * PreStop.
+         * <p>The pre-stop action.</p>
          */
         public Builder preStop(PreStop preStop) {
             this.preStop = preStop;
@@ -128,7 +128,7 @@ public class Lifecycle extends TeaModel {
             } 
 
             /**
-             * Command.
+             * <p>The command.</p>
              */
             public Builder command(java.util.List<String> command) {
                 this.command = command;
@@ -182,7 +182,7 @@ public class Lifecycle extends TeaModel {
             } 
 
             /**
-             * Exec.
+             * <p>The exec action.</p>
              */
             public Builder exec(Exec exec) {
                 this.exec = exec;
@@ -236,7 +236,7 @@ public class Lifecycle extends TeaModel {
             } 
 
             /**
-             * Command.
+             * <p>The command.</p>
              */
             public Builder command(java.util.List<String> command) {
                 this.command = command;
@@ -290,7 +290,7 @@ public class Lifecycle extends TeaModel {
             } 
 
             /**
-             * Exec.
+             * <p>The exec action.</p>
              */
             public Builder exec(PreStopExec exec) {
                 this.exec = exec;

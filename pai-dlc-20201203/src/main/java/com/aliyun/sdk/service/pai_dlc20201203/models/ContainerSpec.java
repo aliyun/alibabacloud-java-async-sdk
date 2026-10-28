@@ -145,7 +145,7 @@ public class ContainerSpec extends TeaModel {
         } 
 
         /**
-         * <p>The command parameters.</p>
+         * <p>The command arguments.</p>
          */
         public Builder args(java.util.List<String> args) {
             this.args = args;
@@ -199,7 +199,7 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * SecurityContext.
+         * <p>The container security context configuration.</p>
          */
         public Builder securityContext(SecurityContext securityContext) {
             this.securityContext = securityContext;

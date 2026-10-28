@@ -101,7 +101,7 @@ public class GetTokenRequest extends Request {
         } 
 
         /**
-         * <p>The expiration time of the sharing link in seconds. Default value: 604800. Minimum value: 0.</p>
+         * <p>The expiration time of the sharing link. Default value: 604800 seconds. Minimum value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -113,7 +113,7 @@ public class GetTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task to share.</p>
+         * <p>The ID of the job to be shared.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc*******</p>
@@ -125,7 +125,7 @@ public class GetTokenRequest extends Request {
         }
 
         /**
-         * <p>The type of the task to share. Valid values: job and tensorboard.</p>
+         * <p>The type of the shared job. Valid values: job and tensorboard.</p>
          * 
          * <strong>example:</strong>
          * <p>job</p>
@@ -137,7 +137,7 @@ public class GetTokenRequest extends Request {
         }
 
         /**
-         * TokenSettings.
+         * <p>The permission settings of the sharing token, which controls log download and cross-account access.</p>
          */
         public Builder tokenSettings(TokenSettings tokenSettings) {
             this.putQueryParameter("TokenSettings", tokenSettings);

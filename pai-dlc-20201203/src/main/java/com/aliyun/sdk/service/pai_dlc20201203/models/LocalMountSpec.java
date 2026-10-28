@@ -80,7 +80,10 @@ public class LocalMountSpec extends TeaModel {
         } 
 
         /**
-         * LocalPath.
+         * <p>The local path on the host. This field is invalid when MountMode is set to Block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/local/a</p>
          */
         public Builder localPath(String localPath) {
             this.localPath = localPath;
@@ -88,7 +91,10 @@ public class LocalMountSpec extends TeaModel {
         }
 
         /**
-         * MountMode.
+         * <p>The mount mode. Valid values: Block and Filesystem.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Filesystem</p>
          */
         public Builder mountMode(String mountMode) {
             this.mountMode = mountMode;
@@ -96,7 +102,10 @@ public class LocalMountSpec extends TeaModel {
         }
 
         /**
-         * MountPath.
+         * <p>The absolute mount path in the container. The path must start with a forward slash (/). When MountMode is set to Block, the path must start with /dev/.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/data</p>
          */
         public Builder mountPath(String mountPath) {
             this.mountPath = mountPath;

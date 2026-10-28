@@ -80,7 +80,10 @@ public class CredentialConfigItem extends TeaModel {
         } 
 
         /**
-         * Key.
+         * <p>The identity key of the credential configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -88,7 +91,7 @@ public class CredentialConfigItem extends TeaModel {
         }
 
         /**
-         * Roles.
+         * <p>The list of associated roles.</p>
          */
         public Builder roles(java.util.List<CredentialRole> roles) {
             this.roles = roles;
@@ -96,7 +99,10 @@ public class CredentialConfigItem extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The credential type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RoleChain</p>
          */
         public Builder type(String type) {
             this.type = type;

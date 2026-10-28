@@ -145,7 +145,10 @@ public class FreeResourceItem extends TeaModel {
         } 
 
         /**
-         * AvailableNumber.
+         * <p>The resource count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder availableNumber(Long availableNumber) {
             this.availableNumber = availableNumber;
@@ -153,7 +156,7 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * ClusterID.
+         * <p>The cluster ID.</p>
          */
         public Builder clusterID(String clusterID) {
             this.clusterID = clusterID;
@@ -161,7 +164,7 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * ClusterName.
+         * <p>The cluster name.</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -169,7 +172,10 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * FreeResourceId.
+         * <p>The idle resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>freeres-whateversth</p>
          */
         public Builder freeResourceId(String freeResourceId) {
             this.freeResourceId = freeResourceId;
@@ -177,7 +183,10 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-18T12:52:15Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -185,7 +194,10 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * GmtModifyTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-18T12:52:15Z</p>
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -193,7 +205,10 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * RegionID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inner</p>
          */
         public Builder regionID(String regionID) {
             this.regionID = regionID;
@@ -201,7 +216,10 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;

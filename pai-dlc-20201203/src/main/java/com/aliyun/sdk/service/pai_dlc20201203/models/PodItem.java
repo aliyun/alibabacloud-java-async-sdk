@@ -223,7 +223,10 @@ public class PodItem extends TeaModel {
         } 
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the pod was created (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -231,7 +234,10 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * GmtFinishTime.
+         * <p>The time when the pod was completed (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T15:36:05Z</p>
          */
         public Builder gmtFinishTime(String gmtFinishTime) {
             this.gmtFinishTime = gmtFinishTime;
@@ -239,7 +245,10 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * GmtStartTime.
+         * <p>The time when the pod was started (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:05Z</p>
          */
         public Builder gmtStartTime(String gmtStartTime) {
             this.gmtStartTime = gmtStartTime;
@@ -247,7 +256,7 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * HistoryPods.
+         * <p>The historical pods.</p>
          */
         public Builder historyPods(java.util.List<PodItem> historyPods) {
             this.historyPods = historyPods;
@@ -255,7 +264,10 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * Ip.
+         * <p>Pod Ip</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.1.2</p>
          */
         public Builder ip(String ip) {
             this.ip = ip;
@@ -263,7 +275,10 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * NodeName.
+         * <p>The name of the compute node where the pod is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-a</p>
          */
         public Builder nodeName(String nodeName) {
             this.nodeName = nodeName;
@@ -271,7 +286,10 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * PodId.
+         * <p>Pod Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-mtl37ge7gkvdz-worker-0</p>
          */
         public Builder podId(String podId) {
             this.podId = podId;
@@ -279,7 +297,10 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * PodIp.
+         * <p>The IP address of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.1.2</p>
          */
         public Builder podIp(String podIp) {
             this.podIp = podIp;
@@ -287,7 +308,7 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * PodIps.
+         * <p>The IP addresses of the pod. For Lingjun AI Computing Service: user VPC net0, management VPC net, and pod-to-pod communication ethx. For general-purpose computing: user VPC eth1 with dedicated gateway default route, management VPC eth0 with public gateway default route, and pod-to-pod communication net eRDMA.</p>
          */
         public Builder podIps(java.util.List<PodNetworkInterface> podIps) {
             this.podIps = podIps;
@@ -295,7 +316,10 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * PodUid.
+         * <p>Pod Uid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe846462-af2c-4521-bd6f-96787a57591d</p>
          */
         public Builder podUid(String podUid) {
             this.podUid = podUid;
@@ -303,7 +327,10 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stopped</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -311,7 +338,10 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * SubStatus.
+         * <p>The substatus of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Restarting</p>
          */
         public Builder subStatus(String subStatus) {
             this.subStatus = subStatus;
@@ -319,7 +349,10 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Worker</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -327,7 +360,10 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * supportedProfilingTypes.
+         * <p>The list of supported profiling types, separated by commas, such as sysom. An empty string indicates that profiling is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sysom</p>
          */
         public Builder supportedProfilingTypes(String supportedProfilingTypes) {
             this.supportedProfilingTypes = supportedProfilingTypes;

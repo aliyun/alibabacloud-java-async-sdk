@@ -67,7 +67,7 @@ public class SecurityContextCapabilities extends TeaModel {
         } 
 
         /**
-         * Add.
+         * <p>The list of Linux capabilities to add.</p>
          */
         public Builder add(java.util.List<String> add) {
             this.add = add;
@@ -75,7 +75,7 @@ public class SecurityContextCapabilities extends TeaModel {
         }
 
         /**
-         * Drop.
+         * <p>The list of Linux capabilities to remove.</p>
          */
         public Builder drop(java.util.List<String> drop) {
             this.drop = drop;

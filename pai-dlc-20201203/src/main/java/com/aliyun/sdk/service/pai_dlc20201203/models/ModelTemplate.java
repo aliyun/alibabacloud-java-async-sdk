@@ -80,7 +80,10 @@ public class ModelTemplate extends TeaModel {
         } 
 
         /**
-         * Collections.
+         * <p>The collection where the model template resides. Default value: QuickStartTemplate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QuickStartTemplate</p>
          */
         public Builder collections(String collections) {
             this.collections = collections;
@@ -88,7 +91,10 @@ public class ModelTemplate extends TeaModel {
         }
 
         /**
-         * ModelName.
+         * <p>The name of the model template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen3-VL-32B-Instruct-PAI_template</p>
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -96,7 +102,10 @@ public class ModelTemplate extends TeaModel {
         }
 
         /**
-         * Provider.
+         * <p>The provider of the model template. Default value: pai, which indicates that the model template is officially provided by PAI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai</p>
          */
         public Builder provider(String provider) {
             this.provider = provider;

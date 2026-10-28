@@ -93,7 +93,7 @@ public class AssumeUserInfo extends TeaModel {
         } 
 
         /**
-         * AccessKeyId.
+         * <p>The AccessKey ID used for role assumption.</p>
          */
         public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = accessKeyId;
@@ -101,7 +101,10 @@ public class AssumeUserInfo extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203610320085271232</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -109,7 +112,7 @@ public class AssumeUserInfo extends TeaModel {
         }
 
         /**
-         * SecurityToken.
+         * <p>The security token used for role assumption.</p>
          */
         public Builder securityToken(String securityToken) {
             this.securityToken = securityToken;
@@ -117,7 +120,10 @@ public class AssumeUserInfo extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The user identity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sub</p>
          */
         public Builder type(String type) {
             this.type = type;

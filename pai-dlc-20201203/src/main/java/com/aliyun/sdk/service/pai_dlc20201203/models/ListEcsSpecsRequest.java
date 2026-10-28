@@ -143,7 +143,7 @@ public class ListEcsSpecsRequest extends Request {
         } 
 
         /**
-         * <p>Filters by accelerator type. Valid values:</p>
+         * <p>The accelerator type. Valid values:</p>
          * <ul>
          * <li>CPU</li>
          * <li>GPU</li>
@@ -159,7 +159,7 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * <p>The list of instance types to query. Separate multiple instance types with commas (,).</p>
+         * <p>The instance types to query. Separate multiple instance types with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6.large,ecs.g6.xlarge</p>
@@ -173,8 +173,8 @@ public class ListEcsSpecsRequest extends Request {
         /**
          * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>desc: descending order.</li>
-         * <li>asc: ascending order.</li>
+         * <li>desc: Descending order.</li>
+         * <li>asc: Ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The minimum value is 1.</p>
+         * <p>The page number. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -199,7 +199,7 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page in a paged query. This parameter is used for paging.</p>
+         * <p>The number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -227,7 +227,7 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * <p>Sorts by return field. Valid values:</p>
+         * <p>The field by which to sort the returned results. Valid values:</p>
          * <ul>
          * <li>CPU</li>
          * <li>GPU</li>

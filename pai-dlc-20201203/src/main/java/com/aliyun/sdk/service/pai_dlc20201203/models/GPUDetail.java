@@ -80,7 +80,10 @@ public class GPUDetail extends TeaModel {
         } 
 
         /**
-         * GPU.
+         * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -88,7 +91,10 @@ public class GPUDetail extends TeaModel {
         }
 
         /**
-         * GPUType.
+         * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tesla-V100-32G</p>
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -96,7 +102,10 @@ public class GPUDetail extends TeaModel {
         }
 
         /**
-         * GPUTypeFullName.
+         * <p>The full name of the GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nvidia.com/gpu-tesla-v100-sxm2-16gb</p>
          */
         public Builder GPUTypeFullName(String GPUTypeFullName) {
             this.GPUTypeFullName = GPUTypeFullName;

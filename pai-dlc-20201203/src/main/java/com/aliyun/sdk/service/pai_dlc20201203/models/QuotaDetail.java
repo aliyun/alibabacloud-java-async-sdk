@@ -119,7 +119,10 @@ public class QuotaDetail extends TeaModel {
         } 
 
         /**
-         * CPU.
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder CPU(String CPU) {
             this.CPU = CPU;
@@ -127,7 +130,10 @@ public class QuotaDetail extends TeaModel {
         }
 
         /**
-         * GPU.
+         * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -135,7 +141,7 @@ public class QuotaDetail extends TeaModel {
         }
 
         /**
-         * GPUDetails.
+         * <p>The GPU details.</p>
          */
         public Builder GPUDetails(java.util.List<GPUDetail> GPUDetails) {
             this.GPUDetails = GPUDetails;
@@ -143,7 +149,10 @@ public class QuotaDetail extends TeaModel {
         }
 
         /**
-         * GPUType.
+         * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tesla-V100</p>
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -151,7 +160,10 @@ public class QuotaDetail extends TeaModel {
         }
 
         /**
-         * GPUTypeFullName.
+         * <p>The full name of the GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nvidia.com/gpu</p>
          */
         public Builder GPUTypeFullName(String GPUTypeFullName) {
             this.GPUTypeFullName = GPUTypeFullName;
@@ -159,7 +171,10 @@ public class QuotaDetail extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10Gi</p>
          */
         public Builder memory(String memory) {
             this.memory = memory;

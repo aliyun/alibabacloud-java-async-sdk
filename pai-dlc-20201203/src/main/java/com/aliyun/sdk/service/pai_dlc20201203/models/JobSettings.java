@@ -379,7 +379,7 @@ public class JobSettings extends TeaModel {
         } 
 
         /**
-         * <p>The extra advanced parameter settings.</p>
+         * <p>The additional advanced parameter settings.</p>
          */
         public Builder advancedSettings(java.util.Map<String, ?> advancedSettings) {
             this.advancedSettings = advancedSettings;
@@ -387,7 +387,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to mount all RDMA network interfaces.</p>
+         * <p>Specifies whether to allocate all RDMA NICs.</p>
          */
         public Builder allocateAllRDMADevices(Boolean allocateAllRDMADevices) {
             this.allocateAllRDMADevices = allocateAllRDMADevices;
@@ -395,7 +395,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * AllowUnschedulableNodes.
+         * <p>Specifies whether to allow jobs to be scheduled to nodes that are marked as unschedulable or are in the workspace blacklist. If enabled, node status checks are skipped and the corresponding bypass configurations are applied.</p>
          */
         public Builder allowUnschedulableNodes(Boolean allowUnschedulableNodes) {
             this.allowUnschedulableNodes = allowUnschedulableNodes;
@@ -403,7 +403,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The user ID associated with the job.</p>
+         * <p>The ID of the user associated with the job.</p>
          * 
          * <strong>example:</strong>
          * <p>16****</p>
@@ -425,7 +425,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The DataJuicer task configuration.</p>
+         * <p>The DataJuicer job configuration.</p>
          */
         public Builder dataJuicerConfig(DataJuicerConfig dataJuicerConfig) {
             this.dataJuicerConfig = dataJuicerConfig;
@@ -433,7 +433,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to skip inventory check. Valid values:</p>
+         * <p>Specifies whether to skip the ECS inventory check. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -459,7 +459,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * ElasticSpotJobMaxRestartTimes.
+         * <p>The maximum number of restarts for an elastic spot job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder elasticSpotJobMaxRestartTimes(Integer elasticSpotJobMaxRestartTimes) {
             this.elasticSpotJobMaxRestartTimes = elasticSpotJobMaxRestartTimes;
@@ -467,7 +470,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The CPU affinity setting. This setting is effective only when using general computing subscription resources.</p>
+         * <p>The CPU affinity settings. These settings take effect only when general-purpose computing subscription resources are used.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -478,7 +481,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * EnableDSWDev.
+         * <p>Specifies whether to enable the DSW development mode for the job. If enabled, a sidecar container is injected into the pod.</p>
          */
         public Builder enableDSWDev(Boolean enableDSWDev) {
             this.enableDSWDev = enableDSWDev;
@@ -501,7 +504,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to allow OSS append write. Valid values:</p>
+         * <p>Specifies whether to allow OSS append writes. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -531,7 +534,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable computing power health check for the job. Valid values:</p>
+         * <p>Specifies whether to enable computing power health checks for the job. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -546,7 +549,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to allow the job to use tidal resources. Valid values:</p>
+         * <p>Specifies whether to allow the job to use tide resources. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -561,7 +564,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The configuration parameters for fault tolerance monitoring after it is enabled, such as whether to enable log hang-based detection.</p>
+         * <p>The configuration parameters for fault tolerance monitoring when it is enabled, such as specifying whether to enable log hang-based detection.</p>
          * 
          * <strong>example:</strong>
          * <p>--enable-log-hang-detection true</p>
@@ -572,7 +575,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The retention duration after job completion, in minutes.</p>
+         * <p>The retention duration after the job ends, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -583,7 +586,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The retention policy after job completion.</p>
+         * <p>The retention policy after the job ends.</p>
          * 
          * <strong>example:</strong>
          * <p>Always</p>
@@ -594,7 +597,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The output model configuration. This parameter is currently effective only in joint training scenarios.</p>
+         * <p>The output model configuration. This parameter takes effect only in joint training scenarios.</p>
          */
         public Builder modelConfig(ModelConfig modelConfig) {
             this.modelConfig = modelConfig;
@@ -602,7 +605,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The oversold resource usage mode for the job (reject/accept/only accept).</p>
+         * <p>The oversold resource usage mode for the job, which can be not accepted, accepted, or only accepted.</p>
          * 
          * <strong>example:</strong>
          * <p>AcceptQuotaOverSold</p>
@@ -624,7 +627,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The configuration parameters for computing power health check.</p>
+         * <p>The configuration parameters for computing power health checks.</p>
          * 
          * <strong>example:</strong>
          * <p>--sanity-check-timing=AfterJobFaultTolerant --sanity-check-timeout-ops=MarkJobFail</p>
@@ -635,7 +638,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * Shell.
+         * <p>The shell used to execute job commands. Valid values: /bin/sh and /bin/bash.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/bin/bash</p>
          */
         public Builder shell(String shell) {
             this.shell = shell;
@@ -651,7 +657,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * TerminationGracePeriodSeconds.
+         * <p>The grace period to wait for the pod to exit when the job is terminated, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder terminationGracePeriodSeconds(Long terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;

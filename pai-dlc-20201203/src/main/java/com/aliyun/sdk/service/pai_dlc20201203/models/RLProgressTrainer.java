@@ -93,7 +93,7 @@ public class RLProgressTrainer extends TeaModel {
         } 
 
         /**
-         * <p>micro-batch 进度</p>
+         * <p>The micro-batch progress.</p>
          */
         public Builder micro(RLProgressMicro micro) {
             this.micro = micro;
@@ -101,7 +101,7 @@ public class RLProgressTrainer extends TeaModel {
         }
 
         /**
-         * <p>当前 mini batch 序号</p>
+         * <p>The current mini-batch ordinal number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -112,7 +112,7 @@ public class RLProgressTrainer extends TeaModel {
         }
 
         /**
-         * <p>mini-batch 总数</p>
+         * <p>The total number of mini-batches.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -123,7 +123,7 @@ public class RLProgressTrainer extends TeaModel {
         }
 
         /**
-         * <p>参数同步状态</p>
+         * <p>The parameter synchronization status.</p>
          */
         public Builder sync(RLProgressSync sync) {
             this.sync = sync;

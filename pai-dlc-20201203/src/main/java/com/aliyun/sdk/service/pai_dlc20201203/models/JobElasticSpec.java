@@ -236,7 +236,7 @@ public class JobElasticSpec extends TeaModel {
         } 
 
         /**
-         * AIMasterDockerImage.
+         * <p>The AIMaster Docker image.</p>
          */
         public Builder AIMasterDockerImage(String AIMasterDockerImage) {
             this.AIMasterDockerImage = AIMasterDockerImage;
@@ -244,7 +244,10 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * AIMasterType.
+         * <p>The resource specifications for the AIMaster role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         public Builder AIMasterType(String AIMasterType) {
             this.AIMasterType = AIMasterType;
@@ -252,7 +255,10 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * EDPMaxParallelism.
+         * <p>The maximum EDP parallelism.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder EDPMaxParallelism(Integer EDPMaxParallelism) {
             this.EDPMaxParallelism = EDPMaxParallelism;
@@ -260,7 +266,10 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * EDPMinParallelism.
+         * <p>The minimum EDP parallelism.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder EDPMinParallelism(Integer EDPMinParallelism) {
             this.EDPMinParallelism = EDPMinParallelism;
@@ -268,7 +277,10 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * ElasticStrategy.
+         * <p>The elastic training strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chief</p>
          */
         public Builder elasticStrategy(String elasticStrategy) {
             this.elasticStrategy = elasticStrategy;
@@ -276,7 +288,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * EnableAIMaster.
+         * <p>Specifies whether to enable AIMaster.</p>
          */
         public Builder enableAIMaster(Boolean enableAIMaster) {
             this.enableAIMaster = enableAIMaster;
@@ -284,7 +296,10 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * EnableEDP.
+         * <p>Specifies whether to enable EDP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableEDP(Boolean enableEDP) {
             this.enableEDP = enableEDP;
@@ -292,7 +307,10 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * EnableElasticTraining.
+         * <p>Specifies whether to enable elastic training.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableElasticTraining(Boolean enableElasticTraining) {
             this.enableElasticTraining = enableElasticTraining;
@@ -300,7 +318,10 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * EnablePsJobElasticPS.
+         * <p>Specifies whether to enable the elastic PS feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enablePsJobElasticPS(Boolean enablePsJobElasticPS) {
             this.enablePsJobElasticPS = enablePsJobElasticPS;
@@ -308,7 +329,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * EnablePsJobElasticWorker.
+         * <p>Specifies whether to enable elastic workers for PS jobs.</p>
          */
         public Builder enablePsJobElasticWorker(Boolean enablePsJobElasticWorker) {
             this.enablePsJobElasticWorker = enablePsJobElasticWorker;
@@ -316,7 +337,10 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * EnablePsResourceEstimate.
+         * <p>Specifies whether to enable PS resource estimation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enablePsResourceEstimate(Boolean enablePsResourceEstimate) {
             this.enablePsResourceEstimate = enablePsResourceEstimate;
@@ -324,7 +348,10 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * MaxParallelism.
+         * <p>The maximum parallelism.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder maxParallelism(Integer maxParallelism) {
             this.maxParallelism = maxParallelism;
@@ -332,7 +359,10 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * MinParallelism.
+         * <p>The minimum parallelism.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minParallelism(Integer minParallelism) {
             this.minParallelism = minParallelism;
@@ -340,7 +370,10 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * PSMaxParallelism.
+         * <p>The maximum PS parallelism.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder PSMaxParallelism(Integer PSMaxParallelism) {
             this.PSMaxParallelism = PSMaxParallelism;
@@ -348,7 +381,10 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * PSMinParallelism.
+         * <p>The minimum PS parallelism.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder PSMinParallelism(Integer PSMinParallelism) {
             this.PSMinParallelism = PSMinParallelism;

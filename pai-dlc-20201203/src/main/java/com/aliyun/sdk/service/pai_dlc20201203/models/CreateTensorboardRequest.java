@@ -327,8 +327,8 @@ public class CreateTensorboardRequest extends Request {
         /**
          * <p>The visibility of the job. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: Visible to all members in the workspace.</li>
-         * <li>PRIVATE: Visible only to you and administrators in the workspace.</li>
+         * <li>PUBLIC: The job is visible to all users in the workspace.</li>
+         * <li>PRIVATE: The job is visible only to you and administrators in the workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -353,7 +353,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The dataset ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
+         * <p>The dataset ID. &lt;props=&quot;china&quot;&gt;For more information about how to obtain the dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>d-xxxxxxxx</p>
@@ -381,7 +381,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The datasource configurations.</p>
+         * <p>The datasource config.</p>
          */
         public Builder dataSources(java.util.List<DataSourceItem> dataSources) {
             this.putBodyParameter("DataSources", dataSources);
@@ -390,7 +390,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The TensorBoard name.</p>
+         * <p>The name of the TensorBoard instance.</p>
          * 
          * <strong>example:</strong>
          * <p>tensorboard</p>
@@ -402,7 +402,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The job ID. For information about how to obtain the job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
+         * <p>The job ID. For more information about how to obtain the job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc-20210126170216-mtl37ge7gkvdz</p>
@@ -438,7 +438,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The extended field of custom dataset in JSON format. Currently, MountPath is supported, which specifies the custom mount path of custom dataset.</p>
+         * <p>The extension field of custom dataset, in JSON format. Currently, only MountPath is supported, which specifies the custom mount path of custom dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;mountpath&quot;:&quot;/root/data/&quot;}</p>
@@ -450,7 +450,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The priority of the job. This is an optional parameter. Default value: 1. Valid values: 1 to 9.</p>
+         * <p>The priority of the job. This parameter is optional. Default value: 1. Valid values: 1 to 9.</p>
          * <ul>
          * <li>1: the lowest priority.</li>
          * <li>9: the highest priority.</li>
@@ -466,9 +466,9 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The resource quota ID. This parameter is required when you create a TensorBoard job by using resources from a resource quota. &lt;props=&quot;china&quot;&gt;For information about how to obtain the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2628071.html">ListQuotas</a>.
-         * &lt;props=&quot;china&quot;&gt;Published only on China site.
-         * Currently, only whitelisted users can create TensorBoard jobs by using resource quota resources. To use this feature, contact us.</p>
+         * <p>The resource quota ID. This parameter is required when you create a TensorBoard job by using resources from a resource quota. &lt;props=&quot;china&quot;&gt;For more information about how to obtain the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2628071.html">ListQuotas</a>.
+         * &lt;props=&quot;china&quot;&gt;Released only on the China site.
+         * Currently, only whitelisted users can create TensorBoard jobs by using resources from a resource quota. To use this feature, contact us.</p>
          * 
          * <strong>example:</strong>
          * <p>quota12345</p>
@@ -516,7 +516,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The summary relative directory.</p>
+         * <p>The relative path of the summary directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/summary/</p>
@@ -537,7 +537,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The pay-as-you-go configuration for TensorBoard, which is used to create a TensorBoard job that uses pay-as-you-go resources.</p>
+         * <p>The pay-as-you-go configuration information of the TensorBoard instance, which is used to create a TensorBoard job that uses pay-as-you-go resources.</p>
          */
         public Builder tensorboardSpec(TensorboardSpec tensorboardSpec) {
             this.putBodyParameter("TensorboardSpec", tensorboardSpec);
@@ -562,7 +562,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123***</p>

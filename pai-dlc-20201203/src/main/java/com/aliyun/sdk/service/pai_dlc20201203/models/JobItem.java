@@ -904,7 +904,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The job running duration, in seconds.</p>
+         * <p>The job duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>243</p>
@@ -923,7 +923,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether PreemptibleJob is enabled.</p>
+         * <p>Specifies whether the preemptible job is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -934,7 +934,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether debugger analysis is enabled.</p>
+         * <p>Specifies whether debugger analysis is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -945,7 +945,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The environment variables injected into the job at runtime.</p>
+         * <p>The environment variables injected during job execution.</p>
          */
         public Builder envs(java.util.Map<String, String> envs) {
             this.envs = envs;
@@ -964,7 +964,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The time when the job failed (UTC).</p>
+         * <p>The job failure time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -975,7 +975,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The time when the job finished (UTC).</p>
+         * <p>The job end time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-16T07:28:20Z</p>
@@ -986,7 +986,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The time when the job was modified (UTC).</p>
+         * <p>The job modification time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-16T07:28:22Z</p>
@@ -997,7 +997,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The time when the job started running in UTC format.</p>
+         * <p>The job start time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-16T07:26:41Z</p>
@@ -1008,7 +1008,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The time when the job was stopped (UTC).</p>
+         * <p>The job stop time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -1019,7 +1019,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The job submission time in UTC format.</p>
+         * <p>The job submission time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-16T07:26:14Z</p>
@@ -1030,7 +1030,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The time when the job completed successfully in UTC format.</p>
+         * <p>The job success time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-16T07:28:20Z</p>
@@ -1041,7 +1041,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the job is deleted.</p>
+         * <p>Specifies whether the job is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1063,7 +1063,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The maximum job running duration.</p>
+         * <p>The maximum job running time.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1074,7 +1074,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * JobReplicaStatuses.
+         * <p>The list of replica running statuses for each task role.</p>
          */
         public Builder jobReplicaStatuses(java.util.List<JobReplicaStatus> jobReplicaStatuses) {
             this.jobReplicaStatuses = jobReplicaStatuses;
@@ -1082,7 +1082,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The node configurations for the job at runtime.</p>
+         * <p>The node configuration during job execution.</p>
          */
         public Builder jobSpecs(java.util.List<JobSpec> jobSpecs) {
             this.jobSpecs = jobSpecs;
@@ -1091,6 +1091,16 @@ public class JobItem extends TeaModel {
 
         /**
          * <p>The job type. Valid values:</p>
+         * <ul>
+         * <li>TFJob</li>
+         * <li>PyTorchJob</li>
+         * <li>MPIJob</li>
+         * <li>XGBoostJob</li>
+         * <li>OneFlowJob</li>
+         * <li>ElasticBatchJob</li>
+         * <li>RayJob</li>
+         * <li>SlurmJob</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TFJob</p>
@@ -1120,7 +1130,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>Pods。</p>
+         * <p>The pods.</p>
          */
         public Builder pods(java.util.List<PodItem> pods) {
             this.pods = pods;
@@ -1139,7 +1149,12 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The reason code for the job entering its current status. Valid values:</p>
+         * <p>The reason code for the current job status. Valid values:</p>
+         * <ul>
+         * <li>InvalidParameter</li>
+         * <li>JobSucceeded</li>
+         * <li>JobStoppedByUser</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>JobStoppedByUser</p>
@@ -1150,7 +1165,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The detailed description of the reason for the job entering its current status.</p>
+         * <p>The detailed description of the reason for the current job status.</p>
          * 
          * <strong>example:</strong>
          * <p>Job is stopped by user.</p>
@@ -1194,7 +1209,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group in which the job runs.</p>
+         * <p>The ID of the resource group where the job runs.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc-quota</p>
@@ -1205,7 +1220,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The resource level of the job at runtime.</p>
+         * <p>The resource level when the job runs.</p>
          * 
          * <strong>example:</strong>
          * <p>L0</p>
@@ -1216,7 +1231,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The name of the resource on which the job runs.</p>
+         * <p>The name of the resource where the job runs.</p>
          * 
          * <strong>example:</strong>
          * <p>my_resource_group</p>
@@ -1227,7 +1242,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The resource name.</p>
+         * <p>The name of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1238,7 +1253,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The resource type. Valid values: ECS, Lingjun, and ACS.</p>
+         * <p>The resource type, such as ECS, Lingjun, or ACS.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>
@@ -1249,7 +1264,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The number of times the job has been restarted.</p>
+         * <p>The number of times the job is restarted.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1260,7 +1275,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * RetryCount.
+         * <p>The number of retries configured for the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder retryCount(Integer retryCount) {
             this.retryCount = retryCount;
@@ -1268,7 +1286,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * SchedulingStrategy.
+         * <p>The scheduling strategy of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Auto</p>
          */
         public Builder schedulingStrategy(String schedulingStrategy) {
             this.schedulingStrategy = schedulingStrategy;
@@ -1285,6 +1306,10 @@ public class JobItem extends TeaModel {
 
         /**
          * <p>The job status. Valid values:</p>
+         * <ul>
+         * <li>Succeeded</li>
+         * <li>Failed</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Stopped</p>
@@ -1295,7 +1320,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The job status transition information.</p>
+         * <p>The status transition information of the job.</p>
          */
         public Builder statusHistory(java.util.List<StatusTransitionItem> statusHistory) {
             this.statusHistory = statusHistory;
@@ -1303,7 +1328,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The job sub-status, such as preemption retry status.</p>
+         * <p>The substatus of the job, such as the preemptible retry status.</p>
          * 
          * <strong>example:</strong>
          * <p>Restarting</p>
@@ -1322,7 +1347,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the node template used to create the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tplmceolmf2****</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -1330,7 +1358,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * TemplateName.
+         * <p>The name of the node template used to create the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-template-example-1778047****</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -1368,7 +1399,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the job uses idle resources.</p>
+         * <p>Specifies whether the job uses idle resources.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1379,7 +1410,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The startup command that runs on each node of the job.</p>
+         * <p>The startup command run by each node of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>python /root/code/mnist.py</p>
@@ -1390,7 +1421,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * <p>The UID of the user who owns the job.</p>
+         * <p>The UID of the user to whom the job belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -1467,7 +1498,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * supportedProfilingTypes.
+         * <p>The list of supported profiling types, separated by commas, such as sysom. An empty string indicates that profiling is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sysom</p>
          */
         public Builder supportedProfilingTypes(String supportedProfilingTypes) {
             this.supportedProfilingTypes = supportedProfilingTypes;
@@ -1782,7 +1816,11 @@ public class JobItem extends TeaModel {
             } 
 
             /**
-             * <p>The default route. Valid values:</p>
+             * <p>The default routing. Valid values:</p>
+             * <ul>
+             * <li>eth0: Uses the default network interface controller (NIC) to access external networks through the public gateway.</li>
+             * <li>eth1: Uses the user elastic network interfaces (ENIs) to access external networks through the private gateway.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>eth0</p>

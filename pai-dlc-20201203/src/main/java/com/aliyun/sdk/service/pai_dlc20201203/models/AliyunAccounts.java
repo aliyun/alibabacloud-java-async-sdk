@@ -93,7 +93,7 @@ public class AliyunAccounts extends TeaModel {
         } 
 
         /**
-         * AliyunUid.
+         * <p>The UID of the Alibaba Cloud account.</p>
          */
         public Builder aliyunUid(String aliyunUid) {
             this.aliyunUid = aliyunUid;
@@ -101,7 +101,7 @@ public class AliyunAccounts extends TeaModel {
         }
 
         /**
-         * EmployeeId.
+         * <p>The employee ID of the internal user.</p>
          */
         public Builder employeeId(String employeeId) {
             this.employeeId = employeeId;
@@ -109,7 +109,10 @@ public class AliyunAccounts extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time of the record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-18T12:52:15Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -117,7 +120,10 @@ public class AliyunAccounts extends TeaModel {
         }
 
         /**
-         * GmtModifyTime.
+         * <p>The last modification time of the record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-18T12:52:15Z</p>
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;

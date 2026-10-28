@@ -368,7 +368,7 @@ public class JobSpec extends TeaModel {
         } 
 
         /**
-         * <p>The node scheduling configuration.</p>
+         * <p>The specified node scheduling configuration.</p>
          */
         public Builder assignNodeSpec(AssignNodeSpec assignNodeSpec) {
             this.assignNodeSpec = assignNodeSpec;
@@ -392,7 +392,10 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * Driver.
+         * <p>The GPU driver version used by the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>535.54.03</p>
          */
         public Builder driver(String driver) {
             this.driver = driver;
@@ -400,7 +403,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * <p>The hardware specification of the worker. Visit <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a> for the detailed specification list.&gt;Notice: Prices vary depending on the specification.</p>
+         * <p>The hardware specifications of the worker. For a detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing overview</a>.&gt;Notice: Prices vary by specification.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.large</p>
@@ -411,7 +414,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * ElasticSpotSpecs.
+         * <p>The list of candidate instance types for this role to participate in elastic spot bidding.</p>
          */
         public Builder elasticSpotSpecs(java.util.List<ElasticSpotSpec> elasticSpotSpecs) {
             this.elasticSpotSpecs = elasticSpotSpecs;
@@ -419,7 +422,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * <p>The extra pod configuration.</p>
+         * <p>The additional pod configuration.</p>
          */
         public Builder extraPodSpec(ExtraPodSpec extraPodSpec) {
             this.extraPodSpec = extraPodSpec;
@@ -427,7 +430,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * HyperNodeSchedulingConfig.
+         * <p>The hypernode scheduling configuration for this role.</p>
          */
         public Builder hyperNodeSchedulingConfig(HyperNodeSchedulingConfig hyperNodeSchedulingConfig) {
             this.hyperNodeSchedulingConfig = hyperNodeSchedulingConfig;
@@ -435,7 +438,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * <p>The runtime image address for this type of worker. Call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to retrieve images provided by the PAI platform. You can also specify a third-party public image.</p>
+         * <p>The runtime image URL for this type of worker. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain images provided by the PAI platform. You can also specify a public third-party image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/cloud-dsw/tensorflow:1.12PAI-gpu-py36-cu101-ubuntu18.04</p>
@@ -454,7 +457,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> This field is deprecated due to a spelling error.</p>
+         * <p><strong>[Deprecated]</strong> This field is misspelled and deprecated.</p>
          */
         public Builder isCheif(Boolean isCheif) {
             this.isCheif = isCheif;
@@ -462,7 +465,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the role is the Chief role. Only one Chief role is allowed.</p>
+         * <p>Specifies whether this role is the chief role. Only one chief role is allowed.</p>
          */
         public Builder isChief(Boolean isChief) {
             this.isChief = isChief;
@@ -478,7 +481,10 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * OversoldType.
+         * <p>The usage type of idle resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AcceptQuotaOverSold</p>
          */
         public Builder oversoldType(String oversoldType) {
             this.oversoldType = oversoldType;
@@ -497,7 +503,10 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * QuotaId.
+         * <p>The ID of the resource quota used by the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota12345</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -548,7 +557,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * SystemDisk.
+         * <p>The system cloud disk configuration for the job replicas.</p>
          */
         public Builder systemDisk(SystemDisk systemDisk) {
             this.systemDisk = systemDisk;
@@ -556,7 +565,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * <p>The type, which is closely related to the job type. Different job types support different worker types.</p>
+         * <p>The type is closely related to the job type. Different job types support different worker types.</p>
          * <ul>
          * <li><p><strong>TFJob</strong>: Supports Chief, PS, Worker, Evaluator, and GraphLearn.</p>
          * </li>
@@ -571,7 +580,7 @@ public class JobSpec extends TeaModel {
          * <li><p><strong>RayJob</strong>: Supports Head, Worker, and Worker[-xxx].</p>
          * </li>
          * </ul>
-         * <p>Master is optional in PyTorchJob, XGBoostJob, OneFlowJob, and ElasticBatch. If not specified, the system automatically designates the first Worker node as Master.</p>
+         * <p>The Master role in PyTorchJob, XGBoostJob, OneFlowJob, and ElasticBatch is optional. If not specified, the system automatically assigns the first worker node as the master.</p>
          * 
          * <strong>example:</strong>
          * <p>Worker</p>

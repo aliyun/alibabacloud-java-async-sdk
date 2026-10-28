@@ -67,7 +67,10 @@ public class HyperNodeSchedulingConfig extends TeaModel {
         } 
 
         /**
-         * MinAvailable.
+         * <p>The minimum number of available instances required when the role participates in HyperNode scheduling. The value must be greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minAvailable(Integer minAvailable) {
             this.minAvailable = minAvailable;
@@ -75,7 +78,10 @@ public class HyperNodeSchedulingConfig extends TeaModel {
         }
 
         /**
-         * QualityPolicy.
+         * <p>The quality policy. Currently, only AlwaysRequire is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AlwaysRequire</p>
          */
         public Builder qualityPolicy(String qualityPolicy) {
             this.qualityPolicy = qualityPolicy;

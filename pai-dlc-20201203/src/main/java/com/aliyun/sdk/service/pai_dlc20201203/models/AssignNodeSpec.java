@@ -106,7 +106,7 @@ public class AssignNodeSpec extends TeaModel {
         } 
 
         /**
-         * AntiAffinityHyperNodes.
+         * <p>The list of hyper nodes to avoid during scheduling.</p>
          */
         public Builder antiAffinityHyperNodes(java.util.List<HyperNodeSpec> antiAffinityHyperNodes) {
             this.antiAffinityHyperNodes = antiAffinityHyperNodes;
@@ -114,7 +114,10 @@ public class AssignNodeSpec extends TeaModel {
         }
 
         /**
-         * AntiAffinityNodeNames.
+         * <p>AntiAffinityNodeNames</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lingjxxxxxxxx</p>
          */
         public Builder antiAffinityNodeNames(String antiAffinityNodeNames) {
             this.antiAffinityNodeNames = antiAffinityNodeNames;
@@ -122,7 +125,10 @@ public class AssignNodeSpec extends TeaModel {
         }
 
         /**
-         * EnableAssignNode.
+         * <p>EnableAssignNode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAssignNode(Boolean enableAssignNode) {
             this.enableAssignNode = enableAssignNode;
@@ -130,7 +136,7 @@ public class AssignNodeSpec extends TeaModel {
         }
 
         /**
-         * HyperNodes.
+         * <p>The list of hyper nodes to schedule to.</p>
          */
         public Builder hyperNodes(java.util.List<HyperNodeSpec> hyperNodes) {
             this.hyperNodes = hyperNodes;
@@ -138,7 +144,10 @@ public class AssignNodeSpec extends TeaModel {
         }
 
         /**
-         * NodeNames.
+         * <p>NodeNames</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lingjxxxxxxxx</p>
          */
         public Builder nodeNames(String nodeNames) {
             this.nodeNames = nodeNames;

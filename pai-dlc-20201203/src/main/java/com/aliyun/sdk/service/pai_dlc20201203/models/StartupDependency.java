@@ -80,7 +80,10 @@ public class StartupDependency extends TeaModel {
         } 
 
         /**
-         * MinReplicas.
+         * <p>The minimum number of dependent roles that must reach the expected phase to be considered satisfied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minReplicas(String minReplicas) {
             this.minReplicas = minReplicas;
@@ -88,7 +91,10 @@ public class StartupDependency extends TeaModel {
         }
 
         /**
-         * OnPhase.
+         * <p>The phase that dependent roles must reach to be considered satisfied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServiceReady</p>
          */
         public Builder onPhase(String onPhase) {
             this.onPhase = onPhase;
@@ -96,7 +102,10 @@ public class StartupDependency extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the dependent role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Worker</p>
          */
         public Builder type(String type) {
             this.type = type;

@@ -80,7 +80,10 @@ public class SystemDisk extends TeaModel {
         } 
 
         /**
-         * Category.
+         * <p>The system cloud disk type, such as cloud_essd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -88,7 +91,10 @@ public class SystemDisk extends TeaModel {
         }
 
         /**
-         * PerformanceLevel.
+         * <p>The performance level of the ESSD cloud disk, such as PL0 and PL1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         public Builder performanceLevel(String performanceLevel) {
             this.performanceLevel = performanceLevel;
@@ -96,7 +102,10 @@ public class SystemDisk extends TeaModel {
         }
 
         /**
-         * Size.
+         * <p>The size of the system cloud disk, in GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder size(Long size) {
             this.size = size;

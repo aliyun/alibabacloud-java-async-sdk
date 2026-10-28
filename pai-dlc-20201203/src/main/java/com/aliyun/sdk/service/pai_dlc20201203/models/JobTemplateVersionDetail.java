@@ -114,7 +114,7 @@ public class JobTemplateVersionDetail extends TeaModel {
         }
 
         /**
-         * <p>Configuration content of the job template. It supports all parameter fields of the CreateJob API and is stored as a JSON object.</p>
+         * <p>任务模板的配置内容，支持 CreateJob 接口的所有参数字段，以 JSON 对象存储</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -122,7 +122,7 @@ public class JobTemplateVersionDetail extends TeaModel {
         }
 
         /**
-         * <p>User ID that created this version</p>
+         * <p>创建该版本的用户ID</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -130,7 +130,7 @@ public class JobTemplateVersionDetail extends TeaModel {
         }
 
         /**
-         * <p>Creation time of this version</p>
+         * <p>该版本的创建时间</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          */
         public Builder gmtCreated(String gmtCreated) {
@@ -139,7 +139,7 @@ public class JobTemplateVersionDetail extends TeaModel {
         }
 
         /**
-         * <p>Template version number</p>
+         * <p>模板版本号</p>
          */
         public Builder version(Integer version) {
             this.version = version;

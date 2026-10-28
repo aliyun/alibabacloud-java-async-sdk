@@ -442,7 +442,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * Cpu.
+         * <p>The CPU resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cpu(Long cpu) {
             this.cpu = cpu;
@@ -461,7 +464,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * DataSourceType.
+         * <p>The dataset type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -535,7 +541,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * MaxRunningTimeMinutes.
+         * <p>The maximum running duration in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>240</p>
          */
         public Builder maxRunningTimeMinutes(Long maxRunningTimeMinutes) {
             this.maxRunningTimeMinutes = maxRunningTimeMinutes;
@@ -543,7 +552,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory size in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder memory(Long memory) {
             this.memory = memory;
@@ -551,7 +563,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * Options.
+         * <p>The extended fields of the dataset in JSON format. Currently, MountPath is supported, which specifies the mount path for a custom dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;mountpath&quot;:&quot;/root/data/&quot;}</p>
          */
         public Builder options(String options) {
             this.options = options;
@@ -559,7 +574,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The priority of the TensorBoard job.</p>
+         * <p>The priority of the Tensorboard job.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -570,7 +585,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group used by TensorBoard.</p>
+         * <p>The ID of the resource group used by Tensorboard.</p>
          * 
          * <strong>example:</strong>
          * <p>quota12***</p>
@@ -581,7 +596,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The name of the resource quota used by TensorBoard.</p>
+         * <p>The name of the resource quota used by Tensorboard.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc-quota</p>
@@ -647,7 +662,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * SummaryRelativePath.
+         * <p>The absolute path of the summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/summary/</p>
          */
         public Builder summaryRelativePath(String summaryRelativePath) {
             this.summaryRelativePath = summaryRelativePath;
@@ -655,7 +673,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The datasets mounted to the TensorBoard job.</p>
+         * <p>The datasets mounted to the Tensorboard job.</p>
          */
         public Builder tensorboardDataSources(java.util.List<TensorboardDataSourceSpec> tensorboardDataSources) {
             this.tensorboardDataSources = tensorboardDataSources;
@@ -663,7 +681,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>Tensorboard ID。</p>
+         * <p>The Tensorboard ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tensorboard-xxx</p>
@@ -674,7 +692,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The pay-as-you-go configuration of the TensorBoard job.</p>
+         * <p>The pay-as-you-go configuration for the Tensorboard job.</p>
          */
         public Builder tensorboardSpec(TensorboardSpec tensorboardSpec) {
             this.tensorboardSpec = tensorboardSpec;
@@ -682,7 +700,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>Tensorboard URL。</p>
+         * <p>The Tensorboard URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxxxx">http://xxxxxx</a></p>
@@ -693,7 +711,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>The token value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9*****</p>
          */
         public Builder token(String token) {
             this.token = token;
@@ -723,7 +744,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

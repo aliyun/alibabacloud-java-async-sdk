@@ -67,7 +67,10 @@ public class PodNetworkInterface extends TeaModel {
         } 
 
         /**
-         * InterfaceName.
+         * <p>The name of the network interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eth0</p>
          */
         public Builder interfaceName(String interfaceName) {
             this.interfaceName = interfaceName;
@@ -75,7 +78,10 @@ public class PodNetworkInterface extends TeaModel {
         }
 
         /**
-         * Ip.
+         * <p>The IP address of the network interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.1.2</p>
          */
         public Builder ip(String ip) {
             this.ip = ip;

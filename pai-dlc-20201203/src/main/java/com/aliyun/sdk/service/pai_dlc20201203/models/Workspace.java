@@ -158,7 +158,10 @@ public class Workspace extends TeaModel {
         } 
 
         /**
-         * Creator.
+         * <p>The creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ken</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -166,7 +169,10 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -174,7 +180,10 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * GmtModifyTime.
+         * <p>The last modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -182,7 +191,7 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * Members.
+         * <p>The member list.</p>
          */
         public Builder members(java.util.List<Member> members) {
             this.members = members;
@@ -190,7 +199,7 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * Quotas.
+         * <p>The resource quota list.</p>
          */
         public Builder quotas(java.util.List<Quota> quotas) {
             this.quotas = quotas;
@@ -198,7 +207,7 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * TotalResources.
+         * <p>The total resources.</p>
          */
         public Builder totalResources(Resources totalResources) {
             this.totalResources = totalResources;
@@ -206,7 +215,7 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * WorkspaceAdmins.
+         * <p>The administrator list.</p>
          */
         public Builder workspaceAdmins(java.util.List<Member> workspaceAdmins) {
             this.workspaceAdmins = workspaceAdmins;
@@ -214,7 +223,10 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-20210126170216-mtl37ge7gkvdz</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -222,7 +234,10 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-workspace</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;

@@ -67,7 +67,10 @@ public class HyperNodeSpec extends TeaModel {
         } 
 
         /**
-         * HyperNodeName.
+         * <p>The name of the HyperNode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mg1234567</p>
          */
         public Builder hyperNodeName(String hyperNodeName) {
             this.hyperNodeName = hyperNodeName;
@@ -75,7 +78,10 @@ public class HyperNodeSpec extends TeaModel {
         }
 
         /**
-         * NodeNames.
+         * <p>The comma-separated names of the specified nodes in the HyperNode. If you leave this parameter empty, all nodes in the HyperNode are specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lingjxxxxxxxx</p>
          */
         public Builder nodeNames(String nodeNames) {
             this.nodeNames = nodeNames;

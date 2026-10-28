@@ -106,7 +106,7 @@ public class EventInfo extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The text content of the event.</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -114,7 +114,7 @@ public class EventInfo extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the event, which is used to obtain the related context.</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -122,7 +122,10 @@ public class EventInfo extends TeaModel {
         }
 
         /**
-         * PodId.
+         * <p>The ID of the pod to which the event belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc*****-master-0</p>
          */
         public Builder podId(String podId) {
             this.podId = podId;
@@ -130,7 +133,10 @@ public class EventInfo extends TeaModel {
         }
 
         /**
-         * PodUid.
+         * <p>The UID of the pod to which the event belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94a7cc7c-0033-48b5-85bd-71c63592c268</p>
          */
         public Builder podUid(String podUid) {
             this.podUid = podUid;
@@ -138,7 +144,7 @@ public class EventInfo extends TeaModel {
         }
 
         /**
-         * Time.
+         * <p>The timestamp of the event in UTC.</p>
          */
         public Builder time(String time) {
             this.time = time;

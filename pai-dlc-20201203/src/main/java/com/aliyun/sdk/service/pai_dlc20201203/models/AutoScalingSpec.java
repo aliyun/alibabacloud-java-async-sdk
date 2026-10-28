@@ -106,7 +106,7 @@ public class AutoScalingSpec extends TeaModel {
         } 
 
         /**
-         * AutoscalingMetricSpec.
+         * <p>The monitoring metrics configuration for autoscaling.</p>
          */
         public Builder autoscalingMetricSpec(AutoscalingMetricSpec autoscalingMetricSpec) {
             this.autoscalingMetricSpec = autoscalingMetricSpec;
@@ -114,7 +114,10 @@ public class AutoScalingSpec extends TeaModel {
         }
 
         /**
-         * MaxReplicas.
+         * <p>The maximum number of replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = maxReplicas;
@@ -122,7 +125,10 @@ public class AutoScalingSpec extends TeaModel {
         }
 
         /**
-         * MinReplicas.
+         * <p>The minimum number of replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minReplicas(Integer minReplicas) {
             this.minReplicas = minReplicas;
@@ -130,7 +136,7 @@ public class AutoScalingSpec extends TeaModel {
         }
 
         /**
-         * PodsToDelete.
+         * <p>The Pods to delete for scale-in. This can only be modified through UpdateJob, and the number of Pods to delete must match PodCount.</p>
          */
         public Builder podsToDelete(java.util.List<String> podsToDelete) {
             this.podsToDelete = podsToDelete;
@@ -138,7 +144,10 @@ public class AutoScalingSpec extends TeaModel {
         }
 
         /**
-         * ScalingStrategy.
+         * <p>The autoscaling policy. Valid values: Default, ScaleByAPI, RayAutoscaler, and CloudMonitorMetric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder scalingStrategy(String scalingStrategy) {
             this.scalingStrategy = scalingStrategy;

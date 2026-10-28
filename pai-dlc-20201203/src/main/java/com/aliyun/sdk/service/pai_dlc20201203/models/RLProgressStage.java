@@ -145,7 +145,7 @@ public class RLProgressStage extends TeaModel {
         } 
 
         /**
-         * <p>阶段耗时（秒，保留 3 位小数）；一个 step 常整体落在同一秒内，故不取整</p>
+         * <p>The duration of the stage in seconds, with three decimal places. A step often falls entirely within the same second, so the value is not rounded to an integer.</p>
          * 
          * <strong>example:</strong>
          * <p>0.483</p>
@@ -156,7 +156,7 @@ public class RLProgressStage extends TeaModel {
         }
 
         /**
-         * <p>阶段结束时间（unix 秒）</p>
+         * <p>The end time of the stage in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487</p>
@@ -167,7 +167,7 @@ public class RLProgressStage extends TeaModel {
         }
 
         /**
-         * <p>阶段标识</p>
+         * <p>The stage identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>traj</p>
@@ -178,10 +178,10 @@ public class RLProgressStage extends TeaModel {
         }
 
         /**
-         * <p>阶段中文名</p>
+         * <p>The Chinese name of the stage.</p>
          * 
          * <strong>example:</strong>
-         * <p>生成轨迹</p>
+         * <p>Generate trace</p>
          */
         public Builder label(String label) {
             this.label = label;
@@ -189,7 +189,7 @@ public class RLProgressStage extends TeaModel {
         }
 
         /**
-         * <p>匹配该阶段的日志标记文案</p>
+         * <p>The log marker text used to match the stage.</p>
          * 
          * <strong>example:</strong>
          * <p>start/end generation</p>
@@ -200,7 +200,7 @@ public class RLProgressStage extends TeaModel {
         }
 
         /**
-         * <p>是否为可选阶段；可选阶段未出现时状态记为 skipped</p>
+         * <p>Specifies whether the stage is optional. If an optional stage does not occur, its status is recorded as skipped.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -211,7 +211,7 @@ public class RLProgressStage extends TeaModel {
         }
 
         /**
-         * <p>阶段开始时间（unix 秒）</p>
+         * <p>The start time of the stage in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487</p>

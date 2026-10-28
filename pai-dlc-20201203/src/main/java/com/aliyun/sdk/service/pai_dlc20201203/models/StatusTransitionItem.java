@@ -107,6 +107,9 @@ public class StatusTransitionItem extends TeaModel {
 
         /**
          * <p>The end time of this status (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T17:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -115,6 +118,9 @@ public class StatusTransitionItem extends TeaModel {
 
         /**
          * <p>The reason code for this status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JobStoppedByUser</p>
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -123,6 +129,9 @@ public class StatusTransitionItem extends TeaModel {
 
         /**
          * <p>The detailed message for this status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Job is stopped by user.</p>
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -131,6 +140,9 @@ public class StatusTransitionItem extends TeaModel {
 
         /**
          * <p>The start time of this status (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -139,6 +151,9 @@ public class StatusTransitionItem extends TeaModel {
 
         /**
          * <p>The job status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;

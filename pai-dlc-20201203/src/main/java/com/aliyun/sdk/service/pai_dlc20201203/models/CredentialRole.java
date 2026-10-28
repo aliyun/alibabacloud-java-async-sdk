@@ -106,7 +106,7 @@ public class CredentialRole extends TeaModel {
         } 
 
         /**
-         * AssumeRoleFor.
+         * <p>The account on whose behalf the role is assumed.</p>
          */
         public Builder assumeRoleFor(String assumeRoleFor) {
             this.assumeRoleFor = assumeRoleFor;
@@ -114,7 +114,7 @@ public class CredentialRole extends TeaModel {
         }
 
         /**
-         * AssumeUserInfo.
+         * <p>The user identity information used for role assumption.</p>
          */
         public Builder assumeUserInfo(AssumeUserInfo assumeUserInfo) {
             this.assumeUserInfo = assumeUserInfo;
@@ -122,7 +122,7 @@ public class CredentialRole extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>The access policy attached during role assumption.</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -130,7 +130,10 @@ public class CredentialRole extends TeaModel {
         }
 
         /**
-         * RoleArn.
+         * <p>The ARN of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1872xxxxxxxxx:role/account-pai-prod</p>
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;
@@ -138,7 +141,10 @@ public class CredentialRole extends TeaModel {
         }
 
         /**
-         * RoleType.
+         * <p>The role type. Valid values: service and user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
          */
         public Builder roleType(String roleType) {
             this.roleType = roleType;

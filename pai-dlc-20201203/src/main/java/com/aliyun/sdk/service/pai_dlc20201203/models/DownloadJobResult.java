@@ -275,7 +275,7 @@ public class DownloadJobResult extends TeaModel {
         } 
 
         /**
-         * <p>The display name of the download job.</p>
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -283,7 +283,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The ID of the download job.</p>
+         * DownloadJobId.
          */
         public Builder downloadJobId(String downloadJobId) {
             this.downloadJobId = downloadJobId;
@@ -291,7 +291,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>A temporary, pre-signed URL for downloading the result file.</p>
+         * DownloadUrl.
          */
         public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = downloadUrl;
@@ -299,7 +299,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The completion time of the download job, in UTC format.</p>
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -307,7 +307,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The type of file to download, such as <code>logs</code> or <code>output</code>.</p>
+         * FileType.
          */
         public Builder fileType(String fileType) {
             this.fileType = fileType;
@@ -315,7 +315,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The creation time of the download job, in UTC format.</p>
+         * GmtCreated.
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -323,7 +323,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The last modification time of the download job, in UTC format.</p>
+         * GmtModified.
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -331,7 +331,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The number of log entries included in the download.</p>
+         * LogCount.
          */
         public Builder logCount(Integer logCount) {
             this.logCount = logCount;
@@ -339,7 +339,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the pods for the source job.</p>
+         * PodIds.
          */
         public Builder podIds(java.util.List<String> podIds) {
             this.podIds = podIds;
@@ -347,7 +347,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The UIDs of the pods for the source job.</p>
+         * PodUids.
          */
         public Builder podUids(java.util.List<String> podUids) {
             this.podUids = podUids;
@@ -355,7 +355,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The ID of the source job whose results are downloaded.</p>
+         * SourceJobId.
          */
         public Builder sourceJobId(String sourceJobId) {
             this.sourceJobId = sourceJobId;
@@ -363,7 +363,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The start time of the download job, in UTC format.</p>
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -371,7 +371,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The status of the download job. Valid values: <code>Running</code>, <code>Succeeded</code>, and <code>Failed</code>.</p>
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -379,7 +379,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The ID of the tenant that the job belongs to.</p>
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -387,7 +387,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The type of the download job.</p>
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;
@@ -395,7 +395,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The time when the download URL expires, in UTC format.</p>
+         * UrlExpireTime.
          */
         public Builder urlExpireTime(String urlExpireTime) {
             this.urlExpireTime = urlExpireTime;
@@ -403,7 +403,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The ID of the user who created the job.</p>
+         * UserId.
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -411,7 +411,7 @@ public class DownloadJobResult extends TeaModel {
         }
 
         /**
-         * <p>The ID of the workspace where the job was created.</p>
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
