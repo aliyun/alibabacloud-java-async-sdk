@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IncidentForView</p>
  */
 public class IncidentForView extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("blockingExpireTimestamp")
+    private Long blockingExpireTimestamp;
+
     @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
@@ -71,6 +74,9 @@ public class IncidentForView extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("subscriptionUuid")
     private String subscriptionUuid;
 
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.Map<String, String> tags;
+
     @com.aliyun.core.annotation.NameInMap("time")
     private Long time;
 
@@ -84,6 +90,7 @@ public class IncidentForView extends TeaModel {
     private String workspace;
 
     private IncidentForView(Builder builder) {
+        this.blockingExpireTimestamp = builder.blockingExpireTimestamp;
         this.content = builder.content;
         this.escalations = builder.escalations;
         this.groupUuid = builder.groupUuid;
@@ -102,6 +109,7 @@ public class IncidentForView extends TeaModel {
         this.state = builder.state;
         this.subscriptionName = builder.subscriptionName;
         this.subscriptionUuid = builder.subscriptionUuid;
+        this.tags = builder.tags;
         this.time = builder.time;
         this.title = builder.title;
         this.userId = builder.userId;
@@ -118,6 +126,13 @@ public class IncidentForView extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return blockingExpireTimestamp
+     */
+    public Long getBlockingExpireTimestamp() {
+        return this.blockingExpireTimestamp;
     }
 
     /**
@@ -247,6 +262,13 @@ public class IncidentForView extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.Map<String, String> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return time
      */
     public Long getTime() {
@@ -275,6 +297,7 @@ public class IncidentForView extends TeaModel {
     }
 
     public static final class Builder {
+        private Long blockingExpireTimestamp; 
         private String content; 
         private java.util.List<IncidentEscalationPolicyForView> escalations; 
         private String groupUuid; 
@@ -293,6 +316,7 @@ public class IncidentForView extends TeaModel {
         private String state; 
         private String subscriptionName; 
         private String subscriptionUuid; 
+        private java.util.Map<String, String> tags; 
         private Long time; 
         private String title; 
         private String userId; 
@@ -302,6 +326,7 @@ public class IncidentForView extends TeaModel {
         } 
 
         private Builder(IncidentForView model) {
+            this.blockingExpireTimestamp = model.blockingExpireTimestamp;
             this.content = model.content;
             this.escalations = model.escalations;
             this.groupUuid = model.groupUuid;
@@ -320,6 +345,7 @@ public class IncidentForView extends TeaModel {
             this.state = model.state;
             this.subscriptionName = model.subscriptionName;
             this.subscriptionUuid = model.subscriptionUuid;
+            this.tags = model.tags;
             this.time = model.time;
             this.title = model.title;
             this.userId = model.userId;
@@ -327,10 +353,21 @@ public class IncidentForView extends TeaModel {
         } 
 
         /**
-         * <p>The details of the incident.</p>
+         * <p>The expiration time of the notification block.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;{&quot;description&quot;:&quot;ECS实例CPU过高&quot;,&quot;impact&quot;:&quot;支付服务延迟&quot;}&quot;</p>
+         * <p>-1 indicates that notifications are not blocked</p>
+         */
+        public Builder blockingExpireTimestamp(Long blockingExpireTimestamp) {
+            this.blockingExpireTimestamp = blockingExpireTimestamp;
+            return this;
+        }
+
+        /**
+         * <p>The detailed content of the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;description&quot;:&quot;High CPU usage on the ECS instance&quot;,&quot;impact&quot;:&quot;Payment service delay&quot;}&quot;</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -357,7 +394,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * <p>The key-value pairs for grouping.</p>
+         * <p>The grouping key-value pairs.</p>
          */
         public Builder groupingKeys(java.util.Map<String, String> groupingKeys) {
             this.groupingKeys = groupingKeys;
@@ -376,10 +413,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * <p>The name of the notification policy.</p>
+         * <p>The notification policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>{ &quot;contactId&quot;: &quot;contact-123&quot;, &quot;name&quot;: &quot;张三&quot; }</p>
+         * <p>{ &quot;contactId&quot;: &quot;contact-123&quot;, &quot;name&quot;: &quot;Zhang San&quot; }</p>
          */
         public Builder notifyStrategyName(String notifyStrategyName) {
             this.notifyStrategyName = notifyStrategyName;
@@ -387,7 +424,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * <p>The UUID of the associated notification policy, which is used to trigger notifications.</p>
+         * <p>The UUID of the associated notification policy used to trigger notifications.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;notify-strategy-789&quot;</p>
@@ -398,7 +435,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * <p>The information about the operator.</p>
+         * <p>The operator information.</p>
          */
         public Builder operator(ContactForIncidentView operator) {
             this.operator = operator;
@@ -460,10 +497,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * <p>The description of the solution.</p>
+         * <p>The solution description.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;重启ECS实例后恢复正常&quot;</p>
+         * <p>&quot;Recovered to normal after restarting the ECS instance&quot;</p>
          */
         public Builder solution(String solution) {
             this.solution = solution;
@@ -482,7 +519,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * <p>The name of the subscription policy.</p>
+         * <p>The subscription policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;P1-Alert-Notification&quot;</p>
@@ -504,6 +541,14 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
+         * <p>The array of tags.</p>
+         */
+        public Builder tags(java.util.Map<String, String> tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * <p>The timestamp when the incident was created.</p>
          * 
          * <strong>example:</strong>
@@ -518,7 +563,7 @@ public class IncidentForView extends TeaModel {
          * <p>The title of the incident.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;支付服务不可用&quot;</p>
+         * <p>&quot;Payment service unavailable&quot;</p>
          */
         public Builder title(String title) {
             this.title = title;

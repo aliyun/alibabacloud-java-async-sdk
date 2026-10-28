@@ -138,7 +138,7 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * <p>The locale. Valid values: zh and en. Default value: zh.</p>
+         * <p>The language environment. Valid values: zh and en. Default value: zh.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -150,7 +150,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * apiVersion.
+         * <p>The add-on catalog version. Valid values: v1 and v2. Default value: v2. If you specify v1, the add-ons in the v1 catalog are listed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder apiVersion(String apiVersion) {
             this.putQueryParameter("apiVersion", apiVersion);
@@ -159,7 +162,7 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * <p>The tag filter.</p>
+         * <p>The category filter.</p>
          * 
          * <strong>example:</strong>
          * <p>database</p>
@@ -183,7 +186,7 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * <p>The search query. Supports searching by add-on name, description, or keyword.</p>
+         * <p>The search keyword. You can search by add-on name, description, or keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>105095</p>

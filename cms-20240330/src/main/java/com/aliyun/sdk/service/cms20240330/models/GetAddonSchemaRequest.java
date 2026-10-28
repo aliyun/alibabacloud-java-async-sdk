@@ -152,7 +152,7 @@ public class GetAddonSchemaRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values: \<code>zh\\</code> and \<code>en\\</code>. The default value is \<code>zh\\</code>.</p>
+         * <p>The language environment. Default value: zh. Valid values: zh, en.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -164,7 +164,10 @@ public class GetAddonSchemaRequest extends Request {
         }
 
         /**
-         * apiVersion.
+         * <p>The add-on catalog version. Valid values: v1, v2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder apiVersion(String apiVersion) {
             this.putQueryParameter("apiVersion", apiVersion);
@@ -173,7 +176,7 @@ public class GetAddonSchemaRequest extends Request {
         }
 
         /**
-         * <p>The environment type. Valid values: \<code>CS\\</code> (container) and \<code>ECS\\</code>.</p>
+         * <p>The environment type. Valid values: CS (container), ECS.</p>
          * 
          * <strong>example:</strong>
          * <p>CS</p>
@@ -185,7 +188,7 @@ public class GetAddonSchemaRequest extends Request {
         }
 
         /**
-         * <p>The version of the component.</p>
+         * <p>The component version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1.1</p>

@@ -97,6 +97,7 @@ public class DisableSubscriptionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the subscription.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class DisableSubscriptionRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);

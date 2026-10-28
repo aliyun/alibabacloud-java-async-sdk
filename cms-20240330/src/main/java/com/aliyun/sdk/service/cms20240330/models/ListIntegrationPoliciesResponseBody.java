@@ -386,7 +386,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation to perform.</p>
+             * <p>The operation to be performed.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -408,7 +408,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag values.</p>
+             * <p>The tag value.</p>
              */
             public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
@@ -499,7 +499,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field values. Separate multiple values with commas (,).</p>
+             * <p>The field content. Separate multiple values with commas (,).</p>
              */
             public Builder fieldValues(java.util.List<String> fieldValues) {
                 this.fieldValues = fieldValues;
@@ -507,7 +507,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation to perform.</p>
+             * <p>The operation to be performed.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -671,7 +671,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation to perform.</p>
+             * <p>The operation to be performed.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -682,7 +682,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key.</p>
+             * <p>The label key.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -693,7 +693,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag values.</p>
+             * <p>The tag value.</p>
              */
             public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
@@ -773,7 +773,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation to perform.</p>
+             * <p>The operation to be performed.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -784,7 +784,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key.</p>
+             * <p>The label key.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -795,7 +795,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag values.</p>
+             * <p>The tag value.</p>
              */
             public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
@@ -1322,7 +1322,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the elastic network interface (ENI) for the managed probe. Example: eni-xxxx.</p>
+             * <p>The elastic network interface (ENI) ID of the managed probe. Example: eni-xxxx.</p>
              * 
              * <strong>example:</strong>
              * <p>eni-12345678</p>
@@ -1425,7 +1425,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules.</p>
+             * <p>The total number of rules.</p>
              * 
              * <strong>example:</strong>
              * <p>278</p>
@@ -1672,7 +1672,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * apiVersion.
+             * <p>The policy version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder apiVersion(String apiVersion) {
                 this.apiVersion = apiVersion;
@@ -1680,7 +1683,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the bound resources.</p>
+             * <p>The information about the bound resource.</p>
              */
             public Builder bindResource(BindResource bindResource) {
                 this.bindResource = bindResource;
@@ -1707,7 +1710,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing type.</p>
+             * <p>The billing method.</p>
              * 
              * <strong>example:</strong>
              * <p>CS_Pro</p>
@@ -1748,7 +1751,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Access Center policy type.</p>
+             * <p>The access center policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>ECS</p>

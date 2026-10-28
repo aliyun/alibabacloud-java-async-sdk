@@ -310,7 +310,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation to perform.</p>
+             * <p>The operation to be performed.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -332,7 +332,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The tag values.</p>
              */
             public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
@@ -431,7 +431,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation to perform.</p>
+             * <p>The operation to be performed.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -595,7 +595,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation to perform.</p>
+             * <p>The operation to be performed.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -697,7 +697,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation to perform.</p>
+             * <p>The operation to be performed.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -901,7 +901,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
+             * <p>The instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -944,7 +944,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The tag values.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1130,7 +1130,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query.</p>
+             * <p>The query condition.</p>
              * 
              * <strong>example:</strong>
              * <p>status: 200 AND totalTime &gt; 0.5</p>
@@ -1551,7 +1551,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The names of all components installed in the policy.</p>
+             * <p>The names of all components installed in this policy.</p>
              */
             public Builder addonNames(java.util.List<String> addonNames) {
                 this.addonNames = addonNames;
@@ -1559,7 +1559,10 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * apiVersion.
+             * <p>The policy version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder apiVersion(String apiVersion) {
                 this.apiVersion = apiVersion;
@@ -1567,7 +1570,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the bound resource.</p>
+             * <p>The information about the bound resources.</p>
              */
             public Builder bindResource(BindResource bindResource) {
                 this.bindResource = bindResource;
@@ -1613,7 +1616,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy name.</p>
+             * <p>The rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>ControlPolicy4DetailVportInfo</p>

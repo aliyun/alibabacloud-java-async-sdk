@@ -144,7 +144,10 @@ public class CreateIntegrationPolicyRequest extends Request {
         } 
 
         /**
-         * apiVersion.
+         * <p>The policy creation version. Valid values: v1 and v2. If this parameter is not specified or is left empty, v2 is used. If v1 is specified, a v1-compatible environment is created for ECS and Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder apiVersion(String apiVersion) {
             this.putBodyParameter("apiVersion", apiVersion);
@@ -153,7 +156,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>The entity group used to create the policy. You can quickly create the policy by using the entity group. The clusterId and vpcId parameters are independent of each other.</p>
+         * <p>The entity group used to create the policy. You can use the entity group for quick creation. The clusterId and vpcId parameters are independent of each other.</p>
          */
         public Builder entityGroup(EntityGroup entityGroup) {
             this.putBodyParameter("entityGroup", entityGroup);
@@ -366,7 +369,10 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * clusterNamespace.
+             * <p>The namespace where the probe is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prom</p>
              */
             public Builder clusterNamespace(String clusterNamespace) {
                 this.clusterNamespace = clusterNamespace;
@@ -374,10 +380,10 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to disable the unique binding of the policy. If this parameter is set to true, you can create multiple policies for a container cluster.</p>
+             * <p>Specifies whether to disable the unique binding of the policy. If this parameter is set to true, you can create multiple policies for a single container cluster.</p>
              * 
              * <strong>example:</strong>
-             * <p>ture</p>
+             * <p>true</p>
              */
             public Builder disablePolicyShare(Boolean disablePolicyShare) {
                 this.disablePolicyShare = disablePolicyShare;

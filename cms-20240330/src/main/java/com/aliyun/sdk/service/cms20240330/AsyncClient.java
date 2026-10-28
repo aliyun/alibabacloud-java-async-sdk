@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ActiveContactChannel  ActiveContactChannelRequest
+     * @return ActiveContactChannelResponse
+     */
+    CompletableFuture<ActiveContactChannelResponse> activeContactChannel(ActiveContactChannelRequest request);
+
+    /**
      * @param request the request parameters of AddContexts  AddContextsRequest
      * @return AddContextsResponse
      */
@@ -53,6 +59,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAggTaskGroupResponse> createAggTaskGroup(CreateAggTaskGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateAlertAction  CreateAlertActionRequest
+     * @return CreateAlertActionResponse
+     */
+    CompletableFuture<CreateAlertActionResponse> createAlertAction(CreateAlertActionRequest request);
+
+    /**
+     * @param request the request parameters of CreateAlertNotifyTemplate  CreateAlertNotifyTemplateRequest
+     * @return CreateAlertNotifyTemplateResponse
+     */
+    CompletableFuture<CreateAlertNotifyTemplateResponse> createAlertNotifyTemplate(CreateAlertNotifyTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateAlertRobot  CreateAlertRobotRequest
      * @return CreateAlertRobotResponse
      */
@@ -78,6 +96,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateCloudResourceResponse
      */
     CompletableFuture<CreateCloudResourceResponse> createCloudResource(CreateCloudResourceRequest request);
+
+    /**
+     * @param request the request parameters of CreateContact  CreateContactRequest
+     * @return CreateContactResponse
+     */
+    CompletableFuture<CreateContactResponse> createContact(CreateContactRequest request);
+
+    /**
+     * @param request the request parameters of CreateContactGroup  CreateContactGroupRequest
+     * @return CreateContactGroupResponse
+     */
+    CompletableFuture<CreateContactGroupResponse> createContactGroup(CreateContactGroupRequest request);
 
     /**
      * @param request the request parameters of CreateContextStore  CreateContextStoreRequest
@@ -150,6 +180,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateNotifyPolicyResponse
      */
     CompletableFuture<CreateNotifyPolicyResponse> createNotifyPolicy(CreateNotifyPolicyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
+     * @param request the request parameters of CreateOncallSchedule  CreateOncallScheduleRequest
+     * @return CreateOncallScheduleResponse
+     */
+    CompletableFuture<CreateOncallScheduleResponse> createOncallSchedule(CreateOncallScheduleRequest request);
 
     /**
      * @param request the request parameters of CreatePipeline  CreatePipelineRequest
@@ -250,6 +289,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAggTaskGroupResponse> deleteAggTaskGroup(DeleteAggTaskGroupRequest request);
 
     /**
+     * @param request the request parameters of DeleteAlertActions  DeleteAlertActionsRequest
+     * @return DeleteAlertActionsResponse
+     */
+    CompletableFuture<DeleteAlertActionsResponse> deleteAlertActions(DeleteAlertActionsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAlertNotifyTemplates  DeleteAlertNotifyTemplatesRequest
+     * @return DeleteAlertNotifyTemplatesResponse
+     */
+    CompletableFuture<DeleteAlertNotifyTemplatesResponse> deleteAlertNotifyTemplates(DeleteAlertNotifyTemplatesRequest request);
+
+    /**
      * @param request the request parameters of DeleteAlertRobots  DeleteAlertRobotsRequest
      * @return DeleteAlertRobotsResponse
      */
@@ -272,6 +323,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCloudResourceResponse
      */
     CompletableFuture<DeleteCloudResourceResponse> deleteCloudResource(DeleteCloudResourceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteContactGroups  DeleteContactGroupsRequest
+     * @return DeleteContactGroupsResponse
+     */
+    CompletableFuture<DeleteContactGroupsResponse> deleteContactGroups(DeleteContactGroupsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteContacts  DeleteContactsRequest
+     * @return DeleteContactsResponse
+     */
+    CompletableFuture<DeleteContactsResponse> deleteContacts(DeleteContactsRequest request);
 
     /**
      * @param request the request parameters of DeleteContext  DeleteContextRequest
@@ -365,6 +428,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteNotifyPolicyResponse
      */
     CompletableFuture<DeleteNotifyPolicyResponse> deleteNotifyPolicy(DeleteNotifyPolicyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
+     * @param request the request parameters of DeleteOncallSchedules  DeleteOncallSchedulesRequest
+     * @return DeleteOncallSchedulesResponse
+     */
+    CompletableFuture<DeleteOncallSchedulesResponse> deleteOncallSchedules(DeleteOncallSchedulesRequest request);
 
     /**
      * @param request the request parameters of DeletePipeline  DeletePipelineRequest
@@ -553,7 +625,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the schema of an add-on.</p>
+     * <p>Retrieves the schema information of an add-on.</p>
      * 
      * @param request the request parameters of GetAddonSchema  GetAddonSchemaRequest
      * @return GetAddonSchemaResponse
@@ -565,6 +637,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAggTaskGroupResponse
      */
     CompletableFuture<GetAggTaskGroupResponse> getAggTaskGroup(GetAggTaskGroupRequest request);
+
+    /**
+     * @param request the request parameters of GetAlertAction  GetAlertActionRequest
+     * @return GetAlertActionResponse
+     */
+    CompletableFuture<GetAlertActionResponse> getAlertAction(GetAlertActionRequest request);
 
     /**
      * @param request the request parameters of GetBizTrace  GetBizTraceRequest
@@ -714,6 +792,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNotifyPolicyResponse> getNotifyPolicy(GetNotifyPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
+     * @param request the request parameters of GetOncallSchedule  GetOncallScheduleRequest
+     * @return GetOncallScheduleResponse
+     */
+    CompletableFuture<GetOncallScheduleResponse> getOncallSchedule(GetOncallScheduleRequest request);
+
+    /**
      * @param request the request parameters of GetPipeline  GetPipelineRequest
      * @return GetPipelineResponse
      */
@@ -839,6 +926,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAlertActionsResponse
      */
     CompletableFuture<ListAlertActionsResponse> listAlertActions(ListAlertActionsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</p>
+     * 
+     * @param request the request parameters of ListAlertHistories  ListAlertHistoriesRequest
+     * @return ListAlertHistoriesResponse
+     */
+    CompletableFuture<ListAlertHistoriesResponse> listAlertHistories(ListAlertHistoriesRequest request);
+
+    /**
+     * @param request the request parameters of ListAlertNotifyTemplates  ListAlertNotifyTemplatesRequest
+     * @return ListAlertNotifyTemplatesResponse
+     */
+    CompletableFuture<ListAlertNotifyTemplatesResponse> listAlertNotifyTemplates(ListAlertNotifyTemplatesRequest request);
 
     /**
      * <b>description</b> :
@@ -1002,6 +1104,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNotifyPoliciesResponse> listNotifyPolicies(ListNotifyPoliciesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
+     * 
+     * @param request the request parameters of ListOncallContacts  ListOncallContactsRequest
+     * @return ListOncallContactsResponse
+     */
+    CompletableFuture<ListOncallContactsResponse> listOncallContacts(ListOncallContactsRequest request);
+
+    /**
+     * @param request the request parameters of ListOncallSchedules  ListOncallSchedulesRequest
+     * @return ListOncallSchedulesResponse
+     */
+    CompletableFuture<ListOncallSchedulesResponse> listOncallSchedules(ListOncallSchedulesRequest request);
+
+    /**
      * @param request the request parameters of ListPipelines  ListPipelinesRequest
      * @return ListPipelinesResponse
      */
@@ -1116,6 +1233,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PreviewDataPipelineResponse> previewDataPipeline(PreviewDataPipelineRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</p>
+     * 
+     * @param request the request parameters of PreviewNotifyTemplate  PreviewNotifyTemplateRequest
+     * @return PreviewNotifyTemplateResponse
+     */
+    CompletableFuture<PreviewNotifyTemplateResponse> previewNotifyTemplate(PreviewNotifyTemplateRequest request);
+
+    /**
      * @param request the request parameters of PutWorkspace  PutWorkspaceRequest
      * @return PutWorkspaceResponse
      */
@@ -1129,6 +1255,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryAlertRulesResponse
      */
     CompletableFuture<QueryAlertRulesResponse> queryAlertRules(QueryAlertRulesRequest request);
+
+    /**
+     * @param request the request parameters of ResendVerifyActivate  ResendVerifyActivateRequest
+     * @return ResendVerifyActivateResponse
+     */
+    CompletableFuture<ResendVerifyActivateResponse> resendVerifyActivate(ResendVerifyActivateRequest request);
 
     /**
      * @param request the request parameters of SearchContext  SearchContextRequest
@@ -1179,6 +1311,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAggTaskGroupStatusResponse> updateAggTaskGroupStatus(UpdateAggTaskGroupStatusRequest request);
 
     /**
+     * @param request the request parameters of UpdateAlertAction  UpdateAlertActionRequest
+     * @return UpdateAlertActionResponse
+     */
+    CompletableFuture<UpdateAlertActionResponse> updateAlertAction(UpdateAlertActionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAlertNotifyTemplate  UpdateAlertNotifyTemplateRequest
+     * @return UpdateAlertNotifyTemplateResponse
+     */
+    CompletableFuture<UpdateAlertNotifyTemplateResponse> updateAlertNotifyTemplate(UpdateAlertNotifyTemplateRequest request);
+
+    /**
      * @param request the request parameters of UpdateAlertRobot  UpdateAlertRobotRequest
      * @return UpdateAlertRobotResponse
      */
@@ -1195,6 +1339,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateBizTraceResponse
      */
     CompletableFuture<UpdateBizTraceResponse> updateBizTrace(UpdateBizTraceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateContact  UpdateContactRequest
+     * @return UpdateContactResponse
+     */
+    CompletableFuture<UpdateContactResponse> updateContact(UpdateContactRequest request);
+
+    /**
+     * @param request the request parameters of UpdateContactGroup  UpdateContactGroupRequest
+     * @return UpdateContactGroupResponse
+     */
+    CompletableFuture<UpdateContactGroupResponse> updateContactGroup(UpdateContactGroupRequest request);
 
     /**
      * @param request the request parameters of UpdateContext  UpdateContextRequest
@@ -1277,6 +1433,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateNotifyStrategyResponse> updateNotifyStrategy(UpdateNotifyStrategyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
+     * @param request the request parameters of UpdateOncallSchedule  UpdateOncallScheduleRequest
+     * @return UpdateOncallScheduleResponse
+     */
+    CompletableFuture<UpdateOncallScheduleResponse> updateOncallSchedule(UpdateOncallScheduleRequest request);
+
+    /**
      * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest
      * @return UpdatePipelineResponse
      */
@@ -1347,5 +1512,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpsertUmodelDataResponse
      */
     CompletableFuture<UpsertUmodelDataResponse> upsertUmodelData(UpsertUmodelDataRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</p>
+     * 
+     * @param request the request parameters of ViewOncallSchedule  ViewOncallScheduleRequest
+     * @return ViewOncallScheduleResponse
+     */
+    CompletableFuture<ViewOncallScheduleResponse> viewOncallSchedule(ViewOncallScheduleRequest request);
 
 }

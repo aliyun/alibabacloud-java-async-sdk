@@ -50,8 +50,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "metrics.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-fuzhou", "metrics.cn-fuzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "metrics.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"),
@@ -80,6 +78,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     @Override
     public void close() {
         this.handler.close();
+    }
+
+    /**
+     * @param request the request parameters of ActiveContactChannel  ActiveContactChannelRequest
+     * @return ActiveContactChannelResponse
+     */
+    @Override
+    public CompletableFuture<ActiveContactChannelResponse> activeContactChannel(ActiveContactChannelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ActiveContactChannel").setMethod(HttpMethod.POST).setPathRegex("/contacts/action/activate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ActiveContactChannelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ActiveContactChannelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
     }
 
     /**
@@ -176,6 +192,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAlertAction  CreateAlertActionRequest
+     * @return CreateAlertActionResponse
+     */
+    @Override
+    public CompletableFuture<CreateAlertActionResponse> createAlertAction(CreateAlertActionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAlertAction").setMethod(HttpMethod.POST).setPathRegex("/alertAction").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAlertActionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAlertActionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAlertNotifyTemplate  CreateAlertNotifyTemplateRequest
+     * @return CreateAlertNotifyTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CreateAlertNotifyTemplateResponse> createAlertNotifyTemplate(CreateAlertNotifyTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAlertNotifyTemplate").setMethod(HttpMethod.POST).setPathRegex("/alertNotifyTemplate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAlertNotifyTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAlertNotifyTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateAlertRobot  CreateAlertRobotRequest
      * @return CreateAlertRobotResponse
      */
@@ -245,6 +297,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateCloudResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateContact  CreateContactRequest
+     * @return CreateContactResponse
+     */
+    @Override
+    public CompletableFuture<CreateContactResponse> createContact(CreateContactRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateContact").setMethod(HttpMethod.POST).setPathRegex("/contact").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateContactResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateContactResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateContactGroup  CreateContactGroupRequest
+     * @return CreateContactGroupResponse
+     */
+    @Override
+    public CompletableFuture<CreateContactGroupResponse> createContactGroup(CreateContactGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateContactGroup").setMethod(HttpMethod.POST).setPathRegex("/contactGroup").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateContactGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateContactGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -437,6 +525,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateNotifyPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
+     * @param request the request parameters of CreateOncallSchedule  CreateOncallScheduleRequest
+     * @return CreateOncallScheduleResponse
+     */
+    @Override
+    public CompletableFuture<CreateOncallScheduleResponse> createOncallSchedule(CreateOncallScheduleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateOncallSchedule").setMethod(HttpMethod.POST).setPathRegex("/oncallschedule").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateOncallScheduleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateOncallScheduleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -697,6 +806,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteAlertActions  DeleteAlertActionsRequest
+     * @return DeleteAlertActionsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAlertActionsResponse> deleteAlertActions(DeleteAlertActionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAlertActions").setMethod(HttpMethod.DELETE).setPathRegex("/alertActions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAlertActionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAlertActionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAlertNotifyTemplates  DeleteAlertNotifyTemplatesRequest
+     * @return DeleteAlertNotifyTemplatesResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAlertNotifyTemplatesResponse> deleteAlertNotifyTemplates(DeleteAlertNotifyTemplatesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAlertNotifyTemplates").setMethod(HttpMethod.DELETE).setPathRegex("/alertNotifyTemplates").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAlertNotifyTemplatesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAlertNotifyTemplatesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteAlertRobots  DeleteAlertRobotsRequest
      * @return DeleteAlertRobotsResponse
      */
@@ -763,6 +908,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteCloudResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteContactGroups  DeleteContactGroupsRequest
+     * @return DeleteContactGroupsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteContactGroupsResponse> deleteContactGroups(DeleteContactGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteContactGroups").setMethod(HttpMethod.DELETE).setPathRegex("/contactGroups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteContactGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteContactGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteContacts  DeleteContactsRequest
+     * @return DeleteContactsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteContactsResponse> deleteContacts(DeleteContactsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteContacts").setMethod(HttpMethod.DELETE).setPathRegex("/contacts").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteContactsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteContactsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1024,6 +1205,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteNotifyPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
+     * @param request the request parameters of DeleteOncallSchedules  DeleteOncallSchedulesRequest
+     * @return DeleteOncallSchedulesResponse
+     */
+    @Override
+    public CompletableFuture<DeleteOncallSchedulesResponse> deleteOncallSchedules(DeleteOncallSchedulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteOncallSchedules").setMethod(HttpMethod.DELETE).setPathRegex("/oncallSchedule").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteOncallSchedulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteOncallSchedulesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1504,7 +1706,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the schema of an add-on.</p>
+     * <p>Retrieves the schema information of an add-on.</p>
      * 
      * @param request the request parameters of GetAddonSchema  GetAddonSchemaRequest
      * @return GetAddonSchemaResponse
@@ -1536,6 +1738,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAggTaskGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAlertAction  GetAlertActionRequest
+     * @return GetAlertActionResponse
+     */
+    @Override
+    public CompletableFuture<GetAlertActionResponse> getAlertAction(GetAlertActionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAlertAction").setMethod(HttpMethod.GET).setPathRegex("/alertAction/{alertActionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAlertActionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAlertActionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1917,6 +2137,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
+     * @param request the request parameters of GetOncallSchedule  GetOncallScheduleRequest
+     * @return GetOncallScheduleResponse
+     */
+    @Override
+    public CompletableFuture<GetOncallScheduleResponse> getOncallSchedule(GetOncallScheduleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetOncallSchedule").setMethod(HttpMethod.GET).setPathRegex("/oncallSchedule/{oncallScheduleId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetOncallScheduleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetOncallScheduleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetPipeline  GetPipelineRequest
      * @return GetPipelineResponse
      */
@@ -2242,6 +2483,45 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAlertActionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</p>
+     * 
+     * @param request the request parameters of ListAlertHistories  ListAlertHistoriesRequest
+     * @return ListAlertHistoriesResponse
+     */
+    @Override
+    public CompletableFuture<ListAlertHistoriesResponse> listAlertHistories(ListAlertHistoriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAlertHistories").setMethod(HttpMethod.GET).setPathRegex("/alertHistories").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAlertHistoriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAlertHistoriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAlertNotifyTemplates  ListAlertNotifyTemplatesRequest
+     * @return ListAlertNotifyTemplatesResponse
+     */
+    @Override
+    public CompletableFuture<ListAlertNotifyTemplatesResponse> listAlertNotifyTemplates(ListAlertNotifyTemplatesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAlertNotifyTemplates").setMethod(HttpMethod.GET).setPathRegex("/alertNotifyTemplate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAlertNotifyTemplatesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAlertNotifyTemplatesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2661,6 +2941,45 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
+     * 
+     * @param request the request parameters of ListOncallContacts  ListOncallContactsRequest
+     * @return ListOncallContactsResponse
+     */
+    @Override
+    public CompletableFuture<ListOncallContactsResponse> listOncallContacts(ListOncallContactsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListOncallContacts").setMethod(HttpMethod.GET).setPathRegex("/oncallSchedule/{oncallScheduleId}/contacts").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOncallContactsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOncallContactsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListOncallSchedules  ListOncallSchedulesRequest
+     * @return ListOncallSchedulesResponse
+     */
+    @Override
+    public CompletableFuture<ListOncallSchedulesResponse> listOncallSchedules(ListOncallSchedulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListOncallSchedules").setMethod(HttpMethod.GET).setPathRegex("/oncallSchedules").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOncallSchedulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOncallSchedulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListPipelines  ListPipelinesRequest
      * @return ListPipelinesResponse
      */
@@ -2955,6 +3274,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</p>
+     * 
+     * @param request the request parameters of PreviewNotifyTemplate  PreviewNotifyTemplateRequest
+     * @return PreviewNotifyTemplateResponse
+     */
+    @Override
+    public CompletableFuture<PreviewNotifyTemplateResponse> previewNotifyTemplate(PreviewNotifyTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PreviewNotifyTemplate").setMethod(HttpMethod.POST).setPathRegex("/v1/template/batchRender").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PreviewNotifyTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PreviewNotifyTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of PutWorkspace  PutWorkspaceRequest
      * @return PutWorkspaceResponse
      */
@@ -2988,6 +3328,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryAlertRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ResendVerifyActivate  ResendVerifyActivateRequest
+     * @return ResendVerifyActivateResponse
+     */
+    @Override
+    public CompletableFuture<ResendVerifyActivateResponse> resendVerifyActivate(ResendVerifyActivateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ResendVerifyActivate").setMethod(HttpMethod.POST).setPathRegex("/contact/{contactId}/action/reSendVerifyActivate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResendVerifyActivateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResendVerifyActivateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3126,6 +3484,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateAlertAction  UpdateAlertActionRequest
+     * @return UpdateAlertActionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAlertActionResponse> updateAlertAction(UpdateAlertActionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAlertAction").setMethod(HttpMethod.PATCH).setPathRegex("/alertAction/{alertActionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAlertActionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAlertActionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAlertNotifyTemplate  UpdateAlertNotifyTemplateRequest
+     * @return UpdateAlertNotifyTemplateResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAlertNotifyTemplateResponse> updateAlertNotifyTemplate(UpdateAlertNotifyTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAlertNotifyTemplate").setMethod(HttpMethod.PATCH).setPathRegex("/alertNotifyTemplate/{alertNotifyTemplateId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAlertNotifyTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAlertNotifyTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateAlertRobot  UpdateAlertRobotRequest
      * @return UpdateAlertRobotResponse
      */
@@ -3174,6 +3568,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateBizTraceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateContact  UpdateContactRequest
+     * @return UpdateContactResponse
+     */
+    @Override
+    public CompletableFuture<UpdateContactResponse> updateContact(UpdateContactRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateContact").setMethod(HttpMethod.PATCH).setPathRegex("/contact/{contactId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateContactResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateContactResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateContactGroup  UpdateContactGroupRequest
+     * @return UpdateContactGroupResponse
+     */
+    @Override
+    public CompletableFuture<UpdateContactGroupResponse> updateContactGroup(UpdateContactGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateContactGroup").setMethod(HttpMethod.PATCH).setPathRegex("/contactGroup/{contactGroupId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateContactGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateContactGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3392,6 +3822,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
+     * @param request the request parameters of UpdateOncallSchedule  UpdateOncallScheduleRequest
+     * @return UpdateOncallScheduleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateOncallScheduleResponse> updateOncallSchedule(UpdateOncallScheduleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateOncallSchedule").setMethod(HttpMethod.PATCH).setPathRegex("/oncallSchedule/{oncallScheduleId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateOncallScheduleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateOncallScheduleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest
      * @return UpdatePipelineResponse
      */
@@ -3578,6 +4029,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpsertUmodelDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</p>
+     * 
+     * @param request the request parameters of ViewOncallSchedule  ViewOncallScheduleRequest
+     * @return ViewOncallScheduleResponse
+     */
+    @Override
+    public CompletableFuture<ViewOncallScheduleResponse> viewOncallSchedule(ViewOncallScheduleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ViewOncallSchedule").setMethod(HttpMethod.GET).setPathRegex("/oncallSchedule/{oncallScheduleId}/calendar").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ViewOncallScheduleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ViewOncallScheduleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

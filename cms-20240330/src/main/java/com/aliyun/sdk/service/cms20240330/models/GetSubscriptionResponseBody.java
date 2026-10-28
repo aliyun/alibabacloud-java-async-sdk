@@ -78,7 +78,7 @@ public class GetSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * subscription.
+         * <p>The subscription object.</p>
          */
         public Builder subscription(SubscriptionForView subscription) {
             this.subscription = subscription;

@@ -78,7 +78,10 @@ public class EnableSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * subscriptionId.
+         * <p>The subscription ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123123</p>
          */
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = subscriptionId;

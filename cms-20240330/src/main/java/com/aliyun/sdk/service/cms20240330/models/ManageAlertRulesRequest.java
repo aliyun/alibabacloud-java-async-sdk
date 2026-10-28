@@ -96,7 +96,7 @@ public class ManageAlertRulesRequest extends Request {
         }
 
         /**
-         * <p>The aggregated request body for managing alert rules. This body is shared by the CREATE, UPDATE, PATCH, and BATCH_DELETE operations. Specify fields based on the action.</p>
+         * <p>The request body for managing alert rules. This body is shared by the CREATE, UPDATE, PATCH, and BATCH_DELETE operations. Specify fields based on the action.</p>
          */
         public Builder body(ManageAlertRulesUnifiedActionInput body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -106,7 +106,7 @@ public class ManageAlertRulesRequest extends Request {
         }
 
         /**
-         * <p>The call source identifier that specifies the internal integration channel of the caller, such as bailian, integrationCenter, or managed_service_for_prometheus. This parameter is used to isolate traffic from different sources. You do not need to specify this parameter for standard OpenAPI calls.</p>
+         * <p>The call source identifier that specifies the internal integration channel of the caller, such as bailian, integrationCenter, or managed_service_for_prometheus. This parameter isolates traffic from different sources. You do not need to specify this parameter for regular OpenAPI calls.</p>
          * 
          * <strong>example:</strong>
          * <p>bailian</p>

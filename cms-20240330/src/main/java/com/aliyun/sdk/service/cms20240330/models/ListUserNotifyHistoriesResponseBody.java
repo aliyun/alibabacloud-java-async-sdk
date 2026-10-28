@@ -106,7 +106,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * historyList.
+         * <p>The notification history list.</p>
          */
         public Builder historyList(java.util.List<HistoryList> historyList) {
             this.historyList = historyList;
@@ -114,7 +114,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned by this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. It is an opaque string generated and encrypted by the server. An empty value indicates that no more data is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2f8aKz3mNq9p****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of notification history entries that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -438,7 +450,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * channel.
+             * <p>The notification channel. The valid values are the same as those of the <code>channel</code> request parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DING</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -446,7 +461,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * contacts.
+             * <p>The list of contacts. Multiple contacts are separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San, Li Si</p>
              */
             public Builder contacts(String contacts) {
                 this.contacts = contacts;
@@ -454,7 +472,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * groups.
+             * <p>The list of contact groups. Multiple contact groups are separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>O&amp;M group, on-call group</p>
              */
             public Builder groups(String groups) {
                 this.groups = groups;
@@ -462,7 +483,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * incidentId.
+             * <p>The incident ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5d41402abc4b2a76b9719d911017c592</p>
              */
             public Builder incidentId(String incidentId) {
                 this.incidentId = incidentId;
@@ -470,7 +494,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * jobId.
+             * <p>The notification job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3fa85f64-5717-4562-b3fc-2c963f66afa8</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -478,7 +505,11 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * noChannel.
+             * <p>Indicates whether the notification record has no actual delivery channel. Valid values:</p>
+             * <ul>
+             * <li>true: The notification record has no actual delivery channel, and the notifyResult is NO_CHANNEL.</li>
+             * <li>false: The notification record has an actual delivery channel.</li>
+             * </ul>
              */
             public Builder noChannel(Boolean noChannel) {
                 this.noChannel = noChannel;
@@ -486,7 +517,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * notifyStrategyId.
+             * <p>The notification policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e</p>
              */
             public Builder notifyStrategyId(String notifyStrategyId) {
                 this.notifyStrategyId = notifyStrategyId;
@@ -494,7 +528,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * notifyStrategyName.
+             * <p>The notification policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default notification policy</p>
              */
             public Builder notifyStrategyName(String notifyStrategyName) {
                 this.notifyStrategyName = notifyStrategyName;
@@ -502,7 +539,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * receiver.
+             * <p>The recipient address, such as a phone number, email address, or webhook URL, depending on the notification channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13800138000</p>
              */
             public Builder receiver(String receiver) {
                 this.receiver = receiver;
@@ -510,7 +550,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * <p>The notification delivery result details. This is the raw response content returned by the channel, such as the API response from a DingTalk or Lark bot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;}</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -518,7 +561,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>The alert rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3fa85f64-5717-4562-b3fc-2c963f66afa6</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -526,7 +572,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>The alert rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU usage alert</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -534,7 +583,15 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * sendType.
+             * <p>The notification delivery type. Valid values:</p>
+             * <ul>
+             * <li>SUBSCRIBE: subscription notifications</li>
+             * <li>DIRECT: direct event notifications</li>
+             * <li>ITSM: ticket or action notifications</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUBSCRIBE</p>
              */
             public Builder sendType(String sendType) {
                 this.sendType = sendType;
@@ -542,7 +599,16 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * severity.
+             * <p>The alert severity. Valid values:</p>
+             * <ul>
+             * <li>CRITICAL: critical</li>
+             * <li>ERROR: error</li>
+             * <li>WARNING: warning</li>
+             * <li>INFO: information</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CRITICAL</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -550,7 +616,21 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The incident status. Valid values:</p>
+             * <ul>
+             * <li>TRIGGERED: triggered</li>
+             * <li>RESOLVED: resolved</li>
+             * <li>ACK: acknowledged</li>
+             * <li>ESCALATED: escalated</li>
+             * <li>MANUAL_RESOLVED: manually resolved</li>
+             * <li>TIMEOUT: automatically resolved due to timeout</li>
+             * <li>RETRIGGERED: retriggered</li>
+             * <li>PARTIAL_RESOLVED: partially resolved</li>
+             * <li>INVALID: invalid</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TRIGGERED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -558,7 +638,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * subscriptionId.
+             * <p>The subscription ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d</p>
              */
             public Builder subscriptionId(String subscriptionId) {
                 this.subscriptionId = subscriptionId;
@@ -566,7 +649,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * subscriptionName.
+             * <p>The subscription name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default subscription</p>
              */
             public Builder subscriptionName(String subscriptionName) {
                 this.subscriptionName = subscriptionName;
@@ -574,7 +660,11 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * success.
+             * <p>Indicates whether the notification was delivered successfully. Valid values:</p>
+             * <ul>
+             * <li>true: The notification was delivered successfully.</li>
+             * <li>false: The notification delivery failed.</li>
+             * </ul>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -582,7 +672,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * <p>The time when the notification record was generated. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1729400000</p>
              */
             public Builder timestamp(Integer timestamp) {
                 this.timestamp = timestamp;
@@ -590,7 +683,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>The Alibaba Cloud account ID to which the notification record belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5884500827389836</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

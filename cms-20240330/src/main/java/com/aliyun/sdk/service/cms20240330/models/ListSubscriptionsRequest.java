@@ -63,6 +63,7 @@ public class ListSubscriptionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("unbound")
+    @Deprecated
     private Boolean unbound;
 
     @com.aliyun.core.annotation.Query
@@ -236,7 +237,10 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * agentUuid.
+         * <p>The UUID of the AI agent. This parameter is used to filter subscriptions of a specified AI agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-rca-001</p>
          */
         public Builder agentUuid(String agentUuid) {
             this.putQueryParameter("agentUuid", agentUuid);
@@ -245,7 +249,14 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * direction.
+         * <p>The sort order of the returned versions. Valid values:</p>
+         * <ul>
+         * <li>asc: Ascending order. </li>
+         * <li>desc: Descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("direction", direction);
@@ -254,7 +265,10 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * enable.
+         * <p>Specifies whether the subscription is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("enable", enable);
@@ -263,7 +277,10 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -272,7 +289,10 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2-3408-4595-9d80-****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -281,7 +301,10 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * notifyStrategyUuid.
+         * <p>The UUID of the notification policy. This parameter is used to filter subscriptions that are bound to a specified notification policy. The value is a 32-character string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d</p>
          */
         public Builder notifyStrategyUuid(String notifyStrategyUuid) {
             this.putQueryParameter("notifyStrategyUuid", notifyStrategyUuid);
@@ -290,7 +313,10 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("orderBy", orderBy);
@@ -299,7 +325,10 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * subscriptionId.
+         * <p>The ID of the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123123</p>
          */
         public Builder subscriptionId(String subscriptionId) {
             this.putQueryParameter("subscriptionId", subscriptionId);
@@ -308,7 +337,10 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * subscriptionName.
+         * <p>The name of the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test subscription</p>
          */
         public Builder subscriptionName(String subscriptionName) {
             this.putQueryParameter("subscriptionName", subscriptionName);
@@ -317,7 +349,14 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * subscriptionType.
+         * <p>The type of the subscription. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: Standard subscription.</li>
+         * <li>AI_AGENT: AI agent subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("subscriptionType", subscriptionType);
@@ -326,7 +365,10 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * unbound.
+         * <p><strong>[Deprecated]</strong> This is an internal reserved parameter. Do not use it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder unbound(Boolean unbound) {
             this.putQueryParameter("unbound", unbound);
@@ -335,7 +377,10 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);

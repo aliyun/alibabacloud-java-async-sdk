@@ -93,7 +93,10 @@ public class ListSubscriptionsResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of records returned for the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class ListSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2-3408-4595-9d80-****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>123-123-234-345-123</p>
@@ -120,7 +126,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * subscriptionList.
+         * <p>The list of subscriptions.</p>
          */
         public Builder subscriptionList(java.util.List<SubscriptionForView> subscriptionList) {
             this.subscriptionList = subscriptionList;

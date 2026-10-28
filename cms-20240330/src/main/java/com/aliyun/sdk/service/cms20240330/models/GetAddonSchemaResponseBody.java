@@ -80,7 +80,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of data table fields.</p>
+         * <p>The list of data table fields.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
@@ -88,7 +88,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E5B1D3D4-BB28-5996-8AD2-***********</p>
@@ -99,7 +99,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the schema.</p>
+         * <p>The schema type.</p>
          * 
          * <strong>example:</strong>
          * <p>common</p>
@@ -194,7 +194,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The control mode of the field.</p>
+             * <p>The field control mode.</p>
              * 
              * <strong>example:</strong>
              * <p>show</p>
@@ -205,7 +205,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the field.</p>
+             * <p>The field name.</p>
              * 
              * <strong>example:</strong>
              * <p>store.storageTarget</p>
@@ -216,7 +216,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operator for the condition.</p>
+             * <p>The condition operator.</p>
              * 
              * <strong>example:</strong>
              * <p>==</p>
@@ -308,7 +308,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the label.</p>
+             * <p>The label value.</p>
              * 
              * <strong>example:</strong>
              * <p>tagValue</p>
@@ -391,7 +391,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the data source.</p>
+             * <p>The data source information.</p>
              */
             public Builder dataSource(java.util.List<DataSource> dataSource) {
                 this.dataSource = dataSource;
@@ -399,7 +399,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A collection of related data.</p>
+             * <p>The related data collection.</p>
              */
             public Builder related(java.util.List<String> related) {
                 this.related = related;
@@ -407,7 +407,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode.</p>
+             * <p>The selection mode.</p>
              * 
              * <strong>example:</strong>
              * <p>single</p>
@@ -542,7 +542,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum value. The value is inclusive.</p>
+             * <p>The maximum value of the score range (inclusive).</p>
              * 
              * <strong>example:</strong>
              * <p>2000</p>
@@ -553,7 +553,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum length that is supported by the text control.</p>
+             * <p>The maximum length supported by the text control.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -564,7 +564,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details.</p>
+             * <p>The detailed information.</p>
              * 
              * <strong>example:</strong>
              * <p>length limit</p>
@@ -808,7 +808,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of display conditions.</p>
+             * <p>The list of display conditions.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
@@ -838,7 +838,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the field is hidden. Valid values: \<code>true\\</code> (hidden) and \<code>false\\</code> (displayed).</p>
+             * <p>Specifies whether the field is hidden. Valid values: true: Hidden. false: Displayed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -849,7 +849,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the element.</p>
+             * <p>The element type.</p>
              * 
              * <strong>example:</strong>
              * <p>input</p>
@@ -860,7 +860,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the field.</p>
+             * <p>The field path.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql.host</p>
@@ -882,7 +882,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the field.</p>
+             * <p>The field name.</p>
              * 
              * <strong>example:</strong>
              * <p>host</p>
@@ -893,7 +893,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The placeholder text.</p>
+             * <p>The input prompt.</p>
              * 
              * <strong>example:</strong>
              * <p>Please enter the metrics collection interval</p>
@@ -904,7 +904,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Other properties of the component.</p>
+             * <p>The other properties of the component.</p>
              */
             public Builder props(Props props) {
                 this.props = props;
@@ -912,7 +912,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the field.</p>
+             * <p>The field type.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -923,7 +923,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validation rule for the field.</p>
+             * <p>The field validation rules.</p>
              */
             public Builder validation(Validation validation) {
                 this.validation = validation;

@@ -217,7 +217,7 @@ public class CreateAddonReleaseRequest extends Request {
         } 
 
         /**
-         * <p>The environment policy ID.</p>
+         * <p>The ID of the environment policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The name of the add-on component to be integrated for monitoring.</p>
+         * <p>The name of the add-on that requires monitoring integration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,10 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * apiVersion.
+         * <p>The catalog version of the add-on. Valid values: v1 and v2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder apiVersion(String apiVersion) {
             this.putBodyParameter("apiVersion", apiVersion);
@@ -285,7 +288,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The environment type. If the policy type is CS or ECS, the corresponding environment type is used. For other policy types, the value is uniformly set to Cloud.</p>
+         * <p>The environment type. If the policy type is CS or ECS, the corresponding environment type is used. For other policy types, the environment type is uniformly set to Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>CS</p>
@@ -297,7 +300,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The parent add-on release ID.</p>
+         * <p>The ID of the parent add-on release.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-xxxxxxxxxxx</p>
@@ -333,7 +336,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The version of the add-on component to be integrated for monitoring.</p>
+         * <p>The version of the add-on that requires monitoring integration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

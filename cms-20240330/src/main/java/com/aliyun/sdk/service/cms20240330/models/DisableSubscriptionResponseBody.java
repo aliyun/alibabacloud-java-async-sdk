@@ -67,7 +67,7 @@ public class DisableSubscriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0CEC5375-C554-562B-A65F-******</p>
@@ -78,7 +78,10 @@ public class DisableSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * subscriptionId.
+         * <p>The ID of the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123123</p>
          */
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = subscriptionId;

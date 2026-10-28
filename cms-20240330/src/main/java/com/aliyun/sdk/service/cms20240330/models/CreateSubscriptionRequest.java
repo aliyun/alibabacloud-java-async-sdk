@@ -96,7 +96,7 @@ public class CreateSubscriptionRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(SubscriptionForModify body) {
             this.putBodyParameter("body", body);
@@ -105,7 +105,10 @@ public class CreateSubscriptionRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);

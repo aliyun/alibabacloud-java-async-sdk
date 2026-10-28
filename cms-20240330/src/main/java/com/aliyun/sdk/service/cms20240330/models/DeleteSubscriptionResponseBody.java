@@ -78,7 +78,10 @@ public class DeleteSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * subscriptionId.
+         * <p>The ID of the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123123</p>
          */
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = subscriptionId;
