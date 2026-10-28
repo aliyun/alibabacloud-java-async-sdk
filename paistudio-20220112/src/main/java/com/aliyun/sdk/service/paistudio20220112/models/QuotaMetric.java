@@ -67,7 +67,10 @@ public class QuotaMetric extends TeaModel {
         } 
 
         /**
-         * GPUType.
+         * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GU108</p>
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -75,7 +78,10 @@ public class QuotaMetric extends TeaModel {
         }
 
         /**
-         * Metrics.
+         * <p>The performance metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23000</p>
          */
         public Builder metrics(java.util.List<Metric> metrics) {
             this.metrics = metrics;

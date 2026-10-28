@@ -106,7 +106,7 @@ public class CredentialRole extends TeaModel {
         } 
 
         /**
-         * AssumeRoleFor.
+         * <p>The entity that uses the role credentials.</p>
          */
         public Builder assumeRoleFor(String assumeRoleFor) {
             this.assumeRoleFor = assumeRoleFor;
@@ -114,7 +114,7 @@ public class CredentialRole extends TeaModel {
         }
 
         /**
-         * AssumeUserInfo.
+         * <p>The user information for role assumption.</p>
          */
         public Builder assumeUserInfo(AssumeUserInfo assumeUserInfo) {
             this.assumeUserInfo = assumeUserInfo;
@@ -122,7 +122,7 @@ public class CredentialRole extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>The access policy.</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -130,7 +130,10 @@ public class CredentialRole extends TeaModel {
         }
 
         /**
-         * RoleArn.
+         * <p>The ARN of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1157703270994901:role/aliyunserviceroleforpaiworkspace</p>
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;
@@ -138,7 +141,10 @@ public class CredentialRole extends TeaModel {
         }
 
         /**
-         * RoleType.
+         * <p>The role type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder roleType(String roleType) {
             this.roleType = roleType;

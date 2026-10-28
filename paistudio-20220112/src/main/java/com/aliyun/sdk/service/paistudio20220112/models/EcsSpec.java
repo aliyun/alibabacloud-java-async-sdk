@@ -288,7 +288,10 @@ public class EcsSpec extends TeaModel {
         } 
 
         /**
-         * AcceleratorType.
+         * <p>The accelerator type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
@@ -296,7 +299,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * Cpu.
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder cpu(Integer cpu) {
             this.cpu = cpu;
@@ -304,7 +310,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * EcsImageId.
+         * <p>The ECS image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp1g7004ksh0oeuc****</p>
          */
         public Builder ecsImageId(String ecsImageId) {
             this.ecsImageId = ecsImageId;
@@ -312,7 +321,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * EriQuantity.
+         * <p>The number of Elastic RDMA Interface (ERI) network interface controllers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder eriQuantity(Integer eriQuantity) {
             this.eriQuantity = eriQuantity;
@@ -320,7 +332,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * Gpu.
+         * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpu(Integer gpu) {
             this.gpu = gpu;
@@ -328,7 +343,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * GpuGUSpec.
+         * <p>The GPU computing unit specifications.</p>
          */
         public Builder gpuGUSpec(String gpuGUSpec) {
             this.gpuGUSpec = gpuGUSpec;
@@ -336,7 +351,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * GpuMemory.
+         * <p>The GPU memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder gpuMemory(Integer gpuMemory) {
             this.gpuMemory = gpuMemory;
@@ -352,7 +370,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * GpuTypeAlias.
+         * <p>The GPU type alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A100</p>
          */
         public Builder gpuTypeAlias(String gpuTypeAlias) {
             this.gpuTypeAlias = gpuTypeAlias;
@@ -360,7 +381,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ml.gu7xf.8xlarge-gu108</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -368,7 +392,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * MachineModel.
+         * <p>The machine model.</p>
          */
         public Builder machineModel(String machineModel) {
             this.machineModel = machineModel;
@@ -376,7 +400,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92</p>
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -384,7 +411,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * NetworkMode.
+         * <p>The network mode.</p>
          */
         public Builder networkMode(String networkMode) {
             this.networkMode = networkMode;
@@ -392,7 +419,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * PlannedCpu.
+         * <p>The planned number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder plannedCpu(Integer plannedCpu) {
             this.plannedCpu = plannedCpu;
@@ -400,7 +430,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * PlannedMemory.
+         * <p>The planned memory size.</p>
          */
         public Builder plannedMemory(Integer plannedMemory) {
             this.plannedMemory = plannedMemory;
@@ -408,7 +438,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -416,7 +449,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * SupportGPUShare.
+         * <p>Specifies whether GPU sharing is supported.</p>
          */
         public Builder supportGPUShare(Boolean supportGPUShare) {
             this.supportGPUShare = supportGPUShare;
@@ -432,7 +465,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * SupportSetNetworkCardIndex.
+         * <p>Specifies whether setting the network interface controller index is supported.</p>
          */
         public Builder supportSetNetworkCardIndex(Boolean supportSetNetworkCardIndex) {
             this.supportSetNetworkCardIndex = supportSetNetworkCardIndex;

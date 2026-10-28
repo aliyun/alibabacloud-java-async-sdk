@@ -80,7 +80,7 @@ public class ResourceLimitDetails extends TeaModel {
         } 
 
         /**
-         * GCLevel.
+         * <p>The GC level.</p>
          */
         public Builder GCLevel(String GCLevel) {
             this.GCLevel = GCLevel;
@@ -88,7 +88,7 @@ public class ResourceLimitDetails extends TeaModel {
         }
 
         /**
-         * ResourceLimit.
+         * <p>The resource limit details.</p>
          */
         public Builder resourceLimit(java.util.Map<String, ?> resourceLimit) {
             this.resourceLimit = resourceLimit;
@@ -96,7 +96,7 @@ public class ResourceLimitDetails extends TeaModel {
         }
 
         /**
-         * ShouldIgnoreResourceCheck.
+         * <p>Specifies whether to ignore the resource check.</p>
          */
         public Builder shouldIgnoreResourceCheck(Boolean shouldIgnoreResourceCheck) {
             this.shouldIgnoreResourceCheck = shouldIgnoreResourceCheck;

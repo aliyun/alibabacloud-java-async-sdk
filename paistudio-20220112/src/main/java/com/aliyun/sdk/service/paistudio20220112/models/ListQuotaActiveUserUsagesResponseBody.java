@@ -101,7 +101,7 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user usage information.</p>
+         * <p>The list of user resource usage details.</p>
          */
         public Builder quotaUserUsages(java.util.List<QuotaUser> quotaUserUsages) {
             this.quotaUserUsages = quotaUserUsages;

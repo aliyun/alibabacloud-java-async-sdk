@@ -67,7 +67,7 @@ public class Permission extends TeaModel {
         } 
 
         /**
-         * IsEnabled.
+         * <p>IsEnabled</p>
          */
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = isEnabled;
@@ -75,7 +75,10 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>ResourceType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ecs</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;

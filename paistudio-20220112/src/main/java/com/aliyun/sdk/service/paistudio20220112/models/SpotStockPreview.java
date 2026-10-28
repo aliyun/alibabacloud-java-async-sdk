@@ -106,7 +106,10 @@ public class SpotStockPreview extends TeaModel {
         } 
 
         /**
-         * AvailableQuantity.
+         * <p>The available quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder availableQuantity(Integer availableQuantity) {
             this.availableQuantity = availableQuantity;
@@ -114,7 +117,10 @@ public class SpotStockPreview extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -122,7 +128,10 @@ public class SpotStockPreview extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The spot instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ml.gu8xf.8xlarge-gu108</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -130,7 +139,10 @@ public class SpotStockPreview extends TeaModel {
         }
 
         /**
-         * SpotDiscount.
+         * <p>The current spot instance discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         public Builder spotDiscount(Float spotDiscount) {
             this.spotDiscount = spotDiscount;
@@ -138,7 +150,10 @@ public class SpotStockPreview extends TeaModel {
         }
 
         /**
-         * StockStatus.
+         * <p>The spot instance inventory status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WithStock</p>
          */
         public Builder stockStatus(String stockStatus) {
             this.stockStatus = stockStatus;

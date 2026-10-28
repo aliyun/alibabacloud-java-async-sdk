@@ -158,7 +158,10 @@ public class NodeSnapshot extends TeaModel {
         } 
 
         /**
-         * AncestorQuotaWorkloadNum.
+         * <p>The number of workloads using ancestor quotas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ancestorQuotaWorkloadNum(Integer ancestorQuotaWorkloadNum) {
             this.ancestorQuotaWorkloadNum = ancestorQuotaWorkloadNum;
@@ -166,7 +169,10 @@ public class NodeSnapshot extends TeaModel {
         }
 
         /**
-         * DescendantQuotaWorkloadNum.
+         * <p>The number of workloads using descendant quotas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder descendantQuotaWorkloadNum(Integer descendantQuotaWorkloadNum) {
             this.descendantQuotaWorkloadNum = descendantQuotaWorkloadNum;
@@ -174,7 +180,10 @@ public class NodeSnapshot extends TeaModel {
         }
 
         /**
-         * NodeName.
+         * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trains930928remn-master-0</p>
          */
         public Builder nodeName(String nodeName) {
             this.nodeName = nodeName;
@@ -182,7 +191,10 @@ public class NodeSnapshot extends TeaModel {
         }
 
         /**
-         * RequestCPU.
+         * <p>The CPU usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder requestCPU(String requestCPU) {
             this.requestCPU = requestCPU;
@@ -190,7 +202,10 @@ public class NodeSnapshot extends TeaModel {
         }
 
         /**
-         * RequestGPU.
+         * <p>The GPU usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder requestGPU(String requestGPU) {
             this.requestGPU = requestGPU;
@@ -198,7 +213,10 @@ public class NodeSnapshot extends TeaModel {
         }
 
         /**
-         * RequestMemory.
+         * <p>The memory usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder requestMemory(String requestMemory) {
             this.requestMemory = requestMemory;
@@ -206,7 +224,10 @@ public class NodeSnapshot extends TeaModel {
         }
 
         /**
-         * SelfQuotaWorkloadNum.
+         * <p>The number of workloads using the current quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder selfQuotaWorkloadNum(Integer selfQuotaWorkloadNum) {
             this.selfQuotaWorkloadNum = selfQuotaWorkloadNum;
@@ -214,7 +235,10 @@ public class NodeSnapshot extends TeaModel {
         }
 
         /**
-         * WorkloadNum.
+         * <p>The number of node workloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder workloadNum(Integer workloadNum) {
             this.workloadNum = workloadNum;
@@ -222,7 +246,7 @@ public class NodeSnapshot extends TeaModel {
         }
 
         /**
-         * Workloads.
+         * <p>The node workload snapshot.</p>
          */
         public Builder workloads(java.util.List<Workloads> workloads) {
             this.workloads = workloads;
@@ -301,7 +325,10 @@ public class NodeSnapshot extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The corresponding queue unit name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dlc1yhisjtmqh15s-master-0</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -309,7 +336,10 @@ public class NodeSnapshot extends TeaModel {
             }
 
             /**
-             * WorkloadId.
+             * <p>The workload ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dlcxxxx</p>
              */
             public Builder workloadId(String workloadId) {
                 this.workloadId = workloadId;
@@ -317,7 +347,10 @@ public class NodeSnapshot extends TeaModel {
             }
 
             /**
-             * WorkloadType.
+             * <p>The workload type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dlc</p>
              */
             public Builder workloadType(String workloadType) {
                 this.workloadType = workloadType;

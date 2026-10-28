@@ -390,7 +390,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the quota creator.</p>
+         * <p>The ID of the user who created the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>1884692****</p>
@@ -423,7 +423,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the quota was created.</p>
+         * <p>The time when the quota was created, in ISO 8601 format and UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-22T00:00:00Z</p>
@@ -434,7 +434,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the quota was last modified.</p>
+         * <p>The time when the quota was last modified, in ISO 8601 format and UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-22T00:00:00Z</p>
@@ -461,7 +461,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the latest quota operation.</p>
+         * <p>The ID of the latest operation on the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>operation****</p>
@@ -502,7 +502,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster specifications and status composed of resources in the quota.</p>
+         * <p>The specifications and status of the cluster composed of resources in the quota.</p>
          */
         public Builder quotaCluster(QuotaCluster quotaCluster) {
             this.quotaCluster = quotaCluster;
@@ -510,7 +510,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota configuration:</p>
+         * <p>The configuration of the quota:</p>
          * <ul>
          * <li><p>VPC information</p>
          * </li>
@@ -534,7 +534,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource quota ID.</p>
+         * <p>The ID of the resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>quotajradxh4****</p>
@@ -567,7 +567,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error reason.</p>
+         * <p>The cause of the error.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -589,7 +589,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource group information associated with the resource quota.</p>
+         * <p>The resource group information corresponding to the resource quota.</p>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.resourceGroupIds = resourceGroupIds;
@@ -619,7 +619,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of sub-quotas under the quota.</p>
+         * <p>The list of sub-quotas of the quota.</p>
          */
         public Builder subQuotas(java.util.List<QuotaIdName> subQuotas) {
             this.subQuotas = subQuotas;
@@ -627,7 +627,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version information. Takes effect when the resource type is ECS.</p>
+         * <p>The version information. This parameter takes effect when the resource type is ECS.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>

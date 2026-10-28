@@ -80,7 +80,7 @@ public class NodeDrainParameters extends TeaModel {
         } 
 
         /**
-         * Force.
+         * <p>Specifies whether to forcibly drain the node.</p>
          */
         public Builder force(Boolean force) {
             this.force = force;
@@ -88,7 +88,7 @@ public class NodeDrainParameters extends TeaModel {
         }
 
         /**
-         * <p>Delete pods of the specified job types</p>
+         * <p>The pods of the specified job types to drain.</p>
          */
         public Builder podFromSubProducts(java.util.List<String> podFromSubProducts) {
             this.podFromSubProducts = podFromSubProducts;
@@ -96,7 +96,7 @@ public class NodeDrainParameters extends TeaModel {
         }
 
         /**
-         * <p>Delete specified pods</p>
+         * <p>The specified pods to drain.</p>
          */
         public Builder podNames(java.util.List<String> podNames) {
             this.podNames = podNames;

@@ -301,7 +301,7 @@ public class QuotaConfig extends TeaModel {
         } 
 
         /**
-         * <p>The ACS-related configurations.</p>
+         * <p>The ACS-related configuration.</p>
          */
         public Builder ACS(ACS ACS) {
             this.ACS = ACS;
@@ -320,7 +320,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * ControlPlaneClusterId.
+         * <p>The ID of the control plane cluster.</p>
          */
         public Builder controlPlaneClusterId(String controlPlaneClusterId) {
             this.controlPlaneClusterId = controlPlaneClusterId;
@@ -328,7 +328,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * <p>The default GPU driver version for the resource quota.</p>
+         * <p>The default driver version of the resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>470.199.02</p>
@@ -339,7 +339,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * EnableGPUShare.
+         * <p>Specifies whether GPU sharing is enabled.</p>
          */
         public Builder enableGPUShare(Boolean enableGPUShare) {
             this.enableGPUShare = enableGPUShare;
@@ -347,7 +347,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether workloads in sub-quotas can be preempted.</p>
+         * <p>Specifies whether sub-quota resources can be preempted.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -358,7 +358,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether guaranteed resources within this quota can be preempted.</p>
+         * <p>Specifies whether guaranteed resource preemption for the current quota is enabled.</p>
          */
         public Builder enableSelfQuotaPreemption(Boolean enableSelfQuotaPreemption) {
             this.enableSelfQuotaPreemption = enableSelfQuotaPreemption;
@@ -366,7 +366,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether resources in sub-quotas can be preempted.</p>
+         * <p>Specifies whether sub-quota resources can be preempted.</p>
          */
         public Builder enableSubQuotaPreemption(Boolean enableSubQuotaPreemption) {
             this.enableSubQuotaPreemption = enableSubQuotaPreemption;
@@ -374,7 +374,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * EniCacheConfig.
+         * <p>The elastic network interface controller (NIC) cache configuration.</p>
          */
         public Builder eniCacheConfig(EniCacheConfig eniCacheConfig) {
             this.eniCacheConfig = eniCacheConfig;
@@ -382,7 +382,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * IsEncryptedResource.
+         * <p>Specifies whether the resource is encrypted.</p>
          */
         public Builder isEncryptedResource(Boolean isEncryptedResource) {
             this.isEncryptedResource = isEncryptedResource;
@@ -390,7 +390,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * OversoldUsageConfig.
+         * <p>The off-peak resource usage configuration.</p>
          */
         public Builder oversoldUsageConfig(OversoldUsageConfig oversoldUsageConfig) {
             this.oversoldUsageConfig = oversoldUsageConfig;
@@ -398,7 +398,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * <p>The resource specification templates.</p>
+         * <p>The resource specification template.</p>
          */
         public Builder resourceSpecs(java.util.List<WorkspaceSpecs> resourceSpecs) {
             this.resourceSpecs = resourceSpecs;
@@ -406,7 +406,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * SandboxCacheConfig.
+         * <p>The sandbox cache configuration.</p>
          */
         public Builder sandboxCacheConfig(SandboxCacheConfig sandboxCacheConfig) {
             this.sandboxCacheConfig = sandboxCacheConfig;
@@ -414,7 +414,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * SelfQuotaPreemptionConfig.
+         * <p>The self-quota preemption configuration.</p>
          */
         public Builder selfQuotaPreemptionConfig(SelfQuotaPreemptionConfig selfQuotaPreemptionConfig) {
             this.selfQuotaPreemptionConfig = selfQuotaPreemptionConfig;
@@ -422,7 +422,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * <p>The configuration for the sub-quota preemption task.</p>
+         * <p>The sub-quota task preemption configuration.</p>
          */
         public Builder subQuotaPreemptionConfig(SubQuotaPreemptionConfig subQuotaPreemptionConfig) {
             this.subQuotaPreemptionConfig = subQuotaPreemptionConfig;
@@ -430,7 +430,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * <p>The GPU driver versions supported by the resource quota.</p>
+         * <p>The driver versions supported by the resource quota.</p>
          */
         public Builder supportGPUDrivers(java.util.List<String> supportGPUDrivers) {
             this.supportGPUDrivers = supportGPUDrivers;
@@ -449,7 +449,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * UseCase.
+         * <p>The scenarios of the resource quota.</p>
          */
         public Builder useCase(String useCase) {
             this.useCase = useCase;
@@ -465,7 +465,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * WorkloadTypes.
+         * <p>The workload types supported by the quota.</p>
          */
         public Builder workloadTypes(java.util.List<String> workloadTypes) {
             this.workloadTypes = workloadTypes;

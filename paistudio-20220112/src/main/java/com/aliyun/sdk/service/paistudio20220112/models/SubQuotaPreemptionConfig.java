@@ -67,7 +67,10 @@ public class SubQuotaPreemptionConfig extends TeaModel {
         } 
 
         /**
-         * PreemptedPriorityUpperBound.
+         * <p>The maximum priority of preempted nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder preemptedPriorityUpperBound(Long preemptedPriorityUpperBound) {
             this.preemptedPriorityUpperBound = preemptedPriorityUpperBound;
@@ -75,7 +78,7 @@ public class SubQuotaPreemptionConfig extends TeaModel {
         }
 
         /**
-         * PreemptedProducts.
+         * <p>The preemptable node types.</p>
          */
         public Builder preemptedProducts(java.util.List<String> preemptedProducts) {
             this.preemptedProducts = preemptedProducts;

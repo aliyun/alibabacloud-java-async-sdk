@@ -309,7 +309,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * GPUType.
+         * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V100</p>
          */
         public Builder GPUType(String GPUType) {
             this.putQueryParameter("GPUType", GPUType);
@@ -318,7 +321,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * HasResource.
+         * <p>Specifies whether the quota contains resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasResource(String hasResource) {
             this.putQueryParameter("HasResource", hasResource);
@@ -327,7 +333,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>Filters by label key and value. Separate multiple labels with commas (,).</p>
+         * <p>Filters the results by label keys and values. Separate multiple labels with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>official=true,gpu=false</p>
@@ -339,7 +345,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The display mode. Valid values: tree or list.</p>
+         * <p>The display mode. Valid values: tree and list.</p>
          * 
          * <strong>example:</strong>
          * <p>Tree</p>
@@ -351,7 +357,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values: desc or asc.</p>
+         * <p>The sort order. Valid values: desc and asc.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -363,7 +369,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The page number to query. Minimum value: 1.</p>
+         * <p>The number of the page to return. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -375,7 +381,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Minimum value: 1.</p>
+         * <p>The number of entries to return on each page. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -387,13 +393,13 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>Filters by ParentQuotaId:</p>
+         * <p>Filters the results by ParentQuotaId.</p>
          * <ul>
-         * <li><p>Not specified: lists all quotas under the tenant, including root quotas and child quotas.</p>
+         * <li><p>If this parameter is not specified, all quotas under the tenant are listed, including root quotas and child quotas.</p>
          * </li>
-         * <li><p>Empty string: lists all root quotas.</p>
+         * <li><p>If this parameter is left empty, all root quotas are listed.</p>
          * </li>
-         * <li><p>Non-empty string: lists all child quotas of the specified ParentQuotaId.</p>
+         * <li><p>If this parameter is specified, all child quotas of the specified ParentQuotaId are listed.</p>
          * </li>
          * </ul>
          * 
@@ -407,7 +413,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>Comma-separated QuotaIds for filtering. Only exact match is supported. A maximum of 100 IDs can be specified at a time.</p>
+         * <p>Filters the results by QuotaIds. Separate multiple IDs with commas (,). Only exact matching is supported. A maximum of 100 IDs can be specified at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>quota1ci8g793pgm,quotajradxh43rgb</p>
@@ -419,7 +425,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>Filters by QuotaName. Fuzzy match is supported.</p>
+         * <p>Filters the results by QuotaName. Fuzzy matching is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>quotajradxh43rgb</p>
@@ -431,7 +437,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The resource type of the quota (Lingjun/ECS/ACS). Default value: ECS.</p>
+         * <p>The resource type of the quota. Valid values: Lingjun, ECS, and ACS. Default value: ECS.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>
@@ -443,7 +449,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results. Valid values:</p>
+         * <p>The field by which to sort the returned results. Valid values:</p>
          * <ul>
          * <li><p>QuotaName</p>
          * </li>
@@ -471,7 +477,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>Comma-separated quota statuses for filtering. Only exact match is supported.</p>
+         * <p>Filters the results by quota statuses. Separate multiple statuses with commas (,). Only exact matching is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Creating</p>
@@ -499,7 +505,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>Filters by version information.</p>
+         * <p>Filters the results by version information.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -511,7 +517,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>Comma-separated WorkspaceIds for filtering. Only exact match is supported. A maximum of 10 IDs can be specified at a time.</p>
+         * <p>Filters the results by WorkspaceIds. Separate multiple IDs with commas (,). Only exact matching is supported. A maximum of 10 IDs can be specified at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>21345,38727</p>

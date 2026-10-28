@@ -275,7 +275,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of instances in the machine group.</p>
+         * <p>The quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -283,7 +286,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The default driver.</p>
+         * <p>The default driver version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>535</p>
          */
         public Builder defaultDriver(String defaultDriver) {
             this.defaultDriver = defaultDriver;
@@ -291,7 +297,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The subscription duration. This parameter is returned only when <code>PayType</code> is <code>PrePay</code>.</p>
+         * <p>The purchase duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder duration(String duration) {
             this.duration = duration;
@@ -299,7 +308,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ECS instance type of the machine group.</p>
+         * <p>The ECS instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         public Builder ecsType(String ecsType) {
             this.ecsType = ecsType;
@@ -307,7 +319,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the machine group was created.</p>
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-10T03:17:31Z</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -315,7 +330,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time. This parameter is returned only when <code>PayType</code> is <code>PrePay</code>.</p>
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-22T00:00:00Z</p>
          */
         public Builder gmtExpired(String gmtExpired) {
             this.gmtExpired = gmtExpired;
@@ -323,7 +341,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the machine group was last modified.</p>
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -331,7 +352,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the machine group started.</p>
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtStarted(String gmtStarted) {
             this.gmtStarted = gmtStarted;
@@ -339,7 +363,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the machine group.</p>
+         * <p>The machine group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mg1</p>
          */
         public Builder machineGroupID(String machineGroupID) {
             this.machineGroupID = machineGroupID;
@@ -355,7 +382,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID of the order.</p>
+         * <p>The order instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>236553689400333</p>
          */
         public Builder orderInstanceId(String orderInstanceId) {
             this.orderInstanceId = orderInstanceId;
@@ -371,7 +401,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The payment type. Valid values: <code>PostPay</code> (pay-as-you-go) and <code>PrePay</code> (subscription).</p>
+         * <p>The billing type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePay</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -379,7 +412,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The billing cycle. This parameter is returned only when <code>PayType</code> is <code>PrePay</code>.</p>
+         * <p>The pricing cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Monthly</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.pricingCycle = pricingCycle;
@@ -388,6 +424,9 @@ public class GetMachineGroupResponseBody extends TeaModel {
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionID(String regionID) {
             this.regionID = regionID;
@@ -396,6 +435,9 @@ public class GetMachineGroupResponseBody extends TeaModel {
 
         /**
          * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2D0392B-D749-5C48-A98A-3FAE5C9444A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -403,7 +445,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the machine group.</p>
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -411,7 +456,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The drivers that the machine group supports.</p>
+         * <p>The supported driver versions.</p>
          */
         public Builder supportedDrivers(java.util.List<String> supportedDrivers) {
             this.supportedDrivers = supportedDrivers;

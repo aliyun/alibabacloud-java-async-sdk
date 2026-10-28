@@ -73,7 +73,10 @@ public class DeleteResourceGroupMachineGroupRequest extends Request {
         } 
 
         /**
-         * MachineGroupID.
+         * <p>The ID of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mgmioirqjgw6c5lg</p>
          */
         public Builder machineGroupID(String machineGroupID) {
             this.putPathParameter("MachineGroupID", machineGroupID);
@@ -82,7 +85,10 @@ public class DeleteResourceGroupMachineGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupID.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putPathParameter("ResourceGroupID", resourceGroupID);

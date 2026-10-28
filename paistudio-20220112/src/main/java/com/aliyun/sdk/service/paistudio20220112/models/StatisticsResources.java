@@ -106,7 +106,10 @@ public class StatisticsResources extends TeaModel {
         } 
 
         /**
-         * CPU.
+         * <p>The amount of CPU resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder CPU(String CPU) {
             this.CPU = CPU;
@@ -114,7 +117,10 @@ public class StatisticsResources extends TeaModel {
         }
 
         /**
-         * GPU.
+         * <p>The amount of GPU resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -122,7 +128,10 @@ public class StatisticsResources extends TeaModel {
         }
 
         /**
-         * HyperNodeNum.
+         * <p>The number of hypernodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hyperNodeNum(Long hyperNodeNum) {
             this.hyperNodeNum = hyperNodeNum;
@@ -130,7 +139,10 @@ public class StatisticsResources extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The amount of memory resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder memory(String memory) {
             this.memory = memory;
@@ -138,7 +150,10 @@ public class StatisticsResources extends TeaModel {
         }
 
         /**
-         * NodeNum.
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder nodeNum(Long nodeNum) {
             this.nodeNum = nodeNum;

@@ -119,7 +119,7 @@ public class ResourceAmount extends TeaModel {
         } 
 
         /**
-         * <p>Total CPU</p>
+         * <p>The total CPU amount.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -130,7 +130,7 @@ public class ResourceAmount extends TeaModel {
         }
 
         /**
-         * <p>Total GPU cards</p>
+         * <p>The total number of GPU cards.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -141,7 +141,10 @@ public class ResourceAmount extends TeaModel {
         }
 
         /**
-         * GPUMemory.
+         * <p>The GPU memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80G</p>
          */
         public Builder GPUMemory(String GPUMemory) {
             this.GPUMemory = GPUMemory;
@@ -149,7 +152,10 @@ public class ResourceAmount extends TeaModel {
         }
 
         /**
-         * GPUMemoryBytes.
+         * <p>The GPU memory, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85899345920</p>
          */
         public Builder GPUMemoryBytes(Long GPUMemoryBytes) {
             this.GPUMemoryBytes = GPUMemoryBytes;
@@ -157,7 +163,7 @@ public class ResourceAmount extends TeaModel {
         }
 
         /**
-         * <p>GPU card type</p>
+         * <p>The GPU card type.</p>
          * 
          * <strong>example:</strong>
          * <p>GPU</p>
@@ -168,7 +174,7 @@ public class ResourceAmount extends TeaModel {
         }
 
         /**
-         * <p>Total memory</p>
+         * <p>The total memory amount.</p>
          * 
          * <strong>example:</strong>
          * <p>100Gi</p>

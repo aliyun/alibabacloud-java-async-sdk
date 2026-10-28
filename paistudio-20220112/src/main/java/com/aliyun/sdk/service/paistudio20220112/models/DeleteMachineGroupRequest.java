@@ -59,7 +59,10 @@ public class DeleteMachineGroupRequest extends Request {
         } 
 
         /**
-         * MachineGroupID.
+         * <p>The ID of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mgmioirqjgw6c5lg</p>
          */
         public Builder machineGroupID(String machineGroupID) {
             this.putPathParameter("MachineGroupID", machineGroupID);

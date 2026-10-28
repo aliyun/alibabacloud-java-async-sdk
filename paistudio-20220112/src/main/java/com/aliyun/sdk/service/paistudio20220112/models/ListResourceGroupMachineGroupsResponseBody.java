@@ -80,7 +80,7 @@ public class ListResourceGroupMachineGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of machine groups.</p>
+         * <p>The list of machine groups.</p>
          */
         public Builder machineGroups(java.util.List<MachineGroup> machineGroups) {
             this.machineGroups = machineGroups;

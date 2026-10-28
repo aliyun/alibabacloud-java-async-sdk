@@ -327,7 +327,10 @@ public class QuotaUserViewMetric extends TeaModel {
         } 
 
         /**
-         * CPUNodeNumber.
+         * <p>The number of CPU nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder CPUNodeNumber(Integer CPUNodeNumber) {
             this.CPUNodeNumber = CPUNodeNumber;
@@ -335,7 +338,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * CPUUsageRate.
+         * <p>The CPU utilization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59</p>
          */
         public Builder CPUUsageRate(String CPUUsageRate) {
             this.CPUUsageRate = CPUUsageRate;
@@ -343,7 +349,7 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * CpuJobNames.
+         * <p>The CPU jobs.</p>
          */
         public Builder cpuJobNames(java.util.List<String> cpuJobNames) {
             this.cpuJobNames = cpuJobNames;
@@ -351,7 +357,7 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * CpuNodeNames.
+         * <p>The CPU node list.</p>
          */
         public Builder cpuNodeNames(java.util.List<String> cpuNodeNames) {
             this.cpuNodeNames = cpuNodeNames;
@@ -359,7 +365,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * DiskReadRate.
+         * <p>The disk read rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder diskReadRate(String diskReadRate) {
             this.diskReadRate = diskReadRate;
@@ -367,7 +376,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * DiskWriteRate.
+         * <p>The disk write rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder diskWriteRate(String diskWriteRate) {
             this.diskWriteRate = diskWriteRate;
@@ -375,7 +387,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * GPUNodeNumber.
+         * <p>The number of GPU nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder GPUNodeNumber(Integer GPUNodeNumber) {
             this.GPUNodeNumber = GPUNodeNumber;
@@ -383,7 +398,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * GPUUsageRate.
+         * <p>The GPU utilization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder GPUUsageRate(String GPUUsageRate) {
             this.GPUUsageRate = GPUUsageRate;
@@ -391,7 +409,7 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * GpuJobNames.
+         * <p>The GPU jobs.</p>
          */
         public Builder gpuJobNames(java.util.List<String> gpuJobNames) {
             this.gpuJobNames = gpuJobNames;
@@ -399,7 +417,7 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * GpuNodeNames.
+         * <p>The GPU node list.</p>
          */
         public Builder gpuNodeNames(java.util.List<String> gpuNodeNames) {
             this.gpuNodeNames = gpuNodeNames;
@@ -407,7 +425,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * JobType.
+         * <p>The job type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PyTorch</p>
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -415,7 +436,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * MemoryUsageRate.
+         * <p>The memory utilization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder memoryUsageRate(String memoryUsageRate) {
             this.memoryUsageRate = memoryUsageRate;
@@ -423,7 +447,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * NetworkInputRate.
+         * <p>The network input rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder networkInputRate(String networkInputRate) {
             this.networkInputRate = networkInputRate;
@@ -431,7 +458,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * NetworkOutputRate.
+         * <p>The network output rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder networkOutputRate(String networkOutputRate) {
             this.networkOutputRate = networkOutputRate;
@@ -439,7 +469,7 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * NodeNames.
+         * <p>The node list.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.nodeNames = nodeNames;
@@ -447,7 +477,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * RequestCPU.
+         * <p>The number of requested CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder requestCPU(Integer requestCPU) {
             this.requestCPU = requestCPU;
@@ -455,7 +488,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * RequestGPU.
+         * <p>The number of requested GPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder requestGPU(Integer requestGPU) {
             this.requestGPU = requestGPU;
@@ -463,7 +499,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * RequestMemory.
+         * <p>The requested memory in KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102400000</p>
          */
         public Builder requestMemory(Long requestMemory) {
             this.requestMemory = requestMemory;
@@ -471,7 +510,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * TotalCPU.
+         * <p>The total number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCPU(Integer totalCPU) {
             this.totalCPU = totalCPU;
@@ -479,7 +521,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * TotalGPU.
+         * <p>The total number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalGPU(Integer totalGPU) {
             this.totalGPU = totalGPU;
@@ -487,7 +532,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * TotalMemory.
+         * <p>The total memory in KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder totalMemory(Long totalMemory) {
             this.totalMemory = totalMemory;
@@ -495,7 +543,10 @@ public class QuotaUserViewMetric extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

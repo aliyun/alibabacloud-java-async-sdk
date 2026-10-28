@@ -91,7 +91,7 @@ public class GetNodeMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node metric information.</p>
+         * <p>The metric information of the nodes.</p>
          */
         public Builder nodesMetrics(java.util.List<NodeMetric> nodesMetrics) {
             this.nodesMetrics = nodesMetrics;
@@ -99,7 +99,7 @@ public class GetNodeMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource group ID. Each resource group has a globally unique resource group ID. You can use the resource group ID to retrieve information about the resource group.</p>
+         * <p>The ID of the resource group. Each resource group has a globally unique ID. You can use the resource group ID to retrieve the information about the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rgf0zhfqn1d4ity2</p>

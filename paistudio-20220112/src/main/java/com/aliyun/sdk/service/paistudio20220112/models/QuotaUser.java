@@ -93,7 +93,7 @@ public class QuotaUser extends TeaModel {
         } 
 
         /**
-         * Resources.
+         * <p>The resources.</p>
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -101,7 +101,10 @@ public class QuotaUser extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -109,7 +112,10 @@ public class QuotaUser extends TeaModel {
         }
 
         /**
-         * Username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder username(String username) {
             this.username = username;
@@ -117,7 +123,10 @@ public class QuotaUser extends TeaModel {
         }
 
         /**
-         * WorkloadCount.
+         * <p>The workload count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder workloadCount(Integer workloadCount) {
             this.workloadCount = workloadCount;
@@ -183,7 +192,7 @@ public class QuotaUser extends TeaModel {
             } 
 
             /**
-             * Submitted.
+             * <p>The submitted resources.</p>
              */
             public Builder submitted(ResourceAmount submitted) {
                 this.submitted = submitted;
@@ -191,7 +200,7 @@ public class QuotaUser extends TeaModel {
             }
 
             /**
-             * Used.
+             * <p>The used resources.</p>
              */
             public Builder used(ResourceAmount used) {
                 this.used = used;

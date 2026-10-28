@@ -87,7 +87,7 @@ public class GetQuotaRequest extends Request {
         } 
 
         /**
-         * <p>The quota identifier for which to retrieve details.</p>
+         * <p>The ID of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>quota1ci8g79****</p>
@@ -111,7 +111,7 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the node metadata bound to the quota.</p>
+         * <p>Specifies whether to return the metadata of nodes bound to the quota.</p>
          */
         public Builder withNodeMeta(Boolean withNodeMeta) {
             this.putQueryParameter("WithNodeMeta", withNodeMeta);

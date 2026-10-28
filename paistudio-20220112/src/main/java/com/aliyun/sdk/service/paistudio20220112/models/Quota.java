@@ -388,7 +388,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The resource quota description.</p>
+         * <p>The description of the resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a test quota</p>
@@ -400,6 +400,9 @@ public class Quota extends TeaModel {
 
         /**
          * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L20</p>
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -418,7 +421,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The time when the resource quota was last modified.</p>
+         * <p>The time when the resource quota was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-22T00:00:00Z</p>
@@ -429,7 +432,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * HyperZones.
+         * <p>The list of high-performance network zones.</p>
          */
         public Builder hyperZones(java.util.List<String> hyperZones) {
             this.hyperZones = hyperZones;
@@ -437,7 +440,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The resource quota labels.</p>
+         * <p>The labels of the resource quota.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
@@ -464,7 +467,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The parent resource quota ID.</p>
+         * <p>The ID of the parent resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -477,10 +480,10 @@ public class Quota extends TeaModel {
         /**
          * <p>The queue policy for the quota. Valid values:</p>
          * <ul>
-         * <li>PaiStrategyIntelligent: intelligent policies.</li>
-         * <li>PaiStrategyBalance: balanced policy.</li>
-         * <li>PaiStrategyRoundRobin: resource-priority policy.</li>
-         * <li>PaiStrategyStrictFIFO: FIFO policy.</li>
+         * <li>PaiStrategyIntelligent: intelligent policies</li>
+         * <li>PaiStrategyBalance: balanced policy</li>
+         * <li>PaiStrategyRoundRobin: resource priority policy</li>
+         * <li>PaiStrategyStrictFIFO: FIFO policy</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -492,7 +495,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * QuotaCluster.
+         * <p>The specifications and status of the cluster composed of resources in the quota.</p>
          */
         public Builder quotaCluster(QuotaCluster quotaCluster) {
             this.quotaCluster = quotaCluster;
@@ -500,7 +503,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The resource quota configuration.</p>
+         * <p>The configuration of the resource quota.</p>
          */
         public Builder quotaConfig(QuotaConfig quotaConfig) {
             this.quotaConfig = quotaConfig;
@@ -508,7 +511,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The resource quota details.</p>
+         * <p>The details of the resource quota.</p>
          */
         public Builder quotaDetails(QuotaDetails quotaDetails) {
             this.quotaDetails = quotaDetails;
@@ -516,7 +519,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The resource quota ID.</p>
+         * <p>The ID of the resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>quota12345</p>
@@ -527,7 +530,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The resource quota name.</p>
+         * <p>The name of the resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc-quota</p>
@@ -549,7 +552,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The error reason.</p>
+         * <p>The cause of the error.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -584,7 +587,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The resource quota status.</p>
+         * <p>The status of the resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -595,7 +598,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The list of sub-quotas under the resource quota.</p>
+         * <p>The list of sub-quotas of the resource quota.</p>
          */
         public Builder subQuotas(java.util.List<QuotaIdName> subQuotas) {
             this.subQuotas = subQuotas;
@@ -604,6 +607,9 @@ public class Quota extends TeaModel {
 
         /**
          * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder version(String version) {
             this.version = version;

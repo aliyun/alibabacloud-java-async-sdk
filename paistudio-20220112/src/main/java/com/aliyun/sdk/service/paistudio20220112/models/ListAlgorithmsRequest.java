@@ -129,7 +129,7 @@ public class ListAlgorithmsRequest extends Request {
         } 
 
         /**
-         * <p>Algorithm ID.</p>
+         * <p>The algorithm ID.</p>
          * 
          * <strong>example:</strong>
          * <p>algo-xsldfvu1334</p>
@@ -141,7 +141,7 @@ public class ListAlgorithmsRequest extends Request {
         }
 
         /**
-         * <p>Algorithm name.</p>
+         * <p>The algorithm name.</p>
          * 
          * <strong>example:</strong>
          * <p>llm_training</p>
@@ -153,7 +153,7 @@ public class ListAlgorithmsRequest extends Request {
         }
 
         /**
-         * <p>Algorithm provider.</p>
+         * <p>The algorithm provider.</p>
          * 
          * <strong>example:</strong>
          * <p>pai</p>
@@ -165,7 +165,7 @@ public class ListAlgorithmsRequest extends Request {
         }
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -177,7 +177,7 @@ public class ListAlgorithmsRequest extends Request {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -189,7 +189,7 @@ public class ListAlgorithmsRequest extends Request {
         }
 
         /**
-         * <p>Workspace ID.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>

@@ -60,8 +60,11 @@ public class GetMachineGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the machine group.</p>
+         * <p>The machine group ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mgmioirqjgw6c5lg</p>
          */
         public Builder machineGroupID(String machineGroupID) {
             this.putPathParameter("MachineGroupID", machineGroupID);

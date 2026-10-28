@@ -80,7 +80,10 @@ public class ResourceGroupMetric extends TeaModel {
         } 
 
         /**
-         * GpuType.
+         * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A100</p>
          */
         public Builder gpuType(String gpuType) {
             this.gpuType = gpuType;
@@ -88,7 +91,10 @@ public class ResourceGroupMetric extends TeaModel {
         }
 
         /**
-         * Metrics.
+         * <p>The performance metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23000</p>
          */
         public Builder metrics(java.util.List<Metric> metrics) {
             this.metrics = metrics;
@@ -96,7 +102,10 @@ public class ResourceGroupMetric extends TeaModel {
         }
 
         /**
-         * ResourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg17tmvwiokhzaxg</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;

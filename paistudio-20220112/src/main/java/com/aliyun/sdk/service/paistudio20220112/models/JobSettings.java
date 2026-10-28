@@ -249,7 +249,7 @@ public class JobSettings extends TeaModel {
         } 
 
         /**
-         * <p>Additional advanced parameter settings.</p>
+         * <p>The additional advanced parameter settings.</p>
          */
         public Builder advancedSettings(java.util.Map<String, ?> advancedSettings) {
             this.advancedSettings = advancedSettings;
@@ -257,7 +257,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>User ID associated with the job.</p>
+         * <p>The ID of the user associated with the job.</p>
          * 
          * <strong>example:</strong>
          * <p>166924</p>
@@ -268,7 +268,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Caller.</p>
+         * <p>The caller.</p>
          * 
          * <strong>example:</strong>
          * <p>SilkFlow</p>
@@ -279,7 +279,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>NVIDIA driver configuration.</p>
+         * <p>The NVIDIA driver configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>535.54.03</p>
@@ -290,7 +290,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Enable job fault tolerance monitoring.</p>
+         * <p>Specifies whether to enable fault tolerance monitoring for the job.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -301,7 +301,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Enable OSS append writes.</p>
+         * <p>Specifies whether to enable OSS append writing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -312,7 +312,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Enable the job to use RDMA.</p>
+         * <p>Specifies whether to allow the job to use RDMA.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -323,7 +323,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Enable computing power health check for the job.</p>
+         * <p>Specifies whether to enable computing power health checks for the job.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -334,7 +334,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Enable the job to use tide resources.</p>
+         * <p>Specifies whether to allow the job to use tide resources.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -345,7 +345,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Specify configuration parameters for fault tolerance monitoring, such as whether to enable log hang-based detection.</p>
+         * <p>The user-specified configuration parameters for fault tolerance monitoring, such as whether to enable log hang-based detection.</p>
          * 
          * <strong>example:</strong>
          * <p>--enable-log-hang-detection true</p>
@@ -356,7 +356,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Duration in minutes to retain the job after completion.</p>
+         * <p>The retention duration after the job ends, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -367,7 +367,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Policy for retaining the job after completion.</p>
+         * <p>The retention policy after the job ends.</p>
          * 
          * <strong>example:</strong>
          * <p>Always</p>
@@ -378,7 +378,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Job\&quot;s oversold resource usage method (not accepted, accepted, or only accepted).</p>
+         * <p>The oversold resource usage type for the job, which can be not accepted, accepted, or only accepted.</p>
          * 
          * <strong>example:</strong>
          * <p>AcceptQuotaOverSold</p>
@@ -389,7 +389,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Workflow ID.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pid-123456</p>
@@ -400,7 +400,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Configuration parameters for computing power health check.</p>
+         * <p>The configuration parameters for computing power health checks.</p>
          * 
          * <strong>example:</strong>
          * <p>--sanity-check-timing=AfterJobFaultTolerant --sanity-check-timeout-ops=MarkJobFai</p>
@@ -411,7 +411,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Custom tags.</p>
+         * <p>The custom labels.</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;

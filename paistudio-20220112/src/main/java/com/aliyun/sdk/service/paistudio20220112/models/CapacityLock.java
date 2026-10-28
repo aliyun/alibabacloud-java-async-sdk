@@ -301,7 +301,10 @@ public class CapacityLock extends TeaModel {
         } 
 
         /**
-         * availableCount.
+         * <p>The number of available instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder availableCount(Integer availableCount) {
             this.availableCount = availableCount;
@@ -309,7 +312,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * crsReservationId.
+         * <p>The ID of the capacity reservation.</p>
          */
         public Builder crsReservationId(String crsReservationId) {
             this.crsReservationId = crsReservationId;
@@ -317,7 +320,10 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test capacity reservation</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -325,7 +331,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * expireTime.
+         * <p>The expiration time of the capacity reservation.</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -333,7 +339,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * gmtCreated.
+         * <p>The creation time.</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -341,7 +347,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The modification time.</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -349,7 +355,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The ID of the capacity reservation lock record.</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -357,7 +363,10 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * instanceType.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ml.gp7vf.16.40xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -365,7 +374,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * lastReconcileAttemptTime.
+         * <p>The time of the last reconciliation attempt.</p>
          */
         public Builder lastReconcileAttemptTime(String lastReconcileAttemptTime) {
             this.lastReconcileAttemptTime = lastReconcileAttemptTime;
@@ -373,7 +382,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * lastSyncTime.
+         * <p>The last synchronization time.</p>
          */
         public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = lastSyncTime;
@@ -381,7 +390,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * lockProvider.
+         * <p>The lock service provider.</p>
          */
         public Builder lockProvider(String lockProvider) {
             this.lockProvider = lockProvider;
@@ -389,7 +398,10 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * lockedCount.
+         * <p>The number of locked instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder lockedCount(Integer lockedCount) {
             this.lockedCount = lockedCount;
@@ -397,7 +409,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * operator.
+         * <p>The operator.</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -405,7 +417,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * paymentType.
+         * <p>The billing method.</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -413,7 +425,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * privatePoolId.
+         * <p>The ID of the private pool.</p>
          */
         public Builder privatePoolId(String privatePoolId) {
             this.privatePoolId = privatePoolId;
@@ -421,7 +433,10 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * requestedCount.
+         * <p>The number of requested instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder requestedCount(Integer requestedCount) {
             this.requestedCount = requestedCount;
@@ -429,7 +444,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status.</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -437,7 +452,7 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * tenantId.
+         * <p>The ID of the tenant.</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -445,7 +460,10 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * usedCount.
+         * <p>The number of used instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedCount(Integer usedCount) {
             this.usedCount = usedCount;
@@ -453,7 +471,10 @@ public class CapacityLock extends TeaModel {
         }
 
         /**
-         * zoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu-a</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

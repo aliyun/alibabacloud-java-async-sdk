@@ -74,7 +74,7 @@ public class GetTokenRequest extends Request {
         } 
 
         /**
-         * <p>Time-to-live (TTL) of the share link in seconds. Default is 604800. Minimum is 0.</p>
+         * <p>The expiration duration of the sharing link, in seconds. Default value: 604800 seconds. Minimum value: 0 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -86,7 +86,7 @@ public class GetTokenRequest extends Request {
         }
 
         /**
-         * <p>ID of the training task.</p>
+         * <p>The ID of the training job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

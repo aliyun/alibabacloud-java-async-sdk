@@ -484,7 +484,7 @@ public class ListNodesRequest extends Request {
          * <li>CPU</li>
          * <li>GPU</li>
          * </ul>
-         * <p>Default value: empty, which indicates all types.</p>
+         * <p>If this parameter is left empty, all types are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>CPU</p>
@@ -496,7 +496,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * AvailabilityZone.
+         * <p>The zone where the nodes reside.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0</p>
          */
         public Builder availabilityZone(String availabilityZone) {
             this.putQueryParameter("AvailabilityZone", availabilityZone);
@@ -505,7 +508,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * CliqueID.
+         * <p>The clique ID.</p>
          */
         public Builder cliqueID(String cliqueID) {
             this.putQueryParameter("CliqueID", cliqueID);
@@ -514,7 +517,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * DiskPL.
+         * <p>The performance level (PL) of the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL2</p>
          */
         public Builder diskPL(String diskPL) {
             this.putQueryParameter("DiskPL", diskPL);
@@ -523,7 +529,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>Used together with ResourceGroupIds to display nodes in the resource groups that are bound to the specified quotas.</p>
+         * <p>Used together with ResourceGroupIds to display nodes in the resource group that are bound to specific quotas.</p>
          * 
          * <strong>example:</strong>
          * <p>quotamtl37ge7gkvdz</p>
@@ -535,7 +541,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>Used together with QuotaId to display nodes in the quota that belong to the specified resource groups.</p>
+         * <p>Used together with QuotaId to display nodes in the quota that belong to specific resource groups.</p>
          * 
          * <strong>example:</strong>
          * <p>rg69rj0leslwdnbe</p>
@@ -547,7 +553,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The GPU type. Fuzzy match is supported.</p>
+         * <p>The GPU card type. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>T4</p>
@@ -569,7 +575,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The health rate of nodes (the proportion of healthy nodes).</p>
+         * <p>The health rate of the nodes, which is the proportion of healthy nodes.</p>
          */
         public Builder healthRate(HealthRate healthRate) {
             String healthRateShrink = shrink(healthRate, "HealthRate", "json");
@@ -579,7 +585,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * HyperNode.
+         * <p>The name of the hypernode.</p>
          */
         public Builder hyperNode(String hyperNode) {
             this.putQueryParameter("HyperNode", hyperNode);
@@ -588,7 +594,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * HyperZone.
+         * <p>The hyperzone where the nodes reside.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A0</p>
          */
         public Builder hyperZone(String hyperZone) {
             this.putQueryParameter("HyperZone", hyperZone);
@@ -598,6 +607,9 @@ public class ListNodesRequest extends Request {
 
         /**
          * <p>The layout mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tree</p>
          */
         public Builder layoutMode(String layoutMode) {
             this.putQueryParameter("LayoutMode", layoutMode);
@@ -606,7 +618,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * MachineGroupIds.
+         * <p>The IDs of the machine groups to which the nodes belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mg124</p>
          */
         public Builder machineGroupIds(String machineGroupIds) {
             this.putQueryParameter("MachineGroupIds", machineGroupIds);
@@ -615,7 +630,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The node names to display, separated by commas.</p>
+         * <p>The names of the nodes to display. Separate multiple names with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>lingjxxxx</p>
@@ -627,7 +642,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The node statuses, separated by commas. If this parameter is not specified, nodes in all statuses are returned.</p>
+         * <p>The status of the node. Separate multiple statuses with commas. If you do not specify this parameter, the system returns a list of nodes in all statuses.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -639,7 +654,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The resource node specifications, separated by commas. If this parameter is not configured, nodes of all node specifications are returned.</p>
+         * <p>The list of resource node specifications. Separate multiple specifications with commas. If you do not specify this parameter, the system returns a list of machines of all resource node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.xlarge</p>
@@ -653,8 +668,8 @@ public class ListNodesRequest extends Request {
         /**
          * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>desc: Descending order.</li>
-         * <li>asc: Ascending order.</li>
+         * <li>desc: descending order.</li>
+         * <li>asc: ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -679,7 +694,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The order statuses of the nodes.</p>
+         * <p>The order status of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -691,7 +706,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The page number, starting from 1.</p>
+         * <p>The page number. Pages start from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -703,7 +718,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for paged query. This parameter is used for paging.</p>
+         * <p>The number of entries to return on each page in a paged query. This parameter is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -715,7 +730,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>The billing method of the node order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -724,7 +742,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PodNum.
+         * <p>The number of pods on the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder podNum(Integer podNum) {
             this.putQueryParameter("PodNum", podNum);
@@ -733,7 +754,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The resource quota ID to which the node belongs.</p>
+         * <p>The ID of the resource quota to which the node belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>quotamtl37ge7gkvdz</p>
@@ -745,7 +766,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * ReasonCodes.
+         * <p>The reason codes for the current status of the nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CordonByUser</p>
          */
         public Builder reasonCodes(String reasonCodes) {
             this.putQueryParameter("ReasonCodes", reasonCodes);
@@ -754,12 +778,12 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of resource groups, separated by commas. Either this parameter or QuotaId is required.</p>
-         * <p>Constraints:</p>
+         * <p>The list of resource group IDs. Separate multiple IDs with commas. You must specify either this parameter or QuotaId.
+         * Constraints:</p>
          * <ol>
-         * <li>The UserId of the specified ResourceGroupId must match the UserId of the request.</li>
-         * <li>The specified resource groups must be of the same type.</li>
-         * <li>The specified resource groups must be associated with the same VPC at this stage.</li>
+         * <li>The user ID of the specified resource group must match the user ID of the request.</li>
+         * <li>The resource groups in the list must be of the same type.</li>
+         * <li>The VPCs associated with the resource groups in the list must be the same.</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -773,6 +797,9 @@ public class ListNodesRequest extends Request {
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-dlc</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);
@@ -781,7 +808,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting.</p>
+         * <p>The field based on which the results are sorted.</p>
          * 
          * <strong>example:</strong>
          * <p>GmtCreateTime</p>
@@ -805,7 +832,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * WorkloadNum.
+         * <p>The number of workloads on the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder workloadNum(Integer workloadNum) {
             this.putQueryParameter("WorkloadNum", workloadNum);
@@ -814,7 +844,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the nodes belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -882,7 +915,10 @@ public class ListNodesRequest extends Request {
             } 
 
             /**
-             * <p>The comparison operator. Valid values: ge, gte, eq, lte, lt.</p>
+             * <p>The comparison operator. Valid values: ge, gte, eq, lte, and lt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>le</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -890,7 +926,10 @@ public class ListNodesRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The threshold for the number of healthy nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder value(Integer value) {
                 this.value = value;
@@ -957,7 +996,10 @@ public class ListNodesRequest extends Request {
             } 
 
             /**
-             * <p>The comparison operator. Valid values: ge, gte, eq, lte, lt.</p>
+             * <p>The comparison operator. Valid values: ge, gte, eq, lte, and lt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ge</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -965,7 +1007,10 @@ public class ListNodesRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The health rate threshold. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder value(Integer value) {
                 this.value = value;

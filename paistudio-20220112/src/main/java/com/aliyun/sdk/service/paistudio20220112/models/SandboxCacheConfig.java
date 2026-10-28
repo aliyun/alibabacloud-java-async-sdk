@@ -54,7 +54,7 @@ public class SandboxCacheConfig extends TeaModel {
         } 
 
         /**
-         * Enabled.
+         * <p>Specifies whether the sandbox cache is enabled.</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;

@@ -59,7 +59,7 @@ public class GetAlgorithmRequest extends Request {
         } 
 
         /**
-         * <p>Algorithm ID.</p>
+         * <p>The algorithm ID.</p>
          * 
          * <strong>example:</strong>
          * <p>algo-xsldfvu1334</p>

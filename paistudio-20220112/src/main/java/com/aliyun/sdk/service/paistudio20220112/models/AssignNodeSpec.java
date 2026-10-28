@@ -80,7 +80,10 @@ public class AssignNodeSpec extends TeaModel {
         } 
 
         /**
-         * AntiAffinityNodeNames.
+         * <p>The anti-affinity node names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node3</p>
          */
         public Builder antiAffinityNodeNames(String antiAffinityNodeNames) {
             this.antiAffinityNodeNames = antiAffinityNodeNames;
@@ -88,7 +91,7 @@ public class AssignNodeSpec extends TeaModel {
         }
 
         /**
-         * EnableAssignNode.
+         * <p>Specifies whether to enable the specified node.</p>
          */
         public Builder enableAssignNode(Boolean enableAssignNode) {
             this.enableAssignNode = enableAssignNode;
@@ -96,7 +99,10 @@ public class AssignNodeSpec extends TeaModel {
         }
 
         /**
-         * NodeNames.
+         * <p>The node names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lingjxxxx</p>
          */
         public Builder nodeNames(String nodeNames) {
             this.nodeNames = nodeNames;

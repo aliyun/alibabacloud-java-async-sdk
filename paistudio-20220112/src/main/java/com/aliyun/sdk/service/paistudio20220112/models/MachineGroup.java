@@ -431,7 +431,10 @@ public class MachineGroup extends TeaModel {
         } 
 
         /**
-         * AllocatableCpu.
+         * <p>The number of allocatable CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder allocatableCpu(Long allocatableCpu) {
             this.allocatableCpu = allocatableCpu;
@@ -439,7 +442,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * AllocatableMemory.
+         * <p>The allocatable memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder allocatableMemory(Long allocatableMemory) {
             this.allocatableMemory = allocatableMemory;
@@ -447,7 +453,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * Cpu.
+         * <p>The number of CPU cores in the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder cpu(Long cpu) {
             this.cpu = cpu;
@@ -455,7 +464,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Machine group creator ID</p>
+         * <p>The ID of the machine group creator.</p>
          * 
          * <strong>example:</strong>
          * <p>1612285282502324</p>
@@ -466,7 +475,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Default driver supported by the machine group</p>
+         * <p>The default driver supported by the machine group.</p>
          * 
          * <strong>example:</strong>
          * <p>470.199.02</p>
@@ -477,7 +486,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * DiskCapacity.
+         * <p>The cloud disk size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder diskCapacity(Long diskCapacity) {
             this.diskCapacity = diskCapacity;
@@ -485,7 +497,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * DiskPL.
+         * <p>The cloud disk performance level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         public Builder diskPL(String diskPL) {
             this.diskPL = diskPL;
@@ -493,7 +508,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Resource count</p>
+         * <p>The resource count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -504,7 +519,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>ECS specification</p>
+         * <p>The ECS instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.large</p>
@@ -515,7 +530,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Creation Time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-22T00:00:00Z</p>
@@ -526,7 +541,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Expiration Time</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-22T00:00:00Z</p>
@@ -537,7 +552,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Update Time</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-22T00:00:00Z</p>
@@ -548,7 +563,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Start At</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-22T00:00:00Z</p>
@@ -559,7 +574,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * Gpu.
+         * <p>The number of GPUs in the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder gpu(Long gpu) {
             this.gpu = gpu;
@@ -567,7 +585,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * GpuMemory.
+         * <p>The GPU memory size of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder gpuMemory(Long gpuMemory) {
             this.gpuMemory = gpuMemory;
@@ -575,7 +596,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * GpuType.
+         * <p>The GPU type of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A100</p>
          */
         public Builder gpuType(String gpuType) {
             this.gpuType = gpuType;
@@ -583,7 +607,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Machine Group ID</p>
+         * <p>The machine group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mg1</p>
@@ -594,7 +618,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory size of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder memory(Long memory) {
             this.memory = memory;
@@ -602,7 +629,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Order ID</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -613,7 +640,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Duration</p>
+         * <p>The duration.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -624,7 +651,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>region ID</p>
          * 
          * <strong>example:</strong>
          * <p>Monthly</p>
@@ -635,7 +662,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Payment type</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PREPAY</p>
@@ -646,7 +673,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Machine group error code</p>
+         * <p>The machine group error code.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -657,7 +684,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Machine group fault message</p>
+         * <p>The machine group error message.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -668,7 +695,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Resource group ID</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rgf0zhfqn1d4ity2</p>
@@ -679,7 +706,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -687,7 +717,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>Machine group status</p>
+         * <p>The machine group status.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -698,7 +728,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * <p>List of NVIDIA GPU driver versions supported by the machine group</p>
+         * <p>The list of NVIDIA GPU driver versions supported by the machine group.</p>
          */
         public Builder supportedDrivers(java.util.List<String> supportedDrivers) {
             this.supportedDrivers = supportedDrivers;
@@ -706,7 +736,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * SystemReservedCpu.
+         * <p>The number of system-reserved CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder systemReservedCpu(Long systemReservedCpu) {
             this.systemReservedCpu = systemReservedCpu;
@@ -714,7 +747,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * SystemReservedMemory.
+         * <p>The size of system-reserved memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder systemReservedMemory(Long systemReservedMemory) {
             this.systemReservedMemory = systemReservedMemory;

@@ -80,7 +80,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Algorithm list.</p>
+         * <p>The algorithm list.</p>
          */
         public Builder algorithms(java.util.List<Algorithms> algorithms) {
             this.algorithms = algorithms;
@@ -88,7 +88,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -99,7 +99,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total algorithms.</p>
+         * <p>The total number of algorithms.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -259,10 +259,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Algorithm description.</p>
+             * <p>The algorithm description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Large language model training.</p>
+             * <p>Large language model training</p>
              */
             public Builder algorithmDescription(String algorithmDescription) {
                 this.algorithmDescription = algorithmDescription;
@@ -270,7 +270,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Algorithm ID.</p>
+             * <p>The algorithm ID.</p>
              * 
              * <strong>example:</strong>
              * <p>algo-sidjc8134hv</p>
@@ -281,7 +281,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Algorithm name.</p>
+             * <p>The algorithm name.</p>
              * 
              * <strong>example:</strong>
              * <p>llm_train</p>
@@ -292,7 +292,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Algorithm provider.</p>
+             * <p>The algorithm provider.</p>
              * 
              * <strong>example:</strong>
              * <p>pai</p>
@@ -303,7 +303,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Algorithm display name.</p>
+             * <p>The display name of the algorithm.</p>
              * 
              * <strong>example:</strong>
              * <p>LLM Train</p>
@@ -314,7 +314,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Algorithm creation time.</p>
+             * <p>The time when the algorithm was created, in ISO 8601 format, in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-21T03:35:24Z</p>
@@ -325,7 +325,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Algorithm update time.</p>
+             * <p>The time when the algorithm was last updated, in ISO 8601 format, in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-25T02:15:40Z</p>
@@ -336,7 +336,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Algorithm owner ID.</p>
+             * <p>The ID of the user to whom the algorithm belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>
@@ -347,7 +347,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workspace ID.</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>

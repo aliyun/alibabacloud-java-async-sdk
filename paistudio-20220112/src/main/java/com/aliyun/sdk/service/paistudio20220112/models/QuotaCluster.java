@@ -106,7 +106,10 @@ public class QuotaCluster extends TeaModel {
         } 
 
         /**
-         * ClusterType.
+         * <p>The cluster type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RayCluster</p>
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -114,7 +117,7 @@ public class QuotaCluster extends TeaModel {
         }
 
         /**
-         * DataSources.
+         * <p>The datasource config.</p>
          */
         public Builder dataSources(java.util.List<DataSource> dataSources) {
             this.dataSources = dataSources;
@@ -122,7 +125,7 @@ public class QuotaCluster extends TeaModel {
         }
 
         /**
-         * Endpoints.
+         * <p>The service access endpoints.</p>
          */
         public Builder endpoints(java.util.Map<String, String> endpoints) {
             this.endpoints = endpoints;
@@ -130,7 +133,10 @@ public class QuotaCluster extends TeaModel {
         }
 
         /**
-         * Image.
+         * <p>The container image address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/pai-training/kmeans:v1.0.0</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -138,7 +144,10 @@ public class QuotaCluster extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;

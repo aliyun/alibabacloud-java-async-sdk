@@ -68,7 +68,10 @@ public class EniCacheConfig extends TeaModel {
         } 
 
         /**
-         * CachePoolSize.
+         * <p>The size of the cache pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cachePoolSize(Integer cachePoolSize) {
             this.cachePoolSize = cachePoolSize;
@@ -76,7 +79,7 @@ public class EniCacheConfig extends TeaModel {
         }
 
         /**
-         * Enabled.
+         * <p>Specifies whether it is enabled.</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;

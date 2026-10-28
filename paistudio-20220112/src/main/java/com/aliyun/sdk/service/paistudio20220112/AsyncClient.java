@@ -248,7 +248,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call ListNodes to retrieve resource nodes that match specified filter conditions.</p>
+     * <p>You can call ListNodes to retrieve resource nodes that meet specified filter conditions.</p>
      * 
      * @param request the request parameters of ListNodes  ListNodesRequest
      * @return ListNodesResponse
@@ -257,7 +257,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the resource usage of users for a specified QuotaId.</p>
+     * <p>Retrieves the resource usage of users for the specified QuotaId.</p>
      * 
      * @param request the request parameters of ListQuotaActiveUserUsages  ListQuotaActiveUserUsagesRequest
      * @return ListQuotaActiveUserUsagesResponse
@@ -284,7 +284,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Currently, AI computing resource groups (including ECS and Lingjun intelligent computing resources) are available only in specific regions. For a list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI computing resource management</a>.</p>
+     * <p>Currently, AI compute resource groups, including general compute resources and Lingjun AI compute resources, are available only in specific regions. For the list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI compute resource management</a>.</p>
      * 
      * @param request the request parameters of ListResourceGroups  ListResourceGroupsRequest
      * @return ListResourceGroupsResponse
@@ -350,7 +350,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call OperateNode to operate on a specified resource node, including operations such as disabling scheduling and enabling scheduling.</p>
+     * <p>Uses OperateNode to perform operations on a specified resource node, including disabling scheduling, enabling scheduling, and other operations.</p>
      * 
      * @param request the request parameters of OperateNode  OperateNodeRequest
      * @return OperateNodeResponse

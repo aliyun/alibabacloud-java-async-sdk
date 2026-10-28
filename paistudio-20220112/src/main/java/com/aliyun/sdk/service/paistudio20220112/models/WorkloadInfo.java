@@ -210,7 +210,7 @@ public class WorkloadInfo extends TeaModel {
         } 
 
         /**
-         * <p>Specifies whether the workload is scheduled. Valid values are <code>true</code> and <code>false</code>.</p>
+         * <p>Specifies whether the task is scheduled.</p>
          */
         public Builder isScheduled(String isScheduled) {
             this.isScheduled = isScheduled;
@@ -218,7 +218,10 @@ public class WorkloadInfo extends TeaModel {
         }
 
         /**
-         * <p>The scheduling priority of the workload. A higher value indicates a higher priority.</p>
+         * <p>The task priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -226,7 +229,7 @@ public class WorkloadInfo extends TeaModel {
         }
 
         /**
-         * <p>A list of metadata for the queues associated with the workload.</p>
+         * <p>The information about the queue where the task resides.</p>
          */
         public Builder queueMetas(java.util.List<QueueMeta> queueMetas) {
             this.queueMetas = queueMetas;
@@ -234,7 +237,10 @@ public class WorkloadInfo extends TeaModel {
         }
 
         /**
-         * <p>The ID of the tenant that contains the workload.</p>
+         * <p>The ID of the Alibaba Cloud account that created the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -242,7 +248,10 @@ public class WorkloadInfo extends TeaModel {
         }
 
         /**
-         * <p>The ID of the user who created the workload.</p>
+         * <p>The ID of the RAM user that created the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -250,7 +259,10 @@ public class WorkloadInfo extends TeaModel {
         }
 
         /**
-         * <p>The name of the user who created the workload.</p>
+         * <p>The username of the task creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -258,7 +270,10 @@ public class WorkloadInfo extends TeaModel {
         }
 
         /**
-         * <p>The creation time of the workload, in UTC format.</p>
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder workloadCreatedTime(String workloadCreatedTime) {
             this.workloadCreatedTime = workloadCreatedTime;
@@ -266,7 +281,10 @@ public class WorkloadInfo extends TeaModel {
         }
 
         /**
-         * <p>The unique, system-generated ID for the workload.</p>
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlcxxxx</p>
          */
         public Builder workloadId(String workloadId) {
             this.workloadId = workloadId;
@@ -274,7 +292,10 @@ public class WorkloadInfo extends TeaModel {
         }
 
         /**
-         * <p>The user-defined name of the workload.</p>
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-job</p>
          */
         public Builder workloadName(String workloadName) {
             this.workloadName = workloadName;
@@ -282,7 +303,10 @@ public class WorkloadInfo extends TeaModel {
         }
 
         /**
-         * <p>The current status of the workload. Possible values include <code>Pending</code>, <code>Running</code>, <code>Succeeded</code>, and <code>Failed</code>.</p>
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder workloadStatus(String workloadStatus) {
             this.workloadStatus = workloadStatus;
@@ -290,7 +314,10 @@ public class WorkloadInfo extends TeaModel {
         }
 
         /**
-         * <p>The type of the workload.</p>
+         * <p>The task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc</p>
          */
         public Builder workloadType(String workloadType) {
             this.workloadType = workloadType;
@@ -298,7 +325,10 @@ public class WorkloadInfo extends TeaModel {
         }
 
         /**
-         * <p>The ID of the workspace that contains the workload.</p>
+         * <p>The ID of the workspace where the task resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -306,7 +336,10 @@ public class WorkloadInfo extends TeaModel {
         }
 
         /**
-         * <p>The name of the workspace that contains the workload.</p>
+         * <p>The name of the workspace where the task resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myshellprod</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;

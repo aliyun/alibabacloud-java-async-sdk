@@ -207,7 +207,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of CPU cores of the instance.</p>
+             * <p>The number of CPU cores for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -218,7 +218,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of GPUs of the instance.</p>
+             * <p>The number of GPUs for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -240,7 +240,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size of the instance. Unit: GiB.</p>
+             * <p>The memory size of the instance, in GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -251,7 +251,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The shared memory size of the instance. Unit: GiB.</p>
+             * <p>The shared memory size of the instance, in GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -395,7 +395,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of resource quota instances.</p>
+             * <p>The number of instances in the resource quota.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -406,7 +406,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource quota instance specification.</p>
+             * <p>The instance configuration for the resource quota.</p>
              */
             public Builder instanceSpec(InstanceSpec instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -707,7 +707,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input data URI.</p>
+             * <p>The URI of the input data.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/input/channel/</p>
@@ -729,7 +729,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The ARN of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1157703270994901:role/aliyunserviceroleforpaiworkspace</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -737,7 +740,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * <p>The data version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -946,7 +952,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output data URI.</p>
+             * <p>The URI of the output data.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/output/channel/</p>
@@ -957,7 +963,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The ARN of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1157703270994901:role/aliyunserviceroleforpaiworkspace</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -965,7 +974,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * <p>The data version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -1019,7 +1031,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum training runtime in seconds. A value of 0 indicates no limit on the maximum runtime.</p>
+             * <p>The maximum training duration, in seconds. A value of 0 indicates that the maximum running time is not limited.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1128,7 +1140,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the status.</p>
+             * <p>The end time of the status, in ISO 8601 format and UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-10T11:49:47Z</p>
@@ -1161,7 +1173,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the status.</p>
+             * <p>The start time of the status, in ISO 8601 format and UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-10T11:49:47Z</p>
@@ -1322,7 +1334,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-abcdef****</p>
@@ -1743,7 +1755,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The algorithm name.</p>
+             * <p>The name of the algorithm.</p>
              * 
              * <strong>example:</strong>
              * <p>llm_train</p>
@@ -1776,7 +1788,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * AssignNodeSpec.
+             * <p>The specified node configuration.</p>
              */
             public Builder assignNodeSpec(AssignNodeSpec assignNodeSpec) {
                 this.assignNodeSpec = assignNodeSpec;
@@ -1792,7 +1804,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialConfig.
+             * <p>The credential configuration.</p>
              */
             public Builder credentialConfig(CredentialConfig credentialConfig) {
                 this.credentialConfig = credentialConfig;
@@ -1800,7 +1812,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DlcJobId.
+             * <p>The DLC job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dlc11gyi2xrc5137</p>
              */
             public Builder dlcJobId(String dlcJobId) {
                 this.dlcJobId = dlcJobId;
@@ -1824,7 +1839,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the training job was created.</p>
+             * <p>The time when the training job was created, in ISO 8601 format and UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-10T11:49:47Z</p>
@@ -1835,7 +1850,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the training job status was last updated.</p>
+             * <p>The time when the training job status was updated, in ISO 8601 format and UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-10T11:49:47Z</p>
@@ -1908,7 +1923,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message of the training job.</p>
+             * <p>The error message for the training job.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -1919,7 +1934,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role ARN used for delegated authorization.</p>
+             * <p>The ARN of the role used for authorization.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::{accountID}:role/{roleName}</p>
@@ -1930,7 +1945,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling configuration of the training job.</p>
+             * <p>The scheduling configuration for the training job.</p>
              */
             public Builder scheduler(Scheduler scheduler) {
                 this.scheduler = scheduler;
@@ -1949,7 +1964,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of training job status transitions.</p>
+             * <p>The list of status transitions for the training job.</p>
              */
             public Builder statusTransitions(java.util.List<StatusTransitions> statusTransitions) {
                 this.statusTransitions = statusTransitions;
@@ -1960,7 +1975,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
              * <p>The description of the training job.</p>
              * 
              * <strong>example:</strong>
-             * <p>Qwen2 large language model training.</p>
+             * <p>Qwen2 large language model training</p>
              */
             public Builder trainingJobDescription(String trainingJobDescription) {
                 this.trainingJobDescription = trainingJobDescription;
@@ -1968,7 +1983,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The training job ID.</p>
+             * <p>The ID of the training job.</p>
              * 
              * <strong>example:</strong>
              * <p>train1layo6js8ra</p>

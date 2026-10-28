@@ -99,7 +99,7 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>23</p>

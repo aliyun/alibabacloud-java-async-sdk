@@ -187,7 +187,7 @@ public class ResourceGroup extends TeaModel {
          * <p>The user ID of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>1612285282502324</p>
+         * <p>161228528250****</p>
          */
         public Builder creatorID(String creatorID) {
             this.creatorID = creatorID;
@@ -195,7 +195,7 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * <p>The time the PAI resource group was created.</p>
+         * <p>The time when the PAI resource group was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-22T00:00:00Z</p>
@@ -206,7 +206,7 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * <p>The time the PAI resource group was last modified.</p>
+         * <p>The time when the PAI resource group was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-22T00:00:00Z</p>
@@ -242,7 +242,7 @@ public class ResourceGroup extends TeaModel {
          * <p>The ID of the PAI resource group.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg17tmvwiokhzaxg</p>
+         * <p>rg17tmvwiokh****</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -250,7 +250,10 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of compute resources in the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ecs</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -258,7 +261,10 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -274,7 +280,10 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -282,7 +291,7 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>23000</p>

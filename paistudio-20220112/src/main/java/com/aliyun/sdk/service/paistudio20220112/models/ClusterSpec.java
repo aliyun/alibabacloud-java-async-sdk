@@ -80,7 +80,10 @@ public class ClusterSpec extends TeaModel {
         } 
 
         /**
-         * ClusterType.
+         * <p>The cluster type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RayCluster</p>
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -88,7 +91,7 @@ public class ClusterSpec extends TeaModel {
         }
 
         /**
-         * DataSources.
+         * <p>The datasource config.</p>
          */
         public Builder dataSources(java.util.List<DataSource> dataSources) {
             this.dataSources = dataSources;
@@ -96,7 +99,10 @@ public class ClusterSpec extends TeaModel {
         }
 
         /**
-         * Image.
+         * <p>The container image address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/pai-training/kmeans:v1.0.0</p>
          */
         public Builder image(String image) {
             this.image = image;

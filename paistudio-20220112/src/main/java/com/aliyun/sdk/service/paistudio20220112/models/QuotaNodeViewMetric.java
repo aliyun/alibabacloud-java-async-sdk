@@ -327,7 +327,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         } 
 
         /**
-         * CPUUsageRate.
+         * <p>The CPU utilization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59</p>
          */
         public Builder CPUUsageRate(String CPUUsageRate) {
             this.CPUUsageRate = CPUUsageRate;
@@ -335,7 +338,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * <p>The node import time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-25T15:20:56Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -343,7 +349,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * DiskReadRate.
+         * <p>The disk read rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder diskReadRate(String diskReadRate) {
             this.diskReadRate = diskReadRate;
@@ -351,7 +360,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * DiskWriteRate.
+         * <p>The disk write rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder diskWriteRate(String diskWriteRate) {
             this.diskWriteRate = diskWriteRate;
@@ -359,7 +371,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * GPUType.
+         * <p>The GPU model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V100</p>
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -367,7 +382,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * MemoryUsageRate.
+         * <p>The memory utilization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder memoryUsageRate(String memoryUsageRate) {
             this.memoryUsageRate = memoryUsageRate;
@@ -375,7 +393,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * NetworkInputRate.
+         * <p>The network inbound rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder networkInputRate(String networkInputRate) {
             this.networkInputRate = networkInputRate;
@@ -383,7 +404,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * NetworkOutputRate.
+         * <p>The network outbound rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder networkOutputRate(String networkOutputRate) {
             this.networkOutputRate = networkOutputRate;
@@ -391,7 +415,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * NodeID.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-i121212node</p>
          */
         public Builder nodeID(String nodeID) {
             this.nodeID = nodeID;
@@ -399,7 +426,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * NodeStatus.
+         * <p>The node status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder nodeStatus(String nodeStatus) {
             this.nodeStatus = nodeStatus;
@@ -407,7 +437,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * NodeType.
+         * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.large</p>
          */
         public Builder nodeType(String nodeType) {
             this.nodeType = nodeType;
@@ -415,7 +448,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * QuotaId.
+         * <p>The resource quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotamtl37ge7gkvdz</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -423,7 +459,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * RequestCPU.
+         * <p>The used CPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder requestCPU(Long requestCPU) {
             this.requestCPU = requestCPU;
@@ -431,7 +470,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * RequestGPU.
+         * <p>The used GPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder requestGPU(Long requestGPU) {
             this.requestGPU = requestGPU;
@@ -439,7 +481,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * RequestMemory.
+         * <p>The used memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102400000</p>
          */
         public Builder requestMemory(Long requestMemory) {
             this.requestMemory = requestMemory;
@@ -447,7 +492,7 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * TaskIdMap.
+         * <p>The node tasks.</p>
          */
         public Builder taskIdMap(java.util.Map<String, ?> taskIdMap) {
             this.taskIdMap = taskIdMap;
@@ -455,7 +500,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * TotalCPU.
+         * <p>The total CPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCPU(Long totalCPU) {
             this.totalCPU = totalCPU;
@@ -463,7 +511,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * TotalGPU.
+         * <p>The total GPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalGPU(Long totalGPU) {
             this.totalGPU = totalGPU;
@@ -471,7 +522,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * TotalMemory.
+         * <p>The total memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder totalMemory(Long totalMemory) {
             this.totalMemory = totalMemory;
@@ -479,7 +533,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * TotalTasks.
+         * <p>The total number of node tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalTasks(Long totalTasks) {
             this.totalTasks = totalTasks;
@@ -487,7 +544,7 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * UserIDs.
+         * <p>The user list.</p>
          */
         public Builder userIDs(java.util.List<String> userIDs) {
             this.userIDs = userIDs;
@@ -495,7 +552,10 @@ public class QuotaNodeViewMetric extends TeaModel {
         }
 
         /**
-         * UserNumber.
+         * <p>The total number of users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userNumber(String userNumber) {
             this.userNumber = userNumber;

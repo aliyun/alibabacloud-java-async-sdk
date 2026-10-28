@@ -184,7 +184,10 @@ public class QueueMeta extends TeaModel {
         } 
 
         /**
-         * <p>The time the entry was removed from the queue.</p>
+         * <p>The time when the task was dequeued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtDequeuedTime(String gmtDequeuedTime) {
             this.gmtDequeuedTime = gmtDequeuedTime;
@@ -192,7 +195,10 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * <p>The time the entry was added to the queue.</p>
+         * <p>The time when the task was enqueued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtEnqueuedTime(String gmtEnqueuedTime) {
             this.gmtEnqueuedTime = gmtEnqueuedTime;
@@ -200,7 +206,10 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * <p>The last time the position of the entry was modified.</p>
+         * <p>The time when the position of the task in the queue was changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtPositionModifiedTime(String gmtPositionModifiedTime) {
             this.gmtPositionModifiedTime = gmtPositionModifiedTime;
@@ -208,7 +217,10 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * <p>The name of the queue entry.</p>
+         * <p>The name of the task in the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlcxxxx</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -216,7 +228,10 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * <p>The position of the entry in the queue.</p>
+         * <p>The position of the task in the queue. This parameter takes effect only when the task is queued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder position(String position) {
             this.position = position;
@@ -224,7 +239,10 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * <p>The queuing strategy for the entry.</p>
+         * <p>The dequeue strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PaiStrategyIntelligent</p>
          */
         public Builder queueStrategy(String queueStrategy) {
             this.queueStrategy = queueStrategy;
@@ -232,7 +250,10 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * <p>The ID of the associated quota.</p>
+         * <p>The resource quota queue to which the task belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotad2kd8ljpsno</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -240,7 +261,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * <p>The resources that the queue entry requires.</p>
+         * <p>The resources occupied by the task in the queue.</p>
          */
         public Builder resource(ResourceAmount resource) {
             this.resource = resource;
@@ -248,7 +269,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * <p>The resources scheduled for the entry.</p>
+         * <p>The scheduled resources occupied by the task in the queue.</p>
          */
         public Builder scheduledResource(String scheduledResource) {
             this.scheduledResource = scheduledResource;
@@ -256,7 +277,10 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * <p>The current status of the entry.</p>
+         * <p>The status of the task in the queue, such as enqueued or dequeued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enqueued</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -264,7 +288,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the entry can use oversold resources.</p>
+         * <p>Specifies whether the task uses idle resources.</p>
          */
         public Builder useOversoldResource(Boolean useOversoldResource) {
             this.useOversoldResource = useOversoldResource;

@@ -80,7 +80,7 @@ public class SelfQuotaPreemptionConfig extends TeaModel {
         } 
 
         /**
-         * PreemptedPriorities.
+         * <p>The priorities that can be preempted.</p>
          */
         public Builder preemptedPriorities(java.util.List<Integer> preemptedPriorities) {
             this.preemptedPriorities = preemptedPriorities;
@@ -88,7 +88,7 @@ public class SelfQuotaPreemptionConfig extends TeaModel {
         }
 
         /**
-         * PreemptedProducts.
+         * <p>The task types that can be preempted.</p>
          */
         public Builder preemptedProducts(java.util.List<String> preemptedProducts) {
             this.preemptedProducts = preemptedProducts;
@@ -96,7 +96,7 @@ public class SelfQuotaPreemptionConfig extends TeaModel {
         }
 
         /**
-         * PreemptorPriorities.
+         * <p>The priorities that can initiate preemption.</p>
          */
         public Builder preemptorPriorities(java.util.List<Integer> preemptorPriorities) {
             this.preemptorPriorities = preemptorPriorities;

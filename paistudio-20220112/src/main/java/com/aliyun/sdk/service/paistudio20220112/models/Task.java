@@ -210,7 +210,7 @@ public class Task extends TeaModel {
         } 
 
         /**
-         * Actions.
+         * <p>The actions performed by the task.</p>
          */
         public Builder actions(java.util.List<Action> actions) {
             this.actions = actions;
@@ -218,7 +218,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test quota</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -226,7 +229,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * GmtActivatedTime.
+         * <p>The time when the task was activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtActivatedTime(String gmtActivatedTime) {
             this.gmtActivatedTime = gmtActivatedTime;
@@ -234,7 +240,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * GmtCreatedTime.
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtCreatedTime(String gmtCreatedTime) {
             this.gmtCreatedTime = gmtCreatedTime;
@@ -242,7 +251,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the task was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -250,7 +262,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * GmtStoppedTime.
+         * <p>The time when the task was stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtStoppedTime(String gmtStoppedTime) {
             this.gmtStoppedTime = gmtStoppedTime;
@@ -258,7 +273,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * QuotaId.
+         * <p>The ID of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotad2kd8ljpsno</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -266,7 +284,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The execution rules of the task.</p>
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
@@ -274,7 +292,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Activated</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -282,7 +303,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>taskxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -290,7 +314,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -298,7 +325,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -306,7 +336,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * UserName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

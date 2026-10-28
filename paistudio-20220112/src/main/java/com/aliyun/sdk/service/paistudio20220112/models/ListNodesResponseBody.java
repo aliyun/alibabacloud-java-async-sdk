@@ -99,7 +99,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of nodes that match the filter conditions.</p>
+         * <p>The total number of nodes that meet the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>23</p>

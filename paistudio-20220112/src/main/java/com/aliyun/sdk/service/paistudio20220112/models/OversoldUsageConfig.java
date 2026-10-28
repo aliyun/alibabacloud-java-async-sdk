@@ -67,7 +67,7 @@ public class OversoldUsageConfig extends TeaModel {
         } 
 
         /**
-         * Disabled.
+         * <p>Indicates whether it is disabled.</p>
          */
         public Builder disabled(Boolean disabled) {
             this.disabled = disabled;
@@ -75,7 +75,10 @@ public class OversoldUsageConfig extends TeaModel {
         }
 
         /**
-         * DisabledBy.
+         * <p>The user who disabled it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotaxxx</p>
          */
         public Builder disabledBy(String disabledBy) {
             this.disabledBy = disabledBy;

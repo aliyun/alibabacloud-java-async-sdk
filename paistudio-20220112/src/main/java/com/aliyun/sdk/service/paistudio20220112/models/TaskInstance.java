@@ -132,7 +132,10 @@ public class TaskInstance extends TeaModel {
         } 
 
         /**
-         * GmtCreatedTime.
+         * <p>The instance creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtCreatedTime(String gmtCreatedTime) {
             this.gmtCreatedTime = gmtCreatedTime;
@@ -140,7 +143,10 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * GmtEndTime.
+         * <p>The instance end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:02:00Z</p>
          */
         public Builder gmtEndTime(String gmtEndTime) {
             this.gmtEndTime = gmtEndTime;
@@ -148,7 +154,10 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -156,7 +165,10 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>taskxxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -164,7 +176,10 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * TaskInstanceId.
+         * <p>The task instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-instance-xxxxx</p>
          */
         public Builder taskInstanceId(String taskInstanceId) {
             this.taskInstanceId = taskInstanceId;
@@ -172,7 +187,10 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -180,7 +198,10 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

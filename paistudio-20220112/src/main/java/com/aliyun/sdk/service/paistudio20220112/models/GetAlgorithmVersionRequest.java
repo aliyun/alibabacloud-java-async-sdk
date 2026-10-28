@@ -73,7 +73,7 @@ public class GetAlgorithmVersionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the algorithm.</p>
+         * <p>The algorithm ID.</p>
          * 
          * <strong>example:</strong>
          * <p>algo-xsldfvu1334</p>
@@ -85,7 +85,7 @@ public class GetAlgorithmVersionRequest extends Request {
         }
 
         /**
-         * <p>The version of the algorithm.</p>
+         * <p>The algorithm version.</p>
          * 
          * <strong>example:</strong>
          * <p>v0.0.1</p>

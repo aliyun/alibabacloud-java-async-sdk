@@ -184,7 +184,10 @@ public class NodeType extends TeaModel {
         } 
 
         /**
-         * AcceleratorType.
+         * <p>The accelerator type of the resource node specifications (CPU/GPU).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
@@ -192,7 +195,10 @@ public class NodeType extends TeaModel {
         }
 
         /**
-         * AllocatableCPU.
+         * <p>The number of allocatable CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder allocatableCPU(String allocatableCPU) {
             this.allocatableCPU = allocatableCPU;
@@ -200,7 +206,10 @@ public class NodeType extends TeaModel {
         }
 
         /**
-         * AllocatableMemory.
+         * <p>The allocatable memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2Gi</p>
          */
         public Builder allocatableMemory(String allocatableMemory) {
             this.allocatableMemory = allocatableMemory;
@@ -208,7 +217,10 @@ public class NodeType extends TeaModel {
         }
 
         /**
-         * CPU.
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder CPU(String CPU) {
             this.CPU = CPU;
@@ -216,7 +228,10 @@ public class NodeType extends TeaModel {
         }
 
         /**
-         * GPU.
+         * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -224,7 +239,10 @@ public class NodeType extends TeaModel {
         }
 
         /**
-         * GPUMemory.
+         * <p>The GPU memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80G</p>
          */
         public Builder GPUMemory(String GPUMemory) {
             this.GPUMemory = GPUMemory;
@@ -232,7 +250,10 @@ public class NodeType extends TeaModel {
         }
 
         /**
-         * GPUType.
+         * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A10</p>
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -240,7 +261,10 @@ public class NodeType extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64Gi</p>
          */
         public Builder memory(String memory) {
             this.memory = memory;
@@ -248,7 +272,10 @@ public class NodeType extends TeaModel {
         }
 
         /**
-         * NodeType.
+         * <p>The resource node specifications type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.4xlarge</p>
          */
         public Builder nodeType(String nodeType) {
             this.nodeType = nodeType;
@@ -256,7 +283,10 @@ public class NodeType extends TeaModel {
         }
 
         /**
-         * SystemReservedCPU.
+         * <p>The number of system-reserved CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder systemReservedCPU(String systemReservedCPU) {
             this.systemReservedCPU = systemReservedCPU;
@@ -264,7 +294,10 @@ public class NodeType extends TeaModel {
         }
 
         /**
-         * SystemReservedMemory.
+         * <p>The system-reserved memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2Gi</p>
          */
         public Builder systemReservedMemory(String systemReservedMemory) {
             this.systemReservedMemory = systemReservedMemory;

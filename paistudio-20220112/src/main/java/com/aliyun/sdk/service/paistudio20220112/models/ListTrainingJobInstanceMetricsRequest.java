@@ -131,7 +131,7 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         } 
 
         /**
-         * <p>Training job ID.</p>
+         * <p>The training job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
-         * <p>End time in UTC, in ISO 8601 format. If empty, use the current time.</p>
+         * <p>The end UTC time in ISO 8601 format. If left empty, the current time is used.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>trains930928remn-master-0</p>
@@ -169,24 +169,16 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
-         * <p>Metric type:</p>
+         * <p>The metric type. Valid values:</p>
          * <ul>
-         * <li><p>GpuCoreUsage: POD GPU usage</p>
-         * </li>
-         * <li><p>GpuMemoryUsage: POD GPU memory usage</p>
-         * </li>
-         * <li><p>CpuCoreUsage: POD CPU usage</p>
-         * </li>
-         * <li><p>MemoryUsage: POD memory usage</p>
-         * </li>
-         * <li><p>NetworkInputRate: POD network input rate (TCP/IP) (MB/s)</p>
-         * </li>
-         * <li><p>NetworkOutputRate: POD network output rate (TCP/IP) (MB/s)</p>
-         * </li>
-         * <li><p>DiskReadRate: POD disk read rate (MB/s)</p>
-         * </li>
-         * <li><p>DiskWriteRate: POD disk write rate (MB/s)</p>
-         * </li>
+         * <li>GpuCoreUsage: POD GPU utilization.</li>
+         * <li>GpuMemoryUsage: POD GPU memory utilization.</li>
+         * <li>CpuCoreUsage: POD CPU utilization.</li>
+         * <li>MemoryUsage: POD memory utilization.</li>
+         * <li>NetworkInputRate: POD network write rate (TCP/IP) (MB/s).</li>
+         * <li>NetworkOutputRate: POD network read rate (TCP/IP) (MB/s).</li>
+         * <li>DiskReadRate: POD disk read rate (MB/s).</li>
+         * <li>DiskWriteRate: POD disk write rate (MB/s).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -200,7 +192,7 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
-         * <p>Start time in UTC, in ISO 8601 format. If empty, use the job start time.</p>
+         * <p>The start UTC time in ISO 8601 format. If left empty, the job start time is used.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +205,7 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
-         * <p>Time interval. Valid values: 1h, 30m, 5m, 10s.</p>
+         * <p>The metric collection interval. Valid values: 1h, 30m, 5m, and 10s. h indicates hours, m indicates minutes, and s indicates seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10s</p>

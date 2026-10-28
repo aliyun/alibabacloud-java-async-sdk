@@ -93,7 +93,10 @@ public class SchedulingRule extends TeaModel {
         } 
 
         /**
-         * CronTab.
+         * <p>The cron tab. Only the minute, hour, day, month, and week fields are currently supported. Second-level configurations are discarded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 * * 7</p>
          */
         public Builder cronTab(String cronTab) {
             this.cronTab = cronTab;
@@ -101,7 +104,10 @@ public class SchedulingRule extends TeaModel {
         }
 
         /**
-         * EndAt.
+         * <p>The stop time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-22T00:00:00Z</p>
          */
         public Builder endAt(String endAt) {
             this.endAt = endAt;
@@ -109,7 +115,7 @@ public class SchedulingRule extends TeaModel {
         }
 
         /**
-         * ExecuteOnce.
+         * <p>Specifies whether the task is executed only once.</p>
          */
         public Builder executeOnce(Boolean executeOnce) {
             this.executeOnce = executeOnce;
@@ -117,7 +123,10 @@ public class SchedulingRule extends TeaModel {
         }
 
         /**
-         * StartAt.
+         * <p>The start time of the effective period for the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder startAt(String startAt) {
             this.startAt = startAt;

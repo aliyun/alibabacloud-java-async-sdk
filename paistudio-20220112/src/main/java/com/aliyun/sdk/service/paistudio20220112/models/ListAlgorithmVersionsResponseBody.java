@@ -80,7 +80,7 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of algorithm version details.</p>
+         * <p>The list of algorithm version details.</p>
          */
         public Builder algorithmVersions(java.util.List<AlgorithmVersions> algorithmVersions) {
             this.algorithmVersions = algorithmVersions;
@@ -290,7 +290,7 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the algorithm was created.</p>
+             * <p>The time when the algorithm was created, in ISO 8601 format, in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-19T02:00:26Z</p>
@@ -301,7 +301,7 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the algorithm was last updated.</p>
+             * <p>The time when the algorithm was last updated, in ISO 8601 format, in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-22T02:00:59Z</p>
@@ -312,7 +312,7 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tenant ID that owns the algorithm.</p>
+             * <p>The ID of the tenant to which the algorithm belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>
@@ -323,7 +323,7 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID that owns the algorithm.</p>
+             * <p>The ID of the user to which the algorithm belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>

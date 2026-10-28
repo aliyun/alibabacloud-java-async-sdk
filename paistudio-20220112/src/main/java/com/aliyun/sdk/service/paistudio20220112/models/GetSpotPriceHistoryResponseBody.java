@@ -91,7 +91,7 @@ public class GetSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of historical spot instance price details</p>
+         * <p>The list of historical price details of spot instances.</p>
          */
         public Builder spotPriceHistory(java.util.List<SpotPriceItem> spotPriceHistory) {
             this.spotPriceHistory = spotPriceHistory;
@@ -99,7 +99,7 @@ public class GetSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of historical spot instance prices</p>
+         * <p>The total number of historical prices of spot instances.</p>
          * 
          * <strong>example:</strong>
          * <p>194</p>

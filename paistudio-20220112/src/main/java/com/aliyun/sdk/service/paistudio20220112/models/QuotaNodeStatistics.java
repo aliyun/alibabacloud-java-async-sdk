@@ -119,7 +119,10 @@ public class QuotaNodeStatistics extends TeaModel {
         } 
 
         /**
-         * <p>The guaranteed minimum number of hyper nodes available in the quota.</p>
+         * <p>The number of super nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder actualMinHyperNodeNum(Long actualMinHyperNodeNum) {
             this.actualMinHyperNodeNum = actualMinHyperNodeNum;
@@ -127,7 +130,10 @@ public class QuotaNodeStatistics extends TeaModel {
         }
 
         /**
-         * <p>The guaranteed minimum number of nodes available in the quota.</p>
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder actualMinNodeNum(Long actualMinNodeNum) {
             this.actualMinNodeNum = actualMinNodeNum;
@@ -135,7 +141,7 @@ public class QuotaNodeStatistics extends TeaModel {
         }
 
         /**
-         * <p>The details of an allocated hyper node.</p>
+         * <p>The super node details.</p>
          */
         public Builder allocatedHyperNodeDetails(java.util.List<AllocatedHyperNodeDetail> allocatedHyperNodeDetails) {
             this.allocatedHyperNodeDetails = allocatedHyperNodeDetails;
@@ -143,7 +149,10 @@ public class QuotaNodeStatistics extends TeaModel {
         }
 
         /**
-         * <p>The number of hyper nodes currently allocated from the quota.</p>
+         * <p>The number of allocated super nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder allocatedHyperNodeNum(Long allocatedHyperNodeNum) {
             this.allocatedHyperNodeNum = allocatedHyperNodeNum;
@@ -151,7 +160,10 @@ public class QuotaNodeStatistics extends TeaModel {
         }
 
         /**
-         * <p>The number of nodes currently allocated from the quota.</p>
+         * <p>The number of allocated nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder allocatedNodeNum(Long allocatedNodeNum) {
             this.allocatedNodeNum = allocatedNodeNum;
@@ -159,7 +171,10 @@ public class QuotaNodeStatistics extends TeaModel {
         }
 
         /**
-         * <p>The number of allocated nodes currently idle.</p>
+         * <p>The number of idle nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder emptyNodeNum(Long emptyNodeNum) {
             this.emptyNodeNum = emptyNodeNum;

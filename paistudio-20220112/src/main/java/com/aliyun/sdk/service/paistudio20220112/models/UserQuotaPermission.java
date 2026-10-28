@@ -67,7 +67,7 @@ public class UserQuotaPermission extends TeaModel {
         } 
 
         /**
-         * Permissions.
+         * <p>The permissions.</p>
          */
         public Builder permissions(java.util.List<String> permissions) {
             this.permissions = permissions;
@@ -75,7 +75,10 @@ public class UserQuotaPermission extends TeaModel {
         }
 
         /**
-         * QuotaId.
+         * <p>Quota ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotamtl37ge7gkvdz</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;

@@ -119,7 +119,10 @@ public class TaskInstanceEvent extends TeaModel {
         } 
 
         /**
-         * GmtEndTime.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:02:00Z</p>
          */
         public Builder gmtEndTime(String gmtEndTime) {
             this.gmtEndTime = gmtEndTime;
@@ -127,7 +130,10 @@ public class TaskInstanceEvent extends TeaModel {
         }
 
         /**
-         * GmtStartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtStartTime(String gmtStartTime) {
             this.gmtStartTime = gmtStartTime;
@@ -135,7 +141,7 @@ public class TaskInstanceEvent extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message content.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,10 @@ public class TaskInstanceEvent extends TeaModel {
         }
 
         /**
-         * PodName.
+         * <p>The name of the pod involved in the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder podName(String podName) {
             this.podName = podName;
@@ -151,7 +160,10 @@ public class TaskInstanceEvent extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -159,7 +171,10 @@ public class TaskInstanceEvent extends TeaModel {
         }
 
         /**
-         * WorkloadType.
+         * <p>The sub-product type involved in the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc</p>
          */
         public Builder workloadType(String workloadType) {
             this.workloadType = workloadType;

@@ -161,7 +161,7 @@ public class ComponentSpec extends TeaModel {
         } 
 
         /**
-         * CodeDir.
+         * <p>The code directory configuration.</p>
          */
         public Builder codeDir(Location codeDir) {
             this.codeDir = codeDir;
@@ -169,6 +169,7 @@ public class ComponentSpec extends TeaModel {
         }
 
         /**
+         * <p>The command used for submit the job.</p>
          * <p>This parameter is required.</p>
          */
         public Builder command(String command) {
@@ -177,7 +178,7 @@ public class ComponentSpec extends TeaModel {
         }
 
         /**
-         * HyperParameters.
+         * <p>The hype parameter used by the algorithm.</p>
          */
         public Builder hyperParameters(java.util.List<HyperParameterDefinition> hyperParameters) {
             this.hyperParameters = hyperParameters;
@@ -185,7 +186,11 @@ public class ComponentSpec extends TeaModel {
         }
 
         /**
+         * <p>The docker image used by the job of this algorithm.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/pai-training/kmeans:v1.0.0</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -193,7 +198,7 @@ public class ComponentSpec extends TeaModel {
         }
 
         /**
-         * InputChannels.
+         * <p>The input for the algorithm.</p>
          */
         public Builder inputChannels(java.util.List<Channel> inputChannels) {
             this.inputChannels = inputChannels;
@@ -201,7 +206,11 @@ public class ComponentSpec extends TeaModel {
         }
 
         /**
+         * <p>Job type of the training job while running the algorithm.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TFJob</p>
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -209,7 +218,7 @@ public class ComponentSpec extends TeaModel {
         }
 
         /**
-         * MetricDefinitions.
+         * <p>The output metrics of the algorithm.</p>
          */
         public Builder metricDefinitions(java.util.List<MetricDefinition> metricDefinitions) {
             this.metricDefinitions = metricDefinitions;
@@ -217,7 +226,7 @@ public class ComponentSpec extends TeaModel {
         }
 
         /**
-         * OutputChannels.
+         * <p>The outputs of the algorithm.</p>
          */
         public Builder outputChannels(java.util.List<Channel> outputChannels) {
             this.outputChannels = outputChannels;
@@ -225,7 +234,7 @@ public class ComponentSpec extends TeaModel {
         }
 
         /**
-         * ResourceRequirements.
+         * <p>Resource requirements.</p>
          */
         public Builder resourceRequirements(java.util.List<ConditionExpression> resourceRequirements) {
             this.resourceRequirements = resourceRequirements;

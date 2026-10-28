@@ -93,7 +93,10 @@ public class AssumeUserInfo extends TeaModel {
         } 
 
         /**
-         * AccessKeyId.
+         * <p>The AccessKey ID of the temporary access credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STS.L4aBSCSJVMuKg5U1****</p>
          */
         public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = accessKeyId;
@@ -101,7 +104,7 @@ public class AssumeUserInfo extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the assumed user.</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -109,7 +112,10 @@ public class AssumeUserInfo extends TeaModel {
         }
 
         /**
-         * SecurityToken.
+         * <p>The temporary security token.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder securityToken(String securityToken) {
             this.securityToken = securityToken;
@@ -117,7 +123,7 @@ public class AssumeUserInfo extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The identity type of the assumed user.</p>
          */
         public Builder type(String type) {
             this.type = type;

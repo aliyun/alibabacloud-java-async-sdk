@@ -397,7 +397,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         } 
 
         /**
-         * <p>Quota ID。</p>
+         * <p>The quota ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -410,7 +410,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>Queries the queuing information for instances before a specified workload ID in the queue.</p>
+         * <p>The ID of the workload before which to query the queue information of instances in the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>dsw654433**</p>
@@ -422,7 +422,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>The range search for workload dequeue time.</p>
+         * <p>The time range used for a range search on the time when the workloads were dequeued.</p>
          */
         public Builder gmtDequeuedTimeRange(TimeRangeFilter gmtDequeuedTimeRange) {
             this.putQueryParameter("GmtDequeuedTimeRange", gmtDequeuedTimeRange);
@@ -431,7 +431,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>The range search for workload enqueue time.</p>
+         * <p>The time range used for a range search on the time when the workloads entered the queue.</p>
          */
         public Builder gmtEnqueuedTimeRange(TimeRangeFilter gmtEnqueuedTimeRange) {
             this.putQueryParameter("GmtEnqueuedTimeRange", gmtEnqueuedTimeRange);
@@ -440,7 +440,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>The range search for workload queue position change time.</p>
+         * <p>The time range used for a range search on the time when the queue positions of the workloads changed.</p>
          */
         public Builder gmtPositionModifiedTimeRange(TimeRangeFilter gmtPositionModifiedTimeRange) {
             this.putQueryParameter("GmtPositionModifiedTimeRange", gmtPositionModifiedTimeRange);
@@ -449,7 +449,10 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train129f212o89d-master-0</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -458,7 +461,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>Searches only for nodes on the specified node.</p>
+         * <p>The name of the node on which to search for workloads.</p>
          * 
          * <strong>example:</strong>
          * <p>lrn482781276**</p>
@@ -482,7 +485,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the query.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -494,7 +497,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of entries per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -506,7 +509,10 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * Position.
+         * <p>The position in the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder position(Integer position) {
             this.putQueryParameter("Position", position);
@@ -515,7 +521,10 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the workload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -524,7 +533,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display only the workloads associated with the current resource quota.</p>
+         * <p>Specifies whether to display only the workloads corresponding to this resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -548,7 +557,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>The status in the queue.</p>
+         * <p>The status of the workload in the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>Enqueued</p>
@@ -572,7 +581,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * UseOversoldResource.
+         * <p>Specifies whether the workload uses oversold resources.</p>
          */
         public Builder useOversoldResource(Boolean useOversoldResource) {
             this.putQueryParameter("UseOversoldResource", useOversoldResource);
@@ -581,7 +590,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>The list of user IDs.</p>
+         * <p>The IDs of the users.</p>
          * 
          * <strong>example:</strong>
          * <p>290438938**,238290930**</p>
@@ -593,7 +602,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * WithHistoricalData.
+         * <p>Specifies whether to include historical data.</p>
          */
         public Builder withHistoricalData(Boolean withHistoricalData) {
             this.putQueryParameter("WithHistoricalData", withHistoricalData);
@@ -602,7 +611,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>The range search for workload creation time.</p>
+         * <p>The time range used for a range search on the workload creation time.</p>
          */
         public Builder workloadCreatedTimeRange(TimeRangeFilter workloadCreatedTimeRange) {
             this.putQueryParameter("WorkloadCreatedTimeRange", workloadCreatedTimeRange);
@@ -611,7 +620,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>Queries the queuing information for specified workload IDs.</p>
+         * <p>The IDs of the workloads to query for queue information.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc123445**</p>
@@ -623,7 +632,10 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * WorkloadNames.
+         * <p>The names of the workloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlcxxxx</p>
          */
         public Builder workloadNames(String workloadNames) {
             this.putQueryParameter("WorkloadNames", workloadNames);
@@ -632,7 +644,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>Filters by workload status.</p>
+         * <p>The workload statuses used to filter the results.</p>
          * 
          * <strong>example:</strong>
          * <p>Pending</p>
@@ -644,7 +656,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>Queries the queuing information for instances of a specified sub-product.</p>
+         * <p>The workload type used to query the queue information of instances for the specified sub-product.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc</p>
@@ -656,7 +668,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
-         * <p>Queries the queuing information for workloads in a specified workspace.</p>
+         * <p>The IDs of the workspaces for which to query the workload queue information.</p>
          * 
          * <strong>example:</strong>
          * <p>1866**</p>

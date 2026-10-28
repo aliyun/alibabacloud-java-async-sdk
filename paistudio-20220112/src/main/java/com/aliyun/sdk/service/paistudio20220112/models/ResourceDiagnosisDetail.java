@@ -106,7 +106,7 @@ public class ResourceDiagnosisDetail extends TeaModel {
         } 
 
         /**
-         * ExceedResources.
+         * <p>The exceeded resources.</p>
          */
         public Builder exceedResources(java.util.List<String> exceedResources) {
             this.exceedResources = exceedResources;
@@ -114,7 +114,7 @@ public class ResourceDiagnosisDetail extends TeaModel {
         }
 
         /**
-         * Limit.
+         * <p>The resource quota.</p>
          */
         public Builder limit(ResourceAmount limit) {
             this.limit = limit;
@@ -122,7 +122,10 @@ public class ResourceDiagnosisDetail extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The diagnosis status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -130,7 +133,7 @@ public class ResourceDiagnosisDetail extends TeaModel {
         }
 
         /**
-         * Used.
+         * <p>The resource usage.</p>
          */
         public Builder used(ResourceAmount used) {
             this.used = used;
@@ -138,7 +141,7 @@ public class ResourceDiagnosisDetail extends TeaModel {
         }
 
         /**
-         * WorkloadIds.
+         * <p>The related workload IDs.</p>
          */
         public Builder workloadIds(java.util.List<String> workloadIds) {
             this.workloadIds = workloadIds;

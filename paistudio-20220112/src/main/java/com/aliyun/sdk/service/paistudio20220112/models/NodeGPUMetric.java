@@ -158,7 +158,10 @@ public class NodeGPUMetric extends TeaModel {
         } 
 
         /**
-         * AcceleratorType.
+         * <p>The accelerator type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GPU</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
@@ -166,7 +169,10 @@ public class NodeGPUMetric extends TeaModel {
         }
 
         /**
-         * GPUCount.
+         * <p>The GPU count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder GPUCount(Integer GPUCount) {
             this.GPUCount = GPUCount;
@@ -174,7 +180,7 @@ public class NodeGPUMetric extends TeaModel {
         }
 
         /**
-         * GPUMetrics.
+         * <p>The GPU metrics.</p>
          */
         public Builder GPUMetrics(java.util.List<GPUMetric> GPUMetrics) {
             this.GPUMetrics = GPUMetrics;
@@ -182,7 +188,10 @@ public class NodeGPUMetric extends TeaModel {
         }
 
         /**
-         * GPUType.
+         * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V100</p>
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -190,7 +199,10 @@ public class NodeGPUMetric extends TeaModel {
         }
 
         /**
-         * MemoryUtil.
+         * <p>The memory utilization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder memoryUtil(Float memoryUtil) {
             this.memoryUtil = memoryUtil;
@@ -198,7 +210,10 @@ public class NodeGPUMetric extends TeaModel {
         }
 
         /**
-         * NodeId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lingj19q90jp66nq-mg1a2kc92f9nn8yd-20</p>
          */
         public Builder nodeId(String nodeId) {
             this.nodeId = nodeId;
@@ -206,7 +221,10 @@ public class NodeGPUMetric extends TeaModel {
         }
 
         /**
-         * NodeType.
+         * <p>The node type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c8i.xlarge</p>
          */
         public Builder nodeType(String nodeType) {
             this.nodeType = nodeType;
@@ -214,7 +232,7 @@ public class NodeGPUMetric extends TeaModel {
         }
 
         /**
-         * TotalMemory.
+         * <p>The total memory.</p>
          */
         public Builder totalMemory(Float totalMemory) {
             this.totalMemory = totalMemory;
@@ -222,7 +240,10 @@ public class NodeGPUMetric extends TeaModel {
         }
 
         /**
-         * UsedMemory.
+         * <p>The used memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder usedMemory(Float usedMemory) {
             this.usedMemory = usedMemory;

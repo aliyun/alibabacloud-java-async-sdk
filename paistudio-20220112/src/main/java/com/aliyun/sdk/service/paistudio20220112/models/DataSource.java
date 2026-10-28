@@ -80,7 +80,10 @@ public class DataSource extends TeaModel {
         } 
 
         /**
-         * DataSourceId.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data-source-1</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -88,7 +91,10 @@ public class DataSource extends TeaModel {
         }
 
         /**
-         * MountPath.
+         * <p>The mount path of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/data/</p>
          */
         public Builder mountPath(String mountPath) {
             this.mountPath = mountPath;
@@ -96,7 +102,10 @@ public class DataSource extends TeaModel {
         }
 
         /**
-         * Uri.
+         * <p>The URI of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/model/output/</p>
          */
         public Builder uri(String uri) {
             this.uri = uri;

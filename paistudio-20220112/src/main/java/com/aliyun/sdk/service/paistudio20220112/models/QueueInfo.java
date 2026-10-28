@@ -340,7 +340,10 @@ public class QueueInfo extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>roleMaximumResource</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -348,7 +351,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * CodeType.
+         * <p>The error type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ConfigRule</p>
          */
         public Builder codeType(String codeType) {
             this.codeType = codeType;
@@ -356,7 +362,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * GmtCreatedTime.
+         * <p>The task creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtCreatedTime(String gmtCreatedTime) {
             this.gmtCreatedTime = gmtCreatedTime;
@@ -364,7 +373,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * GmtDequeuedTime.
+         * <p>The dequeue time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;2023-06-22T00:00:00Z&quot;</p>
          */
         public Builder gmtDequeuedTime(String gmtDequeuedTime) {
             this.gmtDequeuedTime = gmtDequeuedTime;
@@ -372,7 +384,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * GmtEnqueuedTime.
+         * <p>The enqueue time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“2023-06-22T00:00:00Z”</p>
          */
         public Builder gmtEnqueuedTime(String gmtEnqueuedTime) {
             this.gmtEnqueuedTime = gmtEnqueuedTime;
@@ -380,7 +395,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * GmtPositionModifiedTime.
+         * <p>The queue position change time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;2023-06-22T00:00:00Z&quot;</p>
          */
         public Builder gmtPositionModifiedTime(String gmtPositionModifiedTime) {
             this.gmtPositionModifiedTime = gmtPositionModifiedTime;
@@ -388,7 +406,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the underlying QueueUnit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-label-79f5498dd-9qrzs</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -396,7 +417,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * Position.
+         * <p>The queue position.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder position(Long position) {
             this.position = position;
@@ -404,7 +428,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * Priority.
+         * <p>The task priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder priority(Long priority) {
             this.priority = priority;
@@ -412,7 +439,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * QueueStrategy.
+         * <p>The dequeue strategy of the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PaiStrategyIntelligent</p>
          */
         public Builder queueStrategy(String queueStrategy) {
             this.queueStrategy = queueStrategy;
@@ -420,7 +450,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * QuotaId.
+         * <p>The quota used by the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“quotamtl37ge7gkvdz”</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -428,7 +461,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Current GPU Limit is 5, limited by Role PAI.AlgoDeveloper</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -436,7 +472,7 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * Resource.
+         * <p>The resource usage.</p>
          */
         public Builder resource(ResourceAmount resource) {
             this.resource = resource;
@@ -444,7 +480,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enqueued</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -452,7 +491,11 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * UseOversoldResource.
+         * <p>Specifies whether the task uses idle resources. Valid values:</p>
+         * <ul>
+         * <li>true: Used.</li>
+         * <li>false: Not used.</li>
+         * </ul>
          */
         public Builder useOversoldResource(Boolean useOversoldResource) {
             this.useOversoldResource = useOversoldResource;
@@ -460,7 +503,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The creator information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612285282502324</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -468,7 +514,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * UserName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -476,7 +525,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * WorkloadId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlcxxxx</p>
          */
         public Builder workloadId(String workloadId) {
             this.workloadId = workloadId;
@@ -484,7 +536,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * WorkloadName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-job</p>
          */
         public Builder workloadName(String workloadName) {
             this.workloadName = workloadName;
@@ -492,7 +547,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * WorkloadStatus.
+         * <p>The specific status of DLC, DSW, or EAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PreAllocation</p>
          */
         public Builder workloadStatus(String workloadStatus) {
             this.workloadStatus = workloadStatus;
@@ -500,7 +558,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * WorkloadType.
+         * <p>The task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc</p>
          */
         public Builder workloadType(String workloadType) {
             this.workloadType = workloadType;
@@ -508,7 +569,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“432524”</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -516,7 +580,10 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The name of the workspace where the task resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai_dlc</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;

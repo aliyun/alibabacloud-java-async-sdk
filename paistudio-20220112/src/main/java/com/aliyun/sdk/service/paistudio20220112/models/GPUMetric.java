@@ -93,7 +93,10 @@ public class GPUMetric extends TeaModel {
         } 
 
         /**
-         * Index.
+         * <p>The GPU index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder index(Long index) {
             this.index = index;
@@ -101,7 +104,10 @@ public class GPUMetric extends TeaModel {
         }
 
         /**
-         * Model.
+         * <p>The GPU model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NVIDIA V100</p>
          */
         public Builder model(String model) {
             this.model = model;
@@ -109,7 +115,10 @@ public class GPUMetric extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The card status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0：异常；1：正常</p>
          */
         public Builder status(Long status) {
             this.status = status;
@@ -117,7 +126,10 @@ public class GPUMetric extends TeaModel {
         }
 
         /**
-         * UsageRate.
+         * <p>The GPU utilization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder usageRate(Float usageRate) {
             this.usageRate = usageRate;

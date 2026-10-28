@@ -80,7 +80,10 @@ public class NodeOperationResult extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The node operation status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -88,7 +91,10 @@ public class NodeOperationResult extends TeaModel {
         }
 
         /**
-         * NodeName.
+         * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trains930928remn-master-0</p>
          */
         public Builder nodeName(String nodeName) {
             this.nodeName = nodeName;
@@ -96,7 +102,10 @@ public class NodeOperationResult extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The node operation status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -119,7 +119,7 @@ public class NodeStatistics extends TeaModel {
         } 
 
         /**
-         * ActualMinResources.
+         * <p>The total resources.</p>
          */
         public Builder actualMinResources(StatisticsResources actualMinResources) {
             this.actualMinResources = actualMinResources;
@@ -127,7 +127,7 @@ public class NodeStatistics extends TeaModel {
         }
 
         /**
-         * GPUDetails.
+         * <p>The GPU idle statistics.</p>
          */
         public Builder GPUDetails(java.util.List<GPUDetails> GPUDetails) {
             this.GPUDetails = GPUDetails;
@@ -135,7 +135,7 @@ public class NodeStatistics extends TeaModel {
         }
 
         /**
-         * HyperNodeDetails.
+         * <p>The hypernode idle statistics.</p>
          */
         public Builder hyperNodeDetails(java.util.List<HyperNodeDetails> hyperNodeDetails) {
             this.hyperNodeDetails = hyperNodeDetails;
@@ -143,7 +143,7 @@ public class NodeStatistics extends TeaModel {
         }
 
         /**
-         * IdleResources.
+         * <p>The idle resources.</p>
          */
         public Builder idleResources(StatisticsResources idleResources) {
             this.idleResources = idleResources;
@@ -151,7 +151,7 @@ public class NodeStatistics extends TeaModel {
         }
 
         /**
-         * SchedulableResources.
+         * <p>The amount of scheduling resources.</p>
          */
         public Builder schedulableResources(StatisticsResources schedulableResources) {
             this.schedulableResources = schedulableResources;
@@ -159,7 +159,7 @@ public class NodeStatistics extends TeaModel {
         }
 
         /**
-         * SystemReservedResources.
+         * <p>The system reserved resources.</p>
          */
         public Builder systemReservedResources(StatisticsResources systemReservedResources) {
             this.systemReservedResources = systemReservedResources;
@@ -225,7 +225,10 @@ public class NodeStatistics extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -233,7 +236,10 @@ public class NodeStatistics extends TeaModel {
             }
 
             /**
-             * IdleNum.
+             * <p>The idle count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder idleNum(Long idleNum) {
                 this.idleNum = idleNum;
@@ -300,7 +306,10 @@ public class NodeStatistics extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -308,7 +317,10 @@ public class NodeStatistics extends TeaModel {
             }
 
             /**
-             * IdleNum.
+             * <p>The idle count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder idleNum(Long idleNum) {
                 this.idleNum = idleNum;

@@ -223,7 +223,10 @@ public class ResourceOperation extends TeaModel {
         } 
 
         /**
-         * CreatorId.
+         * <p>The ID of the creator of the resource change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1884692****</p>
          */
         public Builder creatorId(String creatorId) {
             this.creatorId = creatorId;
@@ -231,7 +234,10 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * GmtCreatedTime.
+         * <p>The time when the resource change was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtCreatedTime(String gmtCreatedTime) {
             this.gmtCreatedTime = gmtCreatedTime;
@@ -239,7 +245,10 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * GmtEndTime.
+         * <p>The time when the resource change ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:02:00Z</p>
          */
         public Builder gmtEndTime(String gmtEndTime) {
             this.gmtEndTime = gmtEndTime;
@@ -247,7 +256,10 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the resource change was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -255,7 +267,10 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * GmtStartTime.
+         * <p>The time when the resource change started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:01:00Z</p>
          */
         public Builder gmtStartTime(String gmtStartTime) {
             this.gmtStartTime = gmtStartTime;
@@ -263,7 +278,10 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>The object ID of the resource change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotaxxx</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -271,7 +289,10 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * ObjectType.
+         * <p>The object type of the resource change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Quota</p>
          */
         public Builder objectType(String objectType) {
             this.objectType = objectType;
@@ -279,7 +300,10 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * OperationDescription.
+         * <p>The description of the resource change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A user requests to change the Desired Capacity from 4 to 5.</p>
          */
         public Builder operationDescription(String operationDescription) {
             this.operationDescription = operationDescription;
@@ -287,7 +311,10 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * OperationId.
+         * <p>The resource change ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation-123</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -295,7 +322,10 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * OperationSpecJson.
+         * <p>The details of the resource change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ScaleQuota&quot;:{&quot;Min&quot;:{&quot;NodeSpecs&quot;:[{&quot;Type&quot;:&quot;ecs.gn6i-c8g1.2xlarge&quot;,&quot;Count&quot;:20,&quot;IncludeNodes&quot;:[&quot;A&quot;,&quot;B&quot;,&quot;C&quot;],&quot;ExcludeNodes&quot;:[&quot;D&quot;]}]}}}</p>
          */
         public Builder operationSpecJson(String operationSpecJson) {
             this.operationSpecJson = operationSpecJson;
@@ -303,7 +333,10 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * OperationType.
+         * <p>The type of the resource change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScaleQuota</p>
          */
         public Builder operationType(String operationType) {
             this.operationType = operationType;
@@ -311,7 +344,7 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * ReasonCode.
+         * <p>The error code.</p>
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -319,7 +352,10 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * ReasonMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -327,7 +363,10 @@ public class ResourceOperation extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the resource change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Executing</p>
          */
         public Builder status(String status) {
             this.status = status;

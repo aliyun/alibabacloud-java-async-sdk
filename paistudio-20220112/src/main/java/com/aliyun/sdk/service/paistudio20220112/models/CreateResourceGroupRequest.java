@@ -143,7 +143,7 @@ public class CreateResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>Compute resource type for the resource group.</p>
+         * <p>The compute resource type of the ResourceGroup.</p>
          * 
          * <strong>example:</strong>
          * <p>Ecs</p>
@@ -155,7 +155,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Resource group description.</p>
+         * <p>The description of the ResourceGroup.</p>
          * 
          * <strong>example:</strong>
          * <p>test_api_report</p>
@@ -167,7 +167,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Resource group name.</p>
+         * <p>The name of the ResourceGroup.</p>
          * 
          * <strong>example:</strong>
          * <p>testResourceGroup</p>
@@ -179,12 +179,10 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Resource type. Valid values:</p>
+         * <p>The resource type list. Valid values:</p>
          * <ul>
-         * <li><p>Ecs: general computing resources</p>
-         * </li>
-         * <li><p>Lingjun: Lingjun resources</p>
-         * </li>
+         * <li>Ecs: general computing resources</li>
+         * <li>Lingjun: Lingjun AI Compute resources</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +195,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>List of tags to add. Maximum 20 items.</p>
+         * <p>The list of tags to add, containing up to 20 entries.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -206,7 +204,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>VPC connectivity information for the resource group.</p>
+         * <p>The VPC peering information of the ResourceGroup.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.putBodyParameter("UserVpc", userVpc);
@@ -215,7 +213,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Resource group version. This parameter takes effect only when the resource type is ECS.</p>
+         * <p>The resource group version. This parameter only takes effect when the resource type is ECS.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -286,7 +284,7 @@ public class CreateResourceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the instance. N ranges from 1 to 20.</p>
+             * <p>The tag key of the instance. The value of N ranges from 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -297,7 +295,7 @@ public class CreateResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>Tag value for the resource group. N ranges from 1 to 20.</p>
+             * <p>The tag value of the instance. The value of N ranges from 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

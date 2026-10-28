@@ -111,7 +111,7 @@ public class ListAlgorithmVersionsRequest extends Request {
         }
 
         /**
-         * <p>The page size for paging.</p>
+         * <p>The page size for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

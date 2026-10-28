@@ -67,7 +67,10 @@ public class StatisticsDetails extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -75,7 +78,10 @@ public class StatisticsDetails extends TeaModel {
         }
 
         /**
-         * IdleNum.
+         * <p>The idle count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         public Builder idleNum(Long idleNum) {
             this.idleNum = idleNum;

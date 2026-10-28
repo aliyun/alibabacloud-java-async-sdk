@@ -88,7 +88,7 @@ public class GetResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The globally unique ID of the resource group.</p>
+         * <p>The ID of the resource group. Each resource group has a globally unique ID. You can use the resource group ID to retrieve information about the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class GetResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Optional. Defaults to <code>true</code>.</p>
+         * <p>Specifies whether to enable AI workspace data. This parameter is optional. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -113,7 +113,7 @@ public class GetResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>A list of up to 20 tags to add to the instance.</p>
+         * <p>The list of tags to be added. A maximum of 20 tags can be added.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -182,7 +182,7 @@ public class GetResourceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The tag key of the instance. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -193,7 +193,7 @@ public class GetResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The tag value of the instance. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

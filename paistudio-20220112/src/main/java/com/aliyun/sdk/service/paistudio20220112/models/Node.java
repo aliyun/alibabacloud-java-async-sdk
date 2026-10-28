@@ -627,7 +627,7 @@ public class Node extends TeaModel {
         } 
 
         /**
-         * <p>The accelerator type of the resource node specifications (CPU/GPU).</p>
+         * <p>The accelerator type of the node specifications (CPU/GPU).</p>
          * 
          * <strong>example:</strong>
          * <p>CPU</p>
@@ -638,7 +638,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * <p>The number of CPU cores that can be allocated to users.</p>
+         * <p>The number of allocatable CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -649,7 +649,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * <p>The memory size that can be allocated to users.</p>
+         * <p>The allocatable memory size.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -660,7 +660,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * AncestorQuotaWorkloadNum.
+         * <p>The number of workloads that use the ancestor quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ancestorQuotaWorkloadNum(Long ancestorQuotaWorkloadNum) {
             this.ancestorQuotaWorkloadNum = ancestorQuotaWorkloadNum;
@@ -698,7 +701,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * <p>The creator of the resource node.</p>
+         * <p>The ID of the creator of the resource node.</p>
          * 
          * <strong>example:</strong>
          * <p>281044699048527748</p>
@@ -709,7 +712,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * DescendantQuotaWorkloadNum.
+         * <p>The number of workloads that use the descendant quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder descendantQuotaWorkloadNum(Long descendantQuotaWorkloadNum) {
             this.descendantQuotaWorkloadNum = descendantQuotaWorkloadNum;
@@ -717,7 +723,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * DiskCapacity.
+         * <p>The data cloud disk capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder diskCapacity(Long diskCapacity) {
             this.diskCapacity = diskCapacity;
@@ -725,7 +734,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * DiskPL.
+         * <p>The data cloud disk performance level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL2</p>
          */
         public Builder diskPL(String diskPL) {
             this.diskPL = diskPL;
@@ -778,6 +790,9 @@ public class Node extends TeaModel {
 
         /**
          * <p>The creation time of the resource node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtCreatedTime(String gmtCreatedTime) {
             this.gmtCreatedTime = gmtCreatedTime;
@@ -818,7 +833,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the resource node is bound to a quota.</p>
+         * <p>Indicates whether a quota is bound.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -829,7 +844,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of CPU cores.</p>
+         * <p>The limit on the number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -840,7 +855,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of GPUs.</p>
+         * <p>The limit on the number of GPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -851,7 +866,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * <p>The maximum memory size.</p>
+         * <p>The limit on the memory size.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -928,7 +943,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * <p>The node specifications type of the resource node.</p>
+         * <p>The type of node specifications of the resource node.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c8i.xlarge</p>
@@ -994,7 +1009,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * <p>The number of requested GPUs.</p>
+         * <p>The number of requested GPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1038,7 +1053,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * SelfQuotaWorkloadNum.
+         * <p>The number of workloads that use this quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder selfQuotaWorkloadNum(Long selfQuotaWorkloadNum) {
             this.selfQuotaWorkloadNum = selfQuotaWorkloadNum;
@@ -1065,7 +1083,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * <p>The system-reserved memory size.</p>
+         * <p>The size of the system reserved memory.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

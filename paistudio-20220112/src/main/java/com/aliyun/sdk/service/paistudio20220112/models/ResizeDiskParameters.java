@@ -54,7 +54,7 @@ public class ResizeDiskParameters extends TeaModel {
         } 
 
         /**
-         * <p>The target disk capacity after the change.</p>
+         * <p>The target disk capacity.</p>
          */
         public Builder newDiskSize(String newDiskSize) {
             this.newDiskSize = newDiskSize;

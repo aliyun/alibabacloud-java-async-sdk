@@ -171,7 +171,10 @@ public class ResourceInfos extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -179,7 +182,10 @@ public class ResourceInfos extends TeaModel {
         }
 
         /**
-         * EcsSpec.
+         * <p>The ECS instance type information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.gn5-c8g1.2xlarge</p>
          */
         public Builder ecsSpec(String ecsSpec) {
             this.ecsSpec = ecsSpec;
@@ -187,7 +193,7 @@ public class ResourceInfos extends TeaModel {
         }
 
         /**
-         * GpuCardType.
+         * <p>The GPU card type.</p>
          */
         public Builder gpuCardType(String gpuCardType) {
             this.gpuCardType = gpuCardType;
@@ -195,7 +201,7 @@ public class ResourceInfos extends TeaModel {
         }
 
         /**
-         * MachineModel.
+         * <p>The machine model.</p>
          */
         public Builder machineModel(String machineModel) {
             this.machineModel = machineModel;
@@ -203,7 +209,10 @@ public class ResourceInfos extends TeaModel {
         }
 
         /**
-         * MaxQuota.
+         * <p>The maximum quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxQuota(Long maxQuota) {
             this.maxQuota = maxQuota;
@@ -211,7 +220,7 @@ public class ResourceInfos extends TeaModel {
         }
 
         /**
-         * NetworkPodId.
+         * <p>The network pod ID.</p>
          */
         public Builder networkPodId(String networkPodId) {
             this.networkPodId = networkPodId;
@@ -219,7 +228,10 @@ public class ResourceInfos extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -227,7 +239,10 @@ public class ResourceInfos extends TeaModel {
         }
 
         /**
-         * UsedQuota.
+         * <p>The used quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder usedQuota(Long usedQuota) {
             this.usedQuota = usedQuota;
@@ -235,7 +250,10 @@ public class ResourceInfos extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -243,7 +261,10 @@ public class ResourceInfos extends TeaModel {
         }
 
         /**
-         * UserName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

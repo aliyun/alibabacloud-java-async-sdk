@@ -67,7 +67,7 @@ public class UnschedulableNodeDetail extends TeaModel {
         } 
 
         /**
-         * Nodes.
+         * <p>The list of nodes.</p>
          */
         public Builder nodes(java.util.List<String> nodes) {
             this.nodes = nodes;
@@ -75,7 +75,10 @@ public class UnschedulableNodeDetail extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>The failure cause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NotEnoughGPU</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;

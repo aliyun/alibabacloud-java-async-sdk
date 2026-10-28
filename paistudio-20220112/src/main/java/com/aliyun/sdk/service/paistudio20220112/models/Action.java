@@ -54,7 +54,10 @@ public class Action extends TeaModel {
         } 
 
         /**
-         * ActionType.
+         * <p>The operation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Defrag</p>
          */
         public Builder actionType(String actionType) {
             this.actionType = actionType;

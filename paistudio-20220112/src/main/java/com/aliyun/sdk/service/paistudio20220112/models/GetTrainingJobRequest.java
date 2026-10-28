@@ -60,7 +60,7 @@ public class GetTrainingJobRequest extends Request {
         } 
 
         /**
-         * <p>The training job ID.</p>
+         * <p>The ID of the training job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
