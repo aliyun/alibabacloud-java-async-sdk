@@ -90,7 +90,7 @@ public class GetIdentityProviderServiceProviderRequest extends Request {
         } 
 
         /**
-         * <p>必填，目标 Workspace 的标识；请求地域需与目标 Workspace 一致。</p>
+         * <p>Required. The ID of the target workspace. The request region must be the same as the region of the target workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class GetIdentityProviderServiceProviderRequest extends Request {
         }
 
         /**
-         * <p>本接口仅支持 CustomSSO。</p>
+         * <p>This operation only supports CustomSSO.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class GetIdentityProviderServiceProviderRequest extends Request {
         }
 
         /**
-         * <p>查询参数必填，仅支持精确值 SAML；响应返回 SAML。</p>
+         * <p>The query parameter is required and only supports the exact value SAML. The response returns SAML.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,7 +75,7 @@ public class DeleteIdentityProviderSCIMCredentialRequest extends Request {
         } 
 
         /**
-         * <p>必填，目标 Workspace 的标识；请求地域需与目标 Workspace 一致。</p>
+         * <p>Required. The ID of the target workspace. The request region must be the same as the region of the target workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteIdentityProviderSCIMCredentialRequest extends Request {
         }
 
         /**
-         * <p>删除时必填非空，使用凭据列表返回的 ID，不是 Token 明文。</p>
+         * <p>Required. The ID of the credential to delete. Use the ID returned in the credential list instead of the plaintext token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
