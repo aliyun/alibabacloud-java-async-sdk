@@ -88,7 +88,7 @@ public class DescribeComfyProductionsRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the results to return. Pages are 1-indexed. Default: 1.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -100,7 +100,7 @@ public class DescribeComfyProductionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -112,7 +112,7 @@ public class DescribeComfyProductionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Comfy task whose productions you want to list.</p>
+         * <p>The ID of the specified ComfyTask.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

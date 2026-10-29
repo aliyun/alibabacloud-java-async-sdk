@@ -80,7 +80,7 @@ public class CancelComfyTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of 0 indicates success.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -91,7 +91,7 @@ public class CancelComfyTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. A <code>success</code> value indicates a successful request.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class CancelComfyTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>

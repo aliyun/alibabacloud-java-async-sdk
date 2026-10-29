@@ -18,8 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyRenderingInstanceAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Password")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
     @com.aliyun.core.annotation.Query
@@ -29,6 +32,7 @@ public class ModifyRenderingInstanceAttributeRequest extends Request {
 
     private ModifyRenderingInstanceAttributeRequest(Builder builder) {
         super(builder);
+        this.instanceName = builder.instanceName;
         this.password = builder.password;
         this.renderingInstanceId = builder.renderingInstanceId;
     }
@@ -47,6 +51,13 @@ public class ModifyRenderingInstanceAttributeRequest extends Request {
     }
 
     /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
      * @return password
      */
     public String getPassword() {
@@ -61,6 +72,7 @@ public class ModifyRenderingInstanceAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyRenderingInstanceAttributeRequest, Builder> {
+        private String instanceName; 
         private String password; 
         private String renderingInstanceId; 
 
@@ -70,13 +82,25 @@ public class ModifyRenderingInstanceAttributeRequest extends Request {
 
         private Builder(ModifyRenderingInstanceAttributeRequest request) {
             super(request);
+            this.instanceName = request.instanceName;
             this.password = request.password;
             this.renderingInstanceId = request.renderingInstanceId;
         } 
 
         /**
-         * <p>Password for the device.</p>
-         * <p>This parameter is required.</p>
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestInstance</p>
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * <p>The device password.</p>
          * 
          * <strong>example:</strong>
          * <p>Toehold2020</p>
@@ -88,7 +112,7 @@ public class ModifyRenderingInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>ID of the cloud application service instance.</p>
+         * <p>The cloud application service instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

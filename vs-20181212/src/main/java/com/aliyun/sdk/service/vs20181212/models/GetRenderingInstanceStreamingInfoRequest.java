@@ -60,7 +60,7 @@ public class GetRenderingInstanceStreamingInfoRequest extends Request {
         } 
 
         /**
-         * <p>Cloud application service instance ID</p>
+         * <p>The cloud application service instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

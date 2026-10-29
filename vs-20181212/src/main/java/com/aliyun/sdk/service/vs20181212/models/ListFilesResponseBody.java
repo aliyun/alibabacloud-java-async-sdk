@@ -106,7 +106,7 @@ public class ListFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>List of file information.</p>
+         * <p>The list of file information.</p>
          */
         public Builder files(java.util.List<Files> files) {
             this.files = files;
@@ -114,7 +114,7 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page number of the list.</p>
+         * <p>The page number of the returned list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of entries per page for paged queries.</p>
+         * <p>The Settings for the number of entries per page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -147,7 +147,7 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of matching file records.</p>
+         * <p>The total number of matched file records.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -294,10 +294,10 @@ public class ListFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>File description.</p>
+             * <p>The description of the file.</p>
              * 
              * <strong>example:</strong>
-             * <p>我的文件</p>
+             * <p>My file</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -305,7 +305,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File ID.</p>
+             * <p>The ID of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>f-1671accd4dafdag3er256cvgewt13f7141db2f7</p>
@@ -316,7 +316,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File name.</p>
+             * <p>The name of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>myfile</p>
@@ -327,17 +327,13 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Upload status. Valid values:</p>
-             * <ol>
-             * <li><p>Created</p>
-             * </li>
-             * <li><p>Doing</p>
-             * </li>
-             * <li><p>Success (desired state)</p>
-             * </li>
-             * <li><p>Failed (desired state)</p>
-             * </li>
-             * </ol>
+             * <p>The upload status of the file. Valid values:</p>
+             * <ul>
+             * <li>Created</li>
+             * <li>Doing</li>
+             * <li>Success: final state</li>
+             * <li>Failed: final state</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -348,7 +344,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status description.</p>
+             * <p>The description of the status.</p>
              * 
              * <strong>example:</strong>
              * <p>upload success</p>
@@ -359,7 +355,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Destination path for pushing the file to the service instance.</p>
+             * <p>The target path for pushing the file to the cloud application service instance.</p>
              * 
              * <strong>example:</strong>
              * <p>/data/tmp/test/xxx.tar</p>
@@ -370,7 +366,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Most recent status update time.</p>
+             * <p>The time when the status was last updated. The time follows the ISO 8601 standard and includes the time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-28T14:15:08+08:00</p>
@@ -381,7 +377,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Upload start time.</p>
+             * <p>The time when the upload started. The time follows the ISO 8601 standard and includes the time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-28T14:10:12+08:00</p>

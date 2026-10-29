@@ -117,7 +117,7 @@ public class DescribeComfyProductionDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The download link for the production. Use an Alibaba Cloud Object Storage Service (OSS) SDK to download the file.</p>
+         * <p>The download URL of the production. Use the Alibaba Cloud OSS SDK to download the production.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.xxx.xxx">https://xxx.xxx.xxx</a></p>
@@ -128,7 +128,7 @@ public class DescribeComfyProductionDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The download link\&quot;s expiration time.</p>
+         * <p>The expiration time of the download URL. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2029-03-28T16:00Z</p>
@@ -139,7 +139,7 @@ public class DescribeComfyProductionDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -150,7 +150,7 @@ public class DescribeComfyProductionDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>

@@ -106,7 +106,7 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>下次相同告警的最小间隔。（单位：秒）</p>
+         * <p>The minimum interval before the next identical alert. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -117,7 +117,7 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * <p>告警ID。</p>
+         * <p>The alert ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0hyNgTdgv2D000195842</p>
@@ -128,7 +128,7 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * <p>URL的过期时长。（单位：秒）</p>
+         * <p>The expiration period of the URL. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -139,7 +139,7 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>76E11E6A-4441-51C9-AF60-D354362257A7</p>
@@ -150,7 +150,7 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * <p>媒体上传的URL，可使用PUT上传。</p>
+         * <p>The media upload URL. You can use the PUT method to upload media.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://demo.aliyundoc.com/live/310101<em><strong><strong>7542007?auth_key=1639130258-0-0-b2b04fe85ece6</strong></strong></em>a6b1a42bc7e</p>

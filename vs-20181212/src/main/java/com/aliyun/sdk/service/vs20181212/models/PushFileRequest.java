@@ -75,7 +75,7 @@ public class PushFileRequest extends Request {
         } 
 
         /**
-         * <p>File ID</p>
+         * <p>The file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class PushFileRequest extends Request {
         }
 
         /**
-         * <p>Cloud application service instance ID</p>
+         * <p>The instance ID of the cloud application service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

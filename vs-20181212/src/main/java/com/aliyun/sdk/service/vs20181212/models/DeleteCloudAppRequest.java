@@ -60,7 +60,7 @@ public class DeleteCloudAppRequest extends Request {
         } 
 
         /**
-         * <p>The cloud application ID, which corresponds to a unique application package.</p>
+         * <p>The ID of the cloud application, which corresponds to a unique application package.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

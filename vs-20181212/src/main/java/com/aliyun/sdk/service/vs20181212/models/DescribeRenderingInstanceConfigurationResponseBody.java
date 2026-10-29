@@ -67,7 +67,7 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
         } 
 
         /**
-         * <p>The configuration.</p>
+         * <p>The configuration content.</p>
          */
         public Builder configuration(java.util.List<Configuration> configuration) {
             this.configuration = configuration;
@@ -144,7 +144,7 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The name of the attribute.</p>
+             * <p>The attribute name.</p>
              * 
              * <strong>example:</strong>
              * <p>lon</p>
@@ -155,7 +155,7 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>The value of the attribute.</p>
+             * <p>The attribute value.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -225,7 +225,7 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The list of properties for the module.</p>
+             * <p>The list of attributes for the module.</p>
              */
             public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
@@ -233,27 +233,18 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>The name of the device simulation feature module. Valid values:</p>
-             * <ol>
-             * <li><p>ctl: The control module.</p>
-             * </li>
-             * <li><p>prop: The property module.</p>
-             * </li>
-             * <li><p>location: The location module.</p>
-             * </li>
-             * <li><p>battery: The battery module.</p>
-             * </li>
-             * <li><p>network: The network module.</p>
-             * </li>
-             * <li><p>bluetooth: The Bluetooth module.</p>
-             * </li>
-             * <li><p>sim: The SIM card module.</p>
-             * </li>
-             * <li><p>display: The device module.</p>
-             * </li>
-             * <li><p>system: The basic module.</p>
-             * </li>
-             * </ol>
+             * <p>The name of the real-device simulation feature module. Valid values:</p>
+             * <ul>
+             * <li>ctl: Control module.</li>
+             * <li>prop: Attribute module.</li>
+             * <li>location: Location module.</li>
+             * <li>battery: Battery module.</li>
+             * <li>network: Network module.</li>
+             * <li>bluetooth: Bluetooth module.</li>
+             * <li>sim: SIM card module.</li>
+             * <li>display: Device module.</li>
+             * <li>system: Basic module.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>location</p>

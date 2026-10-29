@@ -86,7 +86,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud application service instance.</p>
+         * <p>The instance ID of the cloud application service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The name of the property.</p>
+             * <p>The name of the attribute.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The value of the property.</p>
+             * <p>The value of the attribute.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -245,7 +245,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The list of properties for the module.</p>
+             * <p>The list of attributes corresponding to the module.</p>
              * <p>This parameter is required.</p>
              */
             public Builder attributes(java.util.List<Attributes> attributes) {
@@ -254,27 +254,18 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The name of the real device simulation module. Valid values include the following:</p>
-             * <ol>
-             * <li><p>ctl: control module</p>
-             * </li>
-             * <li><p>prop: property module</p>
-             * </li>
-             * <li><p>location: location module</p>
-             * </li>
-             * <li><p>battery: battery module</p>
-             * </li>
-             * <li><p>network: network module</p>
-             * </li>
-             * <li><p>bluetooth: bluetooth module</p>
-             * </li>
-             * <li><p>sim: SIM card module</p>
-             * </li>
-             * <li><p>display: device module</p>
-             * </li>
-             * <li><p>system: basic module</p>
-             * </li>
-             * </ol>
+             * <p>The name of the real-device simulation feature module. Valid values:</p>
+             * <ul>
+             * <li>ctl: Control module.</li>
+             * <li>prop: Property module.</li>
+             * <li>location: Location module.</li>
+             * <li>battery: Battery module.</li>
+             * <li>network: Network module.</li>
+             * <li>bluetooth: Bluetooth module.</li>
+             * <li>sim: SIM card module.</li>
+             * <li>display: Device module.</li>
+             * <li>system: Basic module.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

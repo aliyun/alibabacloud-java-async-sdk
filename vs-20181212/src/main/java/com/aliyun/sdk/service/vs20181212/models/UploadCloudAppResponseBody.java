@@ -67,7 +67,7 @@ public class UploadCloudAppResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cloud application ID, which uniquely identifies the application package.</p>
+         * <p>The ID of the cloud application, which corresponds to a unique application package.</p>
          * 
          * <strong>example:</strong>
          * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>

@@ -189,7 +189,7 @@ public class DescribeRecordsRequest extends Request {
         } 
 
         /**
-         * <p>Specify the end time for the query.</p>
+         * <p>The end time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * <p>Page size. Default value: 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -247,9 +247,9 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * <p>The field to sort the records by. Valid value:</p>
+         * <p>The field by which to sort. Valid values:</p>
          * <ul>
-         * <li>Id (default)</li>
+         * <li>Id: default</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,12 +262,10 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * <p>The sorting method. Valid values:</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li><p>asc (ascending, default)</p>
-         * </li>
-         * <li><p>desc (descending)</p>
-         * </li>
+         * <li>asc: ascending order (default)</li>
+         * <li>desc: descending order</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,7 +278,7 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * <p>Query records by start time.</p>
+         * <p>The start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +291,7 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * <p>Query by stream ID.</p>
+         * <p>The ID of the stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,12 +304,10 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * <p>The type of the recording record to query. Valid values:</p>
+         * <p>The type of the storage record. Valid values:</p>
          * <ul>
-         * <li><p>record (Recording)</p>
-         * </li>
-         * <li><p>snapshot</p>
-         * </li>
+         * <li>record: recording</li>
+         * <li>snapshot: snapshot</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

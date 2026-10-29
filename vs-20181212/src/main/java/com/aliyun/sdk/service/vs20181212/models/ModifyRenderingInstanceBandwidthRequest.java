@@ -88,14 +88,11 @@ public class ModifyRenderingInstanceBandwidthRequest extends Request {
         } 
 
         /**
-         * <p>The maximum outbound bandwidth for rate limiting. Unit: Mbit/s. You must specify at least one of MaxIngressBandwidth and MaxEgressBandwidth.</p>
+         * <p>The maximum outbound bandwidth limit, in Mbit/s. You must specify at least one of MaxIngressBandwidth and MaxEgressBandwidth.</p>
          * <ul>
-         * <li><p>By default, no rate limit is configured for the instance.</p>
-         * </li>
-         * <li><p>If you do not specify this parameter or set it to 0, the last configuration is retained.</p>
-         * </li>
-         * <li><p>If you set this parameter to a value less than 0, the rate limit is reset to unlimited.</p>
-         * </li>
+         * <li>The original configuration of the instance does not limit the bandwidth.</li>
+         * <li>If you do not specify this parameter or specify 0, the last configuration is retained by default.</li>
+         * <li>If you specify a value less than 0, the bandwidth limit is reset to unlimited.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,14 +105,11 @@ public class ModifyRenderingInstanceBandwidthRequest extends Request {
         }
 
         /**
-         * <p>The maximum inbound bandwidth for rate limiting. Unit: Mbit/s. You must specify at least one of MaxIngressBandwidth and MaxEgressBandwidth.</p>
+         * <p>The maximum inbound bandwidth limit, in Mbit/s. You must specify at least one of MaxIngressBandwidth and MaxEgressBandwidth.</p>
          * <ul>
-         * <li><p>By default, no rate limit is configured for the instance.</p>
-         * </li>
-         * <li><p>If you do not specify this parameter or set it to 0, the last configuration is retained.</p>
-         * </li>
-         * <li><p>If you set this parameter to a value less than 0, the rate limit is reset to unlimited.</p>
-         * </li>
+         * <li>The original configuration of the instance does not limit the bandwidth.</li>
+         * <li>If you do not specify this parameter or specify 0, the last configuration is retained by default.</li>
+         * <li>If you specify a value less than 0, the bandwidth limit is reset to unlimited.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,7 +122,7 @@ public class ModifyRenderingInstanceBandwidthRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud application service instance.</p>
+         * <p>The instance ID of the cloud application service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

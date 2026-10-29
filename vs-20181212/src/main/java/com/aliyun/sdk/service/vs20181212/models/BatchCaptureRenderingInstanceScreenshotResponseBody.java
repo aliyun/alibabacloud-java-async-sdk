@@ -119,7 +119,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
         } 
 
         /**
-         * <p>The dry run result.</p>
+         * <p>The data pre-check result.</p>
          */
         public Builder datatest(Datatest datatest) {
             this.datatest = datatest;
@@ -138,7 +138,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
         }
 
         /**
-         * <p>The list of instances for which screenshots failed.</p>
+         * <p>The list of instances for which screenshot capture failed.</p>
          */
         public Builder failedItems(java.util.List<FailedItems> failedItems) {
             this.failedItems = failedItems;
@@ -278,7 +278,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             } 
 
             /**
-             * <p>The dry run result.</p>
+             * <p>The pre-check result.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -358,7 +358,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             } 
 
             /**
-             * <p>The error code of the failure.</p>
+             * <p>The error code for the failure.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -369,7 +369,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             }
 
             /**
-             * <p>The error message of the failure.</p>
+             * <p>The reason for the failure.</p>
              * 
              * <strong>example:</strong>
              * <p>Not Applied</p>
@@ -380,7 +380,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             }
 
             /**
-             * <p>The instance ID of the cloud application service instance.</p>
+             * <p>The cloud application service instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>render-072da95539d3402da90353b244191722</p>
@@ -463,7 +463,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             } 
 
             /**
-             * <p>The time when the screenshot was created.</p>
+             * <p>The time when the screenshot was created. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-05-19T14:46:37+08:00</p>
@@ -485,7 +485,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             }
 
             /**
-             * <p>The instance ID of the cloud application service instance.</p>
+             * <p>The cloud application service instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>render-1ada8cd82783407b99fa202826fc6447</p>

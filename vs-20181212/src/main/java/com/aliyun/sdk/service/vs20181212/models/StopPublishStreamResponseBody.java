@@ -80,7 +80,10 @@ public class StopPublishStreamResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class StopPublishStreamResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder message(Long message) {
             this.message = message;
@@ -96,7 +102,10 @@ public class StopPublishStreamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

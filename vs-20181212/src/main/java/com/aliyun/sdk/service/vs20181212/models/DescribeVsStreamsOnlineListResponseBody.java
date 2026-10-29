@@ -138,7 +138,7 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries displayed per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -160,7 +160,7 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that meet the criteria.</p>
+         * <p>The total number of entries that meet the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

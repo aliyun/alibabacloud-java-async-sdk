@@ -67,7 +67,7 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -144,7 +144,7 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of an instance configuration.</p>
+             * <p>The instance configuration name.</p>
              * 
              * <strong>example:</strong>
              * <p>navbar.hide</p>
@@ -155,7 +155,7 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of an instance configuration.</p>
+             * <p>The content of the instance configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

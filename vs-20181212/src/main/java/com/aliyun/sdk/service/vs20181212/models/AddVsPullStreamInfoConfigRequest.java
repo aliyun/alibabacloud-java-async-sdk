@@ -196,10 +196,7 @@ public class AddVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * <p>The end time for stream pulling.</p>
-         * <blockquote>
-         * <p>The time must be in UTC format. The interval between StartTime and EndTime cannot exceed 7 days. EndTime must be later than the current time.</p>
-         * </blockquote>
+         * <p>The end time of stream pulling. Specify the time in UTC. The interval between StartTime and EndTime must be within 7 days, and EndTime must be later than the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-08-28T09:30:30Z</p>
@@ -220,10 +217,7 @@ public class AddVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * <p>The source URL of the live stream.</p>
-         * <blockquote>
-         * <p>Multiple source URLs are supported. Separate them with semicolons (;).</p>
-         * </blockquote>
+         * <p>The origin server of the live stream. Separate multiple origin servers with semicolons (;).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,10 +230,7 @@ public class AddVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * <p>The start time for stream pulling.</p>
-         * <blockquote>
-         * <p>The time must be in UTC format. The interval between StartTime and EndTime cannot exceed 7 days.</p>
-         * </blockquote>
+         * <p>The start time of stream pulling. Specify the time in UTC. The interval between StartTime and EndTime must be within 7 days.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-08-28T07:30:30Z</p>

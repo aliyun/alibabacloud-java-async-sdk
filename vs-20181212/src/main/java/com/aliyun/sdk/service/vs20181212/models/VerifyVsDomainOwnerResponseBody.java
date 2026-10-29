@@ -67,10 +67,10 @@ public class VerifyVsDomainOwnerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>校验内容。</p>
+         * <p>The verification content.</p>
          * <blockquote>
          * </blockquote>
-         * <p>调用成功不返回该参数，调用失败返回校验内容。</p>
+         * <p>This parameter is not returned if the call is successful. If the call fails, the verification content is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>verify_dffeb6610035dcb77b413a59c32c****</p>
@@ -81,7 +81,7 @@ public class VerifyVsDomainOwnerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>

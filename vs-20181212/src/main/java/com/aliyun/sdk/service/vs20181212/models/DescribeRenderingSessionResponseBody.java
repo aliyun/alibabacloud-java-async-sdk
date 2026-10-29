@@ -210,7 +210,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Additional optional ingress network information</p>
+         * <p>The additional optional ingress network information.</p>
          */
         public Builder additionalIngresses(java.util.List<AdditionalIngresses> additionalIngresses) {
             this.additionalIngresses = additionalIngresses;
@@ -218,7 +218,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cloud application ID</p>
+         * <p>The cloud application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
@@ -229,7 +229,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>End client ID</p>
+         * <p>The client ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c91263a0-f9ac-45bd-bbe9-6e293ad32d91</p>
@@ -240,7 +240,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Instance hostname. Defaults to the EIP address.</p>
+         * <p>The instance hostname. By default, the value is the elastic IP address (EIP) used for access.</p>
          * 
          * <strong>example:</strong>
          * <p>111.45.29.96</p>
@@ -251,14 +251,11 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Carrier code. Valid values:</p>
+         * <p>The ISP code. Valid values:</p>
          * <ol>
-         * <li><p>cmcc</p>
-         * </li>
-         * <li><p>unicom</p>
-         * </li>
-         * <li><p>telecom</p>
-         * </li>
+         * <li>cmcc</li>
+         * <li>unicom</li>
+         * <li>telecom</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -270,7 +267,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cloud application service instance location</p>
+         * <p>The location information of the cloud application service instance.</p>
          */
         public Builder location(Location location) {
             this.location = location;
@@ -278,7 +275,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cloud application patch package ID. An empty value means the original version.</p>
+         * <p>The cloud application patch package ID. An empty value indicates the original version.</p>
          * 
          * <strong>example:</strong>
          * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
@@ -289,7 +286,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Port mapping information</p>
+         * <p>The port mapping information.</p>
          */
         public Builder portMappings(java.util.List<PortMappings> portMappings) {
             this.portMappings = portMappings;
@@ -297,7 +294,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cloud application service instance ID</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -308,7 +305,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -319,7 +316,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Session ID</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>session-i205217481741918129226</p>
@@ -330,7 +327,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Start time</p>
+         * <p>The start time. The time is in UTC and follows the ISO 8601 standard. The format is YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-18T02:20:00Z</p>
@@ -341,7 +338,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Session state information</p>
+         * <p>The session status information.</p>
          */
         public Builder stateInfo(StateInfo stateInfo) {
             this.stateInfo = stateInfo;
@@ -407,7 +404,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Public port or port range, such as 22. For a port range, use a forward slash (/) to separate the start and end ports. Example: 10/20.</p>
+             * <p>The external port or port range, such as 22. For a port range, separate the start and end ports with a forward slash (/), for example, 10/20.</p>
              * 
              * <strong>example:</strong>
              * <p>11060/11079</p>
@@ -418,7 +415,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Private port or port range. Each private port maps one-to-one with a public port. For a port range, use a forward slash (/) to separate the start and end ports. Example: 10/20.</p>
+             * <p>The internal port or port range. The internal ports correspond one-to-one to the external ports. For a port range, separate the start and end ports with a forward slash (/), for example, 10/20.</p>
              * 
              * <strong>example:</strong>
              * <p>11060/11079</p>
@@ -501,7 +498,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Domain name or IP address of the cloud application service instance</p>
+             * <p>The domain name or IP address of the cloud application service instance.</p>
              * 
              * <strong>example:</strong>
              * <p>111.45.29.96</p>
@@ -512,14 +509,11 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Carrier code. Valid values:</p>
+             * <p>The ISP code. Valid values:</p>
              * <ol>
-             * <li><p>cmcc</p>
-             * </li>
-             * <li><p>unicom</p>
-             * </li>
-             * <li><p>telecom</p>
-             * </li>
+             * <li>cmcc</li>
+             * <li>unicom</li>
+             * <li>telecom</li>
              * </ol>
              * 
              * <strong>example:</strong>
@@ -531,7 +525,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of port mappings</p>
+             * <p>The port mapping list.</p>
              */
             public Builder portMappings(java.util.List<AdditionalIngressesPortMappings> portMappings) {
                 this.portMappings = portMappings;
@@ -585,7 +579,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Province code of the cloud application service instance</p>
+             * <p>The province code of the cloud application service instance.</p>
              * 
              * <strong>example:</strong>
              * <p>310000</p>
@@ -655,7 +649,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Public port or port range, such as 22. For a port range, use a forward slash (/) to separate the start and end ports. Example: 10/20.</p>
+             * <p>The external port or port range, such as 22. For a port range, separate the start and end ports with a forward slash (/), for example, 10/20.</p>
              * 
              * <strong>example:</strong>
              * <p>10013/10020</p>
@@ -666,7 +660,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Private port or port range. Each private port maps one-to-one with a public port. For a port range, use a forward slash (/) to separate the start and end ports. Example: 10/20.</p>
+             * <p>The internal port or port range. The internal ports correspond one-to-one to the external ports. For a port range, separate the start and end ports with a forward slash (/), for example, 10/20.</p>
              * 
              * <strong>example:</strong>
              * <p>49008/49015</p>
@@ -749,10 +743,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>State description</p>
+             * <p>The status description.</p>
              * 
              * <strong>example:</strong>
-             * <p>已启动</p>
+             * <p>Started</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -760,22 +754,15 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Session state. Valid values:</p>
+             * <p>The session status. Valid values:</p>
              * <ol>
-             * <li><p>SessionStarting: Starting the session</p>
-             * </li>
-             * <li><p>SessionStartSuspended: Session start is suspended. Retry by calling Start again.</p>
-             * </li>
-             * <li><p>SessionStarted: Session started or in use</p>
-             * </li>
-             * <li><p>SessionStartFailed: Session failed to start</p>
-             * </li>
-             * <li><p>SessionAbnormal: Session became abnormal after starting successfully</p>
-             * </li>
-             * <li><p>SessionStopping: Stopping the session</p>
-             * </li>
-             * <li><p>SessionStopFailed: Session failed to stop</p>
-             * </li>
+             * <li>SessionStarting: The session is starting.</li>
+             * <li>SessionStartSuspended: The session start is suspended. You can initiate start again to retry.</li>
+             * <li>SessionStarted: The session is started or in use.</li>
+             * <li>SessionStartFailed: The session failed to start.</li>
+             * <li>SessionAbnormal: The session is abnormal after a successful start.</li>
+             * <li>SessionStopping: The session is stopping.</li>
+             * <li>SessionStopFailed: The session failed to stop.</li>
              * </ol>
              * 
              * <strong>example:</strong>
@@ -787,7 +774,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Time when the state was last updated</p>
+             * <p>The time when the status was last updated. The time follows the ISO 8601 standard and includes the time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-15T10:05:20+08:00</p>

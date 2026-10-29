@@ -199,7 +199,7 @@ public class DescribePurchasedDevicesRequest extends Request {
         } 
 
         /**
-         * <p>Queries by the ID of the group to which the device belongs.</p>
+         * <p>The ID of the workspace to which the device belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>348*****174-cn-qingdao</p>
@@ -211,7 +211,7 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * <p>Queries by device ID.</p>
+         * <p>The device ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4070*****1132-cn-qingdao</p>
@@ -223,10 +223,10 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * <p>Queries by device name.</p>
+         * <p>The device name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx路口摄像头</p>
+         * <p>XXX intersection camera</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -244,7 +244,7 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * <p>The page number. The default is 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -256,7 +256,7 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. The default is 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -268,7 +268,7 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * <p>The field to sort by. Valid value:</p>
+         * <p>The field by which to sort the results. Valid values:</p>
          * <ul>
          * <li>id (default)</li>
          * </ul>
@@ -283,12 +283,10 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * <p>The sorting order. The default is ascending. Valid values:</p>
+         * <p>The sort order. Default value: asc. Valid values:</p>
          * <ul>
-         * <li><p>asc (ascending)</p>
-         * </li>
-         * <li><p>desc (descending)</p>
-         * </li>
+         * <li>asc: Ascending order.</li>
+         * <li>desc: Descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,14 +299,11 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * <p>Queries by device subtype. Valid values:</p>
+         * <p>The device subtype. Valid values:</p>
          * <ul>
-         * <li><p>bullet (bullet camera)</p>
-         * </li>
-         * <li><p>dome (dome camera)</p>
-         * </li>
-         * <li><p>ptz (PTZ camera)</p>
-         * </li>
+         * <li>bullet: Bullet camera.</li>
+         * <li>dome: Dome camera.</li>
+         * <li>ptz: PTZ camera.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -321,14 +316,11 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * <p>Queries by device type. Valid values:</p>
+         * <p>The device type. Valid values:</p>
          * <ul>
-         * <li><p>ipc (camera)</p>
-         * </li>
-         * <li><p>platform (platform)</p>
-         * </li>
-         * <li><p>ied (intelligent edge device)</p>
-         * </li>
+         * <li>ipc: Camera.</li>
+         * <li>platform: Platform.</li>
+         * <li>ied: Intelligent device.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -341,10 +333,10 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * <p>Queries by device vendor.</p>
+         * <p>The device vendor.</p>
          * 
          * <strong>example:</strong>
-         * <p>公司A</p>
+         * <p>Company A</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

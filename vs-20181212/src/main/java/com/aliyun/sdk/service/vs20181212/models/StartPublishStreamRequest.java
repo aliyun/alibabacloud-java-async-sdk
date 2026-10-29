@@ -89,7 +89,11 @@ public class StartPublishStreamRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the cloud application service instance for which to start desktop capture and streaming.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -107,7 +111,11 @@ public class StartPublishStreamRequest extends Request {
         }
 
         /**
+         * <p>The streaming URL for the desktop capture content.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://example.com/live/stream</p>
          */
         public Builder publishUrl(String publishUrl) {
             this.putQueryParameter("PublishUrl", publishUrl);

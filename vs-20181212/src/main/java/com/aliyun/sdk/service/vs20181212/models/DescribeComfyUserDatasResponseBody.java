@@ -143,7 +143,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -154,7 +154,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned list.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. The default value is 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -198,7 +198,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         }
 
         /**
-         * UserDatas.
+         * <p>The list of user data.</p>
          */
         public Builder userDatas(java.util.List<UserDatas> userDatas) {
             this.userDatas = userDatas;
@@ -290,7 +290,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the file or folder.</p>
+             * <p>The name of the file or directory.</p>
              * 
              * <strong>example:</strong>
              * <p>myfile</p>
@@ -312,7 +312,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entry type. Valid values are \<code>file\\</code> and \<code>dir\\</code>.</p>
+             * <p>The file type. Valid values: file and dir.</p>
              * 
              * <strong>example:</strong>
              * <p>file</p>
@@ -323,7 +323,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time the file was last modified.</p>
+             * <p>The last modified time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1776646928000</p>

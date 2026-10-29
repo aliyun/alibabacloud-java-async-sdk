@@ -370,7 +370,7 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time the device was created.</p>
+             * <p>The time when the device was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-02-28T17:00:17Z</p>
@@ -384,7 +384,7 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
              * <p>The device description.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx路口摄像头</p>
+             * <p>XXX intersection camera</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -392,7 +392,7 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the group to which the device belongs.</p>
+             * <p>The ID of the workspace to which the device belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>348*****174-cn-qingdao</p>
@@ -403,10 +403,10 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Group name.</p>
+             * <p>The workspace name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试空间</p>
+             * <p>Test workspace</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -428,7 +428,7 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
              * <p>The device name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx路口摄像头</p>
+             * <p>XXX intersection camera</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -447,7 +447,7 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region to which the space belongs. This is the service center.</p>
+             * <p>The region of the workspace, which is the service center.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-qingdao</p>
@@ -471,12 +471,9 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
             /**
              * <p>The device subtype. Valid values:</p>
              * <ul>
-             * <li><p>bullet (bullet camera)</p>
-             * </li>
-             * <li><p>dome (dome camera)</p>
-             * </li>
-             * <li><p>ptz (PTZ camera)</p>
-             * </li>
+             * <li>bullet: Bullet camera.</li>
+             * <li>dome: Dome camera.</li>
+             * <li>ptz: PTZ camera.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -490,12 +487,9 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
             /**
              * <p>The device type. Valid values:</p>
              * <ul>
-             * <li><p>ipc (camera)</p>
-             * </li>
-             * <li><p>platform (platform)</p>
-             * </li>
-             * <li><p>ied (intelligent edge device)</p>
-             * </li>
+             * <li>ipc: Camera.</li>
+             * <li>platform: Platform.</li>
+             * <li>ied: Intelligent device.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -510,7 +504,7 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
              * <p>The device vendor.</p>
              * 
              * <strong>example:</strong>
-             * <p>公司A</p>
+             * <p>Company A</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;

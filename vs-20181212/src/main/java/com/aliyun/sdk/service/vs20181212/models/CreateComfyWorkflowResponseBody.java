@@ -130,7 +130,7 @@ public class CreateComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. If <code>Status</code> is <code>Failed</code>, this parameter provides the reason for the failure.</p>
+         * <p>The description. If Status is Failed, it includes the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>conn failed!</p>
@@ -141,7 +141,7 @@ public class CreateComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of missing nodes.</p>
+         * <p>The list of missing nodes.</p>
          */
         public Builder missingNodes(java.util.List<String> missingNodes) {
             this.missingNodes = missingNodes;

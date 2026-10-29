@@ -106,7 +106,7 @@ public class ListRenderingImagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The session list.</p>
+         * <p>The list of sessions.</p>
          */
         public Builder images(java.util.List<Images> images) {
             this.images = images;
@@ -125,7 +125,7 @@ public class ListRenderingImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListRenderingImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -242,7 +242,7 @@ public class ListRenderingImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The image description.</p>
+             * <p>The description of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>this is test.</p>
@@ -253,7 +253,7 @@ public class ListRenderingImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image ID.</p>
+             * <p>The ID of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>m-0nd0nxyl7zn220n2y</p>
@@ -264,7 +264,7 @@ public class ListRenderingImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image name.</p>
+             * <p>The name of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -275,7 +275,7 @@ public class ListRenderingImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publish time.</p>
+             * <p>The time when the image was published. The time follows the ISO 8601 standard and includes a time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-17T00:22:53+08:00</p>

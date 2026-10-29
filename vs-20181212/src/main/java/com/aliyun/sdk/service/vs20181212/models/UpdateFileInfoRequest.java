@@ -75,11 +75,11 @@ public class UpdateFileInfoRequest extends Request {
         } 
 
         /**
-         * <p>The file description.</p>
+         * <p>The description of the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试使用</p>
+         * <p>For testing purposes</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -88,7 +88,7 @@ public class UpdateFileInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file. Each file has a unique ID.</p>
+         * <p>The ID of the file, which uniquely identifies a file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

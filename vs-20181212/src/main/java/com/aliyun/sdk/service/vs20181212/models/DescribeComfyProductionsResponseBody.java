@@ -143,7 +143,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -154,7 +154,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -176,7 +176,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of productions.</p>
+         * <p>The list of productions.</p>
          */
         public Builder productions(java.util.List<Productions> productions) {
             this.productions = productions;
@@ -184,7 +184,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -195,7 +195,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total count of productions.</p>
+         * <p>The total number of alert rules.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -316,7 +316,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Comfy task.</p>
+             * <p>The ComfyTask ID.</p>
              * 
              * <strong>example:</strong>
              * <p>6c8234f4-d1e1-4cea-b08b-7926fbdea144</p>
@@ -327,7 +327,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the production, in ISO 8601 format.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard and includes a time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-02-06T20:20:26+08:00</p>
@@ -349,7 +349,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the production.</p>
+             * <p>The production ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3e5bda20-5cd4-4d55-8d23-88d624a18caa</p>
@@ -360,7 +360,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the production.</p>
+             * <p>The production status.</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -371,7 +371,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time of the production, as a Unix timestamp.</p>
+             * <p>The last modified time. The time is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1773707865</p>

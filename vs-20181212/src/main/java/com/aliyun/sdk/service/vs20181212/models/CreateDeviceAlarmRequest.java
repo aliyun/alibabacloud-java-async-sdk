@@ -184,7 +184,7 @@ public class CreateDeviceAlarmRequest extends Request {
          * <li>1: motion detection alerting</li>
          * <li>2: intelligent alerting</li>
          * <li>3: switch alerting</li>
-         * <li>4: video loss alerting.</li>
+         * <li>4: video loss alerting</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -254,7 +254,7 @@ public class CreateDeviceAlarmRequest extends Request {
          * <li>0: none</li>
          * <li>1: JPEG image</li>
          * <li>2: video</li>
-         * <li>3: GIF image.</li>
+         * <li>3: GIF image</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -292,6 +292,9 @@ public class CreateDeviceAlarmRequest extends Request {
         /**
          * <p>The alert subtype.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder subAlarm(Integer subAlarm) {
             this.putQueryParameter("SubAlarm", subAlarm);

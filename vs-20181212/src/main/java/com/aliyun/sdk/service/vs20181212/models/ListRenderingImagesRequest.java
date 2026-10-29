@@ -88,7 +88,7 @@ public class ListRenderingImagesRequest extends Request {
         } 
 
         /**
-         * <p>The cloud application service instance ID.</p>
+         * <p>The ID of the cloud application service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>m-9timxhrrgopkec8ju</p>
@@ -100,7 +100,7 @@ public class ListRenderingImagesRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value starts from 1.</p>
+         * <p>The page number. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -112,7 +112,7 @@ public class ListRenderingImagesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query.</p>
+         * <p>The number of entries to return on each page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -132,9 +132,9 @@ public class DescribeRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The start time to query the next record.</p>
+         * <p>The start time for querying the next record.</p>
          * <blockquote>
-         * <p>Applies only to snapshot queries.</p>
+         * <p>Only applicable to snapshot queries. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class DescribeRecordsResponseBody extends TeaModel {
         /**
          * <p>The total number of pages.</p>
          * <blockquote>
-         * <p>Applies only to recording queries.</p>
+         * <p>Only applicable to recording queries.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class DescribeRecordsResponseBody extends TeaModel {
         /**
          * <p>The page number.</p>
          * <blockquote>
-         * <p>Applies only to recording queries.</p>
+         * <p>Only applicable to recording queries.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -174,9 +174,9 @@ public class DescribeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * <blockquote>
-         * <p>Applies only to recording queries.</p>
+         * <p>Only applicable to recording queries.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class DescribeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of stored records.</p>
+         * <p>The list of storage records.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.records = records;
@@ -196,7 +196,7 @@ public class DescribeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -207,9 +207,9 @@ public class DescribeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of stored records.</p>
+         * <p>The total number of storage records.</p>
          * <blockquote>
-         * <p>Applies only to recording queries.</p>
+         * <p>Only applicable to recording queries.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -422,7 +422,7 @@ public class DescribeRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the stored record.</p>
+             * <p>The end time of the storage record. The time is in the YYYY-MM-DDTHH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-23T18:33:48</p>
@@ -433,16 +433,12 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format of the stored file. Valid values:</p>
+             * <p>The format of the storage file. Valid values:</p>
              * <ul>
-             * <li><p>mp4</p>
-             * </li>
-             * <li><p>flv</p>
-             * </li>
-             * <li><p>hls</p>
-             * </li>
-             * <li><p>jpg</p>
-             * </li>
+             * <li>mp4</li>
+             * <li>flv</li>
+             * <li>hls</li>
+             * <li>jpg</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -465,9 +461,9 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the stored record.</p>
+             * <p>The ID of the storage record.</p>
              * <blockquote>
-             * <p>Applies only to recording queries.</p>
+             * <p>Only applicable to recording queries.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -479,7 +475,7 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bucket where the file is stored.</p>
+             * <p>The OSS bucket of the storage file.</p>
              * 
              * <strong>example:</strong>
              * <p>my_oss_bucket</p>
@@ -501,7 +497,7 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object of the stored file.</p>
+             * <p>The OSS object of the storage file.</p>
              * 
              * <strong>example:</strong>
              * <p>record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8</p>
@@ -512,7 +508,7 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the stored record.</p>
+             * <p>The start time of the storage record. The time is in the YYYY-MM-DDTHH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-23T18:19:32</p>
@@ -545,12 +541,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the stored record. Valid values:</p>
+             * <p>The type of the storage record. Valid values:</p>
              * <ul>
-             * <li><p>record</p>
-             * </li>
-             * <li><p>snapshot</p>
-             * </li>
+             * <li>record: recording</li>
+             * <li>snapshot: snapshot</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -562,7 +556,7 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the stored file.</p>
+             * <p>The URL of the storage file.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://my_oss_bucket.oss-cn-qingdao.aliyuncs.com/record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8">http://my_oss_bucket.oss-cn-qingdao.aliyuncs.com/record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8</a></p>

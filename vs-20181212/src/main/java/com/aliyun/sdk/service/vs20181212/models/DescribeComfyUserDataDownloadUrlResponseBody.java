@@ -117,7 +117,7 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The download URL for the application package.</p>
+         * <p>The download URL of the application package.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.xxx.xxx">https://xxx.xxx.xxx</a>.</p>
@@ -128,7 +128,7 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time for the download link.</p>
+         * <p>The expiration time of the download URL. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1752805579553</p>
@@ -139,7 +139,7 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -150,7 +150,7 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>

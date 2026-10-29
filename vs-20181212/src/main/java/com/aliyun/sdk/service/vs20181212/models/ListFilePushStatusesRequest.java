@@ -144,7 +144,7 @@ public class ListFilePushStatusesRequest extends Request {
         } 
 
         /**
-         * <p>A time range filter parameter. Specify the value in ISO8601 format using UTC time: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The start time for the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-23T02:13:00Z</p>
@@ -156,7 +156,7 @@ public class ListFilePushStatusesRequest extends Request {
         }
 
         /**
-         * <p>The file ID, which uniquely identifies a file.</p>
+         * <p>The ID of the file, which uniquely identifies the file.</p>
          * 
          * <strong>example:</strong>
          * <p>f-1671accd4dafdag3er256cvgewt13f7141db2f7</p>
@@ -168,7 +168,7 @@ public class ListFilePushStatusesRequest extends Request {
         }
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>myfile</p>
@@ -180,7 +180,7 @@ public class ListFilePushStatusesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the results to return. Pages start from 1.Default value: 1.</p>
+         * <p>The page number of the list to query. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -192,7 +192,7 @@ public class ListFilePushStatusesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Valid values: 1 to 100.Default value: 10.</p>
+         * <p>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -204,7 +204,7 @@ public class ListFilePushStatusesRequest extends Request {
         }
 
         /**
-         * <p>The cloud application service instance ID. Use this parameter to query files installed on a specific instance.</p>
+         * <p>The instance ID of the cloud application service, which is used to query the files installed on the specified instance.</p>
          * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -216,7 +216,7 @@ public class ListFilePushStatusesRequest extends Request {
         }
 
         /**
-         * <p>A time range filter parameter. Specify the value in ISO8601 format using UTC time: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The start time for the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-17T12:16:00Z</p>

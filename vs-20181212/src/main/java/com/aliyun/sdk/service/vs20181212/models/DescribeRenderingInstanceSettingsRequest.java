@@ -83,7 +83,7 @@ public class DescribeRenderingInstanceSettingsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Cloud Application service instance.</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>

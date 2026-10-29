@@ -183,7 +183,7 @@ public class UpdateVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * <p>Your stream pulling domain.</p>
+         * <p>The stream pulling domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class UpdateVsPullStreamInfoConfigRequest extends Request {
         /**
          * <p>The end time of stream pulling.</p>
          * <blockquote>
-         * <p>UTC time format. The interval between StartTime and EndTime must be within 7 days, and EndTime must be later than the current time.</p>
+         * <p>Specify the time in UTC. The interval between StartTime and EndTime must be within 7 days, and EndTime must be later than the current time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -220,9 +220,9 @@ public class UpdateVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * <p>The origin server of your live stream.</p>
+         * <p>The origin server of the live stream.</p>
          * <blockquote>
-         * <p>Supports multiple values, separated by English semicolons (;).</p>
+         * <p>Multiple origin servers are supported. Separate them with semicolons (;).</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -238,7 +238,7 @@ public class UpdateVsPullStreamInfoConfigRequest extends Request {
         /**
          * <p>The start time of stream pulling.</p>
          * <blockquote>
-         * <p>UTC time format. The interval between StartTime and EndTime must be within 7 days.</p>
+         * <p>Specify the time in UTC. The interval between StartTime and EndTime must be within 7 days.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

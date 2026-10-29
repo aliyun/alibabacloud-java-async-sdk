@@ -149,10 +149,8 @@ public class BatchForbidVsStreamRequest extends Request {
          * <p>The stream name.</p>
          * <blockquote>
          * <ul>
-         * <li><p>Format: AppName/StreamName.</p>
-         * </li>
-         * <li><p>Specify multiple names, separated by commas (,).</p>
-         * </li>
+         * <li>Format: AppName/StreamName.</li>
+         * <li>You can specify multiple stream names separated by commas (,).</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -167,7 +165,10 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
-         * ControlStreamAction.
+         * <p>The stream control action. Set the value to forbid, which indicates that stream push is forbidden.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>forbid</p>
          */
         public Builder controlStreamAction(String controlStreamAction) {
             this.putQueryParameter("ControlStreamAction", controlStreamAction);
@@ -176,7 +177,7 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
-         * <p>Your accelerated domain name.</p>
+         * <p>The accelerated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,12 +190,12 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the operation applies to stream ingest by a streamer or stream pulling by a client. Valid values:</p>
+         * <p>Specifies whether the stream is pushed by the streamer or pulled by the client. Valid values:</p>
          * <ul>
-         * <li>publisher (streamer ingest)</li>
+         * <li>publisher: The stream is pushed by the streamer.</li>
          * </ul>
          * <blockquote>
-         * <p>Only publisher is supported.</p>
+         * <p>Currently, only publisher is supported.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -208,12 +209,10 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to stop ingest without adding the stream to the blacklist. Valid values:</p>
+         * <p>Specifies whether to only interrupt the stream without adding it to the blacklist. Valid values:</p>
          * <ul>
-         * <li><p>yes</p>
-         * </li>
-         * <li><p>no</p>
-         * </li>
+         * <li>yes</li>
+         * <li>no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,9 +234,9 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
-         * <p>The time to resume ingest.</p>
+         * <p>The time to resume the stream.</p>
          * <blockquote>
-         * <p>Use UTC format. Example: 2015-12-01T17:37:00Z</p>
+         * <p>Specify the time in UTC format, for example, 2015-12-01T17:37:00Z.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

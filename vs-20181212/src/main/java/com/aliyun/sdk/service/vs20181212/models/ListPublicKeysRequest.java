@@ -144,7 +144,7 @@ public class ListPublicKeysRequest extends Request {
         } 
 
         /**
-         * <p>A parameter for filtering by time range. The time must be in UTC and follow the ISO 8601 standard. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-09-22T02:23:00Z</p>
@@ -182,10 +182,8 @@ public class ListPublicKeysRequest extends Request {
         /**
          * <p>The type of the public key. Valid values:</p>
          * <ul>
-         * <li><p><strong>adb</strong>: ADB key</p>
-         * </li>
-         * <li><p><strong>ssh</strong>: SSH key</p>
-         * </li>
+         * <li><strong>adb</strong>: ADB key</li>
+         * <li><strong>ssh</strong>: SSH key</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,8 +196,7 @@ public class ListPublicKeysRequest extends Request {
         }
 
         /**
-         * <p>The page number of the list to query. The value starts from 1.
-         * Default value: 1</p>
+         * <p>The page number of the list to query. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,8 +208,7 @@ public class ListPublicKeysRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page for a paged query. Valid values: 1 to 100.
-         * Default value: 10</p>
+         * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -224,7 +220,7 @@ public class ListPublicKeysRequest extends Request {
         }
 
         /**
-         * <p>A parameter for filtering by time range. The time must be in UTC and follow the ISO 8601 standard. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-09-21T16:00:00Z</p>

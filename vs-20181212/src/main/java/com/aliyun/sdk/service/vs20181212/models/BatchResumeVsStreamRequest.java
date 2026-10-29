@@ -118,7 +118,7 @@ public class BatchResumeVsStreamRequest extends Request {
         } 
 
         /**
-         * <p>The name of the stream in the AppName/StreamName format. To specify multiple streams, separate the stream names with commas.</p>
+         * <p>The stream name in the format of AppName/StreamName. Separate multiple stream names with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,10 @@ public class BatchResumeVsStreamRequest extends Request {
         }
 
         /**
-         * ControlStreamAction.
+         * <p>The stream control operation. Set the value to resume to resume the stream push.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resume</p>
          */
         public Builder controlStreamAction(String controlStreamAction) {
             this.putQueryParameter("ControlStreamAction", controlStreamAction);
@@ -153,7 +156,7 @@ public class BatchResumeVsStreamRequest extends Request {
         }
 
         /**
-         * <p>The type of live stream. Only publisher is supported, which indicates that the stream is ingested by a streamer.</p>
+         * <p>Specifies whether the stream is pushed by the broadcaster or pulled by the client. Valid value: publisher (broadcaster push).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

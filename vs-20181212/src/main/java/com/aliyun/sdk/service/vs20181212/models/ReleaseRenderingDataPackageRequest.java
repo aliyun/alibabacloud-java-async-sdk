@@ -60,7 +60,7 @@ public class ReleaseRenderingDataPackageRequest extends Request {
         } 
 
         /**
-         * <p>Cloud application service data pack ID</p>
+         * <p>The ID of the cloud application service data package.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

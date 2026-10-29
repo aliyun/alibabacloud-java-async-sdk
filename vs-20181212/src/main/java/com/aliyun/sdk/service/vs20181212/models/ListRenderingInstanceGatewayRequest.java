@@ -129,7 +129,7 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         } 
 
         /**
-         * <p>The time range for filtering. The time must be in ISO 8601 format and in UTC, such as \<code>yyyy-MM-ddTHH:mm:ssZ\\</code>.</p>
+         * <p>The time range filter parameter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-20T12:23:02Z</p>
@@ -141,7 +141,7 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the gateway instance.</p>
+         * <p>The instance ID of the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>render-xxx</p>
@@ -153,7 +153,7 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         }
 
         /**
-         * <p>The page number of the list to query.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page for a paged query.</p>
+         * <p>The number of entries per page in the paging Settings for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -177,7 +177,7 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud application service instance.</p>
+         * <p>The instance ID of the cloud application service.</p>
          * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -189,7 +189,7 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         }
 
         /**
-         * <p>This parameter specifies the time range filter. The time must be in ISO 8601 format and UTC time, such as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time range filter parameter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-18T02:20:00Z</p>

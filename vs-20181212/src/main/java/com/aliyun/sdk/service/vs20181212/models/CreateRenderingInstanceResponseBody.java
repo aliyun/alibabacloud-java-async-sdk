@@ -67,7 +67,7 @@ public class CreateRenderingInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cloud application service instance.</p>
+         * <p>The instance ID of the cloud application service.</p>
          * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>

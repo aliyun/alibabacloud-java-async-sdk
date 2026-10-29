@@ -99,7 +99,7 @@ public class ListHivesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -194,7 +194,7 @@ public class ListHivesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard and includes the time zone offset. Format: YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05-14T15:20:37+08:00</p>

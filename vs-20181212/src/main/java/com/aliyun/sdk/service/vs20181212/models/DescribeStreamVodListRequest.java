@@ -104,7 +104,7 @@ public class DescribeStreamVodListRequest extends Request {
         } 
 
         /**
-         * <p>VOD record end time (unix timestamp, unit: seconds)</p>
+         * <p>The end time of the video-on-demand records. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,11 +117,11 @@ public class DescribeStreamVodListRequest extends Request {
         }
 
         /**
-         * <p>Stream ID.</p>
+         * <p>The stream ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>18526049*****219118918-cn-beijing</p>
+         * <p>18526049******19118918-cn-beijing</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -139,7 +139,7 @@ public class DescribeStreamVodListRequest extends Request {
         }
 
         /**
-         * <p>VOD record start time (unix timestamp, unit: seconds)</p>
+         * <p>The start time of the video-on-demand records. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>List of installation records.</p>
+         * <p>The list of installation information.</p>
          */
         public Builder installationInfos(java.util.List<InstallationInfos> installationInfos) {
             this.installationInfos = installationInfos;
@@ -114,7 +114,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page number of the returned list.</p>
+         * <p>The page number of the returned list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of entries per page for paged queries.</p>
+         * <p>The number of entries returned per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -147,7 +147,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of installation records.</p>
+         * <p>The total number of installation records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -307,7 +307,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Application ID.</p>
+             * <p>The ID of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
@@ -318,7 +318,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application name.</p>
+             * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>com.aaa.bbb</p>
@@ -329,7 +329,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application version.</p>
+             * <p>The version of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>1.5.0</p>
@@ -340,7 +340,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Installation time.</p>
+             * <p>The installation time. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-28T14:48:34+08:00</p>
@@ -351,7 +351,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Patch package ID.</p>
+             * <p>The ID of the patch package.</p>
              * 
              * <strong>example:</strong>
              * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
@@ -362,7 +362,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cloud application service instance ID.</p>
+             * <p>The cloud application service instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -373,13 +373,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cloud application installation status. Valid values:</p>
-             * <ol>
-             * <li><p>Intermediate states: install-init, installing</p>
-             * </li>
-             * <li><p>Final states: installed, install-failed</p>
-             * </li>
-             * </ol>
+             * <p>The installation status of the cloud application. Valid values: install-init and installing (intermediate states), and installed and install-failed (final states).</p>
              * 
              * <strong>example:</strong>
              * <p>installed</p>
@@ -390,7 +384,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status description.</p>
+             * <p>The description of the status.</p>
              * 
              * <strong>example:</strong>
              * <p>install success</p>
@@ -401,7 +395,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Time when the status was last updated.</p>
+             * <p>The time when the status was last updated. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-28T14:50:04+08:00</p>

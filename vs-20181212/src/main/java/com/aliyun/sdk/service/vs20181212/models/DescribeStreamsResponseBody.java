@@ -119,7 +119,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -130,7 +130,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of items per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -152,7 +152,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -163,7 +163,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of streams.</p>
+         * <p>The list of streams.</p>
          */
         public Builder streams(java.util.List<Streams> streams) {
             this.streams = streams;
@@ -171,7 +171,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of streams.</p>
+         * <p>The total number of streams.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -383,7 +383,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Application that owns this stream.</p>
+             * <p>The application to which the stream belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>live</p>
@@ -394,7 +394,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Time when the stream was created.</p>
+             * <p>The time when the stream was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-12-10T17:00:00Z</p>
@@ -405,7 +405,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Device ID of this stream.</p>
+             * <p>The ID of the device to which the stream belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>348*****380-cn-qingdao</p>
@@ -427,7 +427,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the group to which the stream belongs.</p>
+             * <p>The ID of the space to which the stream belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>348*****174-cn-qingdao</p>
@@ -438,7 +438,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Video stream height in pixels.</p>
+             * <p>The height of the video stream resolution.</p>
              * 
              * <strong>example:</strong>
              * <p>720</p>
@@ -449,7 +449,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Stream ID.</p>
+             * <p>The stream ID.</p>
              * 
              * <strong>example:</strong>
              * <p>323*****997-cn-qingdao</p>
@@ -460,7 +460,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Stream name.</p>
+             * <p>The stream name.</p>
              * 
              * <strong>example:</strong>
              * <p>31000000*****0000002</p>
@@ -471,7 +471,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Streaming domain for this stream.</p>
+             * <p>The playback domain name to which the stream belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>demo.aliyundoc.com</p>
@@ -482,7 +482,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Stream protocol.</p>
+             * <p>The stream protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>gb28181</p>
@@ -493,7 +493,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Ingest domain for this stream.</p>
+             * <p>The ingest domain name to which the stream belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>example.aliyundoc.com</p>
@@ -504,12 +504,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Stream status. Valid values:</p>
+             * <p>The stream status. Valid values:</p>
              * <ul>
-             * <li><p>on (online)</p>
-             * </li>
-             * <li><p>off (offline)</p>
-             * </li>
+             * <li>on: online</li>
+             * <li>off: offline</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -521,7 +519,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Video stream width in pixels.</p>
+             * <p>The width of the video stream resolution.</p>
              * 
              * <strong>example:</strong>
              * <p>1280</p>

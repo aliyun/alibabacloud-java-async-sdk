@@ -74,7 +74,7 @@ public class DeleteRenderingInstanceConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>Configuration content. Purge all configured modules by default.</p>
+         * <p>The configuration content. By default, all configured modules are cleared.</p>
          */
         public Builder configuration(java.util.List<Configuration> configuration) {
             String configurationShrink = shrink(configuration, "Configuration", "json");
@@ -84,7 +84,7 @@ public class DeleteRenderingInstanceConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Cloud application service instance ID.</p>
+         * <p>The cloud application service instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class DeleteRenderingInstanceConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>List attribute names to purge. Purge all configured attributes for this module by default.</p>
+             * <p>The list of attribute names whose configurations are to be cleared. By default, all configured attributes of the module are cleared.</p>
              */
             public Builder attributeNames(java.util.List<String> attributeNames) {
                 this.attributeNames = attributeNames;
@@ -165,7 +165,7 @@ public class DeleteRenderingInstanceConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Module name.</p>
+             * <p>The name of the module.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

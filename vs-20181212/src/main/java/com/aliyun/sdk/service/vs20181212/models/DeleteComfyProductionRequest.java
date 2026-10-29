@@ -59,7 +59,7 @@ public class DeleteComfyProductionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the production.</p>
+         * <p>The ID of the artifact.</p>
          * 
          * <strong>example:</strong>
          * <p>3e5bda20-5cd4-4d55-8d23-88d624a18caa</p>

@@ -130,7 +130,7 @@ public class ListHivesRequest extends Request {
         } 
 
         /**
-         * <p>The time range filter parameter. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The end time. The time follows the ISO 8601 standard and must be in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-14T15:20:37+08:00</p>
@@ -142,7 +142,7 @@ public class ListHivesRequest extends Request {
         }
 
         /**
-         * <p>The cloud application service group ID.</p>
+         * <p>The ID of the cloud application service group.</p>
          * 
          * <strong>example:</strong>
          * <p>g-xxxx</p>
@@ -166,7 +166,7 @@ public class ListHivesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the query list. Minimum value: 1. Default value: 1.</p>
+         * <p>The page number of the list to query. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -178,7 +178,7 @@ public class ListHivesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
+         * <p>Settings for the number of entries per page during paging in a paged query. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -190,7 +190,7 @@ public class ListHivesRequest extends Request {
         }
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard and includes the time zone offset. Format: YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-14T15:20:37+08:00</p>

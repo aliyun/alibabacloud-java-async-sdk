@@ -117,7 +117,7 @@ public class UpgradeRenderingInstanceImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about failed instances.</p>
+         * <p>The information about the failed instances.</p>
          */
         public Builder failedItems(java.util.List<FailedItems> failedItems) {
             this.failedItems = failedItems;
@@ -125,7 +125,7 @@ public class UpgradeRenderingInstanceImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -136,7 +136,7 @@ public class UpgradeRenderingInstanceImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of successful instances.</p>
+         * <p>The number of successfully upgraded instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class UpgradeRenderingInstanceImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about successful instances.</p>
+         * <p>The information about the successfully upgraded instances.</p>
          */
         public Builder successItems(java.util.List<SuccessItems> successItems) {
             this.successItems = successItems;
@@ -226,7 +226,7 @@ public class UpgradeRenderingInstanceImageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code of the failure.</p>
+             * <p>The error code for the failure.</p>
              * 
              * <strong>example:</strong>
              * <p>200302</p>
@@ -237,7 +237,7 @@ public class UpgradeRenderingInstanceImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message of the failure.</p>
+             * <p>The error message for the failure.</p>
              * 
              * <strong>example:</strong>
              * <p>Not Applied</p>

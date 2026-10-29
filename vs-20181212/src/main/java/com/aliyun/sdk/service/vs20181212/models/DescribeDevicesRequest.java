@@ -295,7 +295,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the device. The value must be unique.</p>
+         * <p>The device serial number, which uniquely identifies the device.</p>
          * 
          * <strong>example:</strong>
          * <p>7D0*****4C0</p>
@@ -307,7 +307,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * <p>You can query by device national standard ID.</p>
+         * <p>The national standard ID of the device.</p>
          * 
          * <strong>example:</strong>
          * <p>310000000****0000002</p>
@@ -319,7 +319,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * <p>Query by device Space ID.</p>
+         * <p>The ID of the workspace to which the device belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>348*****174-cn-qingdao</p>
@@ -331,10 +331,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * <p>The device ID.</p>
-         * <blockquote>
-         * <p>Specify multiple IDs. Separate them with commas (,).</p>
-         * </blockquote>
+         * <p>The device ID. You can specify multiple IDs separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>348*****380-cn-qingdao</p>
@@ -358,7 +355,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return stream statistics. Default value: false.</p>
+         * <p>Specifies whether to return stream statistics information. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -370,13 +367,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * <p>The device name.</p>
-         * <blockquote>
-         * <p>Specify multiple names. Separate them with commas (,).</p>
-         * </blockquote>
+         * <p>The device name. You can specify multiple names separated by commas (,).</p>
          * 
          * <strong>example:</strong>
-         * <p>摄像头A</p>
+         * <p>Camera A</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -418,7 +412,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent device.</p>
+         * <p>The ID of the parent device to which the device belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>399*****774-cn-qingdao</p>
@@ -430,10 +424,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results. Valid value:</p>
-         * <blockquote>
-         * <p>id (default)</p>
-         * </blockquote>
+         * <p>The field used for sorting. Valid value:</p>
+         * <ul>
+         * <li>id: Sort by ID. This is the default value.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>id</p>
@@ -447,10 +441,8 @@ public class DescribeDevicesRequest extends Request {
         /**
          * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li><p>asc (ascending) (default)</p>
-         * </li>
-         * <li><p>desc (descending)</p>
-         * </li>
+         * <li>asc: Ascending order. This is the default value.</li>
+         * <li>desc: Descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -463,7 +455,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * <p>Query devices by status.</p>
+         * <p>The device status.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -477,12 +469,9 @@ public class DescribeDevicesRequest extends Request {
         /**
          * <p>The device type. Valid values:</p>
          * <ul>
-         * <li><p>ipc (camera)</p>
-         * </li>
-         * <li><p>platform</p>
-         * </li>
-         * <li><p>ied (intelligent edge device)</p>
-         * </li>
+         * <li>ipc: Camera.</li>
+         * <li>platform: Platform.</li>
+         * <li>ied: Intelligent device.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -495,7 +484,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * <p>Query by device manufacturer.</p>
+         * <p>The device vendor.</p>
          * 
          * <strong>example:</strong>
          * <p>8yd*****qem</p>

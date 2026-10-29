@@ -67,7 +67,10 @@ public class DescribeVsUserResourcePackageResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84839536-2B7E-457D-9D8C-82E6C7D4E1A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -83,11 +83,11 @@ public class DescribeVodStreamURLRequest extends Request {
         }
 
         /**
-         * <p>The file URL of the VOD video.</p>
+         * <p>The file URL of the video-on-demand video.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></p>
+         * <p><a href="http://xxx/xxxx.mp4">http://xxx/xxxx.mp4</a></p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

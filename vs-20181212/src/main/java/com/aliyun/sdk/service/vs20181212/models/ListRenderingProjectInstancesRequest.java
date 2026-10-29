@@ -145,7 +145,7 @@ public class ListRenderingProjectInstancesRequest extends Request {
         } 
 
         /**
-         * <p>End time of the time range. Use ISO 8601 format in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-30T02:18:00Z</p>
@@ -157,7 +157,7 @@ public class ListRenderingProjectInstancesRequest extends Request {
         }
 
         /**
-         * <p>Page number. Start from 1.</p>
+         * <p>The page number. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -169,7 +169,7 @@ public class ListRenderingProjectInstancesRequest extends Request {
         }
 
         /**
-         * <p>Number of entries per page.</p>
+         * <p>The Settings for the number of entries per page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -181,7 +181,7 @@ public class ListRenderingProjectInstancesRequest extends Request {
         }
 
         /**
-         * <p>Project ID</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class ListRenderingProjectInstancesRequest extends Request {
         }
 
         /**
-         * <p>Cloud application service instance ID</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -206,7 +206,7 @@ public class ListRenderingProjectInstancesRequest extends Request {
         }
 
         /**
-         * <p>A parameter for filtering by a time range. The time must be in UTC and formatted according to the ISO 8601 standard as \<code>yyyy-MM-ddTHH:mm:ssZ\\</code>.</p>
+         * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-27T16:00:00Z</p>
@@ -218,15 +218,12 @@ public class ListRenderingProjectInstancesRequest extends Request {
         }
 
         /**
-         * <p>Instance status. Valid values:</p>
-         * <ol>
-         * <li><p>Idle</p>
-         * </li>
-         * <li><p>Locked</p>
-         * </li>
-         * <li><p>InUse</p>
-         * </li>
-         * </ol>
+         * <p>The project instance status. Valid values:</p>
+         * <ul>
+         * <li>Idle: idle</li>
+         * <li>Locked: locked</li>
+         * <li>InUse: in use</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Idle</p>

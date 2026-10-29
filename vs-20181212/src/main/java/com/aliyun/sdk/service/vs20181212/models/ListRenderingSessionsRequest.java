@@ -201,7 +201,7 @@ public class ListRenderingSessionsRequest extends Request {
         } 
 
         /**
-         * <p>Cloud application ID</p>
+         * <p>The cloud application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
@@ -213,7 +213,7 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * <p>Unique ID of the client.</p>
+         * <p>The unique ID of the end client.</p>
          * 
          * <strong>example:</strong>
          * <p>ae7990f4-203d-494b-a5ea-e0babe9fa13d</p>
@@ -225,7 +225,7 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * <p>Time range filter parameter. Represented in ISO8601 standard and must use UTC time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-31T22:20:00Z</p>
@@ -237,7 +237,7 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * <p>Page number, starting from 1</p>
+         * <p>The page number. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -249,7 +249,7 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * <p>The number of rows per page set for paged queries.</p>
+         * <p>The number of entries to return on each page during a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -261,10 +261,7 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * <p>Cloud application patch ID.</p>
-         * <ol>
-         * <li>When you enter origin, only sessions that started the original version of the app are filtered.</li>
-         * </ol>
+         * <p>The ID of the cloud application patch package. If you set this parameter to origin, only sessions that use the original version of the application are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
@@ -276,7 +273,7 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * <p>Project ID</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +286,7 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * <p>Cloud application service instance ID</p>
+         * <p>The instance ID of the cloud application service.</p>
          * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -301,7 +298,7 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * <p>Session ID</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>session-i205217481741918129226</p>
@@ -313,7 +310,7 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * <p>Time range filter parameter. Represented in ISO8601 standard and must use UTC time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-25T02:00:00Z</p>
@@ -325,23 +322,16 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * <p>Session state. Valid values:</p>
-         * <ol>
-         * <li><p>SessionStarting: The session is starting.</p>
-         * </li>
-         * <li><p>SessionStartSuspended: Session startup is paused. Retry by initiating start again.</p>
-         * </li>
-         * <li><p>SessionStarted: The session has started/is in use.</p>
-         * </li>
-         * <li><p>SessionStartFailed: Session startup failed.</p>
-         * </li>
-         * <li><p>SessionAbnormal: The session is abnormal after successful startup.</p>
-         * </li>
-         * <li><p>SessionStopping: The session is stopping.</p>
-         * </li>
-         * <li><p>SessionStopFailed: Session stop failed.</p>
-         * </li>
-         * </ol>
+         * <p>The session state. Valid values:</p>
+         * <ul>
+         * <li>SessionStarting: The session is starting.</li>
+         * <li>SessionStartSuspended: The session startup is suspended. You can retry by initiating a start request again.</li>
+         * <li>SessionStarted: The session is started or in use.</li>
+         * <li>SessionStartFailed: The session failed to start.</li>
+         * <li>SessionAbnormal: An exception occurred after the session was successfully started.</li>
+         * <li>SessionStopping: The session is stopping.</li>
+         * <li>SessionStopFailed: The session failed to stop.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SessionStarting</p>

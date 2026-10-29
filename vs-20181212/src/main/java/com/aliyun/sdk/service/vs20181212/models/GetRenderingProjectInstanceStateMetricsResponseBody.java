@@ -67,7 +67,7 @@ public class GetRenderingProjectInstanceStateMetricsResponseBody extends TeaMode
         } 
 
         /**
-         * <p>Request ID</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -78,7 +78,7 @@ public class GetRenderingProjectInstanceStateMetricsResponseBody extends TeaMode
         }
 
         /**
-         * <p>List of project instance state statistics</p>
+         * <p>The list of statistics information for project instance status.</p>
          */
         public Builder stateMetrics(java.util.List<StateMetrics> stateMetrics) {
             this.stateMetrics = stateMetrics;
@@ -144,7 +144,7 @@ public class GetRenderingProjectInstanceStateMetricsResponseBody extends TeaMode
             } 
 
             /**
-             * <p>Number of instances</p>
+             * <p>The number of instances.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -155,7 +155,7 @@ public class GetRenderingProjectInstanceStateMetricsResponseBody extends TeaMode
             }
 
             /**
-             * <p>Project instance state</p>
+             * <p>The instance status of the project.</p>
              * 
              * <strong>example:</strong>
              * <p>Idle</p>

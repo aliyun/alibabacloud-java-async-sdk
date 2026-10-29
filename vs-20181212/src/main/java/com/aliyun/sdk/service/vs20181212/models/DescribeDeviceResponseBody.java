@@ -457,23 +457,18 @@ public class DescribeDeviceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Subscribed GB alarm method. Valid values:</p>
+         * <p>The subscribed national standard alarm methods. Valid values:</p>
          * <ul>
-         * <li><p>0 (all)</p>
-         * </li>
-         * <li><p>5 (video alarm)</p>
-         * </li>
-         * <li><p>7 (other alarms)</p>
-         * </li>
-         * </ul>
-         * <blockquote>
+         * <li>0: All.</li>
+         * <li>5: Video alarm.</li>
+         * <li>7: Other alarms.<blockquote>
          * <ul>
-         * <li><p>An empty value means no subscription.</p>
-         * </li>
-         * <li><p>Multiple values are supported, separated by commas (,).</p>
-         * </li>
+         * <li>An empty value indicates no subscription.</li>
+         * <li>Multiple values are supported and must be separated by commas (,).</li>
          * </ul>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -492,7 +487,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether device location subscription is enabled.</p>
+         * <p>Specifies whether device position subscription is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -503,7 +498,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Automatically start the stream.</p>
+         * <p>Specifies whether to automatically start the stream.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -514,7 +509,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Channel synchronization time.</p>
+         * <p>The channel synchronization time. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-28T17:01:17Z</p>
@@ -525,7 +520,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device creation time.</p>
+         * <p>The time when the device was created. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-28T17:00:17Z</p>
@@ -536,10 +531,10 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device description.</p>
+         * <p>The device description.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx路口摄像头</p>
+         * <p>Camera at the XXX intersection</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -547,7 +542,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Directory information.</p>
+         * <p>The directory information.</p>
          */
         public Builder directory(Directory directory) {
             this.directory = directory;
@@ -555,7 +550,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Directory ID.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3238848****092994-cn-qingdao</p>
@@ -566,7 +561,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device serial number.</p>
+         * <p>The device serial number.</p>
          * 
          * <strong>example:</strong>
          * <p>7D0*****4C0</p>
@@ -577,7 +572,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the device is enabled.</p>
+         * <p>Specifies whether the device is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -588,9 +583,9 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>GB device ID.</p>
+         * <p>The national standard ID of the device.</p>
          * <blockquote>
-         * <p>This applies only to GB protocols.</p>
+         * <p>This parameter is applicable only to the national standard protocol.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -602,7 +597,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Space ID to which the device belongs.</p>
+         * <p>The ID of the workspace to which the device belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>3238848****092994-cn-qingdao</p>
@@ -613,7 +608,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device ID.</p>
+         * <p>The device ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3238848****092996-cn-qingdao</p>
@@ -624,7 +619,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device IP address.</p>
+         * <p>The IP address of the device.</p>
          * 
          * <strong>example:</strong>
          * <p>10.10.10.10</p>
@@ -635,7 +630,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device latitude.</p>
+         * <p>The latitude of the device.</p>
          * 
          * <strong>example:</strong>
          * <p>119.20</p>
@@ -646,7 +641,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device longitude.</p>
+         * <p>The longitude of the device.</p>
          * 
          * <strong>example:</strong>
          * <p>45.00</p>
@@ -657,10 +652,10 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device name.</p>
+         * <p>The device name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx路口摄像头</p>
+         * <p>Camera at the XXX intersection</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -668,7 +663,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Other device parameters.</p>
+         * <p>Other parameters of the device.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -679,7 +674,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Parent device ID. For example, the platform ID to which a camera belongs.</p>
+         * <p>The ID of the parent device, such as the ID of the platform to which the camera belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>3238848****092995-cn-qingdao</p>
@@ -690,7 +685,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device password.</p>
+         * <p>The device password.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -701,7 +696,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device port.</p>
+         * <p>The device port.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -712,7 +707,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Position subscription interval, in seconds.</p>
+         * <p>The position subscription interval, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -723,7 +718,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device registration protocol.</p>
+         * <p>The device registration protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>gb28181</p>
@@ -734,7 +729,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device registration time.</p>
+         * <p>The time when the device was registered. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-28T17:00:17Z</p>
@@ -745,7 +740,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -756,7 +751,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device stream statistics.</p>
+         * <p>The stream statistics information of the device.</p>
          */
         public Builder stats(Stats stats) {
             this.stats = stats;
@@ -764,16 +759,12 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device status. Valid values:</p>
+         * <p>The device status. Valid values:</p>
          * <ul>
-         * <li><p>on (online)</p>
-         * </li>
-         * <li><p>off (offline)</p>
-         * </li>
-         * <li><p>failed (locked)</p>
-         * </li>
-         * <li><p>new (unregistered)</p>
-         * </li>
+         * <li>on: Online.</li>
+         * <li>off: Offline.</li>
+         * <li>failed: Locked.</li>
+         * <li>new: Unregistered.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -785,14 +776,11 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device type. Valid values:</p>
+         * <p>The device type. Valid values:</p>
          * <ul>
-         * <li><p>ipc (camera)</p>
-         * </li>
-         * <li><p>platform (platform)</p>
-         * </li>
-         * <li><p>ied (intelligent device)</p>
-         * </li>
+         * <li>ipc: IP camera.</li>
+         * <li>platform: Platform.</li>
+         * <li>ied: Intelligent device.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -804,7 +792,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Stream URL on the device.</p>
+         * <p>The stream URL on the device.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://xxx/xxx</p>
@@ -815,7 +803,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device username.</p>
+         * <p>The device username.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -826,10 +814,10 @@ public class DescribeDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device vendor.</p>
+         * <p>The device vendor.</p>
          * 
          * <strong>example:</strong>
-         * <p>公司A</p>
+         * <p>Company A</p>
          */
         public Builder vendor(String vendor) {
             this.vendor = vendor;
@@ -947,7 +935,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Directory creation time.</p>
+             * <p>The time when the directory was created. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-02-28T17:00:17Z</p>
@@ -958,10 +946,10 @@ public class DescribeDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Directory description.</p>
+             * <p>The directory description.</p>
              * 
              * <strong>example:</strong>
-             * <p>目录1</p>
+             * <p>Directory 1</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -969,7 +957,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Space ID to which the directory belongs.</p>
+             * <p>The ID of the workspace to which the directory belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>3238848****092994-cn-qingdao</p>
@@ -980,7 +968,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Directory ID.</p>
+             * <p>The directory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3238848****092994-cn-qingdao</p>
@@ -991,10 +979,10 @@ public class DescribeDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Directory name.</p>
+             * <p>The directory name.</p>
              * 
              * <strong>example:</strong>
-             * <p>目录1</p>
+             * <p>Directory 1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1002,7 +990,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Parent directory ID.</p>
+             * <p>The ID of the parent directory.</p>
              * 
              * <strong>example:</strong>
              * <p>3238848****092995-cn-qingdao</p>
@@ -1111,7 +1099,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Number of channels.</p>
+             * <p>The number of channels.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1122,7 +1110,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of failed streams.</p>
+             * <p>The number of failed streams.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1133,7 +1121,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of offline streams.</p>
+             * <p>The number of offline streams.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1144,7 +1132,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of online streams.</p>
+             * <p>The number of online streams.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1155,7 +1143,7 @@ public class DescribeDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of streams.</p>
+             * <p>The number of streams.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

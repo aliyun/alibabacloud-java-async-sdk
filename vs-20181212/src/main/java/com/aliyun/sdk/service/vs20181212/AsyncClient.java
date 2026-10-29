@@ -86,10 +86,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Authentication</strong>: Requests must include the <code>AliUid</code> parameter for identity verification.</li>
-     * <li><strong>Instance specification</strong>: Use <code>RenderingInstanceIds</code> to specify the instances to capture screenshots from.</li>
-     * <li><strong>Screenshot quality</strong>: Use the <code>Quality</code> parameter to set the image quality of screenshots. The default value is 75 (if not configured). Valid values: 1 to 100.</li>
-     * <li><strong>Response handling</strong>: The response contains lists of successful and failed instances with related information, including download URLs and screenshot completion times.</li>
+     * <li><strong>Authentication</strong>: The request must include the <code>AliUid</code> parameter to authenticate and perform identity verification.</li>
+     * <li><strong>Instance specification</strong>: You can specify the instances to capture screenshots of by using <code>RenderingInstanceIds</code>.</li>
+     * <li><strong>Screenshot quality</strong>: You can configure the Settings for the screenshot image quality by using the <code>Quality</code> parameter. The default value is 75 if not configured, and the valid values range from 1 to 100.</li>
+     * <li><strong>Response processing</strong>: The response includes lists of successful and failed instances along with their related information, such as download URLs and screenshot completion times.</li>
      * </ul>
      * 
      * @param request the request parameters of BatchCaptureRenderingInstanceScreenshot  BatchCaptureRenderingInstanceScreenshotRequest
@@ -213,7 +213,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Stop the parent platform before canceling the task.</p>
+     * <p>Stop the parent platform before deletion.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CancelComfyTask  CancelComfyTaskRequest
@@ -236,7 +236,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You must enable on-demand snapshot in the associated snapshot template in advance.</p>
+     * <p>Enable the on-demand screenshot feature in the associated screenshot template.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateComfyTask  CreateComfyTaskRequest
@@ -247,7 +247,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You must specify either a template ID or a template type.</p>
+     * <p>Specify at least one of the template ID and the templatetype.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateComfyUserDataDir  CreateComfyUserDataDirRequest
@@ -258,7 +258,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You must enable the on-demand screenshot feature in the associated screenshot template before calling this operation.</p>
+     * <p>You must first enable the on-demand snapshot feature in the associated snapshot template.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateComfyWorkflow  CreateComfyWorkflowRequest
@@ -323,7 +323,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can specify a template ID or a template type.</p>
+     * <p>Specify at least one of the template ID and templatetype.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateRenderingInstanceGateway  CreateRenderingInstanceGatewayRequest
@@ -377,7 +377,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Stop the parent platform before you delete a production.</p>
+     * <p>Stop the parent platform before deletion.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteComfyProduction  DeleteComfyProductionRequest
@@ -388,7 +388,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You must stop the upper-level platform before performing this operation.</p>
+     * <p>Stop the parent platform before deletion.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteComfyUserData  DeleteComfyUserDataRequest
@@ -399,7 +399,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You must stop the parent platform before you can delete the workflow.</p>
+     * <p>Stop the parent platform before deletion.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteComfyWorkflow  DeleteComfyWorkflowRequest
@@ -476,7 +476,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Stop the parent platform before you delete the gateway.</p>
+     * <p>Stop the upper-level platform before deletion.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteRenderingInstanceGateway  DeleteRenderingInstanceGatewayRequest
@@ -523,7 +523,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Screenshot queries do not support pagination and must be performed iteratively. To fetch the next page, use the extStartTime value from the response as the StartTime for your subsequent request.</p>
+     * <p>Screenshot queries do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeComfyProductionDownloadUrl  DescribeComfyProductionDownloadUrlRequest
@@ -534,7 +534,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This API uses pagination. Use the PageNumber and PageSize parameters to navigate through the results.</p>
+     * <p>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeComfyProductions  DescribeComfyProductionsRequest
@@ -551,7 +551,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Screenshot queries do not support pagination. Only iteration-based queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</p>
+     * <p>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in a new request.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeComfyTasks  DescribeComfyTasksRequest
@@ -567,7 +567,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can upload files using the retrieved URL and the Alibaba Cloud OSS software development kit (SDK).</p>
+     * <p>The retrieved URL must be used with the Alibaba Cloud OSS SDK to upload files.</p>
      * 
      * @param request the request parameters of DescribeComfyUserDataUploadUrl  DescribeComfyUserDataUploadUrlRequest
      * @return DescribeComfyUserDataUploadUrlResponse
@@ -576,10 +576,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If StartTime and EndTime are not specified, data from the last 24 hours is read by default. To query a specific time range, you must specify both StartTime and EndTime. The maximum time range for a query is 31 days.</p>
+     * <p>If StartTime and EndTime are not specified, data from the past 24 hours is queried by default. You can also query data within a specified start and end time range. Both parameters must be specified at the same time.
+     * The maximum query range is 31 days.</p>
      * <ul>
-     * <li>You can query multiple domain names in a batch. Separate the domain names with a comma (,).</li>
-     * <li>You can retrieve data from the last 90 days.</li>
+     * <li>Batch domain name queries are supported. Separate multiple domain names with commas (,).</li>
+     * <li>You can retrieve data from up to the last 90 days.</li>
      * <li>The time granularity is one hour.</li>
      * </ul>
      * 
@@ -590,7 +591,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>\&gt; 截图查询目前不支持分页，仅支持按迭代方式。使用返回结果里的extStartTime参数值，作为新请求的StartTime可请求下一页。</p>
+     * <blockquote>
+     * <p>Pagination is currently not supported for queries. Only iteration is supported. To request the next page, use the value of the extStartTime parameter from the response as the StartTime parameter in a new request.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of DescribeComfyWorkflows  DescribeComfyWorkflowsRequest
      * @return DescribeComfyWorkflowsResponse
@@ -696,7 +699,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Paging is not supported for snapshot queries. Only iteration is supported. To request the next page, use the NextStartTime value from the response as the StartTime for the new request.</p>
+     * <p>Snapshot queries do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeRecords  DescribeRecordsRequest
@@ -784,11 +787,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you do not specify \<code>StartTime\\</code> and \<code>EndTime\\</code>, the API retrieves data from the last 24 hours by default. To query data for a specific time range, you must specify both \<code>StartTime\\</code> and \<code>EndTime\\</code>. The maximum time range for a single query is 31 days.</p>
+     * <p>If StartTime and EndTime are not specified, the data of the last 24 hours is retrieved by default. You can also query data within a specified time range. Both StartTime and EndTime must be specified at the same time.
+     * The maximum query range is 31 days.</p>
      * <ul>
-     * <li>You can query multiple domain names at once. Separate the domain names with commas.</li>
-     * <li>You can retrieve data from the last 90 days.</li>
-     * <li>The time granularity is one hour.</li>
+     * <li>Batch domain name queries are supported. Separate multiple domain names with commas (,).</li>
+     * <li>You can retrieve data for the last 90 days at most.</li>
+     * <li>The time granularity is 1 hour.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeVsDevicesData  DescribeVsDevicesDataRequest
@@ -973,7 +977,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You must specify at least one of the template ID and templatetype.</p>
+     * <p>Specify at least one of the template ID and the templatetype.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListCloudAppPatches  ListCloudAppPatchesRequest
@@ -989,12 +993,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation queries load information. You can filter results by using various parameters and perform paged query operations.</li>
-     * <li>Optional parameters include Spec (specification), Statuses (status list), InstanceIds (instance ID list), PlanIds (plan ID list), and HiveIds (cluster ID list).</li>
-     * <li>For paged query operations, use the PageNumber and PageSize parameters to control the data volume of returned results. The default page size is 10 records, and the maximum is 100 records. Paging is supported.</li>
-     * <li>To query by time range, specify the StartTime and EndTime parameters.</li>
+     * <li>This API queries workload information and supports filtering, paging, and paged query by using various parameters.</li>
+     * <li>Optional parameters include <code>Spec</code> (specifications), <code>Statuses</code> (status list), <code>InstanceIds</code> (instance ID list), <code>PlanIds</code> (plan ID list), and <code>HiveIds</code> (cluster ID list).</li>
+     * <li>During a paged query, you can use the <code>PageNumber</code> and <code>PageSize</code> parameters to control the returned data volume. The default is 10 records per page, and the maximum is 100 records.</li>
+     * <li>You can specify a time range for the query by using the <code>StartTime</code> and <code>EndTime</code> parameters.</li>
      * </ul>
      * 
      * @param request the request parameters of ListEdgeWorkers  ListEdgeWorkersRequest
@@ -1016,12 +1020,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation queries information about all clusters created by the user.</li>
-     * <li>You can use the <code>HiveId</code> and <code>Name</code> parameters to filter query results.</li>
-     * <li>The <code>PageNumber</code> and <code>PageSize</code> pagination parameters control the number of results and page number. By default, 10 records are displayed per page, with a maximum of 100.</li>
-     * <li>The <code>StartTime</code> and <code>EndTime</code> parameters specify a time range for querying cluster information. These parameters are optional.</li>
+     * <li>This operation queries the information of all clusters created by the user.</li>
+     * <li>You can filter the query results by using the <code>HiveId</code> and <code>Name</code> parameters.</li>
+     * <li>The pagination parameters <code>PageNumber</code> and <code>PageSize</code> control the number of returned results and the page number. By default, 10 entries are displayed on each page, and a maximum of 100 entries are supported.</li>
+     * <li>The <code>StartTime</code> and <code>EndTime</code> parameters can be used to query clusters within a specified time range. These parameters are optional.</li>
      * </ul>
      * 
      * @param request the request parameters of ListHives  ListHivesRequest
@@ -1045,8 +1049,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation supports filtering and paged query of rendering session lists by using various parameter combinations.</li>
-     * <li>You must specify at least one of the <code>SessionId</code> and <code>ClientId</code> parameters, but neither is required. If both parameters are specified, more precise matching is performed based on the two parameters.</li>
+     * <li>This operation supports filtering and paginating the list of user rendering sessions by using various parameter combinations.</li>
+     * <li>You must specify at least one of the <code>SessionId</code> and <code>ClientId</code> parameters, but neither is required. If both parameters are specified, a more precise match is performed based on these two parameters.</li>
      * </ul>
      * 
      * @param request the request parameters of ListRenderingImages  ListRenderingImagesRequest
@@ -1057,7 +1061,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Specify at least the template ID or the template type.</p>
+     * <p>Specify at least one of the template ID and templatetype.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListRenderingInstanceGateway  ListRenderingInstanceGatewayRequest
@@ -1073,9 +1077,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation enables you to query cloud application service instances in a project using multiple filter conditions, such as status and instance ID.</li>
+     * <li>This operation allows you to query cloud application service instances in a specified project by using various filter conditions, such as status and instance ID.</li>
      * </ul>
      * 
      * @param request the request parameters of ListRenderingProjectInstances  ListRenderingProjectInstancesRequest
@@ -1085,10 +1089,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request details</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation returns a paged list of basic information about rendering projects for a specified user.</li>
-     * <li>Filter results by <code>ProjectId</code> or <code>ProjectName</code>.</li>
+     * <li>This operation performs a paged query with paging to retrieve the list of basic information about rendering projects for a specified user.</li>
+     * <li>You can filter the query by <code>ProjectId</code> and <code>ProjectName</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of ListRenderingProjects  ListRenderingProjectsRequest
@@ -1098,10 +1102,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API supports filtering and paged query of user rendering session lists with various parameter combinations.</li>
-     * <li>You must provide at least one of the <code>SessionId</code> or <code>ClientId</code> parameters. Neither parameter is mandatory independently. If both parameters are provided, a more precise match is performed based on these two parameters.</li>
+     * <li>This operation supports filtering and performing a paging query on the array of user rendering sessions by using various parameter combinations.</li>
+     * <li>You must specify at least one of the SessionId and ClientId parameters, but neither is required. If both parameters are specified, a more precise match is performed based on these two parameters.</li>
      * </ul>
      * 
      * @param request the request parameters of ListRenderingSessions  ListRenderingSessionsRequest
@@ -1131,7 +1135,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>\&gt; 截图查询目前不支持分页，仅支持按迭代方式。使用返回结果里的extStartTime参数值，作为新请求的StartTime可请求下一页。</p>
+     * <blockquote>
+     * <p>Screenshot queries do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of ModifyComfyWorkflow  ModifyComfyWorkflowRequest
      * @return ModifyComfyWorkflowResponse
@@ -1272,7 +1278,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Specify at least one of the template ID or template type.</p>
+     * <p>Specify at least one of the template ID and templatetype.</p>
      * </blockquote>
      * 
      * @param request the request parameters of RefreshRenderingInstanceStreaming  RefreshRenderingInstanceStreamingRequest
@@ -1429,7 +1435,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request information</h2>
+     * <h2>Request description.</h2>
      * 
      * @param request the request parameters of StopRenderingSession  StopRenderingSessionRequest
      * @return StopRenderingSessionResponse
