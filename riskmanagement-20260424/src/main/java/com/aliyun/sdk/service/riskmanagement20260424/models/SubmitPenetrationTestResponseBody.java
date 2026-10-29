@@ -117,7 +117,7 @@ public class SubmitPenetrationTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -147,10 +147,12 @@ public class SubmitPenetrationTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The call status. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Successful.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><p><strong>true</strong>: The call was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,9 +224,9 @@ public class SubmitPenetrationTestResponseBody extends TeaModel {
             /**
              * <p>The type of the asset. Valid values:</p>
              * <ul>
-             * <li><strong>EIP</strong>: The public IP address of a virtual private cloud (VPC).</li>
+             * <li><strong>EIP</strong>: the public IP address of a VPC.</li>
              * <li><strong>SLB</strong>: load balancing.</li>
-             * <li><strong>ECS</strong>: The public IP address of an Elastic Compute Service (ECS) instance in the classic network.</li>
+             * <li><strong>ECS</strong>: the public IP address of an ECS instance in the classic network.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -293,7 +295,7 @@ public class SubmitPenetrationTestResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response data.</p>
+             * <p>The returned data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;

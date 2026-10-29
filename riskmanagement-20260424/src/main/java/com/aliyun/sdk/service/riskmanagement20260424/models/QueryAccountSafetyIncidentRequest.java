@@ -26,6 +26,10 @@ public class QueryAccountSafetyIncidentRequest extends Request {
     private String aliyunLang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessCodes")
+    private java.util.List<String> businessCodes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CaseCode")
     private String caseCode;
 
@@ -73,6 +77,7 @@ public class QueryAccountSafetyIncidentRequest extends Request {
         super(builder);
         this.actionCodes = builder.actionCodes;
         this.aliyunLang = builder.aliyunLang;
+        this.businessCodes = builder.businessCodes;
         this.caseCode = builder.caseCode;
         this.caseCodes = builder.caseCodes;
         this.current = builder.current;
@@ -111,6 +116,13 @@ public class QueryAccountSafetyIncidentRequest extends Request {
      */
     public String getAliyunLang() {
         return this.aliyunLang;
+    }
+
+    /**
+     * @return businessCodes
+     */
+    public java.util.List<String> getBusinessCodes() {
+        return this.businessCodes;
     }
 
     /**
@@ -193,6 +205,7 @@ public class QueryAccountSafetyIncidentRequest extends Request {
     public static final class Builder extends Request.Builder<QueryAccountSafetyIncidentRequest, Builder> {
         private java.util.List<String> actionCodes; 
         private String aliyunLang; 
+        private java.util.List<String> businessCodes; 
         private String caseCode; 
         private java.util.List<String> caseCodes; 
         private String current; 
@@ -213,6 +226,7 @@ public class QueryAccountSafetyIncidentRequest extends Request {
             super(request);
             this.actionCodes = request.actionCodes;
             this.aliyunLang = request.aliyunLang;
+            this.businessCodes = request.businessCodes;
             this.caseCode = request.caseCode;
             this.caseCodes = request.caseCodes;
             this.current = request.current;
@@ -237,7 +251,7 @@ public class QueryAccountSafetyIncidentRequest extends Request {
         }
 
         /**
-         * <p>The internationalization language. Default value: zh. Valid values:</p>
+         * <p>The language. Default value: zh. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese.</li>
          * <li><strong>en</strong>: English.</li>
@@ -253,9 +267,19 @@ public class QueryAccountSafetyIncidentRequest extends Request {
         }
 
         /**
+         * <p>The set of cloud service codes.</p>
+         */
+        public Builder businessCodes(java.util.List<String> businessCodes) {
+            String businessCodesShrink = shrink(businessCodes, "BusinessCodes", "json");
+            this.putQueryParameter("BusinessCodes", businessCodesShrink);
+            this.businessCodes = businessCodes;
+            return this;
+        }
+
+        /**
          * <p>The event name code.</p>
          * <blockquote>
-         * <p>This parameter does not take effect when the CaseCodes parameter is not empty.</p>
+         * <p>This parameter does not take effect if the CaseCodes parameter is not empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -292,7 +316,7 @@ public class QueryAccountSafetyIncidentRequest extends Request {
         /**
          * <p>The event ID.</p>
          * <blockquote>
-         * <p>This parameter does not take effect when the EventIds parameter is not empty.</p>
+         * <p>This parameter does not take effect if the EventIds parameter is not empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -315,7 +339,7 @@ public class QueryAccountSafetyIncidentRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Valid values: 1 to 100.</p>
+         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -371,13 +395,13 @@ public class QueryAccountSafetyIncidentRequest extends Request {
         /**
          * <p>The event status. Valid values:</p>
          * <ul>
-         * <li><strong>Executing</strong>: In progress.</li>
-         * <li><strong>Removed</strong>: Removed.</li>
-         * <li><strong>Alerting</strong>: Alerting.</li>
-         * <li><strong>Ended</strong>: Ended.</li>
+         * <li><strong>Executing</strong>: The event is being executed.</li>
+         * <li><strong>Removed</strong>: The event is removed.</li>
+         * <li><strong>Alerting</strong>: The event is in the alerting state.</li>
+         * <li><strong>Ended</strong>: The event has ended.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter does not take effect when the Statuses parameter is not empty.</p>
+         * <p>This parameter does not take effect if the Statuses parameter is not empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

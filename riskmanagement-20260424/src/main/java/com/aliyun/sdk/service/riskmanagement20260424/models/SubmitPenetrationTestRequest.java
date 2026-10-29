@@ -187,7 +187,7 @@ public class SubmitPenetrationTestRequest extends Request {
         /**
          * <p>The asset list.</p>
          * <blockquote>
-         * <p>The array supports a maximum of 50 IP addresses.</p>
+         * <p>The array supports up to 50 IP addresses.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class SubmitPenetrationTestRequest extends Request {
         /**
          * <p>The test content.</p>
          * <blockquote>
-         * <p>The content must not exceed 500 characters. Provide detailed information to facilitate the approval process.</p>
+         * <p>The content must be up to 500 characters in length. Provide detailed information to facilitate the approval process.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class SubmitPenetrationTestRequest extends Request {
         /**
          * <p>The source IP addresses used for the test.</p>
          * <blockquote>
-         * <p>A maximum of 50 IP addresses are supported. Separate multiple IP addresses with line breaks or commas (,). 0.0.0.0 indicates that all IP addresses are allowed. CIDR blocks such as 140.168.0.0/16 are not supported.</p>
+         * <p>Up to 50 IP addresses are supported. Separate multiple IP addresses with line breaks or commas (,). Enter 0.0.0.0 to allow all IP addresses. CIDR blocks such as 140.168.0.0/16 are not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class SubmitPenetrationTestRequest extends Request {
         /**
          * <p>The test steps.</p>
          * <blockquote>
-         * <p>The steps must not exceed 500 characters. Provide detailed information to facilitate the approval process.</p>
+         * <p>The steps must be up to 500 characters in length. Provide detailed information to facilitate the approval process.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -311,7 +311,7 @@ public class SubmitPenetrationTestRequest extends Request {
         }
 
         /**
-         * <p>The third-party tester.</p>
+         * <p>The name of the third-party tester.</p>
          * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
