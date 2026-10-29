@@ -106,7 +106,7 @@ public class UpdateModelPermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter is empty when the call is successful.</p>
+         * <p>The error code. This parameter is empty if the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class UpdateModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is empty when the call is successful.</p>
+         * <p>The error message. This parameter is empty if the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified parameter is invalid</p>
@@ -139,7 +139,7 @@ public class UpdateModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique request ID.</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>36045E0A-551D-592D-B1BC-4C56596CE59E</p>

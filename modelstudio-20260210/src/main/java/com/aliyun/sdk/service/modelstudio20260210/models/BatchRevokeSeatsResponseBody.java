@@ -80,7 +80,7 @@ public class BatchRevokeSeatsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter is empty if the request was successful.</p>
+         * <p>The error code. This parameter is empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -91,7 +91,7 @@ public class BatchRevokeSeatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is empty if the request was successful.</p>
+         * <p>The error message. This parameter is empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -102,7 +102,7 @@ public class BatchRevokeSeatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

@@ -30,6 +30,10 @@ public class GetBillingTrendRequest extends Request {
     private java.util.List<GroupBy> groupBy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("includeHistoryPeriod")
+    private Boolean includeHistoryPeriod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("locale")
     private String locale;
 
@@ -54,6 +58,7 @@ public class GetBillingTrendRequest extends Request {
         this.filter = builder.filter;
         this.granularity = builder.granularity;
         this.groupBy = builder.groupBy;
+        this.includeHistoryPeriod = builder.includeHistoryPeriod;
         this.locale = builder.locale;
         this.regionId = builder.regionId;
         this.timePeriod = builder.timePeriod;
@@ -96,6 +101,13 @@ public class GetBillingTrendRequest extends Request {
     }
 
     /**
+     * @return includeHistoryPeriod
+     */
+    public Boolean getIncludeHistoryPeriod() {
+        return this.includeHistoryPeriod;
+    }
+
+    /**
      * @return locale
      */
     public String getLocale() {
@@ -134,6 +146,7 @@ public class GetBillingTrendRequest extends Request {
         private Filter filter; 
         private String granularity; 
         private java.util.List<GroupBy> groupBy; 
+        private Boolean includeHistoryPeriod; 
         private String locale; 
         private String regionId; 
         private TimePeriod timePeriod; 
@@ -149,6 +162,7 @@ public class GetBillingTrendRequest extends Request {
             this.filter = request.filter;
             this.granularity = request.granularity;
             this.groupBy = request.groupBy;
+            this.includeHistoryPeriod = request.includeHistoryPeriod;
             this.locale = request.locale;
             this.regionId = request.regionId;
             this.timePeriod = request.timePeriod;
@@ -157,7 +171,7 @@ public class GetBillingTrendRequest extends Request {
         } 
 
         /**
-         * <p>The dimension filter conditions.</p>
+         * <p>The dimension filter condition.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "filter", "json");
@@ -179,7 +193,7 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * <p>The grouping conditions. This parameter must contain one and only one element.</p>
+         * <p>The grouping condition. This parameter must contain exactly one element.</p>
          */
         public Builder groupBy(java.util.List<GroupBy> groupBy) {
             String groupByShrink = shrink(groupBy, "groupBy", "json");
@@ -189,7 +203,19 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * <p>The response language. Default value: en-US.</p>
+         * <p>Specifies whether to query the previous non-overlapping period of the same length. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder includeHistoryPeriod(Boolean includeHistoryPeriod) {
+            this.putQueryParameter("includeHistoryPeriod", includeHistoryPeriod);
+            this.includeHistoryPeriod = includeHistoryPeriod;
+            return this;
+        }
+
+        /**
+         * <p>The language of the response. Default value: en-US.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -213,7 +239,7 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * <p>The query time range, including the start time and end time. This parameter is required.</p>
+         * <p>The time range to query, including the start time and end time. This parameter is required.</p>
          */
         public Builder timePeriod(TimePeriod timePeriod) {
             String timePeriodShrink = shrink(timePeriod, "timePeriod", "json");
@@ -223,7 +249,7 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * <p>The number of groups to return. Valid values: 1 to 20. Default value: 20. The remaining groups are merged into &quot;Others&quot;.</p>
+         * <p>The number of groups to return. Valid values: 1 to 20. Default value: 20. The remaining groups are merged into &quot;Other&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -235,7 +261,7 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter out groups with a zero amount. Default value: true.</p>
+         * <p>Specifies whether to filter out groups with an amount of 0. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -319,7 +345,7 @@ public class GetBillingTrendRequest extends Request {
             } 
 
             /**
-             * <p>The filter dimension code. For more information, see the &quot;Additional information&quot; section below.</p>
+             * <p>The filter dimension code. For more information, see the &quot;Additional notes&quot; section below.</p>
              * 
              * <strong>example:</strong>
              * <p>CHARGE_TYPE</p>
@@ -330,7 +356,7 @@ public class GetBillingTrendRequest extends Request {
             }
 
             /**
-             * <p>The filter method.</p>
+             * <p>The filtering method.</p>
              * 
              * <strong>example:</strong>
              * <p>IN</p>
@@ -341,7 +367,7 @@ public class GetBillingTrendRequest extends Request {
             }
 
             /**
-             * <p>The filter value list.</p>
+             * <p>The list of filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -395,7 +421,7 @@ public class GetBillingTrendRequest extends Request {
             } 
 
             /**
-             * <p>The dimension filter list.</p>
+             * <p>The list of dimension filters.</p>
              */
             public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -449,7 +475,7 @@ public class GetBillingTrendRequest extends Request {
             } 
 
             /**
-             * <p>The grouping dimension code. For more information, see the &quot;Additional information&quot; section below.</p>
+             * <p>The grouping dimension code. For more information, see the &quot;Additional notes&quot; section below.</p>
              * 
              * <strong>example:</strong>
              * <p>BASE_MODEL</p>

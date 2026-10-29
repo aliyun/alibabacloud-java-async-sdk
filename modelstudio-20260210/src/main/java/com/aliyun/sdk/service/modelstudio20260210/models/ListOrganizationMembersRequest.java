@@ -115,7 +115,7 @@ public class ListOrganizationMembersRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to filter by seat assignment.</p>
+         * <p>Specifies whether to filter by seat allocation status.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -127,10 +127,10 @@ public class ListOrganizationMembersRequest extends Request {
         }
 
         /**
-         * <p>Fuzzy filter by member name. Matches accountName or email, case-insensitive.</p>
+         * <p>The fuzzy filter for the member name. It matches the accountName or email and is case-insensitive.</p>
          * 
          * <strong>example:</strong>
-         * <p>MemberName</p>
+         * <p>Member name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -139,7 +139,7 @@ public class ListOrganizationMembersRequest extends Request {
         }
 
         /**
-         * <p>The page number, starting from 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -163,7 +163,7 @@ public class ListOrganizationMembersRequest extends Request {
         }
 
         /**
-         * <p>Filters by member status, such as ACTIVE or FROZEN. A value of null indicates no filtering.</p>
+         * <p>The filter for the member status, such as ACTIVE or FROZEN. A null value indicates no filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>

@@ -171,7 +171,7 @@ public class AddOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -251,7 +251,7 @@ public class AddOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the seat was assigned successfully.</p>
+             * <p>Indicates whether the seat is assigned successfully.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

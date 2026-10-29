@@ -113,7 +113,7 @@ public class CreateApiKeyRequest extends Request {
          * <p>The workspace ID.</p>
          * <blockquote>
          * <ul>
-         * <li>If you leave this parameter empty, the API key is automatically assigned to the default workspace.</li>
+         * <li>If you do not specify this parameter, the created API key is automatically assigned to the default workspace.</li>
          * </ul>
          * </blockquote>
          * 
@@ -197,7 +197,7 @@ public class CreateApiKeyRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether all models with granted inference permissions in the workspace are accessible. Valid values:</p>
+             * <p>Specifies whether to allow access to all models that have been granted inference permissions in the workspace. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -284,10 +284,10 @@ public class CreateApiKeyRequest extends Request {
             } 
 
             /**
-             * <p>The IP access whitelist.</p>
+             * <p>The IP address whitelist.</p>
              * <blockquote>
              * <ul>
-             * <li>When you set custom permissions and leave the IP access whitelist empty, the server sets the default values to IPv4 (0.0.0.0/0) and IPv6 (::/0), which allows all traffic.</li>
+             * <li>If you select custom permissions and do not specify an IP address whitelist, the server defaults to IPv4 (0.0.0.0/0) and IPv6 (::/0), which allows all IP addresses.</li>
              * </ul>
              * </blockquote>
              */
@@ -297,7 +297,7 @@ public class CreateApiKeyRequest extends Request {
             }
 
             /**
-             * <p>The model access scope.</p>
+             * <p>The model access scope. If you configure this parameter, you can only call the selected models. If you do not configure this parameter, you can access all models that have been granted inference permissions in the specified workspace by default.</p>
              */
             public Builder modelAccessScope(ModelAccessScope modelAccessScope) {
                 this.modelAccessScope = modelAccessScope;
@@ -305,11 +305,7 @@ public class CreateApiKeyRequest extends Request {
             }
 
             /**
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>All: all permissions.</li>
-             * <li>Custom: custom permissions.</li>
-             * </ul>
+             * <p>The permission type. Valid values: All: all permissions. Custom: custom permissions.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>

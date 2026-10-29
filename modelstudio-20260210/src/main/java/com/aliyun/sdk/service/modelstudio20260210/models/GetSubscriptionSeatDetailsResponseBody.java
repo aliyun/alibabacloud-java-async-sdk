@@ -125,8 +125,8 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li>true: Successful.</li>
-         * <li>false: Failed.</li>
+         * <li>true: successful</li>
+         * <li>false: failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,7 +272,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The equity code (subscription code). This does not need to be consumed in CREDITS scenarios.</p>
+             * <p>The entitlement code (subscription code). Consumption is not required in the credits scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -316,7 +316,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time-series version of the current cycle.</p>
+             * <p>The sequence version of the current cycle.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -327,7 +327,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The equity type, such as CREDITS, SPN, or resource plan.</p>
+             * <p>The entitlement type, such as CREDITS, SPN, or resource plan.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDITS</p>
@@ -573,7 +573,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currently active equity instances. For TokenPlan products, this list contains only one active equity instance.</p>
+             * <p>The active entitlement instances. For the TokenPlan product, this list contains only one active entitlement instance.</p>
              */
             public Builder equityList(java.util.List<EquityList> equityList) {
                 this.equityList = equityList;
@@ -605,9 +605,9 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             /**
              * <p>The seat type. Valid values: </p>
              * <ul>
-             * <li>standard: standard seat.</li>
-             * <li>pro: pro seat.</li>
-             * <li>max: premium seat.</li>
+             * <li>standard: standard seat</li>
+             * <li>pro: advanced seat</li>
+             * <li>max: premium seat</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -632,12 +632,12 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             /**
              * <p>The seat status. Valid values:</p>
              * <ul>
-             * <li>CREATING: being created.</li>
-             * <li>NORMAL: active.</li>
-             * <li>LIMIT: restricted due to overdue payment.</li>
-             * <li>RELEASE: released upon expiration.</li>
-             * <li>STOP: stopped upon expiration.</li>
-             * <li>REFUNDED: refunded.</li>
+             * <li>CREATING: creating</li>
+             * <li>NORMAL: valid</li>
+             * <li>LIMIT: restricted due to overdue payment</li>
+             * <li>RELEASE: released upon expiration</li>
+             * <li>STOP: stopped upon expiration</li>
+             * <li>REFUNDED: refunded</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -742,7 +742,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number. The value is greater than 0 and does not exceed the maximum value of the Integer data type.</p>
+             * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

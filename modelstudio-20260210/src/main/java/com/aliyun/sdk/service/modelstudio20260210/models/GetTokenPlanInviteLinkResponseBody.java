@@ -123,7 +123,7 @@ public class GetTokenPlanInviteLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the API call is successful. Valid values:</p>
          * <ul>
          * <li>true: Successful.</li>
          * <li>false: Failed.</li>

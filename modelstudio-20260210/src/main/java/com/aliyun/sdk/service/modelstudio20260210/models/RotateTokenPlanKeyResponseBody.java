@@ -123,7 +123,7 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
          * <li>true: Successful.</li>
          * <li>false: Failed.</li>
@@ -235,7 +235,7 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API Key ID, which is system-generated.</p>
+             * <p>The system-generated API key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ak_123456</p>
@@ -246,7 +246,7 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The new masked_api_key returned by BaiLian, such as sk_***cdef.</p>
+             * <p>The new masked API key returned by Model Studio, such as sk_***cdef.</p>
              * 
              * <strong>example:</strong>
              * <p>sk_***6</p>
@@ -257,7 +257,7 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The new plaintext API Key returned by BaiLian. This value is returned only once during the reset operation.</p>
+             * <p>The new plaintext API key returned by Model Studio. This key is returned only once upon reset.</p>
              * 
              * <strong>example:</strong>
              * <p>sk-ws.abc123456</p>
@@ -268,7 +268,7 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the API key was reset.</p>
+             * <p>The reset time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-18T03:19:17Z</p>
@@ -279,7 +279,7 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source_id returned by BaiLian.</p>
+             * <p>The source_id returned by Model Studio.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>

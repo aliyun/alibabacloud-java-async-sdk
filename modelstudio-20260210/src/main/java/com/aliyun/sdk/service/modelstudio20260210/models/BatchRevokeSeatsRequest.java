@@ -83,7 +83,7 @@ public class BatchRevokeSeatsRequest extends Request {
         }
 
         /**
-         * <p>The language. Valid values: zh-CN and en-US.</p>
+         * <p>The locale. Valid values: zh-CN and en-US.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>

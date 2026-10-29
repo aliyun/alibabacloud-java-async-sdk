@@ -158,7 +158,10 @@ public class ListModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code. This field is empty when the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message. This field is empty when the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -174,7 +180,10 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +191,10 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records returned per request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +202,7 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * models.
+         * <p>The list of models.</p>
          */
         public Builder models(java.util.List<Models> models) {
             this.models = models;
@@ -198,7 +210,10 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lwytFRtLdNk=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +221,10 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36045E0A-551D-592D-B1BC-4C56596CE59E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,10 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +243,10 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -288,7 +312,7 @@ public class ListModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * requestModality.
+             * <p>The input modality. Valid values: Text, Image, Audio, and Video.</p>
              */
             public Builder requestModality(java.util.List<String> requestModality) {
                 this.requestModality = requestModality;
@@ -296,7 +320,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * responseModality.
+             * <p>The output modality. Valid values: Text, Image, Audio, and Video.</p>
              */
             public Builder responseModality(java.util.List<String> responseModality) {
                 this.responseModality = responseModality;
@@ -415,7 +439,10 @@ public class ListModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * contextWindow.
+             * <p>The context length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder contextWindow(Long contextWindow) {
                 this.contextWindow = contextWindow;
@@ -423,7 +450,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * maxInputTokens.
+             * <p>The maximum input length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxInputTokens(Long maxInputTokens) {
                 this.maxInputTokens = maxInputTokens;
@@ -431,7 +461,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * maxOutputTokens.
+             * <p>The maximum output length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxOutputTokens(Long maxOutputTokens) {
                 this.maxOutputTokens = maxOutputTokens;
@@ -439,7 +472,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * maxReasoningTokens.
+             * <p>The maximum chain-of-thought length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxReasoningTokens(Long maxReasoningTokens) {
                 this.maxReasoningTokens = maxReasoningTokens;
@@ -447,7 +483,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * reasoningMaxInputTokens.
+             * <p>The maximum input length in thinking mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder reasoningMaxInputTokens(Long reasoningMaxInputTokens) {
                 this.reasoningMaxInputTokens = reasoningMaxInputTokens;
@@ -455,7 +494,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * reasoningMaxOutputTokens.
+             * <p>The maximum output length in thinking mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder reasoningMaxOutputTokens(Long reasoningMaxOutputTokens) {
                 this.reasoningMaxOutputTokens = reasoningMaxOutputTokens;
@@ -548,7 +590,10 @@ public class ListModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * price.
+             * <p>The price. The currency unit depends on the account type: ￥ for accounts in the Chinese mainland and $ for international accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder price(String price) {
                 this.price = price;
@@ -556,7 +601,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * priceName.
+             * <p>The price type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>input</p>
              */
             public Builder priceName(String priceName) {
                 this.priceName = priceName;
@@ -564,7 +612,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * priceUnit.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Per 1M tokens</p>
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -572,7 +623,15 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * timeBand.
+             * <p>The time band. Valid values:</p>
+             * <ul>
+             * <li>peak: Peak hours.</li>
+             * <li>offpeak: Off-peak hours.</li>
+             * <li>standard: No time-based tiering.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder timeBand(String timeBand) {
                 this.timeBand = timeBand;
@@ -639,7 +698,7 @@ public class ListModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * prices.
+             * <p>The model pricing.</p>
              */
             public Builder prices(java.util.List<Prices> prices) {
                 this.prices = prices;
@@ -647,7 +706,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * rangeName.
+             * <p>The tier name. If tiered pricing is not used, the value is Default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder rangeName(String rangeName) {
                 this.rangeName = rangeName;
@@ -818,7 +880,7 @@ public class ListModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * capabilities.
+             * <p>The model type.</p>
              */
             public Builder capabilities(java.util.List<String> capabilities) {
                 this.capabilities = capabilities;
@@ -826,7 +888,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The model description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>provided by qwen</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -834,7 +899,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * features.
+             * <p>The list of model capabilities.</p>
              */
             public Builder features(java.util.List<String> features) {
                 this.features = features;
@@ -842,7 +907,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * inferenceMetadata.
+             * <p>The modality type.</p>
              */
             public Builder inferenceMetadata(InferenceMetadata inferenceMetadata) {
                 this.inferenceMetadata = inferenceMetadata;
@@ -850,7 +915,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * model.
+             * <p>The model name for exact match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -858,7 +926,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * modelInfo.
+             * <p>The model information, including various context lengths.</p>
              */
             public Builder modelInfo(ModelInfo modelInfo) {
                 this.modelInfo = modelInfo;
@@ -866,7 +934,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The model name for fuzzy match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -874,7 +945,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * prices.
+             * <p>The list of model pricing.</p>
              */
             public Builder prices(java.util.List<ModelsPrices> prices) {
                 this.prices = prices;
@@ -882,7 +953,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * provider.
+             * <p>The model provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -890,7 +964,10 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * publishedTime.
+             * <p>The release time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1779268196000</p>
              */
             public Builder publishedTime(Long publishedTime) {
                 this.publishedTime = publishedTime;

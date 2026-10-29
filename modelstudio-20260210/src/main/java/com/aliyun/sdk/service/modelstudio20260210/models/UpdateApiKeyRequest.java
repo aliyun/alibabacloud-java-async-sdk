@@ -89,7 +89,7 @@ public class UpdateApiKeyRequest extends Request {
         } 
 
         /**
-         * <p>API Key ID。</p>
+         * <p>The API key ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,9 +102,9 @@ public class UpdateApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The API Key permission settings.</p>
+         * <p>The API key permission settings.</p>
          * <blockquote>
-         * <p>Do not specify this parameter or specify it completely for each UpdateApiKey operation. Otherwise, the configuration may not match your expectations.</p>
+         * <p>When calling the UpdateApiKey operation, either leave this section empty or fill it out completely. Otherwise, the configuration may not match your expectations.</p>
          * </blockquote>
          */
         public Builder auth(Auth auth) {
@@ -196,7 +196,7 @@ public class UpdateApiKeyRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether all models with inference permissions in the workspace are accessible. Valid values:</p>
+             * <p>Specifies whether to allow access to all models that have been granted inference permissions in the workspace. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -280,10 +280,10 @@ public class UpdateApiKeyRequest extends Request {
             } 
 
             /**
-             * <p>The IP access whitelist.</p>
+             * <p>The IP address whitelist.</p>
              * <blockquote>
              * <ul>
-             * <li>When you customize the permission scope, if the IP access whitelist is not specified, the server sets it to IPv4 (0.0.0.0/0) and IPv6 (::/0) by default, which allows all traffic.</li>
+             * <li>When customizing the permission scope, if the IP address whitelist is not specified, the server sets the default values to IPv4 (0.0.0.0/0) and IPv6 (::/0), which allows all traffic.</li>
              * </ul>
              * </blockquote>
              */
@@ -303,7 +303,7 @@ public class UpdateApiKeyRequest extends Request {
             /**
              * <p>The permission type. Valid values:</p>
              * <ul>
-             * <li>All: full permissions.</li>
+             * <li>All: all permissions.</li>
              * <li>Custom: custom permissions.</li>
              * </ul>
              * 

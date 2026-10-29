@@ -93,7 +93,7 @@ public class AddOrganizationMemberRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>账号名称</p>
+         * <p>Account name</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -102,7 +102,7 @@ public class AddOrganizationMemberRequest extends Request {
         }
 
         /**
-         * <p>The organization role code. Only ORG_ADMIN or ORG_MEMBER is allowed. Default value: ORG_MEMBER.</p>
+         * <p>The organization role code. Valid values: ORG_ADMIN and ORG_MEMBER. Default value: ORG_MEMBER.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,9 +117,9 @@ public class AddOrganizationMemberRequest extends Request {
         /**
          * <p>The seat specification. Valid values:</p>
          * <ul>
-         * <li>standard: standard seat.</li>
-         * <li>pro: premium seat.</li>
-         * <li>max: exclusive seat.</li>
+         * <li>standard: Standard seat.</li>
+         * <li>pro: Pro seat.</li>
+         * <li>max: Premium seat.</li>
          * </ul>
          * 
          * <strong>example:</strong>

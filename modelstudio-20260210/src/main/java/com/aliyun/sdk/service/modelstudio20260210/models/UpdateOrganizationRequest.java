@@ -73,10 +73,10 @@ public class UpdateOrganizationRequest extends Request {
         } 
 
         /**
-         * <p>The organization description.</p>
+         * <p>The description of the organization.</p>
          * 
          * <strong>example:</strong>
-         * <p>新的组织描述</p>
+         * <p>New organization description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -85,10 +85,10 @@ public class UpdateOrganizationRequest extends Request {
         }
 
         /**
-         * <p>The organization name.</p>
+         * <p>The name of the organization.</p>
          * 
          * <strong>example:</strong>
-         * <p>新的组织名称</p>
+         * <p>New organization name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

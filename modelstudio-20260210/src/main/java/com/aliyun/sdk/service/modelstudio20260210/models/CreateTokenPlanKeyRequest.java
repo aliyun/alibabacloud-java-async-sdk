@@ -90,7 +90,7 @@ public class CreateTokenPlanKeyRequest extends Request {
          * <p>The description of the key.</p>
          * 
          * <strong>example:</strong>
-         * <p>APIKEY描述</p>
+         * <p>API key description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

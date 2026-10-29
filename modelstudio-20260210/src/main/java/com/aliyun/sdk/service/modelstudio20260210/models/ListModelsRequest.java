@@ -171,7 +171,25 @@ public class ListModelsRequest extends Request {
         } 
 
         /**
-         * capabilities.
+         * <p>The model type. Valid values:</p>
+         * <ul>
+         * <li>Reasoning: Deep thinking.</li>
+         * <li>VU: Visual understanding.</li>
+         * <li>IG: Image generation.</li>
+         * <li>VG: Video generation.</li>
+         * <li>ASR: Speech recognition.</li>
+         * <li>TTS: Speech synthesis.</li>
+         * <li>ME: Multimodal embedding.</li>
+         * <li>Realtime-Omni: Real-time omni-modal.</li>
+         * <li>Multimodal-Omni: Omni-modal.</li>
+         * <li>Realtime-Text-to-Speech: Real-time speech synthesis.</li>
+         * <li>TG: Text generation.</li>
+         * <li>TR: Text embedding.</li>
+         * <li>Realtime-ASR: Real-time speech recognition.</li>
+         * <li>Realtime-Audio-Translate: Real-time audio translation.</li>
+         * <li>3D-generation: 3D generation.</li>
+         * <li>Realtime-Chatting: Real-time voice conversation.</li>
+         * </ul>
          */
         public Builder capabilities(java.util.List<String> capabilities) {
             String capabilitiesShrink = shrink(capabilities, "capabilities", "json");
@@ -181,7 +199,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * contextWindow.
+         * <p>The context window size used to filter models with a context window smaller than this value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder contextWindow(Long contextWindow) {
             this.putQueryParameter("contextWindow", contextWindow);
@@ -190,7 +211,17 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * features.
+         * <p>The model capability. Valid values:</p>
+         * <ul>
+         * <li>model-experience: Playground.</li>
+         * <li>function-calling: Function calling.</li>
+         * <li>structured-outputs: Structured output.</li>
+         * <li>web-search: Web search.</li>
+         * <li>prefix-completion: Partial mode.</li>
+         * <li>cache: Cache.</li>
+         * <li>batch: Batch inference.</li>
+         * <li>fine-tuning: Model fine-tuning.</li>
+         * </ul>
          */
         public Builder features(java.util.List<String> features) {
             String featuresShrink = shrink(features, "features", "json");
@@ -200,7 +231,14 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * language.
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese.</li>
+         * <li>en-US: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("language", language);
@@ -209,7 +247,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return. Valid values: 0 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -218,7 +259,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * model.
+         * <p>The model name for exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("model", model);
@@ -227,7 +271,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The model name for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -236,7 +283,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The next token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lwytFRtLdNk=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -245,7 +295,22 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * providers.
+         * <p>The provider. Valid values:</p>
+         * <ul>
+         * <li>qwen: Alibaba Cloud - Qwen.</li>
+         * <li>zhipu-ai: Zhipu AI.</li>
+         * <li>wan: Alibaba Cloud - Wan.</li>
+         * <li>qwen-domain-model: Alibaba Cloud - Domain Model.</li>
+         * <li>mini-max: MiniMax.</li>
+         * <li>moonshot-ai: Moonshot AI.</li>
+         * <li>deepseek: DeepSeek.</li>
+         * <li>happyhorse: Alibaba Cloud - HappyHorse.</li>
+         * <li>kling: Kling AI.</li>
+         * <li>pixverse: PixVerse.</li>
+         * <li>vidu: Vidu.</li>
+         * <li>tripo: Tripo.</li>
+         * <li>xiaomi: Xiaomi MiMo.</li>
+         * </ul>
          */
         public Builder providers(java.util.List<String> providers) {
             String providersShrink = shrink(providers, "providers", "json");

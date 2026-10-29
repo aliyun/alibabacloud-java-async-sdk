@@ -106,7 +106,7 @@ public class UpdateOrganizationMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter is empty if the operation is successful.</p>
+         * <p>The error code. This parameter is empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class UpdateOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is empty if the operation is successful.</p>
+         * <p>The error message. This parameter is empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -139,7 +139,7 @@ public class UpdateOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9531C132-DF05-5C7F-8BB0-96EA8C4D00D7</p>
@@ -150,7 +150,7 @@ public class UpdateOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

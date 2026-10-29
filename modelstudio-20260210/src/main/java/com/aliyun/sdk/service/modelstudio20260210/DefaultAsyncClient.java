@@ -113,13 +113,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>A user can have only one valid invitation link at a time.
+     * <p>A user can have only one valid invitation link.
      * If the user already has a valid invitation link, this operation returns the existing link.
-     * To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link first.
-     * This operation returns only the generated token. The invitation link is assembled in the following format: <code>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</code></p>
+     * To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link.
+     * This operation returns only the generated token. The invitation link is concatenated in the following format: <code>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</code>.</p>
      * <ul>
      * <li>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</li>
-     * <li>For the China site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</li>
+     * <li>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateTokenPlanInviteLink  CreateTokenPlanInviteLinkRequest
@@ -195,12 +195,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>A workspace can be deleted only if the following conditional requirements are met:</p>
+     * <p>You can delete a workspace only if it meets the following conditional requirements:</p>
      * <ol>
      * <li>The workspace is not the default workspace.</li>
-     * <li>The workspace is not used to purchase other products, such as AMB.</li>
-     * <li>In permission management, the workspace is not granted to Resource Access Management (RAM) users or RAM roles.</li>
-     * <li>The workspace does not contain any resources, such as API keys, model deployments, or knowledge bases.</li>
+     * <li>The workspace is not used to purchase other services, such as AMB.</li>
+     * <li>The workspace is not granted to Resource Access Management (RAM) users or RAM roles in permission management.</li>
+     * <li>No resources exist in the workspace, such as API keys, model deployments, or knowledge bases.</li>
      * </ol>
      * 
      * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
@@ -222,7 +222,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>An API key that is already disabled cannot be disabled again.</p>
+     * <p>You cannot disable an API key repeatedly.</p>
      * 
      * @param request the request parameters of DisableApiKey  DisableApiKeyRequest
      * @return DisableApiKeyResponse
@@ -243,7 +243,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>An API key that is already enabled cannot be enabled again.</p>
+     * <p>You cannot enable an API key multiple times.</p>
      * 
      * @param request the request parameters of EnableApiKey  EnableApiKeyRequest
      * @return EnableApiKeyResponse
@@ -318,7 +318,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves information about a specified organization by OrgId.</p>
+     * <p>Retrieves the details of a specified organization by using the organization ID.</p>
      * 
      * @param request the request parameters of GetOrganization  GetOrganizationRequest
      * @return GetOrganizationResponse
@@ -393,7 +393,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the TokenPlan management platform account information when the user is logged in.</p>
+     * <p>Retrieves the account information from the TokenPlan management platform when logged on.</p>
      * 
      * @param request the request parameters of GetTokenPlanAccountDetail  GetTokenPlanAccountDetailRequest
      * @return GetTokenPlanAccountDetailResponse
@@ -414,7 +414,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation returns only the generated token and expiration time. The invitation link is assembled in the following format: <code>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</code></p>
+     * <p>This operation returns only the generated token and expiration time. The invitation link is concatenated in the following format: <code>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</code>.</p>
      * <ul>
      * <li>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</li>
      * <li>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</li>
@@ -493,14 +493,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use <code>workspaceId</code> to specify the workspace to query (required, cannot be empty).</li>
-     * <li>Token-based pagination is used: <code>nextToken</code> is a string-type offset. Do not pass it for the first page. <code>maxResults</code> defaults to 20. If the upper limit is exceeded, <code>InvalidParameter.maxResults</code> is returned.</li>
-     * <li><code>authorizationScope</code> controls the query dimension: <code>AUTHORIZED</code> = models that have been authorized for the specified action. <code>AUTHORIZABLE</code> = full authorizable catalog.</li>
-     * <li><code>modelAction</code> specifies the authorization action dimension. Currently only <code>INFERENCE</code> is supported. If left empty, it defaults to <code>INFERENCE</code>.</li>
-     * <li><code>filter</code> supports filtering by <code>name</code> (fuzzy match on model and name) or <code>model</code> (exact match on a single model).</li>
-     * <li>Returns a <code>TokenBasedPage</code> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</li>
+     * <li>Specify the workspace to query by using <code>workspaceId</code> (required and cannot be empty).</li>
+     * <li>Uses token-based pagination: <code>nextToken</code> is a string offset and is not required for the first page. The default value of <code>maxResults</code> is 20. If the value exceeds the upper limit, the <code>InvalidParameter.maxResults</code> error is returned.</li>
+     * <li><code>authorizationScope</code> controls the query dimension: <code>AUTHORIZED</code> specifies models that are authorized for the specified action, and <code>AUTHORIZABLE</code> specifies all authorizable directories.</li>
+     * <li><code>modelAction</code> specifies the authorization action dimension. Currently, only <code>INFERENCE</code> is supported. If this parameter is left empty, the default value <code>INFERENCE</code> is used.</li>
+     * <li><code>filter</code> supports filtering by <code>name</code> (fuzzy match for model and name) or <code>model</code> (exact match for a single model).</li>
+     * <li>Returns <code>TokenBasedPage</code>, which contains the authorization status (inference, fine-tuning, and deployment) and throttling information for each model.</li>
      * </ul>
      * 
      * @param request the request parameters of ListModelPermissions  ListModelPermissionsRequest
@@ -651,7 +651,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Only the API Key value changes. The API Key ID remains unchanged.</p>
+     * <p>Only the API key changes. The API key ID remains unchanged.</p>
      * 
      * @param request the request parameters of RotateTokenPlanKey  RotateTokenPlanKeyRequest
      * @return RotateTokenPlanKeyResponse

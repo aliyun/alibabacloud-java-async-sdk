@@ -88,12 +88,7 @@ public class UpdateModelPermissionsRequest extends Request {
         } 
 
         /**
-         * <p>The tri-state value for one-click authorization. Valid values:</p>
-         * <ul>
-         * <li>OPEN: grants authorization to all models with one click.</li>
-         * <li>CLOSE: cancels one-click authorization.</li>
-         * <li>KEEP: keeps per-model authorization.</li>
-         * </ul>
+         * <p>The tri-state configuration for one-click authorization. Valid values: OPEN: enables one-click authorization. CLOSE: cancels one-click authorization. KEEP: retains model-by-model authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>OPEN</p>
@@ -105,7 +100,7 @@ public class UpdateModelPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The list of per-model authorization items.</p>
+         * <p>The list of model-by-model authorization items.</p>
          */
         public Builder models(java.util.List<Models> models) {
             this.putBodyParameter("models", models);
@@ -213,7 +208,7 @@ public class UpdateModelPermissionsRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to grant model deployment permission.</p>
+             * <p>Specifies whether to grant the model deployment permission.</p>
              */
             public Builder deploy(Boolean deploy) {
                 this.deploy = deploy;
@@ -221,7 +216,7 @@ public class UpdateModelPermissionsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to grant model training permission.</p>
+             * <p>Specifies whether to grant the model training permission.</p>
              */
             public Builder fineTune(Boolean fineTune) {
                 this.fineTune = fineTune;
@@ -229,7 +224,7 @@ public class UpdateModelPermissionsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to grant model invocation permission.</p>
+             * <p>Specifies whether to grant the model invocation permission.</p>
              */
             public Builder inference(Boolean inference) {
                 this.inference = inference;

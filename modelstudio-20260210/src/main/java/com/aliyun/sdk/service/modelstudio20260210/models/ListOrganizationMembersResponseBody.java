@@ -355,7 +355,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableLimit.
+             * <p>The currently available quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder availableLimit(Double availableLimit) {
                 this.availableLimit = availableLimit;
@@ -363,7 +366,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * CycleEndTime.
+             * <p>The end time of the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1792476000001</p>
              */
             public Builder cycleEndTime(Long cycleEndTime) {
                 this.cycleEndTime = cycleEndTime;
@@ -371,7 +377,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * CycleStartTime.
+             * <p>The start time of the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1792476000000</p>
              */
             public Builder cycleStartTime(Long cycleStartTime) {
                 this.cycleStartTime = cycleStartTime;
@@ -379,7 +388,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * FrozenCredits.
+             * <p>The frozen quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder frozenCredits(Double frozenCredits) {
                 this.frozenCredits = frozenCredits;
@@ -387,7 +399,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * HasShareLimit.
+             * <p>Indicates whether a quota limit exists for the shared usage package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true/false</p>
              */
             public Builder hasShareLimit(Boolean hasShareLimit) {
                 this.hasShareLimit = hasShareLimit;
@@ -395,7 +410,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * IsAvailable.
+             * <p>Indicates whether the quota is currently available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true/false</p>
              */
             public Builder isAvailable(Boolean isAvailable) {
                 this.isAvailable = isAvailable;
@@ -403,7 +421,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * LastConfirmedTime.
+             * <p>The time when the quota limit configuration was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1792476000000</p>
              */
             public Builder lastConfirmedTime(Long lastConfirmedTime) {
                 this.lastConfirmedTime = lastConfirmedTime;
@@ -411,7 +432,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * UpperLimit.
+             * <p>The upper limit of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder upperLimit(Double upperLimit) {
                 this.upperLimit = upperLimit;
@@ -419,7 +443,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCredits.
+             * <p>The used quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder usedCredits(Double usedCredits) {
                 this.usedCredits = usedCredits;
@@ -538,7 +565,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * CycleEndTime.
+             * <p>The start time of the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1792476000001</p>
              */
             public Builder cycleEndTime(Long cycleEndTime) {
                 this.cycleEndTime = cycleEndTime;
@@ -546,7 +576,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * CycleStartTime.
+             * <p>The start time of the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1792476000000</p>
              */
             public Builder cycleStartTime(Long cycleStartTime) {
                 this.cycleStartTime = cycleStartTime;
@@ -554,7 +587,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * CycleSurplusValue.
+             * <p>The remaining entitlement quota for the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32259</p>
              */
             public Builder cycleSurplusValue(Double cycleSurplusValue) {
                 this.cycleSurplusValue = cycleSurplusValue;
@@ -562,7 +598,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * CycleTotalValue.
+             * <p>The total entitlement quota for the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>250000</p>
              */
             public Builder cycleTotalValue(Double cycleTotalValue) {
                 this.cycleTotalValue = cycleTotalValue;
@@ -570,7 +609,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * EquityType.
+             * <p>The entitlement type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREDITS</p>
              */
             public Builder equityType(String equityType) {
                 this.equityType = equityType;
@@ -578,7 +620,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * EquityUnit.
+             * <p>The unit of measurement for the entitlement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Credit</p>
              */
             public Builder equityUnit(String equityUnit) {
                 this.equityUnit = equityUnit;
@@ -723,7 +768,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the subscription.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1792476000002</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -731,7 +779,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * EquityList.
+             * <p>The list of subscription entitlements.</p>
              */
             public Builder equityList(java.util.List<EquityList> equityList) {
                 this.equityList = equityList;
@@ -739,7 +787,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCode.
+             * <p>The code of the subscription instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subs-1234567</p>
              */
             public Builder instanceCode(String instanceCode) {
                 this.instanceCode = instanceCode;
@@ -747,7 +798,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * PayMode.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>total</p>
              */
             public Builder payMode(String payMode) {
                 this.payMode = payMode;
@@ -755,7 +809,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The code of the subscription product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sfm_tokenplanteams_dp_cn</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -763,7 +820,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * SpecType.
+             * <p>The specification type of the subscription.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -771,7 +831,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the subscription.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1792476000000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -779,7 +842,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The subscription status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1002,7 +1068,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The member business ID.</p>
+             * <p>The business ID of the member.</p>
              * 
              * <strong>example:</strong>
              * <p>112233</p>
@@ -1046,7 +1112,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The member email address.</p>
+             * <p>The email address of the member.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@email.com">test@email.com</a></p>
@@ -1079,7 +1145,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The organization ID.</p>
+             * <p>The ID of the organization.</p>
              * 
              * <strong>example:</strong>
              * <p>org_123456789</p>
@@ -1090,7 +1156,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * PackLimitInfo.
+             * <p>The upper limit information for the shared usage package available to the member.</p>
              */
             public Builder packLimitInfo(PackLimitInfo packLimitInfo) {
                 this.packLimitInfo = packLimitInfo;
@@ -1098,7 +1164,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of member roles.</p>
+             * <p>The list of roles for the member.</p>
              */
             public Builder roles(java.util.List<String> roles) {
                 this.roles = roles;
@@ -1106,7 +1172,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The seat resource allocate ID.</p>
+             * <p>The resource allocation ID of the seat.</p>
              * 
              * <strong>example:</strong>
              * <p>seat_123456</p>
@@ -1117,11 +1183,11 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The seat specification type. Valid values:</p>
+             * <p>The specification type of the seat. Valid values:</p>
              * <ul>
              * <li>standard: Standard seat.</li>
              * <li>pro: Pro seat.</li>
-             * <li>max: Max seat.</li>
+             * <li>max: Premium seat.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1133,7 +1199,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The member status.</p>
+             * <p>The status of the member.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -1144,7 +1210,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionInfo.
+             * <p>The subscription information of the member.</p>
              */
             public Builder subscriptionInfo(SubscriptionInfo subscriptionInfo) {
                 this.subscriptionInfo = subscriptionInfo;

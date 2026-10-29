@@ -150,7 +150,7 @@ public class EnableApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call was successful.</p>
+         * <p>Indicates whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
