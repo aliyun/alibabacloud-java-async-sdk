@@ -529,6 +529,9 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
 
             /**
              * <p>The estimated number of rows. Unit: rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder estimatedRows(Long estimatedRows) {
                 this.estimatedRows = estimatedRows;
@@ -537,6 +540,9 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
 
             /**
              * <p>The number of days before binary logs (binlogs) expire. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expireLogsDays(Integer expireLogsDays) {
                 this.expireLogsDays = expireLogsDays;
@@ -572,6 +578,9 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
 
             /**
              * <p>The maximum idle time for a non-interactive connection. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder waitTimeout(Integer waitTimeout) {
                 this.waitTimeout = waitTimeout;

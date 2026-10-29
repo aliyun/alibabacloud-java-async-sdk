@@ -210,7 +210,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         } 
 
         /**
-         * DatabaseName.
+         * <p>The name of the PostgreSQL database to connect to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analytics_db</p>
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -218,7 +221,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         }
 
         /**
-         * HostName.
+         * <p>The hostname or IP address of the PostgreSQL database server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1xxxxx.pg.rds.aliyuncs.com</p>
          */
         public Builder hostName(String hostName) {
             this.hostName = hostName;
@@ -226,7 +232,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type used to connect to the PostgreSQL data source. Valid values: PublicNetwork (public network) and PrivateNetwork (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrivateNetwork</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -234,7 +243,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         }
 
         /**
-         * Password.
+         * <p>The password of the database connection user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>your_password</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -242,7 +254,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>The connection port of the PostgreSQL database server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -250,7 +265,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the PostgreSQL data source resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -258,7 +276,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         }
 
         /**
-         * SchemaName.
+         * <p>The name of the PostgreSQL schema to synchronize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_schema</p>
          */
         public Builder schemaName(String schemaName) {
             this.schemaName = schemaName;
@@ -266,7 +287,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group used to connect to the PostgreSQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -274,7 +298,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         }
 
         /**
-         * SnapshotMode.
+         * <p>The snapshot mode used when PostgreSQL data synchronization is started for the first time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>when_needed</p>
          */
         public Builder snapshotMode(String snapshotMode) {
             this.snapshotMode = snapshotMode;
@@ -282,7 +309,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         }
 
         /**
-         * TableNames.
+         * <p>The names of the PostgreSQL tables to synchronize. Separate multiple table names with commas. Each table name must be in the {SchemaName}.{TableName} format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_schema.test_table</p>
          */
         public Builder tableNames(String tableNames) {
             this.tableNames = tableNames;
@@ -290,7 +320,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         }
 
         /**
-         * User.
+         * <p>The username for the database connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>readonly_user</p>
          */
         public Builder user(String user) {
             this.user = user;
@@ -298,7 +331,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The ID of the vSwitch in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[vsw-a1b2c3d4e5f6g7h8i9j0k]</p>
          */
         public Builder vSwitchIds(String vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -306,7 +342,10 @@ public class SourcePostgreSQLParameters extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC where the PostgreSQL instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

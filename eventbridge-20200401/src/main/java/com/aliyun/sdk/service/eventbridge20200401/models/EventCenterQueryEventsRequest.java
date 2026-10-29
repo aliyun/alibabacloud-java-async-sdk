@@ -126,7 +126,7 @@ public class EventCenterQueryEventsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return. Valid values: 0 to 10,000. The default value is 100.</p>
+         * <p>The maximum number of results to return. Valid values: 0 to 10000. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -138,7 +138,7 @@ public class EventCenterQueryEventsRequest extends Request {
         }
 
         /**
-         * <p>The token to retrieve the next page of results.</p>
+         * <p>The token used to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -304,6 +304,9 @@ public class EventCenterQueryEventsRequest extends Request {
 
             /**
              * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -312,6 +315,9 @@ public class EventCenterQueryEventsRequest extends Request {
 
             /**
              * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -319,7 +325,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>A list of values to use with the operator.</p>
+             * <p>The list of values used with the operator.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -436,7 +442,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The logical operator for combining nested filters.</p>
+             * <p>The logical combination method for nested filter conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>AND</p>
@@ -447,7 +453,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>A list of nested filters.</p>
+             * <p>The list of nested filter conditions.</p>
              */
             public Builder nestedFilters(java.util.List<NestedFilters> nestedFilters) {
                 this.nestedFilters = nestedFilters;
@@ -466,7 +472,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The values to use with the operator.</p>
+             * <p>The values used with the operator.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -755,7 +761,7 @@ public class EventCenterQueryEventsRequest extends Request {
             } 
 
             /**
-             * <p>An array of column names to use as dimensions for splitting the dataset.</p>
+             * <p>Further splits the dataset by specific dimensions (column names).</p>
              */
             public Builder breakdowns(java.util.List<String> breakdowns) {
                 this.breakdowns = breakdowns;
@@ -763,7 +769,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The calculations to perform on specified columns.</p>
+             * <p>Performs calculations on the specified columns by using operators.</p>
              */
             public Builder calculations(java.util.List<Calculations> calculations) {
                 this.calculations = calculations;
@@ -771,7 +777,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The end timestamp for the event query. Unit: milliseconds.</p>
+             * <p>The end timestamp for querying events, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1687861201814</p>
@@ -782,7 +788,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The logical operator for combining filter conditions.</p>
+             * <p>The logic for combining filter conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>AND</p>
@@ -793,7 +799,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>A list of filter conditions.</p>
+             * <p>The list of filter conditions.</p>
              */
             public Builder filters(java.util.List<Filters> filters) {
                 this.filters = filters;
@@ -801,7 +807,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The time granularity, in seconds, for querying time series data. The minimum value is 1. This is a suggested value; the actual granularity is returned in the response.</p>
+             * <p>The time granularity, which is the minimum time unit for querying time series data. Unit: seconds. Minimum value: 1. This parameter is a recommended value. The actual granularity is subject to the returned value.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -812,7 +818,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of events to query. Valid values: 1 to 10,000.</p>
+             * <p>The maximum number of events to query. Valid values: 1 to 10000.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -823,7 +829,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The starting position of the query. The count starts from 0.</p>
+             * <p>The starting position of the current query. The value starts from 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -834,7 +840,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The sort order for the query results. This parameter applies only when QueryType is set to table.</p>
+             * <p>Sorts the query results. This parameter is valid only for queries where QueryType is set to table.</p>
              */
             public Builder orders(java.util.List<Orders> orders) {
                 this.orders = orders;
@@ -842,7 +848,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The start timestamp for the event query. Unit: milliseconds.</p>
+             * <p>The start timestamp for querying events, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1687860901814</p>
@@ -853,7 +859,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The time range. Unit: milliseconds. The minimum value is 1,000.</p>
+             * <p>The time range. Unit: milliseconds. Minimum value: 1000.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -950,12 +956,9 @@ public class EventCenterQueryEventsRequest extends Request {
             /**
              * <p>The query type. Valid values:</p>
              * <ul>
-             * <li><p><strong>timeseries</strong>: queries time series data.</p>
-             * </li>
-             * <li><p><strong>table</strong>: queries table data.</p>
-             * </li>
-             * <li><p><strong>timeseries_and_table</strong>: queries both time series data and table data.</p>
-             * </li>
+             * <li><strong>timeseries</strong>: time series data</li>
+             * <li><strong>table</strong>: tabular data</li>
+             * <li><strong>timeseries_and_table</strong>: both time series and tabular data</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -968,7 +971,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The schema ID.</p>
+             * <p>The ID of the schema.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

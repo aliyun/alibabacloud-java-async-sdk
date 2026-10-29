@@ -171,7 +171,10 @@ public class SinkRabbitMQMetaParameters extends TeaModel {
         } 
 
         /**
-         * Endpoint.
+         * <p>The endpoint of the ApsaraMQ for RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rabbitmq-cn-a1b2c3d4e5f-cn-hangzhou-vpc.amqp.aliyuncs.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -179,7 +182,10 @@ public class SinkRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rabbitmq-cn-a1b2c3d4e5f</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -187,7 +193,10 @@ public class SinkRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The type of the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -195,7 +204,10 @@ public class SinkRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type used to connect to the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrivateNetwork</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -203,7 +215,10 @@ public class SinkRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * Password.
+         * <p>The password used to connect to the ApsaraMQ for RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourPassword</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -211,7 +226,10 @@ public class SinkRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group to which the servers of the ApsaraMQ for RabbitMQ cluster belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -219,7 +237,10 @@ public class SinkRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * Username.
+         * <p>The username used to connect to the ApsaraMQ for RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder username(String username) {
             this.username = username;
@@ -227,7 +248,10 @@ public class SinkRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The IDs of the vSwitches in the VPC where the ApsaraMQ for RabbitMQ cluster is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-a1b2c3d4e5f6g7h8i9j0k</p>
          */
         public Builder vSwitchIds(String vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -235,7 +259,10 @@ public class SinkRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * VirtualHostName.
+         * <p>The name of the virtual host (vhost) in the ApsaraMQ for RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-001</p>
          */
         public Builder virtualHostName(String virtualHostName) {
             this.virtualHostName = virtualHostName;
@@ -243,7 +270,10 @@ public class SinkRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC where the ApsaraMQ for RabbitMQ cluster is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

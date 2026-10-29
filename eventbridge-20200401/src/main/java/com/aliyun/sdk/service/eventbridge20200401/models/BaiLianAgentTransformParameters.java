@@ -106,7 +106,10 @@ public class BaiLianAgentTransformParameters extends TeaModel {
         } 
 
         /**
-         * ApiKey.
+         * <p>The API key for Model Studio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Q34****</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -114,7 +117,10 @@ public class BaiLianAgentTransformParameters extends TeaModel {
         }
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0123456789abcdef0123456789abcdef</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -122,7 +128,7 @@ public class BaiLianAgentTransformParameters extends TeaModel {
         }
 
         /**
-         * Prompt.
+         * <p>The prompt.</p>
          */
         public Builder prompt(Prompt prompt) {
             this.prompt = prompt;
@@ -130,7 +136,10 @@ public class BaiLianAgentTransformParameters extends TeaModel {
         }
 
         /**
-         * RequestPerMinute.
+         * <p>The throttling limit in requests per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder requestPerMinute(Long requestPerMinute) {
             this.requestPerMinute = requestPerMinute;
@@ -138,7 +147,10 @@ public class BaiLianAgentTransformParameters extends TeaModel {
         }
 
         /**
-         * TokenPerMinute.
+         * <p>The throttling limit in tokens per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder tokenPerMinute(Long tokenPerMinute) {
             this.tokenPerMinute = tokenPerMinute;
@@ -217,7 +229,10 @@ public class BaiLianAgentTransformParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The template form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -225,7 +240,10 @@ public class BaiLianAgentTransformParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -233,7 +251,10 @@ public class BaiLianAgentTransformParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The template value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$.data.message</p>
              */
             public Builder value(String value) {
                 this.value = value;

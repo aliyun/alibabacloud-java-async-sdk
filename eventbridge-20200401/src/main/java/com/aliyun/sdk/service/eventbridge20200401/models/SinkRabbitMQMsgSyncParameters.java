@@ -249,7 +249,7 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         } 
 
         /**
-         * Body.
+         * <p>The message body.</p>
          */
         public Builder body(SinkRabbitMQMsgSyncParametersBody body) {
             this.body = body;
@@ -257,7 +257,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * Endpoint.
+         * <p>The endpoint of the ApsaraMQ for RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rabbitmq-cn-hangzhou-2x***.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -265,7 +268,7 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * Exchange.
+         * <p>The exchange. This parameter is required only when the TargetType parameter is set to Exchange.</p>
          */
         public Builder exchange(Exchange exchange) {
             this.exchange = exchange;
@@ -273,7 +276,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rabbitmq-cn-a1b2c3d4e5f</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -281,7 +287,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The type of the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -289,7 +298,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * MaxHops.
+         * <p>The maximum number of hops allowed for message forwarding in a federation task. Messages that exceed this limit are dropped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxHops(String maxHops) {
             this.maxHops = maxHops;
@@ -297,7 +309,7 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * MessageId.
+         * <p>The message ID.</p>
          */
         public Builder messageId(MessageId messageId) {
             this.messageId = messageId;
@@ -305,7 +317,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type used to connect to the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrivateNetwork</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -313,7 +328,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * Password.
+         * <p>The password used to connect to the ApsaraMQ for RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourPassword</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -321,7 +339,7 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * Properties.
+         * <p>The message properties.</p>
          */
         public Builder properties(Properties properties) {
             this.properties = properties;
@@ -329,7 +347,7 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * RoutingKey.
+         * <p>The routing key of the message. This parameter is required only when the TargetType parameter is set to Exchange.</p>
          */
         public Builder routingKey(RoutingKey routingKey) {
             this.routingKey = routingKey;
@@ -337,7 +355,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group to which the nodes of the ApsaraMQ for RabbitMQ cluster belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -345,7 +366,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * Username.
+         * <p>The username used to connect to the ApsaraMQ for RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder username(String username) {
             this.username = username;
@@ -353,7 +377,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The IDs of the vSwitches in the VPC where the ApsaraMQ for RabbitMQ cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-a1b2c3d4e5f6g7h8i9j0k</p>
          */
         public Builder vSwitchIds(String vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -361,7 +388,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * VirtualHostName.
+         * <p>The name of the virtual host (vhost) in the ApsaraMQ for RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-001</p>
          */
         public Builder virtualHostName(String virtualHostName) {
             this.virtualHostName = virtualHostName;
@@ -369,7 +399,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC where the ApsaraMQ for RabbitMQ cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -448,7 +481,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method used to generate the message body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -456,7 +492,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string used to format parameter values. This parameter is used only when Form is set to TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -464,7 +503,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value expression of the message body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$.data.body</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -544,7 +586,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method used to generate the target exchange.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -552,7 +597,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string used to format parameter values. This parameter is used only when Form is set to TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -560,7 +608,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value expression of the target exchange.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$.data.exchange</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -640,7 +691,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method used to generate the message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -648,7 +702,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string used to format parameter values. This parameter is used only when Form is set to TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -656,7 +713,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value expression of the message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$.data.messageId</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -736,7 +796,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method used to generate the message properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -744,7 +807,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string used to format parameter values. This parameter is used only when Form is set to TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -752,7 +818,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value expression of the message properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$.data.properties</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -832,7 +901,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method used to generate the routing key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -840,7 +912,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string used to format parameter values. This parameter is used only when Form is set to TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -848,7 +923,10 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value expression of the routing key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$.data.routingKey</p>
              */
             public Builder value(String value) {
                 this.value = value;

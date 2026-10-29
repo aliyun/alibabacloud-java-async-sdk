@@ -106,7 +106,7 @@ public class ListEventHouseRuntimesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. Success indicates that the operation was successful.</p>
+         * <p>The response code. A value of Success indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class ListEventHouseRuntimesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The runtime list result.</p>
+         * <p>The runtime list results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListEventHouseRuntimesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned by the operation.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>
@@ -147,7 +147,7 @@ public class ListEventHouseRuntimesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -242,7 +242,10 @@ public class ListEventHouseRuntimesResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxResults.
+             * <p>The maximum number of runtimes returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -250,7 +253,10 @@ public class ListEventHouseRuntimesResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next page. An empty value indicates that there are no more pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -258,7 +264,7 @@ public class ListEventHouseRuntimesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of runtimes.</p>
+             * <p>The runtime list.</p>
              */
             public Builder runtimes(java.util.List<EventHouseRuntime> runtimes) {
                 this.runtimes = runtimes;
@@ -266,7 +272,10 @@ public class ListEventHouseRuntimesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of runtimes that meet the query conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

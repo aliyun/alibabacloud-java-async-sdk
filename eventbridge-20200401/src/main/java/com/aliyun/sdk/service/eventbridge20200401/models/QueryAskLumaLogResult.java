@@ -80,7 +80,7 @@ public class QueryAskLumaLogResult extends TeaModel {
         } 
 
         /**
-         * <p>The log entries returned by the query.</p>
+         * <p>The list of log records returned by the query.</p>
          */
         public Builder entries(java.util.List<AskLumaLogEntry> entries) {
             this.entries = entries;
@@ -88,7 +88,11 @@ public class QueryAskLumaLogResult extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether more results are available. The value is <code>true</code> if more results can be retrieved, and <code>false</code> otherwise.</p>
+         * <p>Indicates whether more query results are available. Valid values:</p>
+         * <ul>
+         * <li>true: More results are available.</li>
+         * <li>false: No more results are available.</li>
+         * </ul>
          */
         public Builder hasMore(Boolean hasMore) {
             this.hasMore = hasMore;
@@ -96,7 +100,10 @@ public class QueryAskLumaLogResult extends TeaModel {
         }
 
         /**
-         * <p>The token to use for retrieving the next page of results. If present, pass this value as the <code>LastKey</code> parameter in a subsequent request to fetch more data. This field is omitted when all results have been retrieved.</p>
+         * <p>The token used to retrieve the next page of query results. Pass this value as LastKey in subsequent requests to continue the query. This field is not returned when all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ0cyI6MTcxN...</p>
          */
         public Builder lastKey(String lastKey) {
             this.lastKey = lastKey;

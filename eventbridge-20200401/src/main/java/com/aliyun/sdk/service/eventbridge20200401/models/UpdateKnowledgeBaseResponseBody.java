@@ -106,7 +106,7 @@ public class UpdateKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of Success indicates that the call was successful. If the call fails, a specific error code is returned.</p>
+         * <p>The response code. A value of Success indicates that the call is successful. If the call fails, a specific error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class UpdateKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the knowledge base after the update.</p>
+         * <p>The updated details of the knowledge base.</p>
          */
         public Builder data(KnowledgeBase data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class UpdateKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned by the operation. A value of Operation success is returned if the call was successful. If the call fails, a specific error description is returned.</p>
+         * <p>The response message. If the call is successful, the value is Operation success. If the call fails, a specific error description is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>
@@ -147,7 +147,7 @@ public class UpdateKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. A value of true indicates success.</p>
+         * <p>Indicates whether the call is successful. A value of true indicates that the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

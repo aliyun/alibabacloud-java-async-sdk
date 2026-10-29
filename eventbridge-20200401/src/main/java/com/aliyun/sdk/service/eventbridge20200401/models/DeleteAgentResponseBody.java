@@ -80,10 +80,7 @@ public class DeleteAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The API status or POP error code. Valid values:</p>
-         * <ul>
-         * <li>Success: the operation is successful.</li>
-         * </ul>
+         * <p>The API status or POP error code. Valid values: Success: The operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>AgentNotFound</p>

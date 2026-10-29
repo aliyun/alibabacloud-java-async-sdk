@@ -106,7 +106,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status of the API call, which can be Success or a POP error code.</p>
+         * <p>The API status or POP error code. Valid values: Success: Successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -136,7 +136,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5DAF96FB-A4B6-548C-B999-XXXXXXXX</p>
@@ -147,7 +147,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+         * <p>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -203,7 +203,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A query result entry, represented as a key-value pair.</p>
+             * <p>The entries in the query results, represented as key-value pairs.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -276,7 +276,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A query result entry, represented as a key-value pair.</p>
+             * <p>The entries in the query results, represented as key-value pairs.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -290,7 +290,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp.</p>
+             * <p>The timestamp used for display.</p>
              * 
              * <strong>example:</strong>
              * <p>1683561600000</p>
@@ -399,7 +399,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum number of entries to return.</p>
+             * <p>The maximum number of records returned for the current request.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -410,7 +410,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token used to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+             * <p>The token that indicates the read position returned by the current call. An empty value indicates that all data has been read.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -421,7 +421,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query results for the <code>table</code> query type.</p>
+             * <p>The query results for the table query type.</p>
              */
             public Builder table(java.util.List<Table> table) {
                 this.table = table;
@@ -429,7 +429,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query results for the <code>time series</code> query type.</p>
+             * <p>The query results for the timeseries query type.</p>
              */
             public Builder timeSeries(java.util.List<TimeSeries> timeSeries) {
                 this.timeSeries = timeSeries;
@@ -437,7 +437,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries that meet the filter conditions. This parameter is optional and is not returned by default.</p>
+             * <p>The total number of data entries that meet the request conditions. This parameter is optional and is not returned by default.</p>
              * 
              * <strong>example:</strong>
              * <p>76</p>

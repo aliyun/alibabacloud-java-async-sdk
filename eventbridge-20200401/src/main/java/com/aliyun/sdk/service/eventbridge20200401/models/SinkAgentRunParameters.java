@@ -106,7 +106,10 @@ public class SinkAgentRunParameters extends TeaModel {
         } 
 
         /**
-         * AgentRuntimeName.
+         * <p>The name of the AgentRun agent runtime. You can obtain it from the Alibaba Cloud AgentRun console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-demo-example</p>
          */
         public Builder agentRuntimeName(String agentRuntimeName) {
             this.agentRuntimeName = agentRuntimeName;
@@ -114,7 +117,7 @@ public class SinkAgentRunParameters extends TeaModel {
         }
 
         /**
-         * Body.
+         * <p>The triplet configuration for the Body parameter template. It defines the data transformation method and supports two modes: ORIGINAL (pass-through) and TEMPLATE (template replacement).</p>
          */
         public Builder body(SinkAgentRunParametersBody body) {
             this.body = body;
@@ -122,7 +125,10 @@ public class SinkAgentRunParameters extends TeaModel {
         }
 
         /**
-         * EndpointName.
+         * <p>The endpoint name of the AgentRun agent runtime, which is used to construct the invocation URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder endpointName(String endpointName) {
             this.endpointName = endpointName;
@@ -130,7 +136,10 @@ public class SinkAgentRunParameters extends TeaModel {
         }
 
         /**
-         * RoleName.
+         * <p>The name of the AgentRun agent role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-agent-role</p>
          */
         public Builder roleName(String roleName) {
             this.roleName = roleName;
@@ -138,7 +147,10 @@ public class SinkAgentRunParameters extends TeaModel {
         }
 
         /**
-         * Timeout.
+         * <p>The HTTP request timeout period in milliseconds. Default value: 30000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000</p>
          */
         public Builder timeout(String timeout) {
             this.timeout = timeout;
@@ -217,7 +229,10 @@ public class SinkAgentRunParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The transformation format. Default value: CONSTANT. Valid values: ORIGINAL, TEMPLATE. Example: <code>ORIGINAL</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ORIGINAL</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -225,7 +240,10 @@ public class SinkAgentRunParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template pattern. This parameter is required only when Form is set to TEMPLATE. It supports ${variable} placeholder replacement. Example: <code>The value of ${key} is ${value}!</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -233,7 +251,10 @@ public class SinkAgentRunParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The parameter value. In ORIGINAL mode, the value is $. In TEMPLATE mode, the value is a key-value mapping in JSON format, where the value is a JSONPath expression or a constant. Example: <code>$</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -145,7 +145,7 @@ public class SinkHttpsParameters extends TeaModel {
         } 
 
         /**
-         * Body.
+         * <p>HTTP Body</p>
          */
         public Builder body(SinkHttpsParametersBody body) {
             this.body = body;
@@ -153,7 +153,10 @@ public class SinkHttpsParameters extends TeaModel {
         }
 
         /**
-         * Method.
+         * <p>The HTTP method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         public Builder method(String method) {
             this.method = method;
@@ -161,7 +164,10 @@ public class SinkHttpsParameters extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type, PrivateNetwork/PublicNetwork.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PublicNetwork</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -169,7 +175,10 @@ public class SinkHttpsParameters extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -177,7 +186,10 @@ public class SinkHttpsParameters extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>HTTP Token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-****</p>
          */
         public Builder token(String token) {
             this.token = token;
@@ -185,7 +197,7 @@ public class SinkHttpsParameters extends TeaModel {
         }
 
         /**
-         * URL.
+         * <p>The HTTP/HTTPS address.</p>
          */
         public Builder URL(URL URL) {
             this.URL = URL;
@@ -193,7 +205,10 @@ public class SinkHttpsParameters extends TeaModel {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The vSwitch IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-a1b2c3d4e5f6g7h8i9j0k</p>
          */
         public Builder vSwitchIds(String vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -201,7 +216,10 @@ public class SinkHttpsParameters extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>vpc ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -280,7 +298,10 @@ public class SinkHttpsParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>Form</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEMPLATE</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -288,7 +309,10 @@ public class SinkHttpsParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>Template</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;message&quot;:&quot;${message}&quot;}</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -296,7 +320,10 @@ public class SinkHttpsParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;message&quot;:&quot;$.data.message&quot;}</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -376,7 +403,10 @@ public class SinkHttpsParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>Form</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -384,7 +414,10 @@ public class SinkHttpsParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>Template</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://${host}/events</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -392,7 +425,10 @@ public class SinkHttpsParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/events">https://example.com/events</a></p>
              */
             public Builder value(String value) {
                 this.value = value;

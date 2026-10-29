@@ -145,7 +145,7 @@ public class Table extends TeaModel {
         } 
 
         /**
-         * <p>The name of the data catalog to which the table belongs</p>
+         * <p>The name of the data catalog to which the table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>my_catalog</p>
@@ -156,7 +156,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The column definition list of the table. Each column contains Name (column name), Type (data type), and Comment (remarks)</p>
+         * <p>The column definitions of the table. Each column includes the name, data type, and comment.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;Primary key&quot;}]</p>
@@ -167,10 +167,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>Comment description of the table</p>
+         * <p>The comment of the table.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试事件表</p>
+         * <p>Test event table</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -178,7 +178,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The creation time of the table (Unix timestamp, in milliseconds)</p>
+         * <p>The creation time of the table. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1717948800000</p>
@@ -189,7 +189,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier name of the event table</p>
+         * <p>The unique name of the event table.</p>
          * 
          * <strong>example:</strong>
          * <p>my_table</p>
@@ -200,7 +200,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The name of the namespace to which the table belongs</p>
+         * <p>The name of the namespace to which the table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>my_namespace</p>
@@ -211,7 +211,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>Data retention policy. Includes the retention days for hot data and cold data</p>
+         * <p>The data retention policy. This includes the retention periods for hot and cold data in days.</p>
          */
         public Builder retentionPolicy(RetentionPolicy retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
@@ -219,7 +219,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The last update time of the table (Unix timestamp, in milliseconds)</p>
+         * <p>The last update time of the table. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1717948800000</p>
@@ -301,10 +301,10 @@ public class Table extends TeaModel {
             } 
 
             /**
-             * <p>Comment description of the table</p>
+             * <p>The comment of the column.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试事件表</p>
+             * <p>Primary key ID</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -312,10 +312,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier name of the event table</p>
+             * <p>The name of the column.</p>
              * 
              * <strong>example:</strong>
-             * <p>my_table</p>
+             * <p>id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -323,7 +323,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The data type of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -390,7 +393,7 @@ public class Table extends TeaModel {
             } 
 
             /**
-             * <p>Retention days for cold data, used for low-cost archival storage</p>
+             * <p>The number of days to retain cold data in low-cost archive storage.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -401,7 +404,7 @@ public class Table extends TeaModel {
             }
 
             /**
-             * <p>Retention days for hot data, used for high-performance query storage</p>
+             * <p>The number of days to retain hot data in high-performance query storage.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>

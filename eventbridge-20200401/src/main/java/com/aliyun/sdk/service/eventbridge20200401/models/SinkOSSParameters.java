@@ -197,7 +197,10 @@ public class SinkOSSParameters extends TeaModel {
         } 
 
         /**
-         * BucketName.
+         * <p>The name of the OSS bucket used to store event data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;
@@ -205,7 +208,10 @@ public class SinkOSSParameters extends TeaModel {
         }
 
         /**
-         * CompressionType.
+         * <p>The compression type of the delivered files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gzip</p>
          */
         public Builder compressionType(String compressionType) {
             this.compressionType = compressionType;
@@ -213,7 +219,7 @@ public class SinkOSSParameters extends TeaModel {
         }
 
         /**
-         * ContentTransform.
+         * <p>The event content transformation configuration before delivery to OSS.</p>
          */
         public Builder contentTransform(ContentTransform contentTransform) {
             this.contentTransform = contentTransform;
@@ -221,7 +227,10 @@ public class SinkOSSParameters extends TeaModel {
         }
 
         /**
-         * Endpoint.
+         * <p>The endpoint of the destination OSS service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -229,7 +238,10 @@ public class SinkOSSParameters extends TeaModel {
         }
 
         /**
-         * PathFormat.
+         * <p>The storage path for event data in the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/EB-test/</p>
          */
         public Builder pathFormat(String pathFormat) {
             this.pathFormat = pathFormat;
@@ -237,7 +249,10 @@ public class SinkOSSParameters extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the destination OSS service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -245,7 +260,10 @@ public class SinkOSSParameters extends TeaModel {
         }
 
         /**
-         * RoleArn.
+         * <p>The ARN of the RAM role used to deliver data to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890123456:role/example-eventbridge-role</p>
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;
@@ -253,7 +271,10 @@ public class SinkOSSParameters extends TeaModel {
         }
 
         /**
-         * RotateIntervalMs.
+         * <p>The time window for batch aggregation of event data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60000</p>
          */
         public Builder rotateIntervalMs(String rotateIntervalMs) {
             this.rotateIntervalMs = rotateIntervalMs;
@@ -261,7 +282,10 @@ public class SinkOSSParameters extends TeaModel {
         }
 
         /**
-         * RotateSizeBytes.
+         * <p>The file size threshold for batch aggregation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1048576</p>
          */
         public Builder rotateSizeBytes(String rotateSizeBytes) {
             this.rotateSizeBytes = rotateSizeBytes;
@@ -269,7 +293,7 @@ public class SinkOSSParameters extends TeaModel {
         }
 
         /**
-         * SSLEnabled.
+         * <p>Specifies whether SSL is enabled.</p>
          */
         public Builder SSLEnabled(Boolean SSLEnabled) {
             this.SSLEnabled = SSLEnabled;
@@ -277,7 +301,10 @@ public class SinkOSSParameters extends TeaModel {
         }
 
         /**
-         * TaskConcurrency.
+         * <p>The number of concurrent delivery tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder taskConcurrency(String taskConcurrency) {
             this.taskConcurrency = taskConcurrency;
@@ -285,7 +312,10 @@ public class SinkOSSParameters extends TeaModel {
         }
 
         /**
-         * TimeZone.
+         * <p>The time zone used for time variables in the storage path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UTC+8:00</p>
          */
         public Builder timeZone(String timeZone) {
             this.timeZone = timeZone;
@@ -364,7 +394,10 @@ public class SinkOSSParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The transformation method for the delivered content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -372,7 +405,10 @@ public class SinkOSSParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string used to format parameter values. This parameter is used only when Form is set to TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -380,7 +416,10 @@ public class SinkOSSParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value expression used to generate the delivered content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$.data.message</p>
              */
             public Builder value(String value) {
                 this.value = value;

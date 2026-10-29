@@ -106,7 +106,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</p>
+         * <p>The response code. A value of Success indicates success. If the call fails, a specific error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The search results, including the list of matched chunks and the time spent.</p>
+         * <p>The search results, which include the list of matched chunks and the time taken.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. A value of Operation success is returned for a successful call. A specific error description is returned for a failed call.</p>
+         * <p>The response message. The value is Operation success if the call is successful, or a specific error description if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>
@@ -147,7 +147,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. A value of true indicates success.</p>
+         * <p>Indicates whether the call is successful. A value of true indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -219,7 +219,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
              * <p>The list of matched chunks, sorted by relevance.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;DocumentId&quot;:&quot;doc-bp1xxxxxxxxxxxx&quot;,&quot;ChunkSeq&quot;:3,&quot;Content&quot;:&quot;EventBridge supports event routing&quot;}]</p>
+             * <p>[{&quot;DocumentId&quot;:&quot;doc-bp1xxxxxxxxxxxx&quot;,&quot;ChunkSeq&quot;:3,&quot;Content&quot;:&quot;EventBridge supports event routing.&quot;}]</p>
              */
             public Builder chunks(java.util.List<KnowledgeBaseSearchChunk> chunks) {
                 this.chunks = chunks;
@@ -227,7 +227,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The server-side processing duration of this search. Unit: milliseconds.</p>
+             * <p>The server-side processing time for this search, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>

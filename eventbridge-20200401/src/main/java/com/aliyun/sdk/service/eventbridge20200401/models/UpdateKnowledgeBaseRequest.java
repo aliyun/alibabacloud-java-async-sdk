@@ -133,7 +133,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
         } 
 
         /**
-         * <p>The data catalog to which the knowledge base belongs. This parameter, together with Namespace and KnowledgeBaseName, uniquely identifies a knowledge base. You can call ListCatalogs to obtain the value.</p>
+         * <p>The data catalog to which the knowledge base belongs. It is used together with Namespace and KnowledgeBaseName to locate the knowledge base. You can call ListCatalogs to obtain the value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>Optional. Updates the default chunking strategy of the knowledge base. The update takes effect only for documents uploaded after the update. Existing documents are not re-chunked. If this parameter is not specified, the configuration remains unchanged.</p>
+         * <p>Optional. Updates the default chunking strategy of the knowledge base. This update takes effect only for newly uploaded documents and does not re-chunk existing documents. If this parameter is not specified, the strategy is not modified.</p>
          */
         public Builder chunkConfiguration(ChunkConfiguration chunkConfiguration) {
             String chunkConfigurationShrink = shrink(chunkConfiguration, "ChunkConfiguration", "json");
@@ -156,7 +156,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>The description of the knowledge base to update. If this parameter is not specified, the description remains unchanged.</p>
+         * <p>Updates the description of the knowledge base. If this parameter is not specified, the description is not modified.</p>
          * 
          * <strong>example:</strong>
          * <p>Product documentation knowledge base</p>
@@ -168,7 +168,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>The name of the knowledge base. The name must be unique within the namespace. The name is specified during creation and cannot be modified.</p>
+         * <p>The name of the knowledge base. The name must be unique within the namespace. It is specified during creation and cannot be modified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>The namespace to which the knowledge base belongs. The namespace must belong to the specified data catalog. This parameter, together with Catalog and KnowledgeBaseName, uniquely identifies a knowledge base. You can call ListNamespaces to obtain the value.</p>
+         * <p>The namespace to which the knowledge base belongs. The namespace must belong to the specified data catalog. It is used together with Catalog and KnowledgeBaseName to locate the knowledge base. You can call ListNamespaces to obtain the value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>Optional. Updates the default search configuration at the knowledge base level. The update takes effect immediately for subsequent search requests. If this parameter is not specified, the configuration remains unchanged.</p>
+         * <p>Optional. Updates the default search configuration at the knowledge base level. The update takes effect immediately for subsequent search requests. If this parameter is not specified, the configuration is not modified.</p>
          */
         public Builder searchConfiguration(SearchConfiguration searchConfiguration) {
             String searchConfigurationShrink = shrink(searchConfiguration, "SearchConfiguration", "json");
@@ -274,7 +274,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to replace consecutive whitespace characters (spaces, line breaks, and tab characters) with a single space.</p>
+             * <p>Specifies whether to replace consecutive whitespace characters, such as spaces, line breaks, and tabs, with a single space.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -398,7 +398,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>Required for the BY_HEADING strategy. Valid values: 1 to 6. This parameter is ignored for other strategies. Headings at or above the specified level are used as split boundaries. For example, if you set this parameter to 2, both H1 and H2 headings are used as split boundaries. Deeper-level headings are not used for splitting and are retained in the chunk body. If the content within a section exceeds MaxChunkSize, the content is split by paragraph or sentence as a fallback. Documents without headings fall back to intelligent chunking.</p>
+             * <p>Required for the BY_HEADING strategy. Valid values: 1 to 6. This parameter is ignored for other strategies. Headings at or above the specified level are used as split boundaries. For example, if you set this parameter to 2, both H1 and H2 headings are used for splitting. Deeper-level headings are not split and are retained in the chunk text. If the section content exceeds MaxChunkSize, the system falls back to splitting by paragraphs or sentences. For documents without headings, the system falls back to intelligent chunking.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -439,7 +439,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The segment identifier for the LINE_BREAK strategy, such as a line feed.</p>
+             * <p>The paragraph identifier for the LINE_BREAK strategy, such as a line break.</p>
              * 
              * <strong>example:</strong>
              * <p>\\n\\n</p>
@@ -450,11 +450,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The chunking strategy. Valid values:</p>
-             * <ul>
-             * <li>AUTO: automatic chunking.</li>
-             * <li>LINE_BREAK: chunking by segment identifier.</li>
-             * </ul>
+             * <p>The chunking strategy. Valid values: AUTO: Automatic chunking. LINE_BREAK: Chunking by paragraph identifier.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -590,12 +586,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>The retrieve mode. Valid values:</p>
-             * <ul>
-             * <li>KEYWORD: keyword retrieve.</li>
-             * <li>VECTOR: vector retrieve.</li>
-             * <li>HYBRID: hybrid retrieve.</li>
-             * </ul>
+             * <p>The search mode. Valid values: KEYWORD: Keyword retrieve. VECTOR: AISearch. HYBRID: Hybrid retrieve.</p>
              * 
              * <strong>example:</strong>
              * <p>HYBRID</p>
@@ -606,10 +597,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>Takes effect only in hybrid search mode. Valid values:</p>
-             * <ul>
-             * <li>RRF: reciprocal rank fusion.</li>
-             * </ul>
+             * <p>The hybrid search fusion algorithm. This parameter takes effect only in hybrid search mode. Valid values: RRF: Reciprocal rank fusion.</p>
              * 
              * <strong>example:</strong>
              * <p>RRF</p>
@@ -620,7 +608,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>Takes effect only in hybrid search mode. This default value is used when the search request does not specify Rerank.</p>
+             * <p>Specifies whether to enable reranking by default. This parameter takes effect only in hybrid search mode and is used when a search request does not specify the Rerank parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -631,7 +619,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The default reranking model used when the search request does not specify RerankModel. Valid values: qwen3-rerank. Default value: qwen3-rerank.</p>
+             * <p>The default rerank model used when a search request does not specify the RerankModel parameter. Valid values: qwen3-rerank. Default value: qwen3-rerank.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3-rerank</p>
@@ -642,7 +630,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The parameter k for the RRF fusion algorithm. Default value: 60. The value must be greater than 0.</p>
+             * <p>The parameter k for the RRF fusion algorithm. The value must be greater than 0. Default value: 60.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -653,7 +641,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The default number of results to return.</p>
+             * <p>The default number of returned results.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -664,7 +652,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The vector path weight for the WEIGHTED fusion algorithm. Valid values: 0 to 1. The keyword path weight equals 1 minus this value. Default value: 0.7.</p>
+             * <p>The weight of the vector path in the WEIGHTED fusion algorithm. Valid values: 0 to 1. The weight of the keyword path is 1 minus this value. Default value: 0.7.</p>
              * 
              * <strong>example:</strong>
              * <p>0.7</p>

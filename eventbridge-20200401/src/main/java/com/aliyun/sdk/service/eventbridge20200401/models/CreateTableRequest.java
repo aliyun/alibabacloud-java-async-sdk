@@ -145,7 +145,7 @@ public class CreateTableRequest extends Request {
         } 
 
         /**
-         * <p>The data catalog to which the table belongs.</p>
+         * <p>The data catalog.</p>
          * 
          * <strong>example:</strong>
          * <p>my_catalog</p>
@@ -172,7 +172,7 @@ public class CreateTableRequest extends Request {
          * <p>The column definitions.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}]</p>
+         * <p>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;Primary key&quot;}]</p>
          */
         public Builder columns(java.util.List<Columns> columns) {
             String columnsShrink = shrink(columns, "Columns", "json");
@@ -182,10 +182,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * <p>The description.</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试事件表</p>
+         * <p>Test event table</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -194,7 +194,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * <p>The namespace to which the table belongs.</p>
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>my_namespace</p>
@@ -304,7 +304,7 @@ public class CreateTableRequest extends Request {
             } 
 
             /**
-             * <p>The description of the field.</p>
+             * <p>The comment of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>Isp</p>
@@ -315,7 +315,7 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * <p>The name of the connector.</p>
+             * <p>The connector name.</p>
              * 
              * <strong>example:</strong>
              * <p>kafka-default-agent-alikafka_pre-cn-28t3sfzno003</p>
@@ -396,7 +396,7 @@ public class CreateTableRequest extends Request {
             } 
 
             /**
-             * <p>The cold storage retention time.</p>
+             * <p>The cold storage duration.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -407,7 +407,7 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * <p>The hot storage retention time.</p>
+             * <p>The hot storage duration.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>

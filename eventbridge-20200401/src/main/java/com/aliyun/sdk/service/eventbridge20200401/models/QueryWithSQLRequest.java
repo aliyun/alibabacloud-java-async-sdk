@@ -74,7 +74,7 @@ public class QueryWithSQLRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of rows to return. Default value: 20. Maximum value: 50.</p>
+         * <p>The number of entries to return. Default value: 20. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -86,7 +86,7 @@ public class QueryWithSQLRequest extends Request {
         }
 
         /**
-         * <p>The query statement. Typically uses a three-part table name in the format of catalog.namespace.table.</p>
+         * <p>The query statement. Typically, a three-part table name in the format of catalog.namespace.table is used.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

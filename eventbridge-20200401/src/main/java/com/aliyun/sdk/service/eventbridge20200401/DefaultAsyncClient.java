@@ -86,7 +86,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Checks for a service-linked role by name.</p>
+     * <p>Checks whether a service-linked role exists based on the name of the service-linked role.</p>
      * 
      * @param request the request parameters of CheckServiceLinkedRoleForProduct  CheckServiceLinkedRoleForProductRequest
      * @return CheckServiceLinkedRoleForProductResponse
@@ -125,7 +125,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create an API destination.</p>
+     * <p>Creates API destination information.</p>
      * 
      * @param request the request parameters of CreateApiDestination  CreateApiDestinationRequest
      * @return CreateApiDestinationResponse
@@ -287,7 +287,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates the service-linked role (SLR) that is associated with a specified product.</p>
+     * <p>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</p>
      * 
      * @param request the request parameters of CreateServiceLinkedRoleForProduct  CreateServiceLinkedRoleForProductRequest
      * @return CreateServiceLinkedRoleForProductResponse
@@ -308,7 +308,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates an event target under the specified rule.</p>
+     * <p>Creates an event target under a specified rule.</p>
      * 
      * @param request the request parameters of CreateTable  CreateTableRequest
      * @return CreateTableResponse
@@ -347,7 +347,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an API destination.</p>
+     * <p>Deletes a specified API destination.</p>
      * 
      * @param request the request parameters of DeleteApiDestination  DeleteApiDestinationRequest
      * @return DeleteApiDestinationResponse
@@ -368,7 +368,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete a connection.</p>
+     * <p>Deletes the specified connection configuration.</p>
      * 
      * @param request the request parameters of DeleteConnection  DeleteConnectionRequest
      * @return DeleteConnectionResponse
@@ -1094,7 +1094,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Gets the details of an event rule.</p>
+     * <p>Retrieves the details of an event rule.</p>
      * 
      * @param request the request parameters of GetRule  GetRuleRequest
      * @return GetRuleResponse
@@ -1547,7 +1547,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries all custom event sources.</p>
+     * <p>Queries all external event sources.</p>
      * 
      * @param request the request parameters of ListUserDefinedEventSources  ListUserDefinedEventSourcesRequest
      * @return ListUserDefinedEventSourcesResponse
@@ -1628,7 +1628,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates or updates event targets for a specified rule.</p>
+     * <p>Creates or updates an event target under a specified rule.</p>
      * 
      * @param request the request parameters of PutTargets  PutTargetsRequest
      * @return PutTargetsResponse
@@ -1790,7 +1790,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries for event traces within a specified time range.</p>
+     * <p>Queries the event trace within a specified time range.</p>
      * 
      * @param request the request parameters of QueryTracedEvents  QueryTracedEventsRequest
      * @return QueryTracedEventsResponse
@@ -1868,7 +1868,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves content from a knowledge base bound to a Luma Agent and returns relevant text chunks along with their relevance scores.</p>
+     * <p>Retrieves content in the knowledge base bound to a Luma agent and returns relevant text chunks along with their relevance scores.</p>
      * 
      * @param request the request parameters of SearchLumaKnowledgeBase  SearchLumaKnowledgeBaseRequest
      * @return SearchLumaKnowledgeBaseResponse
@@ -1910,7 +1910,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Use this action to test an event pattern before you apply it to a rule.</p>
+     * <p>Tests whether the event pattern matches the provided JSON-formatted event.</p>
      * 
      * @param request the request parameters of TestEventPattern  TestEventPatternRequest
      * @return TestEventPatternResponse
@@ -2012,7 +2012,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to update an event bus.</p>
+     * <p>Modifies an event bus.</p>
      * 
      * @param request the request parameters of UpdateEventBus  UpdateEventBusRequest
      * @return UpdateEventBusResponse
@@ -2051,7 +2051,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to update an event source.</p>
+     * <p>Updates the configuration of an event source.</p>
      * 
      * @param request the request parameters of UpdateEventSource  UpdateEventSourceRequest
      * @return UpdateEventSourceResponse

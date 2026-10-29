@@ -117,7 +117,7 @@ public class AskLumaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response body.</p>
+         * <p>The business response body.</p>
          */
         public Builder data(AskLumaResult data) {
             this.data = data;
@@ -136,7 +136,7 @@ public class AskLumaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>97FB3BAE-XXXXXX-36435495B7EB</p>
@@ -147,7 +147,7 @@ public class AskLumaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

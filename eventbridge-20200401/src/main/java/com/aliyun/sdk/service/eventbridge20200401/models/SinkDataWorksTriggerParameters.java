@@ -54,7 +54,10 @@ public class SinkDataWorksTriggerParameters extends TeaModel {
         } 
 
         /**
-         * Enable.
+         * <p>Specifies whether to enable the DataWorks trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(String enable) {
             this.enable = enable;

@@ -204,7 +204,7 @@ public class UpdateTableRequest extends Request {
          * <p>Add column</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}</p>
+         * <p>{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;Primary key&quot;}</p>
          */
         public Builder addColumn(AddColumn addColumn) {
             String addColumnShrink = shrink(addColumn, "AddColumn", "json");
@@ -292,7 +292,7 @@ public class UpdateTableRequest extends Request {
          * <p>Update column comment</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Name&quot;:&quot;id&quot;,&quot;Comment&quot;:&quot;主键ID&quot;}</p>
+         * <p>{&quot;Name&quot;:&quot;id&quot;,&quot;Comment&quot;:&quot;Primary key ID&quot;}</p>
          */
         public Builder updateColumnComment(UpdateColumnComment updateColumnComment) {
             String updateColumnCommentShrink = shrink(updateColumnComment, "UpdateColumnComment", "json");

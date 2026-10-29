@@ -144,7 +144,7 @@ public class AskLumaRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Help me collect statistics on recent order data</p>
+         * <p>Help me summarize the recent order data</p>
          */
         public Builder question(String question) {
             this.putBodyParameter("Question", question);

@@ -174,7 +174,7 @@ public class QueryTracedEventsRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range for the query, specified as a UNIX timestamp in milliseconds.</p>
+         * <p>The end time of the time range to retrieve events. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class QueryTracedEventsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per page. Use this parameter with NextToken to paginate the results.&gt;Notice: The maximum value is 100.</p>
+         * <p>The maximum number of entries to return per page. You can use this parameter together with NextToken to paginate query results. &gt;Notice: The maximum number of entries returned per page cannot exceed 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -248,7 +248,7 @@ public class QueryTracedEventsRequest extends Request {
         }
 
         /**
-         * <p>The token for retrieving the next page of results. It is returned in the response to a previous request if more results are available.</p>
+         * <p>The pagination token. If you specify Limit and more results are available, this token is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -260,7 +260,7 @@ public class QueryTracedEventsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range for the query, specified as a UNIX timestamp in milliseconds.</p>
+         * <p>The start time of the time range to retrieve events. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,7 +273,10 @@ public class QueryTracedEventsRequest extends Request {
         }
 
         /**
-         * <p>The event subject.</p>
+         * <p>The subject of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order-1001</p>
          */
         public Builder subject(String subject) {
             this.putQueryParameter("Subject", subject);

@@ -94,7 +94,7 @@ public class Namespace extends TeaModel {
         } 
 
         /**
-         * <p>The name of the data catalog to which the namespace belongs</p>
+         * <p>The name of the data catalog to which the namespace belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,10 +106,10 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * <p>The description information of the namespace</p>
+         * <p>The comment of the namespace.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试命名空间</p>
+         * <p>Test namespace</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -117,7 +117,7 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier name of the namespace</p>
+         * <p>The unique identifier name of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>my_namespace</p>
@@ -128,7 +128,7 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * <p>The extended properties of the namespace</p>
+         * <p>The extended properties of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;key&quot;:&quot;value&quot;}</p>

@@ -102,7 +102,7 @@ public class CreateNamespaceRequest extends Request {
         } 
 
         /**
-         * <p>Data catalog</p>
+         * <p>The data catalog to which the namespace belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>my_catalog</p>
@@ -114,7 +114,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>Idempotent Token</p>
+         * <p>The idempotency token.</p>
          * 
          * <strong>example:</strong>
          * <p>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</p>
@@ -126,10 +126,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>Remarks</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试命名空间</p>
+         * <p>Test namespace</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -138,7 +138,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>Namespace name</p>
+         * <p>The name of the namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

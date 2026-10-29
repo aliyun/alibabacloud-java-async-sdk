@@ -145,7 +145,10 @@ public class Agent extends TeaModel {
         } 
 
         /**
-         * CreatedAt.
+         * <p>The creation time in UNIX milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717200000000</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -153,7 +156,10 @@ public class Agent extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IoT device data query agent</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -183,7 +189,7 @@ public class Agent extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The associated table metadata.</p>
          */
         public Builder metadata(Metadata metadata) {
             this.metadata = metadata;
@@ -191,7 +197,10 @@ public class Agent extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -199,7 +208,10 @@ public class Agent extends TeaModel {
         }
 
         /**
-         * Prompt.
+         * <p>The custom prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are an IoT data analytics assistant...</p>
          */
         public Builder prompt(String prompt) {
             this.prompt = prompt;
@@ -207,7 +219,10 @@ public class Agent extends TeaModel {
         }
 
         /**
-         * UpdatedAt.
+         * <p>The update time in UNIX milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717200000000</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;

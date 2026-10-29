@@ -116,7 +116,7 @@ public class PutTargetsRequest extends Request {
         }
 
         /**
-         * <p>A list of event targets to create or update. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+         * <p>The list of event targets to be added or updated. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder targets(java.util.List<Targets> targets) {
@@ -173,7 +173,7 @@ public class PutTargetsRequest extends Request {
             } 
 
             /**
-             * <p>The maximum number of concurrent executions for the event target.</p>
+             * <p>The concurrency.</p>
              * 
              * <strong>example:</strong>
              * <p>34</p>
@@ -282,10 +282,10 @@ public class PutTargetsRequest extends Request {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.</p>
+             * <p>The ARN of the dead-letter queue. Unprocessed events or events that exceed the maximum number of retries are written to the dead-letter queue.</p>
              * 
              * <strong>example:</strong>
-             * <p>Acs:mns:cn-hangzhou:123456789098****:/queues/deadletterqueue
+             * <p>acs:mns:cn-hangzhou:123456789098****:/queues/deadletterqueue
              * or
              * acs:mq:cn-hangzhou:123456789098****:/instances/MQ_INST_123456789098****_BX8QbBPL/topic/deadlettertopic
              * or
@@ -300,6 +300,9 @@ public class PutTargetsRequest extends Request {
 
             /**
              * <p>The network type of the dead-letter queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateNetwork</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -308,6 +311,9 @@ public class PutTargetsRequest extends Request {
 
             /**
              * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2vp****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -315,7 +321,10 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The VSwitch IDs.</p>
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-m5****</p>
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -323,7 +332,10 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC where the dead-letter queue resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2z****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -416,7 +428,7 @@ public class PutTargetsRequest extends Request {
             } 
 
             /**
-             * <p>The format of the parameter value. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</p>
+             * <p>The format of the event target parameter. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>TEMPLATE</p>
@@ -427,7 +439,7 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The key of the parameter. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</p>
+             * <p>The resource parameter of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>body</p>
@@ -438,7 +450,7 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The template for the parameter value. This parameter applies only when <code>Form</code> is set to <code>TEMPLATE</code>.</p>
+             * <p>The parameter template style of the event target.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -449,7 +461,7 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The value of the parameter.</p>
+             * <p>The value of the event target parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;key\&quot;=\&quot;value\&quot;}</p>
@@ -599,7 +611,7 @@ public class PutTargetsRequest extends Request {
             } 
 
             /**
-             * <p>The concurrency control settings.</p>
+             * <p>The concurrency control configuration.</p>
              */
             public Builder concurrentConfig(ConcurrentConfig concurrentConfig) {
                 this.concurrentConfig = concurrentConfig;
@@ -607,7 +619,7 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The dead-letter queue (DLQ) to which events are sent after all retry attempts fail. Supported DLQ types include Message Queue for Apache RocketMQ, Message Service (MNS), Message Queue for Apache Kafka, and EventBridge.</p>
+             * <p>The dead-letter queue. Unprocessed events or events that exceed the retry limit are written to the dead-letter queue. The supported queue types for the dead-letter queue include ApsaraMQ for RocketMQ, Simple Message Queue (formerly MNS), Message Queue for Apache Kafka, and EventBridge event bus.</p>
              */
             public Builder deadLetterQueue(DeadLetterQueue deadLetterQueue) {
                 this.deadLetterQueue = deadLetterQueue;
@@ -615,7 +627,7 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The endpoint of the event target.</p>
+             * <p>The delivery endpoint URL.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:fc:cn-hangzhou:123456789098****:services/guide.LATEST/functions/HelloFC</p>
@@ -626,11 +638,11 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The fault tolerance policy. Valid values:</p>
+             * <p>The fault tolerance strategy. Valid values:</p>
              * <ul>
-             * <li><p><strong>ALL</strong>: Enables fault tolerance. If an error occurs, execution continues. After the retry attempts defined by the retry strategy are exhausted, the event is sent to the configured dead-letter queue or discarded.</p>
+             * <li><p><strong>ALL</strong>: Allows fault tolerance. Exceptions are tolerated and do not block execution. If the retry strategy is exhausted, messages are delivered to the dead-letter queue or discarded based on the configuration.</p>
              * </li>
-             * <li><p><strong>NONE</strong>: Disables fault tolerance. If an error persists after all retry attempts fail, execution is blocked.</p>
+             * <li><p><strong>NONE</strong>: Disables fault tolerance. Exceptions are not tolerated. If an exception occurs and the retry strategy is exhausted, execution is blocked.</p>
              * </li>
              * </ul>
              * 
@@ -655,7 +667,7 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>A list of parameters for the event target.</p>
+             * <p>The parameters of the event target.</p>
              */
             public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
@@ -663,11 +675,11 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The retry strategy for pushing events. Valid values:</p>
+             * <p>The push retry policy. Valid values:</p>
              * <ul>
-             * <li><p><strong>BACKOFF_RETRY</strong>: The event is retried up to three times at random intervals between 10 and 20 seconds.</p>
+             * <li><p><strong>BACKOFF_RETRY</strong>: Backoff retry policy. The system retries three times, and the interval between each retry is a random value between 10 and 20 seconds.</p>
              * </li>
-             * <li><p><strong>EXPONENTIAL_DECAY_RETRY</strong>: The event is retried up to 176 times over 24 hours. The retry interval starts at 1 second, doubles with each attempt (1, 2, 4, ..., 256 seconds), and is capped at 512 seconds for all subsequent retries.</p>
+             * <li><p><strong>EXPONENTIAL_DECAY_RETRY</strong>: Exponential decay retry. The system retries 176 times, and the interval between retries increments exponentially up to 512 seconds. The total retry time is one day. The specific intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512...512 seconds (167 intervals of 512 seconds in total).</p>
              * </li>
              * </ul>
              * 

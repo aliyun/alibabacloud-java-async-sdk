@@ -106,7 +106,7 @@ public class GetDocumentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</p>
+         * <p>The response code. A value of Success indicates that the call was successful. If the call fails, a specific error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -125,7 +125,7 @@ public class GetDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. A value of Operation success is returned if the call succeeds. A specific error description is returned if the call fails.</p>
+         * <p>The response message. The value is Operation success if the call is successful, or a specific error description if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>
@@ -136,7 +136,7 @@ public class GetDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -147,7 +147,7 @@ public class GetDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. A value of true indicates success.</p>
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -135,7 +135,7 @@ public class AguiMessage extends TeaModel {
          * <p>The text content of the message.</p>
          * 
          * <strong>example:</strong>
-         * <p>根据您的问题，我将查询过去7天的事件量...</p>
+         * <p>Based on your question, I will query the number of events over the past 7 days..</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -154,7 +154,7 @@ public class AguiMessage extends TeaModel {
         }
 
         /**
-         * <p>The extension metadata.</p>
+         * <p>The extended metadata.</p>
          */
         public Builder metadata(Metadata metadata) {
             this.metadata = metadata;
@@ -162,7 +162,10 @@ public class AguiMessage extends TeaModel {
         }
 
         /**
-         * Reasoning.
+         * <p>The reasoning content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;The user asked me to execute ***&quot;</p>
          */
         public Builder reasoning(String reasoning) {
             this.reasoning = reasoning;
@@ -258,7 +261,7 @@ public class AguiMessage extends TeaModel {
             } 
 
             /**
-             * <p>The name of the extension data.</p>
+             * <p>The name of the extended data.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:eventbridge:cn-hangzhou:12345:eventhouse/system-rocketmq/namespace/rmq-cn-xxx/table/order</p>
@@ -269,7 +272,7 @@ public class AguiMessage extends TeaModel {
             }
 
             /**
-             * <p>The type of the extension data.</p>
+             * <p>The type of the extended data.</p>
              * 
              * <strong>example:</strong>
              * <p>inner-resource/event-table</p>
@@ -326,7 +329,7 @@ public class AguiMessage extends TeaModel {
             } 
 
             /**
-             * <p>The extension data.</p>
+             * <p>The extended data.</p>
              */
             public Builder attachments(Attachments attachments) {
                 this.attachments = attachments;
@@ -393,7 +396,7 @@ public class AguiMessage extends TeaModel {
             } 
 
             /**
-             * <p>The arguments of the tool calling function.</p>
+             * <p>The parameters of the tool invocation method.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -404,7 +407,7 @@ public class AguiMessage extends TeaModel {
             }
 
             /**
-             * <p>The name of the tool calling function.</p>
+             * <p>The name of the tool invocation method.</p>
              * 
              * <strong>example:</strong>
              * <p>discoverMetadata</p>
@@ -487,7 +490,7 @@ public class AguiMessage extends TeaModel {
             } 
 
             /**
-             * <p>The tool calling function.</p>
+             * <p>The tool invocation method.</p>
              */
             public Builder function(Function function) {
                 this.function = function;
@@ -495,7 +498,7 @@ public class AguiMessage extends TeaModel {
             }
 
             /**
-             * <p>The tool calling ID.</p>
+             * <p>The tool invocation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>call_xxx</p>
@@ -506,7 +509,7 @@ public class AguiMessage extends TeaModel {
             }
 
             /**
-             * <p>The tool calling type.</p>
+             * <p>The tool invocation type.</p>
              * 
              * <strong>example:</strong>
              * <p>function</p>

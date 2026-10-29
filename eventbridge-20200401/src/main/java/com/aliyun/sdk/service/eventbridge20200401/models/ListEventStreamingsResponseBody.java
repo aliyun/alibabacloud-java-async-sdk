@@ -107,8 +107,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
         /**
          * <p>The response code. Valid values:</p>
-         * <p>Success: The request was successful.    </p>
-         * <p>Other values: An error occurred. For more information about error codes, see Error codes.</p>
+         * <ul>
+         * <li>Success: The request is successful.</li>
+         * <li>Other values: Error codes. For more information, see Error codes.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -119,7 +121,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The event stream list.</p>
+         * <p>The list of event streams.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +140,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>283FF852-C4B8-58C9-9777-F88A5A16****</p>
@@ -149,7 +151,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful. The value true is returned if the operation was successful.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -218,7 +220,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum number of events that the window can contain. When this threshold is reached, data in the window is pushed downstream. If multiple windows exist, a push is triggered when any window meets the condition.</p>
+             * <p>The maximum number of events that the window can accommodate. When this threshold is reached, data in the window is pushed downstream. If multiple windows exist, the push is triggered when the condition of any window is met.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -229,7 +231,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum time range (in seconds) of events that the window can contain. When this threshold is reached, data in the window is pushed downstream. If multiple windows exist, a push is triggered when any window meets the condition.</p>
+             * <p>The maximum time range in seconds for events that the window can accommodate. When this threshold is reached, data in the window is pushed downstream. If multiple windows exist, the push is triggered when the condition of any window is met.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -312,7 +314,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * BusinessMode.
+             * <p>The business mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;BusinessMode&quot;</p>
              */
             public Builder businessMode(String businessMode) {
                 this.businessMode = businessMode;
@@ -320,7 +325,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCapacityUnitCount.
+             * <p>The maximum number of capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxCapacityUnitCount(Long maxCapacityUnitCount) {
                 this.maxCapacityUnitCount = maxCapacityUnitCount;
@@ -328,7 +336,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * MinCapacityUnitCount.
+             * <p>The minimum number of capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minCapacityUnitCount(Long minCapacityUnitCount) {
                 this.minCapacityUnitCount = minCapacityUnitCount;
@@ -434,7 +445,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.</p>
+             * <p>The ARN of the dead-letter queue.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::159787121179****:role/aliyunsaedefaultrole</p>
@@ -456,7 +467,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group ID of the instance where the dead-letter queue resides.</p>
+             * <p>The ID of the security group to which the instance of the dead-letter queue belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-2vcgdxz7o1n9zapp****</p>
@@ -467,7 +478,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID of the dead-letter queue.</p>
+             * <p>The ID of the vSwitch to which the dead-letter queue belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-m5ev8asdc6h12345****</p>
@@ -478,7 +489,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID of the dead-letter queue.</p>
+             * <p>The ID of the VPC to which the dead-letter queue belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2zehizpoendb3****</p>
@@ -535,7 +546,11 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The retry policy. Valid values: BACKOFF_RETRY (backoff retry) and EXPONENTIAL_DECAY_RETRY (exponential decay retry).</p>
+             * <p>The retry policy. Valid values:</p>
+             * <ul>
+             * <li>BACKOFF_RETRY: Backoff retry.</li>
+             * <li>EXPONENTIAL_DECAY_RETRY: Exponential decay retry.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>EXPONENTIAL_DECAY_RETRY</p>
@@ -678,7 +693,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessOption.
+             * <p>The business options.</p>
              */
             public Builder businessOption(BusinessOption businessOption) {
                 this.businessOption = businessOption;
@@ -686,7 +701,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the dead-letter queue is enabled. By default, the dead-letter queue is disabled, and messages that exceed the retry policy are discarded.</p>
+             * <p>Specifies whether to enable the dead-letter queue. By default, the dead-letter queue is disabled, and messages that exceed the retry policy are discarded.</p>
              */
             public Builder deadLetterQueue(DeadLetterQueue deadLetterQueue) {
                 this.deadLetterQueue = deadLetterQueue;
@@ -694,7 +709,11 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fault tolerance policy. Valid values: NONE (no fault tolerance) and ALL (tolerate all faults).</p>
+             * <p>The error tolerance policy. Valid values:</p>
+             * <ul>
+             * <li>NONE: No errors are tolerated.</li>
+             * <li>ALL: All errors are tolerated.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>
@@ -705,7 +724,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The concurrency.</p>
+             * <p>The number of concurrent tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -716,7 +735,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retry policy when event pushing fails.</p>
+             * <p>The retry policy used when an event push fails.</p>
              */
             public Builder retryStrategy(RetryStrategy retryStrategy) {
                 this.retryStrategy = retryStrategy;
@@ -724,7 +743,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Throttling.
+             * <p>The throttling value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder throttling(Integer throttling) {
                 this.throttling = throttling;
@@ -816,6 +838,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -918,6 +943,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -925,7 +953,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Group ID of the consumer group.</p>
+             * <p>The group ID of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>GID_******</p>
@@ -1020,6 +1048,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1201,7 +1232,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The consumption checkpoint.</p>
+             * <p>The consumption timestamp.</p>
              */
             public Builder consumeTimestamp(ConsumeTimestamp consumeTimestamp) {
                 this.consumeTimestamp = consumeTimestamp;
@@ -1231,7 +1262,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              * <p>The password of the Apache RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>yourPassword</p>
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -1291,7 +1322,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2zehizpoendb3****</p>
@@ -1459,7 +1490,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS file download URL.</p>
+             * <p>The download URL of the OSS file.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;<a href="https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&Expires=1725539627&Signature=rb8q3OpV2i3gZJ">https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&amp;Expires=1725539627&amp;Signature=rb8q3OpV2i3gZJ</a>&quot;</p>
@@ -1637,6 +1668,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1644,10 +1678,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the topic.</p>
+             * <p>The property name.</p>
              * 
              * <strong>example:</strong>
-             * <p>myTopic</p>
+             * <p>content</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1739,6 +1773,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1746,10 +1783,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the topic.</p>
+             * <p>The DashVector property type.</p>
              * 
              * <strong>example:</strong>
-             * <p>myTopic</p>
+             * <p>STRING</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1832,7 +1869,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
-             * <p>CONSTANT</p>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1841,6 +1878,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${content}</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1848,10 +1888,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the topic.</p>
+             * <p>The property value.</p>
              * 
              * <strong>example:</strong>
-             * <p>myTopic</p>
+             * <p>$.data.content</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1931,10 +1971,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The connector name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mongo-sink</p>
+             * <p>The property name.</p>
              */
             public Builder name(Name name) {
                 this.name = name;
@@ -1942,7 +1979,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The DashVector property type.</p>
              */
             public Builder type(Type type) {
                 this.type = type;
@@ -1950,10 +1987,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the topic.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>myTopic</p>
+             * <p>The property value.</p>
              */
             public Builder value(Value value) {
                 this.value = value;
@@ -2044,7 +2078,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${partition}</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2053,8 +2090,8 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <ul>
-             * <li>If Form is set to CONSTANT: a constant value.</li>
-             * <li>If Form is set to JSONPATH: the content extracted by JSONPath.</li>
+             * <li>CONSTANT: The constant value.</li>
+             * <li>JSONPATH: The content extracted by using JSONPath.</li>
              * </ul>
              * <p>Note: The Value field cannot exceed 10,240 characters.</p>
              * 
@@ -2162,8 +2199,8 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <ul>
-             * <li>If Form is set to JSONPATH: the content extracted by JSONPath.</li>
-             * <li>If Form is set to TEMPLATE: the template variable.</li>
+             * <li>JSONPATH: The content extracted by using JSONPath.</li>
+             * <li>TEMPLATE: The template variable.</li>
              * </ul>
              * <p>Note: The Value field cannot exceed 10,240 characters.</p>
              * 
@@ -2259,7 +2296,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${vector}</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2267,7 +2307,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content extracted by JSONPath.</p>
+             * <p>The content extracted by using JSONPath.</p>
              * <p>Note: The Value field cannot exceed 10,240 characters.</p>
              * 
              * <strong>example:</strong>
@@ -2451,7 +2491,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The schema field definition for table entries when inserting into DashVector. The result after event content transformation must be in JSON format.</p>
+             * <p>The schema field definitions for table entries when inserting data into DashVector. The transformed event content must be in JSON format.</p>
              */
             public Builder dashVectorSchemaParameters(java.util.List<DashVectorSchemaParameters> dashVectorSchemaParameters) {
                 this.dashVectorSchemaParameters = dashVectorSchemaParameters;
@@ -2500,7 +2540,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary key ID for inserting or deleting records. If this field is not specified, a random primary key ID is used.</p>
+             * <p>The primary key ID used when you insert or delete a record. If you do not specify this field, a random primary key ID is used.</p>
              */
             public Builder primaryKeyId(PrimaryKeyId primaryKeyId) {
                 this.primaryKeyId = primaryKeyId;
@@ -2508,7 +2548,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vector of the DashVector record to insert.</p>
+             * <p>The vector of the DashVector record to be inserted.</p>
              */
             public Builder vector(Vector vector) {
                 this.vector = vector;
@@ -2599,7 +2639,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2607,7 +2650,12 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The BLOB type. The record content template.</p>
+             * <p>The record content template for the BLOB type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;key&quot;: &quot;value&quot;
+             * }</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2698,7 +2746,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2800,7 +2851,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2808,7 +2862,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>To grant authorization to the event bus EventBridge to use this role to read Simple Log Service (SLS) log content, the following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, set the trusted entity type to &quot;Alibaba Cloud Service&quot; and set the trusted service to &quot;event bus&quot;.</p>
+             * <p>Requirements for the authorization of the event bus EventBridge to use this role to read Simple Log Service logs: when you create the role used by the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service, and select the event bus as the trusted service.</p>
              * 
              * <strong>example:</strong>
              * <p>testRole</p>
@@ -2902,7 +2956,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2910,7 +2967,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the DataHub topic.</p>
+             * <p>The DataHub topic name.</p>
              * 
              * <strong>example:</strong>
              * <p>demo-topic</p>
@@ -3004,7 +3061,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;${k1}&quot;,&quot;k2&quot;:&quot;${k2}&quot;}</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3012,7 +3072,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content schema of the topic. This parameter applies to the TUPLE type.</p>
+             * <p>The topic content schema for the TUPLE type.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;k1&quot;:&quot;value1&quot;,&quot;k2&quot;:&quot;value2&quot;}</p>
@@ -3106,7 +3166,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3114,7 +3177,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
+             * <p>The topic type. Valid values:</p>
              * <ul>
              * <li>TUPLE</li>
              * <li>BLOB</li>
@@ -3240,7 +3303,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The BLOB type. The record content template.</p>
+             * <p>The record content template for the BLOB type.</p>
              */
             public Builder body(SinkDataHubParametersBody body) {
                 this.body = body;
@@ -3256,7 +3319,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>To grant authorization to the event bus EventBridge to use this role to read Simple Log Service (SLS) log content, the following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, set the trusted entity type to &quot;Alibaba Cloud Service&quot; and set the trusted service to &quot;event bus&quot;.</p>
+             * <p>Requirements for the authorization of the event bus EventBridge to use this role to read Simple Log Service logs: when you create the role used by the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service, and select the event bus as the trusted service.</p>
              */
             public Builder roleName(RoleName roleName) {
                 this.roleName = roleName;
@@ -3264,7 +3327,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the DataHub topic.</p>
+             * <p>The DataHub topic name.</p>
              */
             public Builder topic(SinkDataHubParametersTopic topic) {
                 this.topic = topic;
@@ -3272,7 +3335,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content schema of the topic. This parameter applies to the TUPLE type.</p>
+             * <p>The topic content schema for the TUPLE type.</p>
              */
             public Builder topicSchema(TopicSchema topicSchema) {
                 this.topicSchema = topicSchema;
@@ -3280,7 +3343,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
+             * <p>The topic type. Valid values:</p>
              * <ul>
              * <li>TUPLE</li>
              * <li>BLOB</li>
@@ -3375,7 +3438,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3383,14 +3449,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
-             * <ul>
-             * <li>TUPLE</li>
-             * <li>BLOB</li>
-             * </ul>
+             * <p>The public HTTP endpoint of the BE.</p>
              * 
              * <strong>example:</strong>
-             * <p>TUPLE</p>
+             * <p>&quot;BeHttpEndpoint&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3481,7 +3543,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3489,14 +3554,12 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
-             * <ul>
-             * <li>TUPLE</li>
-             * <li>BLOB</li>
-             * </ul>
+             * <p>The message content.</p>
              * 
              * <strong>example:</strong>
-             * <p>TUPLE</p>
+             * <p>{
+             *   &quot;key&quot;: &quot;value&quot;
+             * }</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3587,7 +3650,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3595,14 +3661,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
-             * <ul>
-             * <li>TUPLE</li>
-             * <li>BLOB</li>
-             * </ul>
+             * <p>The database.</p>
              * 
              * <strong>example:</strong>
-             * <p>TUPLE</p>
+             * <p>&quot;Database&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3693,7 +3755,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3701,14 +3766,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
-             * <ul>
-             * <li>TUPLE</li>
-             * <li>BLOB</li>
-             * </ul>
+             * <p>The HTTP endpoint of the FE.</p>
              * 
              * <strong>example:</strong>
-             * <p>TUPLE</p>
+             * <p>&quot;FeHttpEndpoint&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3799,7 +3860,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3807,14 +3871,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
-             * <ul>
-             * <li>TUPLE</li>
-             * <li>BLOB</li>
-             * </ul>
+             * <p>The network type.</p>
              * 
              * <strong>example:</strong>
-             * <p>TUPLE</p>
+             * <p>PublicNetwork</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3905,7 +3965,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3913,14 +3976,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
-             * <ul>
-             * <li>TUPLE</li>
-             * <li>BLOB</li>
-             * </ul>
+             * <p>The password.</p>
              * 
              * <strong>example:</strong>
-             * <p>TUPLE</p>
+             * <p>yourPassword</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4011,7 +4070,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4019,14 +4081,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
-             * <ul>
-             * <li>TUPLE</li>
-             * <li>BLOB</li>
-             * </ul>
+             * <p>The MySQL protocol endpoint.</p>
              * 
              * <strong>example:</strong>
-             * <p>TUPLE</p>
+             * <p>&quot;QueryEndpoint&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4117,7 +4175,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4125,14 +4186,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
-             * <ul>
-             * <li>TUPLE</li>
-             * <li>BLOB</li>
-             * </ul>
+             * <p>The security group ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>TUPLE</p>
+             * <p>sg-mw43*****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4223,7 +4280,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4231,14 +4291,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
-             * <ul>
-             * <li>TUPLE</li>
-             * <li>BLOB</li>
-             * </ul>
+             * <p>The destination table.</p>
              * 
              * <strong>example:</strong>
-             * <p>TUPLE</p>
+             * <p>&quot;Table&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4329,7 +4385,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4337,14 +4396,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
-             * <ul>
-             * <li>TUPLE</li>
-             * <li>BLOB</li>
-             * </ul>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
-             * <p>TUPLE</p>
+             * <p>&quot;UserName&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4435,7 +4490,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4443,14 +4501,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
-             * <ul>
-             * <li>TUPLE</li>
-             * <li>BLOB</li>
-             * </ul>
+             * <p>The vSwitch IDs.</p>
              * 
              * <strong>example:</strong>
-             * <p>TUPLE</p>
+             * <p>vbr-8vb835n3zf9shwl****mp</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4541,7 +4595,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4549,14 +4606,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the topic. Valid values:</p>
-             * <ul>
-             * <li>TUPLE</li>
-             * <li>BLOB</li>
-             * </ul>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>TUPLE</p>
+             * <p>i-2ze7u5i17mbqtx1p****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4753,7 +4806,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * BeHttpEndpoint.
+             * <p>The public HTTP endpoint of the BE.</p>
              */
             public Builder beHttpEndpoint(BeHttpEndpoint beHttpEndpoint) {
                 this.beHttpEndpoint = beHttpEndpoint;
@@ -4761,7 +4814,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The BLOB type. The record content template.</p>
+             * <p>The message content.</p>
              */
             public Builder body(SinkDorisParametersBody body) {
                 this.body = body;
@@ -4769,7 +4822,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * <p>The database.</p>
              */
             public Builder database(Database database) {
                 this.database = database;
@@ -4777,7 +4830,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * FeHttpEndpoint.
+             * <p>The HTTP endpoint of the FE.</p>
              */
             public Builder feHttpEndpoint(FeHttpEndpoint feHttpEndpoint) {
                 this.feHttpEndpoint = feHttpEndpoint;
@@ -4786,9 +4839,6 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The network type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PrivateNetwork</p>
              */
             public Builder networkType(NetworkType networkType) {
                 this.networkType = networkType;
@@ -4796,7 +4846,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * <p>The password.</p>
              */
             public Builder password(Password password) {
                 this.password = password;
@@ -4804,7 +4854,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryEndpoint.
+             * <p>The MySQL protocol endpoint.</p>
              */
             public Builder queryEndpoint(QueryEndpoint queryEndpoint) {
                 this.queryEndpoint = queryEndpoint;
@@ -4813,9 +4863,6 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The security group ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sg-2vcgdxz7o1n9zapp****</p>
              */
             public Builder securityGroupId(SecurityGroupId securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -4823,7 +4870,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Table.
+             * <p>The destination table.</p>
              */
             public Builder table(Table table) {
                 this.table = table;
@@ -4831,7 +4878,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
              */
             public Builder userName(UserName userName) {
                 this.userName = userName;
@@ -4839,10 +4886,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID of the dead-letter queue.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-m5ev8asdc6h12345****</p>
+             * <p>The vSwitch IDs.</p>
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -4850,10 +4894,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-2zehizpoendb3****</p>
+             * <p>The VPC ID.</p>
              */
             public Builder vpcId(VpcId vpcId) {
                 this.vpcId = vpcId;
@@ -5384,7 +5425,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5593,7 +5637,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5695,7 +5742,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5705,8 +5755,8 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             /**
              * <p>The invocation type. Valid values:</p>
              * <ul>
-             * <li>Sync: synchronous.</li>
-             * <li>Async: asynchronous.</li>
+             * <li>Sync: Synchronous.</li>
+             * <li>Async: Asynchronous.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -5801,7 +5851,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5903,7 +5956,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5911,7 +5967,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>myService</p>
@@ -6046,7 +6102,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content body sent to the function.</p>
+             * <p>The request body sent to the function.</p>
              */
             public Builder body(SinkFcParametersBody body) {
                 this.body = body;
@@ -6080,8 +6136,8 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             /**
              * <p>The invocation type. Valid values:</p>
              * <ul>
-             * <li>Sync: synchronous.</li>
-             * <li>Async: asynchronous.</li>
+             * <li>Sync: Synchronous.</li>
+             * <li>Async: Asynchronous.</li>
              * </ul>
              */
             public Builder invocationType(InvocationType invocationType) {
@@ -6098,7 +6154,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              */
             public Builder serviceName(ServiceName serviceName) {
                 this.serviceName = serviceName;
@@ -6190,6 +6246,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6197,7 +6256,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution name.</p>
+             * <p>The name of the execution.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -6292,6 +6351,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6299,7 +6361,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The flow name.</p>
+             * <p>The name of the flow.</p>
              * 
              * <strong>example:</strong>
              * <p>test-streaming-fnf</p>
@@ -6394,6 +6456,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6401,7 +6466,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution input information.</p>
+             * <p>The input information for the execution.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -6496,6 +6561,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6599,7 +6667,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The execution name.</p>
+             * <p>The name of the execution.</p>
              */
             public Builder executionName(ExecutionName executionName) {
                 this.executionName = executionName;
@@ -6607,7 +6675,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The flow name.</p>
+             * <p>The name of the flow.</p>
              */
             public Builder flowName(FlowName flowName) {
                 this.flowName = flowName;
@@ -6615,7 +6683,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution input information.</p>
+             * <p>The input information for the execution.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -6714,7 +6782,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6722,11 +6793,11 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The acknowledgment mode for writing to Kafka:</p>
+             * <p>The acknowledgment mode for writing to Kafka. Valid values:</p>
              * <ul>
-             * <li>acks=0: No response is required from the server. This mode delivers high performance but has a high risk of data loss.</li>
-             * <li>acks=1: A response is returned after the primary node on the server successfully writes the data. This mode delivers moderate performance and has a moderate risk of data loss. Data loss may occur if the primary node goes down.</li>
-             * <li>acks=all: A response is returned only after the primary node successfully writes the data and the secondary nodes complete synchronization. This mode delivers lower performance but provides higher data safety. Data loss occurs only if both the primary and secondary nodes go down.</li>
+             * <li>acks=0: No response from the server is required. This mode provides high performance but has a high risk of data loss.</li>
+             * <li>acks=1: A response is returned after the primary node successfully writes the data. This mode provides medium performance and has a medium risk of data loss. Data may be lost if the primary node goes down.</li>
+             * <li>acks=all: A response is returned after the primary node successfully writes the data and the secondary nodes successfully synchronize the data. This mode provides low performance but ensures high data security. Data is lost only when both the primary and secondary nodes go down.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -6810,9 +6881,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The transformation type.
-             * CONSTANT: a constant.
-             * JSONPATH: extracts a value from the upstream source based on a path.</p>
+             * <p>The transformation type. Valid values:</p>
+             * <ul>
+             * <li>CONSTANT: fixed value</li>
+             * <li>JSONPATH: extracted from the upstream based on the path</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -6821,6 +6897,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6829,6 +6908,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;DynamicTopic&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -6919,7 +7001,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -7021,7 +7106,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -7029,7 +7117,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message key.</p>
+             * <p>The identifier of the message.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -7123,7 +7211,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -7131,7 +7222,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic name.</p>
+             * <p>The name of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>topic</p>
@@ -7373,11 +7464,11 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The acknowledgment mode for writing to Kafka:</p>
+             * <p>The acknowledgment mode for writing to Kafka. Valid values:</p>
              * <ul>
-             * <li>acks=0: No response is required from the server. This mode delivers high performance but has a high risk of data loss.</li>
-             * <li>acks=1: A response is returned after the primary node on the server successfully writes the data. This mode delivers moderate performance and has a moderate risk of data loss. Data loss may occur if the primary node goes down.</li>
-             * <li>acks=all: A response is returned only after the primary node successfully writes the data and the secondary nodes complete synchronization. This mode delivers lower performance but provides higher data safety. Data loss occurs only if both the primary and secondary nodes go down.</li>
+             * <li>acks=0: No response from the server is required. This mode provides high performance but has a high risk of data loss.</li>
+             * <li>acks=1: A response is returned after the primary node successfully writes the data. This mode provides medium performance and has a medium risk of data loss. Data may be lost if the primary node goes down.</li>
+             * <li>acks=all: A response is returned after the primary node successfully writes the data and the secondary nodes successfully synchronize the data. This mode provides low performance but ensures high data security. Data is lost only when both the primary and secondary nodes go down.</li>
              * </ul>
              */
             public Builder acks(Acks acks) {
@@ -7386,7 +7477,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * CompressionType.
+             * <p>The compression type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;CompressionType&quot;</p>
              */
             public Builder compressionType(String compressionType) {
                 this.compressionType = compressionType;
@@ -7394,9 +7488,11 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target topic strategy for message routing. If both the topic parameter and the topics parameter are specified, the value of the topics parameter takes precedence. The following two configuration modes are supported:
-             *     1. <strong>Static constant mode</strong>: Enter a fixed topic name string (for example, &quot;order_created&quot;). All messages are sent to this topic.
-             *     2. <strong>Dynamic extraction mode</strong>: Enter a standard JSONPath expression (for example, &quot;$.user.id&quot; or &quot;$.metadata.category&quot;). The system parses the upstream message body and extracts the value of the matching field as the target topic name.</p>
+             * <p>The target topic routing policy for messages. If both the topic and topics parameters are specified, the value of the topics parameter prevails. The following configuration modes are supported:</p>
+             * <ol>
+             * <li><strong>Static constant mode</strong>: Enter a fixed topic name string, such as &quot;order_created&quot;. All messages are sent to this topic.</li>
+             * <li><strong>Dynamic extraction mode</strong>: Enter a standard JSONPath expression, such as &quot;$.user.id&quot; or &quot;$.metadata.category&quot;. The system parses the upstream message body and extracts the value of the matched field as the target topic name.</li>
+             * </ol>
              */
             public Builder dynamicTopic(DynamicTopic dynamicTopic) {
                 this.dynamicTopic = dynamicTopic;
@@ -7412,7 +7508,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message key.</p>
+             * <p>The identifier of the message.</p>
              */
             public Builder key(Key key) {
                 this.key = key;
@@ -7420,7 +7516,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic name.</p>
+             * <p>The name of the topic.</p>
              */
             public Builder topic(SinkKafkaParametersTopic topic) {
                 this.topic = topic;
@@ -7428,7 +7524,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message body.</p>
+             * <p>The content of the message body.</p>
              */
             public Builder value(SinkKafkaParametersValue value) {
                 this.value = value;
@@ -7626,7 +7722,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -7634,7 +7733,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Base64 encoding is enabled.</p>
+             * <p>Specifies whether Base64 encoding is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -7728,7 +7827,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -7736,7 +7838,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Simple MSMQ (formerly MNS) queue.</p>
+             * <p>The name of the queue in Simple MSMQ (formerly MNS).</p>
              * 
              * <strong>example:</strong>
              * <p>MyQueue</p>
@@ -7819,7 +7921,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The message body.</p>
+             * <p>The message content.</p>
              */
             public Builder body(SinkMNSParametersBody body) {
                 this.body = body;
@@ -7827,7 +7929,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Base64 encoding is enabled.</p>
+             * <p>Specifies whether to enable Base64 encoding.</p>
              */
             public Builder isBase64Encode(IsBase64Encode isBase64Encode) {
                 this.isBase64Encode = isBase64Encode;
@@ -8258,7 +8360,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routing rule of the message.</p>
+             * <p>The routing rule for the message.</p>
              * 
              * <strong>example:</strong>
              * <p>housekeeping</p>
@@ -8521,7 +8623,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message body.</p>
+             * <p>The message content.</p>
              */
             public Builder body(SinkOpenSourceRabbitMQParametersBody body) {
                 this.body = body;
@@ -8529,7 +8631,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The RabbitMQ instance endpoint.</p>
+             * <p>The endpoint of the RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.1:9876</p>
@@ -8570,10 +8672,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username and password used for identity verification.</p>
+             * <p>The username and password used to authenticate for identity verification.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>yourPassword</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -8581,7 +8683,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The filter properties.</p>
+             * <p>The filtering properties.</p>
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -8600,7 +8702,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routing rule of the message. This parameter is required only when the TargetType parameter is set to Exchange.</p>
+             * <p>The routing rule for the message. This parameter is required only when the TargetType parameter is set to Exchange.</p>
              */
             public Builder routingKey(RoutingKey routingKey) {
                 this.routingKey = routingKey;
@@ -8630,7 +8732,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username used for authentication.</p>
+             * <p>The username used to authenticate for identity verification.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -8652,7 +8754,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual host name of RabbitMQ.</p>
+             * <p>The name of the virtual host in RabbitMQ.</p>
              * 
              * <strong>example:</strong>
              * <p>Vhost1</p>
@@ -8663,7 +8765,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2zehizpoendb3****</p>
@@ -8864,7 +8966,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -8872,7 +8977,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Exchange on the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The name of the exchange in the MSMQ message queue RabbitMQ Edition instance.</p>
              * 
              * <strong>example:</strong>
              * <p>a_exchange</p>
@@ -8966,7 +9071,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -8974,7 +9082,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of ApsaraMQ for RabbitMQ.</p>
+             * <p>The instance ID of the MSMQ message queue RabbitMQ Edition.</p>
              * 
              * <strong>example:</strong>
              * <p>si-296cd57939a1421b****</p>
@@ -9282,7 +9390,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -9290,7 +9401,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Queue on the instance.</p>
+             * <p>The name of the queue in the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>MyQueue</p>
@@ -9384,7 +9495,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -9392,7 +9506,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routing rule of the message.</p>
+             * <p>The routing rule for the message.</p>
              * 
              * <strong>example:</strong>
              * <p>housekeeping</p>
@@ -9486,7 +9600,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -9592,7 +9709,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -9600,7 +9720,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Vhost on the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The name of the vhost in the MSMQ message queue RabbitMQ Edition instance.</p>
              * 
              * <strong>example:</strong>
              * <p>rabbit-host</p>
@@ -9761,7 +9881,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The message body.</p>
+             * <p>The message content.</p>
              */
             public Builder body(SinkRabbitMQParametersBody body) {
                 this.body = body;
@@ -9769,7 +9889,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Exchange mode. This parameter is required only when the TargetType parameter is set to Exchange.</p>
+             * <p>The exchange mode. This parameter is required only when the TargetType parameter is set to Exchange.</p>
              */
             public Builder exchange(Exchange exchange) {
                 this.exchange = exchange;
@@ -9777,7 +9897,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event target type is ApsaraMQ for RabbitMQ.</p>
+             * <p>The target service type is MSMQ message queue RabbitMQ Edition.</p>
              */
             public Builder instanceId(SinkRabbitMQParametersInstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -9793,7 +9913,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The filter properties.</p>
+             * <p>The filtering properties.</p>
              */
             public Builder properties(SinkRabbitMQParametersProperties properties) {
                 this.properties = properties;
@@ -9801,7 +9921,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Queue mode. This parameter is required only when the TargetType parameter is set to Queue.</p>
+             * <p>The queue mode. This parameter is required only when the TargetType parameter is set to Queue.</p>
              */
             public Builder queueName(SinkRabbitMQParametersQueueName queueName) {
                 this.queueName = queueName;
@@ -9809,7 +9929,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routing rule for messages. This parameter is required only when the TargetType parameter is set to Exchange.</p>
+             * <p>The routing rule for the message. This parameter is required only when the TargetType parameter is set to Exchange.</p>
              */
             public Builder routingKey(SinkRabbitMQParametersRoutingKey routingKey) {
                 this.routingKey = routingKey;
@@ -9825,7 +9945,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Vhost on the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The name of the vhost in the MSMQ message queue RabbitMQ Edition instance.</p>
              */
             public Builder virtualHostName(VirtualHostName virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -9917,6 +10037,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10019,6 +10142,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10026,7 +10152,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Group ID of the consumer group.</p>
+             * <p>The group ID of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>GID_******</p>
@@ -10121,6 +10247,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10237,7 +10366,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The consumption checkpoint.</p>
+             * <p>The consumption timestamp.</p>
              */
             public Builder consumeTimestamp(SinkRocketMQCheckpointParametersConsumeTimestamp consumeTimestamp) {
                 this.consumeTimestamp = consumeTimestamp;
@@ -10245,7 +10374,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer group information of ApsaraMQ for RocketMQ.</p>
+             * <p>The consumer group information of the MSMQ message queue RocketMQ Edition.</p>
              */
             public Builder group(SinkRocketMQCheckpointParametersGroup group) {
                 this.group = group;
@@ -10253,7 +10382,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of ApsaraMQ for RocketMQ.</p>
+             * <p>The RocketMQ instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>MQ_INST_1825725063814405_BZ******</p>
@@ -10264,7 +10393,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of ApsaraMQ for RocketMQ.</p>
+             * <p>The instance type of the MSMQ message queue RocketMQ Edition.</p>
              * 
              * <strong>example:</strong>
              * <p>Cloud_5</p>
@@ -10275,7 +10404,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The topic of the MSMQ message queue RocketMQ Edition instance.</p>
              */
             public Builder topic(SinkRocketMQCheckpointParametersTopic topic) {
                 this.topic = topic;
@@ -10473,7 +10602,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10575,7 +10707,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10583,7 +10718,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance endpoint.</p>
+             * <p>The endpoint of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vbr-8vbsvkkbpf3vb0zef****</p>
@@ -10677,7 +10812,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10685,7 +10823,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of ApsaraMQ for RocketMQ.</p>
+             * <p>The instance ID of the message queue MSMQ for RocketMQ.</p>
              * 
              * <strong>example:</strong>
              * <p>MQ_INST_164901546557****_BAAN****</p>
@@ -10779,7 +10917,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10787,7 +10928,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance password.</p>
+             * <p>The password of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>admin******</p>
@@ -10881,7 +11022,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10893,7 +11037,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              * <ul>
              * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default).</li>
              * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
-             * <li>SelfBuilt: self-managed Apache RocketMQ cluster.</li>
+             * <li>SelfBuilt: Self-managed Apache RocketMQ cluster.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -10988,7 +11132,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11197,7 +11344,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11410,7 +11560,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11513,6 +11666,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11520,7 +11676,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sharding key value.</p>
+             * <p>The value of the sharding key.</p>
              * 
              * <strong>example:</strong>
              * <p>order_id</p>
@@ -11721,7 +11877,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11729,7 +11888,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic of the MSMQ for RocketMQ instance.</p>
+             * <p>The topic of the message queue MSMQ for RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>topic</p>
@@ -11823,7 +11982,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11914,7 +12076,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The format of the event transformation. Default value: CONSTANT.</p>
+             * <p>The event transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -11925,7 +12087,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -12185,7 +12350,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The message body.</p>
+             * <p>The message content.</p>
              */
             public Builder body(SinkRocketMQParametersBody body) {
                 this.body = body;
@@ -12193,7 +12358,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery order type of messages.</p>
+             * <p>The delivery order type of the message.</p>
              */
             public Builder deliveryOrderType(DeliveryOrderType deliveryOrderType) {
                 this.deliveryOrderType = deliveryOrderType;
@@ -12201,7 +12366,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance endpoint.</p>
+             * <p>The endpoint of the instance.</p>
              */
             public Builder instanceEndpoint(InstanceEndpoint instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -12209,7 +12374,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event target type is ApsaraMQ for RocketMQ.</p>
+             * <p>The target service type is the message queue MSMQ for RocketMQ.</p>
              */
             public Builder instanceId(SinkRocketMQParametersInstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -12217,7 +12382,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance password.</p>
+             * <p>The password of the instance.</p>
              */
             public Builder instancePassword(InstancePassword instancePassword) {
                 this.instancePassword = instancePassword;
@@ -12241,7 +12406,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The filter properties.</p>
+             * <p>The filtering properties.</p>
              */
             public Builder keys(Keys keys) {
                 this.keys = keys;
@@ -12261,7 +12426,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The filter properties.</p>
+             * <p>The filtering properties.</p>
              */
             public Builder properties(SinkRocketMQParametersProperties properties) {
                 this.properties = properties;
@@ -12285,7 +12450,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The filter properties.</p>
+             * <p>The filtering properties.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -12293,7 +12458,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic of the MSMQ for RocketMQ instance.</p>
+             * <p>The topic of the message queue MSMQ for RocketMQ instance.</p>
              */
             public Builder topic(SinkRocketMQParametersTopic topic) {
                 this.topic = topic;
@@ -12507,7 +12672,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -12609,7 +12777,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -12617,7 +12788,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SLS data format. You can use the default format or specify key-value pairs. Valid values:</p>
+             * <p>The data format of Simple Log Service (SLS). Valid values:</p>
              * <ul>
              * <li>JSON</li>
              * <li>KeyValue</li>
@@ -12715,7 +12886,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -12817,7 +12991,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -12919,7 +13096,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -12927,7 +13107,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role used for authorization of EventBridge to read SLS log content. To use this role, the following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, select Alibaba Cloud Service, and set the trusted service to EventBridge.</p>
+             * <p>When granting authorization to the event bus EventBridge to use this role to read SLS log content, the following conditions must be met: when creating the role used by the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service, and select event bus as the trusted service.</p>
              * 
              * <strong>example:</strong>
              * <p>test-role</p>
@@ -13021,7 +13201,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -13029,7 +13212,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic of the log, which corresponds to the SLS reserved field &quot;topic&quot;.</p>
+             * <p>The topic of the log. This corresponds to the reserved field topic in SLS.</p>
              * 
              * <strong>example:</strong>
              * <p>topic</p>
@@ -13164,7 +13347,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content sent to Simple Log Service (SLS).</p>
+             * <p>The content sent to Simple Log Service.</p>
              */
             public Builder body(SinkSLSParametersBody body) {
                 this.body = body;
@@ -13172,7 +13355,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom log key-value pairs. This parameter takes effect only when ContentType is set to KeyValue. Each key-value pair is represented by Key_n and Value_n.</p>
+             * <p>The key-value pairs of the custom log. This parameter takes effect only when ContentType is set to KeyValue. Each key-value pair is represented by Key_n and Value_n.</p>
              */
             public Builder contentSchema(ContentSchema contentSchema) {
                 this.contentSchema = contentSchema;
@@ -13180,7 +13363,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SLS data format. You can use the default format or specify key-value pairs. Valid values:</p>
+             * <p>The data format of Simple Log Service (SLS). Valid values:</p>
              * <ul>
              * <li>JSON</li>
              * <li>KeyValue</li>
@@ -13208,7 +13391,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role used for authorization of EventBridge to read SLS log content. To use this role, the following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, select Alibaba Cloud Service, and set the trusted service to EventBridge.</p>
+             * <p>When granting authorization to the event bus EventBridge to use this role to read SLS log content, the following conditions must be met: when creating the role used by the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service, and select event bus as the trusted service.</p>
              */
             public Builder roleName(SinkSLSParametersRoleName roleName) {
                 this.roleName = roleName;
@@ -13216,7 +13399,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic of the log, which corresponds to the SLS reserved field &quot;topic&quot;.</p>
+             * <p>The topic of the log. This corresponds to the reserved field topic in SLS.</p>
              */
             public Builder topic(SinkSLSParametersTopic topic) {
                 this.topic = topic;
@@ -13582,7 +13765,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * SinkAgentRunParameters.
+             * <p>The delivery parameters for the agent runtime.</p>
              */
             public Builder sinkAgentRunParameters(SinkAgentRunParameters sinkAgentRunParameters) {
                 this.sinkAgentRunParameters = sinkAgentRunParameters;
@@ -13590,7 +13773,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Sink Apache RocketMQ Checkpoint parameters.</p>
+             * <p>The sink Apache RocketMQ checkpoint parameters.</p>
              */
             public Builder sinkApacheRocketMQCheckpointParameters(SinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters) {
                 this.sinkApacheRocketMQCheckpointParameters = sinkApacheRocketMQCheckpointParameters;
@@ -13606,7 +13789,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Sink BaiLian parameters.</p>
+             * <p>The sink BaiLian parameters.</p>
              */
             public Builder sinkBaiLianParameters(SinkBaiLianParameters sinkBaiLianParameters) {
                 this.sinkBaiLianParameters = sinkBaiLianParameters;
@@ -13614,7 +13797,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Sink Kafka connector parameters.</p>
+             * <p>The sink Kafka connector parameters.</p>
              */
             public Builder sinkCustomizedKafkaConnectorParameters(SinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters) {
                 this.sinkCustomizedKafkaConnectorParameters = sinkCustomizedKafkaConnectorParameters;
@@ -13622,7 +13805,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Sink Kafka parameters.</p>
+             * <p>The sink Kafka parameters.</p>
              */
             public Builder sinkCustomizedKafkaParameters(SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters) {
                 this.sinkCustomizedKafkaParameters = sinkCustomizedKafkaParameters;
@@ -13630,7 +13813,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Sink DashVector parameters.</p>
+             * <p>The sink DashVector parameters.</p>
              */
             public Builder sinkDashVectorParameters(SinkDashVectorParameters sinkDashVectorParameters) {
                 this.sinkDashVectorParameters = sinkDashVectorParameters;
@@ -13638,7 +13821,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Sink DataHub parameters.</p>
+             * <p>The DataHub sink parameters.</p>
              */
             public Builder sinkDataHubParameters(SinkDataHubParameters sinkDataHubParameters) {
                 this.sinkDataHubParameters = sinkDataHubParameters;
@@ -13646,7 +13829,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SinkDorisParameters.
+             * <p>The event source type.</p>
              */
             public Builder sinkDorisParameters(SinkDorisParameters sinkDorisParameters) {
                 this.sinkDorisParameters = sinkDorisParameters;
@@ -13670,7 +13853,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Sink Fnf parameters.</p>
+             * <p>The FnF parameters for the sink.</p>
              */
             public Builder sinkFnfParameters(SinkFnfParameters sinkFnfParameters) {
                 this.sinkFnfParameters = sinkFnfParameters;
@@ -13686,7 +13869,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sink Kafka parameters.</p>
+             * <p>The Kafka parameters for the sink.</p>
              */
             public Builder sinkKafkaParameters(SinkKafkaParameters sinkKafkaParameters) {
                 this.sinkKafkaParameters = sinkKafkaParameters;
@@ -13694,7 +13877,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target parameters for delivering event streams to an EventHouse knowledge base. Specify this parameter only when the sink type is knowledge base.</p>
+             * <p>The knowledge base delivery parameters.</p>
              */
             public Builder sinkKnowledgeBaseParameters(SinkKnowledgeBaseParameters sinkKnowledgeBaseParameters) {
                 this.sinkKnowledgeBaseParameters = sinkKnowledgeBaseParameters;
@@ -13702,7 +13885,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple MSMQ (formerly MNS) event target.</p>
+             * <p>The event target for Simple MSMQ (formerly MNS).</p>
              */
             public Builder sinkMNSParameters(SinkMNSParameters sinkMNSParameters) {
                 this.sinkMNSParameters = sinkMNSParameters;
@@ -13710,7 +13893,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SinkMQTTParameters.
+             * <p>The MQTT delivery parameters.</p>
              */
             public Builder sinkMQTTParameters(SinkMQTTParameters sinkMQTTParameters) {
                 this.sinkMQTTParameters = sinkMQTTParameters;
@@ -13718,7 +13901,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SinkOSSParameters.
+             * <p>The Object Storage Service (OSS) delivery parameters.</p>
              */
             public Builder sinkOSSParameters(SinkOSSParameters sinkOSSParameters) {
                 this.sinkOSSParameters = sinkOSSParameters;
@@ -13726,7 +13909,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sink open-source RabbitMQ parameters.</p>
+             * <p>The open source RabbitMQ parameters for the sink.</p>
              */
             public Builder sinkOpenSourceRabbitMQParameters(SinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters) {
                 this.sinkOpenSourceRabbitMQParameters = sinkOpenSourceRabbitMQParameters;
@@ -13734,7 +13917,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SinkRabbitMQMetaParameters.
+             * <p>The metadata delivery parameters for the MSMQ message queue RabbitMQ Edition.</p>
              */
             public Builder sinkRabbitMQMetaParameters(SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters) {
                 this.sinkRabbitMQMetaParameters = sinkRabbitMQMetaParameters;
@@ -13742,7 +13925,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SinkRabbitMQMsgSyncParameters.
+             * <p>The message synchronization delivery parameters for the MSMQ message queue RabbitMQ Edition.</p>
              */
             public Builder sinkRabbitMQMsgSyncParameters(SinkRabbitMQMsgSyncParameters sinkRabbitMQMsgSyncParameters) {
                 this.sinkRabbitMQMsgSyncParameters = sinkRabbitMQMsgSyncParameters;
@@ -13750,7 +13933,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters for the sink RabbitMQ.</p>
+             * <p>The parameters for the RabbitMQ sink.</p>
              */
             public Builder sinkRabbitMQParameters(SinkRabbitMQParameters sinkRabbitMQParameters) {
                 this.sinkRabbitMQParameters = sinkRabbitMQParameters;
@@ -13758,7 +13941,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters for the sink RocketMQ checkpoint.</p>
+             * <p>The parameters for the RocketMQ checkpoint sink.</p>
              */
             public Builder sinkRocketMQCheckpointParameters(SinkRocketMQCheckpointParameters sinkRocketMQCheckpointParameters) {
                 this.sinkRocketMQCheckpointParameters = sinkRocketMQCheckpointParameters;
@@ -13766,7 +13949,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters for the sink RocketMQ source.</p>
+             * <p>The ApsaraMQ for RocketMQ sink parameters.</p>
              */
             public Builder sinkRocketMQParameters(SinkRocketMQParameters sinkRocketMQParameters) {
                 this.sinkRocketMQParameters = sinkRocketMQParameters;
@@ -13774,7 +13957,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Sink SLS Parameters</p>
+             * <p>The Simple Log Service sink parameters.</p>
              */
             public Builder sinkSLSParameters(SinkSLSParameters sinkSLSParameters) {
                 this.sinkSLSParameters = sinkSLSParameters;
@@ -13946,7 +14129,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              * <p>The password of the Apache RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>yourPassword</p>
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -14017,7 +14200,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-adw1awdw*****</p>
@@ -14185,7 +14368,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The download URL of the OSS resource ZIP package.</p>
+             * <p>The download URL of the OSS ZIP package.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;<a href="https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&Expires=1725539627&Signature=rb8q3OpV2i3gZJ">https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&amp;Expires=1725539627&amp;Signature=rb8q3OpV2i3gZJ</a>&quot;</p>
@@ -14204,7 +14387,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Kafka instance configuration.</p>
+             * <p>The Kafka instance configurations.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -14404,6 +14587,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The network address and port number of the data subscription channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;BrokerUrl&quot;</p>
              */
             public Builder brokerUrl(String brokerUrl) {
                 this.brokerUrl = brokerUrl;
@@ -14411,7 +14597,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer offset, which is the timestamp when the SDK client consumes the first data record. The value is a UNIX timestamp.</p>
+             * <p>The consumption checkpoint, which is the timestamp when the SDK client consumes the first data record. The value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1620962769</p>
@@ -14455,7 +14641,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscribed topic of the data subscription channel.</p>
+             * <p>The subscription topic of the data subscription channel.</p>
              * 
              * <strong>example:</strong>
              * <p>TP_TEST_UNDERWRITE_ISSUE</p>
@@ -14536,7 +14722,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The event bus name.</p>
+             * <p>The name of the event bus.</p>
              * 
              * <strong>example:</strong>
              * <p>my-event-bus</p>
@@ -14547,7 +14733,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event rule name.</p>
+             * <p>The name of the event rule.</p>
              * 
              * <strong>example:</strong>
              * <p>my-event-rule</p>
@@ -14743,7 +14929,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network configuration. Default value: Default. Set the value to PublicNetwork for VPC networks.</p>
+             * <p>The network configuration. Default value: Default. Set the value to PublicNetwork for a VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>Default</p>
@@ -14908,7 +15094,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether Base64 encoding is enabled.</p>
+             * <p>Specifies whether to enable Base64 encoding.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -14919,7 +15105,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Simple Message Queue (formerly MNS) message queue.</p>
+             * <p>The name of the Simple Message Queue (formerly MNS) queue.</p>
              * 
              * <strong>example:</strong>
              * <p>work4</p>
@@ -15078,7 +15264,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The encoding format of the message. Valid values:</p>
+             * <p>The message encoding format. Valid values:</p>
              * <ul>
              * <li>JSON</li>
              * <li>Text</li>
@@ -15106,6 +15292,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateNetwork</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -15125,6 +15314,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             /**
              * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1iv19sp1msc7zot4****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -15143,7 +15335,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The vSwitch IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp179l3llg3jjxwrq72****</p>
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -15151,7 +15346,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vblalsi0vbhizr77****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -15281,8 +15479,8 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delimiter. In chunked loading mode, this delimiter is used as the chunk identifier for the text. By default, the newline character 
-             *  is used as the delimiter.</p>
+             * <p>The delimiter. In chunk loading mode, this delimiter is used as the chunk identifier for text. The default value is the newline character 
+             * .</p>
              * 
              * <strong>example:</strong>
              * <p>\n</p>
@@ -15304,7 +15502,12 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data loading mode. The value single indicates single-document loading, and the value element indicates chunked loading. Valid values: single/element. Default value: single.</p>
+             * <p>The data loading mode. Valid values:</p>
+             * <ul>
+             * <li>single: Single document loading.</li>
+             * <li>element: Chunk loading.
+             * Default value: single.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>single</p>
@@ -15326,7 +15529,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the role that provides authorization for the event bus EventBridge to read OSS files. The role must have at least read-only permissions on OSS.</p>
+             * <p>The name of the RAM role that grants authorization to the EventBridge event bus to read OSS files. The role must have at least read-only permissions on OSS.</p>
              * 
              * <strong>example:</strong>
              * <p>eventbridge_oss_role</p>
@@ -15524,7 +15727,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message body data type.</p>
+             * <p>The data type of the message body.</p>
              * 
              * <strong>example:</strong>
              * <p>Json</p>
@@ -15535,7 +15738,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance endpoint.</p>
+             * <p>The endpoint of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.1:9876</p>
@@ -15557,10 +15760,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The password used to connect to the open source RabbitMQ instance.</p>
+             * <p>The password used to connect to the open-source RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>yourPassword</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -15568,7 +15771,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queue name of the open source RabbitMQ instance.</p>
+             * <p>The name of the queue in the open-source RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -15590,7 +15793,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username used to connect to the open source RabbitMQ instance.</p>
+             * <p>The username used to connect to the open-source RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -15612,7 +15815,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual host name of the open source RabbitMQ instance.</p>
+             * <p>The name of the virtual host in the open-source RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Vhost1</p>
@@ -15623,7 +15826,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-m5e3sv4b12345****</p>
@@ -15800,7 +16003,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role used to access Prometheus data.</p>
+             * <p>The RAM role used to access Prometheus data.</p>
              * 
              * <strong>example:</strong>
              * <p>testRole</p>
@@ -15896,7 +16099,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID of the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The ID of the Message Queue for RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>dbaudit-cn-7mz2hqo****</p>
@@ -15907,7 +16110,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queue name of the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The name of the queue in the Message Queue for RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>liuyang</p>
@@ -15929,7 +16132,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vhost name of the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The name of the virtual host in the Message Queue for RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>eb-connect</p>
@@ -16025,7 +16228,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The ID of the Message Queue for RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>rmq-cn-jte3w******</p>
@@ -16036,7 +16239,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The type of the Message Queue for RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Cloud_5</p>
@@ -16058,7 +16261,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The topics in the Message Queue for RocketMQ instance.</p>
              */
             public Builder topics(java.util.List<String> topics) {
                 this.topics = topics;
@@ -16409,7 +16612,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoding format of the message. Valid values:</p>
+             * <p>The message encoding format. Valid values:</p>
              * <ul>
              * <li>JSON</li>
              * <li>Text</li>
@@ -16436,7 +16639,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message filter type.</p>
+             * <p>The message filtering type.</p>
              * 
              * <strong>example:</strong>
              * <p>Tag</p>
@@ -16447,7 +16650,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group ID of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The group ID in Message Queue for RocketMQ.</p>
              * 
              * <strong>example:</strong>
              * <p>GID_group1</p>
@@ -16458,7 +16661,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance endpoint.</p>
+             * <p>The endpoint of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
@@ -16469,7 +16672,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The ID of the Message Queue for RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>i-f8zbher64dlm58pl****</p>
@@ -16480,7 +16683,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance network information. Valid values:</p>
+             * <p>The network information of the instance. Valid values:</p>
              * <ul>
              * <li>PublicNetwork</li>
              * <li>PrivateNetwork</li>
@@ -16495,7 +16698,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance password.</p>
+             * <p>The password of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -16506,7 +16709,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group ID of the instance.</p>
+             * <p>The security group information of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-m5edtu24f12345****</p>
@@ -16521,7 +16724,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              * <ul>
              * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default).</li>
              * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
-             * <li>SelfBuilt: self-managed Apache RocketMQ cluster.</li>
+             * <li>SelfBuilt: Self-managed Apache RocketMQ cluster.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -16555,7 +16758,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1a4gmlk31hy***l3ss</p>
@@ -16583,9 +16786,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             /**
              * <p>The consumption offset of the message. Valid values:</p>
              * <ul>
-             * <li>CONSUMEFROMLASTOFFSET: Consumption starts from the latest offset.</li>
-             * <li>CONSUMEFROMFIRSTOFFSET: Consumption starts from the earliest offset.</li>
-             * <li>CONSUMEFROMTIMESTAMP: Consumption starts from the offset of the specified point in time.</li>
+             * <li>CONSUMEFROMLASTOFFSET: Consumes messages from the latest offset.</li>
+             * <li>CONSUMEFROMFIRSTOFFSET: Consumes messages from the earliest offset.</li>
+             * <li>CONSUMEFROMTIMESTAMP: Consumes messages from the offset at a specified point in time.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -16597,7 +16800,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The region ID of Message Queue for RocketMQ.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-chengdu</p>
@@ -16630,7 +16833,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp. This parameter is valid only if the Offset parameter is set to CONSUMEFROMTIMESTAMP.</p>
+             * <p>The timestamp. This parameter is valid only when the Offset parameter is set to CONSUMEFROMTIMESTAMP.</p>
              * 
              * <strong>example:</strong>
              * <p>1670742074043</p>
@@ -16652,7 +16855,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The vSwitch IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-m5ev8asdc6h12345****</p>
@@ -16772,7 +16975,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The starting consumption offset. You can select the earliest or latest offset, which corresponds to &quot;begin&quot; or &quot;end&quot; respectively. You can also start consumption from a specified point in time, in seconds.</p>
+             * <p>The start consumption offset. You can set this parameter to begin for the earliest offset or end for the latest offset. You can also specify a point in time in seconds to start consumption.</p>
              * 
              * <strong>example:</strong>
              * <p>begin</p>
@@ -16816,7 +17019,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role name for authorization of the event bus EventBridge to read Simple Log Service log content. To use this role, create a role in the Resource Access Management (RAM) console, select &quot;Alibaba Cloud Service&quot; as the trusted entity, and select &quot;event bus&quot; as the trusted service.</p>
+             * <p>When granting authorization to the event bus EventBridge to use this role to read Simple Log Service (SLS) logs, you must select Alibaba Cloud Service as the trusted entity and event bus as the trusted service when you create the role in the Resource Access Management (RAM) console.</p>
              * 
              * <strong>example:</strong>
              * <p>testRole</p>
@@ -17133,7 +17336,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Source RocketMQ checkpoint parameters.</p>
+             * <p>The Apache RocketMQ checkpoint source.</p>
              */
             public Builder sourceApacheRocketMQCheckpointParameters(SourceApacheRocketMQCheckpointParameters sourceApacheRocketMQCheckpointParameters) {
                 this.sourceApacheRocketMQCheckpointParameters = sourceApacheRocketMQCheckpointParameters;
@@ -17141,7 +17344,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom connector Apache Kafka event source.</p>
+             * <p>The custom Apache Kafka connector event source.</p>
              */
             public Builder sourceCustomizedKafkaConnectorParameters(SourceCustomizedKafkaConnectorParameters sourceCustomizedKafkaConnectorParameters) {
                 this.sourceCustomizedKafkaConnectorParameters = sourceCustomizedKafkaConnectorParameters;
@@ -17157,7 +17360,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Source DTS event source.</p>
+             * <p>The DTS source.</p>
              */
             public Builder sourceDTSParameters(SourceDTSParameters sourceDTSParameters) {
                 this.sourceDTSParameters = sourceDTSParameters;
@@ -17165,7 +17368,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Source event bus event source.</p>
+             * <p>The event bus source.</p>
              */
             public Builder sourceEventBusParameters(SourceEventBusParameters sourceEventBusParameters) {
                 this.sourceEventBusParameters = sourceEventBusParameters;
@@ -17173,7 +17376,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceFeiShuDocsParameters.
+             * <p>The Lark document source parameters.</p>
              */
             public Builder sourceFeiShuDocsParameters(SourceFeiShuDocsParameters sourceFeiShuDocsParameters) {
                 this.sourceFeiShuDocsParameters = sourceFeiShuDocsParameters;
@@ -17181,7 +17384,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceJDBCParameters.
+             * <p>The JDBC data source parameters.</p>
              */
             public Builder sourceJDBCParameters(SourceJDBCParameters sourceJDBCParameters) {
                 this.sourceJDBCParameters = sourceJDBCParameters;
@@ -17189,7 +17392,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Source Kafka event source.</p>
+             * <p>The Kafka source.</p>
              */
             public Builder sourceKafkaParameters(SourceKafkaParameters sourceKafkaParameters) {
                 this.sourceKafkaParameters = sourceKafkaParameters;
@@ -17197,7 +17400,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Source Simple Message Queue (formerly MNS) message event source.</p>
+             * <p>The Simple Message Queue (formerly MNS) source.</p>
              */
             public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
                 this.sourceMNSParameters = sourceMNSParameters;
@@ -17205,7 +17408,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Source MQTT event source.</p>
+             * <p>The source MQTT event source.</p>
              */
             public Builder sourceMQTTParameters(SourceMQTTParameters sourceMQTTParameters) {
                 this.sourceMQTTParameters = sourceMQTTParameters;
@@ -17213,7 +17416,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Source MySQL event source.</p>
+             * <p>The source MySQL event source.</p>
              */
             public Builder sourceMySQLParameters(SourceMySQLParameters sourceMySQLParameters) {
                 this.sourceMySQLParameters = sourceMySQLParameters;
@@ -17221,7 +17424,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Source OSS event source.</p>
+             * <p>The source OSS event source.</p>
              */
             public Builder sourceOSSParameters(SourceOSSParameters sourceOSSParameters) {
                 this.sourceOSSParameters = sourceOSSParameters;
@@ -17229,7 +17432,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Source open source RabbitMQ event source.</p>
+             * <p>The source open-source RabbitMQ event source.</p>
              */
             public Builder sourceOpenSourceRabbitMQParameters(SourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters) {
                 this.sourceOpenSourceRabbitMQParameters = sourceOpenSourceRabbitMQParameters;
@@ -17237,7 +17440,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePostgreSQLParameters.
+             * <p>The source PostgreSQL parameters.</p>
              */
             public Builder sourcePostgreSQLParameters(SourcePostgreSQLParameters sourcePostgreSQLParameters) {
                 this.sourcePostgreSQLParameters = sourcePostgreSQLParameters;
@@ -17245,7 +17448,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Source Prometheus event source.</p>
+             * <p>The source Prometheus event source.</p>
              */
             public Builder sourcePrometheusParameters(SourcePrometheusParameters sourcePrometheusParameters) {
                 this.sourcePrometheusParameters = sourcePrometheusParameters;
@@ -17253,7 +17456,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceRabbitMQMetaParameters.
+             * <p>The metadata source parameters of Message Queue for RabbitMQ.</p>
              */
             public Builder sourceRabbitMQMetaParameters(SourceRabbitMQMetaParameters sourceRabbitMQMetaParameters) {
                 this.sourceRabbitMQMetaParameters = sourceRabbitMQMetaParameters;
@@ -17261,7 +17464,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceRabbitMQMsgSyncParameters.
+             * <p>The message synchronization source parameters of Message Queue for RabbitMQ.</p>
              */
             public Builder sourceRabbitMQMsgSyncParameters(SourceRabbitMQMsgSyncParameters sourceRabbitMQMsgSyncParameters) {
                 this.sourceRabbitMQMsgSyncParameters = sourceRabbitMQMsgSyncParameters;
@@ -17269,7 +17472,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Source RabbitMQ event source.</p>
+             * <p>The source ApsaraMQ for RabbitMQ event source.</p>
              */
             public Builder sourceRabbitMQParameters(SourceRabbitMQParameters sourceRabbitMQParameters) {
                 this.sourceRabbitMQParameters = sourceRabbitMQParameters;
@@ -17277,7 +17480,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Source RocketMQ checkpoint parameters.</p>
+             * <p>The Apache RocketMQ checkpoint source.</p>
              */
             public Builder sourceRocketMQCheckpointParameters(SourceRocketMQCheckpointParameters sourceRocketMQCheckpointParameters) {
                 this.sourceRocketMQCheckpointParameters = sourceRocketMQCheckpointParameters;
@@ -17285,7 +17488,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters that are returned if the event source is ApsaraMQ for RocketMQ.</p>
+             * <p>The source ApsaraMQ for RocketMQ event source.</p>
              */
             public Builder sourceRocketMQParameters(SourceRocketMQParameters sourceRocketMQParameters) {
                 this.sourceRocketMQParameters = sourceRocketMQParameters;
@@ -17293,7 +17496,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters that are returned if the event source is Simple Log Service.</p>
+             * <p>The source SLS event source.</p>
              */
             public Builder sourceSLSParameters(SourceSLSParameters sourceSLSParameters) {
                 this.sourceSLSParameters = sourceSLSParameters;
@@ -17519,7 +17722,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AI embedding parameters.</p>
+             * <p>The AI vectorization parameters.</p>
              */
             public Builder aiEmbedTransformParameters(AiEmbedTransformParameters aiEmbedTransformParameters) {
                 this.aiEmbedTransformParameters = aiEmbedTransformParameters;
@@ -17583,7 +17786,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the cloud service, such as the ARN of a function in Function Compute.</p>
+             * <p>The ARN of the cloud service, such as the ARN of a function in Function Compute.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:fc:cn-hangzhou:*****:services/demo-service.LATEST/functions/demo-func</p>
@@ -17594,7 +17797,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * BaiLianAgentTransformParameters.
+             * <p>The Model Studio agent transform parameters.</p>
              */
             public Builder baiLianAgentTransformParameters(BaiLianAgentTransformParameters baiLianAgentTransformParameters) {
                 this.baiLianAgentTransformParameters = baiLianAgentTransformParameters;
@@ -17602,7 +17805,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * DashScopeTransformParameters.
+             * <p>The DashScope model transform parameters.</p>
              */
             public Builder dashScopeTransformParameters(DashScopeTransformParameters dashScopeTransformParameters) {
                 this.dashScopeTransformParameters = dashScopeTransformParameters;
@@ -17782,7 +17985,26 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event filtering rule. If not specified, all events are matched.</p>
+             * <p>The event filtering rule. If this parameter is not specified, all events are matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             * &quot;source&quot;: [
+             * {
+             * &quot;prefix&quot;: &quot;acs:mns&quot;
+             * }
+             * ],
+             * &quot;type&quot;: [
+             * {
+             * &quot;prefix&quot;: &quot;mns:Queue&quot;
+             * }
+             * ],
+             * &quot;subject&quot;: [
+             * {
+             * &quot;prefix&quot;: &quot;acs:mns:cn-hangzhou:123456789098****:queues/zeus&quot;
+             * }
+             * ]
+             * }</p>
              */
             public Builder filterPattern(String filterPattern) {
                 this.filterPattern = filterPattern;
@@ -17790,7 +18012,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * <p>The common JSON Configurations of the event provider. This parameter and Source are mutually exclusive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key&quot;:&quot;value&quot;}</p>
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
@@ -17798,7 +18023,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime parameters.</p>
+             * <p>The runtime environment parameters.</p>
              */
             public Builder runOptions(RunOptions runOptions) {
                 this.runOptions = runOptions;
@@ -17833,7 +18058,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event transformer configurations.</p>
+             * <p>The transform configurations.</p>
              */
             public Builder transforms(java.util.List<Transforms> transforms) {
                 this.transforms = transforms;
@@ -17913,7 +18138,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The event stream list.</p>
+             * <p>The list of event streams.</p>
              */
             public Builder eventStreamings(java.util.List<EventStreamings> eventStreamings) {
                 this.eventStreamings = eventStreamings;
@@ -17921,7 +18146,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether there is more data to return. A value of empty string indicates that all data has been returned. If the value is not empty, set this value to the NextToken request parameter in the next call.</p>
+             * <p>The token that indicates the position where the current call stops reading. An empty value indicates that all data has been read. Set this value to the NextToken request parameter in the next call.</p>
              * 
              * <strong>example:</strong>
              * <p>177</p>

@@ -301,7 +301,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         } 
 
         /**
-         * BodyDataType.
+         * <p>The data type of the message body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>json</p>
          */
         public Builder bodyDataType(String bodyDataType) {
             this.bodyDataType = bodyDataType;
@@ -309,7 +312,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * CloudMigrationTaskId.
+         * <p>The ID of the RabbitMQ cloud migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-42d3-a456-426614174000</p>
          */
         public Builder cloudMigrationTaskId(String cloudMigrationTaskId) {
             this.cloudMigrationTaskId = cloudMigrationTaskId;
@@ -317,7 +323,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * DstClusterHost.
+         * <p>The address of the destination cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rabbitmq-cn-hangzhou-2x***.com</p>
          */
         public Builder dstClusterHost(String dstClusterHost) {
             this.dstClusterHost = dstClusterHost;
@@ -325,7 +334,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * DstClusterType.
+         * <p>The type of the destination RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud</p>
          */
         public Builder dstClusterType(String dstClusterType) {
             this.dstClusterType = dstClusterType;
@@ -333,7 +345,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * Endpoint.
+         * <p>The endpoint of the RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.10</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -341,7 +356,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rabbitmq-cn-a1b2c3d4e5f</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -349,7 +367,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The type of the source RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SelfBuilt</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -357,7 +378,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type used to connect to the source RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrivateNetwork</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -365,7 +389,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * OrderConsume.
+         * <p>Specifies whether SAC is enabled. Do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Leave empty</p>
          */
         public Builder orderConsume(String orderConsume) {
             this.orderConsume = orderConsume;
@@ -373,7 +400,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * Password.
+         * <p>The password used to connect to the RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourPassword</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -381,7 +411,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * PrefetchCount.
+         * <p>The prefetch count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder prefetchCount(String prefetchCount) {
             this.prefetchCount = prefetchCount;
@@ -389,7 +422,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * Regex.
+         * <p>The regular expression for matching. Do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Leave empty</p>
          */
         public Builder regex(String regex) {
             this.regex = regex;
@@ -397,7 +433,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group to which the machines of the RabbitMQ cluster belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -405,7 +444,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * SrcClusterHost.
+         * <p>The address of the source cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rabbitmq-cn-hangzhou-2x***.com</p>
          */
         public Builder srcClusterHost(String srcClusterHost) {
             this.srcClusterHost = srcClusterHost;
@@ -413,7 +455,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * SrcClusterType.
+         * <p>The type of the source RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SelfBuilt</p>
          */
         public Builder srcClusterType(String srcClusterType) {
             this.srcClusterType = srcClusterType;
@@ -421,7 +466,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * SyncMetaType.
+         * <p>The type of metadata to synchronize. Do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder syncMetaType(String syncMetaType) {
             this.syncMetaType = syncMetaType;
@@ -429,7 +477,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * Username.
+         * <p>The username used to connect to the RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder username(String username) {
             this.username = username;
@@ -437,7 +488,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The IDs of the vSwitches in the VPC where the RabbitMQ cluster is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-a1b2c3d4e5f6g7h8i9j0k</p>
          */
         public Builder vSwitchIds(String vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -445,7 +499,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * VirtualHostName.
+         * <p>The name of the virtual host (vhost) in the RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-001</p>
          */
         public Builder virtualHostName(String virtualHostName) {
             this.virtualHostName = virtualHostName;
@@ -453,7 +510,10 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC where the RabbitMQ cluster is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

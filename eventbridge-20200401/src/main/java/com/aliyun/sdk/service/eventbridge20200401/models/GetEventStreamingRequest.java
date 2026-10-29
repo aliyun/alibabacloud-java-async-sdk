@@ -83,7 +83,7 @@ public class GetEventStreamingRequest extends Request {
         }
 
         /**
-         * <p>The name of the event stream that you want to query.</p>
+         * <p>The name of the event stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -87,7 +87,7 @@ public class ListNamespacesRequest extends Request {
         } 
 
         /**
-         * <p>Data catalog</p>
+         * <p>The data catalog.</p>
          * 
          * <strong>example:</strong>
          * <p>my_catalog</p>
@@ -99,7 +99,7 @@ public class ListNamespacesRequest extends Request {
         }
 
         /**
-         * <p>Items per page</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -111,7 +111,7 @@ public class ListNamespacesRequest extends Request {
         }
 
         /**
-         * <p>Pagination Token</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

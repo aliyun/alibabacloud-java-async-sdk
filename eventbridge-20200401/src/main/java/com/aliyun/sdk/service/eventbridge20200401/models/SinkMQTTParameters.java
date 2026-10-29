@@ -106,7 +106,10 @@ public class SinkMQTTParameters extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the destination MQTT instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-cn-a1b2c3d4e5f</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -114,7 +117,7 @@ public class SinkMQTTParameters extends TeaModel {
         }
 
         /**
-         * Mqtt5UserProperty.
+         * <p>The user properties.</p>
          */
         public Builder mqtt5UserProperty(Mqtt5UserProperty mqtt5UserProperty) {
             this.mqtt5UserProperty = mqtt5UserProperty;
@@ -122,7 +125,10 @@ public class SinkMQTTParameters extends TeaModel {
         }
 
         /**
-         * ParentTopic.
+         * <p>The parent topic of the destination MQTT instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-topic</p>
          */
         public Builder parentTopic(String parentTopic) {
             this.parentTopic = parentTopic;
@@ -130,7 +136,7 @@ public class SinkMQTTParameters extends TeaModel {
         }
 
         /**
-         * Payload.
+         * <p>The message payload.</p>
          */
         public Builder payload(Payload payload) {
             this.payload = payload;
@@ -138,7 +144,7 @@ public class SinkMQTTParameters extends TeaModel {
         }
 
         /**
-         * SubTopic.
+         * <p>The subtopic name.</p>
          */
         public Builder subTopic(SubTopic subTopic) {
             this.subTopic = subTopic;
@@ -217,7 +223,10 @@ public class SinkMQTTParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method used to generate the parameter value. Valid values: CONSTANT (constant), JSONPATH (extracted from event content), and TEMPLATE (template).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -225,7 +234,10 @@ public class SinkMQTTParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string used to format the parameter value. This parameter is used only when Form is set to TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -233,7 +245,10 @@ public class SinkMQTTParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The source content of the parameter value specified by Form. When Form is set to CONSTANT, this value is the content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEMO CONTENT</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -313,7 +328,10 @@ public class SinkMQTTParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method used to generate the message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ORIGINAL</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -321,7 +339,10 @@ public class SinkMQTTParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string used to format the parameter value. This parameter is used only when Form is set to TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -329,7 +350,10 @@ public class SinkMQTTParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The source content of the parameter value specified by Form. When Form is set to CONSTANT, this value is the content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEMO CONTENT</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -409,7 +433,10 @@ public class SinkMQTTParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method used to generate the parameter value. Valid values: CONSTANT (constant), JSONPATH (extracted from event content), and TEMPLATE (template).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -417,7 +444,10 @@ public class SinkMQTTParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string used to format the parameter value. This parameter is used only when Form is set to TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -425,7 +455,10 @@ public class SinkMQTTParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The source content of the parameter value specified by Form. When Form is set to CONSTANT, this value is the content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUB-TOPIC</p>
              */
             public Builder value(String value) {
                 this.value = value;

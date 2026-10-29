@@ -106,7 +106,7 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</p>
+         * <p>The response code. A value of Success indicates that the call was successful. If the call fails, a specific error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -125,7 +125,7 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned by the operation. A value of Operation success indicates a successful call. If the call fails, a specific error description is returned.</p>
+         * <p>The response message. If the call is successful, the value is Operation success. If the call fails, a specific error description is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>
@@ -136,7 +136,7 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -147,7 +147,7 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. A value of true indicates success.</p>
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -216,7 +216,7 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A short-lived GET pre-signed URL that the client uses to download the original file.</p>
+             * <p>The short-lived presigned GET URL. Clients use this URL to download the original file.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://my-bucket.oss-cn-hangzhou.aliyuncs.com/kb/doc-bp1xxxxxxxxxxxx?Expires=1788000000&Signature=xxxx">https://my-bucket.oss-cn-hangzhou.aliyuncs.com/kb/doc-bp1xxxxxxxxxxxx?Expires=1788000000&amp;Signature=xxxx</a></p>
@@ -227,7 +227,7 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the pre-signed download URL, in ISO 8601 UTC format.</p>
+             * <p>The expiration time of the presigned download URL in ISO 8601 format and UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1756022400000</p>

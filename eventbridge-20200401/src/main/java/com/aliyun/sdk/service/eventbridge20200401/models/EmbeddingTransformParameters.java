@@ -80,7 +80,10 @@ public class EmbeddingTransformParameters extends TeaModel {
         } 
 
         /**
-         * ApiKey.
+         * <p>The API key used to call the Model Studio embedding model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Q37sQ****</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -88,7 +91,7 @@ public class EmbeddingTransformParameters extends TeaModel {
         }
 
         /**
-         * EmbeddingData.
+         * <p>The input data to be vectorized and its transformation method.</p>
          */
         public Builder embeddingData(EmbeddingData embeddingData) {
             this.embeddingData = embeddingData;
@@ -96,7 +99,10 @@ public class EmbeddingTransformParameters extends TeaModel {
         }
 
         /**
-         * EmbeddingModel.
+         * <p>The name of the model used to generate embeddings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text-embedding-v3</p>
          */
         public Builder embeddingModel(String embeddingModel) {
             this.embeddingModel = embeddingModel;
@@ -175,7 +181,10 @@ public class EmbeddingTransformParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method used to generate the input data. JSONPATH indicates that data is extracted from the event by using JSONPath.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -183,7 +192,10 @@ public class EmbeddingTransformParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template used to build the input data. This parameter is used only when Form is set to TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -191,7 +203,10 @@ public class EmbeddingTransformParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The source content of the input data. If Form is set to JSONPATH, specify a JSONPath expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$.data.message</p>
              */
             public Builder value(String value) {
                 this.value = value;

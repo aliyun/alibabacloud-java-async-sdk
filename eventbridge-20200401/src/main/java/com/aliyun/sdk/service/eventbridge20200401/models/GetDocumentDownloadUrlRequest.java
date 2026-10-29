@@ -119,7 +119,7 @@ public class GetDocumentDownloadUrlRequest extends Request {
         } 
 
         /**
-         * <p>The data catalog to which the knowledge base belongs. This parameter, together with Namespace and KnowledgeBaseName, uniquely identifies a knowledge base. You can call ListCatalogs to obtain the value.</p>
+         * <p>The data catalog to which the knowledge base belongs. This parameter, together with Namespace and KnowledgeBaseName, uniquely identifies the knowledge base. You can call ListCatalogs to obtain the value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class GetDocumentDownloadUrlRequest extends Request {
         }
 
         /**
-         * <p>The document ID.</p>
+         * <p>The ID of the document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class GetDocumentDownloadUrlRequest extends Request {
         }
 
         /**
-         * <p>The name of the knowledge base. The name is unique within the namespace and is determined at creation time. It cannot be modified.</p>
+         * <p>The name of the knowledge base. The name must be unique within the namespace. It is specified upon creation and cannot be modified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class GetDocumentDownloadUrlRequest extends Request {
         }
 
         /**
-         * <p>The namespace to which the knowledge base belongs. The namespace must belong to the specified data catalog. This parameter, together with Catalog and KnowledgeBaseName, uniquely identifies a knowledge base. You can call ListNamespaces to obtain the value.</p>
+         * <p>The namespace to which the knowledge base belongs. The namespace must belong to the specified data catalog. This parameter, together with Catalog and KnowledgeBaseName, uniquely identifies the knowledge base. You can call ListNamespaces to obtain the value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,10 +171,10 @@ public class GetDocumentDownloadUrlRequest extends Request {
         }
 
         /**
-         * <p>The network type of the pre-signed URL. Valid values:</p>
+         * <p>The network type of the presigned URL. Valid values:</p>
          * <ul>
-         * <li>PUBLIC (default): accessible over the Internet.</li>
-         * <li>INTERNAL: accessible only within the same region on the Alibaba Cloud internal network, with no Internet data transfer fees.</li>
+         * <li>PUBLIC: Accessible over the Internet. This is the default value.</li>
+         * <li>INTERNAL: Accessible only over the internal network within the same Alibaba Cloud region. No Internet traffic fees are incurred.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -236,7 +236,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         } 
 
         /**
-         * Endpoint.
+         * <p>The access endpoint of the RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rabbitmq-cn-a1b2c3d4e5f-cn-hangzhou-vpc.amqp.aliyuncs.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -244,7 +247,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * InnerNameSuffix.
+         * <p>The added suffix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rabbitmq-cn-a1b2c3d4e5f_example_123e4567-e89b-42d3-a456-426614174000</p>
          */
         public Builder innerNameSuffix(String innerNameSuffix) {
             this.innerNameSuffix = innerNameSuffix;
@@ -252,7 +258,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the ApsaraMQ for RabbitMQ (MSMQ message queue) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rabbitmq-cn-a1b2c3d4e5f</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -260,7 +269,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The type of the source RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -268,7 +280,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * MaxHops.
+         * <p>The maximum number of hops allowed for message forwarding in a federation task. Messages that exceed this limit are dropped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxHops(String maxHops) {
             this.maxHops = maxHops;
@@ -276,7 +291,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrivateNetwork</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -284,7 +302,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * OrderConsume.
+         * <p>Specifies whether to consume messages in order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder orderConsume(String orderConsume) {
             this.orderConsume = orderConsume;
@@ -292,7 +313,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * Password.
+         * <p>The password used to connect to the RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourPassword</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -300,7 +324,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * Regex.
+         * <p>The regular expression used to filter exchanges.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>^example_.*</p>
          */
         public Builder regex(String regex) {
             this.regex = regex;
@@ -308,7 +335,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group to which the machines of the RabbitMQ cluster belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -316,7 +346,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * SyncMetaType.
+         * <p>The type of synchronized metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>queue</p>
          */
         public Builder syncMetaType(String syncMetaType) {
             this.syncMetaType = syncMetaType;
@@ -324,7 +357,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * Username.
+         * <p>The username used to connect to the RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder username(String username) {
             this.username = username;
@@ -332,7 +368,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The ID of the vSwitch in the VPC where the RabbitMQ cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1****</p>
          */
         public Builder vSwitchIds(String vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -340,7 +379,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * VirtualHostName.
+         * <p>The name of the virtual host (vhost) in the RabbitMQ cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-001</p>
          */
         public Builder virtualHostName(String virtualHostName) {
             this.virtualHostName = virtualHostName;
@@ -348,7 +390,10 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC where the RabbitMQ cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vb****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

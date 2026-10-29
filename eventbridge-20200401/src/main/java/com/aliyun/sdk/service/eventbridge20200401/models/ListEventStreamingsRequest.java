@@ -152,10 +152,7 @@ public class ListEventStreamingsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</p>
-         * <blockquote>
-         * <p>Notice: The maximum number of entries to return per request cannot exceed 100.</p>
-         * </blockquote>
+         * <p>Specifies the maximum number of entries to return per request. You can use this parameter together with NextToken to paginate results.&gt;Notice: The maximum number of entries returned per request cannot exceed 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -167,7 +164,7 @@ public class ListEventStreamingsRequest extends Request {
         }
 
         /**
-         * <p>The name prefix of the event stream.</p>
+         * <p>The prefix of the event stream name.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -179,7 +176,7 @@ public class ListEventStreamingsRequest extends Request {
         }
 
         /**
-         * <p>If the number of entries that match the specified conditions exceeds the value of Limit, a NextToken is returned.</p>
+         * <p>The token that is returned when Limit is specified and additional results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -203,7 +200,7 @@ public class ListEventStreamingsRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the event source.</p>
+         * <p>The ARN of the event source.</p>
          */
         public Builder sourceArn(String sourceArn) {
             this.putBodyParameter("SourceArn", sourceArn);
@@ -212,7 +209,7 @@ public class ListEventStreamingsRequest extends Request {
         }
 
         /**
-         * <p>The tags used for filtering.</p>
+         * <p>The tags used to filter results.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("Tags", tags);

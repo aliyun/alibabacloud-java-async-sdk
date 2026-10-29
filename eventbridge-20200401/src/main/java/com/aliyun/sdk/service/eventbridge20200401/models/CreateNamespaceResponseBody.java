@@ -106,7 +106,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>API response code, 200 indicates success</p>
+         * <p>The response code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response data</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>API response message</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>
@@ -136,7 +136,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -147,7 +147,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the operation was successful</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -203,7 +203,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Namespace ARN</p>
+             * <p>The ARN of the namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:eventbridge:cn-hangzhou:123456789:catalog/my_catalog/namespace/my_namespace</p>

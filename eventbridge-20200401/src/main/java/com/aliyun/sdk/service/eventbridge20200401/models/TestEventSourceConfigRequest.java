@@ -272,6 +272,9 @@ public class TestEventSourceConfigRequest extends Request {
 
             /**
              * <p>The list of allowed CIDR blocks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.0/24</p>
              */
             public Builder allowedCIDRs(String allowedCIDRs) {
                 this.allowedCIDRs = allowedCIDRs;
@@ -357,6 +360,9 @@ public class TestEventSourceConfigRequest extends Request {
 
             /**
              * <p>The snapshot mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>when_needed</p>
              */
             public Builder snapshotMode(String snapshotMode) {
                 this.snapshotMode = snapshotMode;

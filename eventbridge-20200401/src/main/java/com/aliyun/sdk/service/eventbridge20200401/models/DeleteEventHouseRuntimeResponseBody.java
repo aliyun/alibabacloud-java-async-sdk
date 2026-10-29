@@ -106,7 +106,7 @@ public class DeleteEventHouseRuntimeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. Success indicates that the operation was successful.</p>
+         * <p>The response code. A value of Success indicates that the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class DeleteEventHouseRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Runtime information.</p>
+         * <p>The runtime information.</p>
          */
         public Builder data(EventHouseRuntime data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class DeleteEventHouseRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The message returned by the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>
@@ -136,7 +136,7 @@ public class DeleteEventHouseRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>34AD682D-5B91-5773-8132-AA38C130****</p>

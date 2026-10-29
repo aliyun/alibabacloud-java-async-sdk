@@ -106,7 +106,7 @@ public class GetEventHouseRuntimeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. Success indicates a successful operation.</p>
+         * <p>The response code. A value of Success indicates that the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class GetEventHouseRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Runtime information.</p>
+         * <p>The runtime information.</p>
          */
         public Builder data(EventHouseRuntime data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetEventHouseRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The message returned by the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>

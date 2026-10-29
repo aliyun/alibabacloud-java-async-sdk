@@ -119,7 +119,10 @@ public class DashScopeTransformParameters extends TeaModel {
         } 
 
         /**
-         * ApiKey.
+         * <p>The API key for DashScope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Q37sQ****</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -127,7 +130,7 @@ public class DashScopeTransformParameters extends TeaModel {
         }
 
         /**
-         * Messages.
+         * <p>The prompts.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
             this.messages = messages;
@@ -135,7 +138,10 @@ public class DashScopeTransformParameters extends TeaModel {
         }
 
         /**
-         * Model.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder model(String model) {
             this.model = model;
@@ -143,7 +149,10 @@ public class DashScopeTransformParameters extends TeaModel {
         }
 
         /**
-         * RequestPerMinute.
+         * <p>The rate limit in requests per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder requestPerMinute(Long requestPerMinute) {
             this.requestPerMinute = requestPerMinute;
@@ -151,7 +160,10 @@ public class DashScopeTransformParameters extends TeaModel {
         }
 
         /**
-         * StructuredOutputJsonSchema.
+         * <p>The structured output schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;message&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;message&quot;]}</p>
          */
         public Builder structuredOutputJsonSchema(String structuredOutputJsonSchema) {
             this.structuredOutputJsonSchema = structuredOutputJsonSchema;
@@ -159,7 +171,10 @@ public class DashScopeTransformParameters extends TeaModel {
         }
 
         /**
-         * TokenPerMinute.
+         * <p>The rate limit in tokens per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder tokenPerMinute(Long tokenPerMinute) {
             this.tokenPerMinute = tokenPerMinute;
@@ -251,7 +266,10 @@ public class DashScopeTransformParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The template form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -259,7 +277,10 @@ public class DashScopeTransformParameters extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -267,7 +288,10 @@ public class DashScopeTransformParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -275,7 +299,10 @@ public class DashScopeTransformParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The template value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$.data.message</p>
              */
             public Builder value(String value) {
                 this.value = value;
