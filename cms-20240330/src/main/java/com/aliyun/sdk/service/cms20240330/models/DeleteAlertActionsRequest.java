@@ -83,7 +83,6 @@ public class DeleteAlertActionsRequest extends Request {
         }
 
         /**
-         * <p>The unique identifiers of the alert action integrations to delete.</p>
          * <p>This parameter is required.</p>
          */
         public Builder alertActionIds(java.util.List<String> alertActionIds) {

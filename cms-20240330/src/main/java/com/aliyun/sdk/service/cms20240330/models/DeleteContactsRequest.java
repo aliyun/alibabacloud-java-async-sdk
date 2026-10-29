@@ -82,7 +82,7 @@ public class DeleteContactsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the contacts.</p>
+         * contactIds.
          */
         public Builder contactIds(java.util.List<String> contactIds) {
             String contactIdsShrink = shrink(contactIds, "contactIds", "json");

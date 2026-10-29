@@ -138,7 +138,7 @@ public class ListOncallSchedulesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the on-call schedules.</p>
+         * oncallScheduleIds.
          */
         public Builder oncallScheduleIds(java.util.List<String> oncallScheduleIds) {
             String oncallScheduleIdsShrink = shrink(oncallScheduleIds, "oncallScheduleIds", "json");
@@ -148,10 +148,7 @@ public class ListOncallSchedulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the on-call schedule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testOncallScheduleName</p>
+         * oncallScheduleName.
          */
         public Builder oncallScheduleName(String oncallScheduleName) {
             this.putQueryParameter("oncallScheduleName", oncallScheduleName);
@@ -160,10 +157,7 @@ public class ListOncallSchedulesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * pageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -172,10 +166,7 @@ public class ListOncallSchedulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 100.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -184,10 +175,7 @@ public class ListOncallSchedulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the workspace.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default-cms-5884500827389836-cn-hangzhou</p>
+         * workspace.
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);

@@ -67,10 +67,7 @@ public class CreateAlertActionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the alert action integration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testId</p>
+         * alertActionId.
          */
         public Builder alertActionId(String alertActionId) {
             this.alertActionId = alertActionId;
@@ -78,10 +75,7 @@ public class CreateAlertActionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -182,9 +182,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNotifyPolicyResponse> createNotifyPolicy(CreateNotifyPolicyRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Creates an on-call schedule.</p>
-     * 
      * @param request the request parameters of CreateOncallSchedule  CreateOncallScheduleRequest
      * @return CreateOncallScheduleResponse
      */
@@ -792,9 +789,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNotifyPolicyResponse> getNotifyPolicy(GetNotifyPolicyRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Creates an on-call schedule.</p>
-     * 
      * @param request the request parameters of GetOncallSchedule  GetOncallScheduleRequest
      * @return GetOncallScheduleResponse
      */
@@ -926,15 +920,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAlertActionsResponse
      */
     CompletableFuture<ListAlertActionsResponse> listAlertActions(ListAlertActionsRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</p>
-     * 
-     * @param request the request parameters of ListAlertHistories  ListAlertHistoriesRequest
-     * @return ListAlertHistoriesResponse
-     */
-    CompletableFuture<ListAlertHistoriesResponse> listAlertHistories(ListAlertHistoriesRequest request);
 
     /**
      * @param request the request parameters of ListAlertNotifyTemplates  ListAlertNotifyTemplatesRequest
@@ -1104,9 +1089,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNotifyPoliciesResponse> listNotifyPolicies(ListNotifyPoliciesRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
-     * 
      * @param request the request parameters of ListOncallContacts  ListOncallContactsRequest
      * @return ListOncallContactsResponse
      */
@@ -1234,7 +1216,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</p>
+     * <p>传入 Go template 语法的模板内容和渲染上下文数据，返回各模板的渲染结果。支持同时预览多个模板（如 title 和 content），用于前端模板编辑器的实时预览能力。</p>
      * 
      * @param request the request parameters of PreviewNotifyTemplate  PreviewNotifyTemplateRequest
      * @return PreviewNotifyTemplateResponse
@@ -1433,9 +1415,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateNotifyStrategyResponse> updateNotifyStrategy(UpdateNotifyStrategyRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Creates an on-call schedule.</p>
-     * 
      * @param request the request parameters of UpdateOncallSchedule  UpdateOncallScheduleRequest
      * @return UpdateOncallScheduleResponse
      */
@@ -1514,9 +1493,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpsertUmodelDataResponse> upsertUmodelData(UpsertUmodelDataRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</p>
-     * 
      * @param request the request parameters of ViewOncallSchedule  ViewOncallScheduleRequest
      * @return ViewOncallScheduleResponse
      */

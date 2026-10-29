@@ -93,10 +93,7 @@ public class ScheduleValue extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the on-call contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testId</p>
+         * contactId.
          */
         public Builder contactId(String contactId) {
             this.contactId = contactId;
@@ -104,10 +101,7 @@ public class ScheduleValue extends TeaModel {
         }
 
         /**
-         * <p>The name of the on-call contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testName</p>
+         * contactName.
          */
         public Builder contactName(String contactName) {
             this.contactName = contactName;
@@ -115,10 +109,7 @@ public class ScheduleValue extends TeaModel {
         }
 
         /**
-         * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-10-01 02:00:00</p>
+         * end.
          */
         public Builder end(String end) {
             this.end = end;
@@ -126,10 +117,7 @@ public class ScheduleValue extends TeaModel {
         }
 
         /**
-         * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-10-01 22:00:00</p>
+         * start.
          */
         public Builder start(String start) {
             this.start = start;

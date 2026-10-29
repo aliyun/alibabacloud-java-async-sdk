@@ -224,10 +224,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the alert action integration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testId</p>
+         * alertActionId.
          */
         public Builder alertActionId(String alertActionId) {
             this.putBodyParameter("alertActionId", alertActionId);
@@ -236,7 +233,6 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert action integration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +245,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The event bus parameters.</p>
+         * ebParam.
          */
         public Builder ebParam(EbParam ebParam) {
             this.putBodyParameter("ebParam", ebParam);
@@ -258,7 +254,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The elastic scaling parameters.</p>
+         * essParam.
          */
         public Builder essParam(EssParam essParam) {
             this.putBodyParameter("essParam", essParam);
@@ -267,7 +263,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The Function Compute 3.0 parameters.</p>
+         * fc3Param.
          */
         public Builder fc3Param(Fc3Param fc3Param) {
             this.putBodyParameter("fc3Param", fc3Param);
@@ -276,7 +272,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The Function Compute parameters.</p>
+         * fcParam.
          */
         public Builder fcParam(FcParam fcParam) {
             this.putBodyParameter("fcParam", fcParam);
@@ -285,7 +281,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The Simple Message Queue (formerly MNS) (MSMQ) parameters.</p>
+         * mnsParam.
          */
         public Builder mnsParam(MnsParam mnsParam) {
             this.putBodyParameter("mnsParam", mnsParam);
@@ -294,7 +290,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The PagerDuty parameters.</p>
+         * pagerDutyParam.
          */
         public Builder pagerDutyParam(PagerDutyParam pagerDutyParam) {
             this.putBodyParameter("pagerDutyParam", pagerDutyParam);
@@ -303,7 +299,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The Simple Log Service parameters.</p>
+         * slsParam.
          */
         public Builder slsParam(SlsParam slsParam) {
             this.putBodyParameter("slsParam", slsParam);
@@ -312,7 +308,6 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The type of the alert action integration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -325,7 +320,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The webhook parameters.</p>
+         * webhookParam.
          */
         public Builder webhookParam(WebhookParam webhookParam) {
             this.putBodyParameter("webhookParam", webhookParam);
@@ -419,10 +414,7 @@ public class CreateAlertActionRequest extends Request {
             } 
 
             /**
-             * <p>The event source.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * ebSource.
              */
             public Builder ebSource(String ebSource) {
                 this.ebSource = ebSource;
@@ -430,10 +422,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The name of the event bus.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * eventBusName.
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -441,10 +430,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-heyuan</p>
+             * regionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -452,10 +438,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The subject.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * subject.
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -535,10 +518,7 @@ public class CreateAlertActionRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the elastic scaling group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testId</p>
+             * essGroupId.
              */
             public Builder essGroupId(String essGroupId) {
                 this.essGroupId = essGroupId;
@@ -546,10 +526,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The ID of the elastic scaling rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testId</p>
+             * essRuleId.
              */
             public Builder essRuleId(String essRuleId) {
                 this.essRuleId = essRuleId;
@@ -557,10 +534,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * regionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -640,10 +614,7 @@ public class CreateAlertActionRequest extends Request {
             } 
 
             /**
-             * <p>The name of the function in Function Compute.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * function.
              */
             public Builder function(String function) {
                 this.function = function;
@@ -651,10 +622,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The version or alias of the function.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * qualifier.
              */
             public Builder qualifier(String qualifier) {
                 this.qualifier = qualifier;
@@ -662,10 +630,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-nanjing</p>
+             * regionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -745,10 +710,7 @@ public class CreateAlertActionRequest extends Request {
             } 
 
             /**
-             * <p>The name of the function in Function Compute.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testFunction</p>
+             * function.
              */
             public Builder function(String function) {
                 this.function = function;
@@ -756,10 +718,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * regionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -767,10 +726,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The service name of Function Compute.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testService</p>
+             * service.
              */
             public Builder service(String service) {
                 this.service = service;
@@ -850,10 +806,7 @@ public class CreateAlertActionRequest extends Request {
             } 
 
             /**
-             * <p>The resource type of Simple Message Queue (formerly MNS) (MSMQ).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>queue</p>
+             * mnsType.
              */
             public Builder mnsType(String mnsType) {
                 this.mnsType = mnsType;
@@ -861,14 +814,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The name of the resource.</p>
-             * <ul>
-             * <li>If the resource type is queue, the resource name is the queue name.</li>
-             * <li>If the resource type is topic, the resource name is the topic name.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>testName</p>
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -876,10 +822,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * regionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -946,10 +889,7 @@ public class CreateAlertActionRequest extends Request {
             } 
 
             /**
-             * <p>The integration key of PagerDuty.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fds3wr54rvcxfr4543t6435</p>
+             * key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -957,10 +897,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The integration webhook URL of PagerDuty. Both V1 and V2 are supported.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
+             * url.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1040,10 +977,7 @@ public class CreateAlertActionRequest extends Request {
             } 
 
             /**
-             * <p>The name of the Logstore in Simple Log Service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testLogstore。</p>
+             * logstore.
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -1051,10 +985,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The name of the project in Simple Log Service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testProject</p>
+             * project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -1062,10 +993,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-zhangjiakou</p>
+             * regionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1158,10 +1086,7 @@ public class CreateAlertActionRequest extends Request {
             } 
 
             /**
-             * <p>The data format. This parameter takes effect only when the request method is POST.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>JSON</p>
+             * contentType.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -1169,7 +1094,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The request header information.</p>
+             * headers.
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -1177,10 +1102,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The webhook request method.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>POST</p>
+             * method.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -1188,10 +1110,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The alert callback URL.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://www.test.com">http://www.test.com</a></p>
+             * url.
              */
             public Builder url(String url) {
                 this.url = url;

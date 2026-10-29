@@ -74,7 +74,6 @@ public class GetOncallScheduleRequest extends Request {
         } 
 
         /**
-         * <p>The unique identifier of the on-call schedule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

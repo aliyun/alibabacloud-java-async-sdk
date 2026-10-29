@@ -87,10 +87,7 @@ public class ListOncallContactsRequest extends Request {
         } 
 
         /**
-         * <p>The unique identifier of the on-call schedule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testId</p>
+         * oncallScheduleId.
          */
         public Builder oncallScheduleId(String oncallScheduleId) {
             this.putPathParameter("oncallScheduleId", oncallScheduleId);
@@ -108,10 +105,7 @@ public class ListOncallContactsRequest extends Request {
         }
 
         /**
-         * <p>The timestamp of the on-call shift to query. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1730183838000</p>
+         * timestamp.
          */
         public Builder timestamp(String timestamp) {
             this.putQueryParameter("timestamp", timestamp);

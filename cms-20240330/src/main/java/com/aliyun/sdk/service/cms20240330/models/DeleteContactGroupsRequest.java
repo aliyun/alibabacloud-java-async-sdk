@@ -83,7 +83,6 @@ public class DeleteContactGroupsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the contact groups.</p>
          * <p>This parameter is required.</p>
          */
         public Builder contactGroupIds(java.util.List<String> contactGroupIds) {

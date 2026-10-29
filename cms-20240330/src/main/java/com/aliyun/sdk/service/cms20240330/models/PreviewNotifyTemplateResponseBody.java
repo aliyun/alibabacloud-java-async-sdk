@@ -93,7 +93,7 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The rendering result object, which contains two mappings: success for successfully rendered items and failed for items that failed to render.</p>
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +101,7 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The processing result message. The value is success if the request is successful, or an error message if the request fails.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * msg.
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -112,7 +109,7 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>请求ID</p>
          * 
          * <strong>example:</strong>
          * <p>452faed9-ab3b-4340-8a92-bc7d9b98f17a</p>
@@ -123,11 +120,7 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
-         * <ul>
-         * <li>true: The request is successful.</li>
-         * <li>false: The request fails.</li>
-         * </ul>
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -193,7 +186,7 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The mapping of failed rendering results. The key is the template identifier, and the value is the cause of the failure, such as a template syntax error or a reference to an undefined variable.</p>
+             * failed.
              */
             public Builder failed(java.util.Map<String, ?> failed) {
                 this.failed = failed;
@@ -201,7 +194,7 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mapping of successful rendering results. The key is the template identifier, which corresponds to templates[].key in the request, and the value is the rendered string content.</p>
+             * success.
              */
             public Builder success(java.util.Map<String, ?> success) {
                 this.success = success;

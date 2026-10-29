@@ -1,0 +1,15 @@
+- PublishError: 44a54c1d-93f6-4b58-929a-65a7326f0ac2 java-async-tea github:
+
+[message] Command failed: git rebase origin/master
+错误：不能变基：您有未暂存的变更。
+错误：请提交或贮藏修改。
+
+
+[stdout] 
+
+[stderr] 错误：不能变基：您有未暂存的变更。
+错误：请提交或贮藏修改。
+
+
+-----------------
+

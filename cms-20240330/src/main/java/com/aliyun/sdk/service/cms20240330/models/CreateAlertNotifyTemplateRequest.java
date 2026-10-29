@@ -139,7 +139,6 @@ public class CreateAlertNotifyTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the notification template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,10 +151,7 @@ public class CreateAlertNotifyTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the notification template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
+         * alertNotifyTemplateName.
          */
         public Builder alertNotifyTemplateName(String alertNotifyTemplateName) {
             this.putBodyParameter("alertNotifyTemplateName", alertNotifyTemplateName);
@@ -164,10 +160,7 @@ public class CreateAlertNotifyTemplateRequest extends Request {
         }
 
         /**
-         * <p>The template syntax type. Currently, only Go is supported. Templates in the title and content fields use the Go template syntax.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GO</p>
+         * programLang.
          */
         public Builder programLang(String programLang) {
             this.putBodyParameter("programLang", programLang);
@@ -176,10 +169,7 @@ public class CreateAlertNotifyTemplateRequest extends Request {
         }
 
         /**
-         * <p>The multilingual notification templates. The key is the language code: zh for Chinese and en for English. The value is the template configuration object for the specified language. When a notification is sent, the corresponding template is selected based on the recipient\&quot;s language. The content format varies by type: Markdown for DING, WEIXIN, and FEISHU; HTML for EMAIL; plain text for SMS, CALL, and SLACK; and JSON for CUSTOM.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;zh&quot;:{&quot;title&quot;:&quot;CloudMonitor Alert: {{.incident.title}}&quot;,&quot;content&quot;:&quot;<strong>Alert Title:</strong> {{.incident.title}}\n<strong>Severity:</strong> {{.incident.severity}}\n<strong>Events:</strong> {{len .events}}&quot;,&quot;incidentLifeCycleNotifyTemplates&quot;:&quot;{\&quot;IncidentCreationNotify\&quot;:{\&quot;title\&quot;:\&quot;CloudMonitor Alert: {{.incident.title}}\&quot;,\&quot;content\&quot;:\&quot;<strong>Alert Title:</strong> {{.incident.title}}\\n<strong>Severity:</strong> {{.incident.severity}}\&quot;,\&quot;enable\&quot;:true},\&quot;IncidentResolutionNotify\&quot;:{\&quot;title\&quot;:\&quot;CloudMonitor Alert Resolved: {{.incident.title}}\&quot;,\&quot;content\&quot;:\&quot;<strong>Alert Title:</strong> {{.incident.title}}\\n<strong>Severity:</strong> {{.incident.severity}}\&quot;,\&quot;enable\&quot;:true}}&quot;},&quot;en&quot;:{&quot;title&quot;:&quot;CloudMonitor Alert: {{.incident.title}}&quot;,&quot;content&quot;:&quot;<strong>Alert Title:</strong> {{.incident.title}}\n<strong>Severity:</strong> {{.incident.severity}}\n<strong>Events:</strong> {{len .events}}&quot;,&quot;incidentLifeCycleNotifyTemplates&quot;:&quot;{\&quot;IncidentCreationNotify\&quot;:{\&quot;title\&quot;:\&quot;CloudMonitor Alert: {{.incident.title}}\&quot;,\&quot;content\&quot;:\&quot;<strong>Alert Title:</strong> {{.incident.title}}\\n<strong>Severity:</strong> {{.incident.severity}}\&quot;,\&quot;enable\&quot;:true},\&quot;IncidentResolutionNotify\&quot;:{\&quot;title\&quot;:\&quot;CloudMonitor Alert Resolved: {{.incident.title}}\&quot;,\&quot;content\&quot;:\&quot;<strong>Alert Title:</strong> {{.incident.title}}\\n<strong>Severity:</strong> {{.incident.severity}}\&quot;,\&quot;enable\&quot;:true}}&quot;}}</p>
+         * templates.
          */
         public Builder templates(java.util.Map<String, java.util.Map<String, ?>> templates) {
             this.putBodyParameter("templates", templates);
@@ -188,22 +178,7 @@ public class CreateAlertNotifyTemplateRequest extends Request {
         }
 
         /**
-         * <p>The notification channel type. Valid values:</p>
-         * <ul>
-         * <li>DING</li>
-         * <li>WEIXIN</li>
-         * <li>FEISHU</li>
-         * <li>SLACK</li>
-         * <li>CUSTOM</li>
-         * <li>TEAMS</li>
-         * <li>SMS</li>
-         * <li>EMAIL</li>
-         * <li>CALL</li>
-         * <li>PAGER_DUTY</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>DING</p>
+         * type.
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

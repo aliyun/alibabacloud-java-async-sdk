@@ -166,10 +166,7 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * <p>The ID of the contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testId</p>
+         * contactId.
          */
         public Builder contactId(String contactId) {
             this.putBodyParameter("contactId", contactId);
@@ -178,10 +175,7 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * <p>The email address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
+         * email.
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -190,7 +184,7 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * <p>The instant messaging (IM) user ID mapping, which supports multi-platform integration. The key is the IM type (such as DING or WEIXIN), and the value is the corresponding user ID.</p>
+         * imUserIds.
          */
         public Builder imUserIds(java.util.Map<String, String> imUserIds) {
             this.putBodyParameter("imUserIds", imUserIds);
@@ -199,10 +193,7 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * <p>The language.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zh_CN</p>
+         * lang.
          */
         public Builder lang(String lang) {
             this.putBodyParameter("lang", lang);
@@ -211,10 +202,7 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * <p>The name of the contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_07</p>
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -223,10 +211,7 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * <p>The mobile phone number. Currently, only mobile phone numbers in the Chinese mainland are supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>13012345678</p>
+         * phone.
          */
         public Builder phone(String phone) {
             this.putBodyParameter("phone", phone);
@@ -235,10 +220,7 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * <p>The name of the workspace.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default-cms-5884500827389836-cn-hangzhou</p>
+         * workspace.
          */
         public Builder workspace(String workspace) {
             this.putBodyParameter("workspace", workspace);

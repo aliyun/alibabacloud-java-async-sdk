@@ -152,10 +152,7 @@ public class CreateOncallScheduleRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the on-call schedule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testOncallScheduleId</p>
+         * oncallScheduleId.
          */
         public Builder oncallScheduleId(String oncallScheduleId) {
             this.putBodyParameter("oncallScheduleId", oncallScheduleId);
@@ -164,10 +161,7 @@ public class CreateOncallScheduleRequest extends Request {
         }
 
         /**
-         * <p>The name of the on-call schedule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testOncallScheduleName</p>
+         * oncallScheduleName.
          */
         public Builder oncallScheduleName(String oncallScheduleName) {
             this.putBodyParameter("oncallScheduleName", oncallScheduleName);
@@ -176,7 +170,7 @@ public class CreateOncallScheduleRequest extends Request {
         }
 
         /**
-         * <p>The list of rotations.</p>
+         * rotations.
          */
         public Builder rotations(java.util.List<Rotations> rotations) {
             this.putBodyParameter("rotations", rotations);
@@ -185,10 +179,7 @@ public class CreateOncallScheduleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the chatbot for shift reminders.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testRobotId</p>
+         * shiftRobotId.
          */
         public Builder shiftRobotId(String shiftRobotId) {
             this.putBodyParameter("shiftRobotId", shiftRobotId);
@@ -197,7 +188,7 @@ public class CreateOncallScheduleRequest extends Request {
         }
 
         /**
-         * <p>The list of substitution rules.</p>
+         * substitudes.
          */
         public Builder substitudes(java.util.List<Substitudes> substitudes) {
             this.putBodyParameter("substitudes", substitudes);
@@ -206,10 +197,7 @@ public class CreateOncallScheduleRequest extends Request {
         }
 
         /**
-         * <p>The name of the workspace.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default-cms-5884500827389836-cn-hangzhou</p>
+         * workspace.
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);
@@ -376,7 +364,6 @@ public class CreateOncallScheduleRequest extends Request {
             } 
 
             /**
-             * <p>The days of the week when the rotation is active.</p>
              * <p>This parameter is required.</p>
              */
             public Builder activeDays(java.util.List<Integer> activeDays) {
@@ -385,7 +372,6 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The list of contacts.</p>
              * <p>This parameter is required.</p>
              */
             public Builder contacts(java.util.List<String> contacts) {
@@ -394,7 +380,6 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The end time of the rotation. Format: HH:mm.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -406,7 +391,6 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The name of the rotation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -418,7 +402,6 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The start time of the rotation. Format: HH:mm.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -430,10 +413,7 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The length of the shift interval. Use this parameter in conjunction with shiftRecurrenceFrequency. For example, set this parameter to 3 to rotate to the next on-call contact every 3 days.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * shiftLength.
              */
             public Builder shiftLength(Integer shiftLength) {
                 this.shiftLength = shiftLength;
@@ -441,7 +421,6 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The unit of the shift interval. Use this parameter in conjunction with shiftRecurrenceFrequency. For example, set this parameter to week to rotate to the next on-call contact every week.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -453,7 +432,6 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The start date of the rotation. Format: yyyy-MM-dd.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -465,7 +443,6 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The name of the time zone. The time zone must follow the <strong>IANA Time Zone Database</strong> standard, such as <code>Asia/Shanghai</code>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -562,10 +539,7 @@ public class CreateOncallScheduleRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the substitute contact.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testId</p>
+             * contactId.
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -573,10 +547,7 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The end time of the substitution. Format: YYYY-MM-DD HH:mm.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-10-15 18:00</p>
+             * endTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -584,10 +555,7 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The ID of the replaced contact.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testId</p>
+             * replacedContactId.
              */
             public Builder replacedContactId(String replacedContactId) {
                 this.replacedContactId = replacedContactId;
@@ -595,10 +563,7 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The start time of the substitution. Format: YYYY-MM-DD HH:mm.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-10-10 09:00</p>
+             * startTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

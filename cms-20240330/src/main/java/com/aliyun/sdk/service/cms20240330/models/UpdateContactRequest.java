@@ -153,7 +153,6 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * <p>The ID of the contact.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,10 +165,7 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * <p>The email address of the contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
+         * email.
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -178,7 +174,7 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * <p>The IM user ID mappings. Multiple instant messaging tools are supported.</p>
+         * imUserIds.
          */
         public Builder imUserIds(java.util.Map<String, String> imUserIds) {
             this.putBodyParameter("imUserIds", imUserIds);
@@ -187,10 +183,7 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * <p>The language.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zh_CN</p>
+         * lang.
          */
         public Builder lang(String lang) {
             this.putBodyParameter("lang", lang);
@@ -199,10 +192,7 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * <p>The name of the contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -211,10 +201,7 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * <p>The mobile phone number of the contact. Only mobile phone numbers in the Chinese mainland are supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>150123456789</p>
+         * phone.
          */
         public Builder phone(String phone) {
             this.putBodyParameter("phone", phone);

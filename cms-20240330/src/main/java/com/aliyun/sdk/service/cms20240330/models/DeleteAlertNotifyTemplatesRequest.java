@@ -83,7 +83,6 @@ public class DeleteAlertNotifyTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the notification templates.</p>
          * <p>This parameter is required.</p>
          */
         public Builder alertNotifyTemplateIds(java.util.List<String> alertNotifyTemplateIds) {

@@ -67,10 +67,7 @@ public class CreateAlertNotifyTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the notification template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testId</p>
+         * alertNotifyTemplateId.
          */
         public Builder alertNotifyTemplateId(String alertNotifyTemplateId) {
             this.alertNotifyTemplateId = alertNotifyTemplateId;
@@ -78,10 +75,7 @@ public class CreateAlertNotifyTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8A33DBEA-<em><strong><strong>-</strong></strong></em>-<em><strong><strong>-</strong></strong></em></p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

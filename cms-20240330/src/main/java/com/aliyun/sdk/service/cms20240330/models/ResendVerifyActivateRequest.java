@@ -96,10 +96,7 @@ public class ResendVerifyActivateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testId</p>
+         * contactId.
          */
         public Builder contactId(String contactId) {
             this.putPathParameter("contactId", contactId);
@@ -108,10 +105,7 @@ public class ResendVerifyActivateRequest extends Request {
         }
 
         /**
-         * <p>The channel type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PHONE</p>
+         * channelType.
          */
         public Builder channelType(String channelType) {
             this.putBodyParameter("channelType", channelType);
