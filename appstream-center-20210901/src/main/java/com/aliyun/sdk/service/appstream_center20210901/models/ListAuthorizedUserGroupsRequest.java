@@ -35,7 +35,7 @@ public class ListAuthorizedUserGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Body

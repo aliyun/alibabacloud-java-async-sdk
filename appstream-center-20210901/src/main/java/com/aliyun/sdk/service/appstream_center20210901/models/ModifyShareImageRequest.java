@@ -138,7 +138,7 @@ public class ModifyShareImageRequest extends Request {
         }
 
         /**
-         * AddAccount.
+         * <p>The IDs of the Alibaba Cloud accounts to share the image with.</p>
          */
         public Builder addAccount(java.util.List<Long> addAccount) {
             this.putBodyParameter("AddAccount", addAccount);
@@ -147,7 +147,10 @@ public class ModifyShareImageRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The business line. Only the Enterprise Edition scenario is supported. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizType(Integer bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -156,7 +159,10 @@ public class ModifyShareImageRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The ID of the source image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img-bp13mu****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -165,7 +171,10 @@ public class ModifyShareImageRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type, such as Cloud Desktop, cloud application, or workstation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudDesktop</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -174,7 +183,7 @@ public class ModifyShareImageRequest extends Request {
         }
 
         /**
-         * RemoveAccount.
+         * <p>The IDs of the Alibaba Cloud accounts to remove from the image sharing list.</p>
          */
         public Builder removeAccount(java.util.List<Long> removeAccount) {
             this.putBodyParameter("RemoveAccount", removeAccount);

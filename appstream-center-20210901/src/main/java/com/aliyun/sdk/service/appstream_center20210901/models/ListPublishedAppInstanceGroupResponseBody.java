@@ -106,7 +106,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of published delivery groups on the current page, sorted by creation time from newest to oldest. An empty list is returned if no results match or if the requested page exceeds the result range.</p>
+         * <p>The list of published delivery groups on the current page, sorted in descending order of creation time. An empty list is returned if no results match or if the requested page exceeds the result range.</p>
          */
         public Builder appInstanceGroupModels(java.util.List<AppInstanceGroupModels> appInstanceGroupModels) {
             this.appInstanceGroupModels = appInstanceGroupModels;
@@ -114,7 +114,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number specified in this request.</p>
+         * <p>The page number specified in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of delivery groups per page specified in the request. Unit: delivery groups. This value does not represent the actual number of delivery groups returned on the current page. The actual number on the current page may be less than this value.</p>
+         * <p>The number of delivery groups per page specified in the request. This value does not represent the actual number of entries returned on the current page. The actual number on the current page may be less than this value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use this ID to locate and troubleshoot issues.</p>
+         * <p>The unique identifier of the request, which can be used to troubleshoot request issues.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -147,7 +147,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of delivery groups that match all filter conditions. Unit: delivery groups. This value is not the number of delivery groups returned on the current page. Each delivery group is counted only once. The value is <code>0</code> if no results match.</p>
+         * <p>The total number of delivery groups that meet all filter conditions. This value is not the number of entries returned on the current page. Each delivery group is counted only once. If no results match, the value is <code>0</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -255,7 +255,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application icon.</p>
+             * <p>The icon of the application.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://app-center-icon-****.png">https://app-center-icon-****.png</a></p>
@@ -266,7 +266,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application ID.</p>
+             * <p>The ID of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>ca-i87mycyn419nu****</p>
@@ -277,10 +277,10 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application name.</p>
+             * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
-             * <p>OfficeApps</p>
+             * <p>Office applications</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -288,7 +288,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application version.</p>
+             * <p>The version of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -299,7 +299,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application version name.</p>
+             * <p>The version name of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>Initial version</p>
@@ -350,6 +350,12 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("SupportUserGroupMixedAuth")
+        private Boolean supportUserGroupMixedAuth;
+
+        @com.aliyun.core.annotation.NameInMap("UserGroupAuthMode")
+        private String userGroupAuthMode;
+
         private AppInstanceGroupModels(Builder builder) {
             this.appCenterImageId = builder.appCenterImageId;
             this.appInstanceGroupId = builder.appInstanceGroupId;
@@ -360,6 +366,8 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.regionId = builder.regionId;
             this.status = builder.status;
+            this.supportUserGroupMixedAuth = builder.supportUserGroupMixedAuth;
+            this.userGroupAuthMode = builder.userGroupAuthMode;
         }
 
         public static Builder builder() {
@@ -433,6 +441,20 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return supportUserGroupMixedAuth
+         */
+        public Boolean getSupportUserGroupMixedAuth() {
+            return this.supportUserGroupMixedAuth;
+        }
+
+        /**
+         * @return userGroupAuthMode
+         */
+        public String getUserGroupAuthMode() {
+            return this.userGroupAuthMode;
+        }
+
         public static final class Builder {
             private String appCenterImageId; 
             private String appInstanceGroupId; 
@@ -443,6 +465,8 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             private String gmtCreate; 
             private String regionId; 
             private String status; 
+            private Boolean supportUserGroupMixedAuth; 
+            private String userGroupAuthMode; 
 
             private Builder() {
             } 
@@ -457,10 +481,12 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
                 this.gmtCreate = model.gmtCreate;
                 this.regionId = model.regionId;
                 this.status = model.status;
+                this.supportUserGroupMixedAuth = model.supportUserGroupMixedAuth;
+                this.userGroupAuthMode = model.userGroupAuthMode;
             } 
 
             /**
-             * <p>The application image ID.</p>
+             * <p>The ID of the application image.</p>
              * 
              * <strong>example:</strong>
              * <p>img-8z4nztpaqvay4****</p>
@@ -471,7 +497,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery group ID.</p>
+             * <p>The ID of the delivery group.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-9ciijz60n4xsv****</p>
@@ -482,10 +508,10 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery group name.</p>
+             * <p>The name of the delivery group.</p>
              * 
              * <strong>example:</strong>
-             * <p>OfficeApps</p>
+             * <p>Office applications</p>
              */
             public Builder appInstanceGroupName(String appInstanceGroupName) {
                 this.appInstanceGroupName = appInstanceGroupName;
@@ -493,7 +519,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery group specification type.</p>
+             * <p>The specification type of the delivery group.</p>
              * 
              * <strong>example:</strong>
              * <p><strong>dynamic</strong></p>
@@ -504,7 +530,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of deployed applications in the delivery group image. The <code>AppId</code> and <code>AppName</code> parameters in the request only determine whether a delivery group is included in the results. They do not trim this list to only the matched applications.</p>
+             * <p>The list of deployed applications in the image of the delivery group. The <code>AppId</code> and <code>AppName</code> parameters in the request only determine whether the delivery group is selected, and do not restrict this list to the matched applications.</p>
              */
             public Builder apps(java.util.List<Apps> apps) {
                 this.apps = apps;
@@ -512,7 +538,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the delivery group. For delivery groups sold as resources, this is the resource expiration time. For other delivery groups, this is the delivery group expiration time. The value is in ISO 8601 format with milliseconds and a time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
+             * <p>The expiration time of the delivery group. For delivery groups purchased as resources, the expiration time of their resources is returned. For other delivery groups, the expiration time of the delivery group itself is returned. The time is in ISO 8601 date and time format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-27T16:00:00.000+00:00</p>
@@ -523,7 +549,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the delivery group. The value is in ISO 8601 format with milliseconds and a time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
+             * <p>The creation time of the delivery group. The time is in ISO 8601 date and time format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-26T15:06:16.000+00:00</p>
@@ -534,7 +560,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the delivery group.</p>
+             * <p>The ID of the region to which the delivery group belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -545,9 +571,9 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery group status. This operation returns delivery groups only in the following status:</p>
+             * <p>The status of the delivery group. This operation only returns delivery groups in the following states:</p>
              * <ul>
-             * <li><code>PUBLISHED</code>: Published and listed. The delivery group can appear in the query results of this operation. This status does not indicate that a specified user has been granted access permissions.</li>
+             * <li><code>PUBLISHED</code>: The delivery group is published and listed, and can be included in the query results of this operation. This status does not indicate that a specified user has obtained access permissions.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -555,6 +581,25 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether mixed authorization for users and user groups is supported.</p>
+             */
+            public Builder supportUserGroupMixedAuth(Boolean supportUserGroupMixedAuth) {
+                this.supportUserGroupMixedAuth = supportUserGroupMixedAuth;
+                return this;
+            }
+
+            /**
+             * <p>The authorization mode for users and user groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mixed</p>
+             */
+            public Builder userGroupAuthMode(String userGroupAuthMode) {
+                this.userGroupAuthMode = userGroupAuthMode;
                 return this;
             }
 
