@@ -93,7 +93,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -104,7 +104,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query. If NextToken is empty, no more results are available.</p>
+         * <p>The token that is used to start the next query. If NextToken is empty, no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -500,7 +500,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target cloud desktop specification. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the specification IDs supported by WUYING Workspace.</p>
+             * <p>The target cloud desktop type. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the IDs of cloud desktop types supported by WUYING Workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>eds.enterprise_office.8c32g</p>
@@ -665,7 +665,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the resource.</p>
+             * <p>The resource status.</p>
              * 
              * <strong>example:</strong>
              * <p>Stopped</p>

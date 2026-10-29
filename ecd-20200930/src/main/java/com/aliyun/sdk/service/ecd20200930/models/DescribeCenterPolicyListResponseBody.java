@@ -80,7 +80,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the cloud desktop policies.</p>
+         * <p>雲端電腦原則的詳細資訊。</p>
          */
         public Builder describePolicyGroups(java.util.List<DescribePolicyGroups> describePolicyGroups) {
             this.describePolicyGroups = describePolicyGroups;
@@ -88,7 +88,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>請求 ID。</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -99,7 +99,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of query results.</p>
+         * <p>查詢結果總數。</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -115,6 +115,87 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCenterPolicyListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenterPolicyListResponseBody</p>
+     */
+    public static class AppScreenshotBuckets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BucketName")
+        private String bucketName;
+
+        @com.aliyun.core.annotation.NameInMap("BucketRegionId")
+        private String bucketRegionId;
+
+        private AppScreenshotBuckets(Builder builder) {
+            this.bucketName = builder.bucketName;
+            this.bucketRegionId = builder.bucketRegionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AppScreenshotBuckets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bucketName
+         */
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        /**
+         * @return bucketRegionId
+         */
+        public String getBucketRegionId() {
+            return this.bucketRegionId;
+        }
+
+        public static final class Builder {
+            private String bucketName; 
+            private String bucketRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppScreenshotBuckets model) {
+                this.bucketName = model.bucketName;
+                this.bucketRegionId = model.bucketRegionId;
+            } 
+
+            /**
+             * <p>Bucket 名稱。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-bucket-01</p>
+             */
+            public Builder bucketName(String bucketName) {
+                this.bucketName = bucketName;
+                return this;
+            }
+
+            /**
+             * <p>使用者 OSS Bucket 所在地域，必須與 Bucket 的實際地域一致。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
+             */
+            public Builder bucketRegionId(String bucketRegionId) {
+                this.bucketRegionId = bucketRegionId;
+                return this;
+            }
+
+            public AppScreenshotBuckets build() {
+                return new AppScreenshotBuckets(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeCenterPolicyListResponseBody} extends {@link TeaModel}
@@ -168,7 +249,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client access IP CIDR block, in IPv4 CIDR notation.</p>
+             * <p>用戶端存取 IP 位址區段。格式為 CIDR 格式的 IPv4 位址區段。</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -179,10 +260,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the client access IP CIDR block.</p>
+             * <p>用戶端存取 IP 位址區段備註資訊。</p>
              * 
              * <strong>example:</strong>
-             * <p>Corporate office network segment</p>
+             * <p>公司辦公網段</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +395,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The object of the security group rule, which is an IPv4 CIDR block.</p>
+             * <p>安全性群組管控規則的對象，CIDR 格式的 IPv4 位址區段。</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -325,10 +406,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the security group rule.</p>
+             * <p>安全性群組管控規則的描述資訊。</p>
              * 
              * <strong>example:</strong>
-             * <p>Allow access to the internal R&amp;D environment</p>
+             * <p>允許存取內網研發環境</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -336,7 +417,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type of the security group rule.</p>
+             * <p>安全性群組管控規則的通訊協定類型。</p>
              * 
              * <strong>example:</strong>
              * <p>tcp</p>
@@ -347,7 +428,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization policy of the security group rule.</p>
+             * <p>安全性群組管控規則的授權原則。</p>
              * 
              * <strong>example:</strong>
              * <p>accept</p>
@@ -358,7 +439,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port range of the security group rule.</p>
+             * <p>安全性群組管控規則的連接埠範圍。</p>
              * 
              * <strong>example:</strong>
              * <p>22/22</p>
@@ -369,7 +450,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the security group rule. A smaller value indicates a higher priority.</p>
+             * <p>安全性群組管控規則的優先順序，數字越小，代表優先順序越高。</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -380,7 +461,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The direction of the security group rule.</p>
+             * <p>安全性群組管控規則的規則方向。</p>
              * 
              * <strong>example:</strong>
              * <p>inflow</p>
@@ -450,7 +531,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client type.</p>
+             * <p>用戶端類型。</p>
              * 
              * <strong>example:</strong>
              * <p>windows</p>
@@ -461,7 +542,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a specific type of client is allowed to log on to the cloud desktop.</p>
+             * <p>是否允許某一類型的用戶端登入雲端桌面。</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -531,7 +612,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The peripheral device type.</p>
+             * <p>周邊裝置類型。</p>
              * 
              * <strong>example:</strong>
              * <p>camera</p>
@@ -542,7 +623,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The redirection type.</p>
+             * <p>重新導向類型。</p>
              * 
              * <strong>example:</strong>
              * <p>usbRedirect</p>
@@ -677,7 +758,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The device name.</p>
+             * <p>裝置名稱。</p>
              * 
              * <strong>example:</strong>
              * <p>sandisk</p>
@@ -688,7 +769,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product ID.</p>
+             * <p>產品 ID。</p>
              * 
              * <strong>example:</strong>
              * <p>0x55b1</p>
@@ -699,7 +780,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peripheral device type.</p>
+             * <p>周邊裝置類型。</p>
              * 
              * <strong>example:</strong>
              * <p>storage</p>
@@ -710,7 +791,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+             * <p>生產廠商 ID。參見 <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>。</p>
              * 
              * <strong>example:</strong>
              * <p>0x0781</p>
@@ -721,7 +802,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The link optimization command.</p>
+             * <p>連結最佳化指令。</p>
              * 
              * <strong>example:</strong>
              * <p>2:0</p>
@@ -732,7 +813,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The platform types to which the device rule applies.</p>
+             * <p>裝置規則適用的平台類型。</p>
              * 
              * <strong>example:</strong>
              * <p>Windows</p>
@@ -743,7 +824,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The redirection type.</p>
+             * <p>重新導向類型。</p>
              * 
              * <strong>example:</strong>
              * <p>usbRedirect</p>
@@ -826,10 +907,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The policy description.</p>
+             * <p>原則描述。</p>
              * 
              * <strong>example:</strong>
-             * <p>Test rule</p>
+             * <p>測試規則</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -837,7 +918,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name.</p>
+             * <p>網域。</p>
              * 
              * <strong>example:</strong>
              * <p>*.example.com</p>
@@ -848,7 +929,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resolution policy.</p>
+             * <p>解析原則。</p>
              * 
              * <strong>example:</strong>
              * <p>allow</p>
@@ -931,7 +1012,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The domain name.</p>
+             * <p>網域。</p>
              * 
              * <strong>example:</strong>
              * <p>*.example.com</p>
@@ -942,7 +1023,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The redirection policy.</p>
+             * <p>重新導向策略。</p>
              * 
              * <strong>example:</strong>
              * <p>allow</p>
@@ -953,7 +1034,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule type.</p>
+             * <p>規則類型。</p>
              * 
              * <strong>example:</strong>
              * <p>domain</p>
@@ -1062,10 +1143,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The rule description.</p>
+             * <p>規則描述。</p>
              * 
              * <strong>example:</strong>
-             * <p>Test rule</p>
+             * <p>測試規則</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1073,7 +1154,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product ID.</p>
+             * <p>產品 ID。</p>
              * 
              * <strong>example:</strong>
              * <p>08**</p>
@@ -1084,7 +1165,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The USB redirection type.</p>
+             * <p>USB 重新導向類型。</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1095,7 +1176,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The USB redirection rule type.</p>
+             * <p>USB 重新導向規則類型。</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1106,7 +1187,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+             * <p>生產廠商 ID。參見 <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>。</p>
              * 
              * <strong>example:</strong>
              * <p>04**</p>
@@ -1148,6 +1229,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppContentProtection")
         private String appContentProtection;
 
+        @com.aliyun.core.annotation.NameInMap("AppScreenshotBuckets")
+        private java.util.List<AppScreenshotBuckets> appScreenshotBuckets;
+
         @com.aliyun.core.annotation.NameInMap("AuthorizeAccessPolicyRules")
         private java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
 
@@ -1156,6 +1240,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("AutoReconnect")
         private String autoReconnect;
+
+        @com.aliyun.core.annotation.NameInMap("AutoSaveAppScreenshot")
+        private String autoSaveAppScreenshot;
 
         @com.aliyun.core.annotation.NameInMap("CameraRedirect")
         private String cameraRedirect;
@@ -1327,6 +1414,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MaxReconnectTime")
         private Integer maxReconnectTime;
+
+        @com.aliyun.core.annotation.NameInMap("McpService")
+        private String mcpService;
 
         @com.aliyun.core.annotation.NameInMap("MemoryDownGradeDuration")
         private Integer memoryDownGradeDuration;
@@ -1593,9 +1683,11 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.adminKeyboardOnWindows = builder.adminKeyboardOnWindows;
             this.adminMonitor = builder.adminMonitor;
             this.appContentProtection = builder.appContentProtection;
+            this.appScreenshotBuckets = builder.appScreenshotBuckets;
             this.authorizeAccessPolicyRules = builder.authorizeAccessPolicyRules;
             this.authorizeSecurityPolicyRules = builder.authorizeSecurityPolicyRules;
             this.autoReconnect = builder.autoReconnect;
+            this.autoSaveAppScreenshot = builder.autoSaveAppScreenshot;
             this.cameraRedirect = builder.cameraRedirect;
             this.clientControlMenu = builder.clientControlMenu;
             this.clientCreateSnapshot = builder.clientCreateSnapshot;
@@ -1653,6 +1745,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.kmsServerConfig = builder.kmsServerConfig;
             this.localDrive = builder.localDrive;
             this.maxReconnectTime = builder.maxReconnectTime;
+            this.mcpService = builder.mcpService;
             this.memoryDownGradeDuration = builder.memoryDownGradeDuration;
             this.memoryOverload = builder.memoryOverload;
             this.memoryProcessors = builder.memoryProcessors;
@@ -1792,6 +1885,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
 
         /**
+         * @return appScreenshotBuckets
+         */
+        public java.util.List<AppScreenshotBuckets> getAppScreenshotBuckets() {
+            return this.appScreenshotBuckets;
+        }
+
+        /**
          * @return authorizeAccessPolicyRules
          */
         public java.util.List<AuthorizeAccessPolicyRules> getAuthorizeAccessPolicyRules() {
@@ -1810,6 +1910,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         public String getAutoReconnect() {
             return this.autoReconnect;
+        }
+
+        /**
+         * @return autoSaveAppScreenshot
+         */
+        public String getAutoSaveAppScreenshot() {
+            return this.autoSaveAppScreenshot;
         }
 
         /**
@@ -2209,6 +2316,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         public Integer getMaxReconnectTime() {
             return this.maxReconnectTime;
+        }
+
+        /**
+         * @return mcpService
+         */
+        public String getMcpService() {
+            return this.mcpService;
         }
 
         /**
@@ -2820,9 +2934,11 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String adminKeyboardOnWindows; 
             private Integer adminMonitor; 
             private String appContentProtection; 
+            private java.util.List<AppScreenshotBuckets> appScreenshotBuckets; 
             private java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
             private java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules; 
             private String autoReconnect; 
+            private String autoSaveAppScreenshot; 
             private String cameraRedirect; 
             private String clientControlMenu; 
             private String clientCreateSnapshot; 
@@ -2880,6 +2996,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String kmsServerConfig; 
             private String localDrive; 
             private Integer maxReconnectTime; 
+            private String mcpService; 
             private Integer memoryDownGradeDuration; 
             private String memoryOverload; 
             private java.util.List<String> memoryProcessors; 
@@ -2977,9 +3094,11 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.adminKeyboardOnWindows = model.adminKeyboardOnWindows;
                 this.adminMonitor = model.adminMonitor;
                 this.appContentProtection = model.appContentProtection;
+                this.appScreenshotBuckets = model.appScreenshotBuckets;
                 this.authorizeAccessPolicyRules = model.authorizeAccessPolicyRules;
                 this.authorizeSecurityPolicyRules = model.authorizeSecurityPolicyRules;
                 this.autoReconnect = model.autoReconnect;
+                this.autoSaveAppScreenshot = model.autoSaveAppScreenshot;
                 this.cameraRedirect = model.cameraRedirect;
                 this.clientControlMenu = model.clientControlMenu;
                 this.clientCreateSnapshot = model.clientCreateSnapshot;
@@ -3037,6 +3156,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.kmsServerConfig = model.kmsServerConfig;
                 this.localDrive = model.localDrive;
                 this.maxReconnectTime = model.maxReconnectTime;
+                this.mcpService = model.mcpService;
                 this.memoryDownGradeDuration = model.memoryDownGradeDuration;
                 this.memoryOverload = model.memoryOverload;
                 this.memoryProcessors = model.memoryProcessors;
@@ -3126,10 +3246,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to enable the academic proxy feature. Valid values:</p>
+             * <p>學術代理功能開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3141,9 +3261,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the user has administrator permissions after connecting to the cloud desktop.</p>
+             * <p>使用者連線雲端電腦後是否具有管理員權限。</p>
              * <blockquote>
-             * <p>This feature is in invitational preview and is not publicly available.</p>
+             * <p>該功能處於定向邀測中，暫不對外開放。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3155,10 +3275,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable administrator keyboard control in full-screen mode. Valid values:</p>
+             * <p>全螢幕模式下管理員鍵盤控制開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3170,10 +3290,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable administrator keyboard control within the Windows system. Valid values:</p>
+             * <p>Windows 系統內管理員鍵盤控制開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3185,10 +3305,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable administrator monitoring. Valid values:</p>
+             * <p>管理員監控開關。取值範圍：</p>
              * <ul>
-             * <li>1: Enabled.</li>
-             * <li>0: Disabled.</li>
+             * <li>1：開啟。</li>
+             * <li>0：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3200,7 +3320,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the screenshot prevention feature is enabled.</p>
+             * <p>是否開啟防截圖功能。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3211,7 +3331,15 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client access IP whitelist.</p>
+             * <p>防截圖行動裝置截圖自訂 OSS Bucket 清單。</p>
+             */
+            public Builder appScreenshotBuckets(java.util.List<AppScreenshotBuckets> appScreenshotBuckets) {
+                this.appScreenshotBuckets = appScreenshotBuckets;
+                return this;
+            }
+
+            /**
+             * <p>用戶端存取 IP 白名單。</p>
              */
             public Builder authorizeAccessPolicyRules(java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules) {
                 this.authorizeAccessPolicyRules = authorizeAccessPolicyRules;
@@ -3219,7 +3347,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of security group rules.</p>
+             * <p>安全性群組管控規則清單。</p>
              */
             public Builder authorizeSecurityPolicyRules(java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules) {
                 this.authorizeSecurityPolicyRules = authorizeSecurityPolicyRules;
@@ -3227,7 +3355,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable automatic reconnection on the client.</p>
+             * <p>用戶端自動重新連線開關。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3238,7 +3366,22 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether local camera redirection is enabled.</p>
+             * <p>自動儲存行動裝置截圖。取值範圍：</p>
+             * <ul>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
+             */
+            public Builder autoSaveAppScreenshot(String autoSaveAppScreenshot) {
+                this.autoSaveAppScreenshot = autoSaveAppScreenshot;
+                return this;
+            }
+
+            /**
+             * <p>是否開啟本機攝影機重新導向。</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -3249,10 +3392,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client control menu display switch. Valid values:</p>
+             * <p>用戶端控制選單顯示開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3264,10 +3407,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the custom snapshot creation feature on the client. Valid values:</p>
+             * <p>用戶端建立自訂快照功能開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3279,10 +3422,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the hibernate option in the client menu. Valid values:</p>
+             * <p>用戶端休眠選單開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3294,10 +3437,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the restart option in the client menu. Valid values:</p>
+             * <p>用戶端重新啟動選單開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3309,10 +3452,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the shutdown option in the client menu. Valid values:</p>
+             * <p>用戶端關機選單開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3324,7 +3467,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon method control rules.</p>
+             * <p>登入方式管控規則。</p>
              */
             public Builder clientTypes(java.util.List<ClientTypes> clientTypes) {
                 this.clientTypes = clientTypes;
@@ -3332,7 +3475,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The clipboard permission.</p>
+             * <p>剪貼簿權限。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3343,7 +3486,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether color enhancement is enabled for design and 3D common scenarios.</p>
+             * <p>設計及 3D 應用場景選擇是否開啟色彩增強。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3354,10 +3497,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The local drive clipboard feature switch. Valid values:</p>
+             * <p>本機驅動程式剪貼簿功能開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3369,7 +3512,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU downgrade duration. Valid values: 30 to 120. Unit: seconds.</p>
+             * <p>CPU 降頻時長，取值範圍： 30\~120。單位：秒。</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -3380,10 +3523,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable CPU overload protection. Valid values:</p>
+             * <p>CPU 負載保護開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3395,7 +3538,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process name.</p>
+             * <p>處理程序名稱。</p>
              */
             public Builder cpuProcessors(java.util.List<String> cpuProcessors) {
                 this.cpuProcessors = cpuProcessors;
@@ -3403,7 +3546,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU spike protection mode switch.</p>
+             * <p>CPU 保護模式開關。</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -3414,7 +3557,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall CPU usage percentage. Valid values: 70 to 90.</p>
+             * <p>CPU 整體使用率百分比，取值範圍： 70\~90。</p>
              * 
              * <strong>example:</strong>
              * <p>70</p>
@@ -3425,7 +3568,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall CPU sampling duration. Valid values: 10 to 60. Unit: seconds.</p>
+             * <p>CPU 整體取樣時長，取值範圍： 10\~60。單位：秒。</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3436,7 +3579,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The single-core CPU usage percentage. Valid values: 70 to 100.</p>
+             * <p>CPU 單核心使用率百分比，取值範圍： 70\~100。</p>
              * 
              * <strong>example:</strong>
              * <p>70</p>
@@ -3447,7 +3590,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of cloud desktops associated with the policy.</p>
+             * <p>已關聯該原則的雲端電腦數量。</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3458,7 +3601,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of cloud desktop pools associated with the policy.</p>
+             * <p>已關聯該原則的雲端電腦集區數量。</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3469,7 +3612,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peripheral connection notification control.</p>
+             * <p>周邊裝置連線提示控制。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3480,7 +3623,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The device redirection rules.</p>
+             * <p>裝置重新導向規則。</p>
              */
             public Builder deviceRedirects(java.util.List<DeviceRedirects> deviceRedirects) {
                 this.deviceRedirects = deviceRedirects;
@@ -3488,7 +3631,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom peripheral device rules.</p>
+             * <p>自訂周邊裝置規則。</p>
              */
             public Builder deviceRules(java.util.List<DeviceRules> deviceRules) {
                 this.deviceRules = deviceRules;
@@ -3496,9 +3639,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to retain the session after disconnection.</p>
+             * <p>工作階段斷線保留。</p>
              * <blockquote>
-             * <p>This applies only to cloud application policies.</p>
+             * <p>僅適用於雲端應用程式原則。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3510,9 +3653,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session retention duration after disconnection. Unit: seconds.</p>
+             * <p>工作階段斷線保留時長。單位：秒。</p>
              * <blockquote>
-             * <p>This applies only to cloud application policies.</p>
+             * <p>僅適用於雲端應用程式原則。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3524,10 +3667,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable disk overload protection. Valid values:</p>
+             * <p>磁碟負載保護開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3539,7 +3682,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display mode.</p>
+             * <p>顯示模式。</p>
              * 
              * <strong>example:</strong>
              * <p>adminCustom</p>
@@ -3550,7 +3693,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name resolution effective field.</p>
+             * <p>網域解析生效欄位。</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -3561,7 +3704,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the domain name resolution policy.</p>
+             * <p>網域解析原則詳情。</p>
              */
             public Builder domainResolveRule(java.util.List<DomainResolveRule> domainResolveRule) {
                 this.domainResolveRule = domainResolveRule;
@@ -3569,7 +3712,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name resolution policy switch.</p>
+             * <p>網域解析原則開關。</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -3580,7 +3723,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether end users can request administrator assistance.</p>
+             * <p>使用者請求管理員協助。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3591,7 +3734,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of associated end users.</p>
+             * <p>關聯的終端使用者數量。</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -3602,7 +3745,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether users within the same office network can share cloud desktops.</p>
+             * <p>同一個辦公網路下使用者共享雲端電腦。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3613,10 +3756,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the use of external storage devices. Valid values:</p>
+             * <p>外接儲存裝置使用開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3628,7 +3771,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file migration setting.</p>
+             * <p>檔案遷移。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3639,7 +3782,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service address for the file transfer feature.</p>
+             * <p>檔案傳輸功能的服務位址。</p>
              * 
              * <strong>example:</strong>
              * <p>filetransfer.example.com</p>
@@ -3650,7 +3793,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file size limit for a single transfer to the cloud desktop. This parameter must be used together with the inbound unit parameter.</p>
+             * <p>單次傳入雲端電腦的檔案大小限制，需與傳入單位參數配合使用。</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -3661,7 +3804,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit for the file size limit of a single transfer to the cloud desktop.</p>
+             * <p>單次傳入雲端電腦的檔案大小限制單位。</p>
              * 
              * <strong>example:</strong>
              * <p>MB</p>
@@ -3672,7 +3815,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file size limit for a single transfer from the cloud desktop. This parameter must be used together with the outbound unit parameter.</p>
+             * <p>單次從雲端電腦傳出的檔案大小限制，需與傳出單位參數配合使用。</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -3683,7 +3826,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit for the file size limit of a single transfer from the cloud desktop.</p>
+             * <p>單次從雲端電腦傳出的檔案大小限制單位。</p>
              * 
              * <strong>example:</strong>
              * <p>MB</p>
@@ -3694,10 +3837,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the file transfer size limit. Valid values:</p>
+             * <p>檔案傳輸大小限制開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3709,7 +3852,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file transfer speed level.</p>
+             * <p>檔案傳輸速度檔位。</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -3720,7 +3863,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The location where the file transfer speed configured on the client takes effect.</p>
+             * <p>用戶端設定的檔案傳輸速度生效位置。</p>
              * 
              * <strong>example:</strong>
              * <p>client</p>
@@ -3731,7 +3874,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * FolderSync.
+             * <p>檔案同步開關。取值範圍：</p>
+             * <ul>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder folderSync(String folderSync) {
                 this.folderSync = folderSync;
@@ -3739,7 +3889,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image quality policy is enabled for GPU-accelerated cloud desktops. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</p>
+             * <p>是否為圖形型規格雲端電腦開啟畫質策略。對雲端電腦效能和使用體驗要求較高時，例如專業設計場景下，建議開啟該策略。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3750,10 +3900,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the configuration message notification on the floating ball. Valid values:</p>
+             * <p>懸浮球設定訊息提示開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3765,10 +3915,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the hibernate button on the floating ball. Valid values:</p>
+             * <p>懸浮球休眠按鈕開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3780,10 +3930,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the restart button on the floating ball. Valid values:</p>
+             * <p>懸浮球重新啟動按鈕開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3795,10 +3945,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the shutdown button on the floating ball. Valid values:</p>
+             * <p>懸浮球關機按鈕開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3810,7 +3960,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The web client access policy.</p>
+             * <p>Web用戶端存取策略。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3821,7 +3971,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The web client file transfer policy.</p>
+             * <p>Web用戶端檔案傳輸策略。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3832,7 +3982,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network communication protocol.</p>
+             * <p>網路通訊協定。</p>
              * 
              * <strong>example:</strong>
              * <p>tcp</p>
@@ -3843,10 +3993,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network printer feature switch. Valid values:</p>
+             * <p>網路印表機功能開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3858,10 +4008,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable keyboard control on the floating ball. Valid values:</p>
+             * <p>懸浮球鍵盤控制開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3873,10 +4023,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the KMS server. Valid values:</p>
+             * <p>KMS 伺服器開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3888,7 +4038,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The KMS server configuration in the format of address:port.</p>
+             * <p>KMS 伺服器設定，格式為位址:連接埠。</p>
              * 
              * <strong>example:</strong>
              * <p>kms.example.com:1688</p>
@@ -3899,7 +4049,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The local disk mapping permission.</p>
+             * <p>本機磁碟映射權限。</p>
              * 
              * <strong>example:</strong>
              * <p>readwrite</p>
@@ -3910,7 +4060,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum reconnection retry time when the cloud desktop is disconnected due to external reasons. Valid values: 30 to 7200. Unit: seconds.</p>
+             * <p>雲端電腦由於客觀原因造成中斷連線的最大連線重試時間。取值範圍：30\~7200，單位：秒。</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -3921,7 +4071,22 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory downgrade duration of a single process. Valid values: 30 to 120. Unit: seconds.</p>
+             * <p>開啟 MCP 服務。取值範圍：</p>
+             * <ul>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
+             */
+            public Builder mcpService(String mcpService) {
+                this.mcpService = mcpService;
+                return this;
+            }
+
+            /**
+             * <p>單個處理程序記憶體降頻時長，取值範圍： 30\~120。單位：秒。</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -3932,10 +4097,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable memory overload protection. Valid values:</p>
+             * <p>記憶體負載保護開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3947,7 +4112,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process name.</p>
+             * <p>處理程序名稱。</p>
              */
             public Builder memoryProcessors(java.util.List<String> memoryProcessors) {
                 this.memoryProcessors = memoryProcessors;
@@ -3955,7 +4120,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory protection mode switch.</p>
+             * <p>記憶體保護模式開關。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3966,7 +4131,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall memory usage percentage. Valid values: 70 to 90.</p>
+             * <p>記憶體整體使用率百分比，取值範圍： 70\~90。</p>
              * 
              * <strong>example:</strong>
              * <p>70</p>
@@ -3977,7 +4142,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall memory sampling duration. Valid values: 30 to 60. Unit: seconds.</p>
+             * <p>記憶體整體取樣時長，取值範圍： 30\~60。單位：秒。</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -3988,7 +4153,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory usage percentage of a single process. Valid values: 30 to 60.</p>
+             * <p>單個處理程序記憶體使用率百分比，取值範圍： 30\~60。</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -3999,9 +4164,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the restart button is provided in the cloud desktop floating ball when connecting to the cloud desktop from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
+             * <p>透過行動端（Android用戶端&lt;props=&quot;china&quot;&gt;和iOS用戶端）連線雲端電腦時，是否在雲端電腦懸浮球內提供重新啟動按鈕。</p>
              * <blockquote>
-             * <p>This applies only to mobile clients of V7.4 or later.</p>
+             * <p>僅適用於V7.4或更高版本的行動端。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4013,7 +4178,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the Windows security control on mobile clients.</p>
+             * <p>行動端Windows 安全性控制開關。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4024,9 +4189,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the shutdown button is provided in the cloud desktop floating ball when connecting to the cloud desktop from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
+             * <p>透過行動端（Android用戶端&lt;props=&quot;china&quot;&gt;和iOS用戶端）連線雲端電腦時，是否在雲端電腦懸浮球內提供關機按鈕。</p>
              * <blockquote>
-             * <p>This applies only to mobile clients of V7.4 or later.</p>
+             * <p>僅適用於V7.4或更高版本的行動端。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4038,7 +4203,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable WUYING Keeper on mobile clients.</p>
+             * <p>行動端無影管家開關。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4049,7 +4214,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the WUYING Assistant on mobile clients.</p>
+             * <p>行動端小穎的開關。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4060,10 +4225,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the model library feature. Valid values:</p>
+             * <p>模型庫功能開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4075,10 +4240,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the multi-screen display feature. Valid values:</p>
+             * <p>多螢幕顯示功能開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4090,7 +4255,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy name.</p>
+             * <p>策略名稱。</p>
              * 
              * <strong>example:</strong>
              * <p>testPolicyGroupName</p>
@@ -4101,9 +4266,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network redirection setting.</p>
+             * <p>網路重新導向。</p>
              * <blockquote>
-             * <p>This feature is in invitational preview and is not publicly available.</p>
+             * <p>該功能處於定向邀測中，暫不對外開放。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4115,9 +4280,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the network redirection policy.</p>
+             * <p>網路重新導向策略詳細資訊。</p>
              * <blockquote>
-             * <p>This feature is in invitational preview and is not publicly available.</p>
+             * <p>該功能處於定向邀測中，暫不對外開放。</p>
              * </blockquote>
              */
             public Builder netRedirectRule(java.util.List<NetRedirectRule> netRedirectRule) {
@@ -4126,10 +4291,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network printer feature switch. Valid values:</p>
+             * <p>網路印表機功能開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4141,9 +4306,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to disconnect the session when no operation is performed.</p>
+             * <p>無操作中斷連線。</p>
              * <blockquote>
-             * <p>This applies only to cloud application policies.</p>
+             * <p>僅適用於雲端應用策略。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4155,9 +4320,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The idle disconnection duration. Unit: seconds.</p>
+             * <p>無操作中斷連線時長。單位：秒。</p>
              * <blockquote>
-             * <p>This applies only to cloud application policies.</p>
+             * <p>僅適用於雲端應用策略。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4169,7 +4334,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of associated organizations.</p>
+             * <p>關聯的組織數量。</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -4180,7 +4345,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy ID.</p>
+             * <p>策略ID。</p>
              * 
              * <strong>example:</strong>
              * <p>pg-gx2x1dhsmthe9****</p>
@@ -4191,7 +4356,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy type.</p>
+             * <p>策略類型。</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -4202,7 +4367,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cloud desktop policy.</p>
+             * <p>雲端電腦策略狀態。</p>
              * 
              * <strong>example:</strong>
              * <p>AVAILABLE</p>
@@ -4213,10 +4378,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the port proxy feature. Valid values:</p>
+             * <p>連接埠代理功能開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4228,11 +4393,11 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The printer alert dialog setting. Valid values:</p>
+             * <p>印表機彈出視窗提示。取值範圍：</p>
              * <ul>
-             * <li>default: Default.</li>
-             * <li>off: Disabled.</li>
-             * <li>custom: Custom.</li>
+             * <li>default：預設值。</li>
+             * <li>off：關閉。</li>
+             * <li>custom：自訂。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4244,7 +4409,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the printer alert dialog.</p>
+             * <p>印表機彈出視窗提示內容。</p>
              * 
              * <strong>example:</strong>
              * <p>Print Content.</p>
@@ -4255,7 +4420,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the printer alert dialog.</p>
+             * <p>印表機彈出視窗提示標題。</p>
              * 
              * <strong>example:</strong>
              * <p>Print Title</p>
@@ -4266,7 +4431,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The printer redirection policy.</p>
+             * <p>印表機重新導向策略。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4277,7 +4442,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether image quality enhancement is enabled for design and 3D common scenarios.</p>
+             * <p>設計及3D應用場景選擇是否開啟畫質增強。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4288,7 +4453,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether custom screen recording is enabled.</p>
+             * <p>是否開啟自訂螢幕錄影。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4299,7 +4464,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration period of custom screen recording files. Default value: 30. Unit: days.</p>
+             * <p>自訂螢幕錄影的檔案過期時間，預設30天。</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -4310,7 +4475,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The screen recording duration after an event is detected in screen recording audit. Unit: minutes. Valid values: 10 to 60.</p>
+             * <p>螢幕錄影稽核中偵測到事件發生後螢幕錄影的時長。單位：分鐘。取值範圍：10\~60。</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4321,7 +4486,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute paths for file monitoring in screen recording audit.</p>
+             * <p>螢幕錄影稽核中的檔案監控絕對路徑。</p>
              */
             public Builder recordEventFilePaths(java.util.List<String> recordEventFilePaths) {
                 this.recordEventFilePaths = recordEventFilePaths;
@@ -4329,7 +4494,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute paths for registry monitoring in screen recording audit.</p>
+             * <p>螢幕錄影稽核中的登錄檔監控絕對路徑。</p>
              */
             public Builder recordEventRegisters(java.util.List<String> recordEventRegisters) {
                 this.recordEventRegisters = recordEventRegisters;
@@ -4337,7 +4502,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether screen recording is enabled.</p>
+             * <p>是否開啟螢幕錄影。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4348,7 +4513,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The option for recording cloud desktop audio.</p>
+             * <p>錄製雲端電腦聲音選項。</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -4359,7 +4524,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of screen recording files, in minutes. Recording files are automatically split and uploaded to the storage space based on the specified duration. Files are rolled over when they reach 300 MB.</p>
+             * <p>螢幕錄影檔案閱覽時長，單位為分鐘。錄製檔案會根據您設定的時長自動分割並上傳至儲存空間，檔案達到300MB時優先滾動更新。</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4370,7 +4535,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of screen recording, in the format of HH:MM:SS. This response value is meaningful only when Recording is set to period.</p>
+             * <p>螢幕錄影結束時間，取值：HH:MM:SS。只有Recording取值是period時，該傳回值有實際意義。</p>
              * 
              * <strong>example:</strong>
              * <p>08:59:00</p>
@@ -4381,7 +4546,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period of screen recording files. Valid values: 1 to 180. Unit: days.</p>
+             * <p>螢幕錄影檔案的保留時間。取值範圍為1\~180天。</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -4392,7 +4557,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The frame rate of screen recording. Unit: FPS (frames per second).</p>
+             * <p>螢幕錄影幀率。單位：FPS（幀/秒）。</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -4403,7 +4568,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of screen recording, in the format of HH:MM:SS. This response value is meaningful only when Recording is set to period.</p>
+             * <p>螢幕錄影開始時間，取值：HH:MM:SS。只有Recording取值是period時，該傳回值有實際意義。</p>
              * 
              * <strong>example:</strong>
              * <p>08:00:00</p>
@@ -4414,7 +4579,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether end users are notified that screen recording is enabled.</p>
+             * <p>提示終端客戶已開啟螢幕錄影。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4425,10 +4590,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The notification message displayed to end users when screen recording is enabled.</p>
+             * <p>提示終端客戶開啟螢幕錄影的資訊。</p>
              * 
              * <strong>example:</strong>
-             * <p>Screen recording is enabled</p>
+             * <p>螢幕錄影已開啟</p>
              */
             public Builder recordingUserNotifyMessage(String recordingUserNotifyMessage) {
                 this.recordingUserNotifyMessage = recordingUserNotifyMessage;
@@ -4436,7 +4601,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The keyboard and mouse control permission for remote assistance.</p>
+             * <p>遠端協助鍵盤與滑鼠控制權限。</p>
              * 
              * <strong>example:</strong>
              * <p>fullControl</p>
@@ -4447,7 +4612,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The setting for resetting the cloud desktop.</p>
+             * <p>重置雲端電腦。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4458,7 +4623,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DPI value of the screen resolution.</p>
+             * <p>螢幕解析度的 DPI 值。</p>
              * 
              * <strong>example:</strong>
              * <p>96</p>
@@ -4469,7 +4634,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resolution height. Unit: pixels.</p>
+             * <p>解析度的高度。單位：畫素。</p>
              * 
              * <strong>example:</strong>
              * <p>1280</p>
@@ -4480,7 +4645,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resolution type.</p>
+             * <p>解析度類型。</p>
              * 
              * <strong>example:</strong>
              * <p>adaptive</p>
@@ -4491,7 +4656,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resolution width. Unit: pixels.</p>
+             * <p>解析度的寬度。單位：畫素。</p>
              * 
              * <strong>example:</strong>
              * <p>1920</p>
@@ -4502,7 +4667,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of resource groups associated with the policy.</p>
+             * <p>已關聯該策略的資源群組數量。</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -4513,10 +4678,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security center shortcut key switch. Valid values:</p>
+             * <p>安全中心快速鍵開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4528,7 +4693,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope of the policy.</p>
+             * <p>策略的生效範圍。</p>
              * 
              * <strong>example:</strong>
              * <p>GLOBAL</p>
@@ -4539,7 +4704,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CIDR block that the policy applies to.</p>
+             * <p>生效的 CIDR Block。</p>
              */
             public Builder scopeValue(java.util.List<String> scopeValue) {
                 this.scopeValue = scopeValue;
@@ -4547,7 +4712,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The screen display mode.</p>
+             * <p>螢幕顯示模式。</p>
              * 
              * <strong>example:</strong>
              * <p>auto</p>
@@ -4558,7 +4723,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether smoothness enhancement is enabled for daily office scenarios.</p>
+             * <p>日常辦公場景選擇，是否開啟平滑度增強。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4569,7 +4734,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the status monitoring entry is provided in the cloud desktop floating ball.</p>
+             * <p>是否在雲端電腦懸浮球內提供狀態監控功能入口。</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -4580,7 +4745,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The streaming mode adaptation scenario.</p>
+             * <p>串流模式適配場景。</p>
              * 
              * <strong>example:</strong>
              * <p>smooth</p>
@@ -4591,7 +4756,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target frame rate. Valid values: 10 to 60.</p>
+             * <p>目標幀率，取值範圍：10\~60。</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -4602,9 +4767,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application taskbar.</p>
+             * <p>應用程式工作列。</p>
              * <blockquote>
-             * <p>This applies only to cloud application policies.</p>
+             * <p>僅適用於雲端應用程式策略。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4616,10 +4781,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the three-screen feature. Valid values:</p>
+             * <p>三螢幕開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4631,7 +4796,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The USB redirection setting.</p>
+             * <p>USB 重新導向。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4642,7 +4807,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The USB redirection rules.</p>
+             * <p>USB 重新導向規則。</p>
              */
             public Builder usbSupplyRedirectRule(java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule) {
                 this.usbSupplyRedirectRule = usbSupplyRedirectRule;
@@ -4650,10 +4815,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to display the usage duration on the floating ball. Valid values:</p>
+             * <p>懸浮球使用時長顯示開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4665,7 +4830,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average bitrate for video encoding. Unit: Kbps. Valid values: 1000 to 50000.</p>
+             * <p>影片編碼平均位元率。單位：Kbps。取值範圍：1000\~50000。</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -4676,7 +4841,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum QP for video encoding, which represents the lowest quality. Valid values: 0 to 51.</p>
+             * <p>影片編碼最大 QP，畫面最低品質，取值範圍：0\~51。</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -4687,7 +4852,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum QP for video encoding, which represents the highest quality. Valid values: 0 to 51.</p>
+             * <p>影片編碼最小 QP，最高品質。取值範圍：0\~51。</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -4698,7 +4863,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peak bitrate for video encoding. Unit: Kbps. Valid values: 1000 to 50000.</p>
+             * <p>影片編碼峰值位元率。單位：Kbps。取值範圍：1000~50000。</p>
              * 
              * <strong>example:</strong>
              * <p>2000</p>
@@ -4709,7 +4874,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The video encoding policy.</p>
+             * <p>影片編碼策略。</p>
              * 
              * <strong>example:</strong>
              * <p>qualityFirst</p>
@@ -4720,7 +4885,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The multimedia redirection setting.</p>
+             * <p>多媒體重新導向。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4731,7 +4896,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image display quality policy.</p>
+             * <p>影像顯示品質策略。</p>
              * 
              * <strong>example:</strong>
              * <p>medium</p>
@@ -4742,7 +4907,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The watermark setting.</p>
+             * <p>浮水印。</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -4753,7 +4918,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The invisible watermark anti-camera capture feature.</p>
+             * <p>隱藏式浮水印防拍照功能。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4764,7 +4929,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The watermark font color. Valid values: 0 to 16777215.</p>
+             * <p>浮水印字型顏色。取值範圍：0\~16777215。</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -4775,7 +4940,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If the <code>WatermarkType</code> parameter is set to <code>custom</code>, you must also specify the custom text content by using the <code>WatermarkCustomText</code> parameter.</p>
+             * <p>若參數 <code>WatermarkType</code> 傳入 <code>custom</code>，則必須同時透過參數 <code>WatermarkCustomText</code> 傳入自訂文字的內容。</p>
              * 
              * <strong>example:</strong>
              * <p>custom-watermark</p>
@@ -4786,7 +4951,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The watermark tilt angle. Valid values: -10 to -30.</p>
+             * <p>浮水印傾斜度。取值範圍：-10\~-30。</p>
              * 
              * <strong>example:</strong>
              * <p>-10</p>
@@ -4797,7 +4962,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The watermark font size. Valid values: 10 to 20.</p>
+             * <p>浮水印字型大小。取值範圍：10\~20。</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4808,7 +4973,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The watermark font style.</p>
+             * <p>浮水印字型樣式。</p>
              * 
              * <strong>example:</strong>
              * <p>plain</p>
@@ -4819,7 +4984,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The invisible watermark enhancement feature.</p>
+             * <p>隱藏式浮水印增強功能。</p>
              * 
              * <strong>example:</strong>
              * <p>medium</p>
@@ -4830,7 +4995,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of watermark rows.</p>
+             * <p>浮水印行數。</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -4841,7 +5006,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The invisible watermark security-first rule.</p>
+             * <p>隱藏式浮水印安全優先規則。</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -4852,10 +5017,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the watermark shadow effect. Valid values:</p>
+             * <p>浮水印陰影效果開關。取值範圍：</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on：開啟。</li>
+             * <li>off：關閉。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4867,7 +5032,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The watermark transparency. A larger value indicates lower transparency. Valid values: 10 to 100.</p>
+             * <p>浮水印透明度，值越大，透明度越小。取值範圍：10\~100。</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4878,7 +5043,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The watermark type.</p>
+             * <p>浮水印類型。</p>
              * 
              * <strong>example:</strong>
              * <p>EndUserId</p>
@@ -4889,7 +5054,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable WUYING Keeper.</p>
+             * <p>無影管家開關。</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4900,7 +5065,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the WUYING AI Assistant entry is provided in the cloud desktop floating ball.</p>
+             * <p>是否在雲端電腦懸浮球內提供無影 AI 助手功能入口。</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>

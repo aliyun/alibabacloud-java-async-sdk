@@ -67,7 +67,7 @@ public class CreateCenterPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cloud desktop policy ID.</p>
+         * <p>The ID of the cloud desktop policy.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-gx2x1dhsmthe9****</p>

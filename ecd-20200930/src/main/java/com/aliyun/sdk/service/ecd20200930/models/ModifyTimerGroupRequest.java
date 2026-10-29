@@ -128,7 +128,7 @@ public class ModifyTimerGroupRequest extends Request {
          * <p>The description of the configuration group.</p>
          * 
          * <strong>example:</strong>
-         * <p>ScheduledTask</p>
+         * <p>Scheduled task</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -137,7 +137,7 @@ public class ModifyTimerGroupRequest extends Request {
         }
 
         /**
-         * <p>The configuration group ID.</p>
+         * <p>The ID of the configuration group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class ModifyTimerGroupRequest extends Request {
          * <p>The name of the configuration group.</p>
          * 
          * <strong>example:</strong>
-         * <p>ScheduledTask</p>
+         * <p>Scheduled task</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -441,7 +441,7 @@ public class ModifyTimerGroupRequest extends Request {
             } 
 
             /**
-             * <p>The appointment timer for executing scheduled tasks at specified time points.</p>
+             * <p>The appointment timer for scheduled tasks. After you specify this parameter, the scheduled task is executed at the specified time point.</p>
              * 
              * <strong>example:</strong>
              * <p>1764660600967</p>
@@ -460,7 +460,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The cron expression for the end time of the scheduled task.</p>
+             * <p>The cron expression for ending the execution of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 18 ? * 1-5</p>
@@ -471,7 +471,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to forcefully execute the task. If this parameter is set to true, the scheduled task is forcefully executed regardless of the cloud desktop and connection status.</p>
+             * <p>Specifies whether to forcibly execute the scheduled task. A value of true indicates that the system ignores the desktop and connection status checks and forcibly executes the scheduled task.</p>
              */
             public Builder enforce(Boolean enforce) {
                 this.enforce = enforce;
@@ -479,7 +479,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The image ID.</p>
+             * <p>The ID of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>m-4zfb6zj728hhr****</p>
@@ -501,7 +501,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The list of IP CIDR blocks that take effect.</p>
+             * <p>The list of effective IP CIDR blocks.</p>
              */
             public Builder ipSegments(java.util.List<String> ipSegments) {
                 this.ipSegments = ipSegments;
@@ -509,7 +509,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The duration of inactivity before the screen is locked for the no-operation lock screen feature. Unit: minutes. Only AD-joined cloud desktops are supported.</p>
+             * <p>The duration of inactivity before the screen is locked for the no-operation lock screen feature. Unit: minutes. Only AD cloud desktops are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -531,7 +531,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks support this parameter.</p>
+             * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>Shutdown</p>
@@ -542,7 +542,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
+             * <p>The process whitelist for intelligent judgment of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not executed.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -550,7 +550,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The reset type, which determines whether to reset and the scope of cloud disks to reset.</p>
+             * <p>The reset type. This parameter specifies whether to reset the desktop and the scope of cloud disks to be reset.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -561,7 +561,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The cron expression for the start time of the scheduled task.</p>
+             * <p>The cron expression for starting the execution of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 8 ? * 1-5</p>
@@ -572,7 +572,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The execution order number of the timer.</p>
+             * <p>The execution sequence number of the timer.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -803,7 +803,7 @@ public class ModifyTimerGroupRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow end users to configure scheduled tasks on their own.</p>
+             * <p>Specifies whether to allow end users to configure scheduled tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -816,7 +816,7 @@ public class ModifyTimerGroupRequest extends Request {
             /**
              * <p>The cron expression of the scheduled task.</p>
              * <blockquote>
-             * <p>Specify the time in UTC. For example, to schedule a task at 00:00 (UTC+8) every day, set this parameter to 0 0 16 ? * 1,2,3,4,5,6,7.</p>
+             * <p>You must specify the time in UTC. For example, to specify 00:00:00 every day in UTC+8 (Beijing time), set this parameter to 0 0 16 ? * 1,2,3,4,5,6,7.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -828,7 +828,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to forcefully execute the task. If this parameter is set to true, the scheduled task is forcefully executed regardless of the cloud desktop and connection status.</p>
+             * <p>Specifies whether to forcibly execute the scheduled task. A value of true indicates that the system ignores the desktop and connection status checks and forcibly executes the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -861,7 +861,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks support this parameter.</p>
+             * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>Shutdown</p>
@@ -872,7 +872,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
+             * <p>The process whitelist for intelligent judgment of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not executed.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -880,7 +880,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The reset type, which determines whether to reset and the scope of cloud disks to reset.</p>
+             * <p>The reset type. This parameter specifies whether to reset the desktop and the scope of cloud disks to be reset.</p>
              * 
              * <strong>example:</strong>
              * <p>RESET_TYPE_SYSTEM</p>

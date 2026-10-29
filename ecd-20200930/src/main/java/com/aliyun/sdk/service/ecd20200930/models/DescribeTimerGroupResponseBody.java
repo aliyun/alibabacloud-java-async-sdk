@@ -365,7 +365,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The appointment timer used for executing scheduled tasks at specified time points. After this parameter is specified, the scheduled task is executed at the specified time points.</p>
+             * <p>Specifies the time to execute the scheduled task. After this parameter is specified, the scheduled task is executed at the specified time.</p>
              * 
              * <strong>example:</strong>
              * <p>1764660600967</p>
@@ -384,7 +384,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cron expression for the end time of the scheduled task.</p>
+             * <p>The cron expression for ending the execution of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 18 ? * 1-5</p>
@@ -395,7 +395,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to forcefully execute the task. A value of true indicates that the desktop and connection status checks are ignored and the scheduled task is forcefully executed.</p>
+             * <p>Specifies whether to forcibly execute the task. A value of true indicates that the scheduled task is forcibly executed, ignoring the desktop and connection status checks.</p>
              */
             public Builder enforce(Boolean enforce) {
                 this.enforce = enforce;
@@ -403,7 +403,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image ID specified for the image change scheduled task.</p>
+             * <p>Specifies the ID of the image to be replaced. This parameter is used for scheduled image replacement tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>m-5b0vjqbiqu010XXXXXX</p>
@@ -414,7 +414,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time interval. Unit: minutes.</p>
+             * <p>The time interval, in minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -433,7 +433,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of inactivity before the screen is locked, used by the no-operation lock screen feature. Unit: minutes. Only AD-joined cloud desktops are supported.</p>
+             * <p>Specifies the duration of inactivity before the screen is locked, in minutes. This parameter is used for the no-operation lock screen feature and is supported only by AD cloud desktops.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -444,7 +444,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The advance notification time before the scheduled task is executed. Unit: seconds.</p>
+             * <p>The advance notification time before the scheduled task is executed, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -455,7 +455,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks are supported.</p>
+             * <p>The operation type of the scheduled task. Currently, only disconnection scheduled tasks are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>Shutdown</p>
@@ -477,7 +477,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
+             * <p>The process whitelist for the intelligent evaluation of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -485,7 +485,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reset type, which determines whether to reset and the scope of cloud disks to reset.</p>
+             * <p>The reset type, which determines whether to reset and the scope of cloud disks to be reset.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -496,7 +496,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cron expression for the start time of the scheduled task.</p>
+             * <p>The cron expression for starting the execution of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 8 ? * 1-5</p>
@@ -507,7 +507,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution order number of the timer.</p>
+             * <p>The execution sequence number of the timer.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -529,7 +529,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger configuration type of the no-operation scheduled task.</p>
+             * <p>The trigger configuration type for no-operation scheduled tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>Standard</p>
@@ -540,7 +540,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The advance notification time before verification is executed. Unit: seconds.</p>
+             * <p>The advance notification time before execution verification, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -551,7 +551,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verification wait duration. Unit: seconds.</p>
+             * <p>The verification wait duration, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>600</p>
@@ -738,7 +738,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether end users are allowed to configure scheduled tasks on their own.</p>
+             * <p>Specifies whether end users are allowed to configure scheduled tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -760,7 +760,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to forcefully execute the task. A value of true indicates that the desktop and connection status checks are ignored and the scheduled task is forcefully executed.</p>
+             * <p>Specifies whether to forcibly execute the task. A value of true indicates that the scheduled task is forcibly executed, ignoring the desktop and connection status checks.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -771,7 +771,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time interval. Unit: minutes.</p>
+             * <p>The time interval, in minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -782,7 +782,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The advance notification time before the scheduled task is executed. Unit: seconds.</p>
+             * <p>The advance notification time before the scheduled task is executed, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -793,7 +793,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the disconnect scheduled task.</p>
+             * <p>The type of the disconnection scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>Shutdown</p>
@@ -804,7 +804,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
+             * <p>The process whitelist for the intelligent evaluation of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -812,7 +812,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reset type of the reset scheduled task.</p>
+             * <p>The reset type for the scheduled reset task.</p>
              * 
              * <strong>example:</strong>
              * <p>RESET_TYPE_SYSTEM</p>
@@ -842,7 +842,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger configuration type of the no-operation scheduled task.</p>
+             * <p>The trigger configuration type for no-operation scheduled tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>Standard</p>
@@ -1066,7 +1066,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quantity information of resources bound to the configuration.</p>
+             * <p>The information about the number of resources bound to the configuration.</p>
              */
             public Builder bindCountMap(java.util.Map<String, Integer> bindCountMap) {
                 this.bindCountMap = bindCountMap;
@@ -1074,7 +1074,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration information of scheduled tasks. This is a list structure.</p>
+             * <p>The configuration information of scheduled tasks.</p>
              */
             public Builder configTimers(java.util.List<ConfigTimers> configTimers) {
                 this.configTimers = configTimers;
@@ -1085,7 +1085,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
              * <p>The description of the configuration group.</p>
              * 
              * <strong>example:</strong>
-             * <p>ScheduledTask</p>
+             * <p>Scheduled task</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1104,7 +1104,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the system scheduled task description, used for frontend display.</p>
+             * <p>Used for frontend display. The description of the system scheduled task uses a code.</p>
              * 
              * <strong>example:</strong>
              * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</p>
@@ -1115,7 +1115,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mapping code of the system scheduled task name, used for frontend display.</p>
+             * <p>Used for frontend display. The name mapping of the system scheduled task uses a code.</p>
              * 
              * <strong>example:</strong>
              * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</p>
@@ -1126,7 +1126,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Used for system scheduled task check. The current scheduled task does not support unbinding or binding.</p>
+             * <p>Used for system scheduled task checks. The current scheduled task cannot be bound or unbound.</p>
              */
             public Builder isBind(Boolean isBind) {
                 this.isBind = isBind;
@@ -1134,7 +1134,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Used for system scheduled task check. The current scheduled task does not support modification.</p>
+             * <p>Used for system scheduled task checks. The current scheduled task cannot be modified.</p>
              */
             public Builder isUpdate(Boolean isUpdate) {
                 this.isUpdate = isUpdate;
@@ -1145,7 +1145,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
              * <p>The name of the configuration group.</p>
              * 
              * <strong>example:</strong>
-             * <p>ScheduledTask</p>
+             * <p>Scheduled task</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1175,7 +1175,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the configuration group.</p>
+             * <p>The configuration group type.</p>
              * 
              * <strong>example:</strong>
              * <p>Timer</p>

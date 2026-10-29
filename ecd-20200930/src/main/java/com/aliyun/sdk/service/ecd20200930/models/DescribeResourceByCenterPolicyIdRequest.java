@@ -38,6 +38,10 @@ public class DescribeResourceByCenterPolicyIdRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
+    private String resourceName;
+
     private DescribeResourceByCenterPolicyIdRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
@@ -45,6 +49,7 @@ public class DescribeResourceByCenterPolicyIdRequest extends Request {
         this.policyGroupId = builder.policyGroupId;
         this.productType = builder.productType;
         this.resourceId = builder.resourceId;
+        this.resourceName = builder.resourceName;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class DescribeResourceByCenterPolicyIdRequest extends Request {
         return this.resourceId;
     }
 
+    /**
+     * @return resourceName
+     */
+    public String getResourceName() {
+        return this.resourceName;
+    }
+
     public static final class Builder extends Request.Builder<DescribeResourceByCenterPolicyIdRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
         private String policyGroupId; 
         private String productType; 
         private String resourceId; 
+        private String resourceName; 
 
         private Builder() {
             super();
@@ -113,6 +126,7 @@ public class DescribeResourceByCenterPolicyIdRequest extends Request {
             this.policyGroupId = request.policyGroupId;
             this.productType = request.productType;
             this.resourceId = request.resourceId;
+            this.resourceName = request.resourceName;
         } 
 
         /**
@@ -132,7 +146,7 @@ public class DescribeResourceByCenterPolicyIdRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token that is used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l69tQX7yFxx6/4dbooBAOc</p>
@@ -177,6 +191,18 @@ public class DescribeResourceByCenterPolicyIdRequest extends Request {
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
+         */
+        public Builder resourceName(String resourceName) {
+            this.putQueryParameter("ResourceName", resourceName);
+            this.resourceName = resourceName;
             return this;
         }
 

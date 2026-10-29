@@ -80,7 +80,7 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of user personal drives.</p>
+         * <p>The list of user personal drives.</p>
          */
         public Builder cloudDriveUsers(java.util.List<CloudDriveUsers> cloudDriveUsers) {
             this.cloudDriveUsers = cloudDriveUsers;
@@ -88,7 +88,7 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page of results. An empty value indicates that all results have been returned.</p>
+         * <p>The pagination token for the next query. If <code>NextToken</code> is empty, no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
@@ -266,7 +266,7 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Maximum storage capacity for the user’s personal drive, in bytes.</p>
+             * <p>The maximum storage capacity of the user personal drive. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>104857600</p>
@@ -277,7 +277,7 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used storage space, in bytes.</p>
+             * <p>The size of the used storage space. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>10485760</p>

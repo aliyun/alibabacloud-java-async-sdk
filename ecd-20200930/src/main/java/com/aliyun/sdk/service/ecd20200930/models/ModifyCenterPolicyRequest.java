@@ -38,6 +38,10 @@ public class ModifyCenterPolicyRequest extends Request {
     private String appContentProtection;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppScreenshotBuckets")
+    private java.util.List<AppScreenshotBuckets> appScreenshotBuckets;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthorizeAccessPolicyRule")
     private java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule;
 
@@ -48,6 +52,10 @@ public class ModifyCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoReconnect")
     private String autoReconnect;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoSaveAppScreenshot")
+    private String autoSaveAppScreenshot;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BusinessChannel")
@@ -245,6 +253,10 @@ public class ModifyCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxReconnectTime")
     private Integer maxReconnectTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("McpService")
+    private String mcpService;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemoryDownGradeDuration")
@@ -609,9 +621,11 @@ public class ModifyCenterPolicyRequest extends Request {
         this.adminKeyboardOnFullScreen = builder.adminKeyboardOnFullScreen;
         this.adminKeyboardOnWindows = builder.adminKeyboardOnWindows;
         this.appContentProtection = builder.appContentProtection;
+        this.appScreenshotBuckets = builder.appScreenshotBuckets;
         this.authorizeAccessPolicyRule = builder.authorizeAccessPolicyRule;
         this.authorizeSecurityPolicyRule = builder.authorizeSecurityPolicyRule;
         this.autoReconnect = builder.autoReconnect;
+        this.autoSaveAppScreenshot = builder.autoSaveAppScreenshot;
         this.businessChannel = builder.businessChannel;
         this.businessType = builder.businessType;
         this.cameraRedirect = builder.cameraRedirect;
@@ -661,6 +675,7 @@ public class ModifyCenterPolicyRequest extends Request {
         this.internetPrinter = builder.internetPrinter;
         this.localDrive = builder.localDrive;
         this.maxReconnectTime = builder.maxReconnectTime;
+        this.mcpService = builder.mcpService;
         this.memoryDownGradeDuration = builder.memoryDownGradeDuration;
         this.memoryOverload = builder.memoryOverload;
         this.memoryProcessors = builder.memoryProcessors;
@@ -800,6 +815,13 @@ public class ModifyCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return appScreenshotBuckets
+     */
+    public java.util.List<AppScreenshotBuckets> getAppScreenshotBuckets() {
+        return this.appScreenshotBuckets;
+    }
+
+    /**
      * @return authorizeAccessPolicyRule
      */
     public java.util.List<AuthorizeAccessPolicyRule> getAuthorizeAccessPolicyRule() {
@@ -818,6 +840,13 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public String getAutoReconnect() {
         return this.autoReconnect;
+    }
+
+    /**
+     * @return autoSaveAppScreenshot
+     */
+    public String getAutoSaveAppScreenshot() {
+        return this.autoSaveAppScreenshot;
     }
 
     /**
@@ -1161,6 +1190,13 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public Integer getMaxReconnectTime() {
         return this.maxReconnectTime;
+    }
+
+    /**
+     * @return mcpService
+     */
+    public String getMcpService() {
+        return this.mcpService;
     }
 
     /**
@@ -1785,9 +1821,11 @@ public class ModifyCenterPolicyRequest extends Request {
         private String adminKeyboardOnFullScreen; 
         private String adminKeyboardOnWindows; 
         private String appContentProtection; 
+        private java.util.List<AppScreenshotBuckets> appScreenshotBuckets; 
         private java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule; 
         private java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule; 
         private String autoReconnect; 
+        private String autoSaveAppScreenshot; 
         private String businessChannel; 
         private Integer businessType; 
         private String cameraRedirect; 
@@ -1837,6 +1875,7 @@ public class ModifyCenterPolicyRequest extends Request {
         private String internetPrinter; 
         private String localDrive; 
         private Integer maxReconnectTime; 
+        private String mcpService; 
         private Integer memoryDownGradeDuration; 
         private String memoryOverload; 
         private java.util.List<String> memoryProcessors; 
@@ -1937,9 +1976,11 @@ public class ModifyCenterPolicyRequest extends Request {
             this.adminKeyboardOnFullScreen = request.adminKeyboardOnFullScreen;
             this.adminKeyboardOnWindows = request.adminKeyboardOnWindows;
             this.appContentProtection = request.appContentProtection;
+            this.appScreenshotBuckets = request.appScreenshotBuckets;
             this.authorizeAccessPolicyRule = request.authorizeAccessPolicyRule;
             this.authorizeSecurityPolicyRule = request.authorizeSecurityPolicyRule;
             this.autoReconnect = request.autoReconnect;
+            this.autoSaveAppScreenshot = request.autoSaveAppScreenshot;
             this.businessChannel = request.businessChannel;
             this.businessType = request.businessType;
             this.cameraRedirect = request.cameraRedirect;
@@ -1989,6 +2030,7 @@ public class ModifyCenterPolicyRequest extends Request {
             this.internetPrinter = request.internetPrinter;
             this.localDrive = request.localDrive;
             this.maxReconnectTime = request.maxReconnectTime;
+            this.mcpService = request.mcpService;
             this.memoryDownGradeDuration = request.memoryDownGradeDuration;
             this.memoryOverload = request.memoryOverload;
             this.memoryProcessors = request.memoryProcessors;
@@ -2080,7 +2122,7 @@ public class ModifyCenterPolicyRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the academic proxy feature. Valid values:</p>
+         * <p>Specifies whether the academic proxy feature is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -2096,9 +2138,9 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the user has administrator permissions after logging on to the cloud desktop.</p>
+         * <p>Specifies whether the user has administrator permissions after logging on to the cloud computer.</p>
          * <blockquote>
-         * <p>This feature is in invitational preview and is not publicly available.</p>
+         * <p>This feature is in targeted invitation-only preview and is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2111,7 +2153,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable administrator keyboard control in full-screen mode. Valid values:</p>
+         * <p>Specifies whether administrator keyboard control in full-screen mode is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -2127,7 +2169,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable administrator keyboard control within the Windows system. Valid values:</p>
+         * <p>Specifies whether administrator keyboard control in Windows is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -2143,7 +2185,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the screenshot prevention feature.</p>
+         * <p>Specifies whether to enable the screen capture prevention feature.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2155,7 +2197,16 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The list of client IP whitelist entries to add.</p>
+         * <p>The list of custom OSS buckets for mobile screenshots in the anti-screen capture feature.</p>
+         */
+        public Builder appScreenshotBuckets(java.util.List<AppScreenshotBuckets> appScreenshotBuckets) {
+            this.putQueryParameter("AppScreenshotBuckets", appScreenshotBuckets);
+            this.appScreenshotBuckets = appScreenshotBuckets;
+            return this;
+        }
+
+        /**
+         * <p>The list of client IP address whitelists to add.</p>
          */
         public Builder authorizeAccessPolicyRule(java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule) {
             this.putQueryParameter("AuthorizeAccessPolicyRule", authorizeAccessPolicyRule);
@@ -2164,7 +2215,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The list of security group control rules to add.</p>
+         * <p>The list of new security group control rules.</p>
          */
         public Builder authorizeSecurityPolicyRule(java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule) {
             this.putQueryParameter("AuthorizeSecurityPolicyRule", authorizeSecurityPolicyRule);
@@ -2173,7 +2224,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically reconnect after disconnection.</p>
+         * <p>The auto-reconnect after disconnection setting.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2181,6 +2232,22 @@ public class ModifyCenterPolicyRequest extends Request {
         public Builder autoReconnect(String autoReconnect) {
             this.putQueryParameter("AutoReconnect", autoReconnect);
             this.autoReconnect = autoReconnect;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to automatically save mobile screenshots. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
+        public Builder autoSaveAppScreenshot(String autoSaveAppScreenshot) {
+            this.putQueryParameter("AutoSaveAppScreenshot", autoSaveAppScreenshot);
+            this.autoSaveAppScreenshot = autoSaveAppScreenshot;
             return this;
         }
 
@@ -2214,7 +2281,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The local camera redirection policy. This parameter takes effect only when no local camera redirection policy is specified in DeviceRedirects.</p>
+         * <p>The local camera redirection settings. This parameter takes effect when no local camera redirection policy is specified in DeviceRedirects.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2226,10 +2293,10 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the client control menu. Valid values:</p>
+         * <p>The client control menu display switch. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2242,7 +2309,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the custom snapshot creation feature on the client. Valid values:</p>
+         * <p>Specifies whether the feature for clients to create custom snapshots is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -2258,7 +2325,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The list of logon method control rules. Specifies which client types can be used to access cloud computers.</p>
+         * <p>The list of logon method control rules. This parameter is used to control which clients can be used to access the cloud desktop.</p>
          */
         public Builder clientType(java.util.List<ClientType> clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -2267,7 +2334,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The clipboard permission.</p>
+         * <p>The clipboard permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2279,7 +2346,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The fine-grained clipboard control configurations.</p>
+         * <p>The fine-grained clipboard control configuration.</p>
          */
         public Builder clipboardGraineds(java.util.List<ClipboardGraineds> clipboardGraineds) {
             this.putQueryParameter("ClipboardGraineds", clipboardGraineds);
@@ -2300,7 +2367,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether color enhancement is enabled for the design and 3D application common scenarios.</p>
+         * <p>Specifies whether color enhancement is enabled in common scenarios such as design and 3D applications.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2312,10 +2379,10 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the local drive clipboard feature. Valid values:</p>
+         * <p>The local drive clipboard feature switch. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2328,7 +2395,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The CPU throttling duration. Valid values: 30 to 120. Unit: seconds.</p>
+         * <p>The CPU frequency reduction duration. Valid values: 30 to 120. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -2340,7 +2407,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable CPU overload protection. Valid values:</p>
+         * <p>Specifies whether CPU overload protection is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -2377,7 +2444,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The overall CPU usage percentage. Valid values: 70 to 90.</p>
+         * <p>The overall CPU utilization percentage. Valid values: 70 to 90.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -2401,7 +2468,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The single-core CPU usage percentage. Valid values: 70 to 100.</p>
+         * <p>The single-core CPU utilization percentage. Valid values: 70 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -2425,7 +2492,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The peripheral connection notification control.</p>
+         * <p>The peripheral connection prompt control.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2455,7 +2522,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The session retention policy after disconnection.</p>
+         * <p>The session retention setting after disconnection.</p>
          * <blockquote>
          * <p>This parameter applies only to cloud application policies.</p>
          * </blockquote>
@@ -2485,7 +2552,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable disk overload protection. Valid values:</p>
+         * <p>Specifies whether disk overload protection is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -2546,7 +2613,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether users can request assistance from administrators.</p>
+         * <p>Specifies whether users can request administrator assistance.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2558,7 +2625,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether users in the same office network can share cloud desktops.</p>
+         * <p>Specifies whether users in the same office network can share cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2570,7 +2637,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable external storage devices. Valid values:</p>
+         * <p>Specifies whether the use of external storage devices is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -2586,7 +2653,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable file migration.</p>
+         * <p>The file migration setting.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2610,7 +2677,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The maximum file size for a single transfer to the cloud desktop. This parameter must be used together with the transfer-in unit parameter.</p>
+         * <p>The file size limit for a single transfer to the cloud desktop. This parameter must be used together with the transfer-in unit parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -2622,7 +2689,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The unit of the maximum file size for a single transfer to the cloud desktop.</p>
+         * <p>The unit of the file size limit for a single transfer to the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>MB</p>
@@ -2634,7 +2701,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The maximum file size for a single transfer from the cloud desktop. This parameter must be used together with the transfer-out unit parameter.</p>
+         * <p>The file size limit for a single transfer from the cloud desktop. This parameter must be used together with the transfer-out unit parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -2646,7 +2713,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The unit of the maximum file size for a single transfer from the cloud desktop.</p>
+         * <p>The unit of the file size limit for a single transfer from the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>MB</p>
@@ -2658,7 +2725,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the file transfer size limit. Valid values:</p>
+         * <p>Specifies whether the file transfer size limit is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -2686,7 +2753,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The location where the file transfer speed configured on the client takes effect.</p>
+         * <p>The effective location of the file transfer speed configured on the client.</p>
          * 
          * <strong>example:</strong>
          * <p>client</p>
@@ -2698,7 +2765,14 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * FolderSync.
+         * <p>Specifies whether file synchronization is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder folderSync(String folderSync) {
             this.putQueryParameter("FolderSync", folderSync);
@@ -2707,7 +2781,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the image quality policy for GPU-accelerated cloud desktops. Enable this policy when high cloud desktop performance and user experience are required, such as in professional design scenarios.</p>
+         * <p>Specifies whether to enable the image quality policy for cloud desktops with graphics-optimized specifications. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2719,7 +2793,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the floating ball configuration message prompt. Valid values:</p>
+         * <p>Specifies whether the floating ball configuration message prompt is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -2759,10 +2833,10 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the network printer feature. Valid values:</p>
+         * <p>The network printer feature switch. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2775,7 +2849,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The local disk mapping permission.</p>
+         * <p>The local disk mapping permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2787,7 +2861,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The maximum connection retry time when a cloud computer is disconnected due to objective reasons. Valid values: 30 to 7200. Unit: seconds.</p>
+         * <p>The maximum retry time for reconnecting to a cloud desktop after a disconnection caused by objective reasons. Valid values: 30 to 7200. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -2799,7 +2873,23 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The memory throttling duration of a single process. Valid values: 30 to 120. Unit: seconds.</p>
+         * <p>Specifies whether the MCP service is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        public Builder mcpService(String mcpService) {
+            this.putQueryParameter("McpService", mcpService);
+            this.mcpService = mcpService;
+            return this;
+        }
+
+        /**
+         * <p>The memory downgrade duration for a single process. Valid values: 30 to 120. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -2811,7 +2901,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable memory overload protection. Valid values:</p>
+         * <p>Specifies whether memory overload protection is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -2848,7 +2938,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The overall memory usage percentage. Valid values: 70 to 90.</p>
+         * <p>The overall memory utilization percentage. Valid values: 70 to 90.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -2872,7 +2962,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The memory usage percentage of a single process. Valid values: 30 to 60.</p>
+         * <p>The memory utilization percentage of a single process. Valid values: 30 to 60.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -2884,7 +2974,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to provide the restart button in the cloud desktop floating ball when connecting to the cloud desktop from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
+         * <p>Specifies whether to provide a restart button in the floating ball of the cloud desktop when you connect to the cloud desktop from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
          * <blockquote>
          * <p>This parameter applies only to mobile clients of V7.4 or later.</p>
          * </blockquote>
@@ -2899,7 +2989,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the security button for Windows on the mobile client.</p>
+         * <p>The mobile Windows system security button switch.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2911,7 +3001,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to provide the shutdown button in the cloud desktop floating ball when connecting to the cloud desktop from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
+         * <p>Specifies whether to provide a shutdown button in the floating ball of the cloud desktop when you connect to the cloud desktop from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
          * <blockquote>
          * <p>This parameter applies only to mobile clients of V7.4 or later.</p>
          * </blockquote>
@@ -2926,7 +3016,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable WUYING Keeper on the mobile client.</p>
+         * <p>The mobile Wuying Keeper switch.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2938,7 +3028,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable WUYING Assistant on the mobile client.</p>
+         * <p>Specifies whether the mobile WUYING Assistant is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2950,7 +3040,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the model library feature. Valid values:</p>
+         * <p>Specifies whether the model library feature is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -2966,7 +3056,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the multi-screen display feature. Valid values:</p>
+         * <p>Specifies whether the multi-screen display feature is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -3009,9 +3099,9 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The details of the network redirect policy.</p>
+         * <p>The details of the network redirection policy.</p>
          * <blockquote>
-         * <p>This feature is in invitational preview and is not publicly available.</p>
+         * <p>This feature is in invitation-only preview and is not publicly available.</p>
          * </blockquote>
          */
         public Builder netRedirectRule(java.util.List<NetRedirectRule> netRedirectRule) {
@@ -3021,7 +3111,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to disconnect the session when no operation is performed.</p>
+         * <p>The disconnect on inactivity setting.</p>
          * <blockquote>
          * <p>This parameter applies only to cloud application policies.</p>
          * </blockquote>
@@ -3036,7 +3126,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The idle disconnection period. Valid values: 120 to 7200. Unit: seconds.</p>
+         * <p>The inactivity timeout period before disconnection. Valid values: 120 to 7200. Unit: seconds.</p>
          * <blockquote>
          * <p>This parameter applies only to cloud application policies.</p>
          * </blockquote>
@@ -3064,7 +3154,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the port proxy feature. Valid values:</p>
+         * <p>Specifies whether the port proxy feature is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -3121,7 +3211,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The printer redirection policy. This parameter takes effect only when no printer redirection policy is specified in DeviceRedirects.</p>
+         * <p>The printer redirection policy. This parameter takes effect when no printer redirection policy is specified in DeviceRedirects.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3133,7 +3223,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether image quality enhancement is enabled for the design and 3D application common scenarios.</p>
+         * <p>Specifies whether image quality enhancement is enabled in common scenarios such as design and 3D applications.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3145,7 +3235,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The duration of screen recording after an event is detected in screen recording audits. Unit: minutes. Valid values: 10 to 60.</p>
+         * <p>The screen recording duration after an event is detected in the screen recording audit. Unit: minutes. Valid values: 10 to 60.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -3157,7 +3247,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The file extensions of recording events.</p>
+         * <p>The screen recording event file extensions.</p>
          */
         public Builder recordEventFileExts(java.util.List<String> recordEventFileExts) {
             this.putQueryParameter("RecordEventFileExts", recordEventFileExts);
@@ -3166,7 +3256,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The absolute paths for file monitoring in screen recording audits.</p>
+         * <p>The absolute paths for file monitoring in screen recording audit.</p>
          */
         public Builder recordEventFilePaths(java.util.List<String> recordEventFilePaths) {
             this.putQueryParameter("RecordEventFilePaths", recordEventFilePaths);
@@ -3175,7 +3265,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The levels of recording events.</p>
+         * <p>The screen recording event levels.</p>
          */
         public Builder recordEventLevels(java.util.List<RecordEventLevels> recordEventLevels) {
             this.putQueryParameter("RecordEventLevels", recordEventLevels);
@@ -3184,7 +3274,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The absolute paths for registry monitoring in screen recording audits.</p>
+         * <p>The absolute paths for registry monitoring in screen recording audit.</p>
          */
         public Builder recordEventRegisters(java.util.List<String> recordEventRegisters) {
             this.putQueryParameter("RecordEventRegisters", recordEventRegisters);
@@ -3214,7 +3304,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The audio recording option for cloud desktops.</p>
+         * <p>The audio recording option for the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3226,7 +3316,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The duration of each screen recording file, in minutes. Recording files are automatically split and uploaded to the storage space based on the specified duration. Files are rolled over when they reach 300 MB. Valid values: 10 to 60.</p>
+         * <p>The viewing duration of the screen recording file. Unit: minutes. The recording file is automatically split and uploaded to the storage space based on the specified duration. When the file size reaches 300 MB, it is preferentially updated in a rolling manner. Valid values: 10 to 60.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -3238,7 +3328,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The end time of screen recording. Format: HH:MM:SS. This response value is meaningful only when <code>Recording</code> is set to <code>PERIOD</code>.</p>
+         * <p>The end time of screen recording. Format: HH:MM:SS. This parameter is valid only when Recording is set to PERIOD.</p>
          * 
          * <strong>example:</strong>
          * <p>08:59:00</p>
@@ -3250,7 +3340,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of screen recording files. Valid values: 1 to 180. Unit: days.</p>
+         * <p>The retention period of the screen recording file. Valid values: 1 to 180 days.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -3262,7 +3352,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The screen recording frame rate. Unit: FPS (frames per second).</p>
+         * <p>The frame rate of screen recording. Unit: FPS.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -3274,7 +3364,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The start time of screen recording. Format: HH:MM:SS. This response value is meaningful only when <code>Recording</code> is set to <code>PERIOD</code>.</p>
+         * <p>The start time of screen recording. Format: HH:MM:SS. This parameter is valid only when Recording is set to PERIOD.</p>
          * 
          * <strong>example:</strong>
          * <p>08:00:00</p>
@@ -3286,7 +3376,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to notify end users that screen recording is enabled.</p>
+         * <p>Specifies whether to notify the end user that screen recording is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3298,7 +3388,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The notification message displayed to end users when screen recording is enabled.</p>
+         * <p>The notification message sent to the end user when screen recording is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>Screen recording is enabled</p>
@@ -3323,7 +3413,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The keyboard and mouse control permission for remote assistance.</p>
+         * <p>The keyboard and mouse control permissions for remote assistance.</p>
          * 
          * <strong>example:</strong>
          * <p>fullControl</p>
@@ -3335,7 +3425,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow resetting the cloud desktop.</p>
+         * <p>The cloud desktop reset setting.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3408,7 +3498,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The list of client IP whitelist entries to delete.</p>
+         * <p>The list of client IP address whitelists to delete.</p>
          */
         public Builder revokeAccessPolicyRule(java.util.List<RevokeAccessPolicyRule> revokeAccessPolicyRule) {
             this.putQueryParameter("RevokeAccessPolicyRule", revokeAccessPolicyRule);
@@ -3417,7 +3507,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The list of security group rules to delete.</p>
+         * <p>The list of security group policy rules to delete.</p>
          */
         public Builder revokeSecurityPolicyRule(java.util.List<RevokeSecurityPolicyRule> revokeSecurityPolicyRule) {
             this.putQueryParameter("RevokeSecurityPolicyRule", revokeSecurityPolicyRule);
@@ -3426,10 +3516,10 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Security Center shortcut key. Valid values:</p>
+         * <p>The Security Center shortcut switch. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3442,7 +3532,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The scope in which the policy takes effect.</p>
+         * <p>The effective scope of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>GLOBAL</p>
@@ -3454,7 +3544,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The value to specify when <code>Scope</code> is set to <code>IP</code>. This parameter takes effect only when <code>Scope</code> is set to <code>IP</code>.</p>
+         * <p>The value specified when Scope is set to IP. This parameter takes effect only when Scope is set to IP.</p>
          */
         public Builder scopeValue(java.util.List<String> scopeValue) {
             this.putQueryParameter("ScopeValue", scopeValue);
@@ -3475,7 +3565,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The maximum value of session bandwidth throttling. Unit: Kbps. Valid values: 2000 to 100000.</p>
+         * <p>The maximum value for session bandwidth throttling. Unit: Kbps. Valid values: 2000 to 100000.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -3487,7 +3577,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable smoothness enhancement for the daily office scenario.</p>
+         * <p>Specifies whether to enable smoothness enhancement in daily office scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3499,7 +3589,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to provide the status monitoring entry in the cloud desktop floating ball.</p>
+         * <p>Specifies whether to provide an entry for the status monitoring feature in the floating ball of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3511,7 +3601,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The streaming mode adaptation scenario.</p>
+         * <p>The applicable scenario for the streaming mode.</p>
          * 
          * <strong>example:</strong>
          * <p>smooth</p>
@@ -3550,7 +3640,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the three-screen feature. Valid values:</p>
+         * <p>Specifies whether the triple-screen feature is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -3566,7 +3656,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The USB redirection policy.</p>
+         * <p>The USB redirection settings.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3587,10 +3677,10 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the usage duration in the floating ball. Valid values:</p>
+         * <p>The floating ball usage duration display switch. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3615,7 +3705,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The maximum QP for video encoding, which represents the lowest quality. Valid values: 0 to 51.</p>
+         * <p>The maximum QP for video encoding, which indicates the lowest image quality. Valid values: 0 to 51.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -3627,7 +3717,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The minimum QP for video encoding, which represents the highest quality. Valid values: 0 to 51.</p>
+         * <p>The minimum quantization parameter (QP) for video encoding, which indicates the highest quality. Valid values: 0 to 51.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -3663,7 +3753,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The multimedia redirection policy.</p>
+         * <p>The multimedia redirection settings.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3687,7 +3777,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The watermark policy.</p>
+         * <p>The watermark settings.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3699,7 +3789,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The invisible watermark anti-photography feature.</p>
+         * <p>The blind watermark anti-photography feature.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3711,7 +3801,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The watermark font color. Valid values: 0 to 16777215.</p>
+         * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -3735,10 +3825,10 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>If the <code>WatermarkType</code> parameter is set to <code>custom</code>, you must also specify the custom text content by using the <code>WatermarkCustomText</code> parameter.</p>
+         * <p>If you set the <code>WatermarkType</code> parameter to <code>custom</code>, you must also use the <code>WatermarkCustomText</code> parameter to specify the custom text.</p>
          * 
          * <strong>example:</strong>
-         * <p>Internal Document</p>
+         * <p>Confidential</p>
          */
         public Builder watermarkCustomText(String watermarkCustomText) {
             this.putQueryParameter("WatermarkCustomText", watermarkCustomText);
@@ -3747,7 +3837,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The watermark tilt angle. Valid values: -10 to -30.</p>
+         * <p>The tilt angle of the watermark. Valid values: -10 to -30.</p>
          * 
          * <strong>example:</strong>
          * <p>-10</p>
@@ -3759,7 +3849,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The watermark font size. Valid values: 10 to 20.</p>
+         * <p>The font size of the watermark. Valid values: 10 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -3771,7 +3861,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The watermark font style.</p>
+         * <p>The font style of the watermark.</p>
          * 
          * <strong>example:</strong>
          * <p>plain</p>
@@ -3783,7 +3873,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The invisible watermark enhancement feature.</p>
+         * <p>The blind watermark enhancement feature.</p>
          * 
          * <strong>example:</strong>
          * <p>medium</p>
@@ -3807,7 +3897,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The security priority rule for invisible watermarks.</p>
+         * <p>The security priority rule for blind watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3819,7 +3909,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the watermark shadow effect. Valid values:</p>
+         * <p>Specifies whether the watermark shadow effect is enabled. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -3847,9 +3937,9 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The watermark type. You can select up to three types, separated by commas (,).</p>
+         * <p>The watermark type. You can select up to three types and separate them with commas.</p>
          * <blockquote>
-         * <p>If you set this parameter to <code>custom</code>, you must also specify the custom text content by using the <code>WatermarkCustomText</code> parameter.</p>
+         * <p>If you set this parameter to <code>custom</code>, you must also use the <code>WatermarkCustomText</code> parameter to specify the custom text.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -3862,7 +3952,7 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable WUYING Keeper.</p>
+         * <p>The Wuying Keeper switch.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3874,9 +3964,9 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to provide the WUYING AI Assistant entry in the floating ball when connecting to a cloud computer through a desktop client (including Windows client and macOS client).</p>
+         * <p>Specifies whether to provide an entry for the WUYING AI Assistant in the floating widget of the cloud desktop when you connect to the cloud desktop by using a desktop client, including Windows and macOS clients.</p>
          * <blockquote>
-         * <p>This feature applies only to desktop clients of V7.7 or later.</p>
+         * <p>This parameter is applicable only to desktop clients of V7.7 or later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -3895,6 +3985,87 @@ public class ModifyCenterPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCenterPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCenterPolicyRequest</p>
+     */
+    public static class AppScreenshotBuckets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BucketName")
+        private String bucketName;
+
+        @com.aliyun.core.annotation.NameInMap("BucketRegionId")
+        private String bucketRegionId;
+
+        private AppScreenshotBuckets(Builder builder) {
+            this.bucketName = builder.bucketName;
+            this.bucketRegionId = builder.bucketRegionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AppScreenshotBuckets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bucketName
+         */
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        /**
+         * @return bucketRegionId
+         */
+        public String getBucketRegionId() {
+            return this.bucketRegionId;
+        }
+
+        public static final class Builder {
+            private String bucketName; 
+            private String bucketRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppScreenshotBuckets model) {
+                this.bucketName = model.bucketName;
+                this.bucketRegionId = model.bucketRegionId;
+            } 
+
+            /**
+             * <p>The name of the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-bucket</p>
+             */
+            public Builder bucketName(String bucketName) {
+                this.bucketName = bucketName;
+                return this;
+            }
+
+            /**
+             * <p>The region where the user\&quot;s OSS bucket is located. It must be the same as the actual region of the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
+             */
+            public Builder bucketRegionId(String bucketRegionId) {
+                this.bucketRegionId = bucketRegionId;
+                return this;
+            }
+
+            public AppScreenshotBuckets build() {
+                return new AppScreenshotBuckets(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ModifyCenterPolicyRequest} extends {@link TeaModel}
@@ -3948,7 +4119,7 @@ public class ModifyCenterPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The client IP address range. The value is an IPv4 CIDR block.</p>
+             * <p>The IPv4 CIDR block for client access.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -3959,7 +4130,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The description of the client IP whitelist entry.</p>
+             * <p>The description of the client IP address whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>Corporate office network segment</p>
@@ -4094,7 +4265,7 @@ public class ModifyCenterPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The object of the security group control rule. An IPv4 CIDR block in CIDR notation.</p>
+             * <p>The target of the security group control rule, which is an IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -4138,14 +4309,14 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The port range of the security group control rule. The port range is determined by the value of the protocol (IpProtocol):</p>
+             * <p>The port range of the security group control rule. The valid port range is determined by the IpProtocol parameter:</p>
              * <ul>
-             * <li>TCP or UDP: Valid values: 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</li>
-             * <li>ICMP: -1/-1.</li>
-             * <li>GRE: -1/-1.</li>
-             * <li>If IpProtocol is set to all: -1/-1.</li>
+             * <li>TCP or UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
+             * <li>ICMP: Set the value to -1/-1.</li>
+             * <li>GRE: Set the value to -1/-1.</li>
+             * <li>all: Set the value to -1/-1.</li>
              * </ul>
-             * <p>For common ports of typical applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
+             * <p>For more information about common ports used by typical applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>22/22</p>
@@ -4248,9 +4419,9 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow a specific type of client to log on to cloud computers.</p>
+             * <p>Specifies whether to allow a specific type of client to log on to the cloud desktop for logon method control.</p>
              * <blockquote>
-             * <p>If you do not set the <code>ClientType</code> parameters, all client types are allowed to log on to cloud computers by default.</p>
+             * <p>If you do not configure the ClientType-related parameters, all types of clients are allowed to log on to the cloud desktop by default.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4399,7 +4570,7 @@ public class ModifyCenterPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The maximum size of a single clipboard transfer. Use this parameter together with the size unit parameter.</p>
+             * <p>The maximum size of a single clipboard transfer. This parameter must be used together with the size unit parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4410,7 +4581,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The unit of the maximum size of a single clipboard transfer.</p>
+             * <p>The unit of the maximum size for a single clipboard transfer.</p>
              * 
              * <strong>example:</strong>
              * <p>MB</p>
@@ -4423,7 +4594,7 @@ public class ModifyCenterPolicyRequest extends Request {
             /**
              * <p>The fine-grained clipboard control type. Valid values:</p>
              * <ul>
-             * <li>off: Clipboard usage is disabled.</li>
+             * <li>off: Disable the clipboard.</li>
              * <li>read: Read-only.</li>
              * <li>write: Write-only.</li>
              * <li>readwrite: Read and write.</li>
@@ -4455,7 +4626,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The maximum size of a single clipboard transfer to the cloud desktop. Use this parameter together with the inbound size unit parameter.</p>
+             * <p>The maximum size of a single clipboard transfer to the cloud desktop. This parameter must be used together with the inbound size unit parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4466,7 +4637,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The unit of the maximum size of a single clipboard transfer to the cloud desktop.</p>
+             * <p>The unit of the maximum size for a single clipboard transfer to the cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>MB</p>
@@ -4477,7 +4648,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The maximum size of a single clipboard transfer from the cloud desktop. Use this parameter together with the outbound size unit parameter.</p>
+             * <p>The maximum size of a single clipboard transfer from the cloud desktop. This parameter must be used together with the outbound size unit parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4488,7 +4659,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The unit of the maximum size of a single clipboard transfer from the cloud desktop.</p>
+             * <p>The unit of the maximum size for a single clipboard transfer from the cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>MB</p>
@@ -4737,7 +4908,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+             * <p>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>0x0781</p>
@@ -4969,7 +5140,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The redirect policy.</p>
+             * <p>The redirection policy.</p>
              * 
              * <strong>example:</strong>
              * <p>Allow</p>
@@ -5131,7 +5302,7 @@ public class ModifyCenterPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The client IP address range to delete. The value is an IPv4 CIDR block.</p>
+             * <p>The IPv4 CIDR block of the client IP address whitelist to delete.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -5142,7 +5313,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The description of the client IP whitelist entry to delete.</p>
+             * <p>The description of the client IP address whitelist to delete.</p>
              * 
              * <strong>example:</strong>
              * <p>Corporate office network segment</p>
@@ -5277,7 +5448,7 @@ public class ModifyCenterPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The target of the security group rule to delete. The value is an IPv4 CIDR block.</p>
+             * <p>The IPv4 CIDR block of the security group policy rule to delete.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -5288,7 +5459,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The description of the security group rule to delete.</p>
+             * <p>The description of the security group policy rule to delete.</p>
              * 
              * <strong>example:</strong>
              * <p>Allow access to the internal R&amp;D environment</p>
@@ -5299,7 +5470,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The protocol type of the security group rule to delete.</p>
+             * <p>The protocol type of the security group policy rule to delete.</p>
              * 
              * <strong>example:</strong>
              * <p>TCP</p>
@@ -5310,7 +5481,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The authorization policy of the security group rule to delete.</p>
+             * <p>The authorization policy of the security group policy rule to delete.</p>
              * 
              * <strong>example:</strong>
              * <p>accept</p>
@@ -5321,14 +5492,14 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The port range of the security group rule to delete. The port range is determined by the value of IpProtocol:</p>
+             * <p>The port range of the security group policy rule to delete. The valid port range depends on the value of IpProtocol:</p>
              * <ul>
-             * <li>TCP or UDP: The port range is 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</li>
+             * <li>TCP or UDP: 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
              * <li>ICMP: -1/-1.</li>
              * <li>GRE: -1/-1.</li>
-             * <li>If IpProtocol is set to all: -1/-1.</li>
+             * <li>all: -1/-1.</li>
              * </ul>
-             * <p>For more information about common ports of typical applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
+             * <p>For more information about common ports used by typical applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>22/22</p>
@@ -5339,7 +5510,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The priority of the security group rule to delete. A smaller value indicates a higher priority. Valid values: 1 to 60. Default value: 1.</p>
+             * <p>The priority of the security group policy rule to delete. A smaller value indicates a higher priority. Valid values: 1 to 60. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -5350,7 +5521,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The direction of the security group rule to delete.</p>
+             * <p>The direction of the security group policy rule to delete.</p>
              * 
              * <strong>example:</strong>
              * <p>outflow</p>
@@ -5503,7 +5674,7 @@ public class ModifyCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+             * <p>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>04**</p>
