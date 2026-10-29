@@ -35,6 +35,9 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("rules")
     private java.util.List<Rules> rules;
 
+    @com.aliyun.core.annotation.NameInMap("type")
+    private String type;
+
     private DescribeAutoRepairPolicyResponseBody(Builder builder) {
         this.id = builder.id;
         this.name = builder.name;
@@ -42,6 +45,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
         this.resourceSubType = builder.resourceSubType;
         this.resourceType = builder.resourceType;
         this.rules = builder.rules;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -98,6 +102,13 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
         return this.rules;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder {
         private String id; 
         private String name; 
@@ -105,6 +116,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
         private String resourceSubType; 
         private String resourceType; 
         private java.util.List<Rules> rules; 
+        private String type; 
 
         private Builder() {
         } 
@@ -116,10 +128,11 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
             this.resourceSubType = model.resourceSubType;
             this.resourceType = model.resourceType;
             this.rules = model.rules;
+            this.type = model.type;
         } 
 
         /**
-         * <p>The self-healing rule ID.</p>
+         * <p>The ID of the self-healing rule.</p>
          * 
          * <strong>example:</strong>
          * <p>r-xxx</p>
@@ -149,7 +162,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The subtype of the resource bound to the self-healing rule.</p>
+         * <p>The resource subtype bound to the self-healing rule.</p>
          * 
          * <strong>example:</strong>
          * <p>ess</p>
@@ -160,7 +173,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of resource bound to the self-healing rule.</p>
+         * <p>The resource type bound to the self-healing rule.</p>
          * 
          * <strong>example:</strong>
          * <p>nodepool</p>
@@ -175,6 +188,21 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
+            return this;
+        }
+
+        /**
+         * <p>The rule type. The value is case-sensitive. Valid values:</p>
+         * <ul>
+         * <li>custom: user-defined rules that support modification and deletion</li>
+         * <li>builtin: built-in system rules that are read-only and do not support creation, modification, or deletion</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 
@@ -237,7 +265,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the incident.</p>
+             * <p>The fault name.</p>
              * 
              * <strong>example:</strong>
              * <p>Node.FaultNeedReboot.HOST</p>
@@ -248,7 +276,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the incident.</p>
+             * <p>The fault type.</p>
              * 
              * <strong>example:</strong>
              * <p>system</p>
@@ -318,7 +346,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The <code>key</code> of the label.</p>
+             * <p>The key of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>k8s.aliyun.com/incident</p>
@@ -506,7 +534,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The label configuration for authorization confirmation. Adding the following labels to the node indicates that you authorize ACK to execute the operations in this stage. After completing the operations in this stage, ACK automatically removes the authorization inquiry and confirmation labels for this stage. If you do not add the following labels promptly, ACK will not execute the actions in this stage and subsequent stages, and the node may remain in a damaged state.</p>
+             * <p>The label configuration for authorization confirmation. When you add the following label to a node, you authorize ACK to perform the operations in this phase. After completing the operations in this phase, ACK automatically removes the inquiry and confirmation labels for this phase. If you do not add the following label in time, ACK will not perform the operations in this phase and subsequent phases, and the node may remain in a damaged state.</p>
              */
             public Builder approvedLabel(ApprovedLabel approvedLabel) {
                 this.approvedLabel = approvedLabel;
@@ -514,7 +542,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether manual approval is enabled.</p>
+             * <p>Specifies whether manual approval is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -525,7 +553,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label configuration for authorization inquiry. When this stage is reached, ACK adds the following labels to your node and waits for your authorization to execute the actions in this stage.</p>
+             * <p>The label configuration for authorization inquiry. When this phase is entered, ACK adds the following label to your node and waits for your authorization to perform the operations in this phase.</p>
              */
             public Builder inquiringLabel(InquiringLabel inquiringLabel) {
                 this.inquiringLabel = inquiringLabel;
@@ -624,7 +652,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the manual intervention procedure.</p>
+             * <p>The manual intervention procedure.</p>
              */
             public Builder intervention(Intervention intervention) {
                 this.intervention = intervention;
@@ -702,7 +730,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of identified incidents.</p>
+             * <p>The list of identified faults.</p>
              */
             public Builder incidents(java.util.List<Incidents> incidents) {
                 this.incidents = incidents;

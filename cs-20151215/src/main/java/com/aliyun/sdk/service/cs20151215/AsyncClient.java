@@ -416,8 +416,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The default validity period of the certificate issued for a kubeconfig file is three years. Within 180 days before expiration, you can obtain a refreshed kubeconfig file with rotated credentials through the Container Service for Kubernetes console or by calling the API operation to retrieve the cluster kubeconfig. The new kubeconfig certificate remains valid for three years. The old kubeconfig credentials remain valid until the certificate expires. Obtain the rotated credentials promptly based on the kubeconfig expiration time displayed in the console or returned by the API operation.</li>
-     * <li>Properly manage the kubeconfig credentials used for cluster management, and revoke them promptly when they are no longer needed. This prevents security risks such as data leaks caused by kubeconfig exposure.</li>
+     * <li>The default validity period of a certificate issued for a kubeconfig file is three years. Within 180 days before expiration, you can obtain a refreshed kubeconfig file with rotated certificates through the Container Service for Kubernetes console or by calling the API operation to retrieve the cluster kubeconfig. The new kubeconfig certificate remains valid for three years. The old kubeconfig credentials remain valid until the certificate expires. Obtain the rotated credentials promptly based on the kubeconfig expiration time displayed in the console or returned by the API operation.</li>
+     * <li>Properly manage the kubeconfig credentials for cluster management and revoke them promptly when they are no longer needed to prevent security risks such as data leaks caused by kubeconfig exposure.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeClusterUserKubeconfig  DescribeClusterUserKubeconfigRequest
@@ -691,7 +691,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: This API is not yet available. Stay tuned.</notice></p>
+     * <p>Notice: This API is not yet available. Stay tuned.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListAutoRepairPolicies  ListAutoRepairPoliciesRequest

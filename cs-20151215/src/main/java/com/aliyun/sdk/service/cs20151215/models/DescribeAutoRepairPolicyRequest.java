@@ -85,7 +85,7 @@ public class DescribeAutoRepairPolicyRequest extends Request {
         }
 
         /**
-         * <p>The self-healing rule ID.</p>
+         * <p>The ID of the self-healing rule.</p>
          * 
          * <strong>example:</strong>
          * <p>r-xxxxxx</p>
