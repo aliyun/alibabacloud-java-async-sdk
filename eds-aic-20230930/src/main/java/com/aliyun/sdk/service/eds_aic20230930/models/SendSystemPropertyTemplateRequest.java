@@ -87,7 +87,7 @@ public class SendSystemPropertyTemplateRequest extends Request {
         } 
 
         /**
-         * <p>A list of instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putBodyParameter("AndroidInstanceIds", androidInstanceIds);
@@ -96,7 +96,7 @@ public class SendSystemPropertyTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the property template.</p>
+         * <p>The property template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-angyvganxlf****</p>
@@ -108,7 +108,7 @@ public class SendSystemPropertyTemplateRequest extends Request {
         }
 
         /**
-         * <p>A list of property template IDs. If you provide multiple template IDs, the system randomly matches the specified instances with the provided templates.</p>
+         * <p>The list of property template IDs. If multiple templates are provided, the specified instances are randomly matched with all the provided property templates.</p>
          */
         public Builder templateIds(java.util.List<String> templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);

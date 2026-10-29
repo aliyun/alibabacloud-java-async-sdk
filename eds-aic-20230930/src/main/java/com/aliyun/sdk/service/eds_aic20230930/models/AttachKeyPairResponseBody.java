@@ -67,7 +67,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The object that is returned.</p>
+         * <p>The result object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
@@ -170,7 +170,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of the cloud phone instances to which the ADB key pair is successfully attached.</p>
+             * <p>The cloud phone instance ID list to which the key pair was successfully attached.</p>
              */
             public Builder attachedInstanceIds(java.util.List<String> attachedInstanceIds) {
                 this.attachedInstanceIds = attachedInstanceIds;
@@ -178,7 +178,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the cloud phone instances to which the ADB key pair failed to be attached.</p>
+             * <p>The number of instances to which the attachment failed.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -200,7 +200,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of the cloud phone instances.</p>
+             * <p>The total number of instances for which the attachment was attempted.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

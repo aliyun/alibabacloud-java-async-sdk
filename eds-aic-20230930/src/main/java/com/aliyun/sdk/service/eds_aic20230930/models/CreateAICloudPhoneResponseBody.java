@@ -75,7 +75,7 @@ public class CreateAICloudPhoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9A51B1DF-96FF-3BCC-B08C-783161D3****</p>
@@ -144,7 +144,7 @@ public class CreateAICloudPhoneResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The order ID.</p>
+             * <p>The ID of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>20230930123456</p>
@@ -155,7 +155,7 @@ public class CreateAICloudPhoneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of package IDs. After the payment is successful, instances are created based on these IDs through a callback.</p>
+             * <p>The list of package IDs. After a successful payment, a callback creates instances based on these IDs.</p>
              */
             public Builder packageIds(java.util.List<String> packageIds) {
                 this.packageIds = packageIds;

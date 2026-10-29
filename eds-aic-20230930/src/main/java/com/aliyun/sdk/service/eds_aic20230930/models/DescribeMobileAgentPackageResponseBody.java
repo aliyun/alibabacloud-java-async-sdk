@@ -414,7 +414,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The expiration time. The time format is YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The expiration time. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-30 00:00:00</p>
@@ -433,7 +433,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The package credit quota.</p>
+             * <p>The credit quota of the package.</p>
              * 
              * <strong>example:</strong>
              * <p>8000</p>
@@ -467,6 +467,9 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
 
             /**
              * <p>The name of the package specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Flagship Edition (Custom)</p>
              */
             public Builder packageSpecName(String packageSpecName) {
                 this.packageSpecName = packageSpecName;
@@ -486,6 +489,9 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
 
             /**
              * <p>The end time of the package period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-11-02T15:59Z</p>
              */
             public Builder periodEndTime(String periodEndTime) {
                 this.periodEndTime = periodEndTime;
@@ -494,6 +500,9 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
 
             /**
              * <p>The start time of the package period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-10-16T15:29Z</p>
              */
             public Builder periodStartTime(String periodStartTime) {
                 this.periodStartTime = periodStartTime;

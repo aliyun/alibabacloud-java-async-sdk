@@ -103,7 +103,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to remove all tags from the resources. This parameter applies only when TagKey.N is not specified. The default value is false.</p>
+         * <p>Specifies whether to remove all tags from the resources. This parameter takes effect only when TagKey.N is not specified. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -115,7 +115,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the resources. You can specify 1 to 50 resource IDs.</p>
+         * <p>The list of resource IDs, which are cloud phone IDs. You can specify 1 to 50 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -125,8 +125,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource.</p>
-         * <p>Valid value: ALIYUN::ACP::INSTANCE, which represents a cloud phone.</p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>ALIYUN::ACP::INSTANCE: Cloud phone.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +141,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The keys of the tags to remove. You can specify 1 to 20 tag keys.</p>
+         * <p>The tag keys. You can specify 1 to 20 tag keys.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

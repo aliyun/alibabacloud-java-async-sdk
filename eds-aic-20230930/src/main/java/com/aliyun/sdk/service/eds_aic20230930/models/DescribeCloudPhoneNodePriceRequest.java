@@ -215,6 +215,7 @@ public class DescribeCloudPhoneNodePriceRequest extends Request {
         } 
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +228,10 @@ public class DescribeCloudPhoneNodePriceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -236,7 +240,10 @@ public class DescribeCloudPhoneNodePriceRequest extends Request {
         }
 
         /**
-         * Count.
+         * <p>The number of cloud phone matrices to purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(String count) {
             this.putQueryParameter("Count", count);
@@ -245,7 +252,16 @@ public class DescribeCloudPhoneNodePriceRequest extends Request {
         }
 
         /**
-         * IsSingleImgDisk.
+         * <p>Specifies whether to use a single image disk. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><p>true: Uses only the system disk.</p>
+         * </li>
+         * <li><p>false: Uses the system disk and the shared internal storage image disk.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isSingleImgDisk(Boolean isSingleImgDisk) {
             this.putQueryParameter("IsSingleImgDisk", isSingleImgDisk);
@@ -254,7 +270,10 @@ public class DescribeCloudPhoneNodePriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription period of the resource. The unit is specified by PeriodUnit. Valid values: 1 month, 2 months, 3 months, 6 months, and 1 year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -263,7 +282,14 @@ public class DescribeCloudPhoneNodePriceRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription period. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong>: Month.</li>
+         * <li><strong>Year</strong>: Year.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -272,7 +298,10 @@ public class DescribeCloudPhoneNodePriceRequest extends Request {
         }
 
         /**
-         * PhoneCount.
+         * <p>The number of provisioned instances, which refers to the number of cloud phone instances in the matrix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder phoneCount(Integer phoneCount) {
             this.putQueryParameter("PhoneCount", phoneCount);
@@ -281,7 +310,10 @@ public class DescribeCloudPhoneNodePriceRequest extends Request {
         }
 
         /**
-         * PhoneDataVolume.
+         * <p>The size of the dedicated internal storage. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder phoneDataVolume(Integer phoneDataVolume) {
             this.putQueryParameter("PhoneDataVolume", phoneDataVolume);
@@ -290,7 +322,10 @@ public class DescribeCloudPhoneNodePriceRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -299,7 +334,13 @@ public class DescribeCloudPhoneNodePriceRequest extends Request {
         }
 
         /**
-         * ServerShareDataVolume.
+         * <p>The size of the shared internal storage. Unit: GiB.</p>
+         * <blockquote>
+         * <p>The minimum size of the shared internal storage must be greater than the number of instances in the matrix multiplied by 10 GiB.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder serverShareDataVolume(Integer serverShareDataVolume) {
             this.putQueryParameter("ServerShareDataVolume", serverShareDataVolume);
@@ -308,6 +349,7 @@ public class DescribeCloudPhoneNodePriceRequest extends Request {
         }
 
         /**
+         * <p>The specifications of the cloud phone matrix.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +362,10 @@ public class DescribeCloudPhoneNodePriceRequest extends Request {
         }
 
         /**
-         * SwapSize.
+         * <p>The size of the swap space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder swapSize(Integer swapSize) {
             this.putQueryParameter("SwapSize", swapSize);

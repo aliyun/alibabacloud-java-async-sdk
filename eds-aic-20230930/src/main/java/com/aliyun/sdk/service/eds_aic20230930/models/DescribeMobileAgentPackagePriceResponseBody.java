@@ -80,7 +80,7 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
         } 
 
         /**
-         * Price.
+         * <p>The price.</p>
          */
         public Builder price(Price price) {
             this.price = price;
@@ -88,7 +88,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The promotion rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -188,7 +191,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder discountPrice(String discountPrice) {
                 this.discountPrice = discountPrice;
@@ -196,7 +202,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>The name of the module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Advanced Edition</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -204,7 +213,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder originalPrice(String originalPrice) {
                 this.originalPrice = originalPrice;
@@ -212,7 +224,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder tradePrice(String tradePrice) {
                 this.tradePrice = tradePrice;
@@ -318,7 +333,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -326,7 +344,7 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModulePrice.
+             * <p>The prices of the modules.</p>
              */
             public Builder modulePrice(java.util.List<ModulePrice> modulePrice) {
                 this.modulePrice = modulePrice;
@@ -334,7 +352,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -342,7 +363,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudPhoneMobileAgent</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -350,7 +374,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -456,7 +483,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * OptionCode.
+             * <p>The coupon code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -464,7 +494,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionDesc.
+             * <p>The coupon description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Regular discount</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -472,7 +505,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionId.
+             * <p>The ID of the promotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90712091****</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -480,7 +516,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The name of the promotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Regular discount</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -488,7 +527,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Selected.
+             * <p>Indicates whether the promotion is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -607,7 +649,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -615,7 +660,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -623,7 +671,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -631,7 +682,7 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PriceDetail.
+             * <p>The price details.</p>
              */
             public Builder priceDetail(java.util.List<PriceDetail> priceDetail) {
                 this.priceDetail = priceDetail;
@@ -639,7 +690,7 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Promotions.
+             * <p>The promotion information.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -647,7 +698,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -714,7 +768,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Regular discount</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -722,7 +779,10 @@ public class DescribeMobileAgentPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f07tkae80jbiy****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

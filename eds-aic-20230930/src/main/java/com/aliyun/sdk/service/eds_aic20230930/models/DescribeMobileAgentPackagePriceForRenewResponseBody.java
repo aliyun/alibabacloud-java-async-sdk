@@ -80,7 +80,7 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
         } 
 
         /**
-         * Price.
+         * <p>The price.</p>
          */
         public Builder price(Price price) {
             this.price = price;
@@ -88,7 +88,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
         }
 
         /**
-         * Rules.
+         * <p>The rule information.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -188,7 +191,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             } 
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>629.7</p>
              */
             public Builder discountPrice(String discountPrice) {
                 this.discountPrice = discountPrice;
@@ -196,7 +202,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * ModuleName.
+             * <p>The module name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Advanced Edition</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -204,7 +213,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1680</p>
              */
             public Builder originalPrice(String originalPrice) {
                 this.originalPrice = originalPrice;
@@ -212,7 +224,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * TradePrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>94.85</p>
              */
             public Builder tradePrice(String tradePrice) {
                 this.tradePrice = tradePrice;
@@ -331,7 +346,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             } 
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -339,7 +357,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmag-shdbcudbaib****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -347,7 +368,7 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * ModulePrice.
+             * <p>The module prices.</p>
              */
             public Builder modulePrice(java.util.List<ModulePrice> modulePrice) {
                 this.modulePrice = modulePrice;
@@ -355,7 +376,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -363,7 +387,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudPhoneMobileAgent</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -371,7 +398,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * TradePrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -477,7 +507,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             } 
 
             /**
-             * OptionCode.
+             * <p>The coupon code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -485,7 +518,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * PromotionDesc.
+             * <p>The coupon description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Regular discount</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -493,7 +529,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * PromotionId.
+             * <p>The promotion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91381816****</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -501,7 +540,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * PromotionName.
+             * <p>The coupon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Regular discount</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -509,7 +551,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * Selected.
+             * <p>Indicates whether the coupon is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -628,7 +673,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             } 
 
             /**
-             * Currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -636,7 +684,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -644,7 +695,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -652,7 +706,7 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * PriceDetail.
+             * <p>The price details.</p>
              */
             public Builder priceDetail(java.util.List<PriceDetail> priceDetail) {
                 this.priceDetail = priceDetail;
@@ -660,7 +714,7 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * Promotions.
+             * <p>The promotion information.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -668,7 +722,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * TradePrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -735,7 +792,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             } 
 
             /**
-             * Description.
+             * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Regular discount</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -743,7 +803,10 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20230629****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

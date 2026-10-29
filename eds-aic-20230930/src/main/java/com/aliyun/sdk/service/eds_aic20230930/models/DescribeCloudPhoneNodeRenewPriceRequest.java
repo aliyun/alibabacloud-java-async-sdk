@@ -101,7 +101,7 @@ public class DescribeCloudPhoneNodeRenewPriceRequest extends Request {
         } 
 
         /**
-         * NodeIds.
+         * <p>The list of cloud phone matrix IDs.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putQueryParameter("NodeIds", nodeIds);
@@ -110,7 +110,10 @@ public class DescribeCloudPhoneNodeRenewPriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription period. The unit is specified by PeriodUnit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -119,7 +122,14 @@ public class DescribeCloudPhoneNodeRenewPriceRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription period. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong>: Month.</li>
+         * <li><strong>Year</strong>: Year.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -128,7 +138,10 @@ public class DescribeCloudPhoneNodeRenewPriceRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The ID of the promotion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);

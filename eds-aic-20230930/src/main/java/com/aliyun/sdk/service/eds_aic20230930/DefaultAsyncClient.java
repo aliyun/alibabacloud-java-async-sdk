@@ -60,8 +60,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can attach to an ADB key pair only to cloud phone instances in the Running state.</li>
-     * <li>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the \~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</li>
+     * <li>The ADB key pair takes effect only when the instance is in the Running state.</li>
+     * <li>After you attach the key pair, copy the private key of the key pair to the local folder where the key pair is stored (for macOS or Linux operating systems, the folder is ~/.android. For the Windows operating system, the folder is C:\Users\Username\.android.), and invoke the adb kill-server command to restart the ADB process. This ensures normal ADB connections. Otherwise, the ADB connection authentication may be failed.</li>
      * </ul>
      * 
      * @param request the request parameters of AttachKeyPair  AttachKeyPairRequest
@@ -83,8 +83,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Instance states that support user assignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed.
-     * Instance states that support unassignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed, Expired, Overdue, Deleted.</p>
+     * <p>Instance statuses that support user assignment: Available, Shutting down, Stopped, Starting, Backing up, Restoring, Backup failed, and Restoration failed.
+     * Instance statuses that support user unassignment: Available, Shutting down, Stopped, Starting, Backing up, Restoring, Backup failed, Restoration failed, Expired, Overdue payment, and Deleted.</p>
      * 
      * @param request the request parameters of AuthorizeAndroidInstance  AuthorizeAndroidInstanceRequest
      * @return AuthorizeAndroidInstanceResponse
@@ -106,9 +106,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>To ensure that the backup is successful, shut down the instance before you start the data backup. The operation may fail if the cloud phone instance is used during the backup process.</li>
-     * <li>You should test the backup file to ensure that you can restore the instance from it. After the restoration is complete, verify that your data is complete and that all features function correctly. Do not delete the original backup file or reset the source instance until this verification is complete. Otherwise, you may lose your data.</li>
-     * <li>You cannot back up and restore data between different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</li>
+     * <li>To ensure a high success rate, back up data after the instance is shut down. Operating the cloud phone during the backup process may cause the backup to fail.</li>
+     * <li>Ensure that the backup file can be restored properly. After the restoration is complete, check and verify that all data is intact and functions are working properly before deleting the original backup file and resetting the source instance. Otherwise, data loss may occur.</li>
+     * <li>Backup and restoration across different image versions are not supported. Backup and restoration between custom images and public images are not supported. Backup and restoration across different architectures (cpm.gx7.10xlarge and cpm.gx8.16xlarge) are not supported.</li>
      * </ol>
      * 
      * @param request the request parameters of BackupAndroidInstance  BackupAndroidInstanceRequest
@@ -131,9 +131,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Shut down the cloud phone instance before you back up data to ensure that the operation succeeds. Using the cloud phone during a backup may cause the operation to fail.</li>
-     * <li>Ensure that the backup file can be used to restore the instance successfully. After you restore from a backup, verify that your data is complete and that all features are working correctly. Do not delete the original backup file or reset the source instance until you complete this verification. Failure to do so may result in data loss.</li>
-     * <li>Backup and restore operations are not suppported across different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</li>
+     * <li>To ensure a high success rate, back up data after the cloud phone is shut down. Operating the cloud phone during the backup process may cause the backup to fail.</li>
+     * <li>Make sure that your backup files can be restored properly. After the restoration is complete, check and verify that all your data is intact and all features work as expected before you delete the original backup files or reset the source instance. Otherwise, your data may be lost.</li>
+     * <li>Backup and restoration are not supported across different image versions, between custom images and public images, or across different architectures (such as cpm.gx7.10xlarge and cpm.gx8.16xlarge).</li>
      * </ol>
      * 
      * @param request the request parameters of BackupApp  BackupAppRequest
@@ -155,7 +155,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Currently, backup files generated by cloud phones can only be stored in Object Storage Service (OSS).</p>
+     * <p>Currently, backup files generated by Cloud Phone can only be saved to Object Storage Service (OSS).</p>
      * 
      * @param request the request parameters of BackupFile  BackupFileRequest
      * @return BackupFileResponse
@@ -419,7 +419,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</p>
+     * <p>This operation involves billing. Make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone before you call this operation.</p>
      * 
      * @param request the request parameters of CreateEdgeMobileAgentPackage  CreateEdgeMobileAgentPackageRequest
      * @return CreateEdgeMobileAgentPackageResponse
@@ -440,8 +440,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also use the Android Debug Bridge (ADB) tool to create a key pair and then upload it to the Cloud Phone console by calling the <a href="t2729840.xdita#"></a>operation. This key pair can be used in the same way as a key pair created by the system.
-     * Each tenant can have a maximum of 500 key pairs.</p>
+     * <p>In addition to calling CreateKeyPair, you can use the ADB tool to create a key pair and upload it to the Wuying Cloud Phone console by calling <a href="https://help.aliyun.com/document_detail/2807340.html">ImportKeyPair</a>. The uploaded key pair works the same way as a system-generated key pair. Each tenant can create a maximum of 500 key pairs.</p>
      * 
      * @param request the request parameters of CreateKeyPair  CreateKeyPairRequest
      * @return CreateKeyPairResponse
@@ -594,8 +593,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Pay-as-you-go instance groups can be deleted at any time.
-     * Subscription instance groups can be deleted only after they expire.</p>
+     * <p>Pay-as-you-go instance groups can be deleted directly.
+     * Subscription instance groups can be deleted only after they expire. Only subscription instance groups in the Expired state can be deleted.</p>
      * 
      * @param request the request parameters of DeleteAndroidInstanceGroup  DeleteAndroidInstanceGroupRequest
      * @return DeleteAndroidInstanceGroupResponse
@@ -694,9 +693,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  If a cloud phone instance is currently associated with the ADB key pair you intend to delete, the ADB key pair cannot be deleted.</p>
      * <ul>
-     * <li>Once an ADB key pair is deleted, it cannot be retrieved or queried by using the DescribeKeyPairs operation.</li>
+     * <li>If an ADB key pair is already attached to a cloud phone instance, the key pair cannot be deleted.</li>
+     * <li>After an ADB key pair is deleted, it can no longer be queried by calling DescribeKeyPairs.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteKeyPairs  DeleteKeyPairsRequest
@@ -736,7 +735,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>A policy group cannot be deleted if it is associated with an instance group.</p>
+     * <p>You cannot delete a policy if it is associated with an undeleted instance group.</p>
      * 
      * @param request the request parameters of DeletePolicyGroup  DeletePolicyGroupRequest
      * @return DeletePolicyGroupResponse
@@ -2073,7 +2072,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="t2740507.xdita#"></a>operation.</p>
+     * <p>This API operation is asynchronous. You can view the operation results in the task center. To query tasks, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
      * 
      * @param request the request parameters of OperateApp  OperateAppRequest
      * @return OperateAppResponse
@@ -2152,8 +2151,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>When you restore a full instance, the system restarts the instance to ensure a successful restoration. A restart is not required if you restore only applications and data. Make sure the instance is in an active state. Do not perform any operations on the instance during the restoration process. Otherwise, the restoration may fail.</li>
-     * <li>Ensure that the backup file can be used to restore the instance properly. After a restoration is complete, check that all your data is complete and all features are working properly. Do not delete the original backup file or reset the source instance until you have verified the restored data. Otherwise, you may lose your data.</li>
+     * <li>To ensure a high success rate, the cloud phone is restarted during a full-device restore. App and data restoration does not require a restart. Make sure your cloud phone is available and do not operate it during the restoration process. Otherwise, the restoration may fail.</li>
+     * <li>Make sure your backup file can be restored properly. After the restoration is complete, check and verify that all your data is intact and functions are working properly before you delete the original backup file or reset the source instance. Otherwise, your data may be lost.</li>
      * </ol>
      * 
      * @param request the request parameters of RecoverAndroidInstance  RecoverAndroidInstanceRequest
@@ -2200,7 +2199,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Currently, this operation allows you to restore only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</p>
+     * <p>Currently, only backup files generated by cloud phones and saved in Object Storage Service (OSS) are supported.</p>
      * 
      * @param request the request parameters of RecoveryFile  RecoveryFileRequest
      * @return RecoveryFileResponse
@@ -2389,7 +2388,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Use this operation to send files or folders from Object Storage Service (OSS) to cloud phones.</p>
+     * <p>Currently, only files or folders from Object Storage Service (OSS) can be sent to cloud phones.</p>
      * 
      * @param request the request parameters of SendFile  SendFileRequest
      * @return SendFileResponse
@@ -2428,7 +2427,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the desired cloud phone instance is in the Running state.</p>
+     * <p>The ADB authentication settings take effect only when the instance is in the Running state.</p>
      * 
      * @param request the request parameters of SetAdbSecure  SetAdbSecureRequest
      * @return SetAdbSecureResponse
@@ -2450,11 +2449,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation requires image version 26.01 or later.</li>
-     * <li>This API call synchronously updates the IP address blacklist and the domain name blacklist.</li>
-     * <li>The IP address blacklist supports individual IP addresses and IP address segments. The update overwrites the existing configuration. If you pass an empty string (&quot;&quot;), all configured IP blacklist entries are purged.</li>
-     * <li>The domain name blacklist supports only exact matches and does not support regular expressions. If you pass an empty string (&quot;&quot;), all configured domain name blacklist entries are purged.</li>
-     * <li>After you change the configuration, restart the cloud phone to apply the new blacklist rules. Note that these rules may not take effect if you use an agent.</li>
+     * <li>The image version must be 26.01 or later.</li>
+     * <li>This operation supports synchronous updates of the IP address blacklist and the domain name blacklist.</li>
+     * <li>The IP address blacklist supports single IP addresses and CIDR blocks and uses an overwrite update method. If an empty string &quot;&quot; is specified, all configured IP blacklist entries are cleared.</li>
+     * <li>The domain name blacklist supports only exact match and does not support regular expressions. If an empty string &quot;&quot; is specified, all configured domain name blacklist entries are cleared.</li>
+     * <li>After the configuration is changed, you must restart the cloud phone for the new blacklist rules to take effect. Note that these rules may not take effect when a proxy is used.</li>
      * </ul>
      * 
      * @param request the request parameters of SetNetworkBlacklist  SetNetworkBlacklistRequest
@@ -2476,7 +2475,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Only supports starting when the instance is in the <strong>Stopped, Backup Failed, or Recovery Failed</strong> state.</p>
+     * <p>You can start an instance only when it is in the <strong>Stopped, Backup Failed, or Recovery Failed</strong> state.</p>
      * 
      * @param request the request parameters of StartAndroidInstance  StartAndroidInstanceRequest
      * @return StartAndroidInstanceResponse
@@ -2497,7 +2496,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This feature can be enabled when the instance is not in the <strong>UNAVAILABLE</strong> state and has a <strong>private IP address</strong> assigned.</p>
+     * <p>This feature can be enabled only when the instance is in the <strong>non-exception</strong> (<strong>UNAVAILABLE</strong>) state and has been successfully assigned a <strong>private IP address</strong>.</p>
      * 
      * @param request the request parameters of StartInstanceAdb  StartInstanceAdbRequest
      * @return StartInstanceAdbResponse
@@ -2689,7 +2688,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The image and the instance group must be in the active state. The image must be available in the same region as the instance group.</p>
+     * <p>The image must be in the Available state and available in the region where the instance group is located. The instance group must be in the Available state.</p>
      * 
      * @param request the request parameters of UpdateInstanceGroupImage  UpdateInstanceGroupImageRequest
      * @return UpdateInstanceGroupImageResponse

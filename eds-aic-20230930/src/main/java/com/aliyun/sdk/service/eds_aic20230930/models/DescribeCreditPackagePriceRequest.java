@@ -115,7 +115,10 @@ public class DescribeCreditPackagePriceRequest extends Request {
         } 
 
         /**
-         * CreditAmount.
+         * <p>The number of credits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder creditAmount(Integer creditAmount) {
             this.putQueryParameter("CreditAmount", creditAmount);
@@ -124,7 +127,10 @@ public class DescribeCreditPackagePriceRequest extends Request {
         }
 
         /**
-         * PackageAmount.
+         * <p>The number of credit boost packages to purchase. Valid values: 1 to 99.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder packageAmount(String packageAmount) {
             this.putQueryParameter("PackageAmount", packageAmount);
@@ -133,7 +139,10 @@ public class DescribeCreditPackagePriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription period of the resource. The unit is specified by PeriodUnit. Valid values: 3 months, 6 months, and 1 year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -142,7 +151,14 @@ public class DescribeCreditPackagePriceRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The billing time unit of the subscription Billable methods. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong>: year</li>
+         * <li><strong>Month</strong> (default): month</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -151,7 +167,10 @@ public class DescribeCreditPackagePriceRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The ID of the promotion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);

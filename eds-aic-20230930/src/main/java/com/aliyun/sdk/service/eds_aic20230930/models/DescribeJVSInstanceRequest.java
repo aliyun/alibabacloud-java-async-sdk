@@ -96,7 +96,7 @@ public class DescribeJVSInstanceRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

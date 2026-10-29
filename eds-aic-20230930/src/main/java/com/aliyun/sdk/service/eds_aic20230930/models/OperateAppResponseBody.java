@@ -67,7 +67,7 @@ public class OperateAppResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
@@ -78,7 +78,7 @@ public class OperateAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-imr0fufqgac2z****</p>

@@ -103,13 +103,7 @@ public class ActivateEdgeMobileAgentRequest extends Request {
         } 
 
         /**
-         * <p>The device form factor. Valid values:</p>
-         * <ul>
-         * <li>BOX</li>
-         * <li>PHONE</li>
-         * <li>PAD</li>
-         * <li>OTHER</li>
-         * </ul>
+         * <p>The device class. Valid values: BOX, PHONE, PAD, and OTHER.</p>
          * 
          * <strong>example:</strong>
          * <p>BOX</p>
@@ -134,7 +128,7 @@ public class ActivateEdgeMobileAgentRequest extends Request {
         }
 
         /**
-         * <p>The extended device metadata in JSON format. The string contains information such as fingerprint, deviceModel, and firmwareVersion.</p>
+         * <p>The extended metadata of the device. The value is a JSON string that contains information such as fingerprint, deviceModel, and firmwareVersion.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;frmwareVersion&quot;: &quot;1.0.0&quot;}</p>

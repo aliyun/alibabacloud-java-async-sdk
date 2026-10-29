@@ -36,6 +36,10 @@ public class BackupAndroidInstanceRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeAppList")
+    private java.util.List<String> excludeAppList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UploadEndpoint")
     @com.aliyun.core.annotation.Validation(required = true)
     private String uploadEndpoint;
@@ -46,6 +50,7 @@ public class BackupAndroidInstanceRequest extends Request {
         this.backupFileName = builder.backupFileName;
         this.backupFilePath = builder.backupFilePath;
         this.description = builder.description;
+        this.excludeAppList = builder.excludeAppList;
         this.uploadEndpoint = builder.uploadEndpoint;
     }
 
@@ -91,6 +96,13 @@ public class BackupAndroidInstanceRequest extends Request {
     }
 
     /**
+     * @return excludeAppList
+     */
+    public java.util.List<String> getExcludeAppList() {
+        return this.excludeAppList;
+    }
+
+    /**
      * @return uploadEndpoint
      */
     public String getUploadEndpoint() {
@@ -102,6 +114,7 @@ public class BackupAndroidInstanceRequest extends Request {
         private String backupFileName; 
         private String backupFilePath; 
         private String description; 
+        private java.util.List<String> excludeAppList; 
         private String uploadEndpoint; 
 
         private Builder() {
@@ -114,11 +127,12 @@ public class BackupAndroidInstanceRequest extends Request {
             this.backupFileName = request.backupFileName;
             this.backupFilePath = request.backupFilePath;
             this.description = request.description;
+            this.excludeAppList = request.excludeAppList;
             this.uploadEndpoint = request.uploadEndpoint;
         } 
 
         /**
-         * <p>A list of instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -140,7 +154,7 @@ public class BackupAndroidInstanceRequest extends Request {
         }
 
         /**
-         * <p>The upload URL for the backup file.</p>
+         * <p>The upload URL of the backup file.</p>
          * <p>This parameter is required.</p>
          */
         public Builder backupFilePath(String backupFilePath) {
@@ -150,7 +164,7 @@ public class BackupAndroidInstanceRequest extends Request {
         }
 
         /**
-         * <p>The description of the full instance backup.</p>
+         * <p>The description of the full backup.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a backup android instance</p>
@@ -162,7 +176,16 @@ public class BackupAndroidInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region where the backup is stored.</p>
+         * <p>The list of application package names to exclude from the full backup. For matched applications, only APK collection is skipped, and user data is backed up as usual. If this parameter is not specified, no applications are excluded.</p>
+         */
+        public Builder excludeAppList(java.util.List<String> excludeAppList) {
+            this.putQueryParameter("ExcludeAppList", excludeAppList);
+            this.excludeAppList = excludeAppList;
+            return this;
+        }
+
+        /**
+         * <p>The backup region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

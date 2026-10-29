@@ -88,7 +88,7 @@ public class UpdateInstanceGroupImageRequest extends Request {
         }
 
         /**
-         * <p>A list of instance group IDs.</p>
+         * <p>The list of instance group IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {

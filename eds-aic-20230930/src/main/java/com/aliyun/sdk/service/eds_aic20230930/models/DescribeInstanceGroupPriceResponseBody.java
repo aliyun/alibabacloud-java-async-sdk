@@ -80,7 +80,7 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * Price.
+         * <p>The price.</p>
          */
         public Builder price(Price price) {
             this.price = price;
@@ -88,7 +88,10 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E4F2B7-BBDA-534D-B872-CCC798996F69</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The rule information.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -201,7 +204,10 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * OptionCode.
+             * <p>The coupon code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -209,7 +215,10 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionDesc.
+             * <p>The coupon description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Regular promotion</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -217,7 +226,10 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionId.
+             * <p>The promotion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86744342****</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -225,7 +237,10 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The coupon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Regular promotion</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -233,7 +248,10 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * selected.
+             * <p>Indicates whether the promotion is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -339,7 +357,10 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>The currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -347,7 +368,10 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12618.0</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -355,7 +379,10 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18134.0</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -363,7 +390,7 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Promotions.
+             * <p>The promotion information.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -371,7 +398,10 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70.0</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -438,7 +468,10 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Regular promotion</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -446,7 +479,10 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yhpcxb4qhgp2k4****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

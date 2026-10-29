@@ -115,7 +115,7 @@ public class BackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
@@ -221,7 +221,7 @@ public class BackupFileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID of the cloud phone.</p>
+             * <p>The Cloud Phone instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-34pqe4r0kd9kn****</p>
@@ -254,7 +254,7 @@ public class BackupFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID.</p>
+             * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>t-22ex666a653gq****</p>

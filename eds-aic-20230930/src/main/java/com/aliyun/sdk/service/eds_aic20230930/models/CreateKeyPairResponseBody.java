@@ -67,7 +67,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the key pair was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-30 08:45:09.0</p>
@@ -181,7 +181,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the key pair.</p>
+             * <p>The ID of the ADB key pair.</p>
              * 
              * <strong>example:</strong>
              * <p>kp-6v2q33ae4tw3*****</p>
@@ -203,7 +203,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private key of the key pair. The private key is PEM-encoded in PKCS#8 format and is compatible with ADB.</p>
+             * <p>The private key of the key pair. The private key is in the PEM-encoded PKCS#8 format that complies with ADB key pair specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>MIIEpAIBAAKCAQEAtReyMzLIcBH78EV2zj****</p>

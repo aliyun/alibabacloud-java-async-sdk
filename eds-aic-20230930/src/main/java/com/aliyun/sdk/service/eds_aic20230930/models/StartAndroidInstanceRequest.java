@@ -73,7 +73,7 @@ public class StartAndroidInstanceRequest extends Request {
         } 
 
         /**
-         * <p>List of instances.</p>
+         * <p>The list of instances.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
@@ -82,7 +82,7 @@ public class StartAndroidInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing mode. This parameter is deprecated.</p>
+         * <p>The sales mode. <strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>

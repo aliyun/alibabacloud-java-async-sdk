@@ -127,7 +127,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of results returned in this request.</p>
+         * <p>The maximum number of results returned in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -138,7 +138,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that indicates the starting position of the current query. If this parameter is empty, the query starts from the beginning.</p>
+         * <p>The token that specifies the starting position for the query. An empty value indicates that the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -241,6 +241,9 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
 
             /**
              * <p>The AI Engine version upgrade status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder upgradeStatus(String upgradeStatus) {
                 this.upgradeStatus = upgradeStatus;
@@ -329,7 +332,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The limit period.</p>
+             * <p>The credit limit period.</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -474,6 +477,9 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
 
             /**
              * <p>The skill installation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-10-22 13:45:18</p>
              */
             public Builder installedAt(String installedAt) {
                 this.installedAt = installedAt;
@@ -573,7 +579,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of credits.</p>
+             * <p>The credit amount.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -766,7 +772,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time is in UTC and follows the ISO 8601 standard.</p>
+             * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-10T01:31:32Z</p>
@@ -777,7 +783,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credit limit configuration. If multiple configurations are delivered, the subsequent configurations overwrite the previous ones.</p>
+             * <p>The credit limit configuration. Subsequent quota configurations overwrite previous configurations.</p>
              */
             public Builder creditConfig(java.util.List<CreditConfig> creditConfig) {
                 this.creditConfig = creditConfig;
@@ -785,7 +791,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time. The time is in UTC and follows the ISO 8601 standard.</p>
+             * <p>The expiration time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-10T01:31:32Z</p>
@@ -826,7 +832,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time. The time is in UTC and follows the ISO 8601 standard.</p>
+             * <p>The modification time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-10T01:31:32Z</p>
@@ -848,7 +854,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used credits.</p>
+             * <p>The used credit.</p>
              */
             public Builder usedCredit(java.util.List<UsedCredit> usedCredit) {
                 this.usedCredit = usedCredit;

@@ -32,6 +32,10 @@ public class RecoverAndroidInstanceRequest extends Request {
     private String backupFilePath;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeAppList")
+    private java.util.List<String> excludeAppList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UploadEndpoint")
     private String uploadEndpoint;
 
@@ -45,6 +49,7 @@ public class RecoverAndroidInstanceRequest extends Request {
         this.androidInstanceIdList = builder.androidInstanceIdList;
         this.backupFileId = builder.backupFileId;
         this.backupFilePath = builder.backupFilePath;
+        this.excludeAppList = builder.excludeAppList;
         this.uploadEndpoint = builder.uploadEndpoint;
         this.uploadType = builder.uploadType;
     }
@@ -84,6 +89,13 @@ public class RecoverAndroidInstanceRequest extends Request {
     }
 
     /**
+     * @return excludeAppList
+     */
+    public java.util.List<String> getExcludeAppList() {
+        return this.excludeAppList;
+    }
+
+    /**
      * @return uploadEndpoint
      */
     public String getUploadEndpoint() {
@@ -101,6 +113,7 @@ public class RecoverAndroidInstanceRequest extends Request {
         private java.util.List<String> androidInstanceIdList; 
         private String backupFileId; 
         private String backupFilePath; 
+        private java.util.List<String> excludeAppList; 
         private String uploadEndpoint; 
         private String uploadType; 
 
@@ -113,12 +126,13 @@ public class RecoverAndroidInstanceRequest extends Request {
             this.androidInstanceIdList = request.androidInstanceIdList;
             this.backupFileId = request.backupFileId;
             this.backupFilePath = request.backupFilePath;
+            this.excludeAppList = request.excludeAppList;
             this.uploadEndpoint = request.uploadEndpoint;
             this.uploadType = request.uploadType;
         } 
 
         /**
-         * <p>A list of instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -140,7 +154,7 @@ public class RecoverAndroidInstanceRequest extends Request {
         }
 
         /**
-         * <p>The OSS URL where the backup file is uploaded.</p>
+         * <p>The OSS address to which the backup file is uploaded.</p>
          * <p>This parameter is required.</p>
          */
         public Builder backupFilePath(String backupFilePath) {
@@ -150,7 +164,16 @@ public class RecoverAndroidInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region where the backup is located.</p>
+         * <p>The list of app package names excluded from the full-device restore. Excluded apps are not uninstalled and their APKs are not installed, which is compatible with legacy backups that contain APKs. Only user data is replaced. Empty shells must be installed by the customer by using the pm install command. If this parameter is not specified, no apps are excluded.</p>
+         */
+        public Builder excludeAppList(java.util.List<String> excludeAppList) {
+            this.putQueryParameter("ExcludeAppList", excludeAppList);
+            this.excludeAppList = excludeAppList;
+            return this;
+        }
+
+        /**
+         * <p>The backup region.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>

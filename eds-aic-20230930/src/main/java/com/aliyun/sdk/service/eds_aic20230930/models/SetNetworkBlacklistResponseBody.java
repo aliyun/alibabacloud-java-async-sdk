@@ -54,7 +54,7 @@ public class SetNetworkBlacklistResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2B9E6946-0E2A-5D2B-B275-361DF81F****</p>

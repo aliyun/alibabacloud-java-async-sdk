@@ -196,7 +196,7 @@ public class RefreshAuthTokensResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authorization token value.</p>
+             * <p>The value of the authorization token.</p>
              * 
              * <strong>example:</strong>
              * <p>cp******lp</p>

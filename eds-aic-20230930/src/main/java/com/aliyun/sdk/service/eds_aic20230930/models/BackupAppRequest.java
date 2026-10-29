@@ -133,7 +133,7 @@ public class BackupAppRequest extends Request {
         } 
 
         /**
-         * <p>A list of instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -155,7 +155,7 @@ public class BackupAppRequest extends Request {
         }
 
         /**
-         * <p>The URL of the backup file.</p>
+         * <p>The path to the backup file.</p>
          * <p>This parameter is required.</p>
          */
         public Builder backupFilePath(String backupFilePath) {
@@ -177,7 +177,7 @@ public class BackupAppRequest extends Request {
         }
 
         /**
-         * <p>A list of package names for the applications to back up.</p>
+         * <p>The list of package names of the applications to back up.</p>
          * <p>This parameter is required.</p>
          */
         public Builder sourceAppList(java.util.List<String> sourceAppList) {
@@ -187,7 +187,7 @@ public class BackupAppRequest extends Request {
         }
 
         /**
-         * <p>Specifies the region where the backup is created.</p>
+         * <p>The backup region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

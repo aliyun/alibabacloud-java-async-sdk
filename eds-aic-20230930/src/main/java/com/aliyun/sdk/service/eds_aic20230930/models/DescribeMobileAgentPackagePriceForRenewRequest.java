@@ -101,7 +101,7 @@ public class DescribeMobileAgentPackagePriceForRenewRequest extends Request {
         } 
 
         /**
-         * MobileAgentPackageIds.
+         * <p>The IDs of the MobileAgent resource plans.</p>
          */
         public Builder mobileAgentPackageIds(java.util.List<String> mobileAgentPackageIds) {
             this.putQueryParameter("MobileAgentPackageIds", mobileAgentPackageIds);
@@ -110,7 +110,10 @@ public class DescribeMobileAgentPackagePriceForRenewRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription period of the resource. The unit is specified by PeriodUnit. Valid values: 1 month, 2 months, 3 months, 6 months, and 1 year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -119,7 +122,14 @@ public class DescribeMobileAgentPackagePriceForRenewRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription period. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong>: Month.</li>
+         * <li><strong>Year</strong>: Year.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -128,7 +138,10 @@ public class DescribeMobileAgentPackagePriceForRenewRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);

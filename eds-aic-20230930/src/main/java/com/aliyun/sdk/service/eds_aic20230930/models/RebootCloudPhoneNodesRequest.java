@@ -73,7 +73,15 @@ public class RebootCloudPhoneNodesRequest extends Request {
         } 
 
         /**
-         * Force.
+         * <p>Specifies whether to force a restart. Valid values:</p>
+         * <ul>
+         * <li>true: Forces a restart without waiting for the instances to gracefully exit.</li>
+         * <li>false: Performs a graceful restart.
+         * Default value: false.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putBodyParameter("Force", force);
@@ -82,7 +90,10 @@ public class RebootCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * <p>The IDs of the cloud phone matrices. Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpn-05e4d1cec2urdh1j****</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putBodyParameter("NodeIds", nodeIds);

@@ -59,7 +59,7 @@ public class DeleteKeyPairsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the ADB key pairs.</p>
+         * <p>The list of key pair IDs.</p>
          */
         public Builder keyPairIds(java.util.List<String> keyPairIds) {
             this.putQueryParameter("KeyPairIds", keyPairIds);

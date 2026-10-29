@@ -80,7 +80,7 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
         } 
 
         /**
-         * Price.
+         * <p>The price.</p>
          */
         public Builder price(Price price) {
             this.price = price;
@@ -88,7 +88,10 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The promotion rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -201,7 +204,10 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * OptionCode.
+             * <p>The promotion code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhui_quan</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -209,7 +215,10 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionDesc.
+             * <p>The promotion description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhui</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -217,7 +226,10 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionId.
+             * <p>The ID of the promotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91381816****</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -225,7 +237,10 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The name of the promotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhui</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -233,7 +248,10 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Selected.
+             * <p>Indicates whether the promotion is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ture</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -339,7 +357,11 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>&lt;props=&quot;china&quot;&gt;The currency unit (CNY).
+             * &lt;props=&quot;intl&quot;&gt;The currency unit (USD).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -347,7 +369,10 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>274.75</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -355,7 +380,12 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;Unit: CNY.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;Unit: USD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8800</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -363,7 +393,7 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Promotions.
+             * <p>The promotion information.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -371,7 +401,10 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>213.52</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -438,7 +471,10 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -446,7 +482,10 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a7gesyly7o34qy****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

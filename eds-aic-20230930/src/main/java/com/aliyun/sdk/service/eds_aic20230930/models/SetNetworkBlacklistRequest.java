@@ -73,9 +73,9 @@ public class SetNetworkBlacklistRequest extends Request {
         } 
 
         /**
-         * <p>Domain name blacklist.</p>
+         * <p>The domain name blacklist.</p>
          * <blockquote>
-         * <p>Supports a maximum of 200 domain names.</p>
+         * <p>A maximum of 200 domain names are supported.</p>
          * </blockquote>
          */
         public Builder domainBlacklist(java.util.List<String> domainBlacklist) {
@@ -85,9 +85,9 @@ public class SetNetworkBlacklistRequest extends Request {
         }
 
         /**
-         * <p>IP address blacklist.</p>
+         * <p>The IP address blacklist.</p>
          * <blockquote>
-         * <p>Supports a maximum of 200 IP addresses or IP address segments.</p>
+         * <p>A maximum of 200 IP addresses or CIDR blocks are supported.</p>
          * </blockquote>
          */
         public Builder ipBlacklist(java.util.List<String> ipBlacklist) {

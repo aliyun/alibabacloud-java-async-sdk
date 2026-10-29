@@ -93,7 +93,7 @@ public class BackupAppResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of instances that are backed up.</p>
+         * <p>The number of backed-up instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -104,7 +104,7 @@ public class BackupAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response elements.</p>
+         * <p>The returned result object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -218,7 +218,7 @@ public class BackupAppResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the cloud phone instance.</p>
+             * <p>The instance ID of the cloud phone.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-34pqe4r0kd9kn****</p>

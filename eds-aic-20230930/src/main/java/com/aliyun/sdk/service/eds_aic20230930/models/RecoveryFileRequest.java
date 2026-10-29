@@ -35,6 +35,10 @@ public class RecoveryFileRequest extends Request {
     private String backupFilePath;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeAppList")
+    private java.util.List<String> excludeAppList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UploadEndpoint")
     private String uploadEndpoint;
 
@@ -48,6 +52,7 @@ public class RecoveryFileRequest extends Request {
         this.backupAll = builder.backupAll;
         this.backupFileId = builder.backupFileId;
         this.backupFilePath = builder.backupFilePath;
+        this.excludeAppList = builder.excludeAppList;
         this.uploadEndpoint = builder.uploadEndpoint;
         this.uploadType = builder.uploadType;
     }
@@ -94,6 +99,13 @@ public class RecoveryFileRequest extends Request {
     }
 
     /**
+     * @return excludeAppList
+     */
+    public java.util.List<String> getExcludeAppList() {
+        return this.excludeAppList;
+    }
+
+    /**
      * @return uploadEndpoint
      */
     public String getUploadEndpoint() {
@@ -112,6 +124,7 @@ public class RecoveryFileRequest extends Request {
         private Boolean backupAll; 
         private String backupFileId; 
         private String backupFilePath; 
+        private java.util.List<String> excludeAppList; 
         private String uploadEndpoint; 
         private String uploadType; 
 
@@ -125,12 +138,13 @@ public class RecoveryFileRequest extends Request {
             this.backupAll = request.backupAll;
             this.backupFileId = request.backupFileId;
             this.backupFilePath = request.backupFilePath;
+            this.excludeAppList = request.excludeAppList;
             this.uploadEndpoint = request.uploadEndpoint;
             this.uploadType = request.uploadType;
         } 
 
         /**
-         * <p>The IDs of the instances.</p>
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -140,7 +154,7 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to back up the whole instance.</p>
+         * <p>Specifies whether to back up the entire device.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -164,10 +178,8 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * <p>The OSS path to which the backup file is uploaded.</p>
-         * <blockquote>
-         * <p>When calling the describeBuckets operation to retrieve a bucket name, you must also call the ossObjectList operation to obtain the object key. Combine these to form the full path: oss\://${bucketName}/${key}.</p>
-         * </blockquote>
+         * <p>The OSS URL to which the backup file is uploaded.
+         * <notice>Call the describeBuckets operation to obtain the bucketName, and select ossObjectList to obtain the key. The key is the path of the backup file. Concatenate them into &quot;oss://${bucketName}/${key}&quot;.</notice></p>
          */
         public Builder backupFilePath(String backupFilePath) {
             this.putQueryParameter("BackupFilePath", backupFilePath);
@@ -176,10 +188,17 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * <p>The endpoint of the OSS bucket that stores the backup file.</p>
-         * <blockquote>
-         * <p>: When calling the DescribeBuckets operation to query buckets, retrieve the IntranetEndpoint value if the cloud phone and the OSS bucket are in the same region. If they are in different regions, retrieve the ExtranetEndpoint value instead.</p>
-         * </blockquote>
+         * ExcludeAppList.
+         */
+        public Builder excludeAppList(java.util.List<String> excludeAppList) {
+            this.putQueryParameter("ExcludeAppList", excludeAppList);
+            this.excludeAppList = excludeAppList;
+            return this;
+        }
+
+        /**
+         * <p>The domain name of the backup address.
+         * <notice>Call the DescribeBuckets operation to obtain the bucket. If the cloud phone and the bucket are in the same region, obtain the IntranetEndpoint field. If they are in different regions, obtain the ExtranetEndpoint field.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
@@ -191,7 +210,7 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * <p>The type of the backup.</p>
+         * <p>The backup type.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>

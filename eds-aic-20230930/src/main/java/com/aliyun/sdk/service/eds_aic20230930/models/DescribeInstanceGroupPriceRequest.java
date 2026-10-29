@@ -215,7 +215,10 @@ public class DescribeInstanceGroupPriceRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * <p>The number of instance groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -224,7 +227,10 @@ public class DescribeInstanceGroupPriceRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * <p>The ID of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np-shdbbkdubb****</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -233,6 +239,7 @@ public class DescribeInstanceGroupPriceRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +252,10 @@ public class DescribeInstanceGroupPriceRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imgc-0aae4rgm5umzo****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -254,6 +264,7 @@ public class DescribeInstanceGroupPriceRequest extends Request {
         }
 
         /**
+         * <p>The instance group specifications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +277,10 @@ public class DescribeInstanceGroupPriceRequest extends Request {
         }
 
         /**
-         * InstanceVersion.
+         * <p>The instance version. You do not need to specify this parameter. The system automatically matches the value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder instanceVersion(String instanceVersion) {
             this.putQueryParameter("InstanceVersion", instanceVersion);
@@ -275,7 +289,10 @@ public class DescribeInstanceGroupPriceRequest extends Request {
         }
 
         /**
-         * NumberOfInstances.
+         * <p>The number of instances in the instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder numberOfInstances(Integer numberOfInstances) {
             this.putQueryParameter("NumberOfInstances", numberOfInstances);
@@ -284,7 +301,10 @@ public class DescribeInstanceGroupPriceRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The order type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -293,7 +313,10 @@ public class DescribeInstanceGroupPriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription period. The unit is specified by PeriodUnit. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -302,7 +325,10 @@ public class DescribeInstanceGroupPriceRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription period. Default value: Month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -311,7 +337,10 @@ public class DescribeInstanceGroupPriceRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The ID of the promotion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88436689****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -320,7 +349,10 @@ public class DescribeInstanceGroupPriceRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p>The sales mode. You do not need to specify this parameter. The system automatically matches the value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);

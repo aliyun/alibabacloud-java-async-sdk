@@ -87,7 +87,7 @@ public class AuthorizeAndroidInstanceRequest extends Request {
         } 
 
         /**
-         * <p>List of instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
@@ -96,7 +96,7 @@ public class AuthorizeAndroidInstanceRequest extends Request {
         }
 
         /**
-         * <p>User ID to be assigned.</p>
+         * <p>The ID of the user to assign.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -108,7 +108,7 @@ public class AuthorizeAndroidInstanceRequest extends Request {
         }
 
         /**
-         * <p>User ID to be unassigned.</p>
+         * <p>The ID of the user to unassign.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

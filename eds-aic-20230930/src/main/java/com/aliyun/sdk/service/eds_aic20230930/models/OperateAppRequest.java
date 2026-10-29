@@ -87,7 +87,7 @@ public class OperateAppRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the app.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -99,7 +99,7 @@ public class OperateAppRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud phone instances.</p>
+         * <p>The list of instances.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -108,7 +108,7 @@ public class OperateAppRequest extends Request {
         }
 
         /**
-         * <p>The type of the operation.</p>
+         * <p>The operation type. Supported operations include starting, stopping, and restarting.</p>
          * 
          * <strong>example:</strong>
          * <p>start</p>

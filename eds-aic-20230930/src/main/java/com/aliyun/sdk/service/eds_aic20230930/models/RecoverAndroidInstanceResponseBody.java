@@ -104,7 +104,7 @@ public class RecoverAndroidInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result objects.</p>
+         * <p>The returned result object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;

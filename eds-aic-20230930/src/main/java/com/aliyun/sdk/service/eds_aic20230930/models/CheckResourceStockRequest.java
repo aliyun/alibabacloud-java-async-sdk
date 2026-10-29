@@ -165,7 +165,7 @@ public class CheckResourceStockRequest extends Request {
         }
 
         /**
-         * <p>The zone to which the resource belongs.</p>
+         * <p>The zone of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>

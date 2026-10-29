@@ -80,7 +80,7 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
         } 
 
         /**
-         * Price.
+         * <p>The price.</p>
          */
         public Builder price(Price price) {
             this.price = price;
@@ -88,7 +88,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The promotion rule information.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -188,7 +191,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1978.2</p>
              */
             public Builder discountPrice(String discountPrice) {
                 this.discountPrice = discountPrice;
@@ -196,7 +202,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>The name of the module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PhoneData</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -204,7 +213,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8990</p>
              */
             public Builder originalPrice(String originalPrice) {
                 this.originalPrice = originalPrice;
@@ -212,7 +224,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1666.0</p>
              */
             public Builder tradePrice(String tradePrice) {
                 this.tradePrice = tradePrice;
@@ -318,7 +333,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1978.2</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -326,7 +344,7 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModulePrice.
+             * <p>The price of each module.</p>
              */
             public Builder modulePrice(java.util.List<ModulePrice> modulePrice) {
                 this.modulePrice = modulePrice;
@@ -334,7 +352,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4199</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -342,7 +363,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudPhoneMatrix</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -350,7 +374,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>892.0</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -456,7 +483,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * OptionCode.
+             * <p>The promotion code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -464,7 +494,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionDesc.
+             * <p>The promotion description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily promotion</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -472,7 +505,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionId.
+             * <p>The promotion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>82842468****</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -480,7 +516,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The promotion name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily promotion</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -488,7 +527,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * selected.
+             * <p>Indicates whether to receive SMS messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -607,7 +649,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -615,7 +660,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>878.15</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -623,7 +671,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2710</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -631,7 +682,7 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PriceDetail.
+             * <p>The price details.</p>
              */
             public Builder priceDetail(java.util.List<PriceDetail> priceDetail) {
                 this.priceDetail = priceDetail;
@@ -639,7 +690,7 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Promotions.
+             * <p>The promotion information.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -647,7 +698,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.0</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -714,7 +768,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily promotion</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -722,7 +779,10 @@ public class DescribeCloudPhoneNodePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t1uf7xt141ut5i****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
