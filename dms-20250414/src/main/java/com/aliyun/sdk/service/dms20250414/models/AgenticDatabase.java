@@ -236,10 +236,7 @@ public class AgenticDatabase extends TeaModel {
         } 
 
         /**
-         * <p>The name of the catalog.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>prod_mysql_order</p>
+         * CatalogName.
          */
         public Builder catalogName(String catalogName) {
             this.catalogName = catalogName;
@@ -247,15 +244,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The type of the catalog. Valid values:</p>
-         * <ul>
-         * <li><strong>JDBC</strong>: relational database catalog</li>
-         * <li><strong>DataLake</strong>: data lake catalog</li>
-         * <li><strong>Dataset</strong>: knowledge base catalog</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>JDBC</p>
+         * CatalogType.
          */
         public Builder catalogType(String catalogType) {
             this.catalogType = catalogType;
@@ -263,10 +252,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The UUID of the catalog.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mc-HZ-OfjcNc2z***</p>
+         * CatalogUuid.
          */
         public Builder catalogUuid(String catalogUuid) {
             this.catalogUuid = catalogUuid;
@@ -274,7 +260,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The business attributes of the database, returned as key-value pairs. Currently, this may include <strong>ENV_TYPE</strong>, which indicates the environment type of the database.</p>
+         * DatabaseBizAttrs.
          */
         public Builder databaseBizAttrs(java.util.Map<String, ?> databaseBizAttrs) {
             this.databaseBizAttrs = databaseBizAttrs;
@@ -282,10 +268,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>md-HZ-fp9K7r***</p>
+         * DatabaseUuid.
          */
         public Builder databaseUuid(String databaseUuid) {
             this.databaseUuid = databaseUuid;
@@ -293,10 +276,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The database type inherited from the catalog. The value is the uppercase name of the database type, such as MYSQL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MYSQL</p>
+         * DbType.
          */
         public Builder dbType(String dbType) {
             this.dbType = dbType;
@@ -304,10 +284,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The description of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Order database</p>
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -315,7 +292,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The metadata of the database engine. This field is returned only for databases under a JDBC catalog.</p>
+         * EngineMeta.
          */
         public Builder engineMeta(AgenticDatabaseEngineMeta engineMeta) {
             this.engineMeta = engineMeta;
@@ -323,10 +300,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The name of the database. For databases that distinguish schemas, such as PostgreSQL, this is the schema name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>order_db</p>
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -334,7 +308,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The extended properties of the database, returned as key-value pairs. This field is returned only for databases under a DataLake catalog.</p>
+         * Properties.
          */
         public Builder properties(java.util.Map<String, ?> properties) {
             this.properties = properties;
@@ -342,10 +316,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The fully qualified name of the database. For databases that distinguish schemas, such as PostgreSQL, the format is database name.schema name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>order_db</p>
+         * QualifiedName.
          */
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = qualifiedName;
@@ -353,10 +324,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -364,10 +332,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The search name of the database. SearchAgenticDatabase matches search keywords against this name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>order_db</p>
+         * SearchName.
          */
         public Builder searchName(String searchName) {
             this.searchName = searchName;
@@ -375,14 +340,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The status of the database. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: normal</li>
-         * <li><strong>-1</strong>: deleted</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
+         * State.
          */
         public Builder state(Integer state) {
             this.state = state;
@@ -390,10 +348,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * <p>The storage location. This field is returned only for databases under a DataLake catalog.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>oss://examplebucket/datalake/order_db/</p>
+         * StorageLocation.
          */
         public Builder storageLocation(String storageLocation) {
             this.storageLocation = storageLocation;

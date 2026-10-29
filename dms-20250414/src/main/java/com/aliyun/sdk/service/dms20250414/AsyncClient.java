@@ -535,6 +535,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAgenticGlobalSqlExecutionHistoriesResponse> listAgenticGlobalSqlExecutionHistories(ListAgenticGlobalSqlExecutionHistoriesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</p>
+     * <ul>
+     * <li>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</li>
+     * <li>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</li>
+     * <li>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</li>
+     * <li>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListAgenticSecurityPolicies  ListAgenticSecurityPoliciesRequest
+     * @return ListAgenticSecurityPoliciesResponse
+     */
+    CompletableFuture<ListAgenticSecurityPoliciesResponse> listAgenticSecurityPolicies(ListAgenticSecurityPoliciesRequest request);
+
+    /**
      * @param request the request parameters of ListAgenticSqlExecutionHistories  ListAgenticSqlExecutionHistoriesRequest
      * @return ListAgenticSqlExecutionHistoriesResponse
      */

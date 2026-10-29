@@ -93,10 +93,7 @@ public class AgenticDatabaseEngineMeta extends TeaModel {
         } 
 
         /**
-         * <p>The catalog name in the database engine.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>def</p>
+         * CatalogName.
          */
         public Builder catalogName(String catalogName) {
             this.catalogName = catalogName;
@@ -104,10 +101,7 @@ public class AgenticDatabaseEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>The character set encoding of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>utf8mb4</p>
+         * Encoding.
          */
         public Builder encoding(String encoding) {
             this.encoding = encoding;
@@ -115,10 +109,7 @@ public class AgenticDatabaseEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>The schema name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>public</p>
+         * SchemaName.
          */
         public Builder schemaName(String schemaName) {
             this.schemaName = schemaName;
@@ -126,10 +117,7 @@ public class AgenticDatabaseEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>The storage capacity of the database, in MB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1024</p>
+         * StorageCapacity.
          */
         public Builder storageCapacity(Long storageCapacity) {
             this.storageCapacity = storageCapacity;

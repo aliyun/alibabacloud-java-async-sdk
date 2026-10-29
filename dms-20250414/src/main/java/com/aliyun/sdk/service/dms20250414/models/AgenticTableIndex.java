@@ -132,7 +132,7 @@ public class AgenticTableIndex extends TeaModel {
         } 
 
         /**
-         * <p>The list of fields included in the index. Fields with a specified prefix length include a length expression, such as name(10).</p>
+         * ColumnNames.
          */
         public Builder columnNames(java.util.List<String> columnNames) {
             this.columnNames = columnNames;
@@ -140,10 +140,7 @@ public class AgenticTableIndex extends TeaModel {
         }
 
         /**
-         * <p>The index description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Index on user_id</p>
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -151,10 +148,7 @@ public class AgenticTableIndex extends TeaModel {
         }
 
         /**
-         * <p>The index name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>idx_user_id</p>
+         * IndexName.
          */
         public Builder indexName(String indexName) {
             this.indexName = indexName;
@@ -162,17 +156,7 @@ public class AgenticTableIndex extends TeaModel {
         }
 
         /**
-         * <p>The index type. Valid values:</p>
-         * <ul>
-         * <li><strong>Primary</strong>: primary key index</li>
-         * <li><strong>Unique</strong>: unique index</li>
-         * <li><strong>Normal</strong>: normal index</li>
-         * <li><strong>FullText</strong>: full-text index</li>
-         * <li><strong>Spatial</strong>: spatial index</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
+         * IndexType.
          */
         public Builder indexType(String indexType) {
             this.indexType = indexType;
@@ -180,10 +164,7 @@ public class AgenticTableIndex extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the index is a primary key index.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * Primary.
          */
         public Builder primary(Boolean primary) {
             this.primary = primary;
@@ -191,7 +172,7 @@ public class AgenticTableIndex extends TeaModel {
         }
 
         /**
-         * <p>The list of actual field names referenced by the index, with prefix length expressions removed from ColumnNames.</p>
+         * RealColumnNames.
          */
         public Builder realColumnNames(java.util.List<String> realColumnNames) {
             this.realColumnNames = realColumnNames;
@@ -199,10 +180,7 @@ public class AgenticTableIndex extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the index is a unique index.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * Unique.
          */
         public Builder unique(Boolean unique) {
             this.unique = unique;
