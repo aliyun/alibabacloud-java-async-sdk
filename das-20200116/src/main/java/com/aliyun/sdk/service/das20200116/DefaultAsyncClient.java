@@ -71,10 +71,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>Before you begin:</p>
      * <ul>
-     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
-     * <li>When you use the SDK to call DAS services, specify the region as cn-shanghai.</li>
-     * <li>Only database instances with DAS Enterprise Edition enabled support creating offline tasks. For the databases and regions supported by each edition of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-     * For more methods and examples on how to use the Chat interface to interact with the DAS Agent, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (Chat API integration)</a>.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When calling DAS services by using the SDK, set the region to cn-shanghai.</li>
+     * <li>Only database instances with DAS Enterprise Edition enabled support the creation of offline tasks. For the databases and regions supported by each edition of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
+     * For more methods and examples of using the Chat API to interact with the DAS agent, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS agent interaction (Chat API integration)</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of Chat  ChatRequest
@@ -404,6 +404,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateStorageAnalysisTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation responds to operation confirmation requests initiated by the ApsaraDB AI assistant in a session. It is not used to create sessions.</p>
+     * <h3>Invocation flow</h3>
+     * <ol>
+     * <li>Initiate a chat with the ApsaraDB AI assistant, save the current session ID, and continuously read the chat response stream.</li>
+     * <li>After receiving an event where the toolName in ui_function_call is humanConfirm, read the pending confirmation ID from argsText.confirmation_id. Use the ID of the session to which this event belongs as the SessionId. Do not use call_id or query_id in place of ConfirmationId.</li>
+     * <li>Display the pending operation and its parameters to the user, and invoke this operation within the confirmation time limit. Approved=true indicates agreement to proceed with the execution. Approved=false indicates cancellation of the current tool invocation, which does not shut down the entire session. Omit ToolArgs in the current version.</li>
+     * <li>Keep the original chat response stream open and continue reading subsequent responses or errors until the current session response ends. You can also query saved session messages later by invoking DescribeYaoChiAgentChatRecords.</li>
+     * </ol>
+     * <h3>Limits</h3>
+     * <ul>
+     * <li>You must use the same invocation identity and session ID as those used to initiate the confirmation request.</li>
+     * <li>The default confirmation wait time limit is 120 seconds, subject to the actual server configuration. After a timeout, the tool invocation is automatically canceled. A late approval cannot be used to resume a canceled execution.</li>
+     * <li>Do not shut down the original chat stream before submitting the confirmation, and do not initiate a new chat round to resume the tool invocation. Disconnecting the original chat stream may cause the current task to be canceled.</li>
+     * <li>Submit a decision for the same ConfirmationId only once. Do not use historical confirmation cards as replayable requests. If the confirmation record is invalid or has been cleared, submitting a request may return Forbidden.Confirm.</li>
+     * <li>This operation only processes the UUID confirmation identifier in humanConfirm events and is not used for interruption recovery in other interaction protocols.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateYaoChiAgentConfirm  CreateYaoChiAgentConfirmRequest
+     * @return CreateYaoChiAgentConfirmResponse
+     */
+    @Override
+    public CompletableFuture<CreateYaoChiAgentConfirmResponse> createYaoChiAgentConfirm(CreateYaoChiAgentConfirmRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateYaoChiAgentConfirm").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateYaoChiAgentConfirmResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateYaoChiAgentConfirmResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

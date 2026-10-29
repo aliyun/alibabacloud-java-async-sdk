@@ -388,7 +388,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>direct_skill_rejected</p>
+         * 
+         * <strong>example:</strong>
+         * <p>direct_skill_rejected</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -429,7 +432,7 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The display name of the child agent for STEP_STARTED.</p>
+         * <p>The display name of the sub-agent for STEP_STARTED.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL performance diagnostics</p>
@@ -440,7 +443,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>[HdmApiClient] instance is not managed by the agent</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[HdmApiClient] instance is not managed by the agent</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -525,7 +531,7 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution step name.</p>
+         * <p>The name of the execution step.</p>
          * 
          * <strong>example:</strong>
          * <p>sub_agent_performance_diagnose_mysql</p>
@@ -580,7 +586,7 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error that occurred when invoking the tool.</p>
+         * <p>The fault that occurs when you invoke tool calling.</p>
          * 
          * <strong>example:</strong>
          * <p>error</p>
@@ -591,7 +597,7 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tool call ID.</p>
+         * <p>The ID of the tool calling to invoke.</p>
          * 
          * <strong>example:</strong>
          * <p>call_edf9cdb69e0e4c9796a6a5a6</p>
