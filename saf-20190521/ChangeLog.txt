@@ -1,0 +1,3 @@
+2026-10-29 Version: 2.0.0
+- Generated java-async 2019-05-21 for saf.
+
