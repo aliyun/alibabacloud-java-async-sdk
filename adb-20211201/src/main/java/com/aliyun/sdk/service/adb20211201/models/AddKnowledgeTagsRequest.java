@@ -102,7 +102,7 @@ public class AddKnowledgeTagsRequest extends Request {
         } 
 
         /**
-         * <p>The database cluster ID.</p>
+         * <p>The ID of the database cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,10 @@ public class AddKnowledgeTagsRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>The ID of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21321</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);

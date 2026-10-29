@@ -3452,6 +3452,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ForkKnowledgeFile  ForkKnowledgeFileRequest
+     * @return ForkKnowledgeFileResponse
+     */
+    @Override
+    public CompletableFuture<ForkKnowledgeFileResponse> forkKnowledgeFile(ForkKnowledgeFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ForkKnowledgeFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ForkKnowledgeFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ForkKnowledgeFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GenerateSqlBySemanticSql  GenerateSqlBySemanticSqlRequest
      * @return GenerateSqlBySemanticSqlResponse
      */
@@ -5594,6 +5612,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SuspendApsJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TriggerKnowledgeFileParse  TriggerKnowledgeFileParseRequest
+     * @return TriggerKnowledgeFileParseResponse
+     */
+    @Override
+    public CompletableFuture<TriggerKnowledgeFileParseResponse> triggerKnowledgeFileParse(TriggerKnowledgeFileParseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TriggerKnowledgeFileParse").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TriggerKnowledgeFileParseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TriggerKnowledgeFileParseResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

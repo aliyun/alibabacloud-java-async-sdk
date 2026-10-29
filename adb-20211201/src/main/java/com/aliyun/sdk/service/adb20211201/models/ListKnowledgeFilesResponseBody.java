@@ -261,7 +261,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the file was added to the knowledge base. The format is yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The time when the file was added to the knowledge base. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-09 10:27:35</p>
@@ -327,7 +327,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file_id of the content host.</p>
+             * <p>The <code>file_id</code> of the content host.</p>
              * 
              * <strong>example:</strong>
              * <p>122</p>
@@ -349,7 +349,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing information of the knowledge base file.</p>
+             * <p>The processing message of the knowledge base file.</p>
              * 
              * <strong>example:</strong>
              * <p>successful</p>
@@ -377,7 +377,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The format is yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The time when the file was updated. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10 10:23:46</p>
@@ -540,10 +540,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <p>Indicates whether the request is successful. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The request was successful.</li>
-             * <li><strong>false</strong>: The request failed.</li>
+             * <li><strong>true</strong>: The request is successful.</li>
+             * <li><strong>false</strong>: The request fails.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -555,7 +555,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

@@ -27,6 +27,10 @@ public class ListKnowledgeFilesRequest extends Request {
     private String fileIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileLocation")
+    private String fileLocation;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Page")
     private String page;
 
@@ -46,6 +50,7 @@ public class ListKnowledgeFilesRequest extends Request {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.fileIds = builder.fileIds;
+        this.fileLocation = builder.fileLocation;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
@@ -80,6 +85,13 @@ public class ListKnowledgeFilesRequest extends Request {
     }
 
     /**
+     * @return fileLocation
+     */
+    public String getFileLocation() {
+        return this.fileLocation;
+    }
+
+    /**
      * @return page
      */
     public String getPage() {
@@ -110,6 +122,7 @@ public class ListKnowledgeFilesRequest extends Request {
     public static final class Builder extends Request.Builder<ListKnowledgeFilesRequest, Builder> {
         private String DBClusterId; 
         private String fileIds; 
+        private String fileLocation; 
         private String page; 
         private String pageSize; 
         private String status; 
@@ -123,6 +136,7 @@ public class ListKnowledgeFilesRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.fileIds = request.fileIds;
+            this.fileLocation = request.fileLocation;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.status = request.status;
@@ -130,7 +144,7 @@ public class ListKnowledgeFilesRequest extends Request {
         } 
 
         /**
-         * <p>The ADB instance ID.</p>
+         * <p>The ID of the ADB instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +169,19 @@ public class ListKnowledgeFilesRequest extends Request {
         }
 
         /**
-         * <p>The page number, starting from 1. If this parameter is not specified, the default value is 1.</p>
+         * <p>The URL of the knowledge base file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket_name/path/to/file</p>
+         */
+        public Builder fileLocation(String fileLocation) {
+            this.putQueryParameter("FileLocation", fileLocation);
+            this.fileLocation = fileLocation;
+            return this;
+        }
+
+        /**
+         * <p>The page number. Pages start from 1. If you do not specify this parameter, the default value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +193,7 @@ public class ListKnowledgeFilesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. If this parameter is not specified, the default value is 20.</p>
+         * <p>The number of entries per page. Valid values: 1 to 100. If you do not specify this parameter, the default value is 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -191,7 +217,7 @@ public class ListKnowledgeFilesRequest extends Request {
         }
 
         /**
-         * <p>The stable ID of the authorized user. If this parameter is not specified, all files in the knowledge base can be queried.</p>
+         * <p>The stable ID of the authorized user. If you do not specify this parameter, all files in the knowledge base can be queried.</p>
          * 
          * <strong>example:</strong>
          * <p>u123</p>

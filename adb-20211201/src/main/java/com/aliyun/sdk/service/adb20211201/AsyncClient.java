@@ -1443,6 +1443,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExistRunningSQLEngineResponse> existRunningSQLEngine(ExistRunningSQLEngineRequest request);
 
     /**
+     * @param request the request parameters of ForkKnowledgeFile  ForkKnowledgeFileRequest
+     * @return ForkKnowledgeFileResponse
+     */
+    CompletableFuture<ForkKnowledgeFileResponse> forkKnowledgeFile(ForkKnowledgeFileRequest request);
+
+    /**
      * @param request the request parameters of GenerateSqlBySemanticSql  GenerateSqlBySemanticSqlRequest
      * @return GenerateSqlBySemanticSqlResponse
      */
@@ -2389,6 +2395,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SuspendApsJobResponse
      */
     CompletableFuture<SuspendApsJobResponse> suspendApsJob(SuspendApsJobRequest request);
+
+    /**
+     * @param request the request parameters of TriggerKnowledgeFileParse  TriggerKnowledgeFileParseRequest
+     * @return TriggerKnowledgeFileParseResponse
+     */
+    CompletableFuture<TriggerKnowledgeFileParseResponse> triggerKnowledgeFileParse(TriggerKnowledgeFileParseRequest request);
 
     /**
      * <b>description</b> :
