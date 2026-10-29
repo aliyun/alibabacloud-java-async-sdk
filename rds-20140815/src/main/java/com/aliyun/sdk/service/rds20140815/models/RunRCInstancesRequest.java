@@ -759,6 +759,9 @@ public class RunRCInstancesRequest extends Request {
 
         /**
          * <p>The business information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;rds_ai_app&quot;:&quot;true&quot;}</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);

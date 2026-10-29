@@ -731,7 +731,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -740,7 +740,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96105.html">Create a database on an ApsaraDB RDS for MySQL instance</a></li>
@@ -2881,6 +2881,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeModifyParameterLogResponse> describeModifyParameterLog(DescribeModifyParameterLogRequest request);
 
     /**
+     * @param request the request parameters of DescribeOperatorPermission  DescribeOperatorPermissionRequest
+     * @return DescribeOperatorPermissionResponse
+     */
+    CompletableFuture<DescribeOperatorPermissionResponse> describeOperatorPermission(DescribeOperatorPermissionRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
@@ -4148,16 +4154,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBInstanceAutoUpgradeMinorVersion  ModifyDBInstanceAutoUpgradeMinorVersionRequest
@@ -4467,13 +4473,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>ApsaraDB RDS for MySQL instances with native replication enabled must meet the following requirements:</p>
+     * <p>To enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</p>
      * <ul>
-     * <li>Database engine version: MySQL 5.7</li>
-     * <li>Instance edition: Basic Edition</li>
+     * <li>DPI engine version: MySQL 5.7</li>
+     * <li>Edition: Basic Edition</li>
      * <li>Billing method: pay-as-you-go or subscription</li>
-     * <li>Minor engine version: 20240930 or later
-     * For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">RDS native replication</a>.</li>
+     * <li>Milvus version: 20240930 or later
+     * For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">Native replication for ApsaraDB RDS</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBInstanceReplicationSwitch  ModifyDBInstanceReplicationSwitchRequest

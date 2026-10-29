@@ -1,0 +1,133 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.rds20140815.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link DescribeOperatorPermissionResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeOperatorPermissionResponseBody</p>
+ */
+public class DescribeOperatorPermissionResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
+    private String createdTime;
+
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
+    private String expiredTime;
+
+    @com.aliyun.core.annotation.NameInMap("Privileges")
+    private String privileges;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    private DescribeOperatorPermissionResponseBody(Builder builder) {
+        this.createdTime = builder.createdTime;
+        this.expiredTime = builder.expiredTime;
+        this.privileges = builder.privileges;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeOperatorPermissionResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return createdTime
+     */
+    public String getCreatedTime() {
+        return this.createdTime;
+    }
+
+    /**
+     * @return expiredTime
+     */
+    public String getExpiredTime() {
+        return this.expiredTime;
+    }
+
+    /**
+     * @return privileges
+     */
+    public String getPrivileges() {
+        return this.privileges;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String createdTime; 
+        private String expiredTime; 
+        private String privileges; 
+        private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOperatorPermissionResponseBody model) {
+            this.createdTime = model.createdTime;
+            this.expiredTime = model.expiredTime;
+            this.privileges = model.privileges;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * CreatedTime.
+         */
+        public Builder createdTime(String createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+
+        /**
+         * ExpiredTime.
+         */
+        public Builder expiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+
+        /**
+         * Privileges.
+         */
+        public Builder privileges(String privileges) {
+            this.privileges = privileges;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public DescribeOperatorPermissionResponseBody build() {
+            return new DescribeOperatorPermissionResponseBody(this);
+        } 
+
+    } 
+
+}

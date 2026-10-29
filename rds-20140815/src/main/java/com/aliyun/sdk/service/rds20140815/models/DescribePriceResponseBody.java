@@ -205,7 +205,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The estimated hourly fee calculated based on the maximum number of RCUs selected by the user.</p>
+         * <p>The estimated hourly fee calculated based on the maximum number of RCUs selected.</p>
          * 
          * <strong>example:</strong>
          * <p>2**</p>
@@ -216,7 +216,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The estimated hourly fee calculated based on the minimum number of RCUs selected by the user.</p>
+         * <p>The estimated hourly fee calculated based on the minimum number of RCUs selected.</p>
          * 
          * <strong>example:</strong>
          * <p>1**</p>
@@ -787,7 +787,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated hourly fee calculated based on the maximum number of RCUs selected by the user.</p>
+             * <p>The estimated hourly fee calculated based on the maximum number of RCUs selected.</p>
              * 
              * <strong>example:</strong>
              * <p>1**</p>
@@ -798,7 +798,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated hourly fee calculated based on the minimum number of RCUs selected by the user.</p>
+             * <p>The estimated hourly fee calculated based on the minimum number of RCUs selected.</p>
              * 
              * <strong>example:</strong>
              * <p>2**</p>
@@ -809,7 +809,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The final price, which is the original price minus the discount amount.</p>
+             * <p>The final price, which is the original price minus the discount.</p>
              * 
              * <strong>example:</strong>
              * <p>10508</p>
