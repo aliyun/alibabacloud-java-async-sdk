@@ -95,7 +95,7 @@ public class DeleteContactGroupResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>A value of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class DeleteContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * <p>Indicates whether the operation was successful. A value of true indicates success, and a value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

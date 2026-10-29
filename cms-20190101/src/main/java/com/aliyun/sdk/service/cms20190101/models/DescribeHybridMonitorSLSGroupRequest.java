@@ -101,7 +101,7 @@ public class DescribeHybridMonitorSLSGroupRequest extends Request {
         } 
 
         /**
-         * <p>The keyword that is used to search for Logstore groups.</p>
+         * <p>The search keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>Logstore</p>
@@ -114,7 +114,7 @@ public class DescribeHybridMonitorSLSGroupRequest extends Request {
 
         /**
          * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

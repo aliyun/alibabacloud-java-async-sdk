@@ -134,7 +134,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>3607****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -155,9 +155,12 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
         /**
          * <p>The logical operator used between conditional expressions that are used to match instances. Valid values:</p>
          * <ul>
-         * <li>all</li>
-         * <li>and</li>
-         * <li>or</li>
+         * <li><p>all</p>
+         * </li>
+         * <li><p>and</p>
+         * </li>
+         * <li><p>or</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +177,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test1</p>
+         * <p>Process_Java</p>
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
@@ -280,14 +283,18 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
              * </li>
              * <li><p>{Resource type}: the type of the resource that triggers the alert. Valid values:</p>
              * <ul>
-             * <li><strong>queues</strong></li>
-             * <li><strong>topics</strong></li>
+             * <li><p><strong>queues</strong></p>
+             * </li>
+             * <li><p><strong>topics</strong></p>
+             * </li>
              * </ul>
              * </li>
              * <li><p>{Resource name}: the resource name.</p>
              * <ul>
-             * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
-             * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
+             * <li><p>If the resource type is <strong>queues</strong>, the resource name is the queue name.</p>
+             * </li>
+             * <li><p>If the resource type is <strong>topics</strong>, the resource name is the topic name.</p>
+             * </li>
              * </ul>
              * </li>
              * </ul>
@@ -326,9 +333,12 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             /**
              * <p>The alert level. Valid values:</p>
              * <ul>
-             * <li>INFO</li>
-             * <li>WARN</li>
-             * <li>CRITICAL</li>
+             * <li><p>INFO</p>
+             * </li>
+             * <li><p>WARN</p>
+             * </li>
+             * <li><p>CRITICAL</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -510,17 +520,28 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             /**
              * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
              * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-             * <li>GreaterThanThreshold: greater than the threshold</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-             * <li>LessThanThreshold: less than the threshold</li>
-             * <li>NotEqualToThreshold: not equal to the threshold</li>
-             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-             * <li>LessThanLastPeriod: less than the metric value in the previous monitoring cycle</li>
+             * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+             * </li>
+             * <li><p>GreaterThanThreshold: greater than the threshold</p>
+             * </li>
+             * <li><p>LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+             * </li>
+             * <li><p>LessThanThreshold: less than the threshold</p>
+             * </li>
+             * <li><p>NotEqualToThreshold: not equal to the threshold</p>
+             * </li>
+             * <li><p>GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+             * </li>
+             * <li><p>LessThanYesterday: less than the metric value at the same time yesterday</p>
+             * </li>
+             * <li><p>GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+             * </li>
+             * <li><p>LessThanLastWeek: less than the metric value at the same time last week</p>
+             * </li>
+             * <li><p>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+             * </li>
+             * <li><p>LessThanLastPeriod: less than the metric value in the previous monitoring cycle</p>
+             * </li>
              * </ul>
              * <p>Valid values of N: 1 to 3.</p>
              * <p>This parameter is required.</p>
@@ -538,7 +559,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
              * <p>Valid values of N: 1 to 3.</p>
              * 
              * <strong>example:</strong>
-             * <p>00:00-23:59</p>
+             * <p>07:00-22:59</p>
              */
             public Builder effectiveInterval(String effectiveInterval) {
                 this.effectiveInterval = effectiveInterval;
@@ -548,9 +569,12 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             /**
              * <p>The alert level. Valid values:</p>
              * <ul>
-             * <li>critical (default)</li>
-             * <li>warn</li>
-             * <li>info</li>
+             * <li><p>critical (default)</p>
+             * </li>
+             * <li><p>warn</p>
+             * </li>
+             * <li><p>info</p>
+             * </li>
              * </ul>
              * <p>Valid values of N: 1 to 3.</p>
              * <p>This parameter is required.</p>
@@ -567,7 +591,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
              * <p>This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
-             * <p>00:00-23:59</p>
+             * <p>00:00-05:30</p>
              */
             public Builder noEffectiveInterval(String noEffectiveInterval) {
                 this.noEffectiveInterval = noEffectiveInterval;
@@ -578,7 +602,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
              * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
              * <p>Valid values of N: 1 to 3.</p>
              * <blockquote>
-             * <p> Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.</p>
+             * <p>Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -593,7 +617,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
              * <p>The statistical aggregation method that is used to calculate the metric values.</p>
              * <p>Valid values of N: 1 to 3.</p>
              * <blockquote>
-             * <p> Set the value to Average.</p>
+             * <p>Set the value to Average.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -630,7 +654,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
              * <p>The number of times for which the threshold can be consecutively exceeded. Default value: 3.</p>
              * <p>Valid values of N: 1 to 3.</p>
              * <blockquote>
-             * <p> A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+             * <p>A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -647,7 +671,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
              * <p>Valid values of N: 1 to 3.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
+             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;
@@ -729,12 +753,18 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             /**
              * <p>The matching condition. Valid values:</p>
              * <ul>
-             * <li>all (default value): matches all</li>
-             * <li>startWith: starts with a prefix</li>
-             * <li>endWith: ends with a suffix</li>
-             * <li>contains: contains</li>
-             * <li>notContains: does not contain</li>
-             * <li>equals: equals</li>
+             * <li><p>all (default value): matches all</p>
+             * </li>
+             * <li><p>startWith: starts with a prefix</p>
+             * </li>
+             * <li><p>endWith: ends with a suffix</p>
+             * </li>
+             * <li><p>contains: contains</p>
+             * </li>
+             * <li><p>notContains: does not contain</p>
+             * </li>
+             * <li><p>equals: equals</p>
+             * </li>
              * </ul>
              * <p>Valid values of N: 1 to 3.</p>
              * 

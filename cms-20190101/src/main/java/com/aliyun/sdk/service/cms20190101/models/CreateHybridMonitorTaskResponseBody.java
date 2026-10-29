@@ -106,9 +106,9 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>yamlConfigFail</p>
@@ -142,10 +142,10 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the monitoring task.</p>
+         * <p>The monitoring task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36****</p>

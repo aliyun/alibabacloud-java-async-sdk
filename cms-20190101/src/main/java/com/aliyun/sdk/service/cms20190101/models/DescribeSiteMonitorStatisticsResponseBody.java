@@ -106,9 +106,9 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The responses code.</p>
+         * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The value 200 indicates that the call is successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics.</p>
+         * <p>The statistical result.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -134,7 +134,7 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
          * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Succcessful</p>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3AD2724D-E317-4BFB-B422-D6691D071BE1</p>
@@ -153,10 +153,12 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The call is successful.</p>
+         * </li>
+         * <li><p>false: The call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

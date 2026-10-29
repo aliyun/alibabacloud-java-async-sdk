@@ -83,6 +83,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceType")
+    @Deprecated
     private String sourceType;
 
     @com.aliyun.core.annotation.Query
@@ -309,16 +310,14 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * <p>The end timestamp of the alert logs to be queried.</p>
+         * <p>The end timestamp for querying alert history.</p>
          * <p>Unit: milliseconds.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>You can query only the alert logs within the last year.</p>
-         * </li>
-         * <li><p>The interval between the start time (<code>StartTime</code>) and end time (<code>EndTime</code>) must be less than or equal to 15 days.</p>
-         * </li>
+         * <li>You can query only the alert history within the last year.</li>
+         * <li>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1609989009694</p>
@@ -330,10 +329,10 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * <p>The type of the alert event. Valid values:</p>
+         * <p>The alert type. Valid values:</p>
          * <ul>
          * <li>TRIGGERED: The alert is triggered.</li>
-         * <li>RESOLVED: The alert is resolved.</li>
+         * <li>RESOLVED: The alert recovers.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -346,13 +345,13 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * <p>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</p>
+         * <p>Aggregates data by spatial dimension, equivalent to Group By in SQL. Valid values:</p>
          * <ul>
-         * <li><code>product</code>: aggregates data by cloud service.</li>
-         * <li><code>level</code>: aggregates data by alert level.</li>
-         * <li><code>groupId</code>: aggregates data by application group.</li>
-         * <li><code>contactGroup</code>: aggregates data by alert contact group.</li>
-         * <li><code>product,metricName</code>: aggregates data both by cloud service and by metric.</li>
+         * <li><code>product</code>: aggregates by Alibaba Cloud service.</li>
+         * <li><code>level</code>: aggregates by alert level.</li>
+         * <li><code>groupId</code>: aggregates by application group.</li>
+         * <li><code>contactGroup</code>: aggregates by alert contact group.</li>
+         * <li><code>product,metricName</code>: aggregates by Alibaba Cloud service and metric.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -365,7 +364,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The application group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7301****</p>
@@ -377,7 +376,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * <p>The statistical period of alert logs. Unit: minutes.</p>
+         * <p>The period for obtaining logs. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>360</p>
@@ -389,11 +388,15 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * <p>The severity level and notification methods of the alert. Valid values:</p>
-         * <ul>
-         * <li>P4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
-         * <li>OK: No alert is generated.</li>
-         * </ul>
+         * <p>The alert level and notification method. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- P2: phone call + text message + email + DingTalk chatbot.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- P3: text message + email + DingTalk chatbot.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- P4: email + DingTalk chatbot.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- OK: no alert.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;- P4: email + DingTalk chatbot.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;- OK: no alert.</p>
+         * <p>&lt;props=&quot;partner&quot;&gt;- P4: email + DingTalk chatbot.</p>
+         * <p>&lt;props=&quot;partner&quot;&gt;- OK: no alert.</p>
          * 
          * <strong>example:</strong>
          * <p>P4</p>
@@ -407,7 +410,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         /**
          * <p>The metric name.</p>
          * <blockquote>
-         * <p> For more information about the metrics of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>For information about the metrics of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -422,7 +425,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         /**
          * <p>The namespace of the Alibaba Cloud service.</p>
          * <blockquote>
-         * <p> For more information about the namespaces of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>For information about the namespaces of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -473,8 +476,8 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * <p>The ID of the alert rule.</p>
-         * <p>For more information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <p>The alert rule ID.</p>
+         * <p>For information about how to obtain the alert rule ID, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ae06917_75a8c43178ab66****</p>
@@ -486,7 +489,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert rule.</p>
+         * <p>The alert rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>test123</p>
@@ -498,7 +501,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * <p>The keyword that is used to query alert logs.</p>
+         * <p>The keyword for searching alert history.</p>
          * 
          * <strong>example:</strong>
          * <p>alert</p>
@@ -512,13 +515,15 @@ public class DescribeAlertLogHistogramRequest extends Request {
         /**
          * <p>The alert status. Valid values:</p>
          * <ul>
-         * <li>0: The alert is triggered or cleared.</li>
-         * <li>1: The alert is ineffective.</li>
-         * <li>2: The alert is muted and not triggered in a specified period.</li>
+         * <li>0: An alert is triggered or the alert recovers to Normal.</li>
+         * <li>1: The alert is not in the effective period.</li>
+         * <li>2: The mute for epoch.</li>
          * <li>3: The host is restarting.</li>
-         * <li>4: No alert notification is sent.</li>
+         * <li>4: Alerts are not send.</li>
          * </ul>
-         * <p>If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;When the alert status is 0, if the value of Level is P2, P3, or P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
+         * &lt;props=&quot;intl&quot;&gt;When the alert status is 0, if the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
+         * &lt;props=&quot;partner&quot;&gt;When the alert status is 0, if the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -530,7 +535,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -542,16 +547,14 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * <p>The start timestamp of the alert logs to be queried.</p>
+         * <p>The start timestamp for querying alert history.</p>
          * <p>Unit: milliseconds.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>You can query only the alert logs within the last year.</p>
-         * </li>
-         * <li><p>The interval between the start time (<code>StartTime</code>) and end time (<code>EndTime</code>) must be less than or equal to 15 days.</p>
-         * </li>
+         * <li>You can query only the alert history within the last year.</li>
+         * <li>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1609988009694</p>

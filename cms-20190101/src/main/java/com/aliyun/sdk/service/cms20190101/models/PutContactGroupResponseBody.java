@@ -95,7 +95,7 @@ public class PutContactGroupResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class PutContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>Illegal parameters.</p>
@@ -129,10 +129,12 @@ public class PutContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

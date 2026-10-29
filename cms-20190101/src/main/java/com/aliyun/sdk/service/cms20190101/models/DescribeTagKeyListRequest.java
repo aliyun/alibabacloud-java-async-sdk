@@ -73,8 +73,7 @@ public class DescribeTagKeyListRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -87,7 +86,6 @@ public class DescribeTagKeyListRequest extends Request {
 
         /**
          * <p>The number of entries per page.</p>
-         * <p>Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

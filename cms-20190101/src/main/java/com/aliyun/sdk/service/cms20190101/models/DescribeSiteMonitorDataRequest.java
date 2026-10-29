@@ -161,8 +161,10 @@ public class DescribeSiteMonitorDataRequest extends Request {
         /**
          * <p>The end of the time range to query. The following formats are supported:</p>
          * <ul>
-         * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</li>
-         * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</li>
+         * <li><p>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</p>
+         * </li>
+         * <li><p>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,8 +191,10 @@ public class DescribeSiteMonitorDataRequest extends Request {
         /**
          * <p>The metric name. Valid values:</p>
          * <ul>
-         * <li>Availability</li>
-         * <li>ResponseTime</li>
+         * <li><p>Availability</p>
+         * </li>
+         * <li><p>ResponseTime</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -218,7 +222,7 @@ public class DescribeSiteMonitorDataRequest extends Request {
         /**
          * <p>The statistical period. The value is an integral multiple of 60. Unit: seconds.</p>
          * <blockquote>
-         * <p> The default value equals the minimum interval at which detection requests are sent to the monitored address.</p>
+         * <p>The default value equals the minimum interval at which detection requests are sent to the monitored address.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -233,8 +237,10 @@ public class DescribeSiteMonitorDataRequest extends Request {
         /**
          * <p>The start of the time range to query. The following formats are supported:</p>
          * <ul>
-         * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</li>
-         * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</li>
+         * <li><p>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</p>
+         * </li>
+         * <li><p>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,8 +268,10 @@ public class DescribeSiteMonitorDataRequest extends Request {
         /**
          * <p>The type of the monitored object whose monitoring data is to be queried. Valid values:</p>
          * <ul>
-         * <li>metric</li>
-         * <li>event</li>
+         * <li><p>metric</p>
+         * </li>
+         * <li><p>event</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

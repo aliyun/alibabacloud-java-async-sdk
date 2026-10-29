@@ -60,11 +60,8 @@ public class DeleteEventRulesRequest extends Request {
         } 
 
         /**
-         * <p>The name of the alert rule. Valid values of N: 1 to 20.</p>
+         * <p>The names of the rules to delete.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rule1</p>
          */
         public Builder ruleNames(java.util.List<String> ruleNames) {
             this.putQueryParameter("RuleNames", ruleNames);

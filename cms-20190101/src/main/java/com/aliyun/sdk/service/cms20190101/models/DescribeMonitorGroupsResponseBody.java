@@ -145,9 +145,9 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
+         * <p>The value 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified resource is not found.</p>
@@ -170,7 +170,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -181,7 +181,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -203,7 +203,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources that are associated with the application group.</p>
+         * Resources.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -211,10 +211,12 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,7 +228,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -282,10 +284,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the alert contact group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CloudMonitor</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -406,10 +405,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>tagKey1</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -417,10 +413,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>tagValue1</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -914,10 +907,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL of the ACK cluster from which the application group is synchronized.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://aliyun.com">https://aliyun.com</a></p>
+             * BindUrl.
              */
             public Builder bindUrl(String bindUrl) {
                 this.bindUrl = bindUrl;
@@ -925,7 +915,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert contact groups.</p>
+             * ContactGroups.
              */
             public Builder contactGroups(ContactGroups contactGroups) {
                 this.contactGroups = contactGroups;
@@ -933,10 +923,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tag rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6b882d9a-5117-42e2-9d0c-4749a0c6****</p>
+             * DynamicTagRuleId.
              */
             public Builder dynamicTagRuleId(String dynamicTagRuleId) {
                 this.dynamicTagRuleId = dynamicTagRuleId;
@@ -944,10 +931,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the application group was created. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1603181891000</p>
+             * GmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -955,10 +939,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the application group was modified. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1603181891000</p>
+             * GmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -966,10 +947,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key that is created for the application group by using the tag rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>GroupKey1</p>
+             * GroupFounderTagKey.
              */
             public Builder groupFounderTagKey(String groupFounderTagKey) {
                 this.groupFounderTagKey = groupFounderTagKey;
@@ -977,10 +955,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value that is created for the application group by using the tag rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>GroupValue1</p>
+             * GroupFounderTagValue.
              */
             public Builder groupFounderTagValue(String groupFounderTagValue) {
                 this.groupFounderTagValue = groupFounderTagValue;
@@ -988,10 +963,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12345</p>
+             * GroupId.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -999,10 +971,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test123</p>
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1010,10 +979,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-aek2hopjh*******</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1021,10 +987,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>49****</p>
+             * ServiceId.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -1032,7 +995,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are attached to the application group.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1040,7 +1003,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the template.</p>
+             * TemplateIds.
              */
             public Builder templateIds(TemplateIds templateIds) {
                 this.templateIds = templateIds;
@@ -1056,15 +1019,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the application group. Valid values:</p>
-             * <ul>
-             * <li>custom: a self-managed application group</li>
-             * <li>ehpc_cluster: an application group that is synchronized from an E-HPC cluster</li>
-             * <li>kubernetes: an application group that is synchronized from an ACK cluster</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>custom</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

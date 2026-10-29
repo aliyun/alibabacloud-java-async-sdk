@@ -145,7 +145,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -164,7 +164,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Specified parameter PageSize is not valid.</p>
@@ -186,7 +186,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -208,10 +208,12 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +225,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -292,7 +294,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The metrics.</p>
+             * <p>The list of metrics.</p>
              */
             public Builder list(java.util.List<String> list) {
                 this.list = list;
@@ -371,7 +373,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The metrics for the Alibaba Cloud service.</p>
+             * <p>The list of metrics for the Alibaba Cloud service.</p>
              */
             public Builder metricList(java.util.List<MetricList> metricList) {
                 this.metricList = metricList;
@@ -379,7 +381,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace for the Alibaba Cloud service.</p>
+             * <p>The data namespace of the Alibaba Cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>acs_ecs_dashboard</p>
@@ -462,7 +464,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The namespaces.</p>
+             * <p>The list of namespaces.</p>
              */
             public Builder namespaceList(java.util.List<NamespaceList> namespaceList) {
                 this.namespaceList = namespaceList;
@@ -481,15 +483,18 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</p>
+             * <p>The configuration file for the Alibaba Cloud service that is connected to Hybrid Cloud Monitoring.</p>
              * <ul>
-             * <li>namespace: the namespace of the Alibaba Cloud service.</li>
-             * <li>metric_list: the metrics of the Alibaba Cloud service.</li>
-             * <li>dimension: the resources of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring. If you do not specify a dimension, all resources of the Alibaba Cloud service are monitored.</li>
+             * <li><p>namespace: the namespace of the Alibaba Cloud service.</p>
+             * </li>
+             * <li><p>metric_list: the metrics of the Alibaba Cloud service.</p>
+             * </li>
+             * <li><p>dimension: the resources of the Alibaba Cloud service that can be queried in Hybrid Cloud Monitoring. If this parameter is empty, all resources are monitored.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>products:- namespace: acs_ecs_dashboard metric_info: - metric_list: - cpu_total dimension: &quot;&quot;</p>
+             * <p>products:- namespace: acs_ecs_dashboard metric_info: - metric_list: - cpu_total dimension: \&quot;\&quot;</p>
              */
             public Builder YAMLConfig(String YAMLConfig) {
                 this.YAMLConfig = YAMLConfig;
@@ -582,9 +587,9 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The region where the metric data is stored.</p>
+             * <p>The region where the monitoring data is stored.</p>
              * <blockquote>
-             * <p> This parameter is returned if you select <code>m_prom_user</code> for <code>NamespaceType</code> when you create a namespace.</p>
+             * <p>This parameter is returned if you set <code>NamespaceType</code> to <code>m_prom_user</code> when you create the namespace.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -596,7 +601,13 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * PrometheusInstanceId.
+             * <p>The Prometheus instance where the monitoring data is stored.</p>
+             * <blockquote>
+             * <p>This parameter is returned if you set <code>NamespaceType</code> to <code>aliyun_prometheus</code> when you create the namespace.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>rw-57******************7f</p>
              */
             public Builder prometheusInstanceId(String prometheusInstanceId) {
                 this.prometheusInstanceId = prometheusInstanceId;
@@ -604,9 +615,9 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The project where the metric data is located.</p>
+             * <p>The Simple Log Service (SLS) project where the monitoring data is stored.</p>
              * <blockquote>
-             * <p> This parameter is returned if you select <code>m_prom_user</code> for <code>NamespaceType</code> when you create a namespace.</p>
+             * <p>This parameter is returned if you set <code>NamespaceType</code> to <code>m_prom_user</code> when you create the namespace.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -618,14 +629,20 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data retention period. Valid values:</p>
+             * <p>The data storage duration. Valid values:</p>
              * <ul>
-             * <li>cms.s1.large (Retention Period 15 Days)</li>
-             * <li>cms.s1.xlarge (Retention Period 32 Days)</li>
-             * <li>cms.s1.2xlarge (Retention Period 63 Days)</li>
-             * <li>cms.s1.3xlarge (Retention Period 93 Days)</li>
-             * <li>cms.s1.6xlarge (Retention Period 185 Days)</li>
-             * <li>cms.s1.12xlarge (Retention Period 367 Days)</li>
+             * <li><p>cms.s1.large: 15 days.</p>
+             * </li>
+             * <li><p>cms.s1.xlarge: 32 days.</p>
+             * </li>
+             * <li><p>cms.s1.2xlarge: 63 days.</p>
+             * </li>
+             * <li><p>cms.s1.3xlarge: 93 days.</p>
+             * </li>
+             * <li><p>cms.s1.6xlarge: 185 days.</p>
+             * </li>
+             * <li><p>cms.s1.12xlarge: 376 days.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -800,7 +817,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configuration details of metric import tasks for Alibaba Cloud services.</p>
+             * <p>The configuration details of data import tasks for Alibaba Cloud services.</p>
              */
             public Builder aliyunProductMetricList(java.util.List<AliyunProductMetricList> aliyunProductMetricList) {
                 this.aliyunProductMetricList = aliyunProductMetricList;
@@ -808,7 +825,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that was generated when the namespace was created.</p>
+             * <p>The timestamp when the namespace was created.</p>
              * <p>Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
@@ -831,7 +848,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the data retention period.</p>
+             * <p>The details of the data storage duration.</p>
              */
             public Builder detail(Detail detail) {
                 this.detail = detail;
@@ -839,7 +856,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace.</p>
+             * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3****</p>
@@ -852,8 +869,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the namespace is deleted. Valid values:</p>
              * <ul>
-             * <li>0: The namespace is not deleted.</li>
-             * <li>1: The namespace is deleted.</li>
+             * <li><p>0: The namespace is not deleted.</p>
+             * </li>
+             * <li><p>1: The namespace is deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -865,7 +884,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that was generated when the namespace was last modified.</p>
+             * <p>The timestamp when the namespace was last modified. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652682744000</p>
@@ -887,14 +906,18 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage scheme of metric data. Valid values:</p>
+             * <p>The storage solution for monitoring data. Valid values:</p>
              * <ul>
-             * <li>m_prom_user: The metric data is stored in Simple Log Service.</li>
-             * <li>m_prom_pool: The metric data is stored in the storage space provided by CloudMonitor.</li>
+             * <li><p>m_prom_user: The monitoring data is stored in SLS.</p>
+             * </li>
+             * <li><p>m_prom_pool: The monitoring data is stored in the storage space provided by Cloud Monitor.</p>
+             * </li>
+             * <li><p>aliyun_prometheus: The monitoring data is stored in a Prometheus instance.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>m_prom_user</p>
+             * <p>aliyun_prometheus</p>
              */
             public Builder namespaceType(String namespaceType) {
                 this.namespaceType = namespaceType;
@@ -902,7 +925,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of metric import tasks for third-party services.</p>
+             * <p>The number of data import tasks for non-Alibaba Cloud services.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

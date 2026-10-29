@@ -146,6 +146,9 @@ public class PutEventRuleRequest extends Request {
 
         /**
          * <p>The description of the event-triggered alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Event alert test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -154,6 +157,7 @@ public class PutEventRuleRequest extends Request {
         }
 
         /**
+         * <p>The pattern of the event-triggered alert rule.</p>
          * <p>This parameter is required.</p>
          */
         public Builder eventPattern(java.util.List<EventPattern> eventPattern) {
@@ -165,8 +169,8 @@ public class PutEventRuleRequest extends Request {
         /**
          * <p>The type of the event-triggered alert rule. Valid values:</p>
          * <ul>
-         * <li>SYSTEM: system event-triggered alert rule</li>
-         * <li>CUSTOM: custom event-triggered alert rule</li>
+         * <li>SYSTEM: system event.</li>
+         * <li>CUSTOM: custom event.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,7 +208,7 @@ public class PutEventRuleRequest extends Request {
         }
 
         /**
-         * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds.</p>
+         * <p>The mute period. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -218,8 +222,8 @@ public class PutEventRuleRequest extends Request {
         /**
          * <p>The status of the event-triggered alert rule. Valid values:</p>
          * <ul>
-         * <li>ENABLED: enabled</li>
-         * <li>DISABLED: disabled</li>
+         * <li>ENABLED: Enabled.</li>
+         * <li>DISABLED: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -357,7 +361,7 @@ public class PutEventRuleRequest extends Request {
             } 
 
             /**
-             * <p>The keyword that is used to filter events. If the content of an event contains the specified keyword, an alert is automatically triggered.</p>
+             * <p>The keyword for event filtering. When the event content contains this keyword, an alert is automatically triggered.</p>
              * 
              * <strong>example:</strong>
              * <p>Stopping</p>
@@ -368,7 +372,20 @@ public class PutEventRuleRequest extends Request {
             }
 
             /**
-             * EventTypeList.
+             * <p>The type of the event-triggered alert rule. Valid values of N: 1 to 50. Valid values:</p>
+             * <ul>
+             * <li><p>StatusNotification: fault notification.</p>
+             * </li>
+             * <li><p>Exception: exception.</p>
+             * </li>
+             * <li><p>Maintenance: O&amp;M.</p>
+             * </li>
+             * <li><p>\*: unlimited.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Exception</p>
              */
             public Builder eventTypeList(java.util.List<String> eventTypeList) {
                 this.eventTypeList = eventTypeList;
@@ -376,7 +393,20 @@ public class PutEventRuleRequest extends Request {
             }
 
             /**
-             * LevelList.
+             * <p>The level of the event-triggered alert rule. Valid values of N: 1 to 50. Valid values:</p>
+             * <ul>
+             * <li><p>CRITICAL: critical.</p>
+             * </li>
+             * <li><p>WARN: warning.</p>
+             * </li>
+             * <li><p>INFO: information.</p>
+             * </li>
+             * <li><p>\*: all levels.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CRITICAL</p>
              */
             public Builder levelList(java.util.List<String> levelList) {
                 this.levelList = levelList;
@@ -384,7 +414,10 @@ public class PutEventRuleRequest extends Request {
             }
 
             /**
-             * NameList.
+             * <p>The name of the event-triggered alert rule. Valid values of N: 1 to 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Agent_Status_Stopped</p>
              */
             public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
@@ -392,9 +425,9 @@ public class PutEventRuleRequest extends Request {
             }
 
             /**
-             * <p>The type of the cloud service. Valid values of N: 1 to 50.</p>
+             * <p>The Alibaba Cloud service type. Valid values of N: 1 to 50.</p>
              * <blockquote>
-             * <p> You can call the DescribeSystemEventMetaList operation to query the cloud services that support event-triggered alerts. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
+             * <p>For information about the Alibaba Cloud services supported by event-triggered alert rules, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -407,9 +440,9 @@ public class PutEventRuleRequest extends Request {
             }
 
             /**
-             * <p>The SQL condition that is used to filter events. If the content of an event meets the specified SQL condition, an alert is automatically triggered.</p>
+             * <p>The SQL filter for events. When the event content meets the SQL condition, an alert is automatically triggered.</p>
              * <blockquote>
-             * <p> The syntax of SQL event filtering is consistent with the query syntax of Log Service.</p>
+             * <p>The syntax of the SQL event filter is consistent with the query syntax of Simple Log Service (SLS).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -421,7 +454,10 @@ public class PutEventRuleRequest extends Request {
             }
 
             /**
-             * StatusList.
+             * <p>The status of the event-triggered alert rule. Valid values of N: 1 to 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed</p>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;

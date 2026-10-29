@@ -106,9 +106,9 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the call was successful.</p>
+         * <p>The value 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>786E92D2-AC66-4250-B76F-F1E2FCDDBA1C</p>
@@ -142,10 +142,12 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +159,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the resource for which alerts are triggered.</p>
+         * Targets.
          */
         public Builder targets(Targets targets) {
             this.targets = targets;
@@ -249,16 +251,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
-             * <ul>
-             * <li>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</li>
-             * <li>{userId}: the ID of the Alibaba Cloud account.</li>
-             * <li>{regionId}: the region ID of the message queue or topic.</li>
-             * <li>{Resource type}<code>: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.</code></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</p>
+             * Arn.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -266,10 +259,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource for which alerts are triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -277,10 +267,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
+             * JsonParams.
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -288,15 +275,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the alert. Valid values:</p>
-             * <ul>
-             * <li>INFO: information</li>
-             * <li>WARN: warning</li>
-             * <li>CRITICAL: critical</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</p>
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;

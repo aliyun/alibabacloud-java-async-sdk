@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class InstallMonitoringAgentRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
@@ -31,6 +35,7 @@ public class InstallMonitoringAgentRequest extends Request {
 
     private InstallMonitoringAgentRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.force = builder.force;
         this.installCommand = builder.installCommand;
         this.instanceIds = builder.instanceIds;
@@ -47,6 +52,13 @@ public class InstallMonitoringAgentRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -71,6 +83,7 @@ public class InstallMonitoringAgentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<InstallMonitoringAgentRequest, Builder> {
+        private Boolean dryRun; 
         private Boolean force; 
         private String installCommand; 
         private java.util.List<String> instanceIds; 
@@ -81,16 +94,33 @@ public class InstallMonitoringAgentRequest extends Request {
 
         private Builder(InstallMonitoringAgentRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.force = request.force;
             this.installCommand = request.installCommand;
             this.instanceIds = request.instanceIds;
         } 
 
         /**
-         * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
+         * <p>Specifies whether to perform a dry run on the request. The dry run includes checks on permissions and instance status. Valid values:</p>
          * <ul>
-         * <li>true (default value): yes</li>
-         * <li>false: no</li>
+         * <li><strong>false</strong> (default): Sends a normal request. After the request passes the check, the name and description of the route table are directly modified.</li>
+         * <li><strong>true</strong>: Sends a dry run request. Only checks are performed, and the name and description of the route table are not modified. Check items include whether required parameters are specified and the request format. If the check fails, an error is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to forcibly install the CloudMonitor agent. Valid values:</p>
+         * <ul>
+         * <li>true (default): Forcibly installs the agent.</li>
+         * <li>false: Does not forcibly install the agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,14 +133,17 @@ public class InstallMonitoringAgentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to install the CloudMonitor agent on all ECS instances that belong to the current Alibaba Cloud account. Valid values:</p>
+         * <p>Installs the CloudMonitor agent on all Alibaba Cloud hosts within the current Alibaba Cloud account. Valid values:</p>
          * <ul>
-         * <li><code>onlyInstallNotHasAgent</code>: installs the latest version of the CloudMonitor agent only on ECS instances on which the agent is not installed.</li>
-         * <li><code>onlyUpgradeAgent</code>: upgrades the CloudMonitor agent to the latest version only for ECS instances on which an earlier version of the agent is installed.</li>
-         * <li><code>installAndUpgrade</code>: installs the latest version of the CloudMonitor agent on ECS instances on which the agent is not installed, and upgrades the CloudMonitor agent to the latest version for ECS instances on which an earlier version of the agent is installed.</li>
+         * <li><p>onlyInstallNotHasAgent: Installs the latest version of the agent only on Alibaba Cloud hosts on which the CloudMonitor agent is not installed.</p>
+         * </li>
+         * <li><p>onlyUpgradeAgent: Upgrades the agent only on Alibaba Cloud hosts on which a non-latest version of the CloudMonitor agent is installed.</p>
+         * </li>
+         * <li><p>installAndUpgrade: Installs the latest version of the agent on Alibaba Cloud hosts on which the CloudMonitor agent is not installed, and upgrades the agent on Alibaba Cloud hosts on which a non-latest version of the CloudMonitor agent is installed.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you set the InstallCommand parameter, the <code>InstanceIds</code> parameter does not take effect.</p>
+         * <p>If you specify this parameter, the InstanceIds parameter becomes invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -123,7 +156,14 @@ public class InstallMonitoringAgentRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The ID of the Alibaba Cloud host.</p>
+         * <p>Valid values of N: 1 to 10.</p>
+         * <blockquote>
+         * <p>You must specify either InstallCommand or InstanceIds.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-m5e0k0bexac8tykr****</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

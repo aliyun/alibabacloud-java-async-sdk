@@ -108,7 +108,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
+         * <p> The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The host status information.</p>
+         * NodeStatusList.
          */
         public Builder nodeStatusList(NodeStatusList nodeStatusList) {
             this.nodeStatusList = nodeStatusList;
@@ -340,15 +340,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code returned when the CloudMonitor agent is installed. Valid values:</p>
-             * <ul>
-             * <li>Common.Timeout: The installation timed out.</li>
-             * <li>Common.SLR: The service-linked role for CloudMonitor is unauthorized.</li>
-             * <li>Common.OS: The operating system is not supported.</li>
-             * <li>Assist.Invalid: Cloud Assistant is not running.</li>
-             * <li>Assist.Invoke: An error occurred when the installation program is started.</li>
-             * <li>Assist.Execute: An error occurred when the installation program is running.</li>
-             * </ul>
+             * AgentInstallErrorCode.
              */
             public Builder agentInstallErrorCode(String agentInstallErrorCode) {
                 this.agentInstallErrorCode = agentInstallErrorCode;
@@ -356,14 +348,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the CloudMonitor agent is automatically installed. Valid values:</p>
-             * <ul>
-             * <li>true: The CloudMonitor agent is automatically installed.</li>
-             * <li>false: The CloudMonitor agent is not automatically installed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * AutoInstall.
              */
             public Builder autoInstall(Boolean autoInstall) {
                 this.autoInstall = autoInstall;
@@ -371,10 +356,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-hp3dunahluwajv6f****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -398,14 +380,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the SysAK monitoring feature is enabled.`` Valid values:</p>
-             * <ul>
-             * <li><code>true</code>: The SysAK monitoring feature is enabled.</li>
-             * <li><code>false</code>: the SysAK monitoring feature is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;sysak&quot;:true}</p>
+             * OsMonitorConfig.
              */
             public Builder osMonitorConfig(String osMonitorConfig) {
                 this.osMonitorConfig = osMonitorConfig;
@@ -413,18 +388,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error status of SysOM. Valid values:</p>
-             * <ul>
-             * <li><code>install_fail</code>: SysOM fails to be installed or an unknown error occurs.</li>
-             * <li><code>install_assist_invalid</code>: SysOM fails to be installed because the status of Cloud Assistant is invalid.</li>
-             * <li><code>install_assist_command_fail</code>: SysOM fails to be installed because the installation command fails to run.</li>
-             * <li><code>uninstall_fail</code>: SysOM fails to be uninstalled or an unknown error occurs.</li>
-             * <li><code>uninstall_assist_invalid</code>: SysOM fails to be uninstalled because the status of Cloud Assistant is invalid.</li>
-             * <li><code>uninstall_assist_command_fail</code>: SysOM fails to be uninstalled because the uninstallation command fails to run.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>install_fail</p>
+             * OsMonitorErrorCode.
              */
             public Builder osMonitorErrorCode(String osMonitorErrorCode) {
                 this.osMonitorErrorCode = osMonitorErrorCode;
@@ -432,17 +396,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the execution error. Valid values:</p>
-             * <ul>
-             * <li><code>Command.ErrorCode.Fail.Downlaod.REGIN_ID</code>: Failed to obtain the region ID.</li>
-             * <li><code>Command.ErrorCode.Fail.Downlaod.SYSAK</code>: Failed to download the .rpm package of System Analyse Kit (SysAK).</li>
-             * <li><code>Command.ErrorCode.Fail.Downlaod.CMON_FILE</code>: Failed to download the CMON file.</li>
-             * <li><code>Command.ErrorCode.Fail.Downlaod.BTF</code>: Failed to start SysAK because the BTF file is not found.</li>
-             * <li><code>Command.ErrorCode.Fail.Start.SYSAK</code>: Failed to start SysAK due to an unknown error.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Command.ErrorCode.Fail.Downlaod.REGIN_ID</p>
+             * OsMonitorErrorDetail.
              */
             public Builder osMonitorErrorDetail(String osMonitorErrorDetail) {
                 this.osMonitorErrorDetail = osMonitorErrorDetail;
@@ -450,16 +404,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of SysOM. Valid values:</p>
-             * <ul>
-             * <li>installing: SysOM is being installed.</li>
-             * <li>running: SysOM is running.</li>
-             * <li>stopped: SysOM is stopped.</li>
-             * <li>uninstalling: SysOM is being uninstalled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>running</p>
+             * OsMonitorStatus.
              */
             public Builder osMonitorStatus(String osMonitorStatus) {
                 this.osMonitorStatus = osMonitorStatus;
@@ -467,10 +412,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SysOM version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.3.0-12</p>
+             * OsMonitorVersion.
              */
             public Builder osMonitorVersion(String osMonitorVersion) {
                 this.osMonitorVersion = osMonitorVersion;
@@ -478,18 +420,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the CloudMonitor agent. Valid values:</p>
-             * <ul>
-             * <li>running: The CloudMonitor agent is running.</li>
-             * <li>stopped: The CloudMonitor agent is stopped.</li>
-             * <li>installing: The CloudMonitor agent is being installed.</li>
-             * <li>install_faild: The CloudMonitor agent fails to be installed.</li>
-             * <li>abnormal: The CloudMonitor agent is not properly installed.</li>
-             * <li>not_installed: The CloudMonitor agent is not installed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>running</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -204,7 +204,7 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         } 
 
         /**
-         * <p>The category of the cloud service. For example, ApsaraDB for Redis supports the standard architecture, the cluster architecture, and the read/write splitting architecture. In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+         * <p>The category of the Alibaba Cloud service. For example, Redis has categories such as <code>kvstore_standard</code> (Standard Edition), <code>kvstore_sharding</code> (Cluster Edition), and <code>kvstore_splitrw</code> (Read/Write Splitting Edition).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,14 +217,14 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The time range within which the blacklist policy is effective. Take note of the following information:</p>
+         * <p>The effective period of the alert blacklist policy. The implications of the settings for this parameter are as follows:</p>
          * <ul>
-         * <li><p>If you do not configure this parameter, the blacklist policy is permanently effective.</p>
+         * <li><p>If you do not configure the settings for this parameter, the alert blacklist policy is permanently valid.</p>
          * </li>
-         * <li><p>If you configure this parameter, the blacklist policy is effective only within the specified time range. Examples:</p>
+         * <li><p>If you configure the settings for this parameter, the blacklist policy is valid only within the specified time range. The following examples show two formats for this parameter:</p>
          * <ul>
-         * <li><code>03:00-04:59</code>: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.</li>
-         * <li><code>03:00-04:59 UTC+0700</code>: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.</li>
+         * <li><code>03:00-04:59</code>: The alert blacklist policy is valid from 03:00 to 05:00 (excluding 05:00) local time.</li>
+         * <li><code>03:00-04:59 UTC+0700</code>: The alert blacklist policy is valid from 03:00 to 05:00 (excluding 05:00) UTC+7.</li>
          * </ul>
          * </li>
          * </ul>
@@ -239,7 +239,7 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The timestamp when the blacklist policy expires.</p>
+         * <p>The end timestamp of the effective period for the alert blacklist policy.</p>
          * <p>Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +252,7 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The timestamp when the blacklist policy starts to take effect.</p>
+         * <p>The start timestamp of the effective period for the alert blacklist policy.</p>
          * <p>Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -265,8 +265,8 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the blacklist policy.</p>
-         * <p>For information about how to obtain the ID of a blacklist policy, see <a href="https://help.aliyun.com/document_detail/457257.html">DescribeMetricRuleBlackList</a>.</p>
+         * <p>The ID of the alert blacklist policy.</p>
+         * <p>For more information about how to obtain the ID of an alert blacklist policy, see <a href="https://help.aliyun.com/document_detail/457257.html">DescribeMetricRuleBlackList</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,7 +279,7 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances that belong to the specified cloud service.</p>
+         * <p>The list of instances of the specified Alibaba Cloud service in the alert blacklist policy.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instances(java.util.List<String> instances) {
@@ -289,10 +289,12 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The metrics of the instance.</p>
+         * <p>The monitoring metrics of the instances.</p>
          * <ul>
-         * <li>If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.</li>
-         * <li>If you configure this parameter, the blacklist policy applies only to the current metric.</li>
+         * <li><p>If you do not configure the settings for this parameter, the alert blacklist policy applies to all monitoring metrics of the specified Alibaba Cloud service.</p>
+         * </li>
+         * <li><p>If you configure the settings for this parameter, the blacklist policy applies only to the current monitoring metrics.</p>
+         * </li>
          * </ul>
          */
         public Builder metrics(java.util.List<Metrics> metrics) {
@@ -302,7 +304,7 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The name of the blacklist policy.</p>
+         * <p>The name of the alert blacklist policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,8 +317,8 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The namespace of the cloud service.</p>
-         * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The data namespace of the cloud service.</p>
+         * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -329,10 +331,13 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The effective scope of the blacklist policy. Valid values:</p>
+         * <p>The effective scope of the alert blacklist policy. Valid values:</p>
          * <ul>
-         * <li>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</li>
-         * <li>GROUP (default): The blacklist policy takes effect only within the specified application group. For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</li>
+         * <li><p>USER: The alert blacklist policy takes effect only within the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>GROUP (default): The alert blacklist policy takes effect within the specified application group. You must specify an application group.
+         * For more information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -345,9 +350,9 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the application groups.</p>
+         * <p>The list of application group IDs.</p>
          * <blockquote>
-         * <p> This parameter is required only when <code>ScopeType</code> is set to <code>GROUP</code>.</p>
+         * <p>This parameter is required only when <code>ScopeType</code> is set to <code>GROUP</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -420,7 +425,7 @@ public class ModifyMetricRuleBlackListRequest extends Request {
             } 
 
             /**
-             * <p>The name of the metric.</p>
+             * <p>The name of the monitoring metrics.</p>
              * <p>Valid values of N: 1 to 10.</p>
              * <p>This parameter is required.</p>
              * 
@@ -433,7 +438,7 @@ public class ModifyMetricRuleBlackListRequest extends Request {
             }
 
             /**
-             * <p>The extended dimension of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.</p>
+             * <p>The extended dimension information of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> indicates that the blacklist policy applies to all C drives of the ECS instance of the Alibaba Cloud service.</p>
              * <p>Valid values of N: 1 to 10.</p>
              * 
              * <strong>example:</strong>

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PutMonitorGroupDynamicRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
@@ -33,6 +37,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
 
     private PutMonitorGroupDynamicRuleRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.groupId = builder.groupId;
         this.groupRules = builder.groupRules;
         this.isAsync = builder.isAsync;
@@ -49,6 +54,13 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -73,6 +85,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PutMonitorGroupDynamicRuleRequest, Builder> {
+        private Boolean dryRun; 
         private Long groupId; 
         private java.util.List<GroupRules> groupRules; 
         private Boolean isAsync; 
@@ -83,10 +96,20 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
 
         private Builder(PutMonitorGroupDynamicRuleRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.groupId = request.groupId;
             this.groupRules = request.groupRules;
             this.isAsync = request.isAsync;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * <p>The ID of the application group.</p>
@@ -114,8 +137,10 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
         /**
          * <p>The mode for creating the alert rule. Valid values:</p>
          * <ul>
-         * <li>true: creates asynchronously</li>
-         * <li>false (default): creates synchronously</li>
+         * <li><p>true: creates asynchronously</p>
+         * </li>
+         * <li><p>false (default): creates synchronously</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,10 +230,14 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             /**
              * <p>The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:</p>
              * <ul>
-             * <li>contains: contains</li>
-             * <li>notContains: does not contain</li>
-             * <li>startWith: starts with a prefix</li>
-             * <li>endWith: ends with a suffix</li>
+             * <li><p>contains: contains</p>
+             * </li>
+             * <li><p>notContains: does not contain</p>
+             * </li>
+             * <li><p>startWith: starts with a prefix</p>
+             * </li>
+             * <li><p>endWith: ends with a suffix</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -323,9 +352,12 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             /**
              * <p>The cloud service to which the alert rule is applied. Valid values of N: 1 to 3. Valid values:</p>
              * <ul>
-             * <li>ecs: Elastic Compute Service (ECS)</li>
-             * <li>rds: ApsaraDB RDS</li>
-             * <li>slb: Server Load Balancer (SLB)</li>
+             * <li><p>ecs: Elastic Compute Service (ECS)</p>
+             * </li>
+             * <li><p>rds: ApsaraDB RDS</p>
+             * </li>
+             * <li><p>slb: Server Load Balancer (SLB)</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -340,8 +372,10 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             /**
              * <p>The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:</p>
              * <ul>
-             * <li>and: The instances that meet all the conditional expressions are automatically added to the application group.</li>
-             * <li>or: The instances that meet one of the conditional expressions are automatically added to the application group.</li>
+             * <li><p>and: The instances that meet all the conditional expressions are automatically added to the application group.</p>
+             * </li>
+             * <li><p>or: The instances that meet one of the conditional expressions are automatically added to the application group.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

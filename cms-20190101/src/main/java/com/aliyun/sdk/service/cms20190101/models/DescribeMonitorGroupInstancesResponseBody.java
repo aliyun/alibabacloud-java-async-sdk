@@ -147,7 +147,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         /**
          * <p>The responses code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the resources in the application group.</p>
+         * Resources.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -330,10 +330,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The abbreviation of the service name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -341,10 +338,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12345</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -352,10 +346,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-2ze3w55tr2r****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -363,10 +354,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hostIP</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -374,10 +362,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the instance resides.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

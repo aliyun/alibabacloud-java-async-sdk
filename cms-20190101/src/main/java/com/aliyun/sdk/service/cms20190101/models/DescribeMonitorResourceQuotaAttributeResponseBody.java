@@ -95,7 +95,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The details about the resource quotas of CloudMonitor.</p>
+         * <p>The quota details of CloudMonitor.</p>
          */
         public Builder resourceQuota(ResourceQuota resourceQuota) {
             this.resourceQuota = resourceQuota;
@@ -208,7 +208,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The total quota of API calls. Unit: 10,000 calls.</p>
+             * <p>The total API quota. Unit: 10,000 calls.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -219,7 +219,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of API calls in your resource plan. Unit: 10,000 calls.</p>
+             * <p>The API quota included in the plan. Unit: 10,000 calls.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -230,7 +230,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The used quota of API calls in your resource plan. Unit: calls.</p>
+             * <p>The used API quota in the plan. Unit: calls.</p>
              * 
              * <strong>example:</strong>
              * <p>9987</p>
@@ -313,7 +313,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The total quota of the time series for custom monitoring.</p>
+             * <p>The total quota of custom monitoring time series. Unit: time series.</p>
              * 
              * <strong>example:</strong>
              * <p>1200</p>
@@ -324,7 +324,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of the time series for custom monitoring in your resource plan.</p>
+             * <p>The quota of custom monitoring time series included in the plan. Unit: time series.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -335,7 +335,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The used quota of the time series for custom monitoring in your resource plan.</p>
+             * <p>The used quota of custom monitoring time series in the plan. Unit: time series.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -405,7 +405,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The ID of the instance monitored by Hybrid Cloud Monitoring.</p>
+             * <p>The instance ID of Hybrid Cloud Monitoring.</p>
              * 
              * <strong>example:</strong>
              * <p>cms_enterprise_public_cn-7mz27pd****</p>
@@ -499,7 +499,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The total quota of events that can be reported in event monitoring. The total quota is the value that is multiplied by 10,000.</p>
+             * <p>The total quota of event monitoring. Unit: 10,000 events.</p>
              * 
              * <strong>example:</strong>
              * <p>55</p>
@@ -510,7 +510,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of events that can be reported in event monitoring in your resource plan. The total quota is the value that is multiplied by 10,000.</p>
+             * <p>The quota of event monitoring included in the plan. Unit: 10,000 events.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -521,7 +521,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The used quota of events that can be reported in event monitoring in your resource plan. The total quota is the value that is multiplied by 10,000.</p>
+             * <p>The used quota of event monitoring in the plan. Unit: 10,000 events.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -604,7 +604,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The total quota of processed log data in log monitoring. Unit: MB/min.</p>
+             * <p>The total quota of Log Monitoring. Unit: MByte/Min.</p>
              * 
              * <strong>example:</strong>
              * <p>150</p>
@@ -615,7 +615,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of processed log data in log monitoring in your resource plan. Unit: MB/min.</p>
+             * <p>The quota of Log Monitoring included in the plan. Unit: MByte/Min.</p>
              * 
              * <strong>example:</strong>
              * <p>150</p>
@@ -626,7 +626,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The used quota of processed log data in log monitoring in your resource plan. Unit: MB/min.</p>
+             * <p>The used quota of Log Monitoring in the plan. Unit: MByte/Min.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -720,7 +720,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of alert phone calls in your resource plan. Unit: calls.</p>
+             * <p>The quota of alert phone call packages. Unit: calls.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -731,7 +731,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The used quota of alert phone calls in your resource plan. Unit: calls.</p>
+             * <p>The used quota of alert phone call packages. Unit: calls.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -825,7 +825,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of alert text messages in your resource plan. Unit: messages.</p>
+             * <p>The quota of alert text message packages. Unit: messages.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -836,7 +836,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The used quota of alert text messages in your resource plan. Unit: messages.</p>
+             * <p>The used quota of alert text message packages. Unit: messages.</p>
              * 
              * <strong>example:</strong>
              * <p>38</p>
@@ -919,7 +919,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The total quota of browser detection tasks.</p>
+             * <p>The total quota of browser-based monitoring tasks. Unit: tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -930,7 +930,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of browser detection tasks in your resource plan.</p>
+             * <p>The quota of browser-based monitoring tasks included in the plan. Unit: tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -941,7 +941,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The used quota of browser detection tasks in your resource plan.</p>
+             * <p>The used quota of browser-based monitoring tasks in the plan. Unit: tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -1026,7 +1026,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             /**
              * <p>The total quota of ECS detection points for site monitoring.</p>
              * <blockquote>
-             * <p>The value indicates the maximum number of ECS detection points that you can select for a site monitoring task.</p>
+             * <p>The maximum number of ECS detection points that can be selected for a single site monitoring task.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1038,7 +1038,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of ECS detection points for site monitoring in your resource plan.</p>
+             * <p>The quota of ECS detection points for site monitoring included in the plan.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1049,9 +1049,9 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The used quota of ECS detection points for site monitoring in your resource plan.</p>
+             * <p>The used quota of ECS detection points for site monitoring in the plan.</p>
              * <blockquote>
-             * <p>The value indicates the total number of ECS detection points that are used by existing site monitoring tasks.</p>
+             * <p>The total number of ECS detection points across all site monitoring tasks that have been created.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1135,7 +1135,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The total quota of mobile detection tasks.</p>
+             * <p>The total quota of mobile monitoring tasks. Unit: tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -1146,7 +1146,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of mobile detection tasks in your resource plan.</p>
+             * <p>The quota of mobile monitoring tasks included in the plan. Unit: tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -1157,7 +1157,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The used quota of mobile detection tasks in your resource plan.</p>
+             * <p>The used quota of mobile monitoring tasks in the plan. Unit: tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -1251,7 +1251,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of carrier detection points for site monitoring in your resource plan.</p>
+             * <p>The quota of carrier detection points for site monitoring included in the plan.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1262,7 +1262,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The used quota of carrier detection points for site monitoring in your resource plan.</p>
+             * <p>The used quota of carrier detection points for site monitoring in the plan.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1345,7 +1345,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The total quota of site monitoring tasks.</p>
+             * <p>The total quota of site monitoring tasks. Unit: tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>25</p>
@@ -1356,7 +1356,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of site monitoring tasks in your resource plan.</p>
+             * <p>The quota of site monitoring tasks included in the plan. Unit: tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1367,7 +1367,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The used quota of site monitoring tasks in your resource plan.</p>
+             * <p>The used quota of site monitoring tasks in the plan. Unit: tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -1606,7 +1606,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The details about the quota of API calls.</p>
+             * <p>The API quota.</p>
              */
             public Builder api(Api api) {
                 this.api = api;
@@ -1614,7 +1614,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The details about the quota for custom monitoring.</p>
+             * <p>The quota of custom monitoring.</p>
              */
             public Builder customMonitor(CustomMonitor customMonitor) {
                 this.customMonitor = customMonitor;
@@ -1622,7 +1622,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The details about the quota of Hybrid Cloud Monitoring.</p>
+             * <p>The quota details of Hybrid Cloud Monitoring.</p>
              */
             public Builder enterpriseQuota(EnterpriseQuota enterpriseQuota) {
                 this.enterpriseQuota = enterpriseQuota;
@@ -1630,7 +1630,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The details about the quota for event monitoring.</p>
+             * <p>The quota of event monitoring.</p>
              */
             public Builder eventMonitor(EventMonitor eventMonitor) {
                 this.eventMonitor = eventMonitor;
@@ -1638,7 +1638,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The time when the resource plan expires.</p>
+             * <p>The expiration time of the plan. The time follows the ISO 8601 standard in the YYYY-MM-DD format. The default time zone is UTC+8.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-02-28</p>
@@ -1649,7 +1649,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The ID of the resource plan.</p>
+             * <p>The subscription plan ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cms_edition-cn-n6w20rn****</p>
@@ -1660,7 +1660,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The details about the quota for log monitoring.</p>
+             * <p>The quota of Log Monitoring.</p>
              */
             public Builder logMonitor(LogMonitor logMonitor) {
                 this.logMonitor = logMonitor;
@@ -1668,7 +1668,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The details about the quota of alert phone calls.</p>
+             * <p>The quota of alert phone call packages.</p>
              */
             public Builder phone(Phone phone) {
                 this.phone = phone;
@@ -1676,7 +1676,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The details about the quota of alert text messages.</p>
+             * <p>The quota of alert text message packages.</p>
              */
             public Builder SMS(SMS SMS) {
                 this.SMS = SMS;
@@ -1684,7 +1684,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of browser detection tasks.</p>
+             * <p>The quota of browser-based monitoring tasks.</p>
              */
             public Builder siteMonitorBrowser(SiteMonitorBrowser siteMonitorBrowser) {
                 this.siteMonitorBrowser = siteMonitorBrowser;
@@ -1692,7 +1692,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The details about the quota of ECS detection points for site monitoring.</p>
+             * <p>The quota of ECS detection points for site monitoring.</p>
              */
             public Builder siteMonitorEcsProbe(SiteMonitorEcsProbe siteMonitorEcsProbe) {
                 this.siteMonitorEcsProbe = siteMonitorEcsProbe;
@@ -1700,7 +1700,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The quota of mobile detection tasks.</p>
+             * <p>The quota of mobile monitoring tasks.</p>
              */
             public Builder siteMonitorMobile(SiteMonitorMobile siteMonitorMobile) {
                 this.siteMonitorMobile = siteMonitorMobile;
@@ -1708,7 +1708,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The details about the quota of carrier detection points for site monitoring.</p>
+             * <p>The quota of carrier detection points for site monitoring.</p>
              */
             public Builder siteMonitorOperatorProbe(SiteMonitorOperatorProbe siteMonitorOperatorProbe) {
                 this.siteMonitorOperatorProbe = siteMonitorOperatorProbe;
@@ -1726,9 +1726,9 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             /**
              * <p>The current edition of CloudMonitor. Valid values:</p>
              * <ul>
-             * <li>free: Free Edition</li>
-             * <li>pro: Pro Edition</li>
-             * <li>cms_post: pay-as-you-go</li>
+             * <li>free: Free Edition.</li>
+             * <li>pro: Pro Edition.</li>
+             * <li>cms_post: Pay-as-you-go.</li>
              * </ul>
              * 
              * <strong>example:</strong>

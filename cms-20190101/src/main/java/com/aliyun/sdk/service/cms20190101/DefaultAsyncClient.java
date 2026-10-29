@@ -31,49 +31,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2019-01-01";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "metrics.us-west-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "metrics.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "metrics.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "metrics.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "metrics.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "metrics.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "metrics.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "metrics.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "metrics.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "metrics.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "metrics.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "metrics.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "metrics.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "metrics.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "metrics.cn-hangzhou.aliyuncs.com"),
             new TeaPair("us-southeast-1", "metrics.us-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "metrics.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "metrics.eu-west-2.aliyuncs.com"),
+            new TeaPair("eu-central-1", "metrics.eu-central-1.aliyuncs.com"),
             new TeaPair("us-east-1", "metrics.us-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "metrics.us-west-1.aliyuncs.com"),
             new TeaPair("na-south-1", "metrics.na-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "metrics.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "metrics.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-2", "metrics.eu-west-2.aliyuncs.com"),
-            new TeaPair("eu-west-1", "metrics.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "metrics.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "metrics.cn-zhongwei.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "metrics.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "metrics.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu-gic-1", "metrics.cn-wulanchabu-gic-1.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "metrics.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "metrics.cn-wuhan-lr.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "metrics.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "metrics.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "metrics.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "metrics.cn-north-2-gov-1.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "metrics.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan-acdr-1", "metrics.cn-heyuan-acdr-1.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "metrics.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "metrics.cn-hangzhou-finance.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "metrics.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-fuzhou", "metrics.cn-fuzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "metrics.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "metrics.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing", "metrics.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "metrics.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "metrics.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "metrics.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"),
             new TeaPair("ap-south-1", "metrics.ap-south-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "metrics.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "metrics.ap-northeast-1.aliyuncs.com")
+            new TeaPair("me-central-1", "metrics.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "metrics.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "metrics.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "metrics.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "metrics.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "metrics.cn-wulanchabu-gic-1.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "metrics.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "metrics.cn-north-2-gov-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -85,7 +82,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to add a tag to an application group whose ID is <code>7301****</code>. In this example, the key of the tag is <code>key1</code> and the value of the tag is <code>value1</code>.</p>
+     * <p>This topic provides an example of how to attach a tag to the application group <code>7301****</code>. In this example, the tag key is <code>key1</code> and the tag value is <code>value1</code>.</p>
      * 
      * @param request the request parameters of AddTags  AddTagsRequest
      * @return AddTagsResponse
@@ -106,7 +103,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the <code>700****</code> alert template is applied to the <code>123456</code> application group. For the generated alert rule, the ID is <code>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</code>, and the name is <code>test123</code>.</p>
+     * <p>This topic provides an example of applying the alert template <code>700****</code> to the application group <code>123456</code>. The generated alert rule has the ID <code>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</code> and the name <code>test123</code>.</p>
      * 
      * @param request the request parameters of ApplyMetricRuleTemplate  ApplyMetricRuleTemplateRequest
      * @return ApplyMetricRuleTemplateResponse
@@ -127,7 +124,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a site monitoring task named <code>HangZhou_ECS1</code>. The URL that is monitored by the task is <code>https://www.aliyun.com</code> and the type of the task is <code>HTTP</code>. The returned result shows that the site monitoring task is created. The name of the site monitoring task is <code>HangZhou_ECS1</code> and the task ID is <code>679fbe4f-b80b-4706-91b2-5427b43e****</code>.</p>
+     * <p>This topic provides an example of creating a site monitoring task named <code>HangZhou_ECS1</code>. The monitored address of the task is <code>https://www.aliyun.com</code>, and the monitoring type is <code>HTTP</code>. The response shows that the site monitoring task is created. The name of the task is <code>HangZhou_ECS1</code>, and the ID is <code>679fbe4f-b80b-4706-91b2-5427b43e****</code>.</p>
      * 
      * @param request the request parameters of BatchCreateInstantSiteMonitor  BatchCreateInstantSiteMonitorRequest
      * @return BatchCreateInstantSiteMonitorResponse
@@ -148,10 +145,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>The <code>Cursor</code> information is returned by calling the <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a> operation.</p>
-     * <h3><a href="#"></a>Description</h3>
-     * <p>This topic provides an example on how to export the monitoring data of the <code>cpu_idle</code> metric for Elastic Compute Service (ECS). The namespace of ECS is <code>acs_ecs_dashboard</code>. The <code>Cursor</code> information is specified. A maximum of 1,000 data entries can be returned in each response.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that you have called the <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a> operation to obtain the initial Cursor.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example to export the monitoring data of the <code>cpu_idle</code> metric for the <code>acs_ecs_dashboard</code> cloud service by using an initial Cursor. A maximum of 1,000 data records are returned each time.</p>
      * 
      * @param request the request parameters of BatchExport  BatchExportRequest
      * @return BatchExportResponse
@@ -172,8 +169,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available for Elastic Compute Service (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
-     * This topic provides an example to show how to create an application group for resources whose tag key is <code>ecs_instance</code>. In this example, the alert contact group of the application group is <code>ECS_Group</code>.</p>
+     * <p>The Alibaba Cloud services supported by this operation include cloud servers (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
+     * This topic provides an example on how to automatically create an application group for resources that are attached with the tag key <code>ecs_instance</code>. The alert contact group of the application group is <code>ECS_Group</code>.</p>
      * 
      * @param request the request parameters of CreateDynamicTagGroup  CreateDynamicTagGroupRequest
      * @return CreateDynamicTagGroupResponse
@@ -194,7 +191,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example to show how to create an alert rule for the <code>cpu_total</code> metric of Elastic Compute Service (ECS) in the <code>123456</code> application group. The ID of the alert rule is <code>456789</code>. The name of the alert rule is <code>ECS_Rule1</code>. The alert level is <code>Critical</code>. The statistical method is <code>Average</code>. The comparison operator is <code>GreaterThanOrEqualToThreshold</code>. The alert threshold is <code>90</code>. The number of alert retries is <code>3</code>. The response shows that the alert rule named <code>ECS_Rule1</code> is created.</p>
+     * <p>This topic provides an example on how to create an alert rule for the monitoring metric <code>cpu_total</code> of Elastic Computing Service (ECS) in the application group <code>123456</code>. The alert rule ID is <code>456789</code>, the alert rule name is <code>ECS_Rule1</code>, the alert severity is <code>Critical</code>, the statistical method is <code>Average</code>, the comparison operator is <code>GreaterThanOrEqualToThreshold</code>, the threshold is <code>90</code>, and the retry count is <code>3</code>. The response shows that the alert rule <code>ECS_Rule1</code> is created.</p>
      * 
      * @param request the request parameters of CreateGroupMetricRules  CreateGroupMetricRulesRequest
      * @return CreateGroupMetricRulesResponse
@@ -233,7 +230,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create an availability monitoring task named <code>task1</code> in an application group named <code>123456</code>. The TaskType parameter of the task is set to <code>HTTP</code>. After you start the task, the system sends alerts by using the specified email address and DingTalk chatbot.</p>
+     * <p>This topic provides an example on how to create an availability monitoring task named <code>task1</code> with the detection type set to <code>HTTP</code> in application group <code>123456</code>. Alert notifications are sent by email and DingTalk chatbot.</p>
      * 
      * @param request the request parameters of CreateHostAvailability  CreateHostAvailabilityRequest
      * @return CreateHostAvailabilityResponse
@@ -254,10 +251,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Prerequisites</h2>
-     * <p>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
-     * <h2><a href="#"></a>Operation description</h2>
-     * <p>This topic provides an example on how to create a namespace named <code>aliyun</code>. In this example, the data retention period of the namespace is set to <code>cms.s1.3xlarge</code>. The returned result indicates that the namespace is created.</p>
+     * <h2>Before you begin</h2>
+     * <p>Make sure that you have activated Hybrid Cloud Monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
+     * <h2>Operation description</h2>
+     * <p>This topic provides an example on how to create a metric repository named <code>aliyun</code> with a data storage duration of <code>cms.s1.3xlarge</code>. The response indicates that the metric repository is created.</p>
      * 
      * @param request the request parameters of CreateHybridMonitorNamespace  CreateHybridMonitorNamespaceRequest
      * @return CreateHybridMonitorNamespaceResponse
@@ -278,10 +275,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</p>
-     * <h3><a href="#"></a>Operation description</h3>
-     * <p>This topic provides an example on how to create a Logstore group named <code>Logstore_test</code>. The region ID is <code>cn-hangzhou</code>. The project is <code>aliyun-project</code>. The Logstore is <code>Logstore-ECS</code>. The response shows that the Logstore group is created.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that you have activated Simple Log Service (SLS) and created a project and a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Quick Start</a>.</p>
+     * <h3>Operation description</h3>
+     * <p>This topic provides an example on how to create a Logstore group named <code>Logstore_test</code>. The region is <code>ap-southeast-1</code>, the project is <code>aliyun-project</code>, and the Logstore is <code>Logstore-ECS</code>. The response shows that the Logstore group is created.</p>
      * 
      * @param request the request parameters of CreateHybridMonitorSLSGroup  CreateHybridMonitorSLSGroupRequest
      * @return CreateHybridMonitorSLSGroupResponse
@@ -302,13 +299,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a>Prerequisites</h1>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</li>
-     * <li>If you want to create a metric for logs imported from Simple Log Service, make sure that you have activated Simple Log Service and created a project and a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</li>
+     * <li>Before calling this operation, make sure that Hybrid Cloud Monitoring is activated.</li>
+     * <li>To create a metric for SLS logs, make sure that SLS is activated and that you have created a project and a Logstore.</li>
+     * <li>Depending on the value of <code>TaskType</code>, some parameters are required. For example, when <code>TaskType</code> is set to <code>aliyun_fc</code>, you must set <code>YARMConfig</code>. When <code>TaskType</code> is set to <code>aliyun_sls</code>, you must configure parameters such as <code>CollectInterval</code>.</li>
+     * <li>For cross-account operations, specify <code>TargetUserId</code> or <code>TargetUserIdList</code> to import resources of other members into Hybrid Cloud Monitoring.</li>
      * </ul>
-     * <h1><a href="#"></a>Description</h1>
-     * <p>This topic provides an example on how to create a metric import task named <code>aliyun_task</code> for Elastic Compute Service (ECS). The task imports the <code>cpu_total</code> metric to the <code>aliyun</code> namespace. The response shows that the metric import task is created.</p>
      * 
      * @param request the request parameters of CreateHybridMonitorTask  CreateHybridMonitorTaskRequest
      * @return CreateHybridMonitorTaskResponse
@@ -329,8 +326,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. 
-     * This topic provides an example to show how to create an instant test task. The name of the task is <code>task1</code>. The tested address is <code>http://www.aliyun.com</code>. The test type is <code>HTTP</code>. The number of detection points is <code>1</code>.</p>
+     * <p>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time synthetic monitoring tasks.
+     * This topic provides an example of how to create a one-time synthetic monitoring task. The task name is <code>task1</code>, the monitored address is <code>http://www.aliyun.com</code>, the task type is <code>HTTP</code>, and the number of detection points is <code>1</code>.</p>
      * 
      * @param request the request parameters of CreateInstantSiteMonitor  CreateInstantSiteMonitorRequest
      * @return CreateInstantSiteMonitorResponse
@@ -430,7 +427,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>In this example, an application group named <code>ECS_Group</code> is created.</p>
+     * <p>This topic provides an example of creating an application group named <code>ECS_Group</code>.</p>
      * 
      * @param request the request parameters of CreateMonitorGroup  CreateMonitorGroupRequest
      * @return CreateMonitorGroupResponse
@@ -494,8 +491,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If the policy is valid, no alert notifications are sent for the application group.
-     * This topic describes how to create a <code>PauseNotify</code> policy to pause alert notifications for the <code>7301****</code> application group. The StartTime parameter is set to <code>1622949300000</code> and the EndTime parameter is set to <code>1623208500000</code>. This indicates that the policy is valid from <code>2021-06-06 11:15:00 UTC+8</code> to <code>2021-06-09 11:15:00 UTC+8</code>.</p>
+     * <p>Creates a pause alert notification policy for a specified application group. After the policy is created, alert notifications for the application group are paused during the time period specified by StartTime and EndTime (unit: milliseconds). Currently, PolicyType supports only PauseNotify (pause notification).</p>
      * 
      * @param request the request parameters of CreateMonitorGroupNotifyPolicy  CreateMonitorGroupNotifyPolicyRequest
      * @return CreateMonitorGroupNotifyPolicyResponse
@@ -534,7 +530,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a site monitoring task named <code>HanZhou_ECS1</code>. The URL that is monitored by the task is <code>https://www.aliyun.com</code> and the type of the task is <code>HTTPS</code>.</p>
+     * <p>This topic describes how to create a site monitoring task. The example creates a task named <code>HanZhou_ECS1</code> to monitor the URL <code>https://www.aliyun.com</code> over <code>HTTPS</code>.</p>
      * 
      * @param request the request parameters of CreateSiteMonitor  CreateSiteMonitorRequest
      * @return CreateSiteMonitorResponse
@@ -555,12 +551,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
-     * <h3><a href="#"></a>Background information</h3>
-     * <p>You can call this operation to obtain the Cursor information and then call the <a href="https://help.aliyun.com/document_detail/2329847.html">BatchExport</a> operation to export the monitoring data.</p>
-     * <h3><a href="#"></a>Description</h3>
-     * <p>This topic provides an example on how to define the monitoring data of a specified metric for a specified cloud service. In this example, the namespace of the cloud service is set to <code>acs_ecs_dashboard</code>, the metric is set to <code>cpu_idle</code>, the start time is set to <code>1641627000000</code>, and the end time is set to <code>1641645000000</code>. The number of idle CPU cores on your Elastic Compute Service (ECS) instances is measured every 60 seconds from 15:30:00, January 8, 2022 to 20:30:00, January 8, 2022. The <code>Cursor</code> information is returned.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
+     * <h3>Background information</h3>
+     * <p>Call this operation to obtain an initial cursor, and then call the <a href="https://help.aliyun.com/document_detail/2329847.html">BatchExport</a> operation to export monitoring data.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example to define the data export scope for the <code>cpu_idle</code> metric of the <code>acs_ecs_dashboard</code> cloud service at a 60-second interval from <code>1641627000000</code> (2022-01-08 15:30:00) to <code>1641645000000</code> (2022-01-08 20:30:00). The response displays the Cursor information.</p>
      * 
      * @param request the request parameters of Cursor  CursorRequest
      * @return CursorResponse
@@ -1082,8 +1078,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the statistics of alert logs.
-     * This topic provides an example on how to query the statistics of alert logs for Elastic Compute Service (ECS) based on the <code>product</code> dimension.</p>
+     * <p>This operation can query only the alert history within the last year.
+     * This topic provides an example on how to query the alert history statistics of Elastic Compute Service (ECS) from the <code>product</code> dimension of Alibaba Cloud services.</p>
      * 
      * @param request the request parameters of DescribeAlertLogCount  DescribeAlertLogCountRequest
      * @return DescribeAlertLogCountResponse
@@ -1104,7 +1100,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the number of alert logs for Elastic Compute Service (ECS) based on the <code>product</code> dimension.</p>
+     * <p>This topic provides an example of how to query the histogram list of ECS alert history from the Alibaba Cloud service <code>product</code> dimension.</p>
      * 
      * @param request the request parameters of DescribeAlertLogHistogram  DescribeAlertLogHistogramRequest
      * @return DescribeAlertLogHistogramResponse
@@ -1125,8 +1121,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the operation to query only the alert logs within the last year.
-     * This topic provides an example to show how to query the alert logs of Elastic Compute Service (ECS) based on the <code>product</code> dimension.</p>
+     * <p>This operation can query the alert history only within the last year.
+     * This topic provides an example to show how to query the alert history of Elastic Compute Service (ECS) from the cloud service <code>product</code> dimension.</p>
      * 
      * @param request the request parameters of DescribeAlertLogList  DescribeAlertLogListRequest
      * @return DescribeAlertLogListResponse
@@ -1146,6 +1142,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example to show how to set a threshold-based alert rule for the metric <code>cpu_total</code> of the Elastic Compute Service (ECS) instance <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the retry count for the Critical level is <code>3</code>.</p>
+     * <blockquote>
+     * <p>On August 15, 2024, Statistics validation was increased. The statistical value must correspond to the Statistics of the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeAlertingMetricRuleResources  DescribeAlertingMetricRuleResourcesRequest
      * @return DescribeAlertingMetricRuleResourcesResponse
      */
@@ -1238,7 +1240,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation queries the number of times that a custom event occurred for each service.</p>
+     * <p>This operation queries the number of times that a custom event occurred for each service.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeCustomEventCount  DescribeCustomEventCountRequest
@@ -1279,7 +1281,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call the DescribeMetricList operation to query the metrics of cloud services. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>.</p>
+     * <p>You can call the DescribeMetricList operation to query the metrics of cloud services. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeCustomMetricList  DescribeCustomMetricListRequest
@@ -1301,7 +1303,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example to show how to query tag rules that are related to <code>tagkey1</code>. The sample responses indicate that two tag rules are found. The rule IDs are <code>1536df65-a719-429d-8813-73cc40d7****</code> and <code>56e8cebb-b3d7-4a91-9880-78a8c84f****</code>.</p>
+     * <p>This topic provides an example of how to query the rules for the tag key <code>tagkey1</code>. The response shows that two rules are returned. The rule IDs are <code>1536df65-a719-429d-8813-73cc40d7****</code> and <code>56e8cebb-b3d7-4a91-9880-78a8c84f****</code>.</p>
      * 
      * @param request the request parameters of DescribeDynamicTagRuleList  DescribeDynamicTagRuleListRequest
      * @return DescribeDynamicTagRuleListResponse
@@ -1322,7 +1324,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example to show how to query the details of an event-triggered alert rule named <code>testRule</code>.</p>
+     * <p>This topic provides an example on how to query the details of the event-triggered alert rule <code>testRule</code>.</p>
      * 
      * @param request the request parameters of DescribeEventRuleAttribute  DescribeEventRuleAttributeRequest
      * @return DescribeEventRuleAttributeResponse
@@ -1361,7 +1363,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example to show how to query the details of an event-triggered alert rule named <code>testRule</code>.</p>
+     * <p>This topic provides an example to query the details of the event-triggered alert rule <code>testRule</code>.</p>
      * 
      * @param request the request parameters of DescribeEventRuleTargetList  DescribeEventRuleTargetListRequest
      * @return DescribeEventRuleTargetListResponse
@@ -1399,6 +1401,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The alert rule is named <code>Rule_01</code> and has an ID of <code>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</code>.</p>
+     * 
      * @param request the request parameters of DescribeExporterRuleList  DescribeExporterRuleListRequest
      * @return DescribeExporterRuleListResponse
      */
@@ -1439,7 +1444,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example to show how to query all the availability monitoring tasks of your Alibaba Cloud account. The sample responses indicate that the account has one availability monitoring task named <code>ecs_instance</code>.</p>
+     * <p>This topic provides an example on how to query the list of availability monitoring tasks for the current account. The response shows that the current account has one availability monitoring task record <code>ecs_instance</code>.</p>
      * 
      * @param request the request parameters of DescribeHostAvailabilityList  DescribeHostAvailabilityListRequest
      * @return DescribeHostAvailabilityListResponse
@@ -1486,7 +1491,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>In this example, all namespaces within the current account are queried. The response shows that the current account has only one namespace named <code>aliyun-test</code>.</p>
+     * <p>This example shows how to query all namespaces that belong to the current account. The response indicates that only one namespace, <code>aliyun-test</code>, exists.</p>
      * 
      * @param request the request parameters of DescribeHybridMonitorNamespaceList  DescribeHybridMonitorNamespaceListRequest
      * @return DescribeHybridMonitorNamespaceListResponse
@@ -1507,7 +1512,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>In this example, all Logstore groups within the current account are queried. The response shows that the current account has two Logstore groups: <code>Logstore_test</code> and <code>Logstore_aliyun</code>.</p>
+     * <p>This topic provides an example of how to query all Logstore groups in the current account. The response shows that the current account has two Logstore groups: <code>Logstore_test</code> and <code>Logstore_aliyun</code>.</p>
      * 
      * @param request the request parameters of DescribeHybridMonitorSLSGroup  DescribeHybridMonitorSLSGroupRequest
      * @return DescribeHybridMonitorSLSGroupResponse
@@ -1592,7 +1597,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3><a href="#"></a>Description</h3>
      * <blockquote>
-     * <p> Different from <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>, the DescribeMetricData operation provides statistical features. You can set the Dimension parameter to <code>{&quot;instanceId&quot;: &quot;i-abcdefgh12****&quot;}</code> to aggregate all data of your Alibaba Cloud account.
+     * <p>Different from <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>, the DescribeMetricData operation provides statistical features. You can set the Dimension parameter to <code>{&quot;instanceId&quot;: &quot;i-abcdefgh12****&quot;}</code> to aggregate all data of your Alibaba Cloud account.
      * This topic provides an example on how to query the monitoring data of the <code>cpu_idle</code> metric for Elastic Compute Service (ECS). The namespace of ECS is <code>acs_ecs_dashboard</code>.</p>
      * </blockquote>
      * 
@@ -1615,23 +1620,23 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Limits</h3>
+     * <h3>Before you begin</h3>
      * <ul>
-     * <li>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</li>
-     * <li>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.<blockquote>
-     * <p> If <code>Throttling.User</code> or <code>Request was denied due to user flow control</code> is returned when you call an API operation, the API operation is throttled. For more information about how to handle the issue, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle the throttling of a query API?</a></p>
+     * <li>Invocations of DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop share a combined free quota of 1,000,000 calls per month. After the free quota is exhausted, if you have not activated CloudMonitor Basic pay-as-you-go billing method, you cannot use this API normally. If you have activated CloudMonitor Basic pay-as-you-go billing method, the API continues to work after the free quota is exhausted, and usage beyond the free quota is automatically billed. For the method to activate pay-as-you-go billing, see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG&commodityCode=cms_basic_public_cn&from_biz_channel=help_bill">Activate pay-as-you-go billing</a>.</li>
+     * <li>The rate limit for a single API operation is 50 calls per second. This limit is shared by an Alibaba Cloud account and all Resource Access Management (RAM) users under the account.<blockquote>
+     * <p>When you invoke an API operation, if the response contains <code>Throttling.User</code> or <code>Request was denied due to user flow control</code>, the API is being throttled. For the handling method, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle query API throttling</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * <h3><a href="#"></a>Precautions</h3>
-     * <p>The storage duration of the monitoring data of each cloud service is related to the <code>Period</code> parameter (statistical period). A larger value of the <code>Period</code> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</p>
+     * <h3>Notes</h3>
+     * <p>The storage duration of cloud service monitoring data depends on the <code>Period</code> (statistical period). A larger <code>Period</code> value results in sparser monitoring data and a longer storage duration. The relationships are as follows:</p>
      * <ul>
-     * <li>The storage duration is 7 days if the value of the <code>Period</code> parameter is less than 60 seconds.</li>
-     * <li>The storage duration is 31 days if the value of the <code>Period</code> parameter is 60 seconds.</li>
-     * <li>The storage duration is 91 days if the value of the <code>Period</code> parameter is greater than or equal to 300 seconds.</li>
+     * <li>If <code>Period</code> is less than 60 seconds, the storage duration is 7 days.</li>
+     * <li>If <code>Period</code> is equal to 60 seconds, the storage duration is 31 days.</li>
+     * <li>If <code>Period</code> is greater than or equal to 300 seconds, the storage duration is 91 days.</li>
      * </ul>
-     * <h3><a href="#"></a>Operation description</h3>
-     * <p>This topic provides an example on how to query the latest monitoring data of the <code>CPUUtilization</code> metric for Elastic Compute Service (ECS). The namespace of ECS is <code>acs_ecs_dashboard</code>. The returned result indicates that the monitoring data for the instance <code>i-abcdefgh12****</code> of the account <code>123456789876****</code> is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.</p>
+     * <h3>Operation description</h3>
+     * <p>This topic provides an example of how to query the latest monitoring data of the <code>CPUUtilization</code> metric for the cloud service <code>acs_ecs_dashboard</code>. The response shows that for instance <code>i-abcdefgh12****</code> under account <code>123456789876****</code>, the maximum value is 100, the minimum value is 93.1, and the average value is 99.52 at a 60-second interval.</p>
      * 
      * @param request the request parameters of DescribeMetricLast  DescribeMetricLastRequest
      * @return DescribeMetricLastResponse
@@ -1652,11 +1657,23 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the RAM users within the account share the quota. </p>
-     * <blockquote>
-     * <p>This topic provides an example to show how to query the monitoring data of the <code>cpu_idle</code> metric for Elastic Compute Service (ECS). The namespace of ECS is <code>acs_ecs_dashboard</code>. The returned result indicates that the monitoring data for the instance <code>i-abcdefgh12****</code> of the account <code>120886317861****</code> is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.</p>
+     * <h3>Limits</h3>
+     * <ul>
+     * <li>You have a free quota of 1 million total API calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If you use up the free quota and have not enabled the pay-as-you-go billing method for CloudMonitor Basic, you can no longer use these API operations. If you have enabled the pay-as-you-go billing method, you can continue to use the API operations after the free quota is used up. API calls that exceed the free quota are automatically charged on a pay-as-you-go basis. For more information, see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable pay-as-you-go</a>.</li>
+     * <li>You can call each API operation up to 50 times per second. This limit is shared between an Alibaba Cloud account and its RAM users.<blockquote>
+     * <p>If you receive the <code>Throttling.User</code> or <code>Request was denied due to user flow control</code> error message when you call an API operation, the API call is throttled. For more information, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I resolve an API call throttling issue?</a>.</p>
      * </blockquote>
+     * </li>
+     * </ul>
+     * <h3>Notes</h3>
+     * <p>The storage duration of monitoring data for a cloud service depends on the <code>Period</code> (statistical period). A larger <code>Period</code> value indicates that the monitoring data is less granular and is stored for a longer period. The relationship is as follows:</p>
+     * <ul>
+     * <li>If the value of <code>Period</code> is less than 60 seconds, the storage duration is 7 days.</li>
+     * <li>If the value of <code>Period</code> is 60 seconds, the storage duration is 31 days.</li>
+     * <li>If the value of <code>Period</code> is 300 seconds or greater, the storage duration is 91 days.</li>
+     * </ul>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example of how to query the monitoring data of the <code>cpu_idle</code> metric for the <code>acs_ecs_dashboard</code> cloud service. The response shows the data for the instance <code>i-abcdefgh12****</code>, which belongs to the Alibaba Cloud account <code>120886317861****</code>. At a 60 second interval, the maximum, minimum, and average values of the metric are 100, 93.1, and 99.52, respectively.</p>
      * 
      * @param request the request parameters of DescribeMetricList  DescribeMetricListRequest
      * @return DescribeMetricListResponse
@@ -1677,7 +1694,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used together with DescribeMetricList and DescribeMetricLast. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a> and <a href="https://help.aliyun.com/document_detail/51939.html">DescribeMetricLast</a>.</p>
+     * <p>Use this operation together with DescribeMetricList and DescribeMetricLast. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a> and <a href="https://help.aliyun.com/document_detail/51939.html">DescribeMetricLast</a>.</p>
      * 
      * @param request the request parameters of DescribeMetricMetaList  DescribeMetricMetaListRequest
      * @return DescribeMetricMetaListResponse
@@ -1734,7 +1751,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query all alert rules within your Alibaba Cloud account. The returned result shows that only one alert rule is found. The name of the alert rule is <code>Rule_01</code> and the ID is <code>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</code>.</p>
+     * <p>This topic provides an example on how to query all alert rules in the alert rule list under the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The name of the alert rule is <code>Rule_01</code> and the ID is <code>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</code>.</p>
      * 
      * @param request the request parameters of DescribeMetricRuleList  DescribeMetricRuleListRequest
      * @return DescribeMetricRuleListResponse
@@ -1755,11 +1772,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Limit</h2>
-     * <p>This operation supports only Message Service (MNS) resources. </p>
-     * <blockquote>
-     * <p>This topic provides an example on how to query the resources that are associated with an alert rule whose ID is <code>ae06917_75a8c43178ab66****</code>.</p>
-     * </blockquote>
+     * <h2>Usage notes</h2>
+     * <p>This topic provides an example to query the target resources associated with the alert rule <code>ae06917_75a8c43178ab66****</code>.</p>
      * 
      * @param request the request parameters of DescribeMetricRuleTargets  DescribeMetricRuleTargetsRequest
      * @return DescribeMetricRuleTargetsResponse
@@ -1780,7 +1794,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the details of an alert template whose ID is <code>70****</code>.</p>
+     * <p>This topic provides an example on how to query the details of the alert template <code>70****</code>.</p>
      * 
      * @param request the request parameters of DescribeMetricRuleTemplateAttribute  DescribeMetricRuleTemplateAttributeRequest
      * @return DescribeMetricRuleTemplateAttributeResponse
@@ -1801,7 +1815,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query alert templates. In this example, the following alert templates are returned in the response: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example of querying alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * @param request the request parameters of DescribeMetricRuleTemplateList  DescribeMetricRuleTemplateListRequest
      * @return DescribeMetricRuleTemplateListResponse
@@ -1946,7 +1960,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the application groups of the current account. The response shows that the current account has two application groups: <code>testGroup124</code> and <code>test123</code>.</p>
+     * <p>This topic provides an example of how to query the list of application groups for the current account. The response shows that the current account has two application groups: <code>testGroup124</code> and <code>test123</code>.</p>
      * 
      * @param request the request parameters of DescribeMonitorGroups  DescribeMonitorGroupsRequest
      * @return DescribeMonitorGroupsResponse
@@ -2040,8 +2054,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> Before you call this operation, call the CreateMonitoringAgentProcess operation to create processes. For more information, see <a href="https://help.aliyun.com/document_detail/114951.html~">CreateMonitoringAgentProcess</a>.
-     * This topic provides an example of how to query the processes of the <code>i-hp3hl3cx1pbahzy8****</code> instance. The response indicates the details of the <code>NGINX</code> and <code>HTTP</code> processes.</p>
+     * <p>Before you call this operation, you must call the CreateMonitoringAgentProcess operation to create a process monitoring task. For more information, see <a href="https://help.aliyun.com/document_detail/2513212.html">CreateMonitoringAgentProcess</a>.
+     * This topic provides an example of how to query the list of processes for the resource i-hp3hl3cx1pbahzy8\<em>\</em>\<em>\</em>. The response shows the details of the Nginx and HTTP processes.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeMonitoringAgentProcesses  DescribeMonitoringAgentProcessesRequest
@@ -2101,11 +2115,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p> If a tag is attached to multiple cloud resources in the region, the key of the tag is returned only once.</p>
-     * </blockquote>
-     * 
      * @param request the request parameters of DescribeProductResourceTagKeyList  DescribeProductResourceTagKeyListRequest
      * @return DescribeProductResourceTagKeyListResponse
      */
@@ -2143,7 +2152,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The information obtained by this operation includes the service description, namespace, and tags.</p>
+     * <p>Obtains the information about the connected cloud services, including the description, namespace, and tags of each service.</p>
      * 
      * @param request the request parameters of DescribeProjectMeta  DescribeProjectMetaRequest
      * @return DescribeProjectMetaResponse
@@ -2164,7 +2173,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the details of a site monitoring task whose ID is <code>cc641dff-c19d-45f3-ad0a-818a0c4f****</code>. The returned result indicates that the task name is <code>test123</code>, the URL that is monitored by the task is <code>https://aliyun.com</code>, and the name of the carrier is <code>Alibaba</code>.</p>
+     * <p>This topic provides an example of querying the details of the site monitoring task <code>cc641dff-c19d-45f3-ad0a-818a0c4f****</code>. The response shows that the task name is <code>test123</code>, the monitored address is <code>https://aliyun.com</code>, and the carrier is <code>Alibaba</code>.</p>
      * 
      * @param request the request parameters of DescribeSiteMonitorAttribute  DescribeSiteMonitorAttributeRequest
      * @return DescribeSiteMonitorAttributeResponse
@@ -2203,7 +2212,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the detection points that are provided by China Unicom in Guiyang.</p>
+     * <p>本文将提供一个示例，查询运营商“联通”在“贵阳市”的探测点详情。</p>
      * 
      * @param request the request parameters of DescribeSiteMonitorISPCityList  DescribeSiteMonitorISPCityListRequest
      * @return DescribeSiteMonitorISPCityListResponse
@@ -2224,7 +2233,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query all the site monitoring tasks of your Alibaba Cloud account. In this example, the returned result indicates that the Alibaba Cloud account has one site monitoring task named <code>HanZhou_ECS2</code>.</p>
+     * <p>This topic provides an example of how to query the list of site monitoring tasks for the current account. The response shows that the current account has one site monitoring record named <code>HanZhou_ECS2</code>.</p>
      * 
      * @param request the request parameters of DescribeSiteMonitorList  DescribeSiteMonitorListRequest
      * @return DescribeSiteMonitorListResponse
@@ -2245,8 +2254,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring.
-     * This topic provides an example to show how to query the logs of an instant test task whose ID is <code>afa5c3ce-f944-4363-9edb-ce919a29****</code>.</p>
+     * <p>Only Alibaba Cloud accounts with Network Analysis and Monitoring activated can create one-time detection tasks.
+     * This topic provides an example of how to query the detection logs for the one-time detection task <code>afa5c3ce-f944-4363-9edb-ce919a29****</code>.</p>
      * 
      * @param request the request parameters of DescribeSiteMonitorLog  DescribeSiteMonitorLogRequest
      * @return DescribeSiteMonitorLogResponse
@@ -2285,7 +2294,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the statistics of the <code>Availability</code> metric for a site monitoring task whose ID is <code>ef4cdc8b-9dc7-43e7-810e-f950e56c****</code>. The result indicates that the availability rate of the site is <code>100%</code>.</p>
+     * <p>This topic provides an example on how to query the average statistics of the <code>Availability</code> metric in the site monitoring task whose ID is <code>ef4cdc8b-9dc7-43e7-810e-f950e56c****</code>. The returned result shows that the availability is <code>100</code>.</p>
      * 
      * @param request the request parameters of DescribeSiteMonitorStatistics  DescribeSiteMonitorStatisticsRequest
      * @return DescribeSiteMonitorStatisticsResponse
@@ -2305,6 +2314,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example to query the details of detection points for the carrier China Unicom in Beijing.</p>
+     * 
      * @param request the request parameters of DescribeSyntheticProbeList  DescribeSyntheticProbeListRequest
      * @return DescribeSyntheticProbeListResponse
      */
@@ -2342,10 +2354,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Background information</h3>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the cloud services supported by CloudMonitor and their system events.</p>
-     * <h3><a href="#"></a>Description</h3>
-     * <p>This topic provides an example on how to query the number of times that a system event of <code>Elastic Compute Service (ECS)</code> has occurred. The returned result shows that the specified system event has occurred three times.</p>
+     * <h3>Background information</h3>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> to obtain the Alibaba Cloud services and their system events supported by CloudMonitor.</p>
+     * <h3>Operation description</h3>
+     * <p>This topic provides an example of how to query the number of events that occurred for Elastic Compute Service (<code>ECS</code>) under the current account. The response shows that a total of 3 events occurred.</p>
      * 
      * @param request the request parameters of DescribeSystemEventCount  DescribeSystemEventCountRequest
      * @return DescribeSystemEventCountResponse
@@ -2419,9 +2431,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example of how to query the tag values corresponding to <code>tagKey1</code>. The return results are <code>tagValue1</code> and <code>tagValue2</code>.</p>
-     * 
      * @param request the request parameters of DescribeTagValueList  DescribeTagValueListRequest
      * @return DescribeTagValueListResponse
      */
@@ -2548,6 +2557,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of setting a threshold alert rule for the <code>cpu_total</code> metric of the instance <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace of Elastic Compute Service (ECS). The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
+     * <blockquote>
+     * <p>On August 15, 2024, Statistics validation was added. The statistical value must be the Statistics value corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of EnableActiveMetricRule  EnableActiveMetricRuleRequest
      * @return EnableActiveMetricRuleResponse
      */
@@ -2657,8 +2672,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Prerequisites</h2>
-     * <p>The Cloud Assistant client is installed on an ECS instance. For more information about how to install the Cloud Assistant client, see <a href="https://help.aliyun.com/document_detail/64601.html">Overview</a>.</p>
+     * <h2>Before you begin</h2>
+     * <p>Make sure that the Cloud Assistant agent is installed on the Alibaba Cloud host. For more information about how to install the Cloud Assistant agent, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</p>
+     * <h2>Background information</h2>
+     * <p>This operation applies only to Alibaba Cloud hosts, namely ECS instances.
+     * The success rate of installing the CloudMonitor agent by calling this API operation is approximately 95%. If the installation fails, install the agent manually. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent for C++</a>.</p>
+     * <h2>Usage notes</h2>
+     * <p>This topic provides an example on how to forcibly install the latest version of the CloudMonitor agent on the Alibaba Cloud host i-m5e0k0bexac8tykr****.</p>
      * 
      * @param request the request parameters of InstallMonitoringAgent  InstallMonitoringAgentRequest
      * @return InstallMonitoringAgentResponse
@@ -2697,7 +2717,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to change the name of an availability monitoring task named <code>12345</code> in an application group named <code>123456</code> to <code>task2</code>.</p>
+     * <p>This topic provides an example on how to change the name of availability monitoring task <code>12345</code> in application group <code>123456</code> to <code>task2</code>.</p>
      * 
      * @param request the request parameters of ModifyHostAvailability  ModifyHostAvailabilityRequest
      * @return ModifyHostAvailabilityResponse
@@ -2739,7 +2759,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to change the data retention period of the <code>aliyun</code> namespace to <code>cms.s1.2xlarge</code>. The response shows that the namespace is modified.</p>
+     * <p>This topic provides an example on how to change the data storage duration of the metric store <code>aliyun</code> to <code>cms.s1.2xlarge</code>. The response shows that the metric store is modified.</p>
      * 
      * @param request the request parameters of ModifyHybridMonitorNamespace  ModifyHybridMonitorNamespaceRequest
      * @return ModifyHybridMonitorNamespaceResponse
@@ -2760,7 +2780,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>In this example, a Logstore group named <code>Logstore_test</code> is modified. The Logstore of the <code>aliyun-project</code> project in the <code>cn-hangzhou</code> region is changed to <code>Logstore-aliyun-all</code>. The response shows that the Logstore group is modified.</p>
+     * <p>This topic provides an example on how to change the Logstore in the <code>aliyun-project</code> log project in the <code>ap-southeast-1</code> region of the Logstore group <code>Logstore_test</code> to <code>Logstore-aliyun-all</code>. The response shows that the Logstore group is modified.</p>
      * 
      * @param request the request parameters of ModifyHybridMonitorSLSGroup  ModifyHybridMonitorSLSGroupRequest
      * @return ModifyHybridMonitorSLSGroupResponse
@@ -2781,7 +2801,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to change the collection period of a metric import task whose ID is <code>36****</code> to <code>15</code> seconds. The task is used to monitor the logs that are imported from Log Service. The returned result indicates that the metric is modified.</p>
+     * <p>This topic provides an example on how to change the collection interval of the SLS log monitoring task <code>36****</code> to <code>15</code> seconds. The response shows that the metric is modified.</p>
      * 
      * @param request the request parameters of ModifyHybridMonitorTask  ModifyHybridMonitorTaskRequest
      * @return ModifyHybridMonitorTaskResponse
@@ -2876,9 +2896,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The number of site monitoring tasks.</p>
-     * 
      * @param request the request parameters of ModifySiteMonitor  ModifySiteMonitorRequest
      * @return ModifySiteMonitorResponse
      */
@@ -2915,9 +2932,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example on how to create an alert contact group named <code>ECS_Group</code>.</p>
-     * 
      * @param request the request parameters of PutContactGroup  PutContactGroupRequest
      * @return PutContactGroupResponse
      */
@@ -2955,7 +2969,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, call the PutCustomEvent operation to report the monitoring data of the custom event. For more information, see <a href="https://help.aliyun.com/document_detail/115012.html">PutCustomEvent</a>.</p>
+     * <p>Before you call this operation, you must call the PutCustomEvent operation to report the monitoring data of the custom event. For more information, see <a href="https://help.aliyun.com/document_detail/115012.html">PutCustomEvent</a>.</p>
      * 
      * @param request the request parameters of PutCustomEventRule  PutCustomEventRuleRequest
      * @return PutCustomEventRuleResponse
@@ -2977,7 +2991,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> We recommend that you call the <a href="https://help.aliyun.com/document_detail/383455.html">PutHybridMonitorMetricData</a> operation of Hybrid Cloud Monitoring to report monitoring data.</p>
+     * <p>We recommend that you use the <a href="https://help.aliyun.com/document_detail/383455.html">PutHybridMonitorMetricData</a> operation in Enterprise CloudMonitor.</p>
      * </blockquote>
      * 
      * @param request the request parameters of PutCustomMetric  PutCustomMetricRequest
@@ -2999,7 +3013,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>.</p>
+     * <p>Before calling this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>.</p>
      * 
      * @param request the request parameters of PutCustomMetricRule  PutCustomMetricRuleRequest
      * @return PutCustomMetricRuleResponse
@@ -3020,8 +3034,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If the specified rule name does not exist, an event-triggered alert rule is created. If the specified rule name exists, the specified event-triggered alert rule is modified.
-     * In this example, the <code>myRuleName</code> alert rule is created for the <code>ecs</code> cloud service.</p>
+     * <p>If the specified alert rule name does not exist, a new alert rule is created. If the specified alert rule name already exists, the existing alert rule is modified.
+     * This topic provides an example on how to create an event-triggered alert rule named <code>myRuleName</code> for the Alibaba Cloud service <code>ecs</code>.</p>
      * 
      * @param request the request parameters of PutEventRule  PutEventRuleRequest
      * @return PutEventRuleResponse
@@ -3061,7 +3075,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The monitoring data can be exported only to Log Service. More services will be supported in the future.</p>
+     * <p>Only Log Service (SLS) is supported. More products will be supported in the future.</p>
      * </blockquote>
      * 
      * @param request the request parameters of PutExporterOutput  PutExporterOutputRequest
@@ -3101,7 +3115,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create an alert rule for the <code>cpu_total</code> metric of Elastic Compute Service (ECS) in the <code>17285****</code> application group. The ID of the alert rule is <code>123456</code>. The name of the alert rule is <code>Rule_test</code>. The alert level is <code>Critical</code>. The statistical method is <code>Average</code>. The alert threshold comparator is <code>GreaterThanOrEqualToThreshold</code>. The alert threshold is <code>90</code>. The number of alert retries is <code>3</code>. The returned result shows that the alert rule is created and the alert rule ID is <code>123456</code>.</p>
+     * <p>This topic provides an example of creating an alert rule for the <code>cpu_total</code> monitoring metric of the Elastic Computing Service server (an Alibaba Cloud service) in the application group <code>17285****</code>. The alert rule ID is <code>123456</code>, the alert rule name is <code>Rule_test</code>, the alert level is <code>Critical</code>, the statistical method is <code>Average</code>, the threshold comparison operator is <code>GreaterThanOrEqualToThreshold</code>, the threshold is <code>90</code>, and the retry count is <code>3</code>. The response shows that the alert rule is created and the alert rule ID is <code>123456</code>.</p>
      * 
      * @param request the request parameters of PutGroupMetricRule  PutGroupMetricRuleRequest
      * @return PutGroupMetricRuleResponse
@@ -3122,12 +3136,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Prerequisites</h2>
-     * <p>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
-     * <h2><a href="#"></a>Limits</h2>
-     * <p>The size of the monitoring data that you import at a time must be less than or equal to 1 MB.</p>
-     * <h2><a href="#"></a>Operation description</h2>
-     * <p>This topic provides an example on how to import the monitoring data of the <code>CPU_Usage</code> metric to the <code>default-aliyun</code> namespace of Hybrid Cloud Monitoring.</p>
+     * <h2>Prerequisites</h2>
+     * <p>Make sure that you have activated Enterprise CloudMonitor. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Enterprise CloudMonitor</a>.</p>
+     * <h2>Limits</h2>
+     * <p>The size of the monitoring data that you can report at a time cannot exceed 1 MB.</p>
+     * <h2>Usage notes</h2>
+     * <p>This topic provides an example to show how to report the monitoring data of the <code>CPU_Usage</code> metric to the <code>default-aliyun</code> metric namespace of Enterprise CloudMonitor.</p>
      * 
      * @param request the request parameters of PutHybridMonitorMetricData  PutHybridMonitorMetricDataRequest
      * @return PutHybridMonitorMetricDataResponse
@@ -3148,7 +3162,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>In the example of this topic, the <code>cpu_total</code> log monitoring metric is created. The response shows that the log monitoring metric is created and the metric ID is <code>16****</code>.</p>
+     * <p>This topic provides an example of how to create a log monitoring metric named <code>cpu_total</code>. The response shows that the log monitoring metric is created. The log monitoring metric ID is <code>16****</code>.</p>
      * 
      * @param request the request parameters of PutLogMonitor  PutLogMonitorRequest
      * @return PutLogMonitorResponse
@@ -3169,8 +3183,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a></h1>
-     * <p>This topic provides an example on how to associate an alert rule with a resource. In this example, the alert rule is <code>ae06917_75a8c43178ab66****</code>, the resource is <code>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</code>, and the ID of the resource for which alerts are triggered is <code>1</code>. The response indicates that the resource is associated with the specified alert rule.</p>
+     * <h2>Usage notes</h2>
+     * <p>This topic provides an example on how to associate the resource <code>acs:mns:ap-southeast-1:120886317861****:/queues/test/message</code> with the alert rule <code>ae06917_75a8c43178ab66****</code>. The alert trigger target ID is <code>1</code>. The response shows that the resource is associated.</p>
      * 
      * @param request the request parameters of PutMetricRuleTargets  PutMetricRuleTargetsRequest
      * @return PutMetricRuleTargetsResponse
@@ -3227,9 +3241,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a threshold-triggered alert rule for the <code>cpu_total</code> metric of an Elastic Compute Service (ECS) instance whose ID is <code>i-uf6j91r34rnwawoo****</code>. The namespace of ECS metrics is <code>acs_ecs_dashboard</code>. The alert contact group of the alert rule is <code>ECS_Group</code>. The name of the alert rule is <code>test123</code>. The ID of the alert rule is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>. The statistical method for Critical-level alerts is <code>Average</code>. The comparison operator for Critical-level alerts is <code>GreaterThanOrEqualToThreshold</code>. The threshold for Critical-level alerts is <code>90</code>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <code>3</code>.</p>
+     * <p>This topic provides an example on how to configure a threshold-based alert rule for the <code>cpu_total</code> metric of a cloud server (ECS) instance <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
      * <blockquote>
-     * <p> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</p>
+     * <p>On August 15, 2024, Statistics validation is increased. The statistical value must match the Statistics of the corresponding metric. For more information about how to obtain the valid values for this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service metrics</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of PutResourceMetricRule  PutResourceMetricRuleRequest
@@ -3251,9 +3265,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a threshold-triggered alert rule for the <code>cpu_total</code> metric of an Elastic Compute Service (ECS) instance whose ID is <code>i-uf6j91r34rnwawoo****</code>. The namespace of ECS metrics is <code>acs_ecs_dashboard</code>. The alert contact group of the alert rule is <code>ECS_Group</code>. The name of the alert rule is <code>test123</code>. The ID of the alert rule is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>. The statistical method for Critical-level alerts is <code>Average</code>. The comparison operator for Critical-level alerts is <code>GreaterThanOrEqualToThreshold</code>. The threshold for Critical-level alerts is <code>90</code>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <code>3</code>.</p>
+     * <p>This topic provides an example of the Settings for a threshold alert rule for the <code>cpu_total</code> monitoring metric of the ECS server <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
      * <blockquote>
-     * <p> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</p>
+     * <p>On August 15, 2024, Statistics validation was increased. The statistical value must match the Statistics value of the corresponding metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of PutResourceMetricRules  PutResourceMetricRulesRequest
@@ -3293,7 +3307,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to test whether a system event can be triggered as expected. You can call this operation to simulate a system event and check whether an expected response is returned after the system event triggers an alert.</p>
+     * <p>Tests whether a system event can be triggered as expected. Simulates a system event and verifies the response when the event triggers an alert.</p>
      * 
      * @param request the request parameters of SendDryRunSystemEvent  SendDryRunSystemEventRequest
      * @return SendDryRunSystemEventResponse
@@ -3315,7 +3329,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This API operation is not applicable to Elastic Compute Service (ECS) instances. To uninstall the agent from an ECS instance, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent</a>.</p>
+     * <p>This API operation is not applicable to Elastic Compute Service (ECS) instances. To uninstall the agent from an ECS instance, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UninstallMonitoringAgent  UninstallMonitoringAgentRequest

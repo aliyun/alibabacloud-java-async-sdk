@@ -146,7 +146,7 @@ public class CreateInstantSiteMonitorRequest extends Request {
         } 
 
         /**
-         * <p>The URL or IP address that you want to test.</p>
+         * <p>The URL or IP address of the synthetic monitoring task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,10 @@ public class CreateInstantSiteMonitorRequest extends Request {
         }
 
         /**
-         * AgentGroup.
+         * <p>The type of detection points. Valid values: PC and MOBILE. PC indicates fixed-line network detection points. MOBILE indicates mobile network detection points. Default value: PC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PC</p>
          */
         public Builder agentGroup(String agentGroup) {
             this.putQueryParameter("AgentGroup", agentGroup);
@@ -168,11 +171,12 @@ public class CreateInstantSiteMonitorRequest extends Request {
         }
 
         /**
-         * <p>The detection points. If you leave this parameter empty, the system randomly selects three detection points.</p>
-         * <p>The value is a <code>JSON array</code>. Example: {&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}. The values of the city field indicate Beijing, Hangzhou, and Qingdao.</p>
-         * <p>For information about how to obtain detection points, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
+         * <p>The detection point information. If this parameter is left empty, the system randomly selects three detection points.</p>
+         * <p>The value is in <code>JSONArray</code> format. Example: [{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;, &quot;type&quot;:&quot;IDC&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;, &quot;type&quot;:&quot;LASTMILE&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}], which correspond to Beijing, Hangzhou, and Qingdao respectively.</p>
+         * <p>The type field specifies the detection point type. When AgentGroup is set to PC, valid values are IDC and LASTMILE. IDC indicates detection points deployed in data centers. LASTMILE indicates detection points deployed in end-user homes that use fixed-line networks. The type field is optional and defaults to IDC. When AgentGroup is set to MOBILE, this field does not need to be specified.</p>
+         * <p>For information about how to obtain detection point information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
          * <blockquote>
-         * <p>You must specify one of the <code>IspCities</code> and <code>RandomIspCity</code> parameters.</p>
+         * <p>You must specify either <code>IspCities</code> or <code>RandomIspCity</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -185,7 +189,7 @@ public class CreateInstantSiteMonitorRequest extends Request {
         }
 
         /**
-         * <p>The extended options of the protocol that is used by the instant test task. The options vary based on the protocol.</p>
+         * <p>The advanced extended options for the protocol type of the synthetic monitoring task. Different protocol types correspond to different extended options.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;time_out&quot;:5000}</p>
@@ -199,10 +203,10 @@ public class CreateInstantSiteMonitorRequest extends Request {
         /**
          * <p>The number of detection points.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li>You must specify one of the <code>IspCities</code> and <code>RandomIspCity</code> parameters. If you specify the <code>RandomIspCity</code> parameter, the <code>IspCities</code> parameter automatically becomes invalid.</li>
+         * <li>You must specify either <code>IspCities</code> or <code>RandomIspCity</code>.- If you set the <code>RandomIspCity</code> parameter, the <code>IspCities</code> parameter becomes invalid.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,8 +218,10 @@ public class CreateInstantSiteMonitorRequest extends Request {
         }
 
         /**
-         * <p>The name of the instant test task.</p>
-         * <p>The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</p>
+         * <p>The name of the synthetic monitoring task.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The name must be 4 to 100 characters in length and can contain letters, digits, underscores (_), and Chinese characters.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</p>
+         * <p>&lt;props=&quot;partner&quot;&gt;The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +234,8 @@ public class CreateInstantSiteMonitorRequest extends Request {
         }
 
         /**
-         * <p>The type of the instant test task. Valid values: HTTP, PING, TCP, UDP, and DNS.</p>
+         * <p>The type of the synthetic monitoring task.
+         * Valid values: HTTP, PING, TCP, UDP, and DNS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

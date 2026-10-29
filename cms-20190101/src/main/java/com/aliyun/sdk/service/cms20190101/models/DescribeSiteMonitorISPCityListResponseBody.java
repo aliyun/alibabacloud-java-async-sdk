@@ -106,9 +106,9 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>状态码。</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
+         * <p>200表示成功。</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried detection points.</p>
+         * IspCityList.
          */
         public Builder ispCityList(IspCityList ispCityList) {
             this.ispCityList = ispCityList;
@@ -128,7 +128,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>返回信息。</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -139,7 +139,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>请求ID。</p>
          * 
          * <strong>example:</strong>
          * <p>B35D7D84-547B-4E61-B909-48A1F8A0C756</p>
@@ -150,10 +150,12 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>操作是否成功。取值：</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true：成功。</p>
+         * </li>
+         * <li><p>false：失败。</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -488,10 +490,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The city ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * City.
              */
             public Builder city(String city) {
                 this.city = city;
@@ -515,13 +514,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The country name.</p>
-             * <blockquote>
-             * <p>This parameter is valid only on the China site (aliyun.com).</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>629</p>
+             * Country.
              */
             public Builder country(String country) {
                 this.country = country;
@@ -545,7 +538,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address pool.</p>
+             * IPPool.
              */
             public Builder IPPool(IPPool IPPool) {
                 this.IPPool = IPPool;
@@ -553,10 +546,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of IPv4 probes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * IPV4ProbeCount.
              */
             public Builder IPV4ProbeCount(String IPV4ProbeCount) {
                 this.IPV4ProbeCount = IPV4ProbeCount;
@@ -564,10 +554,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of IPv6 probes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * IPV6ProbeCount.
              */
             public Builder IPV6ProbeCount(String IPV6ProbeCount) {
                 this.IPV6ProbeCount = IPV6ProbeCount;
@@ -575,10 +562,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The carrier ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>232</p>
+             * Isp.
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -602,10 +586,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The province name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>264</p>
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;

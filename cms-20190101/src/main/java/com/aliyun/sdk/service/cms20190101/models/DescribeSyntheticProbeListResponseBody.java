@@ -106,7 +106,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried detection points.</p>
+         * <p>The list of detection points.</p>
          */
         public Builder ispCityList(java.util.List<IspCityList> ispCityList) {
             this.ispCityList = ispCityList;
@@ -122,7 +125,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87170bc7-e28a-4c93-b9bf-90a1dbe84736</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The operation is successful.</li>
+         * <li>false: The operation fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -425,7 +441,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             } 
 
             /**
-             * AreaCn.
+             * <p>The Chinese name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>North China</p>
              */
             public Builder areaCn(String areaCn) {
                 this.areaCn = areaCn;
@@ -433,7 +452,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * AreaEn.
+             * <p>The English name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Huabei</p>
              */
             public Builder areaEn(String areaEn) {
                 this.areaEn = areaEn;
@@ -441,7 +463,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * <p>The city ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>738</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -449,7 +474,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * CityCn.
+             * <p>The Chinese name of the city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder cityCn(String cityCn) {
                 this.cityCn = cityCn;
@@ -457,7 +485,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * CityEn.
+             * <p>The English name of the city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder cityEn(String cityEn) {
                 this.cityEn = cityEn;
@@ -465,7 +496,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * Country.
+             * <p>The country code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>629</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -473,7 +507,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * CountryCn.
+             * <p>The Chinese name of the country.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder countryCn(String countryCn) {
                 this.countryCn = countryCn;
@@ -481,7 +518,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * CountryEn.
+             * <p>The English name of the country or region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder countryEn(String countryEn) {
                 this.countryEn = countryEn;
@@ -489,7 +529,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * IdcV4ProbeCount.
+             * <p>The number of IPv4 nodes in the IDC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder idcV4ProbeCount(Integer idcV4ProbeCount) {
                 this.idcV4ProbeCount = idcV4ProbeCount;
@@ -497,7 +540,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of IPv6 nodes in data centers.</p>
+             * <p>The number of IPv6 nodes in the IDC.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -508,7 +551,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses of the monitored nodes.</p>
+             * <p>The list of node IP addresses.</p>
              */
             public Builder ipPool(java.util.List<String> ipPool) {
                 this.ipPool = ipPool;
@@ -516,7 +559,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * <p>The carrier ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -524,7 +570,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * IspCn.
+             * <p>The Chinese name of the carrier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China Unicom</p>
              */
             public Builder ispCn(String ispCn) {
                 this.ispCn = ispCn;
@@ -532,7 +581,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * IspEn.
+             * <p>The English name of the carrier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China-Unicom</p>
              */
             public Builder ispEn(String ispEn) {
                 this.ispEn = ispEn;
@@ -540,7 +592,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * LmProbeCount.
+             * <p>The number of Lastmile detection points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lmProbeCount(Integer lmProbeCount) {
                 this.lmProbeCount = lmProbeCount;
@@ -548,7 +603,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * MbProbeCount.
+             * <p>The number of mobile detection points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mbProbeCount(Integer mbProbeCount) {
                 this.mbProbeCount = mbProbeCount;
@@ -556,7 +614,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The province code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>264</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -564,7 +625,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCn.
+             * <p>The Chinese name of the province.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Jiangxi</p>
              */
             public Builder regionCn(String regionCn) {
                 this.regionCn = regionCn;
@@ -572,7 +636,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionEn.
+             * <p>The English name of the province.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Jiangxi</p>
              */
             public Builder regionEn(String regionEn) {
                 this.regionEn = regionEn;

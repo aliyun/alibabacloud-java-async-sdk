@@ -106,9 +106,9 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status codes.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>A value of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
 
         /**
          * <p>The returned message.</p>
-         * <p>If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+         * <p>If the request is successful, a success message is returned. If the request fails, the failure reason is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -143,10 +143,12 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation is successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +160,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the system event.</p>
+         * SystemEventCounts.
          */
         public Builder systemEventCounts(SystemEventCounts systemEventCounts) {
             this.systemEventCounts = systemEventCounts;
@@ -341,7 +343,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the system event.</p>
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -349,10 +351,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>17285****</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -360,10 +359,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS-test</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -371,15 +367,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the system event. Valid values:</p>
-             * <ul>
-             * <li>Critical</li>
-             * <li>Warn</li>
-             * <li>Info</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Info</p>
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -387,10 +375,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the system event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Instance:StateChange</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -398,10 +383,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the system event has occurred.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * Num.
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -409,10 +391,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cloud service in which the system event occurred.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS</p>
+             * Product.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -420,10 +399,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -431,10 +407,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-rj99xc6cptkk64ml****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -442,10 +415,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the system event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -453,10 +423,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the system event occurred. The value is a timestamp. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1635993751000</p>
+             * Time.
              */
             public Builder time(Long time) {
                 this.time = time;

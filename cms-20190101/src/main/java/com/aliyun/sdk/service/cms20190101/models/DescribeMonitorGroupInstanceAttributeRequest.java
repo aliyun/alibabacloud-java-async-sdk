@@ -224,8 +224,10 @@ public class DescribeMonitorGroupInstanceAttributeRequest extends Request {
         /**
          * <p>Specifies whether to return the total number of resources in the specified application group. Valid values:</p>
          * <ul>
-         * <li>true (default)</li>
-         * <li>false</li>
+         * <li><p>true (default)</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

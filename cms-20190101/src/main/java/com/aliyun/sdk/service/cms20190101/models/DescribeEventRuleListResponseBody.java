@@ -119,10 +119,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
-         * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
-         * </blockquote>
+         * <p>The status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -133,7 +130,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The event-triggered alert rule.</p>
+         * EventRules.
          */
         public Builder eventRules(EventRules eventRules) {
             this.eventRules = eventRules;
@@ -141,7 +138,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>User not authorized to operate on the specified resource.</p>
@@ -163,10 +160,12 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +177,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
@@ -355,7 +354,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The keywords that are used to match events.</p>
+             * Keywords.
              */
             public Builder keywords(Keywords keywords) {
                 this.keywords = keywords;
@@ -363,14 +362,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relationship between multiple keywords in a condition. Valid values:</p>
-             * <ul>
-             * <li>OR: The relationship between keywords is OR.</li>
-             * <li>NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>OR</p>
+             * Relation.
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -610,10 +602,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The custom filter conditions.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS123</p>
+             * CustomFilters.
              */
             public Builder customFilters(String customFilters) {
                 this.customFilters = customFilters;
@@ -621,7 +610,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The types of the event-triggered alert rules.</p>
+             * EventTypeList.
              */
             public Builder eventTypeList(EventTypeList eventTypeList) {
                 this.eventTypeList = eventTypeList;
@@ -629,7 +618,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The keyword for filtering.</p>
+             * KeywordFilter.
              */
             public Builder keywordFilter(KeywordFilter keywordFilter) {
                 this.keywordFilter = keywordFilter;
@@ -637,7 +626,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The levels of the event-triggered alerts.</p>
+             * LevelList.
              */
             public Builder levelList(LevelList levelList) {
                 this.levelList = levelList;
@@ -645,7 +634,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event names.</p>
+             * NameList.
              */
             public Builder nameList(NameList nameList) {
                 this.nameList = nameList;
@@ -653,10 +642,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The abbreviation of the Alibaba Cloud service name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CloudMonitor</p>
+             * Product.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -664,10 +650,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ycccluster1 and (i-23ij0o82612 or Executed1) or Asimulated not 222</p>
+             * SQLFilter.
              */
             public Builder SQLFilter(String SQLFilter) {
                 this.SQLFilter = SQLFilter;
@@ -853,10 +836,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the event-triggered alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Default group event rule.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -864,7 +844,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode of the event-triggered alert rule.</p>
+             * EventPattern.
              */
             public Builder eventPattern(EventRuleEventPattern eventPattern) {
                 this.eventPattern = eventPattern;
@@ -872,14 +852,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the event-triggered alert rule. Valid values:</p>
-             * <ul>
-             * <li>SYSTEM: system event-triggered alert rule</li>
-             * <li>CUSTOM: custom event-triggered alert rule</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SYSTEM</p>
+             * EventType.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -887,10 +860,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>7378****</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -898,10 +868,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the event-triggered alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test_DefaultEventRule_7378****</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -909,10 +876,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>86400</p>
+             * SilenceTime.
              */
             public Builder silenceTime(Long silenceTime) {
                 this.silenceTime = silenceTime;
@@ -920,14 +884,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the event-triggered alert rule. Valid values:</p>
-             * <ul>
-             * <li>ENABLED</li>
-             * <li>DISABLED</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ENABLED</p>
+             * State.
              */
             public Builder state(String state) {
                 this.state = state;

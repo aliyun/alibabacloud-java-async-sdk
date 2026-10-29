@@ -115,7 +115,7 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         } 
 
         /**
-         * <p>The search keyword.</p>
+         * <p>The keyword for the search.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun</p>
@@ -128,7 +128,7 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
 
         /**
          * <p>The name of the namespace.</p>
-         * <p>The name can contain letters, digits, and hyphens (-).</p>
+         * <p>The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun-test</p>
@@ -141,7 +141,7 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
 
         /**
          * <p>The page number.</p>
-         * <p>Page numbers start from 1. Default value: 1.</p>
+         * <p>Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,8 +153,8 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Page numbers start from 1. Default value: 10.</p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Minimum value: 1. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -166,10 +166,12 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:</p>
+         * <p>Specifies whether to display the configuration details of data import tasks for Alibaba Cloud services and the number of data import tasks for non-Alibaba Cloud services. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false (default)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

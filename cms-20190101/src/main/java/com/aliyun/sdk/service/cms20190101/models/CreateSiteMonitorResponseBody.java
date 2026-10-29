@@ -119,9 +119,9 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code of the operation.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
+         * <p>A value of \<code>200\\</code> indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,8 +133,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
-         * <p>If a site monitoring task is created, the result is returned. If a site monitoring task fails to be created, no result is returned.</p>
+         * CreateResultList.
          */
         public Builder createResultList(CreateResultList createResultList) {
             this.createResultList = createResultList;
@@ -142,7 +141,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the site monitoring task.</p>
+         * <p>The results of the monitoring task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,7 +149,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -161,7 +160,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>68192f5d-0d45-4b98-9724-892813f86c71</p>
@@ -174,8 +173,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,10 +246,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the site monitoring task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2c8dbdf9-a3ab-46a1-85a4-f094965e****</p>
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -256,10 +254,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the site monitoring task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>HanZhou_ECS1</p>
+             * TaskName.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -313,8 +308,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The returned result.</p>
-             * <p>If a site monitoring task is created, the result is returned. If a site monitoring task fails to be created, no result is returned.</p>
+             * CreateResultList.
              */
             public Builder createResultList(java.util.List<CreateResultListCreateResultList> createResultList) {
                 this.createResultList = createResultList;
@@ -420,9 +414,9 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status code that is returned after you associate the existing alert rule with the site monitoring task.</p>
+             * <p>The status code of the operation.</p>
              * <blockquote>
-             * <p> The status code 200 indicates that the request was successful.</p>
+             * <p>A value of \<code>200\\</code> indicates success.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -434,10 +428,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message that is returned after you associate the existing alert rule with the site monitoring task.</p>
+             * <p>The message returned for the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>successful</p>
+             * <p>Successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -445,10 +439,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the request that was sent to associate the existing alert rule with the site monitoring task.</p>
+             * <p>The ID of the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>5dd33455-4f65-4b0c-9200-33d66f3f340b</p>
+             * <p>68192f5d-0d45-4b98-9724-892813f86c71</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -456,10 +450,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SystemDefault_acs_ecs_dashboard_InternetOutRate_Percent</p>
+             * RuleId.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -467,10 +458,12 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the existing alert rule was associated with the site monitoring task. Valid values:</p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: The request was successful.</p>
+             * </li>
+             * <li><p>false: The request failed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -582,7 +575,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The result that is returned after you associate the existing alert rule with the site monitoring task.</p>
+             * AttachAlertResult.
              */
             public Builder attachAlertResult(AttachAlertResult attachAlertResult) {
                 this.attachAlertResult = attachAlertResult;

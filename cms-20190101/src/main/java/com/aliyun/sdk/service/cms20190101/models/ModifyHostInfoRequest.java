@@ -74,7 +74,7 @@ public class ModifyHostInfoRequest extends Request {
         } 
 
         /**
-         * <p>The name of the host.</p>
+         * <p>The host name.</p>
          * 
          * <strong>example:</strong>
          * <p>portalHost</p>
@@ -86,7 +86,7 @@ public class ModifyHostInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. Only hosts not on Alibaba Cloud are supported.</p>
+         * <p>The instance ID. Only non-Alibaba Cloud hosts are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

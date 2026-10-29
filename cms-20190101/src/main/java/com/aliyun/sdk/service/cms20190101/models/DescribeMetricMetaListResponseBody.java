@@ -121,7 +121,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         /**
          * <p>The response code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>0CCE0AF0-053C-4B13-A583-DC9A85785D49</p>
+         * <p>CDE9EAFF-D54E-4024-BBFC-B0AAC883143B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -155,7 +155,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration of the metrics in the resources.</p>
+         * Resources.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -165,8 +165,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,7 +183,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
          * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>12</p>
+         * <p>10</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -325,10 +327,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The metric description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CPUUtilization</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -336,10 +335,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitoring dimensions of the resource. Multiple monitoring dimensions are separated with commas (,).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>instanceId</p>
+             * Dimensions.
              */
             public Builder dimensions(String dimensions) {
                 this.dimensions = dimensions;
@@ -347,19 +343,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the metric, including one or more JSON strings.</p>
-             * <p>Format: <code>[{&quot;name&quot;:&quot;tag key&quot;,&quot;value&quot;:&quot;tag value&quot;}]</code>. The <code>name</code> can be repeated. The following tags are available:</p>
-             * <ul>
-             * <li>metricCategory: the category of the metric.</li>
-             * <li>alertEnable: indicates whether to report alerts for the metric.</li>
-             * <li>alertUnit: the unit of the metric in the alerts.</li>
-             * <li>unitFactor: the factor for metric unit conversion.</li>
-             * <li>minAlertPeriod: the minimum interval at which the alert is reported.</li>
-             * <li>productCategory: the category of the service.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>[{&quot;name&quot;:&quot;alertUnit&quot;,&quot;value&quot;:&quot;Bytes&quot;},{&quot;name&quot;:&quot;minAlertPeriod&quot;,&quot;value&quot;:&quot;60&quot;},{&quot;name&quot;:&quot;metricCategory&quot;,&quot;value&quot;:&quot;instanceId&quot;},{&quot;name&quot;:&quot;instanceType&quot;,&quot;value&quot;:&quot;disaster&quot;},{&quot;name&quot;:&quot;is_alarm&quot;,&quot;value&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;productCategory&quot;,&quot;value&quot;:&quot;kvstore_old&quot;}]</p>
+             * Labels.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -367,10 +351,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CPUUtilization</p>
+             * MetricName.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -378,10 +359,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs_kvstore</p>
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -389,11 +367,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical periods of the metric. Multiple statistical periods are separated with commas (,).</p>
-             * <p>Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>60,300</p>
+             * Periods.
              */
             public Builder periods(String periods) {
                 this.periods = periods;
@@ -401,10 +375,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical method. Multiple statistical methods are separated with commas (,).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Average,Minimum,Maximum</p>
+             * Statistics.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -412,10 +383,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>%</p>
+             * Unit.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

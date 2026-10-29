@@ -106,9 +106,9 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the call was successful.</p>
+         * <p>A value of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The results for creating the instant test task.</p>
+         * <p>The result list of the one-time synthetic monitoring task creation.</p>
          */
         public Builder createResultList(java.util.List<CreateResultList> createResultList) {
             this.createResultList = createResultList;
@@ -139,7 +139,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>68192f5d-0d45-4b98-9724-892813f86c71</p>
@@ -150,10 +150,10 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the instant test task.</p>
+             * <p>The ID of the synthetic monitoring task.</p>
              * 
              * <strong>example:</strong>
              * <p>2c8dbdf9-a3ab-46a1-85a4-f094965e****</p>
@@ -234,7 +234,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instant test task.</p>
+             * <p>The name of the synthetic monitoring task.</p>
              * 
              * <strong>example:</strong>
              * <p>task1</p>

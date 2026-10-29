@@ -106,13 +106,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
-         * <blockquote>
-         * <p> The status code 200 indicates that the call was successful.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -120,7 +114,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deleted application group.</p>
+         * Group.
          */
         public Builder group(Group group) {
             this.group = group;
@@ -128,10 +122,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The Request is not authorization.</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,10 +130,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CA35B3AE-4FFD-4A33-AE67-67EF68711EFA</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,10 +138,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,10 +191,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the alert group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS_Group</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +312,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert groups that receive alert notifications for the application group.</p>
+             * ContactGroups.
              */
             public Builder contactGroups(ContactGroups contactGroups) {
                 this.contactGroups = contactGroups;
@@ -338,10 +320,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS_test</p>
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

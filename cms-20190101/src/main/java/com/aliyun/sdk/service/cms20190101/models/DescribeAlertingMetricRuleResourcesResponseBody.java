@@ -121,7 +121,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
+         * <p>A value of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources that are associated with the alert rule.</p>
+         * Resources.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -163,10 +163,12 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +180,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -286,23 +288,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
-             * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-             * <li>GreaterThanThreshold: greater than the threshold</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-             * <li>LessThanThreshold: less than the threshold</li>
-             * <li>NotEqualToThreshold: not equal to the threshold</li>
-             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>GreaterThanOrEqualToThreshold</p>
+             * ComparisonOperator.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -310,10 +296,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cpu_total</p>
+             * MetricName.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -321,10 +304,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical period of the metric. Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>60</p>
+             * Period.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -332,15 +312,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical method of the alert level. Valid values:</p>
-             * <ul>
-             * <li>Maximum</li>
-             * <li>Minimum</li>
-             * <li>Average</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Average</p>
+             * Statistics.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -348,10 +320,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert threshold.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>90</p>
+             * Threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -576,23 +545,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
-             * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-             * <li>GreaterThanThreshold: greater than the threshold</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-             * <li>LessThanThreshold: less than the threshold</li>
-             * <li>NotEqualToThreshold: not equal to the threshold</li>
-             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>GreaterThanOrEqualToThreshold</p>
+             * ComparisonOperator.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -600,13 +553,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the alert rule.</p>
-             * <blockquote>
-             * <p> This parameter indicates the content of the alert rule. If the metric value meets the alert condition, an alert is triggered.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>$Average&gt;=10</p>
+             * Expression.
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -614,7 +561,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the multi-metric alert rule.</p>
+             * ExpressionList.
              */
             public Builder expressionList(ResourceExpressionList expressionList) {
                 this.expressionList = expressionList;
@@ -622,14 +569,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relationship between multiple metrics. Valid values:</p>
-             * <ul>
-             * <li>&amp;&amp;: If all metrics meet the alert conditions, CloudMonitor sends alert notifications.</li>
-             * <li>||: If one of the metrics meets the alert conditions, CloudMonitor sends alert notifications.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>&amp;&amp;</p>
+             * ExpressionListJoin.
              */
             public Builder expressionListJoin(String expressionListJoin) {
                 this.expressionListJoin = expressionListJoin;
@@ -637,15 +577,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger conditions that are created by using expressions. You can use expressions to create trigger conditions in the following scenarios:</p>
-             * <ul>
-             * <li>Set an alert blacklist for specific resources. For example, if you specify <code>$instanceId != \&quot;i-io8kfvcpp7x5****\&quot; ``&amp;&amp;`` $Average &gt; 50</code>, no alert is triggered when the <code>average metric value</code> of the <code>i-io8kfvcpp7x5****</code> instance exceeds 50.</li>
-             * <li>Set a special alert threshold for a specified instance in the rule. For example, if you specify <code>$Average &gt; ($instanceId == \&quot;i-io8kfvcpp7x5****\&quot;? 80: 50)</code>, an alert is triggered when the <code>average metric value</code> of the <code>i-io8kfvcpp7x5****</code> instance exceeds 80 or the <code>average metric value</code> of other instances exceeds 50.</li>
-             * <li>Limit the number of instances whose metric values exceed the threshold. For example, if you specify <code>count($Average &gt; 20) &gt; 3</code>, an alert is triggered only when the <code>average metric value</code> of more than three instances exceeds 20.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>$Average &gt; ($instanceId == &quot;i-io8kfvcpp7x5****&quot;? 80: 50)</p>
+             * ExpressionRaw.
              */
             public Builder expressionRaw(String expressionRaw) {
                 this.expressionRaw = expressionRaw;
@@ -653,14 +585,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level and notification methods of the alert. Valid values:</p>
-             * <ul>
-             * <li>4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
-             * <li>OK: No alert is generated.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * Level.
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -668,20 +593,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
-             * <ul>
-             * <li><code>&gt;=</code></li>
-             * <li><code>=</code></li>
-             * <li><code>&lt;=</code></li>
-             * <li><code>&gt;</code></li>
-             * <li><code>&lt;</code></li>
-             * <li><code>!=</code></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <blockquote>
-             * <p>=</p>
-             * </blockquote>
+             * PreCondition.
              */
             public Builder preCondition(String preCondition) {
                 this.preCondition = preCondition;
@@ -689,10 +601,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mns</p>
+             * Tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -700,10 +609,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert threshold.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * Threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -711,10 +617,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Times.
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -1043,10 +946,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dimensions based on which the resources are queried.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;region&quot;:&quot;cn-huhehaote&quot;,&quot;queue&quot;:&quot;test-0128&quot;,&quot;userId&quot;:&quot;120886317861****&quot;}</p>
+             * Dimensions.
              */
             public Builder dimensions(String dimensions) {
                 this.dimensions = dimensions;
@@ -1054,14 +954,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the alert rule is enabled. Valid values:</p>
-             * <ul>
-             * <li>true: The alert rule is enabled.</li>
-             * <li>false: The alert rule is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Enable.
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -1069,7 +962,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert rule based on which the alert is triggered.</p>
+             * Escalation.
              */
             public Builder escalation(Escalation escalation) {
                 this.escalation = escalation;
@@ -1077,13 +970,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application group.</p>
-             * <blockquote>
-             * <p> If the alert rule is associated with an application group, the ID of the application group is returned in this parameter.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>7671****</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -1091,11 +978,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the last alert was triggered for the resource based on the alert rule. The value is a timestamp.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1622427900000</p>
+             * LastAlertTime.
              */
             public Builder lastAlertTime(String lastAlertTime) {
                 this.lastAlertTime = lastAlertTime;
@@ -1103,11 +986,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert rule was last modified. The value is a timestamp.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1622827900000</p>
+             * LastModifyTime.
              */
             public Builder lastModifyTime(String lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -1115,14 +994,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level and notification methods of the alert. Valid values:</p>
-             * <ul>
-             * <li>4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
-             * <li>OK: No alert is generated.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * Level.
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -1130,10 +1002,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ActiveMessages</p>
+             * MetricName.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1141,10 +1010,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric value that triggered the alert based on the alert rule. The value is a JSON string.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;timestamp&quot;:1623727500000,&quot;Sum&quot;:926,&quot;value&quot;:463,&quot;Maximum&quot;:463,&quot;Minimum&quot;:463,&quot;Average&quot;:463,&quot;SampleCount&quot;:2,&quot;userId&quot;:&quot;120886317861****&quot;,&quot;region&quot;:&quot;cn-huhehaote&quot;,&quot;queue&quot;:&quot;test-0128&quot;}</p>
+             * MetricValues.
              */
             public Builder metricValues(String metricValues) {
                 this.metricValues = metricValues;
@@ -1152,10 +1018,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs_mns_new</p>
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1163,10 +1026,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mns</p>
+             * ProductCategory.
              */
             public Builder productCategory(String productCategory) {
                 this.productCategory = productCategory;
@@ -1174,10 +1034,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resources that are monitored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>userId=120886317861****,region=cn-huhehaote,queue=test-0128</p>
+             * Resource.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -1185,10 +1042,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * RetryTimes.
              */
             public Builder retryTimes(String retryTimes) {
                 this.retryTimes = retryTimes;
@@ -1196,10 +1050,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>putNewAlarm_user_7e78d765-0e3e-4671-ba6d-7ce39108****</p>
+             * RuleId.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1207,10 +1058,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test123456789</p>
+             * RuleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1218,11 +1066,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was associated with the alert rule. The value is a timestamp.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1622427900000</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1230,10 +1074,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method used to calculate the metric values that trigger alerts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Average</p>
+             * Statistics.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -1241,10 +1082,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert threshold.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * Threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -1298,10 +1136,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resources that are monitored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>userId=120886317861****,region=cn-huhehaote,queue=test-0128</p>
+             * Resource.
              */
             public Builder resource(java.util.List<ResourcesResource> resource) {
                 this.resource = resource;

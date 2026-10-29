@@ -74,10 +74,12 @@ public class DeleteSiteMonitorsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:</p>
+         * <p>Specifies whether to delete alert rules when you delete the tasks. Valid values:</p>
          * <ul>
-         * <li>true (default value)</li>
-         * <li>false</li>
+         * <li><p>true (default): Deletes the alert rules.</p>
+         * </li>
+         * <li><p>false: Does not delete the alert rules.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,7 +92,7 @@ public class DeleteSiteMonitorsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the site monitoring tasks that you want to delete. Separate multiple task IDs with commas (,).</p>
+         * <p>The IDs of the tasks to be deleted. Separate multiple task IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

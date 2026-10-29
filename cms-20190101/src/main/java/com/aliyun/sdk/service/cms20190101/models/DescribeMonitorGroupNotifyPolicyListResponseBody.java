@@ -121,7 +121,7 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
+         * <p>A value of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned policies.</p>
+         * NotifyPolicyList.
          */
         public Builder notifyPolicyList(NotifyPolicyList notifyPolicyList) {
             this.notifyPolicyList = notifyPolicyList;
@@ -163,10 +163,12 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +180,7 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -286,11 +288,7 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end of the time range to query.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1551761781273</p>
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -298,10 +296,7 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6780****</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -309,10 +304,7 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123****</p>
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -320,11 +312,7 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range to query.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1551761781273</p>
+             * StartTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -332,10 +320,7 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PauseNotify</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

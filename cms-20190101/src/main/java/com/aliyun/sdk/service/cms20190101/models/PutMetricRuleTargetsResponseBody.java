@@ -108,7 +108,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The value 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The failed data.</p>
+         * <p>The list of failures.</p>
          */
         public Builder failData(FailData failData) {
             this.failData = failData;
@@ -128,7 +128,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -150,10 +150,12 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li><p>true: successful.</p>
+         * </li>
+         * <li><p>false: failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,30 +238,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ARN of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. SMQ, Auto Scaling, Simple Log Service, and Function Compute are supported. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. The following part describes the ARN of SMQ and the parameters in the ARN:</p>
-             * <ul>
-             * <li><p>{Service name abbreviation}: mns.</p>
-             * </li>
-             * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
-             * </li>
-             * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
-             * </li>
-             * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
-             * <ul>
-             * <li><strong>queues</strong></li>
-             * <li><strong>topics</strong></li>
-             * </ul>
-             * </li>
-             * <li><p>{Resource name}: the resource name.</p>
-             * <ul>
-             * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
-             * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
-             * </ul>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:mns:cn-hangzhou:111:/queues/test/message</p>
+             * Arn.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -267,10 +246,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource for which alerts are triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -278,15 +254,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert level. Valid values:</p>
-             * <ul>
-             * <li>INFO</li>
-             * <li>WARN</li>
-             * <li>CRITICAL</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</p>
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -394,7 +362,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the resources for which alerts are triggered.</p>
+             * Targets.
              */
             public Builder targets(Targets targets) {
                 this.targets = targets;

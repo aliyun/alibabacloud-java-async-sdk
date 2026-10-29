@@ -103,11 +103,10 @@ public class PutContactGroupRequest extends Request {
 
         /**
          * <p>The name of the alert contact group.</p>
-         * <p>For information about how to obtain the name of an alert contact group, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS_Group</p>
+         * <p>Attendance system group</p>
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
@@ -116,10 +115,7 @@ public class PutContactGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert contact. Valid values of N: 1 to 100.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alice</p>
+         * <p>The name of the alert contact.</p>
          */
         public Builder contactNames(java.util.List<String> contactNames) {
             this.putQueryParameter("ContactNames", contactNames);
@@ -131,7 +127,7 @@ public class PutContactGroupRequest extends Request {
          * <p>The description of the alert contact group.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS_Alert_Group</p>
+         * <p>Alert test</p>
          */
         public Builder describe(String describe) {
             this.putQueryParameter("Describe", describe);
@@ -140,14 +136,13 @@ public class PutContactGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the weekly report subscription feature. Valid values:</p>
+         * <p>Specifies whether to enable the subscription feature. Valid values:</p>
          * <ul>
-         * <li>true: The weekly report subscription feature is enabled.</li>
-         * <li>false: The weekly report subscription feature is disabled.</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
          * </ul>
-         * <blockquote>
-         * <p> You can enable the weekly report subscription feature only for an Alibaba Cloud account that has at least five Elastic Compute Service (ECS) instances.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>

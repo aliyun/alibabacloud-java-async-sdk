@@ -106,9 +106,9 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the call is successful.</p>
+         * <p>A value of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>461CF2CD-2FC3-4B26-8645-7BD27E7D0F1D</p>
@@ -142,7 +142,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the alert rules.</p>
+         * Resources.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -150,10 +150,12 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid value:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li>true: The call is successful.</li>
-         * <li>false: The call fails.</li>
+         * <li><p>true: The operation is successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,9 +264,9 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status code that is returned for the alert rule.</p>
+             * <p>The status code.</p>
              * <blockquote>
-             * <p> The status code 200 indicates that the call is successful.</p>
+             * <p>A value of 200 indicates success.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -276,10 +278,10 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message that is returned for the alert rule.</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>Metric not found.</p>
+             * <p>The Request is not authorization.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -287,10 +289,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>456789</p>
+             * RuleId.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -298,10 +297,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS_Rule1</p>
+             * RuleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -309,10 +305,12 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the alert rule was created. Valid value:</p>
+             * <p>Indicates whether the operation is successful. Valid values:</p>
              * <ul>
-             * <li>true: The alert rule was created.</li>
-             * <li>false: The alert rule failed to be created.</li>
+             * <li><p>true: The operation is successful.</p>
+             * </li>
+             * <li><p>false: The operation failed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

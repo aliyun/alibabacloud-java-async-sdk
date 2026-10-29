@@ -59,10 +59,10 @@ public class DescribeMonitorResourceQuotaAttributeRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to return information about used quotas. Valid values:</p>
+         * <p>Specifies whether the response includes used quotas. Valid values:</p>
          * <ul>
-         * <li>true (default): yes</li>
-         * <li>false: no</li>
+         * <li>true (default): Included.</li>
+         * <li>false: Not included.</li>
          * </ul>
          * 
          * <strong>example:</strong>

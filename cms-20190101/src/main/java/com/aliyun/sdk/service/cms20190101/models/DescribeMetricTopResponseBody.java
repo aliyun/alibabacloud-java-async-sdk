@@ -108,7 +108,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
          * <p>The monitoring data.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;order&quot;:1,&quot;timestamp&quot;:1620287520000,&quot;userId&quot;:&quot;120886317861****&quot;,&quot;instanceId&quot;:&quot;i-j6ccf7d5fn335qpo****&quot;,&quot;Average&quot;:99.92,&quot;Minimum&quot;:99.5,&quot;Maximum&quot;:100.0,&quot;_count&quot;:1.0},{&quot;order&quot;:2,&quot;timestamp&quot;:1620287520000,&quot;userId&quot;:&quot;120886317861****&quot;,&quot;instanceId&quot;:&quot;i-0xii2bvf42iqvxbp****&quot;,&quot;Average&quot;:99.91,&quot;Minimum&quot;:99.0,&quot;Maximum&quot;:100.0,&quot;_count&quot;:1.0}]</p>
+         * <p>[{\&quot;order\&quot;:1,\&quot;timestamp\&quot;:1620287520000,\&quot;userId\&quot;:\&quot;120886317861****\&quot;,\&quot;instanceId\&quot;:\&quot;i-j6ccf7d5fn335qpo****\&quot;,\&quot;Average\&quot;:99.92,\&quot;Minimum\&quot;:99.5,\&quot;Maximum\&quot;:100.0,\&quot;_count\&quot;:1.0},{\&quot;order\&quot;:2,\&quot;timestamp\&quot;:1620287520000,\&quot;userId\&quot;:\&quot;120886317861****\&quot;,\&quot;instanceId\&quot;:\&quot;i-0xii2bvf42iqvxbp****\&quot;,\&quot;Average\&quot;:99.91,\&quot;Minimum\&quot;:99.0,\&quot;Maximum\&quot;:100.0,\&quot;_count\&quot;:1.0}]</p>
          */
         public Builder datapoints(String datapoints) {
             this.datapoints = datapoints;

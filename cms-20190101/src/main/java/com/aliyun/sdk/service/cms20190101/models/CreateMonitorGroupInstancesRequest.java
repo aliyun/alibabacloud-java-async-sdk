@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateMonitorGroupInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private String dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
@@ -29,6 +33,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
 
     private CreateMonitorGroupInstancesRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.groupId = builder.groupId;
         this.instances = builder.instances;
     }
@@ -47,6 +52,13 @@ public class CreateMonitorGroupInstancesRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public String getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
@@ -61,6 +73,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateMonitorGroupInstancesRequest, Builder> {
+        private String dryRun; 
         private String groupId; 
         private java.util.List<Instances> instances; 
 
@@ -70,9 +83,19 @@ public class CreateMonitorGroupInstancesRequest extends Request {
 
         private Builder(CreateMonitorGroupInstancesRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.groupId = request.groupId;
             this.instances = request.instances;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(String dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * <p>The ID of the application group.</p>

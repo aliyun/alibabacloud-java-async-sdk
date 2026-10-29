@@ -88,7 +88,7 @@ public class ModifyMonitorGroupRequest extends Request {
         } 
 
         /**
-         * <p>The alert groups that can receive alert notifications for the application group.</p>
+         * <p>The alert contact group.</p>
          * 
          * <strong>example:</strong>
          * <p>alarm_ecs_group</p>

@@ -108,7 +108,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The value 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified resource is not found.</p>
@@ -150,10 +150,12 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,23 +251,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The comparison operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</p>
-             * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-             * <li>GreaterThanThreshold: greater than the threshold</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-             * <li>LessThanThreshold: less than the threshold</li>
-             * <li>NotEqualToThreshold: not equal to the threshold</li>
-             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>GreaterThanOrEqualToThreshold</p>
+             * ComparisonOperator.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -273,11 +259,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical method for Critical-level alerts.</p>
-             * <p>The value of the <code>Statistics</code> parameter varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Average</p>
+             * Statistics.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -285,10 +267,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold for Critical-level alerts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>90</p>
+             * Threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -296,10 +275,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * Times.
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -392,23 +368,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The comparison operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</p>
-             * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-             * <li>GreaterThanThreshold: greater than the threshold</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-             * <li>LessThanThreshold: less than the threshold</li>
-             * <li>NotEqualToThreshold: not equal to the threshold</li>
-             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>GreaterThanOrEqualToThreshold</p>
+             * ComparisonOperator.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -416,11 +376,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical method for Info-level alerts.</p>
-             * <p>The value of the <code>Statistics</code> parameter varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Average</p>
+             * Statistics.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -428,10 +384,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold for Info-level alerts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>90</p>
+             * Threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -439,10 +392,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * Times.
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -535,23 +485,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The comparison operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</p>
-             * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-             * <li>GreaterThanThreshold: greater than the threshold</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-             * <li>LessThanThreshold: less than the threshold</li>
-             * <li>NotEqualToThreshold: not equal to the threshold</li>
-             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>GreaterThanOrEqualToThreshold</p>
+             * ComparisonOperator.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -559,11 +493,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical method for Warn-level alerts.</p>
-             * <p>The value of the <code>Statistics</code> parameter varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Average</p>
+             * Statistics.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -571,10 +501,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold for Warn-level alerts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>90</p>
+             * Threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -582,10 +509,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * Times.
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -665,7 +589,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The conditions for triggering Critical-level alerts.</p>
+             * Critical.
              */
             public Builder critical(Critical critical) {
                 this.critical = critical;
@@ -673,7 +597,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditions for triggering Info-level alerts.</p>
+             * Info.
              */
             public Builder info(Info info) {
                 this.info = info;
@@ -681,7 +605,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditions for triggering Warn-level alerts.</p>
+             * Warn.
              */
             public Builder warn(Warn warn) {
                 this.warn = warn;
@@ -748,10 +672,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the alert template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>label1</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -759,10 +680,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the alert template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>value1</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -987,10 +905,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The abbreviation of the Alibaba Cloud service name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -998,7 +913,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold and the alert level.</p>
+             * Escalations.
              */
             public Builder escalations(Escalations escalations) {
                 this.escalations = escalations;
@@ -1006,7 +921,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the alert template.</p>
+             * Labels.
              */
             public Builder labels(AlertTemplateLabels labels) {
                 this.labels = labels;
@@ -1014,10 +929,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cpu_total</p>
+             * MetricName.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1025,10 +937,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the Alibaba Cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs_ecs_dashboard</p>
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1036,15 +945,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method that is used to handle alerts when no monitoring data is found. Valid values:</p>
-             * <ul>
-             * <li>KEEP_LAST_STATE (default): No operation is performed.</li>
-             * <li>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</li>
-             * <li>OK: The status is considered normal.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>KEEP_LAST_STATE</p>
+             * NoDataPolicy.
              */
             public Builder noDataPolicy(String noDataPolicy) {
                 this.noDataPolicy = noDataPolicy;
@@ -1052,10 +953,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS_Rule</p>
+             * RuleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1063,10 +961,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dimension of the alert. It is an extended field.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;disk&quot;:&quot;/&quot;}</p>
+             * Selector.
              */
             public Builder selector(String selector) {
                 this.selector = selector;
@@ -1082,10 +977,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URL to which a request is sent when an alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
+             * Webhook.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;
@@ -1245,7 +1137,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried alert templates.</p>
+             * AlertTemplates.
              */
             public Builder alertTemplates(AlertTemplates alertTemplates) {
                 this.alertTemplates = alertTemplates;
@@ -1254,6 +1146,9 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
 
             /**
              * <p>The description of the alert template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS template</p>
              */
             public Builder description(String description) {
                 this.description = description;

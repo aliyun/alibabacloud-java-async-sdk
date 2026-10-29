@@ -106,9 +106,9 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the call was successful.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the site monitoring tasks that were deleted.</p>
+         * <p>The number of affected rows.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -128,10 +128,10 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. If the call was successful, the value success is returned. If the call failed, an error message such as <code>TaskId not found</code> is returned.</p>
+         * <p>The returned message. If the request is successful, a success message is returned. If the request fails, the cause of the failure is returned, such as <code>TaskId not found</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>successful</p>
+         * <p>Request succeeded.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. The value true indicates success. The value false indicates failure.</p>
+         * <p>Indicates whether the operation was successful. A value of true indicates success, and a value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -206,7 +206,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of the site monitoring tasks that were deleted.</p>
+             * <p>The number of affected rows.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

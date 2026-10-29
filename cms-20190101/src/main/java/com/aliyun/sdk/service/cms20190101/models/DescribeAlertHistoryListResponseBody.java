@@ -119,7 +119,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of historical alerts.</p>
+         * AlarmHistoryList.
          */
         public Builder alarmHistoryList(AlarmHistoryList alarmHistoryList) {
             this.alarmHistoryList = alarmHistoryList;
@@ -165,8 +165,10 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -764,10 +766,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp when the alert was triggered. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1640586600000</p>
+             * AlertTime.
              */
             public Builder alertTime(Long alertTime) {
                 this.alertTime = alertTime;
@@ -775,10 +774,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The TradeManager IDs of the alert contacts.</p>
-             * <blockquote>
-             * <p>This parameter is valid only on the China site (aliyun.com).</p>
-             * </blockquote>
+             * ContactALIIMs.
              */
             public Builder contactALIIMs(ContactALIIMs contactALIIMs) {
                 this.contactALIIMs = contactALIIMs;
@@ -786,7 +782,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert contact groups.</p>
+             * ContactGroups.
              */
             public Builder contactGroups(ContactGroups contactGroups) {
                 this.contactGroups = contactGroups;
@@ -794,7 +790,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email addresses of the alert contacts.</p>
+             * ContactMails.
              */
             public Builder contactMails(ContactMails contactMails) {
                 this.contactMails = contactMails;
@@ -802,10 +798,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile numbers of the alert contacts.</p>
-             * <blockquote>
-             * <p>This parameter is valid only on the China site (aliyun.com).</p>
-             * </blockquote>
+             * ContactSmses.
              */
             public Builder contactSmses(ContactSmses contactSmses) {
                 this.contactSmses = contactSmses;
@@ -813,7 +806,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert contacts that receive alert notifications.</p>
+             * Contacts.
              */
             public Builder contacts(Contacts contacts) {
                 this.contacts = contacts;
@@ -821,10 +814,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resources that are monitored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;instanceId&quot;:&quot;i-bp1cqhiw1za2****&quot;}</p>
+             * Dimensions.
              */
             public Builder dimensions(String dimensions) {
                 this.dimensions = dimensions;
@@ -832,10 +822,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * EvaluationCount.
              */
             public Builder evaluationCount(Integer evaluationCount) {
                 this.evaluationCount = evaluationCount;
@@ -843,10 +830,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expression that is used to trigger alerts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>$Average&gt;=10</p>
+             * Expression.
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -854,10 +838,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>7671****</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -865,10 +846,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp1cqhiw1za2****</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -876,10 +854,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the alert. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>360133</p>
+             * LastTime.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -887,14 +862,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level and notification methods of the alert. Valid values:</p>
-             * <ul>
-             * <li>P4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
-             * <li>OK: No alert is generated.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>P4</p>
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -902,10 +870,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cpu_total</p>
+             * MetricName.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -913,10 +878,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs_ecs_dashboard</p>
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -924,10 +886,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>applyTemplate61dc81b5-d357-4cf6-a9b7-9f83c1d5****</p>
+             * RuleId.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -935,10 +894,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS_Rule</p>
+             * RuleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -946,14 +902,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert status. Valid values:</p>
-             * <ul>
-             * <li>ALARM: Alerts are triggered.</li>
-             * <li>OK: No alerts are triggered.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ALARM</p>
+             * State.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -961,15 +910,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether alerts are muted. Valid values:</p>
-             * <ul>
-             * <li>2 (default): Alerts are muted and are not triggered within the mute period, even if the condition specified in the alert rule is met.</li>
-             * <li>0: Alerts are triggered or cleared.</li>
-             * <li>1: The alert rule is ineffective.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -977,10 +918,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold of the metric value to trigger or clear an alert.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.58</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -988,10 +926,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URL.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
+             * Webhooks.
              */
             public Builder webhooks(String webhooks) {
                 this.webhooks = webhooks;

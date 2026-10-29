@@ -22,12 +22,17 @@ public class PutMonitoringConfigRequest extends Request {
     private Boolean autoInstall;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableInstallAgentNewECS")
     private Boolean enableInstallAgentNewECS;
 
     private PutMonitoringConfigRequest(Builder builder) {
         super(builder);
         this.autoInstall = builder.autoInstall;
+        this.dryRun = builder.dryRun;
         this.enableInstallAgentNewECS = builder.enableInstallAgentNewECS;
     }
 
@@ -52,6 +57,13 @@ public class PutMonitoringConfigRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return enableInstallAgentNewECS
      */
     public Boolean getEnableInstallAgentNewECS() {
@@ -60,6 +72,7 @@ public class PutMonitoringConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<PutMonitoringConfigRequest, Builder> {
         private Boolean autoInstall; 
+        private Boolean dryRun; 
         private Boolean enableInstallAgentNewECS; 
 
         private Builder() {
@@ -69,11 +82,12 @@ public class PutMonitoringConfigRequest extends Request {
         private Builder(PutMonitoringConfigRequest request) {
             super(request);
             this.autoInstall = request.autoInstall;
+            this.dryRun = request.dryRun;
             this.enableInstallAgentNewECS = request.enableInstallAgentNewECS;
         } 
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>This parameter is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -85,10 +99,21 @@ public class PutMonitoringConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:</p>
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to automatically install the CloudMonitor agent on newly purchased ECS instances. Valid values:</p>
          * <ul>
-         * <li>true (default): The CloudMonitor agent is automatically installed on new ECS instances.</li>
-         * <li>false: The CloudMonitor agent is not automatically installed on new ECS instances.</li>
+         * <li><p>true (default): The CloudMonitor agent is automatically installed on newly purchased ECS instances.</p>
+         * </li>
+         * <li><p>false: The CloudMonitor agent is not automatically installed on newly purchased ECS instances.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

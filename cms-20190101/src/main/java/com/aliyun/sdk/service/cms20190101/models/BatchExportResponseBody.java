@@ -158,7 +158,7 @@ public class BatchExportResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The timestamp of the data requested by the backend. A larger timestamp indicates that the data export time is closer to the current time.</p>
+         * <p>The timestamp when the backend requested the data. A larger timestamp indicates that the exported data is closer to the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>1678781819000</p>
@@ -171,7 +171,7 @@ public class BatchExportResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>A status code of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -183,9 +183,9 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Cursor information that is used to call this operation again.</p>
+         * <p>The cursor used for the next call to this operation.</p>
          * <blockquote>
-         * <p> If <code>null</code> is returned, the monitoring data is exported.</p>
+         * <p>If the return value is <code>null</code>, the monitoring data export is complete.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned in this call.</p>
+         * <p>The data returned in the current call.</p>
          */
         public Builder dataResults(java.util.List<MetricStat> dataResults) {
             this.dataResults = dataResults;
@@ -205,10 +205,12 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the data has been exported. Valid values:</p>
+         * <p>Indicates whether the data export is complete. Valid values:</p>
          * <ul>
-         * <li>true: Some data is not exported.</li>
-         * <li>false: All the data is exported.</li>
+         * <li><p>true: The data export is incomplete.</p>
+         * </li>
+         * <li><p>false: The data export is complete.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,7 +222,7 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of data entries returned in this call.</p>
+         * <p>The number of data records returned in the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -253,10 +255,12 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

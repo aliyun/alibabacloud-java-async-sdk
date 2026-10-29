@@ -60,7 +60,7 @@ public class DeleteExporterOutputRequest extends Request {
         } 
 
         /**
-         * <p>The name of the configuration set.</p>
+         * <p>The name of the destination configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

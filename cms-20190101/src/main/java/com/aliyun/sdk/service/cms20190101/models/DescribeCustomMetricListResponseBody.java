@@ -95,7 +95,7 @@ public class DescribeCustomMetricListResponseBody extends TeaModel {
         /**
          * <p>The responses code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class DescribeCustomMetricListResponseBody extends TeaModel {
          * <p>The reported custom metrics that are found in the query.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;all&quot;:0,&quot;size&quot;:10,&quot;param&quot;:{&quot;metric&quot;:&quot;{\&quot;metricName\&quot;:\&quot;cpu_total\&quot;,\&quot;groupId\&quot;:7378****,\&quot;project\&quot;:\&quot;acs_customMetric_120886317861****\&quot;,\&quot;dimension\&quot;:\&quot;sampleName1=value1&amp;sampleName2=value2\&quot;,\&quot;status\&quot;:1}&quot;,&quot;service&quot;:&quot;metric-center.aliyun-inc.com&quot;},&quot;page&quot;:1,&quot;list&quot;:[]}</p>
+         * <p>{\&quot;all\&quot;:0,\&quot;size\&quot;:10,\&quot;param\&quot;:{\&quot;metric\&quot;:\&quot;{\\\&quot;metricName\\\&quot;:\\\&quot;cpu_total\\\&quot;,\\\&quot;groupId\\\&quot;:7378****,\\\&quot;project\\\&quot;:\\\&quot;acs_customMetric_120886317861****\\\&quot;,\\\&quot;dimension\\\&quot;:\\\&quot;sampleName1=value1&amp;sampleName2=value2\\\&quot;,\\\&quot;status\\\&quot;:1}\&quot;,\&quot;service\&quot;:\&quot;metric-center.aliyun-inc.com\&quot;},\&quot;page\&quot;:1,\&quot;list\&quot;:[]}</p>
          */
         public Builder result(String result) {
             this.result = result;

@@ -80,7 +80,10 @@ public class Matcher extends TeaModel {
         } 
 
         /**
-         * Label.
+         * <p>The name of the metric dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-fewrewr*****</p>
          */
         public Builder label(String label) {
             this.label = label;
@@ -88,7 +91,10 @@ public class Matcher extends TeaModel {
         }
 
         /**
-         * Operator.
+         * <p>The matching method for the metric dimension. Only EQUALS is supported. Default value: EQUALS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EQUALS</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -96,7 +102,10 @@ public class Matcher extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The value of the metric dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder value(String value) {
             this.value = value;

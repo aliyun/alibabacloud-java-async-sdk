@@ -132,9 +132,9 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * <p>The status code 200 indicates that the call was successful. Other status codes indicate that the call failed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration sets for exporting monitoring data.</p>
+         * Datapoints.
          */
         public Builder datapoints(Datapoints datapoints) {
             this.datapoints = datapoints;
@@ -154,7 +154,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>sucess</p>
@@ -165,7 +165,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -187,10 +187,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:  </p>
          * <ul>
-         * <li><code>true</code></li>
-         * <li><code>false</code></li>
+         * <li><code>true</code>: successful</li>
+         * <li><code>false</code>: failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -297,10 +297,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AccessKey ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>LTAIpY33********</p>
+             * ak.
              */
             public Builder ak(String ak) {
                 this.ak = ak;
@@ -308,10 +305,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Log Service endpoint to which the monitoring data is exported.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://cn-qingdao-share.log.aliyuncs.com">http://cn-qingdao-share.log.aliyuncs.com</a></p>
+             * endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -319,10 +313,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Logstore.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>monitorlogstore</p>
+             * logstore.
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -330,10 +321,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Log Service project to which the monitoring data is exported.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>exporter</p>
+             * project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -426,7 +414,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The JSON object that contains the details about the destination to which the monitoring data is exported.</p>
+             * ConfigJson.
              */
             public Builder configJson(ConfigJson configJson) {
                 this.configJson = configJson;
@@ -434,10 +422,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the configuration set was created. The value is a UNIX timestamp.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1584016495498</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -445,10 +430,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the configuration set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>exporterOut</p>
+             * DestName.
              */
             public Builder destName(String destName) {
                 this.destName = destName;
@@ -456,13 +438,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service to which the monitoring data is exported.</p>
-             * <blockquote>
-             * <p>Only Log Service is supported. More services will be supported in the future.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>SLS</p>
+             * DestType.
              */
             public Builder destType(String destType) {
                 this.destType = destType;

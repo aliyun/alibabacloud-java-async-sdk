@@ -230,9 +230,9 @@ public class CreateHybridMonitorTaskRequest extends Request {
         } 
 
         /**
-         * <p>The tags of the metric.</p>
+         * <p>The labels of the metric.</p>
          * <blockquote>
-         * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+         * <p>This parameter is required only when <code>TaskType</code> is set to <code>aliyun_sls</code>.</p>
          * </blockquote>
          */
         public Builder attachLabels(java.util.List<AttachLabels> attachLabels) {
@@ -242,7 +242,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * CloudAccessId.
+         * <p>The list of primary account IDs of other cloud providers that are imported into CloudMonitor.</p>
          */
         public Builder cloudAccessId(java.util.List<String> cloudAccessId) {
             this.putQueryParameter("CloudAccessId", cloudAccessId);
@@ -258,7 +258,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
          * </ul>
          * <p>Unit: seconds.</p>
          * <blockquote>
-         * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+         * <p>This parameter is required only when <code>TaskType</code> is set to <code>aliyun_sls</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -271,10 +271,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the collection target.</p>
+         * <p>The type of the collection target for monitoring data.</p>
          * <ul>
-         * <li>If the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>, enter <code>aliyun_fc</code>.</li>
-         * <li>If the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>, enter the name of the Logstore group.</li>
+         * <li>If <code>TaskType</code> is set to <code>aliyun_fc</code>, enter <code>aliyun_fc</code>.</li>
+         * <li>If <code>TaskType</code> is set to <code>aliyun_sls</code>, enter the name of the Logstore group for SLS logs.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -288,7 +288,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The description of the metric import task.</p>
+         * <p>The description of the monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud service data import task.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -297,10 +300,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application group.</p>
-         * <p>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+         * <p>The application group ID.</p>
+         * <p>For information about how to obtain the application group ID, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
          * <blockquote>
-         * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+         * <p>This parameter is required only when <code>TaskType</code> is set to <code>aliyun_sls</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -314,7 +317,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
 
         /**
          * <p>The name of the namespace.</p>
-         * <p>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+         * <p>For information about how to obtain the namespace name, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -327,9 +330,9 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the logs that are imported from Simple Log Service.</p>
+         * <p>The SLS log configuration.</p>
          * <blockquote>
-         * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+         * <p>This parameter is required only when <code>TaskType</code> is set to <code>aliyun_sls</code>.</p>
          * </blockquote>
          */
         public Builder SLSProcessConfig(SLSProcessConfig SLSProcessConfig) {
@@ -339,10 +342,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member account.</p>
-         * <p>If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.</p>
+         * <p>The member ID.</p>
+         * <p>When you invoke this operation by using a management account, you can use cloud native mode to import Alibaba Cloud services of any member in the resource folder into Hybrid Cloud Monitoring. This allows you to use the resource directory to monitor Alibaba Cloud services across accounts in CloudMonitor. You can go to <strong>Settings</strong> to configure this feature.</p>
          * <blockquote>
-         * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>.</p>
+         * <p>This parameter is required only when <code>TaskType</code> is set to <code>aliyun_fc</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -355,9 +358,9 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the member accounts. Separate multiple member account IDs with commas (,).</p>
+         * <p>The member IDs. Separate multiple member IDs with commas (,).</p>
          * <blockquote>
-         * <p> This parameter is required only if you call this operation by using the management account.</p>
+         * <p>This parameter is required only when you call this operation by using a management account.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -370,10 +373,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the metric import task.</p>
+         * <p>The name of the monitoring task.</p>
          * <ul>
-         * <li>If the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>, enter the name of the metric import task.</li>
-         * <li>If the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>, enter the name of the metric for logs imported from Simple Log Service.</li>
+         * <li>If <code>TaskType</code> is set to <code>aliyun_fc</code>, enter the name of the data import task for the Alibaba Cloud service.</li>
+         * <li>If <code>TaskType</code> is set to <code>aliyun_sls</code>, enter the metric name for SLS logs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -386,10 +389,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the metric import task. Valid values:</p>
+         * <p>The type of the monitoring task. Valid values:</p>
          * <ul>
-         * <li>aliyun_fc: metric import tasks for Alibaba Cloud services.</li>
-         * <li>aliyun_sls: metrics for logs imported from Simple Log Service.</li>
+         * <li>aliyun_fc: a data import task for Alibaba Cloud services.</li>
+         * <li>aliyun_sls: a metric for SLS logs.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -403,12 +406,12 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</p>
+         * <p>The configuration file of the Alibaba Cloud service to be imported into Hybrid Cloud Monitoring.</p>
          * <ul>
-         * <li>namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</li>
-         * <li>metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</li>
+         * <li>namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</li>
+         * <li>metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</li>
          * </ul>
-         * <p>The following code shows a sample configuration file:</p>
+         * <p>The following example shows the configuration file:</p>
          * <pre><code>products:
          * - namespace: acs_ecs_dashboard
          *   metric_info:
@@ -428,7 +431,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
          *     - MySQL_TPS
          * </code></pre>
          * <blockquote>
-         * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>.</p>
+         * <p>This parameter is required when <code>TaskType</code> is set to <code>aliyun_fc</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -500,7 +503,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the metric.</p>
+             * <p>The label key of the metric.</p>
              * 
              * <strong>example:</strong>
              * <p>app_service</p>
@@ -511,7 +514,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the metric.</p>
+             * <p>The label value of the metric.</p>
              * 
              * <strong>example:</strong>
              * <p>testValue</p>
@@ -581,7 +584,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The alias of the extended field that specifies the result of basic operations performed on aggregation results.</p>
+             * <p>The alias of the arithmetic operation result of the extended field for SLS log statistical results.</p>
              * 
              * <strong>example:</strong>
              * <p>SuccRate</p>
@@ -592,7 +595,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The extended field that specifies the result of basic operations performed on aggregation results.</p>
+             * <p>The arithmetic operation results of the extended fields for SLS log statistical results.</p>
              * 
              * <strong>example:</strong>
              * <p>success_count</p>
@@ -675,16 +678,16 @@ public class CreateHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The method that is used to filter logs imported from Simple Log Service. Valid values:</p>
+             * <p>The filter method for parameter values in SLS logs. Valid values:</p>
              * <ul>
-             * <li><code>contain</code>: contains</li>
-             * <li><code>notContain</code>: does not contain</li>
-             * <li><code>&gt;</code>: greater than</li>
-             * <li><code>&lt;</code>: less than</li>
-             * <li><code>=</code>: equal to</li>
-             * <li><code>! =</code>: not equal to</li>
-             * <li><code>&gt;=</code>: greater than or equal to</li>
-             * <li><code>&lt;=</code>: less than or equal to</li>
+             * <li><code>contain</code>: contains.</li>
+             * <li><code>notContain</code>: does not contain.</li>
+             * <li><code>&gt;</code>: greater than.</li>
+             * <li><code>&lt;</code>: less than.</li>
+             * <li><code>=</code>: equal to.</li>
+             * <li><code>!=</code>: not equal to.</li>
+             * <li><code>&gt;=</code>: greater than or equal to.</li>
+             * <li><code>&lt;=</code>: less than or equal to.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -696,7 +699,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The name of the key that is used to filter logs imported from Simple Log Service.</p>
+             * <p>The name of the parameter to filter in SLS logs.</p>
              * 
              * <strong>example:</strong>
              * <p>code</p>
@@ -707,7 +710,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the key that is used to filter logs imported from Simple Log Service.</p>
+             * <p>The filter value of the parameter in SLS logs.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -777,7 +780,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The conditions that are used to filter logs imported from Simple Log Service.</p>
+             * <p>The list of filter conditions for parameters in SLS logs.</p>
              */
             public Builder filters(java.util.List<Filters> filters) {
                 this.filters = filters;
@@ -787,8 +790,8 @@ public class CreateHybridMonitorTaskRequest extends Request {
             /**
              * <p>The relationship between multiple filter conditions. Valid values:</p>
              * <ul>
-             * <li>and (default): Logs are processed only if all filter conditions are met.</li>
-             * <li>or: Logs are processed if one of the filter conditions is met.</li>
+             * <li>and (default): Logs are processed only when all filter conditions are met.</li>
+             * <li>or: Logs are processed when any filter condition is met.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -859,7 +862,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The alias of the aggregation result.</p>
+             * <p>The alias of the SLS log statistical result.</p>
              * 
              * <strong>example:</strong>
              * <p>ApiResult</p>
@@ -870,7 +873,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
+             * <p>The name of the parameter for SLS log statistics.</p>
              * 
              * <strong>example:</strong>
              * <p>code</p>
@@ -979,7 +982,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The alias of the aggregation result.</p>
+             * <p>The alias of the SLS log statistical result.</p>
              * 
              * <strong>example:</strong>
              * <p>level_count</p>
@@ -990,19 +993,19 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The function that is used to aggregate the log data of a statistical period. Valid values:</p>
+             * <p>The statistical method used to aggregate log data within the statistical period. Valid values:</p>
              * <ul>
-             * <li>count: counts the number.</li>
-             * <li>sum: calculates the total value.</li>
-             * <li>avg: calculates the average value.</li>
-             * <li>max: calculates the maximum value.</li>
-             * <li>min: calculates the minimum value.</li>
-             * <li>value: collects samples within the statistical period.</li>
-             * <li>countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.</li>
-             * <li>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.</li>
-             * <li>distinct: calculates the number of unique values of the specified field within a statistical period.</li>
-             * <li>distribution: calculates the number of logs that meet a specified condition within the statistical period.</li>
-             * <li>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</li>
+             * <li>count: counts the number of occurrences.</li>
+             * <li>sum: calculates the sum.</li>
+             * <li>avg: calculates the average.</li>
+             * <li>max: returns the maximum value.</li>
+             * <li>min: returns the minimum value.</li>
+             * <li>value: samples within the period.</li>
+             * <li>countps: calculates the average count per second for the specified field within the statistical period.</li>
+             * <li>sumps: calculates the average sum per second for the specified field within the statistical period.</li>
+             * <li>distinct: calculates the number of occurrences of the specified field after deduplication within the statistical period.</li>
+             * <li>distribution: calculates the number of occurrences of field values within a specified range.</li>
+             * <li>percentile: calculates the distribution value of field values, such as P50.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1014,10 +1017,12 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
+             * <p>The statistical value of SLS logs.</p>
              * <ul>
-             * <li>If the <code>Function</code> parameter is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.</li>
-             * <li>If the <code>Function</code> parameter is set to <code>percentile</code>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</li>
+             * <li><p>If <code>Function</code> is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 200.</p>
+             * </li>
+             * <li><p>If <code>Function</code> is set to <code>percentile</code>, this parameter specifies the percentile of the statistical distribution. For example, 0.5 indicates P50.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1029,9 +1034,9 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
+             * <p>The statistical value of SLS logs.</p>
              * <blockquote>
-             * <p> This parameter is required only if the <code>Function</code> parameter is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</p>
+             * <p>This parameter is required only when <code>Function</code> is set to <code>distribution</code>. It specifies the upper limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 299.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1043,7 +1048,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
+             * <p>The name of the parameter for SLS log statistics.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -1139,7 +1144,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The extended fields that specify the results of basic operations performed on aggregation results.</p>
+             * <p>The arithmetic operation results of the extended fields for SLS log statistical results.</p>
              */
             public Builder express(java.util.List<Express> express) {
                 this.express = express;
@@ -1147,7 +1152,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The conditions that are used to filter logs imported from Simple Log Service.</p>
+             * <p>The filter conditions for parameters in SLS logs.</p>
              */
             public Builder filter(Filter filter) {
                 this.filter = filter;
@@ -1155,7 +1160,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</p>
+             * <p>Aggregates data by spatial dimensions, equivalent to Group By in SQL.</p>
              */
             public Builder groupBy(java.util.List<GroupBy> groupBy) {
                 this.groupBy = groupBy;
@@ -1163,7 +1168,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The method that is used to aggregate logs imported from Simple Log Service.</p>
+             * <p>The statistical method for SLS logs.</p>
              */
             public Builder statistics(java.util.List<Statistics> statistics) {
                 this.statistics = statistics;

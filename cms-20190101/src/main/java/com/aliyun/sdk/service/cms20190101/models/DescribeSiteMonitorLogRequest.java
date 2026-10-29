@@ -214,7 +214,10 @@ public class DescribeSiteMonitorLogRequest extends Request {
         } 
 
         /**
-         * Browser.
+         * <p>The type of the browser.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chrome</p>
          */
         public Builder browser(String browser) {
             this.putQueryParameter("Browser", browser);
@@ -223,7 +226,10 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * BrowserInfo.
+         * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder browserInfo(String browserInfo) {
             this.putQueryParameter("BrowserInfo", browserInfo);
@@ -232,7 +238,7 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * <p>The city identification code.</p>
+         * <p>The city ID.</p>
          * 
          * <strong>example:</strong>
          * <p>546</p>
@@ -244,7 +250,10 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * Device.
+         * <p>The type of the device. This parameter specifies the screen size for impersonation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>laptop</p>
          */
         public Builder device(String device) {
             this.putQueryParameter("Device", device);
@@ -253,13 +262,15 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Valid values:</p>
+         * <p>The end of the time range to query. The following formats are supported:</p>
          * <ul>
-         * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</li>
-         * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</li>
+         * <li><p>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</p>
+         * </li>
+         * <li><p>UTC format: YYYY-MM-DDThh:mm:ssZ.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> We recommend that you use UNIX timestamps to prevent time zone-related issues.</p>
+         * <p>Use UNIX timestamps to prevent time zone-related issues.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -272,8 +283,8 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * <p>The filter condition.</p>
-         * <p>You can specify a simple expression, for example, <code>TotalTime&gt;100</code>. In this case, the operation returns only the data for instant test tasks whose total response time exceeds 100 milliseconds.</p>
+         * <p>The filter expression for detection results.</p>
+         * <p>Simple expressions are supported. For example, you can use the <code>TotalTime&gt;100</code> expression to query the detection data whose total response time exceeds 100 milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>TotalTime&gt;100</p>
@@ -285,7 +296,7 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * <p>The carrier identification code.</p>
+         * <p>The carrier ID.</p>
          * 
          * <strong>example:</strong>
          * <p>465</p>
@@ -297,7 +308,7 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 1 to 1440.</p>
+         * <p>The number of entries to return on each page for a paged query. Valid values: 1 to 1440.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -309,7 +320,7 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * <p>The name of the metric.</p>
+         * <p>The metric.</p>
          * <p>Only the <code>ProbeLog</code> metric is supported.</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +333,7 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * <p>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.``</p>
+         * <p>If the response is truncated, use the <code>NextToken</code> parameter to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>IWBjqMYSy0is7zSMGu16****</p>
@@ -334,16 +345,18 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. The following formats are supported:</p>
+         * <p>The beginning of the time range to query. The following formats are supported:</p>
          * <ul>
-         * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</li>
-         * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</li>
+         * <li><p>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</p>
+         * </li>
+         * <li><p>UTC format: YYYY-MM-DDThh:mm:ssZ.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li>The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.<br>We recommend that you use UNIX timestamps to prevent time zone-related issues.</li>
+         * <li>The start time and end time follow the (StartTime, EndTime] pattern. The value of StartTime cannot be the same as or later than the value of EndTime.<br> - Use UNIX timestamps to prevent time zone-related issues.<br></li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1638422474389</p>
@@ -355,7 +368,7 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instant test tasks. Separate multiple task IDs with commas (,).</p>
+         * <p>The ID of the detection task. You can specify multiple task IDs. Separate them with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,9 +106,9 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,10 +150,12 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -331,7 +333,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The keywords that are used to match events.</p>
+             * Keywords.
              */
             public Builder keywords(Keywords keywords) {
                 this.keywords = keywords;
@@ -339,10 +341,10 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relationship between multiple keywords in a condition. Valid values:</p>
+             * <p>The condition for multiple keywords. Valid values:</p>
              * <ul>
-             * <li>OR: The relationship between keywords is OR.</li>
-             * <li>NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.</li>
+             * <li>OR: The relationship between multiple keywords is OR.</li>
+             * <li>NOT: Does not contain the keyword. Matches all events that are not in the keyword list.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -640,7 +642,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The types of the event-triggered alert rules.</p>
+             * EventTypeList.
              */
             public Builder eventTypeList(EventTypeList eventTypeList) {
                 this.eventTypeList = eventTypeList;
@@ -648,7 +650,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The keyword for filtering.</p>
+             * <p>The filter keyword.</p>
              */
             public Builder keywordFilterObj(KeywordFilterObj keywordFilterObj) {
                 this.keywordFilterObj = keywordFilterObj;
@@ -683,7 +685,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.</p>
+             * <p>Filters logs by using SQL statements. An alert is triggered if the filter conditions are met.</p>
              * 
              * <strong>example:</strong>
              * <p>ycccluster1 and (i-23ij0o82612 or Executed1) or Asimulated not 222</p>
@@ -824,7 +826,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event pattern. This parameter describes the trigger conditions of an event.</p>
+             * <p>The event pattern. Describes the trigger conditions of the event.</p>
              */
             public Builder eventPattern(EventPattern eventPattern) {
                 this.eventPattern = eventPattern;
@@ -834,8 +836,10 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             /**
              * <p>The event type. Valid values:</p>
              * <ul>
-             * <li>SYSTEM: system event</li>
-             * <li>CUSTOM: custom event</li>
+             * <li><p>SYSTEM: system event.</p>
+             * </li>
+             * <li><p>CUSTOM: custom event.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -847,7 +851,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application group.</p>
+             * <p>The application group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3607****</p>
@@ -871,8 +875,10 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             /**
              * <p>The status of the event-triggered alert rule. Valid values:</p>
              * <ul>
-             * <li>ENABLED</li>
-             * <li>DISABLED</li>
+             * <li><p>ENABLED: enabled.</p>
+             * </li>
+             * <li><p>DISABLED: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

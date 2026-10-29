@@ -108,7 +108,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>A value of 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -142,11 +142,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Indicates whether the operation was successful. Valid values: -true: The operation was successful. -false: The operation failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -157,7 +153,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unhealthy instances that are detected by the specified availability monitoring tasks.</p>
+         * UnhealthyList.
          */
         public Builder unhealthyList(UnhealthyList unhealthyList) {
             this.unhealthyList = unhealthyList;
@@ -277,10 +273,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the availability monitoring task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123456</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;

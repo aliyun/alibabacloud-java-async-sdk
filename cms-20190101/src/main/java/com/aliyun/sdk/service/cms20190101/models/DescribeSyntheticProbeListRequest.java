@@ -157,7 +157,10 @@ public class DescribeSyntheticProbeListRequest extends Request {
         } 
 
         /**
-         * City.
+         * <p>The name or ID of the city where the carrier detection point is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -166,7 +169,10 @@ public class DescribeSyntheticProbeListRequest extends Request {
         }
 
         /**
-         * IdcProbe.
+         * <p>Specifies whether to query only IDC detection points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder idcProbe(Boolean idcProbe) {
             this.putQueryParameter("IdcProbe", idcProbe);
@@ -175,7 +181,10 @@ public class DescribeSyntheticProbeListRequest extends Request {
         }
 
         /**
-         * Ipv4.
+         * <p>Specifies whether to show only IPv4 nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ipv4(Boolean ipv4) {
             this.putQueryParameter("Ipv4", ipv4);
@@ -184,7 +193,10 @@ public class DescribeSyntheticProbeListRequest extends Request {
         }
 
         /**
-         * Ipv6.
+         * <p>Specifies whether to show only IPv6 nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ipv6(Boolean ipv6) {
             this.putQueryParameter("Ipv6", ipv6);
@@ -193,7 +205,10 @@ public class DescribeSyntheticProbeListRequest extends Request {
         }
 
         /**
-         * Isp.
+         * <p>The name or ID of the carrier detection point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Unicom</p>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -202,7 +217,10 @@ public class DescribeSyntheticProbeListRequest extends Request {
         }
 
         /**
-         * LmProbe.
+         * <p>Specifies whether to query only Lastmile residential broadband nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder lmProbe(Boolean lmProbe) {
             this.putQueryParameter("LmProbe", lmProbe);
@@ -211,7 +229,10 @@ public class DescribeSyntheticProbeListRequest extends Request {
         }
 
         /**
-         * MbProbe.
+         * <p>Specifies whether to query only mobile detection points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mbProbe(Boolean mbProbe) {
             this.putQueryParameter("MbProbe", mbProbe);
@@ -220,7 +241,14 @@ public class DescribeSyntheticProbeListRequest extends Request {
         }
 
         /**
-         * ViewAll.
+         * <p>Specifies whether to return all detection points. Valid values:</p>
+         * <ul>
+         * <li>false: Returns only the detection points available to the user. This is the default value.</li>
+         * <li>true: Returns all detection points.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder viewAll(Boolean viewAll) {
             this.putQueryParameter("ViewAll", viewAll);

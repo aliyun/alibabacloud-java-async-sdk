@@ -93,9 +93,9 @@ public class DisableMetricRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The responses code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class DisableMetricRulesResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>RuleId is mandatory for this action.</p>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,10 +129,10 @@ public class DisableMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The operation is successful.</li>
+         * <li>false: The operation fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

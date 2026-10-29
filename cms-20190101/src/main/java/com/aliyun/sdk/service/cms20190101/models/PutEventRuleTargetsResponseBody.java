@@ -145,9 +145,9 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The value 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>This parameter is returned if the specified alert contact groups in the request failed to be created or modified.</p>
+         * FailedContactParameters.
          */
         public Builder failedContactParameters(FailedContactParameters failedContactParameters) {
             this.failedContactParameters = failedContactParameters;
@@ -167,7 +167,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>This parameter is returned if the specified functions in the request failed to be created or modified in Function Compute.</p>
+         * FailedFcParameters.
          */
         public Builder failedFcParameters(FailedFcParameters failedFcParameters) {
             this.failedFcParameters = failedFcParameters;
@@ -175,7 +175,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>This parameter is returned if the specified queues in the request failed to be created or modified in SMQ.</p>
+         * FailedMnsParameters.
          */
         public Builder failedMnsParameters(FailedMnsParameters failedMnsParameters) {
             this.failedMnsParameters = failedMnsParameters;
@@ -183,7 +183,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of resources that failed to be created or modified.</p>
+         * <p>The number of failed parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -216,7 +216,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * <p>Indicates whether the operation was successful. The value true indicates success. The value false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -298,7 +298,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the alert contact group.</p>
+             * ContactGroupName.
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -306,10 +306,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the recipient.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -317,11 +314,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert notification methods. Valid values:</p>
-             * <p>4: Alert notifications are sent by using DingTalk and emails.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -468,10 +461,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the function.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>functionTest1</p>
+             * FunctionName.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -479,10 +469,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the recipient.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -490,10 +477,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -501,10 +485,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Function Compute service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>serviceTest1</p>
+             * ServiceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -638,10 +619,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the recipient.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -649,10 +627,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the MNS queue.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testQueue</p>
+             * Queue.
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -660,10 +635,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;

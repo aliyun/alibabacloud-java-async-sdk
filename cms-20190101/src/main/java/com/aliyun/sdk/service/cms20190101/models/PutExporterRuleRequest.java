@@ -130,10 +130,10 @@ public class PutExporterRuleRequest extends Request {
         } 
 
         /**
-         * <p>The description of the data export rule.</p>
+         * <p>The description of the export rules.</p>
          * 
          * <strong>example:</strong>
-         * <p>Export CPU metrics</p>
+         * <p>desc_******</p>
          */
         public Builder describe(String describe) {
             this.putQueryParameter("Describe", describe);
@@ -142,11 +142,8 @@ public class PutExporterRuleRequest extends Request {
         }
 
         /**
-         * <p>The destination to which the data is exported. Valid values of N: 1 to 20.</p>
+         * <p>The destination for data export.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>distName1</p>
          */
         public Builder dstNames(java.util.List<String> dstNames) {
             this.putQueryParameter("DstNames", dstNames);
@@ -155,13 +152,10 @@ public class PutExporterRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the metric.</p>
-         * <blockquote>
-         * </blockquote>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>cpu_total</p>
+         * <p>CPUUtilization</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -170,10 +164,7 @@ public class PutExporterRuleRequest extends Request {
         }
 
         /**
-         * <p>The namespace of the cloud service.</p>
-         * <blockquote>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
-         * </blockquote>
+         * <p>The namespace of the Alibaba Cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>acs_ecs_dashboard</p>
@@ -187,11 +178,11 @@ public class PutExporterRuleRequest extends Request {
         /**
          * <p>The name of the rule.</p>
          * <blockquote>
-         * <p>If the specified rule exists, the existing rule is modified. Otherwise, a rule is created.</p>
+         * <p>If the rule name already exists, the existing rule is modified. Otherwise, a new rule is created.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>MyRuleName</p>
+         * <p>rule1_****</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -200,14 +191,14 @@ public class PutExporterRuleRequest extends Request {
         }
 
         /**
-         * <p>The time window of the exported data. Unit: seconds.</p>
+         * <p>The time windows for data export. Unit: seconds.</p>
          * <blockquote>
+         * <ul>
+         * <li>To export data for multiple windows, separate the windows with commas (,).</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li><p>Separate multiple time windows with commas (,).</p>
-         * </li>
-         * <li><p>Data in a time window of less than 60 seconds cannot be exported.</p>
-         * </li>
+         * <li>Exporting data at intervals of less than 60 seconds is not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>

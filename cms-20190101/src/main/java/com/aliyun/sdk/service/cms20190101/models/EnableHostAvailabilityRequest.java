@@ -60,11 +60,8 @@ public class EnableHostAvailabilityRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the availability monitoring task. Valid values of N: 1 to 20.</p>
+         * <p>The ID of the availability monitoring task.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
          */
         public Builder id(java.util.List<Long> id) {
             this.putQueryParameter("Id", id);

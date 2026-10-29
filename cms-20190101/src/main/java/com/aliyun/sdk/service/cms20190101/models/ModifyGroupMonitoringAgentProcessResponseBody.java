@@ -93,9 +93,9 @@ public class ModifyGroupMonitoringAgentProcessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the call was successful.</p>
+         * <p>A value of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class ModifyGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7985D471-3FA8-4EE9-8F4B-45C19DF3D36F</p>
@@ -129,10 +129,10 @@ public class ModifyGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

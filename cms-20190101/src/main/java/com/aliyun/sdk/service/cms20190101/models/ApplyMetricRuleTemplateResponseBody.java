@@ -106,9 +106,9 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The responses code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>A status code of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified resource is not found.</p>
@@ -142,7 +142,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources that are affected by the alert rule.</p>
+         * <p>The resources affected by the alert rule.</p>
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -150,10 +150,12 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation is successful.</p>
+         * </li>
+         * <li><p>false: The operation fails.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,9 +264,9 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The responses code.</p>
+             * <p>The status code.</p>
              * <blockquote>
-             * <p> The status code 200 indicates that the request was successful.</p>
+             * <p>A status code of 200 indicates success.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -309,10 +311,12 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <p>Indicates whether the operation is successful. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: The operation is successful.</p>
+             * </li>
+             * <li><p>false: The operation fails.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -383,7 +387,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the generated alert rule.</p>
+             * <p>The detailed results of the generated alert rules.</p>
              */
             public Builder alertResults(java.util.List<AlertResults> alertResults) {
                 this.alertResults = alertResults;

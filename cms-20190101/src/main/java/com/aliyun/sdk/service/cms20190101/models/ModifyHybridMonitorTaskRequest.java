@@ -130,7 +130,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         } 
 
         /**
-         * <p>The tags of the metric.</p>
+         * <p>The labels of the metric.</p>
          */
         public Builder attachLabels(java.util.List<AttachLabels> attachLabels) {
             this.putQueryParameter("AttachLabels", attachLabels);
@@ -139,10 +139,12 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The collection period of the metric. Valid values:</p>
+         * <p>The collection interval of the metric. Valid values:</p>
          * <ul>
-         * <li>15</li>
-         * <li>60</li>
+         * <li><p>15</p>
+         * </li>
+         * <li><p>60</p>
+         * </li>
          * </ul>
          * <p>Unit: seconds.</p>
          * 
@@ -156,7 +158,10 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The description of the metric import task.</p>
+         * <p>The description of the monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS log monitoring data</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -165,7 +170,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the logs that are imported from Simple Log Service.</p>
+         * <p>The SLS log configuration.</p>
          */
         public Builder SLSProcessConfig(SLSProcessConfig SLSProcessConfig) {
             this.putQueryParameter("SLSProcessConfig", SLSProcessConfig);
@@ -174,8 +179,8 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the metric import task.</p>
-         * <p>For information about how to obtain the ID of a metric import task, see <a href="https://help.aliyun.com/document_detail/428624.html">DescribeHybridMonitorTaskList</a>.</p>
+         * <p>The monitoring task ID.</p>
+         * <p>For information about how to obtain the monitoring task ID, see <a href="https://help.aliyun.com/document_detail/428624.html">DescribeHybridMonitorTaskList</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,8 +193,8 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the metric import task.</p>
-         * <p>For information about how to obtain the ID of a metric import task, see <a href="https://help.aliyun.com/document_detail/428624.html">DescribeHybridMonitorTaskList</a>.</p>
+         * <p>The monitoring task name.</p>
+         * <p>For information about how to obtain the monitoring task ID, see <a href="https://help.aliyun.com/document_detail/428624.html">DescribeHybridMonitorTaskList</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>SLS_task</p>
@@ -260,7 +265,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the metric.</p>
+             * <p>The label key of the metric.</p>
              * 
              * <strong>example:</strong>
              * <p>app_service</p>
@@ -271,7 +276,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the metric.</p>
+             * <p>The label value of the metric.</p>
              * 
              * <strong>example:</strong>
              * <p>testValue</p>
@@ -341,7 +346,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The alias of the extended field that specifies the result of basic operations performed on aggregation results.</p>
+             * <p>The alias of the arithmetic result of the extended fields for the SLS log statistics result.</p>
              * 
              * <strong>example:</strong>
              * <p>SuccRate</p>
@@ -352,7 +357,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The extended field that specifies the result of basic operations performed on aggregation results.</p>
+             * <p>The arithmetic result of the extended fields for the SLS log statistics result.</p>
              * 
              * <strong>example:</strong>
              * <p>success_count</p>
@@ -435,16 +440,16 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The method that is used to filter logs imported from Simple Log Service. Valid values:</p>
+             * <p>The method used to filter parameter values in the SLS log. Valid values:</p>
              * <ul>
-             * <li><code>contain</code>: contains</li>
-             * <li><code>notContain</code>: does not contain</li>
-             * <li><code>&gt;</code>: greater than</li>
-             * <li><code>&lt;</code>: less than</li>
-             * <li><code>=</code>: equal to</li>
-             * <li><code>! =</code>: not equal to</li>
-             * <li><code>&gt;=</code>: greater than or equal to</li>
-             * <li><code>&lt;=</code>: less than or equal to</li>
+             * <li><code>contain</code>: contains.</li>
+             * <li><code>notContain</code>: does not contain.</li>
+             * <li><code>&gt;</code>: greater than.</li>
+             * <li><code>&lt;</code>: less than.</li>
+             * <li><code>=</code>: equal to.</li>
+             * <li><code>!=</code>: not equal to.</li>
+             * <li><code>&gt;=</code>: greater than or equal to.</li>
+             * <li><code>&lt;=</code>: less than or equal to.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -456,7 +461,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The name of the key that is used to filter logs imported from Simple Log Service.</p>
+             * <p>The name of the parameter to filter in the SLS log.</p>
              * 
              * <strong>example:</strong>
              * <p>code</p>
@@ -467,7 +472,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the key that is used to filter logs imported from Simple Log Service.</p>
+             * <p>The filter value of the parameter in the SLS log.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -547,8 +552,8 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             /**
              * <p>The relationship between multiple filter conditions. Valid values:</p>
              * <ul>
-             * <li>and (default): Logs are processed only if all filter conditions are met.</li>
-             * <li>or: Logs are processed if one of the filter conditions is met.</li>
+             * <li>and (default): The log is processed only when all filter conditions are met.</li>
+             * <li>or: The log is processed when any filter condition is met.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -619,7 +624,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The alias of the aggregation result.</p>
+             * <p>The alias of the SLS log statistics result.</p>
              * 
              * <strong>example:</strong>
              * <p>ApiResult</p>
@@ -630,7 +635,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
+             * <p>The name of the parameter for SLS log statistics.</p>
              * 
              * <strong>example:</strong>
              * <p>code</p>
@@ -739,7 +744,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The alias of the aggregation result.</p>
+             * <p>The alias of the SLS log statistics result.</p>
              * 
              * <strong>example:</strong>
              * <p>level_count</p>
@@ -750,19 +755,19 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The function that is used to aggregate the log data of a statistical period. Valid values:</p>
+             * <p>The statistical method used to aggregate log data within a statistical period. Valid values:</p>
              * <ul>
-             * <li>count: counts the number.</li>
-             * <li>sum: calculates the total value.</li>
-             * <li>avg: calculates the average value.</li>
-             * <li>max: calculates the maximum value.</li>
-             * <li>min: calculates the minimum value.</li>
-             * <li>value: collects samples within the statistical period.</li>
-             * <li>countps: calculates the number of values of the specified field divided by the total number of seconds within the statistical period.</li>
-             * <li>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within the statistical period.</li>
-             * <li>distinct: calculates the number of unique values of the specified field within the statistical period.</li>
-             * <li>distribution: calculates the number of logs that meet a specified condition within the statistical period.</li>
-             * <li>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</li>
+             * <li>count: counts the number of entries.</li>
+             * <li>sum: calculates the sum.</li>
+             * <li>avg: calculates the average.</li>
+             * <li>max: returns the maximum value.</li>
+             * <li>min: returns the minimum value.</li>
+             * <li>value: samples within the period.</li>
+             * <li>countps: calculates the average count per second for the specified field within the statistical period.</li>
+             * <li>sumps: calculates the average sum per second for the specified field within the statistical period.</li>
+             * <li>distinct: calculates the number of occurrences of the specified field after deduplication within the statistical period.</li>
+             * <li>distribution: calculates the number of occurrences of field values within a specified range.</li>
+             * <li>percentile: calculates the distribution value of field values, for example, P50.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -774,10 +779,12 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
+             * <p>The statistical value of the SLS log.</p>
              * <ul>
-             * <li>If the <code>Function</code> parameter is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.</li>
-             * <li>If the <code>Function</code> parameter is set to <code>percentile</code>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</li>
+             * <li><p>If <code>Function</code> is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 200.</p>
+             * </li>
+             * <li><p>If <code>Function</code> is set to <code>percentile</code>, this parameter specifies the percentile of the statistical distribution. For example, 0.5 indicates P50.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -789,9 +796,9 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
+             * <p>The statistical value of the SLS log.</p>
              * <blockquote>
-             * <p> This parameter is required only if the <code>Function</code> parameter is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</p>
+             * <p>This parameter is required only when <code>Function</code> is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 299.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -803,7 +810,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
+             * <p>The name of the parameter for SLS log statistics.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -899,7 +906,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             } 
 
             /**
-             * <p>The extended fields that specify the results of basic operations performed on aggregation results.</p>
+             * <p>The arithmetic result of the extended fields for the SLS log statistics result.</p>
              */
             public Builder express(java.util.List<Express> express) {
                 this.express = express;
@@ -907,7 +914,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The conditions that are used to filter logs imported from Simple Log Service.</p>
+             * <p>The filter conditions for parameters in the SLS log.</p>
              */
             public Builder filter(Filter filter) {
                 this.filter = filter;
@@ -915,7 +922,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</p>
+             * <p>The spatial dimension used to aggregate data, which is equivalent to the GROUP BY clause in SQL.</p>
              */
             public Builder groupBy(java.util.List<GroupBy> groupBy) {
                 this.groupBy = groupBy;

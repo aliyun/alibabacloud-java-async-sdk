@@ -147,7 +147,7 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
+         * <p>The value 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the cloud service.</p>
+         * Resources.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -211,7 +211,7 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+         * <p>Indicates whether the operation was successful. Valid values: true and false. The value true indicates success, and the value false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -222,7 +222,7 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -304,10 +304,7 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CDN</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -315,17 +312,7 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags. Tags are used to filter services.</p>
-             * <p>Tags are returned in the following format: <code>[{&quot;name&quot;:&quot;Tag key&quot;,&quot;value&quot;:&quot;Tag value&quot;}, {&quot;name&quot;:&quot;Tag key&quot;,&quot;value&quot;:&quot;Tag value&quot;}]</code>. The following tags are commonly used:</p>
-             * <ul>
-             * <li>alertUnit: the unit of the metric value in alerts. If the unit is small, the original metric value may be too large. In this case, you can use the <code>alertUnit</code> tag to specify an appropriate unit. This tag is used in CloudMonitor.</li>
-             * <li>minAlertPeriod: the minimum time interval to report a new alert. The interval at which monitoring data is reported. The value is usually 1 minute.</li>
-             * <li>metricCategory: the service specification. Example: kvstore_sharding. Some Alibaba Cloud services have multiple specifications that are defined in the same namespace. This parameter is used to identify the specifications.</li>
-             * <li>is_alarm: indicates whether an alert rule can be configured. We recommend that you do not use the special tags in the CloudMonitor console.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>[{&quot;groupFlag&quot;:true}]</p>
+             * Labels.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -333,10 +320,7 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the cloud service. Format: <code>acs_Service name abbreviation</code>. For more information about namespaces, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs_cdn</p>
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;

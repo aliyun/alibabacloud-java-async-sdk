@@ -193,7 +193,7 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * <p>None</p>
+         * <p>None.</p>
          * <p>This parameter is required.</p>
          */
         public Builder alertConfigEscalationList(java.util.List<AlertConfigEscalationList> alertConfigEscalationList) {
@@ -203,7 +203,7 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * <p>The resources for which alerts are triggered.</p>
+         * <p>The alert trigger targets.</p>
          */
         public Builder alertConfigTargetList(java.util.List<AlertConfigTargetList> alertConfigTargetList) {
             this.putQueryParameter("AlertConfigTargetList", alertConfigTargetList);
@@ -212,7 +212,7 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The application group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,9 +225,9 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * <p>The ECS instances that are monitored. Valid values of N: 1 to 21.</p>
+         * <p>The list of ECS instances that initiate detection. Valid values of N: 1 to 21.</p>
          * <blockquote>
-         * <p>This parameter must be specified when <code>TaskScope</code> is set to <code>GROUP_SPEC_INSTANCE</code>.</p>
+         * <p>Set this parameter when <code>TaskScope</code> is set to <code>GROUP_SPEC_INSTANCE</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -240,7 +240,7 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * <p>The name of the availability monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</p>
+         * <p>The name of the availability monitoring task. The name must be 4 to 100 characters in length and can contain letters, digits, underscores (_), and Chinese characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,10 +253,10 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * <p>The range of instances that are monitored by the availability monitoring task. Valid values:</p>
+         * <p>The detection scope of the availability monitoring task. Valid values:</p>
          * <ul>
-         * <li>GROUP: All ECS instances in the application group are monitored.</li>
-         * <li>GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList parameter. The InstanceList parameter specifies the ECS instances to be monitored.</li>
+         * <li>GROUP: uses all ECS instances in the current application group as detection probes.</li>
+         * <li>GROUP_SPEC_INSTANCE: uses specified ECS instances in the current application group as detection probes. If you set this parameter to GROUP_SPEC_INSTANCE, you must also set InstanceList to specify the ECS instances that initiate detection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -269,7 +269,7 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * <p>The monitoring type of the availability monitoring task. Valid values:</p>
+         * <p>The detection type of the availability monitoring task. Valid values:</p>
          * <ul>
          * <li>PING</li>
          * <li>TELNET</li>
@@ -386,10 +386,10 @@ public class CreateHostAvailabilityRequest extends Request {
             } 
 
             /**
-             * <p>The end of the time range during which the alert rule is effective. Valid values: 0 to 23.</p>
-             * <p>For example, if the <code>AlertConfig.StartTime</code> parameter is set to 0 and the <code>AlertConfig.EndTime</code> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
+             * <p>The end time when the alert takes effect.</p>
+             * <p>The value is an integer in the range of 0 to 23. Unit: hours. The value indicates the hour at which the effective period ends. The actual end point is 00:00:00 of the specified hour. For example, a value of 22 indicates that the effective period ends at 22:00:00. The time zone is UTC+8.</p>
              * <blockquote>
-             * <p>Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+             * <p>If the current time is not within the effective time window, alert notifications are not sent even if the threshold is exceeded.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -401,8 +401,12 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The alert notification methods. Valid values:</p>
-             * <p>0: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+             * <p>The alert notification type. Valid values:</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- 2: phone call + text message + email + DingTalk chatbot.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- 1: text message + email + DingTalk chatbot.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- 0: email + DingTalk chatbot.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;0: email + DingTalk chatbot.</p>
+             * <p>&lt;props=&quot;partner&quot;&gt;0: email + DingTalk chatbot.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -414,7 +418,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400. The default value indicates one day.</p>
+             * <p>The mute period. Unit: seconds. Default value: 86400 (1 day).</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -425,10 +429,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The beginning of the time range during which the alert rule is effective. Valid values: 0 to 23.</p>
-             * <p>For example, if the <code>AlertConfig.StartTime</code> parameter is set to 0 and the <code>AlertConfig.EndTime</code> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
+             * <p>The start time when the alert takes effect.</p>
+             * <p>The value is an integer in the range of 0 to 23. Unit: hours. The value indicates the hour at which the effective period starts. The actual start point is 00:00:00 of the specified hour. For example, a value of 0 indicates that the effective period starts at 00:00:00. The time zone is UTC+8.</p>
              * <blockquote>
-             * <p>Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+             * <p>If the current time is not within the effective time window, alert notifications are not sent even if the threshold is exceeded.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -440,7 +444,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The callback URL.</p>
+             * <p>The webhook address.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://www.aliyun.com/webhook.json">https://www.aliyun.com/webhook.json</a></p>
@@ -601,7 +605,7 @@ public class CreateHostAvailabilityRequest extends Request {
             } 
 
             /**
-             * <p>The header of the HTTP request. Format: <code>Parameter name:Parameter value</code>. Separate multiple parameters with carriage return characters. Example:</p>
+             * <p>The header of the HTTP request. The format is <code>Parameter name:Parameter value</code>. Separate multiple parameters with line breaks. Example:</p>
              * <pre><code>params1:value1
              * params2:value2
              * </code></pre>
@@ -615,14 +619,14 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The HTTP request method. Valid values:</p>
+             * <p>The method for the detection type. Valid values:</p>
              * <ul>
              * <li>GET</li>
              * <li>POST</li>
              * <li>HEAD</li>
              * </ul>
              * <blockquote>
-             * <p>This parameter must be specified when TaskType is set to HTTP.</p>
+             * <p>If the detection type is HTTP, set this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -634,13 +638,13 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:</p>
+             * <p>The alert rule for matching HTTP response content. Valid values:</p>
              * <ul>
-             * <li>true: If the HTTP response body includes the alert rule, an alert is triggered.</li>
-             * <li>false: If the HTTP response does not include the alert rule, an alert is triggered.</li>
+             * <li>true: An alert is triggered if the HTTP response content contains the specified alert rule content.</li>
+             * <li>false: An alert is triggered if the HTTP response content does not contain the specified alert rule content.</li>
              * </ul>
              * <blockquote>
-             * <p>This parameter must be specified when TaskType is set to HTTP.</p>
+             * <p>This parameter takes effect only when the detection type is HTTP.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -652,7 +656,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The content of the HTTP POST request.</p>
+             * <p>The POST content of the HTTP detection request.</p>
              * 
              * <strong>example:</strong>
              * <p>params1=paramsValue1</p>
@@ -663,7 +667,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The character set that is used in the HTTP response.</p>
+             * <p>The response character set for HTTP detection.</p>
              * <blockquote>
              * <p>Only UTF-8 is supported.</p>
              * </blockquote>
@@ -677,7 +681,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The response to the HTTP request.</p>
+             * <p>The content to match in the response.</p>
              * 
              * <strong>example:</strong>
              * <p>ok</p>
@@ -688,10 +692,11 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The URI that you want to monitor. This parameter is required if the TaskType parameter is set to HTTP or Telnet.</p>
+             * <p>The URI for HTTP or Telnet detection.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
+             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a>
+             * telnet://127.0.0.1:80</p>
              */
             public Builder httpURI(String httpURI) {
                 this.httpURI = httpURI;
@@ -699,9 +704,9 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The interval at which detection requests are sent. Unit: seconds. Valid values: 15, 30, 60, 120, 300, 900, 1800, and 3600.</p>
+             * <p>The detection frequency. Unit: seconds. Valid values: 15, 30, 60, 120, 300, 900, 1800, and 3600.</p>
              * <blockquote>
-             * <p>This parameter is available only for the CloudMonitor agent V3.5.1 or later.</p>
+             * <p>Only CloudMonitor agent 3.5.1 or later supports this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -713,9 +718,9 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The domain name or IP address that you want to monitor.</p>
+             * <p>The domain name or address to detect.</p>
              * <blockquote>
-             * <p> This parameter is required if the TaskType parameter is set to PING.</p>
+             * <p>If the detection type is PING, set this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -826,16 +831,16 @@ public class CreateHostAvailabilityRequest extends Request {
             } 
 
             /**
-             * <p>The method used to calculate the metric values that trigger alerts. Valid values of N: 1 to 21. Valid values:</p>
+             * <p>The statistical method for the alert. Valid values of N: 1 to 21. The valid values vary based on the metric:</p>
              * <ul>
-             * <li>HttpStatus: Value</li>
-             * <li>HttpLatency: Average</li>
-             * <li>TelnetStatus: Value</li>
-             * <li>TelnetLatency: Average</li>
-             * <li>PingLostRate: Average</li>
+             * <li>HttpStatus: Value.</li>
+             * <li>HttpLatency: Average.</li>
+             * <li>TelnetStatus: Value.</li>
+             * <li>TelnetLatency: Average.</li>
+             * <li>PingLostRate: Average.</li>
              * </ul>
              * <blockquote>
-             * <p>The value Value indicates the original value and is used for metrics such as status codes. The value Average indicates the average value and is used for metrics such as the latency and packet loss rate.</p>
+             * <p>The statistical method for status code metrics is the original value (Value). The statistical method for latency or packet loss rate metrics is the average value (Average).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -847,13 +852,13 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The metric for which the alert feature is enabled. Valid values of N: 1 to 21. Valid values:</p>
+             * <p>The metric for the alert. Valid values of N: 1 to 21. Valid values:</p>
              * <ul>
-             * <li>HttpStatus: HTTP status code</li>
-             * <li>HttpLatency: HTTP response time</li>
-             * <li>TelnetStatus: Telnet status code</li>
-             * <li>TelnetLatency: Telnet response time</li>
-             * <li>PingLostRate: Ping packet loss rate</li>
+             * <li>HttpStatus: HTTP status code.</li>
+             * <li>HttpLatency: HTTP latency.</li>
+             * <li>TelnetStatus: Telnet status code.</li>
+             * <li>TelnetLatency: Telnet latency.</li>
+             * <li>PingLostRate: Ping packet loss rate.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -866,7 +871,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The comparison operator that is used in the alert rule. Valid values of N: 1 to 21. Valid values:</p>
+             * <p>The comparison operator for the alert rule. Valid values of N: 1 to 21. Valid values:</p>
              * <ul>
              * <li><code>&gt;</code></li>
              * <li><code>&gt;=</code></li>
@@ -885,7 +890,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered. Valid values of N: 1 to 21.</p>
+             * <p>The number of alert retries. Valid values of N: 1 to 21.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -992,21 +997,21 @@ public class CreateHostAvailabilityRequest extends Request {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
+             * <p>The resource ARN. Format: <code>acs:{AbbreviatedCloudServiceName}:{regionId}:{userId}:/{ResourceType}/{ResourceName}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. The following list describes the parameters:</p>
              * <ul>
-             * <li><p>{Service name abbreviation}: the abbreviation of the service name. Set the value to Simple Message Queue (formerly MNS) (SMQ).</p>
+             * <li><p>{AbbreviatedCloudServiceName}: Only Simple Message Queue (formerly MNS) is supported.</p>
              * </li>
-             * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
+             * <li><p>{userId}: The Alibaba Cloud account ID.</p>
              * </li>
-             * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
+             * <li><p>{regionId}: The region where the Simple Message Queue (formerly MNS) queue or topic resides.</p>
              * </li>
-             * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
+             * <li><p>{ResourceType}: The type of the resource that accepts alerts. Valid values:</p>
              * <ul>
-             * <li><strong>queues</strong></li>
-             * <li><strong>topics</strong></li>
+             * <li><strong>queues</strong>: queue.</li>
+             * <li><strong>topics</strong>: topic.</li>
              * </ul>
              * </li>
-             * <li><p>{Resource name}: the resource name.</p>
+             * <li><p>{ResourceName}: The resource name.</p>
              * <ul>
              * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
              * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
@@ -1023,7 +1028,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The ID of the resource for which alerts are triggered.</p>
+             * <p>The ID of the alert trigger target.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1034,7 +1039,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+             * <p>The JSON-formatted parameters of the alert callback.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
@@ -1047,9 +1052,9 @@ public class CreateHostAvailabilityRequest extends Request {
             /**
              * <p>The alert level. Valid values:</p>
              * <ul>
-             * <li>INFO</li>
-             * <li>WARN</li>
-             * <li>CRITICAL</li>
+             * <li>INFO: information.</li>
+             * <li>WARN: warning.</li>
+             * <li>CRITICAL: critical.</li>
              * </ul>
              * 
              * <strong>example:</strong>

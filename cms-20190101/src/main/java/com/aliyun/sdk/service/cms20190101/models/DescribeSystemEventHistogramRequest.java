@@ -186,7 +186,7 @@ public class DescribeSystemEventHistogramRequest extends Request {
         /**
          * <p>The event type.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the types of system events.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the types of system events.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -213,9 +213,12 @@ public class DescribeSystemEventHistogramRequest extends Request {
         /**
          * <p>The level of the event. Valid values:</p>
          * <ul>
-         * <li>CRITICAL</li>
-         * <li>WARN</li>
-         * <li>INFO</li>
+         * <li><p>CRITICAL</p>
+         * </li>
+         * <li><p>WARN</p>
+         * </li>
+         * <li><p>INFO</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,7 +233,7 @@ public class DescribeSystemEventHistogramRequest extends Request {
         /**
          * <p>The event name.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the names of system events.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the names of system events.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -245,7 +248,7 @@ public class DescribeSystemEventHistogramRequest extends Request {
         /**
          * <p>The abbreviation of the service name.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the abbreviations of service names.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the abbreviations of service names.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -260,8 +263,10 @@ public class DescribeSystemEventHistogramRequest extends Request {
         /**
          * <p>The keywords that are used to search for the system event. Valid values:</p>
          * <ul>
-         * <li>If you want to search for the system event whose content contains a and b, set the value to <code>a and b</code>.</li>
-         * <li>If you want to search for the system event whose content contains a or b, set the value to <code>a or b</code>.</li>
+         * <li><p>If you want to search for the system event whose content contains a and b, set the value to <code>a and b</code>.</p>
+         * </li>
+         * <li><p>If you want to search for the system event whose content contains a or b, set the value to <code>a or b</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -289,7 +294,7 @@ public class DescribeSystemEventHistogramRequest extends Request {
         /**
          * <p>The event status.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the status of system events.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the status of system events.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

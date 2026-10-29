@@ -93,9 +93,9 @@ public class DeleteMonitorGroupInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>A value of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -129,10 +129,10 @@ public class DeleteMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The operation is successful.</li>
+         * <li>false: The operation fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -106,9 +106,9 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
+         * <p>The value 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of modifying the task.</p>
+         * <p>The details of the node task result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,10 +150,12 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +212,7 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of site monitoring tasks.</p>
+             * <p>The number of monitoring tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -106,9 +106,9 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The value 200 indicates that the call was successful.</p>
+         * <p>A status code of 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified resource is not found.</p>
@@ -131,7 +131,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the processes.</p>
+         * NodeProcesses.
          */
         public Builder nodeProcesses(NodeProcesses nodeProcesses) {
             this.nodeProcesses = nodeProcesses;
@@ -150,10 +150,12 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,13 +277,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The command used to obtain the number of processes. Valid value: <code>number</code>.</p>
-             * <blockquote>
-             * <p> The <code>number</code> command obtains the number of processes that match the condition.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>number</p>
+             * Command.
              */
             public Builder command(String command) {
                 this.command = command;
@@ -289,10 +285,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3619****</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -300,10 +293,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-hp3hl3cx1pbahzy8****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -311,10 +301,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the process.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>234567</p>
+             * ProcessId.
              */
             public Builder processId(Long processId) {
                 this.processId = processId;
@@ -322,10 +309,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the process.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Nginx</p>
+             * ProcessName.
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -333,10 +317,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user who launched the process.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alice</p>
+             * ProcessUser.
              */
             public Builder processUser(String processUser) {
                 this.processUser = processUser;

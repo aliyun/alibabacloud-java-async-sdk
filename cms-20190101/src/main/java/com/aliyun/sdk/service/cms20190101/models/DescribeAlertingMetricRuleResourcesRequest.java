@@ -143,7 +143,7 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Queries the alerts that were triggered before the specified time. Timestamps in milliseconds are supported.</p>
+         * <p>Queries alerts that occurred before this point in time. The value is a millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1698827400000</p>
@@ -155,10 +155,10 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * <p>The dimensions that specify the resources whose monitoring data you want to query.</p>
+         * <p>The dimension map used to query monitoring data of a specified resource.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;userId&quot;:&quot;120886317861****&quot;,&quot;region&quot;:&quot;cn-huhehaote&quot;,&quot;queue&quot;:&quot;test-0128&quot;}</p>
+         * <p>{\&quot;userId\&quot;:\&quot;120886317861****\&quot;,\&quot;region\&quot;:\&quot;cn-huhehaote\&quot;,\&quot;queue\&quot;:\&quot;test-0128\&quot;}</p>
          */
         public Builder dimensions(String dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -167,7 +167,7 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application group. For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+         * <p>The ID of the application group. For more information about how to query application group IDs, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>7671****</p>
@@ -179,8 +179,8 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * <p>The namespace of the cloud service.</p>
-         * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The data namespace of the Alibaba Cloud service.</p>
+         * <p>For more information about how to obtain the data namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>acs_mns_new</p>
@@ -192,7 +192,7 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number. </p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the alert rule. For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <p>The ID of the alert rule. For more information about how to query alert rule IDs, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>putNewAlarm_user_7e78d765-0e3e-4671-ba6d-7ce39108****</p>

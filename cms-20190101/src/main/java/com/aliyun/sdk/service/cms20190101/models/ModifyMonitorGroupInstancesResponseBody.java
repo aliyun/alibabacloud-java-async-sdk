@@ -93,9 +93,9 @@ public class ModifyMonitorGroupInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the call was successful.</p>
+         * <p>A value of 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class ModifyMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FEC7EDB3-9B08-4AC0-A42A-329F5D14B95A</p>
@@ -129,7 +129,7 @@ public class ModifyMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+         * <p>Indicates whether the operation was successful. A value of true indicates a success. A value of false indicates a failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

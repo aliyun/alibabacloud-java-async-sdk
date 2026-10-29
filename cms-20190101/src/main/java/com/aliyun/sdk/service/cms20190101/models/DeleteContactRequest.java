@@ -64,7 +64,7 @@ public class DeleteContactRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test-01</p>
+         * <p>John Doe</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);

@@ -93,9 +93,9 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>A value of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. If the request was successful, the return value is null. If the request failed, an error message is returned.</p>
+         * <p>The returned message. If the call is successful, this parameter is empty. If the call fails, the error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>ComparisonOperator is mandatory for this action.</p>
@@ -129,10 +129,12 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: successful.</p>
+         * </li>
+         * <li><p>false: failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

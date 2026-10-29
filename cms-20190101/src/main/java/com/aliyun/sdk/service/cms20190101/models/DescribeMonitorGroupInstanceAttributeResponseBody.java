@@ -147,7 +147,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         /**
          * <p>The responses code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The resources that are associated with the application group.</p>
+         * Resources.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -213,8 +213,10 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,10 +297,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The zone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-f</p>
+             * AvailabilityZone.
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -306,10 +305,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -376,10 +372,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>instanceNetworkType</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -387,10 +380,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -511,10 +501,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The VPC ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-2zew7etgiceg21****</p>
+             * VpcInstanceId.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -522,10 +509,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The vSwitch ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-2ze36seq79n992****</p>
+             * VswitchInstanceId.
              */
             public Builder vswitchInstanceId(String vswitchInstanceId) {
                 this.vswitchInstanceId = vswitchInstanceId;
@@ -683,10 +667,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The name of the cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -694,10 +675,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The resource description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>desc_test</p>
+             * Desc.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -705,10 +683,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The dimensions of the resource that is associated with the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;instanceId&quot;:&quot;i-m5e0k0bexac8tykr****&quot;}</p>
+             * Dimension.
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -716,10 +691,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-m5e0k0bexac8tykr****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -727,10 +699,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The instance name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hostName</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -738,10 +707,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The network type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -749,7 +715,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The region.</p>
+             * Region.
              */
             public Builder region(Region region) {
                 this.region = region;
@@ -757,7 +723,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The tag of the resource.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -765,7 +731,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The VPC description.</p>
+             * Vpc.
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;

@@ -119,10 +119,12 @@ public class BatchExportRequest extends Request {
         } 
 
         /**
-         * <p>When you call this operation to export data, you must specify the <code>Cursor</code> parameter. You can obtain the value of the <code>Cursor</code> parameter by using one of the following methods:</p>
+         * <p>The cursor value. This parameter is required when you repeatedly call this operation to export data. You can obtain the Cursor value by using one of the following methods:</p>
          * <ul>
-         * <li>When you call this operation for the first time, you must call the Cursor operation to obtain the <code>Cursor</code> value. For more information, see <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a>.</li>
-         * <li>When you call this operation again, you can obtain the <code>Cursor</code> value from the returned data of the last call.</li>
+         * <li><p>When you call this operation for the first time, you must call the Cursor operation to obtain the Cursor value. For more information, see <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a>.</p>
+         * </li>
+         * <li><p>When you call this operation again, you can obtain the Cursor value from the response of the previous call.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -136,7 +138,7 @@ public class BatchExportRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of data entries that can be returned in each response.</p>
+         * <p>The maximum number of data records to return each time.</p>
          * <p>Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
@@ -150,9 +152,9 @@ public class BatchExportRequest extends Request {
         }
 
         /**
-         * <p>The statistical methods used to customize the returned data. By default, the measurements based on all statistical methods are returned.</p>
-         * <p>For example, the <code>cpu_idle</code> metric of ECS (<code>acs_ecs_dashboard</code>) has three statistical methods: <code>Average</code>, <code>Maximum</code>, and <code>Minimum</code>. If you want to return only the measurements based on the <code>Average</code> and <code>Maximum</code> statistical methods, set this parameter to <code>[&quot;Average&quot;, &quot;Maximum&quot;]</code>.</p>
-         * <p>The statistical methods of metrics are displayed in the <code>Statistics</code> column on the Metrics page of each cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The measurements used to customize the returned data. By default, all measurements are returned.</p>
+         * <p>For example, the <code>cpu_idle</code> monitoring metrics for the <code>acs_ecs_dashboard</code> cloud service have three measurement columns: <code>Average</code>, <code>Maximum</code>, and <code>Minimum</code>. If you want to return only the <code>Average</code> and <code>Maximum</code> columns, set the Settings of this parameter to the <code>[&quot;Average&quot;, &quot;Maximum&quot;]</code> array.</p>
+         * <p>For more information about how to obtain the measurements of the monitoring metrics for a cloud service, see the <code>statistics</code> column in <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
          */
         public Builder measurements(java.util.List<String> measurements) {
             String measurementsShrink = shrink(measurements, "Measurements", "json");
@@ -162,10 +164,10 @@ public class BatchExportRequest extends Request {
         }
 
         /**
-         * <p>The metric that is used to monitor the cloud service.</p>
-         * <p>For more information about the metrics of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The name of the monitoring metric for the cloud service.</p>
+         * <p>For more information about how to obtain the monitoring metric name of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p> The value of this parameter must be the same as the value of the request parameter <code>Metric</code> in the Cursor operation.</p>
+         * <p>This parameter must be the same as the Metric request parameter in the Cursor operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -179,10 +181,10 @@ public class BatchExportRequest extends Request {
         }
 
         /**
-         * <p>The namespace of the cloud service.</p>
-         * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The data namespace of the cloud service.</p>
+         * <p>For more information about how to obtain the data namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p> The value of this parameter must be the same as the value of the request parameter <code>Namespace</code> in the Cursor operation.</p>
+         * <p>This parameter must be the same as the Namespace request parameter in the Cursor operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

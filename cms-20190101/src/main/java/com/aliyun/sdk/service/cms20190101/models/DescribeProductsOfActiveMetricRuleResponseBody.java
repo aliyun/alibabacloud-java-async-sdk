@@ -119,7 +119,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the services for which one-click alert is enabled.</p>
+         * AllProductInitMetricRuleList.
          */
         public Builder allProductInitMetricRuleList(AllProductInitMetricRuleList allProductInitMetricRuleList) {
             this.allProductInitMetricRuleList = allProductInitMetricRuleList;
@@ -129,7 +129,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -143,17 +143,28 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         /**
          * <p>The information about the services for which the initiative alert feature is enabled. Services are separated with commas (,). Valid values:</p>
          * <ul>
-         * <li>ECS: Elastic Compute Service (ECS)</li>
-         * <li>rds: ApsaraDB RDS</li>
-         * <li>slb: Server Load Balancer (SLB)</li>
-         * <li>redis_standard: Redis Open-Source Edition (standard architecture)</li>
-         * <li>redis_sharding: Redis Open-Source Edition (cluster architecture)</li>
-         * <li>redis_splitrw: Redis Open-Source Edition (read/write splitting architecture)</li>
-         * <li>mongodb: ApsaraDB for MongoDB of the replica set architecture</li>
-         * <li>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</li>
-         * <li>hbase: ApsaraDB for HBase</li>
-         * <li>elasticsearch: Elasticsearch</li>
-         * <li>opensearch: OpenSearch</li>
+         * <li><p>ECS: Elastic Compute Service (ECS)</p>
+         * </li>
+         * <li><p>rds: ApsaraDB RDS</p>
+         * </li>
+         * <li><p>slb: Server Load Balancer (SLB)</p>
+         * </li>
+         * <li><p>redis_standard: Redis Open-Source Edition (standard architecture)</p>
+         * </li>
+         * <li><p>redis_sharding: Redis Open-Source Edition (cluster architecture)</p>
+         * </li>
+         * <li><p>redis_splitrw: Redis Open-Source Edition (read/write splitting architecture)</p>
+         * </li>
+         * <li><p>mongodb: ApsaraDB for MongoDB of the replica set architecture</p>
+         * </li>
+         * <li><p>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</p>
+         * </li>
+         * <li><p>hbase: ApsaraDB for HBase</p>
+         * </li>
+         * <li><p>elasticsearch: Elasticsearch</p>
+         * </li>
+         * <li><p>opensearch: OpenSearch</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,8 +200,10 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,35 +351,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>LessThanThreshold: less than the threshold</p>
-             * </li>
-             * <li><p>GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-             * </li>
-             * <li><p>LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-             * </li>
-             * <li><p>NotEqualToThreshold: does not equal to the threshold</p>
-             * </li>
-             * <li><p>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-             * </li>
-             * <li><p>GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-             * </li>
-             * <li><p>LessThanYesterday: less than the metric value at the same time yesterday</p>
-             * </li>
-             * <li><p>LessThanLastWeek: less than the metric value at the same time last week</p>
-             * </li>
-             * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-             * </li>
-             * <li><p>GreaterThanThreshold: greater than the threshold</p>
-             * </li>
-             * <li><p>LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>GreaterThanOrEqualToThreshold</p>
+             * ComparisonOperator.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -374,10 +359,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * EvaluationCount.
              */
             public Builder evaluationCount(String evaluationCount) {
                 this.evaluationCount = evaluationCount;
@@ -385,33 +367,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert level.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>INFO</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>WARN</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>CRITICAL</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>CRITICAL</p>
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -419,10 +375,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cpu_total</p>
+             * MetricName.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -430,10 +383,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs_rds_dashboard</p>
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -441,10 +391,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The aggregation period of monitoring data. Unit: minutes. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1m</p>
+             * Period.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -452,10 +399,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method used to calculate metric values that trigger alerts. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Average</p>
+             * Statistics.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -463,10 +407,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert threshold.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>90</p>
+             * Threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -587,7 +528,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The initial alert rules that are generated after one-click alert is enabled for a service.</p>
+             * AlertInitConfigList.
              */
             public Builder alertInitConfigList(AlertInitConfigList alertInitConfigList) {
                 this.alertInitConfigList = alertInitConfigList;
@@ -595,10 +536,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The abbreviation of the service name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs</p>
+             * Product.
              */
             public Builder product(String product) {
                 this.product = product;

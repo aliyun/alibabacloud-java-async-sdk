@@ -60,10 +60,8 @@ public class EnableEventRulesRequest extends Request {
         } 
 
         /**
+         * <p>The names of the event rules to enable.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ruleName1</p>
          */
         public Builder ruleNames(java.util.List<String> ruleNames) {
             this.putQueryParameter("RuleNames", ruleNames);

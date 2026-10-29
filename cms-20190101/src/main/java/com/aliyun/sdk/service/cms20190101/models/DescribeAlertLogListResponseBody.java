@@ -132,7 +132,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried alert logs.</p>
+         * <p>The list of alert history entries.</p>
          */
         public Builder alertLogList(java.util.List<AlertLogList> alertLogList) {
             this.alertLogList = alertLogList;
@@ -142,7 +142,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
+         * <p>The status code 200 indicates that the call was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -198,10 +198,12 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The call was successful.</p>
+         * </li>
+         * <li><p>false: The call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,7 +273,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the dimension.</p>
+             * <p>The key of the alerting resource.</p>
              * 
              * <strong>example:</strong>
              * <p>instanceId</p>
@@ -282,7 +284,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the dimension.</p>
+             * <p>The value of the alerting resource.</p>
              * 
              * <strong>example:</strong>
              * <p>i-m5e1qg6uo38rztr4****</p>
@@ -365,9 +367,9 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the alert rule.</p>
+             * <p>The description of the rule that triggers the alert.</p>
              * <blockquote>
-             * <p> The content of the alert rule. This parameter indicates the conditions that trigger an alert.</p>
+             * <p>The body of the alert rule. An alert rule is triggered when the monitoring data meets the alert conditions.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -379,11 +381,15 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert level and the methods that are used to send alert notifications. Valid values:</p>
-             * <ul>
-             * <li>P4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
-             * <li>OK: No alert is generated.</li>
-             * </ul>
+             * <p>The alert level and notification methods. Valid values:</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- P2: phone calls, text messages, emails, and DingTalk chatbots.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- P3: text messages, emails, and DingTalk chatbots.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- P4: emails and DingTalk chatbots.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- OK: no alerts.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;- P4: emails and DingTalk chatbots.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;- OK: no alerts.</p>
+             * <p>&lt;props=&quot;partner&quot;&gt;- P4: emails and DingTalk chatbots.</p>
+             * <p>&lt;props=&quot;partner&quot;&gt;- OK: no alerts.</p>
              * 
              * <strong>example:</strong>
              * <p>P4</p>
@@ -394,7 +400,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
+             * <p>The number of times that the alert is retried.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -464,7 +470,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the extended field.</p>
+             * <p>The name of the extension field.</p>
              * 
              * <strong>example:</strong>
              * <p>userId</p>
@@ -475,10 +481,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the extended field.</p>
+             * <p>The value of the extension field.</p>
              * 
              * <strong>example:</strong>
-             * <p>120886317861****</p>
+             * <p>100931896542****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -584,10 +590,12 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP status code.</p>
+             * <p>The status code.</p>
              * <ul>
-             * <li>If the value of the <code>Channel</code> parameter is <code>WEBHOOK</code>, the status code is 200 or 500.</li>
-             * <li>If the value of the <code>Channel</code> parameter is <code>MAIL</code>, <code>SMS</code>, <code>SLS</code>, <code>ONCALL</code>, <code>FC</code>, or <code>MNS</code>, this parameter is empty or not returned.</li>
+             * <li><p>If <code>Channel</code> is set to <code>WEBHOOK</code>, the status code is 200 or 500.</p>
+             * </li>
+             * <li><p>If <code>Channel</code> is set to <code>MAIL</code>, <code>SMS</code>, <code>SLS</code>, <code>ONCALL</code>, <code>FC</code>, or <code>MNS</code>, this parameter is unavailable or empty.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -599,7 +607,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the returned results.</p>
+             * <p>The details of the returned result.</p>
              * 
              * <strong>example:</strong>
              * <p>{ }</p>
@@ -610,7 +618,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request ID returned when CloudMonitor calls another cloud service.</p>
+             * <p>The request ID returned by calling another cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>0BDAF8A8-04DC-5F0C-90E4-724D42C4****</p>
@@ -621,10 +629,12 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <p>The result of calling the target.</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: The call was successful.</p>
+             * </li>
+             * <li><p>false: The call failed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -636,7 +646,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * notifyTargetList.
+             * <p>The list of channel notifications.</p>
              */
             public Builder notifyTargetList(java.util.List<String> notifyTargetList) {
                 this.notifyTargetList = notifyTargetList;
@@ -703,15 +713,22 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The method that is used to send alert notifications. Valid values:</p>
+             * <p>The alert pushing channel. Valid values:</p>
              * <ul>
-             * <li>MAIL: email</li>
-             * <li>SMS: text message</li>
-             * <li>WEBHOOK: alert callback</li>
-             * <li>SLS: Simple Log Service</li>
-             * <li>ONCALL: phone call</li>
-             * <li>FC: Function Compute</li>
-             * <li>MNS: Message Service queue</li>
+             * <li><p>MAIL: email.</p>
+             * </li>
+             * <li><p>SMS: text message.</p>
+             * </li>
+             * <li><p>WEBHOOK: alert callback.</p>
+             * </li>
+             * <li><p>SLS: Log Service.</p>
+             * </li>
+             * <li><p>ONCALL: phone call.</p>
+             * </li>
+             * <li><p>FC: Function Compute.</p>
+             * </li>
+             * <li><p>MNS: Message Service (MNS).</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -723,7 +740,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sending results of alert notifications.</p>
+             * <p>The list of alert information results that CloudMonitor sends to the alert channel.</p>
              */
             public Builder resultList(java.util.List<ResultList> resultList) {
                 this.resultList = resultList;
@@ -790,7 +807,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of sending results that are categorized by notification method.</p>
+             * <p>The list of alert pushing results by alert channel.</p>
              */
             public Builder channelResultList(java.util.List<ChannelResultList> channelResultList) {
                 this.channelResultList = channelResultList;
@@ -798,10 +815,12 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the alert notifications are sent.</p>
+             * <p>The pushing status of the alert information.</p>
              * <ul>
-             * <li>If the alert notifications are sent, the value &quot;success&quot; is returned.</li>
-             * <li>If the configuration is invalid, no alert notification is sent and an error code is returned.</li>
+             * <li><p>success: The alert was pushed.</p>
+             * </li>
+             * <li><p>error code: If a configuration error occurs and the pushing list is empty, an error code is displayed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -872,18 +891,18 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the alert notification method. Valid values:</p>
+             * <p>The channel that sends the alert. Valid values:</p>
              * <ul>
-             * <li>MAIL: email</li>
-             * <li>ALIIM: TradeManager</li>
-             * <li>SMS: text message</li>
-             * <li>CALL: phone call</li>
-             * <li>DING: DingTalk chatbot</li>
-             * <li>Merged: alert merging</li>
+             * <li>MAIL: email.</li>
+             * <li>ALIIM: Wangwang.</li>
+             * <li>SMS: text message.</li>
+             * <li>CALL: phone call.</li>
+             * <li>DING: DingTalk chatbot.</li>
+             * <li>Merged: alert combination.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Mail</p>
+             * <p>MAIL</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -891,7 +910,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The notification object corresponding to the alert notification method.</p>
+             * <p>The notification target that corresponds to the alert channel.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;
@@ -971,7 +990,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status code of the alert callback.</p>
+             * <p>The status code returned for the alert callback.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -982,7 +1001,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message returned for the alert callback.</p>
+             * <p>The information returned for the alert callback.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -993,7 +1012,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URL.</p>
+             * <p>The URL that is called back when the alert is triggered.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://www.aliyun.com/webhook.html">https://www.aliyun.com/webhook.html</a></p>
@@ -1453,7 +1472,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp that was generated when the alert was triggered.</p>
+             * <p>The timestamp when the alert was triggered.</p>
              * <p>Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
@@ -1465,10 +1484,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the blacklist policy.</p>
+             * <p>The details of the matched alert blacklist.</p>
              * 
              * <strong>example:</strong>
-             * <p>BlackListDetail</p>
+             * <p>{&quot;id&quot;:12****,&quot;metricProject&quot;:&quot;acs_ecs_dashboard&quot;,&quot;userId&quot;:173651113438****,&quot;uuid&quot;:&quot;8410dbbd-7d30-41c5-94cb-<strong><strong>&quot;,&quot;name&quot;:&quot;alert-</strong></strong>&quot;,&quot;productCategory&quot;:&quot;ecs&quot;,&quot;instances&quot;:[{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}],&quot;metrics&quot;:null,&quot;scopeType&quot;:&quot;USER&quot;,&quot;scopeValue&quot;:&quot;&quot;,&quot;startTime&quot;:&quot;0001-01-01T00:00:00Z&quot;,&quot;endTime&quot;:&quot;9999-12-31T23:59:59.999999999+08:00&quot;,&quot;effectiveTime&quot;:null,&quot;isEnable&quot;:true,&quot;status&quot;:1,&quot;gmtCreate&quot;:&quot;2021-11-02T16:35:59+08:00&quot;,&quot;gmtModified&quot;:&quot;2021-11-02T16:35:59+08:00&quot;,&quot;loadTime&quot;:&quot;2021-11-02T16:36:15.213072177+08:00&quot;}</p>
              */
             public Builder blackListDetail(String blackListDetail) {
                 this.blackListDetail = blackListDetail;
@@ -1476,10 +1495,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the blacklist policy.</p>
+             * <p>The name of the matched alert blacklist.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;id&quot;:123,&quot;metricProject&quot;:&quot;acs_ecs_dashboard&quot;,&quot;userId&quot;:1736511134389110,&quot;uuid&quot;:&quot;8410dbbd-7d30-41c5-94cb-<em><strong>&quot;,&quot;name&quot;:&quot;alert-</strong></em>&quot;,&quot;productCategory&quot;:&quot;ecs&quot;,&quot;instances&quot;:[{&quot;instanceId&quot;:&quot;host-***&quot;}],&quot;metrics&quot;:null,&quot;scopeType&quot;:&quot;USER&quot;,&quot;scopeValue&quot;:&quot;&quot;,&quot;startTime&quot;:&quot;0001-01-01T00:00:00Z&quot;,&quot;endTime&quot;:&quot;9999-12-31T23:59:59.999999999+08:00&quot;,&quot;effectiveTime&quot;:null,&quot;isEnable&quot;:true,&quot;status&quot;:1,&quot;gmtCreate&quot;:&quot;2021-11-02T16:35:59+08:00&quot;,&quot;gmtModified&quot;:&quot;2021-11-02T16:35:59+08:00&quot;,&quot;loadTime&quot;:&quot;2021-11-02T16:36:15.213072177+08:00&quot;}</p>
+             * <p>Black_Test</p>
              */
             public Builder blackListName(String blackListName) {
                 this.blackListName = blackListName;
@@ -1487,10 +1506,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the blacklist policy.</p>
+             * <p>The UUID of the matched alert blacklist.</p>
              * 
              * <strong>example:</strong>
-             * <p>8410dbbd-7d30-41c5-94cb-*****</p>
+             * <p>8410dbbd-7d30-41c5-94cb-****</p>
              */
             public Builder blackListUUID(String blackListUUID) {
                 this.blackListUUID = blackListUUID;
@@ -1498,7 +1517,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * ContactALIIWWList.
+             * <p>The list of Wangwang IDs of the alert contact.</p>
              */
             public Builder contactALIIWWList(java.util.List<String> contactALIIWWList) {
                 this.contactALIIWWList = contactALIIWWList;
@@ -1506,7 +1525,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * ContactDingList.
+             * <p>The list of DingTalk accounts of the alert contact.</p>
              */
             public Builder contactDingList(java.util.List<String> contactDingList) {
                 this.contactDingList = contactDingList;
@@ -1514,7 +1533,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * ContactGroups.
+             * <p>The list of alert contact groups.</p>
              */
             public Builder contactGroups(java.util.List<String> contactGroups) {
                 this.contactGroups = contactGroups;
@@ -1522,7 +1541,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * ContactMailList.
+             * <p>The list of email addresses of the alert contact.</p>
              */
             public Builder contactMailList(java.util.List<String> contactMailList) {
                 this.contactMailList = contactMailList;
@@ -1530,7 +1549,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * ContactOnCallList.
+             * <p>The list of phone numbers of the alert contact.</p>
              */
             public Builder contactOnCallList(java.util.List<String> contactOnCallList) {
                 this.contactOnCallList = contactOnCallList;
@@ -1538,7 +1557,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * ContactSMSList.
+             * <p>The list of phone numbers that receive text messages of the alert contact.</p>
              */
             public Builder contactSMSList(java.util.List<String> contactSMSList) {
                 this.contactSMSList = contactSMSList;
@@ -1546,7 +1565,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dimensions of the resource that triggered alerts.</p>
+             * <p>The dimensions of the resource for which the alert is triggered.</p>
              */
             public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -1554,7 +1573,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * DingdingWebhookList.
+             * <p>The list of webhook URLs of DingTalk chatbots for the alert contact.</p>
              */
             public Builder dingdingWebhookList(java.util.List<String> dingdingWebhookList) {
                 this.dingdingWebhookList = dingdingWebhookList;
@@ -1562,7 +1581,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert rule based on which the alert is triggered.</p>
+             * <p>The rule that triggers the alert.</p>
              */
             public Builder escalation(Escalation escalation) {
                 this.escalation = escalation;
@@ -1570,7 +1589,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event name.</p>
+             * <p>The name of the event.</p>
              * 
              * <strong>example:</strong>
              * <p>IOHang</p>
@@ -1581,7 +1600,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended fields.</p>
+             * <p>The extended information of the alert.</p>
              */
             public Builder extendedInfo(java.util.List<ExtendedInfo> extendedInfo) {
                 this.extendedInfo = extendedInfo;
@@ -1611,7 +1630,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource ID.</p>
+             * <p>The ID of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>i-m5e1qg6uo38rztr4****</p>
@@ -1622,7 +1641,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource name.</p>
+             * <p>The name of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>portalHost</p>
@@ -1633,11 +1652,15 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert level and the methods that are used to send alert notifications. Valid values:</p>
-             * <ul>
-             * <li>P4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
-             * <li>OK: No alert is generated.</li>
-             * </ul>
+             * <p>The alert level and notification methods. Valid values:</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- P2: phone calls, text messages, emails, and DingTalk chatbots.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- P3: text messages, emails, and DingTalk chatbots.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- P4: emails and DingTalk chatbots.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- OK: no alerts.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;- P4: emails and DingTalk chatbots.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;- OK: no alerts.</p>
+             * <p>&lt;props=&quot;partner&quot;&gt;- P4: emails and DingTalk chatbots.</p>
+             * <p>&lt;props=&quot;partner&quot;&gt;- OK: no alerts.</p>
              * 
              * <strong>example:</strong>
              * <p>P4</p>
@@ -1648,10 +1671,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the alert level was changed. Valid values:</p>
+             * <p>The change of the alert level. Valid values:</p>
              * <ul>
-             * <li><code>P4-&gt;OK</code>: The alert level was changed from P4 to OK.</li>
-             * <li><code>P4-&gt;P4</code>: The alert level was still P4.</li>
+             * <li><code>P4-&gt;OK</code>: The alert level changes from P4 to OK, which indicates that the alert is cleared.</li>
+             * <li><code>P4-&gt;P4</code>: indicates a P4-level alert.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1666,7 +1689,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
              * <p>The log ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>7818361[1523]@1671593992[1]</p>
+             * <p>7510****::e8a472a0-46ae-4ac0-84b1-e46be368****</p>
              */
             public Builder logId(String logId) {
                 this.logId = logId;
@@ -1674,7 +1697,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert information in a JSON string.</p>
+             * <p>The alert-related information, which is a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;alertName&quot;:&quot;e47aa0ac-4076-44db-a47d-d1083968****_Availability&quot;}</p>
@@ -1685,7 +1708,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric name.</p>
+             * <p>The name of the metric.</p>
              * 
              * <strong>example:</strong>
              * <p>cpu_total</p>
@@ -1707,10 +1730,12 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the cloud service. Valid values:</p>
+             * <p>The cloud service identifier. Valid values:</p>
              * <ul>
-             * <li>If the cloud service is provided by Alibaba Cloud, the abbreviation of the service name is returned. Example: ECS.</li>
-             * <li>If the cloud service is not provided by Alibaba Cloud, a value in the <code>acs_Service keyword</code> format is returned. Example: acs_networkmonitor.</li>
+             * <li><p>For an Alibaba Cloud service, the value is the abbreviation of the cloud service name. Example: ECS.</p>
+             * </li>
+             * <li><p>For a non-Alibaba Cloud service, the value is in the format of <code>acs_Product keyword</code>. Example: acs_networkmonitor.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1734,6 +1759,9 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
             /**
              * <p>The name of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU utilization</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1741,7 +1769,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about the sending results of alert notifications.</p>
+             * <p>The details of the alert pushing result.</p>
              */
             public Builder sendDetail(SendDetail sendDetail) {
                 this.sendDetail = sendDetail;
@@ -1749,7 +1777,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sending results of alert notifications.</p>
+             * <p>The list of alert sending results.</p>
              */
             public Builder sendResultList(java.util.List<SendResultList> sendResultList) {
                 this.sendResultList = sendResultList;
@@ -1757,15 +1785,17 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the alert. Valid values:</p>
+             * <p>The alert status. Valid values:</p>
              * <ul>
-             * <li>0: The alert is triggered or cleared.</li>
-             * <li>1: The alert is ineffective.</li>
-             * <li>2: The alert is muted.</li>
-             * <li>3: The host is restarting.</li>
-             * <li>4: No alert notification is sent.</li>
+             * <li>0: An alert is triggered or cleared.</li>
+             * <li>1: The current time is not within the effective period of the alert.</li>
+             * <li>2: The current time is within the channel silence period.</li>
+             * <li>3: The host is being restarted.</li>
+             * <li>4: No alerts are sent.</li>
              * </ul>
-             * <p>If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;When the alert status is 0, an alert is triggered if Level is set to P2, P3, or P4; the alert is cleared if Level is set to OK.
+             * &lt;props=&quot;intl&quot;&gt;When the alert status is 0, an alert is triggered if Level is set to P4; the alert is cleared if Level is set to OK.
+             * &lt;props=&quot;partner&quot;&gt;When the alert status is 0, an alert is triggered if Level is set to P4; the alert is cleared if Level is set to OK.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1776,7 +1806,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URLs.</p>
+             * <p>The list of URLs that are called back when the alert is triggered.</p>
              */
             public Builder webhookList(java.util.List<WebhookList> webhookList) {
                 this.webhookList = webhookList;

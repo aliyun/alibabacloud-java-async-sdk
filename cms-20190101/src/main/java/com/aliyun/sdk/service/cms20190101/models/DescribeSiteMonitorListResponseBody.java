@@ -147,7 +147,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The site monitoring tasks that are returned.</p>
+         * SiteMonitors.
          */
         public Builder siteMonitors(SiteMonitors siteMonitors) {
             this.siteMonitors = siteMonitors;
@@ -211,10 +211,12 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,7 +228,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -321,20 +323,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The comparison operator of the assertion. Valid values:</p>
-             * <ul>
-             * <li>contains: contains</li>
-             * <li>doesNotContain: does not contain</li>
-             * <li>matches: matches regular expressions</li>
-             * <li>doesNotMatch: does not match regular expressions</li>
-             * <li>is: equal to a numeric value or matches a character</li>
-             * <li>isNot: not equal to</li>
-             * <li>lessThan: less than</li>
-             * <li>moreThan: greater than</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>lessThan</p>
+             * operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -342,14 +331,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parsing path of the assertion.</p>
-             * <ul>
-             * <li>If the assertion type is <code>body_json</code>, the path is <code>json path</code>.</li>
-             * <li>If the assertion type is <code>body_xml</code>, the path is <code>xml path</code>.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>json path</p>
+             * property.
              */
             public Builder property(String property) {
                 this.property = property;
@@ -357,10 +339,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The numeric value or character used for matching.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * target.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -368,18 +347,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The assertion type. Valid values:</p>
-             * <ul>
-             * <li>response_time: checks whether the response time meets expectations.</li>
-             * <li>status_code: checks whether the HTTP status code meets expectations.</li>
-             * <li>header: checks whether the fields in the response header meet expectations.</li>
-             * <li>body_text: checks whether the content in the response body meets expectations by using text matching.</li>
-             * <li>body_json: checks whether the content in the response body meets expectations by using JSON parsing (JSONPath).</li>
-             * <li>body_xml: checks whether the content in the response body meets expectations by using XML parsing (XPath).</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>response_time</p>
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -864,13 +832,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The acceptable status code.</p>
-             * <blockquote>
-             * <p> We recommend that you configure assertions.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>400</p>
+             * acceptable_response_code.
              */
             public Builder acceptableResponseCode(String acceptableResponseCode) {
                 this.acceptableResponseCode = acceptableResponseCode;
@@ -878,7 +840,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The assertions.</p>
+             * assertions.
              */
             public Builder assertions(OptionsJsonAssertions assertions) {
                 this.assertions = assertions;
@@ -886,10 +848,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of retries after a DNS failure occurred.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * attempts.
              */
             public Builder attempts(Long attempts) {
                 this.attempts = attempts;
@@ -897,14 +856,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the security authentication feature is enabled. Valid values:</p>
-             * <ul>
-             * <li>0: The feature is enabled.</li>
-             * <li>1: The feature is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * authentication.
              */
             public Builder authentication(Integer authentication) {
                 this.authentication = authentication;
@@ -912,14 +864,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the certificate is verified. Valid values:</p>
-             * <ul>
-             * <li>false (default): The certificate is not verified.</li>
-             * <li>true: The certificate is verified.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * cert_verify.
              */
             public Builder certVerify(Boolean certVerify) {
                 this.certVerify = certVerify;
@@ -927,10 +872,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cookie of the HTTP request.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>lang=en</p>
+             * cookie.
              */
             public Builder cookie(String cookie) {
                 this.cookie = cookie;
@@ -938,14 +880,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether MTR is automatically used to diagnose network issues if a task fails. Valid values:</p>
-             * <ul>
-             * <li>false (default): MTR is not automatically used to diagnose network issues if a task fails.</li>
-             * <li>true: MTR is automatically used to diagnose network issues if a task fails.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * diagnosis_mtr.
              */
             public Builder diagnosisMtr(Boolean diagnosisMtr) {
                 this.diagnosisMtr = diagnosisMtr;
@@ -953,14 +888,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether ping requests are automatically sent to detect network latency if a detection task fails. Valid values:</p>
-             * <ul>
-             * <li>false (default): Ping requests are not automatically sent to detect network latency if a detection task fails.</li>
-             * <li>true: Ping requests are automatically sent to detect network latency if a detection task fails.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * diagnosis_ping.
              */
             public Builder diagnosisPing(Boolean diagnosisPing) {
                 this.diagnosisPing = diagnosisPing;
@@ -968,16 +896,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relationship between the list of expected aliases or IP addresses and the list of DNS results. Valid values:</p>
-             * <ul>
-             * <li>IN_DNS: The list of expected values is a subset of the list of DNS results.</li>
-             * <li>DNS_IN: The list of DNS results is a subset of the list of expected values.</li>
-             * <li>EQUAL: The list of DNS results is the same as the list of expected values.</li>
-             * <li>ANY: The list of DNS results intersects with the list of expected values.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>IN_DNS</p>
+             * dns_match_rule.
              */
             public Builder dnsMatchRule(String dnsMatchRule) {
                 this.dnsMatchRule = dnsMatchRule;
@@ -985,10 +904,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name or IP address of the DNS server.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.XX.XX</p>
+             * dns_server.
              */
             public Builder dnsServer(String dnsServer) {
                 this.dnsServer = dnsServer;
@@ -996,18 +912,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the DNS record. This parameter is returned only if the TaskType parameter is set to DNS. Valid values:</p>
-             * <ul>
-             * <li>A (default): a record that specifies an IP address related to the specified host name or domain name.</li>
-             * <li>CNAME: a record that maps multiple domain names to a domain name.</li>
-             * <li>NS: a record that specifies a DNS server used to parse domain names.</li>
-             * <li>MX: a record that links domain names to the address of a mail server.</li>
-             * <li>TXT: a record that stores the text information of host name or domain names. The text must be 1 to 512 bytes in length. The TXT record serves as a Sender Policy Framework (SPF) record to fight against spam.</li>
-             * <li>AAAA: a record that maps a domain name to the relevant IPv6 address.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>A</p>
+             * dns_type.
              */
             public Builder dnsType(String dnsType) {
                 this.dnsType = dnsType;
@@ -1015,14 +920,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the DNS server of the carrier is used.</p>
-             * <ul>
-             * <li>true (default): The DNS server of the carrier is used.</li>
-             * <li>false: The DNS server of the carrier is not used. The default DNS server or the specified DNS server is used.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * enable_operator_dns.
              */
             public Builder enableOperatorDns(Boolean enableOperatorDns) {
                 this.enableOperatorDns = enableOperatorDns;
@@ -1030,13 +928,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The packet loss rate.</p>
-             * <blockquote>
-             * <p> This parameter is returned only if the TaskType parameter is set to PING.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0.5</p>
+             * failure_rate.
              */
             public Builder failureRate(Float failureRate) {
                 this.failureRate = failureRate;
@@ -1044,10 +936,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The header of the HTTP request. An HTTP header is a key-value pair in which the key and the value are separated by a colon (:). The format is <code>key1:value1</code>. Each HTTP header occupies a line.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testKey:testValue</p>
+             * header.
              */
             public Builder header(String header) {
                 this.header = header;
@@ -1055,15 +944,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP request method. Valid values:</p>
-             * <ul>
-             * <li>get</li>
-             * <li>post</li>
-             * <li>head</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>get</p>
+             * http_method.
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -1071,14 +952,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the password is decoded by using the Base64 algorithm. Valid values:</p>
-             * <ul>
-             * <li>true: The password is decoded by using the Base64 algorithm.</li>
-             * <li>false (default): The password is not decoded by using the Base64 algorithm.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * isBase64Encode.
              */
             public Builder isBase64Encode(String isBase64Encode) {
                 this.isBase64Encode = isBase64Encode;
@@ -1086,14 +960,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the alert rule is included. Valid values:</p>
-             * <ul>
-             * <li>0: The alert rule is included.</li>
-             * <li>1: The alert rule is not included.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * match_rule.
              */
             public Builder matchRule(Integer matchRule) {
                 this.matchRule = matchRule;
@@ -1101,10 +968,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The password of the SMTP, POP3, or FTP protocol.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123****</p>
+             * password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -1112,10 +976,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of hops for the PING protocol.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * ping_num.
              */
             public Builder pingNum(Integer pingNum) {
                 this.pingNum = pingNum;
@@ -1123,10 +984,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number of the TCP, UDP, SMTP, or POP3 protocol.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -1134,15 +992,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type of DNS detection. Valid values:</p>
-             * <ul>
-             * <li>udp (default)</li>
-             * <li>tcp</li>
-             * <li>tcp-tls</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>udp</p>
+             * protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -1150,14 +1000,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the PROXY protocol is enabled. Valid values:</p>
-             * <ul>
-             * <li>false (default): The PROXY protocol is disabled.</li>
-             * <li>true: The PROXY protocol is enabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * proxy_protocol.
              */
             public Builder proxyProtocol(Boolean proxyProtocol) {
                 this.proxyProtocol = proxyProtocol;
@@ -1165,10 +1008,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the HTTP request.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cf0f85</p>
+             * request_content.
              */
             public Builder requestContent(String requestContent) {
                 this.requestContent = requestContent;
@@ -1176,14 +1016,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format of the HTTP request. Valid values:</p>
-             * <ul>
-             * <li>hex: hexadecimal</li>
-             * <li>txt: text</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>hex</p>
+             * request_format.
              */
             public Builder requestFormat(String requestFormat) {
                 this.requestFormat = requestFormat;
@@ -1191,14 +1024,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The response to the HTTP request.</p>
-             * <ul>
-             * <li>Hexadecimal format: If the request content is a byte string and cannot be represented in printable characters, you can convert the byte string to printable characters in the hexadecimal format. If you convert the byte string to printable characters in the hexadecimal format, one byte is converted to two hexadecimal characters. For example, (byte)1 is converted to <code>01</code> and (byte)27 is converted to <code>1B</code>. If the request content is a binary array in the Java format, for example, <code>{(byte)1, (byte)27}</code>, you can convert the binary array to <code>011b</code> or <code>011B</code>. Hexadecimal characters are not case-sensitive in site monitoring tasks. You can enter <code>011B</code> in the request content and set the request_format parameter to hex.</li>
-             * <li>Text format: Common text refers to strings that consist of printable characters.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>cf0f85</p>
+             * response_content.
              */
             public Builder responseContent(String responseContent) {
                 this.responseContent = responseContent;
@@ -1206,14 +1032,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format of the HTTP response. Valid values:</p>
-             * <ul>
-             * <li>hex: hexadecimal</li>
-             * <li>txt: text</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>hex</p>
+             * response_format.
              */
             public Builder responseFormat(String responseFormat) {
                 this.responseFormat = responseFormat;
@@ -1221,10 +1040,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times a failed detection request is retried.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * retry_delay.
              */
             public Builder retryDelay(Integer retryDelay) {
                 this.retryDelay = retryDelay;
@@ -1232,10 +1048,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3000</p>
+             * time_out.
              */
             public Builder timeOut(Long timeOut) {
                 this.timeOut = timeOut;
@@ -1243,14 +1056,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether redirects are followed if the status code 301 or 302 is returned. Valid values:</p>
-             * <ul>
-             * <li>true: Redirects are not followed.</li>
-             * <li>false (default): Redirects are followed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * unfollow_redirect.
              */
             public Builder unfollowRedirect(Boolean unfollowRedirect) {
                 this.unfollowRedirect = unfollowRedirect;
@@ -1258,10 +1064,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the FTP, SMTP, or POP3 protocol.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testUser</p>
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -1432,10 +1235,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL or IP address that is monitored by the site monitoring task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://aliyun.com">https://aliyun.com</a></p>
+             * Address.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -1443,14 +1243,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detection point type. Valid values:</p>
-             * <ul>
-             * <li>PC</li>
-             * <li>MOBILE</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PC</p>
+             * AgentGroup.
              */
             public Builder agentGroup(String agentGroup) {
                 this.agentGroup = agentGroup;
@@ -1458,10 +1251,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the site monitoring task was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-11-01 11:05:18</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1469,10 +1259,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval at which detection requests are sent. Unit: minutes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Interval.
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -1480,7 +1267,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see <a href="https://help.aliyun.com/document_detail/115048.html">CreateSiteMonitor</a>.</p>
+             * OptionsJson.
              */
             public Builder optionsJson(OptionsJson optionsJson) {
                 this.optionsJson = optionsJson;
@@ -1488,10 +1275,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the site monitoring task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>f5783760-1b39-4b6b-80e8-453d962a****</p>
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1499,10 +1283,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the site monitoring task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>域名检测_example.com.cn</p>
+             * TaskName.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1510,14 +1291,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status. Valid values:</p>
-             * <ul>
-             * <li>1: The task is enabled.</li>
-             * <li>2: The task is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * TaskState.
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
@@ -1525,10 +1299,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol that is used by the site monitoring task. Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TCP</p>
+             * TaskType.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -1536,10 +1307,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the site monitoring task was updated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-03-08 17:14:31</p>
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

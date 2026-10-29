@@ -119,7 +119,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the alert rules. The result is in the same structure as that returned by the DescribeMetricRuleList operation.</p>
+         * AlertList.
          */
         public Builder alertList(AlertList alertList) {
             this.alertList = alertList;
@@ -129,7 +129,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the alert rules.</p>
+         * Datapoints.
          */
         public Builder datapoints(Datapoints datapoints) {
             this.datapoints = datapoints;
@@ -173,8 +173,10 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,23 +272,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</p>
-             * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-             * <li>GreaterThanThreshold: greater than the threshold</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-             * <li>LessThanThreshold: less than the threshold</li>
-             * <li>NotEqualToThreshold: not equal to the threshold</li>
-             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>GreaterThanThreshold</p>
+             * ComparisonOperator.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -294,10 +280,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical methods for Critical-level alerts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Average</p>
+             * Statistics.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -305,10 +288,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold for Critical-level alerts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>99</p>
+             * Threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -316,10 +296,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * Times.
              */
             public Builder times(String times) {
                 this.times = times;
@@ -412,23 +389,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</p>
-             * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-             * <li>GreaterThanThreshold: greater than the threshold</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-             * <li>LessThanThreshold: less than the threshold</li>
-             * <li>NotEqualToThreshold: not equal to the threshold</li>
-             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>GreaterThanThreshold</p>
+             * ComparisonOperator.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -436,10 +397,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical methods for Info-level alerts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Average</p>
+             * Statistics.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -447,10 +405,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold for Info-level alerts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>95</p>
+             * Threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -458,11 +413,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consecutive number of times</p>
-             * <p>for which the metric value meets the alert condition before an Info-level alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * Times.
              */
             public Builder times(String times) {
                 this.times = times;
@@ -555,23 +506,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</p>
-             * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-             * <li>GreaterThanThreshold: greater than the threshold</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-             * <li>LessThanThreshold: less than the threshold</li>
-             * <li>NotEqualToThreshold: not equal to the threshold</li>
-             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>GreaterThanThreshold</p>
+             * ComparisonOperator.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -579,10 +514,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical methods for Warn-level alerts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Average</p>
+             * Statistics.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -590,10 +522,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold for Warn-level alerts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * Threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -601,11 +530,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consecutive number of times</p>
-             * <p>for which the metric value meets the alert condition before a Warn-level alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * Times.
              */
             public Builder times(String times) {
                 this.times = times;
@@ -685,7 +610,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The trigger condition for Critical-level alerts.</p>
+             * Critical.
              */
             public Builder critical(Critical critical) {
                 this.critical = critical;
@@ -693,7 +618,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditions for triggering Info-level alerts.</p>
+             * Info.
              */
             public Builder info(Info info) {
                 this.info = info;
@@ -701,7 +626,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditions for triggering Warn-level alerts.</p>
+             * Warn.
              */
             public Builder warn(Warn warn) {
                 this.warn = warn;
@@ -950,15 +875,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the alert rule. Valid values:</p>
-             * <ul>
-             * <li>OK: The alert rule has no active alerts.</li>
-             * <li>ALARM: The alert rule has active alerts.</li>
-             * <li>INSUFFICIENT_DATA: No data is found.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>OK</p>
+             * AlertState.
              */
             public Builder alertState(String alertState) {
                 this.alertState = alertState;
@@ -966,10 +883,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert contact group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS_Group</p>
+             * ContactGroups.
              */
             public Builder contactGroups(String contactGroups) {
                 this.contactGroups = contactGroups;
@@ -977,10 +891,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitoring data of the specified resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>&quot;&quot;</p>
+             * Dimensions.
              */
             public Builder dimensions(String dimensions) {
                 this.dimensions = dimensions;
@@ -988,10 +899,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time period during which the alert rule is effective.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>00:00-23:59</p>
+             * EffectiveInterval.
              */
             public Builder effectiveInterval(String effectiveInterval) {
                 this.effectiveInterval = effectiveInterval;
@@ -999,14 +907,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the alert rule is enabled. Valid values:</p>
-             * <ul>
-             * <li>true: The alert rule is enabled.</li>
-             * <li>false: The alert rule is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * EnableState.
              */
             public Builder enableState(Boolean enableState) {
                 this.enableState = enableState;
@@ -1014,7 +915,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditions for triggering different levels of alerts.</p>
+             * Escalations.
              */
             public Builder escalations(Escalations escalations) {
                 this.escalations = escalations;
@@ -1022,10 +923,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subject of the alert notification email.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS_Bucket</p>
+             * MailSubject.
              */
             public Builder mailSubject(String mailSubject) {
                 this.mailSubject = mailSubject;
@@ -1033,10 +931,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cpu_total</p>
+             * MetricName.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1044,10 +939,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the Alibaba Cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs_ecs_dashboard</p>
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1055,10 +947,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time period during which the alert rule is ineffective.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>00:00-06:00</p>
+             * NoEffectiveInterval.
              */
             public Builder noEffectiveInterval(String noEffectiveInterval) {
                 this.noEffectiveInterval = noEffectiveInterval;
@@ -1066,11 +955,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The aggregation period of monitoring data.</p>
-             * <p>Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>60</p>
+             * Period.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -1078,10 +963,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resources that are associated with the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[{&quot;resource&quot;:&quot;_ALL&quot;}]</p>
+             * Resources.
              */
             public Builder resources(String resources) {
                 this.resources = resources;
@@ -1089,10 +971,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ruleIdxxxx</p>
+             * RuleId.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1100,10 +979,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>myAlert</p>
+             * RuleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1111,11 +987,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mute period during which new alerts are not sent even if the trigger conditions are met.</p>
-             * <p>Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>86400</p>
+             * SilenceTime.
              */
             public Builder silenceTime(String silenceTime) {
                 this.silenceTime = silenceTime;
@@ -1123,10 +995,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URL.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
+             * Webhook.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;
@@ -1429,19 +1298,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The comparison operator that is used in the alert rule. Valid values:</p>
-             * <ul>
-             * <li><code>&gt;</code></li>
-             * <li><code>&lt;</code></li>
-             * <li><code>&gt;=</code></li>
-             * <li><code>&lt;=</code></li>
-             * <li><code>=</code></li>
-             * <li><code>=</code></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <blockquote>
-             * </blockquote>
+             * ComparisonOperator.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -1449,10 +1306,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert contact group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS_Group</p>
+             * ContactGroups.
              */
             public Builder contactGroups(String contactGroups) {
                 this.contactGroups = contactGroups;
@@ -1460,14 +1314,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the alert rule is enabled. Valid values:</p>
-             * <ul>
-             * <li>true: The alert rule is enabled.</li>
-             * <li>false: The alert rule is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Enable.
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -1475,11 +1322,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time period during which the alert rule is effective.</p>
-             * <p>Unit: hours. For example, the value 23 indicates <code>23:59:59</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>24</p>
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1487,10 +1330,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * EvaluationCount.
              */
             public Builder evaluationCount(String evaluationCount) {
                 this.evaluationCount = evaluationCount;
@@ -1498,10 +1338,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cpu_total</p>
+             * MetricName.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1509,10 +1346,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs_ecs_dashboard</p>
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1520,11 +1354,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The aggregation period of monitoring data.</p>
-             * <p>Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>60</p>
+             * Period.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -1532,10 +1362,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>a151cd6023eacee2f0978e03863cc1697c89508****</p>
+             * RuleId.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1543,10 +1370,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SystemDefault_acs_rds_dashboard_CpuUsage</p>
+             * RuleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1554,11 +1378,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mute period during which new alerts are not sent even if the trigger conditions are met.</p>
-             * <p>Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>86400</p>
+             * SilenceTime.
              */
             public Builder silenceTime(String silenceTime) {
                 this.silenceTime = silenceTime;
@@ -1566,11 +1386,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time period during which the alert rule is effective.</p>
-             * <p>Unit: hours. For example, the value 00 indicates <code>00:00:00</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>00</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1578,10 +1394,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the alert rule is enabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Enable</p>
+             * State.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1589,10 +1402,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical method.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Average</p>
+             * Statistics.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -1600,10 +1410,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert threshold.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>90</p>
+             * Threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -1611,10 +1418,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URL.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
+             * Webhook.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;

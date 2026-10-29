@@ -64,7 +64,7 @@ public class DeleteContactGroupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>contact_group_2019_templatedfkXQ</p>
+         * <p>My alert group</p>
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);

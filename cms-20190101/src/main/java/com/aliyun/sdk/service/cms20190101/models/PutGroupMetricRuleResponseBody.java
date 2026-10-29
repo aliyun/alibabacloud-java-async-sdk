@@ -108,7 +108,7 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>A status code of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the request.</p>
+         * <p>The result of creating or modifying the alert rule.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -150,10 +150,12 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation is successful.</p>
+         * </li>
+         * <li><p>false: The operation fails.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

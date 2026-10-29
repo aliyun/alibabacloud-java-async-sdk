@@ -119,9 +119,9 @@ public class DescribeContactListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The alert contacts.</p>
+         * Contacts.
          */
         public Builder contacts(Contacts contacts) {
             this.contacts = contacts;
@@ -141,7 +141,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The Request is not authorization.</p>
@@ -163,10 +163,12 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +180,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -273,10 +275,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The TradeManager ID of the alert contact.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Alice</p>
+             * AliIM.
              */
             public Builder aliIM(String aliIM) {
                 this.aliIM = aliIM;
@@ -284,10 +283,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The webhook URL of the DingTalk chatbot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112">https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112</a>****</p>
+             * DingWebHook.
              */
             public Builder dingWebHook(String dingWebHook) {
                 this.dingWebHook = dingWebHook;
@@ -295,10 +291,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the alert contact.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:Alice@example.com">Alice@example.com</a></p>
+             * Mail.
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -306,10 +299,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phone number of the alert contac.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1333333****</p>
+             * SMS.
              */
             public Builder SMS(String SMS) {
                 this.SMS = SMS;
@@ -402,14 +392,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the TradeManager ID.</p>
-             * <p>Valid value: OK. The value OK indicates that the TradeManager ID is valid and can receive alert notifications.</p>
-             * <blockquote>
-             * <p> This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>OK</p>
+             * AliIM.
              */
             public Builder aliIM(String aliIM) {
                 this.aliIM = aliIM;
@@ -417,11 +400,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the DingTalk chatbot.</p>
-             * <p>Valid value: OK. The value OK indicates that the DingTalk chatbot is normal and alert notifications can be received in a DingTalk group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OK</p>
+             * DingWebHook.
              */
             public Builder dingWebHook(String dingWebHook) {
                 this.dingWebHook = dingWebHook;
@@ -429,14 +408,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the email address. Valid values:</p>
-             * <ul>
-             * <li>PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.</li>
-             * <li>OK: The phone number is activated and can receive alert notifications.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PENDING</p>
+             * Mail.
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -444,17 +416,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the phone number. Valid values:</p>
-             * <ul>
-             * <li>PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.</li>
-             * <li>OK: The phone number is activated and can receive alert notifications.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>OK</p>
+             * SMS.
              */
             public Builder SMS(String SMS) {
                 this.SMS = SMS;
@@ -653,7 +615,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert notification method.</p>
+             * Channels.
              */
             public Builder channels(Channels channels) {
                 this.channels = channels;
@@ -661,8 +623,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the alert notification method. Valid values: PENDING and OK.</p>
-             * <p>The email address must be activated after it is added as the value specified for the alert notification method. The value PENDING indicates that the email address is not activated. The value OK indicates that the email address is activated.</p>
+             * ChannelsState.
              */
             public Builder channelsState(ChannelsState channelsState) {
                 this.channelsState = channelsState;
@@ -670,7 +631,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>None.</p>
+             * ContactGroups.
              */
             public Builder contactGroups(ContactGroups contactGroups) {
                 this.contactGroups = contactGroups;
@@ -678,11 +639,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the alert contact was created.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1552356159000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -690,7 +647,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description.</p>
+             * Desc.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -698,14 +655,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language in which the alert information is displayed. Valid values:</p>
-             * <ul>
-             * <li>zh-cn: simplified Chinese</li>
-             * <li>en: English</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>zh-cn</p>
+             * Lang.
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -713,10 +663,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert contact.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Alice</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -724,11 +671,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the alert contact was updated.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1552356159000</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

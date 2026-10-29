@@ -233,7 +233,7 @@ public class PutLogMonitorRequest extends Request {
         } 
 
         /**
-         * <p>The aggregation logic.</p>
+         * <p>The aggregate function definitions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder aggregates(java.util.List<Aggregates> aggregates) {
@@ -255,7 +255,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * <p>The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.</p>
+         * <p>The dimensions used for spatial aggregation. This is equivalent to the Group By clause in SQL, which groups monitoring data by specified dimensions. If no dimension is specified, all monitoring data is aggregated based on the aggregate function.</p>
          */
         public Builder groupbys(java.util.List<Groupbys> groupbys) {
             this.putQueryParameter("Groupbys", groupbys);
@@ -276,13 +276,16 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * <p>The extended field. The extended field allows you to perform basic operations on the aggregation results.</p>
-         * <p>For example, you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber*100.</p>
-         * <p>JSON format: {&quot;extend&quot;:{&quot;errorPercent&quot;:&quot;5XXNumber/TotalNumber*100&quot;}}. Description:</p>
+         * <p>The extended field. The extended field provides arithmetic operations on the results of the statistical methods.</p>
+         * <p>For example, if you configure the total number of HTTP status code requests (TotalNumber) and the number of requests with HTTP status codes greater than 499 (5xxNumber) in the statistical methods, you can use the extended field to calculate the server error rate: 5xxNumber/TotalNumber*100.</p>
+         * <p>JSON format: {&quot;extend&quot;:{&quot;errorPercent&quot;:&quot;5xxNumber/TotalNumber*100&quot;}}. Field description:</p>
          * <ul>
-         * <li>extend: required.</li>
-         * <li>errorPercent: the alias of the field generated in the calculation result. You can specify the alias as needed.</li>
-         * <li>5XXNumber/TotalNumber*100: the calculation expression.</li>
+         * <li><p>extend: required.</p>
+         * </li>
+         * <li><p>errorPercent: the alias of the new field generated from the calculation result. You can specify a custom name. </p>
+         * </li>
+         * <li><p>errorPercent: the calculation expression for existing fields.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,7 +298,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * <p>The metric name. For more information about the metrics for cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The metric name. For information about the metrics supported by CloudMonitor for Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -308,7 +311,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * <p>The name of the Simple Log Service Logstore.</p>
+         * <p>The name of the Log Service Logstore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -321,7 +324,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * <p>The name of the Simple Log Service project.</p>
+         * <p>The name of the Log Service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -334,7 +337,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * <p>The region in which the Simple Log Service project resides.</p>
+         * <p>The region where the Log Service project resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -347,7 +350,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * <p>The size of the tumbling window for calculation. Unit: seconds. CloudMonitor performs aggregation for each tumbling window.</p>
+         * <p>The tumbling window size for pre-aggregation. Unit: seconds. CloudMonitor performs an aggregation calculation on the data at the specified interval.</p>
          * 
          * <strong>example:</strong>
          * <p>60,300</p>
@@ -371,7 +374,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * <p>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements. If no filter condition is specified, all logs are processed. For example, logs contain the Level and Error fields. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</p>
+         * <p>The filter rules, used together with ValueFilterRelation. This is equivalent to the Where clause in SQL. If this parameter is not specified, all data is processed. For example, if the log contains Level and Error fields and you want to count the number of Error occurrences per minute, you can define the statistical method to sum the Level field with the condition Level=Error.</p>
          */
         public Builder valueFilter(java.util.List<ValueFilter> valueFilter) {
             this.putQueryParameter("ValueFilter", valueFilter);
@@ -380,13 +383,15 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * <p>The logical operator that is used between log filter conditions. Valid values:</p>
+         * <p>The logical operator used to combine log filter conditions. Valid values:</p>
          * <ul>
-         * <li>and</li>
-         * <li>or</li>
+         * <li><p>and</p>
+         * </li>
+         * <li><p>or</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> The ValueFilterRelation and <code>ValueFilter.N.Key</code> parameters must be used in pair.</p>
+         * <p>This parameter must be used together with <code>ValueFilter.N.Key</code>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -487,7 +492,7 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * <p>The name of the field to be aggregated. Valid values of N: 1 to 10.</p>
+             * <p>The name of the original field for aggregation. Valid values of N: 1 to 10.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -499,16 +504,16 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * <p>The function that is used to aggregate log data within a statistical period. Valid values of N: 1 to 10. Valid values:</p>
+             * <p>The statistical method used to aggregate log data within a statistical period. Valid values of N: 1 to 10. Valid values:</p>
              * <ul>
-             * <li>count: counts the number.</li>
-             * <li>sum: calculates the total value.</li>
-             * <li>avg: calculates the average value.</li>
-             * <li>max: calculates the maximum value.</li>
-             * <li>min: calculates the minimum value.</li>
-             * <li>countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.</li>
-             * <li>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.</li>
-             * <li>distinct: calculates the number of unique values of the specified field within a statistical period.</li>
+             * <li>count: counts the number of occurrences.</li>
+             * <li>sum: calculates the sum.</li>
+             * <li>avg: calculates the average.</li>
+             * <li>max: returns the maximum value.</li>
+             * <li>min: returns the minimum value.</li>
+             * <li>countps: calculates the average count per second for the specified field within the statistical period.</li>
+             * <li>sumps: calculates the average sum per second for the specified field within the statistical period.</li>
+             * <li>distinct: counts the number of occurrences of the specified field after deduplication within the statistical period.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -580,7 +585,7 @@ public class PutLogMonitorRequest extends Request {
             } 
 
             /**
-             * <p>The alias of the dimension based on which the data is grouped. Valid values of N: 1 to 10.</p>
+             * <p>The alias of the Group By field. Valid values of N: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>CPUUtilization</p>
@@ -591,7 +596,7 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * <p>The name of the field that is specified as the dimension. Valid values of N: 1 to 10.</p>
+             * <p>The name of the Group By field. Valid values of N: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>cpu</p>
@@ -674,7 +679,7 @@ public class PutLogMonitorRequest extends Request {
             } 
 
             /**
-             * <p>The name of the log field that is used for matching in the filter condition. Valid values of N: 1 to 10.</p>
+             * <p>The name of the log field to match. Valid values of N: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>lh_source</p>
@@ -685,14 +690,14 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * <p>The method that is used to match the field value. Valid values of N: 1 to 10. Valid values:</p>
+             * <p>The matching method for the field value. Valid values of N: 1 to 10. Valid values:</p>
              * <ul>
-             * <li><code>contain</code>: contains</li>
-             * <li><code>notContain</code>: does not contain</li>
-             * <li><code>&gt;</code>: greater than</li>
-             * <li><code>&lt;</code>: less than</li>
-             * <li><code>&gt;=</code>: greater than or equal to</li>
-             * <li><code>&lt;=</code>: less than or equal to</li>
+             * <li><code>contain</code>: contains.</li>
+             * <li><code>notContain</code>: does not contain.</li>
+             * <li><code>&gt;</code>: greater than.</li>
+             * <li><code>&lt;</code>: less than.</li>
+             * <li><code>&gt;=</code>: greater than or equal to.</li>
+             * <li><code>&lt;=</code>: less than or equal to.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -704,7 +709,7 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * <p>The field value to be matched in the filter condition. Valid values of N: 1 to 10.</p>
+             * <p>The value of the log field to match. Valid values of N: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

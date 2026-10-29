@@ -106,9 +106,9 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>A status code of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The alert rules that failed to be created for the resource.</p>
+         * FailedListResult.
          */
         public Builder failedListResult(FailedListResult failedListResult) {
             this.failedListResult = failedListResult;
@@ -128,7 +128,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -150,10 +150,12 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,10 +238,13 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response code.</p>
+             * <p>The HTTP status code.</p>
+             * <blockquote>
+             * <p>A status code of 200 indicates success.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>404</p>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -247,7 +252,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned.</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>The request processing has failed due to some unknown error.</p>
@@ -258,14 +263,16 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <p>Indicates whether the operation was successful. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: The operation was successful.</p>
+             * </li>
+             * <li><p>false: The operation failed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>false</p>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -332,7 +339,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert rule that failed to be created.</p>
+             * Result.
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -340,10 +347,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alert rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>a151cd6023eacee2f0978e03863cc1697c89508****</p>
+             * RuleId.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

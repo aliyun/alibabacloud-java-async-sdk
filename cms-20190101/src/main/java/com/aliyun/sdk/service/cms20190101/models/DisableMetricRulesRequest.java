@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DisableMetricRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleId")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> ruleId;
 
     private DisableMetricRulesRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.ruleId = builder.ruleId;
     }
 
@@ -41,6 +46,13 @@ public class DisableMetricRulesRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return ruleId
      */
     public java.util.List<String> getRuleId() {
@@ -48,6 +60,7 @@ public class DisableMetricRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DisableMetricRulesRequest, Builder> {
+        private Boolean dryRun; 
         private java.util.List<String> ruleId; 
 
         private Builder() {
@@ -56,15 +69,29 @@ public class DisableMetricRulesRequest extends Request {
 
         private Builder(DisableMetricRulesRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.ruleId = request.ruleId;
         } 
 
         /**
-         * <p>The ID of the alert rule. Valid values of N: 1 to 20.</p>
-         * <p>This parameter is required.</p>
+         * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: sends a dry run request and does not bind a security group to the instance. Check items include whether required parameters are specified, the request format, and service limits. If the request fails the check, the corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>detect_87****_HTTP_HttpLatency</p>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the alert rule.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ruleId(java.util.List<String> ruleId) {
             this.putQueryParameter("RuleId", ruleId);

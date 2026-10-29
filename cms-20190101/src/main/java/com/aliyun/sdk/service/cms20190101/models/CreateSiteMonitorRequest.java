@@ -188,7 +188,7 @@ public class CreateSiteMonitorRequest extends Request {
         } 
 
         /**
-         * <p>The URL or IP address that is monitored by the task.</p>
+         * <p>The URL or IP address to monitor.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,10 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * AgentGroup.
+         * <p>The group of detection points for the network probe task. \<code>PC\\</code> indicates detection points on PCs. \<code>MOBILE\\</code> indicates detection points on mobile devices. \<code>FC\\</code> indicates detection points in a VPC. The default value is \<code>PC\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PC</p>
          */
         public Builder agentGroup(String agentGroup) {
             this.putQueryParameter("AgentGroup", agentGroup);
@@ -211,7 +214,7 @@ public class CreateSiteMonitorRequest extends Request {
 
         /**
          * <p>The ID of the alert rule.</p>
-         * <p>For more information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>SystemDefault_acs_ecs_dashboard_InternetOutRate_Percent</p>
@@ -223,7 +226,7 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * <p>The custom detection period. You can only select a time period from Monday to Sunday for detection.</p>
+         * <p>The custom detection schedule. Specify a time period and the days of the week for detection.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;start_hour&quot;:0,&quot;end_hour&quot;:24, &quot;days&quot;:[0], &quot;time_zone&quot;:&quot;Local&quot;}</p>
@@ -235,9 +238,9 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * <p>The interval at which detection requests are sent.</p>
-         * <p>Valid values: 1, 5, 15, 30, and 60. Unit: minutes.</p>
-         * <p>Default value: 1.</p>
+         * <p>The monitoring frequency in minutes.</p>
+         * <p>Valid values: 1, 5, 15, 30, and 60.</p>
+         * <p>Default: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -249,9 +252,9 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * <p>The information of the detection points. If you leave this parameter empty, the system randomly selects three detection points.</p>
-         * <p>The value is a JSON array. Example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>. The values of the city field indicate Beijing, Hangzhou, and Qingdao.</p>
-         * <p>For information about how to obtain detection points, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
+         * <p>The detection points. If you do not specify this parameter, the system randomly selects three detection points from different Internet Service Providers (ISPs).</p>
+         * <p>The value must be a JSON array. Example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>. The values correspond to Beijing, Hangzhou, and Qingdao.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</p>
@@ -263,7 +266,7 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * <p>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</p>
+         * <p>The advanced options for the specified protocol. The available options vary based on the protocol type.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;time_out&quot;:5000}</p>
@@ -275,8 +278,8 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * <p>The name of the site monitoring task.</p>
-         * <p>The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</p>
+         * <p>The name of the monitoring task.</p>
+         * <p>The name must be 4 to 100 characters long and can contain letters, digits, underscores (_), and Chinese characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,12 +292,12 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * <p>The protocol that is used by the site monitoring task.</p>
-         * <p>Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, FTP, and WEBSOCKET.</p>
+         * <p>The type of monitoring task.</p>
+         * <p>Valid protocols include HTTP(S), PING, TCP, UDP, DNS, SMTP, POP3, FTP, and WEBSOCKET.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>HTTPS</p>
+         * <p>HTTP</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -303,7 +306,10 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * VpcConfig.
+         * <p>The network information required to create a network probe task in a VPC. This must be a JSON object that contains the \<code>vpcId\\</code>, \<code>vswitchId\\</code>, \<code>securityGroupId\\</code>, and \<code>region\\</code> fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;vpcId&quot;: &quot;vpc-xxxxxx&quot;, &quot;vswitchId&quot;: &quot;vsw-xxxxxx&quot;, &quot;securityGroupId&quot;: &quot;sg-xxxxxx&quot;, &quot;region&quot;: &quot;cn-beijing&quot;}</p>
          */
         public Builder vpcConfig(String vpcConfig) {
             this.putQueryParameter("VpcConfig", vpcConfig);

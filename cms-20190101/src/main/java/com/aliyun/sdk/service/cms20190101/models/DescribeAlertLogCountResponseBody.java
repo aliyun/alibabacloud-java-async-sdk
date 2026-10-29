@@ -106,7 +106,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The statistics of alert logs.</p>
+         * <p>The alert history statistics.</p>
          */
         public Builder alertLogCount(java.util.List<AlertLogCount> alertLogCount) {
             this.alertLogCount = alertLogCount;
@@ -114,9 +114,9 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
+         * <p>The value 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,10 +150,12 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +225,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the dimension field based on which alert logs are aggregated.</p>
+             * <p>The field name of the alert history statistics.</p>
              * 
              * <strong>example:</strong>
              * <p>product</p>
@@ -234,7 +236,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the dimension field based on which alert logs are aggregated.</p>
+             * <p>The field value of the alert history statistics.</p>
              * 
              * <strong>example:</strong>
              * <p>ECS</p>
@@ -304,7 +306,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of alert logs.</p>
+             * <p>The number of alert history statistics.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -315,7 +317,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about alert logs.</p>
+             * <p>The details of the alert history statistics.</p>
              */
             public Builder logs(java.util.List<Logs> logs) {
                 this.logs = logs;

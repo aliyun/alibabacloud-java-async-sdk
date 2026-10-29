@@ -108,7 +108,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the custom event.</p>
+         * CustomEventCounts.
          */
         public Builder customEventCounts(CustomEventCounts customEventCounts) {
             this.customEventCounts = customEventCounts;
@@ -232,10 +232,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The event name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>BABEL_BUY</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -243,10 +240,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the custom event occurred.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * Num.
              */
             public Builder num(Integer num) {
                 this.num = num;
@@ -254,11 +248,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event occurred.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1552267615000</p>
+             * Time.
              */
             public Builder time(Long time) {
                 this.time = time;

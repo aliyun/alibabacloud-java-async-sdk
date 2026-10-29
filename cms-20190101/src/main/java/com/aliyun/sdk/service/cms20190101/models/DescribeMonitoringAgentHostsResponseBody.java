@@ -158,9 +158,9 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the call is successful.</p>
+         * <p>A status code of 200 indicates a successful response.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the hosts.</p>
+         * Hosts.
          */
         public Builder hosts(Hosts hosts) {
             this.hosts = hosts;
@@ -191,7 +191,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -202,7 +202,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -213,7 +213,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -224,7 +224,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>63EEBB2A-9E51-41E4-9E83-5DE7F3B292E0</p>
@@ -235,10 +235,12 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true: The call is successful.</li>
-         * <li>false: The call fails.</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,7 +252,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -475,10 +477,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version of the CloudMonitor agent.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3.4.6</p>
+             * AgentVersion.
              */
             public Builder agentVersion(String agentVersion) {
                 this.agentVersion = agentVersion;
@@ -486,10 +485,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>103201326074****</p>
+             * AliUid.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -497,10 +493,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The elastic IP address (EIP) of the host.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.XX.XX</p>
+             * EipAddress.
              */
             public Builder eipAddress(String eipAddress) {
                 this.eipAddress = eipAddress;
@@ -508,10 +501,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the EIP.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>eip-bp16i16k9gcezyfrp****</p>
+             * EipId.
              */
             public Builder eipId(String eipId) {
                 this.eipId = eipId;
@@ -519,10 +509,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the host.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hostIP</p>
+             * HostName.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -530,10 +517,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-a2d5q7pm3f9yr212****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -541,10 +525,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.n4</p>
+             * InstanceTypeFamily.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -552,13 +533,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the host.</p>
-             * <blockquote>
-             * <p>Multiple IP addresses are separated with commas (,).</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.XX.XX</p>
+             * IpGroup.
              */
             public Builder ipGroup(String ipGroup) {
                 this.ipGroup = ipGroup;
@@ -566,10 +541,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the Network Address Translation (NAT) gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.XX.XX</p>
+             * NatIp.
              */
             public Builder natIp(String natIp) {
                 this.natIp = natIp;
@@ -577,10 +549,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -588,10 +557,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Linux</p>
+             * OperatingSystem.
              */
             public Builder operatingSystem(String operatingSystem) {
                 this.operatingSystem = operatingSystem;
@@ -599,10 +565,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -610,13 +573,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the host. A host that is not provided by Alibaba Cloud has a serial number instead of an instance ID.</p>
-             * <blockquote>
-             * <p>This parameter can be used to accurately search for a monitored host.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>x12335-6cc8-4a22-9f21-1a00a719****</p>
+             * SerialNumber.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -624,14 +581,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the host is provided by Alibaba Cloud. Valid values:</p>
-             * <ul>
-             * <li>true: The host is provided by Alibaba Cloud.</li>
-             * <li>false: The host is not provided by Alibaba Cloud.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * isAliyunHost.
              */
             public Builder isAliyunHost(Boolean isAliyunHost) {
                 this.isAliyunHost = isAliyunHost;

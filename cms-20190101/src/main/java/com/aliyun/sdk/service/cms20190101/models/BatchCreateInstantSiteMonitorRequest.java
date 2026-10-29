@@ -60,9 +60,9 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
         } 
 
         /**
-         * <p>The site monitoring tasks.</p>
+         * <p>The list of site monitoring tasks.</p>
          * <blockquote>
-         * <p> You must create at least one site monitoring task. You must specify all of the <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code> parameters in each request.</p>
+         * <p>You must create at least one site monitoring task, and you must specify <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -171,9 +171,9 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
             } 
 
             /**
-             * <p>The URL or IP address that is monitored by the task.</p>
+             * <p>The URL or IP address of the site monitoring task.</p>
              * <blockquote>
-             * <p> You must create at least one site monitoring task. You must specify all of the <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code> parameters in each request.</p>
+             * <p>You must create at least one site monitoring task, and you must specify <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -185,9 +185,9 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
             }
 
             /**
-             * <p>The detection points. If you leave this parameter empty, the system randomly selects three detection points.</p>
-             * <p>The value is a <code>JSON array</code>. Example: <code>{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}</code>. The values of the city field indicate Beijing, Hangzhou, and Qingdao.</p>
-             * <p>For information about how to obtain detection points, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
+             * <p>The detection point information. If this parameter is left empty, the system randomly selects three detection points.</p>
+             * <p>The value is a JSON array. Example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>. The values correspond to Beijing, Hangzhou, and Qingdao.</p>
+             * <p>For more information about how to obtain detection point information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</p>
@@ -198,7 +198,7 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
             }
 
             /**
-             * <p>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</p>
+             * <p>The advanced extension options for the protocol type of the site monitoring task. Different protocol types correspond to different extension options.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;time_out&quot;:5000}</p>
@@ -210,9 +210,11 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
 
             /**
              * <p>The name of the site monitoring task.</p>
-             * <p>The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</p>
+             * <p>&lt;props=&quot;china&quot;&gt;The name must be 4 to 100 characters in length and can contain letters, digits, underscores (_), and Chinese characters.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</p>
+             * <p>&lt;props=&quot;partner&quot;&gt;The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</p>
              * <blockquote>
-             * <p> You must create at least one site monitoring task. You must specify all of the <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code> parameters in each request.</p>
+             * <p>You must create at least one site monitoring task, and you must specify <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -224,10 +226,10 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
             }
 
             /**
-             * <p>The type of the site monitoring task.</p>
+             * <p>The monitoring type of the site monitoring task.</p>
              * <p>Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
              * <blockquote>
-             * <p> You must create at least one site monitoring task. You must specify all of the <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code> parameters in each request.</p>
+             * <p>You must create at least one site monitoring task, and you must specify <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

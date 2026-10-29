@@ -106,9 +106,9 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The responses code.</p>
+         * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The value 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota.</p>
+         * <p>The quota information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -129,6 +129,9 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
 
         /**
          * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request succeeded.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -147,10 +150,12 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,8 +279,10 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             /**
              * <p>Indicates whether second-level monitoring is enabled. Valid values:</p>
              * <ul>
-             * <li>true: Second-level monitoring is enabled.</li>
-             * <li>false: Second-level monitoring is disabled.</li>
+             * <li><p>true: enabled.</p>
+             * </li>
+             * <li><p>false: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -287,7 +294,7 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota of detection points that are provided by Alibaba Cloud. Five detection points are provided for free.</p>
+             * <p>The quota of Alibaba detection points. The free quota is 5.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -298,7 +305,7 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota of detection points that are not provided by Alibaba Cloud. Default value: 0.</p>
+             * <p>The quota of non-Alibaba detection points. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -309,7 +316,7 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used quota of site monitoring tasks.</p>
+             * <p>The number of used site monitoring detection task quotas.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -320,7 +327,7 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota of site monitoring tasks.</p>
+             * <p>The quota of site monitoring detection tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -333,8 +340,10 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             /**
              * <p>The version of site monitoring. Valid values:</p>
              * <ul>
-             * <li>V1</li>
-             * <li>V2</li>
+             * <li><p>V1: the old version.</p>
+             * </li>
+             * <li><p>V2: the new version.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

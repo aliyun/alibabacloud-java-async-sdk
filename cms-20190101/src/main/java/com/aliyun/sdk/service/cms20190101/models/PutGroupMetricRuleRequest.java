@@ -34,6 +34,10 @@ public class PutGroupMetricRuleRequest extends Request {
     private String dimensions;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EffectiveInterval")
     private String effectiveInterval;
 
@@ -108,6 +112,7 @@ public class PutGroupMetricRuleRequest extends Request {
         this.category = builder.category;
         this.contactGroups = builder.contactGroups;
         this.dimensions = builder.dimensions;
+        this.dryRun = builder.dryRun;
         this.effectiveInterval = builder.effectiveInterval;
         this.emailSubject = builder.emailSubject;
         this.extraDimensionJson = builder.extraDimensionJson;
@@ -165,6 +170,13 @@ public class PutGroupMetricRuleRequest extends Request {
      */
     public String getDimensions() {
         return this.dimensions;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -284,6 +296,7 @@ public class PutGroupMetricRuleRequest extends Request {
         private String category; 
         private String contactGroups; 
         private String dimensions; 
+        private Boolean dryRun; 
         private String effectiveInterval; 
         private String emailSubject; 
         private String extraDimensionJson; 
@@ -311,6 +324,7 @@ public class PutGroupMetricRuleRequest extends Request {
             this.category = request.category;
             this.contactGroups = request.contactGroups;
             this.dimensions = request.dimensions;
+            this.dryRun = request.dryRun;
             this.effectiveInterval = request.effectiveInterval;
             this.emailSubject = request.emailSubject;
             this.extraDimensionJson = request.extraDimensionJson;
@@ -339,8 +353,8 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The abbreviation of the cloud service name.</p>
-         * <p>For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <p>For information about how to obtain the abbreviation of an Alibaba Cloud service name, see the <code>metricCategory</code> field in the <code>Labels</code> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>
@@ -365,7 +379,7 @@ public class PutGroupMetricRuleRequest extends Request {
 
         /**
          * <p>The first-level dimension of the alert rule in the application group.</p>
-         * <p>Set the value to a set of key-value pairs, for example, <code>userId:120886317861****</code> or <code>instanceId:i-m5e1qg6uo38rztr4****</code>.</p>
+         * <p>Format: a collection of <code>key:value</code> pairs. Examples: <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> and <code>{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}]</p>
@@ -377,7 +391,23 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The time period during which the alert rule is effective.</p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: sends a check request. The system does not bind a security group to the instance. The check items include whether required parameters are specified, the request format, and service limits. If the check fails, the system returns an error. If the check succeeds, the system returns the error code <code>DryRunOperation</code>.</li>
+         * <li><strong>false</strong> (default value): sends a normal request. If the check succeeds, the system returns an HTTP 2xx status code and performs the operation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The effective period of the alert rule.</p>
          * 
          * <strong>example:</strong>
          * <p>05:31-23:59</p>
@@ -389,7 +419,10 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The subject of the alert notification email.</p>
+         * <p>The subject of the alert email.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS instance</p>
          */
         public Builder emailSubject(String emailSubject) {
             this.putQueryParameter("EmailSubject", emailSubject);
@@ -399,8 +432,8 @@ public class PutGroupMetricRuleRequest extends Request {
 
         /**
          * <p>The second-level or third-level dimension of the alert rule in the application group.</p>
-         * <p>Set the value to a set of key-value pairs, for example, <code>port:80</code> or <code>/dev/xvda:d-m5e6yphgzn3aprwu****</code>.</p>
-         * <p>If the first-level dimension of the alert rule is <code>instanceId:i-m5e1qg6uo38rztr4****</code>, its second-level dimension is the <code>/dev/xvda:d-m5e6yphgzn3aprwu****</code> disk in the instance.</p>
+         * <p>Format: a collection of <code>key:value</code> pairs. Examples: <code>port:80</code> and <code>/dev/xvda:d-m5e6yphgzn3aprwu****</code>.</p>
+         * <p>If the first-level dimension of the alert rule is <code>{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}</code>, the second-level dimension is the cloud disk in the instance, such as <code>{&quot;/dev/xvda&quot;:&quot;d-m5e6yphgzn3aprwu****&quot;}</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;/dev/xvda&quot;:&quot;d-m5e6yphgzn3aprwu****&quot;}</p>
@@ -412,8 +445,8 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The application group ID.</p>
-         * <p>For more information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+         * <p>The ID of the application group.</p>
+         * <p>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -426,9 +459,9 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The interval at which CloudMonitor checks whether the alert rule is triggered. Unit: seconds.</p>
+         * <p>The detection period of the alert rule. Unit: seconds.</p>
          * <blockquote>
-         * <p> We recommend that you set the interval to the data aggregation period. If the interval is shorter than the data aggregation period, alerts cannot be triggered due to insufficient data.</p>
+         * <p>Make sure the detection period of the alert rule is the same as the data reporting period. If the detection period is shorter than the data reporting period, alerts may not be triggered due to insufficient data.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -442,7 +475,7 @@ public class PutGroupMetricRuleRequest extends Request {
 
         /**
          * <p>The tags of the alert rule.</p>
-         * <p>The specified tag is contained in alert notifications.</p>
+         * <p>Alert notifications include tags.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.putQueryParameter("Labels", labels);
@@ -451,8 +484,8 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The metric name.</p>
-         * <p>For more information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The name of the metric.</p>
+         * <p>For information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -465,8 +498,8 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The namespace of the cloud service.</p>
-         * <p>For more information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The namespace of the Alibaba Cloud service.</p>
+         * <p>For information about how to obtain the namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -479,11 +512,11 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The method that is used to handle alerts when no monitoring data is found. Valid values:</p>
+         * <p>The action to take when no monitoring data is found. Valid values:</p>
          * <ul>
-         * <li>KEEP_LAST_STATE (default): No operation is performed.</li>
-         * <li>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</li>
-         * <li>OK: The status is considered normal.</li>
+         * <li>KEEP_LAST_STATE (default value): Takes no action.</li>
+         * <li>INSUFFICIENT_DATA: Sends an alert notification indicating that no data is found.</li>
+         * <li>OK: Sends an alert notification indicating that the status is normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -496,7 +529,7 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The time period during which the alert rule is ineffective.</p>
+         * <p>The time range during which the alert rule is inactive.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00-05:30</p>
@@ -508,7 +541,11 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>The advanced settings.</p>
+         * <p>Format: <code>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}</code>. Example: <code>{&quot;NotSendOK&quot;:true}</code>, which specifies whether to send alert recovery notifications. The key is <code>NotSendOK</code>, and the value is <code>true</code> (do not send) or <code>false</code> (send by default).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NotSendOK&quot;:true}</p>
          */
         public Builder options(String options) {
             this.putQueryParameter("Options", options);
@@ -517,8 +554,8 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The aggregation period of the metric data.</p>
-         * <p>Set the <code>Period</code> parameter to an integral multiple of 60. Unit: seconds. Default value: 300.</p>
+         * <p>The reporting period of monitoring data.</p>
+         * <p>The value of <code>Period</code> must be 60 or an integer multiple of 60. Unit: seconds. Default value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -532,8 +569,10 @@ public class PutGroupMetricRuleRequest extends Request {
         /**
          * <p>The ID of the alert rule.</p>
          * <ul>
-         * <li>When you create an alert rule for the application group, enter the ID of the alert rule.</li>
-         * <li>When you modify a specified alert rule in the application group, you must obtain the ID of the alert rule. For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</li>
+         * <li><p>To create an alert rule for the application group, enter an alert rule ID.</p>
+         * </li>
+         * <li><p>To modify a specified alert rule in the application group, you must obtain the alert rule ID. For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -549,8 +588,10 @@ public class PutGroupMetricRuleRequest extends Request {
         /**
          * <p>The name of the alert rule.</p>
          * <ul>
-         * <li>When you create an alert rule for the application group, enter the name of the alert rule.</li>
-         * <li>When you modify a specified alert rule in the application group, you must obtain the name of the alert rule. For more information about how to obtain the name of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</li>
+         * <li><p>To create an alert rule for the application group, enter an alert rule name.</p>
+         * </li>
+         * <li><p>To modify a specified alert rule in the application group, you must obtain the alert rule name. For information about how to obtain the name of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -564,7 +605,7 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The mute period during which new alerts are not sent even if the trigger conditions are met.</p>
+         * <p>The mute for epoch.</p>
          * <p>Unit: seconds. Default value: 86400.</p>
          * 
          * <strong>example:</strong>
@@ -577,8 +618,8 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The callback URL.</p>
-         * <p>The callback URL must be accessible over the Internet. CloudMonitor sends a POST request to push an alert notification to the callback URL that you specify. Only HTTP requests are supported.</p>
+         * <p>The webhook URL that is called when an alert is triggered.</p>
+         * <p>Enter a publicly accessible URL. CloudMonitor pushes alert notifications to this URL by sending POST requests. Only HTTP is supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
@@ -675,19 +716,19 @@ public class PutGroupMetricRuleRequest extends Request {
             } 
 
             /**
-             * <p>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</p>
+             * <p>The threshold comparison operator for Critical-level alerts. Valid values:</p>
              * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-             * <li>GreaterThanThreshold: greater than the threshold</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-             * <li>LessThanThreshold: less than the threshold</li>
-             * <li>NotEqualToThreshold: not equal to the threshold</li>
-             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
+             * <li>GreaterThanThreshold: greater than the threshold.</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
+             * <li>LessThanThreshold: less than the threshold.</li>
+             * <li>NotEqualToThreshold: not equal to the threshold.</li>
+             * <li>GreaterThanYesterday: greater than the value at the same time yesterday.</li>
+             * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
+             * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
+             * <li>LessThanLastWeek: less than the value at the same time last week.</li>
+             * <li>GreaterThanLastPeriod: greater than the value in the last period.</li>
+             * <li>LessThanLastPeriod: less than the value in the last period.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -699,8 +740,8 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The statistical methods for Critical-level alerts. Separate multiple statistical methods with commas (,).</p>
-             * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * <p>The statistical method for Critical-level alerts. Separate multiple statistical methods with commas (,).</p>
+             * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>Average</p>
@@ -722,7 +763,7 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</p>
+             * <p>The number of retries for Critical-level alerts.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -818,19 +859,19 @@ public class PutGroupMetricRuleRequest extends Request {
             } 
 
             /**
-             * <p>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</p>
+             * <p>The threshold comparison operator for Info-level alerts. Valid values:</p>
              * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-             * <li>GreaterThanThreshold: greater than the threshold</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-             * <li>LessThanThreshold: less than the threshold</li>
-             * <li>NotEqualToThreshold: not equal to the threshold</li>
-             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
+             * <li>GreaterThanThreshold: greater than the threshold.</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
+             * <li>LessThanThreshold: less than the threshold.</li>
+             * <li>NotEqualToThreshold: not equal to the threshold.</li>
+             * <li>GreaterThanYesterday: greater than the value at the same time yesterday.</li>
+             * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
+             * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
+             * <li>LessThanLastWeek: less than the value at the same time last week.</li>
+             * <li>GreaterThanLastPeriod: greater than the value in the last period.</li>
+             * <li>LessThanLastPeriod: less than the value in the last period.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -842,8 +883,8 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The statistical methods for Info-level alerts. Separate multiple statistical methods with commas (,).</p>
-             * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * <p>The statistical method for Info-level alerts. Separate multiple statistical methods with commas (,).</p>
+             * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>Average</p>
@@ -865,7 +906,7 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.</p>
+             * <p>The number of retries for Info-level alerts.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -961,19 +1002,19 @@ public class PutGroupMetricRuleRequest extends Request {
             } 
 
             /**
-             * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</p>
+             * <p>The threshold comparison operator for Warn-level alerts. Valid values:</p>
              * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-             * <li>GreaterThanThreshold: greater than the threshold</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-             * <li>LessThanThreshold: less than the threshold</li>
-             * <li>NotEqualToThreshold: not equal to the threshold</li>
-             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
+             * <li>GreaterThanThreshold: greater than the threshold.</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
+             * <li>LessThanThreshold: less than the threshold.</li>
+             * <li>NotEqualToThreshold: not equal to the threshold.</li>
+             * <li>GreaterThanYesterday: greater than the value at the same time yesterday.</li>
+             * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
+             * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
+             * <li>LessThanLastWeek: less than the value at the same time last week.</li>
+             * <li>GreaterThanLastPeriod: greater than the value in the last period.</li>
+             * <li>LessThanLastPeriod: less than the value in the last period.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -985,8 +1026,8 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The statistical methods for Warn-level alerts. Separate multiple statistical methods with commas (,).</p>
-             * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * <p>The statistical method for Warn-level alerts. Separate multiple statistical methods with commas (,).</p>
+             * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>Average</p>
@@ -1008,7 +1049,7 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.</p>
+             * <p>The number of retries for Warn-level alerts.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

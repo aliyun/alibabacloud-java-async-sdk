@@ -132,9 +132,9 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * <p>A value of 200 indicates success. Any other value indicates failure.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the data export rules.</p>
+         * Datapoints.
          */
         public Builder datapoints(Datapoints datapoints) {
             this.datapoints = datapoints;
@@ -157,7 +157,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
          * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>susscess</p>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -165,7 +165,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -187,10 +187,10 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:  </p>
          * <ul>
-         * <li><code>true</code></li>
-         * <li><code>false</code></li>
+         * <li><code>true</code>: Successful.</li>
+         * <li><code>false</code>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -416,10 +416,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the rule was created. The value is a UNIX timestamp.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1584024616228</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -427,10 +424,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Export monitoring data</p>
+             * Describe.
              */
             public Builder describe(String describe) {
                 this.describe = describe;
@@ -438,10 +432,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The associated dimensions.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;instanceId&quot;:&quot;xxxxx&quot;}</p>
+             * Dimension.
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -457,10 +448,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the rule is enabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Enabled.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -468,13 +456,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the metric.</p>
-             * <blockquote>
-             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>cpu_total</p>
+             * MetricName.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -482,13 +464,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the service.</p>
-             * <blockquote>
-             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>acs_ecs_dashboard</p>
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -496,10 +472,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data export rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>myRuleName</p>
+             * RuleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -507,13 +480,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time window of the exported data.<br>Multiple windows are separated with commas (,).</p>
-             * <blockquote>
-             * <p>Data in a time window of less than 60 seconds cannot be exported.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>60,300</p>
+             * TargetWindows.
              */
             public Builder targetWindows(String targetWindows) {
                 this.targetWindows = targetWindows;

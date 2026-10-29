@@ -157,10 +157,12 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to display the history of applying the alert templates to application groups. Valid values:</p>
+         * <p>Specifies whether to display the history of applying the alert template to application groups. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li><p>true: Displays the history.</p>
+         * </li>
+         * <li><p>false: Does not display the history. This is the default value.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +175,7 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * <p>The keyword of the alert template name.</p>
+         * <p>The keyword in the alert template name.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>
@@ -197,10 +199,12 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * <p>The sorting order. Valid values:</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>true (default): ascending order</li>
-         * <li>false: descending order</li>
+         * <li><p>true: Ascending order. This is the default value.   </p>
+         * </li>
+         * <li><p>false: Descending order.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,10 +217,12 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * <p>The sorting basis. Valid values:</p>
+         * <p>The sort field. Valid values:</p>
          * <ul>
-         * <li>gmtMotified: sorts alert templates by modification time</li>
-         * <li>gmtCreate (default): sorts alert templates by creation time</li>
+         * <li><p>gmtMotified: Modification date.  </p>
+         * </li>
+         * <li><p>gmtCreate: Creation date. This is the default value.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,7 +248,7 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

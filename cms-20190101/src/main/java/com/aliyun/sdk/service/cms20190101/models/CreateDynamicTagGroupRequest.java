@@ -23,6 +23,10 @@ public class CreateDynamicTagGroupRequest extends Request {
     private java.util.List<String> contactGroupList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableInstallAgent")
     private Boolean enableInstallAgent;
 
@@ -55,6 +59,7 @@ public class CreateDynamicTagGroupRequest extends Request {
     private CreateDynamicTagGroupRequest(Builder builder) {
         super(builder);
         this.contactGroupList = builder.contactGroupList;
+        this.dryRun = builder.dryRun;
         this.enableInstallAgent = builder.enableInstallAgent;
         this.enableSubscribeEvent = builder.enableSubscribeEvent;
         this.matchExpress = builder.matchExpress;
@@ -82,6 +87,13 @@ public class CreateDynamicTagGroupRequest extends Request {
      */
     public java.util.List<String> getContactGroupList() {
         return this.contactGroupList;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -135,6 +147,7 @@ public class CreateDynamicTagGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDynamicTagGroupRequest, Builder> {
         private java.util.List<String> contactGroupList; 
+        private Boolean dryRun; 
         private Boolean enableInstallAgent; 
         private Boolean enableSubscribeEvent; 
         private java.util.List<MatchExpress> matchExpress; 
@@ -150,6 +163,7 @@ public class CreateDynamicTagGroupRequest extends Request {
         private Builder(CreateDynamicTagGroupRequest request) {
             super(request);
             this.contactGroupList = request.contactGroupList;
+            this.dryRun = request.dryRun;
             this.enableInstallAgent = request.enableInstallAgent;
             this.enableSubscribeEvent = request.enableSubscribeEvent;
             this.matchExpress = request.matchExpress;
@@ -160,6 +174,8 @@ public class CreateDynamicTagGroupRequest extends Request {
         } 
 
         /**
+         * <p>The alert contact groups. Valid values of N: 1 to 100. Alert notifications for the application group are sent to the alert contacts in the alert contact groups.</p>
+         * <p>An alert contact group contains one or more alert contacts. For more information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>. For more information about how to query alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,10 +188,28 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the CloudMonitor agent is automatically installed for the application group. CloudMonitor determines whether to automatically install the CloudMonitor agent for the hosts in an application group based on the value of this parameter. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
          * <ul>
-         * <li>true: The CloudMonitor agent is automatically installed.</li>
-         * <li>false (default value): The CloudMonitor agent is not automatically installed.</li>
+         * <li><strong>true</strong>: Performs a dry run without creating the application group. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the dry run, an error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>: Performs a dry run and sends the actual request. If the request passes the dry run, the application group is created. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable automatic installation of the CloudMonitor agent for the application group. CloudMonitor automatically installs the CloudMonitor agent on the hosts in the application group. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enables automatic installation.</p>
+         * </li>
+         * <li><p>false: Disables automatic installation. This is the default value.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,10 +222,12 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:</p>
+         * <p>Specifies whether to enable automatic subscription to event notifications for the application group. When critical or warning events occur on resources in the application group, CloudMonitor sends alert notifications. Valid values:</p>
          * <ul>
-         * <li>true: The application group automatically subscribes to event notifications.</li>
-         * <li>false (default value): The application group does not automatically subscribe to event notifications.</li>
+         * <li><p>true: Enables automatic subscription.</p>
+         * </li>
+         * <li><p>false: Disables automatic subscription. This is the default value.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,7 +240,7 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * <p>The conditional expressions used to create an application group based on the tag.</p>
+         * <p>The matching expression used to generate the application group based on tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder matchExpress(java.util.List<MatchExpress> matchExpress) {
@@ -214,10 +250,10 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * <p>The relationship between the conditional expressions for the tag values of the cloud resources. Valid values:</p>
+         * <p>The relationship between the conditional expressions of the resource tag values. Valid values:</p>
          * <ul>
-         * <li>and (default)</li>
-         * <li>or</li>
+         * <li>and: Uses the AND logical operator. This is the default value.</li>
+         * <li>or: Uses the OR logical operator.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,8 +266,8 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * <p>The tag keys of the cloud resources.</p>
-         * <p>For more information about how to obtain tag keys, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
+         * <p>The tag key of the resource.</p>
+         * <p>For more information about how to query the tag keys of resources, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +280,7 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the tags belong.</p>
+         * <p>The region ID of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -256,7 +292,11 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * TemplateIdList.
+         * <p>The IDs of the alert templates.</p>
+         * <p>For more information about how to query the IDs of alert templates, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85****</p>
          */
         public Builder templateIdList(java.util.List<String> templateIdList) {
             this.putQueryParameter("TemplateIdList", templateIdList);
@@ -337,7 +377,7 @@ public class CreateDynamicTagGroupRequest extends Request {
             } 
 
             /**
-             * <p>The keys of the tags that are used to create the application group. If a specified key is attached to multiple resources, the resources that have the same key-value pair are added to the same group.</p>
+             * <p>The tag key used to create the group. If multiple resources contain this key, the resources that meet the filter conditions are added to the same group based on the same key-value pair.</p>
              * 
              * <strong>example:</strong>
              * <p>appname</p>
@@ -348,9 +388,9 @@ public class CreateDynamicTagGroupRequest extends Request {
             }
 
             /**
-             * <p>The tag values of the cloud resources. Set the value of N to 1.</p>
+             * <p>The tag value of the resource. Valid values of N: 1.</p>
              * <blockquote>
-             * <p> If you set the <code>MatchExpress.N.TagValueMatchFunction</code> parameter, you must also set the <code>MatchExpress.N.TagValue</code> parameter.</p>
+             * <p>You must specify both the <code>MatchExpress.N.TagValueMatchFunction</code> and <code>MatchExpress.N.TagValue</code> parameters.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -362,17 +402,17 @@ public class CreateDynamicTagGroupRequest extends Request {
             }
 
             /**
-             * <p>The method that is used to match the tag values of the cloud resources. Set the value of N to 1. Valid values:</p>
+             * <p>The matching method for the tag value of the resource. Valid values of N: 1. Valid values:</p>
              * <ul>
-             * <li>contains: contains</li>
-             * <li>startWith: starts with a prefix</li>
-             * <li>endWith: ends with a suffix</li>
-             * <li>notContains: does not contain</li>
-             * <li>equals: equals</li>
-             * <li>all: matches all</li>
+             * <li>contains: includes the specified value</li>
+             * <li>startWith: starts with the specified value</li>
+             * <li>endWith: ends with the specified value</li>
+             * <li>notContains: does not include the specified value</li>
+             * <li>equals: equals the specified value</li>
+             * <li>all: all values</li>
              * </ul>
              * <blockquote>
-             * <p> If you set the <code>MatchExpress.N.TagValueMatchFunction</code> parameter, you must also set the <code>MatchExpress.N.TagValue</code> parameter.</p>
+             * <p>You must specify both the <code>MatchExpress.N.TagValueMatchFunction</code> and <code>MatchExpress.N.TagValue</code> parameters.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

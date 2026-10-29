@@ -23,6 +23,10 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
     private String category;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
@@ -35,6 +39,7 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
     private DeleteMonitorGroupInstancesRequest(Builder builder) {
         super(builder);
         this.category = builder.category;
+        this.dryRun = builder.dryRun;
         this.groupId = builder.groupId;
         this.instanceIdList = builder.instanceIdList;
     }
@@ -60,6 +65,13 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return groupId
      */
     public Long getGroupId() {
@@ -75,6 +87,7 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteMonitorGroupInstancesRequest, Builder> {
         private String category; 
+        private Boolean dryRun; 
         private Long groupId; 
         private String instanceIdList; 
 
@@ -85,6 +98,7 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
         private Builder(DeleteMonitorGroupInstancesRequest request) {
             super(request);
             this.category = request.category;
+            this.dryRun = request.dryRun;
             this.groupId = request.groupId;
             this.instanceIdList = request.instanceIdList;
         } 
@@ -92,7 +106,7 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
         /**
          * <p>The abbreviation of the cloud service name.</p>
          * <blockquote>
-         * <p> For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+         * <p>For more information about how to obtain the abbreviation of a cloud service name, see the <code>metricCategory</code> field in the <code>Labels</code> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -102,6 +116,22 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
             this.category = category;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits, but does not delete the instances. If the request fails the check, an error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a normal request. If the request passes the check, the instances are deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -119,7 +149,7 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instances to be removed from the application group. Separate multiple instances with commas (,). You can remove a maximum of 20 instances from an application group at a time.</p>
+         * <p>The IDs of the instances to be deleted. Separate multiple instance IDs with commas (,). You can delete up to 20 instances at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

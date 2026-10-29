@@ -89,7 +89,7 @@ public class DescribeTagValueListRequest extends Request {
 
         /**
          * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>Starts from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +102,6 @@ public class DescribeTagValueListRequest extends Request {
 
         /**
          * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 100. Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -115,7 +114,7 @@ public class DescribeTagValueListRequest extends Request {
 
         /**
          * <p>The tag key.</p>
-         * <p>For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
+         * <p>For more information about how to obtain the tag key, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

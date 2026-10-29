@@ -108,7 +108,7 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>A value of 200 indicates that the operation is successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the site monitoring task.</p>
+         * <p>The information about the site monitoring tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;taskName&quot;: &quot;HangZhou_ECS1&quot;, &quot;taskId&quot;: &quot;679fbe4f-b80b-4706-91b2-5427b43e****&quot;}]</p>
@@ -153,10 +153,10 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The operation is successful.</li>
+         * <li>false: The operation fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

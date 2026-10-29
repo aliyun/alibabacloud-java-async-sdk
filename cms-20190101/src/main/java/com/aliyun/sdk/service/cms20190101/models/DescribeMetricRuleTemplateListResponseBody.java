@@ -121,7 +121,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -155,10 +155,12 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +172,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried alert templates.</p>
+         * Templates.
          */
         public Builder templates(Templates templates) {
             this.templates = templates;
@@ -178,7 +180,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -260,11 +262,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp when the alert template was applied to the application group.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1646055898000</p>
+             * ApplyTime.
              */
             public Builder applyTime(Long applyTime) {
                 this.applyTime = applyTime;
@@ -272,10 +270,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3607****</p>
+             * GroupId.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -283,10 +278,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS_Group</p>
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -472,7 +464,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The history of applying the alert templates to application groups.</p>
+             * ApplyHistories.
              */
             public Builder applyHistories(ApplyHistories applyHistories) {
                 this.applyHistories = applyHistories;
@@ -480,7 +472,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the alert template.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -488,11 +480,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the alert template was created.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1646018798000</p>
+             * GmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -500,11 +488,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the alert template was modified.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1646054798000</p>
+             * GmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -512,10 +496,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS_Template1</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -523,11 +504,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the alert template.</p>
-             * <p>Default value: 0.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * RestVersion.
              */
             public Builder restVersion(Long restVersion) {
                 this.restVersion = restVersion;
@@ -535,10 +512,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alert template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>70****</p>
+             * TemplateId.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

@@ -108,7 +108,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         /**
          * <p>The response code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the number of times the system event occurred during each interval of a time period.</p>
+         * SystemEventHistograms.
          */
         public Builder systemEventHistograms(SystemEventHistograms systemEventHistograms) {
             this.systemEventHistograms = systemEventHistograms;
@@ -232,10 +232,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of times the system event occurred.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Count.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -243,11 +240,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1552225753000</p>
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -255,11 +248,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1552225770000</p>
+             * StartTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

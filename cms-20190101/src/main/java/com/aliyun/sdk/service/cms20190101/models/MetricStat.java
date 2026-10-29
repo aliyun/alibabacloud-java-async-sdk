@@ -145,7 +145,7 @@ public class MetricStat extends TeaModel {
         } 
 
         /**
-         * Associated.
+         * <p>The additional information of the monitored object (instance).</p>
          */
         public Builder associated(java.util.Map<String, String> associated) {
             this.associated = associated;
@@ -153,7 +153,7 @@ public class MetricStat extends TeaModel {
         }
 
         /**
-         * Dimensions.
+         * <p>The dimension information used to identify the monitored object (instance).</p>
          */
         public Builder dimensions(java.util.List<Dimension> dimensions) {
             this.dimensions = dimensions;
@@ -161,7 +161,10 @@ public class MetricStat extends TeaModel {
         }
 
         /**
-         * LogTime.
+         * <p>The recording time of the monitoring data, in milliseconds. For non-raw data (aggregated data), LogTime is null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683686550073</p>
          */
         public Builder logTime(Long logTime) {
             this.logTime = logTime;
@@ -169,7 +172,7 @@ public class MetricStat extends TeaModel {
         }
 
         /**
-         * Measurements.
+         * <p>The measurement values of the metric (multi-value mode by default).</p>
          */
         public Builder measurements(java.util.Map<String, ?> measurements) {
             this.measurements = measurements;
@@ -177,7 +180,10 @@ public class MetricStat extends TeaModel {
         }
 
         /**
-         * Metric.
+         * <p>The name of the metric for the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_idle</p>
          */
         public Builder metric(String metric) {
             this.metric = metric;
@@ -185,7 +191,10 @@ public class MetricStat extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * <p>The data namespace of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -193,7 +202,11 @@ public class MetricStat extends TeaModel {
         }
 
         /**
-         * Period.
+         * <p>The time interval of the metric.</p>
+         * <p>Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(Integer period) {
             this.period = period;
@@ -201,7 +214,10 @@ public class MetricStat extends TeaModel {
         }
 
         /**
-         * Timestamp.
+         * <p>The timestamp of the monitoring data, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1641454680000</p>
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;

@@ -60,7 +60,7 @@ public class DeleteMetricRuleTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the alert template.</p>
+         * <p>The ID of the alert rule template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

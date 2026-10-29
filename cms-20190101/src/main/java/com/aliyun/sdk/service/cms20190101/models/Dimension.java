@@ -67,7 +67,10 @@ public class Dimension extends TeaModel {
         } 
 
         /**
-         * Label.
+         * <p>The name of the metric dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder label(String label) {
             this.label = label;
@@ -75,7 +78,10 @@ public class Dimension extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The value of the metric dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-dferwret*****</p>
          */
         public Builder value(String value) {
             this.value = value;

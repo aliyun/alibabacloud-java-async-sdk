@@ -108,7 +108,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         /**
          * <p>The responses code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources that are associated with the application group.</p>
+         * Resource.
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -152,8 +152,10 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,15 +238,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The method that is used to filter the instances. Valid values:</p>
-             * <ul>
-             * <li>contains: contains</li>
-             * <li>startWith: starts with a prefix</li>
-             * <li>endWith: ends with a suffix</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>contains</p>
+             * Function.
              */
             public Builder function(String function) {
                 this.function = function;
@@ -252,10 +246,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hostName</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -263,10 +254,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the dynamic rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -400,15 +388,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the cloud service to which the dynamic rule belongs. Valid values:</p>
-             * <ul>
-             * <li>ecs: Elastic Compute Service (ECS)</li>
-             * <li>rds: ApsaraDB RDS</li>
-             * <li>slb: Server Load Balancer (SLB)</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -416,14 +396,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The filter condition. Valid values:</p>
-             * <ul>
-             * <li>and: queries the instances that meet all alert rules.</li>
-             * <li>or: queries the instances that meet any alert rule.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>and</p>
+             * FilterRelation.
              */
             public Builder filterRelation(String filterRelation) {
                 this.filterRelation = filterRelation;
@@ -431,7 +404,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dynamic rules of the application group.</p>
+             * Filters.
              */
             public Builder filters(Filters filters) {
                 this.filters = filters;
@@ -485,7 +458,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resources that are associated with the application group.</p>
+             * Resource.
              */
             public Builder resource(java.util.List<ResourceResource> resource) {
                 this.resource = resource;

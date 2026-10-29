@@ -129,8 +129,10 @@ public class DescribeEventRuleListRequest extends Request {
         /**
          * <p>Specifies whether to enable the event-triggered alert rule. Valid values:</p>
          * <ul>
-         * <li>true (default)</li>
-         * <li>false</li>
+         * <li><p>true: enabled. This is the default value.</p>
+         * </li>
+         * <li><p>false: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +145,7 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * <p>The prefix in the name of the event-triggered alert rule.</p>
+         * <p>The prefix of the event-triggered alert rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -155,8 +157,7 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,8 +169,7 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Pages start from page 1. Default value: 10.</p>
+         * <p>The number of entries to return on each page. Minimum value: 1. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

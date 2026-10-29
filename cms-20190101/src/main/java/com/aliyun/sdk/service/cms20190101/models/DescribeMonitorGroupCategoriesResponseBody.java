@@ -108,7 +108,7 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,8 +152,10 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,13 +225,7 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The abbreviation of the cloud service name.</p>
-             * <blockquote>
-             * <p> For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -237,10 +233,7 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of resources that belong to the cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -372,7 +365,7 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud services to which the resources in the application group belong and the number of resources that belong to the cloud service.</p>
+             * MonitorGroupCategory.
              */
             public Builder monitorGroupCategory(MonitorGroupCategory monitorGroupCategory) {
                 this.monitorGroupCategory = monitorGroupCategory;

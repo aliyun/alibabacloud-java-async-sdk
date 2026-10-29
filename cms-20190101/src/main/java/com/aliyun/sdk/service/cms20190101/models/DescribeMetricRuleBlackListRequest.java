@@ -185,7 +185,7 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the blacklist policy.</p>
+         * <p>The category of the Alibaba Cloud service. For example, ApsaraDB for Redis has <code>kvstore_standard</code> (Standard Edition), <code>kvstore_sharding</code> (Cluster Edition), and <code>kvstore_splitrw</code> (read/write splitting Edition).</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -197,7 +197,7 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>The IDs of the alert blacklist policies.</p>
          */
         public Builder ids(java.util.List<String> ids) {
             this.putQueryParameter("Ids", ids);
@@ -206,7 +206,7 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances in the blacklist policy.</p>
+         * <p>The instance ID list in the alert blacklist policy.</p>
          * <p>Valid values of N: 0 to 10.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -216,10 +216,10 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The status of the blacklist policy. Valid values:</p>
+         * <p>The status of the alert blacklist policy. Valid values:</p>
          * <ul>
-         * <li>true: The blacklist policy is enabled.</li>
-         * <li>false: The blacklist policy is disabled.</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The name of the blacklist policy.</p>
+         * <p>The name of the alert blacklist policy.</p>
          * <p>This parameter supports fuzzy match.</p>
          * 
          * <strong>example:</strong>
@@ -245,8 +245,8 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The timestamp when the blacklist policy expired.</p>
-         * <p>Unit: milliseconds.</p>
+         * <p>The namespace of the Alibaba Cloud service.</p>
+         * <p>For information about the namespaces of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>acs_ecs_dashboard</p>
@@ -258,13 +258,12 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The HTTP status code.</p>
-         * <blockquote>
-         * <p> The status code 200 indicates that the call was successful.</p>
-         * </blockquote>
+         * <p>The order in which the query results are sorted by time. Valid values:</p>
+         * <p>0: ascending order (ASC).</p>
+         * <p>1: descending order (DESC). This is the default value.</p>
          * 
          * <strong>example:</strong>
-         * <p>DESC</p>
+         * <p>1</p>
          */
         public Builder order(Integer order) {
             this.putQueryParameter("Order", order);
@@ -273,7 +272,8 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The name of the metric.</p>
+         * <p>The page number.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -285,7 +285,8 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+         * <p>The number of entries per page.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -297,10 +298,12 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * <p>The effective scope of the blacklist policy. Valid values:</p>
+         * <p>The effective scope of the alert blacklist policy. Valid values:</p>
          * <ul>
-         * <li>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</li>
-         * <li>GROUP: The blacklist policy takes effect only within the specified application group.</li>
+         * <li><p>USER: The alert blacklist policy takes effect only within the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>GROUP: The alert blacklist policy takes effect in the specified application groups.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

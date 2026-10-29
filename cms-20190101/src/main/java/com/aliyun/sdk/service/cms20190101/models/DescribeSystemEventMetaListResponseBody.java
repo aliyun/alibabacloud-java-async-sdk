@@ -106,9 +106,9 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>A value of 200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried meta information.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,10 +150,12 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,15 +303,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the system event. Valid values:</p>
-             * <ul>
-             * <li>StatusNotification: fault notifications</li>
-             * <li>Exception: exceptions</li>
-             * <li>Maintenance: O&amp;M</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Exception</p>
+             * EventType.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -317,15 +311,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert level. Valid values:</p>
-             * <ul>
-             * <li>CRITICAL</li>
-             * <li>WARN</li>
-             * <li>INFO</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>INFO</p>
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -333,10 +319,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the system event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SelectFailureRate</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -344,10 +327,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the event name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>High query failure rate</p>
+             * NameDesc.
              */
             public Builder nameDesc(String nameDesc) {
                 this.nameDesc = nameDesc;
@@ -363,10 +343,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The abbreviation of the service name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ADS</p>
+             * Product.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -374,10 +351,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the system event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>failed</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -385,10 +359,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the event status.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Operation Failed</p>
+             * StatusDesc.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;

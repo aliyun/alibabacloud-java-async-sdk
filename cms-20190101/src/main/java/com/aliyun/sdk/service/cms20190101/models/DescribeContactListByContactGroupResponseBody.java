@@ -106,9 +106,9 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The alert contacts that receive alert notifications.</p>
+         * Contacts.
          */
         public Builder contacts(Contacts contacts) {
             this.contacts = contacts;
@@ -128,7 +128,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The group is not exists.</p>
@@ -150,10 +150,12 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Success.</p>
+         * </li>
+         * <li><p>false: Failure.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,13 +251,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The TradeManager ID of the alert contact.</p>
-             * <blockquote>
-             * <p> This parameter can be returned only on the China site (aliyun.com).</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>Alice</p>
+             * AliIM.
              */
             public Builder aliIM(String aliIM) {
                 this.aliIM = aliIM;
@@ -263,10 +259,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The webhook URL of the DingTalk chatbot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112">https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112</a>****</p>
+             * DingWebHook.
              */
             public Builder dingWebHook(String dingWebHook) {
                 this.dingWebHook = dingWebHook;
@@ -274,10 +267,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the alert contact.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
+             * Mail.
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -285,13 +275,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile number of the alert contact.</p>
-             * <blockquote>
-             * <p> This parameter can be returned only on the China site (aliyun.com).</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>1333333****</p>
+             * SMS.
              */
             public Builder SMS(String SMS) {
                 this.SMS = SMS;
@@ -397,7 +381,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert notification methods.</p>
+             * Channels.
              */
             public Builder channels(Channels channels) {
                 this.channels = channels;
@@ -405,11 +389,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert contact was created.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1552314252000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -417,10 +397,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the alert contact.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS</p>
+             * Desc.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -428,10 +405,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert contact.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Alice</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -439,11 +413,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert contact was modified.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1552314252000</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

@@ -74,10 +74,11 @@ public class DescribeSiteMonitorAttributeRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to return the information of the alert rules that are configured for the site monitoring task. Valid values:</p>
+         * <p>Specifies whether the returned task details include alert rules. Valid values:</p>
          * <ul>
-         * <li>true: The system returns the information of the alert rules that are configured for the site monitoring task.</li>
-         * <li>false (default): The system does not return the information of the alert rules that are configured for the site monitoring task.</li>
+         * <li>true: The alert rules are returned.</li>
+         * <li>false: The alert rules are not returned.
+         * Default value: false.</li>
          * </ul>
          * 
          * <strong>example:</strong>

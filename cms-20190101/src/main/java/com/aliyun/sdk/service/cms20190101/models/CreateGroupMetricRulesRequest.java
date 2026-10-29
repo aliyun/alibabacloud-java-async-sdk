@@ -75,11 +75,11 @@ public class CreateGroupMetricRulesRequest extends Request {
 
         /**
          * <p>The ID of the application group.</p>
-         * <p>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+         * <p>For information about how to obtain the application group ID, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>3607****</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -88,7 +88,7 @@ public class CreateGroupMetricRulesRequest extends Request {
         }
 
         /**
-         * GroupMetricRules.
+         * <p>The list of metric-based alert rules for the application group.</p>
          */
         public Builder groupMetricRules(java.util.List<GroupMetricRules> groupMetricRules) {
             this.putQueryParameter("GroupMetricRules", groupMetricRules);
@@ -208,7 +208,27 @@ public class CreateGroupMetricRulesRequest extends Request {
             } 
 
             /**
-             * ComparisonOperator.
+             * <p>The comparison operator for Critical-level alerts. Valid values:</p>
+             * <ul>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold. </li>
+             * <li>GreaterThanThreshold: greater than the threshold. </li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold. </li>
+             * <li>LessThanThreshold: less than the threshold. </li>
+             * <li>NotEqualToThreshold: not equal to the threshold. </li>
+             * <li>GreaterThanYesterday: greater than the value at the same time yesterday. </li>
+             * <li>LessThanYesterday: less than the value at the same time yesterday. </li>
+             * <li>GreaterThanLastWeek: greater than the value at the same time last week. </li>
+             * <li>LessThanLastWeek: less than the value at the same time last week. </li>
+             * <li>GreaterThanLastPeriod: greater than the value in the last period. </li>
+             * <li>LessThanLastPeriod: less than the value in the last period.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <blockquote>
+             * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>GreaterThanOrEqualToThreshold</p>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -232,7 +252,15 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * Statistics.
+             * <p>The statistical method for Critical-level alerts.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For information about how to obtain the valid values, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring</a>.</p>
+             * <blockquote>
+             * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -240,7 +268,14 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold that triggers Critical-level alert notifications.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <blockquote>
+             * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -248,7 +283,14 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * Times.
+             * <p>The number of times that the monitoring metric must reach the alert threshold before a Critical-level alert notification is sent.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <blockquote>
+             * <p>Settings for at least one of the alert severity levels Critical, Warn (warning), or Info must be specified. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -367,7 +409,27 @@ public class CreateGroupMetricRulesRequest extends Request {
             } 
 
             /**
-             * ComparisonOperator.
+             * <p>The comparison operator for Info-level alerts. Valid values:</p>
+             * <ul>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold. </li>
+             * <li>GreaterThanThreshold: greater than the threshold. </li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold. </li>
+             * <li>LessThanThreshold: less than the threshold. </li>
+             * <li>NotEqualToThreshold: not equal to the threshold. </li>
+             * <li>GreaterThanYesterday: greater than the value at the same time yesterday. </li>
+             * <li>LessThanYesterday: less than the value at the same time yesterday. </li>
+             * <li>GreaterThanLastWeek: greater than the value at the same time last week. </li>
+             * <li>LessThanLastWeek: less than the value at the same time last week. </li>
+             * <li>GreaterThanLastPeriod: greater than the value in the last period. </li>
+             * <li>LessThanLastPeriod: less than the value in the last period.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <blockquote>
+             * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>GreaterThanOrEqualToThreshold</p>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -391,7 +453,15 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * Statistics.
+             * <p>The statistical method for Info-level alerts.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For information about how to obtain the valid values, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring</a>.</p>
+             * <blockquote>
+             * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -399,7 +469,14 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold for Info-level alerts.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <blockquote>
+             * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -407,7 +484,14 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * Times.
+             * <p>The number of times that the monitoring metric must reach the alert threshold before an Info-level alert notification is sent.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <blockquote>
+             * <p>Settings for at least one of the alert severity levels Critical, Warn (warning), or Info must be specified. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -526,7 +610,27 @@ public class CreateGroupMetricRulesRequest extends Request {
             } 
 
             /**
-             * ComparisonOperator.
+             * <p>The comparison operator for Warn-level alerts. Valid values:</p>
+             * <ul>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold. </li>
+             * <li>GreaterThanThreshold: greater than the threshold. </li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold. </li>
+             * <li>LessThanThreshold: less than the threshold. </li>
+             * <li>NotEqualToThreshold: not equal to the threshold. </li>
+             * <li>GreaterThanYesterday: greater than the value at the same time yesterday. </li>
+             * <li>LessThanYesterday: less than the value at the same time yesterday. </li>
+             * <li>GreaterThanLastWeek: greater than the value at the same time last week. </li>
+             * <li>LessThanLastWeek: less than the value at the same time last week. </li>
+             * <li>GreaterThanLastPeriod: greater than the value in the last period. </li>
+             * <li>LessThanLastPeriod: less than the value in the last period.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <blockquote>
+             * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>GreaterThanOrEqualToThreshold</p>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -550,7 +654,15 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * Statistics.
+             * <p>The statistical method for Warn-level alerts.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For information about how to obtain the valid values, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring</a>.</p>
+             * <blockquote>
+             * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -558,7 +670,14 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold for Warn-level alerts.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <blockquote>
+             * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -566,7 +685,14 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * Times.
+             * <p>The number of times that the monitoring metric must reach the alert threshold before a Warn-level alert notification is sent.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <blockquote>
+             * <p>Settings for at least one of the alert severity levels Critical, Warn (warning), or Info must be specified. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -732,7 +858,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the alert rule. The specified tag is contained in alert notifications.</p>
+             * <p>The tag key of the alert rule. The tag is included in alert notifications.</p>
              * <p>Valid values of N: 1 to 200.</p>
              * 
              * <strong>example:</strong>
@@ -744,7 +870,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the alert rule. The specified tag is contained in alert notifications.</p>
+             * <p>The tag value of the alert rule. The tag is included in alert notifications.</p>
              * <p>Valid values of N: 1 to 200.</p>
              * 
              * <strong>example:</strong>
@@ -1036,136 +1162,9 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The name of the cloud service. Valid values of N: 1 to 200. Valid value:</p>
-             * <ul>
-             * <li>PolarDB: PolarDB</li>
-             * <li>NewBGPDDoS: Anti-DDoS Pro</li>
-             * <li>IoTDevice: IoT Platform</li>
-             * <li>DRDS: Distributed Relational Database Service (DRDS)</li>
-             * <li>VS: Video Surveillance System</li>
-             * <li>AMQP: Alibaba Cloud Message Queue for AMQP</li>
-             * <li>ADS: AnalyticDB</li>
-             * <li>APIGateway: API Gateway</li>
-             * <li>InternetSharedBandwidth: EIP Bandwidth Plan</li>
-             * <li>CDN: Alibaba Cloud Content Delivery Network (CDN)</li>
-             * <li>CEN: Cloud Enterprise Network (CEN)</li>
-             * <li>DCDN: Dynamic Route for CDN (DCDN)</li>
-             * <li>DDoS: Anti-DDoS</li>
-             * <li>ECS: Elastic Compute Service (ECS)</li>
-             * <li>DirectMail: Direct Mail</li>
-             * <li>Elasticsearch: Elasticsearch</li>
-             * <li>EMR: E-MapReduce (EMR)</li>
-             * <li>ESS: Auto Scaling</li>
-             * <li>FunctionCompute: Function Compute</li>
-             * <li>RealtimeCompute: Realtime Compute for Apache Flink</li>
-             * <li>GlobalAcceleration: Global Accelerator (GA)</li>
-             * <li>Hbase: ApsaraDB for HBase</li>
-             * <li>TSDB: Time Series Database (TSDB)</li>
-             * <li>IPv6trans: IPv6 Translation Service</li>
-             * <li>Kafka: Message Queue for Apache Kafka</li>
-             * <li>Kubernetes: Container Service for Kubernetes (ACK)</li>
-             * <li>KVstore: ApsaraDB for Redis</li>
-             * <li>MNS: Message Service (MNS)</li>
-             * <li>MongoDB: ApsaraDB for MongoDB</li>
-             * <li>MQ: Message Queue</li>
-             * <li>NAT: NAT Gateway</li>
-             * <li>OpenAd: Open Ad</li>
-             * <li>OpenSearch: Open Search</li>
-             * <li>OSS: Object Storage Service (OSS)</li>
-             * <li>PCDN: P2P CDN</li>
-             * <li>petadata: HybridDB for MySQL</li>
-             * <li>RDS: ApsaraDB RDS</li>
-             * <li>SCDN: Secure CDN</li>
-             * <li>SLB: Server Load Balancer (SLB)</li>
-             * <li>SLS: Log Service</li>
-             * <li>VideoLive: ApsaraVideo Live</li>
-             * <li>VOD: ApsaraVideo VOD</li>
-             * <li>EIP: Elastic IP Address (EIP)</li>
-             * <li>VPN: VPN Gateway</li>
-             * <li>AIRec: Artificial Intelligence Recommendation</li>
-             * <li>GPDB: AnalyticDB for PostgreSQL</li>
-             * <li>DBS: Database Backup (DBS)</li>
-             * <li>SAG: Smart Access Gateway (SAG)</li>
-             * <li>Memcache: ApsaraDB for Memcache</li>
-             * <li>IOT_EDGE: Link IoT Edge</li>
-             * <li>OCS: ApsaraDB for Memcache (previous version)</li>
-             * <li>VPC: Express Connect</li>
-             * <li>EHPC: Elastic High Performance Computing (E-HPC)</li>
-             * <li>MPS: ApsaraVideo Media Processing</li>
-             * <li>ENS: Edge Node Service (ENS)</li>
-             * <li>MaxCompute_Prepay: MaxCompute</li>
-             * <li>IoT_Kubernetes: Edge Application Hosting</li>
-             * <li>CMS: CloudMonitor</li>
-             * <li>batchcomputenew: Batch Compute</li>
-             * <li>HBaseUE: ApsaraDB for HBase Performance-enhanced Edition</li>
-             * <li>UIS: Ultimate Internet Service (UIS)</li>
-             * <li>nls: Intelligent Speech Interaction</li>
-             * <li>ots: Tablestore</li>
-             * <li>NAS: File Storage NAS</li>
-             * <li>ECI: Elastic Container Instance (ECI)</li>
-             * <li>OpenAPI: OpenAPI Explorer</li>
-             * <li>pvtzpost: Alibaba Cloud DNS PrivateZone</li>
-             * <li>blinkonk8s: Flink on Kubernetes</li>
-             * <li>FunctionFlow: Serverless Workflow (SWF)</li>
-             * <li>SMC: Server Migration Center (SMC)</li>
-             * <li>ddosbgp: Anti-DDoS Origin</li>
-             * <li>baas: Blockchain as a Service</li>
-             * <li>privatelink: PrivateLink</li>
-             * <li>cds: ApsaraDB for Cassandra</li>
-             * <li>DDH: Dedicated Host</li>
-             * <li>RocketMQ: Message Queue for Apache RocketMQ</li>
-             * <li>ECC: Express Cloud Connect</li>
-             * <li>hbaseserverless: ApsaraDB for HBase Serverless Edition</li>
-             * <li>mns_tmp: Message Service</li>
-             * <li>hdr: Hybrid Disaster Recovery (HDR)</li>
-             * <li>hbr: Hybrid Backup Recovery (HBR)</li>
-             * <li>ADB: AnalyticDB for MySQL V3.0</li>
-             * <li>tag: Tag Service</li>
-             * <li>GDB: Graph Database</li>
-             * <li>WAF: Web Application Firewall (WAF)</li>
-             * <li>hcs_sgw: Cloud Storage Gateway (CSG)</li>
-             * <li>ipv6gateway: IPv6 Gateway</li>
-             * <li>RDS_SAR: ApsaraDB Exclusive Host Group</li>
-             * <li>learn: Machine Learning Platform for AI</li>
-             * <li>ROS: Resource Orchestration Service (ROS)</li>
-             * <li>OOS: Operation Orchestration Service (OOS)</li>
-             * <li>bds: Data Synchronization for HBase</li>
-             * <li>cfw: Cloud Firewall</li>
-             * <li>ddosDip: Anti-DDoS Premium</li>
-             * <li>datahub: DataHub</li>
-             * <li>hologres: Hologres</li>
-             * <li>ExpressConnect: Express Connect</li>
-             * <li>dbfs: Database File System (DBFS)</li>
-             * <li>clickhouse: ApsaraDB for ClickHouse</li>
-             * <li>k8s: Container Service for Kubernetes (ACK)</li>
-             * <li>DTS: Data Transmission Service (DTS)</li>
-             * <li>AnycastEIP: Anycast Elastic IP Address</li>
-             * <li>Lindorm: ApsaraDB for Lindorm</li>
-             * <li>config: Cloud Config</li>
-             * <li>spark: Databricks DataInsight (DDI)</li>
-             * <li>serverless: Serverless App Engine (SAE)</li>
-             * <li>alb: Application Load Balancer (ALB)</li>
-             * <li>oceanbase: ApsaraDB for OceanBase</li>
-             * <li>KMS: Key Management Service (KMS)</li>
-             * <li>lvwang: Content Moderation</li>
-             * <li>LinkVisual: LinkVisual</li>
-             * <li>tair: ApsaraDB for Redis Enhanced Edition (Tair)</li>
-             * <li>dlf: Data Lake Formation (DLF)</li>
-             * <li>networkmonitor: Site Monitoring</li>
-             * <li>pnc: Physical Network Change</li>
-             * <li>AIS: Alibaba Cloud Infrastructure</li>
-             * <li>cloudgame: Cloud Gaming Platform</li>
-             * <li>RTC: Real-Time Communication</li>
-             * <li>cloudbox: CloudBox</li>
-             * <li>actiontrail: ActionTrail</li>
-             * <li>cc: Cloud Connector</li>
-             * <li>disk: Elastic Block Storage (EBS)</li>
-             * <li>easygene: Genomics Computing Platform</li>
-             * <li>cloudphone: Elastic Cloud Phone</li>
-             * <li>BMS: Bare Metal Management Service</li>
-             * <li>swas: Simple Application Server</li>
-             * <li>AvailabilityMonitoring: Availability Monitoring of CloudMonitor</li>
-             * </ul>
+             * <p>The abbreviation of the Alibaba Cloud service name.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>For information about how to obtain the abbreviation, see the <code>metricCategory</code> tag in the <code>Labels</code> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1177,8 +1176,9 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The alert contact groups. Valid values of N: 1 to 200.</p>
-             * <p>For information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
+             * <p>The alert contact group.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>For information about how to obtain the alert contact group, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ECS_Group</p>
@@ -1189,8 +1189,8 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The dimension of the alert rule. Valid values of N: 1 to 200.</p>
-             * <p>Set the value to a set of key-value pairs, for example, <code>userId:120886317861****</code> or <code>instanceId:i-m5e1qg6uo38rztr4****</code>.</p>
+             * <p>The monitoring dimensions of the specified resource.</p>
+             * <p>The value is a collection of <code>key:value</code> pairs, such as <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> and <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}]</p>
@@ -1201,7 +1201,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The time period during which the alert rule is effective. Valid values of N: 1 to 200.</p>
+             * <p>The effective period of the alert rule. Valid values of N: 1 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>05:31-23:59</p>
@@ -1212,7 +1212,11 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The subject of the alert notification email. Valid values of N: 1 to 200.</p>
+             * <p>The subject of the alert notification email.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS instance</p>
              */
             public Builder emailSubject(String emailSubject) {
                 this.emailSubject = emailSubject;
@@ -1220,10 +1224,11 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The interval at which CloudMonitor checks whether the alert rule is triggered. Valid values of N: 1 to 200.</p>
-             * <p>Unit: seconds. The default value is the lowest frequency at which the metric is polled.</p>
+             * <p>The detection period of the alert rule.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>Unit: seconds. The default value is the minimum reporting frequency of the metric.</p>
              * <blockquote>
-             * <p> We recommend that you set the interval to the data aggregation period. If the interval is shorter than the data aggregation period, alerts cannot be triggered due to insufficient data.</p>
+             * <p>Keep the detection period of the alert rule consistent with the data reporting period. If the detection period is shorter than the data reporting period, alerts may not be triggered due to insufficient data.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1235,7 +1240,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * Labels.
+             * <p>The tag keys of the alert rule.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -1243,8 +1248,9 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The name of the metric. Valid values of N: 1 to 200.</p>
-             * <p>For information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * <p>The name of the metric.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>For information about how to obtain the metric name, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1256,8 +1262,9 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The namespace of the cloud service. Valid values of N: 1 to 200.</p>
-             * <p>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * <p>The namespace of the Alibaba Cloud service.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>For information about how to obtain the namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1269,12 +1276,13 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The method that is used to handle alerts when no monitoring data is found. Valid values of N: 1 to 200. Valid value:</p>
+             * <p>The processing method when no monitoring data is found. Valid values:</p>
              * <ul>
-             * <li>KEEP_LAST_STATE (default value): No operation is performed.</li>
-             * <li>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</li>
-             * <li>OK: The alert rule has no active alerts.</li>
+             * <li>KEEP_LAST_STATE (default): No action is performed.</li>
+             * <li>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient Data&quot; is triggered.</li>
+             * <li>OK: The status is considered normal.</li>
              * </ul>
+             * <p>Valid values of N: 1 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>KEEP_LAST_STATE</p>
@@ -1296,7 +1304,13 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * Options.
+             * <p>The advanced settings.</p>
+             * <p>Format: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}. For example, {&quot;NotSendOK&quot;:true} specifies whether to send an alert recovery notification. The key is NotSendOK, and the value is true (do not send) or false (send, which is the default).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;NotSendOK&quot;: true
+             * }</p>
              */
             public Builder options(String options) {
                 this.options = options;
@@ -1304,8 +1318,9 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The aggregation period of the metric data. Valid values of N: 1 to 200.</p>
-             * <p>Set the <code>Period</code> parameter to an integral multiple of 60. Unit: seconds. Default value: 300.</p>
+             * <p>The reporting period of monitoring data.</p>
+             * <p>Valid values of N: 1 to 200. </p>
+             * <p>The value of <code>Period</code> must be 60 or a multiple of 60. Unit: seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -1316,7 +1331,8 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the alert rule. Valid values of N: 1 to 200.</p>
+             * <p>The ID of the alert rule.</p>
+             * <p>Valid values of N: 1 to 200.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1328,7 +1344,8 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The name of the alert rule. Valid values of N: 1 to 200.</p>
+             * <p>The name of the alert rule.</p>
+             * <p>Valid values of N: 1 to 200.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1340,7 +1357,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.</p>
+             * <p>The mute period of the alert notification. Valid values of N: 1 to 200.</p>
              * <p>Unit: seconds. Default value: 86400. Minimum value: 3600.</p>
              * 
              * <strong>example:</strong>
@@ -1352,8 +1369,8 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The callback URL. Valid values of N: 1 to 200.</p>
-             * <p>The callback URL must be accessible over the Internet. CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</p>
+             * <p>The callback URL to which an alert notification is sent. Valid values of N: 1 to 200.</p>
+             * <p>Specify a publicly accessible URL. CloudMonitor sends a POST request to push alert information to this URL. Only the HTTP protocol is supported.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>

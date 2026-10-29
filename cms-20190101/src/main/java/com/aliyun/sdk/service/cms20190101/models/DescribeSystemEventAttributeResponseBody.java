@@ -106,9 +106,9 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the call is successful.</p>
+         * <p>A value of 200 indicates that the call was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned. If the call is successful, <code>success</code> is returned. If the call fails, an error message is returned.</p>
+         * <p>The returned message. If the call is successful, <code>success</code> is returned. If the call fails, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -131,7 +131,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>60912C8D-B340-4253-ADE7-61ACDFD25CFC</p>
@@ -142,7 +142,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values: True: The call is successful. false: The call fails.</p>
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -153,7 +153,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the event.</p>
+         * SystemEvents.
          */
         public Builder systemEvents(SystemEvents systemEvents) {
             this.systemEvents = systemEvents;
@@ -336,10 +336,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[{&quot;product&quot;:&quot;CloudMonitor&quot;,&quot;content&quot;:&quot;{&quot;ipGroup&quot;:&quot;112.126.XX.XX,10.163.XX.XX&quot;,&quot;tianjimonVersion&quot;:&quot;1.2.22&quot;}&quot;,&quot;groupId&quot;:&quot;176,177,178,179,180,692,120812,1663836,96,2028302&quot;,&quot;time&quot;:&quot;1552209568000&quot;,&quot;resourceId&quot;:&quot;acs:ecs:cn-beijing:173651113438****:instance/i-25k35****&quot;,&quot;level&quot;:&quot;CRITICAL&quot;,&quot;status&quot;:&quot;stopped&quot;,&quot;instanceName&quot;:&quot;cmssiteprobebj-6&quot;,&quot;name&quot;:&quot;Agent_Status_Stopped&quot;,&quot;regionId&quot;:&quot;cn-beijing&quot;}]</p>
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -347,10 +344,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12345</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -358,10 +352,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>b936efc9-f621-4e8a-a6eb-076be40e****</p>
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -369,10 +360,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>instanceId1</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -380,15 +368,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the event. Valid values:</p>
-             * <ul>
-             * <li>CRITICAL</li>
-             * <li>WARN</li>
-             * <li>INFO</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>WARN</p>
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -396,10 +376,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Agent_Status_Stopped</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -407,10 +384,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The abbreviation of the service name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CloudMonitor</p>
+             * Product.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -418,10 +392,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -429,10 +400,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>xxxxx-1</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -440,10 +408,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>normal</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -451,11 +416,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event occurred. The value is a timestamp.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1552199984000</p>
+             * Time.
              */
             public Builder time(Long time) {
                 this.time = time;
