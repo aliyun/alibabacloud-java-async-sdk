@@ -74,7 +74,7 @@ public class ListAssetSelectionSelectedTargetRequest extends Request {
         } 
 
         /**
-         * <p>The unique identifier of the asset selection.</p>
+         * <p>The unique identifier for the current asset selection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

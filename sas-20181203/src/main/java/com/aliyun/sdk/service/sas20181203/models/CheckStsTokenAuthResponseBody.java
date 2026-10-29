@@ -67,7 +67,7 @@ public class CheckStsTokenAuthResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The customer UID.</p>
          * 
          * <strong>example:</strong>
          * <p>185685871307****</p>
@@ -78,7 +78,7 @@ public class CheckStsTokenAuthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>898F7AA7-CECD-5EC7-AF4D-664C601B****</p>

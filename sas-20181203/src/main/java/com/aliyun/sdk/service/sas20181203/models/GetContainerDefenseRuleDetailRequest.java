@@ -73,10 +73,10 @@ public class GetContainerDefenseRuleDetailRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +91,8 @@ public class GetContainerDefenseRuleDetailRequest extends Request {
         /**
          * <p>The rule ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to obtain this parameter.
+         * This parameter is required. If it is not provided, the API returns HTTP 400 and the error code -101.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

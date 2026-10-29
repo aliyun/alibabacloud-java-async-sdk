@@ -299,7 +299,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         /**
          * <p>The ID of the container cluster to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -312,7 +312,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The name of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>docker-law</p>
@@ -324,7 +324,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * <p>The container ID.</p>
+         * <p>The ID of the container.</p>
          * 
          * <strong>example:</strong>
          * <p>c08d5fc1a329a4b88950a253d082f****</p>
@@ -351,7 +351,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
          * <p>The query type for the baseline. Valid values:</p>
          * <ul>
          * <li><strong>BaselineNameAlias</strong>: baseline name</li>
-         * <li><strong>BaselineClassAlias</strong>: baseline category.</li>
+         * <li><strong>BaselineClassAlias</strong>: baseline classification</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -364,7 +364,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -376,7 +376,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * <p>The container image name.</p>
+         * <p>The name of the container image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</p>
@@ -388,7 +388,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * <p>The SHA256 value of the image digest.</p>
+         * <p>The SHA-256 value of the image digest.</p>
          * 
          * <strong>example:</strong>
          * <p>2e6daffce524ffeae66cccaa90c8fc47de912346dcec295c27395b6d66db6423</p>
@@ -400,10 +400,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -428,7 +428,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * <p>Settings for paged query paging. The number of image baseline check result details to display per page. Default value: <strong>10</strong>, which indicates that 10 image baseline check result details are displayed per page.</p>
+         * <p>The Settings for the number of image baseline check result details to return on each page in a paged query. Default value: <strong>10</strong>, which indicates that 10 image baseline check result details are displayed on each page during paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -59,7 +59,10 @@ public class GetDockerhubImageRiskRankInfoRequest extends Request {
         } 
 
         /**
-         * <p>The image dimension types to query.</p>
+         * <p>The image dimension types to be aggregated.</p>
+         * <blockquote>
+         * <p>This parameter is required. You must specify at least one valid value. If no value is specified or all specified values are invalid, the API returns HTTP 400 with the error code -101.</p>
+         * </blockquote>
          */
         public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);

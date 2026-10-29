@@ -60,9 +60,9 @@ public class GetOpaPluginStatusRequest extends Request {
         } 
 
         /**
-         * <p>The cluster IDs.</p>
+         * <p>The list of cluster IDs.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * <p>You can query this value by calling the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */

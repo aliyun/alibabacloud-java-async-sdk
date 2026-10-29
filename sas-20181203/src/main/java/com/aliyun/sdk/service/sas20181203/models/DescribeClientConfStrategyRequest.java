@@ -75,7 +75,7 @@ public class DescribeClientConfStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The resource tag of the client to query.</p>
+         * <p>Specifies the client resource tag to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class DescribeClientConfStrategyRequest extends Request {
          * <ul>
          * <li>major</li>
          * <li>advanced</li>
-         * <li>basic.</li>
+         * <li>basic</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

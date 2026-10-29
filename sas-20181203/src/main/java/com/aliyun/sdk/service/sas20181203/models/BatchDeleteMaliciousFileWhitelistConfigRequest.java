@@ -59,7 +59,7 @@ public class BatchDeleteMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the whitelist rules. You can call the <a href="~~ListMaliciousFileWhitelistConfigs~~">ListMaliciousFileWhitelistConfigs</a> operation to query the IDs of whitelist rules.</p>
+         * <p>The list of sensitive file whitelist rule IDs. Call <a href="~~ListMaliciousFileWhitelistConfigs~~">ListMaliciousFileWhitelistConfigs</a> to obtain the IDs of sensitive file whitelist rules.</p>
          */
         public Builder configIdList(java.util.List<Long> configIdList) {
             this.putQueryParameter("ConfigIdList", configIdList);

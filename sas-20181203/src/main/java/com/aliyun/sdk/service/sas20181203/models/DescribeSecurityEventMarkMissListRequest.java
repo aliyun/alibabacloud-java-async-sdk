@@ -131,7 +131,7 @@ public class DescribeSecurityEventMarkMissListRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class DescribeSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * <p>The alert event name (child class).</p>
+         * <p>The name of the alert event (subtype).</p>
          * 
          * <strong>example:</strong>
          * <p>Login with unusual location</p>
@@ -156,7 +156,7 @@ public class DescribeSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * <p>The number of whitelist rules to display on each page in a paged query. Default value: <strong>20</strong>, which indicates that 20 whitelist rules are displayed on each page.</p>
+         * <p>The number of whitelist rules to return on each page during paging. Default value: <strong>20</strong>, which indicates that 20 whitelist rules are returned on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class DescribeSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * <p>The asset search keyword. You can enter the IP address, public IP address, private IP address, or asset name for fuzzy matching.</p>
+         * <p>The asset search criterion. You can specify the IP address, public IP address, private IP address, or name of an asset for fuzzy matching.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>

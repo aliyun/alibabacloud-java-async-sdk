@@ -415,6 +415,9 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The trial version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder trialVersion(Integer trialVersion) {
                 this.trialVersion = trialVersion;

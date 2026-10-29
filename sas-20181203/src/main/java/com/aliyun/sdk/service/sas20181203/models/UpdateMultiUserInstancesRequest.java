@@ -498,6 +498,9 @@ public class UpdateMultiUserInstancesRequest extends Request {
 
             /**
              * <p>The number of platform configuration check instance authorizations allocated to the member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cspmInstanceCapacity(Long cspmInstanceCapacity) {
                 this.cspmInstanceCapacity = cspmInstanceCapacity;

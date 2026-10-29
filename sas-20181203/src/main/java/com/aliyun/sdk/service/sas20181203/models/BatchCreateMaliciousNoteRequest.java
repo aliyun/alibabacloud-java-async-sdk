@@ -59,7 +59,7 @@ public class BatchCreateMaliciousNoteRequest extends Request {
         } 
 
         /**
-         * <p>The batches.</p>
+         * <p>The batch list.</p>
          */
         public Builder imageMaliciousFileList(java.util.List<ImageMaliciousFileList> imageMaliciousFileList) {
             this.putQueryParameter("ImageMaliciousFileList", imageMaliciousFileList);
@@ -127,10 +127,7 @@ public class BatchCreateMaliciousNoteRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the alert.</p>
-             * <blockquote>
-             * <p> You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the alert IDs.</p>
-             * </blockquote>
+             * <p>The alert ID. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -141,7 +138,7 @@ public class BatchCreateMaliciousNoteRequest extends Request {
             }
 
             /**
-             * <p>The description.</p>
+             * <p>The note.</p>
              * 
              * <strong>example:</strong>
              * <p>Malware sample</p>

@@ -145,9 +145,12 @@ public class FindContainerNetworkConnectRequest extends Request {
         /**
          * <p>The query type of the element to query. Valid values:</p>
          * <ul>
+         * <li><strong>NODE</strong>: node information.</li>
          * <li><strong>EDGE</strong>: connection information.</li>
          * </ul>
-         * <p>This parameter is required. If this parameter is not specified, the service returns error code -101.</p>
+         * <blockquote>
+         * <p>This parameter is required. If this parameter is not provided, the API returns HTTP 400 with the error code -101.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>EDGE</p>
@@ -159,7 +162,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return in a paginated query. Default value: <strong>1</strong>, which indicates the first page.</p>
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -172,7 +175,9 @@ public class FindContainerNetworkConnectRequest extends Request {
 
         /**
          * <p>The destination node information, which is used to filter destination nodes.</p>
-         * <p>This parameter is required. If this parameter is not specified, the service returns error code -101.</p>
+         * <blockquote>
+         * <p>Both <strong>SrcNode</strong> and <strong>DstNode</strong> are required. If either parameter is not provided, the API returns HTTP 400 with the error code -101.</p>
+         * </blockquote>
          */
         public Builder dstNode(DstNode dstNode) {
             String dstNodeShrink = shrink(dstNode, "DstNode", "json");
@@ -182,8 +187,10 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * <p>The end time of the network connectivity. Specify a UNIX timestamp in milliseconds.</p>
-         * <p>This parameter is required. If this parameter is not specified, the service returns error code -101.</p>
+         * <p>The end time of the network connectivity. The value is a UNIX timestamp in milliseconds.</p>
+         * <blockquote>
+         * <p>Both <strong>StartTime</strong> and <strong>EndTime</strong> are required, and <strong>StartTime</strong> must be earlier than <strong>EndTime</strong>. The interval between the two cannot exceed 7 days. If either parameter is not provided or the requirements are not met, the API returns HTTP 400 with the error code -101.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1649260799999</p>
@@ -195,9 +202,9 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page when paging is used. Default value: 20. If this parameter is left empty, 20 entries are returned.</p>
+         * <p>The maximum number of entries to return on each page in a paged query. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>Do not leave PageSize empty.</p>
+         * <p>Do not leave this parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -211,7 +218,9 @@ public class FindContainerNetworkConnectRequest extends Request {
 
         /**
          * <p>The source node information, which is used to filter source nodes.</p>
-         * <p>This parameter is required. If this parameter is not specified, the service returns error code -101.</p>
+         * <blockquote>
+         * <p>Both <strong>SrcNode</strong> and <strong>DstNode</strong> are required. If either parameter is not provided, the API returns HTTP 400 with the error code -101.</p>
+         * </blockquote>
          */
         public Builder srcNode(SrcNode srcNode) {
             String srcNodeShrink = shrink(srcNode, "SrcNode", "json");
@@ -221,8 +230,10 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * <p>The start time of the network connectivity. Specify a UNIX timestamp in milliseconds.</p>
-         * <p>This parameter is required. If this parameter is not specified, the service returns error code -101.</p>
+         * <p>The start time of the network connectivity. The value is a UNIX timestamp in milliseconds.</p>
+         * <blockquote>
+         * <p>Both <strong>StartTime</strong> and <strong>EndTime</strong> are required, and <strong>StartTime</strong> must be earlier than <strong>EndTime</strong>. The interval between the two cannot exceed 7 days. If either parameter is not provided or the requirements are not met, the API returns HTTP 400 with the error code -101.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1666886400000</p>
@@ -391,7 +402,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             /**
              * <p>The node type. Valid values:</p>
              * <ul>
-             * <li><strong>app</strong>: application. The node type is application.</li>
+             * <li><strong>app</strong>: application. This value indicates that the node type is application.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -571,7 +582,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             /**
              * <p>The node type. Valid values:</p>
              * <ul>
-             * <li><strong>app</strong>: application. The node type is application.</li>
+             * <li><strong>app</strong>: application. This value indicates that the node type is application.</li>
              * </ul>
              * 
              * <strong>example:</strong>

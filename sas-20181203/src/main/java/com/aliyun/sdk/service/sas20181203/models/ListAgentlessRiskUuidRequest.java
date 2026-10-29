@@ -38,6 +38,10 @@ public class ListAgentlessRiskUuidRequest extends Request {
     private String intranetIp;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MachineName")
     private String machineName;
 
@@ -64,6 +68,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         this.instanceName = builder.instanceName;
         this.internetIp = builder.internetIp;
         this.intranetIp = builder.intranetIp;
+        this.lang = builder.lang;
         this.machineName = builder.machineName;
         this.pageSize = builder.pageSize;
         this.risk = builder.risk;
@@ -120,6 +125,13 @@ public class ListAgentlessRiskUuidRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return machineName
      */
     public String getMachineName() {
@@ -160,6 +172,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         private String instanceName; 
         private String internetIp; 
         private String intranetIp; 
+        private String lang; 
         private String machineName; 
         private Integer pageSize; 
         private Boolean risk; 
@@ -177,6 +190,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
             this.instanceName = request.instanceName;
             this.internetIp = request.internetIp;
             this.intranetIp = request.intranetIp;
+            this.lang = request.lang;
             this.machineName = request.machineName;
             this.pageSize = request.pageSize;
             this.risk = request.risk;
@@ -185,7 +199,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the current page when using paging.</p>
+         * <p>The page number of the current page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -245,7 +259,24 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>The instance name.</p>
+         * <p>The language of the report. Valid values:</p>
+         * <ul>
+         * <li><code>zh</code>: Chinese.</li>
+         * <li><code>en</code>: English.</li>
+         * </ul>
+         * <p>If this parameter is not specified or is left empty, a Chinese report is returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>oracle-win-001****</p>
@@ -257,7 +288,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per page when using paging.</p>
+         * <p>The maximum number of entries to return on each page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -269,10 +300,10 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether risks exist. Valid values:</p>
+         * <p>Specifies whether a risk exists. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Risks exist.</li>
-         * <li><strong>false</strong>: Risks do not exist.</li>
+         * <li><strong>true</strong>: A risk exists.</li>
+         * <li><strong>false</strong>: No risk exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +316,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>The name of the detection target.</p>
+         * <p>The name of the scan target.</p>
          * 
          * <strong>example:</strong>
          * <p>source-test-obj-0****</p>
@@ -297,12 +328,12 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>The object type of the detection target. Valid values:</p>
+         * <p>The object type of the scan target. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: host snapshot</li>
-         * <li><strong>2</strong>: host image</li>
+         * <li><strong>1</strong>: server snapshot</li>
+         * <li><strong>2</strong>: server image</li>
          * <li><strong>3</strong>: user snapshot</li>
-         * <li><strong>4</strong>: user custom image</li>
+         * <li><strong>4</strong>: custom image</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -87,10 +87,10 @@ public class DescribeSearchConditionRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DescribeSearchConditionRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>117.220.XX.XX</p>
@@ -115,10 +115,10 @@ public class DescribeSearchConditionRequest extends Request {
         }
 
         /**
-         * <p>The type of the asset. Valid values:</p>
+         * <p>The Asset Type to query. Valid values:</p>
          * <ul>
-         * <li><strong>ecs</strong>: Elastic Compute Service (ECS) instances.</li>
-         * <li><strong>cloud_product</strong>: cloud services except ECS.</li>
+         * <li><strong>ecs</strong>: queries the filter conditions for all ECS servers.</li>
+         * <li><strong>cloud_product</strong>: queries the filter conditions for all other cloud services.</li>
          * </ul>
          * 
          * <strong>example:</strong>

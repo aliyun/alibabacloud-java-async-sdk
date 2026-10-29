@@ -59,7 +59,7 @@ public class DeleteImageEventOperationRequest extends Request {
         } 
 
         /**
-         * <p>The primary key of the alert disposal rule.</p>
+         * <p>The primary key of the alert handling rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1404656</p>

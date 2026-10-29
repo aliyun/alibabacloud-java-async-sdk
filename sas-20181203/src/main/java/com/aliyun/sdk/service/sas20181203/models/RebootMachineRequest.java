@@ -60,7 +60,7 @@ public class RebootMachineRequest extends Request {
         } 
 
         /**
-         * <p>The UUID of the server that you want to restart.</p>
+         * <p>The UUID of the server to restart.</p>
          * <blockquote>
          * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
          * </blockquote>

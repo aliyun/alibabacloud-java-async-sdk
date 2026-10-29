@@ -229,7 +229,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page when using paged query. This is used for paging.</p>
+         * <p>The page number of the current page returned during paging for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -241,7 +241,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range during which the process was first detected. The value is a timestamp in milliseconds.</p>
+         * <p>The end time of the time range during which the process was first detected. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1768891966345</p>
@@ -253,7 +253,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range during which the process was first detected. The value is a timestamp in milliseconds.</p>
+         * <p>The start time of the time range during which the process was first detected. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1768891966344</p>
@@ -277,7 +277,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page when using paged query. This is used for paging.</p>
+         * <p>The maximum number of entries to return on each page during paging for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -337,7 +337,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The label.</p>
+         * <p>The tag.</p>
          * 
          * <strong>example:</strong>
          * <p>Process Tag</p>

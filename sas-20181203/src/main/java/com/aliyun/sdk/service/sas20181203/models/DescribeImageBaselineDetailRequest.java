@@ -87,10 +87,14 @@ public class DescribeImageBaselineDetailRequest extends Request {
         } 
 
         /**
-         * <p>The baseline data information.</p>
+         * <p>The key of the baseline sub-item.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeImageBaselineItemList~~">DescribeImageBaselineItemList</a> operation to obtain this parameter from the BaselineItemInfos[].BaselineItemKey field in the response.
+         * This parameter is required. If it is not provided, the API returns HTTP 400 and the error code -101.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>取值包括但不限于以下内容：ak_leak, duplicate_uid,duplicate_pwd_hash,non_pwd_user</p>
+         * <p>Values include but are not limited to: ak_leak, duplicate_uid, duplicate_pwd_hash, and non_pwd_user</p>
          */
         public Builder baselineItemKey(String baselineItemKey) {
             this.putQueryParameter("BaselineItemKey", baselineItemKey);
@@ -111,10 +115,10 @@ public class DescribeImageBaselineDetailRequest extends Request {
         }
 
         /**
-         * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>

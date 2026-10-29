@@ -80,7 +80,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Information on check results.</p>
+         * <p>The check result information.</p>
          */
         public Builder checks(java.util.List<Checks> checks) {
             this.checks = checks;
@@ -88,7 +88,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Pagination information.</p>
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -96,7 +96,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the current request.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7532B7EE-7CE7-5F4D-BF04-B12447DDCAE1</p>
@@ -217,7 +217,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Requirement ID of the check item.</p>
+             * <p>The ID of the regulation for the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -228,7 +228,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Display name of the requirement for the check item.</p>
+             * <p>The display name of the regulation for the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>Alibaba cloud OSS best security practices</p>
@@ -239,7 +239,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Section ID of the check item.</p>
+             * <p>The ID of the section for the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -250,7 +250,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Display name of the section for the check item.</p>
+             * <p>The display name of the section for the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>Log Audit</p>
@@ -261,7 +261,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard ID of the check item.</p>
+             * <p>The ID of the standard for the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -272,7 +272,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Display name of the standard for the check item.</p>
+             * <p>The display name of the standard for the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>Best security practices</p>
@@ -498,7 +498,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Subtype of the cloud product.</p>
+             * <p>The subtype of the cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -509,7 +509,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Asset type.</p>
+             * <p>The asset type.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -520,7 +520,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID of the check item.</p>
+             * <p>The ID of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -531,7 +531,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Information about the standards, requirements, and sections associated with the check result.</p>
+             * <p>The standards, regulations, and sections associated with the check result.</p>
              */
             public Builder checkPolicies(java.util.List<CheckPolicies> checkPolicies) {
                 this.checkPolicies = checkPolicies;
@@ -539,7 +539,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Name of the check item.</p>
+             * <p>The name of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS-PublicReadOpenManifestFileWithoutEncryption</p>
@@ -550,12 +550,10 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Source type of the security check item:</p>
+             * <p>The source type of the Threat Detection Service check item. Valid values:</p>
              * <ul>
-             * <li><p><strong>CUSTOM</strong>:User-defined</p>
-             * </li>
-             * <li><p><strong>SYSTEM</strong>:Predefined by the Security Platform</p>
-             * </li>
+             * <li><strong>CUSTOM</strong>: Custom.</li>
+             * <li><strong>SYSTEM</strong>: Predefined by the Threat Detection Service platform.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -567,45 +565,31 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Subtype of the cloud product asset. Values:</p>
+             * <p>The asset subtype of the cloud service. Valid values:</p>
              * <ul>
-             * <li><p>When <strong>InstanceType</strong> is <strong>ECS</strong>, this parameter can take the following values:</p>
-             * <ul>
-             * <li><p><strong>INSTANCE</strong></p>
-             * </li>
-             * <li><p><strong>DISK</strong></p>
-             * </li>
-             * <li><p><strong>SECURITY_GROUP</strong></p>
-             * </li>
+             * <li>If <strong>InstanceType</strong> is set to <strong>ECS</strong>, valid values are:<ul>
+             * <li><strong>INSTANCE</strong></li>
+             * <li><strong>DISK</strong></li>
+             * <li><strong>SECURITY_GROUP</strong></li>
              * </ul>
              * </li>
-             * <li><p>When <strong>InstanceType</strong> is <strong>ACR</strong>, this parameter can take the following values:</p>
-             * <ul>
-             * <li><p><strong>REPOSITORY_ENTERPRISE</strong></p>
-             * </li>
-             * <li><p><strong>REPOSITORY_PERSON</strong></p>
-             * </li>
+             * <li>If <strong>InstanceType</strong> is set to <strong>ACR</strong>, valid values are:<ul>
+             * <li><strong>REPOSITORY_ENTERPRISE</strong></li>
+             * <li><strong>REPOSITORY_PERSON</strong></li>
              * </ul>
              * </li>
-             * <li><p>When <strong>InstanceType</strong> is <strong>RAM</strong>, this parameter can take the following values:</p>
-             * <ul>
-             * <li><p><strong>ALIAS</strong></p>
-             * </li>
-             * <li><p><strong>USER</strong></p>
-             * </li>
-             * <li><p><strong>POLICY</strong></p>
-             * </li>
-             * <li><p><strong>GROUP</strong></p>
-             * </li>
+             * <li>If <strong>InstanceType</strong> is set to <strong>RAM</strong>, valid values are:<ul>
+             * <li><strong>ALIAS</strong></li>
+             * <li><strong>USER</strong></li>
+             * <li><strong>POLICY</strong></li>
+             * <li><strong>GROUP</strong></li>
              * </ul>
              * </li>
-             * <li><p>When <strong>InstanceType</strong> is <strong>WAF</strong>, this parameter can take the following values:</p>
-             * <ul>
+             * <li>If <strong>InstanceType</strong> is set to <strong>WAF</strong>, valid values are:<ul>
              * <li><strong>DOMAIN</strong></li>
              * </ul>
              * </li>
-             * <li><p>For other <strong>InstanceType</strong> values, this parameter can take the following value:</p>
-             * <ul>
+             * <li>If <strong>InstanceType</strong> is set to other values, valid values are:<ul>
              * <li><strong>INSTANCE</strong></li>
              * </ul>
              * </li>
@@ -620,7 +604,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Asset type of the cloud product.</p>
+             * <p>The asset type of the cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>Workload</p>
@@ -631,7 +615,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Timestamp of the latest check, in milliseconds.</p>
+             * <p>The timestamp of the latest check. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1657793398000</p>
@@ -642,14 +626,11 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk level of the check item. Possible values:</p>
+             * <p>The risk level of the check item. Valid values:</p>
              * <ul>
-             * <li><p><strong>HIGH</strong>:High</p>
-             * </li>
-             * <li><p><strong>MEDIUM</strong>:Medium</p>
-             * </li>
-             * <li><p><strong>LOW</strong>:Low</p>
-             * </li>
+             * <li><strong>HIGH</strong>: High.</li>
+             * <li><strong>MEDIUM</strong>: Medium.</li>
+             * <li><strong>LOW</strong>: Low.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -661,18 +642,13 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status of the check item. Values:</p>
+             * <p>The status of the check item. Valid values:</p>
              * <ul>
-             * <li><p><strong>PASS</strong>: Passed</p>
-             * </li>
-             * <li><p><strong>NOT_PASS</strong>: Not passed</p>
-             * </li>
-             * <li><p><strong>CHECKING</strong>: Checking</p>
-             * </li>
-             * <li><p><strong>NOT_CHECK</strong>: Not checked</p>
-             * </li>
-             * <li><p><strong>WHITELIST</strong>: Whitelisted</p>
-             * </li>
+             * <li><strong>PASS</strong>: Passed.</li>
+             * <li><strong>NOT_PASS</strong>: Failed.</li>
+             * <li><strong>CHECKING</strong>: Checking.</li>
+             * <li><strong>NOT_CHECK</strong>: Not checked.</li>
+             * <li><strong>WHITELIST</strong>: Whitelisted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -684,7 +660,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the check depends on TRIAL permissions.</p>
+             * <p>Specifies whether the check depends on the TRIAL permission.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -695,12 +671,10 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the check item requires enabling data delivery of operation audit for more than 30 days to build a behavior baseline.</p>
+             * <p>Specifies whether the check item requires enabling data delivery for ActionTrail for more than 30 days to build a behavior baseline. Valid values:</p>
              * <ul>
-             * <li><p><strong>1</strong>:Required</p>
-             * </li>
-             * <li><p><strong>0</strong>:Not Required</p>
-             * </li>
+             * <li><strong>1</strong>: Yes.</li>
+             * <li><strong>0</strong>: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -712,8 +686,12 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Vendor of the asset. Values:</p>
-             * <p>0: Alibaba Cloud 3: Other cloud 4: Other cloud 5: Other cloud 7: Other cloud</p>
+             * <p>The vendor of the asset. Valid values:</p>
+             * <p>0: Alibaba Cloud.
+             * 3: Other cloud.
+             * 4: Other cloud.
+             * 5: Other cloud.
+             * 7: Other cloud.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -809,7 +787,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of data entries displayed on the current page during pagination.</p>
+             * <p>The number of data entries displayed on the current page during paging in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -820,7 +798,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page number in the pagination query.</p>
+             * <p>The page number of the current page during paging in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -831,7 +809,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of items per page in the pagination query. The default value is <strong>20</strong>, indicating that 20 items are displayed per page.</p>
+             * <p>The number of alerting events to display on each page during paging in a paged query. Default value: <strong>20</strong>, which indicates that 20 alerting events are displayed on each page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -842,7 +820,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of data entries.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>83</p>

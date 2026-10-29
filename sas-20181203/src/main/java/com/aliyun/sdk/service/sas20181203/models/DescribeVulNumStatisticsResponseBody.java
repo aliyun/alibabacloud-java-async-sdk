@@ -210,7 +210,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of application vulnerability entries detected by the scanner on your assets.</p>
+         * <p>The number of scanner application vulnerability records in the assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -221,7 +221,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of application vulnerabilities detected by the scanner on your assets.</p>
+         * <p>The number of scanner application vulnerabilities in the assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -232,7 +232,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of handled CMS vulnerabilities.</p>
+         * <p>The number of handled Web-CMS vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -243,7 +243,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of Web-CMS vulnerabilities on your assets.</p>
+         * <p>The number of the Web-CMS vulnerability in the assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -254,7 +254,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of Linux software vulnerabilities on your assets.</p>
+         * <p>The number of the Linux system vulnerability in the assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -265,7 +265,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of urgent vulnerabilities on your assets.</p>
+         * <p>The number of emergency vulnerabilities in the assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -276,7 +276,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>E22C89D2-FE13-5800-8746-9D0EF1827A59</p>
@@ -287,7 +287,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of middleware vulnerabilities on your assets.</p>
+         * <p>The number of middleware vulnerabilities in the assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -298,7 +298,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of Windows system vulnerabilities on your assets.</p>
+         * <p>The number of the Windows system vulnerability in the assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -309,7 +309,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerabilities with a high fix priority.</p>
+         * <p>The number of high-priority vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -320,7 +320,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>This field is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This field is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -331,7 +331,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerabilities with a medium fix priority.</p>
+         * <p>The number of medium-priority vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -342,7 +342,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerabilities with a low fix priority.</p>
+         * <p>The number of low-priority vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

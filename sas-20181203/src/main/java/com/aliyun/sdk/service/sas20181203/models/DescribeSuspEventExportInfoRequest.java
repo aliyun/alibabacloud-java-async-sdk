@@ -61,8 +61,9 @@ public class DescribeSuspEventExportInfoRequest extends Request {
         /**
          * <p>The ID of the export task.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ExportSuspEvents~~">ExportSuspEvents</a> operation to query the ID.</p>
+         * <p>You can call the <a href="~~ExportSuspEvents~~">ExportSuspEvents</a> operation to export events and obtain this ID.</p>
          * </blockquote>
+         * <p>This parameter is required. If it is not provided, the API returns an HTTP 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

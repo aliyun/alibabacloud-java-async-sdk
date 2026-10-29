@@ -60,7 +60,7 @@ public class GetModuleConfigStatusRequest extends Request {
         } 
 
         /**
-         * <p>The service modules that you want to query.</p>
+         * <p>The list of product modules to query.</p>
          * <p>This parameter is required.</p>
          */
         public Builder moduleNames(java.util.List<String> moduleNames) {

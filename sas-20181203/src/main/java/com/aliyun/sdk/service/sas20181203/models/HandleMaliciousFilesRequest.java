@@ -73,10 +73,9 @@ public class HandleMaliciousFilesRequest extends Request {
         } 
 
         /**
-         * <p>The list of file IDs to process.</p>
+         * <p>The list of IDs of the files to be processed.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> to obtain the IDs.
-         * -.</p>
+         * <h2>You can call the <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> operation to obtain the IDs.</h2>
          * </blockquote>
          */
         public Builder fileIdList(java.util.List<Long> fileIdList) {
@@ -86,10 +85,10 @@ public class HandleMaliciousFilesRequest extends Request {
         }
 
         /**
-         * <p>The type of operation. Valid values:</p>
+         * <p>The type of the operation. Valid values:</p>
          * <ul>
-         * <li>addWhitelist: adds to the whitelist.</li>
-         * <li>offWhitelist: removes from the whitelist.</li>
+         * <li>addWhitelist: Adds the security alerts to the whitelist.</li>
+         * <li>offWhitelist: Removes the security alerts from the whitelist.</li>
          * </ul>
          * 
          * <strong>example:</strong>

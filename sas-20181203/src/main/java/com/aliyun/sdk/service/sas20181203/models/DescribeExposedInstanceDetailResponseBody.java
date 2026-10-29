@@ -489,7 +489,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
              * <p>The name of the check item.</p>
              * 
              * <strong>example:</strong>
-             * <p>使用SSH密钥对登录</p>
+             * <p>Create Alert Rule</p>
              */
             public Builder checkName(String checkName) {
                 this.checkName = checkName;
@@ -1034,7 +1034,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
              * <p>The server group to which the server belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>test-group****</p>
+             * <p>sg-bp1iw5enua6gf5i2xr7z</p>
              */
             public Builder groupNo(String groupNo) {
                 this.groupNo = groupNo;

@@ -80,7 +80,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of backup records.</p>
+         * <p>The backup records.</p>
          */
         public Builder backupRecordList(java.util.List<BackupRecordList> backupRecordList) {
             this.backupRecordList = backupRecordList;
@@ -96,7 +96,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3956048F-9D73-5EDB-834B-4827BB48****</p>
@@ -334,7 +334,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The backup end time. The value is a timestamp in milliseconds.</p>
+             * <p>The end time of the backup. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1699600611000</p>
@@ -345,7 +345,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup task ID.</p>
+             * <p>The ID of the backup task.</p>
              * 
              * <strong>example:</strong>
              * <p>a006f24d069843c88688672d74ee****</p>
@@ -356,7 +356,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup plan ID.</p>
+             * <p>The ID of the backup plan.</p>
              * 
              * <strong>example:</strong>
              * <p>plan-000c4tt43nolmx96****</p>
@@ -367,7 +367,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup start time. The value is a timestamp in milliseconds.</p>
+             * <p>The start time of the backup. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1699514211000</p>
@@ -378,11 +378,11 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup task status. Valid values:</p>
+             * <p>The status of the backup task. Valid values:</p>
              * <ul>
-             * <li><strong>BACKUP_COMPLETE</strong>: backup succeeded</li>
-             * <li><strong>BACKUP_FAILED</strong>: backup failed</li>
-             * <li><strong>PARTIAL_COMPLETE</strong>: partial backup succeeded.</li>
+             * <li><strong>BACKUP_COMPLETE</strong>: The backup is successful.</li>
+             * <li><strong>BACKUP_FAILED</strong>: The backup fails.</li>
+             * <li><strong>PARTIAL_COMPLETE</strong>: The backup is partially successful.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -394,7 +394,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The anti-ransomware client ID.</p>
+             * <p>The ID of the anti-ransomware client.</p>
              * 
              * <strong>example:</strong>
              * <p>c-0002bgagelj3d2sc****</p>
@@ -493,7 +493,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the server backed up by database anti-ransomware.</p>
+             * <p>The UUID of the server backed up by the database anti-ransomware feature.</p>
              * 
              * <strong>example:</strong>
              * <p>b93cccb9-f19f-4886-97fe-47df26ba****</p>
@@ -589,7 +589,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries on the current page in a paged query.</p>
+             * <p>The number of entries returned on the current page when paging.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -600,7 +600,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the current page in a paged query.</p>
+             * <p>The page number of the current page when paging.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -611,7 +611,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries per page in a paged query.</p>
+             * <p>The maximum number of entries returned per page when paging.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

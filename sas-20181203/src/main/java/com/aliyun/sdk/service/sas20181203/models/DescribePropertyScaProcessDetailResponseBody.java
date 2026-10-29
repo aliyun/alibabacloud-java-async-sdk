@@ -88,7 +88,7 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The processes collected by the asset fingerprints feature.</p>
+         * <p>The list of processes in Asset Fingerprints.</p>
          */
         public Builder propertys(java.util.List<Propertys> propertys) {
             this.propertys = propertys;
@@ -96,7 +96,7 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ADE57832-9666-511C-9A80-B87DE2E8****</p>
@@ -191,7 +191,7 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries returned on the current page for paging in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -202,7 +202,7 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number of the current page for paging in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -213,7 +213,7 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+             * <p>The number of processes returned on each page for paging in a paged query. Default value: <strong>10</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -409,7 +409,7 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.</p>
+             * <p>The timestamp of the latest scan by Asset Fingerprints. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1597987834000</p>
@@ -431,7 +431,7 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name of the server.</p>
+             * <p>The name of the server instance.</p>
              * 
              * <strong>example:</strong>
              * <p>hc-host-****</p>
@@ -475,7 +475,7 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the process.</p>
+             * <p>The process ID.</p>
              * 
              * <strong>example:</strong>
              * <p>522</p>
@@ -497,7 +497,7 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of web application service.</p>
+             * <p>The version of the web application service.</p>
              * 
              * <strong>example:</strong>
              * <p>3.10.0</p>

@@ -67,7 +67,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The image baseline details.</p>
+         * <p>The list of image baseline details.</p>
          */
         public Builder baselineDetail(BaselineDetail baselineDetail) {
             this.baselineDetail = baselineDetail;
@@ -235,10 +235,10 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The remediation suggestion for the baseline check risk item.</p>
+             * <p>The hardening suggestions for the baseline check risk items.</p>
              * 
              * <strong>example:</strong>
-             * <p>删除泄漏的AK信息。</p>
+             * <p>Delete the leaked AccessKey information</p>
              */
             public Builder advice(String advice) {
                 this.advice = advice;
@@ -246,7 +246,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alias of the baseline classification.</p>
+             * <p>The alias of the baseline main item category.</p>
              * 
              * <strong>example:</strong>
              * <p>ak_leak</p>
@@ -260,7 +260,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
              * <p>The alias of the baseline sub-item.</p>
              * 
              * <strong>example:</strong>
-             * <p>Access Key泄露</p>
+             * <p>AccessKey leak</p>
              */
             public Builder baselineItemAlias(String baselineItemAlias) {
                 this.baselineItemAlias = baselineItemAlias;
@@ -279,10 +279,10 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alias of the baseline name.</p>
+             * <p>The alias of the baseline main item name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Access Key泄露</p>
+             * <p>AccessKey leak</p>
              */
             public Builder baselineNameAlias(String baselineNameAlias) {
                 this.baselineNameAlias = baselineNameAlias;
@@ -293,7 +293,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
              * <p>The description of the baseline risk item.</p>
              * 
              * <strong>example:</strong>
-             * <p>Access Key泄露，会导致Access Key被冒用的风险。</p>
+             * <p>An AccessKey leak may result in the unauthorized use of the AccessKey</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -303,11 +303,11 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             /**
              * <p>The risk level of the check item. Valid values:</p>
              * <ul>
-             * <li><p><strong>high</strong>: High risk level.</p>
+             * <li><p><strong>high</strong>: High. Indicates a high risk level.</p>
              * </li>
-             * <li><p><strong>medium</strong>: Medium risk level.</p>
+             * <li><p><strong>medium</strong>: Medium. Indicates a medium risk level.</p>
              * </li>
-             * <li><p><strong>low</strong>: Low risk level.</p>
+             * <li><p><strong>low</strong>: Low. Indicates a low risk level.</p>
              * </li>
              * </ul>
              * 
@@ -320,7 +320,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The baseline issue prompt.</p>
+             * <p>The prompt for the baseline issue.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/aksk.txt:yourAccessKeyID</p>
@@ -331,7 +331,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asynchronous request ID.</p>
+             * <p>The ID of the asynchronous request.</p>
              * 
              * <strong>example:</strong>
              * <p>async__c6f3b0b54613383b40bdce593ffe****</p>

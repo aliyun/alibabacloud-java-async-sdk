@@ -59,7 +59,7 @@ public class ListInstanceRiskNumRequest extends Request {
         } 
 
         /**
-         * <p>The instances.</p>
+         * <p>The instance list.</p>
          */
         public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
@@ -127,7 +127,7 @@ public class ListInstanceRiskNumRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-wz9fdluqx20mp2x7****</p>
@@ -138,7 +138,7 @@ public class ListInstanceRiskNumRequest extends Request {
             }
 
             /**
-             * <p>The UUID of the instance.</p>
+             * <p>The UUID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to obtain the UUID of the server.</p>
              * 
              * <strong>example:</strong>
              * <p>f2d6e901-1004-4ca8-9dae-53ec04a9****</p>

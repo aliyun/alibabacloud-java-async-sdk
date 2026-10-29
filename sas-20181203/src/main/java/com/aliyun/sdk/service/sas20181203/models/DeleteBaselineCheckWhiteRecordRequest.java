@@ -101,7 +101,7 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of check items.</p>
+         * <p>The list of check item IDs.</p>
          */
         public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -110,7 +110,7 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -126,7 +126,7 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the whitelist records.</p>
+         * <p>The list of whitelist record IDs.</p>
          */
         public Builder recordIds(java.util.List<Long> recordIds) {
             this.putQueryParameter("RecordIds", recordIds);
@@ -137,8 +137,8 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
         /**
          * <p>The data source. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: host baseline</li>
-         * <li><strong>agentless</strong>: agentless detection</li>
+         * <li><strong>default</strong>: server baseline</li>
+         * <li><strong>agentless</strong>: agentless baseline</li>
          * </ul>
          * 
          * <strong>example:</strong>

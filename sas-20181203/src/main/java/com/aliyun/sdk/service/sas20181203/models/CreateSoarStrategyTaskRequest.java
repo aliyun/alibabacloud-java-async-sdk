@@ -119,9 +119,9 @@ public class CreateSoarStrategyTaskRequest extends Request {
         } 
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The ID of the policy.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeSoarSubscribedStrategy~~">DescribeSoarSubscribedStrategy</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~DescribeSoarSubscribedStrategy~~">DescribeSoarSubscribedStrategy</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -135,11 +135,11 @@ public class CreateSoarStrategyTaskRequest extends Request {
         }
 
         /**
-         * <p>The policy name. Set the value to: Automated Batch Vulnerability Fix Policy.</p>
+         * <p>The Policy Name. Set the value to Automated Batch Vulnerability Fix Policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>漏洞自动化批量修复策略</p>
+         * <p>Automated Batch Vulnerability Fix Policy</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -161,25 +161,26 @@ public class CreateSoarStrategyTaskRequest extends Request {
         }
 
         /**
-         * <p>The parameter information of the policy. The value is a string in JSONArray format. The following items are included:</p>
-         * <p>Vulnerability configuration item. Valid values:</p>
+         * <p>The parameter settings of the policy. The value is a character string in JSON array format. Details:</p>
+         * <p>Vulnerability configuration item. Values:</p>
          * <ul>
          * <li>name: vluList</li>
          * <li>associationProperty: sasAllVul</li>
-         * <li>value: the basic information of the vulnerability.</li>
+         * <li>value: the basic information about the vulnerability</li>
          * </ul>
-         * <p>Snapshot configuration item. Valid values:</p>
+         * <p>Snapshot configuration item. Values:</p>
          * <ul>
          * <li>name: snapshotConfig</li>
          * <li>associationProperty: snapshotConfig</li>
-         * <li>value: the storage time information.</li>
+         * <li>value: the storage duration information</li>
          * </ul>
-         * <p>Notification configuration. Valid values:</p>
+         * <p>Notification configuration:</p>
          * <ul>
          * <li>name: notifyConfig</li>
          * <li>associationProperty: notifyConfig</li>
-         * <li>value: the configuration information of email or DingTalk notifications.</li>
+         * <li>value: the configuration information about email or DingTalk</li>
          * </ul>
+         * <p>The vulList child configuration item is required, and the JSON array must contain an entry whose name is vulList. The snapshotConfig and notifyConfig child configuration items are optional.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +231,7 @@ public class CreateSoarStrategyTaskRequest extends Request {
         }
 
         /**
-         * <p>The planned execution timestamp of the policy task. Unit: milliseconds.</p>
+         * <p>The scheduled execution timestamp of the policy task. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1586739841000</p>

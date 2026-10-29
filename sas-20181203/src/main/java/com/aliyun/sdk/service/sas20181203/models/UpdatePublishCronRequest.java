@@ -117,7 +117,7 @@ public class UpdatePublishCronRequest extends Request {
         } 
 
         /**
-         * <p>The Cron expression for the upgrade start time.</p>
+         * <p>The cron expression for the upgrade start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,12 +132,12 @@ public class UpdatePublishCronRequest extends Request {
         /**
          * <p>The day of the week for the upgrade time. Valid values:</p>
          * <ul>
-         * <li><strong>MON</strong>: Monday</li>
-         * <li><strong>TUE</strong>: Tuesday</li>
-         * <li><strong>WED</strong>: Wednesday</li>
-         * <li><strong>THU</strong>: Thursday</li>
-         * <li><strong>FRI</strong>: Friday</li>
-         * <li><strong>SAT</strong>: Saturday</li>
+         * <li><strong>MON</strong>: Monday.</li>
+         * <li><strong>TUE</strong>: Tuesday.</li>
+         * <li><strong>WED</strong>: Wednesday.</li>
+         * <li><strong>THU</strong>: Thursday.</li>
+         * <li><strong>FRI</strong>: Friday.</li>
+         * <li><strong>SAT</strong>: Saturday.</li>
          * <li><strong>SUN</strong>: Sunday.</li>
          * </ul>
          * 
@@ -151,7 +151,7 @@ public class UpdatePublishCronRequest extends Request {
         }
 
         /**
-         * <p>The publish start timestamp. Unit: milliseconds.</p>
+         * <p>The start timestamp of the release, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1657407600000</p>
@@ -163,10 +163,10 @@ public class UpdatePublishCronRequest extends Request {
         }
 
         /**
-         * <p>The upgrade start cycle type. Valid values:</p>
+         * <p>The cycle type for the upgrade start time. Valid values:</p>
          * <ul>
-         * <li><strong>day</strong>: every day</li>
-         * <li><strong>week</strong>: every week.</li>
+         * <li><strong>day</strong>: Daily.</li>
+         * <li><strong>week</strong>: Weekly.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,7 +179,7 @@ public class UpdatePublishCronRequest extends Request {
         }
 
         /**
-         * <p>The upgrade duration. Unit: hours.</p>
+         * <p>The duration of the upgrade, in hours.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class AddImageEventOperationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code returned.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class AddImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -136,7 +136,7 @@ public class AddImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0C8487EF-50C2-54BB-8634-10F8C35D****</p>
@@ -147,10 +147,10 @@ public class AddImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the API call is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The API call succeeded.</li>
+         * <li><strong>false</strong>: The API call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,11 +285,11 @@ public class AddImageEventOperationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
+             * <p>The rule conditions. The value is in JSON format. Valid keys:</p>
              * <ul>
-             * <li><strong>condition</strong>: the matching condition.</li>
-             * <li><strong>type</strong>: the matching type.</li>
-             * <li><strong>value</strong>: the matching value.</li>
+             * <li><strong>condition</strong>: The matching condition.</li>
+             * <li><strong>type</strong>: The matching type.</li>
+             * <li><strong>value</strong>: The matching value.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -301,7 +301,7 @@ public class AddImageEventOperationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The keyword of the alert item.</p>
+             * <p>The alert metric keyword.</p>
              * 
              * <strong>example:</strong>
              * <p>PEM</p>
@@ -312,7 +312,7 @@ public class AddImageEventOperationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert item.</p>
+             * <p>The alert metric name.</p>
              * 
              * <strong>example:</strong>
              * <p>PEM</p>
@@ -323,9 +323,9 @@ public class AddImageEventOperationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert type.</p>
+             * <p>The Alarm Metric for alerting. Valid values:</p>
              * <ul>
-             * <li>Only <strong>sensitiveFile</strong> may be returned.</li>
+             * <li><strong>sensitiveFile</strong>: Sensitive file.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -348,9 +348,9 @@ public class AddImageEventOperationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation code.</p>
+             * <p>The operation code. Valid values:</p>
              * <ul>
-             * <li>Only <strong>whitelist</strong> may be returned, which indicates that the alert item is added to the whitelist.</li>
+             * <li><strong>whitelist</strong>: Whitelist.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -362,10 +362,10 @@ public class AddImageEventOperationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application scope of the rule. The value is in the JSON format. Valid values of keys:</p>
+             * <p>The rule scope. The value is in JSON format. Valid keys:</p>
              * <ul>
-             * <li><strong>type</strong></li>
-             * <li><strong>value</strong></li>
+             * <li><strong>type</strong>: The scope type.</li>
+             * <li><strong>value</strong>: The scope value.</li>
              * </ul>
              * 
              * <strong>example:</strong>

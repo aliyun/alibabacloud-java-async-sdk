@@ -88,9 +88,9 @@ public class DescribeChartListRequest extends Request {
         } 
 
         /**
-         * <p>The language type for the request and response messages. Valid values:</p>
+         * <p>The language type of the request and response messages. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>zh</strong>: Chinese.</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
@@ -106,7 +106,7 @@ public class DescribeChartListRequest extends Request {
         /**
          * <p>The project code. Valid values:</p>
          * <ul>
-         * <li><strong>customize_report</strong>: custom report.</li>
+         * <li><strong>customize_report</strong>: Custom report.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

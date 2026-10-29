@@ -139,7 +139,7 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Variable Trojan</p>
+         * <p>Mining program</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);

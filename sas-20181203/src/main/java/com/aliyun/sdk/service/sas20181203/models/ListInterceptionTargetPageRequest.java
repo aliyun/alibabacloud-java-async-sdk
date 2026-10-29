@@ -169,7 +169,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates the first page.</p>
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -190,7 +190,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * <p>The namespace of the network object.</p>
+         * <p>The namespace to which the network object belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -202,9 +202,9 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for paging. Default value: 20. If you leave this parameter empty, 20 entries are returned by default.</p>
+         * <p>The maximum number of entries to return per page in a paging query. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>Do not leave PageSize empty.</p>
+         * <p>Do not leave this parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -240,7 +240,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         /**
          * <p>The object type. Valid values:</p>
          * <ul>
-         * <li>IMAGE: image.</li>
+         * <li>IMAGE: Image.</li>
          * </ul>
          * 
          * <strong>example:</strong>

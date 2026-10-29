@@ -129,7 +129,7 @@ public class ListAttackPathWhitelistRequest extends Request {
         } 
 
         /**
-         * <p>The page number when using paging. Default value: <strong>1</strong>.</p>
+         * <p>The page number Settings of the current page for paging in a paged query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -144,7 +144,7 @@ public class ListAttackPathWhitelistRequest extends Request {
          * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class ListAttackPathWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page when using paging. Default value: 20.</p>
+         * <p>The maximum number of entries to return per page for paging in a paged query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -171,7 +171,7 @@ public class ListAttackPathWhitelistRequest extends Request {
         /**
          * <p>The path name description.</p>
          * <blockquote>
-         * <p>Call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path name descriptions.</p>
+         * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path name descriptions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class ListAttackPathWhitelistRequest extends Request {
         /**
          * <p>The path type.</p>
          * <blockquote>
-         * <p>Call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path types.</p>
+         * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

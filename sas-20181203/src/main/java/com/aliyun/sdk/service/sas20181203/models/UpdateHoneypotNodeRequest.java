@@ -146,7 +146,7 @@ public class UpdateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * <p>The collection of allowed CIDR blocks.</p>
+         * <p>The list of allowed CIDR blocks.</p>
          */
         public Builder securityGroupProbeIpList(java.util.List<String> securityGroupProbeIpList) {
             this.putQueryParameter("SecurityGroupProbeIpList", securityGroupProbeIpList);

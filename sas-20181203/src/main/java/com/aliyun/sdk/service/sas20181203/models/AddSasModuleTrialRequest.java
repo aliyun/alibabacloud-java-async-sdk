@@ -73,7 +73,7 @@ public class AddSasModuleTrialRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -89,10 +89,10 @@ public class AddSasModuleTrialRequest extends Request {
         }
 
         /**
-         * <p>The code of the feature. Valid values:</p>
+         * <p>The module code. Valid values:</p>
          * <ul>
-         * <li><strong>vulFix</strong>: vulnerability fixing.</li>
-         * <li><strong>cloudSiem</strong>: threat analysis and response.</li>
+         * <li><strong>vulFix</strong>: vulnerability remediation</li>
+         * <li><strong>cloudSiem</strong>: threat analysis and response</li>
          * </ul>
          * 
          * <strong>example:</strong>

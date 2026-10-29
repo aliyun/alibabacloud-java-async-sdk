@@ -90,9 +90,9 @@ public class DescribeSoarPlaybookTaskDetailRequest extends Request {
         } 
 
         /**
-         * <p>Playbook ID.</p>
+         * <p>The ID of the playbook.</p>
          * <blockquote>
-         * <p>You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/2627461.html">DescribePlaybooks</a> interface.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/3000306.html">DescribePlaybooks</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -106,9 +106,9 @@ public class DescribeSoarPlaybookTaskDetailRequest extends Request {
         }
 
         /**
-         * <p>The vulnerability ID passed when creating the policy task.</p>
+         * <p>The ID of the vulnerability passed when creating the policy task.</p>
          * <blockquote>
-         * <p>You can obtain this parameter by calling the <a href="~~DescribeVulList~~">DescribeVulList</a> interface.</p>
+         * <p>You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -122,9 +122,9 @@ public class DescribeSoarPlaybookTaskDetailRequest extends Request {
         }
 
         /**
-         * <p>UUID of the playbook task execution.</p>
+         * <p>The UUID of the playbook task execution.</p>
          * <blockquote>
-         * <p>You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/2627455.html">DescribeSoarRecords</a> interface.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2627455.html">DescribeSoarRecords</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

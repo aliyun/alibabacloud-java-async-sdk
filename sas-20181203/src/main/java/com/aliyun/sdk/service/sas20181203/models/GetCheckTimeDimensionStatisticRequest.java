@@ -115,7 +115,7 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
         } 
 
         /**
-         * <p>The end time in timestamp format.</p>
+         * <p>The end time in UNIX timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1672285044000</p>
@@ -127,7 +127,13 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The ID of the Alibaba Cloud account to which the member accounts in the resource folder belong.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -136,7 +142,7 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
         }
 
         /**
-         * <p>The start time in timestamp format.</p>
+         * <p>The start time in UNIX timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1672385044000</p>
@@ -148,10 +154,10 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
         }
 
         /**
-         * <p>The type of data statistics. Valid values:</p>
+         * <p>The data statistics type. Valid values:</p>
          * <ul>
-         * <li><strong>CheckPassRate</strong>: Check item pass rate.</li>
-         * <li><strong>AssetPassRate</strong>: Asset pass rate.</li>
+         * <li><strong>CheckPassRate</strong>: The pass rate of check items.</li>
+         * <li><strong>AssetPassRate</strong>: The pass rate of assets.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +170,7 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud service providers.</p>
+         * <p>The list of cloud providers.</p>
          */
         public Builder vendors(java.util.List<String> vendors) {
             this.putQueryParameter("Vendors", vendors);

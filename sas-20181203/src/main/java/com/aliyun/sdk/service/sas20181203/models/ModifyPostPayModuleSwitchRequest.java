@@ -158,7 +158,7 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
@@ -170,7 +170,11 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values: true: performs a check without executing the operation. false: executes the operation. Default value: false.</p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
+         * <ul>
+         * <li>true: Only prechecks the request and does not perform the actual operation.</li>
+         * <li>false: Performs the actual operation.</li>
+         * </ul>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -179,7 +183,7 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         }
 
         /**
-         * EdrModuleSwitch.
+         * <p>The switch configuration for the EDR module.</p>
          */
         public Builder edrModuleSwitch(EdrModuleSwitch edrModuleSwitch) {
             String edrModuleSwitchShrink = shrink(edrModuleSwitch, "EdrModuleSwitch", "json");
@@ -189,10 +193,10 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically bind new assets for host and container protection. Valid values:</p>
+         * <p>Specifies whether to automatically bind new assets to the host and container protection feature. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Disabled.</li>
-         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,11 +211,11 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         /**
          * <p>The edition to which new assets are automatically bound for host and container protection. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Free Edition. </li>
-         * <li><strong>3</strong>: Enterprise Edition.</li>
-         * <li><strong>5</strong>: Advanced Edition.</li>
-         * <li><strong>6</strong>: Anti-virus Edition.    </li>
-         * <li><strong>7</strong>: Ultimate Edition.</li>
+         * <li><strong>1</strong>: Free Edition </li>
+         * <li><strong>3</strong>: Enterprise Edition</li>
+         * <li><strong>5</strong>: Premium Edition</li>
+         * <li><strong>6</strong>: Anti-virus Edition    </li>
+         * <li><strong>7</strong>: Ultimate Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,27 +243,27 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         }
 
         /**
-         * <p>The switch status of pay-as-you-go modules in JSON string format. Valid values:</p>
+         * <p>The switch status of the pay-as-you-go modules. The value is a JSON string. Valid values:</p>
          * <ul>
          * <li>Key:<ul>
-         * <li><strong>VUL</strong>: vulnerability management module</li>
-         * <li><strong>CSPM</strong>: Cloud Security Posture Management (CSPM) module</li>
-         * <li><strong>AGENTLESS</strong>: agentless detection module</li>
-         * <li><strong>SERVERLESS</strong>: serverless security module</li>
-         * <li><strong>CTDR</strong>: threat detection and response module</li>
-         * <li><strong>POST_HOST</strong>: host and container security module</li>
-         * <li><strong>SDK</strong>: malicious file detection SDK module</li>
-         * <li><strong>RASP</strong>: application protection module</li>
-         * <li><strong>CTDR_STORAGE</strong>: log management module</li>
-         * <li><strong>ANTI_RANSOMWARE</strong>: anti-ransomware management</li>
+         * <li><strong>VUL</strong>: Vulnerability fixing module</li>
+         * <li><strong>CSPM</strong>: Cloud Security Posture Management module</li>
+         * <li><strong>AGENTLESS</strong>: Agentless detection module</li>
+         * <li><strong>SERVERLESS</strong>: Serverless security module</li>
+         * <li><strong>CTDR</strong>: Cloud Threat Detection and Response module</li>
+         * <li><strong>POST_HOST</strong>: Host and container security module</li>
+         * <li><strong>SDK</strong>: Malicious file detection SDK module</li>
+         * <li><strong>RASP</strong>: Application protection module</li>
+         * <li><strong>CTDR_STORAGE</strong>: Log management module</li>
+         * <li><strong>ANTI_RANSOMWARE</strong>: Anti-ransomware management</li>
          * </ul>
          * </li>
-         * <li>Value: 0 indicates disabled. 1 indicates enabled.</li>
+         * <li>Value: 0 indicates disabled, and 1 indicates enabled.</li>
          * </ul>
          * <blockquote>
-         * <p>Modules for which no value is specified remain unchanged.</p>
+         * <p>The values of modules that are not specified remain unchanged.</p>
          * </blockquote>
-         * <p><notice>This parameter has the same meaning as PostPayModuleSwitchObj. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></p>
+         * <p><notice>This parameter has the same meaning as the PostPayModuleSwitchObj parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;VUL&quot;:1,&quot;CSPM&quot;:0}</p>
@@ -271,9 +275,9 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         }
 
         /**
-         * <p>The pay-as-you-go module switch.</p>
+         * <p>The switch status of the pay-as-you-go modules.</p>
          * <blockquote>
-         * <p>Notice: This parameter has the same meaning as PostPayModuleSwitch. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></p>
+         * <p>Notice: This parameter has the same meaning as the PostPayModuleSwitch parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></p>
          * </blockquote>
          */
         public Builder postPayModuleSwitchObj(PostPayModuleSwitchObj postPayModuleSwitchObj) {
@@ -343,7 +347,10 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             } 
 
             /**
-             * AutoBind.
+             * <p>Specifies whether to enable automatic binding of new assets to the EDR module. Valid values: 0: disabled. 1: enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder autoBind(Integer autoBind) {
                 this.autoBind = autoBind;
@@ -351,7 +358,10 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             }
 
             /**
-             * EDR_HOST_USAGE.
+             * <p>The authorized quota for EDR hosts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder EDR_HOST_USAGE(Long EDR_HOST_USAGE) {
                 this.EDR_HOST_USAGE = EDR_HOST_USAGE;
@@ -561,10 +571,10 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             } 
 
             /**
-             * <p>The agentless detection module. Valid values:</p>
+             * <p>The Agentless detection module. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Disabled.</li>
-             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -576,7 +586,7 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             }
 
             /**
-             * <p>The AI digital human module.</p>
+             * <p>The AI digitalization feature.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -589,8 +599,8 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             /**
              * <p>The anti-ransomware module. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Disabled.</li>
-             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -604,11 +614,11 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             /**
              * <p>The basic service module. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Disabled.</li>
-             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * <blockquote>
-             * <p>Notice: The basic service module switch cannot be manually modified. This module is in the enabling status when any other module is enabled, and is in the shutdown status only when all other modules are disabled.</notice></p>
+             * <p>Notice: The switch for the basic service module cannot be manually modified. This module is enabled when any other module is enabled, and disabled when all other modules are disabled.</notice></p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -620,10 +630,10 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             }
 
             /**
-             * <p>The cloud security configuration check module. Valid values:</p>
+             * <p>The Cloud Security Posture Management module. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Disabled.</li>
-             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -635,10 +645,10 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             }
 
             /**
-             * <p>The threat detection and response module. Valid values:</p>
+             * <p>The Cloud Threat Detection and Response module. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Disabled.</li>
-             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -652,8 +662,8 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             /**
              * <p>The log management module. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Disabled.</li>
-             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -667,8 +677,8 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             /**
              * <p>The host and container security module. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Disabled.</li>
-             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -682,8 +692,8 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             /**
              * <p>The application protection module. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Disabled.</li>
-             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -697,8 +707,8 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             /**
              * <p>The malicious file detection SDK module. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Disabled.</li>
-             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -710,10 +720,10 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             }
 
             /**
-             * <p>The serverless security module. Valid values:</p>
+             * <p>The Serverless security module. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Disabled.</li>
-             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -725,10 +735,10 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             }
 
             /**
-             * <p>The vulnerability management module. Valid values:</p>
+             * <p>The vulnerability fixing module. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Disabled.</li>
-             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -742,8 +752,8 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             /**
              * <p>The file tamper-proofing module. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Disabled.</li>
-             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>

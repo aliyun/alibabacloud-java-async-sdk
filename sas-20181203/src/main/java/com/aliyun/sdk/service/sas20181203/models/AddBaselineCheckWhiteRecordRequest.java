@@ -117,7 +117,7 @@ public class AddBaselineCheckWhiteRecordRequest extends Request {
         /**
          * <p>The ID of the check item.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of check items.</p>
+         * <p>You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to obtain the check item ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class AddBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -146,10 +146,10 @@ public class AddBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * <p>The reason why the check item is added to the whitelist.</p>
+         * <p>The reason for adding the item to the whitelist.</p>
          * 
          * <strong>example:</strong>
-         * <p>无效</p>
+         * <p>Invalid</p>
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -158,10 +158,10 @@ public class AddBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * <p>The data source. If you leave this parameter empty, the default value is used. Valid values:</p>
+         * <p>The data source. If this parameter is left empty, servers are queried by default. Valid values:</p>
          * <ul>
          * <li><strong>default</strong>: server</li>
-         * <li><strong>agentless</strong>: agentless detection</li>
+         * <li><strong>agentless</strong>: agentless</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,10 +174,10 @@ public class AddBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * <p>The type of the assets on which the whitelist rule takes effect. Valid values:</p>
+         * <p>The type of the target to which the whitelist applies. Valid values:</p>
          * <ul>
          * <li><strong>all_instance</strong>: all servers</li>
-         * <li><strong>instance</strong>: specific servers</li>
+         * <li><strong>instance</strong>: specified servers</li>
          * </ul>
          * 
          * <strong>example:</strong>

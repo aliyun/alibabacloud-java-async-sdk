@@ -129,7 +129,7 @@ public class ListCheckStandardRequest extends Request {
         } 
 
         /**
-         * <p>The instance IDs of the cloud services to which the check items belong.</p>
+         * <p>The target cloud service instance ID for the check item.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -138,7 +138,7 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * <p>The subtypes of cloud services.</p>
+         * <p>The subtype of the cloud service.</p>
          */
         public Builder instanceSubTypes(java.util.List<String> instanceSubTypes) {
             this.putQueryParameter("InstanceSubTypes", instanceSubTypes);
@@ -147,7 +147,7 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * <p>The asset types of cloud services.</p>
+         * <p>The asset type of the cloud service.</p>
          */
         public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -156,12 +156,10 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh</strong>: Chinese</p>
-         * </li>
-         * <li><p><strong>en</strong>: English</p>
-         * </li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +172,7 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * <p>List of task sources.</p>
+         * <p>The list of task sources.</p>
          */
         public Builder taskSources(java.util.List<String> taskSources) {
             this.putQueryParameter("TaskSources", taskSources);
@@ -183,18 +181,13 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * <p>The cloud service providers. Valid values:</p>
+         * <p>The list of cloud vendors. Valid values:</p>
          * <ul>
-         * <li><p><strong>ALIYUN</strong>: Alibaba Cloud.</p>
-         * </li>
-         * <li><p><strong>TENCENT</strong>: Tencent Cloud.</p>
-         * </li>
-         * <li><p><strong>HUAWEICLOUD</strong>: Huawei Cloud.</p>
-         * </li>
-         * <li><p><strong>MICROSOFT</strong>: Microsoft Azure.</p>
-         * </li>
-         * <li><p><strong>AWS</strong>: Amazon Web Services (AWS).</p>
-         * </li>
+         * <li><strong>ALIYUN</strong>: Alibaba Cloud.</li>
+         * <li><strong>TENCENT</strong>: Tencent Cloud.</li>
+         * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud.</li>
+         * <li><strong>MICROSOFT</strong>: Azure.</li>
+         * <li><strong>AWS</strong>: Amazon Web Services (AWS).</li>
          * </ul>
          */
         public Builder vendors(java.util.List<String> vendors) {

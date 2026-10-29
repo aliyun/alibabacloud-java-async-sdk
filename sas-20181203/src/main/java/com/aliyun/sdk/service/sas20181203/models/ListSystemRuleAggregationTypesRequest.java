@@ -62,7 +62,7 @@ public class ListSystemRuleAggregationTypesRequest extends Request {
          * <p>The language of the request and response. Default value: zh. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>

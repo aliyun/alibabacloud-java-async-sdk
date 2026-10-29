@@ -157,10 +157,10 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Valid values:</p>
+         * <p>The end time. Supported formats:</p>
          * <ul>
-         * <li>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC</li>
-         * <li>Date format: YYYY-MM-DDThh:mm:ssZ</li>
+         * <li>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</li>
+         * <li>Formatted time: YYYY-MM-DDThh:mm:ssZ.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,9 +173,9 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The expression that is used to compute the query results in real time.</p>
+         * <p>The expression used to perform real-time calculations on the query results.</p>
          * <blockquote>
-         * <p> Only the groupby expression is supported. This expression is similar to the GROUP BY statement that applies to databases.</p>
+         * <p>Currently, only groupby (similar to the GROUP BY clause in databases) is supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,9 +188,9 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records to return on each page for paging in a paged query.</p>
          * <blockquote>
-         * <p> The maximum value of the Length parameter in a request is 1440.</p>
+         * <p>The maximum value of Length for a single request is 1440.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The metric that is used to monitor the cloud service.</p>
+         * <p>The name of the monitoring metric for the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>cpu_total</p>
@@ -215,7 +215,7 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The namespace of the cloud service. Format: acs_cloud service name.</p>
+         * <p>The data namespace of the cloud service. Naming convention: acs_ServiceName.</p>
          * 
          * <strong>example:</strong>
          * <p>acs_ecs_dashboard</p>
@@ -227,7 +227,8 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The management node ID.</p>
+         * <p>The ID of the management node.</p>
+         * <p>This parameter is required. If you do not specify this parameter, the API returns an IllegalParam error (HTTP 400).</p>
          * 
          * <strong>example:</strong>
          * <p>cc427e14-f257-4670-9d2b-d83bbbe7****</p>
@@ -251,11 +252,11 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The following formats are supported:</p>
+         * <p>The start time. Supported formats:</p>
          * <ul>
-         * <li>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC</li>
-         * <li>Date format: YYYY-MM-DDThh:mm:ssZ</li>
-         * <li>The interval between the start time and the end time is less than or equal to 31 days.</li>
+         * <li>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</li>
+         * <li>Formatted time: YYYY-MM-DDThh:mm:ssZ.</li>
+         * <li>The interval between StartTime and EndTime must be less than or equal to 31 days.</li>
          * </ul>
          * 
          * <strong>example:</strong>

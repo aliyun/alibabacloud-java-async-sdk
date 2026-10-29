@@ -67,7 +67,7 @@ public class DescribeContainerServiceK8sClusterKritisStatusResponseBody extends 
         } 
 
         /**
-         * <p>The Kritis status information of the ACK cluster.</p>
+         * <p>The Kritis status information of the Container Service for Kubernetes cluster.</p>
          */
         public Builder kritisStatus(KritisStatus kritisStatus) {
             this.kritisStatus = kritisStatus;
@@ -75,7 +75,7 @@ public class DescribeContainerServiceK8sClusterKritisStatusResponseBody extends 
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>

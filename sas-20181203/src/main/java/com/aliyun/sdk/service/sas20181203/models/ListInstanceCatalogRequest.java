@@ -143,10 +143,10 @@ public class ListInstanceCatalogRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language type of the request and response messages. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,10 +159,10 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter the assets that support custom checks. Valid values:</p>
+         * <p>Specifies whether to filter assets that support custom checks. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Filter assets that support custom checks.</li>
-         * <li><strong>false</strong>: All assets are selected. This is the default value.</li>
+         * <li><strong>true</strong>: Filters assets that support custom checks.</li>
+         * <li><strong>false</strong>: All check assets. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,10 +175,10 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the asset resides. Valid values:</p>
+         * <p>The ID of the region where the instance to be queried is located. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: International</li>
-         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * <li><strong>cn-hangzhou</strong>: Center.</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * <p>The IDs of requirement items.</p>
+         * <p>The list of requirement IDs.</p>
          */
         public Builder requirementIds(java.util.List<Long> requirementIds) {
             this.putQueryParameter("RequirementIds", requirementIds);
@@ -200,7 +200,7 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * <p>The IDs of standards.</p>
+         * <p>The list of standard IDs.</p>
          */
         public Builder standardIds(java.util.List<Long> standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
@@ -209,7 +209,7 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * <p>List of task sources.</p>
+         * <p>The list of task sources.</p>
          */
         public Builder taskSources(java.util.List<String> taskSources) {
             this.putQueryParameter("TaskSources", taskSources);
@@ -218,7 +218,7 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * <p>The types of check standards.</p>
+         * <p>The list of types to which the check standards belong.</p>
          */
         public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);

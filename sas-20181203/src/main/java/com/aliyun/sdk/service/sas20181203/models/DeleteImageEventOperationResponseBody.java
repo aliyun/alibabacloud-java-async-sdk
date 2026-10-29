@@ -106,7 +106,7 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code of the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The message returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -136,7 +136,7 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61****</p>
@@ -147,10 +147,10 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Successful.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The primary key of the alert disposal rule.</p>
+             * <p>The primary key of the alert handling rule.</p>
              * 
              * <strong>example:</strong>
              * <p>443496</p>

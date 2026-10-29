@@ -187,7 +187,7 @@ public class DescribeImageRepoListRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>Specifies the number of the page to return. Default value: <strong>1</strong>, which indicates the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -201,8 +201,8 @@ public class DescribeImageRepoListRequest extends Request {
         /**
          * <p>The search field. Valid values:</p>
          * <ul>
-         * <li><strong>repoName</strong>: image repository name</li>
-         * <li><strong>repoNamespace</strong>: image repository namespace</li>
+         * <li><strong>repoName</strong>: image repository name.</li>
+         * <li><strong>repoNamespace</strong>: image repository namespace.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter takes effect only when <strong>OperateType</strong> is set to <strong>other</strong>.</p>
@@ -235,7 +235,7 @@ public class DescribeImageRepoListRequest extends Request {
         /**
          * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li><strong>count</strong>: statistics</li>
+         * <li><strong>count</strong>: statistics.</li>
          * <li><strong>other</strong>: other.</li>
          * </ul>
          * 
@@ -249,9 +249,9 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page during paging.</p>
+         * <p>Specifies the maximum number of entries to return on each page in a paging query. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>Set PageSize to a non-empty value.</p>
+         * <p>Do not leave this parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -290,8 +290,8 @@ public class DescribeImageRepoListRequest extends Request {
         /**
          * <p>Specifies whether the item is selected. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: No.</li>
-         * <li><strong>1</strong>: Yes.</li>
+         * <li><strong>0</strong>: no.</li>
+         * <li><strong>1</strong>: yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * <p>The dimension of the defense switch configuration. Valid values:</p>
+         * <p>The operation dimension for the defense switch configuration. Valid values:</p>
          * <ul>
          * <li><strong>image_repo</strong>: image repository ID.</li>
          * </ul>

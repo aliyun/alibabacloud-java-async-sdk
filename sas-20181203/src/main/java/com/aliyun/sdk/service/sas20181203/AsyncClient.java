@@ -107,6 +107,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddInstallCodeResponse> addInstallCode(AddInstallCodeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, the service connects to and verifies the target image registry. Make sure that the image registry address is accessible and that the username and password are valid.</p>
+     * 
      * @param request the request parameters of AddPrivateRegistry  AddPrivateRegistryRequest
      * @return AddPrivateRegistryResponse
      */
@@ -397,6 +400,30 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Initiates deep analysis for a specified file and streams the progress of each analysis phase in real time by using Server-Sent Events (SSE).
+     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial edition verification based on the source.
+     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing phases. Valid values for the event name (event):</p>
+     * <ul>
+     * <li>accepted: The request is accepted.</li>
+     * <li>authorized: The purchase verification for the source is passed.</li>
+     * <li>alertResolved: The file hash is parsed from the alert or input parameters.</li>
+     * <li>fileReady: The file download link is ready.</li>
+     * <li>dispatched: The file is delivered to the detection engine, including the requestId.</li>
+     * <li>result: The analysis result is matched. This parameter is optional and pushed after the asynchronous result is ready.</li>
+     * <li>done: The current analysis process is completed.</li>
+     * <li>error: A processing exception occurs, including the error code and message.
+     * The data payload of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateFileDeepAnalyze  CreateFileDeepAnalyzeRequest
+     * @return CreateFileDeepAnalyzeResponse
+     */
+    CompletableFuture<CreateFileDeepAnalyzeResponse> createFileDeepAnalyze(CreateFileDeepAnalyzeRequest request);
+
+    ResponseIterable<CreateFileDeepAnalyzeResponseBody> createFileDeepAnalyzeWithResponseIterable(CreateFileDeepAnalyzeRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Pushes a file to the cloud for detection.</p>
      * <h3>File upload methods</h3>
      * <p>Two file upload methods are supported: pre-upload and download URL.
@@ -652,7 +679,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
      * 
      * @param request the request parameters of CreateSoarStrategyTask  CreateSoarStrategyTaskRequest
      * @return CreateSoarStrategyTaskResponse
@@ -848,7 +875,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You cannot delete the default server group provided by Security Center, which is <strong>Ungrouped</strong>. After you delete a group, the assets in the group are moved to <strong>Ungrouped</strong> by default.</p>
+     * <p>You cannot delete the default server group provided by Security Center, which is <strong>Ungrouped</strong>. After you delete a group, the assets in the group are moved to the <strong>Ungrouped</strong> group by default.</p>
      * 
      * @param request the request parameters of DeleteGroup  DeleteGroupRequest
      * @return DeleteGroupResponse
@@ -1229,7 +1256,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries servers that have the anti-ransomware client installed in a specified region.</p>
+     * <p>This operation queries the servers on which the anti-ransomware client is installed in a specified region.</p>
      * 
      * @param request the request parameters of DescribeBackupClients  DescribeBackupClientsRequest
      * @return DescribeBackupClientsResponse
@@ -1393,7 +1420,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</p>
+     * <p>You can search for assets by conditions such as instance ID, instance name, VPC ID, region, and public IP address. You can also set logical relationships between different search conditions to search for assets that meet multiple conditions.</p>
      * 
      * @param request the request parameters of DescribeCloudCenterInstances  DescribeCloudCenterInstancesRequest
      * @return DescribeCloudCenterInstancesResponse
@@ -1556,7 +1583,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only users who have purchased Container Registry Enterprise instances can invoke this operation.</p>
+     * <p>Only users who have purchased Container Registry Enterprise instances can invoke this API operation.</p>
      * 
      * @param request the request parameters of DescribeContainerStatistics  DescribeContainerStatisticsRequest
      * @return DescribeContainerStatisticsResponse
@@ -2128,9 +2155,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the commands for manually installing the Security Center agent on servers. The query results include installation verification codes and server-related information. If you need to manually install the Security Center agent on a server, call this operation to obtain the manual installation commands.</p>
-     * <h3>Rate limit</h3>
-     * <p>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as needed.</p>
+     * <p>This operation queries the installation commands used to manually install the Security Center agent on a server. The query result includes the installation verification code and server-related information. When you need to manually install the Security Center agent on a server, you can call this operation to obtain the manual installation commands.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeInstallCodes  DescribeInstallCodesRequest
      * @return DescribeInstallCodesResponse
@@ -2435,7 +2462,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRiskCheckSummaryResponse> describeRiskCheckSummary(DescribeRiskCheckSummaryRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeRiskItemType is deprecated  * @description This operation is offline. Use the upgraded operation ListCheckStandard instead.
+     * @deprecated OpenAPI DescribeRiskItemType is deprecated  * @description This operation is deprecated. Use the upgraded operation ListCheckStandard instead.
      * 
      * @param request the request parameters of DescribeRiskItemType  DescribeRiskItemTypeRequest
      * @return DescribeRiskItemTypeResponse
@@ -2559,7 +2586,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API is only supported by the Enterprise and Flagship editions of Cloud Security Center, other versions do not support it.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
      * 
      * @param request the request parameters of DescribeSoarPlaybookTaskDetail  DescribeSoarPlaybookTaskDetailRequest
      * @return DescribeSoarPlaybookTaskDetailResponse
@@ -2595,7 +2622,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</p>
+     * <p>This API operation is supported only by the Enterprise and Ultimate editions of Security Center.</p>
      * 
      * @param request the request parameters of DescribeSoarStrategyTaskParams  DescribeSoarStrategyTaskParamsRequest
      * @return DescribeSoarStrategyTaskParamsResponse
@@ -3141,7 +3168,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation by using the management account of the resource directory or a delegated administrator account of Security Center.</p>
+     * <p>You must use the management account of a resource directory or the delegated administrator account of Security Center to call this operation.</p>
      * 
      * @param request the request parameters of EnableServiceAccessResourceDirectory  EnableServiceAccessResourceDirectoryRequest
      * @return EnableServiceAccessResourceDirectoryResponse
@@ -3162,7 +3189,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the export progress and retrieve the download URL for the exported Excel file.</p>
+     * <p>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the file export progress and obtain the download link for the exported Excel file.</p>
      * 
      * @param request the request parameters of ExportRecord  ExportRecordRequest
      * @return ExportRecordResponse
@@ -3177,10 +3204,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Exports a vulnerability list. You can export vulnerability lists for Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
-     * This operation is used together with the DescribeVulExportInfo operation. After you call this operation to create a vulnerability export task, call the <a href="~~DescribeVulExportInfo~~">DescribeVulExportInfo</a> operation with the export task ID to check the progress of the export task.</p>
+     * <p>This operation exports vulnerability lists. You can use it to export lists of Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
+     * This operation is used together with the DescribeVulExportInfo operation. After you use this operation to create a vulnerability export task, you can call the DescribeVulExportInfo operation and specify the ID of the vulnerability export task to view the progress of the export task.</p>
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</p>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of ExportVul  ExportVulRequest
      * @return ExportVulResponse
@@ -3188,7 +3215,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportVulResponse> exportVul(ExportVulRequest request);
 
     /**
-     * @deprecated OpenAPI ExportWarning is deprecated, please use Sas::2018-12-03::ExportRecord instead.  * @param request  the request parameters of ExportWarning  ExportWarningRequest
+     * @deprecated OpenAPI ExportWarning is deprecated, please use Sas::2018-12-03::ExportRecord instead.  * @description **[Deprecated]** Exports the list of baseline check results. This operation is deprecated. Use [ExportRecord](~~ExportRecord~~) instead.
+     * 
+     * @param request the request parameters of ExportWarning  ExportWarningRequest
      * @return ExportWarningResponse
      */
     @Deprecated
@@ -3701,6 +3730,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetHoneypotPresetResponse> getHoneypotPreset(GetHoneypotPresetRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified honeypot probe. Before calling this operation, call ListHoneypotProbe to query the probe status. Call this operation only for ready probes whose status is online or installed. Probes in the install_failed or initialing state are unavailable.</p>
+     * 
      * @param request the request parameters of GetHoneypotProbe  GetHoneypotProbeRequest
      * @return GetHoneypotProbeResponse
      */
@@ -4047,7 +4079,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>***.</p>
+     * <hr>
      * 
      * @param request the request parameters of HandleSimilarMaliciousFiles  HandleSimilarMaliciousFilesRequest
      * @return HandleSimilarMaliciousFilesResponse
@@ -4103,7 +4135,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before installation, make sure that the Security Center client on your server is online and that your server can access Alibaba Cloud services over the network.</p>
+     * <p>Before installation, ensure that the Security Center agent on your server is online and that your server has Normal access to Alibaba Cloud services.</p>
      * </blockquote>
      * 
      * @param request the request parameters of InstallCloudMonitor  InstallCloudMonitorRequest
@@ -4158,7 +4190,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of assets for agentless detection.</p>
+     * <p>Queries the list of assets for agentless scanning.</p>
      * 
      * @param request the request parameters of ListAgentlessAsset  ListAgentlessAssetRequest
      * @return ListAgentlessAssetResponse
@@ -4656,7 +4688,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</p>
+     * <p>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address. You can also configure logical relationships between different search conditions to find assets that meet multiple conditions.</p>
      * 
      * @param request the request parameters of ListMultiUserInstances  ListMultiUserInstancesRequest
      * @return ListMultiUserInstancesResponse
@@ -4677,7 +4709,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only users who have purchased the cloud platform configuration check quota or enabled pay-as-you-go billing for cloud platform configuration checks can call this operation.</p>
+     * <p>Only users who have purchased cloud platform configuration check quotas or enabled the pay-as-you-go billing method for cloud platform configuration checks can call this operation.</p>
      * 
      * @param request the request parameters of ListOperationCheck  ListOperationCheckRequest
      * @return ListOperationCheckResponse
@@ -5004,7 +5036,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Cleared logs cannot be recovered. Before calling this operation, perform a log export and save the logs to a local device, and then call this operation to clear the logs and free up storage capacity space.</p>
+     * <p>Logs cannot be recovered after they are cleared. Perform log export and store the logs locally before you call this operation to clear the logs and release storage capacity.</p>
      * 
      * @param request the request parameters of ModifyClearLogstoreStorage  ModifyClearLogstoreStorageRequest
      * @return ModifyClearLogstoreStorageResponse
@@ -5198,10 +5230,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p><em>Before you begin</em>*
      * Activate &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/48863.html">Simple Log Service</a>
-     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/log-service/latest/billable-items">Log Service</a>.
-     * Create a service-linked role and authorize Security Center to access cloud resources. You can call the <a href="~~CreateServiceLinkedRole~~">CreateServiceLinkedRole</a> operation to create a service-linked role and authorize Security Center to access cloud resources.
-     * <strong>Common scenarios</strong>
-     * Before you use the log analysis feature of Security Center, call the <a href="~~ModifyOpenLogShipper~~">ModifyOpenLogShipper</a> operation to activate Simple Log Service.</p>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/log-service/latest/billable-items">Simple Log Service</a> first, and create a service-linked role to authorize Security Center to access cloud resources. You can call the <a href="~~CreateServiceLinkedRole~~">CreateServiceLinkedRole</a> operation to create a service-linked role and authorize Security Center to access cloud resources.
+     * <strong>Scenarios</strong>
+     * Before you use the log analysis feature of Security Center, you must call the <a href="~~ModifyOpenLogShipper~~">ModifyOpenLogShipper</a> operation to enable Simple Log Service.</p>
      * 
      * @param request the request parameters of ModifyOpenLogShipper  ModifyOpenLogShipperRequest
      * @return ModifyOpenLogShipperResponse
@@ -5222,7 +5253,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The application whitelist is a China-site public preview feature that is no longer open for new applications. Users who have already applied for or are using this feature can call this operation as expected.</p>
+     * <p>The application whitelist feature is in public preview and is no longer available for new applications. Users who have already applied for or are currently using this feature can call this operation as usual.</p>
      * 
      * @param request the request parameters of ModifyProcessWhiteList  ModifyProcessWhiteListRequest
      * @return ModifyProcessWhiteListResponse
@@ -5282,7 +5313,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API call. Other editions do not support this call.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
      * 
      * @param request the request parameters of ModifySoarStrategySubscribe  ModifySoarStrategySubscribeRequest
      * @return ModifySoarStrategySubscribeResponse
@@ -5891,13 +5922,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you no longer need Security Center to protect your non-Alibaba Cloud servers, you can call the UnbindAegis operation to unbind the servers. After a non-Alibaba Cloud server is unbound, the server no longer consumes your Security Center quota (the number of servers or compute cores). The released quota can then be used to protect other servers.</p>
+     * <p>If you no longer need Security Center to protect your non-Alibaba Cloud servers, you can call the UnbindAegis operation to unbind the servers. After a non-Alibaba Cloud server is unbound, it no longer consumes the quota of Security Center (the number of protected servers or CPU cores). The released quota can be used to protect other servers.</p>
      * <blockquote>
-     * <p>Only non-Alibaba Cloud servers require the unbinding operation. Alibaba Cloud ECS instances do not require unbinding. For ECS instances, even if you uninstall the agent, the server still appears in the asset management list in an offline state and is not removed from the list.<br><strong>Before you begin</strong></p>
+     * <p>Only non-Alibaba Cloud servers need to be unbound. You do not need to unbind Alibaba Cloud ECS instances. Even if you uninstall the agent from an ECS instance, the instance remains in the asset management list in the offline state and is not removed from the list.<br><strong>Before you begin</strong></p>
      * </blockquote>
      * <ul>
-     * <li>The agent on the non-Alibaba Cloud server that you want to unbind has been paused (the client status is disabled). You can call the <a href="~~PauseClient~~">PauseClient</a> operation to pause the agent.</li>
-     * <li>Client self-protection has been disabled on the non-Alibaba Cloud server that you want to unbind. For more information, see <a href="https://help.aliyun.com/document_detail/460802.html">Client self-protection</a>.</li>
+     * <li>The agent on the non-Alibaba Cloud server that you want to unbind is paused (the client status is Disabled). You can call the <a href="~~PauseClient~~">PauseClient</a> operation to pause the agent.</li>
+     * <li>Client self-protection is disabled for the non-Alibaba Cloud server that you want to unbind. For more information about how to disable client self-protection, see <a href="https://help.aliyun.com/document_detail/460802.html">Client self-protection</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of UnbindAegis  UnbindAegisRequest

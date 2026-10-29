@@ -145,7 +145,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         /**
          * <p>The ID of the check item.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to obtain the check item ID.&gt;Notice: When this parameter is specified, the Uuid parameter is required.</p>
+         * <p>You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to obtain the check item ID.&gt;Notice: If this parameter is specified, the Uuid parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -158,10 +158,10 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * <p>The alert ID of the check item.</p>
+         * <p>The ID of the check item alert.</p>
          * <blockquote>
-         * <p>To query the details of a specified check item, provide the alert ID of the check item. You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to obtain this ID.
-         * Notice: This parameter is required when both Uuid and CheckId are empty.</p>
+         * <p>To query the details of a specified check item, you must provide the check item alert ID. You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to obtain the ID.
+         * Notice: This parameter is required if both the Uuid and CheckId parameters are left empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * <p>The container name.</p>
+         * <p>The name of the container.</p>
          * 
          * <strong>example:</strong>
          * <p>test_container</p>
@@ -202,7 +202,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+         * <p>The ID of the Alibaba Cloud account for the member accounts in the resource folder.</p>
          * <blockquote>
          * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
@@ -217,7 +217,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>103.25.XX.XX</p>
@@ -231,7 +231,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         /**
          * <p>The UUID of the server to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.&gt;Notice: When this parameter is specified, the CheckId parameter is required.</p>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.&gt;Notice: If this parameter is specified, the CheckId parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

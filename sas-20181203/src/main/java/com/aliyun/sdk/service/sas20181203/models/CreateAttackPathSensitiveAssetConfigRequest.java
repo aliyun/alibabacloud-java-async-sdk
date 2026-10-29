@@ -75,7 +75,7 @@ public class CreateAttackPathSensitiveAssetConfigRequest extends Request {
         } 
 
         /**
-         * <p>List of cloud product assets.</p>
+         * <p>The list of cloud service assets.</p>
          * <p>This parameter is required.</p>
          */
         public Builder attackPathAssetList(java.util.List<AttackPathAssetList> attackPathAssetList) {
@@ -85,9 +85,9 @@ public class CreateAttackPathSensitiveAssetConfigRequest extends Request {
         }
 
         /**
-         * <p>Configuration type. Possible values:</p>
+         * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li>asset_instance: Asset.</li>
+         * <li>asset_instance: asset.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -204,9 +204,9 @@ public class CreateAttackPathSensitiveAssetConfigRequest extends Request {
             } 
 
             /**
-             * <p>Subtype of the cloud product asset.</p>
+             * <p>The subtype of the cloud service asset.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the subtype of the cloud product asset.</p>
+             * <p>You can call the <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> operation to query the subtype of the cloud service asset.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -219,9 +219,9 @@ public class CreateAttackPathSensitiveAssetConfigRequest extends Request {
             }
 
             /**
-             * <p>Type of the cloud product asset.</p>
+             * <p>The type of the cloud service asset.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the type of the cloud product asset.</p>
+             * <p>You can call the <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> operation to query the type of the cloud service asset.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -234,9 +234,9 @@ public class CreateAttackPathSensitiveAssetConfigRequest extends Request {
             }
 
             /**
-             * <p>Cloud product asset instance ID.</p>
+             * <p>The instance ID of the cloud service asset.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the cloud product asset instance ID.</p>
+             * <p>You can call the <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> operation to query the instance ID of the cloud service asset.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -249,9 +249,9 @@ public class CreateAttackPathSensitiveAssetConfigRequest extends Request {
             }
 
             /**
-             * <p>Region ID of the cloud product asset instance.</p>
+             * <p>The region ID of the cloud service asset instance.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the region ID of the cloud product asset instance.</p>
+             * <p>You can call the <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> operation to query the region ID of the cloud service asset instance.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -264,9 +264,9 @@ public class CreateAttackPathSensitiveAssetConfigRequest extends Request {
             }
 
             /**
-             * <p>Cloud product asset vendor.</p>
+             * <p>The vendor of the cloud service asset.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the cloud product asset vendor.</p>
+             * <p>You can call the <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> operation to query the vendor of the cloud service asset.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 

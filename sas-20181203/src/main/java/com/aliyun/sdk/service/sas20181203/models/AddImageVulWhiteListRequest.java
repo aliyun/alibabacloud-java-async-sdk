@@ -129,7 +129,7 @@ public class AddImageVulWhiteListRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Default value: zh. Valid values:</p>
+         * <p>The language of the request and response. Default value: zh. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -145,7 +145,7 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The reason why you add the vulnerability to the whitelist.</p>
+         * <p>The reason for adding the whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>already config in another way</p>
@@ -159,8 +159,8 @@ public class AddImageVulWhiteListRequest extends Request {
         /**
          * <p>The source of the whitelist. Valid values:</p>
          * <ul>
-         * <li><strong>image</strong></li>
-         * <li><strong>agentless</strong></li>
+         * <li><strong>image</strong>: image</li>
+         * <li><strong>agentless</strong>: agentless</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,10 +173,10 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The object on which you want to perform the operation. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <p>The operation target. This parameter is in JSON format and contains the following fields:</p>
          * <ul>
-         * <li><strong>type</strong>: the object type. The value is fixed to repo.</li>
-         * <li><strong>target</strong>: the object content. The value is in the Namespace/Image repository format.</li>
+         * <li><strong>type</strong>: the target type. Set the value to repo.</li>
+         * <li><strong>target</strong>: the target content. Format: namespace/image repository.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The type of the vulnerability. Valid values:</p>
+         * <p>The vulnerability type. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: system vulnerability</li>
          * <li><strong>sca</strong>: application vulnerability</li>
@@ -205,11 +205,11 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The whitelist. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <p>The whitelist. This parameter is in JSON format and contains the following fields:</p>
          * <ul>
          * <li><strong>Type</strong>: the vulnerability type. Valid values: cve and sca.</li>
-         * <li><strong>Name</strong>: the name of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).</li>
-         * <li><strong>AliasName</strong>: the alias of the vulnerability that is specified in CVE.</li>
+         * <li><strong>Name</strong>: the name in the vulnerability advisory.</li>
+         * <li><strong>AliasName</strong>: the alias in the vulnerability advisory.</li>
          * </ul>
          * 
          * <strong>example:</strong>

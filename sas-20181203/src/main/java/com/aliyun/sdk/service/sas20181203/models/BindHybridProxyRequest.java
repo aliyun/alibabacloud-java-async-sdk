@@ -88,7 +88,7 @@ public class BindHybridProxyRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of servers that you want to add to Security Center over the proxy server.</p>
+         * <p>The UUIDs of the servers connected to the proxy.</p>
          * <p>This parameter is required.</p>
          */
         public Builder yundunUuids(java.util.List<String> yundunUuids) {

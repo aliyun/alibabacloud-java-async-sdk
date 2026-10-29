@@ -87,10 +87,10 @@ public class ExecStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The action to perform. Default value: <strong>exec</strong>. Valid values:</p>
+         * <p>Specifies the action for this execution. Default value: <strong>exec</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>exec</strong>: exec.</li>
-         * <li><strong>terminate</strong>: stop.</li>
+         * <li><strong>exec</strong>: Execute.</li>
+         * <li><strong>terminate</strong>: Stop.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class ExecStrategyRequest extends Request {
         }
 
         /**
-         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese.</li>
          * <li><strong>en</strong>: English.</li>
@@ -121,7 +121,7 @@ public class ExecStrategyRequest extends Request {
         /**
          * <p>The ID of the baseline check policy.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeStrategy~~">DescribeStrategy</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~DescribeStrategy~~">DescribeStrategy</a> operation to obtain the policy ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

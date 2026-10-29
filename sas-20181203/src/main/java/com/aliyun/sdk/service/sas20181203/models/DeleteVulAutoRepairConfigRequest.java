@@ -101,7 +101,7 @@ public class DeleteVulAutoRepairConfigRequest extends Request {
         /**
          * <p>The list of configuration IDs to delete.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListVulAutoRepairConfig~~">ListVulAutoRepairConfig</a> operation to obtain configuration IDs.</p>
+         * <p>You can call the <a href="~~ListVulAutoRepairConfig~~">ListVulAutoRepairConfig</a> operation to retrieve the configuration IDs.</p>
          * </blockquote>
          */
         public Builder configIdList(java.util.List<Long> configIdList) {
@@ -111,9 +111,9 @@ public class DeleteVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * <p>The type of the vulnerability. Valid values: </p>
+         * <p>The vulnerability type. Valid values: </p>
          * <ul>
-         * <li>cve: Linux software vulnerability </li>
+         * <li>cve: Linux software vulnerability. </li>
          * <li>sys: Windows system vulnerability.</li>
          * </ul>
          * 

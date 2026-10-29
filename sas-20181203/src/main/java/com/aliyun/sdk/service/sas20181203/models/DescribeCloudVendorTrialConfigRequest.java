@@ -75,9 +75,9 @@ public class DescribeCloudVendorTrialConfigRequest extends Request {
         } 
 
         /**
-         * <p>Unique ID of the AK.</p>
+         * <p>The unique ID of the AccessKey.</p>
          * <blockquote>
-         * <h2>You can call <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a> to get the AuthId.</h2>
+         * <h2>You can call <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a> to obtain the AuthId.</h2>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -91,7 +91,7 @@ public class DescribeCloudVendorTrialConfigRequest extends Request {
         }
 
         /**
-         * <p>Cloud asset vendor. Values:</p>
+         * <p>The cloud asset vendor. Valid values:</p>
          * <ul>
          * <li><strong>Tencent</strong>: Tencent Cloud</li>
          * <li><strong>AWS</strong>: Amazon Web Services</li>

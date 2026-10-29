@@ -241,7 +241,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * <p>The name of the field that is used to query containers.</p>
+         * <p>The name of the container security query parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>clusterId</p>
@@ -253,7 +253,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * <p>The value of the field that is used to query containers.</p>
+         * <p>The value of the container security query parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>ce89cdd0ea732472a8703821b19e****</p>
@@ -265,7 +265,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -277,9 +277,9 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * <p>The ID of the asset group.</p>
+         * <p>The ID of the asset group to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to query the ID of the asset group.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -292,7 +292,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -308,9 +308,9 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries to display on each page during paging in a paged query. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave this parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -323,7 +323,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * <p>The keyword that is used to query servers in fuzzy match mode.</p>
+         * <p>The fuzzy match keyword for servers.</p>
          * 
          * <strong>example:</strong>
          * <p>225</p>
@@ -335,9 +335,9 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -350,7 +350,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * <p>The type of the check item.</p>
+         * <p>The category to which the check item belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cis</p>
@@ -362,10 +362,10 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * <p>The data source. Default value: default. Valid values:</p>
+         * <p>The data source. If you leave this parameter empty, the baseline check results for servers are queried by default. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: The check items of baselines for hosts.</li>
-         * <li><strong>agentless</strong>: The check items of baselines for agentless detection.</li>
+         * <li><strong>default</strong>: server</li>
+         * <li><strong>agentless</strong>: agentless</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -378,7 +378,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * <p>The status of the check item. Valid values:</p>
+         * <p>The status of the check item. Default value: null. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: failed</li>
          * <li><strong>2</strong>: verifying</li>
@@ -398,7 +398,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * <p>The UUID array of the servers.</p>
+         * <p>The list of server UUIDs.</p>
          */
         public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);

@@ -308,7 +308,7 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The timestamp of the end time.</p>
+         * <p>The end time. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1650470399999</p>
@@ -416,7 +416,7 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The type of the operation.</p>
+         * <p>The type of the current operation.</p>
          * 
          * <strong>example:</strong>
          * <p>READ</p>
@@ -440,7 +440,7 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The remarks.</p>
+         * <p>The remark. This parameter is required when SelectAll is set to true. If this parameter is not provided, the service returns HTTP 500 with the error code -100.</p>
          */
         public Builder remark(java.util.List<String> remark) {
             this.putQueryParameter("Remark", remark);
@@ -449,7 +449,7 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The rule name.</p>
+         * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>tetsRule</p>
@@ -461,7 +461,7 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to select all.</p>
+         * <p>Specifies whether to select all events.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -474,7 +474,7 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649260800000</p>

@@ -118,10 +118,10 @@ public class ModifyProcessWhiteListRequest extends Request {
         } 
 
         /**
-         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,9 +134,9 @@ public class ModifyProcessWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The MD5 hash of the process startup file.</p>
+         * <p>The MD5 hash value of the process startup file.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeWhiteListProcess~~">DescribeWhiteListProcess</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~DescribeWhiteListProcess~~">DescribeWhiteListProcess</a> operation to query the value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -150,7 +150,7 @@ public class ModifyProcessWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains this value.</p>
+         * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically retrieves the value.</p>
          * 
          * <strong>example:</strong>
          * <p>173.128.XX.XX</p>
@@ -162,10 +162,10 @@ public class ModifyProcessWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The whitelist status of the process. Valid values:</p>
+         * <p>Specifies the whitelist status of the process. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Remove from the whitelist.</li>
-         * <li><strong>2</strong>: Add to the whitelist.</li>
+         * <li><strong>1</strong>: remove from the whitelist</li>
+         * <li><strong>2</strong>: add to the whitelist</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -181,7 +181,7 @@ public class ModifyProcessWhiteListRequest extends Request {
         /**
          * <p>The ID of the policy.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to query the ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
