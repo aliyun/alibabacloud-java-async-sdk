@@ -261,7 +261,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of edge services. This parameter is available only when you set the ServiceType parameter to 2.</p>
+             * <p>The number of edge services. This field returns data only when ServiceType is set to 2.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -283,7 +283,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of data disks.</p>
+             * <p>The number of data cloud disks.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -294,7 +294,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of stopped VMs.</p>
+             * <p>The number of stopped virtual machine instances.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -305,7 +305,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of expired VM instances.</p>
+             * <p>The number of expired virtual machine instances.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -316,7 +316,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of VM instances that are about to expire.</p>
+             * <p>The number of virtual machine instances that are about to expire.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -360,14 +360,11 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service. Valid values:</p>
+             * <p>The service type. Valid values:</p>
              * <ul>
-             * <li><p>1: subscription instance.</p>
-             * </li>
-             * <li><p>2: edge service instance.</p>
-             * </li>
-             * <li><p>3: pay-as-you-go instance.</p>
-             * </li>
+             * <li>1: Subscription instance.</li>
+             * <li>2: Edge service instance.</li>
+             * <li>3: Pay-as-you-go instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -379,7 +376,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total disk size.</p>
+             * <p>The total disk storage capacity.</p>
              * 
              * <strong>example:</strong>
              * <p>5000</p>

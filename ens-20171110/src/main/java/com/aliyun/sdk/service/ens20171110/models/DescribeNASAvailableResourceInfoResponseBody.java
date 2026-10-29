@@ -93,7 +93,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Business status code. Returns 0 on success.</p>
+         * <p>The business status code. A value of 0 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -104,7 +104,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>you are not authorized to this workspace, or workspace not exists.</p>
@@ -115,7 +115,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Available NAS resource information.</p>
+         * <p>The available NAS resource information.</p>
          */
         public Builder nasAvailableResourceInfo(java.util.List<NasAvailableResourceInfo> nasAvailableResourceInfo) {
             this.nasAvailableResourceInfo = nasAvailableResourceInfo;
@@ -123,7 +123,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
@@ -270,7 +270,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Edge zone product capabilities.</p>
+             * <p>The product capabilities of the edge zone.</p>
              */
             public Builder ability(java.util.List<String> ability) {
                 this.ability = ability;
@@ -278,7 +278,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Area to which the ENS edge zone belongs.</p>
+             * <p>The area to which the ENS edge zone belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>SouthWestChina</p>
@@ -289,7 +289,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>English name.</p>
+             * <p>The English name.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-chenzhou-telecom_unicom_cmcc</p>
@@ -300,7 +300,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ENS edge zone ID.</p>
+             * <p>The ENS edge zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-chenzhou-telecom_unicom_cmcc</p>
@@ -311,7 +311,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ENS edge zone name.</p>
+             * <p>The name of the ENS edge zone.</p>
              * 
              * <strong>example:</strong>
              * <p>China Hangzhou36</p>
@@ -322,7 +322,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Available NAS resource count.</p>
+             * <p>The resource count of active NAS resources.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -333,7 +333,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Available NAS resource type.</p>
+             * <p>The type of available NAS resources.</p>
              * 
              * <strong>example:</strong>
              * <p>capacity</p>
@@ -344,10 +344,10 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Province to which the ENS edge zone belongs.</p>
+             * <p>The province to which the ENS edge zone belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>湖北省</p>
+             * <p>Hubei Province</p>
              */
             public Builder province(String province) {
                 this.province = province;

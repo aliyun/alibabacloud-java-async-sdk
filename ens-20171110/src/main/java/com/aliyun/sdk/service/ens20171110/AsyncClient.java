@@ -40,9 +40,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 5 times per second per user.</li>
-     * <li>Internal networks and IPv4 addresses are not supported.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 5 calls per second.</li>
+     * <li>Internal networks and IPv4 are not supported.</li>
      * </ul>
      * 
      * @param request the request parameters of AddNetworkInterfaceToInstance  AddNetworkInterfaceToInstanceRequest
@@ -70,15 +70,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you To associate an HAVIP, take note of the following items:</p>
+     * <p>When you invoke this operation to associate a high availability virtual IP address (HaVip), take note of the following items:</p>
      * <ul>
-     * <li>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</li>
-     * <li>The HAVIP and ENS instance must belong to the same vSwitch.</li>
-     * <li>The ENS instance must be in the Running or Stopped state.</li>
-     * <li>The HAVIP must be in the Available or InUse state.</li>
-     * <li>AssociateHaVip is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the DescribeHaVips operation to query the status of an HAVIP:<ul>
-     * <li>If the HAVIP is in the Associating state, the HAVIP is being associated.<!----></li>
-     * <li>If the HAVIP is in the InUse state, the HAVIP is associated.</li>
+     * <li>After a HaVip is associated, you do not need to restart the ENS instance. However, you must configure the HaVip on the elastic network interface controller (NIC) of the ENS instance.</li>
+     * <li>The HaVip and the ENS instance to be associated must belong to the same vSwitch.</li>
+     * <li>The ENS instance to be associated must be in the Running or Stopped state.</li>
+     * <li>The HaVip instance must be in the Available or InUse state.</li>
+     * <li>The AssociateHaVip operation is an asynchronous operation. After you invoke this operation, the system returns a request ID, but the HaVip is not immediately associated. The association task is still running in the background. You can invoke the DescribeHaVips operation to query the association status of the HaVip:<ul>
+     * <li>If the HaVip is in the Associating state, the HaVip is being associated.</li>
+     * </ul>
+     * <ul>
+     * <li>If the HaVip is in the InUse state, the HaVip is associated.</li>
      * </ul>
      * </li>
      * </ul>
@@ -109,11 +111,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Maximum request rate per user: 10 requests per second.</li>
-     * <li>After the command script runs successfully, the instance restarts and loads automatically.</li>
-     * <li>Instance requirements: minimum size of 2C4G and CentOS 7.4 or later image.
-     * &lt;props=&quot;china&quot;&gt;
-     * Before calling this operation, <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>After the command script is successfully executed, the instance automatically restarts.</li>
+     * <li>Instance requirements: The minimum instance specification is 2 vCPUs and 4 GiB of memory, and the image must be CentOS 7.4 or later.
+     * &lt;props=&quot;china&quot;&gt;Before you call this operation, you must <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of AttachEnsInstances  AttachEnsInstancesRequest
@@ -135,11 +136,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can only attach a key pair to stopped instances.</p>
+     * <h2>Operation description</h2>
+     * <p>This batch operation attaches a key pair to instances. You can only perform this operation on stopped instances.</p>
      * <ul>
-     * <li>Specify up to 30 instances per call.</li>
-     * <li>Specify either <code>KeyPairName</code> or <code>KeyPairId</code>.</li>
-     * <li>We recommend using <code>KeyPairId</code>, as <code>KeyPairName</code> will be deprecated.</li>
+     * <li>You can attach the key pair to a maximum of 30 instances in a single call.</li>
+     * <li>You must specify at least one of the KeyPairName and KeyPairId parameters.</li>
+     * <li>Specify KeyPairId when you call this operation. The KeyPairName parameter will be deprecated.</li>
      * </ul>
      * 
      * @param request the request parameters of AttachKeyPair  AttachKeyPairRequest
@@ -149,13 +151,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following limits:</p>
+     * <p>Note the following when you call this operation:</p>
      * <ul>
-     * <li>The ENI must be in the Available state.</li>
-     * <li>An ENI can be attached to only one instance that is the same zone and the same Virtual Private Cloud (VPC).</li>
+     * <li>The elastic network interfaces (ENIs) must be in the Available state.</li>
+     * <li>Each ENI can be attached to only one instance in the same zone and VPC at a time.</li>
      * <li>The instance must be in the Stopped state.</li>
-     * <li>A maximum of 10 ENIs can be attached to an instance.</li>
-     * <li>This operation is an asynchronous operation. After you To attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</li>
+     * <li>You can attach up to 10 elastic network interfaces (ENIs) to an instance.</li>
+     * <li>This operation is asynchronous. After the call succeeds, you can query the ENI status to check the operation result.</li>
      * </ul>
      * 
      * @param request the request parameters of AttachNetworkInterface  AttachNetworkInterfaceRequest
@@ -171,7 +173,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>In the security group-related API documents, outbound traffic refers to the traffic that is sent by the source device and received at the destination device.</p>
+     * <p>In the API documentation for security groups, the initiator of traffic is the source, and the receiver of data transmission is the destination.</p>
      * 
      * @param request the request parameters of AuthorizeSecurityGroupEgress  AuthorizeSecurityGroupEgressRequest
      * @return AuthorizeSecurityGroupEgressResponse
@@ -369,8 +371,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API call frequency: 100 times per second.</li>
-     * <li>Per-user call frequency: 5 times per second.</li>
+     * <li>API rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 5 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateLoadBalancer  CreateLoadBalancerRequest
@@ -474,12 +476,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A Shared Data Group (SDG) is a data partition image of a virtual device. You can save the data partition of a virtual device as an SDG. The SDG can then be deployed to the data partition of other virtual devices for fast data sharing and application deployment. The following describes the workflow of SDG-related operations:</p>
+     * <p>A Data Sharing Group (SDG) can be regarded as an image of a data partition on a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be used for deployment to the data partitions of other virtual devices to enable fast data distribution and application. The workflow for SDG-related operations is as follows:</p>
      * <ul>
-     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, a blank cloud disk (also called a raw cloud disk) is mounted to device A (InstanceId) for SDG creation.</li>
-     * <li>Install applications, deliver files, and perform other required operations on AIC instance A (InstanceId).</li>
-     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk of AIC instance A as SDG A.</li>
-     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC instance B. This process is asynchronous. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available and has the same applications as AIC instance A.</li>
+     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, an empty cloud disk (also known as the original cloud disk) is mounted to instance A (InstanceId) for SDG creation.</li>
+     * <li>Perform required operations on AIC instance A (InstanceId), such as installing applications and distributing files.</li>
+     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk on AIC instance A as SDG A.</li>
+     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to another AIC instance B. This process is executed asynchronously. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available, and the applications on AIC instance B are identical to those on AIC instance A.
+     * <strong>Before you begin</strong></li>
+     * <li>Before you call this operation, the AIC instance must be in the <strong>success</strong> state. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation and check the AICInstances[].State field to confirm the status.</li>
+     * <li>It usually takes 30 to 60 minutes to create an ARM server. Wait until the State changes from <strong>creating</strong> to <strong>success</strong> before you call this operation.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSDG  CreateSDGRequest
@@ -1224,7 +1229,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</p>
+     * <p>Queries the boot configuration. This operation is supported only for heterogeneous instances (PCFarm bare metal instances).</p>
      * 
      * @param request the request parameters of DescribeInstanceBootConfiguration  DescribeInstanceBootConfigurationRequest
      * @return DescribeInstanceBootConfigurationResponse
@@ -1282,7 +1287,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>API call rate: 100 calls per second.</li>
-     * <li>Per-user call rate: 10 calls per second.</li>
+     * <li>API call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeLoadBalancerAttribute  DescribeLoadBalancerAttributeRequest
@@ -1293,8 +1298,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeLoadBalancerHTTPListenerAttribute  DescribeLoadBalancerHTTPListenerAttributeRequest
@@ -1305,8 +1310,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeLoadBalancerHTTPSListenerAttribute  DescribeLoadBalancerHTTPSListenerAttributeRequest
@@ -1365,8 +1370,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API call rate: 100 calls per second.</li>
-     * <li>Call rate per user: 10 calls per second.</li>
+     * <li>API rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeLoadBalancers  DescribeLoadBalancersRequest
@@ -1660,7 +1665,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This O\&amp;M task currently supports only the <code>Instance:SystemUpgrade.Migrate</code> event type for migrations due to an underlying upgrade.</li>
+     * <li>This O&amp;M operation currently supports only the following event type: Instance:SystemUpgrade.Migrate (migration required for underlying upgrades).</li>
      * </ul>
      * 
      * @param request the request parameters of EventMigrateInstance  EventMigrateInstanceRequest
@@ -1671,7 +1676,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation currently supports only the following Event Type: Instance:SystemMaintenance.Reboot (an Instance Reboot due to System Maintenance).</li>
+     * <li>This O&amp;M operation currently supports only the following event type: Instance:SystemMaintenance.Reboot (instance restart due to system maintenance).</li>
      * </ul>
      * 
      * @param request the request parameters of EventRebootInstance  EventRebootInstanceRequest
@@ -1759,8 +1764,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After the key pair is imported, ENS stores the public key. You must securely store the private key.</li>
-     * <li>The key pair can be only in the ssh-rsa format.</li>
+     * <li>After the key pair is imported, Alibaba Cloud ENS stores the public key. You must securely store the private key of the key pair.</li>
+     * <li>Only the ssh-rsa format is supported.</li>
      * </ul>
      * 
      * @param request the request parameters of ImportKeyPair  ImportKeyPairRequest
@@ -1812,7 +1817,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you remove an instance from a security group, the instance must be in the Stopped or Running state.</p>
+     * <p>The instance must be in the Stopped or Running state before you remove it from a security group.</p>
      * 
      * @param request the request parameters of LeaveSecurityGroup  LeaveSecurityGroupRequest
      * @return LeaveSecurityGroupResponse
@@ -1957,9 +1962,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You cannot reset the instance password when the instance status is Starting.</li>
-     * <li>You cannot modify the instance password when the instance status is Running.</li>
-     * <li>After resetting the password, restart the instance in the console or invoke the RebootInstance operation for the change to take effect. Restarting the instance from within the operating system does not take effect.</li>
+     * <li>You cannot reset the password of an instance when the instance status is Starting.</li>
+     * <li>You cannot modify the password of an instance when the instance status is Running.</li>
+     * <li>After you reset the password, you must restart the instance in the console or invoke the RebootInstance operation for the changes to take effect. Restarting the instance from within the operating system does not take effect.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyInstanceAttribute  ModifyInstanceAttributeRequest
@@ -1994,17 +1999,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The instance that you want to manage must be in the Stopped state. When you modify the parameters of a scaling group, the following limits apply:</p>
+     * <p>When you call this operation, the ENS instance must be in the Stopped state.
+     * Note the following when you modify the attributes:</p>
      * <ul>
      * <li>Instance:<ul>
-     * <li>Instances that are associated with SLB are not supported.</li>
+     * <li>Instances associated with load balancing are not supported.</li>
      * </ul>
      * </li>
      * <li>Network:<ul>
-     * <li>Instances that are associated with EIPs are not supported.</li>
-     * <li>Instances that are associated with high-availability virtual IP addresses are not supported.</li>
-     * <li>Instances that have been used as next hops in the routing table are not supported.</li>
-     * <li>Secondary ENIs cannot be attached to the ECS instance.</li>
+     * <li>Instances bound to an elastic IP address (EIP) are not supported.</li>
+     * <li>Instances bound to a high-availability virtual IP address (HAVIP) are not supported.</li>
+     * <li>Instances used as the next hop in a route table are not supported.</li>
+     * <li>Instances bound to secondary elastic network interfaces (ENIs) are not supported.</li>
      * <li>Instances configured with secondary IP addresses are not supported.</li>
      * </ul>
      * </li>
@@ -2018,8 +2024,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyLoadBalancerAttribute  ModifyLoadBalancerAttributeRequest
@@ -2129,8 +2135,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can configure up to 1,000 rules.</li>
-     * <li>If an object matches multiple rules, the rule with the earliest expiration time applies.</li>
+     * <li>Up to 1,000 rules are supported.</li>
+     * <li>If an object matches multiple rules, the rule with the earliest expiration time takes precedence.</li>
      * </ul>
      * 
      * @param request the request parameters of PutBucketLifecycle  PutBucketLifecycleRequest
@@ -2402,8 +2408,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of SetLoadBalancerHTTPSListenerAttribute  SetLoadBalancerHTTPSListenerAttributeRequest
@@ -2414,8 +2420,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of SetLoadBalancerStatus  SetLoadBalancerStatusRequest
@@ -2438,8 +2444,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API call rate limit: 100 requests/second.</li>
-     * <li>Per-user rate limit: 10 requests/second.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of SetLoadBalancerUDPListenerAttribute  SetLoadBalancerUDPListenerAttributeRequest

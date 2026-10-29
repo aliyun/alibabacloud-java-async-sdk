@@ -106,7 +106,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The specifications. Valid values:</p>
+         * <p>The specifications.</p>
          */
         public Builder loadBalancerSpecs(java.util.List<LoadBalancerSpecs> loadBalancerSpecs) {
             this.loadBalancerSpecs = loadBalancerSpecs;
@@ -114,7 +114,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the instance list.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -136,7 +136,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -147,7 +147,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -216,7 +216,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the instance type.</p>
+             * <p>The display name of the instance specification.</p>
              * 
              * <strong>example:</strong>
              * <p>elb.s1.small</p>
@@ -227,7 +227,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the ELB instance.</p>
+             * <p>The specification of the load balancing instance.</p>
              * 
              * <strong>example:</strong>
              * <p>elb.s1.small</p>

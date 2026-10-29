@@ -73,7 +73,7 @@ public class DescribeEnsResourceUsageRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time of the query range for the expiration time of virtual machine instances. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-06-15T09:07:23Z</p>
@@ -85,7 +85,7 @@ public class DescribeEnsResourceUsageRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time of the query range for the expiration time of virtual machine instances. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-06-15T09:07:23Z</p>

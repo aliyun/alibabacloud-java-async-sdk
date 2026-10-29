@@ -117,7 +117,7 @@ public class DescribeFileSystemsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The edge zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-cmcc</p>
@@ -129,7 +129,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The NAS file system ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c50f8*****</p>
@@ -141,7 +141,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The name of the file system.</p>
+         * <p>The NAS file system name.</p>
          * 
          * <strong>example:</strong>
          * <p>FileSystem1</p>
@@ -153,7 +153,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Starting value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -89,14 +89,11 @@ public class AttachDiskRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether the disk to be attached is released with the instance. Valid values:</p>
+         * <p>Specifies whether the cloud disk to be mounted is released when the instance is released. Valid values:</p>
          * <ul>
-         * <li><p>true: The disk will be released when the ECS instance is released.</p>
-         * </li>
-         * <li><p>false: The disk will be retained when the ECS instance is released.</p>
-         * </li>
-         * <li><p>If you leave this parameter empty, the default value is used.</p>
-         * </li>
+         * <li>true: The cloud disk is released when the instance is released.</li>
+         * <li>false: The cloud disk is retained when the instance is released.</li>
+         * <li>Empty: The default value is false.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +106,7 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the disk to be attached. The cloud disk and the instance must belong to the same node.</p>
+         * <p>The ID of the cloud disk to mount. The cloud disk and the instance must be in the same edge zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,7 +119,7 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

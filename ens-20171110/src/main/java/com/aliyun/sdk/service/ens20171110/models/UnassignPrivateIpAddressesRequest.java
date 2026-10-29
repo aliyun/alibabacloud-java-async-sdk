@@ -75,7 +75,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ENI.</p>
+         * <p>The ID of the network interface controller (NIC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

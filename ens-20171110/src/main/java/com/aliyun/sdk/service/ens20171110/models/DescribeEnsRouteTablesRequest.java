@@ -173,12 +173,10 @@ public class DescribeEnsRouteTablesRequest extends Request {
         } 
 
         /**
-         * <p>The type of the resource with which the route table is associated. Valid values:</p>
+         * <p>The type of resource associated with the route table. Valid values:</p>
          * <ul>
-         * <li><p><strong>VSwitch</strong></p>
-         * </li>
-         * <li><p><strong>Gateway</strong></p>
-         * </li>
+         * <li><strong>VSwitch</strong>: vSwitch</li>
+         * <li><strong>Gateway</strong>: gateway</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,7 +189,7 @@ public class DescribeEnsRouteTablesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ENS node.</p>
+         * <p>The ENS edge zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-xian-unicom</p>
@@ -203,7 +201,7 @@ public class DescribeEnsRouteTablesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
+         * <p>The array of ENS edge zone IDs. Array length: 1 to 100.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -212,7 +210,7 @@ public class DescribeEnsRouteTablesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n-257gqcdfvx6n****</p>
@@ -224,7 +222,7 @@ public class DescribeEnsRouteTablesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -236,7 +234,7 @@ public class DescribeEnsRouteTablesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -272,9 +270,9 @@ public class DescribeEnsRouteTablesRequest extends Request {
         }
 
         /**
-         * <p>The SNAT type.</p>
+         * <p>The SNAT type. Valid values:</p>
          * <ul>
-         * <li>FullCone: full cone NAT.</li>
+         * <li>FullCone: full-cone NAT</li>
          * </ul>
          * 
          * <strong>example:</strong>

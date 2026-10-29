@@ -102,7 +102,7 @@ public class DescribeInstanceBootConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>The startup method.</p>
+         * <p>The boot method.</p>
          * 
          * <strong>example:</strong>
          * <p>legacy</p>
@@ -114,7 +114,7 @@ public class DescribeInstanceBootConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The startup type.</p>
+         * <p>The boot type.</p>
          * 
          * <strong>example:</strong>
          * <p>pxe</p>
@@ -126,7 +126,7 @@ public class DescribeInstanceBootConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the startup depends on the disk.</p>
+         * <p>Specifies whether the boot process depends on disks.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -138,7 +138,7 @@ public class DescribeInstanceBootConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

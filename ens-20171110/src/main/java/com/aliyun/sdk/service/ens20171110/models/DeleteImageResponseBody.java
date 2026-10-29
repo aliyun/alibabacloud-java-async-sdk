@@ -67,7 +67,7 @@ public class DeleteImageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business code. The value 0 is returned for success.</p>
+         * <p>The business code. A value of 0 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

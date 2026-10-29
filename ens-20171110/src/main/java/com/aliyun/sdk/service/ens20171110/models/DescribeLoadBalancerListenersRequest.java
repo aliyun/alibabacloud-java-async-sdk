@@ -119,7 +119,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         } 
 
         /**
-         * <p>The description of the image.</p>
+         * <p>The description of the listener.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -131,7 +131,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * <p>The listener port.</p>
+         * <p>The frontend port used by the load balancing instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -143,7 +143,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ELB instance.</p>
+         * <p>The ID of the load balancing instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

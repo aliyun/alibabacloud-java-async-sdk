@@ -125,7 +125,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -336,7 +336,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the association was created. The time is in the ISO 8601 UTC format of YYYY-MM-DDTHH:mm:ssZ.</p>
+             * <p>The time when the instance was associated. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-01-05T07:09:28Z</p>
@@ -358,10 +358,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance to attach to the HaVip. Valid values:</p>
+             * <p>The type of the instance to attach the HaVip to. Valid values:</p>
              * <ul>
-             * <li>EnsInstance: An ENS cloud server instance.</li>
-             * <li>NetworkInterface: An elastic network interfaces (ENIs) instance, which is a network interface controller (NIC).</li>
+             * <li>EnsInstance: ENS cloud server instance.</li>
+             * <li>NetworkInterface: network interface controller (NIC).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -384,10 +384,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The association status of the HaVip instance. Valid values:</p>
+             * <p>The association status of the HaVip. Valid values:</p>
              * <ul>
              * <li>Associating: The HaVip is being associated.</li>
-             * <li>InUse: The HaVip is available.</li>
+             * <li>InUse: The HaVip is in use.</li>
              * <li>Unassociating: The HaVip is being disassociated.</li>
              * </ul>
              * 
@@ -576,7 +576,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The elastic IP addresses (EIPs) associated with the HaVip.</p>
+             * <p>The EIPs associated with the HaVip.</p>
              */
             public Builder associatedEipAddresses(java.util.List<AssociatedEipAddresses> associatedEipAddresses) {
                 this.associatedEipAddresses = associatedEipAddresses;
@@ -584,7 +584,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instances associated with the HaVip.</p>
+             * <p>The information about the instances associated with the HaVip.</p>
              */
             public Builder associatedInstances(java.util.List<AssociatedInstances> associatedInstances) {
                 this.associatedInstances = associatedInstances;
@@ -592,7 +592,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the HaVip was created. The time is in the ISO 8601 UTC format of YYYY-MM-DDTHH:mm:ssZ.</p>
+             * <p>The time when the HaVip was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-29T11:17:38Z</p>
@@ -614,7 +614,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ENS node.</p>
+             * <p>The ENS edge zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-guiyang-14</p>
@@ -669,7 +669,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HaVip status. Valid values:</p>
+             * <p>The status of the HaVip. Valid values:</p>
              * <ul>
              * <li>Creating: The HaVip is being created.</li>
              * <li>Available: The HaVip is available.</li>

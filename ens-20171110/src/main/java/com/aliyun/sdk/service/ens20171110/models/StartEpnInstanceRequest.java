@@ -60,7 +60,7 @@ public class StartEpnInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the EPN instance.</p>
+         * <p>The edge-to-edge network instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

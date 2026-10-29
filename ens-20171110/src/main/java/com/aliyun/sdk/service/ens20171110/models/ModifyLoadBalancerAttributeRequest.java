@@ -75,7 +75,7 @@ public class ModifyLoadBalancerAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ELB instance.</p>
+         * <p>The ID of the load balancing instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,9 +88,9 @@ public class ModifyLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the ELB instance. The name must be <strong>2</strong> to <strong>128</strong> characters in length.</p>
+         * <p>The name of the load balancing instance. The name must be <strong>2</strong> to <strong>128</strong> characters in length, and can contain English or Chinese characters.</p>
          * <blockquote>
-         * <p>The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>It cannot start with <code>http://</code> or <code>https://</code>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

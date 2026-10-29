@@ -75,7 +75,7 @@ public class AttachEnsInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. Only one ID is supported.</p>
+         * <p>The instance ID. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class AttachEnsInstancesRequest extends Request {
         }
 
         /**
-         * <p>The command to run on the instance, encoded in Base64 using UTF-8.</p>
+         * <p>The command to execute on the instance. The command must be encoded in Base64 and UTF-8.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

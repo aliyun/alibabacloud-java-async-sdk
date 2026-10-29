@@ -74,7 +74,7 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of an instance. Separate multiple IDs with semicolons (;).</p>
+         * <p>The instance IDs. Separate multiple IDs with semicolons (;).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

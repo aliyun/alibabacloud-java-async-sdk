@@ -114,7 +114,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the list.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Settings for the number of entries per page during paging in a paged query. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+         * <p>The Settings for the number of entries per page for paging in a paged query. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -147,7 +147,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -194,7 +194,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>If you leave DataDisk.1.Size empty, the value that you specified for this parameter is used.</p>
+         * <p>The data cloud disks. If DataDisk.1.Size is empty and this field is not empty, this field takes precedence.</p>
          */
         public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
             String dataDisksShrink = shrink(dataDisks, "DataDisks", "json");
@@ -204,7 +204,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ENS node.</p>
+         * <p>The edge zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The specifications of instances.</p>
+         * <p>The instance type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,16 +230,12 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The bandwidth metering method of the instance. Valid values:</p>
+         * <p>The Billable methods for ENS bandwidth. Valid values:</p>
          * <ul>
-         * <li><p>BandwidthByDay: Pay by daily peak bandwidth</p>
-         * </li>
-         * <li><p>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</p>
-         * </li>
-         * <li><p>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</p>
-         * </li>
-         * <li><p>PayByBandwidth: Pay by fixed bandwidth</p>
-         * </li>
+         * <li>BandwidthByDay: daily peak bandwidth.</li>
+         * <li>95BandwidthByMonth: monthly 95th percentile bandwidth.</li>
+         * <li>PayByBandwidth4thMonth: monthly fourth peak bandwidth.</li>
+         * <li>PayByBandwidth: bandwidth with defined specifications.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -253,14 +249,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance.</p>
+         * <p>The subscription duration of the resource.</p>
          * <ul>
-         * <li><p>If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</p>
-         * </li>
-         * <li><p>If you set PeriodUnit to Day, you can set Period only to 3.</p>
-         * </li>
-         * <li><p>If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.</p>
-         * </li>
+         * <li>If PeriodUnit is not specified, the default billing cycle is month. Only Day and Month are supported.</li>
+         * <li>If PeriodUnit is set to Day, Period can only be set to 3.</li>
+         * <li>If PeriodUnit is set to Month, Period can be set to 1 to 9 or 12.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -274,12 +267,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The billing cycle of the ENS instance. Valid values:</p>
+         * <p>The billing cycle for querying the prices of ENS resources. Valid values:</p>
          * <ul>
-         * <li><p>Month (default):</p>
-         * </li>
-         * <li><p>Day</p>
-         * </li>
+         * <li>Month (default): monthly billing cycle.</li>
+         * <li>Day: daily billing cycle.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -292,7 +283,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The number of instances.</p>
+         * <p>The quantity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -351,7 +342,7 @@ public class DescribePriceRequest extends Request {
             } 
 
             /**
-             * <p>The size of the data disk. Unit: GB. If you specify this parameter, this parameter takes precedence over the Size property in DataDisks.</p>
+             * <p>The size of the data cloud disk. Unit: GB. If this field is not empty, it takes precedence.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -409,7 +400,7 @@ public class DescribePriceRequest extends Request {
             } 
 
             /**
-             * <p>The size of the system disk. Unit: GB.</p>
+             * <p>The size of the system cloud disk. Unit: GB.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -480,7 +471,7 @@ public class DescribePriceRequest extends Request {
             } 
 
             /**
-             * <p>The category of the disk.</p>
+             * <p>The cloud disk category.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_efficiency</p>
@@ -491,7 +482,7 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GB.</p>
+             * <p>The size of the data cloud disk. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>

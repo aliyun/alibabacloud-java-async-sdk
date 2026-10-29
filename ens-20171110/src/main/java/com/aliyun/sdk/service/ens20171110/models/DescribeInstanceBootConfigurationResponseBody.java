@@ -170,7 +170,7 @@ public class DescribeInstanceBootConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The startup method.</p>
+             * <p>The boot method.</p>
              * 
              * <strong>example:</strong>
              * <p>legacy</p>
@@ -181,7 +181,7 @@ public class DescribeInstanceBootConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The startup type.</p>
+             * <p>The boot type.</p>
              * 
              * <strong>example:</strong>
              * <p>disk</p>
@@ -192,7 +192,7 @@ public class DescribeInstanceBootConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the startup depends on the disk.</p>
+             * <p>Specifies whether the boot process depends on disks.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -203,7 +203,7 @@ public class DescribeInstanceBootConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-****</p>

@@ -172,7 +172,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         } 
 
         /**
-         * <p>The destination Classless Inter-Domain Routing (CIDR) block of the route entry.</p>
+         * <p>The destination CIDR block of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>11.0.0.0/16</p>
@@ -184,7 +184,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the next hop.</p>
+         * <p>The instance ID of the next hop.</p>
          * 
          * <strong>example:</strong>
          * <p>i-2zecshuv3axtr2gc4noa</p>
@@ -196,14 +196,11 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The type of next hop of the custom route entry. Valid values:</p>
+         * <p>The type of the next hop for a custom route entry. Valid values:</p>
          * <ul>
-         * <li><p>Instance (default): an ENS instance.</p>
-         * </li>
-         * <li><p>HaVip: a high-availability virtual IP address (HAVIP).</p>
-         * </li>
-         * <li><p>NetworkPeer: VPC peering connection.</p>
-         * </li>
+         * <li>Instance (default): ENS instance.</li>
+         * <li>HaVip: high-availability virtual IP address.</li>
+         * <li>NetworkPeer: network peering connection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +213,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The page number of the returned page. Valid values: integers that are greater than 0. Default value: 1.</p>
+         * <p>The page number of the list to query. Valid values: greater than 0. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +225,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Valid values: 10 to 100.</p>
+         * <p>The number of entries per page in a paging query. Valid values: 10 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -240,7 +237,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route that you want to query.</p>
+         * <p>The ID of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>rte-8vbdw66evgv44u2u7v3hx</p>
@@ -252,7 +249,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The name of the route.</p>
+         * <p>The name of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>test0</p>
@@ -264,12 +261,10 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The route type. Valid values:</p>
+         * <p>The type of the routing entry. Valid values:</p>
          * <ul>
-         * <li><p>Custom: custom route</p>
-         * </li>
-         * <li><p>System: system route</p>
-         * </li>
+         * <li>Custom: custom route.</li>
+         * <li>System: system route.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -282,7 +277,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route table that you want to query.</p>
+         * <p>The ID of the route table.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-hp3wdhynneo7fsclox8hs</p>

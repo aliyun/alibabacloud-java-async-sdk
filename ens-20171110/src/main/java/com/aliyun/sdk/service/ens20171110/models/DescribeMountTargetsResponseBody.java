@@ -106,7 +106,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The collection of mount target information.</p>
+         * <p>The information about the mount targets.</p>
          */
         public Builder mountTargets(java.util.List<MountTargets> mountTargets) {
             this.mountTargets = mountTargets;
@@ -114,10 +114,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -125,7 +122,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of rows per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -290,7 +287,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount target path.</p>
+             * <p>The path of the mount target.</p>
              * 
              * <strong>example:</strong>
              * <p>LB:/fileSystemName/mountTargetName</p>
@@ -301,7 +298,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount target name.</p>
+             * <p>The name of the mount target.</p>
              * 
              * <strong>example:</strong>
              * <p>TestMountPath</p>
@@ -323,12 +320,12 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount target status. Valid values:</p>
+             * <p>The status of the mount target. Valid values:</p>
              * <ul>
-             * <li>active: Active.</li>
-             * <li>inactive: Inactive.</li>
-             * <li>pending: Queued.</li>
-             * <li>deleting: Being deleted.</li>
+             * <li>active: The mount target is available.</li>
+             * <li>inactive: The mount target is unavailable.</li>
+             * <li>pending: The task is queued.</li>
+             * <li>deleting: The mount target is being deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>

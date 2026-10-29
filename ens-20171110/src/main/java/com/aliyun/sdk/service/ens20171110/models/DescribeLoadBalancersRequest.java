@@ -274,8 +274,8 @@ public class DescribeLoadBalancersRequest extends Request {
         /**
          * <p>The listener status of the load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>Active</strong>: The listeners in the instance can forward accepted traffic based on rules.</li>
-         * <li><strong>InActive</strong>: The listeners in the instance no longer forward accepted traffic.</li>
+         * <li><strong>Active</strong>: The listeners in the instance can accept and forward traffic based on rules.</li>
+         * <li><strong>InActive</strong>: The listeners in the instance no longer accept and forward traffic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,7 +312,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The page number of the list. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -324,7 +324,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The Settings for the number of entries per page during paging in a paged query. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+         * <p>The Settings for the number of entries per page for paging in a paged query. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

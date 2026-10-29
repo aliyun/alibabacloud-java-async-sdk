@@ -67,7 +67,7 @@ public class InstanceActiveOpsTask extends TeaModel {
         } 
 
         /**
-         * InstanceActiveOpsTaskId.
+         * <p>instance active ops task id</p>
          */
         public Builder instanceActiveOpsTaskId(String instanceActiveOpsTaskId) {
             this.instanceActiveOpsTaskId = instanceActiveOpsTaskId;
@@ -75,7 +75,7 @@ public class InstanceActiveOpsTask extends TeaModel {
         }
 
         /**
-         * InstanceActiveOpsTaskStatus.
+         * <p>the status of instance active ops task</p>
          */
         public Builder instanceActiveOpsTaskStatus(String instanceActiveOpsTaskStatus) {
             this.instanceActiveOpsTaskStatus = instanceActiveOpsTaskStatus;

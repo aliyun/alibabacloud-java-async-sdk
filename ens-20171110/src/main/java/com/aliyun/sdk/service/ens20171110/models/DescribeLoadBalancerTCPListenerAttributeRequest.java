@@ -75,7 +75,7 @@ public class DescribeLoadBalancerTCPListenerAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The listener port. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>The listener port to be queried. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeLoadBalancerTCPListenerAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the load balancer instance.</p>
+         * <p>The ID of the load balancing instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

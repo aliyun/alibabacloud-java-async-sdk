@@ -75,7 +75,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The listener port that you want to query. Valid values: <strong>1 to 65535</strong>.</p>
+         * <p>The listener port to query. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ELB instance.</p>
+         * <p>The ID of the load balancing instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

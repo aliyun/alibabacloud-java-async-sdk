@@ -103,11 +103,11 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to unbind all tags from the resource. This parameter takes effect only when TagKey.N is not specified in the request. Valid values:</p>
+         * <p>Specifies whether to remove all tags from the resources. This parameter takes effect only when TagKey.N is not specified in the request. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Unbinds all tags.</p>
+         * <li><p><strong>true</strong>: Removes all tags.</p>
          * </li>
-         * <li><p><strong>false</strong> (default): Does not unbind all tags.</p>
+         * <li><p><strong>false</strong> (default): Does not remove all tags.</p>
          * </li>
          * </ul>
          * 
@@ -121,7 +121,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of resource IDs. A maximum of 50 items can be specified.</p>
+         * <p>The list of resource IDs. You can specify up to 50 items.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -144,7 +144,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tag key. Valid values of n: 1 to 20.</p>
+         * <p>The tag keys. The value of N ranges from 1 to 20.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

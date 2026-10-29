@@ -144,7 +144,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * <p>The mount target name.</p>
+         * <p>The name of the mount target.</p>
          * 
          * <strong>example:</strong>
          * <p>TestMountPath</p>
@@ -156,7 +156,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * <p>The page number, starting from 1. Default value: 1.</p>
+         * <p>The page number. Starting value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * <p>The number of rows per page, with a maximum value of 100. Default value: 10.</p>
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

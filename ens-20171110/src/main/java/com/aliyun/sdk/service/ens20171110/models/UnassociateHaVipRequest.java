@@ -75,7 +75,7 @@ public class UnassociateHaVipRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the HAVIP that you want to disassociate.</p>
+         * <p>The ID of the HaVip to disassociate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ENS instance or ENI that you want to disassociate from the HAVIP.</p>
+         * <p>The ID of the ENS instance or network interface controller (NIC) to disassociate from the HaVip.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
