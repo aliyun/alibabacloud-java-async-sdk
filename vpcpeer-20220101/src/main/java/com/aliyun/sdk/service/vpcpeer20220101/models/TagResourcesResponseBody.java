@@ -36,6 +36,10 @@ public class TagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class TagResourcesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(TagResourcesResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C46FF5A8-C5F0-4024-8262-B16B639225A0</p>
@@ -66,10 +78,10 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <p>Indicates whether the tags were created and attached. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong>: The tags were created and attached.</li>
+         * <li><strong>false</strong>: The tags failed to be created and attached.</li>
          * </ul>
          * 
          * <strong>example:</strong>

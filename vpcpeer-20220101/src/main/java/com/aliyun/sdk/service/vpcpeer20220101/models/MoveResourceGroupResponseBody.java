@@ -36,6 +36,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(MoveResourceGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The request ID.</p>
          * 
@@ -66,10 +78,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <p>Indicates whether the resource group was changed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The resource group was changed.</li>
+         * <li><strong>false</strong>: The resource group failed to be changed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -48,6 +48,10 @@ public class CreateVpcPeerConnectionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableJumboFrame")
+    private Boolean enableJumboFrame;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LinkType")
     private String linkType;
@@ -83,6 +87,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.dryRun = builder.dryRun;
+        this.enableJumboFrame = builder.enableJumboFrame;
         this.linkType = builder.linkType;
         this.name = builder.name;
         this.regionId = builder.regionId;
@@ -99,7 +104,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,6 +159,13 @@ public class CreateVpcPeerConnectionRequest extends Request {
     }
 
     /**
+     * @return enableJumboFrame
+     */
+    public Boolean getEnableJumboFrame() {
+        return this.enableJumboFrame;
+    }
+
+    /**
      * @return linkType
      */
     public String getLinkType() {
@@ -203,6 +215,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
         private String clientToken; 
         private String description; 
         private Boolean dryRun; 
+        private Boolean enableJumboFrame; 
         private String linkType; 
         private String name; 
         private String regionId; 
@@ -223,6 +236,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.dryRun = request.dryRun;
+            this.enableJumboFrame = request.enableJumboFrame;
             this.linkType = request.linkType;
             this.name = request.name;
             this.regionId = request.regionId;
@@ -232,13 +246,15 @@ public class CreateVpcPeerConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the accepter VPC belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the acceptor of the VPC peering connection belongs.</p>
          * <ul>
-         * <li>To create a VPC peering connection within your Alibaba Cloud account, enter the ID of your Alibaba Cloud account.</li>
-         * <li>To create a VPC peering connection between your Alibaba Cloud account and another Alibaba Cloud account, enter the ID of the peer Alibaba Cloud account.</li>
+         * <li><p>If you enter your own Alibaba Cloud account ID, a same-account VPC peering connection is created.</p>
+         * </li>
+         * <li><p>If you enter the ID of another Alibaba Cloud account, a cross-account VPC peering connection is created.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If the accepter is a RAM user, set <strong>AcceptingAliUid</strong> to the ID of the Alibaba Cloud account that created the RAM user.</p>
+         * <p>If the acceptor account is a Resource Access Management (RAM) user, you must enter the ID of the Alibaba Cloud account to which the RAM user belongs in <strong>AcceptingAliUid</strong>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -252,10 +268,12 @@ public class CreateVpcPeerConnectionRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the accepter VPC of the VPC peering connection that you want to create.</p>
+         * <p>The ID of the region where the acceptor of the VPC peering connection is deployed.</p>
          * <ul>
-         * <li>To create an intra-region VPC peering connection, enter a region ID that is the same as that of the requester VPC.</li>
-         * <li>To create an inter-region VPC peering connection, enter a region ID that is different from that of the requester VPC.</li>
+         * <li><p>To create an intra-region VPC peering connection, enter the same region ID as the initiator.</p>
+         * </li>
+         * <li><p>To create an inter-region VPC peering connection, enter a region ID different from that of the initiator.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -269,7 +287,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the accepter VPC.</p>
+         * <p>The ID of the VPC that acts as the acceptor of the VPC peering connection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,7 +300,10 @@ public class CreateVpcPeerConnectionRequest extends Request {
         }
 
         /**
-         * <p>The bandwidth of the VPC peering connection. Unit: Mbit/s. The value must be an integer greater than 0. Before you specify this parameter, make sure that you create an inter-region VPC peering connection.</p>
+         * <p>The bandwidth of the VPC peering connection. Unit: Mbit/s. The value must be a positive integer.</p>
+         * <blockquote>
+         * <p>If you want to specify this parameter, make sure that you are creating an inter-region peering connection.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -297,7 +318,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -310,8 +331,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
         }
 
         /**
-         * <p>The description of the VPC peering connection.</p>
-         * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the VPC peering connection. The description must be 2 to 256 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -323,10 +343,10 @@ public class CreateVpcPeerConnectionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run for this request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: performs a dry run and does not create a VPC peering connection. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends a Normal request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -339,17 +359,29 @@ public class CreateVpcPeerConnectionRequest extends Request {
         }
 
         /**
-         * <p>The link type of the VPC peering connection that you want to create. Valid values:</p>
+         * <p>Specifies whether to enable the jumbo frame feature for the VPC peering connection. Valid values:</p>
          * <ul>
-         * <li><p>Platinum.</p>
-         * </li>
-         * <li><p>Gold: default value.</p>
+         * <li>true: enabled.</li>
+         * <li>false: disabled.<blockquote>
+         * <p>Note: If you want to specify this parameter, make sure that you are creating an inter-region peering connection.</p>
+         * </blockquote>
          * </li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder enableJumboFrame(Boolean enableJumboFrame) {
+            this.putBodyParameter("EnableJumboFrame", enableJumboFrame);
+            this.enableJumboFrame = enableJumboFrame;
+            return this;
+        }
+
+        /**
+         * <p>The link type.</p>
+         * <p>Valid values: Platinum and Gold. Default value: Gold.</p>
          * <blockquote>
-         * <ul>
-         * <li>If you need to specify this parameter, ensure that the VPC peering connection is an inter-region connection.</li>
-         * </ul>
+         * <p>If you want to specify this parameter, make sure that you are creating an inter-region peering connection.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -362,8 +394,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
         }
 
         /**
-         * <p>The name of the VPC peering connection.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The name of the VPC peering connection. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and can contain digits, underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>vpcpeer</p>
@@ -375,8 +406,8 @@ public class CreateVpcPeerConnectionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where you want to create a VPC peering connection.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where you want to create a VPC peering connection. </p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -390,7 +421,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
 
         /**
          * <p>The ID of the resource group.</p>
-         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">Resource groups</a>.</p>
+         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4ph6aiy****</p>
@@ -402,7 +433,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag information.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -411,7 +442,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the requester VPC.</p>
+         * <p>The ID create a VPC that acts as the initiator create a VPC peering connection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -474,8 +505,20 @@ public class CreateVpcPeerConnectionRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key of the resource. You must specify at least one tag key and can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -483,7 +526,11 @@ public class CreateVpcPeerConnectionRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the resource. You must specify at least one tag value and can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -36,6 +36,10 @@ public class CreateVpcPeerConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -54,8 +58,16 @@ public class CreateVpcPeerConnectionResponseBody extends TeaModel {
         private String instanceId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateVpcPeerConnectionResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The ID of the instance on which the VPC peering connection is created.</p>
+         * <p>The instance ID of the created VPC peering connection.</p>
          * 
          * <strong>example:</strong>
          * <p>pcc-lnk0m24khwvtkm****</p>

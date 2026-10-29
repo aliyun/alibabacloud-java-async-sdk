@@ -44,6 +44,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -78,6 +82,16 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TagResources> tagResources; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListTagResourcesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tagResources = model.tagResources;
+        } 
+
         /**
          * <p>The number of entries returned per page.</p>
          * 
@@ -90,10 +104,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is used for the next query. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</li>
-         * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent queries are available.</li>
+         * <li>If <strong>NextToken</strong> returns a value, the value indicates the token used to start the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,7 +119,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DE65F6B7-7566-4802-9007-96F2494AC512</p>
@@ -116,7 +130,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources to which the tags are added.</p>
+         * <p>The information about the resources to which tags are bound.</p>
          */
         public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -209,8 +223,19 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagResources model) {
+                this.regionNo = model.regionNo;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * <p>The region of the requester VPC.</p>
+             * <p>The region of the initiator of the VPC peering connection.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -221,7 +246,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pcc-bp16qjewdsunr41m1****</p>
@@ -232,7 +257,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. The value is set to <strong>PeerConnection</strong>, which indicates a VPC peering connection.</p>
+             * <p>The resource type. Valid values: <strong>PeerConnection</strong> (VPC peering connection).</p>
              * 
              * <strong>example:</strong>
              * <p>PeerConnection</p>
