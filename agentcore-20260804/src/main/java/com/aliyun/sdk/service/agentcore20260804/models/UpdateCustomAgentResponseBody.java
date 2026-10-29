@@ -158,7 +158,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that describes the processing result of the request. The value is success if the request is successful.</p>
+         * <p>The description of the processing result for the request. The value is success when the request is successful.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
+         * <p>Specifies whether the request was processed successfully. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
          * <p>This parameter is required.</p>
          */
         public Builder success(Boolean success) {
@@ -297,7 +297,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the mount is read-only. A value of true indicates a read-only mount. A value of false indicates a read-write mount.</p>
+             * <p>Specifies whether the mount is read-only. A value of true indicates a read-only mount, and a value of false indicates a read-write mount.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -394,7 +394,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The startup command for the code package. This field is required in code package mode. The working directory is the extracted code root directory /code, such as python main.py. Quotes and escapes are supported. Environment variables, pipes, and logical operations are not automatically expanded. For complex commands, use scripts within the package.</p>
+             * <p>The startup command for the code package. This field is required in code package mode. The working directory is the extracted code root directory /code, such as python main.py. Quotes and escapes are supported. Environment variables, pipes, and logical operations are not automatically expanded. Use scripts within the package for complex commands.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -418,7 +418,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The oss:// address of the platform-fixed code package referenced by the currently saved configuration. This address does not include the signature parameters of the source HTTPS link. You can use this address to reuse existing code packages. To download the content, call GetAgentCodePackageDownloadUrl.</p>
+             * <p>The oss:// address of the platform-fixed code package referenced in the currently saved configuration. This address does not include the signature parameters of the source HTTPS link. You can use this address to reuse an existing code package. To download the content, call GetAgentCodePackageDownloadUrl.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -447,19 +447,15 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         private String entrypoint;
 
         @com.aliyun.core.annotation.NameInMap("instanceId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("namespace")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String namespace;
 
         @com.aliyun.core.annotation.NameInMap("repo")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String repo;
 
         @com.aliyun.core.annotation.NameInMap("tag")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String tag;
 
         @com.aliyun.core.annotation.NameInMap("type")
@@ -558,7 +554,6 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
 
             /**
              * <p>The ID of the ACR instance to which the image repository belongs.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-a1b2c3d4e5f6</p>
@@ -570,7 +565,6 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
 
             /**
              * <p>The namespace to which the ACR image repository belongs.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent</p>
@@ -582,7 +576,6 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
 
             /**
              * <p>The name of the image repository in the ACR namespace.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>chat-agent</p>
@@ -594,7 +587,6 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
 
             /**
              * <p>The latest submitted image tag.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>v1.0.0</p>
@@ -605,7 +597,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type of the image. A value of acr indicates Alibaba Cloud Container Registry.</p>
+             * <p>The source type of the image. A value of acr indicates Alibaba Cloud Container Registry (ACR).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -706,7 +698,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The TCP port listened on by the agent service.</p>
+             * <p>The TCP port on which the agent service listens.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -883,6 +875,636 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
      *
      * <p>UpdateCustomAgentResponseBody</p>
      */
+    public static class PullNetwork extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("securityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        private PullNetwork(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+            this.type = builder.type;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PullNetwork create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+            private String type; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PullNetwork model) {
+                this.securityGroupId = model.securityGroupId;
+                this.type = model.type;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * <p>The ID of the security group. This field is required when type is set to vpc and must belong to the selected VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-example</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The type of the pull network. This field is required when you submit pullNetwork and is validated by the backend. The default value for a new configuration is public network, which is independent of the agent runtime network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the security group. This field is required when type is set to vpc and must belong to the selected VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-example</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the VPC. This field is required when type is set to vpc. The associated account and region are validated by the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-example</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public PullNetwork build() {
+                return new PullNetwork(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateCustomAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateCustomAgentResponseBody</p>
+     */
+    public static class CurrentImage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("image")
+        private String image;
+
+        @com.aliyun.core.annotation.NameInMap("instanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("namespace")
+        private String namespace;
+
+        @com.aliyun.core.annotation.NameInMap("pullNetwork")
+        private PullNetwork pullNetwork;
+
+        @com.aliyun.core.annotation.NameInMap("repo")
+        private String repo;
+
+        @com.aliyun.core.annotation.NameInMap("skipTlsVerify")
+        private Boolean skipTlsVerify;
+
+        @com.aliyun.core.annotation.NameInMap("sourceType")
+        private String sourceType;
+
+        @com.aliyun.core.annotation.NameInMap("tag")
+        private String tag;
+
+        @com.aliyun.core.annotation.NameInMap("username")
+        private String username;
+
+        private CurrentImage(Builder builder) {
+            this.image = builder.image;
+            this.instanceId = builder.instanceId;
+            this.namespace = builder.namespace;
+            this.pullNetwork = builder.pullNetwork;
+            this.repo = builder.repo;
+            this.skipTlsVerify = builder.skipTlsVerify;
+            this.sourceType = builder.sourceType;
+            this.tag = builder.tag;
+            this.username = builder.username;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CurrentImage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return pullNetwork
+         */
+        public PullNetwork getPullNetwork() {
+            return this.pullNetwork;
+        }
+
+        /**
+         * @return repo
+         */
+        public String getRepo() {
+            return this.repo;
+        }
+
+        /**
+         * @return skipTlsVerify
+         */
+        public Boolean getSkipTlsVerify() {
+            return this.skipTlsVerify;
+        }
+
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
+         * @return tag
+         */
+        public String getTag() {
+            return this.tag;
+        }
+
+        /**
+         * @return username
+         */
+        public String getUsername() {
+            return this.username;
+        }
+
+        public static final class Builder {
+            private String image; 
+            private String instanceId; 
+            private String namespace; 
+            private PullNetwork pullNetwork; 
+            private String repo; 
+            private Boolean skipTlsVerify; 
+            private String sourceType; 
+            private String tag; 
+            private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(CurrentImage model) {
+                this.image = model.image;
+                this.instanceId = model.instanceId;
+                this.namespace = model.namespace;
+                this.pullNetwork = model.pullNetwork;
+                this.repo = model.repo;
+                this.skipTlsVerify = model.skipTlsVerify;
+                this.sourceType = model.sourceType;
+                this.tag = model.tag;
+                this.username = model.username;
+            } 
+
+            /**
+             * <p>The original image address for the custom source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.example.com/team/agent:v1</p>
+             */
+            public Builder image(String image) {
+                this.image = image;
+                return this;
+            }
+
+            /**
+             * <p>The instance ID for the acr source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-example</p>
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * <p>The namespace for the acr source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>team</p>
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * <p>The dedicated pull network for the custom source.</p>
+             */
+            public Builder pullNetwork(PullNetwork pullNetwork) {
+                this.pullNetwork = pullNetwork;
+                return this;
+            }
+
+            /**
+             * <p>The repository name for the acr source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
+             */
+            public Builder repo(String repo) {
+                this.repo = repo;
+                return this;
+            }
+
+            /**
+             * <p>The certificate exception option for the custom source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder skipTlsVerify(Boolean skipTlsVerify) {
+                this.skipTlsVerify = skipTlsVerify;
+                return this;
+            }
+
+            /**
+             * <p>The image source type of the current valid version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * <p>The tag of the ACR source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
+             */
+            public Builder tag(String tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            /**
+             * <p>The source snapshot from the current active configuration version. Omitted for anonymous sources. A new source failure does not overwrite this username, and the password is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reader</p>
+             */
+            public Builder username(String username) {
+                this.username = username;
+                return this;
+            }
+
+            public CurrentImage build() {
+                return new CurrentImage(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateCustomAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateCustomAgentResponseBody</p>
+     */
+    public static class CustomImagePullNetwork extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("securityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        private CustomImagePullNetwork(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+            this.type = builder.type;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomImagePullNetwork create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+            private String type; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomImagePullNetwork model) {
+                this.securityGroupId = model.securityGroupId;
+                this.type = model.type;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * <p>The ID of the security group. This field is required when type is set to vpc and must belong to the selected VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-example</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The type of the pull network. This field is required when you submit pullNetwork and is validated by the backend. The default value for a new configuration is public network, which is independent of the agent runtime network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the security group. This field is required when type is set to vpc and must belong to the selected VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-example</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the VPC. This field is required when type is set to vpc. The associated account and region are validated by the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-example</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public CustomImagePullNetwork build() {
+                return new CustomImagePullNetwork(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateCustomAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateCustomAgentResponseBody</p>
+     */
+    public static class CustomImage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("image")
+        private String image;
+
+        @com.aliyun.core.annotation.NameInMap("pullNetwork")
+        private CustomImagePullNetwork pullNetwork;
+
+        @com.aliyun.core.annotation.NameInMap("skipTlsVerify")
+        private Boolean skipTlsVerify;
+
+        @com.aliyun.core.annotation.NameInMap("username")
+        private String username;
+
+        private CustomImage(Builder builder) {
+            this.image = builder.image;
+            this.pullNetwork = builder.pullNetwork;
+            this.skipTlsVerify = builder.skipTlsVerify;
+            this.username = builder.username;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomImage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
+        }
+
+        /**
+         * @return pullNetwork
+         */
+        public CustomImagePullNetwork getPullNetwork() {
+            return this.pullNetwork;
+        }
+
+        /**
+         * @return skipTlsVerify
+         */
+        public Boolean getSkipTlsVerify() {
+            return this.skipTlsVerify;
+        }
+
+        /**
+         * @return username
+         */
+        public String getUsername() {
+            return this.username;
+        }
+
+        public static final class Builder {
+            private String image; 
+            private CustomImagePullNetwork pullNetwork; 
+            private Boolean skipTlsVerify; 
+            private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomImage model) {
+                this.image = model.image;
+                this.pullNetwork = model.pullNetwork;
+                this.skipTlsVerify = model.skipTlsVerify;
+                this.username = model.username;
+            } 
+
+            /**
+             * <p>The latest saved source address, which may still be in preparation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.example.com/team/agent:v1</p>
+             */
+            public Builder image(String image) {
+                this.image = image;
+                return this;
+            }
+
+            /**
+             * <p>The saved dedicated pull network.</p>
+             */
+            public Builder pullNetwork(CustomImagePullNetwork pullNetwork) {
+                this.pullNetwork = pullNetwork;
+                return this;
+            }
+
+            /**
+             * <p>The saved HTTPS certificate exception option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder skipTlsVerify(Boolean skipTlsVerify) {
+                this.skipTlsVerify = skipTlsVerify;
+                return this;
+            }
+
+            /**
+             * <p>Returns the saved username only after the source is successfully prepared. Omitted for anonymous or unverified sources. This does not indicate the presence of a reusable password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reader</p>
+             */
+            public Builder username(String username) {
+                this.username = username;
+                return this;
+            }
+
+            public CustomImage build() {
+                return new CustomImage(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateCustomAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateCustomAgentResponseBody</p>
+     */
     public static class Variables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1002,7 +1624,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The latest submitted list of environment variables.</p>
+             * <p>The list of recently submitted environment variables.</p>
              */
             public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
@@ -1024,6 +1646,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
      */
     public static class HealthCheck extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("healthyThreshold")
+        @Deprecated
         private Integer healthyThreshold;
 
         @com.aliyun.core.annotation.NameInMap("intervalSeconds")
@@ -1121,7 +1744,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>This parameter does not take effect.</p>
+             * <p>This parameter does not take effect currently.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1132,7 +1755,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval between two consecutive health checks, in seconds.</p>
+             * <p>The interval between two health checks, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1143,7 +1766,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP Health Check Path.</p>
+             * <p>The HTTP health check path.</p>
              * 
              * <strong>example:</strong>
              * <p>/healthz</p>
@@ -1262,7 +1885,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the associated cache for this request.</p>
+             * <p>The ID of the currently associated cache.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1299,6 +1922,87 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
 
             public ImageCachePreparation build() {
                 return new ImageCachePreparation(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateCustomAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateCustomAgentResponseBody</p>
+     */
+    public static class ImagePreparation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("phase")
+        private String phase;
+
+        @com.aliyun.core.annotation.NameInMap("preparationId")
+        private String preparationId;
+
+        private ImagePreparation(Builder builder) {
+            this.phase = builder.phase;
+            this.preparationId = builder.preparationId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImagePreparation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return phase
+         */
+        public String getPhase() {
+            return this.phase;
+        }
+
+        /**
+         * @return preparationId
+         */
+        public String getPreparationId() {
+            return this.preparationId;
+        }
+
+        public static final class Builder {
+            private String phase; 
+            private String preparationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImagePreparation model) {
+                this.phase = model.phase;
+                this.preparationId = model.preparationId;
+            } 
+
+            /**
+             * <p>The current image preparation phase. Configuration acceptance does not mean successful deployment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QUEUED</p>
+             */
+            public Builder phase(String phase) {
+                this.phase = phase;
+                return this;
+            }
+
+            /**
+             * <p>The task ID submitted from the console for this submission. This is not the RM operationId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-example:1</p>
+             */
+            public Builder preparationId(String preparationId) {
+                this.preparationId = preparationId;
+                return this;
+            }
+
+            public ImagePreparation build() {
+                return new ImagePreparation(this);
             } 
 
         } 
@@ -1373,7 +2077,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reason code for the waiting or execution failure of the latest configuration. This code is used to determine the subsequent processing method.</p>
+             * <p>The reason code for the waiting or execution failure of the latest configuration. This is used to determine the subsequent handling method.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1385,11 +2089,11 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the reason why the latest configuration is waiting or failed to execute. Combine this with the code and retryable fields to determine what to do next.</p>
+             * <p>The description of the reason why the latest configuration is waiting or failed to execute. Refer to the code and retryable fields to determine What to do next.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Agent execution failed. Check the configuration and resubmit</p>
+             * <p>The agent execution failed. Check the configuration and resubmit</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1397,7 +2101,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether automatic retry is enabled. If the value is true, you can query again later. If the value is false, check and fix the configuration based on the reason, and then resubmit.</p>
+             * <p>Indicates whether the system automatically retries. If true, you can query again later. If false, check and fix the configuration based on the reason, and then resubmit.</p>
              * <p>This parameter is required.</p>
              */
             public Builder retryable(Boolean retryable) {
@@ -1465,7 +2169,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the SLS logstore that receives agent logs.</p>
+             * <p>The name of the SLS Logstore that receives agent logs.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-runtime</p>
@@ -1587,7 +2291,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether Internet access is allowed on the agent side. The actual access is still limited by the workspace.</p>
+             * <p>Specifies whether the agent is allowed to access the Internet. The actual access is still restricted by the workspace.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1641,7 +2345,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether access to the user VPC configured for the workspace is allowed on the agent side. The actual access is still limited by the workspace.</p>
+             * <p>Specifies whether the agent is allowed to access the user VPC configured for the workspace. The actual access is still restricted by the workspace.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1708,7 +2412,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Internet access configuration of the agent. If this field is not configured, Internet access is allowed on the agent side but is still limited by the workspace.</p>
+             * <p>The Internet access configuration of the agent. If this item is not configured, the agent allows access, but it is still restricted by the workspace.</p>
              */
             public Builder accessInternet(AccessInternet accessInternet) {
                 this.accessInternet = accessInternet;
@@ -1716,7 +2420,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user VPC access configuration of the agent. If this field is not configured, user VPC access is allowed on the agent side but is still limited by the workspace.</p>
+             * <p>The user VPC access configuration of the agent. If this item is not configured, the agent allows access, but it is still restricted by the workspace.</p>
              */
             public Builder accessVpc(AccessVpc accessVpc) {
                 this.accessVpc = accessVpc;
@@ -1874,7 +2578,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS mount directory in the container, which is located under /mnt/oss/.</p>
+             * <p>The OSS mount directory in the container, located under /mnt/oss/.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/oss/train</p>
@@ -1896,7 +2600,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the mount is read-only. A value of true indicates a read-only mount. A value of false indicates a read-write mount.</p>
+             * <p>Specifies whether the mount is read-only. A value of true indicates a read-only mount, and a value of false indicates a read-write mount.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1964,7 +2668,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The usage description of the current API path.</p>
+             * <p>The purpose description of the current API path.</p>
              * 
              * <strong>example:</strong>
              * <p>AG-UI conversation API</p>
@@ -1975,7 +2679,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interface path corresponding to the current protocol.</p>
+             * <p>The API path corresponding to the current protocol.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2068,7 +2772,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of API paths for the current protocol.</p>
+             * <p>The list of API paths corresponding to the current protocol.</p>
              */
             public Builder paths(java.util.List<Paths> paths) {
                 this.paths = paths;
@@ -2140,7 +2844,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compute specification. Valid values:</p>
+             * <p>The computing specification. Valid values:</p>
              * <ul>
              * <li>INTERACTIVE: 1 vCPU and 2 GiB of memory.</li>
              * <li>STANDARD: 2 vCPUs and 4 GiB of memory.</li>
@@ -2256,11 +2960,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether elastic scaling is enabled. Valid values:</p>
-             * <ul>
-             * <li>true: Enabled.</li>
-             * <li>false: Disabled.</li>
-             * </ul>
+             * <p>Specifies whether elastic scaling is enabled.</p>
              * <p>This parameter is required.</p>
              */
             public Builder enabled(Boolean enabled) {
@@ -2269,7 +2969,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of concurrent sessions configured for a single running instance.</p>
+             * <p>The maximum number of concurrent sessions configured for a single runtime instance.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -2280,7 +2980,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of running instances configured.</p>
+             * <p>The maximum number of runtime instances configured.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2291,7 +2991,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of running instances configured.</p>
+             * <p>The minimum number of runtime instances configured.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2302,7 +3002,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum idle time for a session, in seconds.</p>
+             * <p>The configured maximum idle time for a session, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>600</p>
@@ -2528,6 +3228,12 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
+        @com.aliyun.core.annotation.NameInMap("currentImage")
+        private CurrentImage currentImage;
+
+        @com.aliyun.core.annotation.NameInMap("customImage")
+        private CustomImage customImage;
+
         @com.aliyun.core.annotation.NameInMap("deployType")
         private String deployType;
 
@@ -2550,6 +3256,9 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("imageCachePreparation")
         private ImageCachePreparation imageCachePreparation;
+
+        @com.aliyun.core.annotation.NameInMap("imagePreparation")
+        private ImagePreparation imagePreparation;
 
         @com.aliyun.core.annotation.NameInMap("latestExecutionError")
         private LatestExecutionError latestExecutionError;
@@ -2614,6 +3323,8 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             this.codePackageInfo = builder.codePackageInfo;
             this.createMode = builder.createMode;
             this.createdAt = builder.createdAt;
+            this.currentImage = builder.currentImage;
+            this.customImage = builder.customImage;
             this.deployType = builder.deployType;
             this.description = builder.description;
             this.effectiveSpecVersion = builder.effectiveSpecVersion;
@@ -2621,6 +3332,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             this.healthCheck = builder.healthCheck;
             this.imageCacheId = builder.imageCacheId;
             this.imageCachePreparation = builder.imageCachePreparation;
+            this.imagePreparation = builder.imagePreparation;
             this.latestExecutionError = builder.latestExecutionError;
             this.latestSpecVersion = builder.latestSpecVersion;
             this.latestVersionStatus = builder.latestVersionStatus;
@@ -2691,6 +3403,20 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return currentImage
+         */
+        public CurrentImage getCurrentImage() {
+            return this.currentImage;
+        }
+
+        /**
+         * @return customImage
+         */
+        public CustomImage getCustomImage() {
+            return this.customImage;
+        }
+
+        /**
          * @return deployType
          */
         public String getDeployType() {
@@ -2737,6 +3463,13 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
          */
         public ImageCachePreparation getImageCachePreparation() {
             return this.imageCachePreparation;
+        }
+
+        /**
+         * @return imagePreparation
+         */
+        public ImagePreparation getImagePreparation() {
+            return this.imagePreparation;
         }
 
         /**
@@ -2865,6 +3598,8 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             private CodePackageInfo codePackageInfo; 
             private String createMode; 
             private String createdAt; 
+            private CurrentImage currentImage; 
+            private CustomImage customImage; 
             private String deployType; 
             private String description; 
             private Long effectiveSpecVersion; 
@@ -2872,6 +3607,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             private HealthCheck healthCheck; 
             private String imageCacheId; 
             private ImageCachePreparation imageCachePreparation; 
+            private ImagePreparation imagePreparation; 
             private LatestExecutionError latestExecutionError; 
             private Long latestSpecVersion; 
             private String latestVersionStatus; 
@@ -2900,6 +3636,8 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
                 this.codePackageInfo = model.codePackageInfo;
                 this.createMode = model.createMode;
                 this.createdAt = model.createdAt;
+                this.currentImage = model.currentImage;
+                this.customImage = model.customImage;
                 this.deployType = model.deployType;
                 this.description = model.description;
                 this.effectiveSpecVersion = model.effectiveSpecVersion;
@@ -2907,6 +3645,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
                 this.healthCheck = model.healthCheck;
                 this.imageCacheId = model.imageCacheId;
                 this.imageCachePreparation = model.imageCachePreparation;
+                this.imagePreparation = model.imagePreparation;
                 this.latestExecutionError = model.latestExecutionError;
                 this.latestSpecVersion = model.latestSpecVersion;
                 this.latestVersionStatus = model.latestVersionStatus;
@@ -2927,7 +3666,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unique identifier of the custom agent. You can obtain this identifier from the response of the CreateCustomAgent or ListCustomAgents operation.</p>
+             * <p>The unique identifier of the custom agent. You can obtain this identifier from the response of CreateCustomAgent or ListCustomAgents.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2963,7 +3702,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation method of the agent. A value of CUSTOM is returned for custom agents.</p>
+             * <p>The creation method of the agent. The value is CUSTOM for custom agents.</p>
              * 
              * <strong>example:</strong>
              * <p>CUSTOM</p>
@@ -2974,7 +3713,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the agent was created. The time is in ISO 8601 format. A trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
+             * <p>The time when the agent was created. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-10T06:00:00Z</p>
@@ -2985,7 +3724,23 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment method of the agent. Custom agents are deployed and managed by the platform. A value of MANAGED is returned.</p>
+             * <p>The image source snapshot of the current valid configuration version. The value is null before the initial configuration takes effect. This field does not indicate the health status.</p>
+             */
+            public Builder currentImage(CurrentImage currentImage) {
+                this.currentImage = currentImage;
+                return this;
+            }
+
+            /**
+             * <p>The recently saved source and the verified username of the source. The source may be in preparation or failed. The password is not returned.</p>
+             */
+            public Builder customImage(CustomImage customImage) {
+                this.customImage = customImage;
+                return this;
+            }
+
+            /**
+             * <p>The deployment method of the agent. Custom agents are deployed and managed by the platform, and MANAGED is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>MANAGED</p>
@@ -2996,7 +3751,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the agent.</p>
+             * <p>The description of the agent\&quot;s purpose.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom agent that provides conversation services</p>
@@ -3007,7 +3762,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective configuration version.</p>
+             * <p>The active configuration version.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3027,7 +3782,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP health check configuration of the agent. This parameter is empty if no health check is configured.</p>
+             * <p>The HTTP health check configuration for the agent. This is empty if not configured.</p>
              */
             public Builder healthCheck(HealthCheck healthCheck) {
                 this.healthCheck = healthCheck;
@@ -3047,7 +3802,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cache preparation acceptance summary for this request.</p>
+             * <p>The acceptance summary for the current cache preparation.</p>
              */
             public Builder imageCachePreparation(ImageCachePreparation imageCachePreparation) {
                 this.imageCachePreparation = imageCachePreparation;
@@ -3055,7 +3810,15 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The waiting or execution error of the latest configuration version. This field is returned only when the version is waiting for a retry or fails to execute.</p>
+             * <p>The currently associated image preparation task. The phase indicates the acceptance prompt. Query the preparation API for real-time progress. A standard save operation does not create an image preparation task.</p>
+             */
+            public Builder imagePreparation(ImagePreparation imagePreparation) {
+                this.imagePreparation = imagePreparation;
+                return this;
+            }
+
+            /**
+             * <p>The waiting or execution error of the latest configuration version. This is returned only when the version is waiting for a retry or fails to execute.</p>
              */
             public Builder latestExecutionError(LatestExecutionError latestExecutionError) {
                 this.latestExecutionError = latestExecutionError;
@@ -3063,7 +3826,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current latest configuration version number. Updates to the same configuration may retain the original version number. This field does not indicate that the configuration has taken effect.</p>
+             * <p>The latest configuration version number. Updates with the same configuration may retain the original version number. This field does not indicate that the configuration has taken effect.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3075,14 +3838,14 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution status corresponding to latestSpecVersion. Valid values:</p>
+             * <p>The execution status corresponding to the latestSpecVersion. Valid values:</p>
              * <ul>
-             * <li>pending: waiting for execution</li>
-             * <li>processing: executing</li>
-             * <li>waiting_retry: waiting for retry</li>
-             * <li>succeeded: executed successfully</li>
-             * <li>failed: execution failed</li>
-             * <li>superseded: superseded by a subsequent version</li>
+             * <li>pending: Waiting for execution.</li>
+             * <li>processing: Executing.</li>
+             * <li>waiting_retry: Waiting for a retry.</li>
+             * <li>succeeded: Executed successfully.</li>
+             * <li>failed: Execution failed.</li>
+             * <li>superseded: Superseded by a subsequent version.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3094,7 +3857,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest submitted log delivery configuration.</p>
+             * <p>The recently submitted log delivery configuration.</p>
              */
             public Builder logging(Logging logging) {
                 this.logging = logging;
@@ -3114,7 +3877,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network access configuration of the agent. The actual access scope is also limited by the network configuration of the workspace.</p>
+             * <p>The network access configuration of the agent. The actual access scope is also restricted by the network configuration of the workspace.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -3130,7 +3893,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest submitted list of OSS directory mounts.</p>
+             * <p>The list of OSS directory mounts in the latest submission.</p>
              */
             public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
                 this.ossMounts = ossMounts;
@@ -3168,7 +3931,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest committed runtime configuration, including compute specifications, session policy, and elastic policy.</p>
+             * <p>The runtime configuration in the latest commit, including compute specifications, session policy, and elastic policy.</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -3176,7 +3939,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance counts grouped by sandbox phase. Keys include PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed). Only phases that actually occur are returned. Missing keys are treated as 0.</p>
+             * <p>The count of runtime instances by phase. Keys include PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed). Only phases that actually occur are returned. Missing keys are treated as 0.</p>
              */
             public Builder sandboxPhaseCounts(java.util.Map<String, Long> sandboxPhaseCounts) {
                 this.sandboxPhaseCounts = sandboxPhaseCounts;
@@ -3207,7 +3970,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the image cache is enabled.</p>
+             * <p>The image cache switch.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

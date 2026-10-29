@@ -116,7 +116,7 @@ public class UpdateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the custom agent. You can obtain this identifier from the response of the CreateCustomAgent or ListCustomAgents operation.</p>
+         * <p>The unique identifier of the custom agent. You can obtain this identifier from the response of CreateCustomAgent or ListCustomAgents.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The update configuration for the custom agent. Provide at least one top-level field. Omitted top-level fields retain their original values. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole.</p>
+         * <p>The update configuration for the custom agent. Specify at least one top-level field. Omitted top-level fields retain their original values. When you provide a configuration object, you must specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole.</p>
          */
         public Builder body(UpdateCustomAgentRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -236,7 +236,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The subdirectory under /mnt/agenticfs/ in the container. This field is required for each mount item. Mount targets must not be duplicated or form parent-child overrides.</p>
+             * <p>The subdirectory under /mnt/agenticfs/ in the container. This field is required for each mount item and is validated by the backend. Mount targets cannot be duplicated or overlap in a parent-child relationship.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/agenticfs/data</p>
@@ -247,7 +247,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The existing non-empty relative directory under the access point. This field is required for each mount item. Root directories, absolute paths, and parent directory traversals are not allowed.</p>
+             * <p>The existing non-empty relative directory under the access point. This field is required for each mount item and is validated by the backend. Root directories, absolute paths, and parent directory traversals are not allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace/data</p>
@@ -258,7 +258,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and a value of false indicates read and write. If this field is omitted, the default value is false.</p>
+             * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and a value of false indicates read and write. If omitted, the default value is false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -269,7 +269,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The domain name of the access point. This field is required for each mount item. Use the DomainName value from the response of the NAS ListAccessPoints operation. Do not include the protocol, port, or path.</p>
+             * <p>The domain name of the access point. This field is required for each mount item and is validated by the backend. Use the DomainName value from the ListAccessPoints response of NAS. Do not include the protocol, port, or path.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -294,15 +294,12 @@ public class UpdateCustomAgentRequest extends Request {
      */
     public static class Code extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entrypoint")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String entrypoint;
 
         @com.aliyun.core.annotation.NameInMap("languageRuntime")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String languageRuntime;
 
         @com.aliyun.core.annotation.NameInMap("sourceUri")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String sourceUri;
 
         private Code(Builder builder) {
@@ -355,8 +352,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The startup command for the code package. This field is required in code package mode. The working directory is the extracted code root directory /code, such as python main.py. Quotes and escapes are supported. Environment variables, pipes, and logical operations are not automatically expanded. For complex commands, use scripts within the package.</p>
-             * <p>This parameter is required.</p>
+             * <p>The startup command for the code package. This field is required in code package mode. The working directory is the extracted code root directory /code, such as python main.py. Quotes and escapes are supported. Environment variables, pipes, and logical operations are not automatically expanded. Use scripts within the package for complex commands.</p>
              * 
              * <strong>example:</strong>
              * <p>python main.py</p>
@@ -367,8 +363,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The code runtime environment identifier, such as python3.12. When creating or switching environments, use the identifier returned by the ListAgentCodeRuntimes operation. The identifier is validated by the current version catalog and is not a fixed enumeration.</p>
-             * <p>This parameter is required.</p>
+             * <p>The code runtime environment identifier, such as python3.12. When you create or switch environments, use the identifier returned by ListAgentCodeRuntimes. The identifier is validated by the current version catalog and is not a fixed enumeration.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.12</p>
@@ -379,8 +374,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The source address of the code package. This field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including OSS signed URLs. Arbitrary external sites, custom domain names, and additional authentication request headers are not supported. After a local upload, use the sourceUri returned by the GetAgentCodePackageUploadUrl operation. The address is revalidated and transferred during creation or updates. After the transfer is saved, the platform returns a fixed oss:// address. This fixed address can be reused for regular updates.</p>
-             * <p>This parameter is required.</p>
+             * <p>The source address of the code package. This field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including OSS signed URLs. External sites, custom domain names, and additional authentication request headers are not supported. For local uploads, use the sourceUri returned by GetAgentCodePackageUploadUrl. The address is revalidated and transferred during creation or update. After the address is saved, a fixed oss:// address of the platform is returned. You can reuse this fixed address for regular updates.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://my-agent-bucket/packages/main.zip</p>
@@ -408,23 +402,18 @@ public class UpdateCustomAgentRequest extends Request {
         private String entrypoint;
 
         @com.aliyun.core.annotation.NameInMap("instanceId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("namespace")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String namespace;
 
         @com.aliyun.core.annotation.NameInMap("repo")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String repo;
 
         @com.aliyun.core.annotation.NameInMap("tag")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String tag;
 
         @com.aliyun.core.annotation.NameInMap("type")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Container(Builder builder) {
@@ -507,7 +496,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The optional executable program and startup parameters. If specified, this field must be a non-empty string. When updating the artifact, omitting this field uses the default startup method of the image. To retain the original custom startup command, provide this field together.</p>
+             * <p>The optional executable program and startup parameters. If specified, this field must be a non-empty string. When you update the artifact, omitting this field uses the default startup method of the image. To retain the original custom startup command, you must provide this field.</p>
              * 
              * <strong>example:</strong>
              * <p>python app.py</p>
@@ -519,7 +508,6 @@ public class UpdateCustomAgentRequest extends Request {
 
             /**
              * <p>The ID of the ACR instance to which the image repository belongs. This field cannot be empty.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-a1b2c3d4e5f6</p>
@@ -531,7 +519,6 @@ public class UpdateCustomAgentRequest extends Request {
 
             /**
              * <p>The namespace to which the ACR image repository belongs. This field cannot be empty.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent</p>
@@ -543,7 +530,6 @@ public class UpdateCustomAgentRequest extends Request {
 
             /**
              * <p>The name of the image repository in the ACR namespace. This field cannot be empty.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>chat-agent</p>
@@ -554,8 +540,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The image tag used for deployment. This field cannot be empty. When updating the tag, you must also provide artifact.port and other required image fields.</p>
-             * <p>This parameter is required.</p>
+             * <p>The image tag used for deployment. This field cannot be empty. When you update the tag, you must also provide artifact.port and other required image fields.</p>
              * 
              * <strong>example:</strong>
              * <p>v1.0.0</p>
@@ -566,8 +551,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The image source type. Currently, only acr is supported, which indicates Alibaba Cloud Container Registry (ACR).</p>
-             * <p>This parameter is required.</p>
+             * <p>The image source type. Only acr is supported, which indicates Container Registry.</p>
              * 
              * <strong>example:</strong>
              * <p>acr</p>
@@ -598,7 +582,6 @@ public class UpdateCustomAgentRequest extends Request {
         private Container container;
 
         @com.aliyun.core.annotation.NameInMap("port")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer port;
 
         private Artifact(Builder builder) {
@@ -668,7 +651,6 @@ public class UpdateCustomAgentRequest extends Request {
 
             /**
              * <p>The TCP port listened by the agent service. Valid values: 1 to 65535.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -680,6 +662,285 @@ public class UpdateCustomAgentRequest extends Request {
 
             public Artifact build() {
                 return new Artifact(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateCustomAgentRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCustomAgentRequest</p>
+     */
+    public static class PullNetwork extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("securityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        private PullNetwork(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+            this.type = builder.type;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PullNetwork create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+            private String type; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PullNetwork model) {
+                this.securityGroupId = model.securityGroupId;
+                this.type = model.type;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * <p>The ID of the security group. This field is required when type is set to vpc and must belong to the selected VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-example</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The type of the pull network. This field is required when you submit pullNetwork and is validated by the backend. The default value for a new configuration is public network, which is independent of the agent runtime network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the security group. This field is required when type is set to vpc and must belong to the selected VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-example</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the VPC. This field is required when type is set to vpc. The associated account and region are validated by the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-example</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public PullNetwork build() {
+                return new PullNetwork(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateCustomAgentRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCustomAgentRequest</p>
+     */
+    public static class CustomImage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("image")
+        private String image;
+
+        @com.aliyun.core.annotation.NameInMap("password")
+        private String password;
+
+        @com.aliyun.core.annotation.NameInMap("pullNetwork")
+        private PullNetwork pullNetwork;
+
+        @com.aliyun.core.annotation.NameInMap("skipTlsVerify")
+        private Boolean skipTlsVerify;
+
+        @com.aliyun.core.annotation.NameInMap("username")
+        private String username;
+
+        private CustomImage(Builder builder) {
+            this.image = builder.image;
+            this.password = builder.password;
+            this.pullNetwork = builder.pullNetwork;
+            this.skipTlsVerify = builder.skipTlsVerify;
+            this.username = builder.username;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomImage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return pullNetwork
+         */
+        public PullNetwork getPullNetwork() {
+            return this.pullNetwork;
+        }
+
+        /**
+         * @return skipTlsVerify
+         */
+        public Boolean getSkipTlsVerify() {
+            return this.skipTlsVerify;
+        }
+
+        /**
+         * @return username
+         */
+        public String getUsername() {
+            return this.username;
+        }
+
+        public static final class Builder {
+            private String image; 
+            private String password; 
+            private PullNetwork pullNetwork; 
+            private Boolean skipTlsVerify; 
+            private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomImage model) {
+                this.image = model.image;
+                this.password = model.password;
+                this.pullNetwork = model.pullNetwork;
+                this.skipTlsVerify = model.skipTlsVerify;
+                this.username = model.username;
+            } 
+
+            /**
+             * <p>The custom image address. This field is required when you submit customImage and is validated by the backend. Specify the full registry[:port]/repository:tag or registry[:port]/repository@sha256:digest format. Multi-level paths are supported. Do not include the protocol or user information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.example.com/team/agent:v1</p>
+             */
+            public Builder image(String image) {
+                this.image = image;
+                return this;
+            }
+
+            /**
+             * <p>The repository password or token for the current task. Submit a non-empty value in pairs with the username field. The value is not trimmed and cannot be null, an empty string, or a masked value. This field is used only for the current task and is not permanently saved or returned. To use anonymous access, omit both fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-registry-token</p>
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * <p>The independent network configuration for pulling images. This field is required when you submit customImage and is validated by the backend. For public networks, only pass type=public.</p>
+             */
+            public Builder pullNetwork(PullNetwork pullNetwork) {
+                this.pullNetwork = pullNetwork;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to skip HTTPS certificate verification. If omitted, the default value is false. This field does not accept null. HTTP fallback semantics are still under discussion and do not affect the current field definition. The image address does not include a protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder skipTlsVerify(Boolean skipTlsVerify) {
+                this.skipTlsVerify = skipTlsVerify;
+                return this;
+            }
+
+            /**
+             * <p>The repository username for the current task. When you create or explicitly update a private source, resubmit this field in pairs with the password field. Existing copies also require verification. To use anonymous access, omit both fields. A read-only username is not automatically used as the input for the current task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reader</p>
+             */
+            public Builder username(String username) {
+                this.username = username;
+                return this;
+            }
+
+            public CustomImage build() {
+                return new CustomImage(this);
             } 
 
         } 
@@ -752,7 +1013,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The value of the environment variable. This field must be a string. Empty strings are allowed.</p>
+             * <p>The value of the environment variable. This field must be a string and can be an empty string.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -832,6 +1093,7 @@ public class UpdateCustomAgentRequest extends Request {
      */
     public static class HealthCheck extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("healthyThreshold")
+        @Deprecated
         private Integer healthyThreshold;
 
         @com.aliyun.core.annotation.NameInMap("intervalSeconds")
@@ -929,7 +1191,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>This parameter currently does not take effect. Omit this field.</p>
+             * <p>This parameter does not take effect. Omit this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -940,7 +1202,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The interval between two health checks, in seconds. This field must be a positive integer. If this field is omitted, the default value is 10.</p>
+             * <p>The interval between two consecutive health checks, in seconds. The value must be a positive integer. Default value: 10.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -951,7 +1213,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The HTTP health check path. This field must start with a forward slash (/). If this field is omitted, the default value is /healthz.</p>
+             * <p>The HTTP health check path. The path must start with a forward slash (/). Default value: /healthz.</p>
              * 
              * <strong>example:</strong>
              * <p>/healthz</p>
@@ -962,7 +1224,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The port accessed by the health check. This field is required when configuring a health check. Valid values: 1 to 65535.</p>
+             * <p>The port used for health checks. This field is required when you configure a health check. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -973,7 +1235,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The timeout period for a single health check, in seconds. This field must be a positive integer and less than intervalSeconds. If this field is omitted, the default value is 2.</p>
+             * <p>The timeout period for a single health check, in seconds. The value must be a positive integer and less than the value of intervalSeconds. Default value: 2.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -984,7 +1246,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The number of consecutive health check failures before the agent is considered unhealthy. This field must be a positive integer. If this field is omitted, the default value is 3.</p>
+             * <p>The number of consecutive health check failures required to mark the target as unhealthy. The value must be a positive integer. Default value: 3.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1054,7 +1316,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the SLS logstore that receives agent logs.</p>
+             * <p>The name of the SLS Logstore that receives agent logs.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-runtime</p>
@@ -1122,7 +1384,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The SLS log delivery destination. When updating this object, you must provide both the project and logstore fields, and they cannot be empty.</p>
+             * <p>The SLS log delivery destination. When you update this object, you must provide both the project and logstore fields, and they cannot be empty.</p>
              */
             public Builder sls(Sls sls) {
                 this.sls = sls;
@@ -1176,7 +1438,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow the agent to access the Internet. When configuring accessInternet, you must provide a Boolean value. For this configuration to take effect, the workspace must also allow Internet access.</p>
+             * <p>Specifies whether to allow the agent to access the Internet. A Boolean value is required when you configure accessInternet. For this setting to take effect, Internet access must also be allowed by the workspace.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1230,7 +1492,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow the agent to access the user VPC configured in the workspace. When configuring accessVpc, you must provide a Boolean value. For this configuration to take effect, the workspace must also allow VPC access.</p>
+             * <p>Specifies whether to allow the agent to access the user VPC configured for the workspace. A Boolean value is required when you configure accessVpc. For this setting to take effect, VPC access must also be allowed by the workspace.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1297,7 +1559,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The Internet access configuration. When this access item is omitted, the agent does not restrict Internet access. However, the workspace must still allow Internet access.</p>
+             * <p>The Internet access configuration. If this access item is omitted, the agent does not restrict Internet access. However, Internet access must still be allowed by the workspace.</p>
              */
             public Builder accessInternet(AccessInternet accessInternet) {
                 this.accessInternet = accessInternet;
@@ -1305,7 +1567,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The user VPC access configuration. When this access item is omitted, the agent does not restrict VPC access. However, the workspace must still be configured to allow access to the user VPC.</p>
+             * <p>The user VPC access configuration. If this access item is omitted, the agent does not restrict VPC access. However, the workspace must be configured to allow access to the user VPC.</p>
              */
             public Builder accessVpc(AccessVpc accessVpc) {
                 this.accessVpc = accessVpc;
@@ -1452,7 +1714,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the OSS bucket. This parameter is required for each mount item. The name must be 3 to 63 characters in length and can contain only lowercase letters, digits, and hyphens. It cannot start or end with a hyphen.</p>
+             * <p>The name of the OSS bucket. This field is required for each mount item. The name must be 3 to 63 characters in length and can contain only lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent-data</p>
@@ -1463,7 +1725,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The subdirectory under /mnt/oss/ in the container. This parameter is required for each mount item. Mount targets must not be duplicated or form parent-child overlaps.</p>
+             * <p>The subdirectory under /mnt/oss/ in the container. This field is required for each mount item. Mount targets cannot be duplicated or form parent-child overlaps.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/oss/train</p>
@@ -1474,7 +1736,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The non-empty object directory prefix in the bucket, such as datasets/train. Leading and trailing slashes are removed. The root directory is not supported. Do not use parent directory navigation.</p>
+             * <p>The non-empty object directory prefix in the bucket, such as datasets/train. Leading and trailing forward slashes (/) are removed. The root directory is not supported. Do not use parent directory navigation.</p>
              * 
              * <strong>example:</strong>
              * <p>datasets/train</p>
@@ -1485,7 +1747,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and a value of false indicates read and write. If this field is omitted, the default value is false.</p>
+             * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and a value of false indicates read and write. If omitted, the default value is false.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1553,7 +1815,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The usage description of the current API path.</p>
+             * <p>The purpose description of the current API path.</p>
              * 
              * <strong>example:</strong>
              * <p>AG-UI conversation API</p>
@@ -1564,7 +1826,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The non-empty API path for the current protocol.</p>
+             * <p>The non-empty API path corresponding to the current protocol.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1657,7 +1919,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The list of API paths for the current protocol.</p>
+             * <p>The list of API paths corresponding to the current protocol.</p>
              */
             public Builder paths(java.util.List<Paths> paths) {
                 this.paths = paths;
@@ -1729,7 +1991,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The compute specification. Valid values:</p>
+             * <p>The computing specification. Valid values:</p>
              * <ul>
              * <li>INTERACTIVE: 1 vCPU and 2 GiB of memory.</li>
              * <li>STANDARD: 2 vCPUs and 4 GiB of memory.</li>
@@ -1845,12 +2107,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable elastic scaling. Valid values:</p>
-             * <ul>
-             * <li>true: Enabled.</li>
-             * <li>false: Disabled.
-             * Default value: false. This default value applies when runtime is provided and this field is omitted.</li>
-             * </ul>
+             * <p>Specifies whether to enable elastic scaling. A value of true indicates that elastic scaling is enabled. A value of false indicates that elastic scaling is disabled. When runtime is provided, omitting this field defaults to false.</p>
              * <p>This parameter is required.</p>
              */
             public Builder enabled(Boolean enabled) {
@@ -1870,7 +2127,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of runtime instances. Valid values: 1 to 100. The value cannot be less than minSandboxCount. When runtime is provided, omitting this field uses the default value of 10.</p>
+             * <p>The maximum number of runtime instances. Valid values: 1 to 100. The value cannot be less than the value of minSandboxCount. When runtime is provided, omitting this field uses the default value of 10.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1881,7 +2138,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of runtime instances. Valid values: 1 to 100. The value cannot be greater than maxSandboxCount. When runtime is provided, omitting this field uses the default value of 1.</p>
+             * <p>The minimum number of runtime instances. Valid values: 1 to 100. The value cannot be greater than the value of maxSandboxCount. When runtime is provided, omitting this field uses the default value of 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1892,7 +2149,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The session idle timeout in seconds. Valid values: 60 to 86400. When runtime is provided, omitting this field uses the default value of 600.</p>
+             * <p>The session idle timeout limit, in seconds. Valid values: 60 to 86400. When runtime is provided, omitting this field uses the default value of 600.</p>
              * 
              * <strong>example:</strong>
              * <p>600</p>
@@ -1963,7 +2220,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the HTTP request header used by the session policy. This parameter is required when type is set to ISOLATED_HEADER_FIELD and must be a valid HTTP request header name. Omit this parameter for other policies.</p>
+             * <p>The name of the HTTP request header used by the session policy. This field is required when type is set to ISOLATED_HEADER_FIELD and must be a valid HTTP request header name. Omit this field for other policies.</p>
              * 
              * <strong>example:</strong>
              * <p>X-Session-Id</p>
@@ -1977,9 +2234,9 @@ public class UpdateCustomAgentRequest extends Request {
              * <p>The session policy type. Valid values:</p>
              * <ul>
              * <li>AFFINITY: Session affinity.</li>
-             * <li>ISOLATED_HEADER_FIELD: Associates sessions by using the request header specified by headerName.</li>
-             * <li>ISOLATED_COOKIE: Cookie-based session policy. This value is not recommended.</li>
-             * <li>DISABLED: Compatibility option. The response returns AFFINITY.</li>
+             * <li>ISOLATED_HEADER_FIELD: Associates sessions by using the request header specified in headerName.</li>
+             * <li>ISOLATED_COOKIE: Not recommended.</li>
+             * <li>DISABLED: A compatibility option. The response returns AFFINITY.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -2075,7 +2332,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The optional elastic policy. When runtime is provided, omitting hpa or its fields uses the default values: enabled is false, the minimum number of instances is 1, the maximum number of instances is 10, the maximum number of concurrent sessions per instance is 100, and the session idle timeout is 600 seconds. To retain the original policy during an update, provide the complete hpa configuration.</p>
+             * <p>The optional elastic policy. When runtime is provided, omitting hpa or its fields uses the following default values: enabled is false, the minimum number of instances is 1, the maximum number of instances is 10, the maximum number of concurrent sessions per instance is 100, and the session idle timeout is 600 seconds. To retain the original policy during an update, provide the complete hpa configuration.</p>
              */
             public Builder hpa(Hpa hpa) {
                 this.hpa = hpa;
@@ -2083,7 +2340,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The session policy configuration used to set the session association method for requests.</p>
+             * <p>The session policy configuration used to set the session affinity method for requests.</p>
              * <p>This parameter is required.</p>
              */
             public Builder sessionPolicy(SessionPolicy sessionPolicy) {
@@ -2110,6 +2367,9 @@ public class UpdateCustomAgentRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("artifact")
         private Artifact artifact;
+
+        @com.aliyun.core.annotation.NameInMap("customImage")
+        private CustomImage customImage;
 
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -2150,6 +2410,7 @@ public class UpdateCustomAgentRequest extends Request {
         private UpdateCustomAgentRequestBody(Builder builder) {
             this.agenticFsMounts = builder.agenticFsMounts;
             this.artifact = builder.artifact;
+            this.customImage = builder.customImage;
             this.description = builder.description;
             this.environment = builder.environment;
             this.healthCheck = builder.healthCheck;
@@ -2184,6 +2445,13 @@ public class UpdateCustomAgentRequest extends Request {
          */
         public Artifact getArtifact() {
             return this.artifact;
+        }
+
+        /**
+         * @return customImage
+         */
+        public CustomImage getCustomImage() {
+            return this.customImage;
         }
 
         /**
@@ -2273,6 +2541,7 @@ public class UpdateCustomAgentRequest extends Request {
         public static final class Builder {
             private java.util.List<AgenticFsMounts> agenticFsMounts; 
             private Artifact artifact; 
+            private CustomImage customImage; 
             private String description; 
             private Environment environment; 
             private HealthCheck healthCheck; 
@@ -2292,6 +2561,7 @@ public class UpdateCustomAgentRequest extends Request {
             private Builder(UpdateCustomAgentRequestBody model) {
                 this.agenticFsMounts = model.agenticFsMounts;
                 this.artifact = model.artifact;
+                this.customImage = model.customImage;
                 this.description = model.description;
                 this.environment = model.environment;
                 this.healthCheck = model.healthCheck;
@@ -2307,7 +2577,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The list of additional AgenticFS mounts. The total number of AgenticFS mounts and ossMounts cannot exceed 10. During creation, omitting this field or passing an empty array [] indicates no additional mounts. During an update, omitting this field retains the original value, and passing an empty array [] clears the list. You cannot pass null.</p>
+             * <p>The list of additional AgenticFS mounts. The total number of AgenticFS mounts and OSS mounts cannot exceed 10. If you omit this field or pass an empty array [] during creation, no additional mounts are configured. During an update, omitting this field retains the original value, and passing an empty array [] clears the list. You cannot pass null.</p>
              */
             public Builder agenticFsMounts(java.util.List<AgenticFsMounts> agenticFsMounts) {
                 this.agenticFsMounts = agenticFsMounts;
@@ -2315,7 +2585,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The deployment artifact configuration. You must specify the service listening port in the port field and choose either the code or container deployment method. During an update, you must provide the required fields for the selected method.</p>
+             * <p>The deployment artifact configuration. You must specify the service listening port and choose either code or container as the deployment method. During an update, you must provide the required fields for the selected method.</p>
              */
             public Builder artifact(Artifact artifact) {
                 this.artifact = artifact;
@@ -2323,7 +2593,15 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The description of the agent purpose. The maximum length is 1,024 characters after leading and trailing whitespaces are removed. Omitting this field retains the original value. Pass null to clear the description.</p>
+             * <p>The custom image configuration. Omitting this field retains the original source. Submitting the complete configuration indicates an active update of the custom image. You do not need to submit this field if only the port and startup command change.</p>
+             */
+            public Builder customImage(CustomImage customImage) {
+                this.customImage = customImage;
+                return this;
+            }
+
+            /**
+             * <p>The description of the agent purpose. The description can be up to 1,024 characters in length after leading and trailing spaces are removed. If omitted, the original value is retained. Pass null to clear the description.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom agent that provides conversation services</p>
@@ -2342,7 +2620,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The optional HTTP health check configuration. When providing this object, you must specify the port field. Other unspecified items use default values. Omitting this field during creation indicates no configuration. During an update, omitting this top-level field retains the original configuration, and passing null removes the health check.</p>
+             * <p>The optional HTTP health check configuration. When this object is provided, the port field is required, and other unspecified fields use default values. Omitting this object during creation means no health check is configured. During an update, omitting this top-level field retains the original configuration, and passing null removes the health check.</p>
              */
             public Builder healthCheck(HealthCheck healthCheck) {
                 this.healthCheck = healthCheck;
@@ -2350,7 +2628,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The log delivery configuration for the agent. You can specify the Simple Log Service (SLS) project and logstore. After a successful creation or update, verify whether logs are delivered properly.</p>
+             * <p>The log delivery configuration for the agent. You can specify the Simple Log Service (SLS) project and Logstore. After a successful creation or update, verify that logs are delivered as expected.</p>
              */
             public Builder logging(Logging logging) {
                 this.logging = logging;
@@ -2358,7 +2636,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The name of the custom agent. The length is 1 to 128 characters after leading and trailing whitespaces are removed. The name must be unique within the same workspace. Omitting this field retains the original value. You cannot pass null or a blank name.</p>
+             * <p>The custom name of the agent. The name must be 1 to 128 characters in length after leading and trailing spaces are removed, and must be unique within the same workspace. Omitting this field retains the original value. You cannot pass null or an empty name.</p>
              * 
              * <strong>example:</strong>
              * <p>my-custom-agent</p>
@@ -2369,7 +2647,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The network access configuration for the agent. When providing this object, omitted access items are treated as allowed. The actual accessible range is still restricted by the workspace network configuration. To retain the original restrictions during an update, specify both accessInternet and accessVpc.</p>
+             * <p>The network access configuration for the agent. When this object is provided, omitted access items are treated as allowed. The actual accessible scope is still restricted by the network configuration of the workspace. To retain the original restrictions during an update, specify both accessInternet and accessVpc.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -2385,7 +2663,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The OSS mount list. A maximum of 10 items in total with agenticFsMounts. Each item must include bucketName, path, and mountPath. Mount targets must not be duplicated or overlap. The entire list is replaced during an update. Pass an empty array to clear the list.</p>
+             * <p>The list of Object Storage Service (OSS) mounts. The total number of OSS mounts and agenticFsMounts cannot exceed 10. For each item, you must specify bucketName, path, and mountPath. Mount targets cannot be duplicated or overlap with each other. During an update, this list is replaced entirely. Pass an empty array to clear all mounts.</p>
              */
             public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
                 this.ossMounts = ossMounts;
@@ -2393,7 +2671,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The list of invocation protocols supported by the agent. Each item includes the protocol type and optional paths and request headers. The entire list is replaced during an update.</p>
+             * <p>The list of invocation protocols supported by the agent. Each item includes the protocol type and optional paths and request headers. During an update, this list is replaced entirely.</p>
              */
             public Builder protocol(java.util.List<Protocol> protocol) {
                 this.protocol = protocol;
@@ -2401,7 +2679,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The ARN of the RAM role used when the agent accesses user cloud resources. The role must have permissions to access the cloud resources.</p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role used by the agent to access user cloud resources. The role must have the required permissions for the accessed cloud resources.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::1234567890123456:role/agentcore-runtime-role</p>
@@ -2412,7 +2690,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The runtime configuration. When this object is provided, compute and sessionPolicy must be present at the same time. To retain the original elastic policy, provide the complete hpa configuration. Omitting the top-level runtime field retains the original configuration.</p>
+             * <p>The runtime configuration. When this object is provided, both compute and sessionPolicy must be present. To retain the original elastic policy, provide the complete hpa configuration. Omitting the top-level runtime field retains the original configuration.</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -2420,7 +2698,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>If this parameter is not passed during an update, the original value is retained. Explicitly set this parameter to true or false. The system does not automatically supplement false. The new contract rejects null and invalid types. Existing compatibility endpoints are processed according to migration agreements.</p>
+             * <p>If this field is not passed during an update, the original value is retained. Explicitly set this field to true or false. The system does not automatically append false. The new contract rejects null and invalid types. Existing compatibility endpoints are processed according to migration agreements.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

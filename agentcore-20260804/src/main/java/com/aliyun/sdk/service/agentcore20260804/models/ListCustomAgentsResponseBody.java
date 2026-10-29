@@ -158,7 +158,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request result code. The value is SUCCESS when the request is successful.</p>
+         * <p>The request result code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -169,7 +169,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code of the current request. The value is 200 when the request is successful.</p>
+         * <p>The HTTP status code of the request. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -199,7 +199,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that describes the processing result of the request. The value is success if the request succeeds.</p>
+         * <p>The message that describes the result of the request. The value is success if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +210,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The opaque token used to query the next page. An empty value indicates that no more pages exist. Pass this token as is in subsequent requests.</p>
+         * <p>The opaque token used to query the next page. An empty value indicates that no more pages are available. Pass this token as-is in subsequent requests.</p>
          * 
          * <strong>example:</strong>
          * <p>djE6YWdlbnRjb3JlLmFnZW50Lmxpc3QuY3VzdG9tOjIw</p>
@@ -221,7 +221,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request, used to locate and troubleshoot issues.</p>
+         * <p>The unique identifier of the request. You can use this ID to locate and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>550E8400-E29B-41D4-A716-446655440000</p>
@@ -232,7 +232,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was processed successfully. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
+         * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was successful. A successful creation, update, or deletion response does not mean that the background operation is complete.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -337,7 +337,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the code runtime environment in the currently saved configuration. The runtime image uses a saved snapshot. Adding a new version to the directory does not automatically change the existing configuration.</p>
+             * <p>The identifier of the code runtime environment in the currently saved configuration. The runtime image uses the saved snapshot. Adding a new version to the directory does not automatically change the existing configuration.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -378,19 +378,15 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         private String entrypoint;
 
         @com.aliyun.core.annotation.NameInMap("instanceId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("namespace")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String namespace;
 
         @com.aliyun.core.annotation.NameInMap("repo")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String repo;
 
         @com.aliyun.core.annotation.NameInMap("tag")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String tag;
 
         @com.aliyun.core.annotation.NameInMap("type")
@@ -488,8 +484,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Container Registry Enterprise instance.</p>
-             * <p>This parameter is required.</p>
+             * <p>The ID of the ACR Enterprise instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-example</p>
@@ -500,8 +495,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the Container Registry instance.</p>
-             * <p>This parameter is required.</p>
+             * <p>The ACR namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>team</p>
@@ -512,8 +506,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Container Registry image repository.</p>
-             * <p>This parameter is required.</p>
+             * <p>The name of the ACR image repository.</p>
              * 
              * <strong>example:</strong>
              * <p>app</p>
@@ -524,8 +517,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the image.</p>
-             * <p>This parameter is required.</p>
+             * <p>The image tag.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -958,7 +950,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The request header configuration for the current protocol. The key is the header name and the value is a string.</p>
+             * <p>The request header configuration of the current protocol. The key is the header name and the value is a string.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -974,7 +966,12 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The invoke Protocol Type. Valid values: agui (AG-UI protocol), openai-chat-completion (OpenAI Chat Completions compatible protocol), and custom (custom protocol).</p>
+             * <p>The invoke Protocol Type. Valid values:</p>
+             * <ul>
+             * <li>agui: AG-UI protocol.</li>
+             * <li>openai-chat-completion: OpenAI Chat Completions compatible protocol.</li>
+             * <li>custom: Custom protocol.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1313,7 +1310,16 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall status of the agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted. To query the execution progress of the latest configuration, call the GetCustomAgent operation.</p>
+             * <p>The overall status of the agent. Valid values:</p>
+             * <ul>
+             * <li>Creating: The agent is being created.</li>
+             * <li>Running: The agent is running.</li>
+             * <li>Failed: The agent failed.</li>
+             * <li>Updating: The agent is being updated.</li>
+             * <li>Deleting: The agent is being deleted.</li>
+             * <li>Deleted: The agent is deleted.
+             * To query the execution progress of the latest configuration, call the GetCustomAgent operation.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
