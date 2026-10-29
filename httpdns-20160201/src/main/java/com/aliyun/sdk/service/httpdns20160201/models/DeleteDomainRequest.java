@@ -74,7 +74,10 @@ public class DeleteDomainRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * <p>The HTTPDNS account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -83,6 +86,7 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
+         * <p>The domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

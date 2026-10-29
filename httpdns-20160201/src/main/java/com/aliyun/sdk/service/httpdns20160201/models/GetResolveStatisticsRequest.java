@@ -104,6 +104,7 @@ public class GetResolveStatisticsRequest extends Request {
         } 
 
         /**
+         * <p>The domain name for which to retrieve statistics information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class GetResolveStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The data granularity. Valid values: <strong>day</strong> and <strong>month</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class GetResolveStatisticsRequest extends Request {
         }
 
         /**
-         * ProtocolName.
+         * <p>The protocol type for resolution. Valid values: http (default) and https.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         public Builder protocolName(String protocolName) {
             this.putQueryParameter("ProtocolName", protocolName);
@@ -137,6 +142,7 @@ public class GetResolveStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The length of the time span.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,6 +75,7 @@ public class GetResolveCountSummaryRequest extends Request {
         } 
 
         /**
+         * <p>The data granularity of the statistics. Valid values: <strong>day</strong> and <strong>month</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetResolveCountSummaryRequest extends Request {
         }
 
         /**
+         * <p>The time span for the statistics.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

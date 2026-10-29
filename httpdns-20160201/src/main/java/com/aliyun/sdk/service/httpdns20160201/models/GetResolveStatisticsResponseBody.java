@@ -75,7 +75,10 @@ public class GetResolveStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50F9C40E-188D-B00B-BE2C-7427E531****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

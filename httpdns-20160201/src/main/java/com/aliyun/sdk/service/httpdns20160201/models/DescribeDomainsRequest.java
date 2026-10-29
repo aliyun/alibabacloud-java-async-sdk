@@ -88,7 +88,10 @@ public class DescribeDomainsRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * <p>The HTTPDNS account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -97,7 +100,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -106,7 +112,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

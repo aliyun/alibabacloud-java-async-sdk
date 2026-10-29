@@ -67,7 +67,10 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3106FFF3-3612-542A-B2CD-3CF4CD48****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * ResolveSummary.
+         * <p>The statistics result.</p>
          */
         public Builder resolveSummary(ResolveSummary resolveSummary) {
             this.resolveSummary = resolveSummary;
@@ -214,7 +217,10 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Http.
+             * <p>The number of IPv4 HTTP resolution requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder http(Long http) {
                 this.http = http;
@@ -222,7 +228,10 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Http6.
+             * <p>The number of IPv6 HTTP resolution requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder http6(Long http6) {
                 this.http6 = http6;
@@ -238,7 +247,10 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Https.
+             * <p>The number of IPv4 HTTPS resolution requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder https(Long https) {
                 this.https = https;
@@ -246,7 +258,10 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Https6.
+             * <p>The number of IPv6 HTTPS resolution requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder https6(Long https6) {
                 this.https6 = https6;

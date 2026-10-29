@@ -59,7 +59,7 @@ public class RefreshResolveCacheRequest extends Request {
         } 
 
         /**
-         * Domains.
+         * <p>The list of domain names to refresh.</p>
          */
         public Builder domains(java.util.List<String> domains) {
             String domainsShrink = shrink(domains, "Domains", "json");

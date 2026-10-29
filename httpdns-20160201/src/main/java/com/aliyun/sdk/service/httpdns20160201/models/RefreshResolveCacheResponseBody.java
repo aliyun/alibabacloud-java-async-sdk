@@ -91,7 +91,10 @@ public class RefreshResolveCacheResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -99,7 +102,10 @@ public class RefreshResolveCacheResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA8C2599-362D-4113-8FB4-E88A40C2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddDomainResponse> addDomain(AddDomainRequest request);
 
     /**
+     * @param request the request parameters of CreateSdnsRuleCategory  CreateSdnsRuleCategoryRequest
+     * @return CreateSdnsRuleCategoryResponse
+     */
+    CompletableFuture<CreateSdnsRuleCategoryResponse> createSdnsRuleCategory(CreateSdnsRuleCategoryRequest request);
+
+    /**
      * @param request the request parameters of DeleteDomain  DeleteDomainRequest
      * @return DeleteDomainResponse
      */
@@ -56,6 +62,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResolveStatisticsResponse> getResolveStatistics(GetResolveStatisticsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h1>Operation description</h1>
+     * <ul>
+     * <li>You can specify the page number (PageNumber) and the number of entries per page (PageSize) for the query.</li>
+     * <li>By default, the domain name list is sorted in descending order of the time when the domain names were added.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListDomains  ListDomainsRequest
      * @return ListDomainsResponse
      */
@@ -66,5 +79,41 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RefreshResolveCacheResponse
      */
     CompletableFuture<RefreshResolveCacheResponse> refreshResolveCache(RefreshResolveCacheRequest request);
+
+    /**
+     * @param request the request parameters of SdnsDeleteRuleCategory  SdnsDeleteRuleCategoryRequest
+     * @return SdnsDeleteRuleCategoryResponse
+     */
+    CompletableFuture<SdnsDeleteRuleCategoryResponse> sdnsDeleteRuleCategory(SdnsDeleteRuleCategoryRequest request);
+
+    /**
+     * @param request the request parameters of SdnsGetRuleCategory  SdnsGetRuleCategoryRequest
+     * @return SdnsGetRuleCategoryResponse
+     */
+    CompletableFuture<SdnsGetRuleCategoryResponse> sdnsGetRuleCategory(SdnsGetRuleCategoryRequest request);
+
+    /**
+     * @param request the request parameters of SdnsListRuleCategories  SdnsListRuleCategoriesRequest
+     * @return SdnsListRuleCategoriesResponse
+     */
+    CompletableFuture<SdnsListRuleCategoriesResponse> sdnsListRuleCategories(SdnsListRuleCategoriesRequest request);
+
+    /**
+     * @param request the request parameters of SdnsSwitchRuleCategory  SdnsSwitchRuleCategoryRequest
+     * @return SdnsSwitchRuleCategoryResponse
+     */
+    CompletableFuture<SdnsSwitchRuleCategoryResponse> sdnsSwitchRuleCategory(SdnsSwitchRuleCategoryRequest request);
+
+    /**
+     * @param request the request parameters of SdnsVerifyRuleCategory  SdnsVerifyRuleCategoryRequest
+     * @return SdnsVerifyRuleCategoryResponse
+     */
+    CompletableFuture<SdnsVerifyRuleCategoryResponse> sdnsVerifyRuleCategory(SdnsVerifyRuleCategoryRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSdnsRuleCategory  UpdateSdnsRuleCategoryRequest
+     * @return UpdateSdnsRuleCategoryResponse
+     */
+    CompletableFuture<UpdateSdnsRuleCategoryResponse> updateSdnsRuleCategory(UpdateSdnsRuleCategoryRequest request);
 
 }

@@ -67,7 +67,7 @@ public class GetAccountInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AccountInfo.
+         * <p>The current account information.</p>
          */
         public Builder accountInfo(AccountInfo accountInfo) {
             this.accountInfo = accountInfo;
@@ -75,7 +75,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50F9C40E-188D-4208-BE2C-74271337****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -310,7 +313,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1337****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -318,7 +324,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DohEnabled.
+             * <p>Indicates whether the DNS over HTTPS (DoH) feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dohEnabled(Boolean dohEnabled) {
                 this.dohEnabled = dohEnabled;
@@ -326,7 +335,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DohResolveAllEnabled.
+             * <p>Indicates whether DoH is used to resolve all domain names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dohResolveAllEnabled(Boolean dohResolveAllEnabled) {
                 this.dohResolveAllEnabled = dohResolveAllEnabled;
@@ -334,7 +346,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MonthDohResolveCount.
+             * <p>The number of DoH resolutions for the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder monthDohResolveCount(Long monthDohResolveCount) {
                 this.monthDohResolveCount = monthDohResolveCount;
@@ -342,7 +357,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MonthFreeCount.
+             * <p>The monthly free resolution quota. This is the number of times you can call the HTTPDNS service for domain name resolution free of charge each calendar month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500000</p>
              */
             public Builder monthFreeCount(Integer monthFreeCount) {
                 this.monthFreeCount = monthFreeCount;
@@ -350,7 +368,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MonthHttpAesResolveCount.
+             * <p>The number of HTTP AES-encrypted resolutions for the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder monthHttpAesResolveCount(Long monthHttpAesResolveCount) {
                 this.monthHttpAesResolveCount = monthHttpAesResolveCount;
@@ -358,7 +379,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MonthHttpsAesResolveCount.
+             * <p>The number of HTTPS AES-encrypted resolutions for the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder monthHttpsAesResolveCount(Long monthHttpsAesResolveCount) {
                 this.monthHttpsAesResolveCount = monthHttpsAesResolveCount;
@@ -366,7 +390,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MonthHttpsResolveCount.
+             * <p>The total number of HTTPS resolutions for the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder monthHttpsResolveCount(Integer monthHttpsResolveCount) {
                 this.monthHttpsResolveCount = monthHttpsResolveCount;
@@ -374,7 +401,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MonthResolveCount.
+             * <p>The total number of HTTP resolutions for the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9927326</p>
              */
             public Builder monthResolveCount(Integer monthResolveCount) {
                 this.monthResolveCount = monthResolveCount;
@@ -382,7 +412,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PackageCount.
+             * <p>The number of resource plans. This is a legacy field and is always set to 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder packageCount(Integer packageCount) {
                 this.packageCount = packageCount;
@@ -390,7 +423,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SignSecret.
+             * <p>The signing secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50F9C40E****</p>
              */
             public Builder signSecret(String signSecret) {
                 this.signSecret = signSecret;
@@ -398,7 +434,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SignedCount.
+             * <p>The number of requests to authenticated API operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>611523</p>
              */
             public Builder signedCount(Long signedCount) {
                 this.signedCount = signedCount;
@@ -406,7 +445,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UnsignedCount.
+             * <p>The number of requests to unauthenticated API operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1523</p>
              */
             public Builder unsignedCount(Long unsignedCount) {
                 this.unsignedCount = unsignedCount;
@@ -414,7 +456,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UnsignedEnabled.
+             * <p>Indicates whether unauthenticated API operations are enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder unsignedEnabled(Boolean unsignedEnabled) {
                 this.unsignedEnabled = unsignedEnabled;
@@ -422,7 +467,15 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserStatus.
+             * <p>The HTTPDNS account status code. Valid values:</p>
+             * <ul>
+             * <li>1: The account is normal.</li>
+             * <li>2: The account has an overdue payment.</li>
+             * <li>3: The account is suspended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userStatus(Integer userStatus) {
                 this.userStatus = userStatus;

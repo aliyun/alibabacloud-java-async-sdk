@@ -29,8 +29,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Httpdns";
         this.version = "2016-02-01";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-hangzhou", "httpdns-api.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -52,6 +54,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AddDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateSdnsRuleCategory  CreateSdnsRuleCategoryRequest
+     * @return CreateSdnsRuleCategoryResponse
+     */
+    @Override
+    public CompletableFuture<CreateSdnsRuleCategoryResponse> createSdnsRuleCategory(CreateSdnsRuleCategoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSdnsRuleCategory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSdnsRuleCategoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSdnsRuleCategoryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -148,6 +168,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Operation description</h1>
+     * <ul>
+     * <li>You can specify the page number (PageNumber) and the number of entries per page (PageSize) for the query.</li>
+     * <li>By default, the domain name list is sorted in descending order of the time when the domain names were added.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListDomains  ListDomainsRequest
      * @return ListDomainsResponse
      */
@@ -178,6 +205,114 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RefreshResolveCacheResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SdnsDeleteRuleCategory  SdnsDeleteRuleCategoryRequest
+     * @return SdnsDeleteRuleCategoryResponse
+     */
+    @Override
+    public CompletableFuture<SdnsDeleteRuleCategoryResponse> sdnsDeleteRuleCategory(SdnsDeleteRuleCategoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SdnsDeleteRuleCategory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SdnsDeleteRuleCategoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SdnsDeleteRuleCategoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SdnsGetRuleCategory  SdnsGetRuleCategoryRequest
+     * @return SdnsGetRuleCategoryResponse
+     */
+    @Override
+    public CompletableFuture<SdnsGetRuleCategoryResponse> sdnsGetRuleCategory(SdnsGetRuleCategoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SdnsGetRuleCategory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SdnsGetRuleCategoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SdnsGetRuleCategoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SdnsListRuleCategories  SdnsListRuleCategoriesRequest
+     * @return SdnsListRuleCategoriesResponse
+     */
+    @Override
+    public CompletableFuture<SdnsListRuleCategoriesResponse> sdnsListRuleCategories(SdnsListRuleCategoriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SdnsListRuleCategories").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SdnsListRuleCategoriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SdnsListRuleCategoriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SdnsSwitchRuleCategory  SdnsSwitchRuleCategoryRequest
+     * @return SdnsSwitchRuleCategoryResponse
+     */
+    @Override
+    public CompletableFuture<SdnsSwitchRuleCategoryResponse> sdnsSwitchRuleCategory(SdnsSwitchRuleCategoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SdnsSwitchRuleCategory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SdnsSwitchRuleCategoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SdnsSwitchRuleCategoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SdnsVerifyRuleCategory  SdnsVerifyRuleCategoryRequest
+     * @return SdnsVerifyRuleCategoryResponse
+     */
+    @Override
+    public CompletableFuture<SdnsVerifyRuleCategoryResponse> sdnsVerifyRuleCategory(SdnsVerifyRuleCategoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SdnsVerifyRuleCategory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SdnsVerifyRuleCategoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SdnsVerifyRuleCategoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateSdnsRuleCategory  UpdateSdnsRuleCategoryRequest
+     * @return UpdateSdnsRuleCategoryResponse
+     */
+    @Override
+    public CompletableFuture<UpdateSdnsRuleCategoryResponse> updateSdnsRuleCategory(UpdateSdnsRuleCategoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateSdnsRuleCategory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateSdnsRuleCategoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateSdnsRuleCategoryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

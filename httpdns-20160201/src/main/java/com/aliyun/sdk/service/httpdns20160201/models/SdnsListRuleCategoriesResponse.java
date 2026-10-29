@@ -1,0 +1,131 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.httpdns20160201.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link SdnsListRuleCategoriesResponse} extends {@link TeaModel}
+ *
+ * <p>SdnsListRuleCategoriesResponse</p>
+ */
+public class SdnsListRuleCategoriesResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
+
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
+    private SdnsListRuleCategoriesResponseBody body;
+
+    private SdnsListRuleCategoriesResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
+    }
+
+    public static SdnsListRuleCategoriesResponse create() {
+        return new BuilderImpl().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return body
+     */
+    public SdnsListRuleCategoriesResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<SdnsListRuleCategoriesResponse, Builder> {
+
+        Builder headers(java.util.Map<String, String> headers);
+
+        Builder statusCode(Integer statusCode);
+
+        Builder body(SdnsListRuleCategoriesResponseBody body);
+
+        @Override
+        SdnsListRuleCategoriesResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<SdnsListRuleCategoriesResponse, Builder>
+            implements Builder {
+        private java.util.Map<String, String> headers; 
+        private Integer statusCode; 
+        private SdnsListRuleCategoriesResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(SdnsListRuleCategoriesResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map<String, String> headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(SdnsListRuleCategoriesResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public SdnsListRuleCategoriesResponse build() {
+            return new SdnsListRuleCategoriesResponse(this);
+        } 
+
+    } 
+
+}

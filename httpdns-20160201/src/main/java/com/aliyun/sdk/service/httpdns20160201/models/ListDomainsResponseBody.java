@@ -114,7 +114,10 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The total number of domain names in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of domain names returned in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50F9C40E-188D-4208-BE2C-7427E531****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of domain names in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

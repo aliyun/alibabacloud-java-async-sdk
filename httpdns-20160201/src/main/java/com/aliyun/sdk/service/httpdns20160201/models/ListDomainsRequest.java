@@ -102,7 +102,10 @@ public class ListDomainsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The number of the current page. Starting value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -111,7 +114,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page for paging in a paged query. Settings: Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

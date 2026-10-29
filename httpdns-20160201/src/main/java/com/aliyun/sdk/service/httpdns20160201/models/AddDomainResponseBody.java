@@ -67,7 +67,10 @@ public class AddDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * DomainName.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -75,7 +78,10 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADA27798-6911-4B06-AF34-53F62F62XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
