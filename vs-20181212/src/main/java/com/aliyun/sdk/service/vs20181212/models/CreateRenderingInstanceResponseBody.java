@@ -20,11 +20,15 @@ public class CreateRenderingInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
     private String renderingInstanceId;
 
+    @com.aliyun.core.annotation.NameInMap("RenderingInstanceIds")
+    private java.util.List<String> renderingInstanceIds;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateRenderingInstanceResponseBody(Builder builder) {
         this.renderingInstanceId = builder.renderingInstanceId;
+        this.renderingInstanceIds = builder.renderingInstanceIds;
         this.requestId = builder.requestId;
     }
 
@@ -48,6 +52,13 @@ public class CreateRenderingInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return renderingInstanceIds
+     */
+    public java.util.List<String> getRenderingInstanceIds() {
+        return this.renderingInstanceIds;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -56,6 +67,7 @@ public class CreateRenderingInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String renderingInstanceId; 
+        private java.util.List<String> renderingInstanceIds; 
         private String requestId; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class CreateRenderingInstanceResponseBody extends TeaModel {
 
         private Builder(CreateRenderingInstanceResponseBody model) {
             this.renderingInstanceId = model.renderingInstanceId;
+            this.renderingInstanceIds = model.renderingInstanceIds;
             this.requestId = model.requestId;
         } 
 
@@ -74,6 +87,14 @@ public class CreateRenderingInstanceResponseBody extends TeaModel {
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.renderingInstanceId = renderingInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>The instance ID list of the cloud application service.</p>
+         */
+        public Builder renderingInstanceIds(java.util.List<String> renderingInstanceIds) {
+            this.renderingInstanceIds = renderingInstanceIds;
             return this;
         }
 

@@ -187,7 +187,7 @@ public class CreateRenderingInstanceRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>Unless you have special requirements, keep the default value. If you have special requirements, consult and confirm before specifying this parameter.</p>
+         * <p>Keep the default value unless you have special requirements. If you have special requirements, contact technical support to confirm and then specify the relevant parameters.</p>
          * </blockquote>
          * <p>The attribute information.</p>
          */
@@ -295,7 +295,7 @@ public class CreateRenderingInstanceRequest extends Request {
          * <blockquote>
          * <p>This parameter takes effect only when <code>InstanceChargeType</code> is set to <code>PrePaid</code> (subscription).</p>
          * </blockquote>
-         * <p>The subscription duration. Valid values (note: if you select 12, it is calculated as one year, and other values are calculated in months):</p>
+         * <p>The subscription duration. Valid values (Note: If you select 12, the duration is calculated as one year. For other values, the unit is months):</p>
          * <ul>
          * <li>1 (default)</li>
          * <li>2</li>
@@ -319,10 +319,10 @@ public class CreateRenderingInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the cloud application service instance.</p>
+         * <p>The specification of the cloud application service instance.</p>
          * <ul>
-         * <li>For the crs.cp.* series, the billing method can be subscription or pay-as-you-go.</li>
-         * <li>For the crs.vm.* series, the billing method can be subscription or pay-as-you-go.</li>
+         * <li>If the specification belongs to the crs.cp.* series, the billing method can be subscription or pay-as-you-go.</li>
+         * <li>If the specification belongs to the crs.vm.* series, the billing method can be subscription or pay-as-you-go.</li>
          * <li>For other series, only the subscription billing method is supported.</li>
          * </ul>
          * <p>This parameter is required.</p>
