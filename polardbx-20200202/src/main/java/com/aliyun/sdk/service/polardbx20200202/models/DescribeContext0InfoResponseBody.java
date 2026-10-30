@@ -80,7 +80,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parameter details.</p>
+         * <p>The data details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -263,7 +263,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication principal type.</p>
+             * <p>The type of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -285,7 +285,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of missing permission.</p>
+             * <p>The no-permission type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -442,7 +442,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target node type: service or dashboard.</p>
+             * <p>The target node type. Valid values: service, dashboard.</p>
              * 
              * <strong>example:</strong>
              * <p>service</p>
@@ -497,7 +497,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC-connected instance ID.</p>
+             * <p>The VPC instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-spsil01pww4hfzjayd-cn-20251013180429</p>
@@ -643,7 +643,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target node type: service or dashboard.</p>
+             * <p>The target node type. Valid values: service, dashboard.</p>
              * 
              * <strong>example:</strong>
              * <p>service</p>
@@ -667,8 +667,8 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             /**
              * <p>The instance type. Valid values:</p>
              * <ul>
-             * <li><strong>ReadWrite</strong>: Primary instance.</li>
-             * <li><strong>ReadOnly</strong>: Read-only instance.</li>
+             * <li><strong>ReadWrite</strong>: primary instance</li>
+             * <li><strong>ReadOnly</strong>: read-only instance</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -702,7 +702,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC-connected instance ID.</p>
+             * <p>The VPC instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-8vbdw66evguopfcfvieoi</p>
@@ -863,7 +863,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance specifications.</p>
+             * <p>The instance class.</p>
              * 
              * <strong>example:</strong>
              * <p>pg.x2.13large.2c</p>
@@ -915,7 +915,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target node type: service or dashboard.</p>
+             * <p>The target node type. Valid values: service, dashboard.</p>
              * 
              * <strong>example:</strong>
              * <p>service</p>
@@ -928,13 +928,13 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             /**
              * <p>The node status. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Running.</li>
-             * <li><strong>1</strong>: Creating.</li>
-             * <li><strong>2</strong>: Abnormal.</li>
-             * <li><strong>3</strong>: Expired.</li>
-             * <li><strong>4</strong>: Releasing.</li>
-             * <li><strong>5</strong>: Released.</li>
-             * <li><strong>6</strong>: Locked.</li>
+             * <li><strong>0</strong>: running</li>
+             * <li><strong>1</strong>: creating</li>
+             * <li><strong>2</strong>: abnormal</li>
+             * <li><strong>3</strong>: expired</li>
+             * <li><strong>4</strong>: releasing</li>
+             * <li><strong>5</strong>: released</li>
+             * <li><strong>6</strong>: locked</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1196,7 +1196,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance specifications.</p>
+             * <p>The instance class.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql.x2.large.2c</p>
@@ -1226,7 +1226,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database instance name.</p>
+             * <p>The name of the database instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-hzr9qzafkeury3</p>
@@ -1248,7 +1248,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service 当前已确认的小版本完整 tag，未知时为空。</p>
+             * <p>The full tag of the minor version currently confirmed for the service. This parameter is empty when the version is unknown.</p>
              * 
              * <strong>example:</strong>
              * <p>polardb-2.6.0_release_contextdb-20261023</p>
@@ -1270,7 +1270,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PolarDB-X Search instance name.</p>
+             * <p>The name of the PolarDB-X Search instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pxs-********</p>

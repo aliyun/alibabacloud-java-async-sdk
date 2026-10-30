@@ -102,7 +102,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

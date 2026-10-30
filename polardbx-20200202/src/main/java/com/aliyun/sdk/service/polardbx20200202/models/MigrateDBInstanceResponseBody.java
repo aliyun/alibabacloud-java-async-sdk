@@ -80,7 +80,7 @@ public class MigrateDBInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Returns success if the request was successful, or an error code if the request failed.</p>
+         * <p>The returned message. If the request is successful, &quot;success&quot; is returned. If the request fails, the corresponding error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -102,7 +102,7 @@ public class MigrateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

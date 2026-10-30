@@ -150,7 +150,7 @@ public class CreatePxfsUserRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the PolarDB-X instance.</p>
+         * <p>The PolarDB-X instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class CreatePxfsUserRequest extends Request {
         }
 
         /**
-         * <p>The identity name.</p>
+         * <p>The name of the identity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class CreatePxfsUserRequest extends Request {
         }
 
         /**
-         * <p>The identity role.</p>
+         * <p>The role of the identity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class CreatePxfsUserRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The ID of the tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
