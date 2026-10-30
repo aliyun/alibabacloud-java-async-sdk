@@ -80,7 +80,7 @@ public class CreateFlowlogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The flow log ID.</p>
+         * <p>The ID of the flow log.</p>
          * 
          * <strong>example:</strong>
          * <p>flowlog-m5evbtbpt****</p>
@@ -102,11 +102,11 @@ public class CreateFlowlogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * <ul>
-         * <li><p><strong>true</strong>: successful.</p>
+         * <li><p><strong>true</strong>: The call was successful.</p>
          * </li>
-         * <li><p><strong>false</strong>: failed.</p>
+         * <li><p><strong>false</strong>: The call failed.</p>
          * </li>
          * </ul>
          * 

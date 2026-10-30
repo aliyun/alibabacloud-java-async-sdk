@@ -78,7 +78,7 @@ public class CreateCenInterRegionTrafficQosPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the traffic scheduling policy.</p>
+         * <p>The ID of the traffic QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-eczzew0v1kzrb5****</p>

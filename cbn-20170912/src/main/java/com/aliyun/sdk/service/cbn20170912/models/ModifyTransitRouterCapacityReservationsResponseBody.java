@@ -54,7 +54,10 @@ public class ModifyTransitRouterCapacityReservationsResponseBody extends TeaMode
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>004E99FB-E996-5777-888E-BA1D8F215407</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

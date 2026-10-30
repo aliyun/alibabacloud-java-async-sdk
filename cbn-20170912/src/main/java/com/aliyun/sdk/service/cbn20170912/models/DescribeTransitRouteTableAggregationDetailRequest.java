@@ -145,10 +145,10 @@ public class DescribeTransitRouteTableAggregationDetailRequest extends Request {
         } 
 
         /**
-         * <p>A client token to ensure the idempotence of the request.</p>
-         * <p>Generate a unique value from your client for each request. The token can contain only ASCII characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can generate the value from your client. Make sure that the value is unique across different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class DescribeTransitRouteTableAggregationDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * <p>The ID of the Enterprise Edition transit router route table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -78,7 +78,7 @@ public class CreateCenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>

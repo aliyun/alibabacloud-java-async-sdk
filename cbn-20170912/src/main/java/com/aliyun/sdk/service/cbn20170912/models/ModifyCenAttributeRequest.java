@@ -172,7 +172,7 @@ public class ModifyCenAttributeRequest extends Request {
 
         /**
          * <p>The description of the CEN instance.</p>
-         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>The description can be empty or 1 to 256 characters in length. It cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>cen</p>
@@ -185,7 +185,7 @@ public class ModifyCenAttributeRequest extends Request {
 
         /**
          * <p>The name of the CEN instance.</p>
-         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
+         * <p>The name can be empty or 1 to 128 characters in length. It cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -215,8 +215,12 @@ public class ModifyCenAttributeRequest extends Request {
         }
 
         /**
-         * <p>The level of CIDR block overlapping.</p>
-         * <p>Valid values: <strong>REDUCED</strong> (default), which indicates that CIDR blocks can overlap but cannot be identical.</p>
+         * <p>Sets the level of CIDR block overlap.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>REDUCED</strong>: CIDR blocks can overlap but cannot be identical.
+         * Default value: <strong>REDUCED</strong>.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>REDUCED</p>

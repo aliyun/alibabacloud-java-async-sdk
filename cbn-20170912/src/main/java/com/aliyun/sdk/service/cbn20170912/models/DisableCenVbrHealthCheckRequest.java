@@ -160,7 +160,7 @@ public class DisableCenVbrHealthCheckRequest extends Request {
         } 
 
         /**
-         * <p>The CEN instance ID.</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,9 +222,9 @@ public class DisableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the VBR instance.</p>
+         * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
          * <blockquote>
-         * <p>This parameter is required if the VBR instance and the CEN instance belong to different accounts.</p>
+         * <p>This parameter is required if the VBR and the CEN instance belong to different accounts.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -237,8 +237,8 @@ public class DisableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the VBR instance.</p>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to query region IDs.</p>
+         * <p>The region ID of the VBR.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

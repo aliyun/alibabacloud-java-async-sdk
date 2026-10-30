@@ -54,7 +54,7 @@ public class ModifyCenAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>13526224-5780-4426-8BDF-BC8B08700F22</p>

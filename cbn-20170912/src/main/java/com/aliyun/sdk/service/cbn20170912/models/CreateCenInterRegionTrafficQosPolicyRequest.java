@@ -229,11 +229,11 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The bandwidth guarantee mode. You can configure QoS queues based on absolute bandwidth values or bandwidth percentages. Valid values:</p>
+         * <p>The bandwidth guarantee mode. You can specify an absolute bandwidth value or a bandwidth percentage. Valid values:</p>
          * <ul>
-         * <li><p><strong>byBandwidth</strong>: configures QoS queues based on absolute bandwidth values.</p>
+         * <li><p><strong>byBandwidth</strong>: configures the QoS queue based on an absolute bandwidth value.</p>
          * </li>
-         * <li><p><strong>byBandwidthPercent</strong> (default): configures QoS queues based on bandwidth percentages.</p>
+         * <li><p><strong>byBandwidthPercent</strong> (default): configures the QoS queue based on a bandwidth percentage.</p>
          * </li>
          * </ul>
          * 
@@ -247,8 +247,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655****</p>
@@ -260,10 +259,10 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the cross-region traffic scheduling policy is created.</li>
+         * <li><strong>true</strong>: prechecks the request without creating the inter-region traffic QoS policy. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, the inter-region traffic QoS policy is created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,10 +275,10 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the traffic scheduling policy is created.</li>
+         * <li><strong>true</strong>: prechecks the request without creating the traffic QoS policy. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, the traffic QoS policy is created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -328,8 +327,8 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>The description of the traffic scheduling policy.</p>
-         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>The description of the traffic QoS policy.</p>
+         * <p>The description must be 1 to 256 characters in length, and can be left empty. It cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -341,8 +340,8 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the traffic scheduling policy.</p>
-         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
+         * <p>The name of the traffic QoS policy.</p>
+         * <p>The name must be 1 to 128 characters in length, and can be left empty. It cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -354,8 +353,8 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>The queue information of the traffic scheduling policy.</p>
-         * <p>You can create up to 3 queues. To create more queues, call CreateCenInterRegionTrafficQosQueue.</p>
+         * <p>The information about the queues in the traffic QoS policy.</p>
+         * <p>You can create up to three queues. To create more queues, call the CreateCenInterRegionTrafficQosQueue operation.</p>
          */
         public Builder trafficQosQueues(java.util.List<TrafficQosQueues> trafficQosQueues) {
             this.putQueryParameter("TrafficQosQueues", trafficQosQueues);
@@ -377,7 +376,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transit router instance.</p>
+         * <p>The transit router instance ID, which is used for forward and routing.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -488,11 +487,11 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The absolute bandwidth value that the queue can use for inter-region traffic, in Mbit/s.</p>
-             * <p>A traffic scheduling policy supports up to 10 queues, and each queue can be assigned an absolute bandwidth value.</p>
-             * <p>For example, if you enter 1, traffic that matches the queue can use up to 1 Mbit/s of inter-region bandwidth.</p>
+             * <p>The absolute value of the inter-region bandwidth that the queue can use. Unit: Mbit/s.</p>
+             * <p>You can create up to 10 queues in a traffic QoS policy and specify the inter-region bandwidth that each queue can use.</p>
+             * <p>For example, if you enter 1, packets that match the queue can use up to 1 Mbit/s of the inter-region bandwidth.</p>
              * <blockquote>
-             * <p>The sum of absolute bandwidth values of all allocated queues in a traffic scheduling policy cannot exceed the inter-region bandwidth value.</p>
+             * <p>The sum of the absolute values of the inter-region bandwidth allocated to all queues in a traffic QoS policy cannot exceed the total inter-region bandwidth.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -504,8 +503,8 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             }
 
             /**
-             * <p>The DSCP values that the queue matches.</p>
-             * <p>A traffic scheduling policy supports up to 3 queues, and each queue can match up to 60 DSCP values. Separate multiple DSCP values with commas (,).</p>
+             * <p>The DSCP values that match the queue.</p>
+             * <p>You can create up to three queues in a traffic QoS policy. Each queue can match up to 60 DSCP values. Separate multiple DSCP values with commas (,).</p>
              */
             public Builder dscps(java.util.List<Integer> dscps) {
                 this.dscps = dscps;
@@ -514,8 +513,8 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
 
             /**
              * <p>The description of the queue.</p>
-             * <p>A traffic scheduling policy supports up to 10 queues, and each queue can have a description.</p>
-             * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
+             * <p>You can create up to 10 queues in a traffic QoS policy and add a description to each queue.</p>
+             * <p>The description must be 1 to 256 characters in length, and can be left empty. It cannot start with http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>desctest</p>
@@ -527,8 +526,8 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
 
             /**
              * <p>The name of the queue.</p>
-             * <p>A traffic scheduling policy supports up to 3 queues, and each queue can be assigned a name.</p>
-             * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
+             * <p>You can create up to three queues in a traffic QoS policy and specify a name for each queue.</p>
+             * <p>The name must be 1 to 128 characters in length, and can be left empty. It cannot start with http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>nametest</p>
@@ -539,11 +538,11 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             }
 
             /**
-             * <p>The percentage of inter-region bandwidth that the queue can use.</p>
-             * <p>A traffic scheduling policy supports up to 10 queues, and each queue can be assigned a percentage of inter-region bandwidth.</p>
-             * <p>For example, if you enter <strong>1</strong>, traffic that matches the queue can use up to 1% of the inter-region bandwidth.</p>
+             * <p>The percentage of the inter-region bandwidth that the queue can use.</p>
+             * <p>You can create up to 10 queues in a traffic QoS policy and specify the percentage of the inter-region bandwidth that each queue can use.</p>
+             * <p>For example, if you enter <strong>1</strong>, packets that match the queue can use up to 1% of the inter-region bandwidth.</p>
              * <blockquote>
-             * <p>The sum of bandwidth percentages of all queues in a traffic scheduling policy cannot exceed 100%.</p>
+             * <p>The sum of the inter-region bandwidth percentages of all queues in a traffic QoS policy cannot exceed 100%.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

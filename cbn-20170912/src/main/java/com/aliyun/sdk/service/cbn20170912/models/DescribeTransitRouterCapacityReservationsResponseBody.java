@@ -93,7 +93,7 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
         } 
 
         /**
-         * DeploymentSets.
+         * <p>The deployment set information specified for the resource reservation.</p>
          */
         public Builder deploymentSets(java.util.List<DeploymentSets> deploymentSets) {
             this.deploymentSets = deploymentSets;
@@ -101,6 +101,7 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
         }
 
         /**
+         * <p>The time when the resource reservation was last modified.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -112,7 +113,7 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
         }
 
         /**
-         * MinimumTransitRouterCapacities.
+         * <p>The list of reserved capacity information for each zone in the resource reservation.</p>
          */
         public Builder minimumTransitRouterCapacities(java.util.List<MinimumTransitRouterCapacities> minimumTransitRouterCapacities) {
             this.minimumTransitRouterCapacities = minimumTransitRouterCapacities;
@@ -120,7 +121,10 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +190,10 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             } 
 
             /**
-             * DeploymentSetID.
+             * <p>The instance ID of the deployment set configured in the specified active zone of the transit router, which handles forward and routing tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-badxcs*****</p>
              */
             public Builder deploymentSetID(String deploymentSetID) {
                 this.deploymentSetID = deploymentSetID;
@@ -194,7 +201,13 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             }
 
             /**
-             * ZoneID.
+             * <p>The zone for which you want to modify the deployment set of the resource reservation.</p>
+             * <ul>
+             * <li>To cancel the deployment set, specify the zone and leave the deployment set instance ID empty.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-b</p>
              */
             public Builder zoneID(String zoneID) {
                 this.zoneID = zoneID;
@@ -261,7 +274,13 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             } 
 
             /**
-             * Effective.
+             * <p>The effective reserved value for the specified zone in the resource reservation.</p>
+             * <ul>
+             * <li>The effective reserved value refers to the current billed value for the resource reservation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder effective(Long effective) {
                 this.effective = effective;
@@ -269,7 +288,14 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             }
 
             /**
-             * Target.
+             * <p>The target reserved value for the specified active zone in the resource reservation.</p>
+             * <ul>
+             * <li>In scenarios where you decrease the quota, the change takes effect in the next month, and the effective reserved value is updated in synchronization.</li>
+             * <li>Upgrade and initial reservation scenarios require spooling by Alibaba Cloud and take effect immediately after the spooling is complete.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder target(Long target) {
                 this.target = target;
@@ -336,7 +362,13 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             } 
 
             /**
-             * Reason.
+             * <p>The reason for failure when the reservation status is ProvisionFailed.</p>
+             * <ul>
+             * <li>For example, Reservation.InsufficientCapacity indicates that resources are insufficient to meet the target reserved value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Reservation.InsufficientCapacity</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -344,7 +376,17 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             }
 
             /**
-             * Status.
+             * <p>The resource reservation status. Valid values:</p>
+             * <ul>
+             * <li>Pending: The initial reservation is initiated and is pending processing by Alibaba Cloud.</li>
+             * <li>Provisioning: Alibaba Cloud is processing the reservation request.</li>
+             * <li>Provisioned: The reservation is successful.</li>
+             * <li>ProvisionFailed: The reservation failed. You can refer to the failure reason.</li>
+             * <li>Updating: The reservation is being updated. Operations such as modifying the deployment set or increasing the reserved value require spooling by Alibaba Cloud.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -424,7 +466,7 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             } 
 
             /**
-             * DataProcessGbps.
+             * <p>The reserved capacity information for the specified zone in the resource reservation.</p>
              */
             public Builder dataProcessGbps(DataProcessGbps dataProcessGbps) {
                 this.dataProcessGbps = dataProcessGbps;
@@ -432,7 +474,7 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             }
 
             /**
-             * State.
+             * <p>The status information of the specified zone in the resource reservation.</p>
              */
             public Builder state(State state) {
                 this.state = state;
@@ -440,7 +482,10 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             }
 
             /**
-             * ZoneId.
+             * <p>The ID of the specified zone for the resource reservation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

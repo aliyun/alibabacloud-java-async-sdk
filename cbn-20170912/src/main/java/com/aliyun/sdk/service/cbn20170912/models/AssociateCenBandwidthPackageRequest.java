@@ -131,7 +131,7 @@ public class AssociateCenBandwidthPackageRequest extends Request {
         } 
 
         /**
-         * <p>The bandwidth package instance ID.</p>
+         * <p>The bandwidth plan instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
