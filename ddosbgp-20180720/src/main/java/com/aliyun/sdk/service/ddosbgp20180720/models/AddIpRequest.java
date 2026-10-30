@@ -104,9 +104,9 @@ public class AddIpRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Anti-DDoS Origin instance to manage.</p>
+         * <p>Instance ID of the Anti-DDoS Origin instance.</p>
          * <blockquote>
-         * <p>Call <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> to query the IDs of all Anti-DDoS Origin instances.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query instance IDs of all Anti-DDoS Origin instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -120,11 +120,11 @@ public class AddIpRequest extends Request {
         }
 
         /**
-         * <p>The list of IP addresses to add to the Anti-DDoS Origin instance for protection. The value is a string that is converted from a JSON array. Each element in the JSON array is a struct that contains the following fields:</p>
+         * <p>The list of IP addresses to add to the Anti-DDoS Origin instance for protection. The list is represented in a character string format converted from a JSON array. Each element in the JSON array is a structure that contains the following fields:</p>
          * <ul>
-         * <li><p><strong>ip</strong>: The IP address to add. This parameter is of the String type and is required.</p>
+         * <li><p><strong>ip</strong>: String | Required | The IP address to add.</p>
          * </li>
-         * <li><p><strong>member_uid</strong>: The ID of the member account that owns the asset. This parameter is of the String type and is optional. Specify this parameter only when you add an asset that belongs to a member account. For example: [{&quot;ip&quot;:&quot;121.41.XX.XX&quot;,&quot;member_uid&quot;:&quot;120100811162\<em>\</em>\<em>\</em>&quot;}]</p>
+         * <li><p><strong>member_uid</strong>: String | Optional | The member accounts to which the asset belongs. This field is required only when you add an asset under member accounts. Example: [{&quot;ip&quot;:&quot;121.41.XX.XX&quot;,&quot;member_uid&quot;:&quot;120100811162****&quot;}]</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -141,7 +141,7 @@ public class AddIpRequest extends Request {
         /**
          * <p>The region ID of the Anti-DDoS Origin instance.</p>
          * <blockquote>
-         * <p>Call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query information about all regions that Anti-DDoS Origin supports.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all regions supported by Anti-DDoS Origin.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class AddIpRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group in Resource Management to which the Anti-DDoS Origin instance belongs. If you leave this parameter empty, the instance is added to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. Default value: empty, which indicates the default resource group.</p>
          * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
          * 
          * <strong>example:</strong>

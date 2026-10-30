@@ -67,7 +67,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The specifications of the Anti-DDoS Origin instance, including whether best-effort protection is enabled, the number of available best-effort protection sessions, and the number of used best-effort protection sessions.</p>
+         * <p>The specification information of the Anti-DDoS Origin instance, including the enabling status of best-effort protection, and the available and used best-effort protection times.</p>
          */
         public Builder instanceSpecs(java.util.List<InstanceSpecs> instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
@@ -259,7 +259,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of IP addresses that are protected by the Anti-DDoS Origin Enterprise instance.</p>
+             * <p>The number of protected IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -281,10 +281,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metering method of burstable clean bandwidth. Valid values:</p>
+             * <p>The burstable clean bandwidth mode. Valid values:</p>
              * <ul>
-             * <li><strong>month</strong>: the monthly 95th percentile metering method.</li>
-             * <li><strong>day</strong>: the daily 95th percentile metering method.</li>
+             * <li><strong>month</strong>: Monthly 95th percentile metering method.</li>
+             * <li><strong>day</strong>: Daily 95th percentile metering method.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -296,7 +296,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The burstable protection bandwidth of each protected IP address. Unit: Gbit/s.</p>
+             * <p>The burstable protection threshold for the protected IP address. Unit: Gbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -307,7 +307,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The basic protection bandwidth of each protected IP address. Unit: Gbit/s.</p>
+             * <p>The basic protection threshold for the protected IP address. Unit: Gbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -318,7 +318,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of IP addresses that can be protected by the Anti-DDoS Origin Enterprise instance.</p>
+             * <p>The number of IP addresses that can be added for protection.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -329,7 +329,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The clean bandwidth. Unit: Mbit/s.</p>
+             * <p>The normal clean bandwidth. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -512,7 +512,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The available best-effort protection sessions.</p>
+             * <p>The available best-effort protection times.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -523,7 +523,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that blackhole filtering can be deactivated.</p>
+             * <p>The available quota for deactivating blackhole filtering.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -534,7 +534,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of the used best-effort protection sessions. Unit: %.</p>
+             * <p>The usage percentage of best-effort protection times. Unit: %.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -545,9 +545,9 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance is downgraded. Valid value:</p>
+             * <p>The downgrade status of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>8</strong>: The instance is downgraded due to excessive bandwidth usage.</li>
+             * <li><strong>8</strong>: The instance is downgraded because the clean bandwidth exceeds the limit.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -570,10 +570,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether best-effort protection is enabled. Valid values:</p>
+             * <p>Indicates whether best-effort protection mode is enabled for the instance. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Best-effort protection is disabled.</li>
-             * <li><strong>1</strong>: Best-effort protection is enabled.</li>
+             * <li><strong>0</strong>: Best-effort protection mode is disabled.</li>
+             * <li><strong>1</strong>: Best-effort protection mode is enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -585,7 +585,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the Anti-DDoS Origin instance, including the number of protected IP addresses and protection bandwidth.</p>
+             * <p>The configuration information of the Anti-DDoS Origin instance, including the number of protected IP addresses and protection bandwidth information.</p>
              */
             public Builder packConfig(PackConfig packConfig) {
                 this.packConfig = packConfig;
@@ -595,7 +595,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             /**
              * <p>The region ID of the Anti-DDoS Origin instance.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the name of the region.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the details of region IDs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -607,7 +607,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total best-effort protection sessions.</p>
+             * <p>The total available best-effort protection times.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

@@ -117,7 +117,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -128,7 +128,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>97935DF1-0289-4AA2-9DD1-72377838B16B</p>
@@ -139,7 +139,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the tags.</p>
+         * <p>The tag information.</p>
          */
         public Builder tagKeys(java.util.List<TagKeys> tagKeys) {
             this.tagKeys = tagKeys;
@@ -147,7 +147,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of tags returned.</p>
+         * <p>The total number of tags.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -216,7 +216,7 @@ public class ListTagKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of tag values that correspond to each key.</p>
+             * <p>The total number of tag values for the tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

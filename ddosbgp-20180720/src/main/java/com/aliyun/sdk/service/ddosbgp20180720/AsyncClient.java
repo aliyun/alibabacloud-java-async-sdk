@@ -77,10 +77,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DeleteBlackhole operation to deactivate blackhole filtering for a protected IP address.
-     * Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/118701.html">DescribePackIpList</a> operation to query the protection status of the IP addresses that are protected by your Anti-DDoS Origin instance. For example, you can query whether blackhole filtering is triggered for an IP address.</p>
-     * <h3><a href="#qps-"></a>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation deactivates blackhole filtering status for a single IP address protected by an Anti-DDoS Origin instance.
+     * Before you invoke this operation, you can invoke <a href="https://help.aliyun.com/document_detail/118701.html">DescribePackIpList</a> to query the protection status of all IP assets protected by Anti-DDoS Origin instances, including whether the IP addresses are in blackhole filtering status.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit on this operation is 10 requests per second per account. If the number of requests per second exceeds the limit, throttling is triggered, which may affect your business. Invoke the API as appropriate.</p>
      * 
      * @param request the request parameters of DeleteBlackhole  DeleteBlackholeRequest
      * @return DeleteBlackholeResponse
@@ -95,7 +95,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You cannot delete a mitigation policy to which a protected object is added.</p>
+     * <p>You cannot delete a mitigation policy that is associated with a protected object.</p>
      * 
      * @param request the request parameters of DeletePolicy  DeletePolicyRequest
      * @return DeletePolicyResponse
@@ -125,9 +125,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.</p>
-     * <h3><a href="#qps-"></a>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>You can invoke this operation to perform a paged query for the details of DDoS attack events that occurred on a single Anti-DDoS Origin instance. The paging result includes the start and end time of the attack, the attacked IP address, and the event status.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeDdosEvent  DescribeDdosEventRequest
      * @return DescribeDdosEventResponse
@@ -145,8 +145,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.</p>
+     * <p>This operation queries the number of abnormal IP addresses (such as those in the Black Hole Activated state) among protected assets that are assigned public IP addresses (such as a cloud server ECS instance, a Server Load Balancer (SLB) instance, and an elastic IP address (EIP)) and the number of Anti-DDoS Origin instances that are about to expire (with a remaining validity period of less than 7 calendar days) in a specified region.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10 calls per second. If you invoke the API and exceed the limit, your requests are throttled, which may affect your services. Invoke the API at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeExcpetionCount  DescribeExcpetionCountRequest
      * @return DescribeExcpetionCountResponse
@@ -183,9 +184,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeOpEntities operation to query the operation logs of an instance by page.</p>
-     * <h3>Limit</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This API operation is used to invoke a paged query with paging for the Operation logs of Anti-DDoS Origin.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Invoke this API operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeOpEntities  DescribeOpEntitiesRequest
      * @return DescribeOpEntitiesResponse
@@ -194,9 +195,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query a paginated list of protected IP addresses for an Anti-DDoS Origin instance. The query returns details such as the IP addresses, the types of cloud assets to which the IP addresses belong, and their current status, such as whether they are under blackhole filtering.</p>
+     * <p>This operation performs a paged query to retrieve the list of protected IP addresses for a single Anti-DDoS Origin instance. The information includes the IP address, the cloud asset type to which the IP address belongs, and the current status of the IP address, such as the blackhole filtering status.</p>
      * <h3>QPS limit</h3>
-     * <p>This operation has a queries per second (QPS) limit of 10 for each user. Calls that exceed this limit are throttled, which may affect your business. We recommend that you call this operation within this limit.</p>
+     * <p>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribePackIpList  DescribePackIpListRequest
      * @return DescribePackIpListResponse
@@ -279,9 +280,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.</p>
-     * <h3><a href="#qps-"></a>Limits</h3>
-     * <p>You can call this API operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation queries the tags bound to Anti-DDoS Origin instances in batches.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit per user for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -316,6 +317,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyRemarkResponse
      */
     CompletableFuture<ModifyRemarkResponse> modifyRemark(ModifyRemarkRequest request);
+
+    /**
+     * @param request the request parameters of MoveIp  MoveIpRequest
+     * @return MoveIpResponse
+     */
+    CompletableFuture<MoveIpResponse> moveIp(MoveIpRequest request);
 
     /**
      * @param request the request parameters of MoveResourceGroup  MoveResourceGroupRequest

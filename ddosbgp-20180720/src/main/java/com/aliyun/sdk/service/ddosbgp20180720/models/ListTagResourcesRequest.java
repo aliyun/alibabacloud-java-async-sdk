@@ -131,7 +131,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</p>
+         * <p>The query token. The value is the <strong>NextToken</strong> parameter value returned from the previous call to this operation. You do not need to specify this parameter when you call this operation for the first time.</p>
          * 
          * <strong>example:</strong>
          * <p>RGuYpqDdKhzXb8C3.D1BwQgc1tMBsoxdGiEKHHUUCf****</p>
@@ -143,9 +143,9 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+         * <p>The region ID of the Anti-DDoS Origin instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all region IDs supported by Anti-DDoS Origin.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -160,7 +160,7 @@ public class ListTagResourcesRequest extends Request {
 
         /**
          * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
-         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
+         * <p>If you do not specify this parameter, the default resource group is used.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>
@@ -174,7 +174,7 @@ public class ListTagResourcesRequest extends Request {
         /**
          * <p>The IDs of the Anti-DDoS Origin instances to query.</p>
          * <blockquote>
-         * <p> The <strong>ResourceId</strong> parameter and the <strong>key-value pair for the Tag parameter</strong> cannot be left empty at the same time.</p>
+         * <p><strong>ResourceId</strong> and <strong>Tag Key-Value pairs</strong> cannot be left empty at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource to query. Set the value to <strong>INSTANCE</strong>.</p>
+         * <p>The type of the resource to query. Set the value to <strong>INSTANCE</strong>, which indicates an instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The key-value pair of the tag to query.</p>
+         * <p>The tag key-value pairs to query.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -268,9 +268,9 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag to query.</p>
+             * <p>The tag key to query.</p>
              * <blockquote>
-             * <p> The <strong>ResourceId</strong> parameter and the <strong>key-value pair for the Tag parameter</strong> cannot be left empty at the same time.</p>
+             * <p><strong>ResourceId</strong> and <strong>Tag Key-Value pairs</strong> cannot be left empty at the same time.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -282,9 +282,9 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag to query.</p>
+             * <p>The tag value to query.</p>
              * <blockquote>
-             * <p> The <strong>ResourceId</strong> parameter and the <strong>key-value pair for the Tag parameter</strong> cannot be left empty at the same time.</p>
+             * <p><strong>ResourceId</strong> and <strong>Tag Key-Value pairs</strong> cannot be left empty at the same time.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
