@@ -130,7 +130,7 @@ public class GetAgentConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the component for which you want to retrieve configurations.</p>
+         * <p>The ID of the component.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class GetAgentConfigRequest extends Request {
         }
 
         /**
-         * <p>The current page number. This field is available when page-based pagination is used.</p>
+         * <p>The current page number. This parameter is available only when pagination by page number is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

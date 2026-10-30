@@ -90,7 +90,7 @@ public class CreateAgentConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the component for the configuration. You can obtain the component ID from ListAgents.</p>
+         * <p>The ID of the agent associated with the configuration. You can obtain the agent ID from ListAgents.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -115,7 +115,7 @@ public class ListAlertStrategiesRequest extends Request {
         } 
 
         /**
-         * <p>The current page number (starting from 1).</p>
+         * <p>The current page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,7 +127,7 @@ public class ListAlertStrategiesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to retrieve in a single request.</p>
+         * <p>The maximum number of records to retrieve per request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

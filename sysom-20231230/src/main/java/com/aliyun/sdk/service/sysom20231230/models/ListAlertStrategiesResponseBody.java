@@ -134,8 +134,8 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <ul>
-         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * <li>If <code>code == Success</code>, the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. If the authorization failed, check the <code>message</code> field for the detailed error message.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -155,7 +155,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -169,7 +169,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
          * <p>The error message.</p>
          * <ul>
          * <li>If <code>code == Success</code>, this field is empty.</li>
-         * <li>Otherwise, this field contains the request error information.</li>
+         * <li>Otherwise, this field contains the request error message.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,7 +301,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of anomaly items that receive alerts.</p>
+             * <p>The list of exception items that receive alerts.</p>
              */
             public Builder items(java.util.List<String> items) {
                 this.items = items;
@@ -479,7 +479,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Kubernetes labels are required.</p>
+             * <p>Indicates whether K8s labels are required.</p>
              */
             public Builder k8sLabel(Boolean k8sLabel) {
                 this.k8sLabel = k8sLabel;

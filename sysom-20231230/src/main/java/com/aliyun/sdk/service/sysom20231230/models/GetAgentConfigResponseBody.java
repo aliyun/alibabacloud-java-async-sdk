@@ -151,7 +151,7 @@ public class GetAgentConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of returned records.</p>
+         * <p>The total number of returned records.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

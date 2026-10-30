@@ -104,7 +104,7 @@ public class UpdateInstanceAgentConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned results.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,11 @@ public class UpdateInstanceAgentConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. If <code>code == Success</code>, this field is empty. Otherwise, this field contains the error message of the request.</p>
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error message.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Analysis ID: 56dae746-ef55-4f77-8373-cb3594c41457
@@ -180,7 +184,8 @@ public class UpdateInstanceAgentConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The task ID. You can use this task ID to call the GetAgentTask operation to check the task execution status.</p>
+             * <p>The task ID.</p>
+             * <p>You can use this task ID to call the GetAgentTask operation to check the task execution status.</p>
              * 
              * <strong>example:</strong>
              * <p>bbe94a98-4192-4172-b856-95777e0a55d7</p>

@@ -171,7 +171,10 @@ public class UpdateAlertDestinationRequest extends Request {
         } 
 
         /**
-         * app_id.
+         * <p>The app ID of the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ab724ba952448eab4b5ed7ebe1d51ab</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("app_id", appId);
@@ -180,7 +183,10 @@ public class UpdateAlertDestinationRequest extends Request {
         }
 
         /**
-         * app_secret.
+         * <p>The app secret of the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZzhtNzloZTY4ZzAwRE4rXFxMRCdNTmFCbV0mQUZIcEM</p>
          */
         public Builder appSecret(String appSecret) {
             this.putBodyParameter("app_secret", appSecret);
@@ -189,7 +195,7 @@ public class UpdateAlertDestinationRequest extends Request {
         }
 
         /**
-         * group_id.
+         * <p>The group ID.</p>
          */
         public Builder groupId(java.util.List<String> groupId) {
             this.putBodyParameter("group_id", groupId);
@@ -210,7 +216,10 @@ public class UpdateAlertDestinationRequest extends Request {
         }
 
         /**
-         * imbot.
+         * <p>Specifies whether the contact is an IM chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder imbot(Boolean imbot) {
             this.putBodyParameter("imbot", imbot);
@@ -371,7 +380,7 @@ public class UpdateAlertDestinationRequest extends Request {
             }
 
             /**
-             * <p>The chatbot secret key.</p>
+             * <p>The secret of the chatbot.</p>
              * 
              * <strong>example:</strong>
              * <p>SECxxx</p>
@@ -382,7 +391,7 @@ public class UpdateAlertDestinationRequest extends Request {
             }
 
             /**
-             * <p>The webhook URL.</p>
+             * <p>The webhook URL of the chatbot.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>

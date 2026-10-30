@@ -119,8 +119,8 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <ul>
-         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * <li><code>code == Success</code>: The authorization succeeded.</li>
+         * <li>Other status codes: The authorization failed. If the authorization fails, check the <code>message</code> field for the detailed fault information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
          * <p>The error message.</p>
          * <ul>
          * <li>If <code>code == Success</code>, this field is empty.</li>
-         * <li>Otherwise, this field contains the request error information.</li>
+         * <li>Otherwise, this field contains the request error message.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -302,7 +302,10 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * agent_config_id.
+             * <p>The component configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f0078fbb-4213-11f0-a19b-00163e4ae208</p>
              */
             public Builder agentConfigId(String agentConfigId) {
                 this.agentConfigId = agentConfigId;
@@ -310,7 +313,10 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * agent_config_name.
+             * <p>The component configuration name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder agentConfigName(String agentConfigName) {
                 this.agentConfigName = agentConfigName;

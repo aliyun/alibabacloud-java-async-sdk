@@ -60,7 +60,7 @@ public class GetAifgResultRequest extends Request {
         } 
 
         /**
-         * <p>The task ID.</p>
+         * <p>The task identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

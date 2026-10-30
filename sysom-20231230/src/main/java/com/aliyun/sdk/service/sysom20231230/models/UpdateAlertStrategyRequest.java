@@ -154,7 +154,7 @@ public class UpdateAlertStrategyRequest extends Request {
         }
 
         /**
-         * <p>The name of the alerting policy.</p>
+         * <p>The alert policy name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class UpdateAlertStrategyRequest extends Request {
             }
 
             /**
-             * <p>The collection of exception items that receive alerts.</p>
+             * <p>The collection of exception items that trigger alerts.</p>
              */
             public Builder items(java.util.List<String> items) {
                 this.items = items;

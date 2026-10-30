@@ -115,7 +115,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
          * <p>The error message.</p>
          * <ul>
          * <li>If <code>code == Success</code>, this field is empty.</li>
-         * <li>Otherwise, this field contains the error message of the request.</li>
+         * <li>Otherwise, this field contains the request error message.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The chatbot secret key.</p>
+             * <p>The secret key of the bot.</p>
              * 
              * <strong>example:</strong>
              * <p>SECxxx</p>
@@ -255,7 +255,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The webhook URL of the chatbot.</p>
+             * <p>The webhook URL of the bot.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>
@@ -403,7 +403,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the contact was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1753669116286</p>
@@ -455,7 +455,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The notification target. Currently, only DingTalk chatbots are supported.</p>
+             * <p>The push target. Currently, only DingTalk bots are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>dingtalk</p>
@@ -477,7 +477,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the contact was last updated.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1751254826285</p>

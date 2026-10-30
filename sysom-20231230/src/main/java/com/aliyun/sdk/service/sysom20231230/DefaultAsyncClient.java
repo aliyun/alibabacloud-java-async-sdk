@@ -234,6 +234,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>本接口仅创建会话，不发送消息，也不触发 Agent 执行。</li>
+     * <li>创建成功后，使用返回的 sessionId 调用 GenerateCopilotStreamResponse 发送消息。</li>
+     * <li>会话 ID 由服务端生成，不支持调用方指定。</li>
+     * <li>每次成功调用均创建一个独立会话。本接口不提供客户端幂等参数，重复调用可能创建多个会话。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateCopilotSession  CreateCopilotSessionRequest
+     * @return CreateCopilotSessionResponse
+     */
+    @Override
+    public CompletableFuture<CreateCopilotSessionResponse> createCopilotSession(CreateCopilotSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateCopilotSession").setMethod(HttpMethod.POST).setPathRegex("/api/v1/copilot/sessions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCopilotSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCopilotSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateInstanceInspection  CreateInstanceInspectionRequest
      * @return CreateInstanceInspectionResponse
      */
@@ -318,6 +344,33 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteAlertStrategyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>仅支持删除当前用户的会话。</li>
+     * <li>会话存在尚未结束的执行时，不允许删除。请先通过 GenerateCopilotStreamResponse 接口发送 action=stop，确认执行结束后再删除。</li>
+     * <li>删除后，无法再通过会话查询接口获取该会话及其历史记录。</li>
+     * <li>会话不存在或不属于当前用户时返回错误。重复删除同一个会话不保证成功。</li>
+     * <li>删除会话不会撤销已经执行的操作，也不会删除产生该会话的定时任务。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteCopilotSession  DeleteCopilotSessionRequest
+     * @return DeleteCopilotSessionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteCopilotSessionResponse> deleteCopilotSession(DeleteCopilotSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteCopilotSession").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/copilot/delete-session").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCopilotSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteCopilotSessionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -495,7 +548,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. Check the <code>data.status</code> field in the response to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
+     * <p>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response to determine the status. If <code>data.status</code> is <code>Success</code>, the diagnosis is successful, and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * @param request the request parameters of GetAifgResult  GetAifgResultRequest
      * @return GetAifgResultResponse
@@ -516,7 +569,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response data to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * <p>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response to determine the status. If <code>data.status</code> is <code>Success</code>, the diagnosis is successful, and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * @param request the request parameters of GetAifgUrl  GetAifgUrlRequest
      * @return GetAifgUrlResponse
@@ -609,6 +662,33 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>仅支持查询当前用户的会话，一次查询一个会话。</li>
+     * <li>返回会话详情及执行摘要，不返回聊天内容。查询历史消息和事件，请调用 ListCopilotSessionMessages。</li>
+     * <li>会话的 status 表示是否归档。判断是否正在执行，应读取 activeTurn。</li>
+     * <li>lastTurn 表示最近一次执行，不一定已经结束；执行过程中，activeTurn 和 lastTurn 可以指向同一轮执行。</li>
+     * <li>会话不存在、已删除或不属于当前用户时返回错误。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetCopilotSession  GetCopilotSessionRequest
+     * @return GetCopilotSessionResponse
+     */
+    @Override
+    public CompletableFuture<GetCopilotSessionResponse> getCopilotSession(GetCopilotSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCopilotSession").setMethod(HttpMethod.GET).setPathRegex("/api/v1/copilot/sessions/{sessionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCopilotSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCopilotSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Queries published hotfixes in batches by CVE ID. You can filter the results by full kernel version.</p>
      * 
      * @param request the request parameters of GetCveHotfix  GetCveHotfixRequest
@@ -651,10 +731,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After installing the component for the target ACK cluster:</p>
+     * <p>After you install the component for the target ACK cluster:</p>
      * <ol>
-     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances are included in the first batch.</li>
-     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component without user intervention.</li>
+     * <li>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
      * </ol>
      * 
      * @param request the request parameters of GetGpuClusterArgsOptions  GetGpuClusterArgsOptionsRequest
@@ -676,10 +756,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After installing the component on the target ACK cluster:</p>
+     * <p>After you install the component for the target ACK cluster:</p>
      * <ol>
-     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
-     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without user intervention.</li>
+     * <li>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</li>
      * </ol>
      * 
      * @param request the request parameters of GetGpuClusterListAlarmRecord  GetGpuClusterListAlarmRecordRequest
@@ -701,10 +781,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After you install the component on the target ACK cluster:</p>
+     * <p>After you install the component for the target ACK cluster:</p>
      * <ol>
-     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
-     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without requiring manual intervention.</li>
+     * <li>When the cluster is initially managed, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
      * </ol>
      * 
      * @param request the request parameters of GetGpuClusterTopology  GetGpuClusterTopologyRequest
@@ -927,10 +1007,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After installing the component for the target ACK cluster:</p>
+     * <p>After you install components for the target ACK cluster:</p>
      * <ol>
-     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</li>
-     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</li>
+     * <li>When the cluster is managed for the first time, the system installs components on all Elastic Compute Service (ECS) instances in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</li>
+     * <li>The Operating System console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the Operating System console automatically installs components without user intervention.</li>
      * </ol>
      * 
      * @param request the request parameters of GetListGpuCluster  GetListGpuClusterRequest
@@ -1157,7 +1237,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation asynchronously installs the agent. After the operation is called, a task ID is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * <p>Calling this operation to install hotfixes is asynchronous. After the operation is called, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
      * 
      * @param request the request parameters of InstallHotfix  InstallHotfixRequest
      * @return InstallHotfixResponse
@@ -1277,7 +1357,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of regions where the current user has machines managed by SysOM. If the user has ECS instances in a region but those instances are not managed by SysOM, that region does not appear in the results.</p>
+     * <p>This operation retrieves the list of regions where the current user has machines managed by SysOM. If a user has ECS instances in a region but they are not managed by SysOM, the region will not appear in the API response.</p>
      * 
      * @param request the request parameters of ListAifgJobs  ListAifgJobsRequest
      * @return ListAifgJobsResponse
@@ -1583,7 +1663,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of regions where the current user has instances managed by SysOM. If a user has ECS instances in a region but none of them are managed by SysOM, that region is not included in the response.</p>
+     * <p>This operation retrieves the list of regions where the current user has instances managed by SysOM. If you have ECS instances in a region but they are not managed by SysOM, the region is not included in the response.</p>
      * 
      * @param request the request parameters of ListRegions  ListRegionsRequest
      * @return ListRegionsResponse
@@ -1622,7 +1702,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The call to this operation to install the agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to obtain the execution status of the task.</p>
+     * <p>Calling this API operation to install the agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
      * 
      * @param request the request parameters of QueryHotfixStatus  QueryHotfixStatusRequest
      * @return QueryHotfixStatusResponse
@@ -1682,7 +1762,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</p>
+     * <p>Currently, only comparative analysis of the same PID across different steps under the same AI Infra analysis record is supported.</p>
      * 
      * @param request the request parameters of StartAifgAnalysis  StartAifgAnalysisRequest
      * @return StartAifgAnalysisResponse
@@ -1763,7 +1843,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * <p>Calling this API to install the agent is asynchronous. After you call this API, a task_id is returned. You can use this ID to call the GetHotfixTask API to obtain the execution status of the task.</p>
      * 
      * @param request the request parameters of UninstallHotfix  UninstallHotfixRequest
      * @return UninstallHotfixResponse
@@ -1784,7 +1864,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After the configuration is updated, the new configuration is delivered to all resources that use it.</p>
+     * <p>After the configuration is updated, the new configuration is delivered to all resources to which the configuration is applied.</p>
      * 
      * @param request the request parameters of UpdateAgentConfig  UpdateAgentConfigRequest
      * @return UpdateAgentConfigResponse

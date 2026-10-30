@@ -95,7 +95,7 @@ public class UpdateClusterAgentConfigResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <ul>
-         * <li>If <code>code</code> is <code>Success</code>, the authorization is successful.</li>
+         * <li>If the value is <code>Success</code>, the authorization is successful.</li>
          * <li>Other status codes indicate that the authorization failed. If the authorization fails, check the <code>message</code> field for the detailed fault message.</li>
          * </ul>
          * 
@@ -118,7 +118,7 @@ public class UpdateClusterAgentConfigResponseBody extends TeaModel {
         /**
          * <p>The error message.</p>
          * <ul>
-         * <li>If <code>code</code> is <code>Success</code>, this field is empty.</li>
+         * <li>If the value of <code>code</code> is <code>Success</code>, this field is empty.</li>
          * <li>Otherwise, this field contains the error message of the request.</li>
          * </ul>
          * 
@@ -188,7 +188,7 @@ public class UpdateClusterAgentConfigResponseBody extends TeaModel {
 
             /**
              * <p>The task ID.</p>
-             * <p>You can use this task ID to call the GetAgentTask operation to view the execution status of the task.</p>
+             * <p>You can call the GetAgentTask operation by using this task ID to check the execution status of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>bbe94a98-4192-4172-b856-95777e0a55d7</p>

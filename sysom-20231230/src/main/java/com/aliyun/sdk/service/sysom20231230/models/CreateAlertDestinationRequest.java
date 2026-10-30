@@ -157,7 +157,10 @@ public class CreateAlertDestinationRequest extends Request {
         } 
 
         /**
-         * app_id.
+         * <p>The ID of the IM bot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ab724ba952448eab4b5ed7ebe1d51ab</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("app_id", appId);
@@ -166,7 +169,10 @@ public class CreateAlertDestinationRequest extends Request {
         }
 
         /**
-         * app_secret.
+         * <p>The secret key of the IM bot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmxjamd2a2MwbzAweHgqZ2U4TH55RjNOP0RUOy8tVVo</p>
          */
         public Builder appSecret(String appSecret) {
             this.putBodyParameter("app_secret", appSecret);
@@ -175,7 +181,7 @@ public class CreateAlertDestinationRequest extends Request {
         }
 
         /**
-         * group_id.
+         * <p>The ID of the group.</p>
          */
         public Builder groupId(java.util.List<String> groupId) {
             this.putBodyParameter("group_id", groupId);
@@ -184,7 +190,10 @@ public class CreateAlertDestinationRequest extends Request {
         }
 
         /**
-         * imbot.
+         * <p>Specifies whether the IM bot is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder imbot(Boolean imbot) {
             this.putBodyParameter("imbot", imbot);
@@ -226,7 +235,7 @@ public class CreateAlertDestinationRequest extends Request {
         }
 
         /**
-         * <p>The notification target. Currently, only DingTalk chatbots are supported.</p>
+         * <p>The push target. Currently, only DingTalk bots are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>dingtalk</p>
@@ -345,7 +354,7 @@ public class CreateAlertDestinationRequest extends Request {
             }
 
             /**
-             * <p>The chatbot secret key.</p>
+             * <p>The secret key of the bot.</p>
              * 
              * <strong>example:</strong>
              * <p>SECxxx</p>
@@ -356,7 +365,7 @@ public class CreateAlertDestinationRequest extends Request {
             }
 
             /**
-             * <p>The webhook URL of the chatbot.</p>
+             * <p>The webhook URL of the bot.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>

@@ -145,7 +145,7 @@ public class ListAifgJobsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to retrieve in a single request.</p>
+         * <p>The maximum number of records to retrieve at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -157,10 +157,7 @@ public class ListAifgJobsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token.</p>
-         * <blockquote>
-         * <p>A non-empty value indicates that more data is available.</p>
-         * </blockquote>
+         * <p>The pagination cursor. A non-empty value indicates that more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>c2f78a783f49457caba6bace6f6f79e4</p>
@@ -197,7 +194,7 @@ public class ListAifgJobsRequest extends Request {
         }
 
         /**
-         * <p>The service name of the diagnostic service.</p>
+         * <p>The diagnostic service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
