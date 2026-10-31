@@ -136,7 +136,10 @@ public class OnlineBizEntityRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -246,7 +249,7 @@ public class OnlineBizEntityRequest extends Request {
             }
 
             /**
-             * <p>The remarks for the offline operation.</p>
+             * <p>The offline comment.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -270,11 +273,7 @@ public class OnlineBizEntityRequest extends Request {
             }
 
             /**
-             * <p>The business type. Valid values:</p>
-             * <ul>
-             * <li>BIZ_OBJECT</li>
-             * <li>BIZ_PROCESS.</li>
-             * </ul>
+             * <p>The business type. Valid values: BIZ_OBJECT and BIZ_PROCESS.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

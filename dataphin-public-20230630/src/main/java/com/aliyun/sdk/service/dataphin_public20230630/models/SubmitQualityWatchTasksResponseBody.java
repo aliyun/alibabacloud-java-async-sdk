@@ -141,7 +141,7 @@ public class SubmitQualityWatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class SubmitQualityWatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -224,7 +224,7 @@ public class SubmitQualityWatchTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of quality watchtask IDs.</p>
+             * <p>The IDs of the monitoring object check nodes.</p>
              */
             public Builder watchTaskIdList(java.util.List<Long> watchTaskIdList) {
                 this.watchTaskIdList = watchTaskIdList;

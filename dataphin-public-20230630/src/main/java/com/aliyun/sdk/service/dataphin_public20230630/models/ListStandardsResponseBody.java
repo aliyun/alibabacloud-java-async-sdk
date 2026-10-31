@@ -119,7 +119,7 @@ public class ListStandardsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Backend response code.</p>
+         * <p>The backend response code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class ListStandardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP response code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class ListStandardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the backend response error.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -152,7 +152,7 @@ public class ListStandardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Paginated query result.</p>
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -171,7 +171,7 @@ public class ListStandardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request is successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +250,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Column to check.</p>
+             * <p>The field to be checked.</p>
              * 
              * <strong>example:</strong>
              * <p>column1</p>
@@ -261,7 +261,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether case-sensitive.</p>
+             * <p>Specifies whether the check is case-sensitive.</p>
              */
             public Builder isCaseSensitive(Boolean isCaseSensitive) {
                 this.isCaseSensitive = isCaseSensitive;
@@ -269,7 +269,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Monitor type: METADATA for metadata monitoring, QUALITY for data quality monitoring.</p>
+             * <p>The monitoring method. Valid values: METADATA: metadata monitoring. QUALITY: data quality monitoring.</p>
              * 
              * <strong>example:</strong>
              * <p>METADATA</p>
@@ -339,7 +339,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Standard ID.</p>
+             * <p>The ID of the standard.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -350,7 +350,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Version number.</p>
+             * <p>The version number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -420,7 +420,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Attribute source: SYSTEM for system attribute, CUSTOM for custom attribute, STANDARD for standard.</p>
+             * <p>The source of the attribute. Valid values: SYSTEM: system attribute. CUSTOM: custom attribute. STANDARD: standard.</p>
              * 
              * <strong>example:</strong>
              * <p>CUSTOM</p>
@@ -431,7 +431,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Corresponding standard, effective when attribute source is STANDARD.</p>
+             * <p>The corresponding standard. This parameter takes effect when the attribute source is set to STANDARD.</p>
              */
             public Builder standardReference(StandardReference standardReference) {
                 this.standardReference = standardReference;
@@ -498,7 +498,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Attribute source.</p>
+             * <p>The source of the attribute.</p>
              */
             public Builder attributeFromInfo(AttributeFromInfo attributeFromInfo) {
                 this.attributeFromInfo = attributeFromInfo;
@@ -506,7 +506,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Attribute ID.</p>
+             * <p>The ID of the attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -576,7 +576,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Referenced lookup table column.</p>
+             * <p>The referenced field in the lookup table.</p>
              * 
              * <strong>example:</strong>
              * <p>col1</p>
@@ -587,7 +587,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Lookup table ID.</p>
+             * <p>The ID of the lookup table.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -683,7 +683,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether to include the maximum value.</p>
+             * <p>Specifies whether to include the maximum value.</p>
              */
             public Builder includeMaxValue(Boolean includeMaxValue) {
                 this.includeMaxValue = includeMaxValue;
@@ -691,7 +691,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to include the minimum value.</p>
+             * <p>Specifies whether to include the minimum value.</p>
              */
             public Builder includeMinValue(Boolean includeMinValue) {
                 this.includeMinValue = includeMinValue;
@@ -699,7 +699,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Maximum value.</p>
+             * <p>The maximum value.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -710,7 +710,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Minimum value.</p>
+             * <p>The minimum value.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -819,7 +819,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Value range, effective when value constraint is DATAPHIN_ATTRIBUTE: BIZ_UNIT for data business unit, PROJECT for project, USER for user, USER_GROUP for user group.</p>
+             * <p>The value range. This parameter takes effect when the value source is set to DATAPHIN_ATTRIBUTE. Valid values: BIZ_UNIT: data block. PROJECT: project. USER: user. USER_GROUP: user group.</p>
              * 
              * <strong>example:</strong>
              * <p>DATAPHIN_ATTRIBUTE</p>
@@ -830,7 +830,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Value range, effective when value constraint is LOOKUP_TABLE.</p>
+             * <p>The value range. This parameter takes effect when the value source is set to LOOKUP_TABLE.</p>
              */
             public Builder lookupTableReference(LookupTableReference lookupTableReference) {
                 this.lookupTableReference = lookupTableReference;
@@ -838,7 +838,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Value range, effective when value constraint is MIN_MAX.</p>
+             * <p>The value range. This parameter takes effect when the value source is set to MIN_MAX.</p>
              */
             public Builder minMaxValueConfig(MinMaxValueConfig minMaxValueConfig) {
                 this.minMaxValueConfig = minMaxValueConfig;
@@ -846,7 +846,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Value constraint: NONE for no constraint, LIST for obtaining from a list, LOOKUP_TABLE for lookup table, MIN_MAX for values between minimum and maximum, DATAPHIN_ATTRIBUTE for Dataphin system attribute, BUILT_IN_DATA_TYPES for built-in data types, BUILT_IN_DATA_CLASSIFICATION for built-in data classification, BUILT_IN_DATA_LEVEL for built-in data security level.</p>
+             * <p>The value source. Valid values: NONE: no constraint. LIST: obtained from a list. LOOKUP_TABLE: lookup table. MIN_MAX: obtained between the maximum and minimum values. DATAPHIN_ATTRIBUTE: Dataphin system property. BUILT_IN_DATA_TYPES: built-in data type. BUILT_IN_DATA_CLASSIFICATION: built-in data categorization. BUILT_IN_DATA_LEVEL: built-in data security classification.</p>
              * 
              * <strong>example:</strong>
              * <p>NONE</p>
@@ -857,7 +857,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Value range, effective when value constraint is LIST.</p>
+             * <p>The value range. This parameter takes effect when the value source is set to LIST.</p>
              */
             public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
@@ -963,7 +963,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Data type of the attribute value: STRING for string, BIGINT for numeric type, DOUBLE for floating-point type, DATE for date accurate to day, DATETIME for date accurate to milliseconds, BOOLEAN for boolean.</p>
+             * <p>The data type of the attribute value. Valid values: STRING: string. BIGINT: numeric type. DOUBLE: floating-point type. DATE: date accurate to day. DATETIME: date accurate to millisecond. BOOLEAN: Boolean type.</p>
              * 
              * <strong>example:</strong>
              * <p>STRING</p>
@@ -974,7 +974,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Default value.</p>
+             * <p>The default value.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -985,7 +985,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Attribute value length. If empty or -1, the length is not limited. Typically, only string types limit the attribute value length.</p>
+             * <p>The length of the attribute value. An empty value or -1 indicates that the length is not limited. Typically, only the string type limits the length of the attribute value.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -996,7 +996,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Attribute value type: CUSTOMIZED for custom input, SINGLE_ENUM for single enumeration value, MULTIPLE_ENUMS for multiple enumeration values, RANGE for range value.</p>
+             * <p>The attribute value type. Valid values: CUSTOMIZED: custom input. SINGLE_ENUM: single enum value. MULTIPLE_ENUMS: multiple enum values. RANGE: range value.</p>
              * 
              * <strong>example:</strong>
              * <p>CUSTOMIZED</p>
@@ -1007,7 +1007,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Value range.</p>
+             * <p>The value range.</p>
              */
             public Builder valueRange(ValueRange valueRange) {
                 this.valueRange = valueRange;
@@ -1178,7 +1178,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Attribute code.</p>
+             * <p>The attribute code.</p>
              * 
              * <strong>example:</strong>
              * <p>test_attr</p>
@@ -1189,7 +1189,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1200,7 +1200,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to enable monitor configuration.</p>
+             * <p>Specifies whether to enable the monitoring configuration.</p>
              */
             public Builder enableMonitorConfig(Boolean enableMonitorConfig) {
                 this.enableMonitorConfig = enableMonitorConfig;
@@ -1208,7 +1208,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Attribute ID.</p>
+             * <p>The ID of the attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>1011</p>
@@ -1219,7 +1219,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Monitor configuration.</p>
+             * <p>The monitoring configuration.</p>
              */
             public Builder monitorConfig(MonitorConfig monitorConfig) {
                 this.monitorConfig = monitorConfig;
@@ -1227,7 +1227,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Attribute name.</p>
+             * <p>The attribute name.</p>
              * 
              * <strong>example:</strong>
              * <p>attr1</p>
@@ -1238,7 +1238,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Referenced attribute information.</p>
+             * <p>The referenced attribute information.</p>
              */
             public Builder refAttribute(RefAttribute refAttribute) {
                 this.refAttribute = refAttribute;
@@ -1246,7 +1246,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it is required.</p>
+             * <p>Specifies whether the attribute is required.</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -1254,7 +1254,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Attribute type: BIZ_ATTRIBUTE for business attribute, TECH_ATTRIBUTE for technical attribute, MANAGEMENT_ATTRIBUTE for management attribute, QUALITY_ATTRIBUTE for quality attribute, MASTER_DATA_ATTRIBUTE for master data attribute, LIFECYCLE_ATTRIBUTE for lifecycle attribute, SECURITY_ATTRIBUTE for security attribute.</p>
+             * <p>The attribute type. Valid values: BIZ_ATTRIBUTE: business attribute. TECH_ATTRIBUTE: technical attribute. MANAGEMENT_ATTRIBUTE: management attribute. QUALITY_ATTRIBUTE: quality attribute. MASTER_DATA_ATTRIBUTE: master data attribute. LIFECYCLE_ATTRIBUTE: lifecycle attribute. SECURITY_ATTRIBUTE: security attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>BIZ_ATTRIBUTE</p>
@@ -1265,7 +1265,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Value configuration.</p>
+             * <p>The value configuration.</p>
              */
             public Builder valueConfig(ValueConfig valueConfig) {
                 this.valueConfig = valueConfig;
@@ -1332,7 +1332,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Attribute details.</p>
+             * <p>The attribute details.</p>
              */
             public Builder attribute(Attribute attribute) {
                 this.attribute = attribute;
@@ -1340,7 +1340,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Attribute value.</p>
+             * <p>The attribute value.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1410,7 +1410,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>User ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>300000913</p>
@@ -1421,7 +1421,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User name.</p>
+             * <p>The name of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>susan</p>
@@ -1504,7 +1504,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>End time of the effective period.</p>
+             * <p>The end time of the effective period. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-30 00:00:00</p>
@@ -1515,7 +1515,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Start time of the effective period.</p>
+             * <p>The start time of the effective period. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -1526,7 +1526,11 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Effective time type: FOREVER for permanent, TIME_PERIOD for a time period.</p>
+             * <p>The effective period type. Valid values:</p>
+             * <ul>
+             * <li>FOREVER: Permanent.</li>
+             * <li>TIME_PERIOD: Time period.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>TIME_PERIOD</p>
@@ -1596,7 +1600,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>User ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>300000913</p>
@@ -1607,7 +1611,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User name.</p>
+             * <p>The name of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>susan</p>
@@ -1677,7 +1681,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>User ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>300000913</p>
@@ -1688,7 +1692,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User name.</p>
+             * <p>The name of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>susan</p>
@@ -1784,7 +1788,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Standard set code.</p>
+             * <p>The code of the standard set.</p>
              * 
              * <strong>example:</strong>
              * <p>cc</p>
@@ -1795,7 +1799,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Directory of the standard set.</p>
+             * <p>The folder to which the standard set belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>/dir1</p>
@@ -1806,7 +1810,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard set ID.</p>
+             * <p>The ID of the standard set.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1817,7 +1821,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard set name.</p>
+             * <p>The name of the standard set.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1926,7 +1930,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Standard template code.</p>
+             * <p>The code of the standard template.</p>
              * 
              * <strong>example:</strong>
              * <p>1121</p>
@@ -1937,7 +1941,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard template ID.</p>
+             * <p>The ID of the standard template.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1948,7 +1952,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard template name.</p>
+             * <p>The name of the standard template.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1959,7 +1963,11 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard template source: CUSTOM for custom standard templates, SYSTEM for system built-in standard templates.</p>
+             * <p>The source of the standard template. Valid values:</p>
+             * <ul>
+             * <li>CUSTOM: Custom standard template.</li>
+             * <li>SYSTEM: Built-in standard template.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -1970,7 +1978,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Version number.</p>
+             * <p>The version number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2235,7 +2243,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Attribute value configuration list.</p>
+             * <p>The attribute value configuration.</p>
              */
             public Builder attributeWithValueList(java.util.List<AttributeWithValueList> attributeWithValueList) {
                 this.attributeWithValueList = attributeWithValueList;
@@ -2243,7 +2251,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard code.</p>
+             * <p>The code of the standard.</p>
              * 
              * <strong>example:</strong>
              * <p>zz</p>
@@ -2254,7 +2262,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creator.</p>
+             * <p>The creator.</p>
              */
             public Builder creator(Creator creator) {
                 this.creator = creator;
@@ -2262,7 +2270,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -2273,7 +2281,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Effective time configuration.</p>
+             * <p>The effective period configuration.</p>
              */
             public Builder effectiveTimeConfig(EffectiveTimeConfig effectiveTimeConfig) {
                 this.effectiveTimeConfig = effectiveTimeConfig;
@@ -2281,7 +2289,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard English name.</p>
+             * <p>The English name of the standard.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -2292,7 +2300,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard ID.</p>
+             * <p>The standard ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -2303,7 +2311,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modifier.</p>
+             * <p>The user who last updated the standard.</p>
              */
             public Builder lastModifier(LastModifier lastModifier) {
                 this.lastModifier = lastModifier;
@@ -2311,7 +2319,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modified time.</p>
+             * <p>The last modified time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -2322,7 +2330,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard name.</p>
+             * <p>The name of the standard.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -2333,7 +2341,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Owner.</p>
+             * <p>The owner.</p>
              */
             public Builder owner(Owner owner) {
                 this.owner = owner;
@@ -2341,7 +2349,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Stage of the standard.</p>
+             * <p>The stage of the standard.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -2352,7 +2360,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard set that the current standard depends on.</p>
+             * <p>The standard set that the current standard depends on.</p>
              */
             public Builder standardSet(StandardSet standardSet) {
                 this.standardSet = standardSet;
@@ -2360,7 +2368,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard template that the current standard depends on.</p>
+             * <p>The standard template that the current standard depends on.</p>
              */
             public Builder standardTemplate(StandardTemplate standardTemplate) {
                 this.standardTemplate = standardTemplate;
@@ -2368,7 +2376,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status of the standard.</p>
+             * <p>The status of the standard.</p>
              * 
              * <strong>example:</strong>
              * <p>draft</p>
@@ -2379,7 +2387,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard type.</p>
+             * <p>The type of the standard.</p>
              * 
              * <strong>example:</strong>
              * <p>zz</p>
@@ -2390,7 +2398,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Version number.</p>
+             * <p>The version number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2460,7 +2468,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Standard list.</p>
+             * <p>The standard list.</p>
              */
             public Builder standardList(java.util.List<StandardList> standardList) {
                 this.standardList = standardList;
@@ -2468,7 +2476,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of records.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>68</p>

@@ -171,7 +171,7 @@ public class GetKgSchemaPublishResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -263,11 +263,11 @@ public class GetKgSchemaPublishResultResponseBody extends TeaModel {
             /**
              * <p>The publish status. Valid values:</p>
              * <ul>
-             * <li>Publishing: Publishing in progress.</li>
-             * <li>Published: Published successfully.</li>
-             * <li>Partial: Partially completed.</li>
-             * <li>Failed: Failed.</li>
-             * <li>RollbackFailed: Publish failed and rollback failed.</li>
+             * <li>Publishing: The publish task is in progress.</li>
+             * <li>Published: The publish task is successful.</li>
+             * <li>Partial: The publish task is partially completed.</li>
+             * <li>Failed: The publish task failed.</li>
+             * <li>RollbackFailed: The publish task failed and the rollback failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -279,7 +279,7 @@ public class GetKgSchemaPublishResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number.</p>
+             * <p>The version ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

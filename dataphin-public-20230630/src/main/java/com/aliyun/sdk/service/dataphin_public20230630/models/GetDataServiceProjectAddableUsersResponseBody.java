@@ -141,7 +141,7 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -163,7 +163,7 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +250,7 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username of the user.</p>
+             * <p>The user account.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:xx@aliyuncs.com">xx@aliyuncs.com</a></p>
@@ -261,7 +261,7 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nickname of the user.</p>
+             * <p>The user nickname.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

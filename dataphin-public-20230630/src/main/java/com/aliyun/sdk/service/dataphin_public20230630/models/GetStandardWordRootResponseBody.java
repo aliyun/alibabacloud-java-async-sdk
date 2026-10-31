@@ -141,7 +141,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -163,7 +163,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -352,7 +352,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -429,7 +429,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -443,7 +443,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
              * <p>The name of the word root.</p>
              * 
              * <strong>example:</strong>
-             * <p>平均值</p>
+             * <p>Average</p>
              */
             public Builder name(String name) {
                 this.name = name;

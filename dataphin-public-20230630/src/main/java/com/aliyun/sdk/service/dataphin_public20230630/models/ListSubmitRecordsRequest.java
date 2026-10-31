@@ -112,7 +112,7 @@ public class ListSubmitRecordsRequest extends Request {
         }
 
         /**
-         * <p>Query command.</p>
+         * <p>The query command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -123,7 +123,7 @@ public class ListSubmitRecordsRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,10 @@ public class ListSubmitRecordsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -272,7 +275,7 @@ public class ListSubmitRecordsRequest extends Request {
             } 
 
             /**
-             * <p>List of change types (0: Create / 1: Update / 2: Delete).</p>
+             * <p>The list of change types (0: Create, 1: Update, 2: Delete).</p>
              */
             public Builder changeTypeList(java.util.List<Integer> changeTypeList) {
                 this.changeTypeList = changeTypeList;
@@ -280,7 +283,7 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
-             * <p>Page number.</p>
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -292,7 +295,7 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
-             * <p>Page size.</p>
+             * <p>The number of entries per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -304,7 +307,7 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
-             * <p>Project ID.</p>
+             * <p>The project IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder projectIdList(java.util.List<Long> projectIdList) {
@@ -313,7 +316,7 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
-             * <p>Submission end time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The submission end time in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-10 10:00:00</p>
@@ -324,7 +327,7 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
-             * <p>Submission start time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The submission start time in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-10 10:00:00</p>
@@ -335,7 +338,7 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
-             * <p>Submitter.</p>
+             * <p>The submitters.</p>
              */
             public Builder submitterList(java.util.List<String> submitterList) {
                 this.submitterList = submitterList;
@@ -403,7 +406,7 @@ public class ListSubmitRecordsRequest extends Request {
             } 
 
             /**
-             * <p>Search keyword.</p>
+             * <p>The search keyword.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -414,7 +417,7 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
-             * <p>Pending deployment record filter.</p>
+             * <p>The filter for pending release records.</p>
              * <p>This parameter is required.</p>
              */
             public Builder searchFilter(SearchFilter searchFilter) {

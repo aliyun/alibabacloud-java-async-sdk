@@ -127,7 +127,7 @@ public class AddProjectMemberRequest extends Request {
         }
 
         /**
-         * <p>The command for adding members.</p>
+         * <p>The command to add members.</p>
          * <p>This parameter is required.</p>
          */
         public Builder addCommand(AddCommand addCommand) {
@@ -164,7 +164,7 @@ public class AddProjectMemberRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator user.</p>
+         * <p>The operator user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -189,8 +189,10 @@ public class AddProjectMemberRequest extends Request {
      * <p>AddProjectMemberRequest</p>
      */
     public static class UserList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RoleCodeList")
+        private java.util.List<String> roleCodeList;
+
         @com.aliyun.core.annotation.NameInMap("RoleList")
-        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<Integer> roleList;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
@@ -198,6 +200,7 @@ public class AddProjectMemberRequest extends Request {
         private String userId;
 
         private UserList(Builder builder) {
+            this.roleCodeList = builder.roleCodeList;
             this.roleList = builder.roleList;
             this.userId = builder.userId;
         }
@@ -208,6 +211,13 @@ public class AddProjectMemberRequest extends Request {
 
         public static UserList create() {
             return builder().build();
+        }
+
+        /**
+         * @return roleCodeList
+         */
+        public java.util.List<String> getRoleCodeList() {
+            return this.roleCodeList;
         }
 
         /**
@@ -225,6 +235,7 @@ public class AddProjectMemberRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<String> roleCodeList; 
             private java.util.List<Integer> roleList; 
             private String userId; 
 
@@ -232,13 +243,21 @@ public class AddProjectMemberRequest extends Request {
             } 
 
             private Builder(UserList model) {
+                this.roleCodeList = model.roleCodeList;
                 this.roleList = model.roleList;
                 this.userId = model.userId;
             } 
 
             /**
-             * <p>The member roles. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</p>
-             * <p>This parameter is required.</p>
+             * <p>The list of role codes for members. System and custom project roles are supported and can be obtained from ListProjectRoles. Only one role is supported. If this parameter is not empty, it takes precedence over RoleList. You must specify at least one of RoleList and RoleCodeList.</p>
+             */
+            public Builder roleCodeList(java.util.List<String> roleCodeList) {
+                this.roleCodeList = roleCodeList;
+                return this;
+            }
+
+            /**
+             * <p>The member role. Valid values: 1 (Project administrator), 2 (Developer), 3 (Guest), 4 (Analyst), and 5 (O&amp;M engineer).</p>
              */
             public Builder roleList(java.util.List<Integer> roleList) {
                 this.roleList = roleList;
@@ -319,7 +338,7 @@ public class AddProjectMemberRequest extends Request {
             } 
 
             /**
-             * <p>The environment identifier. Valid values: DEV, PROD.</p>
+             * <p>The environment identifier. Valid values: DEV and PROD.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -331,7 +350,7 @@ public class AddProjectMemberRequest extends Request {
             }
 
             /**
-             * <p>The list of user members.</p>
+             * <p>The user members.</p>
              * <p>This parameter is required.</p>
              */
             public Builder userList(java.util.List<UserList> userList) {

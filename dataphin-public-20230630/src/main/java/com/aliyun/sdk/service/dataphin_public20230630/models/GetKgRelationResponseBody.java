@@ -152,7 +152,7 @@ public class GetKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The relationship record details.</p>
+         * <p>The relation record details.</p>
          */
         public Builder relationInfo(RelationInfo relationInfo) {
             this.relationInfo = relationInfo;
@@ -171,7 +171,7 @@ public class GetKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -261,7 +261,7 @@ public class GetKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean), DATE (date), LIST (list), and others.</p>
+             * <p>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean), DATE (date), and LIST (list).</p>
              * 
              * <strong>example:</strong>
              * <p>STRING</p>
@@ -381,7 +381,7 @@ public class GetKgRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of relationship record properties.</p>
+             * <p>The property list of the relation record.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;
@@ -389,7 +389,7 @@ public class GetKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relationship record ID.</p>
+             * <p>The relation record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>abc-xxx</p>
@@ -400,7 +400,7 @@ public class GetKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relationship type code.</p>
+             * <p>The relation type code.</p>
              * 
              * <strong>example:</strong>
              * <p>BELONG_TO</p>

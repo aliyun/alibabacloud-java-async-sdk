@@ -112,7 +112,7 @@ public class CreateBizMetricRequest extends Request {
         }
 
         /**
-         * <p>The create request.</p>
+         * <p>The creation request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createBizMetricCommand(CreateBizMetricCommand createBizMetricCommand) {
@@ -136,7 +136,10 @@ public class CreateBizMetricRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -215,7 +218,7 @@ public class CreateBizMetricRequest extends Request {
             }
 
             /**
-             * <p>The list of attribute values. 1. For custom input and single-select dropdown attributes, only the first value in the list is read. 2. For multi-select dropdown attributes, all values in the list are read. 3. For hyperlink attributes, the first value is used as the display text and the second value is used as the redirect link.</p>
+             * <p>The list of attribute values. Rules: 1. For custom input and drop-down single-select attributes, only the first attribute value in the list is read. 2. For drop-down multi-select attributes, all attribute values in the list are read. 3. For hyperlink attributes, the first attribute value in the list is read as the display text, and the second attribute value is read as the redirect URL.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -295,9 +298,9 @@ public class CreateBizMetricRequest extends Request {
             /**
              * <p>The relationship type. Valid values:</p>
              * <ul>
-             * <li>POSITIVE: positive correlation.</li>
-             * <li>NEGATIVE: negative correlation.</li>
-             * <li>OTHER: other.</li>
+             * <li>POSITIVE: Positive correlation.</li>
+             * <li>NEGATIVE: Negative correlation.</li>
+             * <li>OTHER: Other.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -383,9 +386,9 @@ public class CreateBizMetricRequest extends Request {
             /**
              * <p>The visibility scope type. Valid values:</p>
              * <ul>
-             * <li>ALL_USERS_CAN_VIEW: visible to all users.</li>
-             * <li>PART_USERS_CAN_VIEW: visible to specified users.</li>
-             * <li>PART_USERS_CAN_NOT_VIEW: not visible to specified users.</li>
+             * <li>ALL_USERS_CAN_VIEW: Visible to all users.</li>
+             * <li>PART_USERS_CAN_VIEW: Visible to specific users.</li>
+             * <li>PART_USERS_CAN_NOT_VIEW: Invisible to specific users.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -397,7 +400,7 @@ public class CreateBizMetricRequest extends Request {
             }
 
             /**
-             * <p>The names of user groups. This parameter is read only when the visibility scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW.</p>
+             * <p>The names of the user groups. This information is read only when the visibility scope of the asset is set to Visible to specific users or Invisible to specific users.</p>
              */
             public Builder userGroupNames(java.util.List<String> userGroupNames) {
                 this.userGroupNames = userGroupNames;
@@ -405,7 +408,7 @@ public class CreateBizMetricRequest extends Request {
             }
 
             /**
-             * <p>The usernames of individual accounts. This parameter takes effect only when the visibility scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW.</p>
+             * <p>The usernames of individual accounts. This parameter is valid only when the visibility scope of the asset is set to Visible to specific users or Invisible to specific users.</p>
              */
             public Builder userNames(java.util.List<String> userNames) {
                 this.userNames = userNames;
@@ -645,7 +648,7 @@ public class CreateBizMetricRequest extends Request {
             } 
 
             /**
-             * <p>The list of full names of associated technical metrics. Enter the full name in the format of &quot;OwnerTableFullName.MetricName&quot;, where &quot;OwnerTableFullName&quot; equals &quot;AssetSource.OwnerTableName&quot;. A technical metric can be associated with only one business metric and cannot be associated repeatedly.</p>
+             * <p>The list of full names of associated technical metrics. Enter the technical metric in the format of &quot;Full table name.Metric name&quot;, where &quot;Full table name&quot; is equal to &quot;Asset source.Table name&quot;. A technical metric can be associated with only one business metric and cannot be associated repeatedly.</p>
              */
             public Builder associatedTechMetricFullNames(java.util.List<String> associatedTechMetricFullNames) {
                 this.associatedTechMetricFullNames = associatedTechMetricFullNames;
@@ -653,7 +656,7 @@ public class CreateBizMetricRequest extends Request {
             }
 
             /**
-             * <p>The name of the business owner. Enter the username of the owner account.</p>
+             * <p>The name of the business owner. Enter the username of the owner\&quot;s account.</p>
              * 
              * <strong>example:</strong>
              * <p>SuperAdmin</p>
@@ -664,7 +667,7 @@ public class CreateBizMetricRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the folders to which the metric belongs.</p>
+             * <p>The IDs of the parent folders.</p>
              */
             public Builder catalogIds(java.util.List<Long> catalogIds) {
                 this.catalogIds = catalogIds;
@@ -710,7 +713,7 @@ public class CreateBizMetricRequest extends Request {
             }
 
             /**
-             * <p>The metric definition. To reference other business metrics, enclose the metric name in square brackets [ ].</p>
+             * <p>The metric definition. To reference other business metrics, enclose the metric names in half-width square brackets [ ].</p>
              * 
              * <strong>example:</strong>
              * <p>[Metric1]+[Metric2]</p>
@@ -721,7 +724,7 @@ public class CreateBizMetricRequest extends Request {
             }
 
             /**
-             * <p>This parameter is read only when the metric relationship diagram is enabled. Enter a calculation expression composed of metric names selected from the related business metrics. Supported operators include +, -, *, /, (, ), %, and ∑. Each metric name must be enclosed in square brackets [ ]. If no operator is specified between two metrics, the system automatically inserts a padding placeholder. If no metric relational expression is configured, the metric relationship diagram switch is automatically shutdown.</p>
+             * <p>The expression for the metric relationship diagram. This information is read only when the metric relationship diagram is enabled. You can only enter a calculation expression composed of metric names selected from the related business metrics. The supported operators are +, -, *, /, (), %, and ∑. Each metric name must be enclosed in half-width square brackets [ ]. If no operator is specified between two metrics, the system automatically adds padding as a placeholder. If the metric relational expression is not configured, the metric relationship diagram switch is automatically set to shutdown.</p>
              * 
              * <strong>example:</strong>
              * <p>[Metric1]+[Metric2]</p>
@@ -735,9 +738,9 @@ public class CreateBizMetricRequest extends Request {
              * <p>Specifies whether to enable the metric relationship diagram. Valid values:</p>
              * <ul>
              * <li>true: Enabled.</li>
-             * <li>false: Disabled.</li>
+             * <li>false: Disabled.
+             * This switch can be enabled only when at least one related business metric exists. Otherwise, it is automatically disabled.</li>
              * </ul>
-             * <p>This parameter can be set to true only when at least one related business metric exists. Otherwise, the diagram is automatically disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -748,7 +751,7 @@ public class CreateBizMetricRequest extends Request {
             }
 
             /**
-             * <p>The name of the business metric. The name must be unique within the tenant. The name can contain letters, digits, and the following special characters: -_/\·#$^&amp;*()%+=. The name can be up to 256 characters in length.</p>
+             * <p>The name of the business metric. The name must be unique within the tenant. Only English letters, digits, and specific special characters (-_/\·#$^&amp;*()%+=) are supported. Maximum length: 256 characters.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -771,7 +774,7 @@ public class CreateBizMetricRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the operation instructions. Valid values:</p>
+             * <p>Specifies whether to enable operation instructions. Valid values:</p>
              * <ul>
              * <li>true: Enabled.</li>
              * <li>false: Disabled.</li>
@@ -786,7 +789,7 @@ public class CreateBizMetricRequest extends Request {
             }
 
             /**
-             * <p>The list of related business metrics. Enter the names of related business metrics and their relationships.</p>
+             * <p>The list of related business metrics. Enter the names of the related business metrics and their relationships.</p>
              */
             public Builder relatedBizMetrics(java.util.List<RelatedBizMetrics> relatedBizMetrics) {
                 this.relatedBizMetrics = relatedBizMetrics;

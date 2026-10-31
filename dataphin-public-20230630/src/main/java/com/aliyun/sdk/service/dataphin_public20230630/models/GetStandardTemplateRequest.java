@@ -140,7 +140,7 @@ public class GetStandardTemplateRequest extends Request {
         }
 
         /**
-         * <p>The filter condition.</p>
+         * <p>The filter conditions.</p>
          */
         public Builder filterQuery(FilterQuery filterQuery) {
             String filterQueryShrink = shrink(filterQuery, "FilterQuery", "json");
@@ -150,7 +150,7 @@ public class GetStandardTemplateRequest extends Request {
         }
 
         /**
-         * <p>The standard template ID.</p>
+         * <p>The ID of the standard template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class GetStandardTemplateRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow a null value to be returned when the template does not exist. If set to false, an exception is thrown. Default value: true.</p>
+         * <p>Specifies whether to allow a null value to be returned when the template does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</p>
          */
         public Builder nullable(Boolean nullable) {
             this.putQueryParameter("Nullable", nullable);
@@ -185,7 +185,10 @@ public class GetStandardTemplateRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -240,7 +243,7 @@ public class GetStandardTemplateRequest extends Request {
             } 
 
             /**
-             * <p>The version number. If this parameter is left empty or set to -1, the latest version is used.</p>
+             * <p>The version number. An empty value or -1 indicates the latest version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

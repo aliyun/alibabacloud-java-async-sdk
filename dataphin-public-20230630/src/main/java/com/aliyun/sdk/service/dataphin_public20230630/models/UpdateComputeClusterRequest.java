@@ -390,6 +390,9 @@ public class UpdateComputeClusterRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
+        private String timeZone;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         @com.aliyun.core.annotation.Validation(required = true)
         private String type;
@@ -403,6 +406,7 @@ public class UpdateComputeClusterRequest extends Request {
             this.configList = builder.configList;
             this.des = builder.des;
             this.name = builder.name;
+            this.timeZone = builder.timeZone;
             this.type = builder.type;
             this.typeVersion = builder.typeVersion;
         }
@@ -451,6 +455,13 @@ public class UpdateComputeClusterRequest extends Request {
         }
 
         /**
+         * @return timeZone
+         */
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -470,6 +481,7 @@ public class UpdateComputeClusterRequest extends Request {
             private java.util.List<ConfigList> configList; 
             private String des; 
             private String name; 
+            private String timeZone; 
             private String type; 
             private String typeVersion; 
 
@@ -482,6 +494,7 @@ public class UpdateComputeClusterRequest extends Request {
                 this.configList = model.configList;
                 this.des = model.des;
                 this.name = model.name;
+                this.timeZone = model.timeZone;
                 this.type = model.type;
                 this.typeVersion = model.typeVersion;
             } 
@@ -531,6 +544,17 @@ public class UpdateComputeClusterRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>时区名称，例如 Asia/Shanghai。更新时不传则保留原值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
+             */
+            public Builder timeZone(String timeZone) {
+                this.timeZone = timeZone;
                 return this;
             }
 

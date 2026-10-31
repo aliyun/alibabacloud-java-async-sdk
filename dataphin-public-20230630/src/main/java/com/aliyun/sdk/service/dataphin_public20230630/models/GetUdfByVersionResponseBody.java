@@ -141,7 +141,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -163,7 +163,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,7 +171,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the user-defined function.</p>
+         * <p>The custom function details.</p>
          */
         public Builder udfInfo(UdfInfo udfInfo) {
             this.udfInfo = udfInfo;
@@ -367,18 +367,18 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The udf type. Valid values:</p>
+             * <p>The category. Valid values:</p>
              * <ul>
-             * <li>1: window function.</li>
-             * <li>2: statistical function.</li>
-             * <li>3: numerical function.</li>
-             * <li>4: string function.</li>
-             * <li>5: time function.</li>
-             * <li>6: IP address utility function.</li>
+             * <li>1: Window function.</li>
+             * <li>2: Statistical function.</li>
+             * <li>3: Numerical function.</li>
+             * <li>4: String function.</li>
+             * <li>5: Time function.</li>
+             * <li>6: IP address helper function.</li>
              * <li>7: URL-related function.</li>
-             * <li>8: encoding and decoding function.</li>
-             * <li>9: business-related function.</li>
-             * <li>10: other.</li>
+             * <li>8: Encoding and decoding function.</li>
+             * <li>9: Business-related function.</li>
+             * <li>10: Other.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -401,7 +401,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command help.</p>
+             * <p>The command help information.</p>
              * 
              * <strong>example:</strong>
              * <p>udf_to_lower(char x)</p>
@@ -445,7 +445,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory where the function is stored.</p>
+             * <p>The storage directory.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -456,7 +456,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, in the yyyy-MM-d HH:mm:ss format.</p>
+             * <p>The creation time. Format: yyyy-MM-d HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-10 10:01:01</p>
@@ -467,7 +467,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time, in the yyyy-MM-d HH:mm:ss format.</p>
+             * <p>The update time. Format: yyyy-MM-d HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-10 10:01:01</p>
@@ -478,7 +478,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user-defined function.</p>
+             * <p>The custom function ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1030111021</p>

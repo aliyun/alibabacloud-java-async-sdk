@@ -119,7 +119,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code. OK indicates a successful request.</p>
+         * <p>The error code. A value of OK indicates that the request is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code returned by the backend</p>
+         * <p>The HTTP status code returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -152,7 +152,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Node details</p>
+         * <p>The node details.</p>
          */
         public Builder nodeInfo(NodeInfo nodeInfo) {
             this.nodeInfo = nodeInfo;
@@ -160,7 +160,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -171,7 +171,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,7 +240,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>User ID</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1311131</p>
@@ -251,10 +251,10 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Username</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -321,7 +321,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>User ID</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1311131</p>
@@ -332,10 +332,10 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Username</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -402,7 +402,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>User ID</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1311131</p>
@@ -413,10 +413,10 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Username</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -483,7 +483,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Project ID</p>
+             * <p>The project ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1324211</p>
@@ -494,10 +494,10 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Project name</p>
+             * <p>The project name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -733,7 +733,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Creation time</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1717343597000</p>
@@ -744,7 +744,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node creator</p>
+             * <p>The creator of the node.</p>
              */
             public Builder creator(Creator creator) {
                 this.creator = creator;
@@ -752,10 +752,10 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -763,12 +763,12 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node source</p>
+             * <p>The node source. Valid values:</p>
              * <ul>
-             * <li>DATA_PROCESS: Code development</li>
-             * <li>BLACK_BOX: Black box</li>
-             * <li>ONE_ID: Extraction</li>
-             * <li>PIPELINE: Pipeline</li>
+             * <li>DATA_PROCESS: code development</li>
+             * <li>BLACK_BOX: black box</li>
+             * <li>ONE_ID: extraction</li>
+             * <li>PIPELINE: pipeline</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -780,7 +780,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node ID</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>n_2321</p>
@@ -791,7 +791,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modified time</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1717343597000</p>
@@ -802,7 +802,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node modifier</p>
+             * <p>The modifier of the node.</p>
              */
             public Builder modifier(Modifier modifier) {
                 this.modifier = modifier;
@@ -810,10 +810,10 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Name</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -821,14 +821,14 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node subtype</p>
+             * <p>The node subtype. Valid values:</p>
              * <ul>
              * <li>MAX_COMPUTE_SQL</li>
              * <li>HIVE_SQL</li>
              * <li>SHELL</li>
              * <li>PYTHON</li>
              * <li>ONE_SERVICE_SQL</li>
-             * <li>DATABASE_SQL, etc.</li>
+             * <li>DATABASE_SQL</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -840,7 +840,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node owner</p>
+             * <p>The owner of the node.</p>
              */
             public Builder owner(Owner owner) {
                 this.owner = owner;
@@ -848,7 +848,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Priority</p>
+             * <p>The priority. Valid values:</p>
              * <ul>
              * <li>HIGHEST</li>
              * <li>HIGH</li>
@@ -866,7 +866,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Project to which the node belongs</p>
+             * <p>The project to which the node belongs.</p>
              */
             public Builder projectInfo(ProjectInfo projectInfo) {
                 this.projectInfo = projectInfo;
@@ -874,7 +874,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scheduling period type</p>
+             * <p>The scheduling cycle type. Valid values:</p>
              * <ul>
              * <li>MINUTELY</li>
              * <li>HOURLY</li>
@@ -893,7 +893,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node scheduling status</p>
+             * <p>The scheduling status of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCESS</p>
@@ -904,7 +904,7 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Trigger configuration, used to implement field dependencies on logical tables</p>
+             * <p>The trigger configuration, which is used to implement field dependencies for logical tables.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;expression&quot;:&quot;any_success&quot;}</p>

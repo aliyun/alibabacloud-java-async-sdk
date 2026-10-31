@@ -171,7 +171,7 @@ public class DeleteSecurityClassifyCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +250,7 @@ public class DeleteSecurityClassifyCatalogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of full paths of child catalogs that were deleted as a result of the cascading deletion.</p>
+             * <p>The list of full paths of the subdirectories that are cascade-deleted.</p>
              */
             public Builder childCatalogFullPathList(java.util.List<String> childCatalogFullPathList) {
                 this.childCatalogFullPathList = childCatalogFullPathList;
@@ -258,7 +258,7 @@ public class DeleteSecurityClassifyCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of classification IDs that were deleted as a result of the cascading deletion.</p>
+             * <p>The list of IDs of the classifications that are cascade-deleted.</p>
              */
             public Builder classifyIdList(java.util.List<Long> classifyIdList) {
                 this.classifyIdList = classifyIdList;
@@ -266,7 +266,7 @@ public class DeleteSecurityClassifyCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the deletion was successful.</p>
+             * <p>Indicates whether the deletion is successful.</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

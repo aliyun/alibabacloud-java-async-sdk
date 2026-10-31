@@ -119,7 +119,7 @@ public class PublishObjectListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -171,7 +171,7 @@ public class PublishObjectListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -224,7 +224,7 @@ public class PublishObjectListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of pending publish record IDs.</p>
+             * <p>The list of submit record IDs.</p>
              */
             public Builder submitIdList(java.util.List<Long> submitIdList) {
                 this.submitIdList = submitIdList;

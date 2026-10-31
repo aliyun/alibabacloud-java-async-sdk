@@ -111,7 +111,7 @@ public class GetMyTenantsRequest extends Request {
         }
 
         /**
-         * <p>The feature codes owned by the tenant.</p>
+         * <p>The feature codes of the tenant.</p>
          */
         public Builder featureCodeList(java.util.List<String> featureCodeList) {
             String featureCodeListShrink = shrink(featureCodeList, "FeatureCodeList", "json");
@@ -134,7 +134,10 @@ public class GetMyTenantsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

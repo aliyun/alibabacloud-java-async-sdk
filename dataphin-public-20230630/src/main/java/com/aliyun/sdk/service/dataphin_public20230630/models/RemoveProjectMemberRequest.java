@@ -153,7 +153,10 @@ public class RemoveProjectMemberRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -162,7 +165,7 @@ public class RemoveProjectMemberRequest extends Request {
         }
 
         /**
-         * <p>The command to remove a member.</p>
+         * <p>The member removal command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder removeCommand(RemoveCommand removeCommand) {
@@ -245,7 +248,7 @@ public class RemoveProjectMemberRequest extends Request {
             }
 
             /**
-             * <p>The user IDs.</p>
+             * <p>The list of user IDs.</p>
              */
             public Builder userIdList(java.util.List<String> userIdList) {
                 this.userIdList = userIdList;

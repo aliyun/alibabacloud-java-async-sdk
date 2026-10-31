@@ -119,7 +119,7 @@ public class CreatePipelineNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -171,7 +171,7 @@ public class CreatePipelineNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -266,7 +266,7 @@ public class CreatePipelineNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the pipeline created.</p>
+             * <p>The ID of the created pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p>33749</p>

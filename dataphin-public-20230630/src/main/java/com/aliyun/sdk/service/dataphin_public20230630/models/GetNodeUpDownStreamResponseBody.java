@@ -119,7 +119,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -152,7 +152,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dag data of the node.</p>
+         * <p>The dag information of the node.</p>
          */
         public Builder nodeDagInfo(NodeDagInfo nodeDagInfo) {
             this.nodeDagInfo = nodeDagInfo;
@@ -171,7 +171,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -288,7 +288,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
              * <p>The node name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -298,9 +298,9 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             /**
              * <p>The node type. Valid values:</p>
              * <ul>
-             * <li>DATA_PROCESS: code task.</li>
-             * <li>BBOX_LOGIC_TABLE_NODE: logical table node.</li>
-             * <li>PIPELINE_NODE: pipeline node.</li>
+             * <li>DATA_PROCESS: Code task.</li>
+             * <li>BBOX_LOGIC_TABLE_NODE: Logical table node.</li>
+             * <li>PIPELINE_NODE: Pipeline node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -419,7 +419,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
              * <p>The node name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -429,9 +429,9 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             /**
              * <p>The node type. Valid values:</p>
              * <ul>
-             * <li>DATA_PROCESS: code task.</li>
-             * <li>BBOX_LOGIC_TABLE_NODE: logical table node.</li>
-             * <li>PIPELINE_NODE: pipeline node.</li>
+             * <li>DATA_PROCESS: Code task.</li>
+             * <li>BBOX_LOGIC_TABLE_NODE: Logical table node.</li>
+             * <li>PIPELINE_NODE: Pipeline node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -550,7 +550,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
              * <p>The node name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -560,9 +560,9 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             /**
              * <p>The node type. Valid values:</p>
              * <ul>
-             * <li>DATA_PROCESS: code task.</li>
-             * <li>BBOX_LOGIC_TABLE_NODE: black box logical table node.</li>
-             * <li>PIPELINE_NODE: pipeline node.</li>
+             * <li>DATA_PROCESS: Code task.</li>
+             * <li>BBOX_LOGIC_TABLE_NODE: Black box logical table node.</li>
+             * <li>PIPELINE_NODE: Pipeline node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -654,7 +654,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The center nodes.</p>
+             * <p>The central nodes.</p>
              */
             public Builder startNodeList(java.util.List<StartNodeList> startNodeList) {
                 this.startNodeList = startNodeList;

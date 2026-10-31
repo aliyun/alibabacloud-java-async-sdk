@@ -125,7 +125,10 @@ public class UpdateDevProdProjectRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -451,7 +454,7 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * <p>The ID of the offline compute source in the development environment.</p>
+             * <p>The ID of the offline compute source for the development environment.</p>
              * 
              * <strong>example:</strong>
              * <p>2001</p>
@@ -473,7 +476,7 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * <p>The ID of the real-time compute source in the development environment.</p>
+             * <p>The ID of the real-time compute source for the development environment.</p>
              * 
              * <strong>example:</strong>
              * <p>2002</p>
@@ -484,10 +487,10 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * <p>The display name of the project.</p>
+             * <p>The project display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>My project.</p>
+             * <p>My project</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -518,7 +521,7 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * <p>The namespace identifier.</p>
+             * <p>The namespace tag.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -529,7 +532,7 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * <p>The ID of the offline compute source in the production environment.</p>
+             * <p>The ID of the offline compute source for the production environment.</p>
              * 
              * <strong>example:</strong>
              * <p>2003</p>
@@ -551,7 +554,7 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * <p>The ID of the real-time compute source in the production environment.</p>
+             * <p>The ID of the real-time compute source for the production environment.</p>
              * 
              * <strong>example:</strong>
              * <p>2004</p>
@@ -562,7 +565,7 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * <p>The sandbox whitelist.</p>
+             * <p>The sandbox whitelists.</p>
              */
             public Builder whiteLists(java.util.List<WhiteLists> whiteLists) {
                 this.whiteLists = whiteLists;

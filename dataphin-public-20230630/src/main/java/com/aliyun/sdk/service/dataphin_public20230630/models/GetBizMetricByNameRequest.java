@@ -112,7 +112,7 @@ public class GetBizMetricByNameRequest extends Request {
         }
 
         /**
-         * <p>Query request.</p>
+         * <p>The query request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder bizMetricByNameQuery(BizMetricByNameQuery bizMetricByNameQuery) {
@@ -123,7 +123,7 @@ public class GetBizMetricByNameRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,10 @@ public class GetBizMetricByNameRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -206,7 +209,11 @@ public class GetBizMetricByNameRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to query draft or published asset details. Set this parameter to True to query draft details, or False to query published details.</p>
+             * <p>Specifies whether to query the details of a draft or published asset. Valid values:</p>
+             * <ul>
+             * <li>True: Draft.</li>
+             * <li>False: Published.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

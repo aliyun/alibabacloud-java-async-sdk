@@ -170,7 +170,7 @@ public class ExecuteTriggerNodeRequest extends Request {
         }
 
         /**
-         * <p>The business date.</p>
+         * <p>The business date. The format is YYYY-MM-DD.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,12 +183,7 @@ public class ExecuteTriggerNodeRequest extends Request {
         }
 
         /**
-         * <p>The environment. Valid values:</p>
-         * <ul>
-         * <li>DEV: development environment.</li>
-         * <li>PROD: production environment.</li>
-         * </ul>
-         * <p>Default value: PROD.</p>
+         * <p>The environment. Valid values: DEV for the development environment, and PROD for the production environment. Default value: PROD.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -200,7 +195,7 @@ public class ExecuteTriggerNodeRequest extends Request {
         }
 
         /**
-         * <p>If the node is an hourly or minutely node, multiple instances are generated per day. This parameter specifies the ordinal number of the instance.</p>
+         * <p>The instance index. If the node is scheduled by hour or minute, multiple instances are generated per day. This parameter specifies the sequence number of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -238,7 +233,10 @@ public class ExecuteTriggerNodeRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

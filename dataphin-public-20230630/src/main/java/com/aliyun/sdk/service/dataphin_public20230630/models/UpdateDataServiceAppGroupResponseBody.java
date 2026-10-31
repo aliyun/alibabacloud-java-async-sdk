@@ -128,7 +128,7 @@ public class UpdateDataServiceAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the backend encounters an exception.</p>
+         * <p>The backend response exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -150,7 +150,7 @@ public class UpdateDataServiceAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

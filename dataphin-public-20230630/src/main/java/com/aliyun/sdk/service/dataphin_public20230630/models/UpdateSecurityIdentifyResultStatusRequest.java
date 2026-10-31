@@ -125,7 +125,10 @@ public class UpdateSecurityIdentifyResultStatusRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpdateSecurityIdentifyResultStatusRequest extends Request {
         }
 
         /**
-         * <p>The update instruction.</p>
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -206,7 +209,7 @@ public class UpdateSecurityIdentifyResultStatusRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether the result is effective.</p>
+             * <p>Specifies whether the result takes effect.</p>
              * <p>This parameter is required.</p>
              */
             public Builder enable(Boolean enable) {

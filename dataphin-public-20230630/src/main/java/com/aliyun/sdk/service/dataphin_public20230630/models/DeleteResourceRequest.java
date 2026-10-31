@@ -142,11 +142,11 @@ public class DeleteResourceRequest extends Request {
         }
 
         /**
-         * <p>Remarks.</p>
+         * <p>The comment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -155,7 +155,7 @@ public class DeleteResourceRequest extends Request {
         }
 
         /**
-         * <p>Resource file ID.</p>
+         * <p>The resource file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class DeleteResourceRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,10 @@ public class DeleteResourceRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -190,7 +193,7 @@ public class DeleteResourceRequest extends Request {
         }
 
         /**
-         * <p>Project ID.</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

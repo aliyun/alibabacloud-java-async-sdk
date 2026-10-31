@@ -152,7 +152,7 @@ public class DeleteQualityWatchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The exception details of the backend response.</p>
+         * <p>The details of the backend response exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -174,7 +174,7 @@ public class DeleteQualityWatchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

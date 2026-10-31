@@ -112,7 +112,7 @@ public class ListPublishRecordsRequest extends Request {
         }
 
         /**
-         * <p>Query command.</p>
+         * <p>The query command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -123,7 +123,7 @@ public class ListPublishRecordsRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,10 @@ public class ListPublishRecordsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -285,7 +288,7 @@ public class ListPublishRecordsRequest extends Request {
             } 
 
             /**
-             * <p>List of change types (0: Create, 1: Update, 2: Delete).</p>
+             * <p>The list of change types (0: Create, 1: Update, 2: Delete).</p>
              */
             public Builder changeTypeList(java.util.List<Integer> changeTypeList) {
                 this.changeTypeList = changeTypeList;
@@ -293,7 +296,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
-             * <p>Page number.</p>
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -305,7 +308,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
-             * <p>Page size.</p>
+             * <p>The number of entries per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -317,7 +320,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
-             * <p>List of project IDs.</p>
+             * <p>The list of project IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder projectIdList(java.util.List<Long> projectIdList) {
@@ -326,7 +329,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
-             * <p>Publish end time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The publish end time in yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-10 10:00:00</p>
@@ -337,7 +340,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
-             * <p>Publish start time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The publish start time in yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-10 10:00:00</p>
@@ -348,7 +351,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
-             * <p>List of publish statuses (0: Failed, 1: Succeeded, 2: Publishing).</p>
+             * <p>The list of publish statuses (0: Failed, 1: Successful, 2: Publishing).</p>
              */
             public Builder publishStatusList(java.util.List<Integer> publishStatusList) {
                 this.publishStatusList = publishStatusList;
@@ -356,7 +359,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
-             * <p>List of submitter IDs.</p>
+             * <p>The list of submitter IDs.</p>
              */
             public Builder submitterList(java.util.List<String> submitterList) {
                 this.submitterList = submitterList;
@@ -424,7 +427,7 @@ public class ListPublishRecordsRequest extends Request {
             } 
 
             /**
-             * <p>Search keyword.</p>
+             * <p>The search keyword.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -435,7 +438,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
-             * <p>Publish record filter.</p>
+             * <p>The publish record filter.</p>
              * <p>This parameter is required.</p>
              */
             public Builder searchFilter(SearchFilter searchFilter) {

@@ -171,7 +171,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -380,7 +380,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The start time.</p>
+             * <p>The start time in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-15 10:30:00</p>
@@ -402,7 +402,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration, in milliseconds.</p>
+             * <p>The execution duration in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -427,7 +427,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
              * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试任务</p>
+             * <p>Test task</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -468,7 +468,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of related tables.</p>
+             * <p>The list of associated tables.</p>
              */
             public Builder relationTables(java.util.List<String> relationTables) {
                 this.relationTables = relationTables;
@@ -476,7 +476,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the executor.</p>
+             * <p>The executor ID.</p>
              * 
              * <strong>example:</strong>
              * <p>30231123</p>
@@ -487,10 +487,10 @@ public class ListOperationRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the executor.</p>
+             * <p>The runner name.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>John Doe</p>
              */
             public Builder runnerName(String runnerName) {
                 this.runnerName = runnerName;
@@ -498,7 +498,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status.</p>
+             * <p>The node status.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -590,7 +590,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of operation logs.</p>
+             * <p>The operation log list.</p>
              */
             public Builder resultData(java.util.List<ResultData> resultData) {
                 this.resultData = resultData;

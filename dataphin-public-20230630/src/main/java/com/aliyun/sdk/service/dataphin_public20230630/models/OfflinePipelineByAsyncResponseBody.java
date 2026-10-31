@@ -130,7 +130,7 @@ public class OfflinePipelineByAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query ID for the asynchronous execution.</p>
+         * <p>The ID used to query the asynchronous execution.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -152,7 +152,7 @@ public class OfflinePipelineByAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error details returned by the backend.</p>
+         * <p>The details of the backend exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -174,7 +174,7 @@ public class OfflinePipelineByAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

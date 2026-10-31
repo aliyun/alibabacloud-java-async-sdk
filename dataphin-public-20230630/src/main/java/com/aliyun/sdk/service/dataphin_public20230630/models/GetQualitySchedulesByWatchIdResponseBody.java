@@ -141,7 +141,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -152,7 +152,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of schedule objects.</p>
+         * <p>The list of scheduling objects.</p>
          */
         public Builder qualityScheduleList(java.util.List<QualityScheduleList> qualityScheduleList) {
             this.qualityScheduleList = qualityScheduleList;
@@ -171,7 +171,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -483,7 +483,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The schedule object ID.</p>
+             * <p>The scheduling object ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -494,7 +494,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the schedule is referenced by a rule.</p>
+             * <p>Indicates whether the scheduling object is referenced by a rule.</p>
              */
             public Builder isRefByRule(Boolean isRefByRule) {
                 this.isRefByRule = isRefByRule;
@@ -513,7 +513,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -524,7 +524,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The schedule object name.</p>
+             * <p>The name of the scheduling object.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -535,7 +535,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The partition expression. A custom expression.</p>
+             * <p>The custom partition expression.</p>
              * 
              * <strong>example:</strong>
              * <p>ds=${yyyyMMdd}</p>
@@ -548,11 +548,11 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             /**
              * <p>The partition type. Valid values:</p>
              * <ul>
-             * <li>EVERY_DAY: every day.</li>
-             * <li>PRE_DAY: yesterday.</li>
-             * <li>TODAY: today.</li>
-             * <li>FIRST_DAY_OF_WEEK: first day of the week (Sunday).</li>
-             * <li>CUSTOM: custom.</li>
+             * <li>EVERY_DAY: every day</li>
+             * <li>PRE_DAY: previous day</li>
+             * <li>TODAY: current day</li>
+             * <li>FIRST_DAY_OF_WEEK: first day of the week (Sunday)</li>
+             * <li>CUSTOM: custom</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -564,13 +564,13 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval type for timed scheduling. Valid values:</p>
+             * <p>The schedule interval type for timed scheduling. Valid values:</p>
              * <ul>
-             * <li>DAILY: day.</li>
-             * <li>WEEKLY: week.</li>
-             * <li>MONTHLY: month.</li>
-             * <li>HOURLY: hour.</li>
-             * <li>MINUTELY: minute.</li>
+             * <li>DAILY: day</li>
+             * <li>WEEKLY: week</li>
+             * <li>MONTHLY: month</li>
+             * <li>HOURLY: hour</li>
+             * <li>MINUTELY: minute</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -582,7 +582,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval values for timed scheduling.</p>
+             * <p>The schedule interval values for timed scheduling.</p>
              */
             public Builder periodScheduleParamList(java.util.List<String> periodScheduleParamList) {
                 this.periodScheduleParamList = periodScheduleParamList;
@@ -590,11 +590,11 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger method for fixed task triggers. Valid values:</p>
+             * <p>The trigger method for static task triggers. Valid values:</p>
              * <ul>
-             * <li>ALL_TASKS_FINISHED</li>
-             * <li>ONE_TASKS_FINISHED</li>
-             * <li>PRE_ONE_TASKS_START.</li>
+             * <li>ALL_TASKS_FINISHED: all tasks finished</li>
+             * <li>ONE_TASKS_FINISHED: one task finished</li>
+             * <li>PRE_ONE_TASKS_START: previous one task started</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -606,7 +606,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of trigger nodes for trigger-based scheduling.</p>
+             * <p>The list of trigger tasks for trigger scheduling.</p>
              */
             public Builder triggerNodeList(java.util.List<String> triggerNodeList) {
                 this.triggerNodeList = triggerNodeList;
@@ -614,10 +614,10 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger method for trigger-based scheduling. Valid values:</p>
+             * <p>The trigger type for trigger scheduling. Valid values:</p>
              * <ul>
-             * <li>STATIC_TASK_TRIGGER: fixed task trigger.</li>
-             * <li>CODE_CHECK_TRIGGER: code check trigger.</li>
+             * <li>STATIC_TASK_TRIGGER: static task trigger</li>
+             * <li>CODE_CHECK_TRIGGER: code check trigger</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -629,13 +629,13 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The schedule type. Valid values:</p>
+             * <p>The scheduling type. Valid values:</p>
              * <ul>
-             * <li>PERIOD_SCHEDULE: timed scheduling.</li>
-             * <li>MANUAL_SCHEDULE: manual trigger.</li>
-             * <li>CODE_CHECK_TRIGGER: code check trigger.</li>
-             * <li>STATIC_TASK_TRIGGER: fixed task trigger.</li>
-             * <li>DEPENDENCY_SCHEDULE: dependency scheduling.</li>
+             * <li>PERIOD_SCHEDULE: timed scheduling</li>
+             * <li>MANUAL_SCHEDULE: manual trigger</li>
+             * <li>CODE_CHECK_TRIGGER: code check trigger</li>
+             * <li>STATIC_TASK_TRIGGER: static task trigger</li>
+             * <li>DEPENDENCY_SCHEDULE: dependency scheduling</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -649,8 +649,8 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
             /**
              * <p>The validation scope. Valid values:</p>
              * <ul>
-             * <li>TASK_REFERRED_PARTITION: task-updated partition.</li>
-             * <li>USER_DEFINED_PARTITION: custom partition.</li>
+             * <li>TASK_REFERRED_PARTITION: task updated partition</li>
+             * <li>USER_DEFINED_PARTITION: user-defined partition</li>
              * </ul>
              * 
              * <strong>example:</strong>

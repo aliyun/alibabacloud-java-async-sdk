@@ -141,7 +141,7 @@ public class GetDataServiceAuthorizedProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class GetDataServiceAuthorizedProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -272,12 +272,12 @@ public class GetDataServiceAuthorizedProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the user. Valid values:</p>
+             * <p>The user role. Valid values:</p>
              * <ul>
-             * <li>1: super administrator</li>
-             * <li>2: developer</li>
-             * <li>3: application member</li>
-             * <li>4: service project administrator</li>
+             * <li>1: Super administrator.</li>
+             * <li>2: Developer.</li>
+             * <li>3: Application member.</li>
+             * <li>4: Service project administrator.</li>
              * <li>5: O&amp;M user.</li>
              * </ul>
              * 

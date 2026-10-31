@@ -125,7 +125,10 @@ public class ListRowPermissionRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -222,7 +225,7 @@ public class ListRowPermissionRequest extends Request {
              * <p>The search keyword.</p>
              * 
              * <strong>example:</strong>
-             * <p>业务</p>
+             * <p>Business</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;

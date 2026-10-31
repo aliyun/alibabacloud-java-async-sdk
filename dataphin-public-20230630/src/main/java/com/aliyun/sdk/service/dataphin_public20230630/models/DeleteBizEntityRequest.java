@@ -142,7 +142,7 @@ public class DeleteBizEntityRequest extends Request {
         }
 
         /**
-         * <p>The ID of the business unit to which the entity belongs.</p>
+         * <p>The ID of the business unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,10 @@ public class DeleteBizEntityRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -190,7 +193,7 @@ public class DeleteBizEntityRequest extends Request {
         }
 
         /**
-         * <p>The type of the business entity. For more information, refer to the create business entity operation.</p>
+         * <p>The type of the business entity. For more information, see the Create a business entity operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

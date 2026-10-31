@@ -125,7 +125,10 @@ public class UpdateTenantMemberRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -161,6 +164,9 @@ public class UpdateTenantMemberRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DingNumber")
         private String dingNumber;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
+        private String displayName;
+
         @com.aliyun.core.annotation.NameInMap("Mail")
         private String mail;
 
@@ -175,6 +181,7 @@ public class UpdateTenantMemberRequest extends Request {
 
         private MemberList(Builder builder) {
             this.dingNumber = builder.dingNumber;
+            this.displayName = builder.displayName;
             this.mail = builder.mail;
             this.mobilePhone = builder.mobilePhone;
             this.roleList = builder.roleList;
@@ -194,6 +201,13 @@ public class UpdateTenantMemberRequest extends Request {
          */
         public String getDingNumber() {
             return this.dingNumber;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
         }
 
         /**
@@ -226,6 +240,7 @@ public class UpdateTenantMemberRequest extends Request {
 
         public static final class Builder {
             private String dingNumber; 
+            private String displayName; 
             private String mail; 
             private String mobilePhone; 
             private java.util.List<String> roleList; 
@@ -236,6 +251,7 @@ public class UpdateTenantMemberRequest extends Request {
 
             private Builder(MemberList model) {
                 this.dingNumber = model.dingNumber;
+                this.displayName = model.displayName;
                 this.mail = model.mail;
                 this.mobilePhone = model.mobilePhone;
                 this.roleList = model.roleList;
@@ -243,13 +259,24 @@ public class UpdateTenantMemberRequest extends Request {
             } 
 
             /**
-             * <p>The DingTalk number.</p>
+             * <p>The DingTalk ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123@dingding</p>
              */
             public Builder dingNumber(String dingNumber) {
                 this.dingNumber = dingNumber;
+                return this;
+            }
+
+            /**
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
                 return this;
             }
 
@@ -276,7 +303,7 @@ public class UpdateTenantMemberRequest extends Request {
             }
 
             /**
-             * <p>The list of roles.</p>
+             * <p>The role list.</p>
              */
             public Builder roleList(java.util.List<String> roleList) {
                 this.roleList = roleList;
@@ -342,7 +369,7 @@ public class UpdateTenantMemberRequest extends Request {
             } 
 
             /**
-             * <p>The list of members.</p>
+             * <p>The member list.</p>
              * <p>This parameter is required.</p>
              */
             public Builder memberList(java.util.List<MemberList> memberList) {

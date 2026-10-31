@@ -142,7 +142,7 @@ public class GetUdfByVersionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user-defined function.</p>
+         * <p>The custom function ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,10 @@ public class GetUdfByVersionRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

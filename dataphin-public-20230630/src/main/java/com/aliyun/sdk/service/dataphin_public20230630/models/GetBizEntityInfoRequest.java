@@ -153,7 +153,10 @@ public class GetBizEntityInfoRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -162,7 +165,7 @@ public class GetBizEntityInfoRequest extends Request {
         }
 
         /**
-         * <p>The business entity type. For more information, refer to the create business entity operation.</p>
+         * <p>The business entity type. For more information, see the Create business entity operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

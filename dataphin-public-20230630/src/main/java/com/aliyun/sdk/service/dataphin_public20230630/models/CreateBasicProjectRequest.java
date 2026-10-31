@@ -112,7 +112,7 @@ public class CreateBasicProjectRequest extends Request {
         }
 
         /**
-         * <p>The create command.</p>
+         * <p>The creation command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -136,7 +136,10 @@ public class CreateBasicProjectRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -434,10 +437,10 @@ public class CreateBasicProjectRequest extends Request {
             }
 
             /**
-             * <p>The project display name.</p>
+             * <p>The display name of the project.</p>
              * 
              * <strong>example:</strong>
-             * <p>My project.</p>
+             * <p>My project</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -479,7 +482,7 @@ public class CreateBasicProjectRequest extends Request {
             }
 
             /**
-             * <p>The project type. If this parameter is left empty, the default value GENERAL is used.</p>
+             * <p>The project type. Default value: GENERAL.</p>
              * 
              * <strong>example:</strong>
              * <p>GENERAL</p>

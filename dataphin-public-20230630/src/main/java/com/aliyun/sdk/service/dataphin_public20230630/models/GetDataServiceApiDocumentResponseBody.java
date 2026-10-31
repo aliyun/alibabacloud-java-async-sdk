@@ -149,7 +149,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -328,12 +328,12 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication method for the API data source. Valid values:</p>
+             * <p>The authentication method of the API data source. Valid values:</p>
              * <ul>
-             * <li>1: BearToken</li>
-             * <li>2: ApiKey</li>
-             * <li>3: None</li>
-             * <li>4: AppKeyAuth</li>
+             * <li>1: BearToken.</li>
+             * <li>2: ApiKey.</li>
+             * <li>3: None.</li>
+             * <li>4: AppKeyAuth.</li>
              * <li>5: BasicAuth.</li>
              * </ul>
              * 
@@ -346,7 +346,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API data source ID.</p>
+             * <p>The ID of the API data source.</p>
              * 
              * <strong>example:</strong>
              * <p>102311</p>
@@ -357,7 +357,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API data source name.</p>
+             * <p>The name of the API data source.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -368,9 +368,9 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP method for the registered API. Valid values:</p>
+             * <p>The HTTP method of the registered API. Valid values:</p>
              * <ul>
-             * <li>1: GET</li>
+             * <li>1: GET.</li>
              * <li>2: POST.</li>
              * </ul>
              * 
@@ -386,7 +386,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
              * <p>The mode. Valid values:</p>
              * <ul>
              * <li>0: basic</li>
-             * <li>1: dev_prod.</li>
+             * <li>1: dev_prod</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -398,7 +398,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service path.</p>
+             * <p>The path of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>/api/test</p>
@@ -409,7 +409,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request protocol for the API data source.</p>
+             * <p>The request protocol of the API data source.</p>
              * 
              * <strong>example:</strong>
              * <p>https</p>
@@ -431,7 +431,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API data source URL.</p>
+             * <p>The URL of the API data source.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://192.168.1.1:8080">http://192.168.1.1:8080</a></p>
@@ -543,7 +543,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
              * <p>The parameter description.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -551,10 +551,10 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the request parameter is required. Valid values:</p>
+             * <p>Indicates whether the request parameter is required. Valid values:</p>
              * <ul>
-             * <li>1: Required.</li>
-             * <li>0: Optional.</li>
+             * <li>1: required</li>
+             * <li>0: optional</li>
              * </ul>
              */
             public Builder isRequired(Boolean isRequired) {
@@ -721,7 +721,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
              * <p>The parameter description.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -729,10 +729,10 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the request parameter is required. Valid values:</p>
+             * <p>Indicates whether the request parameter is required. Valid values:</p>
              * <ul>
-             * <li>1: Required.</li>
-             * <li>0: Optional.</li>
+             * <li>1: required</li>
+             * <li>0: optional</li>
              * </ul>
              */
             public Builder isRequired(Boolean isRequired) {
@@ -862,7 +862,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
              * <p>The parameter description.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1423,7 +1423,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period of the direct API, in seconds.</p>
+             * <p>The timeout period for the direct API, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -1434,7 +1434,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business unit name. This parameter has a value only for logical tables.</p>
+             * <p>The business unit name. This value is available only for logical tables.</p>
              * 
              * <strong>example:</strong>
              * <p>bizUnit_test</p>
@@ -1460,7 +1460,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
              * <ul>
              * <li>0: custom mode</li>
              * <li>1: wizard mode</li>
-             * <li>2: direct API.</li>
+             * <li>2: direct API connection</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1508,7 +1508,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
              * <p>The environment. Valid values:</p>
              * <ul>
              * <li>0: dev</li>
-             * <li>1: prod.</li>
+             * <li>1: prod</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1550,10 +1550,10 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the query is a paged query. Valid values:</p>
+             * <p>Specifies whether the query is a paged query. Valid values:</p>
              * <ul>
-             * <li>1: Yes.</li>
-             * <li>0: No.</li>
+             * <li>1: yes.</li>
+             * <li>0: no.</li>
              * </ul>
              */
             public Builder isPagedQuery(Boolean isPagedQuery) {
@@ -1562,10 +1562,10 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the SQL is special. Valid values:</p>
+             * <p>Indicates whether the SQL is special. Valid values:</p>
              * <ul>
-             * <li>0: No.</li>
-             * <li>1: Yes.</li>
+             * <li>0: no</li>
+             * <li>1: yes</li>
              * </ul>
              */
             public Builder isSpecialSql(Boolean isSpecialSql) {
@@ -1577,7 +1577,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
              * <p>The mode. Valid values:</p>
              * <ul>
              * <li>0: basic</li>
-             * <li>1: dev_prod.</li>
+             * <li>1: dev_prod</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1592,7 +1592,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
              * <p>The API name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1600,10 +1600,10 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether caching is enabled. Valid values:</p>
+             * <p>Specifies whether the cache is enabled. Valid values:</p>
              * <ul>
-             * <li>0: Disabled.</li>
-             * <li>1: Enabled.</li>
+             * <li>0: disabled.</li>
+             * <li>1: enabled.</li>
              * </ul>
              */
             public Builder openCache(Boolean openCache) {
@@ -1612,7 +1612,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data service project ID.</p>
+             * <p>The ID of the data service project.</p>
              * 
              * <strong>example:</strong>
              * <p>10201</p>
@@ -1623,7 +1623,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data service project name.</p>
+             * <p>The name of the data service project.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1636,9 +1636,9 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             /**
              * <p>The protocol. Valid values:</p>
              * <ul>
-             * <li>1: HTTPS</li>
-             * <li>2: HTTP</li>
-             * <li>3: both HTTP and HTTPS.</li>
+             * <li>1: https</li>
+             * <li>2: http</li>
+             * <li>3: http and https</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1650,7 +1650,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of common parameters.</p>
+             * <p>The common parameter list.</p>
              */
             public Builder publicParamList(java.util.List<PublicParamList> publicParamList) {
                 this.publicParamList = publicParamList;
@@ -1661,7 +1661,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
              * <p>The request method. Valid values:</p>
              * <ul>
              * <li>1: get</li>
-             * <li>2: list.</li>
+             * <li>2: list</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1673,7 +1673,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of request parameters.</p>
+             * <p>The request parameter list.</p>
              */
             public Builder requestParamList(java.util.List<RequestParamList> requestParamList) {
                 this.requestParamList = requestParamList;
@@ -1681,7 +1681,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>10021</p>
@@ -1692,7 +1692,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group name.</p>
+             * <p>The name of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1703,7 +1703,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of response parameters.</p>
+             * <p>The response parameter list.</p>
              */
             public Builder responseParamList(java.util.List<ResponseParamList> responseParamList) {
                 this.responseParamList = responseParamList;
@@ -1711,7 +1711,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sample invocation result.</p>
+             * <p>The call result sample.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;count&quot;: 88}</p>
@@ -1735,7 +1735,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             /**
              * <p>The return data type. Valid values:</p>
              * <ul>
-             * <li>1: JSON.</li>
+             * <li>1: JSON</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1749,8 +1749,8 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             /**
              * <p>The script type. Valid values:</p>
              * <ul>
-             * <li>NORMAL_SQL: basic SQL</li>
-             * <li>MYBATIS_SQL: advanced SQL</li>
+             * <li>NORMAL_SQL: basic SQL.</li>
+             * <li>MYBATIS_SQL: advanced SQL.</li>
              * <li>AVIATOR: Aviator expression.</li>
              * </ul>
              * 
@@ -1774,7 +1774,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logical table name. This parameter has a value only for logical tables.</p>
+             * <p>The logical table name. This value is available only for logical tables.</p>
              * 
              * <strong>example:</strong>
              * <p>t_logical_test1</p>
@@ -1801,7 +1801,7 @@ public class GetDataServiceApiDocumentResponseBody extends TeaModel {
              * <li>0: custom</li>
              * <li>1: daily</li>
              * <li>2: hourly</li>
-             * <li>3: every minute.</li>
+             * <li>3: every minute</li>
              * </ul>
              * 
              * <strong>example:</strong>

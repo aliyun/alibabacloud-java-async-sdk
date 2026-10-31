@@ -139,8 +139,8 @@ public class CreateNodeSupplementRequest extends Request {
         /**
          * <p>The environment identifier. Valid values:</p>
          * <ul>
-         * <li>DEV: Development environment. </li>
-         * <li>PROD (default): Production environment.</li>
+         * <li>DEV: development environment </li>
+         * <li>PROD: production environment (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class CreateNodeSupplementRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator user.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -237,7 +237,7 @@ public class CreateNodeSupplementRequest extends Request {
             } 
 
             /**
-             * <p>The field ID.</p>
+             * <p>The field IDs.</p>
              */
             public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
@@ -345,8 +345,8 @@ public class CreateNodeSupplementRequest extends Request {
              * <li>NODE_OUTPUT_NAME: node output name</li>
              * <li>NODE_NAME: node name</li>
              * <li>NODE_ID: node ID</li>
-             * <li>TARGETS: specified endpoints</li>
-             * <li>SOURCES: specified start points</li>
+             * <li>TARGETS: specified destination</li>
+             * <li>SOURCES: specified source</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -507,7 +507,7 @@ public class CreateNodeSupplementRequest extends Request {
             } 
 
             /**
-             * <p>The list of field IDs. This parameter is applicable when the node ID is a logical table node ID. If this parameter is not specified, all fields in the table are used by default.</p>
+             * <p>The list of field IDs. This parameter can be specified when the node is a logical table node. If you do not specify this parameter, all fields in the table are used by default.</p>
              */
             public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
@@ -678,7 +678,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * <p>The parameter list.</p>
+             * <p>The list of parameters.</p>
              */
             public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
@@ -708,6 +708,12 @@ public class CreateNodeSupplementRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("EndBizDate")
         @com.aliyun.core.annotation.Validation(required = true)
         private String endBizDate;
+
+        @com.aliyun.core.annotation.NameInMap("ExecuteStatusOfIdleNode")
+        private String executeStatusOfIdleNode;
+
+        @com.aliyun.core.annotation.NameInMap("ExecuteStatusOfPauseNode")
+        private String executeStatusOfPauseNode;
 
         @com.aliyun.core.annotation.NameInMap("FilterList")
         private java.util.List<FilterList> filterList;
@@ -741,6 +747,9 @@ public class CreateNodeSupplementRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RunImmediately")
         private Boolean runImmediately;
 
+        @com.aliyun.core.annotation.NameInMap("ScheduleResourceGroupId")
+        private String scheduleResourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("StartBizDate")
         @com.aliyun.core.annotation.Validation(required = true)
         private String startBizDate;
@@ -749,6 +758,8 @@ public class CreateNodeSupplementRequest extends Request {
             this.containAllDownStream = builder.containAllDownStream;
             this.downStreamNodeIdList = builder.downStreamNodeIdList;
             this.endBizDate = builder.endBizDate;
+            this.executeStatusOfIdleNode = builder.executeStatusOfIdleNode;
+            this.executeStatusOfPauseNode = builder.executeStatusOfPauseNode;
             this.filterList = builder.filterList;
             this.globalParamList = builder.globalParamList;
             this.maxDueTime = builder.maxDueTime;
@@ -759,6 +770,7 @@ public class CreateNodeSupplementRequest extends Request {
             this.parallelism = builder.parallelism;
             this.projectId = builder.projectId;
             this.runImmediately = builder.runImmediately;
+            this.scheduleResourceGroupId = builder.scheduleResourceGroupId;
             this.startBizDate = builder.startBizDate;
         }
 
@@ -789,6 +801,20 @@ public class CreateNodeSupplementRequest extends Request {
          */
         public String getEndBizDate() {
             return this.endBizDate;
+        }
+
+        /**
+         * @return executeStatusOfIdleNode
+         */
+        public String getExecuteStatusOfIdleNode() {
+            return this.executeStatusOfIdleNode;
+        }
+
+        /**
+         * @return executeStatusOfPauseNode
+         */
+        public String getExecuteStatusOfPauseNode() {
+            return this.executeStatusOfPauseNode;
         }
 
         /**
@@ -862,6 +888,13 @@ public class CreateNodeSupplementRequest extends Request {
         }
 
         /**
+         * @return scheduleResourceGroupId
+         */
+        public String getScheduleResourceGroupId() {
+            return this.scheduleResourceGroupId;
+        }
+
+        /**
          * @return startBizDate
          */
         public String getStartBizDate() {
@@ -872,6 +905,8 @@ public class CreateNodeSupplementRequest extends Request {
             private Boolean containAllDownStream; 
             private java.util.List<DownStreamNodeIdList> downStreamNodeIdList; 
             private String endBizDate; 
+            private String executeStatusOfIdleNode; 
+            private String executeStatusOfPauseNode; 
             private java.util.List<FilterList> filterList; 
             private java.util.List<GlobalParamList> globalParamList; 
             private String maxDueTime; 
@@ -882,6 +917,7 @@ public class CreateNodeSupplementRequest extends Request {
             private Integer parallelism; 
             private Long projectId; 
             private Boolean runImmediately; 
+            private String scheduleResourceGroupId; 
             private String startBizDate; 
 
             private Builder() {
@@ -891,6 +927,8 @@ public class CreateNodeSupplementRequest extends Request {
                 this.containAllDownStream = model.containAllDownStream;
                 this.downStreamNodeIdList = model.downStreamNodeIdList;
                 this.endBizDate = model.endBizDate;
+                this.executeStatusOfIdleNode = model.executeStatusOfIdleNode;
+                this.executeStatusOfPauseNode = model.executeStatusOfPauseNode;
                 this.filterList = model.filterList;
                 this.globalParamList = model.globalParamList;
                 this.maxDueTime = model.maxDueTime;
@@ -901,11 +939,12 @@ public class CreateNodeSupplementRequest extends Request {
                 this.parallelism = model.parallelism;
                 this.projectId = model.projectId;
                 this.runImmediately = model.runImmediately;
+                this.scheduleResourceGroupId = model.scheduleResourceGroupId;
                 this.startBizDate = model.startBizDate;
             } 
 
             /**
-             * <p>Specifies whether to include all downstream nodes in batch mode. Default value: false.</p>
+             * <p>Specifies whether to include all downstream nodes in massive mode. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -916,7 +955,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * <p>The IDs of downstream nodes to run. This parameter takes effect only when ContainAllDownStream is set to false.</p>
+             * <p>The IDs of the downstream nodes to run. This parameter takes effect only when ContainAllDownStream is set to false.</p>
              */
             public Builder downStreamNodeIdList(java.util.List<DownStreamNodeIdList> downStreamNodeIdList) {
                 this.downStreamNodeIdList = downStreamNodeIdList;
@@ -924,7 +963,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * <p>The end business date.</p>
+             * <p>The end business date. Format: YYYY-MM-DD.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -936,7 +975,29 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * <p>The list of filters. This parameter is used together with ContainAllDownStream to include or exclude nodes based on criteria such as project or node. Default value: empty.</p>
+             * <p>The execution status of idle nodes. Valid values: NORMAL, PAUSED, and IDLE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
+             */
+            public Builder executeStatusOfIdleNode(String executeStatusOfIdleNode) {
+                this.executeStatusOfIdleNode = executeStatusOfIdleNode;
+                return this;
+            }
+
+            /**
+             * <p>The execution status of paused nodes. Valid values: NORMAL, PAUSED, and IDLE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
+             */
+            public Builder executeStatusOfPauseNode(String executeStatusOfPauseNode) {
+                this.executeStatusOfPauseNode = executeStatusOfPauseNode;
+                return this;
+            }
+
+            /**
+             * <p>The filter list. This parameter is used together with ContainAllDownStream to include or exclude items such as projects and nodes. Default value: empty.</p>
              */
             public Builder filterList(java.util.List<FilterList> filterList) {
                 this.filterList = filterList;
@@ -944,7 +1005,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * <p>The runtime global parameters.</p>
+             * <p>The global parameters at runtime.</p>
              */
             public Builder globalParamList(java.util.List<GlobalParamList> globalParamList) {
                 this.globalParamList = globalParamList;
@@ -952,7 +1013,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * <p>The latest trigger time in the HH:MM format. This parameter is applicable only to hourly nodes.</p>
+             * <p>The latest trigger time. Format: HH:MM. This parameter is dedicated to hourly nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>20:59</p>
@@ -963,7 +1024,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * <p>The earliest trigger time in the HH:MM format. This parameter is applicable only to hourly nodes.</p>
+             * <p>The earliest trigger time. Format: HH:MM. This parameter is dedicated to hourly nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>00:00</p>
@@ -974,10 +1035,10 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * <p>The name of the data backfill. If this parameter is not specified, the system automatically generates a name.</p>
+             * <p>The name of the data backfill task. If you do not specify this parameter, the system generates a name.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestBackfill</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -985,7 +1046,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * <p>The root nodes for data backfill. Multiple root nodes are supported.</p>
+             * <p>The IDs of the root nodes for data backfill. Multiple root nodes are supported.</p>
              * <p>This parameter is required.</p>
              */
             public Builder nodeIdList(java.util.List<NodeIdList> nodeIdList) {
@@ -994,7 +1055,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * <p>The runtime custom parameters configured by node.</p>
+             * <p>The custom parameters at runtime, configured by node.</p>
              */
             public Builder nodeParamsList(java.util.List<NodeParamsList> nodeParamsList) {
                 this.nodeParamsList = nodeParamsList;
@@ -1025,7 +1086,12 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * <p>Corresponds to the &quot;Task Run Time&quot; option in the data backfill dialog box. If this parameter is set to true, the scheduled run time of instances is ignored and all instances run immediately. If this parameter is set to false, instances wait for their scheduled run time before running. Default value: true.</p>
+             * <p>Corresponds to the Task Run Time option in the data backfill dialog box on the page. Valid values:</p>
+             * <ul>
+             * <li>true: ignores the scheduled run time of instances and runs all instances immediately.</li>
+             * <li>false: waits for the scheduled run time of instances and runs each instance only when its scheduled time is reached.
+             * Default value: true.</li>
+             * </ul>
              */
             public Builder runImmediately(Boolean runImmediately) {
                 this.runImmediately = runImmediately;
@@ -1033,7 +1099,18 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * <p>The start business date.</p>
+             * <p>The ID of the schedule resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
+             */
+            public Builder scheduleResourceGroupId(String scheduleResourceGroupId) {
+                this.scheduleResourceGroupId = scheduleResourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The start business date. Format: YYYY-MM-DD.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -112,7 +112,7 @@ public class DeleteStandardLookupTableRequest extends Request {
         }
 
         /**
-         * <p>The lookup table ID.</p>
+         * <p>The ID of the lookup table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,10 @@ public class DeleteStandardLookupTableRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

@@ -171,7 +171,7 @@ public class PublishKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +237,7 @@ public class PublishKgSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The expected latest model version number after the publish operation.</p>
+             * <p>The expected latest model version number after publishing.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -130,7 +130,7 @@ public class GetStandardWordRootRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>平均值</p>
+         * <p>Average</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -139,7 +139,7 @@ public class GetStandardWordRootRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow a null value to be returned when the word root does not exist. If set to false, an exception is thrown. Default value: true.</p>
+         * <p>Specifies whether to allow a null value to be returned when the word root does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</p>
          */
         public Builder nullable(Boolean nullable) {
             this.putQueryParameter("Nullable", nullable);
@@ -161,7 +161,10 @@ public class GetStandardWordRootRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

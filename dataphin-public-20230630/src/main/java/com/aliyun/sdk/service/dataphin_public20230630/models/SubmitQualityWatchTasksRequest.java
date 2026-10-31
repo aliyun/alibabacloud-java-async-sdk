@@ -125,7 +125,10 @@ public class SubmitQualityWatchTasksRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -218,7 +221,7 @@ public class SubmitQualityWatchTasksRequest extends Request {
             } 
 
             /**
-             * <p>The business date, in the yyyy-MM-dd format.</p>
+             * <p>The business date. Format: yyyy-MM-dd.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30</p>
@@ -229,7 +232,7 @@ public class SubmitQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The partition expression. This is a custom expression.</p>
+             * <p>The custom partition expression.</p>
              * 
              * <strong>example:</strong>
              * <p>ds=${yyyyMMdd}</p>
@@ -240,7 +243,7 @@ public class SubmitQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The monitored object IDs.</p>
+             * <p>The IDs of the monitored objects.</p>
              * <p>This parameter is required.</p>
              */
             public Builder watchIdList(java.util.List<Long> watchIdList) {

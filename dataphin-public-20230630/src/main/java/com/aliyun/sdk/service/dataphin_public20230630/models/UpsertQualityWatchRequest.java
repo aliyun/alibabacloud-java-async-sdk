@@ -125,7 +125,10 @@ public class UpsertQualityWatchRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpsertQualityWatchRequest extends Request {
         }
 
         /**
-         * <p>The update instruction.</p>
+         * <p>The upsert command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder upsertCommand(UpsertCommand upsertCommand) {
@@ -402,7 +405,7 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * <p>The cell aggregate table name.</p>
+             * <p>The name of the unit aggregate table.</p>
              * 
              * <strong>example:</strong>
              * <p>dws_all</p>
@@ -413,13 +416,7 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * <p>The metric computation type. Valid values:</p>
-             * <ul>
-             * <li>AUTO</li>
-             * <li>CUSTOM</li>
-             * <li>MOUNT</li>
-             * <li>COMBINE.</li>
-             * </ul>
+             * <p>The computation type of the metric. Valid values: AUTO, CUSTOM, MOUNT, and COMBINE.</p>
              * 
              * <strong>example:</strong>
              * <p>AUTO</p>
@@ -430,7 +427,7 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * <p>The metric data type.</p>
+             * <p>The data type of the metric.</p>
              * 
              * <strong>example:</strong>
              * <p>bigint</p>
@@ -452,7 +449,7 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * <p>The metric display name.</p>
+             * <p>The display name of the metric.</p>
              * 
              * <strong>example:</strong>
              * <p>logic</p>
@@ -463,10 +460,10 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * <p>The statistical granularity name.</p>
+             * <p>The name of the statistical granularity.</p>
              * 
              * <strong>example:</strong>
-             * <p>全站汇总表</p>
+             * <p>Site-wide aggregate table</p>
              */
             public Builder granularityDisplayName(String granularityDisplayName) {
                 this.granularityDisplayName = granularityDisplayName;
@@ -518,10 +515,7 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * <p>The metric type. Valid values:</p>
-             * <ul>
-             * <li>INDEX.</li>
-             * </ul>
+             * <p>The type of the metric. Valid value: INDEX.</p>
              * 
              * <strong>example:</strong>
              * <p>INDEX</p>
@@ -710,7 +704,7 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * <p>The monitored object ID. If this parameter is specified, the object is updated. If this parameter is not specified, a new object is created.</p>
+             * <p>The monitored object ID. If you specify this parameter, the operation updates the object. If you do not specify this parameter, the operation creates a new object.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -721,7 +715,7 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * <p>The monitoring metrics object.</p>
+             * <p>The monitored metric object.</p>
              */
             public Builder indexInfo(IndexInfo indexInfo) {
                 this.indexInfo = indexInfo;
@@ -749,14 +743,7 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * <p>The monitored object type. Valid values:</p>
-             * <ul>
-             * <li>TABLE: Dataphin table.</li>
-             * <li>DATASOURCE_TABLE: global table.</li>
-             * <li>DATASOURCE: data source.</li>
-             * <li>INDEX: metric.</li>
-             * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
-             * </ul>
+             * <p>The monitored object type. Valid values: TABLE (Dataphin table), DATASOURCE_TABLE (global table), DATASOURCE (data source), INDEX (metric), and REALTIME_LOGICAL_TABLE (real-time metatable).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

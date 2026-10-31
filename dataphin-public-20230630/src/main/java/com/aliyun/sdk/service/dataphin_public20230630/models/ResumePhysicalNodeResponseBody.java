@@ -119,7 +119,7 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code. A value of OK indicates a successful request.</p>
+         * <p>The error code. A value of OK indicates that the request is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code returned by the backend.</p>
+         * <p>The HTTP status code returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -152,7 +152,7 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Results of the node resume scheduling operation.</p>
+         * <p>The results of the node scheduling resumption operations.</p>
          */
         public Builder nodeOperateResultList(java.util.List<NodeOperateResultList> nodeOperateResultList) {
             this.nodeOperateResultList = nodeOperateResultList;
@@ -160,7 +160,7 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -171,7 +171,7 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -253,7 +253,7 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Error message returned when the operation fails.</p>
+             * <p>The error message returned when the operation fails.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -264,7 +264,7 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node ID.</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>n_123456</p>
@@ -275,7 +275,7 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operation result.</p>
+             * <p>The operation result.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCESS</p>

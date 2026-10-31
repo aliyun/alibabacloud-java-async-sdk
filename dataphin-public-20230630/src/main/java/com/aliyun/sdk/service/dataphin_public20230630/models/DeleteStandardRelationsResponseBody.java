@@ -149,7 +149,7 @@ public class DeleteStandardRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class DeleteStandardRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +237,7 @@ public class DeleteStandardRelationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of standard IDs that do not exist.</p>
+             * <p>The list of non-existent standard IDs.</p>
              */
             public Builder notExistStandardIdList(java.util.List<Long> notExistStandardIdList) {
                 this.notExistStandardIdList = notExistStandardIdList;
@@ -245,7 +245,7 @@ public class DeleteStandardRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successfully deleted associations.</p>
+             * <p>The number of successful operations.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

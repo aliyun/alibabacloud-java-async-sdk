@@ -134,7 +134,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -344,7 +347,7 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * <p>The data domain ID.</p>
+             * <p>The subject domain ID.</p>
              * 
              * <strong>example:</strong>
              * <p>74280</p>
@@ -355,7 +358,7 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to include version details. Default value: FALSE.</p>
+             * <p>Specifies whether to include version details. Default value: false.</p>
              */
             public Builder includeVersionList(Boolean includeVersionList) {
                 this.includeVersionList = includeVersionList;
@@ -396,7 +399,7 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of items per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -419,11 +422,7 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * <p>The dataset scenario. Valid values:</p>
-             * <ul>
-             * <li>OFFLINE: offline.</li>
-             * <li>REALTIME: real-time.</li>
-             * </ul>
+             * <p>The dataset scenario. Valid values: OFFLINE (offline) and REALTIME (real-time).</p>
              * 
              * <strong>example:</strong>
              * <p>OFFLINE</p>
@@ -456,7 +455,7 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * <p>The dataset type. If left empty, all types are queried.</p>
+             * <p>The dataset types. If this parameter is left empty, all types are queried.</p>
              */
             public Builder typeList(java.util.List<String> typeList) {
                 this.typeList = typeList;

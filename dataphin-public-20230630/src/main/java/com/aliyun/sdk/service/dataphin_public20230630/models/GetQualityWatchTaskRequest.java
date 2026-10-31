@@ -125,7 +125,10 @@ public class GetQualityWatchTaskRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class GetQualityWatchTaskRequest extends Request {
         }
 
         /**
-         * <p>The quality watchtask ID.</p>
+         * <p>The watchtask ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

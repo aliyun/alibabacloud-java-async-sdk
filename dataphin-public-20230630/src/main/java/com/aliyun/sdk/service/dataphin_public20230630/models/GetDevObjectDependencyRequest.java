@@ -157,11 +157,11 @@ public class GetDevObjectDependencyRequest extends Request {
         }
 
         /**
-         * <p>Development object source.</p>
+         * <p>The object source. Valid values:</p>
          * <ul>
-         * <li>BLACK_BOX: Logical table</li>
-         * <li>DATA_PROCESS: Compute task</li>
-         * <li>PIPELINE: Integration task</li>
+         * <li>BLACK_BOX: logical table</li>
+         * <li>DATA_PROCESS: computing node</li>
+         * <li>PIPELINE: integration node</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -175,7 +175,7 @@ public class GetDevObjectDependencyRequest extends Request {
         }
 
         /**
-         * <p>Object ID.</p>
+         * <p>The object ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,10 +188,10 @@ public class GetDevObjectDependencyRequest extends Request {
         }
 
         /**
-         * <p>Development object type.</p>
+         * <p>The object type. Valid values:</p>
          * <ul>
-         * <li>FILE_ID: Task FileId</li>
-         * <li>MODEL_ID: Logical table</li>
+         * <li>FILE_ID: file ID of a node</li>
+         * <li>MODEL_ID: logical table</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -205,7 +205,7 @@ public class GetDevObjectDependencyRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,10 @@ public class GetDevObjectDependencyRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -227,7 +230,7 @@ public class GetDevObjectDependencyRequest extends Request {
         }
 
         /**
-         * <p>Project ID.</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

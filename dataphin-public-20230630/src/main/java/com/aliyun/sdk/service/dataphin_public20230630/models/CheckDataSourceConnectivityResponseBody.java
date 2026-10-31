@@ -119,7 +119,7 @@ public class CheckDataSourceConnectivityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class CheckDataSourceConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The connectivity check result of the data source.</p>
+         * <p>The datasource connection check result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -174,7 +174,7 @@ public class CheckDataSourceConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -112,7 +112,7 @@ public class CreateSecurityClassifyCatalogRequest extends Request {
         }
 
         /**
-         * <p>The create command.</p>
+         * <p>The creation command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -136,7 +136,10 @@ public class CreateSecurityClassifyCatalogRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -243,7 +246,7 @@ public class CreateSecurityClassifyCatalogRequest extends Request {
             }
 
             /**
-             * <p>The list of administrator IDs. This parameter takes effect only when the parent folder is the root folder.</p>
+             * <p>The list of administrator IDs. This parameter is valid only when the parent folder is the root folder.</p>
              */
             public Builder ownerList(java.util.List<String> ownerList) {
                 this.ownerList = ownerList;
@@ -251,7 +254,7 @@ public class CreateSecurityClassifyCatalogRequest extends Request {
             }
 
             /**
-             * <p>The full path of the parent folder. Default value: /.</p>
+             * <p>The full path of the parent classification folder. Default value: /.</p>
              * 
              * <strong>example:</strong>
              * <p>/d1/</p>
@@ -262,11 +265,11 @@ public class CreateSecurityClassifyCatalogRequest extends Request {
             }
 
             /**
-             * <p>The visibility scope of the classification folder. Valid values:</p>
+             * <p>The visibility scope of the classification. This parameter is valid only when the parent folder is the root folder. Valid values:</p>
              * <ul>
-             * <li>PUBLIC: visible to all users.</li>
-             * <li>PRIVATE: visible only to administrators.
-             * Default value: PUBLIC. This parameter takes effect only when the parent folder is the root folder.</li>
+             * <li>PUBLIC: Public.</li>
+             * <li>PRIVATE: Visible only to administrators.
+             * Default value: PUBLIC.</li>
              * </ul>
              * 
              * <strong>example:</strong>

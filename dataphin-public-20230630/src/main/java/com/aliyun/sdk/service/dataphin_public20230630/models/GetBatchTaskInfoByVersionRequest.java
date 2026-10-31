@@ -168,7 +168,7 @@ public class GetBatchTaskInfoByVersionRequest extends Request {
         }
 
         /**
-         * <p>The operator user ID.</p>
+         * <p>The operator ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -193,7 +193,7 @@ public class GetBatchTaskInfoByVersionRequest extends Request {
         }
 
         /**
-         * <p>The version number.</p>
+         * <p>The version ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

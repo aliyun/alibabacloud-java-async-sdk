@@ -119,7 +119,7 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code of the request. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -171,7 +171,7 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -439,7 +439,7 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Flink image registry address.</p>
+             * <p>The Flink image registry.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxx-registry-vpc.cn-shanghai.cr.aliyuncs.com/xxxx/flink:1.15.4-scala_2.12</p>
@@ -494,7 +494,7 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of vCores provided by each queue.</p>
+             * <p>The maximum number of vCores provided for each queue.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -527,7 +527,7 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queue name, which serves as a unique identifier. For Kubernetes, this is the resource group name.</p>
+             * <p>The queue name, which is a unique identifier. In Kubernetes, it is the resource group name.</p>
              * 
              * <strong>example:</strong>
              * <p>default-queue</p>

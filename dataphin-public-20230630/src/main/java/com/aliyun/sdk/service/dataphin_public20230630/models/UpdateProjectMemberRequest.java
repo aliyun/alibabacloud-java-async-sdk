@@ -153,7 +153,10 @@ public class UpdateProjectMemberRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -186,8 +189,10 @@ public class UpdateProjectMemberRequest extends Request {
      * <p>UpdateProjectMemberRequest</p>
      */
     public static class UserList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RoleCodeList")
+        private java.util.List<String> roleCodeList;
+
         @com.aliyun.core.annotation.NameInMap("RoleList")
-        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<Integer> roleList;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
@@ -195,6 +200,7 @@ public class UpdateProjectMemberRequest extends Request {
         private String userId;
 
         private UserList(Builder builder) {
+            this.roleCodeList = builder.roleCodeList;
             this.roleList = builder.roleList;
             this.userId = builder.userId;
         }
@@ -205,6 +211,13 @@ public class UpdateProjectMemberRequest extends Request {
 
         public static UserList create() {
             return builder().build();
+        }
+
+        /**
+         * @return roleCodeList
+         */
+        public java.util.List<String> getRoleCodeList() {
+            return this.roleCodeList;
         }
 
         /**
@@ -222,6 +235,7 @@ public class UpdateProjectMemberRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<String> roleCodeList; 
             private java.util.List<Integer> roleList; 
             private String userId; 
 
@@ -229,13 +243,21 @@ public class UpdateProjectMemberRequest extends Request {
             } 
 
             private Builder(UserList model) {
+                this.roleCodeList = model.roleCodeList;
                 this.roleList = model.roleList;
                 this.userId = model.userId;
             } 
 
             /**
-             * <p>The member role. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</p>
-             * <p>This parameter is required.</p>
+             * <p>The list of role codes for the member. Supports system and custom project roles obtained from ListProjectRoles. Only one role is supported. If this list is not empty, it takes precedence over RoleList. You must specify at least one of RoleList and RoleCodeList.</p>
+             */
+            public Builder roleCodeList(java.util.List<String> roleCodeList) {
+                this.roleCodeList = roleCodeList;
+                return this;
+            }
+
+            /**
+             * <p>The member role. Valid values: 1: project administrator. 2: developer. 3: guest. 4: analyst. 5: O&amp;M engineer.</p>
              */
             public Builder roleList(java.util.List<Integer> roleList) {
                 this.roleList = roleList;
@@ -328,7 +350,7 @@ public class UpdateProjectMemberRequest extends Request {
             }
 
             /**
-             * <p>The list of user members.</p>
+             * <p>The user members.</p>
              * <p>This parameter is required.</p>
              */
             public Builder userList(java.util.List<UserList> userList) {

@@ -112,7 +112,7 @@ public class ListUserGroupsRequest extends Request {
         }
 
         /**
-         * <p>The paged query parameters.</p>
+         * <p>The paging query.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -136,7 +136,10 @@ public class ListUserGroupsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -277,7 +280,7 @@ public class ListUserGroupsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to filter user groups that the current user belongs to.</p>
+             * <p>Specifies whether to filter out the user groups to which the current user belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -291,7 +294,7 @@ public class ListUserGroupsRequest extends Request {
              * <p>The keyword for the user group name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;

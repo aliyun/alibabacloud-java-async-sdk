@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyDataServiceAppResponse> applyDataServiceApp(ApplyDataServiceAppRequest request);
 
     /**
+     * @param request the request parameters of ApplyResourcePermission  ApplyResourcePermissionRequest
+     * @return ApplyResourcePermissionResponse
+     */
+    CompletableFuture<ApplyResourcePermissionResponse> applyResourcePermission(ApplyResourcePermissionRequest request);
+
+    /**
      * @param request the request parameters of AssignQualityRuleOfAllRuleScopeSchedules  AssignQualityRuleOfAllRuleScopeSchedulesRequest
      * @return AssignQualityRuleOfAllRuleScopeSchedulesResponse
      */
@@ -96,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return BatchHandoverAssetResponse
      */
     CompletableFuture<BatchHandoverAssetResponse> batchHandoverAsset(BatchHandoverAssetRequest request);
+
+    /**
+     * @param request the request parameters of CheckComputeClusterConnectivityById  CheckComputeClusterConnectivityByIdRequest
+     * @return CheckComputeClusterConnectivityByIdResponse
+     */
+    CompletableFuture<CheckComputeClusterConnectivityByIdResponse> checkComputeClusterConnectivityById(CheckComputeClusterConnectivityByIdRequest request);
 
     /**
      * @param request the request parameters of CheckComputeSourceConnectivity  CheckComputeSourceConnectivityRequest
@@ -161,6 +173,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBatchTaskResponse> createBatchTask(CreateBatchTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateBatchTemplate  CreateBatchTemplateRequest
+     * @return CreateBatchTemplateResponse
+     */
+    CompletableFuture<CreateBatchTemplateResponse> createBatchTemplate(CreateBatchTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateBizEntity  CreateBizEntityRequest
      * @return CreateBizEntityResponse
      */
@@ -224,13 +242,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API creates a new dataset in the specified project.</li>
-     * <li><code>ProjectId</code> is a required parameter that specifies the ID of the project in which to create the dataset.</li>
-     * <li><code>CreateCommand</code> is a complex object that contains the configuration information required to create the dataset.</li>
-     * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios.</li>
-     * <li><code>FileStorageConfig</code> and <code>MetadataStorageConfig</code> in <code>VersionConfig</code> can be configured as needed.</li>
-     * <li>If you need real-time meta-table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
-     * <li>Make sure all required fields are correctly filled in. Otherwise, the request failed.</li>
+     * <li>This API operation creates a dataset in a specified project.</li>
+     * <li>ProjectId is a required parameter that specifies the ID of the project in which to create the dataset.</li>
+     * <li>CreateCommand is a complex object that contains various configuration information required to create the dataset.</li>
+     * <li>Name, Type, ContentType, and Scenario are required fields that specify the dataset name, type, content type, and Scenarios, respectively.</li>
+     * <li>You can configure FileStorageConfig and MetadataStorageConfig in VersionConfig as needed.</li>
+     * <li>If real-time metatable configuration is required, provide the RealtimeMetaTableConfig information.</li>
+     * <li>Make sure that all required fields are correctly filled in. Otherwise, the request will be failed.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDataset  CreateDatasetRequest
@@ -287,6 +305,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePipelineNodeResponse> createPipelineNode(CreatePipelineNodeRequest request);
 
     /**
+     * @param request the request parameters of CreateRectifyFlow  CreateRectifyFlowRequest
+     * @return CreateRectifyFlowResponse
+     */
+    CompletableFuture<CreateRectifyFlowResponse> createRectifyFlow(CreateRectifyFlowRequest request);
+
+    /**
      * @param request the request parameters of CreateResource  CreateResourceRequest
      * @return CreateResourceResponse
      */
@@ -300,6 +324,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateRowPermissionResponse
      */
     CompletableFuture<CreateRowPermissionResponse> createRowPermission(CreateRowPermissionRequest request);
+
+    /**
+     * @param request the request parameters of CreateScheduleMonitor  CreateScheduleMonitorRequest
+     * @return CreateScheduleMonitorResponse
+     */
+    CompletableFuture<CreateScheduleMonitorResponse> createScheduleMonitor(CreateScheduleMonitorRequest request);
 
     /**
      * @param request the request parameters of CreateSecurityClassify  CreateSecurityClassifyRequest
@@ -686,6 +716,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAlertEventResponse> getAlertEvent(GetAlertEventRequest request);
 
     /**
+     * @param request the request parameters of GetApprovalTaskDetail  GetApprovalTaskDetailRequest
+     * @return GetApprovalTaskDetailResponse
+     */
+    CompletableFuture<GetApprovalTaskDetailResponse> getApprovalTaskDetail(GetApprovalTaskDetailRequest request);
+
+    /**
      * @param request the request parameters of GetAssetAttributes  GetAssetAttributesRequest
      * @return GetAssetAttributesResponse
      */
@@ -780,7 +816,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of connectivity tasks that have been tested for a specified data source ID.</p>
+     * <p>Queries the details of tested connectivity tasks based on the data source ID.</p>
      * 
      * @param request the request parameters of GetCheckConnectivityJobs  GetCheckConnectivityJobsRequest
      * @return GetCheckConnectivityJobsResponse
@@ -939,6 +975,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetFileStorageCredentialResponse
      */
     CompletableFuture<GetFileStorageCredentialResponse> getFileStorageCredential(GetFileStorageCredentialRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the statistical granularity of an aggregate logical table. Recursive objects are referenced by ID. Logical tree node IDs are valid only within the currently returned tree.</p>
+     * 
+     * @param request the request parameters of GetGranularityBySummaryId  GetGranularityBySummaryIdRequest
+     * @return GetGranularityBySummaryIdResponse
+     */
+    CompletableFuture<GetGranularityBySummaryIdResponse> getGranularityBySummaryId(GetGranularityBySummaryIdRequest request);
 
     /**
      * @param request the request parameters of GetInstanceDownStream  GetInstanceDownStreamRequest
@@ -1193,6 +1238,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetQueueEngineVersionByEnvResponse> getQueueEngineVersionByEnv(GetQueueEngineVersionByEnvRequest request);
 
     /**
+     * @param request the request parameters of GetRectifyFlow  GetRectifyFlowRequest
+     * @return GetRectifyFlowResponse
+     */
+    CompletableFuture<GetRectifyFlowResponse> getRectifyFlow(GetRectifyFlowRequest request);
+
+    /**
      * @param request the request parameters of GetResource  GetResourceRequest
      * @return GetResourceResponse
      */
@@ -1236,7 +1287,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a published API based on the AppKey.</p>
+     * <p>Queries the details of published APIs based on the appKey.</p>
      * 
      * @param request the request parameters of GetServerVersion  GetServerVersionRequest
      * @return GetServerVersionResponse
@@ -1296,6 +1347,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetStreamJobsResponse
      */
     CompletableFuture<GetStreamJobsResponse> getStreamJobs(GetStreamJobsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the full text of JobManager or TaskManager logs in the production environment.</p>
+     * 
+     * @param request the request parameters of GetStreamLogContent  GetStreamLogContentRequest
+     * @return GetStreamLogContentResponse
+     */
+    CompletableFuture<GetStreamLogContentResponse> getStreamLogContent(GetStreamLogContentRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a single start or stop operation record and the log content by querying the production environment.</p>
+     * 
+     * @param request the request parameters of GetStreamOpsRecord  GetStreamOpsRecordRequest
+     * @return GetStreamOpsRecordResponse
+     */
+    CompletableFuture<GetStreamOpsRecordResponse> getStreamOpsRecord(GetStreamOpsRecordRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the basic information and running status of a real-time task. The DEV and PROD environments are supported.</p>
+     * 
+     * @param request the request parameters of GetStreamTask  GetStreamTaskRequest
+     * @return GetStreamTaskResponse
+     */
+    CompletableFuture<GetStreamTaskResponse> getStreamTask(GetStreamTaskRequest request);
 
     /**
      * @param request the request parameters of GetSupplementDagrun  GetSupplementDagrunRequest
@@ -1431,7 +1509,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the detailed information of published APIs by appKey.</p>
+     * <p>Queries the details of published APIs by AppKey.</p>
      * 
      * @param request the request parameters of ListApiByApp  ListApiByAppRequest
      * @return ListApiByAppResponse
@@ -1458,7 +1536,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description.</h2>
+     * <h2>Request description</h2>
+     * <p>This API allows you to query the APIs authorized to an application by providing the tenant ID, the AppKey of the data service application, or a keyword of the application name. Pagination is supported. The returned data includes the API ID, name, project, authorization validity period (for development and production environments), permission type, and field lists for production and development environments (including field or parameter name, parameter type, description, example value, and authorization status). Note that pagination parameters are required.</p>
      * 
      * @param request the request parameters of ListAuthorizedDataServiceApiDetails  ListAuthorizedDataServiceApiDetailsRequest
      * @return ListAuthorizedDataServiceApiDetailsResponse
@@ -1572,8 +1651,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API allows you to retrieve dataset information for a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. ProjectId is required. Other parameters are optional and can be configured as needed to filter results.</p>
+     * <h2>Request description</h2>
+     * <p>This API allows you to retrieve dataset information for a specific project by providing the tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported for paged query, and the returned packet includes the basic information of the datasets and their version details. Note that ProjectId is required, while other parameters are options that you can configure in Settings as needed to filter the results.</p>
      * 
      * @param request the request parameters of ListDatasets  ListDatasetsRequest
      * @return ListDatasetsResponse
@@ -1601,6 +1680,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListInstancesResponse
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListK8SResourceGroupIds  ListK8SResourceGroupIdsRequest
+     * @return ListK8SResourceGroupIdsResponse
+     */
+    CompletableFuture<ListK8SResourceGroupIdsResponse> listK8SResourceGroupIds(ListK8SResourceGroupIdsRequest request);
 
     /**
      * @param request the request parameters of ListKgEntity  ListKgEntityRequest
@@ -1646,11 +1731,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>获取租户指定项目类型下的项目角色列表。返回角色列表中 roleType 字段标识角色类型：</p>
+     * <p>Retrieves the list of project roles for a specified project type under a tenant. The roleType field in the returned role list indicates the role type:</p>
      * <ul>
-     * <li>BUILD_IN：内置角色</li>
-     * <li>CUSTOM：自定义角色
-     * 请求参数 ProjectType 必填，可选值为：BASIC（基础模式项目）、DEV（开发环境项目）、PROD（生产环境项目）、TAG（标签平台项目）。</li>
+     * <li>BUILD_IN: built-in role.</li>
+     * <li>CUSTOM: custom role.
+     * The ProjectType request parameter is required. Valid values:</li>
+     * <li>BASIC: basic mode project.</li>
+     * <li>DEV: development environment project.</li>
+     * <li>PROD: production environment project.</li>
+     * <li>TAG: tag platform project.</li>
      * </ul>
      * 
      * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
@@ -1669,6 +1758,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPublishRecordsResponse
      */
     CompletableFuture<ListPublishRecordsResponse> listPublishRecords(ListPublishRecordsRequest request);
+
+    /**
+     * @param request the request parameters of ListPythonModules  ListPythonModulesRequest
+     * @return ListPythonModulesResponse
+     */
+    CompletableFuture<ListPythonModulesResponse> listPythonModules(ListPythonModulesRequest request);
 
     /**
      * @param request the request parameters of ListQualityArchiveTables  ListQualityArchiveTablesRequest
@@ -1707,6 +1802,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListQualityWatchesResponse> listQualityWatches(ListQualityWatchesRequest request);
 
     /**
+     * @param request the request parameters of ListRectifyFlow  ListRectifyFlowRequest
+     * @return ListRectifyFlowResponse
+     */
+    CompletableFuture<ListRectifyFlowResponse> listRectifyFlow(ListRectifyFlowRequest request);
+
+    /**
      * @param request the request parameters of ListResourcePermissionOperationLog  ListResourcePermissionOperationLogRequest
      * @return ListResourcePermissionOperationLogResponse
      */
@@ -1729,6 +1830,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRowPermissionByUserIdResponse
      */
     CompletableFuture<ListRowPermissionByUserIdResponse> listRowPermissionByUserId(ListRowPermissionByUserIdRequest request);
+
+    /**
+     * @param request the request parameters of ListScheduleMonitor  ListScheduleMonitorRequest
+     * @return ListScheduleMonitorResponse
+     */
+    CompletableFuture<ListScheduleMonitorResponse> listScheduleMonitor(ListScheduleMonitorRequest request);
 
     /**
      * @param request the request parameters of ListScheduleTemplates  ListScheduleTemplatesRequest
@@ -1759,6 +1866,51 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListStandardsResponse
      */
     CompletableFuture<ListStandardsResponse> listStandards(ListStandardsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the list of historical running instances for a real-time task in the production environment.</p>
+     * 
+     * @param request the request parameters of ListStreamInstanceRecords  ListStreamInstanceRecordsRequest
+     * @return ListStreamInstanceRecordsResponse
+     */
+    CompletableFuture<ListStreamInstanceRecordsResponse> listStreamInstanceRecords(ListStreamInstanceRecordsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the list of JobManager log files for a real-time task in the production environment.</p>
+     * 
+     * @param request the request parameters of ListStreamJobManagerLogs  ListStreamJobManagerLogsRequest
+     * @return ListStreamJobManagerLogsResponse
+     */
+    CompletableFuture<ListStreamJobManagerLogsResponse> listStreamJobManagerLogs(ListStreamJobManagerLogsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the start and stop operation records of real-time tasks in the production environment.</p>
+     * 
+     * @param request the request parameters of ListStreamOpsRecords  ListStreamOpsRecordsRequest
+     * @return ListStreamOpsRecordsResponse
+     */
+    CompletableFuture<ListStreamOpsRecordsResponse> listStreamOpsRecords(ListStreamOpsRecordsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the list of log files for a specified TaskManager in the production environment.</p>
+     * 
+     * @param request the request parameters of ListStreamTaskManagerLogs  ListStreamTaskManagerLogsRequest
+     * @return ListStreamTaskManagerLogsResponse
+     */
+    CompletableFuture<ListStreamTaskManagerLogsResponse> listStreamTaskManagerLogs(ListStreamTaskManagerLogsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the list of TaskManagers for a real-time task in the production environment.</p>
+     * 
+     * @param request the request parameters of ListStreamTaskManagers  ListStreamTaskManagersRequest
+     * @return ListStreamTaskManagersResponse
+     */
+    CompletableFuture<ListStreamTaskManagersResponse> listStreamTaskManagers(ListStreamTaskManagersRequest request);
 
     /**
      * @param request the request parameters of ListSubmitRecords  ListSubmitRecordsRequest
@@ -1803,6 +1955,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUserGroupsResponse
      */
     CompletableFuture<ListUserGroupsResponse> listUserGroups(ListUserGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListUserProjects  ListUserProjectsRequest
+     * @return ListUserProjectsResponse
+     */
+    CompletableFuture<ListUserProjectsResponse> listUserProjects(ListUserProjectsRequest request);
+
+    /**
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
+     */
+    CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
 
     /**
      * @param request the request parameters of OfflineBatchTask  OfflineBatchTaskRequest
@@ -1883,6 +2047,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishStandardResponse> publishStandard(PublishStandardRequest request);
 
     /**
+     * @param request the request parameters of QueryPipelineSubmitResult  QueryPipelineSubmitResultRequest
+     * @return QueryPipelineSubmitResultResponse
+     */
+    CompletableFuture<QueryPipelineSubmitResultResponse> queryPipelineSubmitResult(QueryPipelineSubmitResultRequest request);
+
+    /**
      * @param request the request parameters of RemoveDataServiceAppMember  RemoveDataServiceAppMemberRequest
      * @return RemoveDataServiceAppMemberResponse
      */
@@ -1899,6 +2069,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveQualityRuleSchedulesResponse
      */
     CompletableFuture<RemoveQualityRuleSchedulesResponse> removeQualityRuleSchedules(RemoveQualityRuleSchedulesRequest request);
+
+    /**
+     * @param request the request parameters of RemoveScheduleMonitor  RemoveScheduleMonitorRequest
+     * @return RemoveScheduleMonitorResponse
+     */
+    CompletableFuture<RemoveScheduleMonitorResponse> removeScheduleMonitor(RemoveScheduleMonitorRequest request);
 
     /**
      * @param request the request parameters of RemoveTenantMember  RemoveTenantMemberRequest
@@ -1935,6 +2111,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RetryTransferOwnershipResponse
      */
     CompletableFuture<RetryTransferOwnershipResponse> retryTransferOwnership(RetryTransferOwnershipRequest request);
+
+    /**
+     * @param request the request parameters of ReviewRectifyFlow  ReviewRectifyFlowRequest
+     * @return ReviewRectifyFlowResponse
+     */
+    CompletableFuture<ReviewRectifyFlowResponse> reviewRectifyFlow(ReviewRectifyFlowRequest request);
 
     /**
      * @param request the request parameters of RevokeDataServiceApi  RevokeDataServiceApiRequest
@@ -1991,6 +2173,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitBatchTaskResponse> submitBatchTask(SubmitBatchTaskRequest request);
 
     /**
+     * @param request the request parameters of SubmitBatchTemplate  SubmitBatchTemplateRequest
+     * @return SubmitBatchTemplateResponse
+     */
+    CompletableFuture<SubmitBatchTemplateResponse> submitBatchTemplate(SubmitBatchTemplateRequest request);
+
+    /**
+     * @param request the request parameters of SubmitPipelineAsync  SubmitPipelineAsyncRequest
+     * @return SubmitPipelineAsyncResponse
+     */
+    CompletableFuture<SubmitPipelineAsyncResponse> submitPipelineAsync(SubmitPipelineAsyncRequest request);
+
+    /**
      * @param request the request parameters of SubmitPipelineById  SubmitPipelineByIdRequest
      * @return SubmitPipelineByIdResponse
      */
@@ -2007,6 +2201,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitQualityWatchTasksResponse
      */
     CompletableFuture<SubmitQualityWatchTasksResponse> submitQualityWatchTasks(SubmitQualityWatchTasksRequest request);
+
+    /**
+     * @param request the request parameters of SubmitRectifyFlowForReview  SubmitRectifyFlowForReviewRequest
+     * @return SubmitRectifyFlowForReviewResponse
+     */
+    CompletableFuture<SubmitRectifyFlowForReviewResponse> submitRectifyFlowForReview(SubmitRectifyFlowForReviewRequest request);
 
     /**
      * <b>description</b> :
@@ -2067,6 +2267,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateBatchTaskUdfLineagesResponse
      */
     CompletableFuture<UpdateBatchTaskUdfLineagesResponse> updateBatchTaskUdfLineages(UpdateBatchTaskUdfLineagesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateBatchTemplate  UpdateBatchTemplateRequest
+     * @return UpdateBatchTemplateResponse
+     */
+    CompletableFuture<UpdateBatchTemplateResponse> updateBatchTemplate(UpdateBatchTemplateRequest request);
 
     /**
      * @param request the request parameters of UpdateBizEntity  UpdateBizEntityRequest
@@ -2148,7 +2354,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description.</h2>
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API operation updates the details of an existing dataset in a specific project.</li>
+     * <li>You must specify the <code>ProjectId</code> and <code>UpdateCommand</code> parameters. The <code>UpdateCommand</code> parameter contains the specific fields of the dataset to be updated.</li>
+     * <li>The <code>Id</code> field in <code>UpdateCommand</code> is required to identify the dataset to be updated.</li>
+     * <li>Other fields such as <code>Name</code>, <code>Type</code>, and <code>DataCellId</code> are optional. Specify them based on your actual requirements.</li>
+     * <li>Version configuration (<code>VersionConfig</code>) and real-time metatable configuration (<code>RealtimeMetaTableConfig</code>) provide more detailed setting options, including storage paths and table schemas. These are also optional.</li>
+     * <li>Make sure that all provided ID values, such as <code>ProjectId</code>, <code>Id</code>, and <code>DataSourceId</code>, are valid and correctly associated in the system.</li>
+     * </ul>
      * 
      * @param request the request parameters of UpdateDataset  UpdateDatasetRequest
      * @return UpdateDatasetResponse
@@ -2232,6 +2446,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRowPermissionResponse
      */
     CompletableFuture<UpdateRowPermissionResponse> updateRowPermission(UpdateRowPermissionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateScheduleMonitor  UpdateScheduleMonitorRequest
+     * @return UpdateScheduleMonitorResponse
+     */
+    CompletableFuture<UpdateScheduleMonitorResponse> updateScheduleMonitor(UpdateScheduleMonitorRequest request);
 
     /**
      * @param request the request parameters of UpdateSecurityClassify  UpdateSecurityClassifyRequest

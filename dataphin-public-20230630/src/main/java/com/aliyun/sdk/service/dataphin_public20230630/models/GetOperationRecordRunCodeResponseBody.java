@@ -152,7 +152,7 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation log code response.</p>
+         * <p>The operation record code response.</p>
          */
         public Builder operationLogCodeResponse(OperationLogCodeResponse operationLogCodeResponse) {
             this.operationLogCodeResponse = operationLogCodeResponse;
@@ -171,7 +171,7 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -288,7 +288,7 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
              * <p>The operator name.</p>
              * 
              * <strong>example:</strong>
-             * <p>SQL查询节点</p>
+             * <p>SQL query node</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;

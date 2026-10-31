@@ -23,7 +23,6 @@ public class GetTableColumnsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Catalog")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String catalog;
 
     @com.aliyun.core.annotation.Query
@@ -36,8 +35,11 @@ public class GetTableColumnsRequest extends Request {
     private String opUserId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableGuid")
+    private String tableGuid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
 
     private GetTableColumnsRequest(Builder builder) {
@@ -46,6 +48,7 @@ public class GetTableColumnsRequest extends Request {
         this.catalog = builder.catalog;
         this.opTenantId = builder.opTenantId;
         this.opUserId = builder.opUserId;
+        this.tableGuid = builder.tableGuid;
         this.tableName = builder.tableName;
     }
 
@@ -91,6 +94,13 @@ public class GetTableColumnsRequest extends Request {
     }
 
     /**
+     * @return tableGuid
+     */
+    public String getTableGuid() {
+        return this.tableGuid;
+    }
+
+    /**
      * @return tableName
      */
     public String getTableName() {
@@ -102,6 +112,7 @@ public class GetTableColumnsRequest extends Request {
         private String catalog; 
         private Long opTenantId; 
         private String opUserId; 
+        private String tableGuid; 
         private String tableName; 
 
         private Builder() {
@@ -114,6 +125,7 @@ public class GetTableColumnsRequest extends Request {
             this.catalog = request.catalog;
             this.opTenantId = request.opTenantId;
             this.opUserId = request.opUserId;
+            this.tableGuid = request.tableGuid;
             this.tableName = request.tableName;
         } 
 
@@ -127,8 +139,7 @@ public class GetTableColumnsRequest extends Request {
         }
 
         /**
-         * <p>The asset table catalog, which is the name of the business unit or workspace.</p>
-         * <p>This parameter is required.</p>
+         * <p>The catalog of the asset table, which is the name of the business unit or project workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>LD_test01_dev</p>
@@ -153,7 +164,10 @@ public class GetTableColumnsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -162,8 +176,19 @@ public class GetTableColumnsRequest extends Request {
         }
 
         /**
-         * <p>The table name.</p>
-         * <p>This parameter is required.</p>
+         * <p>The GUID of the table. If this parameter is specified, it takes precedence in the query, and the Catalog and TableName parameters are ignored even if they are provided.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dp_ds_table_xxx</p>
+         */
+        public Builder tableGuid(String tableGuid) {
+            this.putQueryParameter("TableGuid", tableGuid);
+            this.tableGuid = tableGuid;
+            return this;
+        }
+
+        /**
+         * <p>The name of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>t_test01</p>

@@ -111,10 +111,10 @@ public class GetServerVersionRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The environment identifier. Valid values:</p>
+         * <p>The environment identifier. <strong>[Deprecated]</strong> Valid values:</p>
          * <ul>
-         * <li>DEV: Development environment. </li>
-         * <li>PROD (default): Production environment.</li>
+         * <li>DEV: development environment. </li>
+         * <li>PROD: production environment. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class GetServerVersionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operation user.</p>
+         * <p>The ID of the operating user.</p>
          * 
          * <strong>example:</strong>
          * <p>30010012</p>

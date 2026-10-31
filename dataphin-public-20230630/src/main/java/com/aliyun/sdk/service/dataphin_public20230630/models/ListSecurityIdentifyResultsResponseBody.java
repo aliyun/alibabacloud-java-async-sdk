@@ -119,7 +119,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Backend response code.</p>
+         * <p>The backend response code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Backend response error details.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -152,7 +152,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Paginated query result.</p>
+         * <p>The paging query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -171,7 +171,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request is successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -692,7 +692,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Business date.</p>
+             * <p>The business date.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30</p>
@@ -703,7 +703,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Business unit display name.</p>
+             * <p>The Chinese name of the business unit.</p>
              * 
              * <strong>example:</strong>
              * <p>LD_test</p>
@@ -714,7 +714,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Business unit ID.</p>
+             * <p>The ID of the business unit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -725,7 +725,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Business unit name.</p>
+             * <p>The names of the business units.</p>
              * 
              * <strong>example:</strong>
              * <p>LD_test</p>
@@ -736,7 +736,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Classification abbreviation.</p>
+             * <p>The abbreviation of the classification.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -747,7 +747,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Classification ID.</p>
+             * <p>The ID of the classification.</p>
              * 
              * <strong>example:</strong>
              * <p>33</p>
@@ -758,7 +758,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Classification name.</p>
+             * <p>The name of the classification.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -769,7 +769,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 10:30:30</p>
@@ -780,7 +780,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creator.</p>
+             * <p>The creator.</p>
              * 
              * <strong>example:</strong>
              * <p>30012011</p>
@@ -791,7 +791,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data source ID.</p>
+             * <p>The ID of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>101121</p>
@@ -802,7 +802,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data source name.</p>
+             * <p>The names of the data sources.</p>
              * 
              * <strong>example:</strong>
              * <p>ds1</p>
@@ -813,7 +813,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Field description.</p>
+             * <p>The description of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -824,7 +824,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Field ID.</p>
+             * <p>The ID of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>t_test.col1</p>
@@ -835,7 +835,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Field name.</p>
+             * <p>The name of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>col1</p>
@@ -846,7 +846,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether a better matching result exists.</p>
+             * <p>Indicates whether a better match exists.</p>
              */
             public Builder hasBetterRule(Boolean hasBetterRule) {
                 this.hasBetterRule = hasBetterRule;
@@ -854,7 +854,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Identification result ID.</p>
+             * <p>The ID of the identification result.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -865,7 +865,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Identification record ID.</p>
+             * <p>The ID of the identification record.</p>
              * 
              * <strong>example:</strong>
              * <p>99</p>
@@ -876,7 +876,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it is a custom tagging rule.</p>
+             * <p>Indicates whether a custom identification rule is used.</p>
              */
             public Builder isCustomIdentify(Boolean isCustomIdentify) {
                 this.isCustomIdentify = isCustomIdentify;
@@ -884,7 +884,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it is locked.</p>
+             * <p>Specifies whether the item is locked.</p>
              */
             public Builder isLocked(Boolean isLocked) {
                 this.isLocked = isLocked;
@@ -892,7 +892,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Security level abbreviation.</p>
+             * <p>The abbreviation of the classification level.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -903,7 +903,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Security level color.</p>
+             * <p>The color of the classification level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -914,7 +914,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Security level index.</p>
+             * <p>The classification level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -925,7 +925,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Security level name.</p>
+             * <p>The name of the classification level.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -936,7 +936,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modifier.</p>
+             * <p>The modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>30012011</p>
@@ -947,7 +947,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 10:30:30</p>
@@ -958,7 +958,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Project display name.</p>
+             * <p>The Chinese name of the project.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -969,7 +969,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Project ID.</p>
+             * <p>The ID of the project.</p>
              * 
              * <strong>example:</strong>
              * <p>101121</p>
@@ -980,7 +980,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Project name.</p>
+             * <p>The names of the projects.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -991,7 +991,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scan task ID.</p>
+             * <p>The ID of the scan task.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -1002,7 +1002,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status. Valid values: ENABLE and DISABLE.</p>
+             * <p>The status. Valid values: ENABLE (enabled) and DISABLE (disabled).</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLE</p>
@@ -1013,7 +1013,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Table catalog.</p>
+             * <p>The catalog of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>testdb</p>
@@ -1024,7 +1024,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Table description.</p>
+             * <p>The description of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1035,7 +1035,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Table environment.</p>
+             * <p>The environment of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>DEV</p>
@@ -1046,7 +1046,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Table ID.</p>
+             * <p>The ID of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1057,7 +1057,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Table name.</p>
+             * <p>The name of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>t_test</p>
@@ -1068,7 +1068,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Table identification task ID.</p>
+             * <p>The ID of the table identification task.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -1079,7 +1079,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Table type. Valid values: LOGIC_TABLE (logical table), LOGIC_DIM_TABLE (dimension logical table), LOGIC_FACT_TABLE (fact logical table), LOGIC_SUM_TABLE (summary logical table), LOGIC_ODM_SOURCE (source table), LOGIC_LABEL_TABLE (label logical table), PHYSICAL_TABLE (physical table), REAL_TIME_LOGIC_TABLE (real-time configured logical table).</p>
+             * <p>The table type. Valid values: LOGIC_TABLE (logical table), LOGIC_DIM_TABLE (logical dimension table), LOGIC_FACT_TABLE (logical fact table), LOGIC_SUM_TABLE (logical aggregate table), LOGIC_ODM_SOURCE (source table), LOGIC_LABEL_TABLE (logical tag table), PHYSICAL_TABLE (physical table), and REAL_TIME_LOGIC_TABLE (real-time configured logical table).</p>
              * 
              * <strong>example:</strong>
              * <p>LOGIC_TABLE</p>
@@ -1149,7 +1149,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Paginated identification result list.</p>
+             * <p>The paginated list of identification results.</p>
              */
             public Builder securityIdentifyResultList(java.util.List<SecurityIdentifyResultList> securityIdentifyResultList) {
                 this.securityIdentifyResultList = securityIdentifyResultList;
@@ -1157,7 +1157,7 @@ public class ListSecurityIdentifyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of records.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>68</p>

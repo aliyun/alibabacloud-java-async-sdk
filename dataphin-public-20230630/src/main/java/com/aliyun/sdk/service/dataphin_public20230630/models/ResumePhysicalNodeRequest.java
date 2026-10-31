@@ -126,10 +126,10 @@ public class ResumePhysicalNodeRequest extends Request {
         }
 
         /**
-         * <p>Environment identifier.</p>
+         * <p>The environment identifier. Valid values:</p>
          * <ul>
-         * <li>DEV: Development environment</li>
-         * <li>PROD (default): Production environment</li>
+         * <li>DEV: development environment </li>
+         * <li>PROD: production environment. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class ResumePhysicalNodeRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,10 @@ public class ResumePhysicalNodeRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -164,7 +167,7 @@ public class ResumePhysicalNodeRequest extends Request {
         }
 
         /**
-         * <p>Resume scheduling request.</p>
+         * <p>The request to resume scheduling.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resumeCommand(ResumeCommand resumeCommand) {
@@ -236,7 +239,7 @@ public class ResumePhysicalNodeRequest extends Request {
             } 
 
             /**
-             * <p>Node ID list.</p>
+             * <p>The list of node IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder nodeIdList(java.util.List<String> nodeIdList) {
@@ -245,7 +248,7 @@ public class ResumePhysicalNodeRequest extends Request {
             }
 
             /**
-             * <p>Project ID.</p>
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

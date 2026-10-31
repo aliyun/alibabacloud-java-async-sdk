@@ -37,7 +37,6 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer projectId;
 
     private ListDataServiceApiCallStatisticsRequest(Builder builder) {
@@ -127,7 +126,7 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Search conditions.</p>
+         * <p>The search conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -138,7 +137,7 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +150,10 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -160,8 +162,14 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Data service project ID.</p>
-         * <p>This parameter is required.</p>
+         * <p>The data service project ID.</p>
+         * <blockquote>
+         * <p>If this parameter is not specified:</p>
+         * <ul>
+         * <li>Super administrators can query data of all service projects.</li>
+         * <li>Users other than super administrators can query data of service projects where they have the service project administrator or O&amp;M user permissions.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>102102</p>
@@ -299,7 +307,7 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             } 
 
             /**
-             * <p>End time. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -311,7 +319,7 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             }
 
             /**
-             * <p>Search keyword.</p>
+             * <p>The search keyword.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -322,7 +330,15 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             }
 
             /**
-             * <p>Sort column. Valid values: CALL_COUNT (call count), ERROR_COUNT (error count), ERROR_RATE (error rate), AVG_RESPONSE_TIME (average response time), and OFFLINE_RATE (offline percentage). Default value: CALL_COUNT.</p>
+             * <p>The column by which to sort the results. Valid values:</p>
+             * <ul>
+             * <li>CALL_COUNT: the number of calls.</li>
+             * <li>ERROR_COUNT: the number of exceptions.</li>
+             * <li>ERROR_RATE: the error rate.</li>
+             * <li>AVG_RESPONSE_TIME: the average response time.</li>
+             * <li>OFFLINE_RATE: the offline percentage.
+             * Default value: CALL_COUNT.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CALL_COUNT</p>
@@ -333,7 +349,12 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             }
 
             /**
-             * <p>Sort order. Valid values: 1 (ascending) and 2 (descending). Default value: 1.</p>
+             * <p>The sort order. Valid values:</p>
+             * <ul>
+             * <li>1: ascending order.</li>
+             * <li>2: descending order.
+             * Default value: 1.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -344,7 +365,7 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             }
 
             /**
-             * <p>Page number. Default value: 1.</p>
+             * <p>The page number. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -355,7 +376,7 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             }
 
             /**
-             * <p>Number of entries per page. Default value: 20.</p>
+             * <p>The number of entries per page. Default value: 20.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -366,7 +387,7 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             }
 
             /**
-             * <p>Start time. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -171,7 +171,7 @@ public class ImportKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +237,7 @@ public class ImportKgSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entity types that were changed.</p>
+             * <p>The number of changed entity types.</p>
              * 
              * <strong>example:</strong>
              * <p>1032591</p>
@@ -248,7 +248,7 @@ public class ImportKgSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of relation types that were changed.</p>
+             * <p>The number of changed relation types.</p>
              * 
              * <strong>example:</strong>
              * <p>3380766</p>

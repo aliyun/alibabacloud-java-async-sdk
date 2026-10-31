@@ -36,7 +36,6 @@ public class ListDataServicePublishedApisRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer projectId;
 
     private ListDataServicePublishedApisRequest(Builder builder) {
@@ -159,7 +158,6 @@ public class ListDataServicePublishedApisRequest extends Request {
 
         /**
          * <p>Data service project ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>102102</p>

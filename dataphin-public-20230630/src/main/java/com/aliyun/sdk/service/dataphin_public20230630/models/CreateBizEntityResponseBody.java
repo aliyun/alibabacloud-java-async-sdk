@@ -119,7 +119,7 @@ public class CreateBizEntityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code of the request. A value of OK indicates that the request is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -149,7 +149,7 @@ public class CreateBizEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -171,7 +171,7 @@ public class CreateBizEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -119,7 +119,7 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Backend response code</p>
+         * <p>The backend response code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Reset Data Service application key result</p>
+         * <p>The update command to reset the application key of a data service.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Backend exception details</p>
+         * <p>The exception details in the backend response.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +237,7 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The new application key</p>
+             * <p>The new application key.</p>
              * 
              * <strong>example:</strong>
              * <p>200000001</p>
@@ -248,7 +248,7 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The new application secret</p>
+             * <p>The new application secret.</p>
              * 
              * <strong>example:</strong>
              * <p>abc123456789</p>

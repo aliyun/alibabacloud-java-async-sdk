@@ -119,7 +119,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the data domain.</p>
+         * <p>The business unit details.</p>
          */
         public Builder bizUnitInfo(BizUnitInfo bizUnitInfo) {
             this.bizUnitInfo = bizUnitInfo;
@@ -127,7 +127,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -171,7 +171,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -424,7 +424,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
              * <p>The display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试数据板块001_开发</p>
+             * <p>Test business unit 001_Development</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -734,7 +734,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The architects of the data domain.</p>
+             * <p>The business unit architects.</p>
              */
             public Builder accountList(java.util.List<AccountList> accountList) {
                 this.accountList = accountList;
@@ -772,7 +772,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of subject domains.</p>
+             * <p>The number of data domains.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -805,7 +805,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
              * <p>The display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -813,7 +813,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The English names of the data domain for the two environments: production and development.</p>
+             * <p>The English names of the business unit in the production and development environments.</p>
              */
             public Builder envList(java.util.List<EnvList> envList) {
                 this.envList = envList;
@@ -843,7 +843,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The icon of the data domain.</p>
+             * <p>The icon of the business unit.</p>
              * 
              * <strong>example:</strong>
              * <p>icon-e-commerce</p>
@@ -854,7 +854,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data domain ID.</p>
+             * <p>The data sector ID.</p>
              * 
              * <strong>example:</strong>
              * <p>101001201</p>
@@ -865,7 +865,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who last modified the data domain.</p>
+             * <p>The ID of the last modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>30010010</p>
@@ -876,10 +876,10 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user who last modified the data domain.</p>
+             * <p>The name of the last modifier.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
@@ -887,11 +887,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The production mode. Valid values:</p>
-             * <ul>
-             * <li>BASIC: single-environment mode.</li>
-             * <li>DEV_PROD: development/production dual-environment mode.</li>
-             * </ul>
+             * <p>The production mode. Valid values: BASIC (single-environment mode) and DEV_PROD (development and production dual-environment mode).</p>
              * 
              * <strong>example:</strong>
              * <p>DEV_PROD</p>
@@ -913,10 +909,10 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the business object.</p>
+             * <p>The ID of the business object owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -924,7 +920,7 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the business object.</p>
+             * <p>The ID of the business object owner.</p>
              * 
              * <strong>example:</strong>
              * <p>30010010</p>

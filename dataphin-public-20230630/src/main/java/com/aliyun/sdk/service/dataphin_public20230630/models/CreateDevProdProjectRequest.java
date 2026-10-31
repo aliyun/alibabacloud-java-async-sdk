@@ -112,7 +112,7 @@ public class CreateDevProdProjectRequest extends Request {
         }
 
         /**
-         * <p>The create command.</p>
+         * <p>The creation command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -136,7 +136,10 @@ public class CreateDevProdProjectRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -460,7 +463,7 @@ public class CreateDevProdProjectRequest extends Request {
             }
 
             /**
-             * <p>The ID of the real-time compute source in the development environment.</p>
+             * <p>The ID of the streaming compute source in the development environment.</p>
              * 
              * <strong>example:</strong>
              * <p>2002</p>
@@ -474,7 +477,7 @@ public class CreateDevProdProjectRequest extends Request {
              * <p>The display name of the project.</p>
              * 
              * <strong>example:</strong>
-             * <p>My project.</p>
+             * <p>My project</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -494,7 +497,7 @@ public class CreateDevProdProjectRequest extends Request {
             }
 
             /**
-             * <p>The namespace identifier.</p>
+             * <p>The namespace tag.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -527,7 +530,7 @@ public class CreateDevProdProjectRequest extends Request {
             }
 
             /**
-             * <p>The ID of the real-time compute source in the production environment.</p>
+             * <p>The ID of the streaming compute source in the production environment.</p>
              * 
              * <strong>example:</strong>
              * <p>2004</p>

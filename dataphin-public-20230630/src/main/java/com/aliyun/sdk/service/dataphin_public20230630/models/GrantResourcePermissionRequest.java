@@ -136,7 +136,10 @@ public class GrantResourcePermissionRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -318,7 +321,7 @@ public class GrantResourcePermissionRequest extends Request {
             } 
 
             /**
-             * <p>The expiration timestamp, in milliseconds.</p>
+             * <p>The timestamp for the end of the validity period, in milliseconds.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -339,7 +342,7 @@ public class GrantResourcePermissionRequest extends Request {
             }
 
             /**
-             * <p>The reason for the authorization.</p>
+             * <p>The reason for authorization.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -350,7 +353,7 @@ public class GrantResourcePermissionRequest extends Request {
             }
 
             /**
-             * <p>The list of resources.</p>
+             * <p>The resources.</p>
              * <p>This parameter is required.</p>
              */
             public Builder resourceList(java.util.List<ResourceList> resourceList) {
@@ -371,7 +374,7 @@ public class GrantResourcePermissionRequest extends Request {
             }
 
             /**
-             * <p>The authorized users pending authorization.</p>
+             * <p>The users pending authorization.</p>
              * <p>This parameter is required.</p>
              */
             public Builder userIdList(java.util.List<String> userIdList) {

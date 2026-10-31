@@ -111,7 +111,7 @@ public class ListQualityRuleTasksRequest extends Request {
         }
 
         /**
-         * <p>The paged query conditions.</p>
+         * <p>The paging query conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -134,7 +134,10 @@ public class ListQualityRuleTasksRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -317,17 +320,7 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * <p>The rule type. Valid values:</p>
-             * <ul>
-             * <li>CONSISTENT: consistency</li>
-             * <li>EFFECTIVE: validity</li>
-             * <li>TIMELINESE: timeliness</li>
-             * <li>ACCURATE: accuracy</li>
-             * <li>UNIQUENESS: uniqueness</li>
-             * <li>COMPLETENESS: completeness</li>
-             * <li>STABILITY: stability</li>
-             * <li>CUSTOM: custom.</li>
-             * </ul>
+             * <p>The rule types. Valid values: CONSISTENT (consistency), EFFECTIVE (effectiveness), TIMELINESE (timeliness), ACCURATE (accuracy), UNIQUENESS (uniqueness), COMPLETENESS (completeness), STABILITY (stability), and CUSTOM (custom).</p>
              */
             public Builder catalogList(java.util.List<String> catalogList) {
                 this.catalogList = catalogList;
@@ -368,11 +361,7 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * <p>The rule strength. Valid values:</p>
-             * <ul>
-             * <li>STRONG: strong</li>
-             * <li>WEAK: weak.</li>
-             * </ul>
+             * <p>The rule strengths. Valid values: STRONG (strong) and WEAK (weak).</p>
              */
             public Builder ruleStrengthList(java.util.List<String> ruleStrengthList) {
                 this.ruleStrengthList = ruleStrengthList;
@@ -380,14 +369,7 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * <p>The rule label. Valid values:</p>
-             * <ul>
-             * <li>DEFAULT: default label</li>
-             * <li>DATA_STANDARD_MANUAL: standard rule manually created</li>
-             * <li>DATA_STANDARD_AUTO: quality rule created by automatic creation from a standard</li>
-             * <li>PIPELINE: rule created by a pipeline</li>
-             * <li>DATA_MODELING: data modeling diagnostics.</li>
-             * </ul>
+             * <p>The rule labels. Valid values: DEFAULT (default label), DATA_STANDARD_MANUAL (manually created standard rules), DATA_STANDARD_AUTO (standard quality rules created by automatic creation), PIPELINE (rules created by pipelines), and DATA_MODELING (data modeling).</p>
              */
             public Builder ruleTagList(java.util.List<String> ruleTagList) {
                 this.ruleTagList = ruleTagList;
@@ -395,17 +377,7 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * <p>The task status. Valid values:</p>
-             * <ul>
-             * <li>NOT_RUN: not executed</li>
-             * <li>WAITING: waiting</li>
-             * <li>RUNNING: running</li>
-             * <li>SUCCESS: succeeded</li>
-             * <li>FAILED: failed</li>
-             * <li>CANCEL: canceled</li>
-             * <li>TIMEOUT: timed out</li>
-             * <li>OFFLINE: offline.</li>
-             * </ul>
+             * <p>The task statuses. Valid values: NOT_RUN (not run), WAITING (waiting), RUNNING (running), SUCCESS (successful), FAILED (failed), CANCEL (canceled), TIMEOUT (timed out), and OFFLINE (offline).</p>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
@@ -413,18 +385,7 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * <p>The validation result. Valid values:</p>
-             * <ul>
-             * <li>NOT_RUN: not executed</li>
-             * <li>WAITING: waiting for execution</li>
-             * <li>RUNNING: running</li>
-             * <li>PASS: passed</li>
-             * <li>NOT_PASS: not passed</li>
-             * <li>FAILED: execution failed</li>
-             * <li>OFFLINE: offline and needs to be restarted</li>
-             * <li>CANCEL: task canceled</li>
-             * <li>TIMEOUT: task timed out.</li>
-             * </ul>
+             * <p>The validation results. Valid values: NOT_RUN (not run), WAITING (waiting), RUNNING (running), PASS (passed), NOT_PASS (not passed), FAILED (failed), OFFLINE (offline and requires restart), CANCEL (canceled), and TIMEOUT (timed out).</p>
              */
             public Builder validateResultList(java.util.List<String> validateResultList) {
                 this.validateResultList = validateResultList;
@@ -432,7 +393,7 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * <p>The ID of the quality watchtask.</p>
+             * <p>The quality watchtask ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

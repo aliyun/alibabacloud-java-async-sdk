@@ -646,6 +646,192 @@ public class UpdateBatchTaskRequest extends Request {
      *
      * <p>UpdateBatchTaskRequest</p>
      */
+    public static class ExecuteRerunConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CustomRerunInterval")
+        private String customRerunInterval;
+
+        @com.aliyun.core.annotation.NameInMap("CustomRerunTimes")
+        private String customRerunTimes;
+
+        @com.aliyun.core.annotation.NameInMap("FollowSystem")
+        private Boolean followSystem;
+
+        private ExecuteRerunConfig(Builder builder) {
+            this.customRerunInterval = builder.customRerunInterval;
+            this.customRerunTimes = builder.customRerunTimes;
+            this.followSystem = builder.followSystem;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExecuteRerunConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return customRerunInterval
+         */
+        public String getCustomRerunInterval() {
+            return this.customRerunInterval;
+        }
+
+        /**
+         * @return customRerunTimes
+         */
+        public String getCustomRerunTimes() {
+            return this.customRerunTimes;
+        }
+
+        /**
+         * @return followSystem
+         */
+        public Boolean getFollowSystem() {
+            return this.followSystem;
+        }
+
+        public static final class Builder {
+            private String customRerunInterval; 
+            private String customRerunTimes; 
+            private Boolean followSystem; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExecuteRerunConfig model) {
+                this.customRerunInterval = model.customRerunInterval;
+                this.customRerunTimes = model.customRerunTimes;
+                this.followSystem = model.followSystem;
+            } 
+
+            /**
+             * <p>自定义失败重试间隔。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
+             */
+            public Builder customRerunInterval(String customRerunInterval) {
+                this.customRerunInterval = customRerunInterval;
+                return this;
+            }
+
+            /**
+             * <p>自定义失败重试次数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder customRerunTimes(String customRerunTimes) {
+                this.customRerunTimes = customRerunTimes;
+                return this;
+            }
+
+            /**
+             * <p>是否跟随系统配置。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder followSystem(Boolean followSystem) {
+                this.followSystem = followSystem;
+                return this;
+            }
+
+            public ExecuteRerunConfig build() {
+                return new ExecuteRerunConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateBatchTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateBatchTaskRequest</p>
+     */
+    public static class ExecuteTimeOutConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CustomValues")
+        private String customValues;
+
+        @com.aliyun.core.annotation.NameInMap("FollowSystem")
+        private Boolean followSystem;
+
+        private ExecuteTimeOutConfig(Builder builder) {
+            this.customValues = builder.customValues;
+            this.followSystem = builder.followSystem;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExecuteTimeOutConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return customValues
+         */
+        public String getCustomValues() {
+            return this.customValues;
+        }
+
+        /**
+         * @return followSystem
+         */
+        public Boolean getFollowSystem() {
+            return this.followSystem;
+        }
+
+        public static final class Builder {
+            private String customValues; 
+            private Boolean followSystem; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExecuteTimeOutConfig model) {
+                this.customValues = model.customValues;
+                this.followSystem = model.followSystem;
+            } 
+
+            /**
+             * <p>自定义超时时间。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
+             */
+            public Builder customValues(String customValues) {
+                this.customValues = customValues;
+                return this;
+            }
+
+            /**
+             * <p>是否跟随系统配置。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder followSystem(Boolean followSystem) {
+                this.followSystem = followSystem;
+                return this;
+            }
+
+            public ExecuteTimeOutConfig build() {
+                return new ExecuteTimeOutConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateBatchTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateBatchTaskRequest</p>
+     */
     public static class ParamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1153,6 +1339,9 @@ public class UpdateBatchTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ContextParamList")
         private java.util.List<ContextParamList> contextParamList;
 
+        @com.aliyun.core.annotation.NameInMap("CpuResource")
+        private String cpuResource;
+
         @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
 
@@ -1180,9 +1369,18 @@ public class UpdateBatchTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
+        @com.aliyun.core.annotation.NameInMap("ExecuteRerunConfig")
+        private ExecuteRerunConfig executeRerunConfig;
+
+        @com.aliyun.core.annotation.NameInMap("ExecuteTimeOutConfig")
+        private ExecuteTimeOutConfig executeTimeOutConfig;
+
         @com.aliyun.core.annotation.NameInMap("FileId")
         @com.aliyun.core.annotation.Validation(required = true)
         private Long fileId;
+
+        @com.aliyun.core.annotation.NameInMap("MemoryResource")
+        private String memoryResource;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1219,11 +1417,26 @@ public class UpdateBatchTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceReferenceList")
+        private java.util.List<String> resourceReferenceList;
+
+        @com.aliyun.core.annotation.NameInMap("RetryOnTimeoutEnable")
+        private Boolean retryOnTimeoutEnable;
+
         @com.aliyun.core.annotation.NameInMap("SchedulePeriod")
         private String schedulePeriod;
 
         @com.aliyun.core.annotation.NameInMap("SparkClientInfo")
         private SparkClientInfo sparkClientInfo;
+
+        @com.aliyun.core.annotation.NameInMap("SparkDynamicResourceSwitch")
+        private Boolean sparkDynamicResourceSwitch;
+
+        @com.aliyun.core.annotation.NameInMap("SparkResourceEffectScope")
+        private String sparkResourceEffectScope;
+
+        @com.aliyun.core.annotation.NameInMap("SparkSqlResourceConfigMap")
+        private String sparkSqlResourceConfigMap;
 
         @com.aliyun.core.annotation.NameInMap("TaskTagList")
         private java.util.List<String> taskTagList;
@@ -1248,6 +1461,7 @@ public class UpdateBatchTaskRequest extends Request {
             this.conditionScheduleParamList = builder.conditionScheduleParamList;
             this.conditionScheduleTemplateId = builder.conditionScheduleTemplateId;
             this.contextParamList = builder.contextParamList;
+            this.cpuResource = builder.cpuResource;
             this.cronExpression = builder.cronExpression;
             this.customScheduleConfig = builder.customScheduleConfig;
             this.dataSourceCatalog = builder.dataSourceCatalog;
@@ -1257,7 +1471,10 @@ public class UpdateBatchTaskRequest extends Request {
             this.devResourceGroupId = builder.devResourceGroupId;
             this.developOwnerIdList = builder.developOwnerIdList;
             this.engine = builder.engine;
+            this.executeRerunConfig = builder.executeRerunConfig;
+            this.executeTimeOutConfig = builder.executeTimeOutConfig;
             this.fileId = builder.fileId;
+            this.memoryResource = builder.memoryResource;
             this.name = builder.name;
             this.nodeDescription = builder.nodeDescription;
             this.nodeOutputNameList = builder.nodeOutputNameList;
@@ -1269,8 +1486,13 @@ public class UpdateBatchTaskRequest extends Request {
             this.projectId = builder.projectId;
             this.pythonModuleList = builder.pythonModuleList;
             this.resourceGroupId = builder.resourceGroupId;
+            this.resourceReferenceList = builder.resourceReferenceList;
+            this.retryOnTimeoutEnable = builder.retryOnTimeoutEnable;
             this.schedulePeriod = builder.schedulePeriod;
             this.sparkClientInfo = builder.sparkClientInfo;
+            this.sparkDynamicResourceSwitch = builder.sparkDynamicResourceSwitch;
+            this.sparkResourceEffectScope = builder.sparkResourceEffectScope;
+            this.sparkSqlResourceConfigMap = builder.sparkSqlResourceConfigMap;
             this.taskTagList = builder.taskTagList;
             this.taskType = builder.taskType;
             this.upStreamList = builder.upStreamList;
@@ -1326,6 +1548,13 @@ public class UpdateBatchTaskRequest extends Request {
          */
         public java.util.List<ContextParamList> getContextParamList() {
             return this.contextParamList;
+        }
+
+        /**
+         * @return cpuResource
+         */
+        public String getCpuResource() {
+            return this.cpuResource;
         }
 
         /**
@@ -1392,10 +1621,31 @@ public class UpdateBatchTaskRequest extends Request {
         }
 
         /**
+         * @return executeRerunConfig
+         */
+        public ExecuteRerunConfig getExecuteRerunConfig() {
+            return this.executeRerunConfig;
+        }
+
+        /**
+         * @return executeTimeOutConfig
+         */
+        public ExecuteTimeOutConfig getExecuteTimeOutConfig() {
+            return this.executeTimeOutConfig;
+        }
+
+        /**
          * @return fileId
          */
         public Long getFileId() {
             return this.fileId;
+        }
+
+        /**
+         * @return memoryResource
+         */
+        public String getMemoryResource() {
+            return this.memoryResource;
         }
 
         /**
@@ -1476,6 +1726,20 @@ public class UpdateBatchTaskRequest extends Request {
         }
 
         /**
+         * @return resourceReferenceList
+         */
+        public java.util.List<String> getResourceReferenceList() {
+            return this.resourceReferenceList;
+        }
+
+        /**
+         * @return retryOnTimeoutEnable
+         */
+        public Boolean getRetryOnTimeoutEnable() {
+            return this.retryOnTimeoutEnable;
+        }
+
+        /**
          * @return schedulePeriod
          */
         public String getSchedulePeriod() {
@@ -1487,6 +1751,27 @@ public class UpdateBatchTaskRequest extends Request {
          */
         public SparkClientInfo getSparkClientInfo() {
             return this.sparkClientInfo;
+        }
+
+        /**
+         * @return sparkDynamicResourceSwitch
+         */
+        public Boolean getSparkDynamicResourceSwitch() {
+            return this.sparkDynamicResourceSwitch;
+        }
+
+        /**
+         * @return sparkResourceEffectScope
+         */
+        public String getSparkResourceEffectScope() {
+            return this.sparkResourceEffectScope;
+        }
+
+        /**
+         * @return sparkSqlResourceConfigMap
+         */
+        public String getSparkSqlResourceConfigMap() {
+            return this.sparkSqlResourceConfigMap;
         }
 
         /**
@@ -1531,6 +1816,7 @@ public class UpdateBatchTaskRequest extends Request {
             private java.util.List<ConditionScheduleParamList> conditionScheduleParamList; 
             private Long conditionScheduleTemplateId; 
             private java.util.List<ContextParamList> contextParamList; 
+            private String cpuResource; 
             private String cronExpression; 
             private CustomScheduleConfig customScheduleConfig; 
             private String dataSourceCatalog; 
@@ -1540,7 +1826,10 @@ public class UpdateBatchTaskRequest extends Request {
             private String devResourceGroupId; 
             private java.util.List<String> developOwnerIdList; 
             private String engine; 
+            private ExecuteRerunConfig executeRerunConfig; 
+            private ExecuteTimeOutConfig executeTimeOutConfig; 
             private Long fileId; 
+            private String memoryResource; 
             private String name; 
             private String nodeDescription; 
             private java.util.List<String> nodeOutputNameList; 
@@ -1552,8 +1841,13 @@ public class UpdateBatchTaskRequest extends Request {
             private Long projectId; 
             private java.util.List<String> pythonModuleList; 
             private String resourceGroupId; 
+            private java.util.List<String> resourceReferenceList; 
+            private Boolean retryOnTimeoutEnable; 
             private String schedulePeriod; 
             private SparkClientInfo sparkClientInfo; 
+            private Boolean sparkDynamicResourceSwitch; 
+            private String sparkResourceEffectScope; 
+            private String sparkSqlResourceConfigMap; 
             private java.util.List<String> taskTagList; 
             private Integer taskType; 
             private java.util.List<UpStreamList> upStreamList; 
@@ -1570,6 +1864,7 @@ public class UpdateBatchTaskRequest extends Request {
                 this.conditionScheduleParamList = model.conditionScheduleParamList;
                 this.conditionScheduleTemplateId = model.conditionScheduleTemplateId;
                 this.contextParamList = model.contextParamList;
+                this.cpuResource = model.cpuResource;
                 this.cronExpression = model.cronExpression;
                 this.customScheduleConfig = model.customScheduleConfig;
                 this.dataSourceCatalog = model.dataSourceCatalog;
@@ -1579,7 +1874,10 @@ public class UpdateBatchTaskRequest extends Request {
                 this.devResourceGroupId = model.devResourceGroupId;
                 this.developOwnerIdList = model.developOwnerIdList;
                 this.engine = model.engine;
+                this.executeRerunConfig = model.executeRerunConfig;
+                this.executeTimeOutConfig = model.executeTimeOutConfig;
                 this.fileId = model.fileId;
+                this.memoryResource = model.memoryResource;
                 this.name = model.name;
                 this.nodeDescription = model.nodeDescription;
                 this.nodeOutputNameList = model.nodeOutputNameList;
@@ -1591,8 +1889,13 @@ public class UpdateBatchTaskRequest extends Request {
                 this.projectId = model.projectId;
                 this.pythonModuleList = model.pythonModuleList;
                 this.resourceGroupId = model.resourceGroupId;
+                this.resourceReferenceList = model.resourceReferenceList;
+                this.retryOnTimeoutEnable = model.retryOnTimeoutEnable;
                 this.schedulePeriod = model.schedulePeriod;
                 this.sparkClientInfo = model.sparkClientInfo;
+                this.sparkDynamicResourceSwitch = model.sparkDynamicResourceSwitch;
+                this.sparkResourceEffectScope = model.sparkResourceEffectScope;
+                this.sparkSqlResourceConfigMap = model.sparkSqlResourceConfigMap;
                 this.taskTagList = model.taskTagList;
                 this.taskType = model.taskType;
                 this.upStreamList = model.upStreamList;
@@ -1658,6 +1961,17 @@ public class UpdateBatchTaskRequest extends Request {
              */
             public Builder contextParamList(java.util.List<ContextParamList> contextParamList) {
                 this.contextParamList = contextParamList;
+                return this;
+            }
+
+            /**
+             * <p>不传时保留任务当前配置。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
+             */
+            public Builder cpuResource(String cpuResource) {
+                this.cpuResource = cpuResource;
                 return this;
             }
 
@@ -1760,6 +2074,22 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>失败重试配置。不传时保留任务当前配置。传入时整体替换该配置对象。</p>
+             */
+            public Builder executeRerunConfig(ExecuteRerunConfig executeRerunConfig) {
+                this.executeRerunConfig = executeRerunConfig;
+                return this;
+            }
+
+            /**
+             * <p>执行超时配置。不传时保留任务当前配置。传入时整体替换该配置对象。</p>
+             */
+            public Builder executeTimeOutConfig(ExecuteTimeOutConfig executeTimeOutConfig) {
+                this.executeTimeOutConfig = executeTimeOutConfig;
+                return this;
+            }
+
+            /**
              * <p>The ID of the task directory tree node.</p>
              * <p>This parameter is required.</p>
              * 
@@ -1768,6 +2098,17 @@ public class UpdateBatchTaskRequest extends Request {
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
+                return this;
+            }
+
+            /**
+             * <p>不传时保留任务当前配置。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
+             */
+            public Builder memoryResource(String memoryResource) {
+                this.memoryResource = memoryResource;
                 return this;
             }
 
@@ -1888,6 +2229,25 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * ResourceReferenceList.
+             */
+            public Builder resourceReferenceList(java.util.List<String> resourceReferenceList) {
+                this.resourceReferenceList = resourceReferenceList;
+                return this;
+            }
+
+            /**
+             * <p>超时重试开关。不传时保留任务当前配置。显式传入false时关闭。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder retryOnTimeoutEnable(Boolean retryOnTimeoutEnable) {
+                this.retryOnTimeoutEnable = retryOnTimeoutEnable;
+                return this;
+            }
+
+            /**
              * <p>The scheduling cycle. Valid values:</p>
              * <ul>
              * <li>YEARLY: Yearly.</li>
@@ -1911,6 +2271,39 @@ public class UpdateBatchTaskRequest extends Request {
              */
             public Builder sparkClientInfo(SparkClientInfo sparkClientInfo) {
                 this.sparkClientInfo = sparkClientInfo;
+                return this;
+            }
+
+            /**
+             * <p>不传时保留任务当前配置。显式传入false时关闭。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder sparkDynamicResourceSwitch(Boolean sparkDynamicResourceSwitch) {
+                this.sparkDynamicResourceSwitch = sparkDynamicResourceSwitch;
+                return this;
+            }
+
+            /**
+             * <p>ONLY_PROD表示仅生产环境，PROD_AND_DEV表示生产和开发环境。不传时保留任务当前配置。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLY_PROD</p>
+             */
+            public Builder sparkResourceEffectScope(String sparkResourceEffectScope) {
+                this.sparkResourceEffectScope = sparkResourceEffectScope;
+                return this;
+            }
+
+            /**
+             * <p>Spark SQL资源配置，键为配置项名称，值为字符串。不传时保留任务当前配置；传入空JSON对象{}时清空配置。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;spark.executor.memory&quot;:&quot;2g&quot;}</p>
+             */
+            public Builder sparkSqlResourceConfigMap(String sparkSqlResourceConfigMap) {
+                this.sparkSqlResourceConfigMap = sparkSqlResourceConfigMap;
                 return this;
             }
 

@@ -119,7 +119,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -163,7 +163,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pending submit details.</p>
+         * <p>The details of the pending release.</p>
          */
         public Builder submitDetailResult(SubmitDetailResult submitDetailResult) {
             this.submitDetailResult = submitDetailResult;
@@ -171,7 +171,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -261,7 +261,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object name.</p>
+             * <p>The name of the object.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -405,7 +405,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>The ID of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>n_1234</p>
@@ -416,7 +416,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object version.</p>
+             * <p>The version of the object.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -427,7 +427,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The project ID.</p>
+             * <p>The ID of the project.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -438,10 +438,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The submit comment.</p>
+             * <p>The commit description.</p>
              * 
              * <strong>example:</strong>
-             * <p>提交说明</p>
+             * <p>Commit description</p>
              */
             public Builder submitComment(String submitComment) {
                 this.submitComment = submitComment;
@@ -449,7 +449,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The submit object.</p>
+             * <p>The object to be published.</p>
              */
             public Builder submitObject(SubmitObject submitObject) {
                 this.submitObject = submitObject;
@@ -555,7 +555,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The submit record ID.</p>
+             * <p>The ID of the commit record.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -566,19 +566,19 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publish status. Valid values: </p>
+             * <p>The status of the publish record. Valid values: </p>
              * <ul>
-             * <li>NOT_VERIFIED: not verified.</li>
-             * <li>APPROVING: approval in progress.</li>
-             * <li>APPROVE_FAILED: approval failed.</li>
-             * <li>APPROVE_SUCCESS: approval succeeded.</li>
-             * <li>APPROVE_REVOKED: approval revoked.</li>
-             * <li>CHECKING: publish verification in progress.</li>
-             * <li>CHECK_FAILED: publish verification failed.</li>
-             * <li>CHECK_SUCCESS: publish verification succeeded.</li>
-             * <li>PUBLISHING: publishing in progress.</li>
-             * <li>FAILED: publish failed.</li>
-             * <li>SUCCESS: publish succeeded.</li>
+             * <li>NOT_VERIFIED: Not verified.</li>
+             * <li>APPROVING: Approving.</li>
+             * <li>APPROVE_FAILED: Approval failed.</li>
+             * <li>APPROVE_SUCCESS: Approval succeeded.</li>
+             * <li>APPROVE_REVOKED: Approval revoked.</li>
+             * <li>CHECKING: Checking.</li>
+             * <li>CHECK_FAILED: Check failed.</li>
+             * <li>CHECK_SUCCESS: Check succeeded.</li>
+             * <li>PUBLISHING: Publishing.</li>
+             * <li>FAILED: Failed.</li>
+             * <li>SUCCESS: Succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -590,7 +590,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pending submit record object.</p>
+             * <p>The object of the pending release record.</p>
              */
             public Builder releaseObject(ReleaseObject releaseObject) {
                 this.releaseObject = releaseObject;
@@ -598,14 +598,11 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The submit status. Valid values: </p>
+             * <p>The status of the pending release record. Valid values:</p>
              * <ul>
-             * <li><p>TO_BE_PUBLISHED: pending.</p>
-             * </li>
-             * <li><p>PUBLISHED: published.</p>
-             * </li>
-             * <li><p>PUBLISHING: publishing.</p>
-             * </li>
+             * <li>TO_BE_PUBLISHED: Pending release.</li>
+             * <li>PUBLISHED: Published.</li>
+             * <li>PUBLISHING: Publishing.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -617,7 +614,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The record tag.</p>
+             * <p>The tag of the record.</p>
              * 
              * <strong>example:</strong>
              * <p>tag</p>

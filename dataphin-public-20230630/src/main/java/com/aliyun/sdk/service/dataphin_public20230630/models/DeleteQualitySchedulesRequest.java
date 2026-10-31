@@ -112,7 +112,7 @@ public class DeleteQualitySchedulesRequest extends Request {
         }
 
         /**
-         * <p>The delete instruction.</p>
+         * <p>The delete command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -136,7 +136,10 @@ public class DeleteQualitySchedulesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

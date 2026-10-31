@@ -136,7 +136,7 @@ public class CreateComputeClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator user.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -231,7 +231,7 @@ public class CreateComputeClusterRequest extends Request {
             }
 
             /**
-             * <p>The list of whitelist user group IDs.</p>
+             * <p>The list of whitelisted user group IDs.</p>
              */
             public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
@@ -239,7 +239,7 @@ public class CreateComputeClusterRequest extends Request {
             }
 
             /**
-             * <p>The list of whitelist user IDs.</p>
+             * <p>The list of whitelisted user IDs.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -308,7 +308,7 @@ public class CreateComputeClusterRequest extends Request {
             } 
 
             /**
-             * <p>The configuration item.</p>
+             * <p>The configuration key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class CreateComputeClusterRequest extends Request {
             }
 
             /**
-             * <p>The value of the configuration item.</p>
+             * <p>The configuration value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -362,6 +362,9 @@ public class CreateComputeClusterRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
+        private String timeZone;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         @com.aliyun.core.annotation.Validation(required = true)
         private String type;
@@ -375,6 +378,7 @@ public class CreateComputeClusterRequest extends Request {
             this.configList = builder.configList;
             this.des = builder.des;
             this.name = builder.name;
+            this.timeZone = builder.timeZone;
             this.type = builder.type;
             this.typeVersion = builder.typeVersion;
         }
@@ -423,6 +427,13 @@ public class CreateComputeClusterRequest extends Request {
         }
 
         /**
+         * @return timeZone
+         */
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -442,6 +453,7 @@ public class CreateComputeClusterRequest extends Request {
             private java.util.List<ConfigList> configList; 
             private String des; 
             private String name; 
+            private String timeZone; 
             private String type; 
             private String typeVersion; 
 
@@ -454,6 +466,7 @@ public class CreateComputeClusterRequest extends Request {
                 this.configList = model.configList;
                 this.des = model.des;
                 this.name = model.name;
+                this.timeZone = model.timeZone;
                 this.type = model.type;
                 this.typeVersion = model.typeVersion;
             } 
@@ -503,6 +516,17 @@ public class CreateComputeClusterRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The time zone name, such as Asia/Shanghai. If this parameter is not specified during an update, the original value is retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
+             */
+            public Builder timeZone(String timeZone) {
+                this.timeZone = timeZone;
                 return this;
             }
 

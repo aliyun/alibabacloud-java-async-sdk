@@ -149,7 +149,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backend exception details.</p>
+         * <p>The details of the backend exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -237,7 +237,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The entity record ID.</p>
+             * <p>The ID of the entity record.</p>
              * 
              * <strong>example:</strong>
              * <p>abc-xxx</p>
@@ -331,7 +331,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entity records that failed to be created.</p>
+             * <p>The number of failed records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -342,7 +342,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successfully created entity records.</p>
+             * <p>The number of successfully created records.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

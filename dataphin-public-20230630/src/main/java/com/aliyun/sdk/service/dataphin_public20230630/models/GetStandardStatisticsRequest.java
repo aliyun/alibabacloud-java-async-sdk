@@ -112,7 +112,7 @@ public class GetStandardStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The ID of the tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,10 @@ public class GetStandardStatisticsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the user who performs the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class GetStandardStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The statistical query instruction.</p>
+         * <p>The statistics query instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder statisticsQuery(StatisticsQuery statisticsQuery) {
@@ -217,7 +220,7 @@ public class GetStandardStatisticsRequest extends Request {
             } 
 
             /**
-             * <p>The end time.</p>
+             * <p>The end time, in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -228,7 +231,7 @@ public class GetStandardStatisticsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to include the end time. Default value: false.</p>
+             * <p>Specifies whether to include the end time. Default: false.</p>
              */
             public Builder includeEndTime(Boolean includeEndTime) {
                 this.includeEndTime = includeEndTime;
@@ -236,7 +239,7 @@ public class GetStandardStatisticsRequest extends Request {
             }
 
             /**
-             * <p>The start time.</p>
+             * <p>The start time, in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-01 00:00:00</p>
@@ -320,7 +323,7 @@ public class GetStandardStatisticsRequest extends Request {
             } 
 
             /**
-             * <p>The creation time period.</p>
+             * <p>The time period during which the standards were created.</p>
              */
             public Builder createTimePeriod(CreateTimePeriod createTimePeriod) {
                 this.createTimePeriod = createTimePeriod;
@@ -328,7 +331,7 @@ public class GetStandardStatisticsRequest extends Request {
             }
 
             /**
-             * <p>The folder to which the standards belong. The search includes all subfolders under this folder.</p>
+             * <p>The directory to query. Standards in this directory and all its subdirectories are included in the statistics.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -340,7 +343,7 @@ public class GetStandardStatisticsRequest extends Request {
             }
 
             /**
-             * <p>The stages to which the standards belong.</p>
+             * <p>The list of stages to which the standards belong.</p>
              */
             public Builder standardStageList(java.util.List<String> standardStageList) {
                 this.standardStageList = standardStageList;

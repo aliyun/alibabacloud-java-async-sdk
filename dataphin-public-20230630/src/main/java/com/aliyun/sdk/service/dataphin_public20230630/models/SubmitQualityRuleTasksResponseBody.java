@@ -119,7 +119,7 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Backend response code</p>
+         * <p>The backend response code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP response code</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the backend response exception</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -163,7 +163,7 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Execution result</p>
+         * <p>The execution result.</p>
          */
         public Builder submitResult(SubmitResult submitResult) {
             this.submitResult = submitResult;
@@ -171,7 +171,7 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +237,7 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Rule task IDs, returned in the test run scenario</p>
+             * <p>The rule task IDs. Returned in test run scenarios.</p>
              */
             public Builder ruleTaskIdList(java.util.List<Long> ruleTaskIdList) {
                 this.ruleTaskIdList = ruleTaskIdList;
@@ -245,7 +245,7 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Monitoring object task IDs, returned in non-test run scenarios</p>
+             * <p>The monitored object task IDs. Returned in non-test run scenarios.</p>
              */
             public Builder watchTaskIdList(java.util.List<Long> watchTaskIdList) {
                 this.watchTaskIdList = watchTaskIdList;

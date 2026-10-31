@@ -130,7 +130,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of batch relationship record creation.</p>
+         * <p>The result of creating relationship records in batches.</p>
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -171,7 +171,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

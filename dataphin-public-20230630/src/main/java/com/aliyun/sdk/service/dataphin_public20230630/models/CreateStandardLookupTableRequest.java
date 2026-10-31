@@ -112,7 +112,7 @@ public class CreateStandardLookupTableRequest extends Request {
         }
 
         /**
-         * <p>The create command.</p>
+         * <p>The creation command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -136,7 +136,10 @@ public class CreateStandardLookupTableRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -192,7 +195,7 @@ public class CreateStandardLookupTableRequest extends Request {
             } 
 
             /**
-             * <p>The directory to which the lookup table belongs.</p>
+             * <p>The parent folder.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -329,7 +332,7 @@ public class CreateStandardLookupTableRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>杭州</p>
+             * <p>Hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -473,7 +476,7 @@ public class CreateStandardLookupTableRequest extends Request {
             }
 
             /**
-             * <p>The directory to which the lookup table belongs.</p>
+             * <p>The parent folder.</p>
              */
             public Builder directoryReference(DirectoryReference directoryReference) {
                 this.directoryReference = directoryReference;
@@ -493,7 +496,7 @@ public class CreateStandardLookupTableRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>城市码表</p>
+             * <p>City lookup table</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -501,7 +504,7 @@ public class CreateStandardLookupTableRequest extends Request {
             }
 
             /**
-             * <p>The ID of the lookup table owner. Default value: the user ID of the caller.</p>
+             * <p>The ID of the lookup table owner. Default value: the ID of the caller.</p>
              * 
              * <strong>example:</strong>
              * <p>30012021</p>

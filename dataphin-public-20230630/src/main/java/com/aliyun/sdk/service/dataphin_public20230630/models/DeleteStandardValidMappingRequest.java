@@ -112,7 +112,7 @@ public class DeleteStandardValidMappingRequest extends Request {
         }
 
         /**
-         * <p>The delete instruction.</p>
+         * <p>The delete command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -136,7 +136,10 @@ public class DeleteStandardValidMappingRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -218,7 +221,7 @@ public class DeleteStandardValidMappingRequest extends Request {
             } 
 
             /**
-             * <p>The list of parent GUIDs. A maximum of 1000 GUIDs are supported.</p>
+             * <p>The list of parent GUIDs. The maximum number of GUIDs is 1,000.</p>
              */
             public Builder belongGuidList(java.util.List<String> belongGuidList) {
                 this.belongGuidList = belongGuidList;
@@ -226,7 +229,7 @@ public class DeleteStandardValidMappingRequest extends Request {
             }
 
             /**
-             * <p>The list of GUIDs. A maximum of 1000 GUIDs are supported.</p>
+             * <p>The list of GUIDs. The maximum number of GUIDs is 1,000.</p>
              */
             public Builder guidList(java.util.List<String> guidList) {
                 this.guidList = guidList;

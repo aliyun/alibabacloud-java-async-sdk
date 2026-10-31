@@ -112,7 +112,7 @@ public class ListUserGroupMembersRequest extends Request {
         }
 
         /**
-         * <p>The paged query parameters.</p>
+         * <p>The paging query.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -136,7 +136,10 @@ public class ListUserGroupMembersRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -268,7 +271,7 @@ public class ListUserGroupMembersRequest extends Request {
             }
 
             /**
-             * <p>The number of records per page.</p>
+             * <p>The number of entries per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -291,7 +294,7 @@ public class ListUserGroupMembersRequest extends Request {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The user IDs.</p>
              */
             public Builder userIdList(java.util.List<String> userIdList) {
                 this.userIdList = userIdList;

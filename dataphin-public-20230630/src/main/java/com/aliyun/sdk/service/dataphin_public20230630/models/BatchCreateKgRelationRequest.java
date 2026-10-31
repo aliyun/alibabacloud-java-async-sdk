@@ -151,7 +151,10 @@ public class BatchCreateKgRelationRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -346,7 +349,7 @@ public class BatchCreateKgRelationRequest extends Request {
             } 
 
             /**
-             * <p>The list of relationship record properties.</p>
+             * <p>The relationship record property list.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;
@@ -366,7 +369,7 @@ public class BatchCreateKgRelationRequest extends Request {
             }
 
             /**
-             * <p>The ID of the source entity record.</p>
+             * <p>The source entity record ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -378,7 +381,7 @@ public class BatchCreateKgRelationRequest extends Request {
             }
 
             /**
-             * <p>The ID of the target entity record.</p>
+             * <p>The target entity record ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -437,7 +440,7 @@ public class BatchCreateKgRelationRequest extends Request {
             } 
 
             /**
-             * <p>The list of relationships.</p>
+             * <p>The relationship list.</p>
              * <p>This parameter is required.</p>
              */
             public Builder relationList(java.util.List<RelationList> relationList) {

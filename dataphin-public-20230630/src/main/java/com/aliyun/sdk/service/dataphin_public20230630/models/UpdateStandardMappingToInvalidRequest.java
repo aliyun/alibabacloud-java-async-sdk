@@ -112,7 +112,7 @@ public class UpdateStandardMappingToInvalidRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,10 @@ public class UpdateStandardMappingToInvalidRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpdateStandardMappingToInvalidRequest extends Request {
         }
 
         /**
-         * <p>Update Command</p>
+         * <p>The update instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -218,7 +221,7 @@ public class UpdateStandardMappingToInvalidRequest extends Request {
             } 
 
             /**
-             * <p>Belonging GUID list, with an upper limit of 1000</p>
+             * <p>The list of parent GUIDs. The maximum number of items is 1,000.</p>
              */
             public Builder belongGuidList(java.util.List<String> belongGuidList) {
                 this.belongGuidList = belongGuidList;
@@ -226,7 +229,7 @@ public class UpdateStandardMappingToInvalidRequest extends Request {
             }
 
             /**
-             * <p>GUID list, with an upper limit of 1000</p>
+             * <p>The list of GUIDs. The maximum number of items is 1,000.</p>
              */
             public Builder guidList(java.util.List<String> guidList) {
                 this.guidList = guidList;
@@ -234,7 +237,7 @@ public class UpdateStandardMappingToInvalidRequest extends Request {
             }
 
             /**
-             * <p>Standard ID</p>
+             * <p>The standard ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

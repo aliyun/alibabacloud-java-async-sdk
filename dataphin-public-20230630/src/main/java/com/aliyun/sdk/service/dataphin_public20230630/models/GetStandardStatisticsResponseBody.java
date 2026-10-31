@@ -130,7 +130,7 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistical results.</p>
+         * <p>The statistics result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The exception details returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -248,7 +248,7 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The standard type.</p>
+             * <p>The type of the standard.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -318,7 +318,7 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The mapping between standard types and the number of standards for each type. If the standard type is empty, the key is EMPTY.</p>
+             * <p>The mapping between each standard type and the number of standards of that type. If the standard type is empty, the key is EMPTY.</p>
              */
             public Builder standardTypeCountList(java.util.List<StandardTypeCountList> standardTypeCountList) {
                 this.standardTypeCountList = standardTypeCountList;

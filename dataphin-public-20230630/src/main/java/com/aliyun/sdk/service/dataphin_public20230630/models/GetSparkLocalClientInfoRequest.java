@@ -129,8 +129,8 @@ public class GetSparkLocalClientInfoRequest extends Request {
         /**
          * <p>The environment identifier. Valid values:</p>
          * <ul>
-         * <li>DEV: development environment.</li>
-         * <li>PROD: production environment.</li>
+         * <li>DEV: Development environment.</li>
+         * <li>PROD: Production environment.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -157,7 +157,10 @@ public class GetSparkLocalClientInfoRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

@@ -119,7 +119,7 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -171,7 +171,7 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -276,7 +276,7 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The mapping field name.</p>
+             * <p>The name of the mapped field.</p>
              * 
              * <strong>example:</strong>
              * <p>business_id</p>
@@ -287,7 +287,7 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expression operator.</p>
+             * <p>The operator of the expression.</p>
              * 
              * <strong>example:</strong>
              * <p>EQUAL</p>
@@ -306,7 +306,7 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expression type.</p>
+             * <p>The type of the expression.</p>
              * 
              * <strong>example:</strong>
              * <p>EXPRESSION</p>
@@ -317,7 +317,7 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expression operation values.</p>
+             * <p>The operand values of the expression.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -584,7 +584,7 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The rule expressions.</p>
+             * <p>The expressions of the rule.</p>
              */
             public Builder expressions(java.util.List<Expressions> expressions) {
                 this.expressions = expressions;
@@ -592,7 +592,7 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule ID.</p>
+             * <p>The ID of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -614,10 +614,10 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule name.</p>
+             * <p>The name of the rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>业务管控</p>
+             * <p>Business control</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -636,7 +636,7 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule status.</p>
+             * <p>The status of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -727,7 +727,7 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The table field.</p>
+             * <p>The field of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>business_id</p>
@@ -738,10 +738,10 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mapping field name.</p>
+             * <p>The name of the mapped field.</p>
              * 
              * <strong>example:</strong>
-             * <p>拦截规则</p>
+             * <p>Interception rule</p>
              */
             public Builder mappingColumnName(String mappingColumnName) {
                 this.mappingColumnName = mappingColumnName;
@@ -749,7 +749,7 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table GUID.</p>
+             * <p>The GUID of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.300199897.project_name.table_name</p>

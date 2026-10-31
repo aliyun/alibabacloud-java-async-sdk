@@ -119,7 +119,7 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result returned when the node is created.</p>
+         * <p>The return result of a successful task creation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -171,7 +171,7 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -272,7 +272,7 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The redirect relative path.</p>
+             * <p>The relative path for redirection.</p>
              * 
              * <strong>example:</strong>
              * <p>/dev/streamJob/7083701105376640?env=DEV&amp;projectId=7081229106458752&amp;tenantId=300001420</p>

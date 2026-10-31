@@ -127,7 +127,7 @@ public class ImportKgSchemaRequest extends Request {
         }
 
         /**
-         * <p>The command for importing the knowledge graph definition.</p>
+         * <p>The import command for the knowledge graph definition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class ImportKgSchemaRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator user.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -251,7 +251,7 @@ public class ImportKgSchemaRequest extends Request {
             } 
 
             /**
-             * <p>The knowledge graph definition content converted based on the specified format.</p>
+             * <p>The knowledge graph definition content converted based on the format.</p>
              * 
              * <strong>example:</strong>
              * <p>name:xxx</p>

@@ -125,7 +125,10 @@ public class CreateStreamBatchJobMappingRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
         }
 
         /**
-         * <p>The stream-batch integrated node information.</p>
+         * <p>The stream-batch integrated task information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder streamBatchJobMappingCreateCommand(StreamBatchJobMappingCreateCommand streamBatchJobMappingCreateCommand) {
@@ -332,7 +335,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>这是一段任务的描述信息</p>
+             * <p>This is a sample description for the task</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -340,7 +343,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             }
 
             /**
-             * <p>The folder in which the node is generated.</p>
+             * <p>The directory where the task is generated.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -352,7 +355,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             }
 
             /**
-             * <p>The Flink DPI engine version.</p>
+             * <p>The database engine version of the Flink DPI engine.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -424,7 +427,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             }
 
             /**
-             * <p>The VVP cluster type. Valid values: SESSION and PREJOB. This parameter is specific to VVP. If not applicable, leave this parameter empty or do not pass it.</p>
+             * <p>The VVP cluster type. This parameter is specific to VVP. Valid values: SESSION and PREJOB. If it is not applicable, leave it empty or do not specify it.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

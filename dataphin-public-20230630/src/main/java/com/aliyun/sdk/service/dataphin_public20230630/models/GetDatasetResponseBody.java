@@ -149,7 +149,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -254,7 +254,7 @@ public class GetDatasetResponseBody extends TeaModel {
              * <p>The username.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -464,7 +464,10 @@ public class GetDatasetResponseBody extends TeaModel {
             } 
 
             /**
-             * DateFormat.
+             * <p>The date format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yyyyMMdd</p>
              */
             public Builder dateFormat(String dateFormat) {
                 this.dateFormat = dateFormat;
@@ -472,7 +475,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -480,7 +486,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * Descr.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder descr(String descr) {
                 this.descr = descr;
@@ -488,7 +497,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * IsUrl.
+             * <p>Specifies whether the parameter is a URL parameter.</p>
              */
             public Builder isUrl(Boolean isUrl) {
                 this.isUrl = isUrl;
@@ -496,7 +505,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * MappingColumn.
+             * <p>The mapping column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col01</p>
              */
             public Builder mappingColumn(String mappingColumn) {
                 this.mappingColumn = mappingColumn;
@@ -504,7 +516,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * Must.
+             * <p>Specifies whether the parameter is required.</p>
              */
             public Builder must(Boolean must) {
                 this.must = must;
@@ -512,7 +524,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -520,7 +535,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * Optional.
+             * <p>Specifies whether the parameter is optional.</p>
              */
             public Builder optional(Boolean optional) {
                 this.optional = optional;
@@ -528,7 +543,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalColumn.
+             * <p>The original column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col01</p>
              */
             public Builder originalColumn(String originalColumn) {
                 this.originalColumn = originalColumn;
@@ -536,7 +554,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * ParamName.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col01</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -544,7 +565,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * <p>The parameter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>int</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -552,7 +576,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * Sample.
+             * <p>The sample value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sample(String sample) {
                 this.sample = sample;
@@ -560,7 +587,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * SeqNum.
+             * <p>The sequence number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder seqNum(Integer seqNum) {
                 this.seqNum = seqNum;
@@ -718,7 +748,10 @@ public class GetDatasetResponseBody extends TeaModel {
             } 
 
             /**
-             * DateFormat.
+             * <p>The date format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yyyyMMdd</p>
              */
             public Builder dateFormat(String dateFormat) {
                 this.dateFormat = dateFormat;
@@ -726,7 +759,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * Descr.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder descr(String descr) {
                 this.descr = descr;
@@ -734,7 +770,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * IsUrl.
+             * <p>Specifies whether the parameter is a URL parameter.</p>
              */
             public Builder isUrl(Boolean isUrl) {
                 this.isUrl = isUrl;
@@ -742,7 +778,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * MappingColumn.
+             * <p>The mapping column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col01</p>
              */
             public Builder mappingColumn(String mappingColumn) {
                 this.mappingColumn = mappingColumn;
@@ -750,7 +789,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalColumn.
+             * <p>The original column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col01</p>
              */
             public Builder originalColumn(String originalColumn) {
                 this.originalColumn = originalColumn;
@@ -758,7 +800,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * ParamName.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col01</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -766,7 +811,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * <p>The parameter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>int</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -774,7 +822,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * Sample.
+             * <p>The sample value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sample(String sample) {
                 this.sample = sample;
@@ -782,7 +833,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * SeqNum.
+             * <p>The sequence number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder seqNum(String seqNum) {
                 this.seqNum = seqNum;
@@ -987,7 +1041,10 @@ public class GetDatasetResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiNo.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1011</p>
              */
             public Builder apiNo(Long apiNo) {
                 this.apiNo = apiNo;
@@ -995,6 +1052,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The execution timeout period in seconds.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1006,6 +1064,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The execution mode. Valid values: 1: Synchronous. 2: Asynchronous.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1017,6 +1076,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The data service API group.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1028,7 +1088,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * OsApiGroupName.
+             * <p>The name of the data service API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder osApiGroupName(String osApiGroupName) {
                 this.osApiGroupName = osApiGroupName;
@@ -1036,6 +1099,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The data service project.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1047,7 +1111,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * OsProjectName.
+             * <p>The name of the data service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1012</p>
              */
             public Builder osProjectName(String osProjectName) {
                 this.osProjectName = osProjectName;
@@ -1055,6 +1122,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The protocol type. Valid values: 1: HTTPS. 2: HTTP. 3: HTTP and HTTPS.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1066,6 +1134,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The request method. Valid values: 1: GET. 2: LIST.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1077,6 +1146,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The request parameter list.</p>
              * <p>This parameter is required.</p>
              */
             public Builder requestParamList(java.util.List<RequestParamList> requestParamList) {
@@ -1085,7 +1155,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseParamList.
+             * <p>The response parameter list.</p>
              */
             public Builder responseParamList(java.util.List<ResponseParamList> responseParamList) {
                 this.responseParamList = responseParamList;
@@ -1093,6 +1163,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The timeout period in seconds.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1217,10 +1288,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source name.</p>
+             * <p>The name of the data source.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试数据源</p>
+             * <p>Test data source</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -1228,10 +1299,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The development path (not required for basic projects).</p>
+             * <p>The development path. This parameter is not required for basic projects.</p>
              * 
              * <strong>example:</strong>
-             * <p>HTML正文提取/test423/</p>
+             * <p>HTML body extraction/test423/</p>
              */
             public Builder devPath(String devPath) {
                 this.devPath = devPath;
@@ -1255,7 +1326,7 @@ public class GetDatasetResponseBody extends TeaModel {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>HTML正文提取/test423/</p>
+             * <p>HTML body extraction/test423/</p>
              */
             public Builder prodPath(String prodPath) {
                 this.prodPath = prodPath;
@@ -1389,7 +1460,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index build parameters. Different parameters are required depending on the index type. For example, HNSW requires {M:30, efConstruction:360}, and IVF_FLAT requires {nlist:128}.</p>
+             * <p>The index building parameters. Specify different parameters based on the index type. For example, HNSW requires {M:30, efConstruction:360}, and IVF_FLAT requires {nlist:128}.</p>
              * 
              * <strong>example:</strong>
              * <p>{M:30, efConstruction:360}</p>
@@ -1400,7 +1471,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index type. PG supports IVFFlat and HNSW. Milvus supports all types.</p>
+             * <p>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all types.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1564,10 +1635,10 @@ public class GetDatasetResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The column comment.</p>
+             * <p>The column description.</p>
              * 
              * <strong>example:</strong>
-             * <p>主键</p>
+             * <p>Primary key</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -1575,7 +1646,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array element subtype. This parameter is valid only when type is set to ARRAY.</p>
+             * <p>The subtype of the array element. This parameter is valid only when the type is ARRAY.</p>
              * 
              * <strong>example:</strong>
              * <p>INT64</p>
@@ -1586,7 +1657,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum array capacity. This parameter is valid only when type is set to ARRAY. Default value: 4096.</p>
+             * <p>The maximum capacity of the array. This parameter is valid only when the type is ARRAY. Default value: 4096.</p>
              * 
              * <strong>example:</strong>
              * <p>35</p>
@@ -1609,7 +1680,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the column is a primary key.</p>
+             * <p>Specifies whether the column is a primary key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1633,7 +1704,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the column is a URL.</p>
+             * <p>Specifies whether the column is a URL.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1698,7 +1769,7 @@ public class GetDatasetResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of columns.</p>
+             * <p>The column list.</p>
              */
             public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
@@ -1859,10 +1930,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source name.</p>
+             * <p>The name of the data source.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试数据源</p>
+             * <p>Test data source</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -1870,10 +1941,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The development database/schema.</p>
+             * <p>The development database or schema.</p>
              * 
              * <strong>example:</strong>
-             * <p>HTML正文提取/test423/</p>
+             * <p>HTML body extraction/test423/</p>
              */
             public Builder devSchema(String devSchema) {
                 this.devSchema = devSchema;
@@ -1881,7 +1952,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage destination (new table or existing table).</p>
+             * <p>The storage destination, which can be a new table or an existing table.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1904,11 +1975,11 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The production database/schema.</p>
+             * <p>The production database or schema.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>HTML正文提取/test423/</p>
+             * <p>HTML body extraction/test423/</p>
              */
             public Builder prodSchema(String prodSchema) {
                 this.prodSchema = prodSchema;
@@ -2062,7 +2133,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index build parameters.</p>
+             * <p>The index building parameters.</p>
              */
             public Builder indexParams(java.util.Map<String, ?> indexParams) {
                 this.indexParams = indexParams;
@@ -2234,10 +2305,10 @@ public class GetDatasetResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The column comment.</p>
+             * <p>The column description.</p>
              * 
              * <strong>example:</strong>
-             * <p>录入时间</p>
+             * <p>Entry time</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -2245,7 +2316,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array element subtype.</p>
+             * <p>The subtype of the array element.</p>
              * 
              * <strong>example:</strong>
              * <p>INT64</p>
@@ -2256,7 +2327,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum array capacity.</p>
+             * <p>The maximum capacity of the array.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -2279,7 +2350,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the column is a primary key.</p>
+             * <p>Specifies whether the column is a primary key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2303,7 +2374,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the column is a URL.</p>
+             * <p>Specifies whether the column is a URL.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2368,7 +2439,7 @@ public class GetDatasetResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of columns.</p>
+             * <p>The column list.</p>
              */
             public Builder columns(java.util.List<TableSchemaColumns> columns) {
                 this.columns = columns;
@@ -2464,7 +2535,7 @@ public class GetDatasetResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data source type of the meta table. Only KAFKA is supported in the current release.</p>
+             * <p>The data source type of the meta table. Only KAFKA is supported in the current phase.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2480,7 +2551,7 @@ public class GetDatasetResponseBody extends TeaModel {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试元表</p>
+             * <p>Test meta table</p>
              */
             public Builder metaTableName(String metaTableName) {
                 this.metaTableName = metaTableName;
@@ -2488,7 +2559,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The project ID to which the meta table belongs. Cross-project references are supported.</p>
+             * <p>The ID of the project to which the meta table belongs. Cross-project access is supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2500,7 +2571,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table schema configuration (reuses MetadataStorageConfigDTO.TableSchemaDTO).</p>
+             * <p>The table schema configuration. This configuration reuses MetadataStorageConfigDTO.TableSchemaDTO.</p>
              */
             public Builder tableSchema(RealtimeMetaTableConfigTableSchema tableSchema) {
                 this.tableSchema = tableSchema;
@@ -2609,7 +2680,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The real-time meta table configuration. This parameter takes effect only when metadataStorageType is set to REALTIME_META_TABLE.</p>
+             * <p>The real-time meta table configuration. This configuration takes effect only when metadataStorageType is set to REALTIME_META_TABLE.</p>
              */
             public Builder realtimeMetaTableConfig(RealtimeMetaTableConfig realtimeMetaTableConfig) {
                 this.realtimeMetaTableConfig = realtimeMetaTableConfig;
@@ -2620,7 +2691,7 @@ public class GetDatasetResponseBody extends TeaModel {
              * <p>The version description.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试数据集版本</p>
+             * <p>Test dataset version</p>
              */
             public Builder versionDescription(String versionDescription) {
                 this.versionDescription = versionDescription;
@@ -2765,7 +2836,7 @@ public class GetDatasetResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiInfo.
+             * <p>The API information for the online dataset.</p>
              */
             public Builder apiInfo(ApiInfo apiInfo) {
                 this.apiInfo = apiInfo;
@@ -2773,7 +2844,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator ID.</p>
+             * <p>The ID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -2803,7 +2874,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the dataset was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-11-13T02:11:56Z</p>
@@ -2814,7 +2885,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The time when the dataset was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>1749450490000</p>
@@ -3190,7 +3261,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator ID.</p>
+             * <p>The ID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>300001391</p>
@@ -3201,10 +3272,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator name.</p>
+             * <p>The name of the creator.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -3212,7 +3283,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subject area ID.</p>
+             * <p>The subject domain ID.</p>
              * 
              * <strong>example:</strong>
              * <p>78201</p>
@@ -3223,10 +3294,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subject area name.</p>
+             * <p>The name of the subject domain.</p>
              * 
              * <strong>example:</strong>
-             * <p>离线数据主题域</p>
+             * <p>Offline data subject domain</p>
              */
             public Builder dataCellName(String dataCellName) {
                 this.dataCellName = dataCellName;
@@ -3237,7 +3308,7 @@ public class GetDatasetResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试数据集</p>
+             * <p>Test dataset</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3245,7 +3316,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory (retrieved from the file service by using the fileId).</p>
+             * <p>The directory, which is obtained from the file service by using the file ID.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -3267,7 +3338,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the dataset was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-28 10:03:49</p>
@@ -3278,7 +3349,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The time when the dataset was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-28 10:03:49</p>
@@ -3289,7 +3360,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dataset ID (business primary key).</p>
+             * <p>The dataset ID, which serves as the business primary key.</p>
              * 
              * <strong>example:</strong>
              * <p>7255018404425088</p>
@@ -3311,10 +3382,10 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the development owner on the interface.</p>
+             * <p>The field displayed on the user interface.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder lockOwnerName(String lockOwnerName) {
                 this.lockOwnerName = lockOwnerName;
@@ -3333,7 +3404,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dataset name.</p>
+             * <p>The name of the dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>audio_dataset</p>
@@ -3374,11 +3445,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dataset scenarios. Valid values:</p>
-             * <ul>
-             * <li>OFFLINE: offline (default).</li>
-             * <li>REALTIME: real-time.</li>
-             * </ul>
+             * <p>The scenarios of the dataset. Valid values: OFFLINE (offline, default) and REALTIME (real-time).</p>
              * 
              * <strong>example:</strong>
              * <p>OFFLINE</p>
@@ -3411,7 +3478,7 @@ public class GetDatasetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dataset type.</p>
+             * <p>The type of the dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>HYBRID</p>

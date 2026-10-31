@@ -112,7 +112,7 @@ public class CreateAdHocFileRequest extends Request {
         }
 
         /**
-         * <p>The request for creating an ad hoc query file.</p>
+         * <p>The request to create an ad hoc query file.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -136,7 +136,10 @@ public class CreateAdHocFileRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -246,7 +249,7 @@ public class CreateAdHocFileRequest extends Request {
             }
 
             /**
-             * <p>The directory where the file is located.</p>
+             * <p>The directory of the file.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

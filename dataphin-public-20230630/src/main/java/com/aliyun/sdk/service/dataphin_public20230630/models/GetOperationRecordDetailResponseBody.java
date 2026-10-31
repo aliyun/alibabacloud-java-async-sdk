@@ -152,7 +152,7 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution record detail response.</p>
+         * <p>The operation record detail response.</p>
          */
         public Builder operationRecordDetailResponse(OperationRecordDetailResponse operationRecordDetailResponse) {
             this.operationRecordDetailResponse = operationRecordDetailResponse;
@@ -171,7 +171,7 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -298,7 +298,7 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result SQL statement.</p>
+             * <p>The result SQL.</p>
              * 
              * <strong>example:</strong>
              * <p>SELECT * FROM test_table</p>
@@ -323,7 +323,7 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
              * <p>The result title.</p>
              * 
              * <strong>example:</strong>
-             * <p>查询结果</p>
+             * <p>Query result</p>
              */
             public Builder title(String title) {
                 this.title = title;

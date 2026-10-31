@@ -125,7 +125,10 @@ public class GetLatestSubmitDetailRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class GetLatestSubmitDetailRequest extends Request {
         }
 
         /**
-         * <p>The pending submit query request.</p>
+         * <p>The pending release query request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder submitDetailQuery(SubmitDetailQuery submitDetailQuery) {

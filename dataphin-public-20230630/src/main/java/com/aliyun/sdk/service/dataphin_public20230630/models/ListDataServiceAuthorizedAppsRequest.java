@@ -149,7 +149,10 @@ public class ListDataServiceAuthorizedAppsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -265,7 +268,7 @@ public class ListDataServiceAuthorizedAppsRequest extends Request {
             }
 
             /**
-             * <p>The number of records per page. Default value: 20.</p>
+             * <p>The number of entries per page. Default value: 20.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

@@ -136,7 +136,10 @@ public class CheckComputeSourceConnectivityRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operating user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -218,7 +221,7 @@ public class CheckComputeSourceConnectivityRequest extends Request {
             }
 
             /**
-             * <p>The value of the configuration item.</p>
+             * <p>The configuration item value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

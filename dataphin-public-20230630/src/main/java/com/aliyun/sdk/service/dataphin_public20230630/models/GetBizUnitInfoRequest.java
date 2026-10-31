@@ -112,7 +112,7 @@ public class GetBizUnitInfoRequest extends Request {
         }
 
         /**
-         * <p>The data domain ID.</p>
+         * <p>The data sector ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,10 @@ public class GetBizUnitInfoRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

@@ -119,7 +119,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The backend response code.</p>
+         * <p>The backend status code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -141,7 +141,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -163,7 +163,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,7 +171,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the monitoring node task object.</p>
+         * <p>The monitoring node object details.</p>
          */
         public Builder watchTaskInfo(WatchTaskInfo watchTaskInfo) {
             this.watchTaskInfo = watchTaskInfo;
@@ -263,7 +263,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of rules that failed to execute.</p>
+             * <p>The number of failed rules.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -274,7 +274,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules that have been executed.</p>
+             * <p>The number of completed rules.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -285,7 +285,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules that were executed successfully.</p>
+             * <p>The number of successful rules.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -392,7 +392,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of rules that failed to execute.</p>
+             * <p>The number of failed rules.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -403,7 +403,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules that have been executed.</p>
+             * <p>The number of completed rules.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -414,7 +414,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules that were executed successfully.</p>
+             * <p>The number of successful rules.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -521,7 +521,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of rules that failed to execute.</p>
+             * <p>The number of failed rules.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -532,7 +532,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules that have been executed.</p>
+             * <p>The number of completed rules.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -543,7 +543,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules that were executed successfully.</p>
+             * <p>The number of successful rules.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -637,7 +637,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The strong rule count.</p>
+             * <p>The number of strong rules.</p>
              */
             public Builder strongRuleCount(StrongRuleCount strongRuleCount) {
                 this.strongRuleCount = strongRuleCount;
@@ -645,7 +645,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validation rule count.</p>
+             * <p>The validation rule counts.</p>
              */
             public Builder validateRuleCount(ValidateRuleCount validateRuleCount) {
                 this.validateRuleCount = validateRuleCount;
@@ -653,7 +653,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weak rule count.</p>
+             * <p>The number of weak rules.</p>
              */
             public Builder weakRuleCount(WeakRuleCount weakRuleCount) {
                 this.weakRuleCount = weakRuleCount;
@@ -889,7 +889,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The business date.</p>
+             * <p>The business date. Format: YYYY-MM-DD.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30</p>
@@ -900,7 +900,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business date format.</p>
+             * <p>The format of the business date.</p>
              * 
              * <strong>example:</strong>
              * <p>yyyy-MM-dd</p>
@@ -911,7 +911,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -933,7 +933,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time. Time format: yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 20:00:00</p>
@@ -944,7 +944,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quality watchtask ID.</p>
+             * <p>The watchtask ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -955,7 +955,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the last modifier.</p>
+             * <p>The ID of the last modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>30012011</p>
@@ -966,7 +966,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -977,7 +977,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the quality owner.</p>
+             * <p>The ID of the quality owner.</p>
              * 
              * <strong>example:</strong>
              * <p>30012011</p>
@@ -999,7 +999,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quality rule count information.</p>
+             * <p>The quality rule counts.</p>
              */
             public Builder ruleCountInfo(RuleCountInfo ruleCountInfo) {
                 this.ruleCountInfo = ruleCountInfo;
@@ -1007,7 +1007,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of quality rule IDs.</p>
+             * <p>The IDs of the quality rules.</p>
              */
             public Builder ruleIdList(java.util.List<Long> ruleIdList) {
                 this.ruleIdList = ruleIdList;
@@ -1015,7 +1015,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time. Time format: yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 08:00:00</p>
@@ -1026,17 +1026,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status. Valid values:</p>
-             * <ul>
-             * <li>NOT_RUN: not executed.</li>
-             * <li>WAITING: waiting.</li>
-             * <li>RUNNING: executing.</li>
-             * <li>SUCCESS: executed successfully.</li>
-             * <li>FAILED: execution failed.</li>
-             * <li>CANCEL: canceled.</li>
-             * <li>TIMEOUT: timed out.</li>
-             * <li>OFFLINE: offline.</li>
-             * </ul>
+             * <p>The task status. Valid values: NOT_RUN (not executed), WAITING (waiting), RUNNING (running), SUCCESS (successful), FAILED (failed), CANCEL (canceled), TIMEOUT (timed out), and OFFLINE (offline).</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -1047,7 +1037,7 @@ public class GetQualityWatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitored object ID.</p>
+             * <p>The ID of the monitored object.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -149,7 +149,7 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error details returned by the backend.</p>
+         * <p>The details of the backend response exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -194,6 +194,9 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsyncId")
         private Long asyncId;
 
+        @com.aliyun.core.annotation.NameInMap("CheckDetail")
+        private String checkDetail;
+
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
@@ -220,6 +223,7 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.asyncId = builder.asyncId;
+            this.checkDetail = builder.checkDetail;
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
             this.hostMachine = builder.hostMachine;
@@ -243,6 +247,13 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
          */
         public Long getAsyncId() {
             return this.asyncId;
+        }
+
+        /**
+         * @return checkDetail
+         */
+        public String getCheckDetail() {
+            return this.checkDetail;
         }
 
         /**
@@ -303,6 +314,7 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long asyncId; 
+            private String checkDetail; 
             private String errorCode; 
             private String errorMessage; 
             private String hostMachine; 
@@ -317,6 +329,7 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.asyncId = model.asyncId;
+                this.checkDetail = model.checkDetail;
                 this.errorCode = model.errorCode;
                 this.errorMessage = model.errorMessage;
                 this.hostMachine = model.hostMachine;
@@ -339,7 +352,18 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code returned when the execution fails.</p>
+             * <p>The check result of the commit details. The value is a JSON character string and is returned only for asynchronous commit links. The structure is consistent with the commit details on the product page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;success&quot;:true}</p>
+             */
+            public Builder checkDetail(String checkDetail) {
+                this.checkDetail = checkDetail;
+                return this;
+            }
+
+            /**
+             * <p>The error code returned when an execution exception occurs.</p>
              * 
              * <strong>example:</strong>
              * <p>DPN.Pipeline.InnerError</p>
@@ -350,7 +374,7 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the execution fails.</p>
+             * <p>The error message returned when an execution exception occurs.</p>
              * 
              * <strong>example:</strong>
              * <p>NullPointException</p>
@@ -361,7 +385,7 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the server host that processes the execution request.</p>
+             * <p>The server host information for request execution.</p>
              * 
              * <strong>example:</strong>
              * <p>hostName:hostIp</p>
@@ -372,7 +396,7 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling node ID of the pipeline task.</p>
+             * <p>The ID of the scheduling node for the pipeline task.</p>
              * 
              * <strong>example:</strong>
              * <p>n_123</p>
@@ -394,12 +418,7 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current execution status. Valid values:</p>
-             * <ul>
-             * <li>SUCCESS: execution succeeded.</li>
-             * <li>FAILED: execution failed.</li>
-             * <li>RUNNING: execution in progress.</li>
-             * </ul>
+             * <p>The current execution status. Valid values: SUCCESS: The execution is successful. FAILED: The execution fails. RUNNING: The execution is in progress.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCESS</p>
@@ -421,7 +440,7 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number generated when the pipeline task is submitted.</p>
+             * <p>The version number generated after the pipeline task is submitted.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

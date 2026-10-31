@@ -136,7 +136,10 @@ public class ListBizEntitiesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -282,7 +285,7 @@ public class ListBizEntitiesRequest extends Request {
             } 
 
             /**
-             * <p>The list of business unit IDs.</p>
+             * <p>The IDs of the business units.</p>
              */
             public Builder bizUnitIdList(java.util.List<Long> bizUnitIdList) {
                 this.bizUnitIdList = bizUnitIdList;
@@ -290,7 +293,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * <p>The list of business unit IDs.</p>
+             * <p>The IDs of the business units.</p>
              */
             public Builder bizUnitNameList(java.util.List<String> bizUnitNameList) {
                 this.bizUnitNameList = bizUnitNameList;
@@ -298,7 +301,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * <p>The list of data domain IDs.</p>
+             * <p>The IDs of the data domains.</p>
              */
             public Builder dataDomainIdList(java.util.List<Long> dataDomainIdList) {
                 this.dataDomainIdList = dataDomainIdList;
@@ -306,7 +309,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * <p>The list of data domain IDs.</p>
+             * <p>The IDs of the data domains.</p>
              */
             public Builder dataDomainNameList(java.util.List<String> dataDomainNameList) {
                 this.dataDomainNameList = dataDomainNameList;
@@ -322,7 +325,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * <p>The list of owner user IDs.</p>
+             * <p>The IDs of the owners.</p>
              */
             public Builder ownerUserIdList(java.util.List<String> ownerUserIdList) {
                 this.ownerUserIdList = ownerUserIdList;
@@ -330,7 +333,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * <p>The list of business entity statuses. For more information, refer to the API operation for querying business entity details.</p>
+             * <p>The status of the business entity. For more information, refer to the &quot;Get business entity details&quot; API operation.</p>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
@@ -338,7 +341,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * <p>The list of business entity subtypes. For more information, refer to the API operation for querying business entity details.</p>
+             * <p>The subtypes of the business entity. For more information, refer to the &quot;Get business entity details&quot; API operation.</p>
              */
             public Builder subTypeList(java.util.List<String> subTypeList) {
                 this.subTypeList = subTypeList;

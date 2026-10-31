@@ -171,7 +171,7 @@ public class GetKgEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -261,15 +261,7 @@ public class GetKgEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The property data type. Valid values:</p>
-             * <ul>
-             * <li>STRING: string</li>
-             * <li>INTEGER: integer</li>
-             * <li>FLOAT: floating-point number</li>
-             * <li>BOOLEAN: Boolean</li>
-             * <li>DATE: date</li>
-             * <li>LIST: list</li>
-             * </ul>
+             * <p>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean value), DATE (date), and LIST (list).</p>
              * 
              * <strong>example:</strong>
              * <p>STRING</p>
@@ -385,7 +377,7 @@ public class GetKgEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of entity record properties.</p>
+             * <p>The property list of the entity record.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;

@@ -119,7 +119,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Backend response HTTP status code.</p>
+         * <p>The HTTP status code returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Query result.</p>
+         * <p>The query result.</p>
          */
         public Builder listResult(ListResult listResult) {
             this.listResult = listResult;
@@ -149,7 +149,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -160,7 +160,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -171,7 +171,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -419,7 +419,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Change type. Valid values: 0: Create. 1: Update. 2: Delete.</p>
+             * <p>The change type. Valid values: 0: create. 1: update. 2: delete.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -430,7 +430,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Publish error message.</p>
+             * <p>The publish error message.</p>
              * 
              * <strong>example:</strong>
              * <p>error</p>
@@ -441,7 +441,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Publish completion time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The publish completion time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-10 10:10:10</p>
@@ -452,7 +452,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-10 10:00:00</p>
@@ -463,7 +463,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The update time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-10 10:00:00</p>
@@ -474,7 +474,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Publish record ID, which is not the object ID and is globally unique in the publish list.</p>
+             * <p>The ID of the publish record. This is not the object ID and is globally unique in the publish list.</p>
              * 
              * <strong>example:</strong>
              * <p>1241844456</p>
@@ -485,7 +485,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node ID.</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>n_123456</p>
@@ -496,7 +496,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Object ID.</p>
+             * <p>The object ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567</p>
@@ -507,10 +507,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Object name.</p>
+             * <p>The object name.</p>
              * 
              * <strong>example:</strong>
-             * <p>对象A</p>
+             * <p>Object A</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -518,7 +518,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Object type.</p>
+             * <p>The object type.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-10 10:00:00</p>
@@ -529,7 +529,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Object version.</p>
+             * <p>The object version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -540,7 +540,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Project ID.</p>
+             * <p>The project ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1241844456</p>
@@ -551,7 +551,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Publish name.</p>
+             * <p>The publish name.</p>
              * 
              * <strong>example:</strong>
              * <p>test_lc__20241118171502</p>
@@ -562,7 +562,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Publish status. Valid values: 0: Failed. 1: Succeeded. 2: Publishing.</p>
+             * <p>The publish status. Valid values: 0: failed. 1: successful. 2: publishing.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -573,7 +573,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Publisher ID.</p>
+             * <p>The ID of the publisher.</p>
              * 
              * <strong>example:</strong>
              * <p>307999999</p>
@@ -584,10 +584,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Publisher name.</p>
+             * <p>The name of the publisher.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder publisherName(String publisherName) {
                 this.publisherName = publisherName;
@@ -654,7 +654,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Publish record list.</p>
+             * <p>The publish record list.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -662,7 +662,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total count.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

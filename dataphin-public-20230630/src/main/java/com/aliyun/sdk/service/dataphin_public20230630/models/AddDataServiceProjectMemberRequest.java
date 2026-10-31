@@ -127,7 +127,7 @@ public class AddDataServiceProjectMemberRequest extends Request {
         }
 
         /**
-         * <p>The command to add project members.</p>
+         * <p>The command to add a project member.</p>
          * <p>This parameter is required.</p>
          */
         public Builder addCommand(AddCommand addCommand) {
@@ -151,7 +151,10 @@ public class AddDataServiceProjectMemberRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -160,7 +163,7 @@ public class AddDataServiceProjectMemberRequest extends Request {
         }
 
         /**
-         * <p>The data service project ID.</p>
+         * <p>The Data Service project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +265,7 @@ public class AddDataServiceProjectMemberRequest extends Request {
             } 
 
             /**
-             * <p>The username of the user.</p>
+             * <p>The user account.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -274,7 +277,7 @@ public class AddDataServiceProjectMemberRequest extends Request {
             }
 
             /**
-             * <p>The nickname of the user.</p>
+             * <p>The nickname.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -286,11 +289,11 @@ public class AddDataServiceProjectMemberRequest extends Request {
             }
 
             /**
-             * <p>The role of the user. Valid values:</p>
+             * <p>The user role. Valid values:</p>
              * <ul>
-             * <li>2: development user</li>
-             * <li>3: application member</li>
-             * <li>4: service project administrator</li>
+             * <li>2: Developer.</li>
+             * <li>3: Application member.</li>
+             * <li>4: Service project administrator.</li>
              * <li>5: O&amp;M user.</li>
              * </ul>
              * <p>This parameter is required.</p>

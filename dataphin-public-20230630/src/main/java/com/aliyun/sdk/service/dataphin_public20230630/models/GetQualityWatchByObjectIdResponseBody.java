@@ -141,7 +141,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error details from the backend.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -152,7 +152,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the monitored object.</p>
+         * <p>The monitored object details.</p>
          */
         public Builder qualityWatchInfo(QualityWatchInfo qualityWatchInfo) {
             this.qualityWatchInfo = qualityWatchInfo;
@@ -171,7 +171,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -363,7 +363,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the creator.</p>
+             * <p>The creator name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -374,11 +374,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment identifier. Valid values:</p>
-             * <ul>
-             * <li>PROD</li>
-             * <li>DEV.</li>
-             * </ul>
+             * <p>The environment identifier. Valid values: PROD and DEV.</p>
              * 
              * <strong>example:</strong>
              * <p>DEV</p>
@@ -389,7 +385,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The datasource ID.</p>
+             * <p>The data source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -400,7 +396,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -411,7 +407,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The datasource name.</p>
+             * <p>The data source name.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -433,7 +429,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the owner.</p>
+             * <p>The username of the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -444,11 +440,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The datasource type. Valid values:</p>
-             * <ul>
-             * <li>MAX_COMPUTE</li>
-             * <li>HADOOP.</li>
-             * </ul>
+             * <p>The data source type. Valid values: MAX_COMPUTE and HADOOP.</p>
              * 
              * <strong>example:</strong>
              * <p>MAX_COMPUTE</p>
@@ -759,7 +751,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cell aggregate table.</p>
+             * <p>The name of the cell summary logical table.</p>
              * 
              * <strong>example:</strong>
              * <p>dws_all</p>
@@ -770,13 +762,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The computation type of the metric. Valid values:</p>
-             * <ul>
-             * <li>AUTO</li>
-             * <li>CUSTOM</li>
-             * <li>MOUNT</li>
-             * <li>COMBINE.</li>
-             * </ul>
+             * <p>The compute type of the metric. Valid values: AUTO, CUSTOM, MOUNT, and COMBINE.</p>
              * 
              * <strong>example:</strong>
              * <p>AUTO</p>
@@ -820,10 +806,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the statistical granularity.</p>
+             * <p>The statistical granularity name.</p>
              * 
              * <strong>example:</strong>
-             * <p>全站汇总表</p>
+             * <p>Site-wide summary table</p>
              */
             public Builder granularityDisplayName(String granularityDisplayName) {
                 this.granularityDisplayName = granularityDisplayName;
@@ -886,7 +872,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the owner.</p>
+             * <p>The username of the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -919,10 +905,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric type. Valid values:</p>
-             * <ul>
-             * <li>INDEX.</li>
-             * </ul>
+             * <p>The metric type. Valid value: INDEX.</p>
              * 
              * <strong>example:</strong>
              * <p>INDEX</p>
@@ -1194,7 +1177,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The datasource ID.</p>
+             * <p>The data source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -1205,7 +1188,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The datasource type.</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>MAX_COMPUTE</p>
@@ -1227,11 +1210,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment identifier. Valid values:</p>
-             * <ul>
-             * <li>DEV</li>
-             * <li>PROD.</li>
-             * </ul>
+             * <p>The environment identifier. Valid values: DEV and PROD.</p>
              * 
              * <strong>example:</strong>
              * <p>DEV</p>
@@ -1283,7 +1262,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the owner.</p>
+             * <p>The username of the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1316,15 +1295,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type. Valid values:</p>
-             * <ul>
-             * <li>LOGIC_DIM_TABLE: logical dimension table.</li>
-             * <li>LOGIC_FACT_TABLE: logical fact table.</li>
-             * <li>LOGIC_SUM_TABLE: logical aggregate table.</li>
-             * <li>LOGIC_LABEL_TABLE: logical label table.</li>
-             * <li>PHYSICAL_TABLE: physical table.</li>
-             * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
-             * </ul>
+             * <p>The type. Valid values: LOGIC_DIM_TABLE (logical dimension table), LOGIC_FACT_TABLE (logical fact table), LOGIC_SUM_TABLE (logical aggregate table), LOGIC_LABEL_TABLE (logical tag table), PHYSICAL_TABLE (physical table), and REALTIME_LOGICAL_TABLE (real-time metadata table).</p>
              * 
              * <strong>example:</strong>
              * <p>LOGIC_DIM_TABLE</p>
@@ -1624,7 +1595,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the creator.</p>
+             * <p>The creator name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1635,7 +1606,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The datasource details.</p>
+             * <p>The data source details.</p>
              */
             public Builder dataSourceInfo(DataSourceInfo dataSourceInfo) {
                 this.dataSourceInfo = dataSourceInfo;
@@ -1654,7 +1625,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitoring ID.</p>
+             * <p>The monitor ID.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -1673,7 +1644,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the most recent quality watchtask for the monitored object.</p>
+             * <p>The ID of the latest quality watchtask.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1684,7 +1655,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the most recent quality watchtask for the monitored object.</p>
+             * <p>The status of the latest quality watchtask.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCESS</p>
@@ -1706,7 +1677,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -1717,7 +1688,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitoring name.</p>
+             * <p>The monitor name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1761,11 +1732,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status. Valid values:</p>
-             * <ul>
-             * <li>ENABLE</li>
-             * <li>DISABLE.</li>
-             * </ul>
+             * <p>The status. Valid values: ENABLE and DISABLE.</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLE</p>
@@ -1784,14 +1751,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitored object type. Valid values:</p>
-             * <ul>
-             * <li>TABLE: Dataphin table.</li>
-             * <li>DATASOURCE_TABLE: global table.</li>
-             * <li>DATASOURCE: datasource.</li>
-             * <li>INDEX: metric.</li>
-             * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
-             * </ul>
+             * <p>The monitored object type. Valid values: TABLE (Dataphin table), DATASOURCE_TABLE (global table), DATASOURCE (data source), INDEX (metric), and REALTIME_LOGICAL_TABLE (real-time metadata table).</p>
              * 
              * <strong>example:</strong>
              * <p>TABLE</p>

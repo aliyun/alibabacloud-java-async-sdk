@@ -119,7 +119,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The request error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -141,7 +141,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The request error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -171,7 +171,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -209,6 +209,9 @@ public class ListProjectMembersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastModifierName")
         private String lastModifierName;
 
+        @com.aliyun.core.annotation.NameInMap("RoleCodeList")
+        private java.util.List<String> roleCodeList;
+
         @com.aliyun.core.annotation.NameInMap("RoleIdList")
         private java.util.List<Integer> roleIdList;
 
@@ -224,6 +227,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             this.id = builder.id;
             this.lastModifier = builder.lastModifier;
             this.lastModifierName = builder.lastModifierName;
+            this.roleCodeList = builder.roleCodeList;
             this.roleIdList = builder.roleIdList;
             this.userId = builder.userId;
             this.userName = builder.userName;
@@ -273,6 +277,13 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleCodeList
+         */
+        public java.util.List<String> getRoleCodeList() {
+            return this.roleCodeList;
+        }
+
+        /**
          * @return roleIdList
          */
         public java.util.List<Integer> getRoleIdList() {
@@ -299,6 +310,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private Long id; 
             private String lastModifier; 
             private String lastModifierName; 
+            private java.util.List<String> roleCodeList; 
             private java.util.List<Integer> roleIdList; 
             private String userId; 
             private String userName; 
@@ -312,6 +324,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
                 this.id = model.id;
                 this.lastModifier = model.lastModifier;
                 this.lastModifierName = model.lastModifierName;
+                this.roleCodeList = model.roleCodeList;
                 this.roleIdList = model.roleIdList;
                 this.userId = model.userId;
                 this.userName = model.userName;
@@ -329,7 +342,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modified timestamp.</p>
+             * <p>The update timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1721720955000</p>
@@ -351,7 +364,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who last modified the record.</p>
+             * <p>The ID of the editor.</p>
              * 
              * <strong>example:</strong>
              * <p>101111</p>
@@ -362,13 +375,21 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user who last modified the record.</p>
+             * <p>The name of the editor.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试用户</p>
+             * <p>Test User</p>
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
+                return this;
+            }
+
+            /**
+             * <p>The list of role codes bound to the member, including system and custom project roles. This list can be used to add or edit project members.</p>
+             */
+            public Builder roleCodeList(java.util.List<String> roleCodeList) {
+                this.roleCodeList = roleCodeList;
                 return this;
             }
 
@@ -395,7 +416,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
              * <p>The username of the member.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试用户</p>
+             * <p>Test User</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

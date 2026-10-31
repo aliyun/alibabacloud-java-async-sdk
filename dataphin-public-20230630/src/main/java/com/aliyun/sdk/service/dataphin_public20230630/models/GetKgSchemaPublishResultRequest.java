@@ -139,7 +139,10 @@ public class GetKgSchemaPublishResultRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -148,7 +151,7 @@ public class GetKgSchemaPublishResultRequest extends Request {
         }
 
         /**
-         * <p>The version number. If this parameter is left empty, the most recent publish record is returned.</p>
+         * <p>The version ID. If this parameter is left empty, the latest publish record is retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

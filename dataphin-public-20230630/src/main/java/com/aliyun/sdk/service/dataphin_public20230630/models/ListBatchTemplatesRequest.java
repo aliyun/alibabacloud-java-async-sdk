@@ -152,7 +152,7 @@ public class ListBatchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The paged query conditions.</p>
+         * <p>The paging query conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -175,7 +175,10 @@ public class ListBatchTemplatesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -219,10 +222,14 @@ public class ListBatchTemplatesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        private Long templateId;
+
         private ListQuery(Builder builder) {
             this.keyword = builder.keyword;
             this.pageNum = builder.pageNum;
             this.pageSize = builder.pageSize;
+            this.templateId = builder.templateId;
         }
 
         public static Builder builder() {
@@ -254,10 +261,18 @@ public class ListBatchTemplatesRequest extends Request {
             return this.pageSize;
         }
 
+        /**
+         * @return templateId
+         */
+        public Long getTemplateId() {
+            return this.templateId;
+        }
+
         public static final class Builder {
             private String keyword; 
             private Integer pageNum; 
             private Integer pageSize; 
+            private Long templateId; 
 
             private Builder() {
             } 
@@ -266,13 +281,14 @@ public class ListBatchTemplatesRequest extends Request {
                 this.keyword = model.keyword;
                 this.pageNum = model.pageNum;
                 this.pageSize = model.pageSize;
+                this.templateId = model.templateId;
             } 
 
             /**
-             * <p>The template name keyword.</p>
+             * <p>The keyword in the template name.</p>
              * 
              * <strong>example:</strong>
-             * <p>数据处理模板</p>
+             * <p>Data processing template</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -298,6 +314,17 @@ public class ListBatchTemplatesRequest extends Request {
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * <p>The template ID. The query is based on the template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
+             */
+            public Builder templateId(Long templateId) {
+                this.templateId = templateId;
                 return this;
             }
 

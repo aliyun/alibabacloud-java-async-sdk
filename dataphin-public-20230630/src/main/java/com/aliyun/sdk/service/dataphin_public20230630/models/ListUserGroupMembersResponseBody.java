@@ -119,7 +119,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned by the backend.</p>
+         * <p>The HTTP status code of the backend response.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paged query result.</p>
+         * <p>The paging query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -171,7 +171,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -253,7 +253,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The account name of the user.</p>
+             * <p>The user account name.</p>
              * 
              * <strong>example:</strong>
              * <p>12121111</p>
@@ -264,7 +264,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username.</p>
+             * <p>The display name.</p>
              * 
              * <strong>example:</strong>
              * <p>zhangsan</p>
@@ -275,7 +275,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The user IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>12121111</p>
@@ -358,7 +358,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The account name of the user.</p>
+             * <p>The user account name.</p>
              * 
              * <strong>example:</strong>
              * <p>atest</p>
@@ -369,10 +369,10 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username.</p>
+             * <p>The display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx Test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -380,7 +380,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The user IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>13232</p>
@@ -502,7 +502,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The user who added the member.</p>
+             * <p>The creator.</p>
              */
             public Builder creator(Creator creator) {
                 this.creator = creator;
@@ -510,7 +510,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the member was added to the user group.</p>
+             * <p>The time when the user group member was added.</p>
              * 
              * <strong>example:</strong>
              * <p>zhangsan</p>
@@ -551,7 +551,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the member in the user group.</p>
+             * <p>The role of the user group member in the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>SECURITY_ADMIN</p>
@@ -621,7 +621,7 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The paged list.</p>
+             * <p>The paginated list.</p>
              */
             public Builder memberList(java.util.List<MemberList> memberList) {
                 this.memberList = memberList;

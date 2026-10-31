@@ -136,7 +136,10 @@ public class GetOperationRecordRunCodeRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -206,7 +209,7 @@ public class GetOperationRecordRunCodeRequest extends Request {
             } 
 
             /**
-             * <p>The operation log ID.</p>
+             * <p>The operation record ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

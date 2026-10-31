@@ -164,7 +164,10 @@ public class GetPipelineAsyncResultRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the user who performs the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -234,11 +237,7 @@ public class GetPipelineAsyncResultRequest extends Request {
             } 
 
             /**
-             * <p>The current operation environment. Valid values:</p>
-             * <ul>
-             * <li>DEV: development environment.</li>
-             * <li>PROD: production environment.</li>
-             * </ul>
+             * <p>The current operation environment. Valid values: DEV: development environment. PROD: production environment.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

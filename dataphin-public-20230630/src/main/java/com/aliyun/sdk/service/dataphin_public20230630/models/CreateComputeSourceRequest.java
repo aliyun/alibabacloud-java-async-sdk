@@ -136,7 +136,7 @@ public class CreateComputeSourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator.</p>
+         * <p>The ID of the operating user.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -263,6 +263,9 @@ public class CreateComputeSourceRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
+        private String timeZone;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         @com.aliyun.core.annotation.Validation(required = true)
         private String type;
@@ -276,6 +279,7 @@ public class CreateComputeSourceRequest extends Request {
             this.createType = builder.createType;
             this.description = builder.description;
             this.name = builder.name;
+            this.timeZone = builder.timeZone;
             this.type = builder.type;
             this.typeVersion = builder.typeVersion;
         }
@@ -324,6 +328,13 @@ public class CreateComputeSourceRequest extends Request {
         }
 
         /**
+         * @return timeZone
+         */
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -343,6 +354,7 @@ public class CreateComputeSourceRequest extends Request {
             private String createType; 
             private String description; 
             private String name; 
+            private String timeZone; 
             private String type; 
             private String typeVersion; 
 
@@ -355,12 +367,13 @@ public class CreateComputeSourceRequest extends Request {
                 this.createType = model.createType;
                 this.description = model.description;
                 this.name = model.name;
+                this.timeZone = model.timeZone;
                 this.type = model.type;
                 this.typeVersion = model.typeVersion;
             } 
 
             /**
-             * <p>The ID of the associated cluster. This parameter takes effect only when CreateType is not specified or is set to COMPUTE_SOURCE, which creates a compute source that references a cluster. This parameter is mutually exclusive with CreateType=CLUSTER.</p>
+             * <p>The ID of the associated cluster. This parameter takes effect only when CreateType is left empty or set to COMPUTE_SOURCE, which indicates that a compute source referencing a cluster is created. This parameter is mutually exclusive with CreateType set to CLUSTER.</p>
              * 
              * <strong>example:</strong>
              * <p>102311</p>
@@ -380,10 +393,10 @@ public class CreateComputeSourceRequest extends Request {
             }
 
             /**
-             * <p>The type of entity to create. Valid values:</p>
+             * <p>The type of the entity to create. Valid values:</p>
              * <ul>
-             * <li>CLUSTER: Creates a cluster. ClusterId cannot be specified.</li>
-             * <li>COMPUTE_SOURCE: Creates a compute source. This is the default value.</li>
+             * <li>CLUSTER: creates a cluster. You cannot specify ClusterId.</li>
+             * <li>COMPUTE_SOURCE: creates a compute source. This is the default value.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -414,6 +427,17 @@ public class CreateComputeSourceRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The name of the time zone, such as Asia/Shanghai. If this parameter is not specified during an update, the original value is retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
+             */
+            public Builder timeZone(String timeZone) {
+                this.timeZone = timeZone;
                 return this;
             }
 

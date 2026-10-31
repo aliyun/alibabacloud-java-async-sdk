@@ -152,7 +152,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation log details.</p>
+         * <p>The execution record details.</p>
          */
         public Builder operationLogDTO(OperationLogDTO operationLogDTO) {
             this.operationLogDTO = operationLogDTO;
@@ -171,7 +171,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -391,14 +391,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code type. Valid values:</p>
-             * <ul>
-             * <li>SQL0: SQL</li>
-             * <li>shell1: Shell</li>
-             * <li>Python2: Python</li>
-             * <li>MR3: MR</li>
-             * <li>Spark4: Spark</li>
-             * </ul>
+             * <p>The code type. Valid values: SQL0, shell1, Python2, MR3, and Spark4.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -409,7 +402,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration, in milliseconds.</p>
+             * <p>The execution duration in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -434,7 +427,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
              * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试任务</p>
+             * <p>Test task</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -453,7 +446,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation log ID.</p>
+             * <p>The operation record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>987654321</p>
@@ -475,7 +468,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of related tables.</p>
+             * <p>The associated tables.</p>
              */
             public Builder relationTables(java.util.List<String> relationTables) {
                 this.relationTables = relationTables;
@@ -483,7 +476,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the runner.</p>
+             * <p>The executor ID.</p>
              * 
              * <strong>example:</strong>
              * <p>30231123</p>
@@ -494,10 +487,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the runner.</p>
+             * <p>The executor name.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder runnerName(String runnerName) {
                 this.runnerName = runnerName;
@@ -505,12 +498,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node status. Valid values:</p>
-             * <ul>
-             * <li>4: Running.</li>
-             * <li>5: Succeeded.</li>
-             * <li>6: Failed.</li>
-             * </ul>
+             * <p>The task status. Valid values: 4 (Running), 5 (Successful), and 6 (Failed).</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

@@ -138,7 +138,7 @@ public class CheckComputeSourceConnectivityByIdRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator user.</p>
+         * <p>The operator user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>

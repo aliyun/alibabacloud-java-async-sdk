@@ -127,7 +127,7 @@ public class ListDataServiceMyAppPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The query conditions.</p>
+         * <p>The search conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -151,7 +151,10 @@ public class ListDataServiceMyAppPermissionsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -160,7 +163,7 @@ public class ListDataServiceMyAppPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data service project.</p>
+         * <p>The data service project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

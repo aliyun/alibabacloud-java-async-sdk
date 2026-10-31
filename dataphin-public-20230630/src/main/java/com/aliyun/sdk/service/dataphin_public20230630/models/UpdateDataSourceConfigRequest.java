@@ -125,7 +125,10 @@ public class UpdateDataSourceConfigRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpdateDataSourceConfigRequest extends Request {
         }
 
         /**
-         * <p>The data source configuration item change.</p>
+         * <p>The changes to the datasource configuration items.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -206,7 +209,7 @@ public class UpdateDataSourceConfigRequest extends Request {
             } 
 
             /**
-             * <p>The key ID of the configuration item.</p>
+             * <p>The configuration item key ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -300,7 +303,7 @@ public class UpdateDataSourceConfigRequest extends Request {
             }
 
             /**
-             * <p>The data source ID.</p>
+             * <p>The datasource ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

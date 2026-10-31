@@ -134,7 +134,10 @@ public class ListQualityTemplatesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -306,16 +309,16 @@ public class ListQualityTemplatesRequest extends Request {
             } 
 
             /**
-             * <p>The rule type. Valid values:</p>
+             * <p>The rule types. Valid values:</p>
              * <ul>
-             * <li>CONSISTENT: consistency</li>
-             * <li>EFFECTIVE: validity</li>
-             * <li>TIMELINESE: timeliness</li>
-             * <li>ACCURATE: accuracy</li>
-             * <li>UNIQUENESS: uniqueness</li>
-             * <li>COMPLETENESS: completeness</li>
-             * <li>STABILITY: stability</li>
-             * <li>CUSTOM: custom.</li>
+             * <li>CONSISTENT: Consistency.</li>
+             * <li>EFFECTIVE: Effectiveness.</li>
+             * <li>TIMELINESE: Timeliness.</li>
+             * <li>ACCURATE: Accuracy.</li>
+             * <li>UNIQUENESS: Uniqueness.</li>
+             * <li>COMPLETENESS: Completeness.</li>
+             * <li>STABILITY: Stability.</li>
+             * <li>CUSTOM: Custom.</li>
              * </ul>
              */
             public Builder catalogList(java.util.List<String> catalogList) {
@@ -324,7 +327,7 @@ public class ListQualityTemplatesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to query only templates owned by the current user.</p>
+             * <p>Specifies whether the template is owned by the current user.</p>
              */
             public Builder currentUserOwned(Boolean currentUserOwned) {
                 this.currentUserOwned = currentUserOwned;
@@ -332,7 +335,7 @@ public class ListQualityTemplatesRequest extends Request {
             }
 
             /**
-             * <p>The search keyword. Template name filtering is supported.</p>
+             * <p>The search keyword filter, which supports template names.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -354,7 +357,7 @@ public class ListQualityTemplatesRequest extends Request {
             }
 
             /**
-             * <p>The number of records per page. Default value: 20.</p>
+             * <p>The number of entries per page. Default value: 20.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -381,10 +384,10 @@ public class ListQualityTemplatesRequest extends Request {
             }
 
             /**
-             * <p>The template source. Valid values:</p>
+             * <p>The template sources. Valid values:</p>
              * <ul>
-             * <li>SYSTEM: system template</li>
-             * <li>CUSTOM: custom template.</li>
+             * <li>SYSTEM: System template.</li>
+             * <li>CUSTOM: Custom template.</li>
              * </ul>
              */
             public Builder templateSourceList(java.util.List<String> templateSourceList) {
@@ -395,37 +398,37 @@ public class ListQualityTemplatesRequest extends Request {
             /**
              * <p>The templatetype. Valid values:</p>
              * <ul>
-             * <li>FIELD_NULL_VALUE_VALIDATE: field null value check</li>
-             * <li>FIELD_EMPTY_STRING_VALIDATE: field empty character string check</li>
-             * <li>FIELD_UNIQUE_VALIDATE: field uniqueness check</li>
-             * <li>FIELD_GROUP_COUNT_VALIDATE: field unique value count check</li>
-             * <li>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: field duplicate value count check</li>
-             * <li>FUNCTION_TIME_COMPARE: time function comparison</li>
-             * <li>SINGLE_TABLE_TIME_COMPARE: non-partitioned table time field comparison</li>
-             * <li>DOUBLE_TABLE_TIME_COMPARE: two-table time field comparison</li>
-             * <li>FIELD_FORMAT_VALIDATE: field format check</li>
-             * <li>FIELD_LENGTH_VALIDATE: field length check</li>
-             * <li>FIELD_VALUE_RANGE_VALIDATE: field value range check</li>
-             * <li>CODE_TABLE_COMPARE: lookup table reference comparison</li>
-             * <li>STANDARD_CODE_TABLE_COMPARE: data standard lookup table reference comparison</li>
-             * <li>SINGLE_TABLE_FIELD_VALUE_COMPARE: non-partitioned table field value consistency comparison</li>
-             * <li>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: non-partitioned table field statistical value consistency comparison</li>
-             * <li>SINGLE_TABLE_FIELD_EXP_COMPARE: non-partitioned table field business logic consistency comparison</li>
-             * <li>DOUBLE_TABLE_FIELD_VALUE_COMPARE: two-table field value consistency comparison</li>
-             * <li>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: two-table field statistical value consistency comparison</li>
-             * <li>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-source two-table field statistical value consistency comparison</li>
-             * <li>DOUBLE_TABLE_FIELD_EXP_COMPARE: two-table field business logic consistency comparison</li>
-             * <li>TABLE_STABILITY_VALIDATE: table stability check</li>
-             * <li>TABLE_FLUCTUATION_VALIDATE: table fluctuation check</li>
-             * <li>FIELD_STABILITY_VALIDATE: field stability check</li>
-             * <li>FIELD_FLUCTUATION_VALIDATE: field fluctuation check</li>
-             * <li>CUSTOM_STATISTICAL_VALIDATE: custom statistical metric check</li>
-             * <li>CUSTOM_DATA_DETAILS_VALIDATE: custom data details check</li>
-             * <li>DATASOURCE_AVAILABLE_CHECK: data source connectivity monitoring</li>
-             * <li>TABLE_SCHEMA_CHECK: table schema change monitoring</li>
-             * <li>REAL_TIME_OFFLINE_COMPARE: real-time and offline comparison</li>
-             * <li>REAL_TIME_STATISTICAL_VALIDATE: real-time statistical value monitoring</li>
-             * <li>REAL_TIME_MULTI_CHAIN_COMPARE: real-time multi-link comparison.</li>
+             * <li>FIELD_NULL_VALUE_VALIDATE: Field null value check.</li>
+             * <li>FIELD_EMPTY_STRING_VALIDATE: Field empty character check.</li>
+             * <li>FIELD_UNIQUE_VALIDATE: Field uniqueness check.</li>
+             * <li>FIELD_GROUP_COUNT_VALIDATE: Field unique value count check.</li>
+             * <li>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: Field duplicate value count check.</li>
+             * <li>FUNCTION_TIME_COMPARE: Time function comparison.</li>
+             * <li>SINGLE_TABLE_TIME_COMPARE: Non-partitioned table time field comparison.</li>
+             * <li>DOUBLE_TABLE_TIME_COMPARE: Two-table time field comparison.</li>
+             * <li>FIELD_FORMAT_VALIDATE: Field format check.</li>
+             * <li>FIELD_LENGTH_VALIDATE: Field length check.</li>
+             * <li>FIELD_VALUE_RANGE_VALIDATE: Field value range check.</li>
+             * <li>CODE_TABLE_COMPARE: Lookup table reference comparison.</li>
+             * <li>STANDARD_CODE_TABLE_COMPARE: Data standard lookup table reference comparison.</li>
+             * <li>SINGLE_TABLE_FIELD_VALUE_COMPARE: Non-partitioned table field value consistency comparison.</li>
+             * <li>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: Non-partitioned table field statistical value consistency comparison.</li>
+             * <li>SINGLE_TABLE_FIELD_EXP_COMPARE: Non-partitioned table field business logic consistency comparison.</li>
+             * <li>DOUBLE_TABLE_FIELD_VALUE_COMPARE: Two-table field value consistency comparison.</li>
+             * <li>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: Two-table field statistical value consistency comparison.</li>
+             * <li>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: Cross-source two-table field statistical value consistency comparison.</li>
+             * <li>DOUBLE_TABLE_FIELD_EXP_COMPARE: Two-table field business logic consistency comparison.</li>
+             * <li>TABLE_STABILITY_VALIDATE: Table stability check.</li>
+             * <li>TABLE_FLUCTUATION_VALIDATE: Table fluctuation check.</li>
+             * <li>FIELD_STABILITY_VALIDATE: Field stability check.</li>
+             * <li>FIELD_FLUCTUATION_VALIDATE: Field fluctuation check.</li>
+             * <li>CUSTOM_STATISTICAL_VALIDATE: Custom statistical metric check.</li>
+             * <li>CUSTOM_DATA_DETAILS_VALIDATE: Custom data details check.</li>
+             * <li>DATASOURCE_AVAILABLE_CHECK: Data source connectivity monitoring.</li>
+             * <li>TABLE_SCHEMA_CHECK: Table schema change monitoring.</li>
+             * <li>REAL_TIME_OFFLINE_COMPARE: Real-time and offline comparison.</li>
+             * <li>REAL_TIME_STATISTICAL_VALIDATE: Real-time statistical value monitoring.</li>
+             * <li>REAL_TIME_MULTI_CHAIN_COMPARE: Real-time multi-link comparison.</li>
              * </ul>
              */
             public Builder templateTypeList(java.util.List<String> templateTypeList) {
@@ -434,13 +437,13 @@ public class ListQualityTemplatesRequest extends Request {
             }
 
             /**
-             * <p>The monitored object type. Valid values:</p>
+             * <p>The monitored object types. Valid values:</p>
              * <ul>
-             * <li>TABLE: Dataphin table</li>
-             * <li>DATASOURCE_TABLE: full-domain table</li>
-             * <li>DATASOURCE: data source</li>
-             * <li>INDEX: metric</li>
-             * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
+             * <li>TABLE: Dataphin table.</li>
+             * <li>DATASOURCE_TABLE: Global table.</li>
+             * <li>DATASOURCE: Data source.</li>
+             * <li>INDEX: Metric.</li>
+             * <li>REALTIME_LOGICAL_TABLE: Real-time metadata table.</li>
              * </ul>
              */
             public Builder watchTypeList(java.util.List<String> watchTypeList) {

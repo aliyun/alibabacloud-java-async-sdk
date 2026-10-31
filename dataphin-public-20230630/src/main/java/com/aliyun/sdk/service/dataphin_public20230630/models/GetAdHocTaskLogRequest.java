@@ -157,7 +157,7 @@ public class GetAdHocTaskLogRequest extends Request {
         }
 
         /**
-         * <p>The offset for querying logs. Increment the value based on the returned result. Set the initial value to 0.</p>
+         * <p>The offset for log queries. Increment this value based on the returned results. Set the initial value to 0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,10 @@ public class GetAdHocTaskLogRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -205,7 +208,7 @@ public class GetAdHocTaskLogRequest extends Request {
         }
 
         /**
-         * <p>The subtask ID. The value starts from 0.</p>
+         * <p>The subtask ID, starting from 0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

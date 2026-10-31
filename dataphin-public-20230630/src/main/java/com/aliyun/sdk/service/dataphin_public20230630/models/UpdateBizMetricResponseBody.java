@@ -119,7 +119,7 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code. A value of OK indicates the request was successful</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Operation result</p>
+         * <p>The operation result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code</p>
+         * <p>The HTTP status code returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -160,7 +160,7 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -171,7 +171,7 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,7 +240,7 @@ public class UpdateBizMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Exception message</p>
+             * <p>The exception message.</p>
              * 
              * <strong>example:</strong>
              * <p>npe</p>
@@ -251,7 +251,11 @@ public class UpdateBizMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the update was successful. Valid values: true (success) and false (failure)</p>
+             * <p>Indicates whether the update is successful. Valid values:</p>
+             * <ul>
+             * <li>true: The update is successful.</li>
+             * <li>false: The update fails.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>

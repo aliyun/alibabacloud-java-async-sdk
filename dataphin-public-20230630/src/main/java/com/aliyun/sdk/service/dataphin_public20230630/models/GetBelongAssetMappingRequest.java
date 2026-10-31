@@ -111,7 +111,7 @@ public class GetBelongAssetMappingRequest extends Request {
         }
 
         /**
-         * <p>Query command.</p>
+         * <p>The query command.</p>
          */
         public Builder assetMappingQuery(AssetMappingQuery assetMappingQuery) {
             String assetMappingQueryShrink = shrink(assetMappingQuery, "AssetMappingQuery", "json");
@@ -121,7 +121,7 @@ public class GetBelongAssetMappingRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,10 @@ public class GetBelongAssetMappingRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -203,7 +206,7 @@ public class GetBelongAssetMappingRequest extends Request {
             } 
 
             /**
-             * <p>The GUID of the belonging asset.</p>
+             * <p>The GUID of the owning asset.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,7 +218,7 @@ public class GetBelongAssetMappingRequest extends Request {
             }
 
             /**
-             * <p>The mapping relationship type. Valid values: VALID (mapped) and INVALID (invalid mapping).</p>
+             * <p>The type of the mapping relationship. Valid values: VALID (mapped) and INVALID (invalid mapping).</p>
              * 
              * <strong>example:</strong>
              * <p>VALID</p>

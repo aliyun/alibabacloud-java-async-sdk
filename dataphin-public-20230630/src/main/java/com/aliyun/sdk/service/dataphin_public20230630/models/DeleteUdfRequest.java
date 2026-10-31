@@ -146,7 +146,7 @@ public class DeleteUdfRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -155,7 +155,7 @@ public class DeleteUdfRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user-defined function.</p>
+         * <p>The ID of the custom function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,10 @@ public class DeleteUdfRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

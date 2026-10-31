@@ -155,7 +155,7 @@ public class OfflineBatchTaskRequest extends Request {
         }
 
         /**
-         * <p>The node ID in the node directory tree.</p>
+         * <p>The node ID in the task directory tree.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,10 @@ public class OfflineBatchTaskRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

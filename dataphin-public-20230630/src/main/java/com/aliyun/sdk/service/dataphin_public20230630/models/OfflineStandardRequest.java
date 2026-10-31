@@ -112,7 +112,7 @@ public class OfflineStandardRequest extends Request {
         }
 
         /**
-         * <p>The offline instruction.</p>
+         * <p>The offline command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder offlineCommand(OfflineCommand offlineCommand) {
@@ -136,7 +136,10 @@ public class OfflineStandardRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -206,7 +209,7 @@ public class OfflineStandardRequest extends Request {
             } 
 
             /**
-             * <p>The review remarks. The value can be up to 128 characters in length.</p>
+             * <p>The review comment. Maximum length: 128 characters.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

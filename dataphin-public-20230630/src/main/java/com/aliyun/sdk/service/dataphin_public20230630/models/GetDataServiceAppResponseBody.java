@@ -119,7 +119,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code returned by the backend.</p>
+         * <p>The backend response code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -149,7 +149,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned by the backend.</p>
+         * <p>The details of the backend exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +251,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
              * <p>The username.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -409,10 +409,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application group name.</p>
+             * <p>The name of the application group.</p>
              * 
              * <strong>example:</strong>
-             * <p>默认分组</p>
+             * <p>Default group</p>
              */
             public Builder appGroup(String appGroup) {
                 this.appGroup = appGroup;
@@ -434,7 +434,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
              * <p>The AppKey of the application.</p>
              * 
              * <strong>example:</strong>
-             * <p>默认应用</p>
+             * <p>Default application</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -442,10 +442,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application name.</p>
+             * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
-             * <p>默认应用</p>
+             * <p>Default application</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -456,7 +456,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
              * <p>The AppSecret of the application.</p>
              * 
              * <strong>example:</strong>
-             * <p>默认应用</p>
+             * <p>Default application</p>
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;
@@ -464,7 +464,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP whitelist addresses. Specify IP addresses or CIDR blocks separated by semicolons (;). CIDR blocks end with a slash (/) followed by a number in the range of 1 to 32. Example: 192.168.3.12/24.</p>
+             * <p>The IP address whitelist. Separate IP addresses or CIDR blocks with semicolons. For CIDR blocks, use a forward slash (/) to separate the IP address and the prefix length, which ranges from 1 to 32. Example: 192.168.3.12/24.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -475,7 +475,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the IP whitelist is enabled. Valid values:</p>
+             * <p>Indicates whether the IP address whitelist is enabled. Valid values:</p>
              * <ul>
              * <li>true: Enabled.</li>
              * <li>false: Disabled.</li>
@@ -498,7 +498,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
              * <p>The common scenarios.</p>
              * 
              * <strong>example:</strong>
-             * <p>数据分析</p>
+             * <p>Data analytics</p>
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;

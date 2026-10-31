@@ -128,7 +128,7 @@ public class UpdateDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backend exception details.</p>
+         * <p>The details of the backend error.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -150,7 +150,7 @@ public class UpdateDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

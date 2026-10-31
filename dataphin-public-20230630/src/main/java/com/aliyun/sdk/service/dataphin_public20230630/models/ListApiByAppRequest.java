@@ -125,7 +125,10 @@ public class ListApiByAppRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class ListApiByAppRequest extends Request {
         }
 
         /**
-         * <p>The paged query parameters.</p>
+         * <p>The paging query parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder pageQuery(PageQuery pageQuery) {
@@ -246,7 +249,7 @@ public class ListApiByAppRequest extends Request {
             /**
              * <p>The application key.</p>
              * <blockquote>
-             * <p>Notice: Deprecated. Use AppKeyStr instead.</notice>.</p>
+             * <p>Notice: Deprecated. Use AppKeyStr.</notice></p>
              * </blockquote>
              * 
              * <strong>example:</strong>

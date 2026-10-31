@@ -138,7 +138,10 @@ public class GetProjectWhiteListsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operating user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

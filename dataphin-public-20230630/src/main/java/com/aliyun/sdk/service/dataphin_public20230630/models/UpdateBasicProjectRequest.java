@@ -125,7 +125,10 @@ public class UpdateBasicProjectRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -413,7 +416,7 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
-             * <p>The ID of the offline compute source.</p>
+             * <p>The offline compute source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2001</p>
@@ -438,7 +441,7 @@ public class UpdateBasicProjectRequest extends Request {
              * <p>The display name of the project.</p>
              * 
              * <strong>example:</strong>
-             * <p>MyProject.</p>
+             * <p>My Project</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -458,7 +461,7 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
-             * <p>The project name. This value cannot be modified. Pass in the current project name.</p>
+             * <p>The project name. This parameter cannot be modified. Specify the current project name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -481,7 +484,7 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
-             * <p>The ID of the real-time compute source.</p>
+             * <p>The real-time compute source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2002</p>

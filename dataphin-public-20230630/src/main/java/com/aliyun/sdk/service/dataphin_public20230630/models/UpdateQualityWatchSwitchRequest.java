@@ -125,7 +125,10 @@ public class UpdateQualityWatchSwitchRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -206,7 +209,7 @@ public class UpdateQualityWatchSwitchRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the monitored object.</p>
+             * <p>Specifies whether to enable the feature.</p>
              * <p>This parameter is required.</p>
              */
             public Builder open(Boolean open) {
@@ -215,7 +218,7 @@ public class UpdateQualityWatchSwitchRequest extends Request {
             }
 
             /**
-             * <p>The list of monitoring IDs.</p>
+             * <p>The list of watch IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder watchIdList(java.util.List<Long> watchIdList) {

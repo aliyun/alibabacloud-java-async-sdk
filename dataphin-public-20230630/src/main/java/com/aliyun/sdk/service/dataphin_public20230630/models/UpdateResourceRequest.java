@@ -125,7 +125,10 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
-         * <p>The edit command.</p>
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -276,11 +279,11 @@ public class UpdateResourceRequest extends Request {
             } 
 
             /**
-             * <p>The commit remarks.</p>
+             * <p>The submission comment.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx 测试</p>
+             * <p>xx test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -288,11 +291,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
-             * <p>The compute engine type. Valid values:</p>
-             * <ul>
-             * <li>MAX_COMPUTE</li>
-             * <li>HADOOP.</li>
-             * </ul>
+             * <p>The compute engine type. Valid values: MAX_COMPUTE and HADOOP.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -308,7 +307,7 @@ public class UpdateResourceRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx 测试</p>
+             * <p>xx test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -352,7 +351,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
-             * <p>The storage address of the resource.</p>
+             * <p>The resource storage address.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

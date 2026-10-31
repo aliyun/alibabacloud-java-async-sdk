@@ -119,7 +119,7 @@ public class CreateStandardTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code.</p>
+         * <p>The backend response code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class CreateStandardTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Standard template ID.</p>
+         * <p>The ID of the standard template.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -141,7 +141,7 @@ public class CreateStandardTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class CreateStandardTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The details of the backend response exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -174,7 +174,7 @@ public class CreateStandardTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

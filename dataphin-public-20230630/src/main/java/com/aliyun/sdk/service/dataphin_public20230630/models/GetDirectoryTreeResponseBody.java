@@ -119,7 +119,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code. OK indicates a successful request.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Directory tree information. Returns the directory tree with all edge information, traversed level by level from the root node.</p>
+         * <p>The directory tree information. The directory tree and all edge information are returned through a level-order traversal starting from the root node.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -160,7 +160,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -393,7 +393,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Directory type.</p>
+             * <p>The directory type.</p>
              * 
              * <strong>example:</strong>
              * <p>codeManage</p>
@@ -404,7 +404,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creator ID.</p>
+             * <p>The ID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>300000907</p>
@@ -415,7 +415,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creator name.</p>
+             * <p>The name of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>John</p>
@@ -426,7 +426,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data cell ID.</p>
+             * <p>The data cell ID.</p>
              * 
              * <strong>example:</strong>
              * <p>41342</p>
@@ -437,7 +437,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Directory path. Valid only for file or resource nodes.</p>
+             * <p>The directory path. This parameter is valid only for file or resource nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -448,7 +448,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time. Empty for non-entity object nodes.</p>
+             * <p>The creation time. This parameter is empty for non-entity object nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-11-01 18:08:17</p>
@@ -459,7 +459,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time. Empty for non-entity object nodes.</p>
+             * <p>The modification time. This parameter is empty for non-entity object nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-11-01 18:08:17</p>
@@ -470,7 +470,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Directory ID.</p>
+             * <p>The directory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -481,7 +481,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modifier ID.</p>
+             * <p>The ID of the last modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>300000907</p>
@@ -492,7 +492,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modifier name.</p>
+             * <p>The name of the last modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>John</p>
@@ -503,10 +503,10 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Display name of the object.</p>
+             * <p>The display name of the object.</p>
              * 
              * <strong>example:</strong>
-             * <p>代码管理</p>
+             * <p>Code management</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -514,7 +514,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Project ID.</p>
+             * <p>The project ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7081229106458752</p>
@@ -525,7 +525,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Directory string ID.</p>
+             * <p>The string ID of the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -536,7 +536,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Object type.</p>
+             * <p>The object type.</p>
              * 
              * <strong>example:</strong>
              * <p>codeManage</p>
@@ -762,7 +762,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Directory type.</p>
+             * <p>The directory type.</p>
              * 
              * <strong>example:</strong>
              * <p>codeManage</p>
@@ -773,7 +773,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creator ID.</p>
+             * <p>The ID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>300000907</p>
@@ -784,7 +784,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creator name.</p>
+             * <p>The name of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>John</p>
@@ -795,7 +795,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data cell ID.</p>
+             * <p>The data cell ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3213</p>
@@ -806,7 +806,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Directory path. Valid only for file or resource nodes.</p>
+             * <p>The directory path. This parameter is valid only for file or resource nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -817,7 +817,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time. Empty for non-entity object nodes.</p>
+             * <p>The creation time. This parameter is empty for non-entity object nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-11-01 18:08:17</p>
@@ -828,7 +828,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time. Empty for non-entity object nodes.</p>
+             * <p>The modification time. This parameter is empty for non-entity object nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-11-01 18:08:17</p>
@@ -839,7 +839,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Directory ID.</p>
+             * <p>The directory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -850,7 +850,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modifier ID.</p>
+             * <p>The ID of the last modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>300000907</p>
@@ -861,7 +861,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modifier name.</p>
+             * <p>The name of the last modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>John</p>
@@ -872,10 +872,10 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Display name of the object.</p>
+             * <p>The display name of the object.</p>
              * 
              * <strong>example:</strong>
-             * <p>代码管理</p>
+             * <p>Code management</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -883,7 +883,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Project ID.</p>
+             * <p>The project ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7081229106458752</p>
@@ -894,7 +894,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Directory string ID.</p>
+             * <p>The string ID of the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -905,7 +905,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Object type.</p>
+             * <p>The object type.</p>
              * 
              * <strong>example:</strong>
              * <p>codeManage</p>
@@ -975,7 +975,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Child node.</p>
+             * <p>The child nodes.</p>
              */
             public Builder children(Children children) {
                 this.children = children;
@@ -983,7 +983,7 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Parent node.</p>
+             * <p>The parent node.</p>
              */
             public Builder parent(Parent parent) {
                 this.parent = parent;

@@ -112,7 +112,7 @@ public class CheckDataSourceConnectivityRequest extends Request {
         }
 
         /**
-         * <p>The object to check.</p>
+         * <p>The check target.</p>
          * <p>This parameter is required.</p>
          */
         public Builder checkCommand(CheckCommand checkCommand) {
@@ -136,7 +136,10 @@ public class CheckDataSourceConnectivityRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -300,7 +303,7 @@ public class CheckDataSourceConnectivityRequest extends Request {
             }
 
             /**
-             * <p>The data source type. For supported data source types, see the documentation for creating a data source.</p>
+             * <p>The datasource type. For supported datasources, see Create a datasource.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

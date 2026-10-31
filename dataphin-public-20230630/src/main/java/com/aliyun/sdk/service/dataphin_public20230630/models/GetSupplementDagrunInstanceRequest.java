@@ -126,7 +126,7 @@ public class GetSupplementDagrunInstanceRequest extends Request {
         }
 
         /**
-         * <p>The dagrun ID.</p>
+         * <p>Dagrun ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,8 +141,9 @@ public class GetSupplementDagrunInstanceRequest extends Request {
         /**
          * <p>The environment identifier. Valid values:</p>
          * <ul>
-         * <li>DEV: development environment. </li>
-         * <li>PROD (default): production environment.</li>
+         * <li>DEV: development environment</li>
+         * <li>PROD: production environment
+         * Default value: PROD.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,7 +169,10 @@ public class GetSupplementDagrunInstanceRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

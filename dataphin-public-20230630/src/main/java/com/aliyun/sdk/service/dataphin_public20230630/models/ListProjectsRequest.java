@@ -123,7 +123,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The operator tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -267,7 +270,7 @@ public class ListProjectsRequest extends Request {
             }
 
             /**
-             * <p>The keyword for fuzzy match.</p>
+             * <p>The keyword for fuzzy matching.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

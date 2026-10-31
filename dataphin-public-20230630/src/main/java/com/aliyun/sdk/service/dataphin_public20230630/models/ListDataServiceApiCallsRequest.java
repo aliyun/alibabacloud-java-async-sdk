@@ -127,7 +127,7 @@ public class ListDataServiceApiCallsRequest extends Request {
         }
 
         /**
-         * <p>The query conditions.</p>
+         * <p>The search conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -138,7 +138,7 @@ public class ListDataServiceApiCallsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +151,10 @@ public class ListDataServiceApiCallsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -339,7 +342,7 @@ public class ListDataServiceApiCallsRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the API.</p>
+             * <p>The code of the API.</p>
              * 
              * <strong>example:</strong>
              * <p>20122</p>
@@ -363,7 +366,7 @@ public class ListDataServiceApiCallsRequest extends Request {
             /**
              * <p>The application key.</p>
              * <blockquote>
-             * <p>Notice: This parameter is deprecated. Use AppKeyStr instead.</p>
+             * <p>Notice: Deprecated. Use AppKeyStr instead.</notice></p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -420,7 +423,7 @@ public class ListDataServiceApiCallsRequest extends Request {
             }
 
             /**
-             * <p>The number of entries per page. Default value: 20.</p>
+             * <p>The number of records per page. Default value: 20.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -443,7 +446,7 @@ public class ListDataServiceApiCallsRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the call was successful.</p>
+             * <p>Specifies whether the call is successful.</p>
              */
             public Builder successful(Boolean successful) {
                 this.successful = successful;

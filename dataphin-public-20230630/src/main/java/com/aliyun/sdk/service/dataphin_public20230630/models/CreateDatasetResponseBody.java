@@ -130,7 +130,7 @@ public class CreateDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dataset ID (business primary key).</p>
+         * <p>The ID of the newly created dataset, which is the business primary key.</p>
          * 
          * <strong>example:</strong>
          * <p>7280832407583104</p>
@@ -152,7 +152,7 @@ public class CreateDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backend exception details.</p>
+         * <p>The details of the backend exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -174,7 +174,7 @@ public class CreateDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

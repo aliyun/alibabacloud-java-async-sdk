@@ -125,7 +125,10 @@ public class RemoveUserGroupMemberRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operating user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class RemoveUserGroupMemberRequest extends Request {
         }
 
         /**
-         * <p>The command to remove user group members.</p>
+         * <p>The command to remove members from a user group.</p>
          * <p>This parameter is required.</p>
          */
         public Builder removeCommand(RemoveCommand removeCommand) {

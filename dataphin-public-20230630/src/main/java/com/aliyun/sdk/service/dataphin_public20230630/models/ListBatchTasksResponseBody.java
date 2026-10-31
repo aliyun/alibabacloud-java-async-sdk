@@ -119,7 +119,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paginated result of the task query.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -151,7 +160,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class ListBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -407,7 +419,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Order detail processing task</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -415,7 +430,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The folder where the task is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dwd</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -423,7 +441,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The ID of the task file. You can use this ID as the input parameter for the GetBatchTaskInfo operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7090125821589888</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -431,7 +452,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * LastSubmitStatus.
+             * <p>The latest submit status. Valid values: SUBMITTING, SUCCESS, and FAILED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder lastSubmitStatus(String lastSubmitStatus) {
                 this.lastSubmitStatus = lastSubmitStatus;
@@ -439,7 +463,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * LastVersion.
+             * <p>The latest submitted version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder lastVersion(Integer lastVersion) {
                 this.lastVersion = lastVersion;
@@ -447,7 +474,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dwd_order_detail</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -455,7 +485,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_123456</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -463,7 +496,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dwd_order_detail</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -471,7 +507,7 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NodeOutputNameList.
+             * <p>The list of output table names for the node.</p>
              */
             public Builder nodeOutputNameList(java.util.List<String> nodeOutputNameList) {
                 this.nodeOutputNameList = nodeOutputNameList;
@@ -479,7 +515,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The type of the node. Valid values: 1 (periodic task) and 3 (manual task).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeType(Integer nodeType) {
                 this.nodeType = nodeType;
@@ -487,7 +526,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorType.
+             * <p>The task type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder operatorType(Integer operatorType) {
                 this.operatorType = operatorType;
@@ -495,7 +537,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The name of the task owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John Doe</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -503,7 +548,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserId.
+             * <p>The ID of the task owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001011</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -511,7 +559,7 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Published.
+             * <p>Indicates whether the task has been published to the production environment.</p>
              */
             public Builder published(Boolean published) {
                 this.published = published;
@@ -519,7 +567,7 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Released.
+             * <p>Indicates whether the task has been submitted.</p>
              */
             public Builder released(Boolean released) {
                 this.released = released;
@@ -527,7 +575,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the task. Valid values: DRAFT, DEVELOP, and SUBMITTED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUBMITTED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -620,7 +671,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The total number of tasks that meet the query conditions, regardless of pagination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -628,7 +682,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -636,7 +693,10 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -644,7 +704,7 @@ public class ListBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ResultData.
+             * <p>The list of tasks on the current page.</p>
              */
             public Builder resultData(java.util.List<ResultData> resultData) {
                 this.resultData = resultData;

@@ -140,7 +140,10 @@ public class PublishKgSchemaRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -149,7 +152,7 @@ public class PublishKgSchemaRequest extends Request {
         }
 
         /**
-         * <p>The publish command and its details.</p>
+         * <p>The publish command details.</p>
          * <p>This parameter is required.</p>
          */
         public Builder publishCommand(PublishCommand publishCommand) {
@@ -234,7 +237,7 @@ public class PublishKgSchemaRequest extends Request {
             } 
 
             /**
-             * <p>The default value to backfill for the property.</p>
+             * <p>The default value to be backfilled for the property.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -347,7 +350,7 @@ public class PublishKgSchemaRequest extends Request {
             } 
 
             /**
-             * <p>The backfill property default value policy. This parameter takes effect only when PolicyType is set to BackFillDefault.</p>
+             * <p>The default value backfill policy for properties. This policy takes effect only when the policy type is BackFillDefault.</p>
              * <p>This parameter is required.</p>
              */
             public Builder backFillDefaultValuePolicy(BackFillDefaultValuePolicy backFillDefaultValuePolicy) {
@@ -356,10 +359,7 @@ public class PublishKgSchemaRequest extends Request {
             }
 
             /**
-             * <p>The policy type. Valid values:</p>
-             * <ul>
-             * <li>BackFillDefault: backfills default values when a property changes from optional to required.</li>
-             * </ul>
+             * <p>The policy type. Valid value: BackFillDefault (backfills default values when a property changes from optional to required).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -371,11 +371,7 @@ public class PublishKgSchemaRequest extends Request {
             }
 
             /**
-             * <p>The type to which the policy applies. Valid values:</p>
-             * <ul>
-             * <li>ENTITY: applies to entity types.</li>
-             * <li>RELATION: applies to relation types.</li>
-             * </ul>
+             * <p>The policy scope. Valid values: ENTITY (applies to entity types) and RELATION (applies to relationship types).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -387,7 +383,7 @@ public class PublishKgSchemaRequest extends Request {
             }
 
             /**
-             * <p>The code of the entity type or relation type.</p>
+             * <p>The code of the entity type or relationship type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

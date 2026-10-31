@@ -112,7 +112,7 @@ public class DeleteDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The request for deleting a data source.</p>
+         * <p>The data source deletion request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -136,7 +136,10 @@ public class DeleteDataSourceRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -206,10 +209,10 @@ public class DeleteDataSourceRequest extends Request {
             } 
 
             /**
-             * <p>The deletion mode selection. Valid values:</p>
+             * <p>The deletion mode. Valid values:</p>
              * <ul>
-             * <li>DEV: deletes the data source only in the development environment.</li>
-             * <li>DEV_PROD: deletes the data source in both the development and production environments.</li>
+             * <li>DEV: Deletes only the data source in the development environment.</li>
+             * <li>DEV_PROD: Deletes the data sources in both the development and production environments.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

@@ -152,7 +152,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paged query result.</p>
+         * <p>The paging query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -171,7 +171,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +190,438 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
      *
      * <p>ListBatchTemplatesResponseBody</p>
      */
+    public static class DataSourceConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Catalog")
+        private String catalog;
+
+        @com.aliyun.core.annotation.NameInMap("DsId")
+        private String dsId;
+
+        @com.aliyun.core.annotation.NameInMap("Schema")
+        private String schema;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private DataSourceConfig(Builder builder) {
+            this.catalog = builder.catalog;
+            this.dsId = builder.dsId;
+            this.schema = builder.schema;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataSourceConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return catalog
+         */
+        public String getCatalog() {
+            return this.catalog;
+        }
+
+        /**
+         * @return dsId
+         */
+        public String getDsId() {
+            return this.dsId;
+        }
+
+        /**
+         * @return schema
+         */
+        public String getSchema() {
+            return this.schema;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String catalog; 
+            private String dsId; 
+            private String schema; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSourceConfig model) {
+                this.catalog = model.catalog;
+                this.dsId = model.dsId;
+                this.schema = model.schema;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The catalog of the data source for the database SQL template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
+             */
+            public Builder catalog(String catalog) {
+                this.catalog = catalog;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the data source for the database SQL template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
+             */
+            public Builder dsId(String dsId) {
+                this.dsId = dsId;
+                return this;
+            }
+
+            /**
+             * <p>The schema of the data source for the database SQL template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
+             */
+            public Builder schema(String schema) {
+                this.schema = schema;
+                return this;
+            }
+
+            /**
+             * <p>The data source type of the database SQL template. Valid values: MYSQL, ORACLE, ADB_FOR_PG, OUSHUDB, PRESTO, POSTGRE_SQL, STARROCKS, CLICKHOUSE, ANALYTICDB, ADB_FOR_MYSQL_V3, GAUSSDB, SELECTDB, DORIS, SQL_SERVER, HOLOGRES, OPENGAUSS, DAMENG, OCEANBASE, TRINO, POLARDB_X2, LINDORM, EMR_SPARK_SERVERLESS, TDSQL_FOR_PG, TDSQL_FOR_MYSQL, GBASE_8A, and TDENGINE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MYSQL</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public DataSourceConfig build() {
+                return new DataSourceConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListBatchTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBatchTemplatesResponseBody</p>
+     */
+    public static class Params extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("EncryptEnabled")
+        private Boolean encryptEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Params(Builder builder) {
+            this.description = builder.description;
+            this.encryptEnabled = builder.encryptEnabled;
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Params create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return encryptEnabled
+         */
+        public Boolean getEncryptEnabled() {
+            return this.encryptEnabled;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private Boolean encryptEnabled; 
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Params model) {
+                this.description = model.description;
+                this.encryptEnabled = model.encryptEnabled;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether encryption is enabled for the parameter.</p>
+             */
+            public Builder encryptEnabled(Boolean encryptEnabled) {
+                this.encryptEnabled = encryptEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The key of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Params build() {
+                return new Params(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListBatchTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBatchTemplatesResponseBody</p>
+     */
+    public static class PythonModuleList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("InstallTime")
+        private String installTime;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("PythonVersion")
+        private String pythonVersion;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
+
+        private PythonModuleList(Builder builder) {
+            this.id = builder.id;
+            this.installTime = builder.installTime;
+            this.name = builder.name;
+            this.pythonVersion = builder.pythonVersion;
+            this.status = builder.status;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PythonModuleList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return installTime
+         */
+        public String getInstallTime() {
+            return this.installTime;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return pythonVersion
+         */
+        public String getPythonVersion() {
+            return this.pythonVersion;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String installTime; 
+            private String name; 
+            private String pythonVersion; 
+            private String status; 
+            private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(PythonModuleList model) {
+                this.id = model.id;
+                this.installTime = model.installTime;
+                this.name = model.name;
+                this.pythonVersion = model.pythonVersion;
+                this.status = model.status;
+                this.version = model.version;
+            } 
+
+            /**
+             * <p>The ID of the Python third-party package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>The installation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01 10:00:00</p>
+             */
+            public Builder installTime(String installTime) {
+                this.installTime = installTime;
+                return this;
+            }
+
+            /**
+             * <p>The name of the Python third-party package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>numpy</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The Python version. Valid values: PYTHON_2_7, PYTHON_3_7, and PYTHON_3_11.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PYTHON_2_7</p>
+             */
+            public Builder pythonVersion(String pythonVersion) {
+                this.pythonVersion = pythonVersion;
+                return this;
+            }
+
+            /**
+             * <p>The status of the third-party package. Valid values: INSTALL_SUCCESS (installed successfully), INSTALL_FAILED (installation failed), INSTALLING (installing), UPGRADE_SUCCESS (upgraded successfully), UPGRADE_FAILED (upgrade failed), and UPGRADING (upgrading).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTALL_SUCCESS</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The version of the third-party package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.1</p>
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public PythonModuleList build() {
+                return new PythonModuleList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListBatchTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBatchTemplatesResponseBody</p>
+     */
     public static class TemplateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
@@ -200,8 +632,17 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentVersion")
         private Long currentVersion;
 
+        @com.aliyun.core.annotation.NameInMap("DataSourceConfig")
+        private DataSourceConfig dataSourceConfig;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("DevResourceGroupId")
+        private String devResourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("DevResourceGroupName")
+        private String devResourceGroupName;
 
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
@@ -233,8 +674,23 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
+        @com.aliyun.core.annotation.NameInMap("Params")
+        private java.util.List<Params> params;
+
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
+
+        @com.aliyun.core.annotation.NameInMap("PythonModuleList")
+        private java.util.List<PythonModuleList> pythonModuleList;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+        private String resourceGroupName;
+
+        @com.aliyun.core.annotation.NameInMap("ShareRuntimeResource")
+        private Boolean shareRuntimeResource;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -243,7 +699,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             this.comment = builder.comment;
             this.content = builder.content;
             this.currentVersion = builder.currentVersion;
+            this.dataSourceConfig = builder.dataSourceConfig;
             this.description = builder.description;
+            this.devResourceGroupId = builder.devResourceGroupId;
+            this.devResourceGroupName = builder.devResourceGroupName;
             this.engine = builder.engine;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -254,7 +713,12 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             this.operatorType = builder.operatorType;
             this.owner = builder.owner;
             this.ownerId = builder.ownerId;
+            this.params = builder.params;
             this.projectId = builder.projectId;
+            this.pythonModuleList = builder.pythonModuleList;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.resourceGroupName = builder.resourceGroupName;
+            this.shareRuntimeResource = builder.shareRuntimeResource;
             this.status = builder.status;
         }
 
@@ -288,10 +752,31 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return dataSourceConfig
+         */
+        public DataSourceConfig getDataSourceConfig() {
+            return this.dataSourceConfig;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return devResourceGroupId
+         */
+        public String getDevResourceGroupId() {
+            return this.devResourceGroupId;
+        }
+
+        /**
+         * @return devResourceGroupName
+         */
+        public String getDevResourceGroupName() {
+            return this.devResourceGroupName;
         }
 
         /**
@@ -365,10 +850,45 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return params
+         */
+        public java.util.List<Params> getParams() {
+            return this.params;
+        }
+
+        /**
          * @return projectId
          */
         public Long getProjectId() {
             return this.projectId;
+        }
+
+        /**
+         * @return pythonModuleList
+         */
+        public java.util.List<PythonModuleList> getPythonModuleList() {
+            return this.pythonModuleList;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return resourceGroupName
+         */
+        public String getResourceGroupName() {
+            return this.resourceGroupName;
+        }
+
+        /**
+         * @return shareRuntimeResource
+         */
+        public Boolean getShareRuntimeResource() {
+            return this.shareRuntimeResource;
         }
 
         /**
@@ -382,7 +902,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             private String comment; 
             private String content; 
             private Long currentVersion; 
+            private DataSourceConfig dataSourceConfig; 
             private String description; 
+            private String devResourceGroupId; 
+            private String devResourceGroupName; 
             private String engine; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -393,7 +916,12 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             private Integer operatorType; 
             private String owner; 
             private String ownerId; 
+            private java.util.List<Params> params; 
             private Long projectId; 
+            private java.util.List<PythonModuleList> pythonModuleList; 
+            private String resourceGroupId; 
+            private String resourceGroupName; 
+            private Boolean shareRuntimeResource; 
             private String status; 
 
             private Builder() {
@@ -403,7 +931,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
                 this.comment = model.comment;
                 this.content = model.content;
                 this.currentVersion = model.currentVersion;
+                this.dataSourceConfig = model.dataSourceConfig;
                 this.description = model.description;
+                this.devResourceGroupId = model.devResourceGroupId;
+                this.devResourceGroupName = model.devResourceGroupName;
                 this.engine = model.engine;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
@@ -414,7 +945,12 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
                 this.operatorType = model.operatorType;
                 this.owner = model.owner;
                 this.ownerId = model.ownerId;
+                this.params = model.params;
                 this.projectId = model.projectId;
+                this.pythonModuleList = model.pythonModuleList;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceGroupName = model.resourceGroupName;
+                this.shareRuntimeResource = model.shareRuntimeResource;
                 this.status = model.status;
             } 
 
@@ -422,7 +958,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
              * <p>The template submission comment.</p>
              * 
              * <strong>example:</strong>
-             * <p>初始化提交</p>
+             * <p>Initial submission</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -442,7 +978,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current latest version.</p>
+             * <p>The latest version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -453,10 +989,18 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The datasource config of the database SQL template.</p>
+             */
+            public Builder dataSourceConfig(DataSourceConfig dataSourceConfig) {
+                this.dataSourceConfig = dataSourceConfig;
+                return this;
+            }
+
+            /**
              * <p>The template description.</p>
              * 
              * <strong>example:</strong>
-             * <p>用于数据处理的Shell模板</p>
+             * <p>Shell template for data processing</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -464,7 +1008,29 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The compute engine version. Currently supported Python versions: Python 2.7 and Python 3.7.</p>
+             * <p>The ID of the resource group in the development environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
+             */
+            public Builder devResourceGroupId(String devResourceGroupId) {
+                this.devResourceGroupId = devResourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the resource group in the development environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default resource group for the project</p>
+             */
+            public Builder devResourceGroupName(String devResourceGroupName) {
+                this.devResourceGroupName = devResourceGroupName;
+                return this;
+            }
+
+            /**
+             * <p>The version of the compute engine. Valid values: Python 2.7 and Python 3.7.</p>
              * 
              * <strong>example:</strong>
              * <p>Python 3.7</p>
@@ -475,7 +1041,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The time when the template was created. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01 10:00:00</p>
@@ -486,7 +1052,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template update time. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The time when the template was updated. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-05-28 15:30:00</p>
@@ -497,7 +1063,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template ID, which is the same as the menu tree node ID.</p>
+             * <p>The ID of the template. This ID is the same as the menu tree node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -508,10 +1074,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modifier of the template.</p>
+             * <p>The user who last updated the template.</p>
              * 
              * <strong>example:</strong>
-             * <p>李四</p>
+             * <p>Li Si</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -519,7 +1085,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the last modifier of the template.</p>
+             * <p>The ID of the user who last updated the template.</p>
              * 
              * <strong>example:</strong>
              * <p>100002</p>
@@ -530,10 +1096,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template name.</p>
+             * <p>The name of the template.</p>
              * 
              * <strong>example:</strong>
-             * <p>数据处理模板</p>
+             * <p>Data processing template</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -541,7 +1107,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node type. Valid values: 10 (Shell) and 21 (Python).</p>
+             * <p>The type of the node. Valid values: 10 (Shell) and 21 (Python).</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -552,10 +1118,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template owner.</p>
+             * <p>The owner of the template.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -563,7 +1129,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template owner ID.</p>
+             * <p>The ID of the template owner.</p>
              * 
              * <strong>example:</strong>
              * <p>100001</p>
@@ -574,7 +1140,15 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The project ID.</p>
+             * <p>The list of template parameters.</p>
+             */
+            public Builder params(java.util.List<Params> params) {
+                this.params = params;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the project.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -585,7 +1159,45 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template status. Valid values: 0 (draft), 2 (submitted), and 100 (in development).</p>
+             * <p>The list of dependent Python third-party packages.</p>
+             */
+            public Builder pythonModuleList(java.util.List<PythonModuleList> pythonModuleList) {
+                this.pythonModuleList = pythonModuleList;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the resource group in the production environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the resource group in the production environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default resource group for the project</p>
+             */
+            public Builder resourceGroupName(String resourceGroupName) {
+                this.resourceGroupName = resourceGroupName;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether runtime resources are shared.</p>
+             */
+            public Builder shareRuntimeResource(Boolean shareRuntimeResource) {
+                this.shareRuntimeResource = shareRuntimeResource;
+                return this;
+            }
+
+            /**
+             * <p>The status of the template. Valid values: 0 (draft), 2 (submitted), and 100 (in development).</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -655,7 +1267,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of template records.</p>
+             * <p>The paginated template record list.</p>
              */
             public Builder templateList(java.util.List<TemplateList> templateList) {
                 this.templateList = templateList;

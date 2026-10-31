@@ -112,7 +112,7 @@ public class CreateBizEntityRequest extends Request {
         }
 
         /**
-         * <p>The create request.</p>
+         * <p>The creation request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -136,7 +136,10 @@ public class CreateBizEntityRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The user ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -295,7 +298,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * <p>The code name of the business object. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For ADB_PG engines, the code name can be up to 40 characters in length.</p>
+             * <p>The code name of the business object. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For the ADB_PG engine, the code name can be up to 40 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -318,7 +321,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * <p>The parent entity from which the business object inherits. Only common business objects support inheritance, and the parent entity must be an online business object.</p>
+             * <p>The ID of the parent entity to be inherited by the business object. Only normal business objects can be configured to inherit an entity, and they can only inherit online business objects.</p>
              * 
              * <strong>example:</strong>
              * <p>116306</p>
@@ -329,7 +332,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * <p>The list of associated online business entity IDs.</p>
+             * <p>The list of IDs of the associated online business entities.</p>
              */
             public Builder refBizEntityIdList(java.util.List<Long> refBizEntityIdList) {
                 this.refBizEntityIdList = refBizEntityIdList;
@@ -339,10 +342,10 @@ public class CreateBizEntityRequest extends Request {
             /**
              * <p>The object type of the business object. Valid values:</p>
              * <ul>
-             * <li>NORMAL: common object.</li>
-             * <li>ENUM: enumeration object.</li>
-             * <li>VIRTUAL: virtual object.</li>
-             * <li>HIERARCHY: hierarchy object.</li>
+             * <li>NORMAL: Normal object.</li>
+             * <li>ENUM: Enumeration object.</li>
+             * <li>VIRTUAL: Virtual object.</li>
+             * <li>HIERARCHY: Hierarchy object.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -495,7 +498,7 @@ public class CreateBizEntityRequest extends Request {
             } 
 
             /**
-             * <p>The list of business event activity IDs included in the business process activity. This parameter takes effect only when the current activity is a business process activity.</p>
+             * <p>The list of IDs of the business event activities included in the business process activity. This parameter is valid only when the current activity is a business process activity.</p>
              */
             public Builder bizEventEntityIdList(java.util.List<Long> bizEventEntityIdList) {
                 this.bizEventEntityIdList = bizEventEntityIdList;
@@ -526,7 +529,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * <p>The code name of the business activity. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For ADB_PG engines, the code name can be up to 40 characters in length.</p>
+             * <p>The code name of the business activity. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For the ADB_PG engine, the code name can be up to 40 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -549,7 +552,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * <p>The list of preceding business process activity IDs for the business process activity.</p>
+             * <p>The preceding business process activities of the business process activity.</p>
              */
             public Builder preBizProcessIdList(java.util.List<Long> preBizProcessIdList) {
                 this.preBizProcessIdList = preBizProcessIdList;
@@ -557,7 +560,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * <p>The list of associated online business entity IDs.</p>
+             * <p>The list of IDs of the associated online business entities.</p>
              */
             public Builder refBizEntityIdList(java.util.List<Long> refBizEntityIdList) {
                 this.refBizEntityIdList = refBizEntityIdList;
@@ -567,9 +570,9 @@ public class CreateBizEntityRequest extends Request {
             /**
              * <p>The type of the business activity. Valid values:</p>
              * <ul>
-             * <li>BIZ_EVENT: business event.</li>
-             * <li>BIZ_SNAPSHOT: business snapshot.</li>
-             * <li>BIZ_PROCESS: business process.</li>
+             * <li>BIZ_EVENT: Business event.</li>
+             * <li>BIZ_SNAPSHOT: Business snapshot.</li>
+             * <li>BIZ_PROCESS: Business process.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -725,8 +728,8 @@ public class CreateBizEntityRequest extends Request {
             /**
              * <p>The business type. Valid values: </p>
              * <ul>
-             * <li>BIZ_OBJECT: business object.</li>
-             * <li>BIZ_PROCESS: business activity.</li>
+             * <li>BIZ_OBJECT: Business object.</li>
+             * <li>BIZ_PROCESS: Business activity.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

@@ -141,9 +141,12 @@ public class GetPhysicalInstanceRequest extends Request {
         }
 
         /**
-         * <p>Environment identifier.
-         * DEV: Development environment.
-         * PROD (default): Production environment.</p>
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: Development environment.</li>
+         * <li>PROD: Production environment.
+         * Default value: PROD.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PROD</p>
@@ -155,7 +158,7 @@ public class GetPhysicalInstanceRequest extends Request {
         }
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +171,7 @@ public class GetPhysicalInstanceRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +184,10 @@ public class GetPhysicalInstanceRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -190,7 +196,7 @@ public class GetPhysicalInstanceRequest extends Request {
         }
 
         /**
-         * <p>Project ID</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

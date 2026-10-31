@@ -127,7 +127,7 @@ public class GetBatchTaskUdfLineagesRequest extends Request {
         }
 
         /**
-         * <p>The node ID of the task directory tree.</p>
+         * <p>The ID of the node in the task directory tree.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class GetBatchTaskUdfLineagesRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,10 @@ public class GetBatchTaskUdfLineagesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

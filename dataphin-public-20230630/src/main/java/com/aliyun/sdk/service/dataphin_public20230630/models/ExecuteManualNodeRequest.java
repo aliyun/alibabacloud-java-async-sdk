@@ -128,8 +128,8 @@ public class ExecuteManualNodeRequest extends Request {
         /**
          * <p>The environment identifier. Valid values:</p>
          * <ul>
-         * <li>DEV: development environment </li>
-         * <li>PROD (default): production environment.</li>
+         * <li>DEV: Development environment. </li>
+         * <li>PROD: Production environment. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class ExecuteManualNodeRequest extends Request {
         }
 
         /**
-         * <p>The request for running a manual task.</p>
+         * <p>The request to run a manual task.</p>
          * <p>This parameter is required.</p>
          */
         public Builder executeCommand(ExecuteCommand executeCommand) {
@@ -166,7 +166,10 @@ public class ExecuteManualNodeRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -371,7 +374,7 @@ public class ExecuteManualNodeRequest extends Request {
             } 
 
             /**
-             * <p>The end business date.</p>
+             * <p>The end business date, in the YYYY-MM-DD format.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -386,7 +389,7 @@ public class ExecuteManualNodeRequest extends Request {
              * <p>The workflow name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -406,7 +409,7 @@ public class ExecuteManualNodeRequest extends Request {
             }
 
             /**
-             * <p>The runtime parameters.</p>
+             * <p>The run parameters.</p>
              */
             public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
@@ -426,7 +429,7 @@ public class ExecuteManualNodeRequest extends Request {
             }
 
             /**
-             * <p>The start business date.</p>
+             * <p>The start business date, in the YYYY-MM-DD format.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

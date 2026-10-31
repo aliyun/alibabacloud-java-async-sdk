@@ -125,7 +125,10 @@ public class GetDataServiceProjectAddableUsersRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class GetDataServiceProjectAddableUsersRequest extends Request {
         }
 
         /**
-         * <p>The data service project ID.</p>
+         * <p>The Data Service project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

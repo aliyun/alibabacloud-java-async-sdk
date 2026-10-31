@@ -128,8 +128,8 @@ public class GetPhysicalNodeContentRequest extends Request {
         /**
          * <p>The environment identifier. Valid values:</p>
          * <ul>
-         * <li>DEV: Development environment. </li>
-         * <li>PROD (default): Production environment.</li>
+         * <li>DEV: development environment. </li>
+         * <li>PROD: production environment. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,10 @@ public class GetPhysicalNodeContentRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

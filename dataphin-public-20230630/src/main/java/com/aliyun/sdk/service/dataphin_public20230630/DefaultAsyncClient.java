@@ -202,6 +202,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ApplyResourcePermission  ApplyResourcePermissionRequest
+     * @return ApplyResourcePermissionResponse
+     */
+    @Override
+    public CompletableFuture<ApplyResourcePermissionResponse> applyResourcePermission(ApplyResourcePermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ApplyResourcePermission").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ApplyResourcePermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ApplyResourcePermissionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AssignQualityRuleOfAllRuleScopeSchedules  AssignQualityRuleOfAllRuleScopeSchedulesRequest
      * @return AssignQualityRuleOfAllRuleScopeSchedulesResponse
      */
@@ -268,6 +286,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<BatchHandoverAssetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CheckComputeClusterConnectivityById  CheckComputeClusterConnectivityByIdRequest
+     * @return CheckComputeClusterConnectivityByIdResponse
+     */
+    @Override
+    public CompletableFuture<CheckComputeClusterConnectivityByIdResponse> checkComputeClusterConnectivityById(CheckComputeClusterConnectivityByIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckComputeClusterConnectivityById").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckComputeClusterConnectivityByIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckComputeClusterConnectivityByIdResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -457,6 +493,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateBatchTemplate  CreateBatchTemplateRequest
+     * @return CreateBatchTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CreateBatchTemplateResponse> createBatchTemplate(CreateBatchTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateBatchTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateBatchTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateBatchTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateBizEntity  CreateBizEntityRequest
      * @return CreateBizEntityResponse
      */
@@ -640,13 +694,13 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API creates a new dataset in the specified project.</li>
-     * <li><code>ProjectId</code> is a required parameter that specifies the ID of the project in which to create the dataset.</li>
-     * <li><code>CreateCommand</code> is a complex object that contains the configuration information required to create the dataset.</li>
-     * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios.</li>
-     * <li><code>FileStorageConfig</code> and <code>MetadataStorageConfig</code> in <code>VersionConfig</code> can be configured as needed.</li>
-     * <li>If you need real-time meta-table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
-     * <li>Make sure all required fields are correctly filled in. Otherwise, the request failed.</li>
+     * <li>This API operation creates a dataset in a specified project.</li>
+     * <li>ProjectId is a required parameter that specifies the ID of the project in which to create the dataset.</li>
+     * <li>CreateCommand is a complex object that contains various configuration information required to create the dataset.</li>
+     * <li>Name, Type, ContentType, and Scenario are required fields that specify the dataset name, type, content type, and Scenarios, respectively.</li>
+     * <li>You can configure FileStorageConfig and MetadataStorageConfig in VersionConfig as needed.</li>
+     * <li>If real-time metatable configuration is required, provide the RealtimeMetaTableConfig information.</li>
+     * <li>Make sure that all required fields are correctly filled in. Otherwise, the request will be failed.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDataset  CreateDatasetRequest
@@ -811,6 +865,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateRectifyFlow  CreateRectifyFlowRequest
+     * @return CreateRectifyFlowResponse
+     */
+    @Override
+    public CompletableFuture<CreateRectifyFlowResponse> createRectifyFlow(CreateRectifyFlowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRectifyFlow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRectifyFlowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRectifyFlowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateResource  CreateResourceRequest
      * @return CreateResourceResponse
      */
@@ -844,6 +916,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateRowPermissionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateScheduleMonitor  CreateScheduleMonitorRequest
+     * @return CreateScheduleMonitorResponse
+     */
+    @Override
+    public CompletableFuture<CreateScheduleMonitorResponse> createScheduleMonitor(CreateScheduleMonitorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateScheduleMonitor").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateScheduleMonitorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateScheduleMonitorResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2002,6 +2092,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetApprovalTaskDetail  GetApprovalTaskDetailRequest
+     * @return GetApprovalTaskDetailResponse
+     */
+    @Override
+    public CompletableFuture<GetApprovalTaskDetailResponse> getApprovalTaskDetail(GetApprovalTaskDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetApprovalTaskDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetApprovalTaskDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetApprovalTaskDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAssetAttributes  GetAssetAttributesRequest
      * @return GetAssetAttributesResponse
      */
@@ -2276,7 +2384,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of connectivity tasks that have been tested for a specified data source ID.</p>
+     * <p>Queries the details of tested connectivity tasks based on the data source ID.</p>
      * 
      * @param request the request parameters of GetCheckConnectivityJobs  GetCheckConnectivityJobsRequest
      * @return GetCheckConnectivityJobsResponse
@@ -2731,6 +2839,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetFileStorageCredentialResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the statistical granularity of an aggregate logical table. Recursive objects are referenced by ID. Logical tree node IDs are valid only within the currently returned tree.</p>
+     * 
+     * @param request the request parameters of GetGranularityBySummaryId  GetGranularityBySummaryIdRequest
+     * @return GetGranularityBySummaryIdResponse
+     */
+    @Override
+    public CompletableFuture<GetGranularityBySummaryIdResponse> getGranularityBySummaryId(GetGranularityBySummaryIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetGranularityBySummaryId").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGranularityBySummaryIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGranularityBySummaryIdResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3493,6 +3622,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetRectifyFlow  GetRectifyFlowRequest
+     * @return GetRectifyFlowResponse
+     */
+    @Override
+    public CompletableFuture<GetRectifyFlowResponse> getRectifyFlow(GetRectifyFlowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRectifyFlow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRectifyFlowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRectifyFlowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetResource  GetResourceRequest
      * @return GetResourceResponse
      */
@@ -3620,7 +3767,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a published API based on the AppKey.</p>
+     * <p>Queries the details of published APIs based on the appKey.</p>
      * 
      * @param request the request parameters of GetServerVersion  GetServerVersionRequest
      * @return GetServerVersionResponse
@@ -3796,6 +3943,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetStreamJobsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the full text of JobManager or TaskManager logs in the production environment.</p>
+     * 
+     * @param request the request parameters of GetStreamLogContent  GetStreamLogContentRequest
+     * @return GetStreamLogContentResponse
+     */
+    @Override
+    public CompletableFuture<GetStreamLogContentResponse> getStreamLogContent(GetStreamLogContentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetStreamLogContent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetStreamLogContentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetStreamLogContentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a single start or stop operation record and the log content by querying the production environment.</p>
+     * 
+     * @param request the request parameters of GetStreamOpsRecord  GetStreamOpsRecordRequest
+     * @return GetStreamOpsRecordResponse
+     */
+    @Override
+    public CompletableFuture<GetStreamOpsRecordResponse> getStreamOpsRecord(GetStreamOpsRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetStreamOpsRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetStreamOpsRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetStreamOpsRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the basic information and running status of a real-time task. The DEV and PROD environments are supported.</p>
+     * 
+     * @param request the request parameters of GetStreamTask  GetStreamTaskRequest
+     * @return GetStreamTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetStreamTaskResponse> getStreamTask(GetStreamTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetStreamTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetStreamTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetStreamTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4199,7 +4409,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the detailed information of published APIs by appKey.</p>
+     * <p>Queries the details of published APIs by AppKey.</p>
      * 
      * @param request the request parameters of ListApiByApp  ListApiByAppRequest
      * @return ListApiByAppResponse
@@ -4274,7 +4484,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description.</h2>
+     * <h2>Request description</h2>
+     * <p>This API allows you to query the APIs authorized to an application by providing the tenant ID, the AppKey of the data service application, or a keyword of the application name. Pagination is supported. The returned data includes the API ID, name, project, authorization validity period (for development and production environments), permission type, and field lists for production and development environments (including field or parameter name, parameter type, description, example value, and authorization status). Note that pagination parameters are required.</p>
      * 
      * @param request the request parameters of ListAuthorizedDataServiceApiDetails  ListAuthorizedDataServiceApiDetailsRequest
      * @return ListAuthorizedDataServiceApiDetailsResponse
@@ -4604,8 +4815,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API allows you to retrieve dataset information for a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. ProjectId is required. Other parameters are optional and can be configured as needed to filter results.</p>
+     * <h2>Request description</h2>
+     * <p>This API allows you to retrieve dataset information for a specific project by providing the tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported for paged query, and the returned packet includes the basic information of the datasets and their version details. Note that ProjectId is required, while other parameters are options that you can configure in Settings as needed to filter the results.</p>
      * 
      * @param request the request parameters of ListDatasets  ListDatasetsRequest
      * @return ListDatasetsResponse
@@ -4677,6 +4888,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListK8SResourceGroupIds  ListK8SResourceGroupIdsRequest
+     * @return ListK8SResourceGroupIdsResponse
+     */
+    @Override
+    public CompletableFuture<ListK8SResourceGroupIdsResponse> listK8SResourceGroupIds(ListK8SResourceGroupIdsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListK8SResourceGroupIds").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListK8SResourceGroupIdsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListK8SResourceGroupIdsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4810,11 +5039,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>获取租户指定项目类型下的项目角色列表。返回角色列表中 roleType 字段标识角色类型：</p>
+     * <p>Retrieves the list of project roles for a specified project type under a tenant. The roleType field in the returned role list indicates the role type:</p>
      * <ul>
-     * <li>BUILD_IN：内置角色</li>
-     * <li>CUSTOM：自定义角色
-     * 请求参数 ProjectType 必填，可选值为：BASIC（基础模式项目）、DEV（开发环境项目）、PROD（生产环境项目）、TAG（标签平台项目）。</li>
+     * <li>BUILD_IN: built-in role.</li>
+     * <li>CUSTOM: custom role.
+     * The ProjectType request parameter is required. Valid values:</li>
+     * <li>BASIC: basic mode project.</li>
+     * <li>DEV: development environment project.</li>
+     * <li>PROD: production environment project.</li>
+     * <li>TAG: tag platform project.</li>
      * </ul>
      * 
      * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
@@ -4865,6 +5098,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListPublishRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListPythonModules  ListPythonModulesRequest
+     * @return ListPythonModulesResponse
+     */
+    @Override
+    public CompletableFuture<ListPythonModulesResponse> listPythonModules(ListPythonModulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListPythonModules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPythonModulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPythonModulesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4979,6 +5230,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListRectifyFlow  ListRectifyFlowRequest
+     * @return ListRectifyFlowResponse
+     */
+    @Override
+    public CompletableFuture<ListRectifyFlowResponse> listRectifyFlow(ListRectifyFlowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRectifyFlow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRectifyFlowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRectifyFlowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListResourcePermissionOperationLog  ListResourcePermissionOperationLogRequest
      * @return ListResourcePermissionOperationLogResponse
      */
@@ -5045,6 +5314,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListRowPermissionByUserIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListScheduleMonitor  ListScheduleMonitorRequest
+     * @return ListScheduleMonitorResponse
+     */
+    @Override
+    public CompletableFuture<ListScheduleMonitorResponse> listScheduleMonitor(ListScheduleMonitorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListScheduleMonitor").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListScheduleMonitorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListScheduleMonitorResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5135,6 +5422,111 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListStandardsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the list of historical running instances for a real-time task in the production environment.</p>
+     * 
+     * @param request the request parameters of ListStreamInstanceRecords  ListStreamInstanceRecordsRequest
+     * @return ListStreamInstanceRecordsResponse
+     */
+    @Override
+    public CompletableFuture<ListStreamInstanceRecordsResponse> listStreamInstanceRecords(ListStreamInstanceRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListStreamInstanceRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListStreamInstanceRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListStreamInstanceRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the list of JobManager log files for a real-time task in the production environment.</p>
+     * 
+     * @param request the request parameters of ListStreamJobManagerLogs  ListStreamJobManagerLogsRequest
+     * @return ListStreamJobManagerLogsResponse
+     */
+    @Override
+    public CompletableFuture<ListStreamJobManagerLogsResponse> listStreamJobManagerLogs(ListStreamJobManagerLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListStreamJobManagerLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListStreamJobManagerLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListStreamJobManagerLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the start and stop operation records of real-time tasks in the production environment.</p>
+     * 
+     * @param request the request parameters of ListStreamOpsRecords  ListStreamOpsRecordsRequest
+     * @return ListStreamOpsRecordsResponse
+     */
+    @Override
+    public CompletableFuture<ListStreamOpsRecordsResponse> listStreamOpsRecords(ListStreamOpsRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListStreamOpsRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListStreamOpsRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListStreamOpsRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the list of log files for a specified TaskManager in the production environment.</p>
+     * 
+     * @param request the request parameters of ListStreamTaskManagerLogs  ListStreamTaskManagerLogsRequest
+     * @return ListStreamTaskManagerLogsResponse
+     */
+    @Override
+    public CompletableFuture<ListStreamTaskManagerLogsResponse> listStreamTaskManagerLogs(ListStreamTaskManagerLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListStreamTaskManagerLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListStreamTaskManagerLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListStreamTaskManagerLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the list of TaskManagers for a real-time task in the production environment.</p>
+     * 
+     * @param request the request parameters of ListStreamTaskManagers  ListStreamTaskManagersRequest
+     * @return ListStreamTaskManagersResponse
+     */
+    @Override
+    public CompletableFuture<ListStreamTaskManagersResponse> listStreamTaskManagers(ListStreamTaskManagersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListStreamTaskManagers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListStreamTaskManagersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListStreamTaskManagersResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5251,6 +5643,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListUserGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListUserProjects  ListUserProjectsRequest
+     * @return ListUserProjectsResponse
+     */
+    @Override
+    public CompletableFuture<ListUserProjectsResponse> listUserProjects(ListUserProjectsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListUserProjects").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUserProjectsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUserProjectsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
+     */
+    @Override
+    public CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListUsers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUsersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUsersResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5491,6 +5919,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryPipelineSubmitResult  QueryPipelineSubmitResultRequest
+     * @return QueryPipelineSubmitResultResponse
+     */
+    @Override
+    public CompletableFuture<QueryPipelineSubmitResultResponse> queryPipelineSubmitResult(QueryPipelineSubmitResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryPipelineSubmitResult").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryPipelineSubmitResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryPipelineSubmitResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RemoveDataServiceAppMember  RemoveDataServiceAppMemberRequest
      * @return RemoveDataServiceAppMemberResponse
      */
@@ -5539,6 +5985,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RemoveQualityRuleSchedulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RemoveScheduleMonitor  RemoveScheduleMonitorRequest
+     * @return RemoveScheduleMonitorResponse
+     */
+    @Override
+    public CompletableFuture<RemoveScheduleMonitorResponse> removeScheduleMonitor(RemoveScheduleMonitorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveScheduleMonitor").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveScheduleMonitorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveScheduleMonitorResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5647,6 +6111,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RetryTransferOwnershipResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReviewRectifyFlow  ReviewRectifyFlowRequest
+     * @return ReviewRectifyFlowResponse
+     */
+    @Override
+    public CompletableFuture<ReviewRectifyFlowResponse> reviewRectifyFlow(ReviewRectifyFlowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReviewRectifyFlow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReviewRectifyFlowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReviewRectifyFlowResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5815,6 +6297,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SubmitBatchTemplate  SubmitBatchTemplateRequest
+     * @return SubmitBatchTemplateResponse
+     */
+    @Override
+    public CompletableFuture<SubmitBatchTemplateResponse> submitBatchTemplate(SubmitBatchTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitBatchTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitBatchTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitBatchTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitPipelineAsync  SubmitPipelineAsyncRequest
+     * @return SubmitPipelineAsyncResponse
+     */
+    @Override
+    public CompletableFuture<SubmitPipelineAsyncResponse> submitPipelineAsync(SubmitPipelineAsyncRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitPipelineAsync").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitPipelineAsyncResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitPipelineAsyncResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SubmitPipelineById  SubmitPipelineByIdRequest
      * @return SubmitPipelineByIdResponse
      */
@@ -5863,6 +6381,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitQualityWatchTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitRectifyFlowForReview  SubmitRectifyFlowForReviewRequest
+     * @return SubmitRectifyFlowForReviewResponse
+     */
+    @Override
+    public CompletableFuture<SubmitRectifyFlowForReviewResponse> submitRectifyFlowForReview(SubmitRectifyFlowForReviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitRectifyFlowForReview").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitRectifyFlowForReviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitRectifyFlowForReviewResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -6019,6 +6555,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateBatchTaskUdfLineagesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateBatchTemplate  UpdateBatchTemplateRequest
+     * @return UpdateBatchTemplateResponse
+     */
+    @Override
+    public CompletableFuture<UpdateBatchTemplateResponse> updateBatchTemplate(UpdateBatchTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateBatchTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateBatchTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateBatchTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -6248,7 +6802,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description.</h2>
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API operation updates the details of an existing dataset in a specific project.</li>
+     * <li>You must specify the <code>ProjectId</code> and <code>UpdateCommand</code> parameters. The <code>UpdateCommand</code> parameter contains the specific fields of the dataset to be updated.</li>
+     * <li>The <code>Id</code> field in <code>UpdateCommand</code> is required to identify the dataset to be updated.</li>
+     * <li>Other fields such as <code>Name</code>, <code>Type</code>, and <code>DataCellId</code> are optional. Specify them based on your actual requirements.</li>
+     * <li>Version configuration (<code>VersionConfig</code>) and real-time metatable configuration (<code>RealtimeMetaTableConfig</code>) provide more detailed setting options, including storage paths and table schemas. These are also optional.</li>
+     * <li>Make sure that all provided ID values, such as <code>ProjectId</code>, <code>Id</code>, and <code>DataSourceId</code>, are valid and correctly associated in the system.</li>
+     * </ul>
      * 
      * @param request the request parameters of UpdateDataset  UpdateDatasetRequest
      * @return UpdateDatasetResponse
@@ -6496,6 +7058,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateRowPermissionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateScheduleMonitor  UpdateScheduleMonitorRequest
+     * @return UpdateScheduleMonitorResponse
+     */
+    @Override
+    public CompletableFuture<UpdateScheduleMonitorResponse> updateScheduleMonitor(UpdateScheduleMonitorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateScheduleMonitor").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateScheduleMonitorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateScheduleMonitorResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

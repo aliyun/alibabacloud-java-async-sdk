@@ -136,7 +136,10 @@ public class AddTenantMembersRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -215,7 +218,7 @@ public class AddTenantMembersRequest extends Request {
             }
 
             /**
-             * <p>The list of roles. Valid values:</p>
+             * <p>The role list. Valid values:</p>
              * <ul>
              * <li>SYSTEM_ADMIN</li>
              * <li>DATASOURCE_MANAGER</li>
@@ -224,7 +227,7 @@ public class AddTenantMembersRequest extends Request {
              * <li>EXPORT_ADMIN</li>
              * <li>DATA_STANDARD_MANAGER</li>
              * <li>LABELS_BUSINESS_PLANNER</li>
-             * <li>BUSINESS_MEMBER.</li>
+             * <li>BUSINESS_MEMBER</li>
              * </ul>
              */
             public Builder roleList(java.util.List<String> roleList) {
@@ -280,7 +283,7 @@ public class AddTenantMembersRequest extends Request {
             } 
 
             /**
-             * <p>The list of members.</p>
+             * <p>The member list.</p>
              * <p>This parameter is required.</p>
              */
             public Builder userList(java.util.List<UserList> userList) {

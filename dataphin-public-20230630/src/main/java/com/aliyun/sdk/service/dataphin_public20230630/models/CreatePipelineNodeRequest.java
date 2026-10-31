@@ -112,7 +112,7 @@ public class CreatePipelineNodeRequest extends Request {
         }
 
         /**
-         * <p>The command to create a pipeline. Both offline and real-time pipelines are supported.</p>
+         * <p>Creates a pipeline, which supports offline and real-time pipelines.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createPipelineNodeCommand(CreatePipelineNodeCommand createPipelineNodeCommand) {
@@ -136,7 +136,10 @@ public class CreatePipelineNodeRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -229,7 +232,7 @@ public class CreatePipelineNodeRequest extends Request {
             }
 
             /**
-             * <p>The full path of the parent directory of the file. If this parameter is left empty, the root path (/) is used.</p>
+             * <p>The full path of the parent directory of the file. If this parameter is left empty, the root directory \&quot;/\&quot; is used.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -364,7 +367,7 @@ public class CreatePipelineNodeRequest extends Request {
             }
 
             /**
-             * <p>The node type. Valid values: NORMAL, MANUAL, and REAL_TIME.</p>
+             * <p>The node type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -388,7 +391,7 @@ public class CreatePipelineNodeRequest extends Request {
             }
 
             /**
-             * <p>The pipeline type. Valid values: OFFLINE_PIPELINE and REAL_TIME_PIPELINE.</p>
+             * <p>The pipeline type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

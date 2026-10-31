@@ -126,7 +126,7 @@ public class GetStandardLookupTableRequest extends Request {
         }
 
         /**
-         * <p>The lookup table ID.</p>
+         * <p>The ID of the lookup table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class GetStandardLookupTableRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow a null value to be returned when the lookup table does not exist. If set to false, an exception is thrown. Default value: true.</p>
+         * <p>Specifies whether to allow a null value to be returned if the lookup table does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</p>
          */
         public Builder nullable(Boolean nullable) {
             this.putQueryParameter("Nullable", nullable);
@@ -161,7 +161,10 @@ public class GetStandardLookupTableRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

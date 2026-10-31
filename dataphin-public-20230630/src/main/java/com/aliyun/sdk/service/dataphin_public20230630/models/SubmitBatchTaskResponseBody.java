@@ -119,7 +119,7 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code returned for the request. A value of OK indicates that the request is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -141,7 +141,7 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -152,7 +152,7 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -163,7 +163,7 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The submit result.</p>
+         * <p>The edit result.</p>
          */
         public Builder submitResult(SubmitResult submitResult) {
             this.submitResult = submitResult;
@@ -171,7 +171,7 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +237,7 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the scheduling node.</p>
+             * <p>The ID of the task scheduling node.</p>
              * 
              * <strong>example:</strong>
              * <p>n_12113111</p>
@@ -248,7 +248,7 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the object pending publish.</p>
+             * <p>The ID of the object to be published.</p>
              * 
              * <strong>example:</strong>
              * <p>1010312911</p>

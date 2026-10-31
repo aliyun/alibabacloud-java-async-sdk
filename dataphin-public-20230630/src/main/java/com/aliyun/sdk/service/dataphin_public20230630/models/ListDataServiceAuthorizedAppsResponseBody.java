@@ -152,7 +152,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paging query result.</p>
+         * <p>The paging query results.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -171,7 +171,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -537,7 +537,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application name.</p>
+             * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -548,7 +548,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the permission account, which is the applicant ID.</p>
+             * <p>The ID of the authorized account, which is the ID of the applicant.</p>
              * 
              * <strong>example:</strong>
              * <p>30012101</p>
@@ -559,10 +559,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permission account, which is the applicant.</p>
+             * <p>The name of the authorized account, which is the name of the applicant.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder applyUserName(String applyUserName) {
                 this.applyUserName = applyUserName;
@@ -570,7 +570,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration date in the format of yyyy-MM-dd.</p>
+             * <p>The expiration date. Format: yyyy-MM-dd.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30</p>
@@ -581,7 +581,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application ID.</p>
+             * <p>The ID of the authorization request.</p>
              * 
              * <strong>example:</strong>
              * <p>1121</p>
@@ -592,7 +592,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the current user is a project administrator.</p>
+             * <p>Indicates whether the current user is a project manager.</p>
              */
             public Builder isProjectManager(Boolean isProjectManager) {
                 this.isProjectManager = isProjectManager;
@@ -622,7 +622,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permission account. Valid values: 0: individual account.</p>
+             * <p>The authorized account type. Valid values:</p>
+             * <ul>
+             * <li>0: Individual account.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -633,7 +636,11 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permission type. Valid values: 0: usage permission. 1: development permission.</p>
+             * <p>The permission type. Valid values:</p>
+             * <ul>
+             * <li>0: Usage permissions.</li>
+             * <li>1: Development permissions.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -666,7 +673,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the user actually has owner permissions on this application. The user may lack permissions because of expiration or other reasons.</p>
+             * <p>Indicates whether the user actually has the owner permissions for the application. The user may not have the permissions due to expiration or other reasons.</p>
              */
             public Builder realHasOwnerPrivilege(Boolean realHasOwnerPrivilege) {
                 this.realHasOwnerPrivilege = realHasOwnerPrivilege;
@@ -674,7 +681,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the user actually has permissions.</p>
+             * <p>Indicates whether the user actually has the permissions.</p>
              */
             public Builder realHasPrivilege(Boolean realHasPrivilege) {
                 this.realHasPrivilege = realHasPrivilege;
@@ -682,7 +689,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The descriptions used for troubleshooting.</p>
+             * <p>The description used for troubleshooting.</p>
              */
             public Builder remarkForDebugList(java.util.List<RemarkForDebugList> remarkForDebugList) {
                 this.remarkForDebugList = remarkForDebugList;
@@ -690,7 +697,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the permissions can be returned or revoked.</p>
+             * <p>Indicates whether the permission can be returned or revoked.</p>
              */
             public Builder revocable(Boolean revocable) {
                 this.revocable = revocable;
@@ -698,7 +705,15 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed status of the revoke button. Valid values: -1: super administrators cannot revoke. -2: owners cannot revoke. -3: project administrators without actual permissions are grayed out. -4: regular users without permissions cannot revoke. 1: project administrators with actual permissions can revoke. 2: regular users with permissions can revoke.</p>
+             * <p>The detailed status of the revocation button. Valid values:</p>
+             * <ul>
+             * <li>-1: Super administrators cannot relinquish the permission.</li>
+             * <li>-2: Owners cannot relinquish the permission.</li>
+             * <li>-3: Project managers without actual permissions (grayed out).</li>
+             * <li>-4: Regular users without permissions cannot relinquish the permission.</li>
+             * <li>1: Project managers with actual permissions can relinquish the permission.</li>
+             * <li>2: Regular users with permissions can relinquish the permission.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>-1</p>

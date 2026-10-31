@@ -141,7 +141,7 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -248,7 +248,7 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration item value.</p>
+             * <p>The value of the configuration item.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -505,11 +505,11 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the current logon user relative to this record. Valid values:</p>
+             * <p>The role of the current logged-on user for this record. Valid values:</p>
              * <ul>
-             * <li>SuperAdmin: the current user is a super administrator.</li>
-             * <li>ProjMan: the current user is a project administrator for this record.</li>
-             * <li>NormalUser: the current user is a regular user for this record, meaning the user is neither a super administrator nor a project administrator.</li>
+             * <li>SuperAdmin: The current user is a super administrator.</li>
+             * <li>ProjMan: The current user is a project manager for this record.</li>
+             * <li>NormalUser: The current user is a regular user for this record, meaning the user is neither a super administrator nor a project manager.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -543,7 +543,7 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user to whom the permission belongs.</p>
+             * <p>The permission owner.</p>
              * 
              * <strong>example:</strong>
              * <p>1121</p>
@@ -554,9 +554,9 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the authorization. Valid values:</p>
+             * <p>The authorization source. Valid values:</p>
              * <ul>
-             * <li>0: owner.</li>
+             * <li>0: Owner.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -590,7 +590,7 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description, used for troubleshooting.</p>
+             * <p>The description used for troubleshooting.</p>
              */
             public Builder remarkForDebugList(java.util.List<RemarkForDebugList> remarkForDebugList) {
                 this.remarkForDebugList = remarkForDebugList;
@@ -600,7 +600,7 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
             /**
              * <p>The role. Valid values:</p>
              * <ul>
-             * <li>0: owner.</li>
+             * <li>0: Owner.</li>
              * </ul>
              * 
              * <strong>example:</strong>

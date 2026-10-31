@@ -128,7 +128,7 @@ public class ExecuteTriggerNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The error message returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -150,7 +150,7 @@ public class ExecuteTriggerNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

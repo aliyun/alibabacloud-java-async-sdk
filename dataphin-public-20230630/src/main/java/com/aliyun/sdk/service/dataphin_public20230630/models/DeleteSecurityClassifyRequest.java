@@ -112,7 +112,7 @@ public class DeleteSecurityClassifyRequest extends Request {
         }
 
         /**
-         * <p>The delete instruction.</p>
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -136,7 +136,10 @@ public class DeleteSecurityClassifyRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -217,7 +220,7 @@ public class DeleteSecurityClassifyRequest extends Request {
             } 
 
             /**
-             * <p>The categorization ID. If this parameter is not specified, the categorization is matched and deleted based on the categorization name and parent path.</p>
+             * <p>The category ID. If this parameter is not provided, the category is matched and deleted based on the category name and parent path.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -228,7 +231,7 @@ public class DeleteSecurityClassifyRequest extends Request {
             }
 
             /**
-             * <p>The categorization name.</p>
+             * <p>The category name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -239,7 +242,7 @@ public class DeleteSecurityClassifyRequest extends Request {
             }
 
             /**
-             * <p>The categorization path. Default value: /.</p>
+             * <p>The category path. Default value: /.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>

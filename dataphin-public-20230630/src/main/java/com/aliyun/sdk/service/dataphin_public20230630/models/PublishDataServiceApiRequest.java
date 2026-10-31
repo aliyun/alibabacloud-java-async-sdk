@@ -142,7 +142,7 @@ public class PublishDataServiceApiRequest extends Request {
         }
 
         /**
-         * <p>The API ID.</p>
+         * <p>The ID of the API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,10 @@ public class PublishDataServiceApiRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -177,7 +180,7 @@ public class PublishDataServiceApiRequest extends Request {
         }
 
         /**
-         * <p>The data service project ID.</p>
+         * <p>The ID of the data service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +193,7 @@ public class PublishDataServiceApiRequest extends Request {
         }
 
         /**
-         * <p>The API version number.</p>
+         * <p>The API version ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

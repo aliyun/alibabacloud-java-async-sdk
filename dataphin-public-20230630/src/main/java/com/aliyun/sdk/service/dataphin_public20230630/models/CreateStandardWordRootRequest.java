@@ -112,7 +112,7 @@ public class CreateStandardWordRootRequest extends Request {
         }
 
         /**
-         * <p>The create instruction.</p>
+         * <p>The creation command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -136,7 +136,10 @@ public class CreateStandardWordRootRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -272,7 +275,7 @@ public class CreateStandardWordRootRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>平均值</p>
+             * <p>Average</p>
              */
             public Builder name(String name) {
                 this.name = name;

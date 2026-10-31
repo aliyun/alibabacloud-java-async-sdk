@@ -106,7 +106,7 @@ public class DeleteResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Backend response code.</p>
+         * <p>The backend response code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -117,7 +117,7 @@ public class DeleteResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class DeleteResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Backend error details.</p>
+         * <p>The backend response error details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -150,7 +150,7 @@ public class DeleteResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -119,7 +119,7 @@ public class ListAddableUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -152,7 +152,7 @@ public class ListAddableUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paging query result.</p>
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -171,7 +171,7 @@ public class ListAddableUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -513,7 +513,7 @@ public class ListAddableUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Lark chatbot.</p>
+             * <p>The Lark bot.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -535,7 +535,7 @@ public class ListAddableUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the user was last modified.</p>
+             * <p>The time when the user was modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1717343597000</p>
@@ -623,7 +623,7 @@ public class ListAddableUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source ID of the user.</p>
+             * <p>The ID of the user source.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
@@ -634,7 +634,7 @@ public class ListAddableUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type of the user.</p>
+             * <p>The source of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyun</p>
@@ -645,7 +645,7 @@ public class ListAddableUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The WeCom chatbot.</p>
+             * <p>The WeCom bot.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -656,7 +656,7 @@ public class ListAddableUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP whitelist.</p>
+             * <p>The IP address whitelist.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -739,7 +739,7 @@ public class ListAddableUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of users.</p>
+             * <p>The user list.</p>
              */
             public Builder userList(java.util.List<UserList> userList) {
                 this.userList = userList;

@@ -151,7 +151,7 @@ public class BatchCreateKgEntityRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator user.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -334,7 +334,7 @@ public class BatchCreateKgEntityRequest extends Request {
             }
 
             /**
-             * <p>The list of entity record properties.</p>
+             * <p>The list of properties for the entity record.</p>
              * <p>This parameter is required.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {

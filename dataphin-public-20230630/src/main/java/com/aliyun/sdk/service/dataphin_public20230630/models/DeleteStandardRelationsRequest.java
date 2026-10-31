@@ -112,7 +112,7 @@ public class DeleteStandardRelationsRequest extends Request {
         }
 
         /**
-         * <p>The delete instruction.</p>
+         * <p>The delete command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -136,7 +136,10 @@ public class DeleteStandardRelationsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -279,7 +282,7 @@ public class DeleteStandardRelationsRequest extends Request {
             } 
 
             /**
-             * <p>The standard association type: RELATIVE.</p>
+             * <p>The standard association type. Valid value: RELATIVE.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

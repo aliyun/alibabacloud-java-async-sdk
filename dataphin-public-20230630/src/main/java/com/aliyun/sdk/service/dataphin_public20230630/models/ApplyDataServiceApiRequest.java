@@ -127,7 +127,7 @@ public class ApplyDataServiceApiRequest extends Request {
         }
 
         /**
-         * <p>The apply command.</p>
+         * <p>The application command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applyCommand(ApplyCommand applyCommand) {
@@ -151,7 +151,10 @@ public class ApplyDataServiceApiRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -219,7 +222,7 @@ public class ApplyDataServiceApiRequest extends Request {
             } 
 
             /**
-             * <p>The API permission field ID.</p>
+             * <p>The ID of the API permission field.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -276,7 +279,7 @@ public class ApplyDataServiceApiRequest extends Request {
             } 
 
             /**
-             * <p>The API permission field ID.</p>
+             * <p>The ID of the API permission field.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -476,7 +479,7 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to apply for permissions on operation-type APIs in the development environment.</p>
+             * <p>Specifies whether to apply for permissions in the development environment for operation APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -487,7 +490,7 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to apply for permissions on operation-type APIs in the production environment.</p>
+             * <p>Specifies whether to apply for permissions in the production environment for operation APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -500,8 +503,8 @@ public class ApplyDataServiceApiRequest extends Request {
             /**
              * <p>The application type. Valid values:</p>
              * <ul>
-             * <li>APP: application.</li>
-             * <li>USER: individual account.</li>
+             * <li>APP: application</li>
+             * <li>USER: individual account</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -515,16 +518,13 @@ public class ApplyDataServiceApiRequest extends Request {
             /**
              * <p>The list of permission types.</p>
              * <ul>
-             * <li><p>When the principal is an application, the following permission types are supported. To apply for delegation permissions, you must also apply for usage permissions.</p>
-             * <ul>
-             * <li>USE: usage permission.</li>
-             * <li>DELEGATION: delegation permission.</li>
+             * <li>If the applicant is an application, the following permission types are supported. When applying for the delegation permission, you must also apply for the use permission:<ul>
+             * <li>USE: use permission</li>
+             * <li>DELEGATION: delegation permission</li>
              * </ul>
              * </li>
-             * <li><p>When the principal is an individual, only USE (usage) permission is supported.</p>
-             * </li>
-             * <li><p>If this parameter is not specified, the default value is USE (usage) permission.</p>
-             * </li>
+             * <li>If the applicant is an individual, only the USE permission is supported.</li>
+             * <li>If this parameter is not specified, the default value is USE.</li>
              * </ul>
              */
             public Builder authTypes(java.util.List<String> authTypes) {
@@ -533,7 +533,7 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>The list of permission fields for query-type APIs in the development environment. This parameter is required in dev-prod mode. DevFieldList and ProdFieldList cannot both be empty.</p>
+             * <p>The list of permission fields in the development environment for query APIs. This parameter is required in dev-prod mode. Either devFieldList or prodFieldList must be specified.</p>
              */
             public Builder devFieldList(java.util.List<DevFieldList> devFieldList) {
                 this.devFieldList = devFieldList;
@@ -541,7 +541,7 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>The expiration date in the format of yyyy-MM-dd.</p>
+             * <p>The expiration date. Format: yyyy-MM-dd.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -553,7 +553,7 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>The list of permission fields for query-type APIs in the production environment. This parameter is required in basic mode.</p>
+             * <p>The list of permission fields in the production environment for query APIs. This parameter is required in basic mode.</p>
              */
             public Builder prodFieldList(java.util.List<ProdFieldList> prodFieldList) {
                 this.prodFieldList = prodFieldList;

@@ -136,7 +136,10 @@ public class ListOperationRecordRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -350,7 +353,7 @@ public class ListOperationRecordRequest extends Request {
             } 
 
             /**
-             * <p>The end of the start time range. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The end time of the time range. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-31 23:59:59</p>
@@ -361,7 +364,7 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
-             * <p>The beginning of the start time range. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The start time of the time range. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-01 00:00:00</p>
@@ -391,7 +394,7 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
-             * <p>The list of duration ranges.</p>
+             * <p>The list of durations.</p>
              */
             public Builder duration(java.util.List<Integer> duration) {
                 this.duration = duration;
@@ -402,7 +405,7 @@ public class ListOperationRecordRequest extends Request {
              * <p>The script name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试脚本</p>
+             * <p>Test script</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -454,7 +457,7 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
-             * <p>The sort type. Valid values: 0 (start time ascending), 1 (start time descending), 2 (object name).</p>
+             * <p>The sort type. Valid values: 0: Ascending order by start time. 1: Descending order by start time. 2: Object name.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

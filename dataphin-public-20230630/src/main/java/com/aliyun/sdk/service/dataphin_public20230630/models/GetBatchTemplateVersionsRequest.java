@@ -144,9 +144,9 @@ public class GetBatchTemplateVersionsRequest extends Request {
          * <p>The environment. Valid values:</p>
          * <ul>
          * <li>DEV: development environment.</li>
-         * <li>PROD: production environment.</li>
+         * <li>PROD: production environment.
+         * Default value: DEV for dev_prod projects.</li>
          * </ul>
-         * <p>Default value for dev_prod projects: DEV.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -171,7 +171,10 @@ public class GetBatchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

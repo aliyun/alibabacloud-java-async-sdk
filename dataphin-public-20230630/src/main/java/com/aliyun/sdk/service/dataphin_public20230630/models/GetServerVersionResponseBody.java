@@ -119,7 +119,7 @@ public class GetServerVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request is successful.</p>
+         * <p>The request error code. A value of OK indicates that the request is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class GetServerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Dataphin server version number.</p>
+         * <p>The version number of the Dataphin server.</p>
          * 
          * <strong>example:</strong>
          * <p>6.4.0.994114</p>
@@ -152,7 +152,7 @@ public class GetServerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -174,7 +174,7 @@ public class GetServerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -119,7 +119,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. OK indicates a successful request.</p>
+         * <p>The error code. OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The HTTP status code returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paginated query result.</p>
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -171,7 +171,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -280,7 +280,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -302,7 +302,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
              * <p>The name of the user group.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -588,7 +588,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DingTalk number.</p>
+             * <p>The DingTalk ID.</p>
              * 
              * <strong>example:</strong>
              * <p>dd123123</p>
@@ -610,7 +610,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the user without status.</p>
+             * <p>The display name of the user without the status.</p>
              * 
              * <strong>example:</strong>
              * <p>zhangsan</p>
@@ -621,7 +621,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the IP address whitelist is enabled.</p>
+             * <p>Indicates whether the IP whitelist is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -632,7 +632,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the user was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1730000000000</p>
@@ -643,7 +643,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the user was last modified.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>1730000000000</p>
@@ -712,7 +712,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
              * <p>The real name of the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder realName(String realName) {
                 this.realName = realName;
@@ -720,7 +720,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of member roles.</p>
+             * <p>The member role.</p>
              */
             public Builder roleList(java.util.List<String> roleList) {
                 this.roleList = roleList;
@@ -728,7 +728,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user source ID.</p>
+             * <p>The ID of the user source.</p>
              * 
              * <strong>example:</strong>
              * <p>213213232422222</p>
@@ -739,7 +739,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user source.</p>
+             * <p>The source of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyun</p>
@@ -750,7 +750,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of user groups to which the user belongs.</p>
+             * <p>The resource groups to which the user belongs.</p>
              */
             public Builder userGroupList(java.util.List<UserGroupList> userGroupList) {
                 this.userGroupList = userGroupList;
@@ -828,7 +828,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>110</p>
@@ -839,7 +839,7 @@ public class ListTenantMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of users.</p>
+             * <p>The user list.</p>
              */
             public Builder userList(java.util.List<UserList> userList) {
                 this.userList = userList;

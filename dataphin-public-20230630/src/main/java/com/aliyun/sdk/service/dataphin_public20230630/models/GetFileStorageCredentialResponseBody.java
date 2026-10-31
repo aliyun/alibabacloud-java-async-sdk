@@ -163,7 +163,7 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the temporary read/write authorization.</p>
+         * <p>The details of the temporary read and write authorization.</p>
          */
         public Builder storageCredential(StorageCredential storageCredential) {
             this.storageCredential = storageCredential;
@@ -171,7 +171,7 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -405,7 +405,7 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The temporary security token.</p>
+             * <p>The security token.</p>
              * 
              * <strong>example:</strong>
              * <p>temp.token</p>
@@ -416,7 +416,7 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage cluster type. Valid values: oss and ceph.</p>
+             * <p>The type of the storage cluster. Valid values: oss and ceph.</p>
              * 
              * <strong>example:</strong>
              * <p>oss</p>

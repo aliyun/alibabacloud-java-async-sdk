@@ -119,7 +119,7 @@ public class ListBizUnitsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -171,7 +171,7 @@ public class ListBizUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -472,7 +472,7 @@ public class ListBizUnitsResponseBody extends TeaModel {
              * <p>The display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -480,11 +480,7 @@ public class ListBizUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment identifier. Valid values:</p>
-             * <ul>
-             * <li>DEV: development environment.</li>
-             * <li>PROD: production environment.</li>
-             * </ul>
+             * <p>The environment identifier. Valid values: DEV (development environment) and PROD (production environment).</p>
              * 
              * <strong>example:</strong>
              * <p>DEV</p>
@@ -517,7 +513,7 @@ public class ListBizUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business unit icon.</p>
+             * <p>The icon of the business unit.</p>
              * 
              * <strong>example:</strong>
              * <p>icon-e-commerce</p>
@@ -528,7 +524,7 @@ public class ListBizUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business unit ID.</p>
+             * <p>The ID of the business unit.</p>
              * 
              * <strong>example:</strong>
              * <p>101001201</p>
@@ -539,7 +535,7 @@ public class ListBizUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who last modified the business unit.</p>
+             * <p>The ID of the last modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>30010010</p>
@@ -550,10 +546,10 @@ public class ListBizUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user who last modified the business unit.</p>
+             * <p>The name of the last modifier.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
@@ -561,11 +557,7 @@ public class ListBizUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The production mode. Valid values:</p>
-             * <ul>
-             * <li>BASIC: single-environment mode.</li>
-             * <li>DEV_PROD: development/production dual-environment mode.</li>
-             * </ul>
+             * <p>The production mode. Valid values: BASIC (single-environment mode) and DEV_PROD (development and production dual-environment mode).</p>
              * 
              * <strong>example:</strong>
              * <p>DEV_PROD</p>
@@ -587,10 +579,10 @@ public class ListBizUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the business object.</p>
+             * <p>The ID of the owner of the business object.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -598,7 +590,7 @@ public class ListBizUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the business object.</p>
+             * <p>The ID of the owner of the business object.</p>
              * 
              * <strong>example:</strong>
              * <p>30010010</p>
@@ -655,7 +647,7 @@ public class ListBizUnitsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The business unit details.</p>
+             * <p>The details of the business units.</p>
              */
             public Builder bizUnitList(java.util.List<BizUnitList> bizUnitList) {
                 this.bizUnitList = bizUnitList;

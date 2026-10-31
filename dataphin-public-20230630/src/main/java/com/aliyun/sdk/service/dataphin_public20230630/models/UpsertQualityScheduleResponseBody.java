@@ -130,7 +130,7 @@ public class UpsertQualityScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The schedule object ID.</p>
+         * <p>The ID of the schedule object.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -152,7 +152,7 @@ public class UpsertQualityScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backend exception details.</p>
+         * <p>The details of the backend exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -174,7 +174,7 @@ public class UpsertQualityScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

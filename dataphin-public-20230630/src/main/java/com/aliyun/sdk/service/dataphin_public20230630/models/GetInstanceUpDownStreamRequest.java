@@ -169,7 +169,7 @@ public class GetInstanceUpDownStreamRequest extends Request {
         }
 
         /**
-         * <p>The number of downstream node levels. Default value: 1.</p>
+         * <p>The depth of downstream nodes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -183,8 +183,9 @@ public class GetInstanceUpDownStreamRequest extends Request {
         /**
          * <p>The environment identifier. Valid values:</p>
          * <ul>
-         * <li>DEV: development environment. </li>
-         * <li>PROD (default): production environment.</li>
+         * <li>DEV: development environment</li>
+         * <li>PROD: production environment
+         * Default value: PROD.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +198,7 @@ public class GetInstanceUpDownStreamRequest extends Request {
         }
 
         /**
-         * <p>The center node.</p>
+         * <p>The central node.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceId(InstanceId instanceId) {
@@ -221,7 +222,10 @@ public class GetInstanceUpDownStreamRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -243,7 +247,7 @@ public class GetInstanceUpDownStreamRequest extends Request {
         }
 
         /**
-         * <p>The number of upstream node levels. Default value: 1.</p>
+         * <p>The depth of upstream nodes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -315,7 +319,7 @@ public class GetInstanceUpDownStreamRequest extends Request {
             } 
 
             /**
-             * <p>The list of field IDs. This parameter can be specified when the node is a logical table instance ID. If this parameter is not specified, the full table is used by default.</p>
+             * <p>The list of field IDs. You can specify this parameter when the node is a logical table instance ID. If you do not specify this parameter, the entire table is used by default.</p>
              */
             public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;

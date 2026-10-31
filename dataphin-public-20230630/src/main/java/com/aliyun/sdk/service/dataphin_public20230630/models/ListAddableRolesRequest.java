@@ -110,7 +110,10 @@ public class ListAddableRolesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

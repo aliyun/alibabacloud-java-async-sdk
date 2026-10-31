@@ -124,7 +124,10 @@ public class TransferOwnershipForAllObjectRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The user ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -241,7 +244,7 @@ public class TransferOwnershipForAllObjectRequest extends Request {
             }
 
             /**
-             * <p>The remarks.</p>
+             * <p>The comment.</p>
              * 
              * <strong>example:</strong>
              * <p>comment</p>

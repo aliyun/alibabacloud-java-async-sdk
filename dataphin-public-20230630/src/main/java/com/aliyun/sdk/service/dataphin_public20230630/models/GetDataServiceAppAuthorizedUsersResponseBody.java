@@ -141,7 +141,7 @@ public class GetDataServiceAppAuthorizedUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The error details of the backend response.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -163,7 +163,7 @@ public class GetDataServiceAppAuthorizedUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,7 +171,7 @@ public class GetDataServiceAppAuthorizedUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of users.</p>
+         * <p>The user list.</p>
          */
         public Builder userList(java.util.List<UserList> userList) {
             this.userList = userList;

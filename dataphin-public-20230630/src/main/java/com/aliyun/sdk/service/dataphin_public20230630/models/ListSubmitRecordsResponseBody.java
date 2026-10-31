@@ -119,7 +119,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code. OK indicates a successful request.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code returned by the backend.</p>
+         * <p>The HTTP status code returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Query result.</p>
+         * <p>The query result.</p>
          */
         public Builder listResult(ListResult listResult) {
             this.listResult = listResult;
@@ -149,7 +149,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -160,7 +160,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -171,7 +171,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request is successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -380,7 +380,12 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Change type. 0: Create / 1: Update / 2: Delete.</p>
+             * <p>The change type. Valid values:</p>
+             * <ul>
+             * <li>0: create</li>
+             * <li>1: update</li>
+             * <li>2: delete</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -391,7 +396,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The time when the record was created. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-10 10:00:00</p>
@@ -402,7 +407,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The time when the record was updated. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-10 10:00:00</p>
@@ -413,7 +418,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Pending deployment record ID.</p>
+             * <p>The ID of the pending publish record.</p>
              * 
              * <strong>example:</strong>
              * <p>1241844456</p>
@@ -424,7 +429,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node ID.</p>
+             * <p>The ID of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>n_123456</p>
@@ -435,7 +440,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Object ID.</p>
+             * <p>The ID of the object.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567</p>
@@ -446,10 +451,10 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Object name.</p>
+             * <p>The name of the object.</p>
              * 
              * <strong>example:</strong>
-             * <p>对象A</p>
+             * <p>Object A</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -457,53 +462,53 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Object type. Valid values:</p>
+             * <p>The object type. Valid values:</p>
              * <ul>
-             * <li>MaxCompute SQL task: MAX_COMPUTE_SQL</li>
-             * <li>MaxCompute MR task: MAX_COMPUTE_MR</li>
-             * <li>Spark JAR on MaxCompute: SPARK_JAR_ON_MAX_COMPUTE</li>
-             * <li>Shell task: SHELL</li>
-             * <li>Python task: PYTHON</li>
-             * <li>Perl script: PERL</li>
-             * <li>Check: CHECK</li>
-             * <li>Sync task: DATA_X</li>
-             * <li>Virtual node: VIRTUAL</li>
-             * <li>Resource: IDE_RESOURCE</li>
-             * <li>Function: UDF</li>
-             * <li>Hive SQL task: HIVE_SQL</li>
-             * <li>Hadoop MR task: HADOOP_MR</li>
-             * <li>Spark JAR on Hive task: SPARK_JAR_ON_HIVE</li>
-             * <li>Flink SQL task: FLINK_SQL</li>
-             * <li>Flink SQL template task: FLINK_TEMPLATE_SQL</li>
-             * <li>Stream computing template: STREAM_TEMPLATE</li>
-             * <li>Metatable: META_TABLE</li>
-             * <li>Stream computing function: STREAM_UDF</li>
-             * <li>Real-time Flink DataStream: FLINK_DATASTREAM</li>
-             * <li>Real-time custom data source: STREAM_CUSTOM_DATASOURCE</li>
-             * <li>AnalyticDB for PostgreSQL task: ADB_FOR_PG</li>
-             * <li>TDH SQL task: INCEPTOR_SQL</li>
-             * <li>Mirror table: MIRROR_TABLE</li>
-             * <li>Intermediate table: MIDDLE_TABLE</li>
-             * <li>Application table: APPLICATION_TABLE</li>
-             * <li>Impala SQL task: IMPALA_SQL</li>
-             * <li>Offline pipeline task: OFFLINE_PIPELINE</li>
-             * <li>Real-time pipeline task: REAL_TIME_PIPELINE</li>
-             * <li>Dimension logical table: DIM_LOGICAL_TABLE</li>
-             * <li>Fact logical table: FCT_LOGICAL_TABLE</li>
-             * <li>Business condition: BIZ_CONDITION</li>
-             * <li>Atomic metric: ATOM_INDEX</li>
-             * <li>Derived metric: DERIVED_INDEX</li>
-             * <li>Calculated derived metric: CALC_DERIVED_INDEX</li>
-             * <li>PAI task: PAI_DESIGNER</li>
-             * <li>ArgoDB SQL task: ARGODB_SQL</li>
-             * <li>Hologres SQL task: HOLOGRES_SQL</li>
-             * <li>Impala SQL task: IMPALA_SQL</li>
-             * <li>StarRocks SQL task: STARROCKS_SQL</li>
-             * <li>Database SQL task: DATABASE_SQL</li>
-             * <li>Spark SQL task: SPARK_SQL</li>
-             * <li>Compute template: TASK_TEMPLATE</li>
-             * <li>External trigger node: EXTERNAL_TRIGGER</li>
-             * <li>Gauss SQL task: GAUSS_SQL</li>
+             * <li>MAX_COMPUTE_SQL: MaxCompute SQL node</li>
+             * <li>MAX_COMPUTE_MR: MaxCompute MR node</li>
+             * <li>SPARK_JAR_ON_MAX_COMPUTE: Spark JAR on MaxCompute node</li>
+             * <li>SHELL: Shell node</li>
+             * <li>PYTHON: Python node</li>
+             * <li>PERL: Perl script</li>
+             * <li>CHECK: Check node</li>
+             * <li>DATA_X: Data synchronization node</li>
+             * <li>VIRTUAL: Virtual node</li>
+             * <li>IDE_RESOURCE: Resource</li>
+             * <li>UDF: Function</li>
+             * <li>HIVE_SQL: Hive SQL node</li>
+             * <li>HADOOP_MR: Hadoop MR node</li>
+             * <li>SPARK_JAR_ON_HIVE: Spark JAR on Hive node</li>
+             * <li>FLINK_SQL: Flink SQL node</li>
+             * <li>FLINK_TEMPLATE_SQL: Flink SQL template node</li>
+             * <li>STREAM_TEMPLATE: Stream computing template</li>
+             * <li>META_TABLE: Metatable</li>
+             * <li>STREAM_UDF: Stream computing function</li>
+             * <li>FLINK_DATASTREAM: Real-time Flink DataStream node</li>
+             * <li>STREAM_CUSTOM_DATASOURCE: Real-time custom data source</li>
+             * <li>ADB_FOR_PG: AnalyticDB for PostgreSQL node</li>
+             * <li>INCEPTOR_SQL: Inceptor SQL node</li>
+             * <li>MIRROR_TABLE: Mirror table</li>
+             * <li>MIDDLE_TABLE: Intermediate table</li>
+             * <li>APPLICATION_TABLE: Application table</li>
+             * <li>IMPALA_SQL: Impala SQL node</li>
+             * <li>OFFLINE_PIPELINE: Offline pipeline node</li>
+             * <li>REAL_TIME_PIPELINE: Real-time pipeline node</li>
+             * <li>DIM_LOGICAL_TABLE: Logical dimension table</li>
+             * <li>FCT_LOGICAL_TABLE: Logical fact table</li>
+             * <li>BIZ_CONDITION: Business filter</li>
+             * <li>ATOM_INDEX: Atomic metric</li>
+             * <li>DERIVED_INDEX: Derived metric</li>
+             * <li>CALC_DERIVED_INDEX: Derivative metric</li>
+             * <li>PAI_DESIGNER: PAI Designer node</li>
+             * <li>ARGODB_SQL: ArgoDB SQL node</li>
+             * <li>HOLOGRES_SQL: Hologres SQL node</li>
+             * <li>IMPALA_SQL: Impala SQL node</li>
+             * <li>STARROCKS_SQL: StarRocks SQL node</li>
+             * <li>DATABASE_SQL: Database SQL node</li>
+             * <li>SPARK_SQL: Spark SQL node</li>
+             * <li>TASK_TEMPLATE: Task template</li>
+             * <li>EXTERNAL_TRIGGER: External trigger node</li>
+             * <li>GAUSS_SQL: Gauss SQL node</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -515,7 +520,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Object version.</p>
+             * <p>The version of the object.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -526,7 +531,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Project ID.</p>
+             * <p>The project ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1241844456</p>
@@ -537,10 +542,10 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Submission comment.</p>
+             * <p>The submission comment.</p>
              * 
              * <strong>example:</strong>
-             * <p>提交信息</p>
+             * <p>Submission comment</p>
              */
             public Builder submitComment(String submitComment) {
                 this.submitComment = submitComment;
@@ -548,7 +553,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Submitter ID.</p>
+             * <p>The ID of the submitter.</p>
              * 
              * <strong>example:</strong>
              * <p>307999999</p>
@@ -559,10 +564,10 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Submitter name.</p>
+             * <p>The name of the submitter.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder submitterName(String submitterName) {
                 this.submitterName = submitterName;
@@ -629,7 +634,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of pending deployment records.</p>
+             * <p>The list of pending publish records.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -637,7 +642,7 @@ public class ListSubmitRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total count.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

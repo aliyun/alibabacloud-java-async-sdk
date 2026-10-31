@@ -167,7 +167,7 @@ public class GetBatchTaskInfoRequest extends Request {
         }
 
         /**
-         * <p>The node ID in the task directory tree.</p>
+         * <p>The ID of the node in the task directory tree.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

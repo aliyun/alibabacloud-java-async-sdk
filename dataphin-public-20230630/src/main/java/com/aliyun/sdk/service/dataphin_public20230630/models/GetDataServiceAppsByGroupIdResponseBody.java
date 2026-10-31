@@ -119,7 +119,7 @@ public class GetDataServiceAppsByGroupIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of application groups.</p>
+         * <p>The list of applications.</p>
          */
         public Builder appInfoList(java.util.List<AppInfoList> appInfoList) {
             this.appInfoList = appInfoList;
@@ -171,7 +171,7 @@ public class GetDataServiceAppsByGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -248,7 +248,7 @@ public class GetDataServiceAppsByGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application name.</p>
+             * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
