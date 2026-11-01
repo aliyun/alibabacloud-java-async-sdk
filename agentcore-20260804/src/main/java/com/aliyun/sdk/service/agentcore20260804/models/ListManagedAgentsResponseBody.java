@@ -158,7 +158,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. A value of SUCCESS indicates success.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -169,7 +169,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. A value of 200 indicates success.</p>
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -202,7 +202,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result message of the request.</p>
+         * <p>The message about the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -213,7 +213,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page. An empty value indicates the last page.</p>
+         * <p>The token for the next page. An empty value indicates that the last page is reached.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-1</p>
@@ -235,7 +235,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -315,7 +315,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Binds a Service Account Key of the QoderCLI Connector by Key ID. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</p>
+             * <p>Connector Service Account Key</p>
              * 
              * <strong>example:</strong>
              * <p>key-xxxx</p>
@@ -326,7 +326,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Connector Key name populated during queries. This value is not used as a binding reference during writes.</p>
+             * <p>Connector Service Account Name</p>
              * 
              * <strong>example:</strong>
              * <p>my-connector-key</p>
@@ -396,7 +396,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Connector binding configuration for the qodercli framework.</p>
+             * <p>The runtime framework configuration.</p>
              */
             public Builder configuration(Configuration configuration) {
                 this.configuration = configuration;
@@ -404,7 +404,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime framework type. Valid values: qwenpaw and qodercli. The qodercli type binds by configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+             * <p>The runtime framework type.</p>
              * 
              * <strong>example:</strong>
              * <p>qodercli</p>
@@ -428,6 +428,12 @@ public class ListManagedAgentsResponseBody extends TeaModel {
      * <p>ListManagedAgentsResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accessMode")
+        private String accessMode;
+
+        @com.aliyun.core.annotation.NameInMap("accessScope")
+        private String accessScope;
+
         @com.aliyun.core.annotation.NameInMap("agentId")
         private String agentId;
 
@@ -465,6 +471,8 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         private String workspaceId;
 
         private Items(Builder builder) {
+            this.accessMode = builder.accessMode;
+            this.accessScope = builder.accessScope;
             this.agentId = builder.agentId;
             this.createMode = builder.createMode;
             this.createdAt = builder.createdAt;
@@ -485,6 +493,20 @@ public class ListManagedAgentsResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessMode
+         */
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
+        /**
+         * @return accessScope
+         */
+        public String getAccessScope() {
+            return this.accessScope;
         }
 
         /**
@@ -572,6 +594,8 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessMode; 
+            private String accessScope; 
             private String agentId; 
             private String createMode; 
             private String createdAt; 
@@ -589,6 +613,8 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.accessMode = model.accessMode;
+                this.accessScope = model.accessScope;
                 this.agentId = model.agentId;
                 this.createMode = model.createMode;
                 this.createdAt = model.createdAt;
@@ -604,7 +630,29 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The managed agent ID.</p>
+             * <p>API_KEY 表示使用 API Key；USER 表示使用用户身份。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API_KEY</p>
+             */
+            public Builder accessMode(String accessMode) {
+                this.accessMode = accessMode;
+                return this;
+            }
+
+            /**
+             * <p>仅 accessMode 为 USER 时返回：ALL 表示全部用户，SPECIFIED 表示指定用户。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
+             */
+            public Builder accessScope(String accessScope) {
+                this.accessScope = accessScope;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-1</p>
@@ -651,7 +699,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
              * <p>The description of the managed agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>An agent for code review</p>
+             * <p>Agent for code review</p>
              */
             public Builder description(String description) {
                 this.description = description;

@@ -171,7 +171,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
+         * <p>Indicates whether the request was processed successfully. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operations are complete.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,6 +191,12 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
      * <p>DeleteCustomAgentResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accessMode")
+        private String accessMode;
+
+        @com.aliyun.core.annotation.NameInMap("accessScope")
+        private String accessScope;
+
         @com.aliyun.core.annotation.NameInMap("agentId")
         private String agentId;
 
@@ -225,6 +231,8 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         private String workspaceId;
 
         private Data(Builder builder) {
+            this.accessMode = builder.accessMode;
+            this.accessScope = builder.accessScope;
             this.agentId = builder.agentId;
             this.createMode = builder.createMode;
             this.createdAt = builder.createdAt;
@@ -244,6 +252,20 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessMode
+         */
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
+        /**
+         * @return accessScope
+         */
+        public String getAccessScope() {
+            return this.accessScope;
         }
 
         /**
@@ -324,6 +346,8 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessMode; 
+            private String accessScope; 
             private String agentId; 
             private String createMode; 
             private String createdAt; 
@@ -340,6 +364,8 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.accessMode = model.accessMode;
+                this.accessScope = model.accessScope;
                 this.agentId = model.agentId;
                 this.createMode = model.createMode;
                 this.createdAt = model.createdAt;
@@ -354,6 +380,28 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The inbound access mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API_KEY</p>
+             */
+            public Builder accessMode(String accessMode) {
+                this.accessMode = accessMode;
+                return this;
+            }
+
+            /**
+             * <p>The user access scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
+             */
+            public Builder accessScope(String accessScope) {
+                this.accessScope = accessScope;
+                return this;
+            }
+
+            /**
              * <p>The unique identifier of the custom agent. You can obtain it from the response of CreateCustomAgent or ListCustomAgents.</p>
              * 
              * <strong>example:</strong>
@@ -365,7 +413,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation method of the agent. The value is CUSTOM for custom agents.</p>
+             * <p>The creation mode of the agent. The value is CUSTOM for custom agents.</p>
              * 
              * <strong>example:</strong>
              * <p>CUSTOM</p>
@@ -387,7 +435,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment method of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED.</p>
+             * <p>The deployment mode of the agent. Custom agents are deployed and managed by the platform, so the value is MANAGED.</p>
              * 
              * <strong>example:</strong>
              * <p>MANAGED</p>
@@ -398,7 +446,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the agent\&quot;s purpose.</p>
+             * <p>The description of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom agent that provides conversation services</p>
@@ -446,11 +494,11 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
              * <ul>
              * <li>Creating: The agent is being created.</li>
              * <li>Running: The agent is running.</li>
-             * <li>Failed: The agent is in a failed state.</li>
+             * <li>Failed: The agent failed.</li>
              * <li>Updating: The agent is being updated.</li>
              * <li>Deleting: The agent is being deleted.</li>
-             * <li>Deleted: The agent has been deleted.
-             * Call GetCustomAgent to retrieve the latest configuration execution progress.</li>
+             * <li>Deleted: The agent is deleted.
+             * Call GetCustomAgent to query the execution progress of the latest configuration.</li>
              * </ul>
              * 
              * <strong>example:</strong>

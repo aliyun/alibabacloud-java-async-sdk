@@ -162,7 +162,7 @@ public class UpdateMcpRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotency of the request.</p>
+         * <p>The client token used to ensure the idempotency of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -233,7 +233,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The API key for authenticating MCP callers.</p>
+             * <p>The API key used to verify MCP callers.</p>
              * 
              * <strong>example:</strong>
              * <p>example-api-key</p>
@@ -325,7 +325,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The authentication parameter value.</p>
+             * <p>The value of the authentication parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>example-credential</p>
@@ -574,7 +574,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The API key authentication configuration for code-deployed MCP callers.</p>
+             * <p>The API key authentication configuration for callers of code-deployed MCP services.</p>
              */
             public Builder codePackage(CodePackage codePackage) {
                 this.codePackage = codePackage;
@@ -678,7 +678,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The AgentCore Credential referenced when mode is set to CREDENTIAL.</p>
+             * <p>References an AgentCore credential when the mode is CREDENTIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>credential-id</p>
@@ -689,7 +689,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable ingress access control.</p>
+             * <p>Specifies whether to enable entrypoint access control.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -697,11 +697,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The access control mode. Valid values:</p>
-             * <ul>
-             * <li>ANONYMOUS: anonymous access.</li>
-             * <li>CREDENTIAL: access with an AgentCore credential.</li>
-             * </ul>
+             * <p>Specifies the access control mode. ANONYMOUS indicates anonymous access. CREDENTIAL indicates the use of AgentCore access credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -805,7 +801,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the credential provider.</p>
+             * <p>The ARN of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:agentidentity:cn-hangzhou:1234567890123456:provider/example</p>
@@ -827,7 +823,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable Agent Identity.</p>
+             * <p>Specifies whether to enable agent identity.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -907,7 +903,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. After the pre-signed upload is complete, use this token to create or update a code deployment.</p>
+             * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create or update a code deployment after a presigned upload is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>upload-token</p>
@@ -918,7 +914,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The full startup command. Pass each argument as a separate element in order. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and the remaining arguments.</p>
+             * <p>The complete startup command, passed sequentially by parameter boundaries. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the complete subcommand, and the remaining parameters.</p>
              */
             public Builder command(java.util.List<String> command) {
                 this.command = command;
@@ -926,7 +922,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The code package runtime. Valid values: python3.13, nodejs22, and java17.</p>
+             * <p>The runtime of the code package. Valid values: python3.13, nodejs22, and java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -1061,7 +1057,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud Container Registry (ACR) instance.</p>
+             * <p>The ID of the ACR instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-example</p>
@@ -1080,7 +1076,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The container entrypoint arguments.</p>
+             * <p>The entrypoint parameters of the container.</p>
              */
             public Builder entrypoint(java.util.List<String> entrypoint) {
                 this.entrypoint = entrypoint;
@@ -1110,7 +1106,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The MCP runtime mode for the custom container. The custom container must expose a standard MCP endpoint. Set this parameter to SELF_HOSTED.</p>
+             * <p>The MCP runtime mode. Custom containers must currently expose standard MCP by themselves. Valid value: SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -1270,7 +1266,7 @@ public class UpdateMcpRequest extends Request {
              * <p>The description of the hook.</p>
              * 
              * <strong>example:</strong>
-             * <p>Log MCP tool invocations</p>
+             * <p>Log MCP tool invoke</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1286,7 +1282,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The hook event.</p>
+             * <p>The event of the hook.</p>
              * 
              * <strong>example:</strong>
              * <p>PRE_CALL_TOOL</p>
@@ -1297,7 +1293,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The HTTP request headers for the hook.</p>
+             * <p>The request headers of the hook.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -1305,7 +1301,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The timeout period, in milliseconds.</p>
+             * <p>The timeout period of the hook, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -1373,7 +1369,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The list of hooks executed in array order. Supported hook events: PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL.</p>
+             * <p>Executes PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the array order.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1495,7 +1491,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The log segmentation start rule for Function Compute.</p>
+             * <p>The start rule for Function Compute log splitting.</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1506,7 +1502,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The Logstore name.</p>
+             * <p>The name of the Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-logs</p>
@@ -1517,7 +1513,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The Log Service project name.</p>
+             * <p>The name of the Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>agentcore-mcp-logs</p>
@@ -1613,7 +1609,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>For example, /mcp or /sse.</p>
+             * <p>The MCP endpoint path, such as /mcp or /sse.</p>
              * 
              * <strong>example:</strong>
              * <p>/mcp</p>
@@ -1624,7 +1620,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Currently fixed to 1.</p>
+             * <p>The number of concurrent sessions per instance. This value is currently fixed at 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1635,7 +1631,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The session idle timeout. Unit: seconds. Default value: 1800.</p>
+             * <p>The session idle timeout in seconds. Default value: 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -1646,7 +1642,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The maximum session lifetime. Unit: seconds. Default value: 21600.</p>
+             * <p>The maximum session lifetime in seconds. Default value: 21600.</p>
              * 
              * <strong>example:</strong>
              * <p>21600</p>
@@ -1748,7 +1744,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The NAS server address.</p>
+             * <p>The address of the NAS server.</p>
              * 
              * <strong>example:</strong>
              * <p>example.cn-hangzhou.nas.aliyuncs.com</p>
@@ -1831,7 +1827,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The runtime user group ID.</p>
+             * <p>The ID of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1850,7 +1846,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The runtime user ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1957,7 +1953,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-example</p>
@@ -1976,7 +1972,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-example</p>
@@ -2085,7 +2081,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The OSS bucket name.</p>
+             * <p>The name of the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>example-bucket</p>
@@ -2096,7 +2092,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The OSS bucket path.</p>
+             * <p>The path in the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>/data</p>
@@ -2107,7 +2103,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The OSS service endpoint.</p>
+             * <p>The endpoint of the OSS service.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -2282,7 +2278,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The transformation rule version.</p>
+             * <p>The version of the transformation rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -2484,7 +2480,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The CPU specification. Unit: cores. Default value: 0.25.</p>
+             * <p>The CPU specification in cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2495,7 +2491,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The ephemeral disk size. Unit: MB. Valid values: 512 and 10240.</p>
+             * <p>The ephemeral disk size in MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2514,7 +2510,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
+             * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -2536,7 +2532,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Unit: MB. Default value: 512.</p>
+             * <p>The unit is MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2558,7 +2554,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Unit: seconds. Default value: 300.</p>
+             * <p>The unit is seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -2784,7 +2780,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The MCP ingress access control configuration.</p>
+             * <p>The MCP entrypoint access control.</p>
              */
             public Builder accessControl(AccessControl accessControl) {
                 this.accessControl = accessControl;
@@ -2792,7 +2788,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The Agent Identity configuration.</p>
+             * <p>The agent identity configuration.</p>
              */
             public Builder agentIdentityConfiguration(AgentIdentityConfiguration agentIdentityConfiguration) {
                 this.agentIdentityConfiguration = agentIdentityConfiguration;
@@ -2800,11 +2796,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The artifact type. Valid values:</p>
-             * <ul>
-             * <li>Code: a ZIP code package.</li>
-             * <li>Container: a custom container.</li>
-             * </ul>
+             * <p>The artifact type. Code indicates a ZIP code package. Container indicates a custom container.</p>
              * 
              * <strong>example:</strong>
              * <p>Code</p>
@@ -2931,6 +2923,9 @@ public class UpdateMcpRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("permissionMode")
+        private String permissionMode;
+
         @com.aliyun.core.annotation.NameInMap("swaggerConfig")
         private String swaggerConfig;
 
@@ -2940,6 +2935,7 @@ public class UpdateMcpRequest extends Request {
             this.customTags = builder.customTags;
             this.deploymentConfig = builder.deploymentConfig;
             this.description = builder.description;
+            this.permissionMode = builder.permissionMode;
             this.swaggerConfig = builder.swaggerConfig;
         }
 
@@ -2987,6 +2983,13 @@ public class UpdateMcpRequest extends Request {
         }
 
         /**
+         * @return permissionMode
+         */
+        public String getPermissionMode() {
+            return this.permissionMode;
+        }
+
+        /**
          * @return swaggerConfig
          */
         public String getSwaggerConfig() {
@@ -2999,6 +3002,7 @@ public class UpdateMcpRequest extends Request {
             private java.util.List<String> customTags; 
             private DeploymentConfig deploymentConfig; 
             private String description; 
+            private String permissionMode; 
             private String swaggerConfig; 
 
             private Builder() {
@@ -3010,6 +3014,7 @@ public class UpdateMcpRequest extends Request {
                 this.customTags = model.customTags;
                 this.deploymentConfig = model.deploymentConfig;
                 this.description = model.description;
+                this.permissionMode = model.permissionMode;
                 this.swaggerConfig = model.swaggerConfig;
             } 
 
@@ -3022,7 +3027,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The backend authentication configuration. When enabled is set to true: for DIRECT_PROXY, specify directProxy (name/value). For HTTP_TO_MCP, specify the httpToMcp array (each item contains id/type/credential, and apiKey also requires position/name). Multiple authentication objects are supported, and the first one is used as the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of the Swagger specification.</p>
+             * <p>The backend authentication configuration. When enabled is set to true, specify directProxy (name and value) for DIRECT_PROXY, specify the httpToMcp array (each item includes id, type, and credential; apiKey also requires position and name) for HTTP_TO_MCP, which supports multiple authentication objects where the first one is the default upstream credential, and specify codePackage (headerName and apiKey) for CODE_PACKAGE to verify MCP callers. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -3030,7 +3035,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Custom tags. Multiple tags are supported. Pass an empty list to clear all tags.</p>
+             * <p>The custom tags. Multiple tags are supported. Pass an empty list to clear the tags.</p>
              */
             public Builder customTags(java.util.List<String> customTags) {
                 this.customTags = customTags;
@@ -3038,7 +3043,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Deployment configuration patch for a CODE_PACKAGE MCP. Object fields are merged hierarchically. To keep the current deployed code package, omit CodeConfiguration.CodePackageToken so the server reuses the existing package. To replace the code package, pass a new non-empty Token. CodePackageUrl is supported only for CreateMcp and is not supported during updates.</p>
+             * <p>The deployment configuration patch for CODE_PACKAGE MCP, where object fields are merged hierarchically. To retain the current code package, omit CodeConfiguration.CodePackageToken and the server reuses the deployed code package. To replace the code package, provide a new non-empty token. CodePackageUrl is supported only in CreateMcp and not in updates.</p>
              */
             public Builder deploymentConfig(DeploymentConfig deploymentConfig) {
                 this.deploymentConfig = deploymentConfig;
@@ -3049,7 +3054,7 @@ public class UpdateMcpRequest extends Request {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A sample description that explains the purpose of the resource</p>
+             * <p>A sample description to illustrate the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3057,7 +3062,18 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Required if Type is set to HTTP_TO_MCP.</p>
+             * <p>The access permission mode. PUBLIC indicates public access, and CONTROLLED indicates that access is controlled based on permission rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTROLLED</p>
+             */
+            public Builder permissionMode(String permissionMode) {
+                this.permissionMode = permissionMode;
+                return this;
+            }
+
+            /**
+             * <p>The Swagger configuration. Specify this field if the type is HTTP_TO_MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;}</p>

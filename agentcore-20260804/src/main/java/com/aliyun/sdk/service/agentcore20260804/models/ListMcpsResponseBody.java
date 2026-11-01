@@ -3077,6 +3077,9 @@ public class ListMcpsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("officialTag")
         private String officialTag;
 
+        @com.aliyun.core.annotation.NameInMap("permissionMode")
+        private String permissionMode;
+
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
@@ -3111,6 +3114,7 @@ public class ListMcpsResponseBody extends TeaModel {
             this.mcpServerId = builder.mcpServerId;
             this.name = builder.name;
             this.officialTag = builder.officialTag;
+            this.permissionMode = builder.permissionMode;
             this.protocol = builder.protocol;
             this.status = builder.status;
             this.statusReason = builder.statusReason;
@@ -3213,6 +3217,13 @@ public class ListMcpsResponseBody extends TeaModel {
         }
 
         /**
+         * @return permissionMode
+         */
+        public String getPermissionMode() {
+            return this.permissionMode;
+        }
+
+        /**
          * @return protocol
          */
         public String getProtocol() {
@@ -3274,6 +3285,7 @@ public class ListMcpsResponseBody extends TeaModel {
             private String mcpServerId; 
             private String name; 
             private String officialTag; 
+            private String permissionMode; 
             private String protocol; 
             private String status; 
             private String statusReason; 
@@ -3298,6 +3310,7 @@ public class ListMcpsResponseBody extends TeaModel {
                 this.mcpServerId = model.mcpServerId;
                 this.name = model.name;
                 this.officialTag = model.officialTag;
+                this.permissionMode = model.permissionMode;
                 this.protocol = model.protocol;
                 this.status = model.status;
                 this.statusReason = model.statusReason;
@@ -3421,6 +3434,17 @@ public class ListMcpsResponseBody extends TeaModel {
              */
             public Builder officialTag(String officialTag) {
                 this.officialTag = officialTag;
+                return this;
+            }
+
+            /**
+             * <p>PUBLIC 表示公开访问；CONTROLLED 表示根据权限规则控制访问。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTROLLED</p>
+             */
+            public Builder permissionMode(String permissionMode) {
+                this.permissionMode = permissionMode;
                 return this;
             }
 

@@ -236,7 +236,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The subdirectory under /mnt/agenticfs/ in the container. This parameter is required and validated by the backend for each mount item. Mount targets must not be duplicated or overlap in parent-child relationships.</p>
+             * <p>The subdirectory under /mnt/agenticfs/ in the container. This field is required for each mount item and validated by the backend. Mount targets must not overlap or have parent-child overrides.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/agenticfs/data</p>
@@ -247,7 +247,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The existing non-empty relative directory under the access point. This parameter is required and validated by the backend for each mount item. Root directories, absolute paths, and parent directory segments are not allowed.</p>
+             * <p>The existing non-empty relative directory under the access point. This field is required for each mount item and validated by the backend. Root directories, absolute paths, and parent directory segments are not allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace/data</p>
@@ -258,7 +258,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to mount the file system in read-only mode. If omitted, the default value is false. This parameter does not represent a read-only policy for a RAM role.</p>
+             * <p>Specifies whether to mount the file system in read-only mode. If omitted, the default value is false. This does not apply the read-only policy of the RAM role.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -269,7 +269,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The domain name of the access point. This parameter is required and validated by the backend for each mount item. Do not include the protocol, port, or path. Use the DomainName value from the NAS ListAccessPoints response.</p>
+             * <p>The domain name of the access point. This field is required for each mount item and validated by the backend. Do not include the protocol, port, or path. Use the DomainName value from the NAS ListAccessPoints response.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -743,7 +743,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the token quota. If not specified, the default value is true. If set to false, the quota is disabled and existing quota rules are deleted.</p>
+             * <p>Specifies whether to enable the token quota. If not specified, the default value is true. A value of false disables the quota and deletes existing quota rules.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -754,7 +754,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The quota limit type. This parameter is required and validated by the backend when the quota is enabled. Valid value: token.</p>
+             * <p>The quota limit type. This field is required and validated by the backend when the quota is enabled. Fixed value: token.</p>
              * 
              * <strong>example:</strong>
              * <p>token</p>
@@ -765,7 +765,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The statistical period for the quota. This parameter is required and validated by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</p>
+             * <p>The statistical period for the quota. This field is required and validated by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -776,7 +776,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of tokens allowed to be consumed within a single period. This parameter is required and validated by the backend when the quota is enabled. The value must be greater than 0.</p>
+             * <p>The maximum number of tokens allowed to be consumed within a single period. This field is required and validated by the backend when the quota is enabled. The value must be greater than 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -883,7 +883,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The model token quota configuration. If this parameter is not passed, no quota is configured.</p>
+             * <p>The model token quota configuration. If not specified, no quota is configured.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -937,7 +937,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow access to the Internet.</p>
+             * <p>Specifies whether to allow Internet access.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -994,7 +994,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow access to the VPC.</p>
+             * <p>Specifies whether to allow VPC access.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1165,7 +1165,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the OSS bucket. This parameter is required and validated by the backend for each mount item.</p>
+             * <p>The name of the OSS bucket. This field is required for each mount item and validated by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>bucket-001</p>
@@ -1176,7 +1176,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The absolute mount path in the container. This parameter is required and validated by the backend for each mount item.</p>
+             * <p>The absolute mount path in the container. This field is required for each mount item and validated by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/oss/datasets</p>
@@ -1470,7 +1470,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether auto-scaling is enabled. This parameter is required and validated by the backend when HPA is configured.</p>
+             * <p>Specifies whether to enable auto scaling. This parameter is required and validated by the backend when HPA is present.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1478,7 +1478,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of active sessions per sandbox. This parameter is required and validated by the backend when HPA is configured.</p>
+             * <p>The maximum number of active sessions per sandbox. This parameter is required and validated by the backend when HPA is present.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1489,7 +1489,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and must not be less than the minimum value.</p>
+             * <p>The maximum number of sandboxes. This parameter is required and must be greater than or equal to the minimum value when HPA is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1511,7 +1511,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The time in seconds before an inactive session is reclaimed. This parameter is required and validated by the backend when HPA is configured.</p>
+             * <p>The idle timeout in seconds before an inactive session is reclaimed. This parameter is required and validated by the backend when HPA is present.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -1688,7 +1688,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The sandbox auto-scaling and session configuration.</p>
+             * <p>The sandbox auto scaling and session configuration.</p>
              */
             public Builder hpa(Hpa hpa) {
                 this.hpa = hpa;
@@ -1764,7 +1764,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The version selector type. Valid values: LABEL (selects by tag) and VERSION (selects by specific version).</p>
+             * <p>The type of the version selector. Valid values: LABEL (by tag) and VERSION (by specific version).</p>
              * 
              * <strong>example:</strong>
              * <p>LABEL</p>
@@ -1775,7 +1775,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The value of the selector. When the type is LABEL, this is the tag name, such as latest. When the type is VERSION, this is the specific version number.</p>
+             * <p>The value of the selector. If the type is LABEL, this value is the tag name, such as latest. If the type is VERSION, this value is the specific version number.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -1884,7 +1884,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The skill source type. Valid values: REFERENCE (references the AI Registry) and STATIC (statically provided with the package).</p>
+             * <p>The source type of the skill. Valid values: REFERENCE (references the AI registry) and STATIC (provided statically within the package).</p>
              * 
              * <strong>example:</strong>
              * <p>REFERENCE</p>
@@ -2336,6 +2336,12 @@ public class UpdateManagedAgentRequest extends Request {
      * <p>UpdateManagedAgentRequest</p>
      */
     public static class UpdateManagedAgentRequestBody extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accessMode")
+        private String accessMode;
+
+        @com.aliyun.core.annotation.NameInMap("accessScope")
+        private String accessScope;
+
         @com.aliyun.core.annotation.NameInMap("agenticFsMounts")
         private java.util.List<AgenticFsMounts> agenticFsMounts;
 
@@ -2382,6 +2388,8 @@ public class UpdateManagedAgentRequest extends Request {
         private java.util.List<Tools> tools;
 
         private UpdateManagedAgentRequestBody(Builder builder) {
+            this.accessMode = builder.accessMode;
+            this.accessScope = builder.accessScope;
             this.agenticFsMounts = builder.agenticFsMounts;
             this.description = builder.description;
             this.environment = builder.environment;
@@ -2405,6 +2413,20 @@ public class UpdateManagedAgentRequest extends Request {
 
         public static UpdateManagedAgentRequestBody create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessMode
+         */
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
+        /**
+         * @return accessScope
+         */
+        public String getAccessScope() {
+            return this.accessScope;
         }
 
         /**
@@ -2513,6 +2535,8 @@ public class UpdateManagedAgentRequest extends Request {
         }
 
         public static final class Builder {
+            private String accessMode; 
+            private String accessScope; 
             private java.util.List<AgenticFsMounts> agenticFsMounts; 
             private String description; 
             private Environment environment; 
@@ -2533,6 +2557,8 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             private Builder(UpdateManagedAgentRequestBody model) {
+                this.accessMode = model.accessMode;
+                this.accessScope = model.accessScope;
                 this.agenticFsMounts = model.agenticFsMounts;
                 this.description = model.description;
                 this.environment = model.environment;
@@ -2551,7 +2577,29 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The AgenticFS mounts. If omitted during an update, the existing mounts are retained. If an empty array is passed, the mounts are cleared. If a non-empty array is passed, the mounts are fully replaced. Null values are rejected. The total number of AgenticFS and OSS mounts cannot exceed 10.</p>
+             * <p>省略时保持不变；API_KEY 会清空 accessScope，USER 必须设置访问范围。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API_KEY</p>
+             */
+            public Builder accessMode(String accessMode) {
+                this.accessMode = accessMode;
+                return this;
+            }
+
+            /**
+             * <p>省略时保持不变；仅 accessMode 为 USER 时使用。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
+             */
+            public Builder accessScope(String accessScope) {
+                this.accessScope = accessScope;
+                return this;
+            }
+
+            /**
+             * <p>If omitted, the existing mounts are retained. An empty array clears the mounts. A non-empty array replaces all existing mounts. Null is rejected. The total number of AgenticFS and OSS mounts cannot exceed 10.</p>
              */
             public Builder agenticFsMounts(java.util.List<AgenticFsMounts> agenticFsMounts) {
                 this.agenticFsMounts = agenticFsMounts;
@@ -2586,7 +2634,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The agent instructions used to guide the behavior of the agent.</p>
+             * <p>The agent instruction, which is used to guide the behavior of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>You are a code review assistant</p>

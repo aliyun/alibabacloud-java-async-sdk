@@ -94,11 +94,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
-     * To use the container mode, configure artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-     * To use the code package pattern, specify artifact.port, and configure sourceUri, languageRuntime, and entrypoint in artifact.code. Do not configure container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. To upload a local file, call GetAgentCodePackageUploadUrl to obtain the upload URL, upload the file directly, and then commit the returned sourceUri.
-     * When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
-     * The creation process is asynchronous. A successful response indicates that the request is accepted. Use the returned agentId to call GetCustomAgent and check latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
-     * The clientToken parameter does not provide idempotence guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</p>
+     * In container mode, use artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
+     * In code package pattern, specify artifact.port, and the sourceUri, languageRuntime, and entrypoint parameters of artifact.code. Do not specify container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain the upload URL, upload the file directly, and then commit the returned sourceUri.
+     * When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. For code package requests, set the client timeout to 210 seconds. Archive integrity and secure decompression are checked at startup. A successful acceptance does not mean that the agent is ready to run.
+     * The creation process is asynchronous. A successful response indicates that the request is accepted. You can use the returned agentId to call GetCustomAgent and check the latestVersionStatus, latestExecutionError, and status parameters corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
+     * The clientToken parameter does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not currently take effect. Omit this parameter.</p>
      * 
      * @param request the request parameters of CreateCustomAgent  CreateCustomAgentRequest
      * @return CreateCustomAgentResponse
@@ -269,6 +269,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Creates permission rules in batches for resources in a specified workspace.</p>
+     * 
+     * @param request the request parameters of CreatePermissionRules  CreatePermissionRulesRequest
+     * @return CreatePermissionRulesResponse
+     */
+    CompletableFuture<CreatePermissionRulesResponse> createPermissionRules(CreatePermissionRulesRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</p>
      * 
@@ -303,6 +312,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DebugModelResponse
      */
     CompletableFuture<DebugModelResponse> debugModel(DebugModelRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes an access application. The secret key is returned only upon creation and is not returned by query operations.</p>
+     * 
+     * @param request the request parameters of DeleteAccessApplication  DeleteAccessApplicationRequest
+     * @return DeleteAccessApplicationResponse
+     */
+    CompletableFuture<DeleteAccessApplicationResponse> deleteAccessApplication(DeleteAccessApplicationRequest request);
 
     /**
      * <b>description</b> :
@@ -344,8 +362,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, ensure that the workspace is writable. If the agent is still associated with a team, you must dissociate it from the team first.
-     * Deletion is an asynchronous process. After the request is accepted, the associated invocation endpoints become unavailable, and the runtime resources are subsequently cleaned up. The status in the response is typically Deleting. If the agent is already in the deletion process, a subsequent request returns the current summary.
+     * <p>Before calling this operation, ensure that the workspace is writable. If the agent is still associated with a team, dissociate the agent from the team first.
+     * Deletion is an asynchronous process. After the request is accepted, the associated invocation endpoints become unavailable, and the runtime resources are subsequently cleaned up. The status in the response is typically Deleting. If the agent is already being deleted, a subsequent request returns the current summary.
      * You can call GetCustomAgent to check the deletion progress. After the deletion is complete, a detail query returns a resource not found error.</p>
      * 
      * @param request the request parameters of DeleteCustomAgent  DeleteCustomAgentRequest
@@ -476,6 +494,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Deletes a permission rule in a specified workspace. Repeated deletions still return a success response.</p>
+     * 
+     * @param request the request parameters of DeletePermissionRule  DeletePermissionRuleRequest
+     * @return DeletePermissionRuleResponse
+     */
+    CompletableFuture<DeletePermissionRuleResponse> deletePermissionRule(DeletePermissionRuleRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</p>
      * 
@@ -574,6 +601,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Queries an access application. The secret is returned only when the application is created and is not returned by query operations.</p>
+     * 
+     * @param request the request parameters of GetAccessApplication  GetAccessApplicationRequest
+     * @return GetAccessApplicationResponse
+     */
+    CompletableFuture<GetAccessApplicationResponse> getAccessApplication(GetAccessApplicationRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Generates a time-limited, read-only download URL for the code package referenced by the currently saved agent configuration. This applies to code packages uploaded locally or imported from Object Storage Service (OSS). The operation uses workspaceId and agentId for locating and does not accept arbitrary bucket, object key, or historical version parameters. The current configuration must reference an available, fixed code package, and does not require waiting for a running instance to be ready. An error is returned if the code package does not exist, has changed, or is unreadable. The link is valid for up to 10 minutes and does not exceed the underlying credential expiration time. Call the operation again after it expires. The resourceVersionId indicates the saved configuration version corresponding to this download. The sample download link is redacted. Use the downloadUrl in the response.</p>
      * 
      * @param request the request parameters of GetAgentCodePackageDownloadUrl  GetAgentCodePackageDownloadUrlRequest
@@ -661,8 +697,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed state for the version. If retryable is true, you can query again later.
-     * The returned configuration is the most recently submitted one and may not have taken effect yet. Verify the deployment and running status by combining latestVersionStatus, the overall agent status, and the sandboxPhaseCounts running instance statistics.
+     * <p>After you create or update a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed status for the version. If retryable is true, you can query again later.
+     * The returned configuration is the latest submitted configuration and may not have taken effect. Verify the deployment and running status by checking latestVersionStatus, the overall agent status, and the sandboxPhaseCounts running instance statistics.
      * If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
      * 
      * @param request the request parameters of GetCustomAgent  GetCustomAgentRequest
@@ -895,8 +931,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</p>
+     * <h2>Request description</h2>
+     * <p>Queries the details of a specified MCP service, such as the address, type, status, authentication configuration, and protocol.</p>
      * 
      * @param request the request parameters of GetMcp  GetMcpRequest
      * @return GetMcpResponse
@@ -1040,7 +1076,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nQueries the plug-in status of a specified workspace. Returns whether the plug-in is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plug-ins are supported: collaboration and agentloop. If a plug-in is not installed, its status is DISABLED.\n.</h2>
+     * <h2>Request description\nQueries the plugin status of a specified workspace. Returns whether the plugin is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plugins are supported: collaboration and agentloop. If a plugin is not installed, its status is DISABLED.\n.</h2>
      * 
      * @param request the request parameters of GetWorkspacePlugin  GetWorkspacePluginRequest
      * @return GetWorkspacePluginResponse
@@ -1130,8 +1166,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>The default value of maxResults is 20, and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
-     * Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is, and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
-     * This operation returns the summaries for the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId from items.</p>
+     * For the first request, omit nextToken. For subsequent requests, pass the nextToken value returned in the previous response as is, and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it yourself. An empty token in the response indicates that there are no more pages.
+     * This operation returns the summaries for the current page and does not return the complete deployment configuration or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in the items.</p>
      * 
      * @param request the request parameters of ListCustomAgents  ListCustomAgentsRequest
      * @return ListCustomAgentsResponse
@@ -1260,7 +1296,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
+     * <p>Queries the list of managed agents in a specified workspace by using paging and returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
      * 
      * @param request the request parameters of ListManagedAgents  ListManagedAgentsRequest
      * @return ListManagedAgentsResponse
@@ -1346,6 +1382,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListModelsResponse
      */
     CompletableFuture<ListModelsResponse> listModels(ListModelsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries permission rules by resource with paging.</p>
+     * 
+     * @param request the request parameters of ListPermissionRules  ListPermissionRulesRequest
+     * @return ListPermissionRulesResponse
+     */
+    CompletableFuture<ListPermissionRulesResponse> listPermissionRules(ListPermissionRulesRequest request);
 
     /**
      * @param request the request parameters of ListPredefinedModelProviders  ListPredefinedModelProvidersRequest
@@ -1557,6 +1602,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Updates an access application. The secret is returned only upon creation and is not returned by query operations.</p>
+     * 
+     * @param request the request parameters of UpdateAccessApplication  UpdateAccessApplicationRequest
+     * @return UpdateAccessApplicationResponse
+     */
+    CompletableFuture<UpdateAccessApplicationResponse> updateAccessApplication(UpdateAccessApplicationRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Updates the ServiceEndpoint, enablement status, or channel behavior configuration bound to an IM channel. At least one updatable field must be provided.</p>
      * 
      * @param request the request parameters of UpdateAgentIMChannel  UpdateAgentIMChannelRequest
@@ -1603,12 +1657,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Specify at least one top-level field to update. Omitted top-level fields retain their original configurations. When you provide a configuration object, you must also specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
-     * When you update an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, you must also provide the entrypoint field.
-     * In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
-     * When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
-     * When you provide the runtime field, the compute and sessionPolicy fields must also be provided. If you omit the hpa field or its subfields, unspecified elastic configurations use default values. To retain the original elastic configurations, you must provide them together. When you provide the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network. To retain the original restrictions, provide both accessInternet and accessVpc. When you provide the healthCheck field, you must specify the port field. Other unspecified items use default values. When you provide the logging.sls field, you must specify both the project and logstore fields.
-     * The update is an asynchronous process. A successful response indicates that the request is accepted. You can call GetCustomAgent to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
+     * <p>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
+     * When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field.
+     * In the code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported, and the compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling the ListAgentCodeRuntimes operation. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call the GetAgentCodePackageUploadUrl operation to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+     * When submitting a new code package source, the backend rechecks read permissions, objects, and sizes. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+     * When providing the runtime field, the compute and sessionPolicy fields must be provided at the same time. If the hpa field or its subfields are omitted, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them together. When providing the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network limits. To retain the original limits, provide both accessInternet and accessVpc. When providing the healthCheck field, the port field is required, and other unspecified items use default values. When providing the logging.sls field, both the project and logstore fields are required.
+     * The update is an asynchronous process. A successful response indicates that the request is accepted. Call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
      * The clientToken field does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks does not currently take effect. Omit this field.</p>
      * 
      * @param request the request parameters of UpdateCustomAgent  UpdateCustomAgentRequest
@@ -1691,8 +1745,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</p>
+     * <h2>Request description</h2>
+     * <p>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update process is asynchronous.</p>
      * 
      * @param request the request parameters of UpdateMcp  UpdateMcpRequest
      * @return UpdateMcpResponse

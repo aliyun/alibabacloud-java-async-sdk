@@ -119,7 +119,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+         * <p>The business status code. The value is SUCCESS when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+         * <p>The HTTP status code. The value is 200 when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message about the request processing result.</p>
+         * <p>The request processing result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -191,6 +191,12 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
      * <p>DeleteExternalAgentResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accessMode")
+        private String accessMode;
+
+        @com.aliyun.core.annotation.NameInMap("accessScope")
+        private String accessScope;
+
         @com.aliyun.core.annotation.NameInMap("agentId")
         private String agentId;
 
@@ -225,6 +231,8 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         private String workspaceId;
 
         private Data(Builder builder) {
+            this.accessMode = builder.accessMode;
+            this.accessScope = builder.accessScope;
             this.agentId = builder.agentId;
             this.createMode = builder.createMode;
             this.createdAt = builder.createdAt;
@@ -244,6 +252,20 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessMode
+         */
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
+        /**
+         * @return accessScope
+         */
+        public String getAccessScope() {
+            return this.accessScope;
         }
 
         /**
@@ -324,6 +346,8 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessMode; 
+            private String accessScope; 
             private String agentId; 
             private String createMode; 
             private String createdAt; 
@@ -340,6 +364,8 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.accessMode = model.accessMode;
+                this.accessScope = model.accessScope;
                 this.agentId = model.agentId;
                 this.createMode = model.createMode;
                 this.createdAt = model.createdAt;
@@ -352,6 +378,28 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
                 this.updatedAt = model.updatedAt;
                 this.workspaceId = model.workspaceId;
             } 
+
+            /**
+             * <p>The inbound access mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API_KEY</p>
+             */
+            public Builder accessMode(String accessMode) {
+                this.accessMode = accessMode;
+                return this;
+            }
+
+            /**
+             * <p>The user access scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
+             */
+            public Builder accessScope(String accessScope) {
+                this.accessScope = accessScope;
+                return this;
+            }
 
             /**
              * <p>The external agent ID.</p>

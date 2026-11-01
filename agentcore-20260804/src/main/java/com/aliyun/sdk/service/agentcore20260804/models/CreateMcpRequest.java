@@ -2931,6 +2931,9 @@ public class CreateMcpRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("permissionMode")
+        private String permissionMode;
+
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
@@ -2948,6 +2951,7 @@ public class CreateMcpRequest extends Request {
             this.deploymentConfig = builder.deploymentConfig;
             this.description = builder.description;
             this.name = builder.name;
+            this.permissionMode = builder.permissionMode;
             this.protocol = builder.protocol;
             this.swaggerConfig = builder.swaggerConfig;
             this.type = builder.type;
@@ -3004,6 +3008,13 @@ public class CreateMcpRequest extends Request {
         }
 
         /**
+         * @return permissionMode
+         */
+        public String getPermissionMode() {
+            return this.permissionMode;
+        }
+
+        /**
          * @return protocol
          */
         public String getProtocol() {
@@ -3031,6 +3042,7 @@ public class CreateMcpRequest extends Request {
             private DeploymentConfig deploymentConfig; 
             private String description; 
             private String name; 
+            private String permissionMode; 
             private String protocol; 
             private String swaggerConfig; 
             private String type; 
@@ -3045,6 +3057,7 @@ public class CreateMcpRequest extends Request {
                 this.deploymentConfig = model.deploymentConfig;
                 this.description = model.description;
                 this.name = model.name;
+                this.permissionMode = model.permissionMode;
                 this.protocol = model.protocol;
                 this.swaggerConfig = model.swaggerConfig;
                 this.type = model.type;
@@ -3102,6 +3115,17 @@ public class CreateMcpRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>PUBLIC 表示公开访问；CONTROLLED 表示根据权限规则控制访问。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTROLLED</p>
+             */
+            public Builder permissionMode(String permissionMode) {
+                this.permissionMode = permissionMode;
                 return this;
             }
 

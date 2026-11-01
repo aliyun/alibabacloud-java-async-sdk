@@ -113,7 +113,7 @@ public class ListManagedAgentsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, use the nextToken value returned in the previous response.</p>
+         * <p>The pagination token. Leave this parameter empty for the first call. For subsequent calls, use the nextToken value returned in the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-1</p>

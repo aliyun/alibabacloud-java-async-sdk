@@ -194,6 +194,12 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
      * <p>DeleteManagedAgentResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accessMode")
+        private String accessMode;
+
+        @com.aliyun.core.annotation.NameInMap("accessScope")
+        private String accessScope;
+
         @com.aliyun.core.annotation.NameInMap("agentId")
         private String agentId;
 
@@ -228,6 +234,8 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         private String workspaceId;
 
         private Data(Builder builder) {
+            this.accessMode = builder.accessMode;
+            this.accessScope = builder.accessScope;
             this.agentId = builder.agentId;
             this.createMode = builder.createMode;
             this.createdAt = builder.createdAt;
@@ -247,6 +255,20 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessMode
+         */
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
+        /**
+         * @return accessScope
+         */
+        public String getAccessScope() {
+            return this.accessScope;
         }
 
         /**
@@ -327,6 +349,8 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessMode; 
+            private String accessScope; 
             private String agentId; 
             private String createMode; 
             private String createdAt; 
@@ -343,6 +367,8 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.accessMode = model.accessMode;
+                this.accessScope = model.accessScope;
                 this.agentId = model.agentId;
                 this.createMode = model.createMode;
                 this.createdAt = model.createdAt;
@@ -355,6 +381,28 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
                 this.updatedAt = model.updatedAt;
                 this.workspaceId = model.workspaceId;
             } 
+
+            /**
+             * <p>API_KEY 表示使用 API Key；USER 表示使用用户身份。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API_KEY</p>
+             */
+            public Builder accessMode(String accessMode) {
+                this.accessMode = accessMode;
+                return this;
+            }
+
+            /**
+             * <p>仅 accessMode 为 USER 时返回：ALL 表示全部用户，SPECIFIED 表示指定用户。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPECIFIED</p>
+             */
+            public Builder accessScope(String accessScope) {
+                this.accessScope = accessScope;
+                return this;
+            }
 
             /**
              * <p>The managed agent ID.</p>

@@ -88,7 +88,7 @@ public class GetWorkspacePluginRequest extends Request {
         }
 
         /**
-         * <p>The plug-in name. Valid values: collaboration, agentloop.</p>
+         * <p>The plugin name. Valid values: collaboration and agentloop.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

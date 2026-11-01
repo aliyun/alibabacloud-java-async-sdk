@@ -130,7 +130,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The plug-in details.</p>
+         * <p>The plugin details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -171,7 +171,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +250,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AgentSpace name associated with the AgentLoop plug-in.</p>
+             * <p>The name of the AgentSpace associated with the AgentLoop plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>agentcore-ws-123456</p>
@@ -261,7 +261,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the AgentSpace in UTC in RFC 3339 format.</p>
+             * <p>The creation time of the AgentSpace, in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -272,7 +272,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID where the AgentSpace resides.</p>
+             * <p>The region ID of the AgentSpace.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -329,7 +329,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether public network access is enabled.</p>
+             * <p>Specifies whether public network access is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -412,7 +412,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether VPC network access is enabled for the collaboration plug-in.</p>
+             * <p>Indicates whether VPC networking is currently enabled for the collaboration plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -423,7 +423,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of vSwitch IDs used for plug-in deployment.</p>
+             * <p>The list of vSwitch IDs used for plugin deployment.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -431,7 +431,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID used for plug-in deployment.</p>
+             * <p>The VPC ID used for plugin deployment.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1example</p>
@@ -576,7 +576,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AgentLoop plug-in configuration.</p>
+             * <p>The AgentLoop plugin configuration.</p>
              */
             public Builder agentLoop(AgentLoop agentLoop) {
                 this.agentLoop = agentLoop;
@@ -584,7 +584,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network configuration of the plug-in, including public network access configuration and VPC configuration.</p>
+             * <p>The network configuration of the plugin, including the public network access configuration and VPC configuration.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -690,7 +690,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The user-configurable properties currently in effect for the plug-in. This field is empty if the plug-in is not installed.</p>
+             * <p>The user-configurable properties that are currently in effect for the plugin. This field is empty if the plugin is not installed.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -698,7 +698,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the plug-in is enabled. The value is true when the status is ENABLED.</p>
+             * <p>Indicates whether the plugin is enabled. The value is true if the status is ENABLED.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -706,7 +706,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in name.</p>
+             * <p>The plugin name.</p>
              * 
              * <strong>example:</strong>
              * <p>collaboration</p>
@@ -717,7 +717,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in status. Valid values: DISABLED, ENABLING, ENABLED, ENABLE_FAILED, DISABLING, DISABLE_FAILED.</p>
+             * <p>The plugin status. Valid values: DISABLED, ENABLING, ENABLED, ENABLE_FAILED, DISABLING, and DISABLE_FAILED.</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLED</p>
