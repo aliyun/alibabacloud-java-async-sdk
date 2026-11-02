@@ -119,7 +119,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the model services.</p>
+         * <p>The list of model services.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -127,7 +127,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -138,7 +138,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -149,14 +149,11 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values: </p>
          * <ul>
-         * <li><p><strong>30</strong></p>
-         * </li>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>100</strong></p>
-         * </li>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
          * </ul>
          * <p>Default value: <strong>30</strong>.</p>
          * 
@@ -169,7 +166,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -180,7 +177,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -379,7 +376,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API key for the model service.</p>
+             * <p>The API key of the model service.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxx</p>
@@ -390,7 +387,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The base URL of the upstream service.</p>
+             * <p>The upstream service endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxxxxx">https://xxxxxx</a></p>
@@ -401,7 +398,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the model service was created.</p>
+             * <p>The creation date of the model.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-31T14:40:48Z</p>
@@ -412,7 +409,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost in points per million input tokens.</p>
+             * <p>The input points.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -423,7 +420,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model category.</p>
+             * <p>The category.</p>
              * 
              * <strong>example:</strong>
              * <p>text</p>
@@ -434,7 +431,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model service ID.</p>
+             * <p>The model service IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>ms-xxxxxx</p>
@@ -456,7 +453,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost in points per million output tokens.</p>
+             * <p>The output points.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -467,16 +464,12 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol. Valid values:</p>
+             * <p>The protocol type. Valid values:</p>
              * <ul>
-             * <li><p><strong>OpenAI</strong></p>
-             * </li>
-             * <li><p><strong>Anthropic</strong></p>
-             * </li>
-             * <li><p><strong>bailian</strong>: Alibaba Cloud Model Studio.</p>
-             * </li>
-             * <li><p><strong>vLLM</strong></p>
-             * </li>
+             * <li><strong>openai</strong></li>
+             * <li><strong>anthropic</strong></li>
+             * <li><strong>bailian</strong></li>
+             * <li><strong>vllm</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -488,7 +481,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost in points per request.</p>
+             * <p>The number of requests.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -499,7 +492,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the model service.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -510,7 +503,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vendor of the model service.</p>
+             * <p>The model service provider.</p>
              * 
              * <strong>example:</strong>
              * <p>bailian</p>

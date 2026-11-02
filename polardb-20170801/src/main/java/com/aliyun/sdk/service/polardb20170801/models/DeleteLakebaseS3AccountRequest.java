@@ -105,7 +105,7 @@ public class DeleteLakebaseS3AccountRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available region IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -119,9 +119,9 @@ public class DeleteLakebaseS3AccountRequest extends Request {
         }
 
         /**
-         * <p>The access key of the S3 account to delete.</p>
+         * <p>The AccessKey of the S3 account that you want to delete.</p>
          * <blockquote>
-         * <p>The default account cannot be deleted.</p>
+         * <p>You cannot delete the default account.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

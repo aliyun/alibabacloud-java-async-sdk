@@ -89,7 +89,7 @@ public class DeleteModelServiceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the gateway instance.</p>
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DeleteModelServiceRequest extends Request {
         }
 
         /**
-         * <p>The name of the model.</p>
+         * <p>The model name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class DeleteModelServiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

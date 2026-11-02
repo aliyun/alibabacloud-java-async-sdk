@@ -105,7 +105,7 @@ public class DescribeAgenticDBProjectHistoryRetentionRequest extends Request {
         } 
 
         /**
-         * <p>The AgenticDB cluster ID.</p>
+         * <p>The ID of the AgenticDB cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class DescribeAgenticDBProjectHistoryRetentionRequest extends Request {
         }
 
         /**
-         * <p>The target project ID.</p>
+         * <p>The ID of the target project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

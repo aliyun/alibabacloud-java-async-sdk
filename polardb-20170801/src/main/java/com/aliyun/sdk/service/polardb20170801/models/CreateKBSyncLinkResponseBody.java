@@ -171,7 +171,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The client ID.</p>
+         * <p>The client identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>cli_xxxxxxbe8</p>
@@ -182,7 +182,8 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time. The time is in ISO 8601 format and the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The creation time.</p>
+         * <p>The time follows the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-14T05:58:42Z</p>
@@ -193,7 +194,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the link.</p>
+         * <p>The description of the synchronization link.</p>
          * 
          * <strong>example:</strong>
          * <p>testDesc</p>
@@ -230,7 +231,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the link.</p>
+         * <p>The name of the synchronization link.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -252,7 +253,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The source directory address for synchronization.</p>
+         * <p>The address of the source directory for synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.feishu.cn/wiki/space/xxxxxx">https://example.feishu.cn/wiki/space/xxxxxx</a></p>

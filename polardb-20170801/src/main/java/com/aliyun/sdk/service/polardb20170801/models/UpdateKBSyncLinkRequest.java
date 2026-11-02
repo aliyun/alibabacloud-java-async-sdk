@@ -258,7 +258,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The validity period of a successful Lark group member snapshot used for fallback reuse, in seconds. This parameter can be explicitly set only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of a snapshot allowed for reuse. If this parameter is omitted, the original value is retained. Explicitly passing -1 restores the default behavior.</p>
+         * <p>The validity period of the successful Lark group member snapshot for fallback reuse, in seconds. This parameter can only be explicitly set for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of the snapshot allowed for reuse. If this parameter is omitted, the original value is retained. Explicitly passing -1 restores the default behavior.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -296,7 +296,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The endpoint of the DingTalk Docs MCP server.</p>
+         * <p>The endpoint of the DingTalk document MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></p>
@@ -321,7 +321,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The endpoint of the DingTalk Sheets MCP server.</p>
+         * <p>The endpoint of the DingTalk sheet MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></p>
@@ -333,7 +333,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic synchronization. This parameter must be modified individually and cannot be changed along with other configurations.</p>
+         * <p>Specifies whether to enable automatic synchronization. This parameter can only be modified individually and cannot be changed together with other configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -369,7 +369,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DingTalk user that performs the operation.</p>
+         * <p>The ID of the DingTalk user who performs the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>123***56</p>
@@ -381,7 +381,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The new Lark user refresh token. Pass this parameter together with UserAccessToken. Passing empty strings for both parameters indicates deletion.</p>
+         * <p>The new Lark user refresh token. This parameter must be passed together with UserAccessToken. Passing empty strings for both parameters deletes the tokens.</p>
          * 
          * <strong>example:</strong>
          * <hr>

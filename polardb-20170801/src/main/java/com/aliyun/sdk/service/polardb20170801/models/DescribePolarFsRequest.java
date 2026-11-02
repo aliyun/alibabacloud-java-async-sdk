@@ -51,6 +51,10 @@ public class DescribePolarFsRequest extends Request {
     private String relativeDbClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -64,6 +68,7 @@ public class DescribePolarFsRequest extends Request {
         this.polarFsType = builder.polarFsType;
         this.regionId = builder.regionId;
         this.relativeDbClusterId = builder.relativeDbClusterId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
     }
 
@@ -137,6 +142,13 @@ public class DescribePolarFsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -152,6 +164,7 @@ public class DescribePolarFsRequest extends Request {
         private String polarFsType; 
         private String regionId; 
         private String relativeDbClusterId; 
+        private String resourceGroupId; 
         private java.util.List<Tag> tag; 
 
         private Builder() {
@@ -168,11 +181,12 @@ public class DescribePolarFsRequest extends Request {
             this.polarFsType = request.polarFsType;
             this.regionId = request.regionId;
             this.relativeDbClusterId = request.relativeDbClusterId;
+            this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
         } 
 
         /**
-         * <p>The instance ID of the PolarDB instance on which the application depends.</p>
+         * <p>The PolarDB instance ID that the application depends on.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-2ze8u21s03******</p>
@@ -184,7 +198,7 @@ public class DescribePolarFsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be an integer greater than 0 and not exceeding the maximum value of Integer.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum integer value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +242,7 @@ public class DescribePolarFsRequest extends Request {
         }
 
         /**
-         * <p>The list of PolarFS instance IDs, separated by commas (,).</p>
+         * <p>The PolarFS instance IDs. Separate multiple instance IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>pfs-ins1*******</p>
@@ -273,6 +287,18 @@ public class DescribePolarFsRequest extends Request {
         public Builder relativeDbClusterId(String relativeDbClusterId) {
             this.putQueryParameter("RelativeDbClusterId", relativeDbClusterId);
             this.relativeDbClusterId = relativeDbClusterId;
+            return this;
+        }
+
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxx</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

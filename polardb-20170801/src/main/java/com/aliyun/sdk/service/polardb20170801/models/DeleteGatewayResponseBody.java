@@ -54,7 +54,7 @@ public class DeleteGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</p>

@@ -130,7 +130,7 @@ public class DescribeAgenticDBProjectHistoryRetentionResponseBody extends TeaMod
         }
 
         /**
-         * <p>The effective history data retention period for the project. For the actual recoverable range, query the branch recovery window.</p>
+         * <p>The effective history data retention period of the project. To check the actual recoverable range, query the branch recovery window.</p>
          * 
          * <strong>example:</strong>
          * <p>604800</p>

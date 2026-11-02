@@ -128,6 +128,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
@@ -193,6 +196,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         this.relativeDbClusterId = builder.relativeDbClusterId;
         this.relativePfsClusterId = builder.relativePfsClusterId;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupId = builder.securityGroupId;
         this.storageSpace = builder.storageSpace;
         this.storageType = builder.storageType;
@@ -476,6 +480,13 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return securityGroupId
      */
     public String getSecurityGroupId() {
@@ -576,6 +587,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         private String relativeDbClusterId; 
         private String relativePfsClusterId; 
         private String requestId; 
+        private String resourceGroupId; 
         private String securityGroupId; 
         private Double storageSpace; 
         private String storageType; 
@@ -627,6 +639,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             this.relativeDbClusterId = model.relativeDbClusterId;
             this.relativePfsClusterId = model.relativePfsClusterId;
             this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
             this.securityGroupId = model.securityGroupId;
             this.storageSpace = model.storageSpace;
             this.storageType = model.storageType;
@@ -650,7 +663,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The acceleration storage space. Unit: GB.</p>
+         * <p>The accelerated storage space. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -762,7 +775,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
-         * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-02T05:57:10Z</p>
@@ -818,7 +831,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of endpoints, including endpoint information for types such as NAS and S3Gateway.</p>
+         * <p>The list of endpoints, including endpoint information for types such as NAS and S3 Gateway.</p>
          */
         public Builder endpointItems(java.util.List<EndpointItems> endpointItems) {
             this.endpointItems = endpointItems;
@@ -828,9 +841,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         /**
          * <p>The expiration time of the cluster.</p>
          * <blockquote>
-         * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
+         * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). For clusters whose billing method is <strong>Postpaid</strong> (pay-as-you-go), an empty value is returned.</p>
          * </blockquote>
-         * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-10T16:00:00Z</p>
@@ -868,7 +881,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         /**
          * <p>The lock mode. Valid values: </p>
          * <ul>
-         * <li><strong>Unlock</strong>: Not locked.</li>
+         * <li><strong>Unlock</strong>: Unlocked.</li>
          * <li><strong>ManualLock</strong>: Manually locked. </li>
          * <li><strong>LockByExpiration</strong>: Automatically locked due to cluster expiration.</li>
          * </ul>
@@ -893,7 +906,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster endpoint of the metadata service.</p>
+         * <p>The metadata service cluster endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-x67w12d2d5t13mt88.pg.polardb.rds.aliyuncs.com</p>
@@ -915,7 +928,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster endpoint of the metadata proxy service.</p>
+         * <p>The metadata proxy service cluster endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-y3610mp168p3bb740.rwlb.rds.aliyuncs.com</p>
@@ -926,7 +939,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The metadata address for Fuse mounting (encrypted).</p>
+         * <p>The metadata address for FUSE mounting (encrypted).</p>
          * 
          * <strong>example:</strong>
          * <p>e6cc1d2e2a6fa292038d999fda6501*****</p>
@@ -937,7 +950,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The minor version of the instance.</p>
+         * <p>The minor version number of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>v1.3.0-v1.1.1</p>
@@ -958,8 +971,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: Pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: Subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -971,7 +984,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the Polarlakebase instance.</p>
+         * <p>The Polarlakebase instance description.</p>
          * 
          * <strong>example:</strong>
          * <p>pfs-xxx</p>
@@ -1052,7 +1065,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID of the associated Polarlakebase instance.</p>
+         * <p>The associated Polarlakebase instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pfs-**********</p>
@@ -1070,6 +1083,17 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxx</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -1096,14 +1120,15 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Storage types for the High-performance Edition. Valid values:</p>
+         * <p>The storage type. 
+         * For High-performance Edition, valid values are:</p>
          * <ul>
          * <li><strong>ESSDPL1</strong></li>
          * <li><strong>ESSDPL0</strong></li>
          * </ul>
-         * <p>Storage types for the Basic Edition. Valid values:</p>
+         * <p>For Basic Edition, valid values are:</p>
          * <ul>
-         * <li><strong>city_redundancy</strong>: zone-redundant storage.</li>
+         * <li><strong>city_redundancy</strong>: Zone-redundant storage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1137,7 +1162,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The default user account key for S3 Gateway (encrypted ciphertext).</p>
+         * <p>The default user account secret key for S3 Gateway (encrypted ciphertext).</p>
          * 
          * <strong>example:</strong>
          * <p>EncryptedSecretKey==</p>
@@ -1396,9 +1421,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             /**
              * <p>The network type of the connection string. Valid values:</p>
              * <ul>
-             * <li><strong>Public</strong>: public endpoint.</li>
-             * <li><strong>Private</strong>: private endpoint.</li>
-             * <li><strong>Inner</strong>: private endpoint (classic network).</li>
+             * <li><strong>Public</strong>: Public network address.</li>
+             * <li><strong>Private</strong>: Private network address.</li>
+             * <li><strong>Inner</strong>: Private network address (classic network).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1534,7 +1559,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint type. Valid values: Nas, S3Gateway, and others.</p>
+             * <p>The endpoint type, such as NAS or S3 Gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>S3Gateway</p>

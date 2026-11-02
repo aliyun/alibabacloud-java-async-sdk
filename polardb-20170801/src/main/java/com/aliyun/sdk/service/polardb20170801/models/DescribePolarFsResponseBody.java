@@ -125,7 +125,7 @@ public class DescribePolarFsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -147,7 +147,7 @@ public class DescribePolarFsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -620,6 +620,9 @@ public class DescribePolarFsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RelativeDbClusterId")
         private String relativeDbClusterId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -660,6 +663,7 @@ public class DescribePolarFsResponseBody extends TeaModel {
             this.polarFsType = builder.polarFsType;
             this.regionId = builder.regionId;
             this.relativeDbClusterId = builder.relativeDbClusterId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.securityGroupId = builder.securityGroupId;
             this.storageSpace = builder.storageSpace;
             this.storageType = builder.storageType;
@@ -804,6 +808,13 @@ public class DescribePolarFsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -871,6 +882,7 @@ public class DescribePolarFsResponseBody extends TeaModel {
             private String polarFsType; 
             private String regionId; 
             private String relativeDbClusterId; 
+            private String resourceGroupId; 
             private String securityGroupId; 
             private Long storageSpace; 
             private String storageType; 
@@ -901,6 +913,7 @@ public class DescribePolarFsResponseBody extends TeaModel {
                 this.polarFsType = model.polarFsType;
                 this.regionId = model.regionId;
                 this.relativeDbClusterId = model.relativeDbClusterId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.securityGroupId = model.securityGroupId;
                 this.storageSpace = model.storageSpace;
                 this.storageType = model.storageType;
@@ -1051,6 +1064,14 @@ public class DescribePolarFsResponseBody extends TeaModel {
              */
             public Builder relativeDbClusterId(String relativeDbClusterId) {
                 this.relativeDbClusterId = relativeDbClusterId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

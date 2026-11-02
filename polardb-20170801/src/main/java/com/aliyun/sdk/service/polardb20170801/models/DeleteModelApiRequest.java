@@ -102,7 +102,7 @@ public class DeleteModelApiRequest extends Request {
         }
 
         /**
-         * <p>The model API ID.</p>
+         * <p>The ID of the model API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

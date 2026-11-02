@@ -114,7 +114,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the current results.</p>
+         * <p>The page number of the returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records per page in the current results.</p>
+         * <p>The number of records returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -147,7 +147,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of synchronization links that match the query conditions.</p>
+         * <p>The total number of synchronization links that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -307,7 +307,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client ID.</p>
+             * <p>The client identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>cli_xxxxxxbe8</p>
@@ -318,8 +318,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
-             * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The creation time. The time is in ISO 8601 format in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-11T09:55:19Z</p>
@@ -352,7 +351,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The synchronization link ID.</p>
+             * <p>The ID of the synchronization link.</p>
              * 
              * <strong>example:</strong>
              * <p>pkbl-xxxxx</p>
@@ -363,7 +362,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The link name.</p>
+             * <p>The name of the synchronization link.</p>
              * 
              * <strong>example:</strong>
              * <p>testName</p>
@@ -374,7 +373,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source directory address for synchronization.</p>
+             * <p>The address of the source directory for synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.feishu.cn/wiki/space/xxxxxx">https://example.feishu.cn/wiki/space/xxxxxx</a></p>

@@ -317,6 +317,9 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageResources")
         private java.util.List<ImageResources> imageResources;
 
+        @com.aliyun.core.annotation.NameInMap("KnowledgeBaseId")
+        private String knowledgeBaseId;
+
         @com.aliyun.core.annotation.NameInMap("Metadata")
         private String metadata;
 
@@ -342,6 +345,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
             this.fileName = builder.fileName;
             this.headings = builder.headings;
             this.imageResources = builder.imageResources;
+            this.knowledgeBaseId = builder.knowledgeBaseId;
             this.metadata = builder.metadata;
             this.pageNumbers = builder.pageNumbers;
             this.shardContent = builder.shardContent;
@@ -401,6 +405,13 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
+         * @return knowledgeBaseId
+         */
+        public String getKnowledgeBaseId() {
+            return this.knowledgeBaseId;
+        }
+
+        /**
          * @return metadata
          */
         public String getMetadata() {
@@ -449,6 +460,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
             private String fileName; 
             private java.util.List<String> headings; 
             private java.util.List<ImageResources> imageResources; 
+            private String knowledgeBaseId; 
             private String metadata; 
             private java.util.List<Integer> pageNumbers; 
             private String shardContent; 
@@ -466,6 +478,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
                 this.fileName = model.fileName;
                 this.headings = model.headings;
                 this.imageResources = model.imageResources;
+                this.knowledgeBaseId = model.knowledgeBaseId;
                 this.metadata = model.metadata;
                 this.pageNumbers = model.pageNumbers;
                 this.shardContent = model.shardContent;
@@ -475,7 +488,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of captions for the figures or tables associated with the chunk.</p>
+             * <p>The list of figure or table captions associated with the chunk.</p>
              */
             public Builder captions(java.util.List<String> captions) {
                 this.captions = captions;
@@ -483,7 +496,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of structured element references in the source document associated with the chunk. You can use these references to precisely locate the original elements.</p>
+             * <p>The list of structured element references from the source document associated with the chunk. This can be used to precisely locate the original elements.</p>
              */
             public Builder docItems(java.util.List<String> docItems) {
                 this.docItems = docItems;
@@ -525,6 +538,17 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
              */
             public Builder imageResources(java.util.List<ImageResources> imageResources) {
                 this.imageResources = imageResources;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the knowledge base to which the retrieved chunk belongs. This is used to distinguish the source of results when searching multiple knowledge bases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pkb-xxxxxxxx</p>
+             */
+            public Builder knowledgeBaseId(String knowledgeBaseId) {
+                this.knowledgeBaseId = knowledgeBaseId;
                 return this;
             }
 

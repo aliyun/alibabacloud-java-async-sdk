@@ -118,7 +118,7 @@ public class DeleteAgenticDBProjectRequest extends Request {
         }
 
         /**
-         * <p>The ID of the target project.</p>
+         * <p>The target project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

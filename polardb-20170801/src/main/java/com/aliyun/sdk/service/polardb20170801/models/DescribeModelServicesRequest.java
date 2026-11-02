@@ -172,7 +172,7 @@ public class DescribeModelServicesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the gateway instance.</p>
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the model services. Separate multiple IDs with a comma (,).</p>
+         * <p>The model service IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>ms-xxx,ms-xxxx</p>
@@ -209,7 +209,7 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * <p>The name of the model service.</p>
+         * <p>The model service name.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -247,14 +247,10 @@ public class DescribeModelServicesRequest extends Request {
         /**
          * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li><p><strong>openai</strong></p>
-         * </li>
-         * <li><p><strong>anthropic</strong></p>
-         * </li>
-         * <li><p><strong>bailian</strong>: Models from Model Studio.</p>
-         * </li>
-         * <li><p><strong>vllm</strong></p>
-         * </li>
+         * <li><strong>openai</strong></li>
+         * <li><strong>anthropic</strong></li>
+         * <li><strong>bailian</strong></li>
+         * <li><strong>vllm</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,7 +263,7 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -279,7 +275,7 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * <p>The status of the model service.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
