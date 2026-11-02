@@ -158,7 +158,7 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the configuration was modified.</p>
+         * <p>The modification time. The time is in ISO 8601 format in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-02T22:22:22Z</p>
@@ -169,7 +169,7 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-02T22:22:22Z</p>
@@ -180,7 +180,7 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The naming format of the snapshot captured in overwrite mode.</p>
+         * <p>The snapshot file overwrite format.</p>
          * 
          * <strong>example:</strong>
          * <p>snapshot/{JobId}.jpg</p>
@@ -202,7 +202,7 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The naming format of the snapshot captured in time series mode.</p>
+         * <p>The snapshot file sequence format.</p>
          * 
          * <strong>example:</strong>
          * <p>snapshot/{JobId}/{UnixTimestamp}.jpg</p>
@@ -225,6 +225,9 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template 1</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -232,7 +235,7 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The interval between two adjacent snapshots.</p>
+         * <p>The snapshot time interval, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -243,12 +246,7 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the template.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>system</li>
-         * <li>custom</li>
-         * </ul>
+         * <p>The templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>

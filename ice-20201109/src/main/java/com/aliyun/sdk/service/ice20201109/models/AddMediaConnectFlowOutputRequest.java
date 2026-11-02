@@ -214,7 +214,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>The flow ID.</p>
+         * <p>The flow instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>The output name.</p>
+         * <p>The name of the output.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,15 +240,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>The output type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>RTMP-PUSH</li>
-         * <li>SRT-Caller</li>
-         * <li>RTMP-PULL</li>
-         * <li>SRT-Listener</li>
-         * <li>Flow</li>
-         * </ul>
+         * <p>The output protocol.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +253,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>The output URL. This parameter is required when OutputProtocol is set to RTMP-PUSH or SRT-Caller.</p>
+         * <p>The output URL. This parameter is required when the output type is RTMP-PUSH or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://push.test.alivecdn.com/live/alitest</p>
@@ -273,7 +265,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination flow. This parameter is required when OutputProtocol is set to Flow.</p>
+         * <p>The peer flow instance ID. This parameter is required when the output type is Flow.</p>
          * 
          * <strong>example:</strong>
          * <p>8666ec062190f00e263012666319a5be</p>
@@ -285,7 +277,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>The source name of the destination flow. This parameter is required when OutputProtocol is set to Flow.</p>
+         * <p>The input name of the peer flow. This parameter is required when the output type is Flow.</p>
          * 
          * <strong>example:</strong>
          * <p>AliTestInput</p>
@@ -297,7 +289,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of viewers.</p>
+         * <p>The maximum number of concurrent players.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -309,7 +301,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>The latency for the SRT stream. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
+         * <p>The SRT latency. This parameter is required only when the output type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -321,7 +313,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>The SRT key. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
+         * <p>The SRT encryption passphrase. This parameter is required only when the output type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>BETTERG08S01</p>
@@ -333,7 +325,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>The encryption key length. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
+         * <p>The SRT encryption key length. This parameter is required only when the output type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>

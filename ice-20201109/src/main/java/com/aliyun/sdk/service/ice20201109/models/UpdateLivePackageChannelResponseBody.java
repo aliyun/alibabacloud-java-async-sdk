@@ -67,7 +67,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the live package channel.</p>
+         * <p>The detailed information about the live packaging channel.</p>
          */
         public Builder livePackageChannel(LivePackageChannel livePackageChannel) {
             this.livePackageChannel = livePackageChannel;
@@ -170,7 +170,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ingest endpoint ID.</p>
+             * <p>The ID of the ingest endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>ingest1</p>
@@ -192,7 +192,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ingest endpoint URL.</p>
+             * <p>The URL of the ingest endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxx-1.packagepush-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest">http://xxx-1.packagepush-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest</a></p>
@@ -364,7 +364,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The channel name.</p>
+             * <p>The name of the channel.</p>
              * 
              * <strong>example:</strong>
              * <p>channel-1</p>
@@ -375,7 +375,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the channel was created.</p>
+             * <p>The time when the channel was created. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-16T02:24:42Z</p>
@@ -386,7 +386,10 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel description. It can be up to 1,000 characters in length.</p>
+             * <p>The description of the channel. The description can be up to 1,000 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test channel</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -394,7 +397,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel group name.</p>
+             * <p>The name of the channel group.</p>
              * 
              * <strong>example:</strong>
              * <p>channel-group-1</p>
@@ -405,7 +408,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ingest endpoints.</p>
+             * <p>The array of ingest endpoints.</p>
              */
             public Builder ingestEndpoints(java.util.List<IngestEndpoints> ingestEndpoints) {
                 this.ingestEndpoints = ingestEndpoints;
@@ -424,7 +427,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ingest protocol. Only HLS is supported.</p>
+             * <p>The input stream protocol. Valid values: HLS, HLS_CMAF, and SRT_RTMP.</p>
              * 
              * <strong>example:</strong>
              * <p>HLS</p>
@@ -435,7 +438,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of segments.</p>
+             * <p>The number of segments in the input stream.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -446,7 +449,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The segment duration.</p>
+             * <p>The duration of each segment in the input stream.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

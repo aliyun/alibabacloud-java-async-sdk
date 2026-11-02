@@ -98,6 +98,7 @@ public class CreateYikeWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The project title.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class CreateYikeWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of users in the workspace team.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -101,7 +101,7 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The call description.</p>
+         * <p>The description of the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -112,7 +112,7 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11357BE8-4C54-58EA-890A-5AB646EDE4B2</p>
@@ -123,7 +123,7 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error code. A value of 0 indicates the call is successful.</p>
+         * <p>The returned error code. A value of 0 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -192,7 +192,10 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
             } 
 
             /**
-             * InnerInputUrl.
+             * <p>The internal stream pushing IP address. This parameter is valid only when you connect to the cloud through an Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder innerInputUrl(String innerInputUrl) {
                 this.innerInputUrl = innerInputUrl;
@@ -200,7 +203,7 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source URL.</p>
+             * <p>The input URL.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp://1.2.3.4:1935/live/AliTestInput_8666ec062190f00e263012666319a5be</p>

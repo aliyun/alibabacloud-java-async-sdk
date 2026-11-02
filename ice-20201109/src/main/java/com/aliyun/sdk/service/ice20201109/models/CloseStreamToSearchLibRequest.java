@@ -110,7 +110,7 @@ public class CloseStreamToSearchLibRequest extends Request {
         }
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>

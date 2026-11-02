@@ -67,7 +67,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The transcoding task.</p>
+         * <p>The media transcoding task.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -75,7 +75,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -170,7 +170,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The inputs of the transcoding task.</p>
+             * <p>The media transcoding task input list.</p>
              */
             public Builder inputs(java.util.List<MediaConvertInput> inputs) {
                 this.inputs = inputs;
@@ -178,10 +178,10 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the job.</p>
+             * <p>The task name.</p>
              * 
              * <strong>example:</strong>
-             * <p>insx6-1310</p>
+             * <p>Name</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -189,7 +189,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output group configurations.</p>
+             * <p>The media transcoding task output group configuration list.</p>
              */
             public Builder outputGroups(java.util.List<MediaConvertOutputGroup> outputGroups) {
                 this.outputGroups = outputGroups;
@@ -197,7 +197,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output configurations.</p>
+             * <p>The media transcoding output configuration list.</p>
              */
             public Builder outputs(java.util.List<MediaConvertOutput> outputs) {
                 this.outputs = outputs;
@@ -381,7 +381,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The idempotency key of the request for creating the transcoding task.</p>
+             * <p>The idempotency parameter for the media transcoding task creation request.</p>
              * 
              * <strong>example:</strong>
              * <p>FB7F25E9-AD9B-1603-8AF6-F1E42DF2E706</p>
@@ -392,10 +392,10 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code returned when the transcoding task failed.</p>
+             * <p>The error code returned when the media transcoding task fails.</p>
              * 
              * <strong>example:</strong>
-             * <p>200</p>
+             * <p>InvalidParameter.ResourceContentBad</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -403,7 +403,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the transcoding task.</p>
+             * <p>The media transcoding task configuration.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -411,7 +411,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the transcoding task.</p>
+             * <p>The media transcoding task ID.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -422,10 +422,10 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the transcoding task failed.</p>
+             * <p>The detailed error message returned when the media transcoding task fails.</p>
              * 
              * <strong>example:</strong>
-             * <p>ok</p>
+             * <p>The resource operated InputFile is bad</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -433,7 +433,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the transcoded outputs.</p>
+             * <p>The media transcoding output result list.</p>
              */
             public Builder outputDetails(java.util.List<MediaConvertOutputDetail> outputDetails) {
                 this.outputDetails = outputDetails;
@@ -441,7 +441,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the output groups.</p>
+             * <p>The media transcoding output group result list.</p>
              */
             public Builder outputGroupDetails(java.util.List<MediaConvertOutputGroupDetail> outputGroupDetails) {
                 this.outputGroupDetails = outputGroupDetails;
@@ -449,10 +449,10 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the queue.</p>
+             * <p>The pipeline ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>3780049</p>
+             * <p><em><strong>48a4edf410b908aecd91fc3b</strong></em></p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -460,7 +460,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the request.</p>
+             * <p>The request ID.</p>
              * 
              * <strong>example:</strong>
              * <p>A2129C9F-CE95-58B5-B8C1-07758FF6C86F</p>
@@ -471,17 +471,17 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the transcoding task. Valid values:</p>
+             * <p>The media transcoding task status. Valid values:</p>
              * <ul>
-             * <li>Inited: The task is initialized.</li>
-             * <li>Running</li>
-             * <li>Complete</li>
-             * <li>Error</li>
-             * <li>Cancelled</li>
+             * <li>Inited: initialized.</li>
+             * <li>Running: running.</li>
+             * <li>Success: transcoding succeeded.</li>
+             * <li>Failed: transcoding failed.</li>
+             * <li>Cancelled: canceled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Inited</p>
+             * <p>Success</p>
              */
             public Builder state(String state) {
                 this.state = state;

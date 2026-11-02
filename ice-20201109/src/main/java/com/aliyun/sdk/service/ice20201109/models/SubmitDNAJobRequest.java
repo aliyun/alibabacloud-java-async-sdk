@@ -202,10 +202,11 @@ public class SubmitDNAJobRequest extends Request {
         } 
 
         /**
-         * <p>The configurations of the media fingerprint analysis job. The value is a JSON object. If you specify this parameter, the template parameters are overwritten.</p>
+         * <p>The DNA configuration, which is a JSON object.
+         * If you specify this parameter, it overwrites the template parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;&quot;:&quot;video&quot;}</p>
+         * <p>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;:&quot;video&quot;}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -214,7 +215,7 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the media fingerprint library. If you do not specify this parameter, the default media fingerprint library is used. For more information about how to create a media fingerprint library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB</a>.</p>
+         * <p>The ID of the DNA library. To create a DNA library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB - Create a DNA library</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +228,7 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * <p>The input file for media fingerprint analysis.</p>
+         * <p>The input DNA file.</p>
          * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
@@ -256,7 +257,7 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the media fingerprint analysis job is submitted.</p>
+         * <p>The ID of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>5246b8d12a62433ab77845074039****</p>
@@ -268,7 +269,7 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * <p>The primary key of the video. You must make sure that each primary key is unique.</p>
+         * <p>The unique primary key of the video. You must ensure its uniqueness.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -299,7 +300,7 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * <p>The template ID.</p>
+         * <p>The ID of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>S00000101-100060</p>
@@ -311,7 +312,7 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data. The data can be up to 128 bytes in length.</p>
+         * <p>The custom user data. The maximum length is 128 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>userData</p>
@@ -384,10 +385,15 @@ public class SubmitDNAJobRequest extends Request {
             } 
 
             /**
-             * <p>The input file. The file can be an OSS object or a media asset. You can specify the path of an OSS object in one of the following formats:</p>
-             * <p>1. oss://bucket/object</p>
-             * <p>2. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
-             * <p>In the preceding paths, bucket indicates an OSS bucket that resides in the same region as the current project, and object indicates the path of the object in the bucket.</p>
+             * <p>The information about the input file. OSS URLs and media asset IDs are supported.
+             * OSS URL formats:</p>
+             * <ul>
+             * <li><p>oss://bucket/object</p>
+             * </li>
+             * <li><p>http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
+             * </li>
+             * </ul>
+             * <p>In the URLs, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -400,10 +406,10 @@ public class SubmitDNAJobRequest extends Request {
 
             /**
              * <p>The type of the input file. Valid values:</p>
-             * <ol>
-             * <li>OSS: Object Storage Service (OSS) object.</li>
-             * <li>Media: media asset.</li>
-             * </ol>
+             * <ul>
+             * <li>OSS: the URL of an OSS file.</li>
+             * <li>Media: the ID of a media asset.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

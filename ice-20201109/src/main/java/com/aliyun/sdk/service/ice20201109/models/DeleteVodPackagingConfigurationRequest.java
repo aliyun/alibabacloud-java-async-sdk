@@ -59,7 +59,7 @@ public class DeleteVodPackagingConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>The name of the packaging configuration.</p>
+         * <p>The name of the VOD packaging configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>hls_3s</p>

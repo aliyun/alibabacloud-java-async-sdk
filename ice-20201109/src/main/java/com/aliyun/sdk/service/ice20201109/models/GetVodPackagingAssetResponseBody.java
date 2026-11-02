@@ -67,7 +67,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the asset.</p>
+         * <p>The details of the VOD packaging asset.</p>
          */
         public Builder asset(Asset asset) {
             this.asset = asset;
@@ -75,7 +75,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
@@ -168,11 +168,11 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asset status. Valid values:</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li>Queuing: The asset is waiting for packaging.</li>
-             * <li>Playable: The asset is packaged and playable.</li>
-             * <li>Failed: The asset fails to be packaged.</li>
+             * <li>Queuing: Queued for processing.</li>
+             * <li>Playable: Playable.</li>
+             * <li>Failed: Packaging failed and playback is unavailable.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The playback URL. If the asset fails to be packaged, no playback URL is returned.</p>
+             * <p>The playback URL. If asset packaging fails, the corresponding playback URL is not returned.</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -251,7 +251,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL of the media file. Only M3U8 files stored in OSS are supported.</p>
+             * <p>The input media asset. Currently, only OSS paths are supported, such as OSS://test-bucket/video/202208/test.m3u8. Only inputs with the .m3u8 extension are supported.</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -259,7 +259,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input type. Only Object Storage Service (OSS) is supported.</p>
+             * <p>The input type. Currently, only Object Storage Service (OSS) is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>
@@ -381,7 +381,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the asset.</p>
+             * <p>The name of the packaging asset.</p>
              * 
              * <strong>example:</strong>
              * <p>30min_movie</p>
@@ -392,7 +392,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content ID in the DRM system. The maximum length is 256 characters. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+             * <p>The content ID in the Digital Rights Management (DRM) system. The format is [A-Za-z0-9_-]+, and the maximum length is 256 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>movie</p>
@@ -403,7 +403,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the asset was created. It follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the asset was created. The format is 2024-11-21T06:45:32Z, which indicates 2024-11-21 14:45:32 in UTC+8.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-11-21T06:45:32Z</p>
@@ -414,7 +414,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The egress endpoints, each corresponding to a packaging configuration.</p>
+             * <p>The list of output endpoints for asset packaging and playback. Each packaging configuration corresponds to one packaging playback endpoint.</p>
              */
             public Builder egressEndpoints(java.util.List<EgressEndpoints> egressEndpoints) {
                 this.egressEndpoints = egressEndpoints;
@@ -433,7 +433,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asset input configurations.</p>
+             * <p>The input of the packaging asset.</p>
              */
             public Builder input(Input input) {
                 this.input = input;

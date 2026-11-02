@@ -67,7 +67,13 @@ public class TranspositionResult extends TeaModel {
         } 
 
         /**
-         * TargetLanguage.
+         * <ul>
+         * <li>The target language for translation transposition. For more information, see the list of target languages for video translation.</li>
+         * <li>This field is only used in video translation scenarios.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.targetLanguage = targetLanguage;
@@ -75,7 +81,13 @@ public class TranspositionResult extends TeaModel {
         }
 
         /**
-         * TranslatedText.
+         * <ul>
+         * <li>The text after translation transposition, which is the expected output text after the matched hot word is translated. The maximum length is 100 characters.</li>
+         * <li>This field is only used in scenarios related to the translation feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         public Builder translatedText(String translatedText) {
             this.translatedText = translatedText;

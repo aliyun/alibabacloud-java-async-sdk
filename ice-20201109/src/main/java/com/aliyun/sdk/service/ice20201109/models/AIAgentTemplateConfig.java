@@ -80,7 +80,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         } 
 
         /**
-         * AvatarChat3D.
+         * <p>The 3D digital human parameters.</p>
          */
         public Builder avatarChat3D(AvatarChat3D avatarChat3D) {
             this.avatarChat3D = avatarChat3D;
@@ -88,7 +88,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
-         * VisionChat.
+         * <p>The visual agent parameters.</p>
          */
         public Builder visionChat(VisionChat visionChat) {
             this.visionChat = visionChat;
@@ -96,7 +96,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
-         * VoiceChat.
+         * <p>The voice call parameters.</p>
          */
         public Builder voiceChat(VoiceChat voiceChat) {
             this.voiceChat = voiceChat;
@@ -162,7 +162,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The actual text of the conversation content, which records the specific expression or response of the role in the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -170,7 +173,24 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the conversation participant. Valid values:</p>
+             * <ul>
+             * <li><p>user: User</p>
+             * </li>
+             * <li><p>assistant: Assistant</p>
+             * </li>
+             * <li><p>system: System</p>
+             * </li>
+             * <li><p>function: Function</p>
+             * </li>
+             * <li><p>plugin: Plug-in</p>
+             * </li>
+             * <li><p>tool: Tool</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -549,7 +569,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             } 
 
             /**
-             * AsrHotWords.
+             * <p>The list of hotwords for ASR. The hotword list supports a maximum of 128 words.</p>
              */
             public Builder asrHotWords(java.util.List<String> asrHotWords) {
                 this.asrHotWords = asrHotWords;
@@ -557,7 +577,17 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * AsrLanguageId.
+             * <p>The language ID for automatic speech recognition (ASR). Valid values:</p>
+             * <ul>
+             * <li>zh_mandarin: Chinese</li>
+             * <li>en: English</li>
+             * <li>zh_en: Chinese and English mixed</li>
+             * <li>es: Spanish</li>
+             * <li>jp: Japanese</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>zh_mandarin</p>
              */
             public Builder asrLanguageId(String asrLanguageId) {
                 this.asrLanguageId = asrLanguageId;
@@ -565,7 +595,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * AsrMaxSilence.
+             * <p>The threshold for speech segmentation detection. Silence exceeding this threshold is treated as a sentence break. Valid values: 200 to 1200. Unit: milliseconds. Default value: 400.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder asrMaxSilence(Integer asrMaxSilence) {
                 this.asrMaxSilence = asrMaxSilence;
@@ -573,7 +606,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * AvatarId.
+             * <p>The ID of the digital human model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231</p>
              */
             public Builder avatarId(String avatarId) {
                 this.avatarId = avatarId;
@@ -581,7 +617,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * BailianAppParams.
+             * <p>The parameters for Alibaba Cloud Model Studio Application Center. For the parameter format, refer to <a href="https://help.aliyun.com/document_detail/2858132.html">Alibaba Cloud Model Studio Application Center parameters</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder bailianAppParams(String bailianAppParams) {
                 this.bailianAppParams = bailianAppParams;
@@ -597,7 +636,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * EnableIntelligentSegment.
+             * <p>Specifies whether to enable intelligent segmentation. After this feature is enabled, sentence breaks in user speech are intelligently merged into a single sentence. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableIntelligentSegment(Boolean enableIntelligentSegment) {
                 this.enableIntelligentSegment = enableIntelligentSegment;
@@ -605,7 +647,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * EnablePushToTalk.
+             * <p>Specifies whether to enable the push-to-talk mode. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enablePushToTalk(Boolean enablePushToTalk) {
                 this.enablePushToTalk = enablePushToTalk;
@@ -613,7 +658,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * EnableVoiceInterrupt.
+             * <p>Specifies whether to support voice interruption. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableVoiceInterrupt(Boolean enableVoiceInterrupt) {
                 this.enableVoiceInterrupt = enableVoiceInterrupt;
@@ -621,7 +669,13 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * GracefulShutdown.
+             * <p>Specifies whether to enable graceful shutdown. Default value: false.</p>
+             * <ul>
+             * <li>Graceful shutdown: When the agent is stopped, it finishes broadcasting the current speech before stopping, with a maximum broadcast duration of 10 seconds.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder gracefulShutdown(Boolean gracefulShutdown) {
                 this.gracefulShutdown = gracefulShutdown;
@@ -629,7 +683,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * Greeting.
+             * <p>The greeting message, which takes effect when joining the session. If not specified, the greeting configured in the agent template is used. Maximum length: 128 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Good morning, my friend!</p>
              */
             public Builder greeting(String greeting) {
                 this.greeting = greeting;
@@ -637,7 +694,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * InterruptWords.
+             * <p>The list of specific words or phrases that trigger conversation interruption.</p>
              */
             public Builder interruptWords(java.util.List<String> interruptWords) {
                 this.interruptWords = interruptWords;
@@ -645,7 +702,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * LlmHistory.
+             * <p>The maximum number of retained turns for the LLM or MLLM historical conversation context. Default value: 10.</p>
              */
             public Builder llmHistory(java.util.List<LlmHistory> llmHistory) {
                 this.llmHistory = llmHistory;
@@ -653,7 +710,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * LlmHistoryLimit.
+             * <p>The maximum number of retained turns for the LLM or MLLM historical conversation context. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder llmHistoryLimit(Integer llmHistoryLimit) {
                 this.llmHistoryLimit = llmHistoryLimit;
@@ -661,7 +721,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * LlmSystemPrompt.
+             * <p>The system prompt for the LLM after the call starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are a friendly and helpful assistant, focused on providing users with accurate information and advice.</p>
              */
             public Builder llmSystemPrompt(String llmSystemPrompt) {
                 this.llmSystemPrompt = llmSystemPrompt;
@@ -669,7 +732,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * MaxIdleTime.
+             * <p>The maximum waiting time without interaction with the agent. The agent goes offline upon timeout. Unit: seconds. Default value: 600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder maxIdleTime(Integer maxIdleTime) {
                 this.maxIdleTime = maxIdleTime;
@@ -677,7 +743,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * UseVoiceprint.
+             * <p>Specifies whether to enable voiceprint recognition. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder useVoiceprint(Boolean useVoiceprint) {
                 this.useVoiceprint = useVoiceprint;
@@ -685,7 +754,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * UserOfflineTimeout.
+             * <p>The timeout period for the agent to close the task after the user leaves the session. Unit: seconds. Default value: 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder userOfflineTimeout(Integer userOfflineTimeout) {
                 this.userOfflineTimeout = userOfflineTimeout;
@@ -693,7 +765,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * UserOnlineTimeout.
+             * <p>The timeout period for the agent to close the task if the user does not join the session. Unit: seconds. Default value: 60.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder userOnlineTimeout(Integer userOnlineTimeout) {
                 this.userOnlineTimeout = userOnlineTimeout;
@@ -701,7 +776,15 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * VadLevel.
+             * <p>The interruption threshold parameter. Valid values: 0 to 11. Default value: 11.</p>
+             * <ul>
+             * <li>0: Disables the voice activity detection (VAD) feature.</li>
+             * <li>1 to 10: A higher value indicates that it is more difficult to interrupt.</li>
+             * <li>11: Significantly different from previous values, with lower pre-processing speech damage and stronger anti-interference.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder vadLevel(Integer vadLevel) {
                 this.vadLevel = vadLevel;
@@ -709,7 +792,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * VoiceId.
+             * <p>The ID of the voice, which takes effect in the next sentence. If not specified, the voice ID configured in the agent template is used. This parameter applies only to preset text-to-speech (TTS). Maximum length: 64 characters. For valid values, refer to <a href="https://help.aliyun.com/document_detail/449563.html">Intelligent speech effect examples</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhixiaoxia</p>
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;
@@ -717,7 +803,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * VoiceIdList.
+             * <p>The list of available voices.</p>
              */
             public Builder voiceIdList(java.util.List<String> voiceIdList) {
                 this.voiceIdList = voiceIdList;
@@ -725,7 +811,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * VoiceprintId.
+             * <p>The unique identity ID for voiceprint recognition. Default value: none.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uniqueId</p>
              */
             public Builder voiceprintId(String voiceprintId) {
                 this.voiceprintId = voiceprintId;
@@ -733,7 +822,24 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * Volume.
+             * <p>The volume of the agent\&quot;s speech.</p>
+             * <ul>
+             * <li><p>If not specified: The adaptive volume mode recommended by Alibaba Cloud is used by default.</p>
+             * </li>
+             * <li><p>If specified: Valid values are 0 to 400. Output volume = Speech output volume in the workflow × volume / 100. Examples:</p>
+             * </li>
+             * </ul>
+             * <ol>
+             * <li><p>If volume is set to 0, the output volume is 0.</p>
+             * </li>
+             * <li><p>If volume is set to 100, the volume is the original volume.</p>
+             * </li>
+             * <li><p>If volume is set to 200, the volume is twice the original volume.</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder volume(Long volume) {
                 this.volume = volume;
@@ -741,7 +847,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * WakeUpQuery.
+             * <p>The user\&quot;s instruction before the call starts, which is used for the agent to respond immediately after the call starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>How’s the weather today?</p>
              */
             public Builder wakeUpQuery(String wakeUpQuery) {
                 this.wakeUpQuery = wakeUpQuery;
@@ -749,7 +858,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * WorkflowOverrideParams.
+             * <p>The override parameters for the workflow. Default value: none.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder workflowOverrideParams(String workflowOverrideParams) {
                 this.workflowOverrideParams = workflowOverrideParams;
@@ -816,7 +928,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The actual text of the conversation content, which records the specific expression or response of the role in the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -824,7 +939,24 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the conversation participant. Valid values:</p>
+             * <ul>
+             * <li><p>user: User</p>
+             * </li>
+             * <li><p>assistant: Assistant</p>
+             * </li>
+             * <li><p>system: System</p>
+             * </li>
+             * <li><p>function: Function</p>
+             * </li>
+             * <li><p>plugin: Plug-in</p>
+             * </li>
+             * <li><p>tool: Tool</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -1190,7 +1322,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             } 
 
             /**
-             * AsrHotWords.
+             * <p>The list of hotwords for ASR. The hotword list supports a maximum of 128 words.</p>
              */
             public Builder asrHotWords(java.util.List<String> asrHotWords) {
                 this.asrHotWords = asrHotWords;
@@ -1198,7 +1330,17 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * AsrLanguageId.
+             * <p>The language ID for automatic speech recognition (ASR). Valid values:</p>
+             * <ul>
+             * <li>zh_mandarin: Chinese</li>
+             * <li>en: English</li>
+             * <li>zh_en: Chinese and English mixed</li>
+             * <li>es: Spanish</li>
+             * <li>jp: Japanese</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>zh_mandarin</p>
              */
             public Builder asrLanguageId(String asrLanguageId) {
                 this.asrLanguageId = asrLanguageId;
@@ -1206,7 +1348,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * AsrMaxSilence.
+             * <p>The threshold for speech segmentation detection. Silence exceeding this threshold is treated as a sentence break. Valid values: 200 to 1200. Unit: milliseconds. Default value: 400.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder asrMaxSilence(Integer asrMaxSilence) {
                 this.asrMaxSilence = asrMaxSilence;
@@ -1214,7 +1359,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * BailianAppParams.
+             * <p>The parameters for Alibaba Cloud Model Studio Application Center. For the parameter format, refer to <a href="https://help.aliyun.com/document_detail/2858132.html">Alibaba Cloud Model Studio Application Center parameters</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder bailianAppParams(String bailianAppParams) {
                 this.bailianAppParams = bailianAppParams;
@@ -1230,7 +1378,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * EnableIntelligentSegment.
+             * <p>Specifies whether to enable intelligent segmentation. After this feature is enabled, sentence breaks in user speech are intelligently merged into a single sentence. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableIntelligentSegment(Boolean enableIntelligentSegment) {
                 this.enableIntelligentSegment = enableIntelligentSegment;
@@ -1238,7 +1389,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * EnablePushToTalk.
+             * <p>Specifies whether to enable the push-to-talk mode. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enablePushToTalk(Boolean enablePushToTalk) {
                 this.enablePushToTalk = enablePushToTalk;
@@ -1246,7 +1400,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * EnableVoiceInterrupt.
+             * <p>Specifies whether to support voice interruption. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableVoiceInterrupt(Boolean enableVoiceInterrupt) {
                 this.enableVoiceInterrupt = enableVoiceInterrupt;
@@ -1254,7 +1411,11 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * GracefulShutdown.
+             * <p>Specifies whether to enable graceful shutdown. Default value: false.</p>
+             * <p>Graceful shutdown: When the agent is stopped, it finishes broadcasting the current speech before stopping, with a maximum broadcast duration of 10 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder gracefulShutdown(Boolean gracefulShutdown) {
                 this.gracefulShutdown = gracefulShutdown;
@@ -1262,7 +1423,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * Greeting.
+             * <p>The greeting message, which takes effect when joining the session. If not specified, the greeting configured in the agent template is used. Maximum length: 128 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Good morning, my friend!</p>
              */
             public Builder greeting(String greeting) {
                 this.greeting = greeting;
@@ -1270,7 +1434,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * InterruptWords.
+             * <p>The list of specific words or phrases that trigger conversation interruption.</p>
              */
             public Builder interruptWords(java.util.List<String> interruptWords) {
                 this.interruptWords = interruptWords;
@@ -1278,7 +1442,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * LlmHistory.
+             * <p>The maximum number of retained turns for the LLM or MLLM historical conversation context. Default value: 10.</p>
              */
             public Builder llmHistory(java.util.List<VisionChatLlmHistory> llmHistory) {
                 this.llmHistory = llmHistory;
@@ -1286,7 +1450,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * LlmHistoryLimit.
+             * <p>The maximum number of retained turns for the LLM or MLLM historical conversation context. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder llmHistoryLimit(Integer llmHistoryLimit) {
                 this.llmHistoryLimit = llmHistoryLimit;
@@ -1294,7 +1461,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * LlmSystemPrompt.
+             * <p>The system prompt for the LLM after the call starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are a friendly and helpful assistant, focused on providing users with accurate information and advice.</p>
              */
             public Builder llmSystemPrompt(String llmSystemPrompt) {
                 this.llmSystemPrompt = llmSystemPrompt;
@@ -1302,7 +1472,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * MaxIdleTime.
+             * <p>The maximum waiting time without interaction with the agent. The agent goes offline upon timeout. Unit: seconds. Default value: 600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder maxIdleTime(Integer maxIdleTime) {
                 this.maxIdleTime = maxIdleTime;
@@ -1310,7 +1483,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * UseVoiceprint.
+             * <p>Specifies whether to enable voiceprint recognition. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder useVoiceprint(Boolean useVoiceprint) {
                 this.useVoiceprint = useVoiceprint;
@@ -1318,7 +1494,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * UserOfflineTimeout.
+             * <p>The timeout period for the agent to close the task after the user leaves the session. Unit: seconds. Default value: 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder userOfflineTimeout(Integer userOfflineTimeout) {
                 this.userOfflineTimeout = userOfflineTimeout;
@@ -1326,7 +1505,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * UserOnlineTimeout.
+             * <p>The timeout period for the agent to close the task if the user does not join the session. Unit: seconds. Default value: 60.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder userOnlineTimeout(Integer userOnlineTimeout) {
                 this.userOnlineTimeout = userOnlineTimeout;
@@ -1334,7 +1516,15 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * VadLevel.
+             * <p>The interruption threshold parameter. Valid values: 0 to 11. Default value: 11.</p>
+             * <ul>
+             * <li>0: Disables the voice activity detection (VAD) feature.</li>
+             * <li>1 to 10: A higher value indicates that it is more difficult to interrupt.</li>
+             * <li>11: Significantly different from previous values, with lower pre-processing speech damage and stronger anti-interference.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder vadLevel(Integer vadLevel) {
                 this.vadLevel = vadLevel;
@@ -1342,7 +1532,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * VoiceId.
+             * <p>The ID of the voice, which takes effect in the next sentence. If not specified, the voice ID configured in the agent template is used. This parameter applies only to preset text-to-speech (TTS). Maximum length: 64 characters. For valid values, refer to <a href="https://help.aliyun.com/document_detail/449563.html">Intelligent speech effect examples</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhixiaoxia</p>
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;
@@ -1350,7 +1543,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * VoiceIdList.
+             * <p>The list of available voices.</p>
              */
             public Builder voiceIdList(java.util.List<String> voiceIdList) {
                 this.voiceIdList = voiceIdList;
@@ -1358,7 +1551,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * VoiceprintId.
+             * <p>The unique identity ID for voiceprint recognition. Default value: none.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uniqueId</p>
              */
             public Builder voiceprintId(String voiceprintId) {
                 this.voiceprintId = voiceprintId;
@@ -1366,7 +1562,15 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * Volume.
+             * <p>The volume of the agent\&quot;s speech.</p>
+             * <p>If not specified: The adaptive volume mode recommended by Alibaba Cloud is used by default.</p>
+             * <p>If specified: Valid values are 0 to 400. Output volume = Speech output volume in the workflow × volume / 100. Examples:</p>
+             * <p>If volume is set to 0, the output volume is 0.</p>
+             * <p>If volume is set to 100, the volume is the original volume.</p>
+             * <p>If volume is set to 200, the volume is twice the original volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder volume(Long volume) {
                 this.volume = volume;
@@ -1374,7 +1578,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * WakeUpQuery.
+             * <p>The user\&quot;s instruction before the call starts, which is used for the agent to respond immediately after the call starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>How’s the weather today?</p>
              */
             public Builder wakeUpQuery(String wakeUpQuery) {
                 this.wakeUpQuery = wakeUpQuery;
@@ -1382,7 +1589,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * WorkflowOverrideParams.
+             * <p>The override parameters for the workflow. Default value: none.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder workflowOverrideParams(String workflowOverrideParams) {
                 this.workflowOverrideParams = workflowOverrideParams;
@@ -1449,7 +1659,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The actual text of the conversation content, which records the specific expression or response of the role in the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1457,7 +1670,24 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the conversation participant. Valid values:</p>
+             * <ul>
+             * <li><p>user: user</p>
+             * </li>
+             * <li><p>assistant: assistant</p>
+             * </li>
+             * <li><p>system: system</p>
+             * </li>
+             * <li><p>function: function</p>
+             * </li>
+             * <li><p>plugin: plug-in</p>
+             * </li>
+             * <li><p>tool: tool</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -1849,7 +2079,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             } 
 
             /**
-             * AsrHotWords.
+             * <p>The list of hotwords for ASR. The hotword list supports a maximum of 128 words.</p>
              */
             public Builder asrHotWords(java.util.List<String> asrHotWords) {
                 this.asrHotWords = asrHotWords;
@@ -1857,7 +2087,17 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * AsrLanguageId.
+             * <p>The language ID for automatic speech recognition (ASR). Valid values:</p>
+             * <ul>
+             * <li>zh_mandarin: Chinese</li>
+             * <li>en: English</li>
+             * <li>zh_en: Chinese and English mixed</li>
+             * <li>es: Spanish</li>
+             * <li>jp: Japanese</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>zh_mandarin</p>
              */
             public Builder asrLanguageId(String asrLanguageId) {
                 this.asrLanguageId = asrLanguageId;
@@ -1865,7 +2105,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * AsrMaxSilence.
+             * <p>The threshold for speech segmentation detection. Silence exceeding this threshold is treated as a sentence break. Valid values: 200 to 1200. Unit: milliseconds. Default value: 400.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder asrMaxSilence(Integer asrMaxSilence) {
                 this.asrMaxSilence = asrMaxSilence;
@@ -1873,7 +2116,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * AvatarUrl.
+             * <p>The URL of the agent avatar for voice calls. Default value: none.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/a.jpg">http://example.com/a.jpg</a></p>
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -1881,7 +2127,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * AvatarUrlType.
+             * <p>The type of the agent avatar URL. Default value: none.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder avatarUrlType(String avatarUrlType) {
                 this.avatarUrlType = avatarUrlType;
@@ -1889,7 +2138,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * BailianAppParams.
+             * <p>The parameters for Alibaba Cloud Model Studio Application Center. For the parameter format, refer to <a href="https://help.aliyun.com/document_detail/2858132.html">Alibaba Cloud Model Studio Application Center parameters</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder bailianAppParams(String bailianAppParams) {
                 this.bailianAppParams = bailianAppParams;
@@ -1905,7 +2157,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * EnableIntelligentSegment.
+             * <p>Specifies whether to enable intelligent segmentation. After this feature is enabled, sentence breaks in user speech are intelligently merged into a single sentence. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableIntelligentSegment(Boolean enableIntelligentSegment) {
                 this.enableIntelligentSegment = enableIntelligentSegment;
@@ -1913,7 +2168,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * EnablePushToTalk.
+             * <p>Specifies whether to enable the push-to-talk mode. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enablePushToTalk(Boolean enablePushToTalk) {
                 this.enablePushToTalk = enablePushToTalk;
@@ -1921,7 +2179,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * EnableVoiceInterrupt.
+             * <p>Specifies whether to support voice interruption. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableVoiceInterrupt(Boolean enableVoiceInterrupt) {
                 this.enableVoiceInterrupt = enableVoiceInterrupt;
@@ -1929,7 +2190,13 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * GracefulShutdown.
+             * <p>Specifies whether to enable graceful shutdown. Default value: false.</p>
+             * <ul>
+             * <li>Graceful shutdown: When the agent is stopped, it finishes broadcasting the current speech before stopping, with a maximum broadcast duration of 10 seconds.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder gracefulShutdown(Boolean gracefulShutdown) {
                 this.gracefulShutdown = gracefulShutdown;
@@ -1937,7 +2204,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * Greeting.
+             * <p>The greeting message, which takes effect when joining the session. If not specified, the greeting configured in the agent template is used. Maximum length: 128 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Good morning, my friend</p>
              */
             public Builder greeting(String greeting) {
                 this.greeting = greeting;
@@ -1945,7 +2215,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * InterruptWords.
+             * <p>The list of specific words or phrases that trigger conversation interruption.</p>
              */
             public Builder interruptWords(java.util.List<String> interruptWords) {
                 this.interruptWords = interruptWords;
@@ -1953,7 +2223,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * LlmHistory.
+             * <p>The historical conversation context of the LLM or MLLM.</p>
              */
             public Builder llmHistory(java.util.List<VoiceChatLlmHistory> llmHistory) {
                 this.llmHistory = llmHistory;
@@ -1961,7 +2231,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * LlmHistoryLimit.
+             * <p>The maximum number of retained turns for the LLM or MLLM historical conversation context. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder llmHistoryLimit(Integer llmHistoryLimit) {
                 this.llmHistoryLimit = llmHistoryLimit;
@@ -1969,7 +2242,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * LlmSystemPrompt.
+             * <p>The system prompt for the LLM after the call starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are a friendly and helpful assistant, focused on providing users with accurate information and advice.</p>
              */
             public Builder llmSystemPrompt(String llmSystemPrompt) {
                 this.llmSystemPrompt = llmSystemPrompt;
@@ -1977,7 +2253,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * MaxIdleTime.
+             * <p>The maximum waiting time without interaction with the agent. The agent goes offline upon timeout. Unit: seconds. Default value: 600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder maxIdleTime(Integer maxIdleTime) {
                 this.maxIdleTime = maxIdleTime;
@@ -1985,7 +2264,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * UseVoiceprint.
+             * <p>Specifies whether to enable voiceprint recognition. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder useVoiceprint(Boolean useVoiceprint) {
                 this.useVoiceprint = useVoiceprint;
@@ -1993,7 +2275,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * UserOfflineTimeout.
+             * <p>The timeout period for the agent to close the task after the user leaves the session. Unit: seconds. Default value: 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder userOfflineTimeout(Integer userOfflineTimeout) {
                 this.userOfflineTimeout = userOfflineTimeout;
@@ -2001,7 +2286,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * UserOnlineTimeout.
+             * <p>The timeout period for the agent to close the task if the user does not join the session. Unit: seconds. Default value: 60.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder userOnlineTimeout(Integer userOnlineTimeout) {
                 this.userOnlineTimeout = userOnlineTimeout;
@@ -2009,7 +2297,15 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * VadLevel.
+             * <p>The interruption threshold parameter. Valid values: 0 to 11. Default value: 11.</p>
+             * <ul>
+             * <li>0: Disables the voice activity detection (VAD) feature.</li>
+             * <li>1 to 10: A higher value indicates that it is more difficult to interrupt.</li>
+             * <li>11: Significantly different from previous values, with lower pre-processing speech damage and stronger anti-interference.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder vadLevel(Integer vadLevel) {
                 this.vadLevel = vadLevel;
@@ -2017,7 +2313,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * VoiceId.
+             * <p>The ID of the voice, which takes effect in the next sentence. If not specified, the voice ID configured in the agent template is used. This parameter applies only to preset text-to-speech (TTS). Maximum length: 64 characters. For valid values, refer to <a href="https://help.aliyun.com/document_detail/449563.html">Intelligent speech effect examples</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhixiaoxia</p>
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;
@@ -2025,7 +2324,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * VoiceIdList.
+             * <p>The list of available voices.</p>
              */
             public Builder voiceIdList(java.util.List<String> voiceIdList) {
                 this.voiceIdList = voiceIdList;
@@ -2033,7 +2332,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * VoiceprintId.
+             * <p>The unique identity ID for voiceprint recognition. Default value: none.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uniqueId</p>
              */
             public Builder voiceprintId(String voiceprintId) {
                 this.voiceprintId = voiceprintId;
@@ -2041,7 +2343,24 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * Volume.
+             * <p>The volume of the agent\&quot;s speech.</p>
+             * <ul>
+             * <li><p>If not specified: The adaptive volume mode recommended by Alibaba Cloud is used by default.</p>
+             * </li>
+             * <li><p>If specified: Valid values are 0 to 400. Output volume = Speech output volume in the workflow × volume / 100. Examples:</p>
+             * </li>
+             * </ul>
+             * <ol>
+             * <li><p>If volume is set to 0, the output volume is 0.</p>
+             * </li>
+             * <li><p>If volume is set to 100, the volume is the original volume.</p>
+             * </li>
+             * <li><p>If volume is set to 200, the volume is twice the original volume.</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder volume(Long volume) {
                 this.volume = volume;
@@ -2049,7 +2368,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * WakeUpQuery.
+             * <p>The user\&quot;s instruction before the call starts, which is used for the agent to respond immediately after the call starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>How’s the weather today?</p>
              */
             public Builder wakeUpQuery(String wakeUpQuery) {
                 this.wakeUpQuery = wakeUpQuery;
@@ -2057,7 +2379,10 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
-             * WorkflowOverrideParams.
+             * <p>The override parameters for the workflow. Default value: none.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder workflowOverrideParams(String workflowOverrideParams) {
                 this.workflowOverrideParams = workflowOverrideParams;

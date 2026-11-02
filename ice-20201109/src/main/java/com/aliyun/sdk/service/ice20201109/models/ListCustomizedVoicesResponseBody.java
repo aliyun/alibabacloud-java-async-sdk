@@ -80,7 +80,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,10 +99,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,7 +237,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The media asset ID of the sample audio file.</p>
+             * <p>The media asset ID of the demo audio.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>4d5e829d498aaf966b119348</strong></strong></p>
@@ -250,8 +250,8 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             /**
              * <p>The gender. Valid values:</p>
              * <ul>
-             * <li>female</li>
-             * <li>male</li>
+             * <li>female: Female.</li>
+             * <li>male: Male.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -265,9 +265,9 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             /**
              * <p>The scenario. Valid values:</p>
              * <ul>
-             * <li>story</li>
-             * <li>interaction</li>
-             * <li>navigation</li>
+             * <li>story: Story.</li>
+             * <li>interaction: Interaction.</li>
+             * <li>navigation: Navigation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -279,13 +279,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The voice type. Valid values:</p>
              * <ul>
-             * <li><p>The voice type. Valid values:</p>
-             * <ul>
-             * <li>Basic</li>
-             * <li>Standard</li>
-             * </ul>
-             * </li>
+             * <li>Basic: Basic edition.</li>
+             * <li>Standard: Standard edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -298,6 +295,9 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
 
             /**
              * <p>The voice description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a personalized vocal small special</p>
              */
             public Builder voiceDesc(String voiceDesc) {
                 this.voiceDesc = voiceDesc;
@@ -316,6 +316,9 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The voice name, which is typically in Chinese.</p>
+             * 
+             * <strong>example:</strong>
              * <p>The voice name.</p>
              */
             public Builder voiceName(String voiceName) {
@@ -383,7 +386,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried personalized human voices.</p>
+             * <p>The list of personalized voices.</p>
              */
             public Builder customizedVoiceList(java.util.List<CustomizedVoiceList> customizedVoiceList) {
                 this.customizedVoiceList = customizedVoiceList;
@@ -391,7 +394,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>41</p>

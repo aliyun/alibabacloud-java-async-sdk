@@ -197,7 +197,10 @@ public class ChannelAssemblyChannel extends TeaModel {
         } 
 
         /**
-         * AccessPolicy.
+         * <p>Specifies whether to enable access control.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder accessPolicy(Boolean accessPolicy) {
             this.accessPolicy = accessPolicy;
@@ -205,7 +208,10 @@ public class ChannelAssemblyChannel extends TeaModel {
         }
 
         /**
-         * AccessToken.
+         * <p>The token for accessing the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -213,7 +219,10 @@ public class ChannelAssemblyChannel extends TeaModel {
         }
 
         /**
-         * Arn.
+         * <p>The ARN of the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ims:mediaweaver:<regionId>:<userId>:channel/myChannel</p>
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -221,7 +230,10 @@ public class ChannelAssemblyChannel extends TeaModel {
         }
 
         /**
-         * ChannelName.
+         * <p>The name of the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyChannel</p>
          */
         public Builder channelName(String channelName) {
             this.channelName = channelName;
@@ -229,7 +241,10 @@ public class ChannelAssemblyChannel extends TeaModel {
         }
 
         /**
-         * ChannelTier.
+         * <p>The tier of the channel. Valid values: basic and standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder channelTier(String channelTier) {
             this.channelTier = channelTier;
@@ -237,7 +252,10 @@ public class ChannelAssemblyChannel extends TeaModel {
         }
 
         /**
-         * FillerSourceLocationName.
+         * <p>The source location of the filler slate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySourceLocation</p>
          */
         public Builder fillerSourceLocationName(String fillerSourceLocationName) {
             this.fillerSourceLocationName = fillerSourceLocationName;
@@ -245,7 +263,10 @@ public class ChannelAssemblyChannel extends TeaModel {
         }
 
         /**
-         * FillerSourceName.
+         * <p>The source name of the filler slate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySource</p>
          */
         public Builder fillerSourceName(String fillerSourceName) {
             this.fillerSourceName = fillerSourceName;
@@ -253,7 +274,10 @@ public class ChannelAssemblyChannel extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * <p>The time when the channel was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-15T03:44:16Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -261,7 +285,10 @@ public class ChannelAssemblyChannel extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The time when the channel was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-01T10:09Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -269,7 +296,7 @@ public class ChannelAssemblyChannel extends TeaModel {
         }
 
         /**
-         * OutPutConfigList.
+         * <p>The channel output configurations.</p>
          */
         public Builder outPutConfigList(java.util.List<OutPutConfigList> outPutConfigList) {
             this.outPutConfigList = outPutConfigList;
@@ -277,7 +304,10 @@ public class ChannelAssemblyChannel extends TeaModel {
         }
 
         /**
-         * PlaybackMode.
+         * <p>The playback mode. Valid values: loop and linear.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>loop</p>
          */
         public Builder playbackMode(String playbackMode) {
             this.playbackMode = playbackMode;
@@ -285,7 +315,10 @@ public class ChannelAssemblyChannel extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The channel status. A value of 0 specifies stopped. A value of 1 specifies running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder state(Integer state) {
             this.state = state;
@@ -403,7 +436,10 @@ public class ChannelAssemblyChannel extends TeaModel {
             } 
 
             /**
-             * ChannelName.
+             * <p>The name of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyChannel</p>
              */
             public Builder channelName(String channelName) {
                 this.channelName = channelName;
@@ -411,7 +447,10 @@ public class ChannelAssemblyChannel extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The streaming protocol. Only HTTP Live Streaming (HLS) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hls</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -419,7 +458,10 @@ public class ChannelAssemblyChannel extends TeaModel {
             }
 
             /**
-             * ManifestName.
+             * <p>The name of the manifest file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>index1</p>
              */
             public Builder manifestName(String manifestName) {
                 this.manifestName = manifestName;
@@ -427,7 +469,10 @@ public class ChannelAssemblyChannel extends TeaModel {
             }
 
             /**
-             * ManifestSettings.
+             * <p>The manifest settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;WindowDuration&quot;: 60,&quot;AdMarkType&quot;:&quot;Daterange&quot;}</p>
              */
             public Builder manifestSettings(String manifestSettings) {
                 this.manifestSettings = manifestSettings;
@@ -435,7 +480,10 @@ public class ChannelAssemblyChannel extends TeaModel {
             }
 
             /**
-             * PlaybackUrl.
+             * <p>The playback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxxx.com/xxx.m3u8">https://xxxxx.com/xxx.m3u8</a></p>
              */
             public Builder playbackUrl(String playbackUrl) {
                 this.playbackUrl = playbackUrl;
@@ -443,7 +491,10 @@ public class ChannelAssemblyChannel extends TeaModel {
             }
 
             /**
-             * SourceGroupName.
+             * <p>The name of the source group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group1</p>
              */
             public Builder sourceGroupName(String sourceGroupName) {
                 this.sourceGroupName = sourceGroupName;

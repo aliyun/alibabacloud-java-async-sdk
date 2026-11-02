@@ -237,7 +237,15 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * AuthTimeout.
+         * <p>The authentication expiration time. Unit: seconds.</p>
+         * <ul>
+         * <li>Minimum value: 1.</li>
+         * <li>Maximum value: 86400.</li>
+         * <li>Default value: 3600.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder authTimeout(Long authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
@@ -247,11 +255,18 @@ public class ListMediaBasicInfosRequest extends Request {
 
         /**
          * <p>The business type of the media asset. Valid values:</p>
-         * <p>- subtitles</p>
-         * <p>- watermark</p>
-         * <p>- opening</p>
-         * <p>- ending</p>
-         * <p>- general</p>
+         * <ul>
+         * <li><p>&quot;subtitles&quot;: Subtitles.</p>
+         * </li>
+         * <li><p>&quot;watermark&quot;: Watermark.</p>
+         * </li>
+         * <li><p>&quot;opening&quot;: Opening.</p>
+         * </li>
+         * <li><p>&quot;ending&quot;: Ending.</p>
+         * </li>
+         * <li><p>&quot;general&quot;: General.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>opening</p>
@@ -263,9 +278,13 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * <p>The end time of utcCreated.</p>
-         * <p>- The value is the end of the left-open right-closed interval.</p>
-         * <p>- Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. For example, 2017-01-11T12:00:00Z indicates 20:00:00 on January 11, 2017 (UTC +8).</p>
+         * <p>The end time of the creation time (utcCreated).</p>
+         * <ul>
+         * <li><p>The interval is closed, which means the time must be earlier than or equal to the end time.</p>
+         * </li>
+         * <li><p>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC. For example, 2017-01-11T12:00:00Z indicates 20:00:00 on January 11, 2017 (UTC+8).</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2020-12-20T13:00:00Z</p>
@@ -277,7 +296,7 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the basic information of the source file.</p>
+         * <p>Specifies whether to include the basic information of the file in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -289,7 +308,7 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
+         * <p>The maximum number of records to return for the current request.</p>
          * <p>Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -302,7 +321,7 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The ID of the media asset. A single media asset ID supports prefix matching.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>019b82e24b37a1c2958dec38</strong></strong></p>
@@ -314,11 +333,17 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * <p>The type of the media asset. Valid values:</p>
-         * <p>- image</p>
-         * <p>- video</p>
-         * <p>- audio</p>
-         * <p>- text</p>
+         * <p>The media type of the media asset. Valid values:</p>
+         * <ul>
+         * <li><p>&quot;image&quot;: Image.</p>
+         * </li>
+         * <li><p>&quot;video&quot;: Video.</p>
+         * </li>
+         * <li><p>&quot;audio&quot;: Audio.</p>
+         * </li>
+         * <li><p>&quot;text&quot;: Text.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>video</p>
@@ -330,7 +355,7 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The token that indicates the position from which the current call starts to read. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>pSa1SQ0wCe5pzVrQ6mWZEw==</p>
@@ -342,9 +367,13 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * <p>The order of sorting by utcCreated. Default value: desc. Valid values:</p>
-         * <p>- desc</p>
-         * <p>- asc</p>
+         * <p>The sort order based on utcCreated. Default value: desc. Valid values:</p>
+         * <ul>
+         * <li><p>&quot;desc&quot;: Descending order.</p>
+         * </li>
+         * <li><p>&quot;asc&quot;: Ascending order.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -356,11 +385,17 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * <p>The source of the media asset. Valid values:</p>
-         * <p>- oss: Object Storage Service (OSS).</p>
-         * <p>- vod: ApsaraVideo VOD.</p>
-         * <p>- live: ApsaraVideo Live.</p>
-         * <p>- general: other sources. This is the default value.</p>
+         * <p>The source. Valid values:</p>
+         * <ul>
+         * <li><p>&quot;oss&quot;: OSS storage.</p>
+         * </li>
+         * <li><p>&quot;vod&quot;: VOD.</p>
+         * </li>
+         * <li><p>&quot;live&quot;: ApsaraVideo Live.</p>
+         * </li>
+         * <li><p>&quot;general&quot;: Other sources (default).</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -372,9 +407,13 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * <p>The start time of utcCreated.</p>
-         * <p>- The value is the beginning of a left-open right-closed interval.</p>
-         * <p>- Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. For example, 2017-01-11T12:00:00Z indicates 20:00:00 on January 11, 2017 (UTC +8).</p>
+         * <p>The start time of the creation time (utcCreated).</p>
+         * <ul>
+         * <li><p>The interval is open, which means the time must be later than the start time.</p>
+         * </li>
+         * <li><p>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC. For example, 2017-01-11T12:00:00Z indicates 20:00:00 on January 11, 2017 (UTC+8).</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2020-12-20T12:00:00Z</p>
@@ -386,11 +425,17 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * <p>The status of the media asset. Valid values:</p>
-         * <p>- Init: the initial state, which indicates that the source file is not ready.</p>
-         * <p>- Preparing: The source file is being prepared. For example, the file is being uploaded or edited.</p>
-         * <p>- PrepareFail: The source file failed to be prepared. For example, the information of the source file failed to be obtained.</p>
-         * <p>- Normal: The source file is ready.</p>
+         * <p>The resource status. Valid values:</p>
+         * <ul>
+         * <li><p>Init: Initial state. The source file is not ready.</p>
+         * </li>
+         * <li><p>Preparing: The source file is being prepared, such as being uploaded or edited and produced.</p>
+         * </li>
+         * <li><p>PrepareFail: The source file fails to be prepared, such as failing to obtain the source file information.</p>
+         * </li>
+         * <li><p>Normal: Normal. The source file is ready.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>

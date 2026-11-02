@@ -89,7 +89,7 @@ public class CreatePipelineRequest extends Request {
         } 
 
         /**
-         * <p>The name of the MPS queue.</p>
+         * <p>The name of the pipeline.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The priority. Default value: 6. Valid values: 1 to 10. A greater value specifies a higher priority.</p>
+         * <p>The priority of the pipeline. Valid values: 1 to 10. Default value: 6. A larger value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -114,12 +114,12 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The type of the MPS queue. Valid values:</p>
-         * <ol>
-         * <li>Standard: standard MPS queue.</li>
-         * <li>Boost: MPS queue with transcoding speed boosted.</li>
-         * <li>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</li>
-         * </ol>
+         * <p>The type of the pipeline. Valid values:</p>
+         * <ul>
+         * <li>Standard: standard pipeline</li>
+         * <li>Boost: accelerated transcoding pipeline</li>
+         * <li>NarrowBandHDV2: Narrowband HD 2.0 pipeline</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

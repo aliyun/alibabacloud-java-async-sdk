@@ -82,7 +82,13 @@ public class AddFavoritePublicMediaRequest extends Request {
         }
 
         /**
-         * MediaIds.
+         * <p>The IDs of the IMS media assets.</p>
+         * <ul>
+         * <li>Separate multiple IDs with commas (,).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>icepublic-<strong><strong>7213c6050cbc66750b469701</strong></strong>,icepublic-<strong><strong>0b4697017213c6050cbc6675</strong></strong></p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

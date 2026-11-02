@@ -67,7 +67,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The tags of media assets in the public media library.</p>
+         * <p>The list of tags in the public media asset library.</p>
          */
         public Builder mediaTagList(java.util.List<MediaTagList> mediaTagList) {
             this.mediaTagList = mediaTagList;
@@ -75,7 +75,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B45F83B7-7F87-4792-BFE9-63CD2137CAF0</p>
@@ -157,7 +157,10 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The option name in Chinese.</p>
+             * <p>The Chinese name of the filter option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>愤怒</p>
              */
             public Builder optionChineseName(String optionChineseName) {
                 this.optionChineseName = optionChineseName;
@@ -165,7 +168,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The option name in English.</p>
+             * <p>The English name of the filter option.</p>
              * 
              * <strong>example:</strong>
              * <p>Angry</p>
@@ -176,7 +179,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The option ID.</p>
+             * <p>The ID of the filter option.</p>
              * 
              * <strong>example:</strong>
              * <p>Angry</p>
@@ -272,7 +275,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the media tag.</p>
+             * <p>The ID of the media asset tag.</p>
              * 
              * <strong>example:</strong>
              * <p>sticker-gif</p>
@@ -283,10 +286,10 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the media tag in Chinese.</p>
+             * <p>The Chinese name of the media asset tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>Gif</p>
+             * <p>动图</p>
              */
             public Builder mediaTagNameChinese(String mediaTagNameChinese) {
                 this.mediaTagNameChinese = mediaTagNameChinese;
@@ -294,7 +297,10 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the material tag in English.</p>
+             * <p>The English name of the media asset tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Gif</p>
              */
             public Builder mediaTagNameEnglish(String mediaTagNameEnglish) {
                 this.mediaTagNameEnglish = mediaTagNameEnglish;
@@ -302,7 +308,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The options.</p>
+             * <p>The list of options.</p>
              */
             public Builder options(java.util.List<Options> options) {
                 this.options = options;

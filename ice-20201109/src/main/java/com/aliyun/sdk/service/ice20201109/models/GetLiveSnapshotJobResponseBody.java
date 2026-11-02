@@ -234,7 +234,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the file was created.</p>
+         * <p>The creation time. The time is in ISO 8601 format and in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-02T22:22:22Z</p>
@@ -256,7 +256,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Snapshot job 1</p>
          */
         public Builder jobName(String jobName) {
             this.jobName = jobName;
@@ -264,7 +267,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the file was last modified.</p>
+         * <p>The last modified time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-02T22:22:22Z</p>
@@ -275,7 +278,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The naming format of the snapshot captured in overwrite mode.</p>
+         * <p>The overwrite snapshot format.</p>
          * 
          * <strong>example:</strong>
          * <p>snapshot/{JobId}.jpg</p>
@@ -297,7 +300,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The naming format of the snapshot captured in time series mode.</p>
+         * <p>The sequence snapshot format.</p>
          * 
          * <strong>example:</strong>
          * <p>snapshot/{JobId}/{UnixTimestamp}.jpg</p>
@@ -316,13 +319,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of the job.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>init: The job is not started.</li>
-         * <li>paused: The job is paused.</li>
-         * <li>started: The job is in progress.</li>
-         * </ul>
+         * <p>The job status.</p>
          * 
          * <strong>example:</strong>
          * <p>started</p>
@@ -352,7 +349,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template 1</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -360,7 +360,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The interval between two adjacent snapshots.</p>
+         * <p>The snapshot interval. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -442,7 +442,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bucket of the output endpoint. If the storage type is set to oss, the OSS bucket is returned.</p>
+             * <p>The bucket of the output endpoint. The OSS bucket is returned when the type is oss.</p>
              * 
              * <strong>example:</strong>
              * <p>testbucket</p>
@@ -453,7 +453,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output endpoint. If the storage type is set to oss, the Object Storage Service (OSS) domain name is returned.</p>
+             * <p>The output endpoint. The OSS domain name is returned when the type is oss.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-shanghai.aliyuncs.com</p>
@@ -464,7 +464,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type. The value can only be oss.</p>
+             * <p>The storage type. Currently, only OSS is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>oss</p>
@@ -534,7 +534,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the input stream. The value can only be rtmp.</p>
+             * <p>The input type. Currently, only RTMP is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp</p>
@@ -545,7 +545,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the input stream.</p>
+             * <p>The input URL.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp://<a href="http://www.aliyun.com/stream">www.aliyun.com/stream</a></p>

@@ -125,7 +125,7 @@ public class SearchIndexJobRerunRequest extends Request {
         }
 
         /**
-         * <p>The ID of the media asset. Separate multiple IDs with commas (,).</p>
+         * <p>The media asset IDs. Separate multiple IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,10 @@ public class SearchIndexJobRerunRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -159,15 +162,15 @@ public class SearchIndexJobRerunRequest extends Request {
         }
 
         /**
-         * <p>The type of the job. Separate multiple types with commas (,).</p>
+         * <p>The task type. Separate multiple types with commas (,). Valid values:</p>
          * <ul>
-         * <li>aiLabel: smart tagging.</li>
+         * <li>aiLabel: intelligent tagging.</li>
          * <li>face: face recognition.</li>
-         * <li>mm: large visual model.</li>
+         * <li>mm: foundation model.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>AiLabel,Face,Mm</p>
+         * <p>aiLabel,face,mm</p>
          */
         public Builder task(String task) {
             this.putQueryParameter("Task", task);

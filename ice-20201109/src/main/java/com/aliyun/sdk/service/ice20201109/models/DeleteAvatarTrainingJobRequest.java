@@ -60,7 +60,7 @@ public class DeleteAvatarTrainingJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the digital human training job.</p>
+         * <p>The ID of the digital human training task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

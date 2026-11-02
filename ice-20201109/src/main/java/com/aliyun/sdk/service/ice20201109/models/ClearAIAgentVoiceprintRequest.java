@@ -73,7 +73,10 @@ public class ClearAIAgentVoiceprintRequest extends Request {
         } 
 
         /**
-         * RegistrationMode.
+         * <p>The voiceprint registration mode. Default value: Explicit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Explicit</p>
          */
         public Builder registrationMode(String registrationMode) {
             this.putQueryParameter("RegistrationMode", registrationMode);
@@ -82,7 +85,7 @@ public class ClearAIAgentVoiceprintRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier for the voiceprint.</p>
+         * <p>The identity identifier used to uniquely identify a voiceprint.</p>
          * 
          * <strong>example:</strong>
          * <p>vp_1699123456_8527</p>

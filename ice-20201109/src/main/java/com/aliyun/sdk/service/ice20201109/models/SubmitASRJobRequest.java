@@ -143,10 +143,10 @@ public class SubmitASRJobRequest extends Request {
         } 
 
         /**
-         * <p>The job description, which can up to 128 bytes in length.</p>
+         * <p>The job description. The maximum length is 128 bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试描述</p>
+         * <p>Test description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -155,7 +155,7 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * <p>The speech duration.</p>
+         * <p>The duration.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:10</p>
@@ -167,7 +167,17 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * EditingConfig.
+         * <p>The audio speech-to-text configuration:</p>
+         * <ul>
+         * <li>HotwordLibraryIdList: the list of hotword library IDs. Currently, only one hotword library ID can be passed. Support for multiple hotword library IDs is planned for the future.</li>
+         * <li>SentenceMaxLength: the maximum length of each sentence in the output result. Type: int.</li>
+         * <li>EnableSemanticSentenceDetection: specifies whether to segment sentences in the output result based on semantics. Type: bool. Default value: false.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;HotwordLibraryIdList&quot;: &quot;<strong><strong><strong>2609a14f54a0636b7e16</strong></strong></strong>&quot;
+         * }</p>
          */
         public Builder editingConfig(String editingConfig) {
             this.putQueryParameter("EditingConfig", editingConfig);
@@ -176,10 +186,10 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * <p>The input file. You can specify an Object Storage Service (OSS) URL or the ID of a media asset in the media asset library.</p>
+         * <p>The input configuration. OSS URLs and content library material IDs are supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 或 <strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+         * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</p>
          */
         public Builder inputFile(String inputFile) {
             this.putQueryParameter("InputFile", inputFile);
@@ -188,7 +198,7 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * <p>The start time of the speech to recognize.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
@@ -200,10 +210,10 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * <p>The job title, which can be up to 128 bytes in length.</p>
+         * <p>The job title. The maximum length is 128 bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试标题</p>
+         * <p>Test title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -212,7 +222,7 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data in the JSON format. You can specify your business information, such as the business environment and job information.</p>
+         * <p>The custom settings. You can pass in customer business information, such as the business environment and job information, in JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>{

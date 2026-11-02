@@ -88,7 +88,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token for querying the next page.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -168,7 +168,15 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats: 1. OSS://bucket/object 2. http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
+             * <p>The input media. If Type is set to OSS, enter the OSS URL. If Type is set to Media, enter the media asset ID.
+             * The OSS URL must follow these rules:</p>
+             * <ul>
+             * <li><p>OSS://bucket/object</p>
+             * </li>
+             * <li><p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</p>
+             * </li>
+             * </ul>
+             * <p>In the URLs, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://bucket/object.mp4</p>
@@ -179,10 +187,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the input file. Valid values:</p>
+             * <p>The input type. Valid values:</p>
              * <ol>
-             * <li>OSS: an Object Storage Service (OSS) object.</li>
-             * <li>Media: a media asset.</li>
+             * <li>OSS: URL of an OSS object</li>
+             * <li>Media: media asset ID</li>
              * </ol>
              * 
              * <strong>example:</strong>
@@ -253,12 +261,23 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The output file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
-             * <ol>
-             * <li>OSS://bucket/object</li>
-             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</li>
-             * </ol>
-             * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS. If multiple static snapshots were captured, the object must contain the &quot;{Count}&quot; placeholder. In the case of a sprite, the object must contain the &quot;{TileCount}&quot; placeholder. The suffix of the WebVTT snapshot objects must be &quot;.vtt&quot;.</p>
+             * <p>The output media. If Type is set to OSS, enter the OSS URL. If Type is set to Media, enter the media asset ID.
+             * The OSS URL must follow these rules:</p>
+             * <ul>
+             * <li><p>OSS://bucket/object</p>
+             * </li>
+             * <li><p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</p>
+             * </li>
+             * </ul>
+             * <p>In the URLs, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
+             * <ul>
+             * <li><p>When capturing multiple static snapshots, the object must contain the &quot;{Count}&quot; placeholder.</p>
+             * </li>
+             * <li><p>When capturing sprite snapshots, the object must contain the &quot;{TileCount}&quot; placeholder.</p>
+             * </li>
+             * <li><p>For WebVTT snapshots, the object extension must be &quot;.vtt&quot;.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/output-%7BCount%7D.jpg">http://test-bucket.oss-cn-shanghai.aliyuncs.com/output-{Count}.jpg</a></p>
@@ -269,10 +288,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the output file. Valid values:</p>
+             * <p>The output type. Valid values:</p>
              * <ol>
-             * <li>OSS: an OSS object.</li>
-             * <li>Media: a media asset.</li>
+             * <li>OSS: URL of an OSS object</li>
+             * <li>Media: media asset ID</li>
              * </ol>
              * 
              * <strong>example:</strong>
@@ -512,7 +531,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the snapshots were captured in asynchronous mode.</p>
+             * <p>Specifies whether to capture snapshots asynchronously.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -534,7 +553,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was created.</p>
+             * <p>The creation time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:17:54Z</p>
@@ -545,7 +564,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was complete.</p>
+             * <p>The time when the job was completed. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:30:54Z</p>
@@ -556,7 +575,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input of the job.</p>
+             * <p>The job input.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -575,7 +594,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was last modified.</p>
+             * <p>The last modification time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:30:54Z</p>
@@ -586,7 +605,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the job.</p>
+             * <p>The job name.</p>
              * 
              * <strong>example:</strong>
              * <p>SampleJob</p>
@@ -597,7 +616,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output of the job.</p>
+             * <p>The job output.</p>
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -605,7 +624,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * <p>The pipeline ID.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -616,11 +635,14 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the job.</p>
+             * <p>The job status.</p>
              * <ul>
-             * <li><strong>Success</strong>: The job is successful.</li>
-             * <li><strong>Fail</strong>: The job failed.</li>
-             * <li><strong>Init</strong>: The job is submitted.</li>
+             * <li><p><strong>Success</strong>: Success.</p>
+             * </li>
+             * <li><p><strong>Fail</strong>: Failed.</p>
+             * </li>
+             * <li><p><strong>Init</strong>: Submitted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -632,7 +654,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was submitted.</p>
+             * <p>The time when the job was submitted. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:17:54Z</p>
@@ -654,13 +676,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request trigger source.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Console</li>
-             * <li>Workflow</li>
-             * <li>API</li>
-             * </ul>
+             * <p>The trigger source of the request.</p>
              * 
              * <strong>example:</strong>
              * <p>API</p>
@@ -671,13 +687,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the job.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>WebVtt</li>
-             * <li>Sprite</li>
-             * <li>Normal</li>
-             * </ul>
+             * <p>The job type.</p>
              * 
              * <strong>example:</strong>
              * <p>Sprite</p>

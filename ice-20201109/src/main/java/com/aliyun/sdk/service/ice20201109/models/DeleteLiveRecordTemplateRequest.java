@@ -64,7 +64,7 @@ public class DeleteLiveRecordTemplateRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
+         * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b7****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

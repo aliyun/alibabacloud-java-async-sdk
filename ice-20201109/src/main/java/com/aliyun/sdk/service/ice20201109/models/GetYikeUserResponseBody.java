@@ -67,7 +67,10 @@ public class GetYikeUserResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetYikeUserResponseBody extends TeaModel {
         }
 
         /**
-         * UserInfo.
+         * <p>The user information.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             this.userInfo = userInfo;
@@ -167,7 +170,10 @@ public class GetYikeUserResponseBody extends TeaModel {
             } 
 
             /**
-             * Nickname.
+             * <p>The nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nick</p>
              */
             public Builder nickname(String nickname) {
                 this.nickname = nickname;
@@ -175,7 +181,10 @@ public class GetYikeUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -183,7 +192,10 @@ public class GetYikeUserResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spaceId</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -191,7 +203,10 @@ public class GetYikeUserResponseBody extends TeaModel {
             }
 
             /**
-             * YikeUserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder yikeUserId(String yikeUserId) {
                 this.yikeUserId = yikeUserId;

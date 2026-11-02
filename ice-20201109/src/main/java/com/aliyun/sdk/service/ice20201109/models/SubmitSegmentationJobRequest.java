@@ -150,16 +150,12 @@ public class SubmitSegmentationJobRequest extends Request {
         }
 
         /**
-         * <p>The input configuration. For detailed parameters, see <a href="~~2874121#cc59ad3082jbx~~">InputConfig</a>.</p>
+         * <p>The input configuration. For more information, see <a href="~~2874121#cc59ad3082jbx~~">InputConfig</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;Type&quot;: &quot;OSS&quot;,
          *     &quot;Media&quot;: &quot;<a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a>&quot;
-         * }
-         * or {
-         *     &quot;Type&quot;: &quot;Media&quot;,
-         *     &quot;Media&quot;: &quot;ce49a020e****1ef81c1e6f6d5686302&quot;
          * }</p>
          */
         public Builder inputConfig(String inputConfig) {
@@ -169,7 +165,7 @@ public class SubmitSegmentationJobRequest extends Request {
         }
 
         /**
-         * <p>The task parameters. For details, see <a href="~~2874121#a60357f2d5iix~~">JobParams</a>.</p>
+         * <p>The task parameters. For more information, see <a href="~~2874121#a60357f2d5iix~~">JobParams</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -190,7 +186,7 @@ public class SubmitSegmentationJobRequest extends Request {
         }
 
         /**
-         * <p>The output configuration. For detailed parameters, see <a href="~~2874121#cef23186a8d6w~~">OutputConfig</a>.</p>
+         * <p>The output configuration. For more information, see <a href="~~2874121#cef23186a8d6w~~">OutputConfig</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -209,7 +205,7 @@ public class SubmitSegmentationJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data in the JSON format, which can be up to 512 bytes in length.</p>
+         * <p>The user data. Custom settings in JSON format. The maximum length is 512 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;test&quot;: &quot;22&quot;}</p>

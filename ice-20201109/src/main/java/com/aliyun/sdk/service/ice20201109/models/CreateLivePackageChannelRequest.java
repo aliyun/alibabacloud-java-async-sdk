@@ -146,7 +146,7 @@ public class CreateLivePackageChannelRequest extends Request {
         } 
 
         /**
-         * <p>The channel name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
+         * <p>The name of the channel. The name can contain only uppercase and lowercase letters, digits, hyphens, and underscores. It must be 1 to 200 characters in length. Format: [A-Za-z0-9_-]+.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class CreateLivePackageChannelRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token used to ensure request idempotence.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -171,7 +171,10 @@ public class CreateLivePackageChannelRequest extends Request {
         }
 
         /**
-         * <p>The channel description. It can be up to 1,000 characters in length.</p>
+         * <p>The description of the channel. It can be up to 1,000 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test channel</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -180,7 +183,7 @@ public class CreateLivePackageChannelRequest extends Request {
         }
 
         /**
-         * <p>The channel group name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
+         * <p>The name of the channel group. The name can contain only uppercase and lowercase letters, digits, hyphens, and underscores. It must be 1 to 200 characters in length. Format: [A-Za-z0-9_-]+.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +196,7 @@ public class CreateLivePackageChannelRequest extends Request {
         }
 
         /**
-         * <p>The ingest protocol. Only HLS is supported.</p>
+         * <p>The ingest protocol. Valid values: HLS, HLS_CMAF, and SRT_RTMP. If you select SRT_RTMP, you must output the stream to this MediaPackage channel through MediaLive.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +209,7 @@ public class CreateLivePackageChannelRequest extends Request {
         }
 
         /**
-         * <p>The number of M3U8 segments. Valid values: 2 to 100.</p>
+         * <p>The number of m3u8 segments for the ingest stream. Valid values: 2 to 100. This parameter is required when the ingest protocol is HLS or HLS_CMAF.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -218,7 +221,7 @@ public class CreateLivePackageChannelRequest extends Request {
         }
 
         /**
-         * <p>The segment duration. Valid values: 1 to 30.</p>
+         * <p>The segment duration for the ingest stream. Valid values: 1 to 30. This parameter is required when the ingest protocol is HLS or HLS_CMAF.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

@@ -375,7 +375,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * SrtLatency.
+             * <p>Latency of the SRT stream, in milliseconds (ms).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder srtLatency(Integer srtLatency) {
                 this.srtLatency = srtLatency;
@@ -383,7 +386,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * SrtMaxBitrate.
+             * <p>The maximum bitrate of the SRT stream, in bps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000000</p>
              */
             public Builder srtMaxBitrate(Integer srtMaxBitrate) {
                 this.srtMaxBitrate = srtMaxBitrate;
@@ -391,7 +397,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * SrtPassphrase.
+             * <p>SRT encryption configuration—the password for the SRT stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>srtencryption</p>
              */
             public Builder srtPassphrase(String srtPassphrase) {
                 this.srtPassphrase = srtPassphrase;
@@ -399,7 +408,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * SrtPbKeyLen.
+             * <p>Encryption configuration for SRT. Specifies the key length for the SRT stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder srtPbKeyLen(Integer srtPbKeyLen) {
                 this.srtPbKeyLen = srtPbKeyLen;

@@ -99,7 +99,7 @@ public class ListCustomizedVoicesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -111,15 +111,11 @@ public class ListCustomizedVoicesRequest extends Request {
         }
 
         /**
+         * <p>The voice type. Valid values:</p>
          * <ul>
-         * <li><p>The voice type. Valid values:</p>
-         * <ul>
-         * <li>Basic</li>
-         * <li>Standard</li>
-         * </ul>
-         * </li>
-         * <li><p>If you do not specify this parameter, the default value Basic is used.</p>
-         * </li>
+         * <li>Basic: Basic edition.</li>
+         * <li>Standard: Standard edition.
+         * If you do not specify this parameter, the default value Basic is used.</li>
          * </ul>
          * 
          * <strong>example:</strong>

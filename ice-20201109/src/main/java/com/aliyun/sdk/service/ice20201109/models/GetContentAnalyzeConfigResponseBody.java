@@ -67,7 +67,7 @@ public class GetContentAnalyzeConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * ContentAnalyzeConfig.
+         * <p>The configuration for Intelligent Content Analysis.</p>
          */
         public Builder contentAnalyzeConfig(ContentAnalyzeConfig contentAnalyzeConfig) {
             this.contentAnalyzeConfig = contentAnalyzeConfig;
@@ -75,7 +75,10 @@ public class GetContentAnalyzeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31FEC819-2344-5771-9366-9172DB0D26C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,17 @@ public class GetContentAnalyzeConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Auto.
+             * <p>Specifies if Intelligent Content Analysis starts automatically after a Media Asset is registered.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p><code>true</code>: Enabled.</p>
+             * </li>
+             * <li><p><code>false</code>: Disabled. (default)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder auto(Boolean auto) {
                 this.auto = auto;
@@ -162,7 +175,19 @@ public class GetContentAnalyzeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SaveType.
+             * <p>The repository type for saving analysis results. This parameter is valid only when <code>Auto</code> is set to <code>true</code>. The default is an empty string.</p>
+             * <ul>
+             * <li><p><code>TEXT</code>: Label</p>
+             * </li>
+             * <li><p><code>FACE</code>: Face</p>
+             * </li>
+             * <li><p><code>DNA</code>: Image DNA</p>
+             * </li>
+             * </ul>
+             * <p>You can specify multiple values, separated by commas (,). If this parameter is left empty, the analysis results are not saved to any search repository and cannot be used for content search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEXT,FACE</p>
              */
             public Builder saveType(String saveType) {
                 this.saveType = saveType;
@@ -170,7 +195,18 @@ public class GetContentAnalyzeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the Intelligent Content Analysis template. Each template includes the following AI capabilities:</p>
+             * <ul>
+             * <li><p><code>S00000101-100040</code>: Text Recognition</p>
+             * </li>
+             * <li><p><code>S00000101-100060</code>: Video Classification and Face Recognition</p>
+             * </li>
+             * <li><p><code>S00000101-100070</code>: Text Recognition, Video Classification, and Face Recognition</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>S00000101-100070</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

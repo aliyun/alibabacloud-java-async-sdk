@@ -67,7 +67,7 @@ public class ListDNADBResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried media fingerprint libraries.</p>
+         * <p>The list of media fingerprint libraries.</p>
          */
         public Builder DBList(java.util.List<DBList> DBList) {
             this.DBList = DBList;
@@ -195,6 +195,9 @@ public class ListDNADBResponseBody extends TeaModel {
 
             /**
              * <p>The description of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a video DNA library.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -204,10 +207,10 @@ public class ListDNADBResponseBody extends TeaModel {
             /**
              * <p>The model of the media fingerprint library. Valid values:</p>
              * <ul>
-             * <li><strong>Video</strong></li>
-             * <li><strong>Audio</strong></li>
-             * <li><strong>Image</strong></li>
-             * <li><strong>Text</strong> (supported only in the China (Shanghai) region)</li>
+             * <li><strong>Video</strong>: Video.</li>
+             * <li><strong>Audio</strong>: Audio.</li>
+             * <li><strong>Image</strong>: Image.</li>
+             * <li><strong>Text</strong>: Text. Only supported in the China (Shanghai) region.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -230,11 +233,11 @@ public class ListDNADBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the media fingerprint library. Default value: <strong>offline</strong>. ****Valid values:</p>
+             * <p>The status of the media fingerprint library. Default value: <strong>offline</strong>. <strong>active</strong> indicates that the library is available. Valid values:</p>
              * <ul>
-             * <li><strong>offline</strong>: The media fingerprint library is offline.</li>
-             * <li><strong>active</strong>: The media fingerprint library is online.</li>
-             * <li><strong>deleted</strong>: The media fingerprint library is deleted.</li>
+             * <li><strong>offline</strong>: Offline.</li>
+             * <li><strong>active</strong>: Online.</li>
+             * <li><strong>deleted</strong>: Deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>

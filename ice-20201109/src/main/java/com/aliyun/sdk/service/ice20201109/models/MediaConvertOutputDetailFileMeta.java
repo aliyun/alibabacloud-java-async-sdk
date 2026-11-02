@@ -80,7 +80,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         } 
 
         /**
-         * AudioStreamInfoList.
+         * <p>The audio stream information.</p>
          */
         public Builder audioStreamInfoList(java.util.List<AudioStreamInfoList> audioStreamInfoList) {
             this.audioStreamInfoList = audioStreamInfoList;
@@ -88,7 +88,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         }
 
         /**
-         * FileBasicInfo.
+         * <p>The basic file information.</p>
          */
         public Builder fileBasicInfo(FileBasicInfo fileBasicInfo) {
             this.fileBasicInfo = fileBasicInfo;
@@ -96,7 +96,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         }
 
         /**
-         * VideoStreamInfoList.
+         * <p>The video stream information.</p>
          */
         public Builder videoStreamInfoList(java.util.List<VideoStreamInfoList> videoStreamInfoList) {
             this.videoStreamInfoList = videoStreamInfoList;
@@ -331,7 +331,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             } 
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.f</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -339,7 +342,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * ChannelLayout.
+             * <p>The channel layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stereo</p>
              */
             public Builder channelLayout(String channelLayout) {
                 this.channelLayout = channelLayout;
@@ -347,7 +353,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Channels.
+             * <p>The number of channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -355,7 +364,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * <p>The codec long name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC (Advanced Audio Coding)</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -363,7 +375,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The codec name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aac</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -371,7 +386,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The codec tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x000f</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -379,7 +397,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The codec tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[15][0][0][0]</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -387,7 +408,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The codec time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/44100</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -395,7 +419,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>403.039989</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -403,7 +430,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The stream index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -411,7 +441,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -419,7 +452,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * SampleFmt.
+             * <p>The sample format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fltp</p>
              */
             public Builder sampleFmt(String sampleFmt) {
                 this.sampleFmt = sampleFmt;
@@ -427,7 +463,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * SampleRate.
+             * <p>The sample rate in Hz.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder sampleRate(String sampleRate) {
                 this.sampleRate = sampleRate;
@@ -435,7 +474,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.473556</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -443,7 +485,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/90000</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -640,7 +685,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             } 
 
             /**
-             * Bitrate.
+             * <p>The video bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>888.563</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -648,7 +696,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The video duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>403.039999</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -656,7 +707,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file.m3u8</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -664,7 +718,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The file size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31737</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -672,7 +729,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * FileStatus.
+             * <p>The file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder fileStatus(String fileStatus) {
                 this.fileStatus = fileStatus;
@@ -680,7 +740,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type. Valid values: source_file, transcode_file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_file</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -688,7 +751,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The file URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8">http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8</a></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -696,7 +762,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * FormatName.
+             * <p>The video format name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hls,applehttp</p>
              */
             public Builder formatName(String formatName) {
                 this.formatName = formatName;
@@ -704,7 +773,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>478</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -712,7 +784,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9066406c306771f0bfa35107e0c90102</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -720,7 +795,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region where the file is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -728,7 +806,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>848</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -1068,7 +1149,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             } 
 
             /**
-             * Avg_fps.
+             * <p>The average frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25.0</p>
              */
             public Builder avgFps(String avgFps) {
                 this.avgFps = avgFps;
@@ -1076,7 +1160,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Bit_rate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>888.563</p>
              */
             public Builder bitRate(String bitRate) {
                 this.bitRate = bitRate;
@@ -1084,7 +1171,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Codec_long_name.
+             * <p>The codec long name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -1092,7 +1182,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Codec_name.
+             * <p>The codec name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h264</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -1100,7 +1193,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Codec_tag.
+             * <p>The codec tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x001b</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -1108,7 +1204,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Codec_tag_string.
+             * <p>The codec tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[27][0][0][0]</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -1116,7 +1215,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Codec_time_base.
+             * <p>The codec time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/50</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -1124,7 +1226,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Dar.
+             * <p>The display aspect ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16:9</p>
              */
             public Builder dar(String dar) {
                 this.dar = dar;
@@ -1132,7 +1237,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>403.039989</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1140,7 +1248,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25.0</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -1148,7 +1259,15 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Has_b_frames.
+             * <p>Specifies whether B-frames are included. Valid values:</p>
+             * <ul>
+             * <li>0: No B-frames. </li>
+             * <li>1: One B-frame. </li>
+             * <li>2: Multiple consecutive B-frames.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hasBFrames(String hasBFrames) {
                 this.hasBFrames = hasBFrames;
@@ -1156,7 +1275,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>478</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -1164,7 +1286,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The stream index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1172,7 +1297,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1180,7 +1308,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The encoding level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1188,7 +1319,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * <p>The total number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10040</p>
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -1196,7 +1330,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * PixFmt.
+             * <p>The pixel format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuv420p</p>
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -1204,7 +1341,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The encoder profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -1212,7 +1352,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Rotate.
+             * <p>The video rotation angle. Valid values: 0, 90, 180, and 270. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rotate(String rotate) {
                 this.rotate = rotate;
@@ -1220,7 +1363,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Sar.
+             * <p>The sample aspect ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>478:477</p>
              */
             public Builder sar(String sar) {
                 this.sar = sar;
@@ -1228,7 +1374,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Start_time.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.473556</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1236,7 +1385,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Time_base.
+             * <p>The time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/90000</p>
              */
             public Builder timeBase(String timeBase) {
                 this.timeBase = timeBase;
@@ -1244,7 +1396,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>848</p>
              */
             public Builder width(String width) {
                 this.width = width;

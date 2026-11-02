@@ -67,7 +67,7 @@ public class SubmitLiveSnapshotJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>a046-263c-3560-978a-fb287666</strong></strong></p>

@@ -208,10 +208,12 @@ public class ListEditingProjectsRequest extends Request {
         }
 
         /**
-         * <p>The method for creating the online editing project. Valid values:</p>
-         * <p>- OpenAPI</p>
-         * <p>- AliyunConsole</p>
-         * <p>- WebSDK</p>
+         * <p>The creation source. Valid values:</p>
+         * <ul>
+         * <li>OpenAPI</li>
+         * <li>AliyunConsole</li>
+         * <li>WebSDK</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OpenAPI</p>
@@ -223,7 +225,7 @@ public class ListEditingProjectsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time of the creation time range. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-02T23:59:59Z</p>
@@ -235,7 +237,7 @@ public class ListEditingProjectsRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. You can search by job ID.</p>
+         * <p>The search keyword. You can search for projects by task ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>6f36bc45d09a9d5cde49</strong></strong></strong></p>
@@ -247,7 +249,7 @@ public class ListEditingProjectsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. A maximum of 100 entries can be returned on each page.</p>
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -260,7 +262,7 @@ public class ListEditingProjectsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>8EqYpQbZ6Eh7+Zz8DxVYoQ==</p>
@@ -274,8 +276,8 @@ public class ListEditingProjectsRequest extends Request {
         /**
          * <p>The type of the editing project. Valid values:</p>
          * <ul>
-         * <li>EditingProject: a regular editing project.</li>
-         * <li>LiveEditingProject: a live stream editing project.</li>
+         * <li>EditingProject: regular editing project.</li>
+         * <li>LiveEditingProject: live editing project.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,10 +290,10 @@ public class ListEditingProjectsRequest extends Request {
         }
 
         /**
-         * <p>The order of sorting of the results. Valid values:</p>
+         * <p>The sorting method of the query results. Valid values:</p>
          * <ul>
-         * <li>CreationTime:Desc (default): sorts the results in reverse chronological order.</li>
-         * <li>CreationTime:Asc: sorts the results in chronological order.</li>
+         * <li>CreationTime:Desc: sorts the results in descending order of creation time. This is the default value.</li>
+         * <li>CreationTime:Asc: sorts the results in ascending order of creation time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,7 +306,7 @@ public class ListEditingProjectsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time of the creation time range. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-21T08:00:01Z</p>
@@ -316,7 +318,7 @@ public class ListEditingProjectsRequest extends Request {
         }
 
         /**
-         * <p>The status of the online editing project. By default, online editing projects in all states are queried.</p>
+         * <p>The status of the cloud editing project. By default, all cloud editing projects are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Produced</p>
@@ -328,17 +330,7 @@ public class ListEditingProjectsRequest extends Request {
         }
 
         /**
-         * <p>The template type. This parameter is required if you create a template-based online editing project. Default value: Timeline.</p>
-         * <ul>
-         * <li></li>
-         * <li></li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Timeline: a regular template.</li>
-         * <li>VETemplate: an advanced template.</li>
-         * <li>None: general editing.</li>
-         * </ul>
+         * <p>The templatetype. This parameter is required when you create a template-based cloud editing project. Default value: Timeline.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>

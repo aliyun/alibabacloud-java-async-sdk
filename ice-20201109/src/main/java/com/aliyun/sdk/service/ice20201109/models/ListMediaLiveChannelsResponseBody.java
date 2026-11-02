@@ -106,7 +106,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The channels.</p>
+         * <p>The channel configurations.</p>
          */
         public Builder channels(java.util.List<Channels> channels) {
             this.channels = channels;
@@ -114,7 +114,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries returned per page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -136,7 +136,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -147,7 +147,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that meet the conditions of a conditional query with paging.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -229,7 +229,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The audio bitrate. Unit: bit/s.</p>
+             * <p>The audio bitrate.</p>
              * 
              * <strong>example:</strong>
              * <p>200000</p>
@@ -251,7 +251,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The audio sample rate. Unit: Hz.</p>
+             * <p>The audio sample rate.</p>
              * 
              * <strong>example:</strong>
              * <p>44100</p>
@@ -384,7 +384,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The audio encoding settings.</p>
+             * <p>The audio codec settings.</p>
              */
             public Builder audioCodecSetting(AudioCodecSetting audioCodecSetting) {
                 this.audioCodecSetting = audioCodecSetting;
@@ -392,7 +392,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the audio selector.</p>
+             * <p>The audio selector name.</p>
              * 
              * <strong>example:</strong>
              * <p>myselector</p>
@@ -403,7 +403,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A three-letter ISO 639-2 language code.</p>
+             * <p>The ISO 639-2 language code. The code consists of three characters.</p>
              * 
              * <strong>example:</strong>
              * <p>eng</p>
@@ -414,7 +414,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the language.</p>
+             * <p>The language name. This parameter is valid only for RTMP inputs and specifies the name tag used by the output.</p>
              * 
              * <strong>example:</strong>
              * <p>English</p>
@@ -425,7 +425,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the audio settings.</p>
+             * <p>The audio setting name.</p>
              * 
              * <strong>example:</strong>
              * <p>zhuanfengzhuang</p>
@@ -483,7 +483,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A three-letter ISO 639-2 language code from within an audio source.</p>
+             * <p>The ISO 639-2 language code. The code consists of three characters.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -542,7 +542,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A PID from within a source.</p>
+             * <p>The PID of the input source stream.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -601,7 +601,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The track ID from within a source.</p>
+             * <p>The track ID of the input source stream.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -699,7 +699,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The audio language selection.</p>
+             * <p>The language selector.</p>
              */
             public Builder audioLanguageSelection(AudioLanguageSelection audioLanguageSelection) {
                 this.audioLanguageSelection = audioLanguageSelection;
@@ -707,7 +707,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The audio PID selection.</p>
+             * <p>The PID selector.</p>
              */
             public Builder audioPidSelection(AudioPidSelection audioPidSelection) {
                 this.audioPidSelection = audioPidSelection;
@@ -715,7 +715,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The audio track selection.</p>
+             * <p>The audio track selector.</p>
              */
             public Builder audioTrackSelection(java.util.List<AudioTrackSelection> audioTrackSelection) {
                 this.audioTrackSelection = audioTrackSelection;
@@ -723,7 +723,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the audio selector.</p>
+             * <p>The audio selector name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -829,7 +829,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the input.</p>
+             * <p>The ID of the attached input.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -841,7 +841,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the input.</p>
+             * <p>The input name.</p>
              * 
              * <strong>example:</strong>
              * <p>myinput</p>
@@ -852,7 +852,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the language.</p>
+             * <p>The language name. This parameter is valid only for RTMP inputs and specifies the name tag used by the output.</p>
              * 
              * <strong>example:</strong>
              * <p>eng</p>
@@ -922,7 +922,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>ChannelName in MediaPackage.</p>
+             * <p>The channel name of the referenced MediaPackage.</p>
              * 
              * <strong>example:</strong>
              * <p>myPackageChannel</p>
@@ -933,7 +933,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GroupName in MediaPackage.</p>
+             * <p>The group name of the referenced MediaPackage.</p>
              * 
              * <strong>example:</strong>
              * <p>myPackageGroup</p>
@@ -1003,7 +1003,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The manifest audio group ID.</p>
+             * <p>The audio group ID in the manifest.</p>
              * 
              * <strong>example:</strong>
              * <p>audiogroup</p>
@@ -1014,7 +1014,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The manifest name modifier. The child manifests include this modifier in their M3U8 file names.</p>
+             * <p>The manifest suffix.</p>
              * 
              * <strong>example:</strong>
              * <p>480p</p>
@@ -1123,7 +1123,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The referenced AudioSettings.</p>
+             * <p>The list of referenced audio setting names.</p>
              */
             public Builder audioSettingNames(java.util.List<String> audioSettingNames) {
                 this.audioSettingNames = audioSettingNames;
@@ -1131,7 +1131,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The settings of the output delivered to MediaPackage.</p>
+             * <p>The output settings when the output group type is MediaPackage.</p>
              */
             public Builder mediaPackageOutputSetting(MediaPackageOutputSetting mediaPackageOutputSetting) {
                 this.mediaPackageOutputSetting = mediaPackageOutputSetting;
@@ -1150,7 +1150,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the output.</p>
+             * <p>The output name.</p>
              * 
              * <strong>example:</strong>
              * <p>output1</p>
@@ -1161,7 +1161,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the referenced VideoSettings.</p>
+             * <p>The name of the referenced video setting.</p>
              * 
              * <strong>example:</strong>
              * <p>myVideo1</p>
@@ -1270,7 +1270,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MediaPackage destination.</p>
+             * <p>The output group settings when the output group type is MediaPackage.</p>
              */
             public Builder mediaPackageGroupSetting(MediaPackageGroupSetting mediaPackageGroupSetting) {
                 this.mediaPackageGroupSetting = mediaPackageGroupSetting;
@@ -1278,7 +1278,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL for monitoring the output group. The parameter is returned only when the output gourp type is MediaPackage.</p>
+             * <p>The output group monitoring URL for monitoring. This URL is returned only when the output group type is MediaPackage and you query the channel details.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp://xxx</p>
@@ -1289,7 +1289,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the output group.</p>
+             * <p>The output group name.</p>
              * 
              * <strong>example:</strong>
              * <p>group1</p>
@@ -1300,7 +1300,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outputs in the output group.</p>
+             * <p>The output settings.</p>
              */
             public Builder outputs(java.util.List<Outputs> outputs) {
                 this.outputs = outputs;
@@ -1378,7 +1378,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The video encoding level. It is not supported yet.</p>
+             * <p>The video codec level. This parameter is not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>H264_LEVEL_AUTO</p>
@@ -1389,7 +1389,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The H.264 profile.</p>
+             * <p>The video codec profile.</p>
              * 
              * <strong>example:</strong>
              * <p>MAIN</p>
@@ -1472,7 +1472,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The frame rate mode.</p>
+             * <p>The video frame rate control mode.</p>
              * 
              * <strong>example:</strong>
              * <p>SPECIFIED</p>
@@ -1483,7 +1483,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The denominator of the fixed frame rate.</p>
+             * <p>The video frame rate denominator.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1494,7 +1494,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The numerator of the fixed frame rate.</p>
+             * <p>The video frame rate numerator.</p>
              * 
              * <strong>example:</strong>
              * <p>25</p>
@@ -1577,7 +1577,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of B frames.</p>
+             * <p>The number of B-frames.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1588,7 +1588,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GOP size.</p>
+             * <p>The video GOP size.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -1599,7 +1599,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GOP size unit.</p>
+             * <p>The unit of the video GOP size.</p>
              * 
              * <strong>example:</strong>
              * <p>FRAMES</p>
@@ -1695,7 +1695,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The video bitrate. Unit: bit/s.</p>
+             * <p>The video bitrate.</p>
              * 
              * <strong>example:</strong>
              * <p>2500000</p>
@@ -1706,7 +1706,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The video buffer size. Unit: bit/s.</p>
+             * <p>The video codec buffer size.</p>
              * 
              * <strong>example:</strong>
              * <p>6000000</p>
@@ -1717,7 +1717,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum bitrate. Unit: bit/s.</p>
+             * <p>The maximum video bitrate.</p>
              * 
              * <strong>example:</strong>
              * <p>6000000</p>
@@ -1728,7 +1728,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bitrate control mode.</p>
+             * <p>The video codec rate control mode.</p>
              * 
              * <strong>example:</strong>
              * <p>ABR</p>
@@ -1824,7 +1824,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The video encoding settings.</p>
+             * <p>The video codec detail settings.</p>
              */
             public Builder codecDetail(CodecDetail codecDetail) {
                 this.codecDetail = codecDetail;
@@ -1832,7 +1832,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The frame rate.</p>
+             * <p>The video frame rate settings.</p>
              */
             public Builder framerate(Framerate framerate) {
                 this.framerate = framerate;
@@ -1840,7 +1840,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GOP setting.</p>
+             * <p>The video GOP settings.</p>
              */
             public Builder gop(Gop gop) {
                 this.gop = gop;
@@ -1848,7 +1848,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The video encoding rate.</p>
+             * <p>The video codec rate settings.</p>
              */
             public Builder rate(Rate rate) {
                 this.rate = rate;
@@ -1967,7 +1967,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The height of the video in pixels.</p>
+             * <p>The height of the video resolution.</p>
              * 
              * <strong>example:</strong>
              * <p>720</p>
@@ -1978,7 +1978,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the video settings.</p>
+             * <p>The name of the video setting.</p>
              * 
              * <strong>example:</strong>
              * <p>video1</p>
@@ -1989,7 +1989,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The video codec.</p>
+             * <p>The video codec type.</p>
              * 
              * <strong>example:</strong>
              * <p>H264</p>
@@ -2000,7 +2000,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The video encoding settings.</p>
+             * <p>The video codec settings.</p>
              */
             public Builder videoCodecSetting(VideoCodecSetting videoCodecSetting) {
                 this.videoCodecSetting = videoCodecSetting;
@@ -2008,7 +2008,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The video transcoding method. Valid values: NORMAL (regular transcoding) and NBHD (Narrowband HD™ transcoding).</p>
+             * <p>The video transcoding method, such as standard transcoding and Narrowband HD transcoding.</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -2019,7 +2019,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the video in pixels.</p>
+             * <p>The width of the video resolution.</p>
              * 
              * <strong>example:</strong>
              * <p>1280</p>
@@ -2201,7 +2201,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the channel.</p>
+             * <p>The channel ID.</p>
              * 
              * <strong>example:</strong>
              * <p>SEGK5KA6KYKAWQQH</p>
@@ -2212,7 +2212,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the channel was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the channel was created. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format (RFC 3339 format) and in UTC+0.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-03T06:56:42Z</p>
@@ -2223,7 +2223,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inputs associated with the channel.</p>
+             * <p>The input attachment settings.</p>
              */
             public Builder inputAttachments(java.util.List<InputAttachments> inputAttachments) {
                 this.inputAttachments = inputAttachments;
@@ -2231,7 +2231,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the channel was last started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. If the channel has never been started since it was created, an empty string is returned.</p>
+             * <p>The last time when the channel was started. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format (RFC 3339 format) and in UTC+0. If the channel has never been started since it was created, an empty string is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-03T06:56:42Z</p>
@@ -2242,7 +2242,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the channel was last stopped. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. If the channel has never stopped since it was created, an empty string is returned.</p>
+             * <p>The last time when the channel was stopped. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format (RFC 3339 format) and in UTC+0. If the channel has never been stopped since it was created, an empty string is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-03T06:56:42Z</p>
@@ -2253,7 +2253,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the channel.</p>
+             * <p>The channel name.</p>
              * 
              * <strong>example:</strong>
              * <p>mych</p>
@@ -2264,7 +2264,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output groups.</p>
+             * <p>The output group configurations.</p>
              */
             public Builder outputGroups(java.util.List<OutputGroups> outputGroups) {
                 this.outputGroups = outputGroups;
@@ -2272,7 +2272,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the channel. Valid values: IDLE, STARTING, RUNNING, RECOVERING, and STOPPING.</p>
+             * <p>The channel status. Valid values: IDLE, STARTING, RUNNING, RECOVERING, and STOPPING.</p>
              * 
              * <strong>example:</strong>
              * <p>IDLE</p>

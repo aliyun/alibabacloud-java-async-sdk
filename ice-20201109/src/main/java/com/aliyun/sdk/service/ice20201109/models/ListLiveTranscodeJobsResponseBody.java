@@ -99,7 +99,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -168,7 +168,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL of the output stream.</p>
+             * <p>The output stream URL.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp://mydomain/app/mytranscode1</p>
@@ -179,7 +179,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the output stream protocol. Only the RTMP protocol is supported.</p>
+             * <p>The output stream protocol type. Currently, only the RTMP protocol is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp</p>
@@ -236,7 +236,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of stream URLs.</p>
+             * <p>The list of playback URLs.</p>
              */
             public Builder streamInfos(java.util.List<StreamInfos> streamInfos) {
                 this.streamInfos = streamInfos;
@@ -303,7 +303,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL of the input stream.</p>
+             * <p>The input stream URL.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp://mydomain/app/stream1</p>
@@ -314,7 +314,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the input stream.</p>
+             * <p>The input stream type.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp</p>
@@ -488,7 +488,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the job was created.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-20T02:48:58Z</p>
@@ -521,7 +521,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the output stream.</p>
+             * <p>The output stream information.</p>
              */
             public Builder outputStream(OutputStream outputStream) {
                 this.outputStream = outputStream;
@@ -529,7 +529,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start mode of the job.</p>
+             * <p>The start mode.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -540,7 +540,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the job.</p>
+             * <p>The job status.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -551,7 +551,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the input stream.</p>
+             * <p>The input stream information.</p>
              */
             public Builder streamInput(StreamInput streamInput) {
                 this.streamInput = streamInput;
@@ -559,7 +559,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the transcoding template used by the transcoding job.</p>
+             * <p>The ID of the template corresponding to the transcoding job.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>a046-263c-3560-978a-fb287666</strong></strong></p>
@@ -570,7 +570,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template name.</p>
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template 1</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -578,7 +581,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the transcoding template used by the transcoding job.</p>
+             * <p>The type of the transcoding template corresponding to the transcoding job.</p>
              * 
              * <strong>example:</strong>
              * <p>normal</p>

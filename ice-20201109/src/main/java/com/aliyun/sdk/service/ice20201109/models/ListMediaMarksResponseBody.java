@@ -80,7 +80,7 @@ public class ListMediaMarksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong></p>
@@ -91,7 +91,25 @@ public class ListMediaMarksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The marks of the media asset, in the JSONArray format.</p>
+         * <p>The list of mark information. The string content is in JSONArray format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *  {
+         *  &quot;MarkStartTime&quot;: &quot;12.1&quot;,
+         *  &quot;MarkEndTime&quot;: &quot;12.2&quot;,
+         *  &quot;MarkTag&quot;: &quot;tag-1&quot;,
+         *  &quot;MarkContent&quot;: &quot;content-1&quot;,
+         *  &quot;MarkStatus&quot;: &quot;a&quot;
+         *  },
+         *  {
+         *  &quot;MarkStartTime&quot;: &quot;12.3&quot;,
+         *  &quot;MarkEndTime&quot;: &quot;12.4&quot;,
+         *  &quot;MarkTag&quot;: &quot;tag-2&quot;,
+         *  &quot;MarkContent&quot;: &quot;content-2&quot;,
+         *  &quot;MarkStatus&quot;: &quot;online&quot;
+         *  }
+         * ]</p>
          */
         public Builder mediaMarks(String mediaMarks) {
             this.mediaMarks = mediaMarks;

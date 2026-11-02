@@ -67,7 +67,10 @@ public class ResumeYikeStoryboardJobResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The task ID. You can obtain it from the response parameters returned when you submit a storyboard generation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -75,7 +78,10 @@ public class ResumeYikeStoryboardJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

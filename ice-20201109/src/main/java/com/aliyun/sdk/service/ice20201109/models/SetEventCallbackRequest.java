@@ -166,8 +166,10 @@ public class SetEventCallbackRequest extends Request {
         /**
          * <p>Specifies whether to enable callback authentication. This parameter takes effect only if you set CallbackType to <strong>HTTP</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li><p><strong>on</strong></p>
+         * </li>
+         * <li><p><strong>off</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,8 +196,10 @@ public class SetEventCallbackRequest extends Request {
         /**
          * <p>The callback method. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong></li>
-         * <li><strong>MNS</strong></li>
+         * <li><p><strong>HTTP</strong></p>
+         * </li>
+         * <li><p><strong>MNS</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

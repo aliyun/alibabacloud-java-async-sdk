@@ -67,7 +67,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried media fingerprint analysis jobs.</p>
+         * <p>The DNA job information.</p>
          */
         public Builder jobList(java.util.List<JobList> jobList) {
             this.jobList = jobList;
@@ -144,10 +144,13 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The input file. The file can be an OSS object or a media asset. The path of an OSS object can be in one of the following formats:</p>
-             * <p>1. oss://bucket/object</p>
-             * <p>2. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
-             * <p>In the preceding paths, bucket indicates an OSS bucket that resides in the same region as the current project, and object indicates the path of the object in the bucket.</p>
+             * <p>The information about the input file. Both OSS URLs and media asset IDs are supported.
+             * An OSS URL must be in one of the following formats:</p>
+             * <ul>
+             * <li>oss://bucket/object</li>
+             * <li>http(s)://bucket.oss-[regionId].aliyuncs.com/object</li>
+             * </ul>
+             * <p>In the formats, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
              * 
              * <strong>example:</strong>
              * <p>1b1b9cd148034739af413150fded****</p>
@@ -159,10 +162,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
 
             /**
              * <p>The type of the input file. Valid values:</p>
-             * <ol>
-             * <li>OSS: Object Storage Service (OSS) object.</li>
-             * <li>Media: media asset.</li>
-             * </ol>
+             * <ul>
+             * <li>OSS: the URL of an OSS object.</li>
+             * <li>Media: the ID of a media asset.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Media</p>
@@ -362,7 +365,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response code.</p>
+             * <p>The error code returned for the job execution.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;InvalidParameter.ResourceNotFound&quot;</p>
@@ -373,7 +376,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the media fingerprint analysis job.</p>
+             * <p>The DNA configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;&quot;:&quot;video&quot;}</p>
@@ -384,7 +387,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was created.</p>
+             * <p>The time when the job was created. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-12-28T03:21:37Z</p>
@@ -395,7 +398,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the media fingerprint library.</p>
+             * <p>The ID of the DNA library.</p>
              * 
              * <strong>example:</strong>
              * <p>2288c6ca184c0e47098a5b665e2a12****</p>
@@ -406,7 +409,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the media fingerprint analysis result.</p>
+             * <p>The URL of the DNA result.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://test_bucket.oss-cn-shanghai.aliyuncs.com/fingerprint/video/search_result/5/5.txt">http://test_bucket.oss-cn-shanghai.aliyuncs.com/fingerprint/video/search_result/5/5.txt</a></p>
@@ -417,7 +420,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was complete.</p>
+             * <p>The time when the job was completed. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-12-28T03:21:44Z</p>
@@ -439,7 +442,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the input file.</p>
+             * <p>The input file.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -447,10 +450,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned message.</p>
+             * <p>The error message returned for the job execution.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;The resource operated &quot;a887d0b***d805ef6f7f6786302&quot; cannot be found&quot;</p>
+             * <p>&quot;The resource operated \&quot;a887d0b***d805ef6f7f6786302\&quot; cannot be found&quot;</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -458,7 +461,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary key of the video. You must make sure that each primary key is unique.</p>
+             * <p>The unique primary key of the video. You must ensure the uniqueness of the primary key.</p>
              * 
              * <strong>example:</strong>
              * <p>3ca84a39a9024f19853b21be9cf9****</p>
@@ -469,11 +472,11 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job state. Valid values:</p>
+             * <p>The status of the job. Valid values:</p>
              * <ul>
-             * <li><strong>Queuing</strong>: The job is waiting in the queue.</li>
-             * <li><strong>Analysing</strong>: The job is in progress.</li>
-             * <li><strong>Success</strong>: The job is successful.</li>
+             * <li><strong>Queuing</strong>: The job is queued.</li>
+             * <li><strong>Analysing</strong>: The job is being analyzed.</li>
+             * <li><strong>Success</strong>: The job succeeded.</li>
              * <li><strong>Fail</strong>: The job failed.</li>
              * </ul>
              * 
@@ -486,7 +489,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined data.</p>
+             * <p>The custom user data.</p>
              * 
              * <strong>example:</strong>
              * <p>testdna</p>

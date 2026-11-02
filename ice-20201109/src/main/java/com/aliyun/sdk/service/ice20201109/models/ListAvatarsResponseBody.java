@@ -80,7 +80,7 @@ public class ListAvatarsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,10 +99,10 @@ public class ListAvatarsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,6 +238,9 @@ public class ListAvatarsResponseBody extends TeaModel {
 
             /**
              * <p>The description of the digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a digital human, intended for use in a certain scenario.</p>
              */
             public Builder avatarDescription(String avatarDescription) {
                 this.avatarDescription = avatarDescription;
@@ -257,6 +260,9 @@ public class ListAvatarsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the digital human.</p>
              */
             public Builder avatarName(String avatarName) {
                 this.avatarName = avatarName;
@@ -275,7 +281,7 @@ public class ListAvatarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The media asset ID of the portrait image.</p>
+             * <p>The media asset ID of the profile picture.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
@@ -286,7 +292,7 @@ public class ListAvatarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The thumbnail URL.</p>
+             * <p>The URL of the thumbnail.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png</a></p>
@@ -297,7 +303,7 @@ public class ListAvatarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the digital human image supports the alpha channels.</p>
+             * <p>Indicates whether the current digital human image supports an alpha channel.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -367,7 +373,7 @@ public class ListAvatarsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried digital humans.</p>
+             * <p>The list of digital humans.</p>
              */
             public Builder avatarList(java.util.List<AvatarList> avatarList) {
                 this.avatarList = avatarList;
@@ -375,7 +381,7 @@ public class ListAvatarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

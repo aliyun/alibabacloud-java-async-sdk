@@ -184,7 +184,10 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
         } 
 
         /**
-         * ClientToken.
+         * <p>The idempotency token provided during the task creation request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>12e8864746a0a398</strong></strong></p>
          */
         public Builder clientToken(String clientToken) {
             this.clientToken = clientToken;
@@ -192,7 +195,10 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The error code for a failed task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.ResourceNotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -200,7 +206,7 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>The task configuration.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -208,7 +214,10 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time the task was created, in UTC format (<em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-07T13:01:07Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -216,7 +225,10 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
         }
 
         /**
-         * FinishTime.
+         * <p>The time the task finished processing, in UTC format (<em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-07T13:01:07Z</p>
          */
         public Builder finishTime(String finishTime) {
             this.finishTime = finishTime;
@@ -224,7 +236,10 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -232,7 +247,10 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The reason for a task failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The resource operated &quot;%s&quot; cannot be found</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -240,7 +258,10 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
         }
 
         /**
-         * PipelineId.
+         * <p>The ID of the queue on which this task was processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>688c2a8bfa4e44ddbba0c8730db91b0c</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.pipelineId = pipelineId;
@@ -248,7 +269,10 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the API request that created this task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +280,17 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The status of the task.</p>
+         * <ul>
+         * <li>Inited: The task is initialized.</li>
+         * <li>Running</li>
+         * <li>Complete</li>
+         * <li>Error</li>
+         * <li>Cancelled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Inited</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -264,7 +298,10 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;info&quot;: &quot;xxx&quot;}</p>
          */
         public Builder userData(String userData) {
             this.userData = userData;
@@ -356,7 +393,7 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
             } 
 
             /**
-             * Inputs.
+             * <p>The input files for the task.</p>
              */
             public Builder inputs(java.util.List<MediaConvertInput> inputs) {
                 this.inputs = inputs;
@@ -364,7 +401,10 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -372,7 +412,7 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
             }
 
             /**
-             * OutputGroups.
+             * <p>The output groups.</p>
              */
             public Builder outputGroups(java.util.List<MediaConvertOutputGroup> outputGroups) {
                 this.outputGroups = outputGroups;
@@ -380,7 +420,7 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
             }
 
             /**
-             * Outputs.
+             * <p>The output configurations.</p>
              */
             public Builder outputs(java.util.List<MediaConvertOutput> outputs) {
                 this.outputs = outputs;

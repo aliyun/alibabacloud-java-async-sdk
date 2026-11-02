@@ -222,7 +222,7 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The template state.</p>
+             * <p>The template status.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -233,7 +233,7 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtype ID of the template.</p>
+             * <p>The template subtype ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -244,7 +244,7 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtype name of the template.</p>
+             * <p>The template subtype name.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -288,7 +288,7 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type ID of the template.</p>
+             * <p>The templatetype ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -299,7 +299,7 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type name of the template.</p>
+             * <p>The templatetype name.</p>
              * 
              * <strong>example:</strong>
              * <p>TranscodeTemplate</p>

@@ -197,7 +197,10 @@ public class AiRtcLicenseInfoDTO extends TeaModel {
         } 
 
         /**
-         * AvailableCapacity.
+         * <p>The remaining usage capacity of the batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000000</p>
          */
         public Builder availableCapacity(Long availableCapacity) {
             this.availableCapacity = availableCapacity;
@@ -205,7 +208,10 @@ public class AiRtcLicenseInfoDTO extends TeaModel {
         }
 
         /**
-         * BeginOn.
+         * <p>The time when the batch became active.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:49Z</p>
          */
         public Builder beginOn(String beginOn) {
             this.beginOn = beginOn;
@@ -213,7 +219,10 @@ public class AiRtcLicenseInfoDTO extends TeaModel {
         }
 
         /**
-         * ContractNo.
+         * <p>The contract number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258396267390***</p>
          */
         public Builder contractNo(String contractNo) {
             this.contractNo = contractNo;
@@ -221,7 +230,10 @@ public class AiRtcLicenseInfoDTO extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:49Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -229,7 +241,10 @@ public class AiRtcLicenseInfoDTO extends TeaModel {
         }
 
         /**
-         * ExpiredOn.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-23T13:33:49Z</p>
          */
         public Builder expiredOn(String expiredOn) {
             this.expiredOn = expiredOn;
@@ -237,7 +252,10 @@ public class AiRtcLicenseInfoDTO extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ice_CoverAILicense_public_cn***</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -245,7 +263,10 @@ public class AiRtcLicenseInfoDTO extends TeaModel {
         }
 
         /**
-         * LicenseCount.
+         * <p>The total number of licenses contained within this batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder licenseCount(Long licenseCount) {
             this.licenseCount = licenseCount;
@@ -253,7 +274,10 @@ public class AiRtcLicenseInfoDTO extends TeaModel {
         }
 
         /**
-         * LicenseItemId.
+         * <p>The ID of the batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17712***</p>
          */
         public Builder licenseItemId(String licenseItemId) {
             this.licenseItemId = licenseItemId;
@@ -261,7 +285,10 @@ public class AiRtcLicenseInfoDTO extends TeaModel {
         }
 
         /**
-         * ModificationTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:49Z</p>
          */
         public Builder modificationTime(String modificationTime) {
             this.modificationTime = modificationTime;
@@ -269,7 +296,14 @@ public class AiRtcLicenseInfoDTO extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the batch. Valid values:</p>
+         * <ul>
+         * <li>1: Active</li>
+         * <li>2\. Expired</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -277,7 +311,14 @@ public class AiRtcLicenseInfoDTO extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The license type. Valid values:</p>
+         * <ul>
+         * <li>1: Audio call</li>
+         * <li>2: Vision call</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.type = type;
@@ -285,7 +326,10 @@ public class AiRtcLicenseInfoDTO extends TeaModel {
         }
 
         /**
-         * ValidDays.
+         * <p>The validity period of the licenses in this batch, in days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder validDays(Long validDays) {
             this.validDays = validDays;

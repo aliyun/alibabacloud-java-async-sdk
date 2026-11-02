@@ -131,13 +131,18 @@ public class DeleteRecognitionLibRequest extends Request {
         } 
 
         /**
-         * <p>The type of recognition algorithm. Valid values:</p>
+         * <p>The recognition type. Valid values:</p>
          * <ul>
-         * <li>landmark</li>
-         * <li>object</li>
-         * <li>logo</li>
-         * <li>face</li>
-         * <li>label</li>
+         * <li><p>landmark: custom landmark</p>
+         * </li>
+         * <li><p>object: custom object</p>
+         * </li>
+         * <li><p>logo: custom logo</p>
+         * </li>
+         * <li><p>face: custom face</p>
+         * </li>
+         * <li><p>label: custom label</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

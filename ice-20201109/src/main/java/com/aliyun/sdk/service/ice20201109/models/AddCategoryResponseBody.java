@@ -67,7 +67,7 @@ public class AddCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the category.</p>
+         * <p>The media asset category information.</p>
          */
         public Builder category(Category category) {
             this.category = category;
@@ -195,6 +195,9 @@ public class AddCategoryResponseBody extends TeaModel {
 
             /**
              * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Category 1</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -202,7 +205,7 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the category. A value of <strong>0</strong> indicates a level-1 category, a value of <strong>1</strong> indicates a level-2 category, and a value of <strong>2</strong> indicates a level-3 category.</p>
+             * <p>The category level. The first-level category has a level of <strong>0</strong>, the second-level category has a level of <strong>1</strong>, and the third-level category has a level of <strong>2</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -213,7 +216,7 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent category. By default, if ParentId is left empty or less than 1, -1 is returned, which indicates that the created category is the root directory.</p>
+             * <p>The parent category ID. If the ParentId parameter is set to empty or a value less than 1, the default return value is -1, which indicates that the created category is a root directory.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -224,10 +227,10 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the category. Valid values:</p>
+             * <p>The category type. Valid values:</p>
              * <ul>
-             * <li><strong>default</strong>: audio, video, and image files. This is the default value.</li>
-             * <li><strong>material</strong>: short video materials.</li>
+             * <li><strong>default</strong> (default): audio, video, and image category.</li>
+             * <li><strong>material</strong>: short video material category.</li>
              * </ul>
              * 
              * <strong>example:</strong>

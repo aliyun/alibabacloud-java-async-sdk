@@ -106,7 +106,7 @@ public class LivePackagingConfig extends TeaModel {
         } 
 
         /**
-         * DrmConfig.
+         * <p>The DRM encryption provider configuration. If encryption is not used, leave all fields empty.</p>
          */
         public Builder drmConfig(DrmConfig drmConfig) {
             this.drmConfig = drmConfig;
@@ -114,7 +114,7 @@ public class LivePackagingConfig extends TeaModel {
         }
 
         /**
-         * LiveManifestConfigs.
+         * <p>The live streaming manifest configuration. Up to one configuration is supported.</p>
          */
         public Builder liveManifestConfigs(java.util.List<LiveManifestConfig> liveManifestConfigs) {
             this.liveManifestConfigs = liveManifestConfigs;
@@ -122,7 +122,10 @@ public class LivePackagingConfig extends TeaModel {
         }
 
         /**
-         * PartDurationMs.
+         * <p>The duration of an LL-HLS part or an LL-DASH chunk in milliseconds. The value must be no less than 200 and no greater than the segment duration in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350</p>
          */
         public Builder partDurationMs(Integer partDurationMs) {
             this.partDurationMs = partDurationMs;
@@ -130,7 +133,10 @@ public class LivePackagingConfig extends TeaModel {
         }
 
         /**
-         * SegmentDuration.
+         * <p>The duration of each segment in seconds. Default value: the segment duration of the channel. The actual segment duration is the nearest multiple of the source segment duration that is greater than or equal to the configured value. Valid values: 1 to 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder segmentDuration(Integer segmentDuration) {
             this.segmentDuration = segmentDuration;
@@ -138,7 +144,10 @@ public class LivePackagingConfig extends TeaModel {
         }
 
         /**
-         * UseAudioRenditionGroups.
+         * <p>Specifies whether to separate audio tracks for TS segments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useAudioRenditionGroups(Boolean useAudioRenditionGroups) {
             this.useAudioRenditionGroups = useAudioRenditionGroups;
@@ -256,7 +265,10 @@ public class LivePackagingConfig extends TeaModel {
             } 
 
             /**
-             * ContentId.
+             * <p>The content ID in the DRM system. Format: [A-Za-z0-9_-]+. Maximum length: 256 characters. You must ensure the uniqueness of the content ID. Otherwise, DRM playback may fail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>live-axb1-9dd2fa123</p>
              */
             public Builder contentId(String contentId) {
                 this.contentId = contentId;
@@ -264,7 +276,14 @@ public class LivePackagingConfig extends TeaModel {
             }
 
             /**
-             * EncryptionMethod.
+             * <p>The encryption algorithm. Valid values:</p>
+             * <ul>
+             * <li>SAMPLE_AES</li>
+             * </ul>
+             * <p>Default value: empty, which indicates no encryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAMPLE_AES</p>
              */
             public Builder encryptionMethod(String encryptionMethod) {
                 this.encryptionMethod = encryptionMethod;
@@ -272,7 +291,10 @@ public class LivePackagingConfig extends TeaModel {
             }
 
             /**
-             * IV.
+             * <p>The optional 128-bit (16-byte) hexadecimal value represented by a 32-character string, used with the key for encrypted data blocks. If you do not specify this value, MediaPackage creates a constant initialization vector (IV). Default value: empty. If specified, the value is passed through to the provider as a constant initialization vector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00000000000000000000000000000000</p>
              */
             public Builder iv(String iv) {
                 this.iv = iv;
@@ -280,7 +302,10 @@ public class LivePackagingConfig extends TeaModel {
             }
 
             /**
-             * RotatePeriod.
+             * <p>The DRM key rotation interval in seconds. Default value: 0, which indicates that keys are not rotated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rotatePeriod(Integer rotatePeriod) {
                 this.rotatePeriod = rotatePeriod;
@@ -288,7 +313,21 @@ public class LivePackagingConfig extends TeaModel {
             }
 
             /**
-             * SystemIds.
+             * <p>The DRM system IDs, which are determined by the protocol type used.</p>
+             * <ul>
+             * <li>DASH: supports Google Widevine and Microsoft PlayReady</li>
+             * <li>HLS: not supported</li>
+             * <li>HLS_CMAF: supports Apple FairPlay, Google Widevine, and Microsoft PlayReady</li>
+             * </ul>
+             * <p>The following three DRM systems are supported, with their corresponding system IDs:</p>
+             * <ul>
+             * <li>Apple FairPlay:
+             * 94ce86fb-07ff-4f43-adb8-93d2fa968ca2</li>
+             * <li>Google Widevine:
+             * edef8ba9-79d6-4ace-a3c8-27dcd51d21ed</li>
+             * <li>Microsoft PlayReady:
+             * 9a04f079-9840-4286-ab92-e65be0885f95.</li>
+             * </ul>
              */
             public Builder systemIds(java.util.List<String> systemIds) {
                 this.systemIds = systemIds;
@@ -296,7 +335,10 @@ public class LivePackagingConfig extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the DRM key provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://exampledrm.com/path?arg1=xxx">https://exampledrm.com/path?arg1=xxx</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

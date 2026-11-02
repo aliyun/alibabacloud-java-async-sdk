@@ -166,7 +166,7 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * <p>The scheduling settings.</p>
+         * <p>The scheduling configuration.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -187,7 +187,7 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data.</p>
+         * <p>The custom user data.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;test parameter&quot;: &quot;test value&quot;}</p>
@@ -260,13 +260,23 @@ public class SubmitSnapshotJobRequest extends Request {
             } 
 
             /**
-             * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
+             * <p>The input media.</p>
+             * <ul>
+             * <li><p>If Type is set to OSS, enter the OSS URL.</p>
+             * </li>
+             * <li><p>If Type is set to Media, enter the media asset ID.</p>
+             * </li>
+             * </ul>
+             * <p>The OSS URL must follow these rules:</p>
              * <ol>
-             * <li>oss://bucket/object</li>
-             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</li>
+             * <li><p>oss://bucket/object</p>
+             * </li>
+             * <li><p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object
+             * In the URLs, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
+             * </li>
              * </ol>
              * <blockquote>
-             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+             * <p>The OSS bucket in the URL must be added to the IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a> before it can be used.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -279,11 +289,13 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the input file. Valid values:</p>
-             * <ol>
-             * <li>OSS: an Object Storage Service (OSS) object.</li>
-             * <li>Media: a media asset.</li>
-             * </ol>
+             * <p>The input type. Valid values:</p>
+             * <ul>
+             * <li><p>OSS: the URL of an OSS object.</p>
+             * </li>
+             * <li><p>Media: the ID of a media asset.</p>
+             * </li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -356,14 +368,31 @@ public class SubmitSnapshotJobRequest extends Request {
             } 
 
             /**
-             * <p>The output file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
+             * <p>The output media.</p>
+             * <ul>
+             * <li><p>If Type is set to OSS, enter the OSS URL.</p>
+             * </li>
+             * <li><p>If Type is set to Media, enter the media asset ID.</p>
+             * </li>
+             * </ul>
+             * <p>The OSS URL must follow these rules:</p>
              * <ol>
-             * <li>oss://bucket/object</li>
-             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</li>
+             * <li><p>oss://bucket/object</p>
+             * </li>
+             * <li><p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</p>
+             * </li>
              * </ol>
-             * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS. If multiple static snapshots were captured, the object must contain the &quot;{Count}&quot; placeholder. In the case of a sprite, the object must contain the &quot;{TileCount}&quot; placeholder. The suffix of the WebVTT snapshot objects must be &quot;.vtt&quot;.</p>
+             * <p>In the URLs, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
+             * <ul>
+             * <li><p>When capturing multiple static snapshots, the object must contain the &quot;{Count}&quot; placeholder.</p>
+             * </li>
+             * <li><p>When capturing a sprite snapshot, the object must contain the &quot;{TileCount}&quot; placeholder.</p>
+             * </li>
+             * <li><p>For WebVTT snapshots, the object suffix must be &quot;.vtt&quot;.</p>
+             * </li>
+             * </ul>
              * <blockquote>
-             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the IMS console.</p>
+             * <p>The OSS bucket in the URL must be added to the IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a> before it can be used.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -376,11 +405,13 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the output file. Valid values:</p>
-             * <ol>
-             * <li>OSS: an OSS object.</li>
-             * <li>Media: a media asset.</li>
-             * </ol>
+             * <p>The input type. Valid values:</p>
+             * <ul>
+             * <li><p>OSS: the URL of an OSS object.</p>
+             * </li>
+             * <li><p>Media: the ID of a media asset.</p>
+             * </li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -438,7 +469,7 @@ public class SubmitSnapshotJobRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
+             * <p>The ID of the pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
@@ -573,7 +604,7 @@ public class SubmitSnapshotJobRequest extends Request {
             } 
 
             /**
-             * <p>The height of a single snapshot before tiling. The default value is the height of the output snapshot.</p>
+             * <p>The height of a single image. Default value: the height of the snapshot output resolution.</p>
              * 
              * <strong>example:</strong>
              * <p>480</p>
@@ -584,7 +615,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The width of a single snapshot before tiling. The default value is the width of the output snapshot.</p>
+             * <p>The width of a single image. Default value: the width of the snapshot output resolution.</p>
              * 
              * <strong>example:</strong>
              * <p>720</p>
@@ -606,7 +637,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The number of columns that the image sprite contains.</p>
+             * <p>The number of columns for image stitching.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -617,7 +648,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The number of rows that the image sprite contains.</p>
+             * <p>The number of rows for image stitching.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -628,7 +659,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The width of the frame. Default value: 0. Unit: pixels.</p>
+             * <p>The margin width. Default value: 0. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -639,7 +670,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The spacing between two adjacent snapshots. Default value: 0. Unit: pixels.</p>
+             * <p>The spacing between images. Default value: 0. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -826,7 +857,7 @@ public class SubmitSnapshotJobRequest extends Request {
             } 
 
             /**
-             * <p>The threshold that is used to filter out black frames for the first snapshot to be captured. This feature is available if you request the system to capture multiple snapshots.</p>
+             * <p>The threshold for filtering black screen images in the first frame of multi-frame snapshots.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -848,7 +879,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the frame.</p>
+             * <p>The frame type.</p>
              * 
              * <strong>example:</strong>
              * <p>intra</p>
@@ -859,7 +890,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The height of a captured snapshot.</p>
+             * <p>The height of the output image.</p>
              * 
              * <strong>example:</strong>
              * <p>480</p>
@@ -870,7 +901,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The interval at which snapshots are captured.</p>
+             * <p>The snapshot interval. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -881,7 +912,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The WebVTT snapshot configuration that specifies whether to merge the output snapshots.</p>
+             * <p>The WebVTT snapshot configuration. Specifies whether to stitch the output.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -892,7 +923,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The color value threshold that determines whether a pixel is black.</p>
+             * <p>The threshold for determining whether a pixel is a black pixel.</p>
              * 
              * <strong>example:</strong>
              * <p>70</p>
@@ -903,7 +934,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The configuration of the sprite snapshot.</p>
+             * <p>The sprite snapshot configuration.</p>
              */
             public Builder spriteSnapshotConfig(SpriteSnapshotConfig spriteSnapshotConfig) {
                 this.spriteSnapshotConfig = spriteSnapshotConfig;
@@ -911,7 +942,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The point in time at which the system starts to capture snapshots in the input video.</p>
+             * <p>The start time of the snapshot. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -922,7 +953,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The snapshot type. Valid values:</p>
+             * <p>The snapshot type.</p>
              * 
              * <strong>example:</strong>
              * <p>Sprite</p>
@@ -933,7 +964,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The width of a captured snapshot.</p>
+             * <p>The width of the output image.</p>
              * 
              * <strong>example:</strong>
              * <p>720</p>
@@ -1004,7 +1035,7 @@ public class SubmitSnapshotJobRequest extends Request {
             } 
 
             /**
-             * <p>The parameters that are used to overwrite the corresponding parameters.</p>
+             * <p>The override parameters.</p>
              */
             public Builder overwriteParams(OverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -1012,7 +1043,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The template ID.</p>
+             * <p>The ID of the template.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

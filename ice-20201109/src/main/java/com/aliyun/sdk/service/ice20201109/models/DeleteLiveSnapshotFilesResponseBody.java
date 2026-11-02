@@ -67,7 +67,7 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of deleted files.</p>
+         * <p>The list of deletion results.</p>
          */
         public Builder deleteFileResultList(java.util.List<DeleteFileResultList> deleteFileResultList) {
             this.deleteFileResultList = deleteFileResultList;
@@ -75,7 +75,7 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
@@ -144,7 +144,7 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the file was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The creation timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1660638613798</p>
@@ -155,12 +155,7 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result of deletion. A value of OK indicates that the file is deleted. Other values indicate that the file failed to be deleted.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>OK: The file was deleted.</li>
-             * <li>NotFound: The file was not found.</li>
-             * </ul>
+             * <p>The deletion result. OK indicates that the deletion was successful. Other values indicate that the deletion failed.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>

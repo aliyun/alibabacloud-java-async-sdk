@@ -112,7 +112,7 @@ public class GetCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The subcategories in the category.</p>
+         * SubCategories.
          */
         public Builder subCategories(SubCategories subCategories) {
             this.subCategories = subCategories;
@@ -240,6 +240,9 @@ public class GetCategoriesResponseBody extends TeaModel {
 
             /**
              * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>First-level category</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -271,8 +274,10 @@ public class GetCategoriesResponseBody extends TeaModel {
             /**
              * <p>The type of the category. Valid values:</p>
              * <ul>
-             * <li><strong>default</strong>: audio, video, and image files. This is the default value.</li>
-             * <li><strong>material</strong>: short video materials.</li>
+             * <li><p><strong>default</strong>: audio, video, and image files. This is the default value.</p>
+             * </li>
+             * <li><p><strong>material</strong>: short video materials.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -398,7 +403,7 @@ public class GetCategoriesResponseBody extends TeaModel {
              * <p>The category ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>129</p>
+             * <p>46</p>
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -407,10 +412,9 @@ public class GetCategoriesResponseBody extends TeaModel {
 
             /**
              * <p>The category name.</p>
-             * <ul>
-             * <li>The value can be up to 64 bytes in length.</li>
-             * <li>The value is encoded in UTF-8.</li>
-             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>First-level category</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -421,7 +425,7 @@ public class GetCategoriesResponseBody extends TeaModel {
              * <p>The level of the category. A value of <strong>0</strong> indicates a level-1 category, a value of <strong>1</strong> indicates a level-2 category, and a value of <strong>2</strong> indicates a level-3 category.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>0</p>
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -432,7 +436,7 @@ public class GetCategoriesResponseBody extends TeaModel {
              * <p>The ID of the parent category.</p>
              * 
              * <strong>example:</strong>
-             * <p>46</p>
+             * <p>-1</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -453,8 +457,10 @@ public class GetCategoriesResponseBody extends TeaModel {
             /**
              * <p>The type of the category. Valid values:</p>
              * <ul>
-             * <li><strong>default</strong>: audio, video, and image files. This is the default value.</li>
-             * <li><strong>material</strong>: short video materials.</li>
+             * <li><p><strong>default</strong>: audio, video, and image files. This is the default value.</p>
+             * </li>
+             * <li><p><strong>material</strong>: short video materials.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

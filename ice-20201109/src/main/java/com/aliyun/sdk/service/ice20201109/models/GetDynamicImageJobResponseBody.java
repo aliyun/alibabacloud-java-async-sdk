@@ -67,7 +67,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the snapshot job.</p>
+         * <p>The dynamic image task information.</p>
          */
         public Builder dynamicImageJob(DynamicImageJob dynamicImageJob) {
             this.dynamicImageJob = dynamicImageJob;
@@ -75,7 +75,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></strong></p>
@@ -157,7 +157,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS bucket.</p>
+             * <p>OSS Bucket</p>
              * 
              * <strong>example:</strong>
              * <p>test-bucket</p>
@@ -168,7 +168,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS location.</p>
+             * <p>OSS Location</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-shanghai</p>
@@ -179,7 +179,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS object.</p>
+             * <p>OSS Object</p>
              * 
              * <strong>example:</strong>
              * <p>sample-input.mp4</p>
@@ -262,12 +262,13 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
-             * <ol>
-             * <li>OSS://bucket/object</li>
+             * <p>The input media. If Type is set to OSS, enter the URL of the OSS object. If Type is set to Media, enter the ID of the media asset.
+             * The URL of the OSS object must be in one of the following formats:</p>
+             * <ul>
+             * <li>oss://bucket/object</li>
              * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</li>
-             * </ol>
-             * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
+             * </ul>
+             * <p>In the formats, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://test-bucket/sample-input.mp4</p>
@@ -278,7 +279,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The three key elements of OSS.</p>
+             * <p>The OSS triplet.</p>
              */
             public Builder ossFile(OssFile ossFile) {
                 this.ossFile = ossFile;
@@ -286,11 +287,11 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the input file. Valid values:</p>
-             * <ol>
-             * <li>OSS: an Object Storage Service (OSS) object.</li>
-             * <li>Media: a media asset.</li>
-             * </ol>
+             * <p>The input type. Valid values:</p>
+             * <ul>
+             * <li>OSS: the URL of an OSS object.</li>
+             * <li>Media: the ID of a media asset.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>
@@ -373,7 +374,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS bucket.</p>
+             * <p>OSS Bucket</p>
              * 
              * <strong>example:</strong>
              * <p>sample-bucket</p>
@@ -384,7 +385,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS location.</p>
+             * <p>OSS Location</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-shanghai</p>
@@ -395,7 +396,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS object.</p>
+             * <p>OSS Object</p>
              * 
              * <strong>example:</strong>
              * <p>path/to/object</p>
@@ -478,11 +479,13 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
-             * <ol>
-             * <li>OSS://bucket/object</li>
-             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</li>
-             * </ol>
+             * <p>The output media. If Type is set to OSS, enter the URL of the OSS object. If Type is set to Media, enter the ID of the media asset.
+             * The URL of the OSS object must be in one of the following formats:</p>
+             * <ul>
+             * <li>oss://bucket/object</li>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</li>
+             * </ul>
+             * <p>In the formats, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
@@ -493,7 +496,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The three key elements of OSS.</p>
+             * <p>The OSS triplet.</p>
              */
             public Builder ossFile(OutputOssFile ossFile) {
                 this.ossFile = ossFile;
@@ -501,7 +504,11 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the input file. Valid values: OSS: an OSS object. Media: a media asset.</p>
+             * <p>The output type. Valid values:</p>
+             * <ul>
+             * <li>OSS: the URL of an OSS object.</li>
+             * <li>Media: the ID of a media asset.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Media</p>
@@ -766,7 +773,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Error codes</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>ResourceNotFound</p>
@@ -777,7 +784,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was created.</p>
+             * <p>The creation time. The time is in the ISO 8601 format and UTC, ending with Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:17:54Z</p>
@@ -788,7 +795,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was complete.</p>
+             * <p>The time when the task was completed. The time is in the ISO 8601 format and UTC, ending with Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:30:54Z</p>
@@ -799,7 +806,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input of the job.</p>
+             * <p>The input of the task.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -807,7 +814,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job ID.</p>
+             * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
@@ -818,7 +825,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message that is returned.</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>The specified resource for &quot;CustomTemplate&quot; could not be found.</p>
@@ -829,7 +836,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was last modified.</p>
+             * <p>The last modification time. The time is in the ISO 8601 format and UTC, ending with Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:30:54Z</p>
@@ -840,7 +847,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the job.</p>
+             * <p>The name of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>SampleJob</p>
@@ -851,7 +858,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output of the job.</p>
+             * <p>The output of the task.</p>
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -859,7 +866,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the output animated image.</p>
+             * <p>The URL of the output dynamic image.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/output.gif">http://test-bucket.oss-cn-shanghai.aliyuncs.com/output.gif</a></p>
@@ -870,7 +877,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * <p>The ID of the pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
@@ -881,13 +888,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the job.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Init: The job is submitted.</li>
-             * <li>Success: The job is successful.</li>
-             * <li>Fail: The job failed.</li>
-             * </ul>
+             * <p>The status of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -898,7 +899,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was submitted.</p>
+             * <p>The time when the task was submitted. The time is in the ISO 8601 format and UTC, ending with Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:17:54Z</p>
@@ -909,7 +910,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The animation template configuration.</p>
+             * <p>The dynamic image template configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;Format&quot;:&quot;gif&quot;,&quot;Fps&quot;:5,&quot;Height&quot;:1080,&quot;Width&quot;:1920}</p>
@@ -920,7 +921,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template ID.</p>
+             * <p>The ID of the template.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
@@ -931,13 +932,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request trigger source.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Console</li>
-             * <li>Workflow</li>
-             * <li>API</li>
-             * </ul>
+             * <p>The trigger source of the request.</p>
              * 
              * <strong>example:</strong>
              * <p>API</p>
@@ -948,7 +943,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined data.</p>
+             * <p>The custom user data.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;sampleParam&quot;: &quot;sampleValue&quot;}</p>

@@ -93,7 +93,7 @@ public class VodPackagingConfig extends TeaModel {
         } 
 
         /**
-         * DrmProvider.
+         * <p>The DRM encryption provider configuration.</p>
          */
         public Builder drmProvider(DrmProvider drmProvider) {
             this.drmProvider = drmProvider;
@@ -101,7 +101,7 @@ public class VodPackagingConfig extends TeaModel {
         }
 
         /**
-         * ManifestName.
+         * <p>The manifest name. The value must match the regular expression [A-Za-z0-9_]+ and cannot exceed 128 characters in length.</p>
          */
         public Builder manifestName(String manifestName) {
             this.manifestName = manifestName;
@@ -109,7 +109,10 @@ public class VodPackagingConfig extends TeaModel {
         }
 
         /**
-         * SegmentDuration.
+         * <p>The duration of each segment in seconds. The actual segment duration is rounded to the nearest multiple of the source segment duration. Valid values: 1 to 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder segmentDuration(Long segmentDuration) {
             this.segmentDuration = segmentDuration;
@@ -117,7 +120,7 @@ public class VodPackagingConfig extends TeaModel {
         }
 
         /**
-         * StreamSelection.
+         * <p>The stream selection configuration for packaging output.</p>
          */
         public Builder streamSelection(StreamSelection streamSelection) {
             this.streamSelection = streamSelection;
@@ -209,7 +212,11 @@ public class VodPackagingConfig extends TeaModel {
             } 
 
             /**
-             * EncryptionMethod.
+             * <p>The encryption algorithm. Valid values:</p>
+             * <ul>
+             * <li>AES_128</li>
+             * <li>SAMPLE_AES</li>
+             * </ul>
              */
             public Builder encryptionMethod(String encryptionMethod) {
                 this.encryptionMethod = encryptionMethod;
@@ -217,7 +224,10 @@ public class VodPackagingConfig extends TeaModel {
             }
 
             /**
-             * IV.
+             * <p>The optional 128-bit (16-byte) hexadecimal value represented by a 32-character string, which is used with the key for encrypted data blocks. If you do not specify this value, MediaPackage creates a constant initialization vector (IV). Default value: empty. If specified, the value is passed through to the provider as a constant initialization vector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0123456789abcdef0123456789abcdef</p>
              */
             public Builder iv(String iv) {
                 this.iv = iv;
@@ -225,7 +235,19 @@ public class VodPackagingConfig extends TeaModel {
             }
 
             /**
-             * SystemIds.
+             * <p>The DRM system IDs. The number of system IDs depends on the protocol type used:</p>
+             * <ul>
+             * <li>DASH: up to two</li>
+             * <li>HLS: one</li>
+             * <li>HLS_CMAF: up to two
+             * Only the following three DRM systems are supported: Apple FairPlay, Google Widevine, and Microsoft PlayReady. The corresponding system IDs are:
+             * Apple FairPlay:
+             * 94ce86fb-07ff-4f43-adb8-93d2fa968ca2
+             * Google Widevine:
+             * edef8ba9-79d6-4ace-a3c8-27dcd51d21ed
+             * Microsoft PlayReady:
+             * 9a04f079-9840-4286-ab92-e65be0885f95.</li>
+             * </ul>
              */
             public Builder systemIds(java.util.List<String> systemIds) {
                 this.systemIds = systemIds;
@@ -233,7 +255,7 @@ public class VodPackagingConfig extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the DRM key provider.</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -313,7 +335,7 @@ public class VodPackagingConfig extends TeaModel {
             } 
 
             /**
-             * MaxVideoBitsPerSecond.
+             * <p>The maximum video stream bitrate in bps.</p>
              */
             public Builder maxVideoBitsPerSecond(Long maxVideoBitsPerSecond) {
                 this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
@@ -321,7 +343,7 @@ public class VodPackagingConfig extends TeaModel {
             }
 
             /**
-             * MinVideoBitsPerSecond.
+             * <p>The minimum video stream bitrate in bps.</p>
              */
             public Builder minVideoBitsPerSecond(Long minVideoBitsPerSecond) {
                 this.minVideoBitsPerSecond = minVideoBitsPerSecond;
@@ -329,7 +351,12 @@ public class VodPackagingConfig extends TeaModel {
             }
 
             /**
-             * StreamOrder.
+             * <p>The stream sorting rule. Valid values:</p>
+             * <ul>
+             * <li>ORIGINAL: Keeps the input sequence number.</li>
+             * <li>VIDEO_BITRATE_ASCENDING: Sorts streams by video bitrate in ascending order.</li>
+             * <li>VIDEO_BITRATE_DESCENDING: Sorts streams by video bitrate in descending order.</li>
+             * </ul>
              */
             public Builder streamOrder(String streamOrder) {
                 this.streamOrder = streamOrder;

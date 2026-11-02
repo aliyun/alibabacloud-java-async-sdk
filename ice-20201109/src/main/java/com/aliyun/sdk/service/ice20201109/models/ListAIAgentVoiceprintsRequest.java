@@ -101,7 +101,7 @@ public class ListAIAgentVoiceprintsRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -113,7 +113,7 @@ public class ListAIAgentVoiceprintsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Value values: [1,100].</p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -125,7 +125,10 @@ public class ListAIAgentVoiceprintsRequest extends Request {
         }
 
         /**
-         * RegistrationMode.
+         * <p>The voiceprint registration mode. Default value: Explicit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Explicit</p>
          */
         public Builder registrationMode(String registrationMode) {
             this.putQueryParameter("RegistrationMode", registrationMode);
@@ -134,7 +137,7 @@ public class ListAIAgentVoiceprintsRequest extends Request {
         }
 
         /**
-         * <p>A unique identifier for the voiceprint. This parameter is optional. If provided, only the information for that ID is returned. If not specified, all voiceprints under the account are returned.</p>
+         * <p>The unique ID for voiceprint recognition. This parameter is optional. If you do not specify this parameter, all voiceprint IDs under the account are listed. If you specify this parameter, only the specified voiceprint ID is displayed.</p>
          * 
          * <strong>example:</strong>
          * <p>vp_1699123456_8527</p>

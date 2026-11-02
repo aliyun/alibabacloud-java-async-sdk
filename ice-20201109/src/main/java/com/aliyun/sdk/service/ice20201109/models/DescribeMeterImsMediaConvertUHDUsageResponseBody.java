@@ -67,7 +67,7 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The usage statistics of IMS on UHD transcoding of MPS.</p>
+         * <p>The metering data for MPS UHD transcoding in IMS.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -157,7 +157,7 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The usage duration, in minutes.</p>
+             * <p>The duration. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>308028</p>
@@ -168,7 +168,7 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transcoding specifications.</p>
+             * <p>The transcoding specification.</p>
              * 
              * <strong>example:</strong>
              * <p>SuperResolution.Standard.1080P</p>
@@ -179,7 +179,7 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning time of usage. The value is a 10-digit timestamp.</p>
+             * <p>The start timestamp of the time period, which is a 10-digit UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1656950400</p>

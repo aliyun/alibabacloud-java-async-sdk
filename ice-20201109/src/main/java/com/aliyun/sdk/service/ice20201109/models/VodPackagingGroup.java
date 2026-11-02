@@ -119,7 +119,7 @@ public class VodPackagingGroup extends TeaModel {
         } 
 
         /**
-         * ApproximateAssetCount.
+         * <p>The approximate number of packaging assets in the packaging group.</p>
          */
         public Builder approximateAssetCount(Long approximateAssetCount) {
             this.approximateAssetCount = approximateAssetCount;
@@ -127,7 +127,7 @@ public class VodPackagingGroup extends TeaModel {
         }
 
         /**
-         * ConfigurationCount.
+         * <p>The number of packaging configurations in the packaging group.</p>
          */
         public Builder configurationCount(Long configurationCount) {
             this.configurationCount = configurationCount;
@@ -135,7 +135,7 @@ public class VodPackagingGroup extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time of the packaging group.</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -143,7 +143,7 @@ public class VodPackagingGroup extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the packaging group.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -151,7 +151,7 @@ public class VodPackagingGroup extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>The playback domain name of the packaging group. All VOD packaging assets in the same packaging group share the same domain name.</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -159,7 +159,10 @@ public class VodPackagingGroup extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the packaging group. The name must be unique per user, up to 128 characters in length, and match the format [A-Za-z0-9_-]+.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-group</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;

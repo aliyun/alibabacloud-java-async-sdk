@@ -117,7 +117,7 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -128,10 +128,10 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx-xxxx-xxxxx-xxxx</p>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -139,7 +139,7 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The samples.</p>
+         * Samples.
          */
         public Builder samples(Samples samples) {
             this.samples = samples;
@@ -250,10 +250,7 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the image sample.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://example.com/sample.png">https://example.com/sample.png</a></p>
+             * ImageUrl.
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -269,10 +266,7 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sample ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>xxxxxxxxxxxxx</p>
+             * SampleId.
              */
             public Builder sampleId(String sampleId) {
                 this.sampleId = sampleId;

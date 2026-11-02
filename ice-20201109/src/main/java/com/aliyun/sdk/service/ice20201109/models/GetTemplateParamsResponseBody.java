@@ -80,7 +80,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried parameters.</p>
+         * <p>The parameter list.</p>
          */
         public Builder paramList(java.util.List<ParamList> paramList) {
             this.paramList = paramList;
@@ -88,7 +88,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
@@ -286,6 +286,9 @@ public class GetTemplateParamsResponseBody extends TeaModel {
 
             /**
              * <p>The original subtitle content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Subtitle test</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -293,7 +296,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The thumbnail URL of the original material.</p>
+             * <p>The thumbnail URL of the original media.</p>
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
@@ -301,7 +304,10 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the original media in the output video, in absolute pixel values. Currently, this value is returned only for common templates created in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -320,7 +326,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the original material.</p>
+             * <p>The URL of the original media.</p>
              */
             public Builder mediaUrl(String mediaUrl) {
                 this.mediaUrl = mediaUrl;
@@ -328,7 +334,10 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * TimelineIn.
+             * <p>The in-point of the original media clip relative to the timeline. Unit: seconds. Currently, this value is returned only for common templates created in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.5</p>
              */
             public Builder timelineIn(Float timelineIn) {
                 this.timelineIn = timelineIn;
@@ -336,7 +345,10 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * TimelineOut.
+             * <p>The out-point of the original media clip relative to the timeline. Unit: seconds. Currently, this value is returned only for common templates created in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.5</p>
              */
             public Builder timelineOut(Float timelineOut) {
                 this.timelineOut = timelineOut;
@@ -344,13 +356,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The material type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Video</li>
-             * <li>Text</li>
-             * <li>Image</li>
-             * </ul>
+             * <p>The media type.</p>
              * 
              * <strong>example:</strong>
              * <p>Image</p>
@@ -361,7 +367,10 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the original media in the output video, in absolute pixel values. Currently, this value is returned only for common templates created in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -369,7 +378,10 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The horizontal distance of the original media from the upper-left corner of the video, in absolute pixel values. Currently, this value is returned only for common templates created in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -377,7 +389,10 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The vertical distance of the original media from the upper-left corner of the video, in absolute pixel values. Currently, this value is returned only for common templates created in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder y(Integer y) {
                 this.y = y;

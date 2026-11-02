@@ -82,7 +82,10 @@ public class BatchGetYikeAIAppJobRequest extends Request {
         }
 
         /**
-         * JobIds.
+         * <p>The list of task IDs. Separate multiple IDs with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cec2c13da767c090,ca3d3c9737f04586</p>
          */
         public Builder jobIds(String jobIds) {
             this.putQueryParameter("JobIds", jobIds);

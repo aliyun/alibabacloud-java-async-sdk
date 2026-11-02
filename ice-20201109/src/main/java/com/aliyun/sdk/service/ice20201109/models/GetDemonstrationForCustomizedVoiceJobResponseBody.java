@@ -80,7 +80,7 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,10 +99,10 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The sequence number of the text, which corresponds to the AduioRecordId parameter to be passed during audio check.</p>
+             * <p>The sequence number of the text, which corresponds to the AudioRecordId field that must be passed during audio detection.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -198,9 +198,9 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
             /**
              * <p>The URL of the sample audio.</p>
              * <ul>
-             * <li><p>The value is an Object Storage Service (OSS) URL.</p>
-             * <p>**</p>
-             * <p><strong>Note</strong>: The URL expires in 12 hours.</p>
+             * <li>OSS URL.<blockquote>
+             * <p>Notice: The audio file expires in 12 hours.</notice></p>
+             * </blockquote>
              * </li>
              * </ul>
              * 
@@ -213,7 +213,10 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The text content to be read.</p>
+             * <p>The text content to be read aloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No, he thought for a moment. I cannot say this to the king. That would be a lie</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -267,7 +270,7 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>A list of 20 text entries to be read and the corresponding sample audio.</p>
+             * <p>The demonstration list, which returns 20 text passages to be read aloud and their corresponding audio samples.</p>
              */
             public Builder demonstrationList(java.util.List<DemonstrationList> demonstrationList) {
                 this.demonstrationList = demonstrationList;

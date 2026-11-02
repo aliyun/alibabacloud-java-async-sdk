@@ -67,7 +67,10 @@ public class SetYikeUserRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,14 @@ public class SetYikeUserRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the user role is set successfully. Valid values:</p>
+         * <ul>
+         * <li>true: Success.</li>
+         * <li>false: Failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

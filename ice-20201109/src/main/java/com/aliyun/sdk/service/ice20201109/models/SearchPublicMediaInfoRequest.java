@@ -180,7 +180,10 @@ public class SearchPublicMediaInfoRequest extends Request {
         }
 
         /**
-         * Authorized.
+         * <p>Specifies whether the user has purchased a resource plan that includes the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder authorized(Boolean authorized) {
             this.putQueryParameter("Authorized", authorized);
@@ -189,7 +192,10 @@ public class SearchPublicMediaInfoRequest extends Request {
         }
 
         /**
-         * DynamicMetaDataMatchFields.
+         * <p>The matching conditions for dynamic metadata search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ApprovalStatus=\&quot;Available\&quot;&amp;MaterialBags=\&quot;boutiquemusic\&quot;&amp;Mood=\&quot;Nervous\&quot;&quot;</p>
          */
         public Builder dynamicMetaDataMatchFields(String dynamicMetaDataMatchFields) {
             this.putQueryParameter("DynamicMetaDataMatchFields", dynamicMetaDataMatchFields);
@@ -198,7 +204,13 @@ public class SearchPublicMediaInfoRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * <p>The entity ID, which is used to identify different types of public copyright media assets. Valid values:</p>
+         * <ul>
+         * <li>Copyright_Music: public copyright music.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Copyright_Music</p>
          */
         public Builder entityId(String entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -207,7 +219,10 @@ public class SearchPublicMediaInfoRequest extends Request {
         }
 
         /**
-         * Favorite.
+         * <p>Specifies whether the user has added the media asset to their favorites.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder favorite(Boolean favorite) {
             this.putQueryParameter("Favorite", favorite);
@@ -216,7 +231,10 @@ public class SearchPublicMediaInfoRequest extends Request {
         }
 
         /**
-         * MediaIds.
+         * <p>The IDs of the IMS media assets. Separate multiple IDs with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong>,<strong><strong>15d4a4b0448391508f2cb486</strong></strong></p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);
@@ -225,7 +243,10 @@ public class SearchPublicMediaInfoRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -234,7 +255,10 @@ public class SearchPublicMediaInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +267,20 @@ public class SearchPublicMediaInfoRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting method for the results. Format: <field>:<order>. Valid values:</p>
+         * <p>field:</p>
+         * <ul>
+         * <li>UsageCount: usage count.</li>
+         * <li>UnitPrice: unit price.</li>
+         * </ul>
+         * <p>order:</p>
+         * <ul>
+         * <li>Desc: descending order.</li>
+         * <li>Asc: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UsageCount:Desc,UnitPrice:Asc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

@@ -90,7 +90,7 @@ public class DeleteEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * <p>The material ID. Separate multiple material IDs with commas (,). You can specify up to 10 IDs.</p>
+         * <p>The IDs of the materials. Separate multiple material IDs with commas (,). You can specify up to 10 material IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,12 +103,14 @@ public class DeleteEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * <p>The material type. Valid values:</p>
-         * <p>- video</p>
-         * <p>- image</p>
-         * <p>- audio</p>
-         * <p>- subtitle</p>
-         * <p>- text</p>
+         * <p>The type of the material. Valid values:</p>
+         * <ul>
+         * <li>video</li>
+         * <li>image</li>
+         * <li>audio</li>
+         * <li>subtitle</li>
+         * <li>text</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

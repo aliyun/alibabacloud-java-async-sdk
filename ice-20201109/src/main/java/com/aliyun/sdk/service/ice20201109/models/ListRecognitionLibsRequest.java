@@ -160,13 +160,18 @@ public class ListRecognitionLibsRequest extends Request {
         } 
 
         /**
-         * <p>The type of recognition algorithm. Valid values:</p>
+         * <p>The recognition type. Valid values:</p>
          * <ul>
-         * <li>landmark</li>
-         * <li>object</li>
-         * <li>logo</li>
-         * <li>face</li>
-         * <li>label</li>
+         * <li><p>landmark: custom landmark</p>
+         * </li>
+         * <li><p>object: custom object</p>
+         * </li>
+         * <li><p>logo: custom logo</p>
+         * </li>
+         * <li><p>face: custom face</p>
+         * </li>
+         * <li><p>label: custom label</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -180,7 +185,10 @@ public class ListRecognitionLibsRequest extends Request {
         }
 
         /**
-         * LibId.
+         * <p>The ID of the library. If you specify this parameter, the system queries the specified library. You can specify multiple IDs separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lib1,lib2,lib3</p>
          */
         public Builder libId(String libId) {
             this.putQueryParameter("LibId", libId);
@@ -220,7 +228,7 @@ public class ListRecognitionLibsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 50.</p>
+         * <p>The number of entries per page. The maximum number of entries per page is 50.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

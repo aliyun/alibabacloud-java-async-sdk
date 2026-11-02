@@ -161,13 +161,18 @@ public class ListRecognitionEntitiesRequest extends Request {
         } 
 
         /**
-         * <p>The type of recognition algorithm associated with the entity. Valid values:</p>
+         * <p>The recognition type. Valid values:</p>
          * <ul>
-         * <li>landmark</li>
-         * <li>object</li>
-         * <li>logo</li>
-         * <li>face</li>
-         * <li>label</li>
+         * <li><p>landmark: custom landmark</p>
+         * </li>
+         * <li><p>object: custom object</p>
+         * </li>
+         * <li><p>logo: custom logo</p>
+         * </li>
+         * <li><p>face: custom face</p>
+         * </li>
+         * <li><p>label: custom label</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -225,7 +230,7 @@ public class ListRecognitionEntitiesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 50.</p>
+         * <p>The number of entries per page. Maximum value: 50.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

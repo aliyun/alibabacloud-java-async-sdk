@@ -21,9 +21,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>This API is used to activate a specific license for Real-time Conversational AI by providing a batch ID (<code>LicenseItemId</code>), authorization code (<code>AuthCode</code>), and device ID (<code>DeviceId</code>). Upon successful activation, the API returns a response containing the request ID, an error code, the request status, the HTTP status code, and the activated license information.
-     * <strong>Note</strong>: Ensure that the provided batch ID, authorization code, and device ID are correct. Incorrect information may cause the activation to fail.</p>
+     * <h2>Request description</h2>
+     * <p>This operation activates a specific Real-time Conversational AI service license by providing the batch ID (<code>LicenseItemId</code>), authorization code (<code>AuthCode</code>), and device ID (<code>DeviceId</code>). Upon successful activation, the response includes the request ID, error code, request status, HTTP status code, and activated license information.
+     * <strong>Note</strong>: Ensure that the provided batch ID, authorization code, and device ID are accurate. Otherwise, the activation may fail.</p>
      * 
      * @param request the request parameters of ActiveAiRtcLicense  ActiveAiRtcLicenseRequest
      * @return ActiveAiRtcLicenseResponse
@@ -38,7 +38,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</p>
+     * <p>Categories support up to three levels, and each level supports up to 100 subcategories.</p>
      * 
      * @param request the request parameters of AddCategory  AddCategoryRequest
      * @return AddCategoryResponse
@@ -59,17 +59,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>A flow can have only one source.</li>
+     * <li>If the specified flow instance ID does not exist, the API returns an error.</li>
+     * <li>By default, a flow can have only one input. After you enable dual-stream disaster recovery, you can add another input.</li>
      * </ul>
-     * <h3><a href="#"></a>Source type</h3>
+     * <h3>Input type descriptions</h3>
      * <ul>
-     * <li>RTMP-PUSH: An input that you can push to the returned URL over the RTMP protocol.</li>
-     * <li>RTMP-PULL: An input that the MediaConnect flow pulls from the specified server over the RTMP protocol.</li>
-     * <li>SRT-Listener: An input that you can push to the returned URL over the SRT protocol.</li>
-     * <li>SRT-Caller: An input that the MediaConnect flow pulls from the specified server over the SRT protocol.</li>
-     * <li>Flow: An input that uses the output of another upstream flow. You must specify an upstream flow and its output. The output type of the upstream flow must be SRT-Listener or RTMP-PULL. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</li>
+     * <li>RTMP-PUSH: Creates an RTMP listener input. You can push streams to the URL returned by the API by using the RTMP protocol.</li>
+     * <li>RTMP-PULL: Creates an RTMP back-to-origin pull input. The flow pulls RTMP live streams from the origin server that you specify.</li>
+     * <li>SRT-Listener: Creates an SRT listener input. You can push streams to the URL returned by the API by using the SRT protocol.</li>
+     * <li>SRT-Caller: Creates an SRT back-to-origin pull input. The flow pulls SRT live streams from the origin server that you specify.</li>
+     * <li>Flow: Uses the output of another upstream flow instance as the input. You must specify both the instance ID and the output name of the peer flow. The output of the upstream flow instance must be of the SRT-Listener or RTMP-PULL type. When flow instances are cascaded, Express Connect circuits are used by default. This can be used for cross-region distribution among multiple flows.</li>
      * </ul>
      * 
      * @param request the request parameters of AddMediaConnectFlowInput  AddMediaConnectFlowInputRequest
@@ -79,19 +79,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>A flow can have a maximum of four outputs.</li>
-     * <li>The output names in the same flow cannot be duplicated.</li>
-     * <li>You can set an upper limit on the number of concurrent viewers for each output. If this limit is exceeded, any new playback requests will fail. Each output supports up to five streams.</li>
+     * <li>If the specified flow instance ID does not exist, the API returns an error.</li>
+     * <li>A flow instance can have up to four outputs.</li>
+     * <li>Output names within the same flow instance must be unique.</li>
+     * <li>You can set a limit on the number of concurrent players for each output. New playback requests fail if the limit is exceeded. Each output supports up to five concurrent playback streams.</li>
      * </ul>
-     * <h3><a href="#"></a>Output types</h3>
+     * <h3>Output type descriptions</h3>
      * <ul>
-     * <li>RTMP-PUSH: An output that the MediaConnect flow pushes to the server you specified over the RTMP protocol.</li>
-     * <li>RTMP-PULL: An output that you can pull using the returned streaming URL over the RTMP protocol.</li>
-     * <li>SRT-Caller: An output that the MediaConnect flow pushes to the server you specified over the SRT protocol.</li>
-     * <li>SRT-Listener: An output that you can pull using the returned streaming URL over the SRT protocol.</li>
-     * <li>Flow: An output that is pushed to the source URL of another MediaConnect flow. The source type of the destination flow must be SRT-Listener or RTMP-PUSH. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</li>
+     * <li>RTMP-PUSH: Creates an RTMP push output. The flow uses the RTMP protocol to push the live stream to the origin server in Settings.</li>
+     * <li>RTMP-PULL: Creates an RTMP pull output. You can use the RTMP protocol to pull the stream from the URL returned in the API response.</li>
+     * <li>SRT-Caller: Creates an SRT push output. The flow uses the SRT protocol to push the live stream to the origin server in Settings.</li>
+     * <li>SRT-Listener: Creates an SRT pull output. You can use the SRT protocol to pull the stream from the URL returned in the API response.</li>
+     * <li>Flow: Uses the input of another downstream flow instance as the output. You must specify both the instance ID and the input name of the peer flow. The input type of the downstream flow instance must be a listener type, such as SRT-Listener or RTMP-PUSH. This instance pushes the live stream to the downstream flow. When flow instances are cascaded, Express Connect circuits are used by default, which is active for cross-area distribution among multiple flows.</li>
      * </ul>
      * 
      * @param request the request parameters of AddMediaConnectFlowOutput  AddMediaConnectFlowOutputRequest
@@ -106,6 +106,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddMediaMarksResponse> addMediaMarks(AddMediaMarksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Tags media assets created from live streams.</p>
+     * 
      * @param request the request parameters of AddStreamTagToSearchLib  AddStreamTagToSearchLibRequest
      * @return AddStreamTagToSearchLibResponse
      */
@@ -113,11 +116,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</p>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
-     * <li>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</li>
+     * <li>To use standard templates, refer to <a href="https://help.aliyun.com/document_detail/445399.html">Quick start for standard templates</a>.</li>
+     * <li>To use advanced templates, refer to <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
      * </ul>
+     * <h3>Limits</h3>
+     * <p>After an advanced template is created, it requires parsing time and its status is Processing. During this period, the template is unavailable. You can use the template only when its status changes to Available. The parsing time depends on the template file size and typically ranges from 10 seconds to 5 minutes.</p>
      * 
      * @param request the request parameters of AddTemplate  AddTemplateRequest
      * @return AddTemplateResponse
@@ -168,9 +173,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can cancel a media fingerprint analysis job only if the job is in the Queuing state.</p>
      * <ul>
-     * <li>We recommend that you call the <strong>UpdatePipeline</strong> operation to set the status of the ApsaraVideo Media Processing (MPS) queue to Paused before you cancel a job. This suspends job scheduling in the MPS queue. After the job is canceled, you must set the status of the MPS queue back to Active so that the other jobs in the MPS queue can be scheduled.</li>
+     * <li>This operation can only cancel jobs that are in the <strong>Queued</strong> state.</li>
+     * <li>Set the pipeline status to Paused by calling the <strong>UpdatePipeline</strong> operation to pause job scheduling before you call this operation to cancel a job. After the job is canceled, set the pipeline status back to Active so that jobs in the pipeline can be scheduled and executed.</li>
      * </ul>
      * 
      * @param request the request parameters of CancelDNAJob  CancelDNAJobRequest
@@ -191,11 +196,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelIProductionJobResponse> cancelIProductionJob(CancelIProductionJobRequest request);
 
     /**
-     * <b>description</b> :
-     * <h2><a href="#"></a></h2>
-     * <pre><code>
-     * </code></pre>
-     * 
      * @param request the request parameters of ClearAIAgentVoiceprint  ClearAIAgentVoiceprintRequest
      * @return ClearAIAgentVoiceprintResponse
      */
@@ -203,7 +203,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  If a flow has two sources, you cannot disable Source Failover. Delete one of them before this operation.</p>
+     * <ul>
+     * <li>If the instance has two inputs, you cannot disable dual-stream disaster recovery. You must delete one input before the call can succeed.</li>
+     * </ul>
      * 
      * @param request the request parameters of CloseMediaConnectFlowFailover  CloseMediaConnectFlowFailoverRequest
      * @return CloseMediaConnectFlowFailoverResponse
@@ -223,6 +225,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAuditResponse> createAudit(CreateAuditRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation only initializes the training task information and does not submit the training. To formally submit the training, call the <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> operation.</p>
+     * 
      * @param request the request parameters of CreateAvatarTrainingJob  CreateAvatarTrainingJobRequest
      * @return CreateAvatarTrainingJobResponse
      */
@@ -241,6 +246,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCustomTemplateResponse> createCustomTemplate(CreateCustomTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</p>
+     * <ul>
+     * <li>To achieve entertainment-level effects, call this operation. When using it, you need to record 20 fixed script texts. The system extracts key voiceprint features, enabling quick and low-cost voice cloning customization.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateCustomizedVoiceJob  CreateCustomizedVoiceJobRequest
      * @return CreateCustomizedVoiceJobResponse
      */
@@ -248,7 +259,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can create up to five media fingerprint libraries within an account. To increase the quota, submit a ticket. You can call the DeleteDNADB operation to delete the fingerprint libraries that you no longer need.</p>
+     * <p>By default, each user can create up to 5 media fingerprint libraries. To increase the quota, <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c4g.11186623.0.0.645019b6Btnu4q">submit a ticket</a>. You can call the DeleteDNADB operation to delete unused media fingerprint libraries.</p>
      * 
      * @param request the request parameters of CreateDNADB  CreateDNADBRequest
      * @return CreateDNADBResponse
@@ -256,18 +267,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDNADBResponse> createDNADB(CreateDNADBRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Billing is based on the duration of the produced video. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">video clip</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">live streaming editing</a>. If the processing failed, no fees are charged.</li>
+     * <li>After you create an editing project, you can invoke the <a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - commit a media editing and producing job</a> operation to commit a media editing and producing node. You can also invoke the <a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - commit a live streaming editing node</a> operation to commit a live streaming editing node.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateEditingProject  CreateEditingProjectRequest
      * @return CreateEditingProjectResponse
      */
     CompletableFuture<CreateEditingProjectResponse> createEditingProject(CreateEditingProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls the CreateHotwordLibrary operation to create a hotword library.</p>
+     * 
      * @param request the request parameters of CreateHotwordLibrary  CreateHotwordLibraryRequest
      * @return CreateHotwordLibraryResponse
      */
     CompletableFuture<CreateHotwordLibraryResponse> createHotwordLibrary(CreateHotwordLibraryRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/3004591.html">billing methods and pricing of IPC</a>.</p>
+     * 
      * @param request the request parameters of CreateIpcOrder  CreateIpcOrderRequest
      * @return CreateIpcOrderResponse
      */
@@ -275,15 +298,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</p>
-     * <h3><a href="#"></a>Precautions</h3>
+     * <h2>Operation description</h2>
+     * <p>This operation creates a live video packaging service channel and currently supports the HLS protocol. The system automatically generates the ingest endpoint URLs and the username and password required for authentication.</p>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>Channel group names and channel names can contain only letters, digits, underscores (_), and hyphens (-).</li>
-     * <li>Only <code>HLS</code> is supported.</li>
-     * <li>The segment duration must be from 1 to 30 seconds.</li>
-     * <li>The number of M3U8 segments must be from 2 to 100.
-     * If the request succeeds, the system will return the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</li>
+     * <li>The channel group name and channel name can only contain uppercase and lowercase letters, digits, underscores, and hyphens.</li>
+     * <li>Currently, only the <code>HLS</code> protocol is supported.</li>
+     * <li>The segment duration must be set to a value between 1 and 30 seconds.</li>
+     * <li>The number of m3u8 segments must be between 2 and 100.
+     * A successful response returns the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateLivePackageChannel  CreateLivePackageChannelRequest
@@ -293,7 +316,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you create a channel group, the assigned origin domain is returned.</p>
+     * <p>Creates a channel group for the live packaging service. The assigned origin domain name is returned after the channel group is created.</p>
      * 
      * @param request the request parameters of CreateLivePackageChannelGroup  CreateLivePackageChannelGroupRequest
      * @return CreateLivePackageChannelGroupResponse
@@ -302,8 +325,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>This API operation is mainly used to configure origin settings, security policies including the IP address blacklist and whitelist and authorization code, and time shifting settings for channels. Before you create an origin endpoint, you must create a live package channel group and channel. After you create the endpoint, the endpoint URL and other configuration details are returned.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation allows you to create an origin endpoint for a real-time packaging service. It is mainly used to configure the back-to-origin settings, security policy (such as IP blacklists and whitelists, and authorization codes), and time-shift features for a channel. Currently, only HLS protocol playback is supported. Before creating an origin endpoint, you must create a real-time packaging channel group and channel. After the endpoint is created, the endpoint playback URL and other configuration details are returned.</p>
      * 
      * @param request the request parameters of CreateLivePackageOriginEndpoint  CreateLivePackageOriginEndpointRequest
      * @return CreateLivePackageOriginEndpointResponse
@@ -312,7 +335,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must specify a recording template for live stream recording. You can configure information such as the format and duration of a recording in a recording template. The recording format can be M3U8, MP4, or FLV.</p>
+     * <p>A recording template must be specified for live recording. The recording template allows you to configure information such as the output format of the recording file (m3u8, mp4, or flv) and the duration of the recording file.</p>
      * 
      * @param request the request parameters of CreateLiveRecordTemplate  CreateLiveRecordTemplateRequest
      * @return CreateLiveRecordTemplateResponse
@@ -326,6 +349,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateLiveSnapshotTemplateResponse> createLiveSnapshotTemplate(CreateLiveSnapshotTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Real-time media transcoding is supported only in the Shanghai region.</p>
+     * 
      * @param request the request parameters of CreateLiveTranscodeTemplate  CreateLiveTranscodeTemplateRequest
      * @return CreateLiveTranscodeTemplateResponse
      */
@@ -333,8 +359,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  The flow names cannot be duplicated in the same region.</p>
      * <ul>
+     * <li>The flow names cannot be duplicated in the same region.</li>
      * <li>Take note of the returned flow ID. You may reference it in other API operations.</li>
      * </ul>
      * 
@@ -355,8 +381,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * <ul>
+     * <li>Create a live media input.</li>
+     * </ul>
+     * <h2>Queries per second (QPS) limit</h2>
+     * <p>The queries per second (QPS) limit for this API is 50 requests per second per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</p>
      * 
      * @param request the request parameters of CreateMediaLiveInput  CreateMediaLiveInputRequest
      * @return CreateMediaLiveInputResponse
@@ -387,9 +416,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
      * <ul>
-     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * <li>This operation is currently supported in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions. Other regions are not supported.</li>
+     * <li>The queries per second (QPS) limit per user for this operation is 50. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342832.html">QPS limits</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRecognitionEntity  CreateRecognitionEntityRequest
@@ -399,10 +428,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
      * <ul>
-     * <li>Workflow for using a custom recognition library: Create a library, create a custom object entity within the library, register sample images for the entity, create an analysis template that uses your custom library, and then submit an analysis task using the template.</li>
-     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * <li>This API operation is currently supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</li>
+     * <li>Usage of a self-registered recognition library (using object as an example): Create a custom object library and a custom object entity. After the creation, register images for the custom object entity. After the registration, create Template A that includes the self-registered object library, use Template A to submit an analysis task, and then query the results.</li>
+     * <li>The queries per second (QPS) limit per user is 50. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342832.html">QPS limits</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRecognitionLib  CreateRecognitionLibRequest
@@ -412,9 +441,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
      * <ul>
-     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * <li>This operation is currently supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</li>
+     * <li>The QPS limit per user for this operation is 50. If this limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342832.html">QPS limits</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRecognitionSample  CreateRecognitionSampleRequest
@@ -424,7 +453,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The large visual model feature is still in the public preview phase. You can use this feature for free for 1,000 hours of videos.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">billing</a> methods and pricing of intelligent retrieval.</p>
      * 
      * @param request the request parameters of CreateSearchIndex  CreateSearchIndexRequest
      * @return CreateSearchIndexResponse
@@ -457,14 +486,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to obtain the upload URLs and credentials of audio and video files. You can also call this operation to obtain the upload URLs and credentials of images and auxiliary media assets.</p>
+     * <h3>Operation description</h3>
      * <ul>
-     * <li>Obtaining an upload URL and credential is essential for Intelligent Media Services (IMS) and is required in each upload operation.</li>
-     * <li>If the video upload credential expires, you can call the RefreshUploadMedia operation to obtain a new upload credential. The default validity period of a video upload credential is 3,000 seconds.</li>
-     * <li>After you upload a media asset, you can configure a callback to receive upload event notifications or call the GetMediaInfo operation to determine whether the media asset is uploaded based on the returned status.</li>
+     * <li>Retrieving the upload URL and credential is a core foundation of Intelligent Media Services and a required procedure for every upload operation.</li>
+     * <li>If the video upload credential expires (the default validity epoch is 3000 seconds), invoke the refresh video upload credential operation to obtain a new upload credential.</li>
+     * <li>After the upload, you can configure callbacks to accept upload event notifications, or invoke the GetMediaInfo operation to check the returned media asset status to determine whether the upload is successful.</li>
      * <li>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</li>
-     * <li>You can call this operation to upload media assets only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media asset to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</li>
-     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * <h3>Limits</h3>
+     * <ul>
+     * <li>This operation supports uploads only to VOD storage. Uploads to user-owned OSS storage are not supported. If you use your own OSS storage, upload files to OSS by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then invoke the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS file in the media library.</li>
+     * <li>This operation currently supports only the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateUploadMedia  CreateUploadMediaRequest
@@ -474,9 +506,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to upload only a local media stream. After the media stream is uploaded, it is associated with the specified media asset ID.</p>
      * <ul>
-     * <li>You can call this operation to upload media streams only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</li>
+     * <li>Upload only a local media stream. After the media stream is uploaded, it is associated with the specified media asset ID.</li>
+     * <li>Upload media streams only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</li>
      * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
      * </ul>
      * 
@@ -553,7 +585,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</p>
+     * <p>This operation also deletes all subcategories, including level-2 and level-3 categories. Proceed with caution.</p>
      * 
      * @param request the request parameters of DeleteCategory  DeleteCategoryRequest
      * @return DeleteCategoryResponse
@@ -606,7 +638,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2><a href="#"></a></h2>
      * <ul>
-     * <li>You can call this operation to delete a specified hotword library.</li>
+     * <li>Delete a specified hotword library.</li>
      * <li>The delete operation is irreversible.</li>
      * <li>You can create up to 100 hotword libraries in an account.</li>
      * </ul>
@@ -684,8 +716,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
+     * <li>When the specified flow ID is not available, an error code is returned.</li>
      * <li>When a flow is deleted, its source and outputs are also deleted.</li>
      * <li>When a flow is in the online state, it cannot be deleted.</li>
      * </ul>
@@ -697,10 +729,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>When a flow is in the online state, its source cannot be deleted.</li>
-     * <li>You can delete the source only after all outputs of the flow have been deleted.</li>
+     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>When the Flow instance status is online, the input cannot be deleted.</li>
+     * <li>Only after all outputs under the Flow instance have been deleted can the input be deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteMediaConnectFlowInput  DeleteMediaConnectFlowInputRequest
@@ -710,8 +742,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
+     * <li>When the specified flow ID is not available, an error code is returned.</li>
      * <li>When a flow is in the online state, its outputs cannot be deleted.</li>
      * </ul>
      * 
@@ -734,7 +766,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p> You can only delete a channel that is not running.</p>
+     * <ul>
+     * <li>You can only delete a channel that is not running.</li>
+     * </ul>
      * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
@@ -745,7 +779,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can delete an input only when it is not associated with a MediaLive channel.</p>
+     * <ul>
+     * <li>You can delete an input only when it is not associated with a MediaLive channel.</li>
+     * </ul>
      * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
@@ -756,7 +792,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can only delete a security group not associated with an input.</p>
+     * <ul>
+     * <li>You can only delete a security group not associated with an input.</li>
+     * </ul>
      * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
@@ -779,7 +817,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to delete multiple media streams at a time.</p>
+     * <p>Delete multiple media streams at a time.</p>
      * 
      * @param request the request parameters of DeletePlayInfo  DeletePlayInfoRequest
      * @return DeletePlayInfoResponse
@@ -794,9 +832,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
      * <ul>
-     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * <li>This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</li>
+     * <li>Callable up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteRecognitionEntity  DeleteRecognitionEntityRequest
@@ -806,9 +844,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
      * <ul>
-     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * <li>This operation is currently supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</li>
+     * <li>The queries per second (QPS) limit per user for this operation is 50. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342832.html">QPS limits</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteRecognitionLib  DeleteRecognitionLibRequest
@@ -818,9 +856,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
      * <ul>
-     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * <li>This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</li>
+     * <li>Callable up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteRecognitionSample  DeleteRecognitionSampleRequest
@@ -841,6 +879,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSourceResponse> deleteSource(DeleteSourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls the DeleteSourceLocation operation to delete a source location.</p>
+     * 
      * @param request the request parameters of DeleteSourceLocation  DeleteSourceLocationRequest
      * @return DeleteSourceLocationResponse
      */
@@ -885,10 +926,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
      * <ul>
-     * <li><strong>Feature</strong>: You can call this operation to query the information about an AI agent.</li>
-     * <li><strong>Scenario</strong>: If you need to monitor or analyze the performance of an AI agent in a call or debug the agent configurations, you can call this operation to obtain required data.</li>
+     * <li><strong>Feature description</strong>: This operation queries the details of a specified agent instance.</li>
+     * <li><strong>Scenarios</strong>: Call this operation to obtain the required data when you need to monitor or analyze the performance of an agent during a call, or debug the configuration effects of the agent.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeAIAgentInstance  DescribeAIAgentInstanceRequest
@@ -928,7 +968,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the detailed callback configurations of an AI agent.</p>
+     * <p>Retrieves the event callback configuration for a specified AIAgent.</p>
      * 
      * @param request the request parameters of DescribeNotifyConfig  DescribeNotifyConfigRequest
      * @return DescribeNotifyConfigResponse
@@ -979,9 +1019,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
-     * <p>You can call this operation to create an AI agent based on the provided ID. You can join the channel based on the returned information and talk to the agent.
-     * <strong>Note:</strong> Make sure that the provided AI agent ID is valid and configure optional parameters based on your business requirements.</p>
+     * <p>This API allows you to create an agent instance based on the provided AI agent ID (AIAgentId). You can use the information in the API response to join the corresponding room and converse with the agent.</p>
+     * <blockquote>
+     * <p>Notice: Ensure that the provided AI agent ID is valid and configure optional parameters based on common scenarios.</notice></p>
+     * </blockquote>
      * 
      * @param request the request parameters of GenerateAIAgentCall  GenerateAIAgentCallRequest
      * @return GenerateAIAgentCallResponse
@@ -989,6 +1030,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateAIAgentCallResponse> generateAIAgentCall(GenerateAIAgentCallRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a customer master key (CMK) in KMS before you call this operation.</p>
+     * 
      * @param request the request parameters of GenerateKMSDataKey  GenerateKMSDataKeyRequest
      * @return GenerateKMSDataKeyResponse
      */
@@ -1035,11 +1080,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>This API allows you to retrieve a list of license batches for Real-time Conversational AI using filters such as Batch ID, status, and type.</li>
-     * <li>By default, the <code>NeedTotalCount</code> parameter is set to <code>true</code>, indicating that the response includes the total count of matching records. Set it to <code>false</code> if you do not need this total.</li>
-     * <li>If no filter criteria are provided, the API returns information for all license batches.</li>
+     * <li>Retrieve AI Real-Time Communication license batches based on filter criteria such as License Item ID, Status, and Type.</li>
+     * <li>The <code>NeedTotalCount</code> parameter defaults to <code>true</code>. When set to true, the response includes the total count of matching entries. To exclude the total count, set this parameter to <code>false</code>.</li>
+     * <li>If you do not specify any filter criteria, the operation returns the details for all license batches by default.</li>
      * </ul>
      * 
      * @param request the request parameters of GetAiRtcLicenseInfoList  GetAiRtcLicenseInfoListRequest
@@ -1067,7 +1112,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the information about a category and its subcategories based on the category ID and category type.</p>
+     * <p>Query the information about a category and its subcategories based on the category ID and category type.</p>
      * 
      * @param request the request parameters of GetCategories  GetCategoriesRequest
      * @return GetCategoriesResponse
@@ -1075,6 +1120,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCategoriesResponse> getCategories(GetCategoriesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls the GetChannel operation to retrieve and assemble channel information.</p>
+     * 
      * @param request the request parameters of GetChannel  GetChannelRequest
      * @return GetChannelResponse
      */
@@ -1088,35 +1136,35 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the information about a template with the ID specified by the TemplateId parameter. You can also query the information about the default template. If TemplateId is specified, other parameters are ignored and the template whose ID is specified is queried. If TemplateId is not specified, the default template is queried based on other parameters. In this case, Type is required.
-     * Template types:</p>
+     * <p>This operation queries the information about a template with a specified ID based on TemplateId, or queries the information about the default template. If TemplateId is not empty, other parameters are ignored and the information about the template with the specified TemplateId is queried. If TemplateId is empty, the default template of the user is queried based on other parameters. In this case, Type is required.
+     * templatetype (Type):</p>
      * <ol>
-     * <li>1: transcoding template.</li>
-     * <li>2: snapshot template.</li>
-     * <li>3: animated image template.</li>
-     * <li>4\. image watermark template.</li>
-     * <li>5: text watermark template.</li>
-     * <li>6: subtitle template.</li>
-     * <li>7: AI-assisted content moderation template.</li>
-     * <li>8: AI-assisted intelligent thumbnail template.</li>
-     * <li>9: AI-assisted intelligent erasure template.
-     * Subtypes of transcoding templates:</li>
-     * <li>1 (Normal): regular template.</li>
-     * <li>2 (AudioTranscode): audio transcoding template.</li>
-     * <li>3 (Remux): container format conversion template.</li>
-     * <li>4 (NarrowBandV1): Narrowband HD 1.0 template.</li>
-     * <li>5 (NarrowBandV2): Narrowband HD 2.0 template.
-     * Subtypes of snapshot templates:</li>
-     * <li>1 (Normal): regular template.</li>
-     * <li>2 (Sprite): sprite template.</li>
-     * <li>3 (WebVtt): WebVTT template.
-     * Subtypes of AI-assisted content moderation templates:</li>
-     * <li>1 (Video): video moderation template.</li>
-     * <li>2 (Audio): audio moderation template.</li>
-     * <li>3 (Image): image moderation template.
-     * Subtypes of AI-assisted intelligent erasure templates:</li>
-     * <li>1 (VideoDelogo): logo erasure template.</li>
-     * <li>2 (VideoDetext): subtitle erasure template.</li>
+     * <li>1: Transcoding template</li>
+     * <li>2: Snapshot template</li>
+     * <li>3: Animated image template</li>
+     * <li>4: Image watermark template</li>
+     * <li>5: Text watermark template</li>
+     * <li>6: Subtitle template</li>
+     * <li>7: AI content moderation</li>
+     * <li>8: AI smart cover</li>
+     * <li>9: AI smart erasure
+     * Subtype of the transcoding template (Subtype):</li>
+     * <li>1: Normal transcoding template (Normal)</li>
+     * <li>2: Audio transcoding template (AudioTranscode)</li>
+     * <li>3: Remuxing (Remux)</li>
+     * <li>4: Narrowband HD 1.0 (NarrowBandV1)</li>
+     * <li>5: Narrowband HD 2.0 (NarrowBandV2)
+     * Subtype of the snapshot template (Subtype):</li>
+     * <li>1: Normal snapshot/Static snapshot (Normal)</li>
+     * <li>2: Sprite snapshot (Sprite)</li>
+     * <li>3: WebVTT snapshot (WebVtt)
+     * Subtype of the AI content moderation template (Subtype):</li>
+     * <li>1: Video moderation (Video) </li>
+     * <li>2: Audio moderation (Audio)</li>
+     * <li>3: Image moderation (Image)
+     * Subtype of the AI smart erasure template (Subtype):</li>
+     * <li>1: Icon erasure (VideoDelogo)</li>
+     * <li>2: Subtitle erasure (VideoDetext)</li>
      * </ol>
      * 
      * @param request the request parameters of GetCustomTemplate  GetCustomTemplateRequest
@@ -1174,8 +1222,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a></h2>
-     * <p>You can call this operation to retrieve details of a specified hotword library based on the ID, including the library name, description, and content and attributes of all hotwords in it.</p>
+     * <h2>Request description</h2>
+     * <p>Provide a library ID to retrieve the details of the hotword library, including the library name, description, and all hotwords with their properties. This operation is primarily used to manage and view the content of existing hotword libraries.</p>
      * 
      * @param request the request parameters of GetHotwordLibrary  GetHotwordLibraryRequest
      * @return GetHotwordLibraryResponse
@@ -1202,8 +1250,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>This API operation allows you to query the details of a live package channel, including the creation time, description, ingest endpoint, protocol, number of segments, and segment duration.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to query the details of a real-time packaging channel under a specified channel, including but not limited to the channel creation time, description, ingest endpoints, protocol, segment count, and segment duration.</p>
      * 
      * @param request the request parameters of GetLivePackageChannel  GetLivePackageChannelRequest
      * @return GetLivePackageChannelResponse
@@ -1212,8 +1260,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>You can call this API operation to query the details of a specific channel group, including its name, description, origin domain, and creation and last modification timestamps.</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation queries the detailed configurations of a specified channel group, including the channel group name, description, origin domain name, and the creation and last modification timestamps.</p>
      * 
      * @param request the request parameters of GetLivePackageChannelGroup  GetLivePackageChannelGroupRequest
      * @return GetLivePackageChannelGroupResponse
@@ -1222,7 +1270,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Request description.</h2>
      * 
      * @param request the request parameters of GetLivePackageOriginEndpoint  GetLivePackageOriginEndpointRequest
      * @return GetLivePackageOriginEndpointResponse
@@ -1273,9 +1321,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>The returned StartTime is valid only when the flow is in the online state.</li>
+     * <li>If the specified flow instance ID does not exist, the API returns an error.</li>
+     * <li>The StartTime returned by the API is valid only when the flow status is online.</li>
      * </ul>
      * 
      * @param request the request parameters of GetMediaConnectFlow  GetMediaConnectFlowRequest
@@ -1291,7 +1339,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When the specified flow ID is not available, an error code is returned.</p>
+     * <ul>
+     * <li>If the specified flow instance ID does not exist, the API returns an error.</li>
+     * </ul>
      * 
      * @param request the request parameters of GetMediaConnectFlowInput  GetMediaConnectFlowInputRequest
      * @return GetMediaConnectFlowInputResponse
@@ -1300,7 +1350,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When the specified flow ID is not available, an error code is returned.</p>
+     * <ul>
+     * <li>If the specified flow instance ID does not exist, the API operation returns an error.</li>
+     * </ul>
      * 
      * @param request the request parameters of GetMediaConnectFlowOutput  GetMediaConnectFlowOutputRequest
      * @return GetMediaConnectFlowOutputResponse
@@ -1315,7 +1367,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified.</p>
+     * <p>If MediaId is not empty, it takes precedence. If MediaId is empty, InputURL must be specified.</p>
      * 
      * @param request the request parameters of GetMediaInfo  GetMediaInfoRequest
      * @return GetMediaInfoResponse
@@ -1340,8 +1392,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * <ul>
+     * <li>Query the details of a media live input.</li>
+     * </ul>
+     * <h2>Queries per second (QPS) limit</h2>
+     * <p>The queries per second (QPS) limit for this API is 50 requests per second per user. If this limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</p>
      * 
      * @param request the request parameters of GetMediaLiveInput  GetMediaLiveInputRequest
      * @return GetMediaLiveInputResponse
@@ -1365,6 +1420,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMediaMarksResponse> getMediaMarks(GetMediaMarksRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Limits</h3>
+     * <p>This operation supports querying data of video editing tasks from the last three months.</p>
+     * 
      * @param request the request parameters of GetMediaProducingJob  GetMediaProducingJobRequest
      * @return GetMediaProducingJobResponse
      */
@@ -1383,9 +1442,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPipelineResponse> getPipeline(GetPipelineRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You use the ID of a video or audio file to query the playback URL of the file. Then, you can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</p>
-     * 
      * @param request the request parameters of GetPlayInfo  GetPlayInfoRequest
      * @return GetPlayInfoResponse
      */
@@ -1459,10 +1515,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</p>
+     * <p>The template factory encapsulates the editing and synthesis timeline. You can define commonly used timelines as templates. When similar requirements arise, you only need to pass key parameters and media assets to produce videos.</p>
      * <ul>
-     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</li>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
+     * <li>To use standard templates, refer to <a href="https://help.aliyun.com/document_detail/445399.html">Quick start for standard templates</a>.</li>
+     * <li>To use advanced templates, refer to <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of GetTemplate  GetTemplateRequest
@@ -1483,6 +1539,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTemplateParamsResponse> getTemplateParams(GetTemplateParamsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;intl&quot;&gt;This API operation will be deprecated soon. Call <a href="https://help.aliyun.com/document_detail/2867675.html">GetMediaConvertJob - Query a media transcoding job</a>.</p>
+     * 
      * @param request the request parameters of GetTranscodeJob  GetTranscodeJobRequest
      * @return GetTranscodeJobResponse
      */
@@ -1490,7 +1549,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the information, including the upload status, user data, creation time, and completion time, about URL-based upload jobs based on the returned job IDs or the URLs used during the upload.
+     * <p>Query the information, including the upload status, user data, creation time, and completion time, about URL-based upload jobs based on the returned job IDs or the URLs used during the upload.
      * If an upload job fails, you can view the error code and error message. If an upload job is successful, you can obtain the video ID.</p>
      * 
      * @param request the request parameters of GetUrlUploadInfos  GetUrlUploadInfosRequest
@@ -1500,7 +1559,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query information about up to the first 5,000 audio and video files based on the filter condition, such as the status or category ID of the file. We recommend that you set the StartTime and EndTime parameters to narrow down the time range and perform multiple queries to obtain data.</p>
+     * <p>This operation retrieves up to 5,000 audio and video files that meet specified filter conditions, such as video status and category ID. Specify StartTime and EndTime to retrieve data in batches.</p>
      * 
      * @param request the request parameters of GetVideoList  GetVideoListRequest
      * @return GetVideoListResponse
@@ -1562,6 +1621,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetYikeUserCreditResponse> getYikeUserCredit(GetYikeUserCreditRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Before inserting a media asset into the search library, you must call the <a href="https://help.aliyun.com/document_detail/2584454.html">CreateSearchLib</a> API to create the search library.</p>
+     * 
      * @param request the request parameters of InsertMediaToSearchLib  InsertMediaToSearchLibRequest
      * @return InsertMediaToSearchLibResponse
      */
@@ -1575,12 +1638,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
-     * <p>You can call this operation to query a list of AI agents based on the <code>AIAgentId</code>. The optional parameters include <code>StartTime</code>, <code>EndTime</code>, <code>PageSize</code>, and <code>PageNumber</code>. The returned result includes the status, runtime configurations, template configurations, custom information, and the URL of call log file for each AI agent.
-     * <strong>Note</strong>:</p>
-     * <ul>
-     * <li>The default value of <code>PageSize</code> is 10, and the default value of <code>PageNumber</code> is 1.</li>
-     * </ul>
+     * <p>This operation allows you to query a list of AI agent instances based on a specified agent ID (<code>AIAgentId</code>), and optional parameters such as the time range (<code>StartTime</code> and <code>EndTime</code>), number of entries per page (<code>PageSize</code>), and current page number (<code>PageNumber</code>). The response includes the status, runtime configuration, template configuration, user-defined data, and the download URL for the conversation call logs of each instance.</p>
+     * <blockquote>
+     * <p>Notice: Default values for pagination parameters: PageSize is 10, and PageNumber is 1.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of ListAIAgentInstance  ListAIAgentInstanceRequest
      * @return ListAIAgentInstanceResponse
@@ -1588,6 +1649,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAIAgentInstanceResponse> listAIAgentInstance(ListAIAgentInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation allows you to query user phone number resources by specifying the number of records per page (PageSize) and the current page number (PageNumber). The response includes phone numbers and their corresponding statuses.</p>
+     * 
      * @param request the request parameters of ListAIAgentPhoneNumber  ListAIAgentPhoneNumberRequest
      * @return ListAIAgentPhoneNumberResponse
      */
@@ -1606,6 +1670,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAdInsertionsResponse> listAdInsertions(ListAdInsertionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls the ListAlerts operation to retrieve source alert information.</p>
+     * 
      * @param request the request parameters of ListAlerts  ListAlertsRequest
      * @return ListAlertsResponse
      */
@@ -1636,12 +1703,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListBatchMediaProducingJobsResponse> listBatchMediaProducingJobs(ListBatchMediaProducingJobsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls the ListChannelAlerts operation to retrieve the alert information of resources in a channel.</p>
+     * 
      * @param request the request parameters of ListChannelAlerts  ListChannelAlertsRequest
      * @return ListChannelAlertsResponse
      */
     CompletableFuture<ListChannelAlertsResponse> listChannelAlerts(ListChannelAlertsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls the ListChannels operation to list and assemble channels.</p>
+     * 
      * @param request the request parameters of ListChannels  ListChannelsRequest
      * @return ListChannelsResponse
      */
@@ -1673,7 +1746,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query files in a media fingerprint library based on the library ID. The queried results can be paginated.</p>
+     * <p>This operation queries the file list by DNA library ID and supports paging.</p>
      * 
      * @param request the request parameters of ListDNAFiles  ListDNAFilesRequest
      * @return ListDNAFilesResponse
@@ -1694,13 +1767,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a></h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>You can call this operation to get information about all hotword libraries that you created.</li>
-     * <li>The API supports fuzzy search by <code>Name</code>, filtering by creation time range, and pagination.</li>
-     * <li>By default, the results are sorted by creation time in descending order. You can set <code>SortBy</code> to change the sorting order.</li>
-     * <li>The maximum number of entries returned for each request is 100. Default value: 10.</li>
-     * <li>Use <code>NextToken</code> for pagination.</li>
+     * <li>This operation queries the list of all hotword libraries created by users.</li>
+     * <li>You can use the <code>Name</code> parameter for fuzzy search. Pagination and time range filtering are supported.</li>
+     * <li>By default, the results are sorted in descending order of creation time. You can use the <code>SortBy</code> parameter to adjust the sorting method.</li>
+     * <li>The maximum number of records returned per request is 100. The default value is 10.</li>
+     * <li>You can use the <code>NextToken</code> parameter to read data in pages.</li>
      * </ul>
      * 
      * @param request the request parameters of ListHotwordLibraries  ListHotwordLibrariesRequest
@@ -1710,7 +1783,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Request description.</h2>
      * 
      * @param request the request parameters of ListLivePackageChannelGroups  ListLivePackageChannelGroupsRequest
      * @return ListLivePackageChannelGroupsResponse
@@ -1719,14 +1792,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>This API operation allows you to query live package channels by <strong>GroupName</strong> and <strong>Keyword</strong>. Keyword is optional. You can sort the channels by creation time in ascending or descending order and paginate the results. This facilitates the management of channels and retrieval of channel information.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation allows you to query the list of real-time packaging channels based on the specified <strong>GroupName</strong> and an optional <strong>Keyword</strong>. The results can be sorted in ascending or descending order by creation time, and paged query is supported to facilitate management and retrieve a large amount of channel information.</p>
      * <ul>
-     * <li><strong>GroupName</strong> is required to specify the channel group to which the channel belongs.</li>
-     * <li><strong>Keyword</strong> supports fuzzy match of channel names or descriptions, which helps quickly filter desired channels.</li>
-     * <li><strong>PageNo</strong> and <strong>PageSize</strong> can help control the paging of returned results to facilitate batch processing of data.</li>
-     * <li><strong>SortBy</strong> allows you to customize how the results are sorted. By default, the results are sorted in descending order.
-     * <strong>RequestId</strong> in the response is used for subsequent troubleshooting. <strong>TotalCount</strong> indicates the total number of channels that meet the conditions.</li>
+     * <li><strong>GroupName</strong> is required and specifies the channel group to which the channels belong.</li>
+     * <li><strong>Keyword</strong> supports fuzzy match for channel names or descriptions, which helps quickly filter the required channels.</li>
+     * <li>The <strong>PageNo</strong> and <strong>PageSize</strong> parameters help control the paging of returned results, facilitating batch data processing.</li>
+     * <li>The <strong>SortBy</strong> parameter allows you to customize the sorting order of the results. The default value is descending order.
+     * Check the returned <strong>RequestId</strong> for subsequent troubleshooting, and pay attention to <strong>TotalCount</strong> to understand the total number of channels that meet the conditional requirements.</li>
      * </ul>
      * 
      * @param request the request parameters of ListLivePackageChannels  ListLivePackageChannelsRequest
@@ -1736,8 +1809,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>This API operation allows you to query origin endpoints associated with a live package channel. The results include detailed configurations about the origin endpoints, such as access URL, protocol, and security policies. Paging and sorting by creation time are supported.</p>
+     * <h2>Request description</h2>
+     * <p>This operation allows you to query the origin endpoints in the real-time packaging service based on a specified channel. The response includes detailed configuration information about the origin endpoints, such as the access URL, protocol type, and security policy. In addition, paging and sorting by creation time are supported.</p>
      * 
      * @param request the request parameters of ListLivePackageOriginEndpoints  ListLivePackageOriginEndpointsRequest
      * @return ListLivePackageOriginEndpointsResponse
@@ -1794,7 +1867,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If includeFileBasicInfo is set to true, the basic information, such as the duration and file size, of the source file is also returned. At most the first 100 entries that meet the specified conditions are returned. All media assets must exactly match all non-empty fields. The fields that support exact match include MediaType, Source, BusinessType, Category, and Status. If all information cannot be returned at a time, you can use NextToken to initiate a request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If the includeFileBasicInfo field is set to true, the basic information of the source file, such as the duration and file size, is also returned.</li>
+     * <li>A maximum of 100 matching records are returned.</li>
+     * <li>All matching media assets must exactly match all non-empty fields. The fields that support exact match include the media type, source, business type, category, and resource status of the media asset.</li>
+     * <li>If all information cannot be returned at a time, you can use nextToken to query the next page.</li>
+     * </ul>
      * 
      * @param request the request parameters of ListMediaBasicInfos  ListMediaBasicInfosRequest
      * @return ListMediaBasicInfosResponse
@@ -1815,8 +1893,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * <ul>
+     * <li>Call this operation to query a list of media live channels.</li>
+     * </ul>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit per user is 50. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * @param request the request parameters of ListMediaLiveChannels  ListMediaLiveChannelsRequest
      * @return ListMediaLiveChannelsResponse
@@ -1835,8 +1916,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * <ul>
+     * <li>You can invoke this API to query the list of media live inputs.</li>
+     * </ul>
+     * <h2>QPS Limit</h2>
+     * <p>The queries per second (QPS) limit for this API is 50 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</p>
      * 
      * @param request the request parameters of ListMediaLiveInputs  ListMediaLiveInputsRequest
      * @return ListMediaLiveInputsResponse
@@ -1881,9 +1965,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
      * <ul>
-     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * <li>This API operation is currently supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</li>
+     * <li>The queries per second (QPS) limit per user is 50. If you exceed the limit, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342832.html">QPS limits</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ListRecognitionEntities  ListRecognitionEntitiesRequest
@@ -1893,9 +1977,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
      * <ul>
-     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * <li>This API operation currently supports the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions. Other regions are not supported.</li>
+     * <li>The queries per second (QPS) limit for a single user is 50. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342832.html">QPS limits</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ListRecognitionLibs  ListRecognitionLibsRequest
@@ -1904,6 +1988,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRecognitionLibsResponse> listRecognitionLibs(ListRecognitionLibsRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API operation is currently available in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions. Other regions are not supported.</li>
+     * <li>The queries per second (QPS) limit per user is 50. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342832.html">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListRecognitionSamples  ListRecognitionSamplesRequest
      * @return ListRecognitionSamplesResponse
      */
@@ -1996,10 +2086,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</p>
+     * <p>Template Factory encapsulates editing and synthesis timelines. You can define commonly used timelines as templates. When similar requirements arise, you only need to pass key parameters and media assets to produce videos.</p>
      * <ul>
-     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</li>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
+     * <li>To use standard templates, refer to <a href="https://help.aliyun.com/document_detail/270942.html">Quick start for standard templates</a>.</li>
+     * <li>To use advanced templates, refer to <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ListTemplates  ListTemplatesRequest
@@ -2033,7 +2123,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API only returns data from the last 90 days.</p>
+     * <p>This operation returns only the instances executed within the last 90 days.</p>
      * 
      * @param request the request parameters of ListWorkflowTasks  ListWorkflowTasksRequest
      * @return ListWorkflowTasksResponse
@@ -2054,8 +2144,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Before this operation, you must add a source to the flow.</p>
      * <ul>
+     * <li>Before this operation, you must add a source to the flow.</li>
      * <li>After Source Failover is enabled, you can add an additional source. The input type of the two sources must be identical.</li>
      * </ul>
      * 
@@ -2078,7 +2168,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * <ul>
+     * <li>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * </ul>
      * 
      * @param request the request parameters of QueryCopyrightJobList  QueryCopyrightJobListRequest
      * @return QueryCopyrightJobListResponse
@@ -2105,7 +2197,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>In the content moderation results, the moderation results of the video are sorted in ascending order by time into a timeline. If the video is long, the content moderation results are paginated, and the first page is returned. You can call this operation again to query the remaining moderation results of the video.</p>
+     * <p>In the content moderation results, the video section forms a timeline sorted by time in ascending order. If the video is very long, the query returns the first page of information by default. To query the full results of the video section in detail, you can call this operation separately.</p>
      * 
      * @param request the request parameters of QueryMediaCensorJobDetail  QueryMediaCensorJobDetailRequest
      * @return QueryMediaCensorJobDetailResponse
@@ -2113,9 +2205,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryMediaCensorJobDetailResponse> queryMediaCensorJobDetail(QueryMediaCensorJobDetailRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation to query only the content moderation jobs within the most recent three months.</p>
-     * 
      * @param request the request parameters of QueryMediaCensorJobList  QueryMediaCensorJobListRequest
      * @return QueryMediaCensorJobListResponse
      */
@@ -2147,7 +2236,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * <ul>
+     * <li>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * </ul>
      * 
      * @param request the request parameters of QueryTraceAbJobList  QueryTraceAbJobListRequest
      * @return QueryTraceAbJobListResponse
@@ -2156,7 +2247,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * <p>Currently, digital watermarking API operations are supported only in the China (Shanghai) and China (Beijing) regions.</p>
      * 
      * @param request the request parameters of QueryTraceExtractJob  QueryTraceExtractJobRequest
      * @return QueryTraceExtractJobResponse
@@ -2165,9 +2256,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
      * <ul>
-     * <li>The M3U8 file with absolute paths generated by the SubmitTraceM3u8Job API has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. After the signature expires, the M3U8 file will become inaccessible. You must submit a new M3U8 generation job.</li>
+     * <li>Currently, API operations related to digital watermarking are only supported in the China (Shanghai) and China (Beijing) regions.</li>
+     * <li>The signature authentication for the absolute path of the m3u8 file generated by the video tracing watermark m3u8 job is valid for 24 hours (starting from the completion of processing). Query it promptly. After the signature authentication expires, the m3u8 file generated by the job cannot be accessed. If you need the file after expiration, commit the video tracing watermark m3u8 job again.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryTraceM3u8JobList  QueryTraceM3u8JobListRequest
@@ -2182,9 +2273,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryVideoCognitionJobResponse> queryVideoCognitionJob(QueryVideoCognitionJobRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can also call this operation to overwrite media files. After you obtain the upload URL of a media file, you can upload the media file again without changing the audio or video ID.</p>
-     * 
      * @param request the request parameters of RefreshUploadMedia  RefreshUploadMediaRequest
      * @return RefreshUploadMediaResponse
      */
@@ -2192,7 +2280,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the GetMediaInfo operation at this time, you may fail to obtain the information about the media asset.</p>
+     * <p>Media asset registration is an asynchronous task that typically takes 2 to 3 seconds to complete. When the registration operation returns a mediaId, the media asset may not have been fully registered. In this case, calling <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> may not return the file information of the media asset.</p>
      * 
      * @param request the request parameters of RegisterMediaInfo  RegisterMediaInfoRequest
      * @return RegisterMediaInfoResponse
@@ -2200,9 +2288,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RegisterMediaInfoResponse> registerMediaInfo(RegisterMediaInfoRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation to register a media stream file in an Object Storage Service (OSS) bucket with Intelligent Media Services (IMS) and associate the media stream with the specified media asset ID.</p>
-     * 
      * @param request the request parameters of RegisterMediaStream  RegisterMediaStreamRequest
      * @return RegisterMediaStreamResponse
      */
@@ -2240,7 +2325,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * <p>For usage inquiries or consultations regarding the intelligent media asset search feature of Intelligent Media Services, search for the DingTalk group ID 30415005038 to join the IMS Multimodal Search Customer Support group and contact us.</p>
      * 
      * @param request the request parameters of SearchMedia  SearchMediaRequest
      * @return SearchMediaResponse
@@ -2249,7 +2334,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query media assets or media asset clips based on character names, subtitles, or AI categories.</p>
+     * <p>Performs a multimodal search based on person names, subtitles, and AI categories. Coarse search returns results at the media asset granularity, while precise search returns matched segment information within the media asset.</p>
      * 
      * @param request the request parameters of SearchMediaByAILabel  SearchMediaByAILabelRequest
      * @return SearchMediaByAILabelResponse
@@ -2258,7 +2343,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * <p>To use the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services or to consult about related issues, search for DingTalk group (30415005038) to join the Intelligent Media Services multimodal search customer support group and contact us.</p>
      * 
      * @param request the request parameters of SearchMediaByFace  SearchMediaByFaceRequest
      * @return SearchMediaByFaceResponse
@@ -2266,6 +2351,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchMediaByFaceResponse> searchMediaByFace(SearchMediaByFaceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For usage inquiries or consultations regarding the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services, search for the DingTalk group (30415005038) to join the Intelligent Media Services multimodal search customer support group and contact us.</p>
+     * 
      * @param request the request parameters of SearchMediaByHybrid  SearchMediaByHybridRequest
      * @return SearchMediaByHybridResponse
      */
@@ -2273,7 +2361,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * <p>For usage inquiries or consultations regarding the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services, search for the DingTalk group 30415005038 to join the Intelligent Media Services multimodal search customer support group and contact us.</p>
      * 
      * @param request the request parameters of SearchMediaByMultimodal  SearchMediaByMultimodalRequest
      * @return SearchMediaByMultimodalResponse
@@ -2282,7 +2370,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * <p>For usage inquiries or consultations regarding the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services, search for the DingTalk group 30415005038 to join the Intelligent Media Services multimodal search customer support group and contact us.</p>
      * 
      * @param request the request parameters of SearchMediaClipByFace  SearchMediaClipByFaceRequest
      * @return SearchMediaClipByFaceResponse
@@ -2303,12 +2391,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to instruct an AI agent to broadcast the content that you specify. You can determine whether this broadcast can immediately interrupt the ongoing speech. The interruption is allowed by default.
-     * <strong>Note</strong></p>
+     * <p>Use this operation to immediately instruct an AI agent instance to broadcast a voice message by passing specified text content. You can optionally allow this broadcast to interrupt the current voice playback. By default, interruption is allowed.
+     * <strong>Note:</strong></p>
      * <ul>
-     * <li>Make sure that the <code>InstanceId</code> is valid and corresponds to an existing AI agent.</li>
-     * <li>The content of <code>Text</code> must comply with the specifications and does not contain sensitive or inappropriate information.</li>
-     * <li>If you do not want the new broadcast to interrupt the ongoing speech, you must set <code>EnableInterrupt</code> to <code>false</code>.</li>
+     * <li>InstanceId must be valid and correspond to an existing agent instance.</li>
+     * <li>The content of Text must comply with specifications and avoid sensitive or inappropriate information.</li>
+     * <li>To prevent the new broadcast from interrupting the current voice, explicitly set EnableInterrupt to false.</li>
      * </ul>
      * 
      * @param request the request parameters of SendAIAgentSpeech  SendAIAgentSpeechRequest
@@ -2359,6 +2447,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetDefaultCustomTemplateResponse> setDefaultCustomTemplate(SetDefaultCustomTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>-Intelligent Media Services can use Object Storage Service (OSS) or ApsaraVideo VOD storage. Activate the corresponding service based on the storage type you need. The differences are as follows:</p>
+     * <ul>
+     * <li>ApsaraVideo VOD storage: ApsaraVideo VOD provides a one-stop audio and video Solutions that includes video storage, media asset management, and CDN playback services. When you store media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and launch of video services based on the APIs provided by ApsaraVideo VOD.</li>
+     * <li>Object Storage Service: OSS is a massive, secure, low-cost, and highly durable cloud storage service provided by Alibaba Cloud. You can develop multi-scenario audio and video services based on the capabilities of Intelligent Media Services and OSS.
+     * -You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure storage address</a>.
+     * -Storage fees are billed in OSS or ApsaraVideo VOD based on the storage address you configure. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media asset storage billing</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SetDefaultStorageLocation  SetDefaultStorageLocationRequest
      * @return SetDefaultStorageLocationResponse
      */
@@ -2372,8 +2469,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
-     * <p>You can call this operation to configure event notifications for an AI agent. You can configure <code>EnableNotify</code> to enable or disable event notifications, configure <code>CallbackUrl</code> to specify a callback URL, and configure <code>EventTypes</code> to specify event types. You can also configure <code>Token</code> to specify an authentication token for enhanced security. The system returns a unique <code>RequestId</code> for subsequent tracing after a successful request.</p>
+     * <h2>Description</h2>
+     * <p>This operation configures event notification settings for an AI Agent instance. You can enable or disable event notifications, specify the Callback URL, and define the Event Types to subscribe to. You can also provide an Authentication Token for enhanced security. A successful request returns a unique Request ID for tracking and troubleshooting.</p>
      * 
      * @param request the request parameters of SetNotifyConfig  SetNotifyConfigRequest
      * @return SetNotifyConfigResponse
@@ -2388,7 +2485,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to start an AI agent instance for a conversation. ````````When the AI agent is started, the system returns a unique <code>InstanceId</code> for subsequent tracking and operations.</p>
+     * <p>Use this API to start a configured AI agent instance and engage it in a conversation. You must provide the agent ID (<code>AIAgentId</code>) and runtime configuration (<code>RuntimeConfig</code>). Optional parameters include the template configuration (<code>TemplateConfig</code>) and user-defined information (<code>UserData</code>). After the agent instance is successfully started, a unique <code>InstanceId</code> is returned for subsequent tracking or operations.</p>
      * 
      * @param request the request parameters of StartAIAgentInstance  StartAIAgentInstanceRequest
      * @return StartAIAgentInstanceResponse
@@ -2396,6 +2493,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartAIAgentInstanceResponse> startAIAgentInstance(StartAIAgentInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can use this API operation to start a configured AI agent instance and initiate an outbound call to a specified callee number. After the agent instance is started, a unique <code>InstanceId</code> is returned for subsequent tracking or operations. Each caller number <strong>supports up to 15 concurrent calls</strong>.</p>
+     * 
      * @param request the request parameters of StartAIAgentOutboundCall  StartAIAgentOutboundCallRequest
      * @return StartAIAgentOutboundCallResponse
      */
@@ -2403,7 +2503,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You must specify a workflow template. To create one, go to the <a href="https://ims.console.aliyun.com/ai-workflow/template">Intelligent Media Services (IMS)</a> console.</p>
+     * <ul>
+     * <li>When you initiate an intelligent workflow task, you must specify an intelligent workflow template. You can create an intelligent workflow template in the <a href="https://ims.console.aliyun.com/ai-workflow/template">Intelligent Media Services console</a>.</li>
+     * </ul>
      * 
      * @param request the request parameters of StartAIWorkflow  StartAIWorkflowRequest
      * @return StartAIWorkflowResponse
@@ -2418,7 +2520,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</p>
+     * <ul>
+     * <li>Starts a channel only when the channel is idle. You cannot start a channel repeatedly.</li>
+     * </ul>
      * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
@@ -2435,9 +2539,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Only media assets from Intelligent Media Services (IMS) or ApsaraVideo VOD can be used as the input of a workflow.</p>
      * <ul>
-     * <li>When you submit a workflow task, you must specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">IMS console</a> or use a preset workflow template.</li>
+     * <li>Currently, only Intelligent Media Services (IMS) media assets and ApsaraVideo VOD media assets are supported as workflow inputs.</li>
+     * <li>When you initiate a workflow task, specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a preset template.</li>
      * </ul>
      * 
      * @param request the request parameters of StartWorkflow  StartWorkflowRequest
@@ -2447,11 +2551,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When you no longer need an AI agent to participate in a conversation or task, you can call this operation to stop the running agent and release relevant resources.****</p>
      * <ul>
-     * <li>You must specify the unique ID of the AI agent that you want to stop by using InstanceId.****</li>
+     * <li><strong>Feature description</strong>: This operation stops and terminates a running agent instance and releases related resources.</li>
+     * <li><strong>Parameter notes</strong>: You must provide the unique ID (InstanceId) of the instance to be stopped as a query parameter.</li>
+     * <li><strong>Common scenarios</strong>: Invoke this operation to end the running of an agent when the agent is no longer needed for a call or node.</li>
      * </ul>
-     * <hr>
      * 
      * @param request the request parameters of StopAIAgentInstance  StopAIAgentInstanceRequest
      * @return StopAIAgentInstanceResponse
@@ -2460,7 +2564,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is only used to stop workflow tasks in real-time scenarios such as live streaming and RTC. It cannot be used to stop tasks in offline scenarios.</p>
+     * <p>This operation stops intelligent workflow tasks only in real-time scenarios such as live streaming and RTC, and does not support stopping tasks in offline scenarios.</p>
      * 
      * @param request the request parameters of StopAIWorkflowTask  StopAIWorkflowTaskRequest
      * @return StopAIWorkflowTaskResponse
@@ -2468,6 +2572,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopAIWorkflowTaskResponse> stopAIWorkflowTask(StopAIWorkflowTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls the StopChannel operation to stop a channel.</p>
+     * 
      * @param request the request parameters of StopChannel  StopChannelRequest
      * @return StopChannelResponse
      */
@@ -2475,8 +2582,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * <ul>
+     * <li>Call this operation to stop a media live channel.</li>
+     * <li>You can call this operation to stop a media live channel only after it is started. You cannot stop a channel that is not started.</li>
+     * </ul>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit per user is 50 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * @param request the request parameters of StopMediaLiveChannel  StopMediaLiveChannelRequest
      * @return StopMediaLiveChannelResponse
@@ -2497,7 +2608,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Call SubmitAIAgentVideoAuditTask to submit a video moderation task with configurations such as a video URL, frame-capturing policies, and review interval. The system returns a unique JobId for tracking. When the task is complete, the service will push the results, including the moderation status and AI-generated analysis, to the configured callback URL. Only OSS URLs are supported as input. The underlying multi-modal large language model (MLLM) only supports interaction via the non-streaming OpenAI protocol.</p>
+     * <p>You can call the SubmitAIAgentVideoAuditTask operation to submit a moderation task with configurations such as the video URL, frame capture policy, and moderation interval. The system returns a unique JobId for task tracking. After the task is completed, the system pushes the moderation results, including the moderation status and AI evaluation content, to your configured callback URL. Only OSS video URLs are supported. Multimodal large language models (MLLMs) support only the non-streaming OpenAI protocol. For more information about the response of the non-streaming OpenAI protocol, refer to <a href="https://help.aliyun.com/document_detail/2839094.html">Standard API reference for self-developed models</a>.</p>
      * 
      * @param request the request parameters of SubmitAIAgentVideoAuditTask  SubmitAIAgentVideoAuditTaskRequest
      * @return SubmitAIAgentVideoAuditTaskResponse
@@ -2505,18 +2616,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitAIAgentVideoAuditTaskResponse> submitAIAgentVideoAuditTask(SubmitAIAgentVideoAuditTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you commit a node, a node ID is returned. The node is not completed at this time, enters the background queue, and will execute asynchronously. The final result is notified through a callback. You can also call the <a href="https://help.aliyun.com/document_detail/441172.html">Retrieve smart task result</a> operation to actively query the node status.</p>
+     * 
      * @param request the request parameters of SubmitASRJob  SubmitASRJobRequest
      * @return SubmitASRJobResponse
      */
     CompletableFuture<SubmitASRJobResponse> submitASRJob(SubmitASRJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After a task is submitted, a task ID is returned. The task is not completed at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling the <a href="https://help.aliyun.com/document_detail/441172.html">Query intelligent task results</a> operation.</p>
+     * 
      * @param request the request parameters of SubmitAudioProduceJob  SubmitAudioProduceJobRequest
      * @return SubmitAudioProduceJobResponse
      */
     CompletableFuture<SubmitAudioProduceJobResponse> submitAudioProduceJob(SubmitAudioProduceJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you call this operation, it returns a JobId and queues the training job for background processing. The initial response confirms the job submission, not its completion. The final result is sent via a callback notification, or you can check the job\&quot;s status by <a href="https://help.aliyun.com/document_detail/2526661.html">querying the details of an avatar training job</a>.</p>
+     * 
      * @param request the request parameters of SubmitAvatarTrainingJob  SubmitAvatarTrainingJobRequest
      * @return SubmitAvatarTrainingJobResponse
      */
@@ -2525,9 +2645,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The input supports only text or a human voice audio file in MP3 or WAV format.</li>
-     * <li>The output supports MP4 and WebM formats. For the MP4 format, the task produces two videos: one with the avatar on a green screen background and a separate alpha mask video. This is ideal for post-production. For the WebM format, the task produces a single video with a transparent alpha channel, suitable for direct web front-end display. Rendering WebM is slower due to encoding complexity.</li>
-     * <li>The final output includes sentence-level timestamps, which are useful for subsequent video editing.</li>
+     * <li>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After a node is committed, a node ID is returned. The node is not completed immediately and enters a background queue to execute asynchronously. The final result is sent through a callback notification. You can also call the <a href="https://help.aliyun.com/document_detail/441172.html">Get smart node task result</a> operation to query the node status.</li>
+     * <li>Currently, only text or human voice audio is supported as input. Audio files support only the MP3 or WAV format.</li>
+     * <li>Both MP4 and WebM output formats are supported. When the output format is MP4, the final video has a green screen background, and a mask video of the virtual human is also generated for subsequent use. This method is recommended. When the output format is WebM, the final video is a WebM file with a transparent channel, which is active for frontend display. However, the synthesis is slower due to WebM encoding issues.</li>
+     * <li>The output result includes sentence UNIX timestamps of the human voice for subsequent use in editing.</li>
      * </ul>
      * 
      * @param request the request parameters of SubmitAvatarVideoJob  SubmitAvatarVideoJobRequest
@@ -2536,6 +2657,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitAvatarVideoJobResponse> submitAvatarVideoJob(SubmitAvatarVideoJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li>To use intelligent one-click video production, you must first purchase the [IMS subscription service]. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription billing</a>.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>For the billing rules of intelligent one-click video production, see <a href="https://help.aliyun.com/document_detail/2840901.html">Intelligent one-click video production</a>.</li>
+     * <li>Intelligent one-click video production is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a>.</li>
+     * <li>Intelligent one-click video production provides multiple solutions, including [Scripted automatic video production], [Intelligent text-image matching video production - General scenario], [Intelligent text-image matching video production - Film highlights], [Sports event highlights production], and [High-energy remix production]. For more information about the features, see <a href="https://help.aliyun.com/document_detail/2689046.html">Intelligent one-click video production</a>.</li>
+     * <li>Scripted automatic video production and intelligent text-image matching video production share the same task submission API. For information about how to distinguish between them by using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter differences for intelligent one-click video production</a>.</li>
+     * <li>After you submit a batch intelligent one-click video production task, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to obtain a list of all eligible one-click video production tasks. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to obtain detailed task information, including the task status, produced media asset IDs, and URLs.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitBatchMediaProducingJob  SubmitBatchMediaProducingJobRequest
      * @return SubmitBatchMediaProducingJobResponse
      */
@@ -2543,7 +2676,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * <ul>
+     * <li>Digital watermarking API operations are currently supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API operation</a>. After you submit a job, a job ID is returned. The job is not completed immediately and is queued for asynchronous execution in the background. The final result is sent through a callback notification. You can also actively query the job status by calling the <a href="https://help.aliyun.com/document_detail/2862132.html">Query a copyright watermark extraction job</a> operation.</li>
+     * </ul>
      * 
      * @param request the request parameters of SubmitCopyrightExtractJob  SubmitCopyrightExtractJobRequest
      * @return SubmitCopyrightExtractJobResponse
@@ -2552,10 +2688,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to add a copyright watermark to a video that lasts at least 3 minutes. If the video is too short, the call may fail, or no output may be returned. To add a copyright watermark to a video shorter than 3 minutes, specify the Params parameter to change the algorithm.</p>
      * <ul>
-     * <li>Each API call supports processing only one video.</li>
-     * <li>This API is supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * <li>By default, committing a video copyright watermark job supports only videos that are 3 minutes or longer. If the video is too short, it may result in a failed API invocation or no output. To add a copyright watermark to a short video of less than 3 minutes, specify the parameter in Params. For more information, see the parameter description.</li>
+     * <li>Each time you invoke the API to commit a video copyright watermark job, a watermark is added to a single video. Committing multiple videos at the same time is not supported.</li>
+     * <li>Currently, API operations related to digital watermarking are supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API operation</a>. After you commit the node, a node ID is returned. The node is not completed at this time and enters the background queue to execute asynchronously. The final result is notified by a callback. You can also actively query the node status by calling the <a href="https://help.aliyun.com/document_detail/2862135.html">List video copyright watermark jobs</a> operation.</li>
      * </ul>
      * 
      * @param request the request parameters of SubmitCopyrightJob  SubmitCopyrightJobRequest
@@ -2564,12 +2701,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitCopyrightJobResponse> submitCopyrightJob(SubmitCopyrightJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob - Query a voice cloning job</a> operation to check the job completion and training status.</li>
+     * <li>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the job, a job ID is returned. The job is not completed immediately and is queued for asynchronous execution in the background. You can call <a href="https://help.aliyun.com/document_detail/2384473.html">Query a voice cloning job</a> to query the job status and obtain the final result.</li>
+     * <li>Note that each account supports a maximum of 30 cloned voices per region. Quota increases are not supported at this time.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitCosyVoiceCustomizedVoiceJob  SubmitCosyVoiceCustomizedVoiceJobRequest
      * @return SubmitCosyVoiceCustomizedVoiceJobResponse
      */
     CompletableFuture<SubmitCosyVoiceCustomizedVoiceJobResponse> submitCosyVoiceCustomizedVoiceJob(SubmitCosyVoiceCustomizedVoiceJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</p>
+     * <ul>
+     * <li>When submitting a voice cloning task, the VoiceId must be the same as the one used during audio detection. The cloud relies on this parameter to locate the staged audio for training.  </li>
+     * <li>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is completed or to obtain the training status.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned (the task is not yet completed at this point and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitCustomizedVoiceJob  SubmitCustomizedVoiceJobRequest
      * @return SubmitCustomizedVoiceJobResponse
      */
@@ -2577,10 +2729,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  SubmitDNAJob is an asynchronous operation. After a request is sent, the system returns a request ID and a job ID and runs the task in the background.</p>
      * <ul>
-     * <li>You can call this operation only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</li>
-     * <li>You can submit a text fingerprint analysis job only in the China (Shanghai) region.</li>
+     * <li>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call the <a href="https://help.aliyun.com/document_detail/479279.html">List DNA jobs</a> operation to query the task status.</li>
+     * <li>This operation is currently supported in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</li>
+     * <li>Submitting text DNA jobs is currently supported only in the China (Shanghai) region.</li>
      * </ul>
      * 
      * @param request the request parameters of SubmitDNAJob  SubmitDNAJobRequest
@@ -2590,21 +2742,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This feature is available only in the China (Shanghai) region.</p>
+     * <p>Generates chart videos based on Excel data. Line charts, bar charts, and pie charts are supported. This feature is available only in the China (Shanghai) region.</p>
      * <ul>
-     * <li>You can add a title, subtitle, data source, and unit to a chart and specify the font and font size. For supported fonts, see <a href="https://help.aliyun.com/document_detail/449567.html">Fonts</a>.</li>
-     * <li>This feature provides five styles of animated charts: normal, mystery, lively, business, and green.</li>
-     * <li>You can set the background color or image.</li>
-     * <li>You can set the animation duration, size, and bitrate.
-     * Examples</li>
-     * <li>Line chart: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/line.xlsx">Sample datasheet</a>, <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/line.mp4">Effect</a></li>
-     * <li>Bar chart: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/histgram.xlsx">Sample datasheet</a>, <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/histgram.mp4">Effect</a></li>
-     * <li>Pie chart: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/pie.xlsx">Sample datasheet</a>, <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/pie.mp4">Effect</a></li>
-     * <li>Normal: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Normal.mp4">Effect</a></li>
-     * <li>Mystery: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Mystery.mp4">Effect</a></li>
-     * <li>Lively: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Lively.mp4">Effect</a></li>
-     * <li>Business: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Business.mp4">Effect</a></li>
-     * <li>Green: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Green.mp4">Effect</a></li>
+     * <li>Supports setting text such as the chart title, subtitle, data source, and unit, and allows you to set the font and font size of the text. For supported fonts, see <a href="https://help.aliyun.com/document_detail/449567.html">Font list</a>.</li>
+     * <li>Supports five built-in styles. Valid values: Normal, Mystery, Lively, Business, and Green.</li>
+     * <li>Supports setting the background color and background image.</li>
+     * <li>Supports setting the video duration, dimensions, and bitrate.
+     * Examples:</li>
+     * <li>Line chart: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/line.xlsx">Excel sample</a>, <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/line.mp4">Generated video</a>.</li>
+     * <li>Bar chart: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/histgram.xlsx">Excel sample</a>, <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/histgram.mp4">Generated video</a>.</li>
+     * <li>Pie chart: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/pie.xlsx">Excel sample</a>, <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/pie.mp4">Generated video</a>.</li>
+     * <li>Normal style: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Normal.mp4">Generated video</a>.</li>
+     * <li>Mystery style: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Mystery.mp4">Generated video</a>.</li>
+     * <li>Lively style: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Lively.mp4">Generated video</a>.</li>
+     * <li>Business style: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Business.mp4">Generated video</a>.</li>
+     * <li>Green style: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Green.mp4">Generated video</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of SubmitDynamicChartJob  SubmitDynamicChartJobRequest
@@ -2613,18 +2765,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitDynamicChartJobResponse> submitDynamicChartJob(SubmitDynamicChartJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. At this point, the task is not yet complete and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441199.html">Query animated image task details</a>.</p>
+     * 
      * @param request the request parameters of SubmitDynamicImageJob  SubmitDynamicImageJobRequest
      * @return SubmitDynamicImageJobResponse
      */
     CompletableFuture<SubmitDynamicImageJobResponse> submitDynamicImageJob(SubmitDynamicImageJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After the task is submitted, a task ID is returned. The task is not completed immediately and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call the <a href="https://help.aliyun.com/document_detail/441172.html">Query intelligent task results</a> operation to query the task status.</p>
+     * 
      * @param request the request parameters of SubmitHighlightExtractionJob  SubmitHighlightExtractionJobRequest
      * @return SubmitHighlightExtractionJobResponse
      */
     CompletableFuture<SubmitHighlightExtractionJobResponse> submitHighlightExtractionJob(SubmitHighlightExtractionJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After the job is submitted, a job ID is returned. The job is not yet complete and is queued for asynchronous execution in the background. The final result is sent through a callback notification. You can also call the <a href="https://help.aliyun.com/document_detail/441215.html">Query intelligent production job</a> operation to query the job status.</p>
+     * 
      * @param request the request parameters of SubmitIProductionJob  SubmitIProductionJobRequest
      * @return SubmitIProductionJobResponse
      */
@@ -2632,7 +2793,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Live editing is supported for live streams that are recorded and stored in Object Storage Service (OSS) and ApsaraVideo VOD. If multiple live streams are involved in a single job, only those recorded within the same application are supported for mixed editing. The streams must all be recorded either in OSS or ApsaraVideo VOD.</p>
+     * <ul>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a>.</li>
+     * <li>Live editing is supported for live streams recorded to OSS and VOD. When mixing multiple live streams, all streams must be recorded to OSS or all streams must be recorded to VOD.</li>
+     * </ul>
      * 
      * @param request the request parameters of SubmitLiveEditingJob  SubmitLiveEditingJobRequest
      * @return SubmitLiveEditingJobResponse
@@ -2641,9 +2805,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
-     * Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
-     * If the preset recording template does not meet your requirements, you can create a custom recording template.</p>
+     * <p>This operation supports recording live streams from ApsaraVideo Live or third-party RTMP live streams. Ingest the stream before calling this operation to submit a recording task. If no stream is available at the live stream URL, the task attempts to pull the stream for 3 minutes. After the timeout period elapses, the recording service stops recording.
+     * Before you submit a recording task, prepare an Alibaba Cloud OSS bucket or ApsaraVideo VOD storage space. Use the storage address configured in Intelligent Media Services to facilitate the management and processing of the recorded files.
+     * If the preset recording templates do not meet your requirements, you can create a custom recording template.</p>
      * 
      * @param request the request parameters of SubmitLiveRecordJob  SubmitLiveRecordJobRequest
      * @return SubmitLiveRecordJobResponse
@@ -2658,9 +2822,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When you submit a transcoding job that immediately takes effect, make sure that the input stream can be streamed.</p>
      * <ul>
-     * <li>When you submit a timed transcoding job, make sure that the input stream can be streamed before the specified time.</li>
+     * <li>When submitting a transcoding task that takes effect immediately, ensure that the input source stream is playable.</li>
+     * <li>When submitting a delayed transcoding task, ensure that the source stream is playable before the specified time.</li>
      * </ul>
      * 
      * @param request the request parameters of SubmitLiveTranscodeJob  SubmitLiveTranscodeJobRequest
@@ -2676,7 +2840,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The job that you submit by calling this operation is run in asynchronous mode. The job is added to an ApsaraVideo Media Processing (MPS) queue to be scheduled and run. You can call the <a href="https://help.aliyun.com/document_detail/444847.html">QueryMediaCensorJobDetail</a> operation or configure an asynchronous notification to obtain the job results.</p>
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, the service returns a job ID and processes the job in the background. You receive the final result through a callback notification. You can also check the job status by calling the <a href="https://help.aliyun.com/document_detail/444847.html">QueryMediaCensorJob</a> API.</p>
      * 
      * @param request the request parameters of SubmitMediaCensorJob  SubmitMediaCensorJobRequest
      * @return SubmitMediaCensorJobResponse
@@ -2684,6 +2848,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitMediaCensorJobResponse> submitMediaCensorJob(SubmitMediaCensorJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution in the background. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2867675.html">Query media transcoding task</a>.</p>
+     * 
      * @param request the request parameters of SubmitMediaConvertJob  SubmitMediaConvertJobRequest
      * @return SubmitMediaConvertJobResponse
      */
@@ -2691,7 +2858,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to analyze an input media file by using a callback mechanism or initiating subsequent queries. This operation is suitable for scenarios in which real-time performance is less critical and high concurrency is expected.</p>
+     * <ul>
+     * <li>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed immediately and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call the <a href="https://help.aliyun.com/document_detail/441200.html">media information task query</a> operation to query the task status.</li>
+     * <li>You can call this operation to perform media analysis on input files by using callbacks or re-querying the task status. This operation is suitable for scenarios where timeliness requirements are relatively low or concurrency is high.</li>
+     * </ul>
      * 
      * @param request the request parameters of SubmitMediaInfoJob  SubmitMediaInfoJobRequest
      * @return SubmitMediaInfoJobResponse
@@ -2700,23 +2870,38 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation returns only the submission result of a media editing and production job. When the submission result is returned, the job may still be in progress. After a media editing and production job is submitted, the job is queued in the background for asynchronous processing.</p>
      * <ul>
-     * <li>The materials referenced in the timeline of an online editing project can be media assets in the media asset library or Object Storage Service (OSS) objects. External URLs or Alibaba Cloud Content Delivery Network (CDN) URLs are not supported. To use an OSS object as a material, you must set MediaUrl to an OSS URL, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>.</li>
-     * <li>After the production is complete, the output file is automatically registered as a media asset. The media asset first needs to be analyzed. After the media asset is analyzed, you can query the duration and resolution information based on the media asset ID.</li>
+     * <li><p><strong>Billing: Video editing is billed based on the duration of the produced video. For more information, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video editing</a>. No fees are charged if the processing fails.</strong></p>
+     * </li>
+     * <li><p>Diverse editing capabilities: Invoke this API operation when you need to arrange and design materials based on personalized ideas. This API operation supports flexible <a href="https://help.aliyun.com/document_detail/198823.html">timeline configurations</a> to meet complex video editing requirements.</p>
+     * </li>
+     * <li><p>Material reference rules: Materials referenced in the cloud editing timeline can be media assets in the media asset library, OSS files (recommended), or other public URLs. If the material is an OSS file, MediaUrl only supports the OSS address format, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>. If the material is another public URL, the task duration increases.</p>
+     * </li>
+     * <li><p>Asynchronously execute tasks: - This API operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you submit the task, a task ID is returned (the task is not completed at this time and enters the background queue to execute asynchronously). The final result is notified through a callback. You can also invoke the <a href="https://help.aliyun.com/document_detail/441149.html">query media editing and producing jobs</a> operation to actively query the task status. </p>
+     * </li>
+     * <li><p>Task status query:</p>
+     * <ol>
+     * <li>Invoke the <a href="https://help.aliyun.com/document_detail/441149.html">query media editing and producing jobs</a> operation and pass the JobId parameter to query the task status and result.</li>
+     * <li>When submitting a media editing and producing job, you can set <strong>UserData</strong> in the request parameters to include a callback URL. When the editing task is completed or fails, the system sends a notification to this callback URL. You can process the callback data to obtain the task status.</li>
+     * </ol>
+     * </li>
+     * <li><p>Media asset registration and analysis: After the video is produced, the media asset is automatically registered. At this time, the media asset is in the analyzing state. After the analysis is completed, you can obtain the duration and resolution information of the produced video based on the MediaId.</p>
+     * </li>
      * </ul>
-     * <h2><a href="#"></a>Limits</h2>
+     * <h2>Limits</h2>
      * <ul>
-     * <li>The throttling threshold of this operation is 30 queries per second (QPS).
-     * **
-     * <strong>Note</strong> If the threshold is exceeded, a &quot;Throttling.User&quot; error is returned when you submit an editing job. For more information about how to resolve this issue, see the <a href="https://help.aliyun.com/document_detail/453484.html">FAQ</a>.</li>
-     * <li>You can create up to 100 video tracks, 100 image tracks, and 100 subtitle tracks in a project.</li>
-     * <li>The total size of material files cannot exceed 1 TB.</li>
-     * <li>The OSS buckets in which the materials reside and where the output media assets are stored must be in the same region as the region in which Intelligent Media Services (IMS) is activated.</li>
-     * <li>An output video must meet the following requirements:<ul>
-     * <li>Both the width and height must be at least 128 pixels.</li>
-     * <li>Both the width and height cannot exceed 4,096 pixels.</li>
-     * <li>The shorter side of the video cannot exceed 2,160 pixels.</li>
+     * <li>The rate limit for this API operation is 30 QPS (requests per second for submitting tasks). Submitted tasks enter the background queue and are processed asynchronously.<blockquote>
+     * <p>If this limit is exceeded, you may encounter the &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">Throttling.User error when submitting an editing task</a>.</p>
+     * </blockquote>
+     * </li>
+     * <li>When you submit a large number of tasks (such as 1,000 or 10,000), the system dynamically scales out, but a certain queue time may be required.</li>
+     * <li>The maximum number of tracks for video, image, and subtitle tracks is 100 each.    </li>
+     * <li>There is no limit on the number of materials, but the total size of material files cannot exceed 1 TB.  </li>
+     * <li>The region of the input or output OSS bucket must be the same as the region where Intelligent Media Services (IMS) is used.   </li>
+     * <li>When the output is a video, the resolution of the produced video has the following limits:<ul>
+     * <li>The width and height cannot be less than 128 pixels.</li>
+     * <li>The width and height cannot be greater than 4,096 pixels.</li>
+     * <li>The short side cannot be greater than 2,160 pixels.</li>
      * </ul>
      * </li>
      * </ul>
@@ -2740,7 +2925,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  After submitting a job, you can call ListBatchMediaProducingJob to retrieve all matching jobs. To get detailed information for a specific job, including its status, output media asset IDs, and URLs, call GetBatchMediaProducingJob.</p>
+     * <ul>
+     * <li>After submitting a job, you can call ListBatchMediaProducingJob to retrieve all matching jobs. To get detailed information for a specific job, including its status, output media asset IDs, and URLs, call GetBatchMediaProducingJob.</li>
+     * </ul>
      * 
      * @param request the request parameters of SubmitSceneBatchEditingJob  SubmitSceneBatchEditingJobRequest
      * @return SubmitSceneBatchEditingJobResponse
@@ -2749,9 +2936,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  After a job is submitted, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to query submitted jobs, or <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to query the job status and results.</p>
      * <ul>
-     * <li>The feature is in public preview and charges no fees.</li>
+     * <li>After you submit a scenario-based material selection task, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to obtain a list of all matching tasks. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to obtain the task details, including the task status, synthesized media asset ID, and URL.</li>
+     * <li>This feature is in public preview and is free of charge.</li>
      * </ul>
      * 
      * @param request the request parameters of SubmitSceneMediaSelectionJob  SubmitSceneMediaSelectionJobRequest
@@ -2761,9 +2948,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  After submitting a job, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to retrieve matching jobs. To get detailed information for a specific job, including its status, output media asset IDs, and URLs, call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a>.</p>
      * <ul>
-     * <li>The feature is in public preview and does not charge fees.</li>
+     * <li>After you submit a scenario-based timeline orchestration task, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to obtain a list of all matching tasks. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to obtain the task details, including the task status, synthesized media asset ID, and URL.</li>
+     * <li>This feature is in public preview and is free of charge.</li>
      * </ul>
      * 
      * @param request the request parameters of SubmitSceneTimelineOrganizationJob  SubmitSceneTimelineOrganizationJobRequest
@@ -2772,12 +2959,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitSceneTimelineOrganizationJobResponse> submitSceneTimelineOrganizationJob(SubmitSceneTimelineOrganizationJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After a task is submitted, a task ID is returned. The task is not completed immediately and enters a background queue for asynchronous execution. The final result is delivered through a callback notification.</p>
+     * 
      * @param request the request parameters of SubmitScreenMediaHighlightsJob  SubmitScreenMediaHighlightsJobRequest
      * @return SubmitScreenMediaHighlightsJobResponse
      */
     CompletableFuture<SubmitScreenMediaHighlightsJobResponse> submitScreenMediaHighlightsJob(SubmitScreenMediaHighlightsJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also proactively query the task status by calling the <a href="https://help.aliyun.com/document_detail/441172.html">Query intelligent task results</a> operation.</p>
+     * 
      * @param request the request parameters of SubmitSegmentationJob  SubmitSegmentationJobRequest
      * @return SubmitSegmentationJobResponse
      */
@@ -2785,7 +2978,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation to submit a smart tagging job, you must add a smart tagging template and specify the analysis types that you want to use in the template. For more information, see CreateCustomTemplate. You can use the smart tagging feature only in the China (Beijing), China (Shanghai), and China (Hangzhou) regions. By default, an ApsaraVideo Media Processing (MPS) queue can process a maximum of two concurrent smart tagging jobs. If you need to process more concurrent smart tagging jobs, submit a ticket to contact Alibaba Cloud Technical Support for evaluation and configuration.</p>
+     * <h3>Before you begin</h3>
+     * <p>To submit a smart tagging job by calling this operation, you must first configure the analysis type by using a template. For more information, see <a href="https://help.aliyun.com/document_detail/441184.html">CreateCustomTemplate</a>.</p>
+     * <h3>Limits</h3>
+     * <ul>
+     * <li>The smart tagging feature is available only in the China (Beijing), China (Shanghai), and China (Hangzhou) regions.</li>
+     * <li>The default concurrency of smart tagging pipelines is 2. If you require a higher concurrency, <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c4g.11186623.0.0.645019b6Btnu4q">submit a ticket</a> to contact Alibaba Cloud technical support for evaluation and configuration.</li>
+     * <li>Smart tagging jobs and related results are retained for 180 days and are automatically deleted after the retention period expires.</li>
+     * </ul>
      * 
      * @param request the request parameters of SubmitSmarttagJob  SubmitSmarttagJobRequest
      * @return SubmitSmarttagJobResponse
@@ -2793,12 +2993,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitSmarttagJobResponse> submitSmarttagJob(SubmitSmarttagJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not completed immediately and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call the operation to <a href="https://help.aliyun.com/document_detail/441203.html">query the details of a snapshot job</a> to actively query the job status.</p>
+     * 
      * @param request the request parameters of SubmitSnapshotJob  SubmitSnapshotJobRequest
      * @return SubmitSnapshotJobResponse
      */
     CompletableFuture<SubmitSnapshotJobResponse> submitSnapshotJob(SubmitSnapshotJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is returned through a callback notification.</p>
+     * 
      * @param request the request parameters of SubmitSportsHighlightsJob  SubmitSportsHighlightsJobRequest
      * @return SubmitSportsHighlightsJobResponse
      */
@@ -2812,7 +3018,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to analyze an input media file in synchronous mode. This operation is suitable for scenarios that require high real-time performance and low concurrency. If it takes an extended period of time to obtain the media information about the input media file, the request may time out or the obtained information may be inaccurate. We recommend that you call the <a href="https://help.aliyun.com/document_detail/441222.html">SubmitMediaInfoJob</a> operation to obtain media information.</p>
+     * <p>You can call this operation to analyze input files in synchronous mode. This operation is suitable for scenarios that require high real-time performance and have low concurrency. If obtaining media information from the source file takes a long time, the request may time out, resulting in missing or inaccurate information. In this case, call the <a href="https://help.aliyun.com/document_detail/441222.html">SubmitMediaInfoJob - Submit an asynchronous media information job</a> operation to obtain media information.</p>
      * 
      * @param request the request parameters of SubmitSyncMediaInfoJob  SubmitSyncMediaInfoJobRequest
      * @return SubmitSyncMediaInfoJobResponse
@@ -2820,6 +3026,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitSyncMediaInfoJobResponse> submitSyncMediaInfoJob(SubmitSyncMediaInfoJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before you call this operation, you must purchase the Enterprise Subscription Service to obtain the permissions to use this feature&lt;props=&quot;china&quot;&gt;. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription billing</a>.</li>
+     * <li>This operation is billed based on the number of tokens in the generated content. The number of tokens is positively correlated with the word count of the generated text. For more information, see <a href="https://help.aliyun.com/document_detail/2840901.html">Intelligent one-click video generation</a>. If the synthesis task fails, no fees are incurred.</li>
+     * <li>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed at this time and is queued for asynchronous execution in the background. The final result is notified through a callback. You can also call the <a href="https://help.aliyun.com/document_detail/441172.html">Obtain intelligent task results</a> operation to actively query the task status.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitTextGenerateJob  SubmitTextGenerateJobRequest
      * @return SubmitTextGenerateJobResponse
      */
@@ -2827,7 +3040,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</p>
+     * <ul>
+     * <li>This operation supports only videos that are three minutes or longer. Submitting a job for a shorter video may cause the API call to fail or produce no output.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous interface</a>. After you submit a job, the system returns a job ID and processes the job asynchronously. You can obtain the processing result through a callback or by <a href="https://help.aliyun.com/document_detail/2862133.html">querying the list of A/B stream forensic watermarking jobs</a>.</li>
+     * </ul>
      * 
      * @param request the request parameters of SubmitTraceAbJob  SubmitTraceAbJobRequest
      * @return SubmitTraceAbJobResponse
@@ -2836,9 +3052,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
      * <ul>
-     * <li>The input video must be 3 minutes or longer. Jobs submitted with shorter videos will fail.</li>
+     * <li>The digital watermarking APIs are available only in the China (Shanghai) and China (Beijing) regions.</li>
+     * <li>Trace watermark extraction is supported only for videos that are 3 minutes or longer. Jobs for shorter videos will fail.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, a job ID is returned. The job is not immediately complete and is queued for asynchronous processing. You can get the final result through a callback notification or check the job status by calling the <a href="https://help.aliyun.com/document_detail/2862130.html">GetTraceExtractJob</a> operation.</li>
      * </ul>
      * 
      * @param request the request parameters of SubmitTraceExtractJob  SubmitTraceExtractJobRequest
@@ -2848,10 +3065,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, you must call SubmitTraceAbJob to get the TraceMediaId from its response.</p>
      * <ul>
-     * <li>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</li>
-     * <li>The M3U8 file generated by this job has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. Once the signature expires, you will no longer be able to trace the watermark information using that specific M3U8 file. If you need to use it after expiration, you must call this API again to generate a new M3U8 file.</li>
+     * <li>Before invoking this operation, invoke the operation to commit a video tracing watermark AB stream job to obtain the media ID of the processed AB stream, and then invoke this operation.</li>
+     * <li>Digital watermarking-related operations are supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * <li>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After a node is committed, a node ID is returned. The node is not completed immediately and enters a background queue to be executed asynchronously. The final result is sent through a callback notification. You can also invoke the <a href="https://help.aliyun.com/document_detail/2862136.html">List video tracing watermark m3u8 jobs</a> operation to query the node status.</li>
+     * <li>The signature authentication for the m3u8 file generated by the video tracing watermark m3u8 job is valid for 24 hours starting from the completion of the processing. Query the result promptly. After the signature authentication expires, the watermark information of the job cannot be queried. If you need the information after the expiration, recommit the video tracing watermark m3u8 job.</li>
      * </ul>
      * 
      * @param request the request parameters of SubmitTraceM3u8Job  SubmitTraceM3u8JobRequest
@@ -2860,12 +3078,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitTraceM3u8JobResponse> submitTraceM3u8Job(SubmitTraceM3u8JobRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>&lt;props=&quot;intl&quot;&gt;This operation will be retired on December 31, 2025. Call <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob - Submit a media transcoding job</a> instead.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the job, a job ID is returned. The job is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call <a href="https://help.aliyun.com/document_detail/441206.html">Query a transcoding job</a> to actively query the job status.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitTranscodeJob  SubmitTranscodeJobRequest
      * @return SubmitTranscodeJobResponse
      */
     CompletableFuture<SubmitTranscodeJobResponse> submitTranscodeJob(SubmitTranscodeJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed immediately and is queued for asynchronous execution in the background. The final result is delivered through a callback notification. You can also query the task status by calling the <a href="https://help.aliyun.com/document_detail/2975154.html">Query intelligent content understanding tasks</a> operation.</p>
+     * 
      * @param request the request parameters of SubmitVideoCognitionJob  SubmitVideoCognitionJobRequest
      * @return SubmitVideoCognitionJobResponse
      */
@@ -2873,7 +3100,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation to submit a video translation job, the system returns a job ID. You can call the GetSmartHandleJob operation based on the job ID to obtain the status and result information of the job.</p>
+     * <ul>
+     * <li>For this operation, the region in the OSS URL of all media assets must match the region of the OpenAPI endpoint.</li>
+     * <li>This operation supports 30 queries per second (QPS). When a large number of tasks are submitted, they are automatically queued and processed with dynamic scaling. There is no limit on the number of concurrent executions.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After a task is submitted, a task ID is returned. The task is not completed at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a> to proactively query the task status.<blockquote>
+     * <p>Notice: For detailed metric descriptions and examples of this operation, refer to the following document: &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ims/use-cases/introduction-and-examples-of-video-translation-parameters">Introduction and examples of video translation parameters</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/2852702.html">Introduction and examples of video translation parameters</a></p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * @param request the request parameters of SubmitVideoTranslationJob  SubmitVideoTranslationJobRequest
      * @return SubmitVideoTranslationJobResponse
@@ -2900,8 +3135,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
-     * <p>You can call this operation to update the configurations of an AI agent, such as the tone, by specifying the agent ID and configurations.</p>
+     * <p>Allows you to specify an agent instance ID and configuration to update the agent configuration, such as the voice.</p>
      * 
      * @param request the request parameters of UpdateAIAgentInstance  UpdateAIAgentInstanceRequest
      * @return UpdateAIAgentInstanceResponse
@@ -2922,7 +3156,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</p>
+     * <p>After you create a media asset category, you can call this operation to locate and update the name of the category by its ID.</p>
      * 
      * @param request the request parameters of UpdateCategory  UpdateCategoryRequest
      * @return UpdateCategoryResponse
@@ -2955,13 +3189,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a></h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>You can call this operation to modify a specified hotword library.</li>
-     * <li>The hotword library ID (<code>HotwordLibraryId</code>) is required to identify the library that requires modification.</li>
-     * <li>You can modify its name (<code>Name</code> ), description (<code>Description</code> ), and hotword list (<code>HotWords</code>).</li>
-     * <li>Each hotword in the list can also be modified, including its content (<code>Text</code>), weight (<code>Weight</code>), language (<code>Language</code>), and translation results (<code>TranspositionResultList</code>).</li>
-     * <li>A single account supports up to 100 hotword libraries, each containing a maximum of 300 hotword entries. In a library, the combination of <code>language</code> and <code>text</code> of an entry must be unique. The combination of <code>TranslatedText</code> and <code>TargetLanguage</code> in <code>TranspositionResultList</code> must also be unique.</li>
+     * <li>This operation allows you to update the information of an existing hotword library.</li>
+     * <li>You must provide the hotword library ID (<code>HotwordLibraryId</code>), which is a required parameter.</li>
+     * <li>You can simultaneously update the name (<code>Name</code>), description (<code>Description</code>), and hotword list (<code>HotWords</code>) of the hotword library.</li>
+     * <li>For each hotword in the hotword list, you can set its text content (<code>Text</code>), weight (<code>Weight</code>), language (<code>Language</code>), and translation and transposition results (<code>TranspositionResultList</code>).</li>
+     * <li>Note: You can create up to 100 hotword libraries under a single account, and add up to 300 hotwords to a single hotword library. Within a single hotword library, the combination of <code>language</code> and <code>text</code> for a hotword must be unique. In addition, within a single hotword library, the combination of <code>TranslatedText</code> and <code>TargetLanguage</code> in the <code>TranspositionResultList</code> of a hotword must also be unique.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateHotwordLibrary  UpdateHotwordLibraryRequest
@@ -2971,8 +3205,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>You need to provide the name of the channel group to which the channel belongs, channel name, protocol, segment duration, and number of segments to update. In addition, you can choose to add or modify the description of the channel. Make sure that the provided channel group name and channel name conform to the naming conventions.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to update the configurations of a specified channel in the live packaging service. You must provide the name of the channel group to which the channel belongs, the channel name, and the protocol type, segment duration, and segment count to be updated. You can also optionally add or modify the description of the channel. Make sure that the provided channel group name and channel name meet the format requirements.</p>
      * 
      * @param request the request parameters of UpdateLivePackageChannel  UpdateLivePackageChannelRequest
      * @return UpdateLivePackageChannelResponse
@@ -2991,8 +3225,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>This API operation allows you to modify the name and description of a live package channel group. The channel group name must conform to the naming conventions and can be up to 1,000 characters. The API response includes the updated channel group details and unique identifier of the request.</p>
+     * <h2>Operation description</h2>
+     * <p>You can use this API operation to update the name and description of an existing channel group in the Live Packaging service. The channel group name must comply with specific character rules, and the description cannot exceed 1,000 characters in length. The API response returns the updated channel group details and the unique identifier (RequestId) of the operation request.</p>
      * 
      * @param request the request parameters of UpdateLivePackageChannelGroup  UpdateLivePackageChannelGroupRequest
      * @return UpdateLivePackageChannelGroupResponse
@@ -3001,8 +3235,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>You can call this operation to modify the origin protocol, set the number of days that time-shifted content is available, define playlist names, and configure the IP address blacklist and whitelist, allowing for fine-grained control over streaming media distribution. Some parameters are required. You must configure IpWhitelist, AuthorizationCode, or both.</p>
+     * <h2>Request description</h2>
+     * <p>This operation updates the origin endpoint configuration of the live packaging service for a specified channel group. You can use this operation to adjust the back-to-origin protocol, set the time-shift days, define the playlist name, and configure IP blacklists and whitelists to achieve fine-grained management of live streaming distribution. Note that some parameters are required, and you must specify at least one of the IP whitelist and the back-to-origin authorization code.</p>
      * 
      * @param request the request parameters of UpdateLivePackageOriginEndpoint  UpdateLivePackageOriginEndpointRequest
      * @return UpdateLivePackageOriginEndpointResponse
@@ -3026,8 +3260,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  For a non-timed transcoding job, you can modify the Name parameter of the job, regardless of the job state.</p>
      * <ul>
+     * <li>For a non-timed transcoding job, you can modify the Name parameter of the job, regardless of the job state.</li>
      * <li>For a timed job, you can modify the Name, StreamInput, TranscodeOutput, and TimedConfig parameters. However, the StreamInput, TranscodeOutput, and TimedConfig parameters can be modified only when the job is not started.</li>
      * </ul>
      * 
@@ -3044,9 +3278,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can modify the source only when the flow is in the offline state.</p>
      * <ul>
-     * <li>The source type cannot be modified.</li>
+     * <li>The input can only be modified when the Flow instance status is offline.</li>
+     * <li>The input type cannot be modified.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateMediaConnectFlowInput  UpdateMediaConnectFlowInputRequest
@@ -3056,8 +3290,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can modify an output only when the flow is in the offline state.</p>
      * <ul>
+     * <li>You can modify an output only when the flow is in the offline state.</li>
      * <li>The output type cannot be modified.</li>
      * </ul>
      * 
@@ -3083,9 +3317,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can modify a MediaLive channel only when it is not running.</p>
+     * <ul>
+     * <li>Call this operation to update a media live channel.</li>
+     * <li>You can update a channel only when it is not started. You cannot update a running channel.</li>
+     * </ul>
      * <h2>QPS limit</h2>
-     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * <p>The queries per second (QPS) limit per user for this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of UpdateMediaLiveChannel  UpdateMediaLiveChannelRequest
      * @return UpdateMediaLiveChannelResponse
@@ -3094,9 +3331,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can modify an input only when it is not associated with a MediaLive channel.</p>
-     * <h2>QPS limit</h2>
-     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * <ul>
+     * <li>Invoke this API to update a media live input.</li>
+     * <li>You can update an input only when it is not attached to any media live channel. Inputs that are already attached to a channel cannot be updated.</li>
+     * </ul>
+     * <h2>Queries per second (QPS) limit</h2>
+     * <p>The QPS limit for this API is 50 queries per second per user. If the limit is exceeded, Rate Limiting will be applied to your API calls, which may impact your business. Make sure to call this API appropriately.</p>
      * 
      * @param request the request parameters of UpdateMediaLiveInput  UpdateMediaLiveInputRequest
      * @return UpdateMediaLiveInputResponse
@@ -3105,7 +3345,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can modify a security group only when it is not associated with a MediaLive input.</p>
+     * <ul>
+     * <li>You can modify a security group only when it is not associated with a MediaLive input.</li>
+     * </ul>
      * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
@@ -3133,6 +3375,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls the UpdateProgram API operation to create a program.</p>
+     * 
      * @param request the request parameters of UpdateProgram  UpdateProgramRequest
      * @return UpdateProgramResponse
      */
@@ -3158,9 +3403,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</p>
      * <ul>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
+     * <li>To use common templates, refer to <a href="https://help.aliyun.com/document_detail/270942.html">Quick start for common templates</a>.</li>
+     * <li>To use advanced templates, refer to <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateTemplate  UpdateTemplateRequest
@@ -3170,13 +3415,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  If a callback is configured, you will receive an UploadByURLComplete event notification after the file is uploaded. You can query the upload status by calling the GetURLUploadInfos operation.</p>
+     * <h3>Operation description</h3>
      * <ul>
-     * <li>After a request is submitted, the upload job is queued as an asynchronous job in the cloud. You can query the status of the upload job based on information such as the URL and media asset ID that are returned in the event notification.</li>
-     * <li>You can call this operation to upload media files that are not stored on a local server or device and must be uploaded by using URLs that are accessible over the Internet.</li>
-     * <li>You can call this operation to upload media files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</li>
-     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
-     * <li>You can call this operation to upload only audio and video files.</li>
+     * <li>If a callback is configured, you receive an event notification about the completion of URL-based video upload after the upload is complete. You can invoke the operation for obtaining URL upload information to query the upload status.</li>
+     * <li>After an upload task is submitted successfully, an asynchronous task is generated in the cloud and queued for execution. After the upload is complete, you can associate the URL with the video ID based on the information returned in the event notification (message callback).</li>
+     * </ul>
+     * <h3>Limits</h3>
+     * <ul>
+     * <li>This operation supports uploading only to VOD storage, not to user-owned Object Storage Service (OSS) storage. If you use your own OSS storage, pull the file to a local device first, upload the file to OSS by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then invoke the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS file in the media asset library.</li>
+     * <li>This operation is currently supported only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * <li>This operation supports uploading only audio and video files.</li>
      * </ul>
      * 
      * @param request the request parameters of UploadMediaByURL  UploadMediaByURLRequest
@@ -3186,9 +3434,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to pull a media stream file based on a URL and upload the file. After the media stream file is uploaded, the media stream is associated with the specified media asset ID.</p>
      * <ul>
-     * <li>You can call this operation to upload media stream files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</li>
+     * <li>Pull a media stream file based on a URL and upload the file. After the media stream file is uploaded, the media stream is associated with the specified media asset ID.</li>
+     * <li>Upload media stream files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</li>
      * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
      * </ul>
      * 

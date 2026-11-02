@@ -74,7 +74,7 @@ public class UpdateRtcRobotInstanceRequest extends Request {
         } 
 
         /**
-         * Config.
+         * <p>The configuration.</p>
          */
         public Builder config(Config config) {
             String configShrink = shrink(config, "Config", "json");
@@ -84,6 +84,7 @@ public class UpdateRtcRobotInstanceRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +169,10 @@ public class UpdateRtcRobotInstanceRequest extends Request {
             } 
 
             /**
-             * EnableVoiceInterrupt.
+             * <p>Specifies whether voice interruption is allowed. This setting takes effect immediately.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableVoiceInterrupt(Boolean enableVoiceInterrupt) {
                 this.enableVoiceInterrupt = enableVoiceInterrupt;
@@ -176,7 +180,10 @@ public class UpdateRtcRobotInstanceRequest extends Request {
             }
 
             /**
-             * Greeting.
+             * <p>The greeting. Modifications do not take effect if the greeting has already been played.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder greeting(String greeting) {
                 this.greeting = greeting;
@@ -184,7 +191,10 @@ public class UpdateRtcRobotInstanceRequest extends Request {
             }
 
             /**
-             * VoiceId.
+             * <p>The voice ID. The change takes effect for the next sentence spoken by the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhixiaoxia</p>
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;

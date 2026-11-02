@@ -132,7 +132,7 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The username of the AI agent in the Alibaba Real-Time Communication (ARTC) channel.</p>
+         * <p>The name of the agent in the ARTC channel.</p>
          * 
          * <strong>example:</strong>
          * <p>877ae632caae49b1afc81c2e8194ffb4</p>
@@ -143,7 +143,10 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
         }
 
         /**
-         * AvatarUserId.
+         * <p>The user ID of the digital human joining the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>avatar_39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder avatarUserId(String avatarUserId) {
             this.avatarUserId = avatarUserId;
@@ -162,7 +165,7 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the AI agent.</p>
+         * <p>The instance ID of the generated agent.</p>
          * 
          * <strong>example:</strong>
          * <p>39f8e0bc005e4f309379701645f4****</p>
@@ -184,7 +187,7 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ARTC token of the client.</p>
+         * <p>The ARTC token for the client.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>

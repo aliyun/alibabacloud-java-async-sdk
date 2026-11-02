@@ -93,7 +93,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried quick video production jobs.</p>
+         * <p>The list of one-click video production jobs.</p>
          */
         public Builder editingBatchJobList(java.util.List<EditingBatchJobList> editingBatchJobList) {
             this.editingBatchJobList = editingBatchJobList;
@@ -101,7 +101,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>8EqYpQbZ6Eh7+Zz8DxVYoQ==</p>
@@ -124,7 +124,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
@@ -310,7 +310,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The completion time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-06-09T06:38:09Z</p>
@@ -321,7 +321,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The creation time. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-06-09T06:36:48Z</p>
@@ -332,7 +332,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The editing configurations. For more information, see <a href="~~2692547#1be9bba03b7qu~~">EditingConfig</a>.</p>
+             * <p>The editing configurations. For more information about the structure, see <a href="~~2692547#1be9bba03b7qu~~">EditingConfig</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -364,7 +364,24 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input configurations.</p>
+             * <p>The input configuration for user synthesis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;MediaGroupArray&quot;: [{
+             *       &quot;MediaArray&quot;: [
+             *         &quot;<strong><strong>9d46c886b45481030f6e</strong></strong>&quot;,
+             *         &quot;<strong><strong>6c886b4549d481030f6e</strong></strong>&quot; ]
+             *     }, {
+             *       &quot;MediaArray&quot;: [
+             *         &quot;<strong><strong>d46c886810b454930f6e</strong></strong>&quot;,
+             *         &quot;<strong><strong>4549d886810b46c30f6e</strong></strong>&quot; ]
+             *   }],
+             *   &quot;TitleArray&quot;: [
+             *       &quot;Hema Fresh in Huilongguan is now open&quot;],
+             *   &quot;SpeechTextArray&quot;: [
+             *       &quot;A new Hema Fresh store has opened in the nearby mall, and today is its first day of business&quot;]
+             * }</p>
              */
             public Builder inputConfig(String inputConfig) {
                 this.inputConfig = inputConfig;
@@ -372,7 +389,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the quick video production job.</p>
+             * <p>The ID of the one-click video production job.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong><strong>7ecbee4c6d9b8474498e</strong></strong></strong></p>
@@ -384,11 +401,6 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
 
             /**
              * <p>The job type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Script: script-based editing job that mixes media assets.</li>
-             * <li>Smart_Mix: intelligent editing job that mixes media assets.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Script</p>
@@ -399,7 +411,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was last modified.</p>
+             * <p>The last modification time. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-06-09T06:37:58Z</p>
@@ -410,7 +422,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output configurations. For more information, see <a href="~~2692547#447b928fcbuoa~~">OutputConfig</a>.</p>
+             * <p>The output configurations. For more information about the structure, see <a href="~~2692547#447b928fcbuoa~~">OutputConfig</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -428,14 +440,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job state.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Finished</li>
-             * <li>Init</li>
-             * <li>Failed</li>
-             * <li>Processing</li>
-             * </ul>
+             * <p>The job status.</p>
              * 
              * <strong>example:</strong>
              * <p>Finished</p>
@@ -446,7 +451,10 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined data in the JSON format, which can be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</p>
+             * <p>The custom settings in JSON format. The maximum length is 512 bytes. You can configure a <a href="~~451631#section-fbd-xz2-xum~~">custom callback URL</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a>, {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a>, or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

@@ -83,7 +83,10 @@ public class GetYikeUserRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test.xxx@xxx.yikeai">test.xxx@xxx.yikeai</a></p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

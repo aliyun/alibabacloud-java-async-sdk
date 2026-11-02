@@ -74,7 +74,7 @@ public class QuerySmarttagJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the smart tagging job that you want to query. You can obtain the job ID from the response parameters of the SubmitSmarttagJob operation.</p>
+         * <p>The ID of the smart tag job to query. You can obtain the ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/478786.html">SubmitSmarttagJob</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,10 +87,12 @@ public class QuerySmarttagJobRequest extends Request {
         }
 
         /**
-         * <p>The extra parameters that you want to query in the request. The value is a JSON string. Example: {&quot;labelResultType&quot;:&quot;auto&quot;}. The value of labelResultType is of the STRING type. Valid values:</p>
+         * <p>The additional request parameters, represented as a JSON string. Example: {&quot;labelResultType&quot;:&quot;auto&quot;}. The labelResultType parameter is of the String type. Valid values:</p>
          * <ul>
-         * <li>auto: machine tagging</li>
-         * <li>hmi: tagging by human and machine</li>
+         * <li><p>auto: machine tagging results.</p>
+         * </li>
+         * <li><p>hmi: human-machine collaboration results.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class SubmitTextGenerateJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The job ID.</p>
+         * <p>The ID of the intelligent task.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
@@ -78,7 +78,7 @@ public class SubmitTextGenerateJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>

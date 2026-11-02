@@ -116,7 +116,7 @@ public class ListLivePackageChannelsRequest extends Request {
         } 
 
         /**
-         * <p>The channel group name.</p>
+         * <p>The name of the channel group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,12 +165,7 @@ public class ListLivePackageChannelsRequest extends Request {
         }
 
         /**
-         * <p>The sort order by creation time. Default value: desc.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>asc</li>
-         * <li>desc</li>
-         * </ul>
+         * <p>The sorting order by creation time. Default value: desc (descending order).</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>

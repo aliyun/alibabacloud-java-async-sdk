@@ -213,9 +213,10 @@ public class SubmitVideoTranslationJobRequest extends Request {
         } 
 
         /**
-         * <ul>
-         * <li>The client token.</li>
-         * </ul>
+         * <p>Ensures the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test ClientToken</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -224,9 +225,10 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li>The job description.</li>
-         * </ul>
+         * <p>The task description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -235,10 +237,7 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li>The configuration parameters of the video translation job.</li>
-         * <li>The value must be in the JSON format.</li>
-         * </ul>
+         * <p>The configuration parameters for the video translation task. Must be in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;SourceLanguage&quot;:&quot;zh&quot;,&quot;TargetLanguage&quot;:&quot;en&quot;,&quot;DetextArea&quot;:&quot;Auto&quot;}</p>
@@ -250,14 +249,14 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
+         * <p>The input parameters for the video translation task.</p>
          * <ul>
-         * <li>The input parameters of the video translation job.</li>
-         * <li>A video translation job takes a video or subtitle file as the input.</li>
-         * <li>The value must be in the JSON format.</li>
+         * <li>Supports videos and subtitle files as input.</li>
+         * <li>Must be in JSON format.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Type&quot;:&quot;Video&quot;,&quot;Media&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4&quot;}</a></p>
+         * <p>{&quot;Type&quot;:&quot;Video&quot;,&quot;Video&quot;:&quot;1628ae20c36******8f6f7c77a6302&quot;}</p>
          */
         public Builder inputConfig(String inputConfig) {
             this.putQueryParameter("InputConfig", inputConfig);
@@ -266,10 +265,7 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li>The output parameters of the video translation job.</li>
-         * <li>A video translation job can generate a video or subtitle file as the output.</li>
-         * </ul>
+         * <p>The output parameters for the video translation task. Supports video and subtitle file types as output.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;MediaURL&quot;: &quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/your-object.mp4%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/your-object.mp4&quot;}</a></p>
@@ -290,7 +286,10 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * SignatureMehtod.
+         * <p>Automatically populated. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Auto-complete, no need to write</p>
          */
         public Builder signatureMehtod(String signatureMehtod) {
             this.putQueryParameter("SignatureMehtod", signatureMehtod);
@@ -308,7 +307,10 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * SignatureType.
+         * <p>Automatically populated. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Auto-complete, no need to write</p>
          */
         public Builder signatureType(String signatureType) {
             this.putQueryParameter("SignatureType", signatureType);
@@ -326,9 +328,10 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li>The job title.</li>
-         * </ul>
+         * <p>The task title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -337,9 +340,9 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
+         * <p>The custom information in JSON format. The maximum length is 512 bytes.</p>
          * <ul>
-         * <li>The user-defined data.</li>
-         * <li>The data must be in the JSON format, and can be up to 512 characters in length.</li>
+         * <li><a href="https://help.aliyun.com/document_detail/451631.html">Supports custom callback URL configuration</a></li>
          * </ul>
          * 
          * <strong>example:</strong>

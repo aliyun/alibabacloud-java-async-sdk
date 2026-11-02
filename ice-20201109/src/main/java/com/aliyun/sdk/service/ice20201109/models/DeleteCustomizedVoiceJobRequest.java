@@ -60,7 +60,7 @@ public class DeleteCustomizedVoiceJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the human voice cloning job.</p>
+         * <p>The ID of the voice cloning task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

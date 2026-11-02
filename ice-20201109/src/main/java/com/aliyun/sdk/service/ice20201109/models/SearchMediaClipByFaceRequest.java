@@ -154,7 +154,7 @@ public class SearchMediaClipByFaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the entity.</p>
+         * <p>The entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2d3bf1e35a1e42b5ab338d701efa****</p>
@@ -166,7 +166,7 @@ public class SearchMediaClipByFaceRequest extends Request {
         }
 
         /**
-         * <p>The value of this parameter is the same as that of the FaceSearchToken parameter in the SearchMediaByFace request. This specifies to return media asset clips that meet the same query conditions.</p>
+         * <p>The face search token. Keep this value consistent with the FaceSearchToken value in the <a href="https://help.aliyun.com/document_detail/612893.html">rough search operation</a>. This parameter is used to determine whether the paginated results are returned under the same search conditions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +179,7 @@ public class SearchMediaClipByFaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class SearchMediaClipByFaceRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -204,7 +204,7 @@ public class SearchMediaClipByFaceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -80,7 +80,13 @@ public class AddYikeUserCreditResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code. This parameter is returned when the increase fails. Valid values:</p>
+         * <ul>
+         * <li>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA: The credit balance of the Alibaba Cloud account is insufficient.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -88,7 +94,10 @@ public class AddYikeUserCreditResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +105,14 @@ public class AddYikeUserCreditResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the credits are increased successfully. Valid values:</p>
+         * <ul>
+         * <li>true: Succeeded.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

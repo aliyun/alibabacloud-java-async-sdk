@@ -158,10 +158,10 @@ public class UpdateEditingProjectRequest extends Request {
         } 
 
         /**
-         * <p>The business status of the project. This parameter can be ignored for general editing projects. Valid values:</p>
+         * <p>The business status of the project. This parameter can be ignored for general editing projects. You can modify the reservation status of the project. Valid values:</p>
          * <ul>
-         * <li>Reserving</li>
-         * <li>ReservationCanceled</li>
+         * <li>Reserving: The project is being reserved.</li>
+         * <li>ReservationCanceled: The reservation is canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +174,10 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The material parameter corresponding to the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified.</p>
+         * <p>The material parameters for the template in JSON format. If TemplateId is specified, ClipsParam must also be specified. &lt;props=&quot;china&quot;&gt;For more information about the format, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use standard templates</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>See the template documentation</p>
          */
         public Builder clipsParam(String clipsParam) {
             this.putQueryParameter("ClipsParam", clipsParam);
@@ -183,7 +186,7 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The thumbnail URL of the online editing project.</p>
+         * <p>The cover URL of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p>https://<strong><strong>.com/6AB4D0E1E1C7446888</strong></strong>.png</p>
@@ -195,7 +198,7 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The description of the online editing project.</p>
+         * <p>The description of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p>testtimeline001desciption</p>
@@ -207,7 +210,7 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The ID of the online editing project.</p>
+         * <p>The ID of the cloud editing project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +223,7 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The template ID. This parameter is used to quickly build a timeline with ease. Note: Only one of ProjectId, Timeline, and TemplateId can be specified. If TemplateId is specified, ClipsParam must also be specified.</p>
+         * <p>The template ID, which is used to quickly and easily build a timeline. <notice>Only one of ProjectId, Timeline, and TemplateId can be specified. If TemplateId is specified, ClipsParam must also be specified.</notice></p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
@@ -232,7 +235,10 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * Timeline.
+         * <p>The timeline of the cloud editing project in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;0123456789abcdef0123456789abcdef&quot;}]}]}</p>
          */
         public Builder timeline(String timeline) {
             this.putBodyParameter("Timeline", timeline);
@@ -241,7 +247,7 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The title of the online editing project.</p>
+         * <p>The title of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p>testtimeline</p>

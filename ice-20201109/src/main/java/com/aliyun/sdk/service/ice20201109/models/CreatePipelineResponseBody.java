@@ -67,7 +67,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the MPS queue.</p>
+         * <p>The pipeline information.</p>
          */
         public Builder pipeline(Pipeline pipeline) {
             this.pipeline = pipeline;
@@ -209,7 +209,7 @@ public class CreatePipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the template was created.</p>
+             * <p>The time when the pipeline was created. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:17:54Z</p>
@@ -220,7 +220,7 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was last modified.</p>
+             * <p>The time when the pipeline was last modified. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:17:54Z</p>
@@ -231,7 +231,7 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the MPS queue.</p>
+             * <p>The name of the pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p>test-pipeline</p>
@@ -242,7 +242,7 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the MPS queue.</p>
+             * <p>The ID of the pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -253,7 +253,7 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the MPS queue.</p>
+             * <p>The priority of the pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -264,13 +264,7 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the MPS queue.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Boost: MPS queue with transcoding speed boosted.</li>
-             * <li>Standard: standard MPS queue.</li>
-             * <li>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</li>
-             * </ul>
+             * <p>The type of the pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p>Standard</p>
@@ -281,12 +275,7 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the MPS queue.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Active</li>
-             * <li>Paused</li>
-             * </ul>
+             * <p>The status of the pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>

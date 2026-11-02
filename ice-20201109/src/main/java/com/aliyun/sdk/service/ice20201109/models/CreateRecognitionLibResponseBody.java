@@ -67,7 +67,7 @@ public class CreateRecognitionLibResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the recognition library created.</p>
+         * <p>The ID of the created recognition library.</p>
          * 
          * <strong>example:</strong>
          * <p><em><strong><strong><strong><strong><strong><strong>24b47865c6</strong></strong></strong></strong></strong></strong></em>*</p>

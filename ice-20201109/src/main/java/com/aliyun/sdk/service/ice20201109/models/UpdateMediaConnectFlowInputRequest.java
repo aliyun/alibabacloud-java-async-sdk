@@ -195,7 +195,10 @@ public class UpdateMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * InputName.
+         * <p>Input name. This parameter is required only when primary/standby input is enabled for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>input1</p>
          */
         public Builder inputName(String inputName) {
             this.putQueryParameter("InputName", inputName);

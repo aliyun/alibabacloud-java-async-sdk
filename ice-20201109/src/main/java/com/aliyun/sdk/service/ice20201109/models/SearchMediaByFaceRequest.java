@@ -210,7 +210,15 @@ public class SearchMediaByFaceRequest extends Request {
         }
 
         /**
-         * CustomFilters.
+         * <p>The custom filter. JSON string. Supported fields include integer field intField1 and string fields strField1 and strField2. Each field supports only one matching mode. Filters on different fields are combined with an AND relationship.</p>
+         * <ul>
+         * <li>Exact match, such as {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}</li>
+         * <li>Multi-value match, such as {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}</li>
+         * <li>Range match, such as {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13},&quot;strField2&quot;:[&quot;cd&quot;,&quot;de&quot;],&quot;strField1&quot;:&quot;abc&quot;}</p>
          */
         public Builder customFilters(String customFilters) {
             this.putQueryParameter("CustomFilters", customFilters);
@@ -219,7 +227,7 @@ public class SearchMediaByFaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the entity.</p>
+         * <p>The entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2d3bf1e35a1e42b5ab338d701efa****</p>
@@ -231,7 +239,7 @@ public class SearchMediaByFaceRequest extends Request {
         }
 
         /**
-         * <p>The token that is used to identify the query. You can use this parameter in the SearchMediaClipByFace operation to specify the same query conditions.</p>
+         * <p>The token used to identify paginated results under the same search condition. Use this parameter together with the FaceSearchToken parameter in the <a href="https://help.aliyun.com/document_detail/612891.html">refined search operation</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,10 +252,10 @@ public class SearchMediaByFaceRequest extends Request {
         }
 
         /**
-         * <p>The type of the media asset. Valid values:</p>
+         * <p>The media asset type. Valid values:</p>
          * <ul>
-         * <li>image</li>
-         * <li>video</li>
+         * <li>image: image</li>
+         * <li>video: video</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +268,10 @@ public class SearchMediaByFaceRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -318,7 +329,13 @@ public class SearchMediaByFaceRequest extends Request {
         }
 
         /**
-         * UtcCreate.
+         * <p>The creation time, in millisecond-precision timestamp. gte specifies greater than or equal to, and lte specifies less than or equal to.</p>
+         * <ul>
+         * <li>Range, such as {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</p>
          */
         public Builder utcCreate(String utcCreate) {
             this.putQueryParameter("UtcCreate", utcCreate);

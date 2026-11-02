@@ -93,7 +93,10 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The next token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Token</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,7 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * ProductionList.
+         * <p>The list of projects.</p>
          */
         public Builder productionList(java.util.List<ProductionList> productionList) {
             this.productionList = productionList;
@@ -117,7 +123,10 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -261,7 +270,10 @@ public class ListYikeProductionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Auth.
+             * <p>The authentication method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manage</p>
              */
             public Builder auth(String auth) {
                 this.auth = auth;
@@ -269,7 +281,10 @@ public class ListYikeProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * CoverUrl.
+             * <p>The cover URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://tagvvcloud-material-center-prod.oss-cn-hangzhou.aliyuncs.com/sumvideo/utils_image/sumvideo-video-cover.png">https://tagvvcloud-material-center-prod.oss-cn-hangzhou.aliyuncs.com/sumvideo/utils_image/sumvideo-video-cover.png</a></p>
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
@@ -277,7 +292,10 @@ public class ListYikeProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The time follows the ISO 8601 standard and is in UTC (ending with Z).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-07T02:21:36Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -285,7 +303,10 @@ public class ListYikeProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserName.
+             * <p>The username of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun_183320223010****</p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -293,7 +314,10 @@ public class ListYikeProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The project description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Swas_QuerySwasInstanceByRegion</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -301,7 +325,10 @@ public class ListYikeProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductionId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pd_463862****</p>
              */
             public Builder productionId(String productionId) {
                 this.productionId = productionId;
@@ -309,7 +336,10 @@ public class ListYikeProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Harvest</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -317,7 +347,10 @@ public class ListYikeProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>llm-m3r546h1n9kq3mtm</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

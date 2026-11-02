@@ -80,7 +80,7 @@ public class CreateCustomizedVoiceJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,7 +99,11 @@ public class CreateCustomizedVoiceJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true false</p>
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -168,7 +172,7 @@ public class CreateCustomizedVoiceJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the human voice cloning job.</p>
+             * <p>The voice cloning task ID.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>29faef8144638ba42eb8e037</strong></strong></p>

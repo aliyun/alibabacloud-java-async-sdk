@@ -67,7 +67,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried MPS queues.</p>
+         * <p>The list of pipelines.</p>
          */
         public Builder pipelineList(java.util.List<PipelineList> pipelineList) {
             this.pipelineList = pipelineList;
@@ -209,7 +209,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the template was created.</p>
+             * <p>The pipeline creation time. The time is displayed in ISO 8601 format in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:17:54Z</p>
@@ -220,7 +220,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was last modified.</p>
+             * <p>The pipeline modification time. The time is displayed in ISO 8601 format in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:17:54Z</p>
@@ -231,7 +231,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the MPS queue.</p>
+             * <p>The pipeline name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-pipeline</p>
@@ -242,7 +242,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the MPS queue.</p>
+             * <p>The pipeline ID.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -253,7 +253,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the MPS queue.</p>
+             * <p>The pipeline priority.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -264,7 +264,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the MPS queue.</p>
+             * <p>The pipeline type.</p>
              * 
              * <strong>example:</strong>
              * <p>Standard</p>
@@ -275,12 +275,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the MPS queue.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Active</li>
-             * <li>Paused</li>
-             * </ul>
+             * <p>The pipeline status.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>

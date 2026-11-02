@@ -67,7 +67,7 @@ public class DeleteSourceLocationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p><strong>Request ID</strong></p>
+         * <p><strong>The request ID.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>xxx-xxxx-xxxxx-xxxx</p>
@@ -78,10 +78,10 @@ public class DeleteSourceLocationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid value:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true: The request succeeded.</li>
-         * <li>false: The request failed.</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

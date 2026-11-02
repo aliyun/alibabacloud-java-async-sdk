@@ -67,7 +67,10 @@ public class GetAIAgentConcurrencyResponseBody extends TeaModel {
         } 
 
         /**
-         * ActiveCount.
+         * <p>The number of active concurrent calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39</p>
          */
         public Builder activeCount(Integer activeCount) {
             this.activeCount = activeCount;
@@ -75,7 +78,10 @@ public class GetAIAgentConcurrencyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

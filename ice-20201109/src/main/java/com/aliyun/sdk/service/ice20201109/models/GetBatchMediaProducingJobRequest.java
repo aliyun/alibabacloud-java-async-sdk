@@ -59,7 +59,7 @@ public class GetBatchMediaProducingJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the quick video production job.</p>
+         * <p>The ID of the batch intelligent one-click video production job.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>b4549d46c88681030f6e</strong></strong></p>

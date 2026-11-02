@@ -145,7 +145,10 @@ public class MediaConvertOutputDetail extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code for a transcoding failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.ResourceContentBad</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,10 @@ public class MediaConvertOutputDetail extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the output was created. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-07T06:06:58Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -161,7 +167,10 @@ public class MediaConvertOutputDetail extends TeaModel {
         }
 
         /**
-         * FinishTime.
+         * <p>The time when the output was completed. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-07T13:01:07Z</p>
          */
         public Builder finishTime(String finishTime) {
             this.finishTime = finishTime;
@@ -169,7 +178,10 @@ public class MediaConvertOutputDetail extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The detailed cause of the transcoding failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The resource operated InputFile is bad</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,7 +189,10 @@ public class MediaConvertOutputDetail extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the transcoding output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720P-mp4</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -185,7 +200,7 @@ public class MediaConvertOutputDetail extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The details of the output result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -193,7 +208,17 @@ public class MediaConvertOutputDetail extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Init: Initialized.</li>
+         * <li>Scheduled: Scheduled.</li>
+         * <li>Success: Succeeded.</li>
+         * <li>Failed: Failed.</li>
+         * <li>Skipped: Skipped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -201,7 +226,10 @@ public class MediaConvertOutputDetail extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the transcoding output task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>4215e042b3966ca5441e</strong></strong></strong></p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -280,7 +308,14 @@ public class MediaConvertOutputDetail extends TeaModel {
             } 
 
             /**
-             * Media.
+             * <p>The media value.</p>
+             * <ul>
+             * <li>When Type is set to OSS, the URL supports the OSS and HTTP protocols.</li>
+             * <li>When Type is set to Media, the value is the media asset ID.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -288,7 +323,14 @@ public class MediaConvertOutputDetail extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The media object type. Valid values:</p>
+             * <ul>
+             * <li>OSS: OSS file.</li>
+             * <li>Media: Media asset ID.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -296,7 +338,10 @@ public class MediaConvertOutputDetail extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The actual file URL when Type is set to Media.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -363,7 +408,7 @@ public class MediaConvertOutputDetail extends TeaModel {
             } 
 
             /**
-             * OutFileMeta.
+             * <p>The metadata of the audio and video streams.</p>
              */
             public Builder outFileMeta(MediaConvertOutputDetailFileMeta outFileMeta) {
                 this.outFileMeta = outFileMeta;
@@ -371,7 +416,7 @@ public class MediaConvertOutputDetail extends TeaModel {
             }
 
             /**
-             * OutputFile.
+             * <p>The details of the output file.</p>
              */
             public Builder outputFile(OutputFile outputFile) {
                 this.outputFile = outputFile;

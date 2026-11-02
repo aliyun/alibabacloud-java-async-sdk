@@ -152,7 +152,7 @@ public class SubmitBatchMediaProducingJobRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token that is used to ensure the idempotency of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -164,7 +164,7 @@ public class SubmitBatchMediaProducingJobRequest extends Request {
         }
 
         /**
-         * <p>The editing configurations. For more information, see <a href="~~2692547#1be9bba03b7qu~~">EditingConfig</a>.</p>
+         * <p>The editing configuration. For the specific structure definition, see <a href="~~2692547#1be9bba03b7qu~~">EditingConfig</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -186,7 +186,28 @@ public class SubmitBatchMediaProducingJobRequest extends Request {
         }
 
         /**
-         * <p>The input configurations. For more information, see <a href="~~2692547#2faed1559549n~~">InputConfig</a>.</p>
+         * <p>The input configuration. For the specific structure definition, see <a href="~~2692547#2faed1559549n~~">InputConfig</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;MediaGroupArray&quot;: [{
+         *       &quot;GroupName&quot;: &quot;MediaGroup1&quot;,
+         *       &quot;MediaArray&quot;: [
+         *         &quot;<strong><strong>9d46c886b45481030f6e</strong></strong>&quot;,
+         *         &quot;<strong><strong>6c886b4549d481030f6e</strong></strong>&quot; ]
+         *     }, {
+         *       &quot;GroupName&quot;: &quot;MediaGroup2&quot;,
+         *       &quot;MediaArray&quot;: [
+         *         &quot;<strong><strong>d46c886810b454930f6e</strong></strong>&quot;,
+         *         &quot;<strong><strong>4549d886810b46c30f6e</strong></strong>&quot; ]
+         *   }],
+         *   &quot;TitleArray&quot;: [
+         *       &quot;Hema Fresh grand opening in Huilongguan&quot;,
+         *       &quot;Hema Fresh grand opening&quot; ],
+         *   &quot;SpeechTextArray&quot;: [
+         *       &quot;A new Hema Fresh store just opened in the nearby mall, today is the first day of business&quot;
+         *       &quot;There are quite a few people in the mall, snacks and beverages are relatively cheap, come check it out&quot; ]
+         * }</p>
          */
         public Builder inputConfig(String inputConfig) {
             this.putBodyParameter("InputConfig", inputConfig);
@@ -195,7 +216,7 @@ public class SubmitBatchMediaProducingJobRequest extends Request {
         }
 
         /**
-         * <p>The output configurations. For more information, see <a href="~~2692547#447b928fcbuoa~~">OutputConfig</a>.</p>
+         * <p>The output configuration. For the specific structure definition, see <a href="~~2692547#447b928fcbuoa~~">OutputConfig</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -214,7 +235,10 @@ public class SubmitBatchMediaProducingJobRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>The template parameters. You can configure multiple one-click video production templates, and one is randomly selected and applied. For details, see <a href="https://www.alibabacloud.com/help/en/ims/use-cases/batch-video-production-public-parameters#32c3bea6182sy">TemplateConfig metric description</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<strong><strong>b4549d46c88681030f6e</strong></strong>&quot;,&quot;<strong><strong>549d46c88b4681030f6e</strong></strong>&quot;]</p>
          */
         public Builder templateConfig(String templateConfig) {
             this.putQueryParameter("TemplateConfig", templateConfig);
@@ -223,7 +247,10 @@ public class SubmitBatchMediaProducingJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData</a>.</p>
+         * <p>The user business configuration and callback configuration. For the specific structure definition, see <a href="~~357745#section-urj-v3f-0s1~~">UserData configuration</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

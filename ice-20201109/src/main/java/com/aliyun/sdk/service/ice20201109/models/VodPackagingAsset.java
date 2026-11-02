@@ -106,7 +106,10 @@ public class VodPackagingAsset extends TeaModel {
         } 
 
         /**
-         * AssetName.
+         * <p>The asset name. It must be unique per user, up to 128 characters in length, and match the format [A-Za-z0-9_-]+.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-asset</p>
          */
         public Builder assetName(String assetName) {
             this.assetName = assetName;
@@ -114,7 +117,10 @@ public class VodPackagingAsset extends TeaModel {
         }
 
         /**
-         * ContentId.
+         * <p>The content ID in the DRM system. The format is [A-Za-z0-9_-]+, and the maximum length is 256 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-content</p>
          */
         public Builder contentId(String contentId) {
             this.contentId = contentId;
@@ -122,7 +128,10 @@ public class VodPackagingAsset extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time. The format is 2024-11-21T06:45:32Z, which indicates 2024-11-21 14:45:32 in UTC+8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-21T06:45:32Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -130,7 +139,7 @@ public class VodPackagingAsset extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the packaging group.</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -138,7 +147,7 @@ public class VodPackagingAsset extends TeaModel {
         }
 
         /**
-         * Input.
+         * <p>The input configuration of the asset.</p>
          */
         public Builder input(Input input) {
             this.input = input;
@@ -204,7 +213,7 @@ public class VodPackagingAsset extends TeaModel {
             } 
 
             /**
-             * Media.
+             * <p>The input media asset. Currently, only OSS paths are supported, such as OSS://test-bucket/video/202208/test.m3u8. Only inputs with the .m3u8 extension are supported.</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -212,7 +221,7 @@ public class VodPackagingAsset extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The input type. Currently, only OSS is supported.</p>
              */
             public Builder type(String type) {
                 this.type = type;

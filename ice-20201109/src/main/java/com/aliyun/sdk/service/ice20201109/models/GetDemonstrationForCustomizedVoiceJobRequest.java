@@ -60,12 +60,11 @@ public class GetDemonstrationForCustomizedVoiceJobRequest extends Request {
         } 
 
         /**
-         * <p>The demonstration scenario.</p>
-         * <p>Valid values:</p>
+         * <p>The demonstration scenario. Valid values:</p>
          * <ul>
-         * <li><strong>story</strong></li>
-         * <li><strong>interaction</strong></li>
-         * <li><strong>navigation</strong></li>
+         * <li><strong>story</strong>: Story.</li>
+         * <li><strong>interaction</strong>: Interaction.</li>
+         * <li><strong>navigation</strong>: Navigation.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

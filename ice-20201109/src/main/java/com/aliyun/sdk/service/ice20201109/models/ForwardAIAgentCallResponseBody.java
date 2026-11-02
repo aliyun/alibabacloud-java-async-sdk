@@ -54,7 +54,10 @@ public class ForwardAIAgentCallResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400********55440000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,7 +67,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the origin endpoints.</p>
+         * <p>The type of the origin endpoint.</p>
          */
         public Builder livePackageOriginEndpoint(LivePackageOriginEndpoint livePackageOriginEndpoint) {
             this.livePackageOriginEndpoint = livePackageOriginEndpoint;
@@ -78,7 +78,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>requestIdExample123</p>
+         * <p>5D87B753-0250-5D9D-B248-D40C3271F864</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -311,7 +311,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel name.</p>
+             * <p>The name of the channel.</p>
              * 
              * <strong>example:</strong>
              * <p>channel-1</p>
@@ -322,7 +322,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the endpoint was created.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -333,7 +333,10 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint description.</p>
+             * <p>The description of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is an origin endpoint</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -341,7 +344,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint name.</p>
+             * <p>The name of the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>endpoint-1</p>
@@ -352,7 +355,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint URL.</p>
+             * <p>The URL of the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest">https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest</a></p>
@@ -363,7 +366,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel group name.</p>
+             * <p>The name of the channel group.</p>
              * 
              * <strong>example:</strong>
              * <p>channel-group-1</p>
@@ -374,7 +377,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address blacklist.</p>
+             * <p>The IP blacklist.</p>
              * 
              * <strong>example:</strong>
              * <p>10.21.222.1/32</p>
@@ -385,7 +388,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address whitelist.</p>
+             * <p>The IP whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.0/24,10.0.0.1/24</p>
@@ -396,7 +399,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the endpoint was last modified.</p>
+             * <p>The last modified time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -407,7 +410,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * LivePackagingConfig.
+             * <p>The live packaging configuration.</p>
              */
             public Builder livePackagingConfig(LivePackagingConfig livePackagingConfig) {
                 this.livePackagingConfig = livePackagingConfig;
@@ -415,7 +418,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The playlist name.</p>
+             * <p>The name of the manifest.</p>
              * 
              * <strong>example:</strong>
              * <p>manifest</p>
@@ -437,7 +440,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days that time-shifted content is available.</p>
+             * <p>The number of time-shift days.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

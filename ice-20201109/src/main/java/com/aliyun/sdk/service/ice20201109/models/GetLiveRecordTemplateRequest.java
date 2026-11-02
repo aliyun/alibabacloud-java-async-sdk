@@ -74,7 +74,7 @@ public class GetLiveRecordTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the recording job. You can specify the JobId parameter to retrieve the snapshot of the template used by the job.</p>
+         * <p>The recording task ID. Specify this parameter to retrieve the template snapshot used by the task.</p>
          * 
          * <strong>example:</strong>
          * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>

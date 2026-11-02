@@ -106,7 +106,7 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The alerts.</p>
+         * <p>The list of program alerts.</p>
          */
         public Builder programAlerts(java.util.List<ProgramAlerts> programAlerts) {
             this.programAlerts = programAlerts;
@@ -136,7 +136,7 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p><strong>Request ID</strong></p>
+         * <p><strong>The request ID.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>xxx-xxxx-xxxxx-xxxx</p>
@@ -147,7 +147,7 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of alerts returned.</p>
+         * <p>The number of alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -266,7 +266,15 @@ public class ListChannelAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert type.</p>
+             * <p>The category. Valid values:</p>
+             * <ul>
+             * <li>Scheduling Error: An error occurred while building the schedule.</li>
+             * <li>PlayBack Warning: An exception occurred when pulling the address while adding a source.</li>
+             * <li>info: Information.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduling Error</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -274,7 +282,7 @@ public class ListChannelAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of alerts.</p>
+             * <p>The total number.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -285,7 +293,7 @@ public class ListChannelAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert was last modified in UTC.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-16T10:03Z</p>

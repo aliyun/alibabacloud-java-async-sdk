@@ -324,7 +324,10 @@ public class UpdateMediaLiveInputRequest extends Request {
             }
 
             /**
-             * SrtLatency.
+             * <p>Latency of the SRT stream, in ms. Valid range: [100, 10000]. Optional when Type is SRT_PUSH or SRT_PULL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder srtLatency(Integer srtLatency) {
                 this.srtLatency = srtLatency;
@@ -332,7 +335,10 @@ public class UpdateMediaLiveInputRequest extends Request {
             }
 
             /**
-             * SrtMaxBitrate.
+             * <p>Maximum bitrate of the SRT stream, in bps. Valid range: [100, 100000000]. Optional when Type is SRT_PUSH or SRT_PULL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000000</p>
              */
             public Builder srtMaxBitrate(Integer srtMaxBitrate) {
                 this.srtMaxBitrate = srtMaxBitrate;
@@ -340,7 +346,11 @@ public class UpdateMediaLiveInputRequest extends Request {
             }
 
             /**
-             * SrtPassphrase.
+             * <p>The SRT encryption configuration. The password for the SRT stream must consist of 10 to 79 visible ASCII characters. Optional when Type is SRT_PUSH or SRT_PULL.</p>
+             * <p>If the encryption configuration is not empty, all SRT clients must use the correct password to publish or playback streams. Otherwise, the SRT connection will be denied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>srtencryption</p>
              */
             public Builder srtPassphrase(String srtPassphrase) {
                 this.srtPassphrase = srtPassphrase;
@@ -348,7 +358,10 @@ public class UpdateMediaLiveInputRequest extends Request {
             }
 
             /**
-             * SrtPbKeyLen.
+             * <p>Encryption configuration for SRT—the key length of the SRT stream. Valid values: 0, 16, 24, 32. Optional when Type is SRT_PUSH or SRT_PULL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder srtPbKeyLen(Integer srtPbKeyLen) {
                 this.srtPbKeyLen = srtPbKeyLen;

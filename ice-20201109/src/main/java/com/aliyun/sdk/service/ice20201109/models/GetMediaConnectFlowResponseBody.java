@@ -101,7 +101,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The call description.</p>
+         * <p>The description of the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -112,7 +112,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FB503AEF-118E-1516-89E2-7B227EA1AC20</p>
@@ -123,7 +123,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned code. A value of 0 indicates the call is successful.</p>
+         * <p>The returned status code. A value of 0 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -257,7 +257,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the flow was created.</p>
+             * <p>The time when the flow was created. The time follows the ISO 8601 standard in UTC and ends with Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-18T01:29:24Z</p>
@@ -268,7 +268,10 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * FlowFailover.
+             * <p>Indicates whether dual-stream disaster recovery is enabled for the flow input. Valid values: yes and no.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yes</p>
              */
             public Builder flowFailover(String flowFailover) {
                 this.flowFailover = flowFailover;
@@ -276,7 +279,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The flow ID.</p>
+             * <p>The flow instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
@@ -287,7 +290,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The flow name.</p>
+             * <p>The flow instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>AliTestFlow</p>
@@ -298,7 +301,10 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * FlowRegion.
+             * <p>The region to which the flow instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>me-east-1</p>
              */
             public Builder flowRegion(String flowRegion) {
                 this.flowRegion = flowRegion;
@@ -306,7 +312,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the flow.</p>
+             * <p>The flow status.</p>
              * 
              * <strong>example:</strong>
              * <p>online</p>
@@ -317,7 +323,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the flow is started.</p>
+             * <p>The time when the flow was started. The time follows the ISO 8601 standard in UTC and ends with Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-18T01:39:24Z</p>

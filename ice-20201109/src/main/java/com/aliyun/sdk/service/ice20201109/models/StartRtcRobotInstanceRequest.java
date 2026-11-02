@@ -133,6 +133,7 @@ public class StartRtcRobotInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The RTC join token. You must generate this token by using the RTC AppKey.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +146,7 @@ public class StartRtcRobotInstanceRequest extends Request {
         }
 
         /**
+         * <p>The RTC channel ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +159,7 @@ public class StartRtcRobotInstanceRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The advanced call configuration. If specified, this configuration overwrites the default configurations that were set when the AI agent was created. If not specified, the default configurations are used.</p>
          */
         public Builder config(Config config) {
             String configShrink = shrink(config, "Config", "json");
@@ -167,6 +169,7 @@ public class StartRtcRobotInstanceRequest extends Request {
         }
 
         /**
+         * <p>The AI agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +182,10 @@ public class StartRtcRobotInstanceRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom user information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -188,6 +194,7 @@ public class StartRtcRobotInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the AI agent in the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -358,7 +365,10 @@ public class StartRtcRobotInstanceRequest extends Request {
             }
 
             /**
-             * EnableVoiceInterrupt.
+             * <p>Specifies whether voice interruption is allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableVoiceInterrupt(Boolean enableVoiceInterrupt) {
                 this.enableVoiceInterrupt = enableVoiceInterrupt;
@@ -366,7 +376,10 @@ public class StartRtcRobotInstanceRequest extends Request {
             }
 
             /**
-             * Greeting.
+             * <p>The greeting message that the AI agent proactively speaks after the user joins the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hello, how can I help you?</p>
              */
             public Builder greeting(String greeting) {
                 this.greeting = greeting;
@@ -398,7 +411,10 @@ public class StartRtcRobotInstanceRequest extends Request {
             }
 
             /**
-             * VoiceId.
+             * <p>The voice ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhixiaoxia</p>
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;

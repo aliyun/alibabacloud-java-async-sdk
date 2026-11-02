@@ -282,6 +282,7 @@ public class RegisterMediaInfoRequest extends Request {
          * <p>The business type of the media asset. Valid values:</p>
          * <ul>
          * <li>subtitles</li>
+         * <li>font</li>
          * <li>watermark</li>
          * <li>opening</li>
          * <li>ending</li>
@@ -310,7 +311,7 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. The value must be a UUID that contains 32 characters.</p>
+         * <p>The client token. A 32-character UUID that ensures the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>0311a423d11a5f7dee713535</strong></strong></p>
@@ -322,10 +323,12 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The thumbnail URL of the media asset.</p>
+         * <p>The cover image URL.</p>
          * <ul>
-         * <li>The value can be up to 128 bytes in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li><p>Maximum length: 128 bytes.</p>
+         * </li>
+         * <li><p>UTF-8 encoded.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,10 +341,12 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The description of the media asset.</p>
+         * <p>The content description.</p>
          * <ul>
-         * <li>The value can be up to 1,024 bytes in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li><p>Maximum length: 1024 bytes.</p>
+         * </li>
+         * <li><p>UTF-8 encoded.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -354,17 +359,21 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The URL of the media asset in another service. The URL is associated with the ID of the media asset in IMS. The URL cannot be modified once registered. The following types of URLs are supported:</p>
+         * <p>The URL of the media asset to be registered in the corresponding system. Once registered, this URL cannot be changed and is attached to the IMS mediaId.</p>
          * <ul>
-         * <li>OSS URL in one of the following formats:</li>
+         * <li>OSS URL. Two formats are supported:</li>
          * </ul>
          * <p>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</p>
-         * <p>oss://example-bucket/example.mp4: In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</p>
+         * <p>oss://example-bucket/example.mp4
+         *  (This format assumes by default that the OSS region is the same as the service registration area.)</p>
          * <ul>
-         * <li>URL of an ApsaraVideo VOD media asset</li>
+         * <li>VOD media asset:</li>
          * </ul>
-         * <p>vod://***20b48fb04483915d4f2cd8ac****</p>
+         * <p>vod://\<em>\</em>\<em>20b48fb04483915d4f2cd8ac</em>***</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a>  or  vod://<strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder inputURL(String inputURL) {
             this.putQueryParameter("InputURL", inputURL);
@@ -373,12 +382,16 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The tags of the media asset.</p>
+         * <p>The tags.</p>
          * <ul>
-         * <li>Up to 16 tags are supported.</li>
-         * <li>Separate multiple tags with commas (,).</li>
-         * <li>Each tag can be up to 32 bytes in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li><p>Maximum number of tags: 16.</p>
+         * </li>
+         * <li><p>Separate multiple tags with commas.</p>
+         * </li>
+         * <li><p>Maximum length of a single tag: 32 bytes.</p>
+         * </li>
+         * <li><p>UTF-8 encoded.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -391,15 +404,15 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The type of the media asset. Valid values:</p>
+         * <p>The media type of the media asset. Valid values:</p>
          * <ul>
          * <li>image</li>
          * <li>video</li>
          * <li>audio</li>
          * <li>text</li>
          * </ul>
-         * <p>We recommend that you specify this parameter based on your business requirements. If you set InputURL to an OSS URL, the media asset type can be automatically determined based on the file name extension. For more information
-         * &lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/466207.html">File formats</a>.</p>
+         * <p>When the value is &quot;text&quot;, the businessType must be set to &quot;subtitles&quot; or &quot;font&quot;.</p>
+         * <p>Specify this field as needed. When the InputURL field is an OSS URL, the media type can also be automatically determined based on the file name extension (only for image, video, and audio file extensions). For the mapping between file extensions and media types, see <a href="https://help.aliyun.com/document_detail/466207.html">File formats</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>video</p>
@@ -411,9 +424,13 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to overwrite the media asset that has been registered by using the same URL. Default value: false. Valid values:</p>
-         * <p>- true: If a media asset has been registered by using the same URL, the original media asset is deleted and the new media asset is registered.</p>
-         * <p>- false: If a media asset has been registered by using the same URL, the new media asset is not registered. A URL cannot be used to register multiple media assets.</p>
+         * <p>Specifies whether to overwrite an existing registered media asset. Default value: false.</p>
+         * <ul>
+         * <li><p>true: If the inputUrl is already registered, the existing media asset is deleted and a new media asset is registered.</p>
+         * </li>
+         * <li><p>false: If the inputUrl is already registered, the new media asset is not registered. Duplicate inputUrl values are not supported.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -425,7 +442,7 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The custom ID. The ID can be 6 to 64 characters in length and can contain only letters, digits, hyphens (-), and underscores (_). Make sure that the ID is unique among users.</p>
+         * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens (-), and underscores (_) are supported. The length must be 6 to 64 characters. The ID must be unique for each user.</p>
          * 
          * <strong>example:</strong>
          * <p>123-123</p>
@@ -437,13 +454,22 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The registration configurations.</p>
-         * <p>By default, a sprite is generated for the media asset. You can set NeedSprite to false to disable automatic sprite generation.</p>
-         * <p>By default, a snapshot is generated for the media asset. You can set NeedSnapshot to false to disable automatic snapshot generation.</p>
+         * <p>The registration configuration.</p>
+         * <p>By default, a sprite image is generated for the media asset. To disable this, set the NeedSprite field to false.</p>
+         * <p>By default, a snapshot is generated. To disable this, set the NeedSnapshot field to false.</p>
+         * <p>To specify the time for the cover image, configure CoverConfig, which contains the following field:</p>
+         * <ul>
+         * <li>StartTime: The time in seconds at which the cover image is captured from the media asset. Up to four decimal places are supported.</li>
+         * </ul>
+         * <p>After media asset registration, to import the media asset into a custom search library, configure SearchLibName. For information about how to create and use a custom search library, see <a href="~~2796619#dd34d8c740yj9~~">Use a custom search library</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
-         *       &quot;NeedSprite&quot;: &quot;false&quot;
+         *     &quot;NeedSprite&quot;: &quot;false&quot;,
+         *     &quot;CoverConfig&quot;: {
+         *         &quot;StartTime&quot;: 1.0
+         *     },
+         *        &quot;SearchLibName&quot;: &quot;test&quot;
          * }</p>
          */
         public Builder registerConfig(String registerConfig) {
@@ -453,13 +479,14 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the smart tagging template. Valid values:</p>
+         * <p>The intelligent tagging template. Valid values:</p>
          * <ul>
-         * <li>S00000101-300080: the system template that supports natural language processing (NLP) for content recognition.</li>
-         * <li>S00000103-000001: the system template that supports NLP for content recognition and all tagging capabilities.</li>
-         * <li>S00000103-000002: the system template that supports all tagging capabilities but does not support NLP for content recognition.</li>
+         * <li>S00000101-300080: A system template that includes NLP content understanding.</li>
+         * <li>S00000103-000001: A system template that includes NLP content understanding and all <a href="~~2804526#93b27f536airj~~">tagging capabilities</a>.</li>
+         * <li>S00000103-000002: A system template that includes all <a href="~~2804526#93b27f536airj~~">tagging capabilities</a> but does not include NLP content understanding.</li>
          * </ul>
-         * <p>After you configure this parameter, a smart tag analysis task is automatically initiated after the media asset is registered. For more information about the billable items&lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/zh/ims/media-ai-billing?spm=a2c4g.11186623.0.0.3147392dWwlSjL#p-k38-3rb-dug">Smart tagging</a>.</p>
+         * <p>For more information about tagging capabilities, see the documentation.</p>
+         * <p>After this field is configured, an intelligent tagging analysis task is automatically initiated upon media asset registration. For billing information, see <a href="https://help.aliyun.com/document_detail/600262.html">Billing of Smart Tag Standard Edition</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>S00000101-300080</p>
@@ -471,10 +498,12 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The title. If you do not specify this parameter, a default title is automatically generated based on the date.</p>
+         * <p>The title. If not provided, a default title is automatically generated based on the date.</p>
          * <ul>
-         * <li>The value can be up to 128 bytes in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li><p>Maximum length: 128 bytes.</p>
+         * </li>
+         * <li><p>UTF-8 encoded.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -487,12 +516,18 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The user data. You can specify a custom callback URL. For more information&lt;props=&quot;china&quot;&gt; ,see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</p>
+         * <p>The user data. Custom callback URL configuration is supported. For configuration instructions, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</p>
          * <ul>
-         * <li>The value can be up to 1,024 bytes in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
-         * <li>The value must be in the JSON format.</li>
+         * <li><p>Maximum length: 1024 bytes.</p>
+         * </li>
+         * <li><p>UTF-8 encoded.</p>
+         * </li>
+         * <li><p>Json format.</p>
+         * </li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or{&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or{&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

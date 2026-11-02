@@ -262,7 +262,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The creation time in GMT.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-07T07:16:11Z</p>
@@ -273,7 +273,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the job was complete.</p>
+         * <p>The completion time in GMT.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-26T14:50:25Z</p>
@@ -284,12 +284,22 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the algorithm that you want to use for the job. Valid values:</p>
+         * <p>The name of the algorithm feature to use. Valid values:</p>
          * <ul>
-         * <li><strong>Cover</strong>: This algorithm intelligently generates a thumbnail image for a video.</li>
-         * <li><strong>VideoClip</strong>: This algorithm intelligently generates a summary for a video.</li>
-         * <li><strong>VideoDelogo</strong>: This algorithm removes logos from a video.</li>
-         * <li><strong>VideoDetext</strong>: This algorithm removes captions from a video.</li>
+         * <li><strong>Cover</strong>: Intelligent cover</li>
+         * <li><strong>VideoClip</strong>: Video synopsis</li>
+         * <li><strong>VideoDelogo</strong>: Video icon removal</li>
+         * <li><strong>VideoDetext</strong>: Video subtitle removal</li>
+         * <li><strong>CaptionExtraction</strong>: Subtitle fetch</li>
+         * <li><strong>VideoGreenScreenMatting</strong>: Image matting</li>
+         * <li><strong>FaceBeauty</strong>: Video face beautification</li>
+         * <li><strong>VideoH2V</strong>: Video landscape-to-portrait conversion</li>
+         * <li><strong>MusicSegmentDetect</strong>: Chorus detection</li>
+         * <li><strong>AudioBeatDetection</strong>: Beat detection</li>
+         * <li><strong>AudioQualityAssessment</strong>: Audio quality assessment</li>
+         * <li><strong>SpeechDenoise</strong>: Speech noise reduction</li>
+         * <li><strong>AudioMixing</strong>: Audio mixing</li>
+         * <li><strong>MusicDemix</strong>: Vocal and accompaniment separation</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,7 +311,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The input file.</p>
+         * <p>The input media.</p>
          */
         public Builder input(Input input) {
             this.input = input;
@@ -309,7 +319,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the intelligent production job.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -320,7 +330,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The algorithm-specific parameters. The parameters are specified as JSON objects and vary based on the algorithm.</p>
+         * <p>The algorithm job parameters. This is a JSON object. The parameters vary based on the algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Model&quot;:&quot;gif&quot;}</p>
@@ -331,7 +341,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the intelligent production job.</p>
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test task</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -339,7 +352,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The output file.</p>
+         * <p>The output media.</p>
          */
         public Builder output(Output output) {
             this.output = output;
@@ -347,7 +360,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The output files.</p>
+         * <p>The output file array.</p>
          */
         public Builder outputFiles(java.util.List<String> outputFiles) {
             this.outputFiles = outputFiles;
@@ -355,7 +368,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * OutputMediaIds.
+         * <p>The list of media asset IDs output by the job.</p>
          */
         public Builder outputMediaIds(java.util.List<String> outputMediaIds) {
             this.outputMediaIds = outputMediaIds;
@@ -363,7 +376,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The URLs of the output files.</p>
+         * <p>The output file URL array.</p>
          */
         public Builder outputUrls(java.util.List<String> outputUrls) {
             this.outputUrls = outputUrls;
@@ -371,7 +384,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01A0E5D1-4B3C-599D-8017-2DA186EA1053</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -379,7 +395,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The output of the algorithm. The output is in JSON format and varies based on the algorithm. For more information, see the &quot;Parameters of Result&quot; section of this topic.</p>
+         * <p>The result information output by the algorithm. The output varies based on FunctionName and is in JSON format. For more information, see the following sections.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -390,7 +406,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The scheduling configuration.</p>
+         * <p>The job configuration information.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             this.scheduleConfig = scheduleConfig;
@@ -398,12 +414,12 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the job. Valid values:</p>
+         * <p>The job status. Valid values:</p>
          * <ul>
-         * <li>Queuing: The job is waiting in the queue.</li>
-         * <li>Analysing: The job is in progress.</li>
+         * <li>Queuing: The job is queued.</li>
+         * <li>Analysing: The job is being analyzed.</li>
          * <li>Fail: The job failed.</li>
-         * <li>Success: The job was successful.</li>
+         * <li>Success: The job succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -426,7 +442,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user-defined data that is returned in the response.</p>
+         * <p>The user-defined data. This data is returned as-is when the result is retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;test&quot;:1}</p>
@@ -495,11 +511,13 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The input file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</p>
-             * <ol>
+             * <p>The input media. If Type is set to OSS, enter the OSS URL. If Type is set to Media, enter the media asset ID.
+             * The OSS URL must be in one of the following formats:</p>
+             * <ul>
              * <li>oss://bucket/object</li>
-             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object bucket in the path specifies an OSS bucket that resides in the same region as the intelligent production job. object in the path specifies the object path in OSS.</li>
-             * </ol>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object
+             * where bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>oss://bucket/object</p>
@@ -510,11 +528,11 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The media type. Valid values:</p>
-             * <ol>
-             * <li>OSS: Object Storage Service (OSS) object</li>
-             * <li>Media: media asset</li>
-             * </ol>
+             * <p>The input type. Valid values:</p>
+             * <ul>
+             * <li>OSS: OSS file URL.</li>
+             * <li>Media: media asset ID.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>
@@ -610,7 +628,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Biz.
+             * <p>The business to which the media asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMS</p>
              */
             public Builder biz(String biz) {
                 this.biz = biz;
@@ -618,11 +639,13 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</p>
-             * <ol>
+             * <p>The output media. If Type is set to OSS, the OSS URL is returned. If Type is set to Media, the specified media asset ID or a newly generated media asset ID is returned.</p>
+             * <p>The OSS URL must be in one of the following formats:</p>
+             * <ul>
              * <li>oss://bucket/object</li>
-             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object bucket in the path specifies an OSS bucket that resides in the same region as the intelligent production job. object in the path specifies the object path in OSS.</li>
-             * </ol>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object
+             * where bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>oss://bucket/object</p>
@@ -633,7 +656,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUrl.
+             * <p>The OSS URL of the specified output file when Type is set to Media.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -643,8 +669,8 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             /**
              * <p>The media type. Valid values:</p>
              * <ul>
-             * <li>OSS: OSS object</li>
-             * <li>Media: media asset</li>
+             * <li>OSS: OSS path.</li>
+             * <li>Media: media asset ID.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -715,7 +741,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ApsaraVideo Media Processing (MPS) queue.</p>
+             * <p>The pipeline ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a54fdc9c9aab413caef0d1150f565e86</p>
@@ -726,10 +752,12 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the job in the MPS queue to which the job is added.</p>
+             * <p>The priority of the job in its corresponding pipeline.</p>
              * <ul>
-             * <li>A value of 10 indicates the highest priority.</li>
-             * <li>Default value: <strong>6</strong>.</li>
+             * <li><p>Highest priority: 10.</p>
+             * </li>
+             * <li><p>Default value: <strong>6</strong>.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

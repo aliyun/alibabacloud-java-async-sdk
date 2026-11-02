@@ -101,7 +101,7 @@ public class ListLivePackageChannelGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The channel group name or description. Fuzzy match is supported.</p>
+         * <p>The name or description of the channel group. Fuzzy matching is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>channel-group</p>
@@ -113,7 +113,7 @@ public class ListLivePackageChannelGroupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Valid values: integers greater than or equal to 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -137,7 +137,7 @@ public class ListLivePackageChannelGroupsRequest extends Request {
         }
 
         /**
-         * <p>The sort order by creation time. Default value: desc.</p>
+         * <p>The sort order by creation time. Default value: desc, which indicates descending order.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>

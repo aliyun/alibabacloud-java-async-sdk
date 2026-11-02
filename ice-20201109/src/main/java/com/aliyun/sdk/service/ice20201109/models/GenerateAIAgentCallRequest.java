@@ -159,7 +159,7 @@ public class GenerateAIAgentCallRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AI agent.</p>
+         * <p>The agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,10 @@ public class GenerateAIAgentCallRequest extends Request {
         }
 
         /**
-         * AgentConfig.
+         * <p>The agent template configurations. The specified configurations are merged and updated with the agent template configurations in the console. If you do not specify this parameter, the default configurations of the agent in the console are used.</p>
+         * <blockquote>
+         * <p>Compatibility rules for TemplateConfig: Fields in AgentConfig take precedence. If TemplateConfig contains fields that are not specified in AgentConfig, the fields in TemplateConfig are used. We recommend that you use AgentConfig instead of TemplateConfig.</p>
+         * </blockquote>
          */
         public Builder agentConfig(AIAgentConfig agentConfig) {
             String agentConfigShrink = shrink(agentConfig, "AgentConfig", "json");
@@ -182,7 +185,7 @@ public class GenerateAIAgentCallRequest extends Request {
         }
 
         /**
-         * ChatSyncConfig.
+         * <p>The configurations for synchronizing chat records.</p>
          */
         public Builder chatSyncConfig(ChatSyncConfig chatSyncConfig) {
             String chatSyncConfigShrink = shrink(chatSyncConfig, "ChatSyncConfig", "json");
@@ -192,7 +195,7 @@ public class GenerateAIAgentCallRequest extends Request {
         }
 
         /**
-         * <p>The time when the token expires. Unit: seconds. Default value: 3600. Valid values: 0 to 604800.</p>
+         * <p>Optional. The expiration time of the token, in seconds. Default value: 3600. Valid values: 0 to 604800.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -204,7 +207,10 @@ public class GenerateAIAgentCallRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The unique identifier of the conversation. Default value: none.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fw1gr0bc005e4f309379701645f4****</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -213,7 +219,15 @@ public class GenerateAIAgentCallRequest extends Request {
         }
 
         /**
-         * <p>The template configurations of the AI agent. The specified configurations are merged with the template configurations that are specified in the console. If you do not specify this parameter, the system uses the default configurations for an AI agent created in the console.</p>
+         * <ul>
+         * <li><p>The specified configurations are merged and updated with the agent template configurations in the console.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, the default configurations of the agent in the console are used.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Agent template configurations. <strong>[Deprecated]</strong> For more information, see the AgentConfig parameter.</p>
+         * </blockquote>
          */
         public Builder templateConfig(AIAgentTemplateConfig templateConfig) {
             String templateConfigShrink = shrink(templateConfig, "TemplateConfig", "json");
@@ -223,7 +237,10 @@ public class GenerateAIAgentCallRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom user information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -232,7 +249,7 @@ public class GenerateAIAgentCallRequest extends Request {
         }
 
         /**
-         * <p>The username of the AI agent in the channel. If you do not specify this parameter, the system automatically generates a username. The value can be up to 64 characters in length.</p>
+         * <p>The username in the conversation channel. If you do not specify this parameter, the system automatically generates a username. The username can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>877ae632caae49b1afc81c2e8194ffb4</p>
@@ -303,7 +320,10 @@ public class GenerateAIAgentCallRequest extends Request {
             } 
 
             /**
-             * IMAIAgentId.
+             * <p>The agent ID for IM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**<strong><strong>005e4f309379701645f4</strong></strong></p>
              */
             public Builder IMAIAgentId(String IMAIAgentId) {
                 this.IMAIAgentId = IMAIAgentId;
@@ -311,7 +331,10 @@ public class GenerateAIAgentCallRequest extends Request {
             }
 
             /**
-             * ReceiverId.
+             * <p>The ID of the receiving user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4167626d312034b2b1c3b7f2f3e41884</p>
              */
             public Builder receiverId(String receiverId) {
                 this.receiverId = receiverId;

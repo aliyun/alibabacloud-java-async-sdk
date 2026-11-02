@@ -80,7 +80,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * IgnoredList.
+         * <p>The list of IDs that failed to be retrieved.</p>
          */
         public Builder ignoredList(java.util.List<String> ignoredList) {
             this.ignoredList = ignoredList;
@@ -88,7 +88,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         }
 
         /**
-         * MediaInfos.
+         * <p>The collection of media assets that meet the specified criteria.</p>
          */
         public Builder mediaInfos(java.util.List<MediaInfos> mediaInfos) {
             this.mediaInfos = mediaInfos;
@@ -96,7 +96,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -292,7 +295,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * AuditBlockedLabel.
+             * <p>The moderation label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Label</p>
              */
             public Builder auditBlockedLabel(String auditBlockedLabel) {
                 this.auditBlockedLabel = auditBlockedLabel;
@@ -300,7 +306,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * AuditStatus.
+             * <p>The moderation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -308,7 +317,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CreationJobId.
+             * <p>The ID of the creation job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID</p>
              */
             public Builder creationJobId(String creationJobId) {
                 this.creationJobId = creationJobId;
@@ -316,7 +328,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * <p>The folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pd_0617169475</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -324,7 +339,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * IsFavorite.
+             * <p>Specifies whether the media asset is favorited.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isFavorite(String isFavorite) {
                 this.isFavorite = isFavorite;
@@ -332,7 +350,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * IsLogicalDeleted.
+             * <p>Indicates whether the item is logically deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isLogicalDeleted(String isLogicalDeleted) {
                 this.isLogicalDeleted = isLogicalDeleted;
@@ -340,7 +361,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaAssetSubType.
+             * <p>The media asset subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Image</p>
              */
             public Builder mediaAssetSubType(String mediaAssetSubType) {
                 this.mediaAssetSubType = mediaAssetSubType;
@@ -348,7 +372,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaAssetType.
+             * <p>The media asset type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HistoricalUpload</p>
              */
             public Builder mediaAssetType(String mediaAssetType) {
                 this.mediaAssetType = mediaAssetType;
@@ -356,7 +383,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ProductionId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pd_0617169475</p>
              */
             public Builder productionId(String productionId) {
                 this.productionId = productionId;
@@ -364,7 +394,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * SourceId.
+             * <p>The source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f4a26390f02371f0a1f4e6e7c7586706</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -372,7 +405,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * SourceName.
+             * <p>The source name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder sourceName(String sourceName) {
                 this.sourceName = sourceName;
@@ -380,7 +416,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MainBody</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -564,7 +603,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -572,7 +614,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -580,7 +625,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.mp4</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -588,7 +636,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The file size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>191</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -596,7 +647,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileStatus.
+             * <p>The file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder fileStatus(String fileStatus) {
                 this.fileStatus = fileStatus;
@@ -604,7 +658,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_file</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -612,7 +669,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The OSS URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -620,7 +680,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FormatName.
+             * <p>The container format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jpg</p>
              */
             public Builder formatName(String formatName) {
                 this.formatName = formatName;
@@ -628,7 +691,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>416</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -636,7 +702,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The storage region of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -644,7 +713,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>640</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -698,7 +770,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * FileBasicInfo.
+             * <p>The basic file information, including the duration and size.</p>
              */
             public Builder fileBasicInfo(FileBasicInfo fileBasicInfo) {
                 this.fileBasicInfo = fileBasicInfo;
@@ -986,7 +1058,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * Biz.
+             * <p>The business to which the media asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ICE</p>
              */
             public Builder biz(String biz) {
                 this.biz = biz;
@@ -994,7 +1069,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessType.
+             * <p>The business type of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -1002,7 +1080,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * <p>The category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1010,7 +1091,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * <p>The cover URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg</a></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -1018,7 +1102,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the media asset was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1026,7 +1113,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * DeletedTime.
+             * <p>The time when the media asset was deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-08T16:52:07Z</p>
              */
             public Builder deletedTime(String deletedTime) {
                 this.deletedTime = deletedTime;
@@ -1034,7 +1124,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sample_description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1042,7 +1135,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * InputURL.
+             * <p>The URL of the media asset to be registered in the corresponding system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
              */
             public Builder inputURL(String inputURL) {
                 this.inputURL = inputURL;
@@ -1050,7 +1146,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong><strong>64623a94eca8516569c8f</strong></strong></em></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -1058,7 +1157,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaTags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1，tag2</p>
              */
             public Builder mediaTags(String mediaTags) {
                 this.mediaTags = mediaTags;
@@ -1066,7 +1168,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>The media type of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -1074,7 +1179,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the media asset was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-08T16:52:04Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -1082,7 +1190,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * <p>The snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder snapshots(String snapshots) {
                 this.snapshots = snapshots;
@@ -1090,7 +1201,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -1098,7 +1212,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * SpriteImages.
+             * <p>The sprite images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
              */
             public Builder spriteImages(String spriteImages) {
                 this.spriteImages = spriteImages;
@@ -1106,7 +1223,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1114,7 +1234,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1122,7 +1245,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeStatus.
+             * <p>The transcoding status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Init</p>
              */
             public Builder transcodeStatus(String transcodeStatus) {
                 this.transcodeStatus = transcodeStatus;
@@ -1130,7 +1256,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserData</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -1223,7 +1352,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * BizData.
+             * <p>The business information.</p>
              */
             public Builder bizData(BizData bizData) {
                 this.bizData = bizData;
@@ -1231,7 +1360,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileInfoList.
+             * <p>The file list information.</p>
              */
             public Builder fileInfoList(java.util.List<FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
@@ -1239,7 +1368,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaBasicInfo.
+             * <p>The basic information of the media asset.</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;
@@ -1247,7 +1376,10 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;

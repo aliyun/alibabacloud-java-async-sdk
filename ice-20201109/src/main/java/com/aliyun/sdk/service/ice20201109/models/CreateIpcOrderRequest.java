@@ -110,7 +110,17 @@ public class CreateIpcOrderRequest extends Request {
         }
 
         /**
-         * Capability.
+         * <p>The capability. Valid values:</p>
+         * <ul>
+         * <li>understand: Image understanding. Supports 300 image understanding tasks per day.</li>
+         * <li>understand-reid: Image understanding with ReID. Supports 300 image understanding tasks per day.</li>
+         * <li>search: Search. Supports 75 searches per day.</li>
+         * <li>understand-search: Image understanding and search. Supports 300 image understanding tasks and 75 searches per day.</li>
+         * <li>understand-reid-search: Image understanding with ReID and search. Supports 300 image understanding tasks and 75 searches per day.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>understand</p>
          */
         public Builder capability(String capability) {
             this.putQueryParameter("Capability", capability);
@@ -119,7 +129,10 @@ public class CreateIpcOrderRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>The device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d123</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -128,7 +141,15 @@ public class CreateIpcOrderRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription period. Valid values:</p>
+         * <ul>
+         * <li>month: Monthly subscription, calculated as 30 days.</li>
+         * <li>quarter: Quarterly subscription, calculated as 90 days.</li>
+         * <li>year: Annual subscription, calculated as 365 days.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);

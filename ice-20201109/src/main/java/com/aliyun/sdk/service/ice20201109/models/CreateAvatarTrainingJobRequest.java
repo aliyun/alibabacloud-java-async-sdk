@@ -148,10 +148,10 @@ public class CreateAvatarTrainingJobRequest extends Request {
         } 
 
         /**
-         * <ul>
-         * <li>The description of the digital human.</li>
-         * <li>The description can be up to 1,000 characters in length.</li>
-         * </ul>
+         * <p>The description of the digital human. The description can be up to 1000 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a digital human used for a specific scenario.</p>
          */
         public Builder avatarDescription(String avatarDescription) {
             this.putQueryParameter("AvatarDescription", avatarDescription);
@@ -160,11 +160,11 @@ public class CreateAvatarTrainingJobRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li>The name of the digital human.</li>
-         * <li>The name can be up to seven characters in length.</li>
-         * </ul>
+         * <p>The name of the digital human. The name can be up to 7 characters in length.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Decimal</p>
          */
         public Builder avatarName(String avatarName) {
             this.putQueryParameter("AvatarName", avatarName);
@@ -186,8 +186,9 @@ public class CreateAvatarTrainingJobRequest extends Request {
 
         /**
          * <ul>
-         * <li>The media asset ID of the portrait image.</li>
-         * <li>The value must be 32 characters in length.</li>
+         * <li>The media asset ID of the avatar image. The ID is 32 characters in length.</li>
+         * <li>If you subsequently call SubmitAvatarTrainingJob to submit the training, this field is required.</li>
+         * <li>The image must have equal width and height.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,10 +201,10 @@ public class CreateAvatarTrainingJobRequest extends Request {
         }
 
         /**
+         * <p>The thumbnail URL.</p>
          * <ul>
-         * <li>The thumbnail URL.</li>
-         * <li>After the digital human is trained, the thumbnail is uploaded to this URL.</li>
-         * <li>The URL must be a valid public Object Storage Service (OSS) URL.</li>
+         * <li>After training succeeds, the thumbnail is uploaded to this address.</li>
+         * <li>The URL must be a valid public OSS URL under the current user.</li>
          * <li>The URL can be up to 512 characters in length.</li>
          * </ul>
          * 
@@ -217,12 +218,10 @@ public class CreateAvatarTrainingJobRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li><p>Specifies whether the training video supports alpha channels.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong>: Make sure that the current settings are consistent with those of the submitted training video. Otherwise, the digital human may malfunction.</p>
-         * </li>
-         * </ul>
+         * <p>Specifies whether the training video supports a transparent channel.</p>
+         * <blockquote>
+         * <p>Notice: Make sure that this setting is consistent with the submitted training video. Otherwise, the synthesized digital human may be abnormal.</notice></p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -234,12 +233,13 @@ public class CreateAvatarTrainingJobRequest extends Request {
         }
 
         /**
+         * <p>The media asset ID of the training video.</p>
          * <ul>
-         * <li>The ID of the video used for training.</li>
-         * <li>The value must be 32 characters in length.</li>
-         * <li>Supported formats: MP4, MOV, and WebM.</li>
-         * <li>The duration of the video must be 5 to 15 minutes.</li>
-         * <li>The resolution of the video must be 1920×1080 or 1080×1920.</li>
+         * <li>The ID is 32 characters in length.</li>
+         * <li>Supported formats: mp4, mov, and webm.</li>
+         * <li>The duration of the material must be between 5 minutes and 15 minutes.</li>
+         * <li>The resolution of the material must be 1920 × 1080 or 1080 × 1920.</li>
+         * <li>If you subsequently call SubmitAvatarTrainingJob to submit the training, this field is required.</li>
          * </ul>
          * 
          * <strong>example:</strong>

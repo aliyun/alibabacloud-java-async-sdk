@@ -101,7 +101,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The call description.</p>
+         * <p>The API call description.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -112,7 +112,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D4C231DF-103A-55FF-8D09-E699552457DE</p>
@@ -123,7 +123,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error code. A value of 0 indicates the call is successful.</p>
+         * <p>The returned error code. A value of 0 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -465,7 +465,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupCidrs.
+             * <p>The IP address whitelist for the backup input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.211.0.0/17</p>
              */
             public Builder backupCidrs(String backupCidrs) {
                 this.backupCidrs = backupCidrs;
@@ -473,7 +476,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * BackupCreateTime.
+             * <p>The time when the backup input was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-18T01:29:24Z</p>
              */
             public Builder backupCreateTime(String backupCreateTime) {
                 this.backupCreateTime = backupCreateTime;
@@ -481,7 +487,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * BackupInnerInputUrl.
+             * <p>The internal IP address for backup stream ingestion. This field is valid only when cloud access is established over an Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder backupInnerInputUrl(String backupInnerInputUrl) {
                 this.backupInnerInputUrl = backupInnerInputUrl;
@@ -489,7 +498,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * BackupInputName.
+             * <p>The backup input name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliTestInput-sub</p>
              */
             public Builder backupInputName(String backupInputName) {
                 this.backupInputName = backupInputName;
@@ -497,7 +509,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * BackupInputStatus.
+             * <p>The backup input status, which indicates whether the backup stream is being ingested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder backupInputStatus(String backupInputStatus) {
                 this.backupInputStatus = backupInputStatus;
@@ -505,7 +520,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * BackupInputUrl.
+             * <p>The backup input URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://1.2.3.4:1935/live/AliTestInput_8666ec062190f00e263012666319a5be_backup</p>
              */
             public Builder backupInputUrl(String backupInputUrl) {
                 this.backupInputUrl = backupInputUrl;
@@ -513,7 +531,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMaxBitrate.
+             * <p>The maximum bitrate for the backup input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000000</p>
              */
             public Builder backupMaxBitrate(Integer backupMaxBitrate) {
                 this.backupMaxBitrate = backupMaxBitrate;
@@ -521,7 +542,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSrtLatency.
+             * <p>The SRT latency for the backup input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder backupSrtLatency(Integer backupSrtLatency) {
                 this.backupSrtLatency = backupSrtLatency;
@@ -529,7 +553,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSrtPassphrase.
+             * <p>The SRT encryption passphrase for the backup input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FICUBPX4Q77DYHRF</p>
              */
             public Builder backupSrtPassphrase(String backupSrtPassphrase) {
                 this.backupSrtPassphrase = backupSrtPassphrase;
@@ -537,7 +564,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSrtPbkeyLen.
+             * <p>The SRT encryption key length for the backup input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder backupSrtPbkeyLen(Integer backupSrtPbkeyLen) {
                 this.backupSrtPbkeyLen = backupSrtPbkeyLen;
@@ -545,7 +575,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address whitelist in CIDR format. CIDR blocks are separated with commas (,).</p>
+             * <p>The IP address whitelist in CIDR format. Multiple CIDR blocks are separated by commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>10.211.0.0/17</p>
@@ -556,7 +586,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the flow was created.</p>
+             * <p>The time when the input was created. The time is displayed in ISO 8601 format in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-18T01:29:24Z</p>
@@ -567,7 +597,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * InnerInputUrl.
+             * <p>The internal IP address for stream ingestion. This field is valid only when cloud access is established over an Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder innerInputUrl(String innerInputUrl) {
                 this.innerInputUrl = innerInputUrl;
@@ -575,7 +608,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source name.</p>
+             * <p>The input name.</p>
              * 
              * <strong>example:</strong>
              * <p>AliTestInput</p>
@@ -586,15 +619,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>RTMP-PUSH</li>
-             * <li>SRT-Caller</li>
-             * <li>RTMP-PULL</li>
-             * <li>SRT-Listener</li>
-             * <li>Flow</li>
-             * </ul>
+             * <p>The input protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>RTMP-PUSH</p>
@@ -605,7 +630,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * InputStatus.
+             * <p>The input status, which indicates whether the primary stream is being ingested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder inputStatus(String inputStatus) {
                 this.inputStatus = inputStatus;
@@ -613,7 +641,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source URL.</p>
+             * <p>The input URL.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp://1.2.3.4:1935/live/AliTestInput_8666ec062190f00e263012666319a5be</p>
@@ -624,7 +652,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum bitrate. Unit: bit/s.</p>
+             * <p>The maximum input bitrate, in bps.</p>
              * 
              * <strong>example:</strong>
              * <p>2000000</p>
@@ -635,7 +663,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source flow. This parameter is returned when the source type is Flow.</p>
+             * <p>The peer flow instance ID. This field is required when the output type is Flow.</p>
              * 
              * <strong>example:</strong>
              * <p>05c3adf4-aa0e-421d-a991-48ceae3e642e</p>
@@ -646,7 +674,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output of the source flow. This parameter is returned when the source type is Flow.</p>
+             * <p>The output name of the peer flow. This field is required only when the input type is Flow.</p>
              * 
              * <strong>example:</strong>
              * <p>AliTestOutput</p>
@@ -657,7 +685,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latency for the SRT stream. Unit: milliseconds. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</p>
+             * <p>The SRT latency, in milliseconds. This field is required only when the input type is SRT-Listener or SRT-Caller.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -668,7 +696,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SRT key. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</p>
+             * <p>The SRT encryption passphrase. This field is required only when the input type is SRT-Listener or SRT-Caller.</p>
              * 
              * <strong>example:</strong>
              * <p>FICUBPX4Q77DYHRF</p>
@@ -679,14 +707,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption key length. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>0</li>
-             * <li>16</li>
-             * <li>24</li>
-             * <li>32</li>
-             * </ul>
+             * <p>The SRT encryption key length. This field is required only when the input type is SRT-Listener or SRT-Caller.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>

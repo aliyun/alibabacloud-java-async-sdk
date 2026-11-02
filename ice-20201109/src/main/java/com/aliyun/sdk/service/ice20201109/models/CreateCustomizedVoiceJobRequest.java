@@ -122,8 +122,8 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         /**
          * <p>The gender. Valid values:</p>
          * <ul>
-         * <li>female</li>
-         * <li>male</li>
+         * <li>female: female.</li>
+         * <li>male: male.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -139,9 +139,9 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         /**
          * <p>The scenario. Valid values:</p>
          * <ul>
-         * <li>story</li>
-         * <li>interaction</li>
-         * <li>navigation</li>
+         * <li>story: story.</li>
+         * <li>interaction: interaction.</li>
+         * <li>navigation: navigation.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -157,8 +157,11 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         /**
          * <p>The voice description.</p>
          * <ul>
-         * <li>The description can be up to 256 characters in length.</li>
+         * <li>The description cannot exceed 256 characters.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a personalized voice</p>
          */
         public Builder voiceDesc(String voiceDesc) {
             this.putQueryParameter("VoiceDesc", voiceDesc);
@@ -167,11 +170,11 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * <p>The voice ID. It can be the English name or Chinese Pinyin of the voice.</p>
+         * <p>The custom voice ID (English name or pinyin of the voice).</p>
          * <ul>
-         * <li>The value must be a unique ID that is not used by other custom voices.</li>
-         * <li>The ID can be up to 32 characters in length.</li>
-         * <li>Only letters and digits are supported.</li>
+         * <li>The ID cannot be the same as any of your other custom voice IDs.</li>
+         * <li>The ID cannot exceed 32 characters.</li>
+         * <li>Only letters and numbers are supported.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -185,10 +188,13 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * <p>The voice name.</p>
+         * <p>The voice name (generally a Chinese name).</p>
          * <ul>
-         * <li>The name can be up to 32 characters in length.</li>
+         * <li>The name cannot exceed 32 characters.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>小专</p>
          */
         public Builder voiceName(String voiceName) {
             this.putQueryParameter("VoiceName", voiceName);

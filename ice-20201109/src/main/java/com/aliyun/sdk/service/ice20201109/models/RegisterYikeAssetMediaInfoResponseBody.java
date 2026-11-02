@@ -67,7 +67,10 @@ public class RegisterYikeAssetMediaInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * MediaId.
+         * <p>The media asset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -75,7 +78,10 @@ public class RegisterYikeAssetMediaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

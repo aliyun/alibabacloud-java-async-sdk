@@ -143,7 +143,7 @@ public class ListTranscodeJobsRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range during which the jobs to be queried were created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time for filtering jobs by creation time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-15T00:00:00Z</p>
@@ -155,10 +155,10 @@ public class ListTranscodeJobsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * <p>The mark for the next page during continuous paging in a paged query. This parameter is not required for the first page.</p>
          * 
          * <strong>example:</strong>
-         * <p>ab4802364a2e49208c99efab82dfa8e8</p>
+         * <p>ab4802364a2e49208c99efab82df****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -167,10 +167,10 @@ public class ListTranscodeJobsRequest extends Request {
         }
 
         /**
-         * <p>The order that you use to sort the query results. Valid values:</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>CreateTimeDesc: sorts the query results by creation time in descending order.</li>
-         * <li>CreateTimeAsc: sorts the query results by creation time in ascending order.</li>
+         * <li>CreateTimeDesc: Sorts by creation time in descending order.</li>
+         * <li>CreateTimeAsc: Sorts by creation time in ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class ListTranscodeJobsRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The ID of the parent job used to filter results.</p>
          * 
          * <strong>example:</strong>
          * <p>7b38a5d86f1e47838927b6e7ccb1****</p>
@@ -207,7 +207,7 @@ public class ListTranscodeJobsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range during which the jobs to be queried were created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time for filtering jobs by creation time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-01T00:00:00Z</p>
@@ -219,11 +219,11 @@ public class ListTranscodeJobsRequest extends Request {
         }
 
         /**
-         * <p>The state of the job.</p>
+         * <p>The job status. Valid values: </p>
          * <ul>
-         * <li>Init: The job is submitted.</li>
-         * <li>Success: The job is successful.</li>
-         * <li>Fail: The job failed.</li>
+         * <li>Init: Submitted.</li>
+         * <li>Success: Succeeded.</li>
+         * <li>Fail: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

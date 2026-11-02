@@ -125,10 +125,11 @@ public class SubmitYikeAIAppJobRequest extends Request {
         }
 
         /**
+         * <p>The AI application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>sys-ao-smith-1</p>
+         * <p>app_test</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -137,7 +138,10 @@ public class SubmitYikeAIAppJobRequest extends Request {
         }
 
         /**
-         * AppParams.
+         * <p>The runtime parameters of the AI application. The value is a JSON-serialized string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;testKey&quot;:&quot;testValue&quot;}</p>
          */
         public Builder appParams(String appParams) {
             this.putBodyParameter("AppParams", appParams);
@@ -146,7 +150,10 @@ public class SubmitYikeAIAppJobRequest extends Request {
         }
 
         /**
-         * FolderId.
+         * <p>The folder ID. This parameter is used to save results to the specified folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-cReaEcVqQK</p>
          */
         public Builder folderId(String folderId) {
             this.putBodyParameter("FolderId", folderId);
@@ -155,7 +162,10 @@ public class SubmitYikeAIAppJobRequest extends Request {
         }
 
         /**
-         * ProductionId.
+         * <p>The project ID. This parameter is used to save results to the specified project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProductionId</p>
          */
         public Builder productionId(String productionId) {
             this.putBodyParameter("ProductionId", productionId);

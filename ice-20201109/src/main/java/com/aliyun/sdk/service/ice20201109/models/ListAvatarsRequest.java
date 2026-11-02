@@ -88,10 +88,7 @@ public class ListAvatarsRequest extends Request {
         } 
 
         /**
-         * <ul>
-         * <li>The type of the digital human.</li>
-         * <li>2DAvatar</li>
-         * </ul>
+         * <p>The type of the digital human. Valid value: 2DAvatar.</p>
          * 
          * <strong>example:</strong>
          * <p>2DAvatar</p>
@@ -103,10 +100,7 @@ public class ListAvatarsRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li>The page number.</li>
-         * <li>Default value: 1.</li>
-         * </ul>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -118,10 +112,7 @@ public class ListAvatarsRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li>The number of entries per page.</li>
-         * <li>Default value: 10.</li>
-         * </ul>
+         * <p>The number of entries per page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

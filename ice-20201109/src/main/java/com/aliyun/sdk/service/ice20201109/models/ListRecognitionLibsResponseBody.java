@@ -106,7 +106,7 @@ public class ListRecognitionLibsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The recognition libraries.</p>
+         * Libs.
          */
         public Builder libs(Libs libs) {
             this.libs = libs;
@@ -136,7 +136,7 @@ public class ListRecognitionLibsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -147,7 +147,7 @@ public class ListRecognitionLibsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>
@@ -229,7 +229,7 @@ public class ListRecognitionLibsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the recognition library.</p>
+             * LibDescription.
              */
             public Builder libDescription(String libDescription) {
                 this.libDescription = libDescription;
@@ -237,10 +237,7 @@ public class ListRecognitionLibsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the recognition library.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><em><strong><strong><strong><strong><strong><strong>24b47865c6</strong></strong></strong></strong></strong></strong></em>*</p>
+             * LibId.
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -248,7 +245,7 @@ public class ListRecognitionLibsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the recognition library.</p>
+             * LibName.
              */
             public Builder libName(String libName) {
                 this.libName = libName;

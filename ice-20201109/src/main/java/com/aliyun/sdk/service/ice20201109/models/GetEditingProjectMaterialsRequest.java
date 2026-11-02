@@ -83,7 +83,7 @@ public class GetEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the online editing project.</p>
+         * <p>The ID of the cloud editing project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

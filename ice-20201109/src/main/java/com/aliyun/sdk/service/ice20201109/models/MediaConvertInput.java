@@ -67,7 +67,7 @@ public class MediaConvertInput extends TeaModel {
         } 
 
         /**
-         * InputFile.
+         * <p>The input file.</p>
          */
         public Builder inputFile(MediaObject inputFile) {
             this.inputFile = inputFile;
@@ -75,7 +75,10 @@ public class MediaConvertInput extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the input file. If Output contains InputRef, use this name to reference the input file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InputVideo</p>
          */
         public Builder name(String name) {
             this.name = name;

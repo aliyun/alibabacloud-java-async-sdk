@@ -171,7 +171,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         } 
 
         /**
-         * AppId.
+         * <p>The AI application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -179,7 +182,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         }
 
         /**
-         * AppParams.
+         * <p>The input parameters for running the AI application, serialized as a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;LoadImage.1.TargetImage\&quot;:\&quot;MediaId1\&quot;}</p>
          */
         public Builder appParams(String appParams) {
             this.appParams = appParams;
@@ -187,7 +193,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         }
 
         /**
-         * ExecutionFinishTime.
+         * <p>The end time of the task, in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-02-06T18:53:18.809+08:00</p>
          */
         public Builder executionFinishTime(String executionFinishTime) {
             this.executionFinishTime = executionFinishTime;
@@ -195,7 +204,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         }
 
         /**
-         * ExecutionStartTime.
+         * <p>The start time of the task, in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-02-06T18:53:34.001+08:00</p>
          */
         public Builder executionStartTime(String executionStartTime) {
             this.executionStartTime = executionStartTime;
@@ -203,7 +215,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         }
 
         /**
-         * FolderId.
+         * <p>The folder ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>folder-u3ilwhoc36ux9a****</p>
          */
         public Builder folderId(String folderId) {
             this.folderId = folderId;
@@ -211,7 +226,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -219,7 +237,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         }
 
         /**
-         * ProductionId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
          */
         public Builder productionId(String productionId) {
             this.productionId = productionId;
@@ -227,7 +248,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +259,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The task execution result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -243,7 +267,17 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Created: The task is newly created.</li>
+         * <li>Queuing: The task is in the queue.</li>
+         * <li>Executing: The task is being executed.</li>
+         * <li>Finished: The task execution is complete.</li>
+         * <li>Failed: The task execution failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -309,7 +343,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
             } 
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1a7852b032c371f0b64fe6f6c74b****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -317,7 +354,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUrl.
+             * <p>The downloadable OSS URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp3">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp3</a></p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -384,7 +424,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
             } 
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1a7852b032c371f0b64fe6f6c74b****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -392,7 +435,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUrl.
+             * <p>The downloadable OSS URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.png">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.png</a></p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -459,7 +505,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
             } 
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1a7852b032c371f0b64fe6f6c74b****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -467,7 +516,10 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUrl.
+             * <p>The downloadable OSS URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4</a></p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -547,7 +599,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
             } 
 
             /**
-             * AudioResult.
+             * <p>The audio task result.</p>
              */
             public Builder audioResult(java.util.List<AudioResult> audioResult) {
                 this.audioResult = audioResult;
@@ -555,7 +607,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * ImageResult.
+             * <p>The image task result.</p>
              */
             public Builder imageResult(java.util.List<ImageResult> imageResult) {
                 this.imageResult = imageResult;
@@ -563,7 +615,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * VideoResult.
+             * <p>The video task result.</p>
              */
             public Builder videoResult(java.util.List<VideoResult> videoResult) {
                 this.videoResult = videoResult;

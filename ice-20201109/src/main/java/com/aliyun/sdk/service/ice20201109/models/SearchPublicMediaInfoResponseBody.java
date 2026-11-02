@@ -80,7 +80,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * PublicMediaInfos.
+         * <p>The public copyright media asset information.</p>
          */
         public Builder publicMediaInfos(java.util.List<PublicMediaInfos> publicMediaInfos) {
             this.publicMediaInfos = publicMediaInfos;
@@ -88,7 +88,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>3CFB-2767-54FD-B311-BD15A4C1</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries that match the request conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +168,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The metadata JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{\&quot;AuditionUrl\&quot;: \&quot;<a href="http://xxx%5C%5C">http://xxx\\</a>&quot;, \&quot;AuditionCount\&quot;: 3...}&quot;</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -170,7 +179,15 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type. Valid values:</p>
+             * <ul>
+             * <li>ai: AI data processed from original AI results.</li>
+             * <li>user-defined: user-defined metadata.</li>
+             * <li>system: system-provided metadata.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -406,7 +423,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * BusinessType.
+             * <p>The business type of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -414,7 +434,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * <p>The category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -422,7 +445,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * <p>The cover URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -430,7 +456,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time of the media asset. The time is in the ISO 8601 format and in UTC (ending with Z).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T06:04:49Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -438,7 +467,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DeletedTime.
+             * <p>The deletion time of the media asset. The time is in the ISO 8601 format and in UTC (ending with Z).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-29T06:04:49Z</p>
              */
             public Builder deletedTime(String deletedTime) {
                 this.deletedTime = deletedTime;
@@ -446,7 +478,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The content description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -465,7 +500,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaTags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag,tag1</p>
              */
             public Builder mediaTags(String mediaTags) {
                 this.mediaTags = mediaTags;
@@ -473,7 +511,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>The media type of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audio</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -481,7 +522,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time of the media asset. The time is in the ISO 8601 format and in UTC (ending with Z).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T06:04:50Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -489,7 +533,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -497,7 +544,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SpriteImages.
+             * <p>The sprite images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
              */
             public Builder spriteImages(String spriteImages) {
                 this.spriteImages = spriteImages;
@@ -505,7 +555,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -513,7 +566,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -521,7 +577,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userDataTest</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -601,7 +660,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * DynamicMetaData.
+             * <p>The dynamic metadata.</p>
              */
             public Builder dynamicMetaData(DynamicMetaData dynamicMetaData) {
                 this.dynamicMetaData = dynamicMetaData;
@@ -617,7 +676,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>MediaId</p>
+             * <p>The media asset ID.</p>
              * 
              * <strong>example:</strong>
              * <p>icepublic-<strong><strong>87b921bb4a55908a72a0537e</strong></strong></p>
@@ -713,7 +772,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Authorized.
+             * <p>Indicates whether the user has purchased a resource plan that includes the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder authorized(Boolean authorized) {
                 this.authorized = authorized;
@@ -721,7 +783,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Favorite.
+             * <p>Indicates whether the media asset has been added to favorites.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder favorite(Boolean favorite) {
                 this.favorite = favorite;
@@ -729,7 +794,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaInfo.
+             * <p>The media asset information.</p>
              */
             public Builder mediaInfo(MediaInfo mediaInfo) {
                 this.mediaInfo = mediaInfo;
@@ -737,7 +802,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RemainingAuthTime.
+             * <p>The remaining validity period of the resource plan, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder remainingAuthTime(String remainingAuthTime) {
                 this.remainingAuthTime = remainingAuthTime;

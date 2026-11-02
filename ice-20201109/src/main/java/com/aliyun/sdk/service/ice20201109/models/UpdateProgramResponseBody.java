@@ -67,7 +67,7 @@ public class UpdateProgramResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the program.</p>
+         * <p>The program information.</p>
          */
         public Builder program(ChannelAssemblyProgram program) {
             this.program = program;
@@ -75,7 +75,7 @@ public class UpdateProgramResponseBody extends TeaModel {
         }
 
         /**
-         * <p><strong>Request ID</strong></p>
+         * <p><strong>The request ID.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>xxx-xxxx-xxxxx-xxxx</p>

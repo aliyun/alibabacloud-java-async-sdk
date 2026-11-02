@@ -59,7 +59,7 @@ public class GetMediaProducingJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the media editing and production job.</p>
+         * <p>The ID of the video editing and producing job.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>

@@ -88,7 +88,7 @@ public class QueryVideoCognitionJobRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to include the full algorithm results in the response.</p>
+         * <p>Specifies whether to include the complete algorithm results in the query results.</p>
          */
         public Builder includeResults(IncludeResults includeResults) {
             String includeResultsShrink = shrink(includeResults, "IncludeResults", "json");
@@ -98,7 +98,7 @@ public class QueryVideoCognitionJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task to query. It is returned when you call the <a href="https://help.aliyun.com/document_detail/478786.html">SubmitSmarttagJob</a> operation.</p>
+         * <p>The ID of the intelligent tagging job to query. You can obtain the ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/478786.html">Submit a smart tagging job</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class QueryVideoCognitionJobRequest extends Request {
         }
 
         /**
-         * <p>Additional request parameters, provided as a JSON string.</p>
+         * <p>The additional request parameters, represented as a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class QueryVideoCognitionJobRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to include Automatic Speech Recognition (ASR) results.</p>
+             * <p>Specifies whether to display the automatic speech recognition (ASR) results.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -206,7 +206,7 @@ public class QueryVideoCognitionJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to include Optical Character Recognition (OCR) results.</p>
+             * <p>Specifies whether to display the optical character recognition (OCR) results.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -217,7 +217,7 @@ public class QueryVideoCognitionJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to include the URL to the raw output of the algorithm.</p>
+             * <p>Specifies whether to display the links to the original results of the operators.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

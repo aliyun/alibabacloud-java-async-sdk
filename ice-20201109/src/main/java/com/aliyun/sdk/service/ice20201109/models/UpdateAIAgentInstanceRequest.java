@@ -103,7 +103,23 @@ public class UpdateAIAgentInstanceRequest extends Request {
         } 
 
         /**
-         * AgentConfig.
+         * <p>The agent configuration to be updated. This configuration is merged with the configuration used when the instance was started. For more information, see the AIAgentConfig definition. The following parameters in AIAgentTemplateConfig can be updated:</p>
+         * <ul>
+         * <li><p>VoiceId</p>
+         * </li>
+         * <li><p>EnableVoiceInterrupt</p>
+         * </li>
+         * <li><p>Greeting</p>
+         * </li>
+         * <li><p>Volume</p>
+         * </li>
+         * <li><p>EnablePushToTalk</p>
+         * </li>
+         * <li><p>UseVoiceprint</p>
+         * </li>
+         * <li><p>BailianAppParams</p>
+         * </li>
+         * </ul>
          */
         public Builder agentConfig(AIAgentConfig agentConfig) {
             String agentConfigShrink = shrink(agentConfig, "AgentConfig", "json");
@@ -113,7 +129,10 @@ public class UpdateAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AI agent that you want to update.</p>
+         * <p>The agent instance ID.</p>
+         * <blockquote>
+         * <p>The InstanceId is the unique ID returned after the agent instance is successfully started. For more information about the API operations used to start an agent, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +145,27 @@ public class UpdateAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * <p>The template configurations of the AI agent. The configurations are merged with the template configurations that are used to start the AI agent. For more information, see the definition of TemplateConfig.</p>
+         * <blockquote>
+         * <p>The agent template configuration. <strong>[Deprecated]</strong> Use the AgentConfig parameter instead.</p>
+         * </blockquote>
+         * <p>The agent configuration to be updated. This configuration is merged with the configuration used when the instance was started. For more information, see the <a href="https://help.aliyun.com/document_detail/2846193.html">AIAgentTemplateConfig</a> definition.
+         * The following parameters in AIAgentTemplateConfig can be updated:</p>
+         * <ul>
+         * <li><p>VoiceId (voice ID)</p>
+         * </li>
+         * <li><p>EnableVoiceInterrupt (enable voice interruption)</p>
+         * </li>
+         * <li><p>Greeting (greeting)</p>
+         * </li>
+         * <li><p>Volume (volume)</p>
+         * </li>
+         * <li><p>EnablePushToTalk (enable push-to-talk)</p>
+         * </li>
+         * <li><p>UseVoiceprint (use voiceprint)</p>
+         * </li>
+         * <li><p>AsrMaxSilence (maximum ASR silence duration)</p>
+         * </li>
+         * </ul>
          */
         public Builder templateConfig(AIAgentTemplateConfig templateConfig) {
             String templateConfigShrink = shrink(templateConfig, "TemplateConfig", "json");
@@ -136,7 +175,10 @@ public class UpdateAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom user data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;VoiceId&quot;:&quot;xiaoxia&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

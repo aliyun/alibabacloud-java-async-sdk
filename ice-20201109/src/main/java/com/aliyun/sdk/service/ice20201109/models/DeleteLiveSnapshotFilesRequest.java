@@ -89,7 +89,7 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
         } 
 
         /**
-         * <p>The list of timestamps when the jobs were created. The values are UNIX timestamps representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A maximum of 200 jobs can be deleted at a time.</p>
+         * <p>The list of creation timestamps. You can delete up to 200 files at a time.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createTimestampList(java.util.List<Long> createTimestampList) {
@@ -100,7 +100,7 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to delete the original files at the same time. Default value: false.</p>
+         * <p>Specifies whether to delete the original file. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

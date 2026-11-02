@@ -114,7 +114,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The media assets that meet the specified conditions.</p>
+         * <p>The collection of qualified media assets.</p>
          */
         public Builder mediaInfos(java.util.List<MediaInfos> mediaInfos) {
             this.mediaInfos = mediaInfos;
@@ -122,7 +122,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the online editing project.</p>
+         * <p>The ID of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p><em><strong><strong>67ae06542b9b93e0d1c387</strong></strong></em></p>
@@ -133,7 +133,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The materials associated with the editing project. A live stream editing project will be associated with a regular editing project after the live streaming ends.</p>
+         * <p>The materials associated with the editing project. A live editing project is associated with a common editing project after the live stream ends.</p>
          * 
          * <strong>example:</strong>
          * <p><em><strong><strong>9b145c5cafc2e057304fcd</strong></strong></em></p>
@@ -239,7 +239,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application name of the live stream.</p>
+             * <p>The name of the live streaming application.</p>
              * 
              * <strong>example:</strong>
              * <p>testrecord</p>
@@ -481,7 +481,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file name.</p>
+             * <p>The name of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>example.mp4</p>
@@ -492,7 +492,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file size. Unit: bytes.</p>
+             * <p>The size of the file in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>30611502</p>
@@ -503,12 +503,14 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file status.</p>
-             * <p>-Uploading</p>
-             * <p>-Normal</p>
-             * <p>-UploadFail</p>
-             * <p>-Disable</p>
-             * <p>-Deleted</p>
+             * <p>The status of the file. Valid values:</p>
+             * <ul>
+             * <li>Uploading: uploading</li>
+             * <li>Normal: normal</li>
+             * <li>UploadFail: upload failed</li>
+             * <li>Disable: disabled</li>
+             * <li>Deleted: deleted</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -519,7 +521,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file type.</p>
+             * <p>The type of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>source_file</p>
@@ -530,7 +532,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Object Storage Service (OSS) URL of the file.</p>
+             * <p>The OSS URL of the file.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
@@ -541,7 +543,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The container format.</p>
+             * <p>The encapsulation format.</p>
              * 
              * <strong>example:</strong>
              * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
@@ -563,7 +565,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region in which the file resides.</p>
+             * <p>The storage region of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -917,7 +919,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the media asset.</p>
+             * <p>The category.</p>
              * 
              * <strong>example:</strong>
              * <p>audio</p>
@@ -928,7 +930,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The thumbnail URL of the media asset.</p>
+             * <p>The URL of the cover image.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
@@ -939,7 +941,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the media asset was created.</p>
+             * <p>The time when the media asset was created. The time is displayed in ISO 8601 format in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-23T03:32:59Z</p>
@@ -950,7 +952,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the media asset was deleted.</p>
+             * <p>The time when the media asset was deleted. The time is displayed in ISO 8601 format in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-23T03:32:59Z</p>
@@ -961,7 +963,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the media asset.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>sample_description</p>
@@ -972,7 +974,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the media asset in another service.</p>
+             * <p>The URL of the media asset to be registered in the corresponding system.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/file.mp4">http://bucket.oss-cn-shanghai.aliyuncs.com/file.mp4</a></p>
@@ -994,7 +996,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the media asset.</p>
+             * <p>The tags.</p>
              * 
              * <strong>example:</strong>
              * <p>sample_tag</p>
@@ -1005,7 +1007,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the media asset.</p>
+             * <p>The media type of the media asset.</p>
              * 
              * <strong>example:</strong>
              * <p>Video</p>
@@ -1016,7 +1018,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the media asset was last modified.</p>
+             * <p>The time when the media asset was modified. The time is displayed in ISO 8601 format in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-23T03:32:59Z</p>
@@ -1027,7 +1029,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The snapshots of the media asset.</p>
+             * <p>The snapshots.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -1038,7 +1040,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the media asset.</p>
+             * <p>The source.</p>
              * 
              * <strong>example:</strong>
              * <p>oss</p>
@@ -1049,7 +1051,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sprite of the media asset.</p>
+             * <p>The sprite images.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://outin-example.oss-cn-shanghai.aliyuncs.com/test.png?Expires=">http://outin-example.oss-cn-shanghai.aliyuncs.com/test.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
@@ -1061,10 +1063,12 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
 
             /**
              * <p>The status of the media asset. Valid values:</p>
-             * <p>- Init</p>
-             * <p>- Preparing</p>
-             * <p>- PrepareFail</p>
-             * <p>- Normal</p>
+             * <ul>
+             * <li>Init: initialized</li>
+             * <li>Preparing: preparing</li>
+             * <li>PrepareFail: preparation failed</li>
+             * <li>Normal: normal</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -1075,7 +1079,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the media asset.</p>
+             * <p>The title.</p>
              * 
              * <strong>example:</strong>
              * <p>default_title_2020-12-23T03:32:59Z</p>
@@ -1086,7 +1090,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transcoding status of the media asset.</p>
+             * <p>The transcoding status.</p>
              * 
              * <strong>example:</strong>
              * <p>Init</p>
@@ -1188,7 +1192,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The basic information of the media assets.</p>
+             * <p>The basic information of the media asset.</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;

@@ -80,7 +80,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of media information analysis jobs.</p>
+         * <p>The list of media information jobs.</p>
          */
         public Builder jobs(java.util.List<Jobs> jobs) {
             this.jobs = jobs;
@@ -88,7 +88,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The token of the next page is returned after you call this operation for the first time.</p>
+         * <p>The next page token. Leave this parameter empty for the first request. The next page token is returned after the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>019daf5780f74831b0e1a767c9f1c178</p>
@@ -168,10 +168,10 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The media object.</p>
+             * <p>The media value.</p>
              * <ul>
-             * <li>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</li>
-             * <li>If Type is set to Media, the ID of a media asset is returned.</li>
+             * <li>If the type is OSS, the value is a URL that supports the OSS and HTTP protocols.</li>
+             * <li>If the type is Media, the value is a media asset ID.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -183,10 +183,10 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the media object. Valid values:</p>
+             * <p>The media object type. Valid values:</p>
              * <ul>
-             * <li>OSS: an Object Storage Service (OSS) object.</li>
-             * <li>Media: a media asset.</li>
+             * <li>OSS: OSS file.</li>
+             * <li>Media: media asset ID.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -437,7 +437,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sound channel layout.</p>
+             * <p>The channel layout.</p>
              * 
              * <strong>example:</strong>
              * <p>stereo</p>
@@ -448,7 +448,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sound channels.</p>
+             * <p>The number of channels.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -459,7 +459,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the encoding format.</p>
+             * <p>The full codec name.</p>
              * 
              * <strong>example:</strong>
              * <p>AAC (Advanced Audio Coding)</p>
@@ -470,7 +470,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoding format.</p>
+             * <p>The codec format.</p>
              * 
              * <strong>example:</strong>
              * <p>aac</p>
@@ -481,7 +481,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoder tag.</p>
+             * <p>The codec tag.</p>
              * 
              * <strong>example:</strong>
              * <p>0x000f</p>
@@ -492,7 +492,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the encoder tag.</p>
+             * <p>The codec tag string.</p>
              * 
              * <strong>example:</strong>
              * <p>[15][0][0][0]</p>
@@ -503,7 +503,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time base of the encoder.</p>
+             * <p>The codec time base.</p>
              * 
              * <strong>example:</strong>
              * <p>1/44100</p>
@@ -514,7 +514,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the stream. Unit: seconds.</p>
+             * <p>The duration, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>403.039989</p>
@@ -525,7 +525,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sequence number of the stream.</p>
+             * <p>The stream index.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -536,7 +536,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language of the stream.</p>
+             * <p>The language.</p>
              * 
              * <strong>example:</strong>
              * <p>cn</p>
@@ -547,7 +547,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sampling format.</p>
+             * <p>The sample format.</p>
              * 
              * <strong>example:</strong>
              * <p>fltp</p>
@@ -558,7 +558,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sampling rate. Unit: Hz.</p>
+             * <p>The sample rate. Unit: Hz.</p>
              * 
              * <strong>example:</strong>
              * <p>44100</p>
@@ -569,7 +569,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the stream.</p>
+             * <p>The start time, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1.473556</p>
@@ -791,7 +791,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the video. Unit: seconds.</p>
+             * <p>The video duration. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>403.039999</p>
@@ -824,7 +824,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the file.</p>
+             * <p>The file status.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -835,7 +835,11 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file type. Valid values: source_file and transcode_file.</p>
+             * <p>The file type. Valid values:</p>
+             * <ul>
+             * <li>source_file: source file.</li>
+             * <li>transcode_file: transcoded file.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>source_file</p>
@@ -846,7 +850,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the file.</p>
+             * <p>The file URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8">http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8</a></p>
@@ -857,7 +861,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the video format.</p>
+             * <p>The video format name.</p>
              * 
              * <strong>example:</strong>
              * <p>hls,applehttp</p>
@@ -879,10 +883,10 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the media asset.</p>
+             * <p>The media asset ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>4765337007f571edbfdf81848c016303</p>
+             * <p>4765337007f571edbfdf81848c01****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -890,7 +894,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region in which the file resides.</p>
+             * <p>The region where the file is located.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -1266,7 +1270,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the encoding format.</p>
+             * <p>The full codec name.</p>
              * 
              * <strong>example:</strong>
              * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
@@ -1277,7 +1281,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoding format.</p>
+             * <p>The codec format.</p>
              * 
              * <strong>example:</strong>
              * <p>h264</p>
@@ -1288,7 +1292,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the encoding format.</p>
+             * <p>The codec tag.</p>
              * 
              * <strong>example:</strong>
              * <p>0x001b</p>
@@ -1299,7 +1303,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag string of the encoding format.</p>
+             * <p>The codec tag string.</p>
              * 
              * <strong>example:</strong>
              * <p>[27][0][0][0]</p>
@@ -1310,7 +1314,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time base of the encoder.</p>
+             * <p>The codec time base.</p>
              * 
              * <strong>example:</strong>
              * <p>1/50</p>
@@ -1332,7 +1336,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the stream. Unit: seconds.</p>
+             * <p>The duration, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>403.039989</p>
@@ -1354,11 +1358,11 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the video stream contains bidirectional frames (B-frames). Valid values:</p>
+             * <p>Indicates whether B-frames are present. Valid values:</p>
              * <ul>
-             * <li>0: The stream contains no B-frames.</li>
-             * <li>1: The stream contains one B-frame.</li>
-             * <li>2: The stream contains multiple consecutive B-frames.</li>
+             * <li>0: No B-frames.</li>
+             * <li>1: One B-frame.</li>
+             * <li>2: Multiple consecutive B-frames.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1381,7 +1385,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sequence number of the stream.</p>
+             * <p>The stream index.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1392,7 +1396,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language of the stream.</p>
+             * <p>The language.</p>
              * 
              * <strong>example:</strong>
              * <p>cn</p>
@@ -1403,7 +1407,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec level.</p>
+             * <p>The encoding level.</p>
              * 
              * <strong>example:</strong>
              * <p>31</p>
@@ -1447,7 +1451,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rotation angle of the video image.</p>
+             * <p>The video rotation angle.</p>
              * <ul>
              * <li>Valid values: 0, 90, 180, and 270.</li>
              * <li>Default value: 0.</li>
@@ -1462,7 +1466,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The aspect ratio of the area from which the sampling points are collected.</p>
+             * <p>The sample aspect ratio.</p>
              * 
              * <strong>example:</strong>
              * <p>478:477</p>
@@ -1473,7 +1477,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the stream.</p>
+             * <p>The start time, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1.473556</p>
@@ -1578,7 +1582,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the audio stream.</p>
+             * <p>The audio stream information.</p>
              */
             public Builder audioStreamInfoList(java.util.List<AudioStreamInfoList> audioStreamInfoList) {
                 this.audioStreamInfoList = audioStreamInfoList;
@@ -1594,7 +1598,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the video stream.</p>
+             * <p>The video stream information.</p>
              */
             public Builder videoStreamInfoList(java.util.List<VideoStreamInfoList> videoStreamInfoList) {
                 this.videoStreamInfoList = videoStreamInfoList;
@@ -1661,10 +1665,10 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * <p>The pipeline ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>e37ebee5d98b4781897f6086e89f9c56</p>
+             * <p>e37ebee5d98b4781897f6086e89f****</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -1672,7 +1676,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+             * <p>The job priority. A larger value indicates a higher priority. Valid values: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1885,7 +1889,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether asynchronous processing was performed.</p>
+             * <p>Specifies whether the job is processed asynchronously.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1896,7 +1900,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The job completion time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-12T08:49:41Z</p>
@@ -1907,7 +1911,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input of the job.</p>
+             * <p>The job input.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -1918,7 +1922,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
              * <p>The job ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>ab4802364a2e49208c99efab82dfa8e8</p>
+             * <p>ab4802364a2e49208c99efab82df****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1926,7 +1930,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the media information.</p>
+             * <p>The media information details.</p>
              */
             public Builder mediaInfoProperty(MediaInfoProperty mediaInfoProperty) {
                 this.mediaInfoProperty = mediaInfoProperty;
@@ -1964,11 +1968,11 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the job. Valid values:</p>
+             * <p>The job status. Valid values:</p>
              * <ul>
-             * <li>Init: The job is submitted.</li>
-             * <li>Success: The job is successful.</li>
-             * <li>Fail: The job failed.</li>
+             * <li>Init: Submitted.</li>
+             * <li>Success: Succeeded.</li>
+             * <li>Fail: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1988,7 +1992,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was submitted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The job submission time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-12T08:49:41Z</p>
@@ -1999,11 +2003,11 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the job. Valid values:</p>
+             * <p>The job source. Valid values:</p>
              * <ul>
-             * <li>API</li>
-             * <li>WorkFlow</li>
-             * <li>Console</li>
+             * <li>API: API.</li>
+             * <li>WorkFlow: workflow.</li>
+             * <li>Console: console.</li>
              * </ul>
              * 
              * <strong>example:</strong>

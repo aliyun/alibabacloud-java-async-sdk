@@ -200,14 +200,7 @@ public class QueryMediaCensorJobListRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query.</p>
-         * <ul>
-         * <li>Specify the time in the ISO 8601 standard. The time must be in UTC.</li>
-         * <li>Format: yyyy-MM-ddTHH:mm:ssZ.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-02-14T02:16:07Z</p>
+         * EndOfJobCreatedTimeRange.
          */
         public Builder endOfJobCreatedTimeRange(String endOfJobCreatedTimeRange) {
             this.putQueryParameter("EndOfJobCreatedTimeRange", endOfJobCreatedTimeRange);
@@ -216,10 +209,7 @@ public class QueryMediaCensorJobListRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the content moderation jobs. You can obtain the ID of a content moderation job from the response parameters of the SubmitMediaCensorJob operation. Separate multiple IDs with commas (,).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>fa9c34be3bcf42919ac4d1775239****,78dc866518b843259669df58ed30****</p>
+         * JobIds.
          */
         public Builder jobIds(String jobIds) {
             this.putQueryParameter("JobIds", jobIds);
@@ -228,14 +218,7 @@ public class QueryMediaCensorJobListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <ul>
-         * <li>Default value: <strong>30</strong>.</li>
-         * <li>Valid values: <strong>1 to 300</strong>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
+         * MaximumPageSize.
          */
         public Builder maximumPageSize(Long maximumPageSize) {
             this.putQueryParameter("MaximumPageSize", maximumPageSize);
@@ -244,10 +227,7 @@ public class QueryMediaCensorJobListRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>79aff3eee82242e092899db5f669</p>
+         * NextPageToken.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -274,10 +254,7 @@ public class QueryMediaCensorJobListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the jobs were submitted.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c5b30b7c0d0e4a0abde1d5f9e751****</p>
+         * PipelineId.
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -304,14 +281,7 @@ public class QueryMediaCensorJobListRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
-         * <ul>
-         * <li>Specify the time in the ISO 8601 standard. The time must be in UTC.</li>
-         * <li>Format: yyyy-MM-ddTHH:mm:ssZ.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-12-22T03:48:05Z</p>
+         * StartOfJobCreatedTimeRange.
          */
         public Builder startOfJobCreatedTimeRange(String startOfJobCreatedTimeRange) {
             this.putQueryParameter("StartOfJobCreatedTimeRange", startOfJobCreatedTimeRange);
@@ -320,17 +290,7 @@ public class QueryMediaCensorJobListRequest extends Request {
         }
 
         /**
-         * <p>The state of the jobs that you want to query. Valid values:</p>
-         * <ul>
-         * <li><strong>All</strong>: all jobs.</li>
-         * <li><strong>Queuing</strong>: the jobs that are waiting in the queue.</li>
-         * <li><strong>Analysing</strong>: the jobs that are in progress.</li>
-         * <li><strong>Fail</strong>: failed jobs.</li>
-         * <li><strong>Success</strong>: successful jobs.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>All</p>
+         * State.
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

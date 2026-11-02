@@ -106,7 +106,16 @@ public class MediaConvertVolume extends TeaModel {
         } 
 
         /**
-         * IntegratedLoudnessTarget.
+         * <p>The target volume.</p>
+         * <ul>
+         * <li>This parameter takes effect only when Method is set to dynamic.</li>
+         * <li>Unit: dB.</li>
+         * <li>Value range: -70 to -5.</li>
+         * <li>Default value: -6.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-6</p>
          */
         public Builder integratedLoudnessTarget(Integer integratedLoudnessTarget) {
             this.integratedLoudnessTarget = integratedLoudnessTarget;
@@ -114,7 +123,16 @@ public class MediaConvertVolume extends TeaModel {
         }
 
         /**
-         * Level.
+         * <p>The volume increase relative to the input audio.</p>
+         * <ul>
+         * <li>This parameter takes effect only when Method is set to linear.</li>
+         * <li>Unit: dB.</li>
+         * <li>Value range: up to 20 dB.</li>
+         * <li>Default value: -20 dB.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-20</p>
          */
         public Builder level(Integer level) {
             this.level = level;
@@ -122,7 +140,16 @@ public class MediaConvertVolume extends TeaModel {
         }
 
         /**
-         * LoudnessRangeTarget.
+         * <p>The fluctuation range relative to the target volume.</p>
+         * <ul>
+         * <li>This parameter takes effect only when Method is set to dynamic.</li>
+         * <li>Unit: dB.</li>
+         * <li>Value range: 1 to 20.</li>
+         * <li>Default value: 8.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder loudnessRangeTarget(Integer loudnessRangeTarget) {
             this.loudnessRangeTarget = loudnessRangeTarget;
@@ -130,7 +157,16 @@ public class MediaConvertVolume extends TeaModel {
         }
 
         /**
-         * Method.
+         * <p>The volume adjustment method.</p>
+         * <ul>
+         * <li>auto: Automatic adjustment.</li>
+         * <li>dynamic: Dynamic adjustment.</li>
+         * <li>linear: Linear adjustment.</li>
+         * <li>Default value: dynamic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dynamic</p>
          */
         public Builder method(String method) {
             this.method = method;
@@ -138,7 +174,16 @@ public class MediaConvertVolume extends TeaModel {
         }
 
         /**
-         * TruePeak.
+         * <p>The peak volume.</p>
+         * <ul>
+         * <li>This parameter takes effect only when Method is set to dynamic.</li>
+         * <li>Unit: dB.</li>
+         * <li>Value range: -9 to 0.</li>
+         * <li>Default value: -1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder truePeak(Integer truePeak) {
             this.truePeak = truePeak;

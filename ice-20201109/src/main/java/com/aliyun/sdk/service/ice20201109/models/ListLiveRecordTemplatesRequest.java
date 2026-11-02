@@ -129,7 +129,7 @@ public class ListLiveRecordTemplatesRequest extends Request {
         } 
 
         /**
-         * <p>The search keyword. You can use the template ID or name as the keyword to search for templates. If you search for templates by name, fuzzy match is supported.</p>
+         * <p>The search keyword. You can search by template ID or name. Fuzzy match is supported for names.</p>
          * 
          * <strong>example:</strong>
          * <p>test template</p>
@@ -153,7 +153,7 @@ public class ListLiveRecordTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The page size. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -165,12 +165,7 @@ public class ListLiveRecordTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>asc: sorts the query results in ascending order.</li>
-         * <li>desc: sorts the query results in descending order.</li>
-         * </ul>
+         * <p>The sorting parameter. By default, templates are sorted in descending order of creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -182,7 +177,7 @@ public class ListLiveRecordTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateIds.
+         * <p>The list of recording template IDs.</p>
          */
         public Builder templateIds(java.util.List<String> templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);
@@ -191,12 +186,7 @@ public class ListLiveRecordTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The type of the template.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>system</li>
-         * <li>custom</li>
-         * </ul>
+         * <p>The templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>

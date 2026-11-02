@@ -110,9 +110,13 @@ public class BatchGetMediaInfosRequest extends Request {
         }
 
         /**
-         * <p>The additional information that you want to query about the media assets. By default, only BasicInfo is returned. The following additional information can be queried:</p>
-         * <p>- FileInfo</p>
-         * <p>- DynamicMetaData</p>
+         * <p>The additional information about the media assets to query. By default, only BasicInfo is returned. Additional file information includes:</p>
+         * <ul>
+         * <li><p>FileInfo</p>
+         * </li>
+         * <li><p>DynamicMetaData</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>FileInfo,DynamicMetaData</p>
@@ -124,7 +128,15 @@ public class BatchGetMediaInfosRequest extends Request {
         }
 
         /**
-         * AuthTimeout.
+         * <p>The authentication expiration time, in seconds.</p>
+         * <ul>
+         * <li>Minimum value: <strong>1</strong>.</li>
+         * <li>Maximum value: 86400.</li>
+         * <li>Default value: 3600.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder authTimeout(Long authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
@@ -133,7 +145,7 @@ public class BatchGetMediaInfosRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the media assets that you want to query. Separate the IDs with commas (,).</p>
+         * <p>The IDs of the media assets to query, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>

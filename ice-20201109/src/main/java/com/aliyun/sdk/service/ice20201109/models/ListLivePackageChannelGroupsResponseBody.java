@@ -119,7 +119,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The channel groups returned.</p>
+         * <p>The channel groups.</p>
          */
         public Builder livePackageChannelGroups(java.util.List<LivePackageChannelGroups> livePackageChannelGroups) {
             this.livePackageChannelGroups = livePackageChannelGroups;
@@ -171,7 +171,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -279,7 +279,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the channel group was created. It is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and displayed in UTC.</p>
+             * <p>The time when the channel group was created. The time follows the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -290,7 +290,10 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel group description.</p>
+             * <p>The description of the channel group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is the description information of the channel group.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,7 +301,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel group name.</p>
+             * <p>The name of the channel group.</p>
              * 
              * <strong>example:</strong>
              * <p>testChannelGroup</p>
@@ -309,7 +312,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the channel group was last modified. It is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and displayed in UTC.</p>
+             * <p>The time when the channel group was last modified. The time follows the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-02T12:00:00Z</p>
@@ -320,7 +323,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The origin domain.</p>
+             * <p>The origin domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>origin.example.com</p>

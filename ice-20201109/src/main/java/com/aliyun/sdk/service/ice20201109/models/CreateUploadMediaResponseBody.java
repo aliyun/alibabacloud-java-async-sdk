@@ -119,7 +119,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The OSS URL of the file. The URL does not contain the information used for authentication.</p>
+         * <p>The OSS URL of the file (without authentication).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://outin-***.oss-cn-north-2-gov-1.aliyuncs.com/sv/40360f05-181f63c3110-0004-cd8e-27f-de3c9.mp4">http://outin-***.oss-cn-north-2-gov-1.aliyuncs.com/sv/40360f05-181f63c3110-0004-cd8e-27f-de3c9.mp4</a></p>
@@ -130,7 +130,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -141,9 +141,9 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The URL of the media asset.</p>
+         * <p>The media asset URL.</p>
          * <blockquote>
-         * <p> If a domain name for Alibaba Cloud CDN (CDN) is specified, a CDN URL is returned. Otherwise, an OSS URL is returned. If the HTTP status code 403 is returned when you access the URL from your browser, the URL authentication feature of ApsaraVideo VOD is enabled. To resolve this issue, disable URL authentication or generate an authentication signature.</p>
+         * <p>If a CDN domain name is configured, a CDN URL is returned. Otherwise, an OSS URL is returned. If the returned MediaURL is inaccessible (403) in a browser, URL signing is enabled for the VOD domain name. Disable URL signing or generate a signing signature.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -166,13 +166,13 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The upload URL.</p>
+         * <p>The upload address.</p>
          * <blockquote>
-         * <p> The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded upload URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAddress only if you use OSS SDK or call an OSS API operation to upload media files.</p>
+         * <p>The upload address returned by the operation is a Base64-encoded value. When you call an SDK or API to upload media assets, decode the value by using Base64 before use. Only uploads through the native OSS SDK or OSS API require you to parse UploadAddress.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>eyJFbmRwb2ludCI6Imh0dHBzOi8vb3NzLWNuLXNoYW5naGFpLmFsaXl1bmNzLmNvbSIsIkJ1Y2tldCI6InN6aGQtdmlkZW8iLCJGaWxlTmFtZSI6InZvZC0yOTYzMWEvc3YvNTBmYTJlODQtMTgxMjdhZGRiMTcvNTBmYTJlODQtMTgxMjdhZGRiM***</p>
+         * <p>eyJTZWN1cml0a2VuIjoiQ0FJU3p3TjF****</p>
          */
         public Builder uploadAddress(String uploadAddress) {
             this.uploadAddress = uploadAddress;
@@ -182,11 +182,11 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         /**
          * <p>The upload credential.</p>
          * <blockquote>
-         * <p> The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded upload URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAuth only if you use OSS SDK or call an OSS API operation to upload media files.</p>
+         * <p>The upload credential returned by the operation is a Base64-encoded value. When you call an SDK or API to upload media assets, decode the value by using Base64 before use. Only uploads through the native OSS SDK or OSS API require you to parse UploadAuth.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>eyJBY2Nlc3NLZXlJZCI6IkxUQUk0Rm53bTk1dHdxQjMxR3IzSE5hRCIsIkFjY2Vzc0tleVNlY3JldCI6Ik9lWllKR0dTMTlkNkZaM1E3UVpJQmdmSVdnM3BPaiIsIkV4cGlyYXRpb24iOiI***</p>
+         * <p>eyJFbmRwb2ludCI6Imm****</p>
          */
         public Builder uploadAuth(String uploadAuth) {
             this.uploadAuth = uploadAuth;

@@ -80,7 +80,7 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,7 +99,11 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true false</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -285,10 +289,7 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <ul>
-             * <li>The time when the job was created.</li>
-             * <li>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</li>
-             * </ul>
+             * <p>The time when the task was created. The time is in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T06:23:59Z</p>
@@ -301,8 +302,8 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             /**
              * <p>The gender. Valid values:</p>
              * <ul>
-             * <li>female</li>
-             * <li>male</li>
+             * <li>female: Female.</li>
+             * <li>male: Male.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -314,7 +315,7 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-06-27T02:42:28Z</p>
@@ -325,7 +326,7 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the human voice cloning job.</p>
+             * <p>The ID of the voice cloning task.</p>
              * 
              * <strong>example:</strong>
              * <p>2245ab99a7fd4116a4fd3f499b7a56c5</p>
@@ -336,7 +337,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned message.</p>
+             * <p>The additional description of the status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Successful training</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -346,9 +350,9 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             /**
              * <p>The scenario. Valid values:</p>
              * <ul>
-             * <li>story</li>
-             * <li>interaction</li>
-             * <li>navigation</li>
+             * <li>story: Story.</li>
+             * <li>interaction: Interaction.</li>
+             * <li>navigation: Navigation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -360,14 +364,14 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job state. Valid values:</p>
+             * <p>The status of the task. Valid values:</p>
              * <ul>
-             * <li>Initialization</li>
-             * <li>AudioDetecting</li>
-             * <li>PreTraining</li>
-             * <li>Training</li>
-             * <li>Success</li>
-             * <li>Fail</li>
+             * <li>Initialization: Initialized.</li>
+             * <li>AudioDetecting: Audio detection in progress.</li>
+             * <li>PreTraining: Submitted and pending training.</li>
+             * <li>Training: Training in progress.</li>
+             * <li>Success: Training succeeded.</li>
+             * <li>Fail: Training failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -379,13 +383,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The voice type. Valid values:</p>
              * <ul>
-             * <li><p>The voice type. Valid values:</p>
-             * <ul>
-             * <li>Basic</li>
-             * <li>Standard</li>
-             * </ul>
-             * </li>
+             * <li>Basic: Basic edition.</li>
+             * <li>Standard: Standard edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -397,10 +398,13 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The voice description.</p>
+             * <p>The description of the voice.</p>
              * <ul>
-             * <li>The description can be up to 256 characters in length.</li>
+             * <li>The description cannot exceed 256 characters in length.</li>
              * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>This is the description of this voice</p>
              */
             public Builder voiceDesc(String voiceDesc) {
                 this.voiceDesc = voiceDesc;
@@ -408,7 +412,7 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The voice ID.</p>
+             * <p>The ID of the voice.</p>
              * 
              * <strong>example:</strong>
              * <p>xiaozhuan</p>
@@ -419,10 +423,13 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The voice name.</p>
+             * <p>The name of the voice, which is typically in Chinese.</p>
              * <ul>
-             * <li>The name can be up to 32 characters in length.</li>
+             * <li>The name cannot exceed 32 characters in length.</li>
              * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Small Special</p>
              */
             public Builder voiceName(String voiceName) {
                 this.voiceName = voiceName;
@@ -489,7 +496,7 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried human voice cloning jobs.</p>
+             * <p>The list of voice cloning tasks.</p>
              */
             public Builder customizedVoiceJobList(java.util.List<CustomizedVoiceJobList> customizedVoiceJobList) {
                 this.customizedVoiceJobList = customizedVoiceJobList;
@@ -497,7 +504,7 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>271</p>

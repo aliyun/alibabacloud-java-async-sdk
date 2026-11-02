@@ -93,7 +93,7 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -123,10 +123,10 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The media asset IDs that do not exist.</p>
+             * <p>The list of media asset IDs that do not exist.</p>
              */
             public Builder mediaIdsNoExist(java.util.List<String> mediaIdsNoExist) {
                 this.mediaIdsNoExist = mediaIdsNoExist;

@@ -174,10 +174,10 @@ public class SubmitCopyrightJobRequest extends Request {
         } 
 
         /**
-         * <p>The description of the watermark.</p>
+         * <p>The description of the watermark information.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description</p>
+         * <p>Task description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -186,14 +186,13 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * <p>The source video file that you want to add a watermark to.</p>
+         * <p>The video file to which the watermark is to be added.</p>
          * <blockquote>
-         * <p>The OSS object or media asset must reside in the same region as the IMS service region.</p>
+         * <ul>
+         * <li>The region of the OSS file or media asset must be the same as the region of the current IMS.</li>
+         * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;Bucket&quot;:&quot;example-bucket&quot;,&quot;Location&quot;:&quot;oss-cn-shanghai&quot;,&quot;Object&quot;:&quot;example.mp4&quot;}</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -203,7 +202,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * <p>The watermark level, which specifies the channel to embed watermarks. Valid values: 0 specifies the 0u channel, 1 specifies the 1uv channel, and 2 specifies the 2yuv channel.</p>
+         * <p>The watermark level, which indicates the embedding channel. Valid values: 0 (0u), 1 (1uv), and 2 (2yuv).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -215,11 +214,11 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * <p>The information about the watermark to be added.</p>
+         * <p>The watermark information to be added.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>Copyright watermark test</p>
          */
         public Builder message(String message) {
             this.putQueryParameter("Message", message);
@@ -230,12 +229,11 @@ public class SubmitCopyrightJobRequest extends Request {
         /**
          * <p>The URL of the output file.</p>
          * <blockquote>
-         * <p>The OSS bucket must reside in the same region as the IMS service region.</p>
+         * <ul>
+         * <li>The region of OSS must be the same as the region of the current IMS.</li>
+         * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;Bucket&quot;:&quot;example-bucket&quot;,&quot;Location&quot;:&quot;oss-cn-shanghai&quot;,&quot;Object&quot;:&quot;example_result.mp4&quot;}</p>
          */
         public Builder output(Output output) {
             String outputShrink = shrink(output, "Output", "json");
@@ -245,12 +243,11 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * <p>The parameters related to watermark jobs. The value is a JSON string. Supported parameter:</p>
+         * <p>The parameters of the watermark job, in the JSON string format. The following parameters are supported:</p>
          * <ul>
-         * <li><p>algoType: the algorithm type. Default value: v1.</p>
-         * <ul>
-         * <li>v1: watermarking for long videos that last at least 3 minutes.</li>
-         * <li>v2: watermarking for videos shorter than 3 minutes.</li>
+         * <li>algoType: the algorithm type. Default value: v1.<ul>
+         * <li>v1: long video copyright watermark, which supports only videos longer than 3 minutes.</li>
+         * <li>v2: short video copyright watermark.</li>
          * </ul>
          * </li>
          * </ul>
@@ -265,7 +262,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * <p>The start time of the watermark. Unit: seconds. If you do not specify this parameter, the default value 0 is used.</p>
+         * <p>The start time of the watermark, in seconds. If you do not specify this parameter, the default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -277,7 +274,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * <p>The end time of the watermark. Unit: seconds. If you do not specify this parameter, the default value is the video duration.</p>
+         * <p>The end time of the watermark, in seconds. If you do not specify this parameter, the default value is the duration of the video.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -289,7 +286,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * <p>The custom data, which can be up to 1,024 bytes in size.</p>
+         * <p>The user-defined data, with a maximum length of 1,024 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -362,7 +359,19 @@ public class SubmitCopyrightJobRequest extends Request {
             } 
 
             /**
+             * <p>The information about the input file. Both OSS URLs and media asset IDs are supported.
+             * The OSS URL rules are as follows:</p>
+             * <ol>
+             * <li><p>oss://bucket/object</p>
+             * </li>
+             * <li><p>http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
+             * </li>
+             * </ol>
+             * <p>In the URLs, bucket is the name of the OSS bucket that is in the same region as the current project, and object is the file path.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -370,7 +379,15 @@ public class SubmitCopyrightJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the input file. Valid values:</p>
+             * <ol>
+             * <li>OSS: the URL of the OSS file.</li>
+             * <li>Media: the ID of the media asset.</li>
+             * </ol>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -439,7 +456,18 @@ public class SubmitCopyrightJobRequest extends Request {
             } 
 
             /**
+             * <p>The information about the output file. Only OSS URLs are supported. The OSS URL rules are as follows:</p>
+             * <ol>
+             * <li><p>oss://bucket/object</p>
+             * </li>
+             * <li><p>http(s)://bucket.oss-[regionId].aliyuncs.com/object
+             * In the URLs, bucket is the name of the OSS bucket that is in the same region as the current project, and object is the file path.</p>
+             * </li>
+             * </ol>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/output.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -447,7 +475,14 @@ public class SubmitCopyrightJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the output file. Valid values:</p>
+             * <ol>
+             * <li>OSS: the URL of the OSS file.</li>
+             * </ol>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;

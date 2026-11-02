@@ -96,7 +96,10 @@ public class PrecheckYikeAIAppJobRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-1000000</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -105,7 +108,10 @@ public class PrecheckYikeAIAppJobRequest extends Request {
         }
 
         /**
-         * AppParams.
+         * <p>The application\&quot;s runtime parameters, serialized as a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;LoadImage.1.TargetImage\&quot;:\&quot;794da8a01b8c71f1b973e6e7c7586301\&quot;}</p>
          */
         public Builder appParams(String appParams) {
             this.putQueryParameter("AppParams", appParams);

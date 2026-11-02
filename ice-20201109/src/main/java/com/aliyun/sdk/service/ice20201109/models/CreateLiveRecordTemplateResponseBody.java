@@ -78,7 +78,7 @@ public class CreateLiveRecordTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The template ID.</p>
+         * <p>The ID of the template.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>

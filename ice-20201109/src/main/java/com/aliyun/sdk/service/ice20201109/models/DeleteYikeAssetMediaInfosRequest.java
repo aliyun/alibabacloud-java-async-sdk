@@ -96,7 +96,14 @@ public class DeleteYikeAssetMediaInfosRequest extends Request {
         }
 
         /**
-         * LogicDelete.
+         * <p>Specifies whether to logically delete the media asset information and files. Valid values:</p>
+         * <ul>
+         * <li>true (default): logically deletes the media asset. The media asset is moved to the recycle bin, and the files are retained.</li>
+         * <li>false: deletes the media asset information and files.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder logicDelete(Boolean logicDelete) {
             this.putQueryParameter("LogicDelete", logicDelete);
@@ -105,7 +112,10 @@ public class DeleteYikeAssetMediaInfosRequest extends Request {
         }
 
         /**
-         * MediaIds.
+         * <p>The media asset IDs. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong>,<strong><strong>15d4a4b0448391508f2cb486</strong></strong></p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

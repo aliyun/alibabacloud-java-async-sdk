@@ -146,7 +146,7 @@ public class StartAIAgentInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AI agent created in the <a href="https://ims.console.aliyun.com/ai/robot/list">IMS</a> console.</p>
+         * <p>The ID of the agent configured in the <a href="https://ims.console.aliyun.com/ai/robot/list">IMS console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,10 @@ public class StartAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * AgentConfig.
+         * <p>The agent template configuration. The specified configuration is merged and updated with the agent template configuration in the console. If this parameter is not specified, the default configurations of the agent in the console are used.</p>
+         * <blockquote>
+         * <p>Compatible with TemplateConfig rules: Fields in AgentConfig take precedence. If TemplateConfig contains fields that are not specified in AgentConfig, the fields in TemplateConfig are used. Use AgentConfig instead of TemplateConfig.</p>
+         * </blockquote>
          */
         public Builder agentConfig(AIAgentConfig agentConfig) {
             String agentConfigShrink = shrink(agentConfig, "AgentConfig", "json");
@@ -169,7 +172,7 @@ public class StartAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * <p>同步聊天记录配置。</p>
+         * <p>The configuration for synchronizing chat history.</p>
          */
         public Builder chatSyncConfig(ChatSyncConfig chatSyncConfig) {
             String chatSyncConfigShrink = shrink(chatSyncConfig, "ChatSyncConfig", "json");
@@ -179,6 +182,7 @@ public class StartAIAgentInstanceRequest extends Request {
         }
 
         /**
+         * <p>The configuration required for the agent runtime.</p>
          * <p>This parameter is required.</p>
          */
         public Builder runtimeConfig(AIAgentRuntimeConfig runtimeConfig) {
@@ -189,7 +193,10 @@ public class StartAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The unique identifier of the conversation. Default value: none.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f213fbc005e4f309379701645f4****</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -198,7 +205,10 @@ public class StartAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>The agent template configuration. The specified configuration is merged and updated with the agent template configuration in the console. If this parameter is not specified, the default configurations of the agent in the console are used.</p>
+         * <blockquote>
+         * <p>Agent template configuration. <strong>[Deprecated]</strong> For more information, see the AgentConfig field.</p>
+         * </blockquote>
          */
         public Builder templateConfig(AIAgentTemplateConfig templateConfig) {
             String templateConfigShrink = shrink(templateConfig, "TemplateConfig", "json");
@@ -208,7 +218,10 @@ public class StartAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -276,7 +289,7 @@ public class StartAIAgentInstanceRequest extends Request {
             } 
 
             /**
-             * <p>IM的智能体Id。</p>
+             * <p>The ID of the IM agent.</p>
              * 
              * <strong>example:</strong>
              * <p>**<strong><strong>005e4f309379701645f4</strong></strong></p>
@@ -287,7 +300,7 @@ public class StartAIAgentInstanceRequest extends Request {
             }
 
             /**
-             * <p>接收用户Id。</p>
+             * <p>The ID of the receiving user.</p>
              * 
              * <strong>example:</strong>
              * <p>4167626d312034b2b1c3b7f2f3e41884</p>

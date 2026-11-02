@@ -59,7 +59,7 @@ public class CloseMediaConnectFlowFailoverRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the MediaConnect flow.</p>
+         * <p>The MediaConnect instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>

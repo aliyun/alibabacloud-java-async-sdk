@@ -119,7 +119,7 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the live editing job.</p>
+         * <p>The ID of the live editing task.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
@@ -130,7 +130,7 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The media asset ID of the output file.</p>
+         * <p>The media asset ID of the output.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
@@ -141,7 +141,7 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The URL of the output file.</p>
+         * <p>The URL of the output.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://test-bucket.cn-shanghai.aliyuncs.com/test.mp4">http://test-bucket.cn-shanghai.aliyuncs.com/test.mp4</a></p>
@@ -174,7 +174,7 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The media asset ID of the output file in ApsaraVideo VOD if the output file is stored in ApsaraVideo VOD.</p>
+         * <p>The VOD media asset ID. This parameter is returned when the video output destination is VOD.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>d7578s4h75ci945c14b</strong></strong></p>

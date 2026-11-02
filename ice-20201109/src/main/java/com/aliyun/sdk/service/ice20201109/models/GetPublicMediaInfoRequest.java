@@ -82,7 +82,10 @@ public class GetPublicMediaInfoRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The IMS media asset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>icepublic-<strong><strong>14e501538aeef0a3140176f6</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

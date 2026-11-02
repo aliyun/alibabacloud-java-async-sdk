@@ -80,7 +80,10 @@ public class GetYikeUserCreditResponseBody extends TeaModel {
         } 
 
         /**
-         * CreditTotal.
+         * <p>The total allocated credit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder creditTotal(String creditTotal) {
             this.creditTotal = creditTotal;
@@ -88,7 +91,10 @@ public class GetYikeUserCreditResponseBody extends TeaModel {
         }
 
         /**
-         * CreditUsage.
+         * <p>The remaining credit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder creditUsage(String creditUsage) {
             this.creditUsage = creditUsage;
@@ -96,7 +102,10 @@ public class GetYikeUserCreditResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

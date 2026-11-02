@@ -143,7 +143,7 @@ public class ListLiveTranscodeJobsRequest extends Request {
         } 
 
         /**
-         * <p>The search keyword. You can use the job ID or name as the keyword to search for jobs. If you search for jobs by name, fuzzy match is supported.</p>
+         * <p>The search keyword. You can search by job ID or name. Fuzzy match is supported for job names.</p>
          * 
          * <strong>example:</strong>
          * <p>24ecbb5c-4f98-4194-9400-f17102e27fc5</p>
@@ -179,10 +179,10 @@ public class ListLiveTranscodeJobsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</p>
+         * <p>The sort order based on CreateTime. Default value: desc. Valid values:</p>
          * <ul>
-         * <li>asc</li>
-         * <li>desc</li>
+         * <li>asc: Ascending order.</li>
+         * <li>desc: Descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,10 +195,10 @@ public class ListLiveTranscodeJobsRequest extends Request {
         }
 
         /**
-         * <p>The start mode of the transcoding job.</p>
+         * <p>The start mode. Valid values:</p>
          * <ul>
-         * <li>0: The transcoding job immediately starts.</li>
-         * <li>1: The transcoding job starts at the scheduled time.</li>
+         * <li>0: Starts immediately.</li>
+         * <li>1: Starts at a scheduled time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,8 +211,12 @@ public class ListLiveTranscodeJobsRequest extends Request {
         }
 
         /**
-         * <p>The state of the job.</p>
-         * <p>0: The job is not started. 1: The job is in progress. 2: The job is stopped.</p>
+         * <p>The job status. Valid values:</p>
+         * <ul>
+         * <li>0: Not started.</li>
+         * <li>1: Running.</li>
+         * <li>2: Stopped.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -224,12 +228,12 @@ public class ListLiveTranscodeJobsRequest extends Request {
         }
 
         /**
-         * <p>The type of the template used by the transcoding job.</p>
+         * <p>The template type corresponding to the transcoding job. Valid values:</p>
          * <ul>
-         * <li>normal</li>
-         * <li>narrow-band</li>
-         * <li>audio-only</li>
-         * <li>origin</li>
+         * <li>normal: Standard template.</li>
+         * <li>narrow-band: Narrowband HD template.</li>
+         * <li>audio-only: Audio-only template.</li>
+         * <li>origin: Original quality template.</li>
          * </ul>
          * 
          * <strong>example:</strong>

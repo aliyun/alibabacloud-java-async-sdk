@@ -67,7 +67,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the transcoding job.</p>
+         * <p>The transcoding job information.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -144,7 +144,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL of the output stream.</p>
+             * <p>The output stream URL.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp://mydomain/app/mytranscode1</p>
@@ -155,7 +155,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the output stream protocol. Only the RTMP protocol is supported.</p>
+             * <p>The output stream protocol type. Currently, only the RTMP protocol is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp</p>
@@ -212,7 +212,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the output stream.</p>
+             * <p>The output stream information.</p>
              */
             public Builder streamInfos(java.util.List<StreamInfos> streamInfos) {
                 this.streamInfos = streamInfos;
@@ -279,7 +279,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL of the input stream.</p>
+             * <p>The input stream URL.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp://mydomain/app/stream1</p>
@@ -290,7 +290,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the input stream.</p>
+             * <p>The input stream type.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp</p>
@@ -464,7 +464,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the job was created.</p>
+             * <p>The creation time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-20T02:48:58Z</p>
@@ -497,7 +497,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the output stream.</p>
+             * <p>The output stream information.</p>
              */
             public Builder outputStream(OutputStream outputStream) {
                 this.outputStream = outputStream;
@@ -505,7 +505,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start mode of the job.</p>
+             * <p>The start mode.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -516,11 +516,11 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the job.</p>
+             * <p>The job status. Valid values:</p>
              * <ul>
-             * <li>0: The job is not started.</li>
-             * <li>1: The job is in progress.</li>
-             * <li>2: The job is stopped.</li>
+             * <li>0: Not started.</li>
+             * <li>1: Running.</li>
+             * <li>2: Stopped.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -532,7 +532,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the input stream.</p>
+             * <p>The input stream information.</p>
              */
             public Builder streamInput(StreamInput streamInput) {
                 this.streamInput = streamInput;
@@ -551,7 +551,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template name.</p>
+             * <p>The name of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>basic</p>
@@ -562,7 +562,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the template.</p>
+             * <p>The templatetype.</p>
              * 
              * <strong>example:</strong>
              * <p>normal</p>

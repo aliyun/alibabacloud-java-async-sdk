@@ -145,8 +145,10 @@ public class GetEventCallbackResponseBody extends TeaModel {
         /**
          * <p>Specifies whether callback authentication is enabled. This parameter is returned only for <strong>HTTP</strong> callbacks. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li><p><strong>on</strong></p>
+         * </li>
+         * <li><p><strong>off</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,8 +173,10 @@ public class GetEventCallbackResponseBody extends TeaModel {
         /**
          * <p>The callback method. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong></li>
-         * <li><strong>MNS</strong></li>
+         * <li><p><strong>HTTP</strong></p>
+         * </li>
+         * <li><p><strong>MNS</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

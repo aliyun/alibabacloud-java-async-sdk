@@ -128,9 +128,9 @@ public class SubmitTraceM3u8JobRequest extends Request {
         }
 
         /**
-         * <p>The OSS URL of the output M3U8 file.</p>
+         * <p>The OSS output address of the m3u8 file.</p>
          * <blockquote>
-         * <p>The OSS bucket must reside in the same region as the service region.</p>
+         * <p>The region of the OSS bucket must be the same as the region of the current MPS.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -142,12 +142,14 @@ public class SubmitTraceM3u8JobRequest extends Request {
         }
 
         /**
-         * <p>Additional parameters for the watermark job, provided as a JSON string. Supported parameter:</p>
+         * <p>The watermark job parameters. The value is a JSON string. The following parameters are supported:</p>
          * <ul>
-         * <li><p>m3u8Type: The type of M3U8 to generate. Defaults to v1.</p>
+         * <li><p>m3u8Type: the algorithm type. Default value: v1.</p>
          * <ul>
-         * <li>v1: Generates an M3U8 with absolute paths, playable directly. The signed URL for access is valid for 24 hours. If you need to use it after expiration, you must call this API again.</li>
-         * <li>v2: Generates an M3U8 with relative paths. It must be placed in the same directory as the TS segment files to be playable.</li>
+         * <li><p>v1: generates an m3u8 file with an absolute path, which can be played directly. The signature authentication is valid for 24 hours. After the authentication expires, you must resubmit the job to obtain the m3u8 file.</p>
+         * </li>
+         * <li><p>v2: generates an m3u8 file with a relative path, which must be placed in the same directory as the TS files.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -162,7 +164,10 @@ public class SubmitTraceM3u8JobRequest extends Request {
         }
 
         /**
-         * <p>The specific trace watermark information.</p>
+         * <p>The tracing watermark information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Traceability Watermark Test</p>
          */
         public Builder trace(String trace) {
             this.putQueryParameter("Trace", trace);
@@ -171,7 +176,7 @@ public class SubmitTraceM3u8JobRequest extends Request {
         }
 
         /**
-         * <p>The media ID for the trace watermark. You can obtain this from the response of the SubmitTraceAbJob operation.</p>
+         * <p>The media ID of the processed tracing watermark AB stream. You can obtain this ID from the response parameters of the operation that submits a video tracing watermark AB stream job.</p>
          * 
          * <strong>example:</strong>
          * <p>437bd2b516ffda105d07b12a9a82****</p>
@@ -244,9 +249,14 @@ public class SubmitTraceM3u8JobRequest extends Request {
             } 
 
             /**
-             * <p>The OSS path where the output file is saved. You can specify the path in one of the following formats:</p>
-             * <p>1. oss://bucket/object</p>
-             * <p>2. http(s)://bucket.oss-[regionId].aliyuncs.com/object where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</p>
+             * <p>The output file information. OSS addresses are supported. The OSS address rules are as follows:</p>
+             * <ol>
+             * <li><p>oss://bucket/object</p>
+             * </li>
+             * <li><p>http(s)://bucket.oss-[regionId].aliyuncs.com/object
+             * where bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
+             * </li>
+             * </ol>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -258,9 +268,9 @@ public class SubmitTraceM3u8JobRequest extends Request {
             }
 
             /**
-             * <p>The type of the output file. Valid value:</p>
+             * <p>The output file type. Valid values:</p>
              * <ol>
-             * <li>OSS: an OSS object.</li>
+             * <li>OSS: OSS file address.</li>
              * </ol>
              * <p>This parameter is required.</p>
              * 

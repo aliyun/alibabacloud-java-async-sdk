@@ -54,7 +54,7 @@ public class StopRtcRobotInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AC84E5DD-AB56-56C0-A992-07ECB82008CA</p>

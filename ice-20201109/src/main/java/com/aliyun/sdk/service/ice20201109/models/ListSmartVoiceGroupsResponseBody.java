@@ -67,7 +67,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>627B30EB-1D0A-5C6D-8467-431626E0FA10</p>
@@ -78,7 +78,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried speaker groups.</p>
+         * <p>The result set of voice groups.</p>
          */
         public Builder voiceGroups(java.util.List<VoiceGroups> voiceGroups) {
             this.voiceGroups = voiceGroups;
@@ -235,7 +235,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The speaker description.</p>
+             * <p>The description of the voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Female Voice</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -243,7 +246,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The speaker name.</p>
+             * <p>The name of the voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhitian</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,7 +257,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks of the speaker.</p>
+             * <p>The remarks for the voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chinese and English mixed</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -259,7 +268,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportSampleRate.
+             * <p>The sample rates supported by the current voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48000</p>
              */
             public Builder supportSampleRate(String supportSampleRate) {
                 this.supportSampleRate = supportSampleRate;
@@ -267,7 +279,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the speaker type.</p>
+             * <p>The voice type tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -275,7 +290,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The speaker ID.</p>
+             * <p>The ID of the voice.</p>
              * 
              * <strong>example:</strong>
              * <p>zhitian</p>
@@ -286,7 +301,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceSource.
+             * <p>The speech service source of the voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CosyVoice</p>
              */
             public Builder voiceSource(String voiceSource) {
                 this.voiceSource = voiceSource;
@@ -294,14 +312,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The speaker type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Male</li>
-             * <li>Female</li>
-             * <li>Boy</li>
-             * <li>Girl</li>
-             * </ul>
+             * <p>The voice type.</p>
              * 
              * <strong>example:</strong>
              * <p>Female</p>
@@ -312,10 +323,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the sample audio file.</p>
+             * <p>The URL of the sample audio for the voice.</p>
              * 
              * <strong>example:</strong>
-             * <p>https://***.com/zhiqing.mp3</p>
+             * <p>https://***.com/zhitian.mp3</p>
              */
             public Builder voiceUrl(String voiceUrl) {
                 this.voiceUrl = voiceUrl;
@@ -382,7 +393,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the speaker group.</p>
+             * <p>The name of the voice group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ultra HD</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -390,7 +404,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The speakers.</p>
+             * <p>The list of voices.</p>
              */
             public Builder voiceList(java.util.List<VoiceList> voiceList) {
                 this.voiceList = voiceList;

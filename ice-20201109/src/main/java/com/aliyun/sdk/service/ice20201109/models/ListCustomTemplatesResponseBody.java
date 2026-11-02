@@ -80,7 +80,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried templates.</p>
+         * <p>The list of templates.</p>
          */
         public Builder customTemplateList(java.util.List<CustomTemplateList> customTemplateList) {
             this.customTemplateList = customTemplateList;
@@ -155,7 +155,10 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * BitrateControlType.
+             * <p>The bitrate control type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CRF</p>
              */
             public Builder bitrateControlType(String bitrateControlType) {
                 this.bitrateControlType = bitrateControlType;
@@ -209,7 +212,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * TranscodeTemplateHint.
+             * <p>The hint information for the transcode template.</p>
              */
             public Builder transcodeTemplateHint(TranscodeTemplateHint transcodeTemplateHint) {
                 this.transcodeTemplateHint = transcodeTemplateHint;
@@ -406,7 +409,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the template was created.</p>
+             * <p>The time when the template was created. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:17:54Z</p>
@@ -417,7 +420,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * FrontendHint.
+             * <p>The reserved information for frontend display.</p>
              */
             public Builder frontendHint(FrontendHint frontendHint) {
                 this.frontendHint = frontendHint;
@@ -426,11 +429,6 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
 
             /**
              * <p>Indicates whether the template is the default template.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -441,7 +439,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was last modified.</p>
+             * <p>The time when the template was modified. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T16:17:54Z</p>
@@ -452,11 +450,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template state.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Normal</li>
-             * </ul>
+             * <p>The template status.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -467,7 +461,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtype ID of the template.</p>
+             * <p>The template subtype ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -478,7 +472,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtype name of the template.</p>
+             * <p>The template subtype name.</p>
              * 
              * <strong>example:</strong>
              * <p>AudioTranscode</p>
@@ -522,7 +516,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type ID of the template.</p>
+             * <p>The templatetype ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -533,7 +527,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type name of the template.</p>
+             * <p>The templatetype name.</p>
              * 
              * <strong>example:</strong>
              * <p>TranscodeTemplate</p>

@@ -67,7 +67,10 @@ public class StartRtcRobotInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727dc0e296014bb58670940a3da95592</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;

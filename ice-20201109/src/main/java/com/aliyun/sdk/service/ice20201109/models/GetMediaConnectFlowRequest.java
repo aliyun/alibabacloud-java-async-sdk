@@ -60,7 +60,7 @@ public class GetMediaConnectFlowRequest extends Request {
         } 
 
         /**
-         * <p>The flow ID.</p>
+         * <p>The flow instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

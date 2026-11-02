@@ -74,13 +74,12 @@ public class SubmitCustomizedVoiceJobRequest extends Request {
         } 
 
         /**
-         * <p>The URL of the sample audio file.</p>
+         * <p>The audio output address of the sample.  </p>
          * <ul>
-         * <li><p>If this parameter is specified, a sample audio file is generated at the specified Object Storage Service (OSS) URL after the training is complete.</p>
-         * </li>
-         * <li><p>If this parameter is not specified, no sample audio file is generated.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong>: The URL must be a valid public OSS URL within your Alibaba Cloud account.</p>
+         * <li>If you specify this parameter, a sample audio file is generated at the specified OSS address after training succeeds.  </li>
+         * <li>If you do not specify this parameter, no sample audio is generated.<blockquote>
+         * <p>Notice: The address must be a valid public OSS address under your account.</p>
+         * </blockquote>
          * </li>
          * </ul>
          * 

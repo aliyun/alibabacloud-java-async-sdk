@@ -54,7 +54,7 @@ public class SetNotifyConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>771A1414-27BF-53E6-AB73-EFCB*****ACF</p>

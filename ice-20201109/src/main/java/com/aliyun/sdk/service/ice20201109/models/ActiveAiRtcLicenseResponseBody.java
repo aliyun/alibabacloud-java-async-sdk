@@ -119,7 +119,7 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -174,7 +174,7 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

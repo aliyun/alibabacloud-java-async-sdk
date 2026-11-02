@@ -76,12 +76,6 @@ public class SendLiveSnapshotJobCommandRequest extends Request {
 
         /**
          * <p>The operation command.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>stop</li>
-         * <li>restart</li>
-         * <li>start</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -94,7 +88,7 @@ public class SendLiveSnapshotJobCommandRequest extends Request {
         }
 
         /**
-         * <p>The ID of the snapshot job.</p>
+         * <p>The ID of the snapshot task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

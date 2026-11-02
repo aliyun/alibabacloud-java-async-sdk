@@ -264,7 +264,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * AspectRatio.
+         * <p>The aspect ratio of the output video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4:3</p>
          */
         public Builder aspectRatio(String aspectRatio) {
             this.putQueryParameter("AspectRatio", aspectRatio);
@@ -273,7 +276,16 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * ExecMode.
+         * <p>The execution mode for storyboard generation. Valid values:</p>
+         * <ul>
+         * <li><p>FullPipeline: full pipeline generation, which includes storyboard generation and shot video generation.</p>
+         * </li>
+         * <li><p>StoryboardOnly: generates only the storyboard.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FullPipeline</p>
          */
         public Builder execMode(String execMode) {
             this.putQueryParameter("ExecMode", execMode);
@@ -282,7 +294,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * FileURL.
+         * <p>The OSS URL of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://test.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></p>
          */
         public Builder fileURL(String fileURL) {
             this.putBodyParameter("FileURL", fileURL);
@@ -291,7 +306,12 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * ModelParams.
+         * <p>The model feature parameters in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;AudioEnable&quot;: false
+         * }</p>
          */
         public Builder modelParams(String modelParams) {
             this.putQueryParameter("ModelParams", modelParams);
@@ -300,7 +320,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * NarrationVoiceId.
+         * <p>The narration voice ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sys_YoungGracefulWoman</p>
          */
         public Builder narrationVoiceId(String narrationVoiceId) {
             this.putQueryParameter("NarrationVoiceId", narrationVoiceId);
@@ -309,7 +332,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * Resolution.
+         * <p>The resolution of the output video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720P</p>
          */
         public Builder resolution(String resolution) {
             this.putQueryParameter("Resolution", resolution);
@@ -318,7 +344,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * ShotPromptMode.
+         * <p>The storyboard shot generation mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>multi</p>
          */
         public Builder shotPromptMode(String shotPromptMode) {
             this.putQueryParameter("ShotPromptMode", shotPromptMode);
@@ -327,7 +356,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * ShotSplitMode.
+         * <p>The shot split mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>firstPersonNarration</p>
          */
         public Builder shotSplitMode(String shotSplitMode) {
             this.putBodyParameter("ShotSplitMode", shotSplitMode);
@@ -336,7 +368,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * SkipFailureShot.
+         * <p>Specifies whether to skip failed shots. Default value: True.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder skipFailureShot(Boolean skipFailureShot) {
             this.putQueryParameter("SkipFailureShot", skipFailureShot);
@@ -345,7 +380,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Novel</p>
          */
         public Builder sourceType(String sourceType) {
             this.putBodyParameter("SourceType", sourceType);
@@ -354,7 +392,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * StyleId.
+         * <p>The storyboard style ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RealisticPhotography</p>
          */
         public Builder styleId(String styleId) {
             this.putBodyParameter("StyleId", styleId);
@@ -363,7 +404,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The task title. If not specified, a default title is automatically generated based on the date. The title cannot exceed 128 bytes in length and must be UTF-8 encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -372,7 +416,15 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom settings in JSON format. Fields:</p>
+         * <ul>
+         * <li>NotifyAddress: the callback URL for task completion. MNS callbacks and HTTP callbacks are supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;NotifyAddress&quot;: &quot;<a href="https://www.callback.com">https://www.callback.com</a>&quot;
+         * }</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -381,7 +433,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
-         * VideoModel.
+         * <p>The video model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wan2.6-r2v-flash</p>
          */
         public Builder videoModel(String videoModel) {
             this.putQueryParameter("VideoModel", videoModel);

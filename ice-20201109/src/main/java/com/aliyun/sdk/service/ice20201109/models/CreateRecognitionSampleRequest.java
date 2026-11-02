@@ -174,13 +174,18 @@ public class CreateRecognitionSampleRequest extends Request {
         } 
 
         /**
-         * <p>The type of recognition this sample is for.</p>
+         * <p>The recognition type. Valid values:</p>
          * <ul>
-         * <li>landmark</li>
-         * <li>object</li>
-         * <li>logo</li>
-         * <li>face</li>
-         * <li>label</li>
+         * <li><p>landmark: custom landmark</p>
+         * </li>
+         * <li><p>object: custom object</p>
+         * </li>
+         * <li><p>logo: custom logo</p>
+         * </li>
+         * <li><p>face: custom face</p>
+         * </li>
+         * <li><p>label: custom label</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -194,7 +199,7 @@ public class CreateRecognitionSampleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the specific entity within the library.</p>
+         * <p>The ID of the entity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +224,10 @@ public class CreateRecognitionSampleRequest extends Request {
         }
 
         /**
-         * <p>The custom text label.</p>
+         * <p>The text prompt for the custom label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Full front view</p>
          */
         public Builder labelPrompt(String labelPrompt) {
             this.putQueryParameter("LabelPrompt", labelPrompt);

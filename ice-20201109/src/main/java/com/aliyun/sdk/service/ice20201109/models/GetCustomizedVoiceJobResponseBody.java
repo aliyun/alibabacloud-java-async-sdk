@@ -80,7 +80,7 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned if the request was successful.</p>
+         * <p>The data returned when the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,10 +99,10 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The creation time in UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-06-07T02:27:08Z</p>
@@ -289,8 +289,8 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             /**
              * <p>The gender. Valid values:</p>
              * <ul>
-             * <li>female</li>
-             * <li>male</li>
+             * <li>female: Female.</li>
+             * <li>male: Male.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -302,7 +302,7 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the human voice cloning job.</p>
+             * <p>The ID of the voice cloning task.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
@@ -313,7 +313,10 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status description.</p>
+             * <p>The additional description of the status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Training failed</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -323,9 +326,9 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             /**
              * <p>The scenario. Valid values:</p>
              * <ul>
-             * <li>story</li>
-             * <li>interaction</li>
-             * <li>navigation</li>
+             * <li>story: Story.</li>
+             * <li>interaction: Interaction.</li>
+             * <li>navigation: Navigation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -337,14 +340,14 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job state. Valid values:</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
-             * <li>Initialization</li>
-             * <li>AudioDetecting</li>
-             * <li>PreTraining</li>
-             * <li>Training</li>
-             * <li>Success</li>
-             * <li>Fail</li>
+             * <li>Initialization: Initialized.</li>
+             * <li>AudioDetecting: Audio detection is in progress.</li>
+             * <li>PreTraining: Submitted for training and pending.</li>
+             * <li>Training: Training is in progress.</li>
+             * <li>Success: Training succeeded.</li>
+             * <li>Fail: Training failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -356,10 +359,10 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the human voice cloning job. Valid values:</p>
+             * <p>The type of the voice cloning task. Valid values:</p>
              * <ul>
-             * <li>Basic</li>
-             * <li>Standard</li>
+             * <li>Basic: Basic edition.</li>
+             * <li>Standard: Standard edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -374,7 +377,7 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
              * <p>The voice description.</p>
              * 
              * <strong>example:</strong>
-             * <p>This is an exclusive voice</p>
+             * <p>This is an exclusive human voice</p>
              */
             public Builder voiceDesc(String voiceDesc) {
                 this.voiceDesc = voiceDesc;
@@ -396,7 +399,7 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
              * <p>The voice name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Xiaozhuan</p>
+             * <p>The voice name.</p>
              */
             public Builder voiceName(String voiceName) {
                 this.voiceName = voiceName;
@@ -450,7 +453,7 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the human voice cloning job.</p>
+             * <p>The voice cloning task.</p>
              */
             public Builder customizedVoiceJob(CustomizedVoiceJob customizedVoiceJob) {
                 this.customizedVoiceJob = customizedVoiceJob;

@@ -64,7 +64,7 @@ public class GetPackageJobRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ab4802364a2e49208c99efab82dfa8e8</p>
+         * <p>ab4802364a2e49208c99efab82df****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

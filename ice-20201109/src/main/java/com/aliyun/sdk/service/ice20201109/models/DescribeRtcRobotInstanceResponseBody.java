@@ -132,7 +132,10 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthToken.
+         * <p>The authentication token for joining the RTC channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder authToken(String authToken) {
             this.authToken = authToken;
@@ -140,7 +143,10 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ChannelId.
+         * <p>The channel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testId</p>
          */
         public Builder channelId(String channelId) {
             this.channelId = channelId;
@@ -148,7 +154,7 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>The advanced configuration of the AI agent.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -156,7 +162,7 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20B3A1B6-4BD2-5DE6-BCBC-098C9B4F4E91</p>
@@ -167,7 +173,16 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li><p>Executing: Running.</p>
+         * </li>
+         * <li><p>Finished: Finished.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Executing</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -175,7 +190,10 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UserData.
+         * <p>The custom user information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder userData(String userData) {
             this.userData = userData;
@@ -183,7 +201,10 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the AI agent in the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-robot</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -262,7 +283,10 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * EnableVoiceInterrupt.
+             * <p>Specifies whether voice interruption is allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableVoiceInterrupt(Boolean enableVoiceInterrupt) {
                 this.enableVoiceInterrupt = enableVoiceInterrupt;
@@ -270,7 +294,10 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Greeting.
+             * <p>The greeting message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hello</p>
              */
             public Builder greeting(String greeting) {
                 this.greeting = greeting;
@@ -278,7 +305,10 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceId.
+             * <p>The voice ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhixiaoxia</p>
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;

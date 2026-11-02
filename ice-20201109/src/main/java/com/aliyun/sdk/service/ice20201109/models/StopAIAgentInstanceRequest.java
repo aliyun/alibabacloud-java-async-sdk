@@ -60,6 +60,10 @@ public class StopAIAgentInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The agent instance ID.</p>
+         * <blockquote>
+         * <p>InstanceId is the unique ID returned after the agent instance is started successfully. For information about how to start an agent instance, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

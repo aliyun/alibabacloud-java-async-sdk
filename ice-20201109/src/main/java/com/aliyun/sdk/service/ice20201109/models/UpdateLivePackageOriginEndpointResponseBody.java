@@ -67,7 +67,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the origin endpoint.</p>
+         * <p>The origin endpoint type.</p>
          */
         public Builder livePackageOriginEndpoint(LivePackageOriginEndpoint livePackageOriginEndpoint) {
             this.livePackageOriginEndpoint = livePackageOriginEndpoint;
@@ -78,7 +78,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>b1f8d6c4-a123-4cd5-9e88-d0819e3bfa70</p>
+         * <p>5D87B753-0250-5D9D-B248-D40C3271F864</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -322,7 +322,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the endpoint was created.</p>
+             * <p>The creation time. The time is displayed in ISO 8601 format in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -333,7 +333,10 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint description.</p>
+             * <p>The description of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is an origin endpoint</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -374,7 +377,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address blacklist. It supports subnet masks. Multiple IP addresses are separated by commas (,).</p>
+             * <p>The IP blacklist. CIDR blocks are supported. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>10.21.222.1/32,192.168.100.0/24</p>
@@ -385,7 +388,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address whitelist. It supports subnet masks. Multiple IP addresses are separated by commas (,).</p>
+             * <p>The IP whitelist. CIDR blocks are supported. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.0/24,10.0.0.1/24</p>
@@ -396,7 +399,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the endpoint was last modified.</p>
+             * <p>The last modified time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -407,7 +410,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * LivePackagingConfig.
+             * <p>The live packaging configuration.</p>
              */
             public Builder livePackagingConfig(LivePackagingConfig livePackagingConfig) {
                 this.livePackagingConfig = livePackagingConfig;
@@ -415,7 +418,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The playlist name. Default value: manifest.</p>
+             * <p>The name of the playlist. Default value: manifest.</p>
              * 
              * <strong>example:</strong>
              * <p>manifest</p>
@@ -426,7 +429,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol. Only HLS is supported.</p>
+             * <p>The protocol. Only HTTP Live Streaming (HLS) is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>HLS</p>
@@ -437,7 +440,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days that time-shifted content is available. Maximum value: 30.</p>
+             * <p>The number of time-shift days. Maximum value: 30.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

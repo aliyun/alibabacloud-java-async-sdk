@@ -145,7 +145,7 @@ public class ScheduleData extends TeaModel {
         } 
 
         /**
-         * AdBreaks.
+         * <p>The information about ad breaks.</p>
          */
         public Builder adBreaks(java.util.List<AdBreaks> adBreaks) {
             this.adBreaks = adBreaks;
@@ -153,7 +153,10 @@ public class ScheduleData extends TeaModel {
         }
 
         /**
-         * ApproximateDurationSeconds.
+         * <p>The scheduled playback duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder approximateDurationSeconds(Long approximateDurationSeconds) {
             this.approximateDurationSeconds = approximateDurationSeconds;
@@ -161,7 +164,10 @@ public class ScheduleData extends TeaModel {
         }
 
         /**
-         * ApproximateStartTime.
+         * <p>The scheduled start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1989128002313</p>
          */
         public Builder approximateStartTime(String approximateStartTime) {
             this.approximateStartTime = approximateStartTime;
@@ -169,7 +175,15 @@ public class ScheduleData extends TeaModel {
         }
 
         /**
-         * EntryType.
+         * <p>The entry type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>FillerSlate</li>
+         * <li>program</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>program</p>
          */
         public Builder entryType(String entryType) {
             this.entryType = entryType;
@@ -177,7 +191,10 @@ public class ScheduleData extends TeaModel {
         }
 
         /**
-         * ProgramName.
+         * <p>The name of the program.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>program1</p>
          */
         public Builder programName(String programName) {
             this.programName = programName;
@@ -185,7 +202,10 @@ public class ScheduleData extends TeaModel {
         }
 
         /**
-         * SourceLocationName.
+         * <p>The name of the source location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySourceLocation</p>
          */
         public Builder sourceLocationName(String sourceLocationName) {
             this.sourceLocationName = sourceLocationName;
@@ -193,7 +213,10 @@ public class ScheduleData extends TeaModel {
         }
 
         /**
-         * SourceName.
+         * <p>The name of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySource</p>
          */
         public Builder sourceName(String sourceName) {
             this.sourceName = sourceName;
@@ -201,7 +224,10 @@ public class ScheduleData extends TeaModel {
         }
 
         /**
-         * SourceType.
+         * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vodSource</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -319,7 +345,10 @@ public class ScheduleData extends TeaModel {
             } 
 
             /**
-             * MessageType.
+             * <p>MessageType</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPLICE_INSERT</p>
              */
             public Builder messageType(String messageType) {
                 this.messageType = messageType;
@@ -327,7 +356,10 @@ public class ScheduleData extends TeaModel {
             }
 
             /**
-             * OffsetMillis.
+             * <p>The time offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder offsetMillis(String offsetMillis) {
                 this.offsetMillis = offsetMillis;
@@ -335,7 +367,10 @@ public class ScheduleData extends TeaModel {
             }
 
             /**
-             * SourceLocationName.
+             * <p>The name of the source location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySourceLocation</p>
              */
             public Builder sourceLocationName(String sourceLocationName) {
                 this.sourceLocationName = sourceLocationName;
@@ -343,7 +378,10 @@ public class ScheduleData extends TeaModel {
             }
 
             /**
-             * SourceName.
+             * <p>The name of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySource</p>
              */
             public Builder sourceName(String sourceName) {
                 this.sourceName = sourceName;
@@ -351,7 +389,10 @@ public class ScheduleData extends TeaModel {
             }
 
             /**
-             * SpliceInsertSettings.
+             * <p>The SpliceInsert configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AvailNumber&quot;:0,&quot;AvailExpected&quot;:0,&quot;SpliceEventID&quot;:1,&quot;UniqueProgramID&quot;:0}</p>
              */
             public Builder spliceInsertSettings(String spliceInsertSettings) {
                 this.spliceInsertSettings = spliceInsertSettings;
@@ -359,7 +400,10 @@ public class ScheduleData extends TeaModel {
             }
 
             /**
-             * TimeSignalSettings.
+             * <p>The TimeSignal configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;segmentationEventID&quot;:0,&quot;segmentationUPIDType&quot;:14,&quot;segmentationUPID&quot;:&quot;upid&quot;,&quot;segmentationTypeID&quot;:48,&quot;segmentNumber&quot;:0,&quot;segmentsExpected&quot;:0,&quot;subSegmentNumber&quot;:1,&quot;subSegmentsExpected&quot;:0}</p>
              */
             public Builder timeSignalSettings(String timeSignalSettings) {
                 this.timeSignalSettings = timeSignalSettings;

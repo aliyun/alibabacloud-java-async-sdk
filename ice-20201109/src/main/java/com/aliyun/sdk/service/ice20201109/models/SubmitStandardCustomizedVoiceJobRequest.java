@@ -115,12 +115,9 @@ public class SubmitStandardCustomizedVoiceJobRequest extends Request {
         } 
 
         /**
-         * <ul>
-         * <li>The material assets IDs of the materials for training.</li>
-         * <li>Separate multiple media IDs with commas (,).</li>
-         * </ul>
+         * <p>The list of media asset IDs for training audio materials. Separate multiple media asset IDs with commas (,).</p>
          * <blockquote>
-         * <p>: The total duration of all materials must be within 15 to 30 minutes. The duration of each material must be greater than 1 minute.</p>
+         * <p>Notice: The total duration of all materials must be between 15 and 30 minutes, and the duration of each individual material must be greater than 1 minute.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,14 +130,10 @@ public class SubmitStandardCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li><p>The media asset ID of the authentication audio.</p>
-         * </li>
-         * <li><p>Upload an audio file for identity authentication. If the voiceprint extracted from the uploaded file differs from that of the training file, the job fails.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong>: Clearly read and record the following text: I confirm to customize human voice cloning and provide audio files that contain my voice for training. I promise that I am responsible for the customized content and that the content complies with laws and regulations.</p>
-         * </li>
-         * </ul>
+         * <p>The media asset ID of the authentication audio. Upload an audio clip to verify your identity. The task fails if the voiceprint does not match the training audio.</p>
+         * <blockquote>
+         * <p>Notice: Read and record the following statement clearly: I confirm that I am initiating voice cloning customization. The training audio is provided by me. I commit to being responsible for the customized content and guarantee that no illegal or non-compliant content will be created.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
@@ -152,13 +145,12 @@ public class SubmitStandardCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * <p>The URL of the sample audio file.</p>
+         * <p>The audio output address for the sample.  </p>
          * <ul>
-         * <li><p>If this parameter is specified, a sample audio file is generated at the specified Object Storage Service (OSS) URL after the training is complete.</p>
-         * </li>
-         * <li><p>If this parameter is not specified, no sample audio file is generated.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong>: The URL must be a valid public OSS URL within your Alibaba Cloud account.</p>
+         * <li>If you specify this parameter, a sample audio file is generated at the specified OSS address after training succeeds.  </li>
+         * <li>If you do not specify this parameter, no sample audio is generated.<blockquote>
+         * <p>Notice: The address must be a valid public OSS URL under your account.</p>
+         * </blockquote>
          * </li>
          * </ul>
          * 
@@ -188,10 +180,10 @@ public class SubmitStandardCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * <p>The voice name.</p>
-         * <ul>
-         * <li>The name can be up to 32 characters in length.</li>
-         * </ul>
+         * <p>The voice name. The name can be up to 32 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder voiceName(String voiceName) {
             this.putQueryParameter("VoiceName", voiceName);

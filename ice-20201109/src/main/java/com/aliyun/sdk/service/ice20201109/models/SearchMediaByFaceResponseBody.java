@@ -106,7 +106,7 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The media assets that meet the conditions.</p>
+         * <p>The list of media assets that match the search criteria.</p>
          */
         public Builder mediaInfoList(java.util.List<MediaInfoList> mediaInfoList) {
             this.mediaInfoList = mediaInfoList;
@@ -125,7 +125,7 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7CA7D615-CFB1-5437-9A12-2D185C3EE6CB</p>
@@ -136,7 +136,7 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true false</p>
+         * <p>Indicates whether the operation was successful. Valid values: true: The operation was successful. false: The operation failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -147,7 +147,7 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of data records that meet the specified filter condition.</p>
+         * <p>The total number of media assets that match the search criteria.</p>
          * 
          * <strong>example:</strong>
          * <p>163</p>
@@ -203,7 +203,7 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the media asset.</p>
+             * <p>The media asset ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3b187b3620c8490886cfc2a9578c****</p>

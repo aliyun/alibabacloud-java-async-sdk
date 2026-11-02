@@ -75,7 +75,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
@@ -144,7 +144,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CDN prefix for accessing ad segments.</p>
+             * <p>The CDN prefix for ad segments.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://cdn.com/">http://cdn.com/</a></p>
@@ -155,7 +155,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CDN prefix for accessing content segments.</p>
+             * <p>The CDN prefix for video content segments.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://cdn.com/">http://cdn.com/</a></p>
@@ -225,7 +225,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>DASH清单播放端点前缀</p>
+             * <p>The DASH manifest endpoint prefix.</p>
              */
             public Builder dashPrefix(String dashPrefix) {
                 this.dashPrefix = dashPrefix;
@@ -233,7 +233,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The playback endpoint prefix for accessing HLS manifests.</p>
+             * <p>The HLS manifest endpoint prefix.</p>
              */
             public Builder hlsPrefix(String hlsPrefix) {
                 this.hlsPrefix = hlsPrefix;
@@ -417,7 +417,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether ad marker passthrough is enabled.</p>
+             * <p>The ad marker passthrough.</p>
              * 
              * <strong>example:</strong>
              * <p>ON</p>
@@ -428,7 +428,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the ad decision server (ADS).</p>
+             * <p>The URL of the ad policy server.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://ads.com/ad1?param1=%5Bpalyer_params.p1%5D">http://ads.com/ad1?param1=[palyer_params.p1]</a></p>
@@ -439,7 +439,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CDN configurations.</p>
+             * <p>The CDN configuration.</p>
              */
             public Builder cdnConfig(CdnConfig cdnConfig) {
                 this.cdnConfig = cdnConfig;
@@ -447,7 +447,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The aliases for dynamic variable replacement.</p>
+             * <p>The dynamic configuration aliases.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -462,7 +462,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prefix of the source URL.</p>
+             * <p>The content URL prefix.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://source.com/">https://source.com/</a></p>
@@ -473,7 +473,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the configuration was created.</p>
+             * <p>The creation time in ISO 8601 format in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-13T08:26:09Z</p>
@@ -484,7 +484,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the configuration was last modified.</p>
+             * <p>The last modified time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-13T08:26:09Z</p>
@@ -495,7 +495,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The playback endpoint prefix for accessing manifests.</p>
+             * <p>The manifest endpoint configuration.</p>
              */
             public Builder manifestEndpointConfig(ManifestEndpointConfig manifestEndpointConfig) {
                 this.manifestEndpointConfig = manifestEndpointConfig;
@@ -503,7 +503,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the configuration.</p>
+             * <p>The name of the ad insertion configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>my_ad</p>
@@ -514,7 +514,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The personalization threshold.</p>
+             * <p>The personalization configuration threshold.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -525,7 +525,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the slate ad.</p>
+             * <p>The slate ad URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://storage.com/slate1.mp4">http://storage.com/slate1.mp4</a></p>

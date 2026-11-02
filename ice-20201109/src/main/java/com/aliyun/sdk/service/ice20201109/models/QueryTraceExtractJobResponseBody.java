@@ -93,7 +93,7 @@ public class QueryTraceExtractJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class QueryTraceExtractJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -112,7 +112,7 @@ public class QueryTraceExtractJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p><em><strong><strong>ACB-44F2-5F2D-88D7-1283E70</strong></strong></em></p>
@@ -179,7 +179,10 @@ public class QueryTraceExtractJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The trace watermark information.</p>
+             * <p>The tracing watermark information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Trace extract test</p>
              */
             public Builder trace(String trace) {
                 this.trace = trace;

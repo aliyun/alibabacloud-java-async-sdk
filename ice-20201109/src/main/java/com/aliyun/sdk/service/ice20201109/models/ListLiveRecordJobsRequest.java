@@ -143,7 +143,7 @@ public class ListLiveRecordJobsRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. The maximum time range between EndTime and StartTime cannot exceed 30 days. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time of the query. The interval between the end time and the start time cannot exceed 30 days. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class ListLiveRecordJobsRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. You can use the job ID or name as the keyword to search for jobs.</p>
+         * <p>The search keyword. You can search by job ID or job name.</p>
          * 
          * <strong>example:</strong>
          * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
@@ -192,12 +192,7 @@ public class ListLiveRecordJobsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>asc: sorts the query results in ascending order.</li>
-         * <li>desc: sorts the query results in descending order.</li>
-         * </ul>
+         * <p>The sorting parameter. By default, jobs are sorted in descending order of creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -209,7 +204,7 @@ public class ListLiveRecordJobsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time of the query. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -222,13 +217,7 @@ public class ListLiveRecordJobsRequest extends Request {
         }
 
         /**
-         * <p>The state of the job. By default, the state is not filtered.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>paused: The job is paused.</li>
-         * <li>initial: The job is not started.</li>
-         * <li>started: The job is in progress.</li>
-         * </ul>
+         * <p>The status of the job. By default, no status filter is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>started</p>

@@ -157,7 +157,7 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time. The time is displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-05T15:59:59Z</p>
@@ -169,7 +169,7 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the quick video production job.</p>
+         * <p>The ID of the one-click video production job.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
@@ -181,11 +181,10 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * <p>The job type.</p>
-         * <p>Valid values:</p>
+         * <p>The job type. Valid values:</p>
          * <ul>
-         * <li>Script: script-based editing job that mixes media assets.</li>
-         * <li>Smart_Mix: intelligent editing job that mixes media assets.</li>
+         * <li>Script: script-based material editing</li>
+         * <li>Smart_Mix: intelligent material editing</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +197,7 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
+         * <p>The maximum number of entries to return for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -210,7 +209,7 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token that indicates the position from which the current call starts to read data. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>mRZkKAovub0xWVfH14he4Q==</p>
@@ -222,12 +221,11 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * <p>The sorting parameter. Valid values:</p>
+         * <p>The sorting order of the query results. Valid values:</p>
          * <ul>
-         * <li>desc (default): sorted by creation time in descending order.</li>
-         * <li>asc: sorted by creation time in ascending order.</li>
+         * <li>desc: sorts the results in descending order of creation time. This is the default value.</li>
+         * <li>asc: sorts the results in ascending order of creation time.</li>
          * </ul>
-         * <!---->
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -239,7 +237,7 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time. The time is displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-02T00:00:00Z</p>
@@ -251,13 +249,12 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * <p>The job state.</p>
-         * <p>Valid values:</p>
+         * <p>The job status. Valid values:</p>
          * <ul>
-         * <li>Finished</li>
-         * <li>Init</li>
-         * <li>Failed</li>
-         * <li>Processing</li>
+         * <li>Finished: The job is completed.</li>
+         * <li>Init: The job is initialized.</li>
+         * <li>Failed: The job failed.</li>
+         * <li>Processing: The job is being processed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

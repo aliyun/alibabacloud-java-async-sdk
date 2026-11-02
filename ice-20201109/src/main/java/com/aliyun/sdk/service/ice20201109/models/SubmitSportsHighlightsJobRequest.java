@@ -136,7 +136,28 @@ public class SubmitSportsHighlightsJobRequest extends Request {
         }
 
         /**
-         * <p>The input configurations.</p>
+         * <p>The input configuration. For more information, see <a href="~~2843158#5cbc796a9cuu8~~">InputConfig parameter description</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;SportsCategory&quot;: &quot;basketball&quot;,
+         *   &quot;InputMedia&quot;: &quot;<a href="http://test-bucket.oss-cn-******.basketball-0707.mp4">http://test-bucket.oss-cn-******.basketball-0707.mp4</a>&quot;,
+         *   &quot;FaceRegister&quot;: [
+         *     {
+         *       &quot;FaceUrls&quot;: [&quot;<a href="http://testcdn.com/front.jpg">http://testcdn.com/front.jpg</a>&quot;, &quot;<a href="http://testcdn.com/side.jpg%22%5D">http://testcdn.com/side.jpg&quot;]</a>,
+         *       &quot;Name&quot;: &quot;James&quot;
+         *     }
+         *   ],
+         *   &quot;SlowMotionLogoRegister&quot;: {
+         *       &quot;SlowMotionLogoUrls&quot;: [&quot;<a href="http://testcdn.com/logo1.jpg">http://testcdn.com/logo1.jpg</a>&quot;, &quot;<a href="http://testcdn.com/logo2.jpg%22%5D">http://testcdn.com/logo2.jpg&quot;]</a>
+         *   },
+         *   &quot;TransferNameRegister&quot;: [
+         *     {
+         *       &quot;OriginalName&quot;: &quot;IND&quot;,
+         *       &quot;TransferName&quot;: &quot;Indiana Pacers&quot;
+         *     }
+         *   ]
+         * }</p>
          */
         public Builder inputConfig(String inputConfig) {
             this.putBodyParameter("InputConfig", inputConfig);
@@ -145,7 +166,7 @@ public class SubmitSportsHighlightsJobRequest extends Request {
         }
 
         /**
-         * <p>The output configurations.</p>
+         * <p>The output configuration. For more information, see <a href="~~2843158#b7dad99fe5q0r~~">OutputConfig parameter description</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -162,7 +183,10 @@ public class SubmitSportsHighlightsJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data.</p>
+         * <p>The user business configuration and callback configuration. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData configuration</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

@@ -126,7 +126,10 @@ public class RegisterYikeAssetMediaInfoRequest extends Request {
         }
 
         /**
-         * FolderId.
+         * <p>The folder ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-ABMFfAB2bA</p>
          */
         public Builder folderId(String folderId) {
             this.putQueryParameter("FolderId", folderId);
@@ -135,6 +138,7 @@ public class RegisterYikeAssetMediaInfoRequest extends Request {
         }
 
         /**
+         * <p>The URL of the media asset. You can pass in the FileURL returned by the CreateYikeAssetUpload operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +151,7 @@ public class RegisterYikeAssetMediaInfoRequest extends Request {
         }
 
         /**
+         * <p>The type of the media asset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +164,10 @@ public class RegisterYikeAssetMediaInfoRequest extends Request {
         }
 
         /**
-         * ProductionId.
+         * <p>The project ID. If this parameter is not specified, the media asset is uploaded to the default project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProductionId</p>
          */
         public Builder productionId(String productionId) {
             this.putQueryParameter("ProductionId", productionId);

@@ -145,7 +145,10 @@ public class ChannelAssemblySource extends TeaModel {
         } 
 
         /**
-         * Arn.
+         * <p>The ARN of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ims:mediaweaver:<regionId>:<userId>:vodSource/mySourceLocation/mySource</p>
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -153,7 +156,10 @@ public class ChannelAssemblySource extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * <p>The time when the source was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-20T07:15:51Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -161,7 +167,10 @@ public class ChannelAssemblySource extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The time when the source was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-07T10:12:01Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -169,7 +178,14 @@ public class ChannelAssemblySource extends TeaModel {
         }
 
         /**
-         * HttpPackageConfigurations.
+         * <p>The source configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{
+         *     &quot;sourceGroupName&quot;: &quot;mySourceGroup-1&quot;,
+         *     &quot;relativePath&quot;: &quot;group1/hls.m3u8&quot;,
+         *     &quot;packageType&quot;: &quot;hls&quot;
+         * }]</p>
          */
         public Builder httpPackageConfigurations(String httpPackageConfigurations) {
             this.httpPackageConfigurations = httpPackageConfigurations;
@@ -177,7 +193,10 @@ public class ChannelAssemblySource extends TeaModel {
         }
 
         /**
-         * SourceLocationName.
+         * <p>The name of the source location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySourceLocation</p>
          */
         public Builder sourceLocationName(String sourceLocationName) {
             this.sourceLocationName = sourceLocationName;
@@ -185,7 +204,10 @@ public class ChannelAssemblySource extends TeaModel {
         }
 
         /**
-         * SourceName.
+         * <p>The name of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyVodSource</p>
          */
         public Builder sourceName(String sourceName) {
             this.sourceName = sourceName;
@@ -193,7 +215,10 @@ public class ChannelAssemblySource extends TeaModel {
         }
 
         /**
-         * SourceType.
+         * <p>The source type. Valid values: vodSource and liveSource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vodSource</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -201,7 +226,10 @@ public class ChannelAssemblySource extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The status of the source. 0: normal. 1: deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder state(Integer state) {
             this.state = state;

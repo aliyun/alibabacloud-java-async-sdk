@@ -250,7 +250,15 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * CustomFilters.
+         * <p>The custom filters. The value is a JSON string. Supported fields include the integer field intField1 and the string fields strField1 and strField2. You can select at most one match type for the same field. Filters for different fields use the AND logical operator.</p>
+         * <ul>
+         * <li>Exact match, such as {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}.</li>
+         * <li>Multi-value match, such as {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}.</li>
+         * <li>Range match, such as {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13},&quot;strField2&quot;:[&quot;cd&quot;,&quot;de&quot;],&quot;strField1&quot;:&quot;abc&quot;}</p>
          */
         public Builder customFilters(String customFilters) {
             this.putQueryParameter("CustomFilters", customFilters);
@@ -259,7 +267,14 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * MatchingMode.
+         * <p>The matching mode. Default value: fuzzy. Valid values:</p>
+         * <ul>
+         * <li>fuzzy: fuzzy match.</li>
+         * <li>precise: exact match. This mode takes effect only for newly added media assets.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fuzzy</p>
          */
         public Builder matchingMode(String matchingMode) {
             this.putQueryParameter("MatchingMode", matchingMode);
@@ -268,7 +283,7 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * <p>The ID of the media asset. This parameter is required if you want to query media asset clips.</p>
+         * <p>The media asset ID. This parameter is required for precise search.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
@@ -280,11 +295,11 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * <p>The type of the media assets. Valid values:</p>
+         * <p>The media asset type. Valid values:</p>
          * <ul>
-         * <li>image</li>
-         * <li>video</li>
-         * <li>audio</li>
+         * <li>image: images</li>
+         * <li>video: videos</li>
+         * <li>audio: audio</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,12 +312,12 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * <p>The type of query. Valid values:</p>
+         * <p>The multimodal search type. Default value: FullSearch. Valid values:</p>
          * <ul>
-         * <li>PersonName: queries media assets based on character names.</li>
-         * <li>Ocr: queries media assets based on subtitles.</li>
-         * <li>AiCategory: queries media assets based on AI categories.</li>
-         * <li>FullSearch (default): queries all media assets.</li>
+         * <li>PersonName: person name search</li>
+         * <li>Ocr: subtitle search</li>
+         * <li>AiCategory: AI categorization search</li>
+         * <li>FullSearch: full text search</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,7 +330,10 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -324,7 +342,7 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -336,7 +354,7 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -360,10 +378,10 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * <p>The sorting method of the results. Valid values:</p>
+         * <p>The sorting of query results. Valid values:</p>
          * <ul>
-         * <li>CreationTime:Desc (default): sorts results in reverse chronological order.</li>
-         * <li>CreationTime:Asc: sorts results in chronological order.</li>
+         * <li>CreationTime:Desc (default): sorts by creation time in descending order.</li>
+         * <li>CreationTime:Asc: sorts by creation time in ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -376,10 +394,10 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query media asset clips. Valid values:</p>
+         * <p>Specifies whether to perform a precise search. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: performs a precise search.</li>
+         * <li>false: performs a coarse search.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,7 +410,10 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * <p>The content that you want to query.</p>
+         * <p>The search content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kite</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
@@ -401,7 +422,13 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * UtcCreate.
+         * <p>The creation time, in milliseconds. gte indicates greater than or equal to, and lte indicates less than or equal to.</p>
+         * <ul>
+         * <li>Range match, such as {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</p>
          */
         public Builder utcCreate(String utcCreate) {
             this.putQueryParameter("UtcCreate", utcCreate);

@@ -184,7 +184,7 @@ public class ChannelAssemblyProgram extends TeaModel {
         } 
 
         /**
-         * AdBreaks.
+         * <p>The ad breaks.</p>
          */
         public Builder adBreaks(java.util.List<AdBreaks> adBreaks) {
             this.adBreaks = adBreaks;
@@ -192,7 +192,10 @@ public class ChannelAssemblyProgram extends TeaModel {
         }
 
         /**
-         * Arn.
+         * <p>The ARN of the program.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ims:mediaweaver:<regionId>:<userId>:program/myChannel/MyProgram</p>
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -200,7 +203,10 @@ public class ChannelAssemblyProgram extends TeaModel {
         }
 
         /**
-         * ChannelName.
+         * <p>The name of the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyChannel</p>
          */
         public Builder channelName(String channelName) {
             this.channelName = channelName;
@@ -208,7 +214,10 @@ public class ChannelAssemblyProgram extends TeaModel {
         }
 
         /**
-         * ClipRange.
+         * <p>Extracts a clip from the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{StartOffsetMillis: 213123, EndOffsetMillis: 213134}</p>
          */
         public Builder clipRange(String clipRange) {
             this.clipRange = clipRange;
@@ -216,7 +225,10 @@ public class ChannelAssemblyProgram extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * <p>The time when the program was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-02T00:58:19Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -224,7 +236,10 @@ public class ChannelAssemblyProgram extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The time when the program was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-02T00:58:19Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -232,7 +247,10 @@ public class ChannelAssemblyProgram extends TeaModel {
         }
 
         /**
-         * ProgramName.
+         * <p>The name of the program.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>program1</p>
          */
         public Builder programName(String programName) {
             this.programName = programName;
@@ -240,7 +258,10 @@ public class ChannelAssemblyProgram extends TeaModel {
         }
 
         /**
-         * SourceLocationName.
+         * <p>The name of the source location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySourceLocation</p>
          */
         public Builder sourceLocationName(String sourceLocationName) {
             this.sourceLocationName = sourceLocationName;
@@ -248,7 +269,10 @@ public class ChannelAssemblyProgram extends TeaModel {
         }
 
         /**
-         * SourceName.
+         * <p>The name of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySource</p>
          */
         public Builder sourceName(String sourceName) {
             this.sourceName = sourceName;
@@ -256,7 +280,10 @@ public class ChannelAssemblyProgram extends TeaModel {
         }
 
         /**
-         * SourceType.
+         * <p>The source type. Valid values: vodSource and liveSource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vodSource</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -264,7 +291,10 @@ public class ChannelAssemblyProgram extends TeaModel {
         }
 
         /**
-         * Transition.
+         * <p>The program transition method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Type&quot;: &quot;RELATIVE&quot;, &quot;RelativePosition&quot;: &quot;AFTER_PROGRAM&quot;, &quot;RelativeProgram&quot;: &quot;program2&quot;}</p>
          */
         public Builder transition(String transition) {
             this.transition = transition;
@@ -408,7 +438,10 @@ public class ChannelAssemblyProgram extends TeaModel {
             } 
 
             /**
-             * ChannelName.
+             * <p>The name of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyChannel</p>
              */
             public Builder channelName(String channelName) {
                 this.channelName = channelName;
@@ -416,7 +449,10 @@ public class ChannelAssemblyProgram extends TeaModel {
             }
 
             /**
-             * MessageType.
+             * <p>The SCTE-35 message type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPLICE_INSERT</p>
              */
             public Builder messageType(String messageType) {
                 this.messageType = messageType;
@@ -424,7 +460,10 @@ public class ChannelAssemblyProgram extends TeaModel {
             }
 
             /**
-             * OffsetMillis.
+             * <p>The position to insert the ad marker, as an offset relative to the beginning of the program. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder offsetMillis(Long offsetMillis) {
                 this.offsetMillis = offsetMillis;
@@ -432,7 +471,10 @@ public class ChannelAssemblyProgram extends TeaModel {
             }
 
             /**
-             * ProgramName.
+             * <p>The name of the program.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>program_name</p>
              */
             public Builder programName(String programName) {
                 this.programName = programName;
@@ -440,7 +482,10 @@ public class ChannelAssemblyProgram extends TeaModel {
             }
 
             /**
-             * SourceLocationName.
+             * <p>The name of the source location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySourceLocation</p>
              */
             public Builder sourceLocationName(String sourceLocationName) {
                 this.sourceLocationName = sourceLocationName;
@@ -448,7 +493,10 @@ public class ChannelAssemblyProgram extends TeaModel {
             }
 
             /**
-             * SourceName.
+             * <p>The name of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyAdSource</p>
              */
             public Builder sourceName(String sourceName) {
                 this.sourceName = sourceName;
@@ -456,7 +504,10 @@ public class ChannelAssemblyProgram extends TeaModel {
             }
 
             /**
-             * SpliceInsertSettings.
+             * <p>The SpliceInsert configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AvailNumber&quot;:0,&quot;AvailExpected&quot;:0,&quot;SpliceEventID&quot;:1,&quot;UniqueProgramID&quot;:0}</p>
              */
             public Builder spliceInsertSettings(String spliceInsertSettings) {
                 this.spliceInsertSettings = spliceInsertSettings;
@@ -464,7 +515,10 @@ public class ChannelAssemblyProgram extends TeaModel {
             }
 
             /**
-             * TimeSignalSettings.
+             * <p>The TimeSignal configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;segmentationEventID&quot;:0,&quot;segmentationUPIDType&quot;:14,&quot;segmentationUPID&quot;:&quot;upid&quot;,&quot;segmentationTypeID&quot;:48,&quot;segmentNumber&quot;:0,&quot;segmentsExpected&quot;:0,&quot;subSegmentNumber&quot;:1,&quot;subSegmentsExpected&quot;:0}</p>
              */
             public Builder timeSignalSettings(String timeSignalSettings) {
                 this.timeSignalSettings = timeSignalSettings;

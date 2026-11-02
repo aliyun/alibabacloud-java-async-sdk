@@ -67,7 +67,7 @@ public class DeleteYikeAssetMediaInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * IgnoredList.
+         * <p>The list of IDs or InputUrls that failed to be deleted.</p>
          */
         public Builder ignoredList(java.util.List<String> ignoredList) {
             this.ignoredList = ignoredList;
@@ -75,7 +75,10 @@ public class DeleteYikeAssetMediaInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

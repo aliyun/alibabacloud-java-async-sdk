@@ -115,7 +115,10 @@ public class SubmitCosyVoiceCustomizedVoiceJobRequest extends Request {
         } 
 
         /**
-         * Audios.
+         * <p>The media asset ID of the audio material for training. Currently, only one audio material is supported for training.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
          */
         public Builder audios(String audios) {
             this.putQueryParameter("Audios", audios);
@@ -124,7 +127,16 @@ public class SubmitCosyVoiceCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * DemoAudioMediaURL.
+         * <p>The sample audio output URL.  </p>
+         * <ul>
+         * <li>If you specify this parameter, a sample audio file is generated at the specified OSS URL after the training job succeeds.  <blockquote>
+         * <p>Notice: The URL must be a valid public OSS URL under your account.</notice></p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/demo.MP3">https://your-bucket.oss-cn-shanghai.aliyuncs.com/demo.MP3</a></p>
          */
         public Builder demoAudioMediaURL(String demoAudioMediaURL) {
             this.putQueryParameter("DemoAudioMediaURL", demoAudioMediaURL);
@@ -133,7 +145,14 @@ public class SubmitCosyVoiceCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * Gender.
+         * <p>The gender. Valid values:</p>
+         * <ul>
+         * <li>female: Female.</li>
+         * <li>male: Male.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>female</p>
          */
         public Builder gender(String gender) {
             this.putQueryParameter("Gender", gender);
@@ -142,7 +161,16 @@ public class SubmitCosyVoiceCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The voice cloning model. Valid values:</p>
+         * <ul>
+         * <li><strong>cosyvoice-v3-plus</strong></li>
+         * <li><strong>cosyvoice-v3-flash</strong></li>
+         * <li><strong>cosyvoice-v3.5-plus</strong></li>
+         * <li><strong>cosyvoice-v3.5-flash</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cosyvoice-v3-plus</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
@@ -151,7 +179,10 @@ public class SubmitCosyVoiceCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * VoiceName.
+         * <p>The name of the voice. The name cannot exceed 32 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>voice name</p>
          */
         public Builder voiceName(String voiceName) {
             this.putQueryParameter("VoiceName", voiceName);

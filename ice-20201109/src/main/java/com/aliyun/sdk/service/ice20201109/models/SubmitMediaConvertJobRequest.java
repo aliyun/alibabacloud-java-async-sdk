@@ -102,7 +102,7 @@ public class SubmitMediaConvertJobRequest extends Request {
         } 
 
         /**
-         * <p>The idempotency key that is used to ensure repeated requests have the same effect as a single request.</p>
+         * <p>The idempotency key. Ensures request idempotency.</p>
          * 
          * <strong>example:</strong>
          * <p>86f8e525-9d73-4dac-88aa-7aa4e950c00a</p>
@@ -114,7 +114,7 @@ public class SubmitMediaConvertJobRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the transcoding task.</p>
+         * <p>The transcoding task configuration. For more information, see <a href="https://help.aliyun.com/document_detail/2999539.html">MediaConvertJobConfig</a>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder config(String config) {
@@ -124,7 +124,7 @@ public class SubmitMediaConvertJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the queue.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e197ecfb103e4849922b054d3032f954</p>

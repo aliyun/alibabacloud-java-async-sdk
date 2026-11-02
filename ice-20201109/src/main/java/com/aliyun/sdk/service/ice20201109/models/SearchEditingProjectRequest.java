@@ -171,15 +171,14 @@ public class SearchEditingProjectRequest extends Request {
         } 
 
         /**
-         * <p>The source of the project.</p>
-         * <p>-OpenAPI</p>
-         * <p>-AliyunConsole</p>
-         * <p>-WebSDK</p>
-         * <p>Valid values:</p>
+         * <p>The creation source. Valid values:</p>
          * <ul>
-         * <li>AliyunConsole: The project is created in the Alibaba Cloud console.</li>
-         * <li>WebSDK: The project is created by using the SDK for Web.</li>
-         * <li>OpenAPI: The project is created by calling API operations.</li>
+         * <li><p>OpenAPI: OpenAPI.</p>
+         * </li>
+         * <li><p>AliyunConsole: Alibaba Cloud console.</p>
+         * </li>
+         * <li><p>WebSDK: WebSDK.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +191,7 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The end time of the creation time. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -216,7 +215,7 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -228,10 +227,13 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The type of the editing project. Default value: EditingProject. Valid values:</p>
+         * <p>The type of the editing project. Default value: EditingProject.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>EditingProject: a regular editing project.</li>
-         * <li>LiveEditingProject: a live stream editing project.</li>
+         * <li><p>EditingProject: Standard editing project. This is the default value.</p>
+         * </li>
+         * <li><p>LiveEditingProject: Live editing project.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,9 +246,13 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The sorting rule of results. Valid values:</p>
-         * <p>- CreationTime:Desc (default): The results are sorted in reverse chronological order based on the creation time.</p>
-         * <p>- CreationTime:Asc: The results are sorted in chronological order based on the creation time.</p>
+         * <p>The sorting method for the results. Valid values:</p>
+         * <ul>
+         * <li><p>CreationTime:Desc: Sort by creation time in descending order. This is the default value.</p>
+         * </li>
+         * <li><p>CreationTime:Asc: Sort by creation time in ascending order.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CreationTime:Desc</p>
@@ -258,7 +264,7 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The start time of the creation time. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -270,12 +276,18 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The status of the online editing project. Separate multiple values with commas (,). By default, all online editing projects are queried.</p>
+         * <p>The status of the cloud editing project. Separate multiple values with commas (,). By default, all cloud editing projects are retrieved.</p>
          * <p>Valid values:</p>
-         * <p>-Draft</p>
-         * <p>-Producing</p>
-         * <p>-Produced</p>
-         * <p>-ProduceFailed</p>
+         * <ul>
+         * <li><p>Draft: draft.</p>
+         * </li>
+         * <li><p>Producing: producing.</p>
+         * </li>
+         * <li><p>Produced: produced.</p>
+         * </li>
+         * <li><p>ProduceFailed: production failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Producing</p>
@@ -287,14 +299,12 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The template type. Valid values:</p>
-         * <p>-Timeline</p>
-         * <p>-VETemplate</p>
-         * <p>Valid values:</p>
+         * <p>The templatetype. Valid values:</p>
          * <ul>
-         * <li>Timeline: regular template.</li>
-         * <li>VETemplate: advanced template.</li>
-         * <li>None: No template is used.</li>
+         * <li><p>Timeline: timeline.</p>
+         * </li>
+         * <li><p>VETemplate: advanced template.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

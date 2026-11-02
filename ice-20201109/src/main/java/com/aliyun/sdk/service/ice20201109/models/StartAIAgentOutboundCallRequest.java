@@ -146,6 +146,7 @@ public class StartAIAgentOutboundCallRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AI agent configured in the <a href="https://ims.console.aliyun.com/ai/robot/list">IMS console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +159,7 @@ public class StartAIAgentOutboundCallRequest extends Request {
         }
 
         /**
+         * <p>The callee number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +172,7 @@ public class StartAIAgentOutboundCallRequest extends Request {
         }
 
         /**
+         * <p>The caller number. Only phone numbers in the Chinese mainland are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +185,7 @@ public class StartAIAgentOutboundCallRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The outbound call configuration of the AI agent.</p>
          */
         public Builder config(AIAgentOutboundCallConfig config) {
             String configShrink = shrink(config, "Config", "json");
@@ -192,7 +195,10 @@ public class StartAIAgentOutboundCallRequest extends Request {
         }
 
         /**
-         * ImsAIAgentFreeObCall.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder imsAIAgentFreeObCall(String imsAIAgentFreeObCall) {
             this.putQueryParameter("ImsAIAgentFreeObCall", imsAIAgentFreeObCall);
@@ -201,7 +207,10 @@ public class StartAIAgentOutboundCallRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The unique identifier of the conversation, which can be used to store, query, and synchronize chat records across multiple calls. Default value: none.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f213fbc005e4f309379701645f4****</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -210,7 +219,10 @@ public class StartAIAgentOutboundCallRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;city&quot;:&quot;hangzhou&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

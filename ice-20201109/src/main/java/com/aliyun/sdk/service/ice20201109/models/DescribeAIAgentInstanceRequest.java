@@ -60,7 +60,10 @@ public class DescribeAIAgentInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AI agent that you want to query.</p>
+         * <p>The agent instance ID.</p>
+         * <blockquote>
+         * <p>InstanceId is the unique ID returned after the agent instance is successfully started. For more information about the operations used to start an agent, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance </a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

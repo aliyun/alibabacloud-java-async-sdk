@@ -106,7 +106,7 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The entities.</p>
+         * Entities.
          */
         public Builder entities(Entities entities) {
             this.entities = entities;
@@ -136,7 +136,7 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * <p><strong>Request ID</strong></p>
+         * <p><strong>The request ID.</strong></p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -147,7 +147,7 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -229,10 +229,7 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the entity.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>**<strong><strong><strong><strong><strong><strong>544cb84754</strong></strong></strong></strong></strong></strong></p>
+             * EntityId.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -240,10 +237,7 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The additional information of the entity, in JSON format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{}</p>
+             * EntityInfo.
              */
             public Builder entityInfo(String entityInfo) {
                 this.entityInfo = entityInfo;
@@ -251,7 +245,7 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the entity.</p>
+             * EntityName.
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;

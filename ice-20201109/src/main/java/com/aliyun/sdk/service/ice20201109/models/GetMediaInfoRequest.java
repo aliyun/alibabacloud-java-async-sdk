@@ -147,12 +147,12 @@ public class GetMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The input URL of the media asset in another service. The URL must be registered in the IMS content library and bound to the ID of the media asset in IMS.</p>
+         * <p>The URL of the media asset to be queried in the corresponding system. The media asset must be registered in the IMS content library and attached to an IMS media ID before use.</p>
          * <ul>
-         * <li>For a media asset from Object Storage Service (OSS), the URL may have one of the following formats:</li>
+         * <li>OSS addresses. Two formats are supported:</li>
          * </ul>
          * <p>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 or</p>
-         * <p>oss://example-bucket/example.mp4. The second format indicates that the region in which the OSS bucket of the media asset resides is the same as the region in which OSS is activated.</p>
+         * <p>oss://example-bucket/example.mp4. In this format, the default OSS region is the same as the service registration area.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
@@ -164,7 +164,7 @@ public class GetMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the media asset in IMS. If this parameter is left empty, the InputURL parameter must be specified.</p>
+         * <p>The IMS media asset ID. If this parameter is empty, InputURL must be specified.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -176,10 +176,12 @@ public class GetMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The type of the URL of the media asset to return in the response. Valid values:</p>
+         * <p>The type of the media asset file URL in the response. Valid values:</p>
          * <ul>
-         * <li>oss (default): an OSS URL.</li>
-         * <li>cdn: a CDN URL. A CDN URL is returned only if the media asset is imported from ApsaraVideo VOD and the relevant domain name is an accelerated domain name in ApsaraVideo VOD.</li>
+         * <li><p>oss: Returns the OSS URL. This is the default value.</p>
+         * </li>
+         * <li><p>cdn: Returns the CDN URL. A CDN URL is returned only when the media asset is imported from ApsaraVideo VOD and an accelerated domain name is configured in ApsaraVideo VOD.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,10 +194,13 @@ public class GetMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return detailed information for specific media asset attributes. Supported attributes: AiRoughData.StandardSmartTagJob, which specifies whether to return detailed tag information if a tagging job has been submitted for the media asset. Valid values for the attribute:</p>
+         * <p>Specifies whether to return detailed information for the corresponding media asset fields. Supported fields:</p>
+         * <p>AiRoughData.StandardSmartTagJob: Specifies whether to return detailed tagging results if the media asset has been submitted for tag analysis. Valid values:</p>
          * <ul>
-         * <li>false (default): The job result is returned as a URL.</li>
-         * <li>true: The job result is returned as text.</li>
+         * <li><p>false: The task result is returned as a URL. This is the default value.</p>
+         * </li>
+         * <li><p>true: The task result is returned as text.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

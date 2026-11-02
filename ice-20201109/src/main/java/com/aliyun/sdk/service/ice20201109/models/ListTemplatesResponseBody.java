@@ -91,7 +91,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried templates.</p>
+         * <p>The list of templates.</p>
          */
         public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
@@ -99,7 +99,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that meet the request conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -311,7 +311,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The clip parameters.</p>
+             * <p>The editing parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;Media1&quot;:&quot;mediaId&quot;,&quot;Text1&quot;:&quot;text&quot;}</p>
@@ -322,10 +322,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template configurations.</p>
+             * <p>The template configuration.</p>
              * 
              * <strong>example:</strong>
-             * <p>参考Timeline模板配置详解</p>
+             * <p>Refer to Timeline template configuration details</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -333,7 +333,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The thumbnail URL.</p>
+             * <p>The cover URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
@@ -344,13 +344,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source from which the template was created.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AliyunConsole</li>
-             * <li>WebSDK</li>
-             * <li>OpenAPI</li>
-             * </ul>
+             * <p>The creation source.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAPI</p>
@@ -361,7 +355,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was created.</p>
+             * <p>The creation time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-26T04:11:10Z</p>
@@ -372,13 +366,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source from which the template was modified.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AliyunConsole</li>
-             * <li>WebSDK</li>
-             * <li>OpenAPI</li>
-             * </ul>
+             * <p>The modification source.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAPI</p>
@@ -389,7 +377,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was last modified.</p>
+             * <p>The modification time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-26T04:11:10Z</p>
@@ -403,7 +391,7 @@ public class ListTemplatesResponseBody extends TeaModel {
              * <p>The template name.</p>
              * 
              * <strong>example:</strong>
-             * <p>视频添加水印模板</p>
+             * <p>Cloud editing template</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -411,7 +399,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The preview media asset.</p>
+             * <p>The preview media.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -422,14 +410,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the preview media asset.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>PrepareFail</li>
-             * <li>Init</li>
-             * <li>Normal</li>
-             * <li>Preparing</li>
-             * </ul>
+             * <p>The preview media status.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -440,16 +421,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template state.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>UploadFailed: Failed to upload the video.</li>
-             * <li>ProcessFailed: Failed to process the advanced template.</li>
-             * <li>Available: The template is available.</li>
-             * <li>Uploading: The video is being uploaded.</li>
-             * <li>Created: The template is created but not ready for use.</li>
-             * <li>Processing: The advanced template is being processed.</li>
-             * </ul>
+             * <p>The template status.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -471,12 +443,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Timeline: regular template.</li>
-             * <li>VETemplate: advanced template.</li>
-             * </ul>
+             * <p>The templatetype.</p>
              * 
              * <strong>example:</strong>
              * <p>Timeline</p>

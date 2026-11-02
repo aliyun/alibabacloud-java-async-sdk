@@ -80,7 +80,10 @@ public class CreateYikeWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * ProductionId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProductionId</p>
          */
         public Builder productionId(String productionId) {
             this.productionId = productionId;
@@ -88,7 +91,10 @@ public class CreateYikeWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class CreateYikeWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-zna577pdximvztk5</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

@@ -67,7 +67,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the AI agent.</p>
+         * <p>The agent instance information.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -249,7 +249,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentConfig.
+             * <p>The agent template configuration.</p>
              */
             public Builder agentConfig(AIAgentConfig agentConfig) {
                 this.agentConfig = agentConfig;
@@ -257,7 +257,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CallInfo.
+             * <p>The PSTN call details. This field may be empty if the call has not ended.</p>
              */
             public Builder callInfo(AIAgentCallInfo callInfo) {
                 this.callInfo = callInfo;
@@ -265,7 +265,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the call log file.</p>
+             * <p>The URL of the call log.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/call_logs/12345">https://example.com/call_logs/12345</a></p>
@@ -276,7 +276,10 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-18T06:39:08.000+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -284,7 +287,10 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-18T06:40:12.000+00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -292,7 +298,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime configurations of the AI agent.</p>
+             * <p>The runtime configuration of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;VoiceChat&quot;:{&quot;AgentUserId&quot;:&quot;voice_agent_001&quot;,&quot;ChannelId&quot;:&quot;voice_channel_001&quot;,&quot;AuthToken&quot;:&quot;your_voice_chat_auth_token&quot;}}</p>
@@ -303,7 +309,10 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The unique identifier of the conversation. Default value: none.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>955535**************</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -311,7 +320,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the AI agent. Valid values: Finished and Executing.</p>
+             * <p>The status of the agent instance, such as Finished or Executing.</p>
              * 
              * <strong>example:</strong>
              * <p>Finished</p>
@@ -322,7 +331,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template configurations of the AI agent.</p>
+             * <p>The agent template configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;VoiceChat&quot;: {&quot;AppId&quot;: &quot;your_voice_chat_app_id&quot;}}</p>
@@ -333,7 +342,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom information.</p>
+             * <p>The user-defined data.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</p>

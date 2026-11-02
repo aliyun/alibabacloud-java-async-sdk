@@ -144,7 +144,10 @@ public class CreateDNADBRequest extends Request {
         } 
 
         /**
-         * <p>The description of the media fingerprint library.</p>
+         * <p>The description of the DNA library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a video DNA library.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -153,12 +156,12 @@ public class CreateDNADBRequest extends Request {
         }
 
         /**
-         * <p>The model of the media fingerprint library. Valid values:</p>
+         * <p>The model of the DNA library. Valid values:</p>
          * <ul>
-         * <li><strong>Video</strong></li>
-         * <li><strong>Audio</strong></li>
-         * <li><strong>Image</strong></li>
-         * <li><strong>Text</strong> (supported only in the China (Shanghai) region)</li>
+         * <li><strong>Video</strong>: Video.</li>
+         * <li><strong>Audio</strong>: Audio.</li>
+         * <li><strong>Image</strong>: <strong>[Deprecated]</strong> Image.</li>
+         * <li><strong>Text</strong>: <strong>[Deprecated]</strong> Text. Supported only in the China (Shanghai) region.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +174,7 @@ public class CreateDNADBRequest extends Request {
         }
 
         /**
-         * <p>The name of the media fingerprint library.</p>
+         * <p>The name of the DNA library.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

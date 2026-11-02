@@ -93,7 +93,7 @@ public class GetMediaConnectFlowAllOutputNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response body, as an array of strings.</p>
+         * <p>The response body, which is an array of strings.</p>
          */
         public Builder content(java.util.List<String> content) {
             this.content = content;
@@ -101,7 +101,7 @@ public class GetMediaConnectFlowAllOutputNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The call description.</p>
+         * <p>The description of the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -123,7 +123,7 @@ public class GetMediaConnectFlowAllOutputNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error code. A value of 0 indicates the call is successful.</p>
+         * <p>The error code returned. A value of 0 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

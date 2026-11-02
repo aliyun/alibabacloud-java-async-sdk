@@ -131,7 +131,7 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token that is used to ensure request idempotency.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -143,7 +143,7 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
-         * <p>The input group of the job. An input of a single file indicates a transcoding job. An input of multiple files indicates an audio and video stream merge job.</p>
+         * <p>The input group of the job. A single input indicates a transcoding job. Multiple inputs indicate an audio and video stream merging job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
-         * <p>The job name.</p>
+         * <p>The name of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>job-name</p>
@@ -169,7 +169,7 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
-         * <p>The output group of the job.</p>
+         * <p>The task output group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
-         * <p>The scheduling information about the job.</p>
+         * <p>The task scheduling information.</p>
          * 
          * <strong>example:</strong>
          * <p>job-name</p>
@@ -196,7 +196,7 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
-         * <p>The custom settings. The value must be in the JSON format and can be up to 512 bytes in length. You can specify a <a href="https://help.aliyun.com/document_detail/451631.html">custom callback URL</a>.</p>
+         * <p>The custom settings in JSON format. The maximum length is 512 bytes. <a href="https://help.aliyun.com/document_detail/451631.html">Custom callback URL configuration</a> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>user-data</p>
@@ -282,10 +282,10 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The URL of the input stream.</p>
+             * <p>The input stream path.</p>
              * <ul>
-             * <li>This parameter takes effect only when Type is set to Media. You can select a specific file within the media asset as an input.</li>
-             * <li>The system checks whether the input URL exists within the media asset.</li>
+             * <li>This parameter takes effect only when Type is set to Media. It allows you to select a specific file under the media asset as the input. </li>
+             * <li>The system checks whether the InputUrl exists under the media asset.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -297,15 +297,15 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The media object.</p>
+             * <p>The media value.</p>
              * <ul>
-             * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-             * </ul>
+             * <li><p>If Type is set to OSS, this parameter specifies a URL. Both the OSS and HTTP protocols are supported.</p>
              * <blockquote>
-             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+             * <p>The OSS bucket in the URL must be added to the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> module of IMS before use.</p>
              * </blockquote>
-             * <ul>
-             * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+             * </li>
+             * <li><p>If Type is set to Media, this parameter specifies a media asset ID.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -318,10 +318,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the media object. Valid values:</p>
+             * <p>The media object type. Valid values:</p>
              * <ul>
-             * <li>OSS: an Object Storage Service (OSS) object.</li>
-             * <li>Media: a media asset.</li>
+             * <li>OSS: OSS file</li>
+             * <li>Media: media asset ID</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -408,15 +408,15 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The media object.</p>
+             * <p>The media value.</p>
              * <ul>
-             * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-             * </ul>
+             * <li><p>If Type is set to OSS, this parameter specifies a URL. Both the OSS and HTTP protocols are supported.</p>
              * <blockquote>
-             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the IMS console.</p>
+             * <p>The OSS bucket in the URL must be added to the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> module of IMS before use.</p>
              * </blockquote>
-             * <ul>
-             * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+             * </li>
+             * <li><p>If Type is set to Media, this parameter specifies a media asset ID.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -429,18 +429,20 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The URL of the output stream.<br>This parameter takes effect only when Type is set to Media. You can select a specific file within the media asset as an output.<br>Supported placeholders:</p>
+             * <p>The output stream path. This parameter takes effect only when Type is set to Media, allowing you to select a specific file under the media asset as the output. Supported placeholders:</p>
              * <ul>
-             * <li>{MediaId}: the ID of the media asset.</li>
-             * <li>{JobId}: the ID of the transcoding subjob.</li>
-             * <li>{MediaBucket}: the bucket to which the media asset belongs.</li>
-             * <li>{ExtName}: the file suffix, which uses the output format of the transcoding template.</li>
-             * <li>{DestMd5}: the MD5 value of the transcoded output file.<br>Notes:</li>
-             * </ul>
+             * <li>{MediaId}: the media asset ID.</li>
+             * <li>{JobId}: the transcoding subtask ID.</li>
+             * <li>{MediaBucket}: the bucket where the media asset ID is located.</li>
+             * <li>{ExtName}: the file name extension, which is the output format of the transcoding template.</li>
+             * <li>{DestMd5}: the MD5 hash value of the transcoded output file.<blockquote>
              * <ol>
              * <li>This parameter must contain the {MediaId} and {JobId} placeholders.</li>
-             * <li>The output bucket is the same as the bucket to which the media asset belongs.</li>
+             * <li>The output bucket must be the same as the bucket where the media asset ID is located.</li>
              * </ol>
+             * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>oss://bucket/path/to/{MediaId}/{JobId}.mp4</p>
@@ -451,10 +453,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the media object. Valid values:</p>
+             * <p>The media object type. Valid values:</p>
              * <ul>
-             * <li>OSS: an OSS object.</li>
-             * <li>Media: a media asset.</li>
+             * <li>OSS: OSS file</li>
+             * <li>Media: media asset ID</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -558,7 +560,7 @@ public class SubmitTranscodeJobRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>0 或 exclude</p>
+             * <p>0 or exclude</p>
              */
             public Builder audioIndex(String audioIndex) {
                 this.audioIndex = audioIndex;
@@ -566,7 +568,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The duration of the input stream. The default value is the duration of the video.</p>
+             * <p>The duration of the input stream. Default value: the video duration.</p>
              * 
              * <strong>example:</strong>
              * <p>20.0</p>
@@ -592,7 +594,7 @@ public class SubmitTranscodeJobRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>0 或 exclude</p>
+             * <p>0 or exclude</p>
              */
             public Builder videoIndex(String videoIndex) {
                 this.videoIndex = videoIndex;
@@ -685,7 +687,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The ciphertext of HTTP Live Streaming (HLS) encryption.</p>
+             * <p>The ciphertext of the standard encryption key.</p>
              * 
              * <strong>example:</strong>
              * <p>MTYi00NDU0LTg5O****</p>
@@ -696,7 +698,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The address of the decryption service for HLS encryption.</p>
+             * <p>The decryption service URL for standard encryption.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://sample.com/path?CipherText=MTYi00NDU0LTg5O">https://sample.com/path?CipherText=MTYi00NDU0LTg5O</a>****</p>
@@ -707,10 +709,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies the encryption type. Valid values:</p>
+             * <p>The encryption type. Valid values:</p>
              * <ul>
-             * <li>PrivateEncryption: Alibaba Cloud proprietary cryptography</li>
-             * <li>HLSEncryption: HTTP Live Streaming (HLS) encryption</li>
+             * <li>PrivateEncryption: Alibaba Cloud proprietary encryption.</li>
+             * <li>HLSEncryption: HLS standard encryption.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -722,7 +724,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The key service type for HLS encryption. Valid values:</p>
+             * <p>The key service type for standard encryption. Valid values:</p>
              * <ul>
              * <li>KMS</li>
              * <li>Base64</li>
@@ -796,10 +798,10 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The media object.</p>
+             * <p>The media value.</p>
              * <ul>
-             * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-             * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+             * <li>If Type is set to OSS, the value is a URL that supports the OSS and HTTP protocols.</li>
+             * <li>If Type is set to Media, the value is a media asset ID.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -811,10 +813,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the media object. Valid values:</p>
+             * <p>The media object type. Valid values:</p>
              * <ul>
-             * <li>OSS: an OSS object.</li>
-             * <li>Media: a media asset.</li>
+             * <li>OSS: OSS file</li>
+             * <li>Media: media asset ID</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -885,9 +887,9 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The time range in which the watermark is displayed.</p>
+             * <p>The duration of the watermark.</p>
              * <ul>
-             * <li>Valid values: integers and ToEND.</li>
+             * <li>Valid values: [numeric value, ToEND].</li>
              * <li>Default value: ToEND.</li>
              * </ul>
              * 
@@ -900,10 +902,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The beginning of the time range in which the watermark is displayed.</p>
+             * <p>The time when the watermark starts to appear.</p>
              * <ul>
              * <li>Unit: seconds.</li>
-             * <li>Value values: integers.</li>
+             * <li>Valid values: numeric values.</li>
              * <li>Default value: 0.</li>
              * </ul>
              * 
@@ -1040,19 +1042,16 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The horizontal offset of the watermark relative to the output video. Default value: 0.</p>
-             * <p>The following value types are supported:</p>
+             * <p>The horizontal offset of the watermark image relative to the output video. Default value: 0. The value can be in one of the following formats:</p>
              * <ul>
-             * <li><p>Integer: the pixel value of the horizontal offset.</p>
-             * <ul>
-             * <li>Valid values: [8,4096].</li>
-             * <li>Unit: pixels.</li>
+             * <li>Integer: The offset in pixels.<ul>
+             * <li>Valid values: [8, 4096].</li>
+             * <li>Unit: px.</li>
              * </ul>
              * </li>
-             * <li><p>Decimal: the ratio of the horizontal offset to the width of the output video.</p>
-             * <ul>
-             * <li>Valid values: (0,1).</li>
-             * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+             * <li>Decimal: The ratio of the horizontal offset to the width of the output resolution.<ul>
+             * <li>Valid values: (0, 1).</li>
+             * <li>Up to four decimal places are supported, such as 0.9999. Extra decimal places are automatically discarded by the system.</li>
              * </ul>
              * </li>
              * </ul>
@@ -1066,19 +1065,16 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The vertical offset of the watermark relative to the output video. Default value: 0.</p>
-             * <p>The following value types are supported:</p>
+             * <p>The vertical offset of the watermark image relative to the output video. Default value: 0. The value can be in one of the following formats:</p>
              * <ul>
-             * <li><p>Integer: the pixel value of the horizontal offset.</p>
-             * <ul>
-             * <li>Valid values: [8,4096].</li>
-             * <li>Unit: pixels.</li>
+             * <li>Integer: The offset in pixels.<ul>
+             * <li>Valid values: [8, 4096].</li>
+             * <li>Unit: px.</li>
              * </ul>
              * </li>
-             * <li><p>Decimal: the ratio of the vertical offset to the height of the output video.</p>
-             * <ul>
-             * <li>Valid values: (0,1).</li>
-             * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+             * <li>Decimal: The ratio of the vertical offset to the height of the output resolution.<ul>
+             * <li>Valid values: (0, 1).</li>
+             * <li>Up to four decimal places are supported, such as 0.9999. Extra decimal places are automatically discarded by the system.</li>
              * </ul>
              * </li>
              * </ul>
@@ -1100,18 +1096,16 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The height of the watermark image in the output video. The following value types are supported:</p>
+             * <p>The height of the watermark image on the output video. The value can be in one of the following formats:</p>
              * <ul>
-             * <li><p>Integer: the pixel value of the watermark height.</p>
-             * <ul>
-             * <li>Valid values: [8,4096].</li>
-             * <li>Unit: pixels.</li>
+             * <li>Integer: The pixel value of the watermark image height.<ul>
+             * <li>Valid values: [8, 4096].</li>
+             * <li>Unit: px.</li>
              * </ul>
              * </li>
-             * <li><p>Decimal: the ratio of the watermark height to the height of the output video.</p>
-             * <ul>
-             * <li>Valid values: (0,1).</li>
-             * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+             * <li>Decimal: The ratio of the watermark image height to the height of the output video resolution.<ul>
+             * <li>Valid values: (0, 1).</li>
+             * <li>Up to four decimal places are supported, such as 0.9999. Extra decimal places are automatically discarded by the system.</li>
              * </ul>
              * </li>
              * </ul>
@@ -1127,7 +1121,7 @@ public class SubmitTranscodeJobRequest extends Request {
             /**
              * <p>The position of the watermark.</p>
              * <ul>
-             * <li>Valid values: TopRight, TopLeft, BottomRight, and BottomLeft.</li>
+             * <li>Valid values: TopRight (top right), TopLeft (top left), BottomRight (bottom right), and BottomLeft (bottom left).</li>
              * <li>Default value: TopRight.</li>
              * </ul>
              * 
@@ -1140,7 +1134,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The time settings of the dynamic watermark.</p>
+             * <p>The display time settings for dynamic watermarks.</p>
              */
             public Builder timeline(Timeline timeline) {
                 this.timeline = timeline;
@@ -1148,18 +1142,16 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The width of the watermark in the output video. The following value types are supported:</p>
+             * <p>The width of the watermark image on the output video. The value can be in one of the following formats:</p>
              * <ul>
-             * <li><p>Integer: the pixel value of the watermark width.</p>
-             * <ul>
-             * <li>Valid values: [8,4096].</li>
-             * <li>Unit: pixels.</li>
+             * <li>Integer: The pixel value of the watermark image width.<ul>
+             * <li>Valid values: [8, 4096].</li>
+             * <li>Unit: px.</li>
              * </ul>
              * </li>
-             * <li><p>Decimal: the ratio of the watermark width to the width of the output video.</p>
-             * <ul>
-             * <li>Valid values: (0,1).</li>
-             * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+             * <li>Decimal: The ratio of the watermark image width to the width of the output video resolution.<ul>
+             * <li>Valid values: (0, 1).</li>
+             * <li>Up to four decimal places are supported, such as 0.9999. Extra decimal places are automatically discarded by the system.</li>
              * </ul>
              * </li>
              * </ul>
@@ -1233,7 +1225,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
+             * <p>The override parameters. If specified, these parameters override the corresponding parameters in the template.</p>
              */
             public Builder overwriteParams(OverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -1312,10 +1304,10 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The media object.</p>
+             * <p>The media value.</p>
              * <ul>
-             * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-             * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+             * <li>If Type is set to OSS, the value is a URL that supports the OSS and HTTP protocols.</li>
+             * <li>If Type is set to Media, the value is a media asset ID.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1327,10 +1319,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the media object. Valid values:</p>
+             * <p>The media object type. Valid values:</p>
              * <ul>
-             * <li>OSS: an OSS object.</li>
-             * <li>Media: a media asset.</li>
+             * <li>OSS: OSS file</li>
+             * <li>Media: media asset ID</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1433,7 +1425,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The format of the subtitle file.</p>
+             * <p>The subtitle file format.</p>
              * 
              * <strong>example:</strong>
              * <p>vtt</p>
@@ -1504,7 +1496,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
+             * <p>The override parameters. If specified, these parameters override the corresponding parameters in the template.</p>
              */
             public Builder overwriteParams(SubtitlesOverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -1687,7 +1679,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to the font size based on the output video dimensions. true / false, default: false</p>
+             * <p>Specifies whether to adjust the font size based on the output video size. Valid values: true and false. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1698,7 +1690,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The outline color of the text watermark. Default value: black. For more information, see BorderColor.</p>
+             * <p>The stroke color. Default value: Black. For more valid values, see BorderColor.</p>
              * 
              * <strong>example:</strong>
              * <p>#006400</p>
@@ -1709,10 +1701,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The outline width of the text watermark.</p>
+             * <p>The border width.</p>
              * <ul>
              * <li>Default value: 0.</li>
-             * <li>Valid values: (0,4096].</li>
+             * <li>Valid values: 1 to 4096.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1724,10 +1716,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The watermark text. Base64 encoding is not required. The string must be encoded in UTF-8.</p>
+             * <p>The watermark text. Base64 encoding is not required. The string must be UTF-8 encoded.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试水印</p>
+             * <p>Test watermark</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1735,10 +1727,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The transparency of the text.</p>
+             * <p>The font transparency.</p>
              * <ul>
-             * <li>Valid values: (0,1].</li>
-             * <li>Default value: 1.</li>
+             * <li>Valid values: (0, 1].</li>
+             * <li>Default value: 1.0.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1750,7 +1742,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The color of the text.</p>
+             * <p>The color.</p>
              * 
              * <strong>example:</strong>
              * <p>#006400</p>
@@ -1761,7 +1753,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The font of the text. Default value: SimSun.</p>
+             * <p>The font. Default value: SimSun.</p>
              * 
              * <strong>example:</strong>
              * <p>SimSun</p>
@@ -1772,10 +1764,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The size of the text.</p>
+             * <p>The font size.</p>
              * <ul>
              * <li>Default value: 16.</li>
-             * <li>Valid values: (4,120).</li>
+             * <li>Valid values: 5 to 119.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1787,10 +1779,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The left margin of the text watermark.</p>
+             * <p>The left margin of the text.</p>
              * <ul>
              * <li>Default value: 0.</li>
-             * <li>Valid values: [0,4096].</li>
+             * <li>Valid values: 0 to 4096.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1805,7 +1797,7 @@ public class SubmitTranscodeJobRequest extends Request {
              * <p>The top margin of the text.</p>
              * <ul>
              * <li>Default value: 0.</li>
-             * <li>Valid values: [0,4096].</li>
+             * <li>Valid values: 0 to 4096.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1877,7 +1869,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
+             * <p>The override parameters. If specified, these parameters override the corresponding parameters in the template.</p>
              */
             public Builder overwriteParams(TextWatermarksOverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -1982,7 +1974,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The output volume.</p>
+             * <p>The target volume.</p>
              * 
              * <strong>example:</strong>
              * <p>-6</p>
@@ -1993,7 +1985,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The volume range.</p>
+             * <p>The loudness range.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -2004,7 +1996,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The volume adjustment method. Valid values:</p>
+             * <p>The volume adjustment method.</p>
              * 
              * <strong>example:</strong>
              * <p>auto</p>
@@ -2150,7 +2142,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The audio bitrate of the output file. Valid values: [8,1000]. Unit: Kbit/s. Default value: 128.</p>
+             * <p>The audio bitrate of the output file. Valid values: 8 to 1000. Unit: Kbit/s. Default value: 128.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>
@@ -2161,7 +2153,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The number of sound channels. Default value: 2.</p>
+             * <p>The number of audio channels. Default value: 2.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -2183,7 +2175,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The audio codec profile. If the Codec parameter is set to AAC, the valid values are aac_low, aac_he, aac_he_v2, aac_ld, and aac_eld.</p>
+             * <p>The audio encoding profile. When Codec is set to AAC, valid values are aac_low, aac_he, aac_he_v2, aac_ld, and aac_eld.</p>
              * 
              * <strong>example:</strong>
              * <p>aac_low</p>
@@ -2194,7 +2186,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to delete the audio stream.</p>
+             * <p>Specifies whether to remove the audio stream.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2205,7 +2197,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The sampling rate. Valid values: 22050, 32000, 44100, 48000, and 96000. Default value: 44100. Unit: Hz.</p>
+             * <p>The sample rate. Default value: 44100. Valid values: 22050, 32000, 44100, 48000, and 96000. Unit: Hz.</p>
              * 
              * <strong>example:</strong>
              * <p>44100</p>
@@ -2216,7 +2208,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The volume configurations.</p>
+             * <p>The volume control settings.</p>
              */
             public Builder volume(Volume volume) {
                 this.volume = volume;
@@ -2340,7 +2332,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The segment length.</p>
+             * <p>The segment duration.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2351,7 +2343,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The forced segmentation point in time.</p>
+             * <p>The forced segmentation time points.</p>
              * 
              * <strong>example:</strong>
              * <p>2,3</p>
@@ -2553,9 +2545,8 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The method that is used to adjust the resolution. This parameter takes effect only if both the Width and Height parameters are specified. You can use this parameter together with the LongShortMode parameter.</p>
-             * <p>Valid values: rescale, crop, pad, and none.</p>
-             * <p>Default value: none.</p>
+             * <p>The resolution adjustment method. This parameter takes effect only when both Width and Height are specified. It can be used together with LongShortMode. Valid values: rescale, crop, pad, and none.
+             * Default value: none.</p>
              * 
              * <strong>example:</strong>
              * <p>none</p>
@@ -2566,15 +2557,13 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to check the audio bitrate. You can specify only one of the IsCheckAudioBitrate and IsCheckAudioBitrateFail parameters. The priority of the IsCheckAudioBitrateFail parameter is higher. Valid values:</p>
+             * <p>Specifies whether to check the audio bitrate. You can specify only one of IsCheckAudioBitrate and IsCheckAudioBitrateFail. IsCheckAudioBitrateFail has a higher priority. Valid values:</p>
              * <ul>
-             * <li>true: checks the video resolution. If the bitrate of the input audio is less than that of the output audio, the bitrate of the input audio is used for transcoding.</li>
-             * <li>false: does not check the video resolution.</li>
-             * </ul>
-             * <p>Default value:</p>
-             * <ul>
-             * <li>If this parameter is not specified and the codec of the output audio is different from that of the input audio, the default value is false.</li>
-             * <li>If this parameter is not specified and the codec of the output audio is the same as that of the input audio, the default value is true.</li>
+             * <li>true: Checks the bitrate. If the input audio bitrate is lower than the output setting, the input audio bitrate is used for transcoding.</li>
+             * <li>false: Does not check the bitrate.
+             * Default value:</li>
+             * <li>false if the parameter is empty and the codec is different from the input source.</li>
+             * <li>true if the parameter is empty and the codec is the same as the input source.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2586,12 +2575,12 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to check the audio bitrate. You can specify only one of the IsCheckAudioBitrate and IsCheckAudioBitrateFail parameters. The priority of the IsCheckAudioBitrateFail parameter is higher. Valid values:</p>
+             * <p>Specifies whether to check the audio bitrate. You can specify only one of IsCheckAudioBitrate and IsCheckAudioBitrateFail. This parameter has a higher priority. Valid values:</p>
              * <ul>
-             * <li>true: checks the video resolution. If the bitrate of the input audio is less than that of the output audio, the transcoding job fails.</li>
-             * <li>false: does not check the video resolution.</li>
+             * <li>true: Checks the bitrate. If the input audio bitrate is lower than the output setting, a transcoding failure is returned.</li>
+             * <li>false: Does not check the bitrate.
+             * Default value: false.</li>
              * </ul>
-             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2602,12 +2591,12 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to check the video resolution. You can specify only one of the IsCheckReso and IsCheckResoFail parameters. The priority of the IsCheckResoFail parameter is higher. Valid values:</p>
+             * <p>Specifies whether to check the video resolution. You can specify only one of IsCheckReso and IsCheckResoFail. IsCheckResoFail has a higher priority. Valid values:</p>
              * <ul>
-             * <li>true: checks the video resolution. If the width or height of the input video is less than that of the output video, the resolution of the input video is used for transcoding.</li>
-             * <li>false: does not check the video resolution.</li>
+             * <li>true: Checks the resolution. If the width or height of the input video resolution is smaller than the output setting, the input video resolution is used for transcoding.</li>
+             * <li>false: Does not check the resolution.
+             * Default value: false.</li>
              * </ul>
-             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2618,12 +2607,12 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to check the video resolution. You can specify only one of the IsCheckReso and IsCheckResoFail parameters. The priority of the IsCheckResoFail parameter is higher. Valid values:</p>
+             * <p>Specifies whether to check the video resolution. You can specify only one of IsCheckReso and IsCheckResoFail. This parameter has a higher priority. Valid values:</p>
              * <ul>
-             * <li>true: checks the video resolution. If the width or height of the input video is less than that of the output video, the transcoding job fails.</li>
-             * <li>false: does not check the video resolution.</li>
+             * <li>true: Checks the resolution. If the width or height of the input video resolution is smaller than the output setting, a transcoding failure is returned.</li>
+             * <li>false: Does not check the resolution.
+             * Default value: false.</li>
              * </ul>
-             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2634,12 +2623,12 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to check the video bitrate. You can specify only one of the IsCheckVideoBitrate and IsCheckVideoBitrateFail parameters. The priority of the IsCheckVideoBitrateFail parameter is higher. Valid values:</p>
+             * <p>Specifies whether to check the video bitrate. You can specify only one of IsCheckVideoBitrate and IsCheckVideoBitrateFail. IsCheckVideoBitrateFail has a higher priority. Valid values:</p>
              * <ul>
-             * <li>true: checks the video resolution. If the bitrate of the input video is less than that of the output video, the bitrate of the input video is used for transcoding.</li>
-             * <li>false: does not check the video resolution.</li>
+             * <li>true: Checks the bitrate. If the input video bitrate is lower than the output setting, the input video bitrate is used for transcoding.</li>
+             * <li>false: Does not check the bitrate.
+             * Default value: false.</li>
              * </ul>
-             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2650,12 +2639,12 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to check the video bitrate. You can specify only one of the IsCheckVideoBitrate and IsCheckVideoBitrateFail parameters. The priority of the IsCheckVideoBitrateFail parameter is higher. Valid values:</p>
+             * <p>Specifies whether to check the video bitrate. You can specify only one of IsCheckVideoBitrate and IsCheckVideoBitrateFail. This parameter has a higher priority. Valid values:</p>
              * <ul>
-             * <li>true: checks the video resolution. If the bitrate of the input video is less than that of the output video, the transcoding job fails.</li>
-             * <li>false: does not check the video resolution.</li>
+             * <li>true: Checks the bitrate. If the input video bitrate is lower than the output setting, a transcoding failure is returned.</li>
+             * <li>false: Does not check the bitrate.
+             * Default value: false.</li>
              * </ul>
-             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2668,11 +2657,11 @@ public class SubmitTranscodeJobRequest extends Request {
             /**
              * <p>The video transcoding mode. Valid values:</p>
              * <ul>
-             * <li>onepass: You can set this parameter to onepass if the Bitrate parameter is set to ABR. The encoding speed of this mode is faster than that of the twopass mode.</li>
-             * <li>twopass: You can set this parameter to twopass if the Bitrate parameter is set to VBR. The encoding speed of this mode is slower than that of the onepass mode.</li>
-             * <li>CBR: the constant bitrate mode.</li>
+             * <li>onepass: Typically used for ABR. The encoding speed is faster than twopass.</li>
+             * <li>twopass: Typically used for VBR. The encoding speed is slower than onepass.</li>
+             * <li>CBR: Constant bitrate mode.
+             * Default value: onepass.</li>
              * </ul>
-             * <p>Default value: onepass.</p>
              * 
              * <strong>example:</strong>
              * <p>onepass</p>
@@ -2950,7 +2939,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The maximum adaptive bitrate (ABR). This parameter takes effect only for Narrowband HD 1.0. Valid values: [10,50000]. Unit: Kbit/s.</p>
+             * <p>The maximum adaptive bitrate (ABR). This parameter is valid only when Narrowband HD 1.0 is enabled. Valid values: 10 to 50000. Unit: Kbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>6000</p>
@@ -2961,7 +2950,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The average video bitrate. Valid values: [10,50000]. Unit: Kbit/s.</p>
+             * <p>The average video bitrate. Valid values: 10 to 50000. Unit: Kbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -2972,7 +2961,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The buffer size. Valid values: [1000,128000]. Default value: 6000. Unit: KB.</p>
+             * <p>The buffer size. Valid values: 1000 to 128000. Default value: 6000. Unit: Kbit.</p>
              * 
              * <strong>example:</strong>
              * <p>6000</p>
@@ -2983,7 +2972,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The encoding format.</p>
+             * <p>The codec.</p>
              * 
              * <strong>example:</strong>
              * <p>H.264</p>
@@ -2994,9 +2983,9 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The constant rate factor (CRF). Valid values: [0,51]. Default value: 23 if the encoding format is H.264, or 26 if the encoding format is H.265.</p>
+             * <p>The constant rate factor (CRF). Valid values: 0 to 51. Default value: 23 for H.264 and 26 for H.265.</p>
              * <blockquote>
-             * <p> If this parameter is specified, the setting of the bitrate becomes invalid.</p>
+             * <p>If CRF is specified, the Bitrate setting becomes invalid.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3008,10 +2997,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The method of video cropping. Valid values:</p>
+             * <p>The video cropping settings. Two methods are supported:               </p>
              * <ul>
-             * <li>border: automatically detects and removes black bars.</li>
-             * <li>A value in the width:height:left:top format: crops the videos based on the custom settings. Example: 1280:800:0:140.</li>
+             * <li>Automatically detect and crop black borders. Set this parameter to border.</li>
+             * <li>Custom cropping. Parameter format: width:height:left:top. Example: 1280:800:0:140.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3023,9 +3012,9 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The frame rate. Valid values:(0,60]. Default value: the frame rate of the input file.</p>
+             * <p>The frame rate. Valid values: (0,60]. Default value: the frame rate of the input file.</p>
              * <blockquote>
-             * <p> The value is 60 if the frame rate of the input file exceeds 60.</p>
+             * <p>If the frame rate of the input file exceeds 60, the value 60 is used.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3037,7 +3026,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of frames between keyframes. Valid values: [1,1080000]. Default value: 250.</p>
+             * <p>The maximum number of frames between keyframes. Valid values: 1 to 1080000. Default value: 250.</p>
              * 
              * <strong>example:</strong>
              * <p>250</p>
@@ -3048,7 +3037,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The height of the video. Valid values: [128,4096]. Unit: pixels. Default value: the original height of the video.</p>
+             * <p>The height. Valid values: 128 to 4096. Unit: pixels. Default value: the original height of the video.</p>
              * 
              * <strong>example:</strong>
              * <p>1080</p>
@@ -3059,7 +3048,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the auto-rotate screen feature.</p>
+             * <p>Specifies whether to enable the adaptive landscape and portrait mode, which adjusts the output based on the long and short edges of the video.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -3070,7 +3059,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The maximum bitrate of the video. Valid values: [10,50000]. Unit: Kbit/s.</p>
+             * <p>The maximum video bitrate. Valid values: 10 to 50000. Unit: Kbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>9000</p>
@@ -3081,7 +3070,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The black bars added to the video. Format: width:height:left:top. Example: 1280:800:0:140.</p>
+             * <p>The video padding settings. Parameter format: width:height:left:top. Example: 1280:800:0:140.</p>
              * 
              * <strong>example:</strong>
              * <p>1280:800:0:140</p>
@@ -3092,7 +3081,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.</p>
+             * <p>The video pixel format. Valid values: standard color formats such as yuv420p and yuvj420p.</p>
              * 
              * <strong>example:</strong>
              * <p>yuv420p</p>
@@ -3103,7 +3092,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The preset video algorithm. This parameter takes effect only if the encoding format is H.264. Valid values: veryfast, fast, medium, slow, and slower. Default value: medium.</p>
+             * <p>The video algorithm preset. This parameter is supported only for H.264. Valid values: veryfast, fast, medium, slow, and slower. Default value: medium.</p>
              * 
              * <strong>example:</strong>
              * <p>medium</p>
@@ -3114,11 +3103,12 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The encoding profile. Valid values: baseline, main, and high.</p>
+             * <p>The encoding profile.
+             * Valid values:</p>
              * <ul>
-             * <li>baseline: applicable to mobile devices.</li>
-             * <li>main: applicable to standard-definition devices.</li>
-             * <li>high: applicable to high-definition devices.</li>
+             * <li>baseline: For mobile devices.</li>
+             * <li>main: For standard-resolution devices.</li>
+             * <li>high: For high-resolution devices.</li>
              * </ul>
              * <p>Default value: high.</p>
              * 
@@ -3131,7 +3121,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to remove the video.</p>
+             * <p>Specifies whether to remove the video stream.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -3153,7 +3143,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The width of the video. Valid values: [128,4096]. Unit: pixels. Default value: the original width of the video.</p>
+             * <p>The width. Valid values: 128 to 4096. Unit: pixels. Default value: the original width of the video.</p>
              * 
              * <strong>example:</strong>
              * <p>1920</p>
@@ -3270,7 +3260,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The encapsulation format settings.</p>
+             * <p>The container format settings.</p>
              */
             public Builder container(Container container) {
                 this.container = container;
@@ -3278,7 +3268,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The encapsulation settings.</p>
+             * <p>The multiplexing settings.</p>
              */
             public Builder muxConfig(MuxConfig muxConfig) {
                 this.muxConfig = muxConfig;
@@ -3286,7 +3276,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The conditional transcoding configurations.</p>
+             * <p>The conditional transcoding parameters.</p>
              */
             public Builder transConfig(TransConfig transConfig) {
                 this.transConfig = transConfig;
@@ -3362,7 +3352,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
+             * <p>The override parameters. If specified, these parameters override the corresponding parameters in the template.</p>
              */
             public Builder overwriteParams(TranscodeOverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -3494,7 +3484,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The multi-input stream merge configuration.</p>
+             * <p>The multi-input stream mixing configuration.</p>
              */
             public Builder combineConfigs(java.util.List<CombineConfigs> combineConfigs) {
                 this.combineConfigs = combineConfigs;
@@ -3502,7 +3492,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The encryption settings.</p>
+             * <p>The encryption configuration.</p>
              */
             public Builder encryption(Encryption encryption) {
                 this.encryption = encryption;
@@ -3510,7 +3500,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The watermark configuration of an image.</p>
+             * <p>The image watermark settings.</p>
              */
             public Builder imageWatermarks(java.util.List<ImageWatermarks> imageWatermarks) {
                 this.imageWatermarks = imageWatermarks;
@@ -3518,7 +3508,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The subtitle configuration.</p>
+             * <p>The subtitle burn-in configuration.</p>
              */
             public Builder subtitles(java.util.List<Subtitles> subtitles) {
                 this.subtitles = subtitles;
@@ -3526,7 +3516,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The configurations of the text watermark.</p>
+             * <p>The text watermark settings.</p>
              */
             public Builder textWatermarks(java.util.List<TextWatermarks> textWatermarks) {
                 this.textWatermarks = textWatermarks;
@@ -3604,7 +3594,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The output file configuration.</p>
+             * <p>The output media configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder output(Output output) {
@@ -3613,7 +3603,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The job processing configuration.</p>
+             * <p>The task processing configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder processConfig(ProcessConfig processConfig) {
@@ -3681,7 +3671,7 @@ public class SubmitTranscodeJobRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * <p>The pipeline ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e37ebee5d98b4781897f6086e89f9c56</p>
@@ -3692,7 +3682,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+             * <p>The task priority. A larger value indicates a higher priority. Valid values: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

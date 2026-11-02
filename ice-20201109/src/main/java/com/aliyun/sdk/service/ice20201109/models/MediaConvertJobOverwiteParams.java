@@ -54,7 +54,7 @@ public class MediaConvertJobOverwiteParams extends TeaModel {
         } 
 
         /**
-         * Subtitles.
+         * <p>Subtitle stream configurations.</p>
          */
         public Builder subtitles(java.util.List<Subtitles> subtitles) {
             this.subtitles = subtitles;
@@ -107,7 +107,10 @@ public class MediaConvertJobOverwiteParams extends TeaModel {
             } 
 
             /**
-             * Codec.
+             * <p>The encoding format for the subtitle stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VTT</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;

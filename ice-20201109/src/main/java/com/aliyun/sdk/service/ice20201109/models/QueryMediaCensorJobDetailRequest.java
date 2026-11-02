@@ -144,7 +144,7 @@ public class QueryMediaCensorJobDetailRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the content moderation job. You can obtain the job ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/444848.html">SubmitMediaCensorJob</a> operation.</p>
+         * <p>The ID of the content moderation job. You can obtain the ID from the response parameters of <a href="https://help.aliyun.com/document_detail/444848.html">Submit a content moderation job</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,10 +157,12 @@ public class QueryMediaCensorJobDetailRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries to return per page.</p>
          * <ul>
-         * <li>Default value: <strong>30</strong>.</li>
-         * <li>Valid values: <strong>1 to 300</strong>.</li>
+         * <li><p>Default value: <strong>30</strong>.</p>
+         * </li>
+         * <li><p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +175,7 @@ public class QueryMediaCensorJobDetailRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The token for the next page. Leave this parameter empty for the first request. The token is returned after the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>ae0fd49c0840e14daf0d66a75b83****</p>

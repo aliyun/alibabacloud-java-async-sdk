@@ -157,7 +157,14 @@ public class AddTemplateRequest extends Request {
         } 
 
         /**
-         * Config.
+         * <ul>
+         * <li>The Config parameter for standard templates is an encapsulation based on the cloud editing timeline. Custom template configurations are more flexible. If you have special requirements, familiarize yourself with the Config structure and customize the template. For more information, see <a href="https://help.aliyun.com/document_detail/456193.html">Config details for standard templates</a>.</li>
+         * <li>For more Config examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Common Config examples for standard templates</a>.</li>
+         * <li>For the Config settings of one-click video generation templates, see <a href="https://help.aliyun.com/document_detail/2878274.html">Metric description for one-click video generation template configuration</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>See Config documentation</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
@@ -166,7 +173,7 @@ public class AddTemplateRequest extends Request {
         }
 
         /**
-         * <p>The URL of the template thumbnail.</p>
+         * <p>The URL of the template cover.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
@@ -178,10 +185,10 @@ public class AddTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the custom template.</p>
+         * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>视频添加水印模板</p>
+         * <p>TemplateName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -190,7 +197,7 @@ public class AddTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the template preview video.</p>
+         * <p>The media asset ID of the template preview video.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>01bf24bf41c78b2754cb3187</strong></strong></p>
@@ -202,7 +209,7 @@ public class AddTemplateRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the materials associated with the template for use by the regular template editor.</p>
+         * <p>The media assets associated with the template. This parameter is used by the standard template editor.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;video&quot;:[&quot;1805a0c6ca544fb395a06ca683619655&quot;]}</p>
@@ -216,11 +223,10 @@ public class AddTemplateRequest extends Request {
         /**
          * <p>The source from which the template is created. Valid values:</p>
          * <ul>
-         * <li>OpenAPI</li>
-         * <li>AliyunConsole</li>
-         * <li>WebSDK</li>
+         * <li>OpenAPI: Created by calling an API operation.</li>
+         * <li>AliyunConsole: Created in the Alibaba Cloud Management Console.</li>
+         * <li>WebSDK: Created by using WebSDK.</li>
          * </ul>
-         * <!---->
          * 
          * <strong>example:</strong>
          * <p>OpenAPI</p>
@@ -232,16 +238,15 @@ public class AddTemplateRequest extends Request {
         }
 
         /**
-         * <p>The template state. Valid values:</p>
+         * <p>The template status. Valid values:</p>
          * <ul>
-         * <li>Available: The template is available.</li>
-         * <li>Created: The template is created but not ready for use.</li>
-         * <li>Uploading: The video is being uploaded.</li>
-         * <li>Processing: The advanced template is being processed.</li>
-         * <li>UploadFailed: Failed to upload the video.</li>
-         * <li>ProcessFailed: Failed to process the advanced template.</li>
+         * <li>Available: Normal.</li>
+         * <li>Created: Created but unavailable.</li>
+         * <li>Uploading: Uploading.</li>
+         * <li>Processing: Analyzing the advanced template.</li>
+         * <li>UploadFailed: Upload failed.</li>
+         * <li>ProcessFailed: Advanced template analysis failed.</li>
          * </ul>
-         * <!---->
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -253,12 +258,12 @@ public class AddTemplateRequest extends Request {
         }
 
         /**
-         * <p>The template type. Valid values:</p>
+         * <p>The templatetype. Valid values:  </p>
          * <ul>
-         * <li>Timeline: a regular template created based on the timeline of a video editing project, in which multiple materials are arranged in sequence across multiple layers. It can be used to convert text and images into videos, create photo albums, add opening and closing parts, and apply the default watermark.</li>
-         * <li>VETemplate: an advanced template created using effects of Adobe After Effects (AE). It can be used to produce complex animations and advanced media effects.</li>
+         * <li>Timeline: standard template. It is created based on the timeline of a video clip project, where multiple materials are spliced across multiple layers. It supports effects such as text-to-video, photo albums, intros and outros, and default watermarks.</li>
+         * <li>VETemplate: advanced template. It is created based on Adobe After Effects (AE) effects to achieve advanced media effects with complex motion graphics.</li>
+         * <li>BatchEditing: one-click video generation template. It supports parameters such as sticker watermarks, background music, background images, voiceover subtitle styles, title subtitle styles, and output resolution. These parameters are automatically applied when a one-click video generation node is committed.</li>
          * </ul>
-         * <!---->
          * 
          * <strong>example:</strong>
          * <p>Timeline</p>

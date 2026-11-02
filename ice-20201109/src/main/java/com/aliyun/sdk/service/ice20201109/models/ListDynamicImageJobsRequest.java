@@ -143,7 +143,7 @@ public class ListDynamicImageJobsRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range during which the jobs to be queried were created.</p>
+         * <p>The end time of the creation time filter. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-14T00:00:00Z</p>
@@ -155,7 +155,7 @@ public class ListDynamicImageJobsRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
@@ -167,7 +167,7 @@ public class ListDynamicImageJobsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The mark for the next page during continuous paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>cdb3e74639973036bc84</p>
@@ -179,11 +179,11 @@ public class ListDynamicImageJobsRequest extends Request {
         }
 
         /**
-         * <p>The order that you use to sort the query results. Valid values:</p>
-         * <ol>
-         * <li>CreateTimeAsc: sorts the jobs by creation time in ascending order.</li>
-         * <li>CreateTimeDesc: sorts the jobs by creation time in descending order.</li>
-         * </ol>
+         * <p>The sort order. Valid values: </p>
+         * <ul>
+         * <li>CreateTimeAsc: Sorts by creation time in ascending order.</li>
+         * <li>CreateTimeDesc: Sorts by creation time in descending order.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CreateTimeDesc</p>
@@ -207,7 +207,7 @@ public class ListDynamicImageJobsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range during which the jobs to be queried were created.</p>
+         * <p>The start time of the creation time filter. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T00:00:00Z</p>
@@ -219,13 +219,7 @@ public class ListDynamicImageJobsRequest extends Request {
         }
 
         /**
-         * <p>The state of the job.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Init: The job is submitted.</li>
-         * <li>Success: The job is successful.</li>
-         * <li>Fail: The job failed.</li>
-         * </ul>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>

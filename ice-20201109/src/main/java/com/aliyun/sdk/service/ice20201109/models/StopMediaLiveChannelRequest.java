@@ -60,7 +60,7 @@ public class StopMediaLiveChannelRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the channel.</p>
+         * <p>The channel ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

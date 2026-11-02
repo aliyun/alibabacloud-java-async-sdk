@@ -80,7 +80,7 @@ public class SubmitASRJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The job ID.</p>
+         * <p>The smart job ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -102,7 +102,7 @@ public class SubmitASRJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job state. Valid values:</p>
+         * <p>The job status. Valid values:</p>
          * <ul>
          * <li>Created</li>
          * <li>Executing</li>

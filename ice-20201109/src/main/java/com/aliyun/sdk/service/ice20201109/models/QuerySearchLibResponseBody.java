@@ -132,7 +132,7 @@ public class QuerySearchLibResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class QuerySearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * IndexInfo.
+         * <p>The index information.</p>
          */
         public Builder indexInfo(java.util.List<IndexInfo> indexInfo) {
             this.indexInfo = indexInfo;
@@ -151,7 +151,7 @@ public class QuerySearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -162,7 +162,10 @@ public class QuerySearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * SearchLibConfig.
+         * <p>The search library configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;faceGroupIds&quot;:&quot;xxx1,xxx2,xx3&quot;}</p>
          */
         public Builder searchLibConfig(String searchLibConfig) {
             this.searchLibConfig = searchLibConfig;
@@ -182,12 +185,6 @@ public class QuerySearchLibResponseBody extends TeaModel {
 
         /**
          * <p>The status of the search library.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>normal</li>
-         * <li>deleting</li>
-         * <li>deleteFail</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -198,10 +195,12 @@ public class QuerySearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p><strong>true</strong>: The call was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,7 +283,18 @@ public class QuerySearchLibResponseBody extends TeaModel {
             } 
 
             /**
-             * IndexReadiness.
+             * <p>The readiness status of the index. Valid values:</p>
+             * <ul>
+             * <li><p>Initializing: The index is being initialized.</p>
+             * </li>
+             * <li><p>Normal: The index is ready.</p>
+             * </li>
+             * <li><p>Fail: The index failed to be created.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder indexReadiness(String indexReadiness) {
                 this.indexReadiness = indexReadiness;
@@ -292,7 +302,16 @@ public class QuerySearchLibResponseBody extends TeaModel {
             }
 
             /**
-             * IndexStatus.
+             * <p>The status of the index. Valid values:</p>
+             * <ul>
+             * <li><p>Active: The index is active.</p>
+             * </li>
+             * <li><p>Deactive: The index is inactive.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder indexStatus(String indexStatus) {
                 this.indexStatus = indexStatus;
@@ -300,7 +319,18 @@ public class QuerySearchLibResponseBody extends TeaModel {
             }
 
             /**
-             * IndexType.
+             * <p>The index type. Valid values:</p>
+             * <ul>
+             * <li><p>mm: Large language model (LLM).</p>
+             * </li>
+             * <li><p>face: Face recognition.</p>
+             * </li>
+             * <li><p>aiLabel: Smart tagging.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>face</p>
              */
             public Builder indexType(String indexType) {
                 this.indexType = indexType;

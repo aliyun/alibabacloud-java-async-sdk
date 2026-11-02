@@ -106,7 +106,7 @@ public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data array.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>******<strong><strong><strong>16-412C-B127-</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNumber.
+         * <p>The total number of phone numbers returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>186</p>
          */
         public Builder totalNumber(Integer totalNumber) {
             this.totalNumber = totalNumber;
@@ -204,7 +216,10 @@ public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
             } 
 
             /**
-             * PhoneNumber.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132*****683</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -212,7 +227,20 @@ public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The phone number status. Valid values:</p>
+             * <ul>
+             * <li><p>1: Activation in progress.</p>
+             * </li>
+             * <li><p>2: Normal.</p>
+             * </li>
+             * <li><p>3: Unregistering.</p>
+             * </li>
+             * <li><p>4: Unregistered.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

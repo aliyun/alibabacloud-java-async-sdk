@@ -96,7 +96,15 @@ public class SetYikeUserRoleRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>The user role. Valid values:</p>
+         * <ul>
+         * <li>SuperAdmin: Primary administrator.</li>
+         * <li>Admin: Administrator.</li>
+         * <li>RegularUser: Regular member.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Admin</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
@@ -105,7 +113,10 @@ public class SetYikeUserRoleRequest extends Request {
         }
 
         /**
-         * YikeUserId.
+         * <p>The ID of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder yikeUserId(String yikeUserId) {
             this.putQueryParameter("YikeUserId", yikeUserId);

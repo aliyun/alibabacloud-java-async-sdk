@@ -99,7 +99,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -218,7 +218,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sound channels.</p>
+             * <p>The number of audio channels.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -251,7 +251,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The audio sampling rate.</p>
+             * <p>The audio sample rate.</p>
              * 
              * <strong>example:</strong>
              * <p>44100</p>
@@ -419,7 +419,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group of pictures (GOP) of the output video. Unit: frame.</p>
+             * <p>The video GOP. Unit: frames.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -430,7 +430,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vertical resolution of the video.</p>
+             * <p>The video resolution height.</p>
              * 
              * <strong>example:</strong>
              * <p>1280</p>
@@ -452,7 +452,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The horizontal resolution of the video.</p>
+             * <p>The video resolution width.</p>
              * 
              * <strong>example:</strong>
              * <p>720</p>
@@ -649,7 +649,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the template. Valid values:</p>
+             * <p>The template category.</p>
              * 
              * <strong>example:</strong>
              * <p>system</p>
@@ -660,7 +660,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-20T03:26:36Z</p>
@@ -682,7 +682,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the template.</p>
+             * <p>The template configuration.</p>
              */
             public Builder templateConfig(TemplateConfig templateConfig) {
                 this.templateConfig = templateConfig;
@@ -701,7 +701,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the template.</p>
+             * <p>The templatetype.</p>
              * 
              * <strong>example:</strong>
              * <p>normal</p>

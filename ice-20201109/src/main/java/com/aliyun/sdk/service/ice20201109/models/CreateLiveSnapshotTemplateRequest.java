@@ -103,13 +103,13 @@ public class CreateLiveSnapshotTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The naming format of the snapshot captured in overwrite mode.</p>
+         * <p>The overwrite snapshot file format.</p>
          * <ul>
-         * <li>The value cannot start with a forward slash (/). Only the suffix .jpg is supported.</li>
-         * <li>It cannot exceed 255 characters in length.</li>
-         * <li>The {JobId} placeholder is supported. It specifies the ID of the snapshot job.</li>
-         * <li>Placeholders such as {UnixTimestamp}, {Sequence}, and {Date} are not allowed.</li>
-         * <li>You must specify at least one of the OverwriteFormat and SequenceFormat parameters.</li>
+         * <li>The value cannot start with &quot;/&quot;. Only the .jpg suffix is supported.</li>
+         * <li>Maximum length: 255.</li>
+         * <li>Supported placeholder: {JobId}: snapshot task ID.</li>
+         * <li>The placeholders {UnixTimestamp}, {Sequence}, and {Date} are not allowed.</li>
+         * <li>At least one of the overwrite snapshot format or sequence snapshot format must be specified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,12 +122,12 @@ public class CreateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * <p>The naming format of the snapshot captured in time series mode.</p>
+         * <p>The sequence snapshot file format.</p>
          * <ul>
-         * <li>The value cannot start with a forward slash (/). Only the suffix .jpg is supported.</li>
-         * <li>It cannot exceed 255 characters in length.</li>
-         * <li>The {JobId}, {Date}, {UnixTimestamp}, and {Sequence} placeholders are supported. {JobId} specifies the ID of the snapshot job. {Date} specifies the date on which the snapshot is captured. {UnixTimestamp} specifies the timestamp of the snapshot. {Sequence} specifies the sequence number of the snapshot. You must specify at least one of the {UnixTimestamp} and {Sequence} placeholders.</li>
-         * <li>You must specify at least one of the OverwriteFormat and SequenceFormat parameters.</li>
+         * <li>The value cannot start with &quot;/&quot;. Only the .jpg suffix is supported.</li>
+         * <li>Maximum length: 255.</li>
+         * <li>Supported placeholders: {JobId}: snapshot task ID, {Date}: snapshot date, {UnixTimestamp}: timestamp, {Sequence}: serial number. At least one of {UnixTimestamp} or {Sequence} must be specified.</li>
+         * <li>At least one of the overwrite snapshot format or sequence snapshot format must be specified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,11 +140,14 @@ public class CreateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          * <ul>
-         * <li>It cannot exceed 128 characters in length.</li>
+         * <li>Maximum length: 128.</li>
          * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template 1</p>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("TemplateName", templateName);
@@ -153,9 +156,9 @@ public class CreateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * <p>The interval between two adjacent snapshots. Unit: seconds.</p>
+         * <p>The snapshot time interval. Unit: seconds.</p>
          * <ul>
-         * <li>Valid values: [5,3600].</li>
+         * <li>Valid values: 5 to 3600.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

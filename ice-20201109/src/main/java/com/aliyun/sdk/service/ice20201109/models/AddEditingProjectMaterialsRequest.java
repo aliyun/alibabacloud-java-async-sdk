@@ -75,18 +75,18 @@ public class AddEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * <p>The material ID. Separate multiple material IDs with commas (,). Each type supports up to 10 material IDs. The following material types are supported:</p>
+         * <p>The material IDs. Separate multiple IDs with commas (,). A maximum of 10 material IDs are supported for each type. Valid values:</p>
          * <ul>
-         * <li>video</li>
-         * <li>audio</li>
-         * <li>image</li>
-         * <li>liveStream</li>
-         * <li>editingProject</li>
+         * <li>&quot;video&quot;: video</li>
+         * <li>&quot;audio&quot;: audio</li>
+         * <li>&quot;image&quot;: image</li>
+         * <li>&quot;liveStream&quot;: live stream</li>
+         * <li>&quot;editingProject&quot;: editing project</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;video&quot;:&quot;<em><strong><strong>2e057304fcd9b145c5cafc</strong></strong></em>&quot;, &quot;image&quot;:&quot;<strong><strong>8021a8d493da643c8acd98</strong></strong>*,<em><strong><strong>cb6307a4edea614d8b3f3c</strong></strong></em>&quot;, &quot;liveStream&quot;: &quot;[{&quot;appName&quot;:&quot;testrecord&quot;,&quot;domainName&quot;:&quot;test.alivecdn.com&quot;,&quot;liveUrl&quot;:&quot;rtmp://test.alivecdn.com/testrecord/teststream&quot;,&quot;streamName&quot;:&quot;teststream&quot;}]&quot;, &quot;editingProject&quot;: &quot;<em><strong><strong>9b145c5cafc2e057304fcd</strong></strong></em>&quot;}</p>
+         * <p>{&quot;video&quot;:&quot;<em><strong><strong>2e057304fcd9b145c5cafc</strong></strong></em>&quot;, &quot;image&quot;:&quot;<strong><strong>8021a8d493da643c8acd98</strong></strong>*,<em><strong><strong>cb6307a4edea614d8b3f3c</strong></strong></em>&quot;, &quot;liveStream&quot;: &quot;[{\&quot;appName\&quot;:\&quot;testrecord\&quot;,\&quot;domainName\&quot;:\&quot;test.alivecdn.com\&quot;,\&quot;liveUrl\&quot;:\&quot;rtmp://test.alivecdn.com/testrecord/teststream\&quot;,\&quot;streamName\&quot;:\&quot;teststream\&quot;}]&quot;, &quot;editingProject&quot;: &quot;<em><strong><strong>9b145c5cafc2e057304fcd</strong></strong></em>&quot;}</p>
          */
         public Builder materialMaps(String materialMaps) {
             this.putQueryParameter("MaterialMaps", materialMaps);
@@ -95,7 +95,7 @@ public class AddEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the online editing project.</p>
+         * <p>The ID of the cloud editing project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

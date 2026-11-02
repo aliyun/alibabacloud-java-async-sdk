@@ -145,7 +145,10 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code for the failed output group task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.ResourceContentBad</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,10 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-21T01:48:41Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -161,7 +167,10 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
         }
 
         /**
-         * FinishTime.
+         * <p>The end time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-21T01:48:41Z</p>
          */
         public Builder finishTime(String finishTime) {
             this.finishTime = finishTime;
@@ -169,7 +178,10 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The reason for a task failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The resource operated &quot;InputFile&quot; is bad</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,7 +189,10 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the output group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hls-group</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -185,7 +200,7 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
         }
 
         /**
-         * Outputs.
+         * <p>The output details.</p>
          */
         public Builder outputs(java.util.List<MediaConvertOutputDetail> outputs) {
             this.outputs = outputs;
@@ -193,7 +208,17 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the output group task.</p>
+         * <ul>
+         * <li>Init: The task is submitted.</li>
+         * <li>Running</li>
+         * <li>Success</li>
+         * <li>Failed</li>
+         * <li>Skipped</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -201,7 +226,10 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the output group task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>22dad741d086a50325f9</strong></strong></strong></p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -67,7 +67,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>0C-7870-15FE-B96F-8880BB</strong></strong></strong></p>
@@ -78,7 +78,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the workflow task.</p>
+         * <p>The workflow task information.</p>
          */
         public Builder workflowTask(WorkflowTask workflowTask) {
             this.workflowTask = workflowTask;
@@ -196,7 +196,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the workflow was created.</p>
+             * <p>The workflow creation time. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-27T10:02:12Z</p>
@@ -207,7 +207,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workflow was last modified.</p>
+             * <p>The time when the workflow was last modified. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-29T02:06:19Z</p>
@@ -219,6 +219,9 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
 
             /**
              * <p>The workflow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Super-resolution transcoding workflow</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -226,12 +229,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workflow state.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Active</li>
-             * <li>Inactive</li>
-             * </ul>
+             * <p>The workflow status.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -243,12 +241,6 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
 
             /**
              * <p>The workflow type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Customize: custom workflow.</li>
-             * <li>System: system workflow.</li>
-             * <li>Common: user-created workflow.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Common</p>
@@ -407,7 +399,10 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The results for all nodes of the workflow task.</p>
+             * <p>The results of each node in the workflow task, in JSON format. The content varies based on the workflow configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ActivityResults&quot;: &quot;Success&quot;}</p>
              */
             public Builder activityResults(String activityResults) {
                 this.activityResults = activityResults;
@@ -415,7 +410,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The task creation time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-01-04T02:05:17Z</p>
@@ -426,7 +421,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The task completion time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-01-04T02:06:19Z</p>
@@ -437,15 +432,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task state.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Init: The task is being initialized.</li>
-             * <li>Failed: The task failed.</li>
-             * <li>Canceled: The task is canceled.</li>
-             * <li>Processing: The task is in progress.</li>
-             * <li>Succeed: The task is successful.</li>
-             * </ul>
+             * <p>The task status.</p>
              * 
              * <strong>example:</strong>
              * <p>Succeed</p>
@@ -456,7 +443,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workflow task.</p>
+             * <p>The workflow task ID.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong><strong>4215e042b3966ca5441e</strong></strong></strong></p>
@@ -467,7 +454,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input of the workflow task.</p>
+             * <p>The workflow task input.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -481,7 +468,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined field that was specified when the workflow task was submitted.</p>
+             * <p>The custom fields specified when the workflow task was submitted.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
@@ -492,7 +479,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workflow Information.</p>
+             * <p>The workflow information.</p>
              */
             public Builder workflow(Workflow workflow) {
                 this.workflow = workflow;

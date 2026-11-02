@@ -78,7 +78,7 @@ public class CreateLiveTranscodeTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>

@@ -67,7 +67,7 @@ public class AddTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
@@ -235,10 +235,10 @@ public class AddTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The template configurations.</p>
+             * <p>The configuration of the template.</p>
              * 
              * <strong>example:</strong>
-             * <p>参见Timeline模板Config文档</p>
+             * <p>See Config documentation</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -246,7 +246,7 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the template thumbnail.</p>
+             * <p>The URL of the template cover.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
@@ -258,12 +258,6 @@ public class AddTemplateResponseBody extends TeaModel {
 
             /**
              * <p>The source from which the template was created.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AliyunConsole</li>
-             * <li>WebSDK</li>
-             * <li>OpenAPI</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>OpenAPI</p>
@@ -275,12 +269,6 @@ public class AddTemplateResponseBody extends TeaModel {
 
             /**
              * <p>The source from which the template was modified.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AliyunConsole</li>
-             * <li>WebSDK</li>
-             * <li>OpenAPI</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>OpenAPI</p>
@@ -291,10 +279,10 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template name.</p>
+             * <p>The name of the template.</p>
              * 
              * <strong>example:</strong>
-             * <p>视频添加水印模板</p>
+             * <p>TemplateName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -302,7 +290,7 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the preview video.</p>
+             * <p>The media asset ID of the preview video.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>01bf24bf41c78b2754cb3187</strong></strong></p>
@@ -313,16 +301,7 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template state.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>UploadFailed: Failed to upload the video.</li>
-             * <li>ProcessFailed: Failed to process the advanced template.</li>
-             * <li>Available: The template is available.</li>
-             * <li>Uploading: The video is being uploaded.</li>
-             * <li>Created: The template is created but not ready for use.</li>
-             * <li>Processing: The advanced template is being processed.</li>
-             * </ul>
+             * <p>The status of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -333,7 +312,7 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template ID.</p>
+             * <p>The ID of the template.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>01bf24bf41c78b2754cb3187</strong></strong></p>
@@ -344,12 +323,7 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Timeline: regular template.</li>
-             * <li>VETemplate: advanced template.</li>
-             * </ul>
+             * <p>The templatetype.</p>
              * 
              * <strong>example:</strong>
              * <p>Timeline</p>

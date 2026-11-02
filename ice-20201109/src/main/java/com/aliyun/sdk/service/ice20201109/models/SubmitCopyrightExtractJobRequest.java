@@ -88,9 +88,11 @@ public class SubmitCopyrightExtractJobRequest extends Request {
         } 
 
         /**
-         * <p>The source video file from which to extract the watermark.</p>
+         * <p>The video file from which the watermark is to be extracted.</p>
          * <blockquote>
-         * <p>The OSS object or media asset must reside in the same region as the IMS service region.</p>
+         * <ul>
+         * <li>The region of the OSS file or media asset must be the same as the region of the current IMS instance.</li>
+         * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -102,12 +104,12 @@ public class SubmitCopyrightExtractJobRequest extends Request {
         }
 
         /**
-         * <p>Additional parameters for the watermark job, provided as a JSON string. Supported parameter:</p>
+         * <p>The watermark job parameters in JSON string format. The following parameters are supported:</p>
          * <ul>
-         * <li><p>algoType: The algorithm type. Defaults to v1. The extraction algorithm must match the one used for embedding.</p>
+         * <li><p>algoType: the algorithm type. Default value: v1. The extraction algorithm type must be the same as the algorithm type used for embedding.</p>
          * <ul>
-         * <li>v1: Copyright watermark extraction algorithm for long videos.</li>
-         * <li>v2: Copyright watermark extraction algorithm for short videos.</li>
+         * <li>v1: the copyright extraction API operation for long videos.</li>
+         * <li>v2: the copyright extraction API operation for short videos.</li>
          * </ul>
          * </li>
          * </ul>
@@ -122,7 +124,7 @@ public class SubmitCopyrightExtractJobRequest extends Request {
         }
 
         /**
-         * <p>The custom data, which can be up to 1,024 bytes in size.</p>
+         * <p>The custom user data. The maximum length is 1,024 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -195,10 +197,15 @@ public class SubmitCopyrightExtractJobRequest extends Request {
             } 
 
             /**
-             * <p>The specific information for the input file, which can be an OSS URL or a media asset ID. OSS URL formats:</p>
-             * <p>1. oss://bucket/object</p>
-             * <p>2. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
-             * <p>where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</p>
+             * <p>The information about the input file. Both OSS URLs and media asset IDs are supported.
+             * The OSS URL must be in one of the following formats:</p>
+             * <ol>
+             * <li><p>oss://bucket/object</p>
+             * </li>
+             * <li><p>http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
+             * </li>
+             * </ol>
+             * <p>where bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -210,11 +217,11 @@ public class SubmitCopyrightExtractJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the source file. Valid values:</p>
-             * <ol>
-             * <li>OSS: an OSS object.</li>
-             * <li>Media: a media asset.</li>
-             * </ol>
+             * <p>The type of the input file. Valid values:</p>
+             * <ul>
+             * <li>OSS: the URL of an OSS file.</li>
+             * <li>Media: the ID of a media asset.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

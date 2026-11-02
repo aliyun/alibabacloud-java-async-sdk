@@ -106,7 +106,10 @@ public class GetDefaultStorageLocationResponseBody extends TeaModel {
         } 
 
         /**
-         * Bucket.
+         * <p>OSS bucket name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-test-bucket</p>
          */
         public Builder bucket(String bucket) {
             this.bucket = bucket;
@@ -114,7 +117,10 @@ public class GetDefaultStorageLocationResponseBody extends TeaModel {
         }
 
         /**
-         * Path.
+         * <p>Path</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ice/dir</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -122,7 +128,10 @@ public class GetDefaultStorageLocationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,16 @@ public class GetDefaultStorageLocationResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Bucket status:</p>
+         * <ul>
+         * <li><p>Normal: The bucket is in normal status.</p>
+         * </li>
+         * <li><p>notExist: The bucket does not exist.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -138,7 +156,10 @@ public class GetDefaultStorageLocationResponseBody extends TeaModel {
         }
 
         /**
-         * StorageType.
+         * <p>Storage class</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_oss_bucket</p>
          */
         public Builder storageType(String storageType) {
             this.storageType = storageType;

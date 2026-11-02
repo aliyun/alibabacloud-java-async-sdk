@@ -103,7 +103,7 @@ public class SendAIAgentSpeechRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether the broadcast can interrupt the ongoing speech. Default value: true</p>
+         * <p>Specifies whether this proactive broadcast can interrupt the current voice playback. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -115,6 +115,10 @@ public class SendAIAgentSpeechRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the agent.</p>
+         * <blockquote>
+         * <p>InstanceId is the unique ID returned after an agent instance is successfully started. For the operations used to start an agent instance, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +131,11 @@ public class SendAIAgentSpeechRequest extends Request {
         }
 
         /**
+         * <p>The text content to be broadcast. Different input types are supported based on the Type parameter. The length cannot exceed 1,024 characters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello, welcome to use our service</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
@@ -136,7 +144,17 @@ public class SendAIAgentSpeechRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The input type. Valid values:</p>
+         * <ul>
+         * <li><p>Text: text input.</p>
+         * </li>
+         * <li><p>AudioUrl: audio URL input.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: Text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Text</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

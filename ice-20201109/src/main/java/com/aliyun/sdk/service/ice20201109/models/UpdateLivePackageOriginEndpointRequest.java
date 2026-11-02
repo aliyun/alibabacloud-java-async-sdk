@@ -203,7 +203,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         } 
 
         /**
-         * <p>The authorization code. It can be up to 200 characters in length. You must configure AuthorizationCode, IpWhitelist, or both. Format: [A-Za-z0-9-_.]+</p>
+         * <p>The authorization code. You must specify at least one of AuthorizationCode and IpWhitelist. The code can be up to 200 characters in length. Format: [A-Za-z0-9-_.]+.</p>
          * 
          * <strong>example:</strong>
          * <p>Abc123Def456</p>
@@ -215,7 +215,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         }
 
         /**
-         * <p>The channel name.</p>
+         * <p>The name of an existing channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,10 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         }
 
         /**
-         * <p>The endpoint description.</p>
+         * <p>The description of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an origin endpoint</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -237,7 +240,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         }
 
         /**
-         * <p>The origin endpoint name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
+         * <p>The name of the origin endpoint. The name must be 1 to 200 characters in length and can contain only uppercase and lowercase letters, digits, hyphens (-), and underscores (<em>). Format: [A-Za-z0-9</em>-]+.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +253,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         }
 
         /**
-         * <p>The channel group name.</p>
+         * <p>The name of an existing channel group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,7 +266,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         }
 
         /**
-         * <p>The IP address blacklist. It supports subnet masks. Separate multiple IP addresses with commas (,).</p>
+         * <p>The IP blacklist. CIDR blocks are supported. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>103.0.0.0/8</p>
@@ -275,7 +278,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         }
 
         /**
-         * <p>The IP address whitelist. It supports subnet masks. 0.0.0.0/0 is not allowed. It can be up to 1,000 characters in length. Separate multiple IP addresses with commas (,). You must configure AuthorizationCode, IpWhitelist, or both.</p>
+         * <p>The IP whitelist. CIDR blocks are supported. You cannot configure 0.0.0.0/0. Separate multiple IP addresses or CIDR blocks with commas (,). You must specify at least one of IpWhitelist and AuthorizationCode. The whitelist can be up to 1,000 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24,10.0.0.1</p>
@@ -287,7 +290,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         }
 
         /**
-         * LivePackagingConfig.
+         * <p>The live packaging configuration.</p>
          */
         public Builder livePackagingConfig(LivePackagingConfig livePackagingConfig) {
             String livePackagingConfigShrink = shrink(livePackagingConfig, "LivePackagingConfig", "json");
@@ -297,7 +300,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         }
 
         /**
-         * <p>The playlist name. Default value: manifest.</p>
+         * <p>The name of the playlist. Default value: manifest.</p>
          * 
          * <strong>example:</strong>
          * <p>manifest</p>
@@ -309,7 +312,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         }
 
         /**
-         * <p>The protocol. Only HLS is supported.</p>
+         * <p>The protocol. Only HTTP Live Streaming (HLS) is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +325,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         }
 
         /**
-         * <p>The number of days that time-shifted content is available. Maximum value: 30.</p>
+         * <p>The number of time-shift days. Maximum value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

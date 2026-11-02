@@ -59,13 +59,7 @@ public class ListPipelinesRequest extends Request {
         } 
 
         /**
-         * <p>The type of the MPS queue.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Boost: MPS queue with transcoding speed boosted.</li>
-         * <li>Standard: standard MPS queue.</li>
-         * <li>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</li>
-         * </ul>
+         * <p>The pipeline type.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>

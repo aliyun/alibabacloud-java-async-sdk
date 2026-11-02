@@ -67,7 +67,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the live package channel.</p>
+         * <p>The details of the live packaging channel.</p>
          */
         public Builder livePackageChannel(LivePackageChannel livePackageChannel) {
             this.livePackageChannel = livePackageChannel;
@@ -75,7 +75,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
@@ -170,7 +170,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ingest endpoint ID.</p>
+             * <p>The ID of the ingest endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>ingest1</p>
@@ -192,7 +192,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ingest endpoint URL.</p>
+             * <p>The URL of the ingest endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxx-1.packagepush-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest">http://xxx-1.packagepush-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest</a></p>
@@ -364,7 +364,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The channel name.</p>
+             * <p>The name of the channel.</p>
              * 
              * <strong>example:</strong>
              * <p>example-channel</p>
@@ -375,7 +375,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the channel was created. It is in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC.</p>
+             * <p>The time when the channel was created. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -386,7 +386,10 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel description.</p>
+             * <p>The description of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test channel</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -394,7 +397,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel group name.</p>
+             * <p>The name of the channel group.</p>
              * 
              * <strong>example:</strong>
              * <p>channel-group-1</p>
@@ -413,7 +416,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the channel was last modified. It is in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC.</p>
+             * <p>The time when the channel was created. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -424,7 +427,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ingest protocol. Only HLS is supported.</p>
+             * <p>The ingest protocol. Valid values: HLS, HLS_CMAF, and SRT_RTMP.</p>
              * 
              * <strong>example:</strong>
              * <p>HLS</p>
@@ -435,7 +438,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of M3U8 segments.</p>
+             * <p>The number of m3u8 segments for the ingest stream.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -446,7 +449,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The segment duration.</p>
+             * <p>The segment duration for the ingest stream.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

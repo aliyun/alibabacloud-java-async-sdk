@@ -112,7 +112,7 @@ public class SubmitSceneBatchEditingJobRequest extends Request {
         }
 
         /**
-         * <p>The output configuration. The structure is the same as the <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.3af86997GreVu9&scm=20140722.H_2863940._.OR_help-T_cn~zh-V_1#4111a373d0xbz">OutputConfig</a> for batch video generation, except that Count and GeneratePreviewOnly are not supported.</p>
+         * <p>The output configuration. The structure is the same as the <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.3af86997GreVu9%5C&scm=20140722.H_2863940._.OR_help-T_cn~zh-V_1#4111a373d0xbz">OutputConfig</a> for batch video generation, except that Count and GeneratePreviewOnly are not supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +143,9 @@ public class SubmitSceneBatchEditingJobRequest extends Request {
 
         /**
          * <p>Custom user data, including callback configurations. For more information, see <a href="~~357745#section-urj-v3f-0s1~~">UserData</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D%E6%88%96%7B%22NotifyAddress%22:%22https://xx.xx.xxx%22%7D%E6%88%96%7B%22NotifyAddress%22:%22ice-callback-demo%22%7D">http://xx.xx.xxx&quot;}或{&quot;NotifyAddress&quot;:&quot;https://xx.xx.xxx&quot;}或{&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

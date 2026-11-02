@@ -152,7 +152,15 @@ public class GetIpcDeviceInfoRequest extends Request {
         }
 
         /**
-         * Capability.
+         * <p>The capability. Default value: understand. Valid values:</p>
+         * <ul>
+         * <li>understand: Understanding.</li>
+         * <li>understand-reid: Understanding with ReID.</li>
+         * <li>search: Search.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>understand</p>
          */
         public Builder capability(String capability) {
             this.putQueryParameter("Capability", capability);
@@ -161,7 +169,10 @@ public class GetIpcDeviceInfoRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>The device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d123</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -170,7 +181,10 @@ public class GetIpcDeviceInfoRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time in UTC. Format: yyyy-MM-ddTHH:mm:ssZ. The interval between the end time and the start time cannot exceed 180 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-02-11T12:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,7 +193,10 @@ public class GetIpcDeviceInfoRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -188,7 +205,10 @@ public class GetIpcDeviceInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +217,10 @@ public class GetIpcDeviceInfoRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

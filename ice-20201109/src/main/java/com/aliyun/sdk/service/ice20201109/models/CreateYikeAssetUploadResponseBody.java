@@ -93,7 +93,10 @@ public class CreateYikeAssetUploadResponseBody extends TeaModel {
         } 
 
         /**
-         * FileURL.
+         * <p>The OSS URL of the file without authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4</a></p>
          */
         public Builder fileURL(String fileURL) {
             this.fileURL = fileURL;
@@ -101,7 +104,10 @@ public class CreateYikeAssetUploadResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +115,10 @@ public class CreateYikeAssetUploadResponseBody extends TeaModel {
         }
 
         /**
-         * UploadAddress.
+         * <p>The upload URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJTZWN1cml0a2VuIjoiQ0FJU3p3TjF****</p>
          */
         public Builder uploadAddress(String uploadAddress) {
             this.uploadAddress = uploadAddress;
@@ -117,7 +126,10 @@ public class CreateYikeAssetUploadResponseBody extends TeaModel {
         }
 
         /**
-         * UploadAuth.
+         * <p>The upload credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJFbmRwb2ludCI6Imm****</p>
          */
         public Builder uploadAuth(String uploadAuth) {
             this.uploadAuth = uploadAuth;

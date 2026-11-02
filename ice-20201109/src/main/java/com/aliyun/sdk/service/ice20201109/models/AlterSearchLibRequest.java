@@ -97,7 +97,13 @@ public class AlterSearchLibRequest extends Request {
         }
 
         /**
-         * SearchLibConfig.
+         * <p>The search library configuration in JSON string format. It includes the following fields:</p>
+         * <ul>
+         * <li>faceGroupIds: the IDs of self-registered face libraries created by calling CreateRecognitionLib. A maximum of three self-registered face libraries are supported, concatenated by commas (,).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;faceGroupIds&quot;:&quot;xxx1,xxx2,xx3&quot;}</p>
          */
         public Builder searchLibConfig(String searchLibConfig) {
             this.putQueryParameter("SearchLibConfig", searchLibConfig);
@@ -106,6 +112,7 @@ public class AlterSearchLibRequest extends Request {
         }
 
         /**
+         * <p>The search library.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

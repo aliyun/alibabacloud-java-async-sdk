@@ -80,7 +80,7 @@ public class DeleteMediaInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs or URLs of media assets that cannot be deleted. Generally, media assets cannot be deleted if you do not have the required permissions.</p>
+         * <p>The list of media asset IDs or URLs (exactly as entered) that cannot be deleted. This is generally caused by a lack of permissions.</p>
          */
         public Builder forbiddenList(java.util.List<String> forbiddenList) {
             this.forbiddenList = forbiddenList;
@@ -88,7 +88,7 @@ public class DeleteMediaInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs or URLs of ignored media assets. An error occurred while obtaining such media assets.</p>
+         * <p>The list of IDs or input URLs (exactly as entered) that encountered errors.</p>
          */
         public Builder ignoredList(java.util.List<String> ignoredList) {
             this.ignoredList = ignoredList;

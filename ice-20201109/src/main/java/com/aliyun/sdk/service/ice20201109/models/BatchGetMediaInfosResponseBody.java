@@ -80,7 +80,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * IgnoredList.
+         * <p>The list of media asset information that failed to be retrieved.</p>
          */
         public Builder ignoredList(java.util.List<String> ignoredList) {
             this.ignoredList = ignoredList;
@@ -88,7 +88,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried media assets.</p>
+         * <p>The collection of matching media assets.</p>
          */
         public Builder mediaInfos(java.util.List<MediaInfos> mediaInfos) {
             this.mediaInfos = mediaInfos;
@@ -373,7 +373,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.794</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -381,7 +384,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelLayout.
+             * <p>The channel layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stereo</p>
              */
             public Builder channelLayout(String channelLayout) {
                 this.channelLayout = channelLayout;
@@ -389,7 +395,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Channels.
+             * <p>The number of channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -397,7 +406,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * <p>The long name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC (Advanced Audio Coding)</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -405,7 +417,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aac</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -413,7 +428,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The codec tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x6134706d</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -421,7 +439,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The codec tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4a</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -429,7 +450,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The time base of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/24000</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -437,7 +461,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16.200998</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -445,7 +472,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The audio frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -453,7 +483,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The index of the audio stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -461,7 +494,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>und</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -469,7 +505,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * <p>The total number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -477,7 +516,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The encoding profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -485,7 +527,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * SampleFmt.
+             * <p>The sample format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fltp</p>
              */
             public Builder sampleFmt(String sampleFmt) {
                 this.sampleFmt = sampleFmt;
@@ -493,7 +538,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * SampleRate.
+             * <p>The sample rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder sampleRate(String sampleRate) {
                 this.sampleRate = sampleRate;
@@ -501,7 +549,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.000000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -509,7 +560,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The timebase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/44100</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -726,7 +780,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file size. Unit: bytes.</p>
+             * <p>The file size in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>30611502</p>
@@ -759,7 +813,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Object Storage Service (OSS) URL of the file.</p>
+             * <p>The OSS URL of the file.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
@@ -792,7 +846,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region in which the file resides.</p>
+             * <p>The storage region of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -977,7 +1031,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * CodecLongName.
+             * <p>The long name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SubRip Text</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -985,7 +1042,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>srt</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -993,7 +1053,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The codec tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicode</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -1001,7 +1064,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The codec tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicode</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -1009,7 +1075,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The time base of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29.97</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -1020,7 +1089,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
              * <p>The duration.</p>
              * 
              * <strong>example:</strong>
-             * <p>200</p>
+             * <p>1</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1028,7 +1097,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The index of the audio stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1036,7 +1108,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>und</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1044,7 +1119,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1052,7 +1130,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The timebase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -1405,7 +1486,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * AvgFPS.
+             * <p>The average frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24.0</p>
              */
             public Builder avgFPS(String avgFPS) {
                 this.avgFPS = avgFPS;
@@ -1416,7 +1500,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
              * <p>The bitrate.</p>
              * 
              * <strong>example:</strong>
-             * <p>1132.68</p>
+             * <p>1001.594</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1424,7 +1508,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * <p>The long name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -1432,7 +1519,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h264</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -1440,7 +1530,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The codec tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x0000</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -1448,7 +1541,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The codec tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0][0][0][0]</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -1456,7 +1552,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The time base of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/48</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -1464,7 +1563,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Dar.
+             * <p>The display aspect ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:1</p>
              */
             public Builder dar(String dar) {
                 this.dar = dar;
@@ -1475,7 +1577,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
              * <p>The duration.</p>
              * 
              * <strong>example:</strong>
-             * <p>200</p>
+             * <p>216.206706</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1483,7 +1585,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The video frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24.0</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -1491,7 +1596,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * HasBFrames.
+             * <p>Indicates whether the video stream contains B-frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hasBFrames(String hasBFrames) {
                 this.hasBFrames = hasBFrames;
@@ -1502,7 +1610,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
              * <p>The height.</p>
              * 
              * <strong>example:</strong>
-             * <p>1080</p>
+             * <p>540</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -1510,7 +1618,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The video stream index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1518,7 +1629,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>und</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1526,7 +1640,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The encoding level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1534,7 +1651,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Nb_frames.
+             * <p>The total number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5184</p>
              */
             public Builder nbFrames(String nbFrames) {
                 this.nbFrames = nbFrames;
@@ -1542,7 +1662,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * <p>The total number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5184</p>
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -1550,7 +1673,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * PixFmt.
+             * <p>The pixel format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuv420p</p>
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -1558,7 +1684,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The encoding profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -1566,7 +1695,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Rotate.
+             * <p>The rotation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rotate(String rotate) {
                 this.rotate = rotate;
@@ -1574,7 +1706,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Sar.
+             * <p>The sample aspect ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:1</p>
              */
             public Builder sar(String sar) {
                 this.sar = sar;
@@ -1582,7 +1717,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.081706</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1590,7 +1728,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The timebase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/12288</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -1601,7 +1742,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
              * <p>The width.</p>
              * 
              * <strong>example:</strong>
-             * <p>1920</p>
+             * <p>960</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -1694,7 +1835,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * AudioStreamInfoList.
+             * <p>The audio stream information. A media asset may contain multiple audio streams.</p>
              */
             public Builder audioStreamInfoList(java.util.List<AudioStreamInfoList> audioStreamInfoList) {
                 this.audioStreamInfoList = audioStreamInfoList;
@@ -1702,7 +1843,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The basic information of the file, including the duration and size.</p>
+             * <p>The basic file information, including the duration and size.</p>
              */
             public Builder fileBasicInfo(FileBasicInfo fileBasicInfo) {
                 this.fileBasicInfo = fileBasicInfo;
@@ -1710,7 +1851,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * SubtitleStreamInfoList.
+             * <p>The subtitle stream information. A media asset may have multiple subtitle streams.</p>
              */
             public Builder subtitleStreamInfoList(java.util.List<SubtitleStreamInfoList> subtitleStreamInfoList) {
                 this.subtitleStreamInfoList = subtitleStreamInfoList;
@@ -1718,7 +1859,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * VideoStreamInfoList.
+             * <p>The video stream information. A media asset may have multiple video streams.</p>
              */
             public Builder videoStreamInfoList(java.util.List<VideoStreamInfoList> videoStreamInfoList) {
                 this.videoStreamInfoList = videoStreamInfoList;
@@ -2006,7 +2147,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * Biz.
+             * <p>The business to which the media asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ICE</p>
              */
             public Builder biz(String biz) {
                 this.biz = biz;
@@ -2025,7 +2169,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the media asset.</p>
+             * <p>The category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category1</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -2033,7 +2180,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The thumbnail URL of the media asset.</p>
+             * <p>The cover URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
@@ -2044,7 +2191,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the media asset was created.</p>
+             * <p>The creation time of the media asset. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-26T04:11:10Z</p>
@@ -2055,7 +2202,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the media asset was deleted.</p>
+             * <p>The deletion time of the media asset. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-26T04:11:10Z</p>
@@ -2066,7 +2213,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the media asset.</p>
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2074,7 +2224,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the media asset in another service.</p>
+             * <p>The URL of the media asset to be registered in the corresponding system.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
@@ -2085,7 +2235,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>MediaId</p>
+             * <p>The ID of the media asset.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
@@ -2096,7 +2246,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the media asset.</p>
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1, tag2</p>
              */
             public Builder mediaTags(String mediaTags) {
                 this.mediaTags = mediaTags;
@@ -2104,11 +2257,13 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the media asset. Valid values:</p>
-             * <p>- image</p>
-             * <p>- video</p>
-             * <p>- audio</p>
-             * <p>- text</p>
+             * <p>The media type of the media asset. Valid values:</p>
+             * <ul>
+             * <li>Image</li>
+             * <li>Video</li>
+             * <li>Audio</li>
+             * <li>Text</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>video</p>
@@ -2119,7 +2274,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the media asset was last modified.</p>
+             * <p>The modification time of the media asset. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-26T04:11:12Z</p>
@@ -2130,10 +2285,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The snapshots of the media asset.</p>
+             * <p>The snapshots.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;3&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>f48f0e4154976b2b8c45</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-beijing&quot;,&quot;snapshotRegular&quot;:&quot;example.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e6a6440b29eb60bd7c</strong></strong></strong>&quot;}]</p>
+             * <p>[
+             *     &quot;<a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00001.png?Expires=&OSSAccessKeyId=&Signature=&security-token=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00001.png?Expires=&amp;OSSAccessKeyId=&amp;Signature=&amp;security-token=</a>&quot;,
+             *     &quot;<a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00002.jpg?Expires=&OSSAccessKeyId=&Signature=&security-token=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00002.jpg?Expires=&amp;OSSAccessKeyId=&amp;Signature=&amp;security-token=</a>&quot;,
+             *     &quot;<a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00003.jpg?Expires=&OSSAccessKeyId=&Signature=&security-token=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00003.jpg?Expires=&amp;OSSAccessKeyId=&amp;Signature=&amp;security-token=</a>&quot;
+             * ]</p>
              */
             public Builder snapshots(String snapshots) {
                 this.snapshots = snapshots;
@@ -2141,9 +2300,11 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the media asset. Valid values:</p>
-             * <p>- oss</p>
-             * <p>- vod</p>
+             * <p>The source. Valid values:</p>
+             * <ul>
+             * <li>OSS</li>
+             * <li>vod</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>oss</p>
@@ -2154,7 +2315,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sprite.</p>
+             * <p>The sprite images.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
@@ -2165,7 +2326,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the media asset.</p>
+             * <p>The resource status.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -2176,7 +2337,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the media asset.</p>
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -2184,7 +2348,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transcoding status of the media asset.</p>
+             * <p>The transcoding status.</p>
              * 
              * <strong>example:</strong>
              * <p>Init</p>
@@ -2252,7 +2416,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The media asset type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -2306,7 +2473,12 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * DynamicMetaData.
+             * <p>The type. Valid values:</p>
+             * <ul>
+             * <li>ai: AI data processed from original AI results.</li>
+             * <li>user-defined: User-defined metadata.</li>
+             * <li>system: System-provided metadata.</li>
+             * </ul>
              */
             public Builder dynamicMetaData(DynamicMetaData dynamicMetaData) {
                 this.dynamicMetaData = dynamicMetaData;
@@ -2399,7 +2571,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>FileInfos</p>
+             * <p>The list of basic file information.</p>
              */
             public Builder fileInfoList(java.util.List<FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
@@ -2415,7 +2587,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaDynamicInfo.
+             * <p>The media asset type.</p>
              */
             public Builder mediaDynamicInfo(MediaDynamicInfo mediaDynamicInfo) {
                 this.mediaDynamicInfo = mediaDynamicInfo;

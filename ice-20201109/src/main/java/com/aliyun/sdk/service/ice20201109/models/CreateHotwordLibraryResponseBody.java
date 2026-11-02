@@ -78,7 +78,7 @@ public class CreateHotwordLibraryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>13cbb83e-043c-4728-ac35-*****</p>

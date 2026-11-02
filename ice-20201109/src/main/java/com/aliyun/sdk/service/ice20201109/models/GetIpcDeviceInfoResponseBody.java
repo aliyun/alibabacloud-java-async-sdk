@@ -80,7 +80,7 @@ public class GetIpcDeviceInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * DeviceInfos.
+         * <p>The list of device identity information.</p>
          */
         public Builder deviceInfos(java.util.List<DeviceInfos> deviceInfos) {
             this.deviceInfos = deviceInfos;
@@ -88,7 +88,10 @@ public class GetIpcDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class GetIpcDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -175,7 +181,15 @@ public class GetIpcDeviceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Capability.
+             * <p>The capability. Valid values:</p>
+             * <ul>
+             * <li>understand: Understanding.</li>
+             * <li>understand-reid: Understanding with ReID.</li>
+             * <li>search: Search.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>understand</p>
              */
             public Builder capability(String capability) {
                 this.capability = capability;
@@ -183,7 +197,10 @@ public class GetIpcDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>The device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d123</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -191,7 +208,10 @@ public class GetIpcDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-02-11T12:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;

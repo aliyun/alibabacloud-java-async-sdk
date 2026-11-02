@@ -158,7 +158,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the job fails. This parameter is not returned if the job is executed successfully.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SpeechTranslationNoValidVocal</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -166,7 +169,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the job fails. This parameter is not returned if the job is executed successfully.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The speech translation job failed due to lack of valid vocal voice data.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -185,7 +191,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job results.</p>
+         * <p>The task result of the node.</p>
          */
         public Builder jobResult(JobResult jobResult) {
             this.jobResult = jobResult;
@@ -193,7 +199,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job results.</p>
+         * <p>The task result of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -215,7 +221,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the intelligent job.</p>
+         * <p>The smart job information.</p>
          */
         public Builder smartJobInfo(SmartJobInfo smartJobInfo) {
             this.smartJobInfo = smartJobInfo;
@@ -223,14 +229,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job state.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Finished</li>
-         * <li>Failed</li>
-         * <li>Executing</li>
-         * <li>Created</li>
-         * </ul>
+         * <p>The job status.</p>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>
@@ -241,7 +240,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user-defined data in the JSON format.</p>
+         * <p>The user-defined information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;user&quot;:&quot;data&quot;}</p>
@@ -339,7 +338,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
              * <p>The AI analysis result.</p>
              * 
              * <strong>example:</strong>
-             * <p>Intelligent segmentation or tagging information</p>
+             * <p>ai result</p>
              */
             public Builder aiResult(String aiResult) {
                 this.aiResult = aiResult;
@@ -347,7 +346,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the media asset.</p>
+             * <p>The media asset ID.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -358,7 +357,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * MediaUrl.
+             * <p>The URL of the output video for the smart job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
              */
             public Builder mediaUrl(String mediaUrl) {
                 this.mediaUrl = mediaUrl;
@@ -366,7 +368,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token usage. This parameter is returned only for keyword-based text generation jobs.</p>
+             * <p>The token usage. This parameter is returned only for keyword expansion jobs.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;total_tokens&quot;:100}</p>
@@ -423,10 +425,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS URL or the ID of the material in the media asset library.</p>
+             * <p>The OSS URL or content library material ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 或 <strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+             * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 or <strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
              */
             public Builder inputFile(String inputFile) {
                 this.inputFile = inputFile;
@@ -493,7 +495,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS bucket.</p>
+             * <p>OSS Bucket</p>
              * 
              * <strong>example:</strong>
              * <p>test-bucket</p>
@@ -504,7 +506,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS object.</p>
+             * <p>OSS Object</p>
              * 
              * <strong>example:</strong>
              * <p>test-object</p>
@@ -652,7 +654,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the job was created.</p>
+             * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-26T04:11:10Z</p>
@@ -666,7 +668,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
              * <p>The job description.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试描述</p>
+             * <p>Test description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -674,7 +676,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input configurations.</p>
+             * <p>The input parameters.</p>
              */
             public Builder inputConfig(InputConfig inputConfig) {
                 this.inputConfig = inputConfig;
@@ -693,7 +695,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was last modified.</p>
+             * <p>The modification time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-26T04:11:10Z</p>
@@ -704,7 +706,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output configurations.</p>
+             * <p>The output configuration.</p>
              */
             public Builder outputConfig(OutputConfig outputConfig) {
                 this.outputConfig = outputConfig;
@@ -715,7 +717,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
              * <p>The job title.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试标题</p>
+             * <p>Test title</p>
              */
             public Builder title(String title) {
                 this.title = title;

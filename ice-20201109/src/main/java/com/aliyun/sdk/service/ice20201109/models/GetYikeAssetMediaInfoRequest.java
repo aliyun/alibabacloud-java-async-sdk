@@ -83,6 +83,7 @@ public class GetYikeAssetMediaInfoRequest extends Request {
         }
 
         /**
+         * <p>The media asset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

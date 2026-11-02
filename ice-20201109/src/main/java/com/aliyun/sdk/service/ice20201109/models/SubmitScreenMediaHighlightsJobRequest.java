@@ -124,7 +124,7 @@ public class SubmitScreenMediaHighlightsJobRequest extends Request {
         }
 
         /**
-         * <p>The editing configuration. For detailed parameters, see <a href="~~2863940#9b05519d46e0x~~">EditingConfig</a>.</p>
+         * <p>The editing configuration. For more information, see <a href="~~2863940#9b05519d46e0x~~">EditingConfig parameter description</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -144,7 +144,7 @@ public class SubmitScreenMediaHighlightsJobRequest extends Request {
         }
 
         /**
-         * <p>The input configuration. For detailed parameters, see <a href="~~2863940#dda38bf6ec2pk~~">InputConfig</a>.</p>
+         * <p>The input configuration. For more information, see <a href="~~2863940#dda38bf6ec2pk~~">InputConfig parameter description</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -161,7 +161,7 @@ public class SubmitScreenMediaHighlightsJobRequest extends Request {
         }
 
         /**
-         * <p>The output configuration. For detailed parameters, see <a href="~~2863940#4111a373d0xbz~~">OutputConfig</a>.</p>
+         * <p>The output configuration. For more information, see <a href="~~2863940#4111a373d0xbz~~">OutputConfig parameter description</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -178,7 +178,10 @@ public class SubmitScreenMediaHighlightsJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData</a>.</p>
+         * <p>The user business configuration and callback configuration. For the specific structure definition, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData configuration</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

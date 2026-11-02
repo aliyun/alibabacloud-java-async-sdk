@@ -179,8 +179,10 @@ public class GetAiRtcAuthCodeListRequest extends Request {
         /**
          * <p>The status of the authorization code. Valid values:</p>
          * <ul>
-         * <li><code>1</code>: Activated</li>
-         * <li><code>2</code>: Inactive</li>
+         * <li><p><code>1</code>: Activated</p>
+         * </li>
+         * <li><p><code>2</code>: Inactive</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,8 +197,10 @@ public class GetAiRtcAuthCodeListRequest extends Request {
         /**
          * <p>The type of license. Valid values:</p>
          * <ul>
-         * <li><code>1</code>: Audio call</li>
-         * <li><code>2</code>: Vision call</li>
+         * <li><p><code>1</code>: Audio call</p>
+         * </li>
+         * <li><p><code>2</code>: Vision call</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

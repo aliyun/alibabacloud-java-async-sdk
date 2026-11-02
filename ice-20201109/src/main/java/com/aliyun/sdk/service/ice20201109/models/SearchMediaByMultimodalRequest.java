@@ -180,7 +180,15 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * CustomFilters.
+         * <p>The custom filters. The value is a JSON string. Supported fields include the integer field intField1 and the string fields strField1 and strField2. You can specify at most one match type for a single field. Filters for different fields are combined by using the AND operator. Examples:</p>
+         * <ul>
+         * <li>Exact match, such as {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}.</li>
+         * <li>Multi-value match, such as {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}.</li>
+         * <li>Range match, such as {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13},&quot;strField2&quot;:[&quot;cd&quot;,&quot;de&quot;],&quot;strField1&quot;:&quot;abc&quot;}</p>
          */
         public Builder customFilters(String customFilters) {
             this.putQueryParameter("CustomFilters", customFilters);
@@ -189,11 +197,10 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * <p>The type of the media assets.</p>
-         * <p>Valid values:</p>
+         * <p>The media asset type. Default value: video. Valid values:</p>
          * <ul>
-         * <li>image</li>
-         * <li>video (default)</li>
+         * <li>image: Image.</li>
+         * <li>video: Video.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +213,10 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -215,7 +225,7 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -227,7 +237,7 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -251,7 +261,10 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * <p>The content that you want to query. You can describe the content in natural language.</p>
+         * <p>The search content. It can be a natural language description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Two pandas are fighting</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
@@ -260,7 +273,13 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * UtcCreate.
+         * <p>The creation time. The value is a timestamp in milliseconds. gte specifies greater than or equal to, and lte specifies less than or equal to. Example:</p>
+         * <ul>
+         * <li>Range match, such as {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</p>
          */
         public Builder utcCreate(String utcCreate) {
             this.putQueryParameter("UtcCreate", utcCreate);

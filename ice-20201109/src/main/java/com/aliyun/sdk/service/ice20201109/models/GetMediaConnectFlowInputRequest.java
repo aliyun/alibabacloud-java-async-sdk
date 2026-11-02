@@ -74,7 +74,7 @@ public class GetMediaConnectFlowInputRequest extends Request {
         } 
 
         /**
-         * <p>The flow ID.</p>
+         * <p>The flow instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,10 @@ public class GetMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * WithInternalVip.
+         * <p>Specifies whether to return the internal IP address for stream ingestion. This parameter is valid only when cloud access is established over an Express Connect circuit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder withInternalVip(String withInternalVip) {
             this.putQueryParameter("WithInternalVip", withInternalVip);

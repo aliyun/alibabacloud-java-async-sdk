@@ -149,10 +149,10 @@ public class UpdateAvatarTrainingJobRequest extends Request {
         } 
 
         /**
-         * <ul>
-         * <li>The description of the digital human.</li>
-         * <li>The description can be up to 1,000 characters in length.</li>
-         * </ul>
+         * <p>The description of the digital human. The description can be up to 1,000 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a digital human, intended for use in a certain scenario.</p>
          */
         public Builder avatarDescription(String avatarDescription) {
             this.putQueryParameter("AvatarDescription", avatarDescription);
@@ -161,10 +161,10 @@ public class UpdateAvatarTrainingJobRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li>The name of the digital human.</li>
-         * <li>The name can be up to seven characters in length.</li>
-         * </ul>
+         * <p>The name of the digital human. The name can be up to 7 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the digital human.</p>
          */
         public Builder avatarName(String avatarName) {
             this.putQueryParameter("AvatarName", avatarName);
@@ -173,7 +173,7 @@ public class UpdateAvatarTrainingJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the digital human training job.</p>
+         * <p>The ID of the digital human training task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,10 +186,7 @@ public class UpdateAvatarTrainingJobRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li>The media asset ID of the portrait image.</li>
-         * <li>The value must be 32 characters in length.</li>
-         * </ul>
+         * <p>The media asset ID of the profile picture. The ID must be 32 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
@@ -201,12 +198,12 @@ public class UpdateAvatarTrainingJobRequest extends Request {
         }
 
         /**
+         * <p>The URL of the thumbnail.</p>
          * <ul>
-         * <li>The thumbnail URL.</li>
-         * <li>After the digital human is trained, the thumbnail is uploaded to this URL.</li>
-         * <li>The URL must be a valid public Object Storage Service (OSS) URL.</li>
+         * <li>The thumbnail is uploaded to this URL after the training succeeds.</li>
+         * <li>The URL must be a valid public Object Storage Service (OSS) URL within your account.</li>
          * <li>The URL can be up to 512 characters in length.</li>
-         * <li>The URL cannot be updated after the digital human is trained.</li>
+         * <li>The URL cannot be updated after the training succeeds.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,14 +216,9 @@ public class UpdateAvatarTrainingJobRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li><p>Indicates whether the input video supports alpha channels.</p>
-         * </li>
-         * <li><p>You can modify this parameter only if the job is in the Init or Fail state.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong>: Make sure that the current settings are consistent with those of the submitted training video. Otherwise, the digital human may malfunction.</p>
-         * </li>
-         * </ul>
+         * <p>Specifies whether the uploaded video supports a transparent channel.</p>
+         * <p>You can modify this parameter only for tasks in the Initialized or Training Failed state.
+         * <notice>Make sure that this setting matches the properties of the submitted training video. Otherwise, the synthesized digital human may behave abnormally.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -238,12 +230,12 @@ public class UpdateAvatarTrainingJobRequest extends Request {
         }
 
         /**
+         * <p>The media asset ID of the training video.</p>
          * <ul>
-         * <li>The ID of the video used for training.</li>
-         * <li>The value must be 32 characters in length.</li>
-         * <li>Supported formats: MP4, MOV, and WebM.</li>
-         * <li>The duration of the video must be 5 to 15 minutes.</li>
-         * <li>The resolution of the video must be 1920×1080 or 1080×1920.</li>
+         * <li>The ID must be 32 characters in length.</li>
+         * <li>The MP4, MOV, and WebM formats are supported.</li>
+         * <li>The video duration must be between 5 and 15 minutes.</li>
+         * <li>The video resolution must be 1920 × 1080 or 1080 × 1920.</li>
          * </ul>
          * 
          * <strong>example:</strong>

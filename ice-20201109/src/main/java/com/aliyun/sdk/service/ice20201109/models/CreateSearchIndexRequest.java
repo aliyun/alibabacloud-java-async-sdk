@@ -125,7 +125,10 @@ public class CreateSearchIndexRequest extends Request {
         }
 
         /**
-         * IndexConfig.
+         * <p>The index configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder indexConfig(String indexConfig) {
             this.putQueryParameter("IndexConfig", indexConfig);
@@ -134,7 +137,14 @@ public class CreateSearchIndexRequest extends Request {
         }
 
         /**
-         * IndexStatus.
+         * <p>The index status. Default value: Active. Valid values:</p>
+         * <ul>
+         * <li>Active: activated.</li>
+         * <li>Deactive: deactivated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder indexStatus(String indexStatus) {
             this.putQueryParameter("IndexStatus", indexStatus);
@@ -143,16 +153,17 @@ public class CreateSearchIndexRequest extends Request {
         }
 
         /**
-         * <p>The category of the index. Valid values:</p>
+         * <p>The index type. Valid values:</p>
          * <ul>
-         * <li>mm: large visual model. You can use this model to describe complex visual features and identify and search for specific actions, movements, and events in videos, such as when athletes score a goal or get injured.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This feature is in the public preview phase. You can use this feature for free for 1,000 hours of videos.</p>
+         * <li>mm: large model visual state. Used to describe complex visual features and actions in videos. This type helps identify and search for specific actions, movements, and events in videos, such as a soccer player scoring a goal or a basketball player getting injured.<blockquote>
+         * <p>The shared instance type supports up to 1,000 hours of video. After the limit is exceeded, the system no longer performs large model visual state analysis.</p>
          * </blockquote>
-         * <ul>
-         * <li>face: face recognition. You can use the face recognition technology to describe face characteristics and automatically mark or search for faces in videos.</li>
-         * <li>aiLabel: smart tagging. The smart tagging category is used to describe content such as subtitles and audio in videos. You can use the speech recognition technology to automatically extract, mark, and search for subtitles and dialog content from videos. This helps you quickly locate the video content that is related to specific topics or keywords.</li>
+         * </li>
+         * <li>face: automatic face recognition. Used to describe facial features in videos. Through face recognition technology, faces in videos can be automatically tagged and searched.<blockquote>
+         * <p>The shared instance type supports up to 1,000,000 face analyses. After the limit is exceeded, the system no longer performs face analysis.</p>
+         * </blockquote>
+         * </li>
+         * <li>aiLabel: intelligent tagging. The intelligent tagging index type is used to describe subtitles, speech, and other content in videos. Through text and speech recognition technology, language information such as subtitles and dialogues in videos can be automatically extracted for tagging and searching. This helps users quickly search for and locate content related to specific topics or keywords in videos.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -166,7 +177,14 @@ public class CreateSearchIndexRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The name of the search library.</p>
+         * <ul>
+         * <li>If you do not specify a search library name, the search index is created in the default IMS search library. Default value: ims-default-search-lib.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/2584455.html">QuerySearchLib</a> operation to query information about existing search libraries.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);

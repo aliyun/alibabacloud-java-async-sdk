@@ -178,7 +178,7 @@ public class UploadMediaByURLRequest extends Request {
         }
 
         /**
-         * <p>The entity ID. You can call the CreateEntity operation to create an entity and specify a dynamic metadata structure.</p>
+         * <p>The entity ID. You can call the CreateEntity operation to create an entity and define a custom dynamic metadata structure.</p>
          * 
          * <strong>example:</strong>
          * <p>d67281da3c8743b8823ad12976187***</p>
@@ -190,11 +190,11 @@ public class UploadMediaByURLRequest extends Request {
         }
 
         /**
-         * <p>The metadata of the media file that you want to upload. The value must be a JSON string.</p>
+         * <p>The metadata of the media file to be uploaded. The value is a JSON string.</p>
          * <ul>
-         * <li>This parameter takes effect only if its value matches a URL that is specified in UploadURLs.</li>
-         * <li>You must convert the JSON-formatted data, such as [UploadMetadata, UploadMetadata,…], into a JSON string.</li>
-         * <li>For more information, see the &quot;UploadMetadata&quot; section of this topic.</li>
+         * <li>The metadata takes effect only when it matches a URL in UploadURLs.</li>
+         * <li>JSON format: [UploadMetadata, UploadMetadata, ...]. The value must be converted to a JSON string.</li>
+         * <li>For more information, see the UploadMetadata table below.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,8 +207,8 @@ public class UploadMediaByURLRequest extends Request {
         }
 
         /**
-         * <p>The postprocessing configurations. You can specify this parameter if Type is set to video or audio.</p>
-         * <p>Set ProcessType to Workflow.</p>
+         * <p>The post-upload processing action when Type is set to video or audio.</p>
+         * <p>Valid values of ProcessType: Workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessType&quot;: &quot;Workflow&quot;,&quot;ProcessID&quot;:&quot;b72a06c6beeb4dcdb898feef067b1***&quot;}</p>
@@ -221,8 +221,10 @@ public class UploadMediaByURLRequest extends Request {
 
         /**
          * <p>The destination storage address.</p>
-         * <p>Set StorageType to oss.</p>
-         * <p>Set StorageLocation to an address in ApsaraVideo VOD. You cannot set this field to an OSS URL.</p>
+         * <ul>
+         * <li>StorageType: only oss is supported.</li>
+         * <li>StorageLocation: only VOD storage is supported. User-owned OSS storage is not supported.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{&quot;StorageType&quot;:&quot;oss&quot;,&quot;StorageLocation&quot;:&quot;outin-***.oss-cn-shanghai.aliyuncs.com&quot;}</p>
@@ -234,18 +236,15 @@ public class UploadMediaByURLRequest extends Request {
         }
 
         /**
-         * <p>The URL of the source file.</p>
+         * <p>The URL of the media source file.</p>
          * <ul>
-         * <li><p>The URL must contain a file name extension, such as mp4 in <code>https://****.mp4</code>.</p>
-         * <ul>
-         * <li>If the URL does not contain a file name extension, you can specify one by setting <code>FileExtension</code> in <code>UploadMetadata</code>.</li>
-         * <li>If the URL contains a file name extension and <code>FileExtension</code> is also specified, the value of <code>FileExtension</code> prevails.</li>
+         * <li>The URL must include a file name extension. For example, mp4 is the file name extension in <code>https://****.mp4</code>.<ul>
+         * <li>If the URL does not include a file name extension, you can specify the FileExtension parameter in <code>UploadMetadatas</code>.</li>
+         * <li>If the URL includes a file name extension and the FileExtension parameter is also specified, the value of FileExtension takes precedence.</li>
          * </ul>
          * </li>
-         * <li><p>URL encoding is required. Separate multiple URLs with commas (,). You can specify a maximum of 20 URLs.</p>
-         * </li>
-         * <li><p>Special characters may cause upload failures. Therefore, you must encode URLs before you separate them with commas (,).</p>
-         * </li>
+         * <li>URL-encode the URLs. Separate multiple URLs with commas (,). A maximum of 20 URLs are supported.</li>
+         * <li>To prevent upload failures caused by special characters, URL-encode each URL before concatenating them with commas.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,7 +257,7 @@ public class UploadMediaByURLRequest extends Request {
         }
 
         /**
-         * <p>The user data. The value must be a JSON string. You can configure settings such as message callbacks.</p>
+         * <p>The custom settings. The value is a JSON string that supports settings such as message callbacks.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D,%22Extend%22:%7B%22localId%22:%22xxx%22,%22test%22:%22www%22%7D%7D">http://example.aliyundoc.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</a></p>

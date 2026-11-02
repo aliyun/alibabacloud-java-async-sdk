@@ -233,7 +233,7 @@ public class GetAIWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workflow&quot;s topological structure.</p>
+             * <p>The workflow\&quot;s topological structure.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -271,9 +271,12 @@ public class GetAIWorkflowTaskResponseBody extends TeaModel {
             /**
              * <p>Workflow template status. Valid values:</p>
              * <ul>
-             * <li>Draft</li>
-             * <li>Published</li>
-             * <li>Editing</li>
+             * <li><p>Draft</p>
+             * </li>
+             * <li><p>Published</p>
+             * </li>
+             * <li><p>Editing</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -506,7 +509,7 @@ public class GetAIWorkflowTaskResponseBody extends TeaModel {
              * <p>The input parameters of the workflow task.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;source_language_id&quot;:&quot;en&quot;,&quot;live_id&quot;:123,&quot;live_url&quot;:{&quot;url&quot;:&quot;rtmp://test.com.cn/video/638d9088fe4f15ce&quot;}}</p>
+             * <p>{\&quot;source_language_id\&quot;:\&quot;en\&quot;,\&quot;live_id\&quot;:123,\&quot;live_url\&quot;:{\&quot;url\&quot;:\&quot;rtmp://test.com.cn/video/638d9088fe4f15ce\&quot;}}</p>
              */
             public Builder inputs(String inputs) {
                 this.inputs = inputs;
@@ -514,7 +517,7 @@ public class GetAIWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of the workflow nodes. The structure of this JSON varies based on the workflow&quot;s configuration.</p>
+             * <p>The results of the workflow nodes. The structure of this JSON varies based on the workflow\&quot;s configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{...}</p>
@@ -541,11 +544,16 @@ public class GetAIWorkflowTaskResponseBody extends TeaModel {
              * <p>The task state.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>running</li>
-             * <li>stopped</li>
-             * <li>failed</li>
-             * <li>partial-succeeded</li>
-             * <li>succeeded</li>
+             * <li><p>running</p>
+             * </li>
+             * <li><p>stopped</p>
+             * </li>
+             * <li><p>failed</p>
+             * </li>
+             * <li><p>partial-succeeded</p>
+             * </li>
+             * <li><p>succeeded</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

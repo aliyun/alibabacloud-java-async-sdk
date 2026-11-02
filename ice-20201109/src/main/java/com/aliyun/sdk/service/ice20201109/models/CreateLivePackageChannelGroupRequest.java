@@ -88,7 +88,7 @@ public class CreateLivePackageChannelGroupRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The idempotency parameter.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -100,7 +100,10 @@ public class CreateLivePackageChannelGroupRequest extends Request {
         }
 
         /**
-         * <p>The channel group description. It can be up to 1,000 characters in length.</p>
+         * <p>The description of the channel group. The description can be up to 1,000 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a sample description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -109,7 +112,7 @@ public class CreateLivePackageChannelGroupRequest extends Request {
         }
 
         /**
-         * <p>The channel group name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
+         * <p>The name of the channel group. The name must be 1 to 200 characters in length, and can contain only uppercase and lowercase letters, digits, hyphens, and underscores. Format: [A-Za-z0-9_-]+.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

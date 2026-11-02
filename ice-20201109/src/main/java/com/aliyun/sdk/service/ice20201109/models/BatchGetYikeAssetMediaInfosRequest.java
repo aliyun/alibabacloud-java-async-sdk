@@ -82,7 +82,10 @@ public class BatchGetYikeAssetMediaInfosRequest extends Request {
         }
 
         /**
-         * MediaIds.
+         * <p>The IDs of the media assets to query, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

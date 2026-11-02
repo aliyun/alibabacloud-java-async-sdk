@@ -108,10 +108,14 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         /**
          * <p>The status of the job. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong>: The job was successful.</li>
-         * <li><strong>Fail</strong>: The job failed.</li>
-         * <li><strong>Processing</strong>: The job is in progress.</li>
-         * <li><strong>Submitted</strong>: The job is submitted and waiting to be processed.</li>
+         * <li><p><strong>Success</strong>: The job is processed.</p>
+         * </li>
+         * <li><p><strong>Fail</strong>: The job fails to be processed.</p>
+         * </li>
+         * <li><p><strong>Processing</strong>: The job is being processed.</p>
+         * </li>
+         * <li><p><strong>Submitted</strong>: The job is submitted and waiting to be processed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +138,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The analysis results of the smart tagging job. The value is an array.</p>
+         * Results.
          */
         public Builder results(Results results) {
             this.results = results;
@@ -150,7 +154,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The content of callback messages that are sent to Simple Message Queue (SMQ) when the information of the smart tagging job changes. For more information about the parameters contained in the callback message, see the &quot;Callback parameters&quot; section of this topic.</p>
+         * <p>The information passed through during an MNS callback. For the message format, see the callback message format definition below.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;userId&quot;:&quot;123432412831&quot;}</p>
@@ -219,10 +223,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the analysis result. The value is a JSON string. For more information about the parameters of different result types, see the &quot;Parameters of different result types&quot; section of this topic.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;title&quot;:&quot;example-title-****&quot;}</p>
+             * Data.
              */
             public Builder data(String data) {
                 this.data = data;
@@ -230,34 +231,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the analysis result.</p>
-             * <ul>
-             * <li>The type of the analysis result based on Smart tagging V1.0. Valid values:</li>
-             * </ul>
-             * <ol>
-             * <li>TextLabel: the text tag.</li>
-             * <li>VideoLabel: the video tag.</li>
-             * <li>ASR: the original result of automatic speech recognition (ASR). By default, this type of result is not returned.</li>
-             * <li>OCR: the original result of optical character recognition (OCR). By default, this type of result is not returned.</li>
-             * <li>NLP: the natural language processing (NLP)-based result. By default, this type of result is not returned.</li>
-             * </ol>
-             * <ul>
-             * <li>The type of the analysis result based on Smart tagging V2.0. Valid values:</li>
-             * </ul>
-             * <ol>
-             * <li>CPVLabel</li>
-             * <li>Meta: the information about the video file, such as the title of the video. By default, this type of information is not returned.</li>
-             * </ol>
-             * <ul>
-             * <li>The type of the analysis result based on Smart tagging V2.0-custom. Valid values:</li>
-             * </ul>
-             * <ol>
-             * <li>CPVLabel</li>
-             * <li>Meta: the information about the video file, such as the title of the video. By default, this type of information is not returned.</li>
-             * </ol>
-             * 
-             * <strong>example:</strong>
-             * <p>Meta</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -386,34 +360,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the analysis result.</p>
-             * <ul>
-             * <li>The type of the analysis result based on Smart tagging V1.0. Valid values:</li>
-             * </ul>
-             * <ol>
-             * <li>TextLabel: the text tag.</li>
-             * <li>VideoLabel: the video tag.</li>
-             * <li>ASR: the original result of automatic speech recognition (ASR). By default, this type of result is not returned.</li>
-             * <li>OCR: the original result of optical character recognition (OCR). By default, this type of result is not returned.</li>
-             * <li>NLP: the natural language processing (NLP)-based result. By default, this type of result is not returned.</li>
-             * </ol>
-             * <ul>
-             * <li>The type of the analysis result based on Smart tagging V2.0. Valid values:</li>
-             * </ul>
-             * <ol>
-             * <li>CPVLabel</li>
-             * <li>Meta: the information about the video file, such as the title of the video. By default, this type of information is not returned.</li>
-             * </ol>
-             * <ul>
-             * <li>The type of the analysis result based on Smart tagging V2.0-custom. Valid values:</li>
-             * </ul>
-             * <ol>
-             * <li>CPVLabel</li>
-             * <li>Meta: the information about the video file, such as the title of the video. By default, this type of information is not returned.</li>
-             * </ol>
-             * 
-             * <strong>example:</strong>
-             * <p>Meta</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

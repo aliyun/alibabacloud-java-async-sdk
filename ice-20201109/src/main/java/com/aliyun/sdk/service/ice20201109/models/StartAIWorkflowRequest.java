@@ -101,7 +101,7 @@ public class StartAIWorkflowRequest extends Request {
         } 
 
         /**
-         * <p>The tag for the task.</p>
+         * <p>The task tag. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -113,7 +113,7 @@ public class StartAIWorkflowRequest extends Request {
         }
 
         /**
-         * <p>A JSON string containing the specific input parameters, such as information about the media assets, standard live streams, or RTC streams.</p>
+         * <p>The startup parameters for the intelligent workflow. The value is a JSON string, such as media asset information or live streaming/RTC stream information.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -131,7 +131,7 @@ public class StartAIWorkflowRequest extends Request {
         }
 
         /**
-         * <p>A user-defined parameter for passing custom metadata.</p>
+         * <p>The custom user data. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -145,7 +145,7 @@ public class StartAIWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workflow template.</p>
+         * <p>The ID of the intelligent workflow template.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>3f44-f1f6-477e-9364-c5e6c49e</strong></strong></p>

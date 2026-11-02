@@ -167,12 +167,12 @@ public class SubmitLiveEditingJobRequest extends Request {
         }
 
         /**
-         * <p>The clips in the JSON array format. The output video is created by merging these clips sequentially.</p>
-         * <p>Each clip has a start time and an end time. If no live stream parameters are specified, the outer live stream configurations apply. The start and end timestamps are in UTC. For more information about the parameters, see the &quot;Clip&quot; section of this topic.</p>
+         * <p>The list of clip segments. The output is produced by concatenating the segments in the list in order. JSON Array.</p>
+         * <p>Each segment contains a start time and an end time. If no live stream parameters are specified, the outer-level live stream configuration is used. Both start and end timestamps are in UTC. For parameter details, see the Clip data structure below.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;StartTime&quot;: &quot; 2021-06-21T08:01:00Z&quot;,  &quot;EndTime&quot;: &quot; 2021-06-21T08:03:00Z&quot; ,  &quot;AppName&quot;: &quot;app&quot;, &quot;DomainName&quot;: &quot;domain.com&quot;, &quot;StreamName&quot;: &quot;stream&quot;},  {&quot;StartTime&quot;: &quot; 2021-06-21T08:05:00Z&quot;,  &quot;EndTime&quot;: &quot; 2021-06-21T08:09:00Z&quot; }]</p>
+         * <p>[{\&quot;StartTime\&quot;: \&quot; 2021-06-21T08:01:00Z\&quot;,  \&quot;EndTime\&quot;: \&quot; 2021-06-21T08:03:00Z\&quot; ,  &quot;AppName&quot;: &quot;app&quot;, &quot;DomainName&quot;: &quot;domain.com&quot;, &quot;StreamName&quot;: &quot;stream&quot;},  {\&quot;StartTime\&quot;: \&quot; 2021-06-21T08:05:00Z\&quot;,  \&quot;EndTime\&quot;: \&quot; 2021-06-21T08:09:00Z\&quot; }]</p>
          */
         public Builder clips(String clips) {
             this.putQueryParameter("Clips", clips);
@@ -181,11 +181,14 @@ public class SubmitLiveEditingJobRequest extends Request {
         }
 
         /**
-         * <p>The live stream configurations, in the JSON format. The configurations must include the following parameters:</p>
+         * <p>The live stream configuration. JSON Object. The following configuration items are required:</p>
          * <ul>
-         * <li>AppName: the name of the application to which the live stream belongs.</li>
-         * <li>DomainName: the domain name of the application.</li>
-         * <li>StreamName: the name of the live stream.</li>
+         * <li><p>AppName: the name of the application to which the stream belongs. </p>
+         * </li>
+         * <li><p>DomainName: the domain name.</p>
+         * </li>
+         * <li><p>StreamName: the name of the live stream.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,12 +201,12 @@ public class SubmitLiveEditingJobRequest extends Request {
         }
 
         /**
-         * <p>The production configurations, in the JSON format. Mode specifies the editing mode. Valid values:</p>
+         * <p>The composition configuration for generating segments, in JSON format. Mode specifies the editing mode. Valid values:</p>
          * <ul>
-         * <li><strong>AccurateFast</strong> (default): fast editing. It is faster than the Accurate mode. The resolution of the output file is the same as that of the source stream. You cannot specify the width and height of the output file.</li>
-         * <li><strong>Accurate</strong>: accurate editing. In this mode, you can specify the width and height of the output file.</li>
-         * <li><strong>Rough</strong>: rough editing. The minimum precision is one TS segment. The output file comprises all segments within the specified time range. You can specify the width and height of the output file.</li>
-         * <li><strong>RoughFast</strong>: fast rough editing. It is faster than the Accurate mode. The minimum precision is one TS segment. The output file comprises all segments within the specified time range. The resolution of the output file is the same as that of the source stream. You cannot specify the width and height of the output file.</li>
+         * <li><strong>AccurateFast</strong> (default): fast accurate editing. This mode is faster than the Accurate mode. The output file resolution is the same as the source stream resolution. Custom output width and height are not supported.</li>
+         * <li><strong>Accurate</strong>: accurate editing. You can specify the output width and height.</li>
+         * <li><strong>Rough</strong>: rough editing. The minimum precision is one TS segment. The output contains all segments within the specified start and end time. You can specify the output width and height.</li>
+         * <li><strong>RoughFast</strong>: fast rough editing. This mode is faster than the Accurate mode. The minimum precision is one TS segment. The output contains all segments within the specified start and end time. The output file resolution is the same as the source stream resolution. Custom output width and height are not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,11 +219,14 @@ public class SubmitLiveEditingJobRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the output file, in the JSON format. You can specify an OSS URL or a storage location in a storage bucket of ApsaraVideo VOD.</p>
+         * <p>The destination configuration for the output. JSON Object. You can specify the URL of the output on OSS or the storage location in a VOD bucket.</p>
          * <ul>
-         * <li>To store the output file in OSS, you must specify MediaURL.</li>
-         * <li>To store the output file in ApsaraVideo VOD, you must specify StorageLocation and FileName.</li>
+         * <li>When outputting to OSS, the MediaURL of the output destination is required.</li>
+         * <li>When outputting to VOD, the StorageLocation and FileName parameters are required.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;MediaURL&quot;: &quot;<a href="https://ice-auto-test.oss-cn-shanghai.aliyuncs.com/testfile.mp4">https://ice-auto-test.oss-cn-shanghai.aliyuncs.com/testfile.mp4</a>&quot; }, or { &quot;StorageLocation&quot;: &quot;bucket.oss-cn-shanghai.aliyuncs.com&quot;, &quot;FileName&quot;: &quot;output.mp4&quot; }</p>
          */
         public Builder outputMediaConfig(String outputMediaConfig) {
             this.putQueryParameter("OutputMediaConfig", outputMediaConfig);
@@ -229,10 +235,10 @@ public class SubmitLiveEditingJobRequest extends Request {
         }
 
         /**
-         * <p>The type of the output file. Valid values:</p>
+         * <p>The target type of the output. Valid values:</p>
          * <ul>
-         * <li>oss-object: OSS object in an OSS bucket.</li>
-         * <li>vod-media: media asset in Alibaba Cloud VOD.</li>
+         * <li>oss-object: an OSS object in an Alibaba Cloud OSS bucket.</li>
+         * <li>vod-media: a media asset in Alibaba Cloud VOD.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,7 +251,7 @@ public class SubmitLiveEditingJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the live editing project. If this parameter is specified, the system reads the storage configurations of the project. If this parameter is not specified, the specified storage configurations take precedence.</p>
+         * <p>The ID of the live editing project. If this parameter is not empty, the storage configuration associated with the project is used. If this parameter is empty, the storage configuration specified in the request parameters is used.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
@@ -257,7 +263,7 @@ public class SubmitLiveEditingJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data in the JSON format, which can be up to 512 bytes in length.</p>
+         * <p>The custom settings. JSON Object. Maximum length: 512 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;key&quot;: &quot;value&quot;}</p>

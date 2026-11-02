@@ -54,7 +54,8 @@ public class MediaConvertMuxConfig extends TeaModel {
         } 
 
         /**
-         * Segment.
+         * <p>The segment configuration field. For more information, see the Segment details.</p>
+         * <p>This parameter takes effect only when Container is set to m3u8, hls-fmp4, mpd, or cmaf.</p>
          */
         public Builder segment(MediaConvertSegment segment) {
             this.segment = segment;

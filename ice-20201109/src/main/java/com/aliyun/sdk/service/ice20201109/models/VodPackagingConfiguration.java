@@ -119,7 +119,10 @@ public class VodPackagingConfiguration extends TeaModel {
         } 
 
         /**
-         * ConfigurationName.
+         * <p>The name of the packaging configuration. The name can be up to 128 characters in length, must match the [A-Za-z0-9_-]+ format, and must be unique per user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-config</p>
          */
         public Builder configurationName(String configurationName) {
             this.configurationName = configurationName;
@@ -127,7 +130,7 @@ public class VodPackagingConfiguration extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -135,7 +138,7 @@ public class VodPackagingConfiguration extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the packaging configuration.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -143,7 +146,10 @@ public class VodPackagingConfiguration extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the packaging group. The name can be up to 128 characters in length and must match the [A-Za-z0-9_-]+ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-group</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -159,7 +165,15 @@ public class VodPackagingConfiguration extends TeaModel {
         }
 
         /**
-         * Protocol.
+         * <p>The packaging type. Valid values:</p>
+         * <ul>
+         * <li>HLS: HLS protocol playback format.</li>
+         * <li>HLS_CMAF: CMAF playback format for the HLS protocol.</li>
+         * <li>DASH: DASH protocol playback format.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HLS</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;

@@ -106,7 +106,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The job ID. You can obtain this value from the response parameters of <a href="https://help.aliyun.com/document_detail/461964.html">Submit a packaging job</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -114,7 +117,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobParams.
+         * <p>The algorithm job parameters. This is a JSON object whose content varies depending on the algorithm.</p>
          */
         public Builder jobParams(JobParams jobParams) {
             this.jobParams = jobParams;
@@ -122,7 +125,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobResult.
+         * <p>The job result.</p>
          */
         public Builder jobResult(JobResult jobResult) {
             this.jobResult = jobResult;
@@ -130,7 +133,18 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobStatus.
+         * <p>The job status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Succeeded</strong>: The job is processed.</p>
+         * </li>
+         * <li><p><strong>Failed</strong>: The job failed.</p>
+         * </li>
+         * <li><p><strong>Running</strong>: The job is being processed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder jobStatus(String jobStatus) {
             this.jobStatus = jobStatus;
@@ -138,7 +152,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -321,7 +338,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             } 
 
             /**
-             * AspectRatio.
+             * <p>The aspect ratio of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16:9</p>
              */
             public Builder aspectRatio(String aspectRatio) {
                 this.aspectRatio = aspectRatio;
@@ -329,7 +349,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * FileURL.
+             * <p>The OSS URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></p>
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -337,7 +360,12 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * ModelParams.
+             * <p>The random seed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;AudioEnable&quot;: false
+             * }</p>
              */
             public Builder modelParams(String modelParams) {
                 this.modelParams = modelParams;
@@ -345,7 +373,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * NarrationVoiceId.
+             * <p>The narration voice ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sys_YoungGracefulWoman</p>
              */
             public Builder narrationVoiceId(String narrationVoiceId) {
                 this.narrationVoiceId = narrationVoiceId;
@@ -353,7 +384,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * Resolution.
+             * <p>The resolution of the generated video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1K</p>
              */
             public Builder resolution(String resolution) {
                 this.resolution = resolution;
@@ -361,7 +395,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * ShotPromptMode.
+             * <p>The shot prompt generation mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>multi</p>
              */
             public Builder shotPromptMode(String shotPromptMode) {
                 this.shotPromptMode = shotPromptMode;
@@ -369,7 +406,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * ShotSplitMode.
+             * <p>The shot split mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>firstPersonNarration</p>
              */
             public Builder shotSplitMode(String shotSplitMode) {
                 this.shotSplitMode = shotSplitMode;
@@ -377,7 +417,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Novel</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -385,7 +428,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * StyleId.
+             * <p>The style ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RealisticPhotography</p>
              */
             public Builder styleId(String styleId) {
                 this.styleId = styleId;
@@ -393,7 +439,12 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The job title.</p>
+             * <p>\- Maximum length: 128 bytes.</p>
+             * <p>\- UTF-8 encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -401,7 +452,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * VideoModel.
+             * <p>The video model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wan2.6-r2v-flash</p>
              */
             public Builder videoModel(String videoModel) {
                 this.videoModel = videoModel;
@@ -520,7 +574,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             } 
 
             /**
-             * ExceptionStoryboardIds.
+             * <p>The list of exception storyboard IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[\&quot;st_2053348871\&quot;]</p>
              */
             public Builder exceptionStoryboardIds(String exceptionStoryboardIds) {
                 this.exceptionStoryboardIds = exceptionStoryboardIds;
@@ -528,7 +585,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * FailureShotList.
+             * <p>The list of failed shots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;errorCode\&quot;:\&quot;NoMediaData\&quot;,\&quot;storyboardId\&quot;:\&quot;st_2118280473\&quot;,\&quot;shotId\&quot;:\&quot;54\&quot;}]</p>
              */
             public Builder failureShotList(String failureShotList) {
                 this.failureShotList = failureShotList;
@@ -536,7 +596,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUrl.
+             * <p>The downloadable OSS URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -544,7 +607,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * StoryboardInfoList.
+             * <p>The detailed storyboard information for the storyboard generation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;storyboardId\&quot;:\&quot;st_1541525214\&quot;,\&quot;title\&quot;:\&quot;test_1\&quot;,\&quot;status\&quot;:\&quot;Produced\&quot;,\&quot;subStatus\&quot;:\&quot;ProduceSucc\&quot;},{\&quot;storyboardId\&quot;:\&quot;st_1633435355\&quot;,\&quot;title\&quot;:\&quot;test_2\&quot;,\&quot;status\&quot;:\&quot;Produced\&quot;,\&quot;subStatus\&quot;:\&quot;ProduceSucc\&quot;}]</p>
              */
             public Builder storyboardInfoList(String storyboardInfoList) {
                 this.storyboardInfoList = storyboardInfoList;
@@ -552,7 +618,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessStoryboardIds.
+             * <p>The list of successful storyboard IDs, separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>st_2118280473, st_2118280471</p>
              */
             public Builder successStoryboardIds(String successStoryboardIds) {
                 this.successStoryboardIds = successStoryboardIds;
@@ -560,7 +629,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessStoryboardList.
+             * <p>The list of successful storyboards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[\&quot;st_2118280473\&quot;]</p>
              */
             public Builder successStoryboardList(String successStoryboardList) {
                 this.successStoryboardList = successStoryboardList;

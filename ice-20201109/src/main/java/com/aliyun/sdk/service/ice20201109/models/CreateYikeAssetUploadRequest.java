@@ -97,6 +97,7 @@ public class CreateYikeAssetUploadRequest extends Request {
         }
 
         /**
+         * <p>The file extension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class CreateYikeAssetUploadRequest extends Request {
         }
 
         /**
-         * FileType.
+         * <p>The file type. Default value: Media.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StoryboardInput</p>
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("FileType", fileType);

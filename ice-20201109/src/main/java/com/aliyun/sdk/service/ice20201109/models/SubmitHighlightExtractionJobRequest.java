@@ -124,7 +124,7 @@ public class SubmitHighlightExtractionJobRequest extends Request {
         }
 
         /**
-         * <p>The client token used to ensure the idempotency of the request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -136,7 +136,7 @@ public class SubmitHighlightExtractionJobRequest extends Request {
         }
 
         /**
-         * <p>The input configuration.</p>
+         * <p>The input configuration. For more information, see <a href="~~2869391#e72301e3a74mk~~">InputConfig parameter description</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -164,7 +164,7 @@ public class SubmitHighlightExtractionJobRequest extends Request {
         }
 
         /**
-         * <p>The output configuration.</p>
+         * <p>The output configuration. For more information, see <a href="~~2869391#cd08cbc516voq~~">OutputConfig parameter description</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -184,7 +184,10 @@ public class SubmitHighlightExtractionJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="~~357745#section-urj-v3f-0s1~~">UserData</a>.</p>
+         * <p>The user business configuration and callback configuration. For more information about the structure, see <a href="~~357745#section-urj-v3f-0s1~~">UserData configuration</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

@@ -119,7 +119,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The live package channels.</p>
+         * <p>The list of real-time packaging channels.</p>
          */
         public Builder livePackageChannels(java.util.List<LivePackageChannels> livePackageChannels) {
             this.livePackageChannels = livePackageChannels;
@@ -149,7 +149,10 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Example value of RequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +160,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sort order. Valid values: asc and desc (default).</p>
+         * <p>The sorting order. Valid values: asc (ascending) and desc (descending, default).</p>
          * 
          * <strong>example:</strong>
          * <p>asc/desc</p>
@@ -168,7 +171,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -263,7 +266,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ingest endpoint ID.</p>
+             * <p>The ID of the ingest endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>ingest1</p>
@@ -285,7 +288,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ingest endpoint URL.</p>
+             * <p>The URL of the ingest endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxx-1.packagepush-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest">http://xxx-1.packagepush-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest</a></p>
@@ -457,7 +460,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The channel name.</p>
+             * <p>The name of the channel.</p>
              * 
              * <strong>example:</strong>
              * <p>ch3</p>
@@ -468,7 +471,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the channel was created.</p>
+             * <p>The creation time. The time is in ISO 8601 format and uses UTC time (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -479,7 +482,10 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel description.</p>
+             * <p>The description of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test channel</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -487,7 +493,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel group name.</p>
+             * <p>The name of the channel group.</p>
              * 
              * <strong>example:</strong>
              * <p>channel-group-1</p>
@@ -498,7 +504,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ingest endpoints.</p>
+             * <p>The array of ingest endpoints.</p>
              */
             public Builder ingestEndpoints(java.util.List<IngestEndpoints> ingestEndpoints) {
                 this.ingestEndpoints = ingestEndpoints;
@@ -506,7 +512,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the channel was last modified.</p>
+             * <p>The last modified time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -517,7 +523,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ingest protocol. Only HLS is supported.</p>
+             * <p>The input protocol, such as HLS.</p>
              * 
              * <strong>example:</strong>
              * <p>HLS</p>
@@ -528,7 +534,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of M3U8 segments.</p>
+             * <p>The number of m3u8 segments in the input stream.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -539,7 +545,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The segment duration.</p>
+             * <p>The duration of segments in the input stream.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

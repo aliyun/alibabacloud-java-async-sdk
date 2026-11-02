@@ -80,7 +80,7 @@ public class MediaConvertJobConfig extends TeaModel {
         } 
 
         /**
-         * Inputs.
+         * <p>The list of inputs for the transcoding job.</p>
          */
         public Builder inputs(java.util.List<Inputs> inputs) {
             this.inputs = inputs;
@@ -88,7 +88,13 @@ public class MediaConvertJobConfig extends TeaModel {
         }
 
         /**
-         * JobName.
+         * <p>The job name.</p>
+         * <ul>
+         * <li>The maximum length is 64 bytes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder jobName(String jobName) {
             this.jobName = jobName;
@@ -96,7 +102,7 @@ public class MediaConvertJobConfig extends TeaModel {
         }
 
         /**
-         * OutputGroups.
+         * <p>The list of output group configurations for the transcoding job.</p>
          */
         public Builder outputGroups(java.util.List<OutputGroups> outputGroups) {
             this.outputGroups = outputGroups;
@@ -162,7 +168,14 @@ public class MediaConvertJobConfig extends TeaModel {
             } 
 
             /**
-             * Media.
+             * <p>The URL or ID of the media asset file.</p>
+             * <ul>
+             * <li>When Type is set to OSS, the value is a URL that supports the OSS or HTTP protocol. Do not include signature parameters. Otherwise, permission verification may fail. </li>
+             * <li>When Type is set to Media, the value is a media asset ID. By default, the source stream is used as the input.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://bucket.loction.aliyuncs.com/path/to/video.mp4">http://bucket.loction.aliyuncs.com/path/to/video.mp4</a></p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -170,7 +183,14 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The media file type. Valid values:</p>
+             * <ul>
+             * <li>OSS: OSS file.</li>
+             * <li>Media: Media asset file.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -237,7 +257,7 @@ public class MediaConvertJobConfig extends TeaModel {
             } 
 
             /**
-             * InputFile.
+             * <p>The input file.</p>
              */
             public Builder inputFile(InputFile inputFile) {
                 this.inputFile = inputFile;
@@ -245,7 +265,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the input file. This name can be referenced when InputRef is used in Output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InputVideo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -325,7 +348,10 @@ public class MediaConvertJobConfig extends TeaModel {
             } 
 
             /**
-             * Language.
+             * <p>Filters items based on the Language field of the stream. This field follows the RFC 5646 standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -333,7 +359,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Filters items based on the Name field of the stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audio-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -341,7 +370,14 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Filters items based on the Type field of the stream. Valid values:</p>
+             * <ul>
+             * <li>Audio.</li>
+             * <li>Subtitle.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Audio</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -408,7 +444,7 @@ public class MediaConvertJobConfig extends TeaModel {
             } 
 
             /**
-             * Excludes.
+             * <p>The conditions used to exclude streams from the referenced manifest file. The AND logic is used within a condition, and the OR logic is used between conditions for filtering.</p>
              */
             public Builder excludes(java.util.List<Excludes> excludes) {
                 this.excludes = excludes;
@@ -416,7 +452,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * InputRef.
+             * <p>The referenced manifest file. The value is the Name of the Input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Input-Manifest</p>
              */
             public Builder inputRef(String inputRef) {
                 this.inputRef = inputRef;
@@ -483,7 +522,14 @@ public class MediaConvertJobConfig extends TeaModel {
             } 
 
             /**
-             * Media.
+             * <p>The media asset of the file.</p>
+             * <ul>
+             * <li>When Type is set to OSS, the value is a URL that supports the OSS and HTTP protocols.</li>
+             * <li>When Type is set to Media, the value is a media asset ID. By default, the source stream is used as the input.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/dir</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -491,7 +537,14 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The media object type. Valid values:</p>
+             * <ul>
+             * <li>OSS: Alibaba Cloud OSS file.</li>
+             * <li>Media: Media asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -584,7 +637,7 @@ public class MediaConvertJobConfig extends TeaModel {
             } 
 
             /**
-             * ManifestExtend.
+             * <p>The extended configuration of the manifest file. This feature allows you to reference an existing manifest file and generate a new manifest file by combining it with the current output group results.</p>
              */
             public Builder manifestExtend(ManifestExtend manifestExtend) {
                 this.manifestExtend = manifestExtend;
@@ -592,7 +645,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * ManifestName.
+             * <p>The name of the manifest file. When Type is set to Hls or Dash, this parameter specifies the file name of the generated manifest file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>manifest</p>
              */
             public Builder manifestName(String manifestName) {
                 this.manifestName = manifestName;
@@ -600,7 +656,7 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * OutputFileBase.
+             * <p>The output directory of the group. All files generated by this OutputGroup are stored in this directory.</p>
              */
             public Builder outputFileBase(OutputFileBase outputFileBase) {
                 this.outputFileBase = outputFileBase;
@@ -608,7 +664,14 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The output group type. Valid values:</p>
+             * <ul>
+             * <li>File: Independent file.</li>
+             * <li>Hls: HTTP Live Streaming (HLS) protocol file that generates an adaptive streaming playlist.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Hls</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -766,7 +829,11 @@ public class MediaConvertJobConfig extends TeaModel {
             } 
 
             /**
-             * AudioGroup.
+             * <p>The audio group referenced by this video stream. This parameter takes effect when Type is set to video.
+             * Default value: audio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audio</p>
              */
             public Builder audioGroup(String audioGroup) {
                 this.audioGroup = audioGroup;
@@ -774,7 +841,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * AutoSelect.
+             * <p>Specifies whether to automatically select the stream. This parameter takes effect when Type is set to audio or subtitle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoSelect(String autoSelect) {
                 this.autoSelect = autoSelect;
@@ -782,7 +852,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Forced.
+             * <p>Specifies whether to force the display of the stream. This parameter takes effect when Type is set to audio or subtitle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder forced(String forced) {
                 this.forced = forced;
@@ -790,7 +863,11 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Group.
+             * <p>The GROUP_ID attribute of this output stream in the HLS manifest. This attribute takes effect when Type is set to audio or subtitle.
+             * Default value: the same as the value of Type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audio</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -798,7 +875,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Specifies whether to set the stream as the default stream. This parameter takes effect when Type is set to audio or subtitle. Only one default stream is allowed in the same group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -806,7 +886,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>The LANGUAGE attribute of this output stream in the HLS manifest. This attribute takes effect when Type is set to audio or subtitle and must follow the RFC 5646 standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -814,7 +897,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The NAME attribute of this output stream in the HLS manifest. This parameter is <strong>required</strong> when Type is set to audio or subtitle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -822,7 +908,11 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * SubtitleGroup.
+             * <p>The subtitle group referenced by this video stream. This parameter takes effect when Type is set to video or hybrid.
+             * Default value: subtitle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subtitle</p>
              */
             public Builder subtitleGroup(String subtitleGroup) {
                 this.subtitleGroup = subtitleGroup;
@@ -830,7 +920,17 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Specifies the output stream type. Valid values:</p>
+             * <ul>
+             * <li>video: Video stream. Only video-related settings are retained during processing.</li>
+             * <li>audio: Audio stream. Only audio-related settings are retained during processing.</li>
+             * <li>subtitle: Subtitle stream. Only subtitle-related settings are retained during processing.</li>
+             * <li>hybrid: Hybrid stream. Both audio- and video-related settings are retained during processing.
+             * Default value: hybrid.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>hybrid</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -962,7 +1062,10 @@ public class MediaConvertJobConfig extends TeaModel {
             } 
 
             /**
-             * Features.
+             * <p>The feature parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2979993.html">MediaConvertJobFeature</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder features(String features) {
                 this.features = features;
@@ -970,7 +1073,7 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * HlsGroupConfig.
+             * <p>The HLS group configuration. This parameter configures the behavior of the current stream in the manifest. This parameter takes effect only when the group type is Hls.</p>
              */
             public Builder hlsGroupConfig(HlsGroupConfig hlsGroupConfig) {
                 this.hlsGroupConfig = hlsGroupConfig;
@@ -978,7 +1081,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the transcoding output. This name is used only to label the output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group-output</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -986,7 +1092,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * OutputFileName.
+             * <p>The file name of the transcoding output. This parameter is used together with OutputFileBase in GroupConfig.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720p.mp4</p>
              */
             public Builder outputFileName(String outputFileName) {
                 this.outputFileName = outputFileName;
@@ -994,7 +1103,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * OverrideParams.
+             * <p>The override parameters in JSON string format. This parameter allows you to override the parameters associated with the transcoding template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder overrideParams(String overrideParams) {
                 this.overrideParams = overrideParams;
@@ -1002,7 +1114,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority. A larger value indicates a higher priority. Valid values: 1 to 10. Default value: 6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -1010,7 +1125,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the transcoding template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -1090,7 +1208,7 @@ public class MediaConvertJobConfig extends TeaModel {
             } 
 
             /**
-             * GroupConfig.
+             * <p>The group information configuration.</p>
              */
             public Builder groupConfig(GroupConfig groupConfig) {
                 this.groupConfig = groupConfig;
@@ -1098,7 +1216,10 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the output group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hls-group</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1106,7 +1227,7 @@ public class MediaConvertJobConfig extends TeaModel {
             }
 
             /**
-             * Outputs.
+             * <p>The list of single-output transcoding configurations. Each configuration in the array represents an output stream file.</p>
              */
             public Builder outputs(java.util.List<Outputs> outputs) {
                 this.outputs = outputs;

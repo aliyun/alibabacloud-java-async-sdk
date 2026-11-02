@@ -132,7 +132,10 @@ public class SourceLocation extends TeaModel {
         } 
 
         /**
-         * Arn.
+         * <p>The ARN of the source location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ims:mediaweaver:<regionId>:<UserId>:sourcelocation/MySourceLocation</p>
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -140,7 +143,10 @@ public class SourceLocation extends TeaModel {
         }
 
         /**
-         * BaseUrl.
+         * <p>The base URL of the source location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com">http://xxxx.com</a></p>
          */
         public Builder baseUrl(String baseUrl) {
             this.baseUrl = baseUrl;
@@ -148,7 +154,10 @@ public class SourceLocation extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-12T07:15:52Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -156,7 +165,10 @@ public class SourceLocation extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-22T10:49:14Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -164,7 +176,10 @@ public class SourceLocation extends TeaModel {
         }
 
         /**
-         * SegmentDeliveryConfigurations.
+         * <p>The segment delivery server configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://segmentdelivery.com">http://segmentdelivery.com</a></p>
          */
         public Builder segmentDeliveryConfigurations(String segmentDeliveryConfigurations) {
             this.segmentDeliveryConfigurations = segmentDeliveryConfigurations;
@@ -172,7 +187,10 @@ public class SourceLocation extends TeaModel {
         }
 
         /**
-         * SourceLocationName.
+         * <p>The name of the source location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySourceLocation</p>
          */
         public Builder sourceLocationName(String sourceLocationName) {
             this.sourceLocationName = sourceLocationName;
@@ -180,7 +198,10 @@ public class SourceLocation extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The status of the source location. 0: normal. 1: deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder state(Integer state) {
             this.state = state;

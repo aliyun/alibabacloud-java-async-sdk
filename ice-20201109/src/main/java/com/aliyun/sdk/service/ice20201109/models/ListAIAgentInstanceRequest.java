@@ -116,7 +116,7 @@ public class ListAIAgentInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AI agent.</p>
+         * <p>The ID of the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. This parameter does not have a default value.</p>
+         * <p>The end time of the query in ISO 8601 format. Default value: none.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-02T00:00:00Z</p>
@@ -141,7 +141,7 @@ public class ListAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1. Valid values: 1 to 100.</p>
+         * <p>The current page number. Default value: 1. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class ListAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. This parameter does not have a default value.</p>
+         * <p>The start time of the query in ISO 8601 format. Default value: none.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-01T00:00:00Z</p>

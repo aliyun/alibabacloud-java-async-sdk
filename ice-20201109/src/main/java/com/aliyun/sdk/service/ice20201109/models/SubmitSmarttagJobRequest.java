@@ -199,7 +199,7 @@ public class SubmitSmarttagJobRequest extends Request {
         } 
 
         /**
-         * <p>The video description. The description can contain letters, digits, and hyphens (-) and cannot start with a special character. The description can be up to 1 KB in length.</p>
+         * <p>The description of the video content. It supports Chinese characters, English letters, digits, and hyphens (-). It cannot start with a special character and can be up to 1 KB in length.</p>
          * 
          * <strong>example:</strong>
          * <p>example content ****</p>
@@ -211,10 +211,10 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is discontinued.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://123.com/testVideo.mp4">http://123.com/testVideo.mp4</a></p>
+         * <p>This parameter is deprecated</p>
          */
         public Builder contentAddr(String contentAddr) {
             this.putQueryParameter("ContentAddr", contentAddr);
@@ -223,10 +223,10 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is discontinued.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>application/zip</p>
+         * <p>This parameter is deprecated</p>
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);
@@ -235,7 +235,7 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * <p>The job input.</p>
+         * <p>input</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -245,7 +245,7 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * <p>The URL for receiving callbacks. Set the value to an HTTP URL or an HTTPS URL.</p>
+         * <p>The callback URL. Only HTTP and HTTPS are supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/endpoint/aliyun/ai?id=76401125000">https://example.com/endpoint/aliyun/ai?id=76401125000</a>***</p>
@@ -257,16 +257,20 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * <p>The additional request parameters. The value is a JSON string. Example: {&quot;needAsrData&quot;:true, &quot;needOcrData&quot;:false}. The following parameters are supported:</p>
+         * <p>The additional request parameters, represented as a JSON string. Example: {&quot;needAsrData&quot;:true, &quot;needOcrData&quot;:false}. Field descriptions:</p>
          * <ul>
-         * <li>needAsrData: specifies whether to query the automatic speech recognition (ASR) data. The value is of the BOOLEAN type. Default value: false. Valid values: true and false.</li>
-         * <li>needOcrData: specifies whether to query the optical character recognition (OCR) data. The value is of the BOOLEAN type. Default value: false. Valid values: true and false.</li>
-         * <li>needMetaData: specifies whether to query the metadata. The value is of the BOOLEAN type. Default value: false. Valid values: true and false.</li>
-         * <li>nlpParams: the input parameters of the natural language processing (NLP) operator. The value is a JSON object. This parameter is empty by default, which indicates that the NLP operator is not used. For more information, see the &quot;nlpParams&quot; section of this topic.</li>
+         * <li><p>needAsrData: a Boolean value that specifies whether to include the original ASR results in the analysis results. Default value: false. Set the value to true to include the original ASR results.</p>
+         * </li>
+         * <li><p>needOcrData: a Boolean value that specifies whether to include the original OCR results in the analysis results. Default value: false. Set the value to true to include the original OCR results.</p>
+         * </li>
+         * <li><p>needMetaData: a Boolean value that specifies whether to include metadata in the analysis results. Default value: false. Set the value to true to include metadata.</p>
+         * </li>
+         * <li><p>nlpParams: a JSON object that specifies the input parameters for the NLP operator. Default value: empty (the NLP operator is not used). For more information, see the supplementary description of request parameters below.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;needAsrData&quot;:true, &quot;needOcrData&quot;:false}</p>
+         * <p>{&quot;needAsrData&quot;:true, &quot;needOcrData&quot;:false, &quot;nlpParams&quot;:{&quot;sourceLanguage&quot;:&quot;cn&quot;}}</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
@@ -275,7 +279,7 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * <p>The scheduling configurations.</p>
+         * <p>scheduleConfig</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -285,7 +289,27 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>The template parameters that are dynamically passed when the job is started. These parameters are used to temporarily override or supplement the configured parameters in the template specified by TemplateId. The server merges these parameters with the original template parameters by field to generate the final template configuration for the current job, and validates the configuration before execution.</p>
+         * <ul>
+         * <li>Merge rules:</li>
+         * </ul>
+         * <ol>
+         * <li>If a field already exists in the template, the value provided by the caller overrides the template value (caller takes precedence).</li>
+         * <li>If a field does not exist in the template, it is appended as a new field.</li>
+         * </ol>
+         * <ul>
+         * <li>Supported dynamic fields:</li>
+         * </ul>
+         * <ol>
+         * <li>FaceCategoryIds: the list of face library IDs that participate in recognition (separated by commas, which can include system library IDs and custom library IDs).</li>
+         * </ol>
+         * <ul>
+         * <li>Precautions:
+         * This configuration affects only the execution of the current job and does not modify the template itself.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;FaceCategoryIds&quot;:&quot;custom_face_lib1&quot;}</p>
          */
         public Builder templateConfig(String templateConfig) {
             this.putQueryParameter("TemplateConfig", templateConfig);
@@ -294,7 +318,7 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the template that specifies the analysis algorithms. For more information about template operations, see <a href="https://help.aliyun.com/document_detail/445702.html">Configure templates</a>.</p>
+         * <p>The ID of the template that is used to specify the analysis algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>39f8e0bc005e4f309379701645f4</p>
@@ -306,7 +330,7 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * <p>The video title. The title can contain letters, digits, and hyphens (-) and cannot start with a special character. The title can be up to 256 bytes in length.</p>
+         * <p>The video title. It supports Chinese characters, English letters, digits, and hyphens (-). It cannot start with a special character and can be up to 256 bytes in length.</p>
          * 
          * <strong>example:</strong>
          * <p>example-title-****</p>
@@ -318,7 +342,7 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * <p>The data to be passed through Simple Message Queue (SMQ, formerly MNS) during callbacks. The data can be up to 1 KB in length. For more information about how to specify an SMQ queue for receiving callbacks, see UpdatePipeline.</p>
+         * <p>The custom data that is returned in an MNS callback. It can be up to 1 KB in length. For more information about how to configure an MNS callback queue, see the relevant documentation.</p>
          * 
          * <strong>example:</strong>
          * <p>{“a”:&quot;test&quot;}</p>
@@ -389,9 +413,14 @@ public class SubmitSmarttagJobRequest extends Request {
             } 
 
             /**
-             * <p>If Type is set to OSS, specify an OSS path. Example: OSS://test-bucket/video/202208/test.mp4.</p>
-             * <p>If Type is set to Media, specify a media asset ID. Example: c5c62d8f0361337cab312dce8e77dc6d.</p>
-             * <p>If Type is set to URL, specify an HTTP URL. Example: <a href="https://zc-test.oss-cn-shanghai.aliyuncs.com/test/unknowFace.mp4">https://zc-test.oss-cn-shanghai.aliyuncs.com/test/unknowFace.mp4</a>.</p>
+             * <ul>
+             * <li><p>If the Type parameter is set to OSS, specify the OSS address. Example: OSS://test-bucket/video/202208/test.mp4.</p>
+             * </li>
+             * <li><p>If the Type parameter is set to Media, specify the media ID. Example: c5c62d8f0361337cab312dce8e77dc6d.</p>
+             * </li>
+             * <li><p>If the Type parameter is set to URL, specify the HTTP URL. Example: <a href="https://zc-test.oss-cn-shanghai.aliyuncs.com/test/unknowFace.mp4">https://zc-test.oss-cn-shanghai.aliyuncs.com/test/unknowFace.mp4</a>.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>c5c62d8f0361337cab312dce8e77dc6d</p>
@@ -404,9 +433,12 @@ public class SubmitSmarttagJobRequest extends Request {
             /**
              * <p>The media type. Valid values:</p>
              * <ul>
-             * <li>OSS</li>
-             * <li>Media</li>
-             * <li>URL</li>
+             * <li><p>OSS</p>
+             * </li>
+             * <li><p>Media</p>
+             * </li>
+             * <li><p>URL</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -477,7 +509,8 @@ public class SubmitSmarttagJobRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which you want to submit the smart tagging job. The MPS queue is bound to an SMQ queue. This parameter specifies the default MPS queue. By default, an MPS queue can process a maximum of two concurrent smart tagging jobs. To increase the limit, submit a ticket.</p>
+             * <p>The ID of the pipeline, which is used to distinguish business scenarios and bind message notifications.</p>
+             * <p>If this parameter is not configured, the default pipeline is used. The default concurrency of the default pipeline is 2. To increase the concurrency, submit a ticket.</p>
              * 
              * <strong>example:</strong>
              * <p>acdbfe4323bcfdae</p>
@@ -488,7 +521,7 @@ public class SubmitSmarttagJobRequest extends Request {
             }
 
             /**
-             * <p>The job priority. This parameter is not implemented. You can leave this parameter empty or enter a random value.</p>
+             * <p>The priority. This parameter is not implemented. You can leave it empty or specify an arbitrary value.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>

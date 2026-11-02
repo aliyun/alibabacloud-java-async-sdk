@@ -80,7 +80,7 @@ public class SubmitCosyVoiceCustomizedVoiceJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,7 +99,14 @@ public class SubmitCosyVoiceCustomizedVoiceJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -165,7 +172,10 @@ public class SubmitCosyVoiceCustomizedVoiceJobResponseBody extends TeaModel {
             } 
 
             /**
-             * JobId.
+             * <p>The ID of the voice cloning job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bfb786c639894f4d80648792021****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -173,7 +183,10 @@ public class SubmitCosyVoiceCustomizedVoiceJobResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceId.
+             * <p>The ID of the voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Voice-l*****</p>
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;

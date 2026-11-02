@@ -67,7 +67,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the recording job.</p>
+         * <p>The recording job.</p>
          */
         public Builder recordJob(RecordJob recordJob) {
             this.recordJob = recordJob;
@@ -75,7 +75,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B57A046C-CE33-5FBB-B57A-D2B89ACF6907</p>
@@ -168,7 +168,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the storage service.</p>
+             * <p>The storage service endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-shanghai.aliyuncs.com</p>
@@ -179,12 +179,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the storage address.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>vod</li>
-             * <li>oss</li>
-             * </ul>
+             * <p>The storage URL type.</p>
              * 
              * <strong>example:</strong>
              * <p>oss</p>
@@ -254,7 +249,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the live stream. The value can only be rtmp.</p>
+             * <p>The live stream type. Currently, only RTMP is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp</p>
@@ -265,7 +260,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the live stream.</p>
+             * <p>The live stream URL.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp://example.com/app/stream</p>
@@ -426,7 +421,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the job was created.</p>
+             * <p>The creation time. The time is in the ISO 8601 format and in UTC (ending with Z).</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -450,6 +445,9 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
 
             /**
              * <p>The name of the recording job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Live Event Recording Task 1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -468,7 +466,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage address of the recording.</p>
+             * <p>The recording storage URL.</p>
              */
             public Builder recordOutput(RecordOutput recordOutput) {
                 this.recordOutput = recordOutput;
@@ -476,13 +474,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the recording job.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>paused: The job is paused.</li>
-             * <li>initial: The job is not started.</li>
-             * <li>started: The job is in progress.</li>
-             * </ul>
+             * <p>The status of the recording job.</p>
              * 
              * <strong>example:</strong>
              * <p>paused</p>
@@ -493,7 +485,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the live stream.</p>
+             * <p>The live stream URL.</p>
              */
             public Builder streamInput(StreamInput streamInput) {
                 this.streamInput = streamInput;

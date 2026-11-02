@@ -104,7 +104,7 @@ public class DescribeMeterImsMpsAiUsageRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. The value is a 10-digit timestamp. The maximum query range is 31 days. The duration between StartTs and EndTs cannot exceed 31 days.</p>
+         * <p>The end timestamp, which is a 10-digit UNIX timestamp. The maximum query interval is 31 days, which means the interval between this parameter and StartTs cannot exceed 31 days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,11 @@ public class DescribeMeterImsMpsAiUsageRequest extends Request {
         }
 
         /**
-         * <p>The time granularity of the query. Valid values: 3600 (hour) and 86400 (day).</p>
+         * <p>The time granularity. Valid values:</p>
+         * <ul>
+         * <li>3600: hourly granularity.</li>
+         * <li>86400: daily granularity.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +134,7 @@ public class DescribeMeterImsMpsAiUsageRequest extends Request {
         }
 
         /**
-         * <p>This parameter does not take effect. By default, the usage data of all regions is returned.</p>
+         * <p>The region. This parameter does not take effect. By default, the usage across all regions is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -142,7 +146,7 @@ public class DescribeMeterImsMpsAiUsageRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a 10-digit timestamp. You can query data within the last 90 days.</p>
+         * <p>The start timestamp, which is a 10-digit UNIX timestamp. Data from up to 90 days ago can be queried.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

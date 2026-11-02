@@ -67,7 +67,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The results of the content moderation job.</p>
+         * <p>The list of content moderation job results.</p>
          */
         public Builder mediaCensorJobDetail(MediaCensorJobDetail mediaCensorJobDetail) {
             this.mediaCensorJobDetail = mediaCensorJobDetail;
@@ -75,7 +75,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B42299E6-F71F-465F-8FE9-4FC2E3D3C2CA</p>
@@ -172,13 +172,20 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             /**
              * <p>The label of the moderation result. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>spam</strong>: spam.</li>
-             * <li><strong>ad</strong>: ads.</li>
-             * <li><strong>abuse</strong>: abuse content.</li>
-             * <li><strong>flood</strong>: excessive junk content.</li>
-             * <li><strong>contraband</strong>: prohibited content.</li>
-             * <li><strong>meaningless</strong>: meaningless content.</li>
+             * <li><p><strong>normal</strong>: normal</p>
+             * </li>
+             * <li><p><strong>spam</strong>: spam</p>
+             * </li>
+             * <li><p><strong>ad</strong>: advertisement</p>
+             * </li>
+             * <li><p><strong>abuse</strong>: abuse</p>
+             * </li>
+             * <li><p><strong>flood</strong>: flooding</p>
+             * </li>
+             * <li><p><strong>contraband</strong>: contraband</p>
+             * </li>
+             * <li><p><strong>meaningless</strong>: meaningless</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -201,7 +208,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation scenario. The value is <strong>antispam</strong>.</p>
+             * <p>The moderation scene. Set the value to <strong>antispam</strong>, which indicates text anti-spam.</p>
              * 
              * <strong>example:</strong>
              * <p>antispam</p>
@@ -212,11 +219,14 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended subsequent operation. Valid values:</p>
+             * <p>The moderation suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>pass</strong>: The content passes the moderation.</li>
-             * <li><strong>review</strong>: The content needs to be manually reviewed.</li>
-             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * <li><p><strong>pass</strong>: The content passes the moderation.</p>
+             * </li>
+             * <li><p><strong>review</strong>: The content requires manual review.</p>
+             * </li>
+             * <li><p><strong>block</strong>: The content is blocked.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -313,68 +323,26 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The label of the moderation result.</p>
+             * <p>The label of the moderation result. Valid values:</p>
              * <ul>
-             * <li><p>Valid values in the pornographic content moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>sexy</strong>: sexy content.</li>
-             * <li><strong>porn</strong>: pornographic content.</li>
-             * </ul>
+             * <li><p><strong>normal</strong>: normal</p>
              * </li>
-             * <li><p>Valid values in the terrorist content moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>bloody</strong>: bloody content.</li>
-             * <li><strong>explosion</strong>: explosion and smoke.</li>
-             * <li><strong>outfit</strong>: special costume.</li>
-             * <li><strong>logo</strong>: special logo.</li>
-             * <li><strong>weapon</strong>: weapon.</li>
-             * <li><strong>politics</strong>: political content.</li>
-             * <li><strong>violence</strong>: violence.</li>
-             * <li><strong>crowd</strong>: crowd.</li>
-             * <li><strong>parade</strong>: parade.</li>
-             * <li><strong>carcrash</strong>: car accident.</li>
-             * <li><strong>flag</strong>: flag.</li>
-             * <li><strong>location</strong>: landmark.</li>
-             * <li><strong>others</strong>: other content.</li>
-             * </ul>
+             * <li><p><strong>spam</strong>: spam</p>
              * </li>
-             * <li><p>Valid values in the ad moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>ad</strong>: other ads.</li>
-             * <li><strong>politics</strong>: political content in text.</li>
-             * <li><strong>porn</strong>: pornographic content in text.</li>
-             * <li><strong>abuse</strong>: abuse in text.</li>
-             * <li><strong>terrorism</strong>: terrorist content in text.</li>
-             * <li><strong>contraband</strong>: prohibited content in text.</li>
-             * <li><strong>spam</strong>: spam in text.</li>
-             * <li><strong>npx</strong>: illegal ad.</li>
-             * <li><strong>qrcode</strong>: QR code.</li>
-             * <li><strong>programCode</strong>: mini program code.</li>
-             * </ul>
+             * <li><p><strong>ad</strong>: advertisement</p>
              * </li>
-             * <li><p>Valid values in the undesirable scene moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen.</li>
-             * <li><strong>PIP</strong>: picture-in-picture.</li>
-             * <li><strong>smoking</strong>: smoking.</li>
-             * <li><strong>drivelive</strong>: live broadcasting in a running vehicle.</li>
-             * </ul>
+             * <li><p><strong>abuse</strong>: abuse</p>
              * </li>
-             * <li><p>Valid values in the logo moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>TV</strong>: controlled logo.</li>
-             * <li><strong>trademark</strong>: trademark.</li>
-             * </ul>
+             * <li><p><strong>flood</strong>: flooding</p>
+             * </li>
+             * <li><p><strong>contraband</strong>: contraband</p>
+             * </li>
+             * <li><p><strong>meaningless</strong>: meaningless</p>
              * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Normal</p>
+             * <p>normal</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -382,10 +350,10 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score. Valid values: 0 to 100.</p>
+             * <p>The score.</p>
              * 
              * <strong>example:</strong>
-             * <p>100</p>
+             * <p>99.91</p>
              */
             public Builder rate(String rate) {
                 this.rate = rate;
@@ -393,17 +361,10 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation scenario. Valid values:</p>
-             * <ul>
-             * <li><strong>porn</strong>: pornographic content moderation.</li>
-             * <li><strong>terrorism</strong>: terrorist content moderation.</li>
-             * <li><strong>ad</strong>: ad moderation.</li>
-             * <li><strong>live</strong>: undesirable scene moderation.</li>
-             * <li><strong>logo</strong>: logo moderation.</li>
-             * </ul>
+             * <p>The moderation scene. Set the value to <strong>antispam</strong>, which indicates text anti-spam.</p>
              * 
              * <strong>example:</strong>
-             * <p>Antispam</p>
+             * <p>antispam</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -411,11 +372,14 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended subsequent operation. Valid values:</p>
+             * <p>The moderation suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>pass</strong>: The content passes the moderation.</li>
-             * <li><strong>review</strong>: The content needs to be manually reviewed.</li>
-             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * <li><p><strong>pass</strong>: The content passes the moderation.</p>
+             * </li>
+             * <li><p><strong>review</strong>: The content requires manual review.</p>
+             * </li>
+             * <li><p><strong>block</strong>: The content is blocked.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -566,10 +530,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS bucket in which the thumbnail is stored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>bucket-out-test-****</p>
+             * Bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -577,10 +538,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS region in which the thumbnail resides.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>oss-cn-shanghai</p>
+             * Location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -588,10 +546,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Object Storage Service (OSS) object that is used as the thumbnail.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test/ai/censor/v2/vme-****.jpg</p>
+             * Object.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -599,7 +554,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation results.</p>
+             * Results.
              */
             public Builder results(Results results) {
                 this.results = results;
@@ -748,13 +703,20 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             /**
              * <p>The label of the moderation result. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>spam</strong>: spam.</li>
-             * <li><strong>ad</strong>: ads.</li>
-             * <li><strong>abuse</strong>: abuse content.</li>
-             * <li><strong>flood</strong>: excessive junk content.</li>
-             * <li><strong>contraband</strong>: prohibited content.</li>
-             * <li><strong>meaningless</strong>: meaningless content.</li>
+             * <li><p><strong>normal</strong>: normal</p>
+             * </li>
+             * <li><p><strong>spam</strong>: spam</p>
+             * </li>
+             * <li><p><strong>ad</strong>: advertisement</p>
+             * </li>
+             * <li><p><strong>abuse</strong>: abuse</p>
+             * </li>
+             * <li><p><strong>flood</strong>: flooding</p>
+             * </li>
+             * <li><p><strong>contraband</strong>: contraband</p>
+             * </li>
+             * <li><p><strong>meaningless</strong>: meaningless</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -777,7 +739,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation scenario. The value is <strong>antispam</strong>.</p>
+             * <p>The moderation scene. Set the value to <strong>antispam</strong>, which indicates text anti-spam.</p>
              * 
              * <strong>example:</strong>
              * <p>antispam</p>
@@ -788,11 +750,14 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended subsequent operation. Valid values:</p>
+             * <p>The moderation suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>pass</strong>: The content passes the moderation.</li>
-             * <li><strong>review</strong>: The content needs to be manually reviewed.</li>
-             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * <li><p><strong>pass</strong>: The content passes the moderation.</p>
+             * </li>
+             * <li><p><strong>review</strong>: The content requires manual review.</p>
+             * </li>
+             * <li><p><strong>block</strong>: The content is blocked.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -876,7 +841,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the OSS bucket in which the input file is stored.</p>
+             * <p>The OSS bucket of the input file.</p>
              * 
              * <strong>example:</strong>
              * <p>bucket-test-in-****</p>
@@ -887,7 +852,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS region in which the input file resides.</p>
+             * <p>The OSS location of the input file.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-shanghai</p>
@@ -898,7 +863,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the OSS object that is used as the input file.</p>
+             * <p>The OSS object of the input file.</p>
              * 
              * <strong>example:</strong>
              * <p>test/ai/censor/test-****.mp4</p>
@@ -996,13 +961,20 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             /**
              * <p>The label of the moderation result. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>spam</strong>: spam.</li>
-             * <li><strong>ad</strong>: ads.</li>
-             * <li><strong>abuse</strong>: abuse content.</li>
-             * <li><strong>flood</strong>: excessive junk content.</li>
-             * <li><strong>contraband</strong>: prohibited content.</li>
-             * <li><strong>meaningless</strong>: meaningless content.</li>
+             * <li><p><strong>normal</strong>: normal</p>
+             * </li>
+             * <li><p><strong>spam</strong>: spam</p>
+             * </li>
+             * <li><p><strong>ad</strong>: advertisement</p>
+             * </li>
+             * <li><p><strong>abuse</strong>: abuse</p>
+             * </li>
+             * <li><p><strong>flood</strong>: flooding</p>
+             * </li>
+             * <li><p><strong>contraband</strong>: contraband</p>
+             * </li>
+             * <li><p><strong>meaningless</strong>: meaningless</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1025,7 +997,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation scenario. The value is <strong>antispam</strong>.</p>
+             * <p>The moderation scene. Set the value to <strong>antispam</strong>, which indicates text anti-spam.</p>
              * 
              * <strong>example:</strong>
              * <p>antispam</p>
@@ -1036,11 +1008,14 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended subsequent operation. Valid values:</p>
+             * <p>The moderation suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>pass</strong>: The content passes the moderation.</li>
-             * <li><strong>review</strong>: The content needs to be manually reviewed.</li>
-             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * <li><p><strong>pass</strong>: The content passes the moderation.</p>
+             * </li>
+             * <li><p><strong>review</strong>: The content requires manual review.</p>
+             * </li>
+             * <li><p><strong>block</strong>: The content is blocked.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1137,63 +1112,21 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The label of the moderation result.</p>
+             * <p>The label of the moderation result. Valid values:</p>
              * <ul>
-             * <li><p>Valid values in the pornographic content moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>sexy</strong>: sexy content.</li>
-             * <li><strong>porn</strong>: pornographic content.</li>
-             * </ul>
+             * <li><p><strong>normal</strong>: normal</p>
              * </li>
-             * <li><p>Valid values in the terrorist content moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>bloody</strong>: bloody content.</li>
-             * <li><strong>explosion</strong>: explosion and smoke.</li>
-             * <li><strong>outfit</strong>: special costume.</li>
-             * <li><strong>logo</strong>: special logo.</li>
-             * <li><strong>weapon</strong>: weapon.</li>
-             * <li><strong>politics</strong>: political content.</li>
-             * <li><strong>violence</strong>: violence.</li>
-             * <li><strong>crowd</strong>: crowd.</li>
-             * <li><strong>parade</strong>: parade.</li>
-             * <li><strong>carcrash</strong>: car accident.</li>
-             * <li><strong>flag</strong>: flag.</li>
-             * <li><strong>location</strong>: landmark.</li>
-             * <li><strong>others</strong>: other content.</li>
-             * </ul>
+             * <li><p><strong>spam</strong>: spam</p>
              * </li>
-             * <li><p>Valid values in the ad moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>ad</strong>: other ads.</li>
-             * <li><strong>politics</strong>: political content in text.</li>
-             * <li><strong>porn</strong>: pornographic content in text.</li>
-             * <li><strong>abuse</strong>: abuse in text.</li>
-             * <li><strong>terrorism</strong>: terrorist content in text.</li>
-             * <li><strong>contraband</strong>: prohibited content in text.</li>
-             * <li><strong>spam</strong>: spam in text.</li>
-             * <li><strong>npx</strong>: illegal ad.</li>
-             * <li><strong>qrcode</strong>: QR code.</li>
-             * <li><strong>programCode</strong>: mini program code.</li>
-             * </ul>
+             * <li><p><strong>ad</strong>: advertisement</p>
              * </li>
-             * <li><p>Valid values in the undesirable scene moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen.</li>
-             * <li><strong>PIP</strong>: picture-in-picture.</li>
-             * <li><strong>smoking</strong>: smoking.</li>
-             * <li><strong>drivelive</strong>: live broadcasting in a running vehicle.</li>
-             * </ul>
+             * <li><p><strong>abuse</strong>: abuse</p>
              * </li>
-             * <li><p>Valid values in the logo moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>TV</strong>: controlled logo.</li>
-             * <li><strong>trademark</strong>: trademark.</li>
-             * </ul>
+             * <li><p><strong>flood</strong>: flooding</p>
+             * </li>
+             * <li><p><strong>contraband</strong>: contraband</p>
+             * </li>
+             * <li><p><strong>meaningless</strong>: meaningless</p>
              * </li>
              * </ul>
              * 
@@ -1209,7 +1142,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
              * <p>The score.</p>
              * 
              * <strong>example:</strong>
-             * <p>100</p>
+             * <p>99.91</p>
              */
             public Builder rate(String rate) {
                 this.rate = rate;
@@ -1217,17 +1150,10 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation scenario. Valid values:</p>
-             * <ul>
-             * <li><strong>porn</strong>: pornographic content moderation.</li>
-             * <li><strong>terrorism</strong>: terrorist content moderation.</li>
-             * <li><strong>ad</strong>: ad moderation.</li>
-             * <li><strong>live</strong>: undesirable scene moderation.</li>
-             * <li><strong>logo</strong>: logo moderation.</li>
-             * </ul>
+             * <p>The moderation scene. Set the value to <strong>antispam</strong>, which indicates text anti-spam.</p>
              * 
              * <strong>example:</strong>
-             * <p>terrorism</p>
+             * <p>antispam</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -1235,15 +1161,18 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended subsequent operation. Valid values:</p>
+             * <p>The moderation suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>pass</strong>: The content passes the moderation.</li>
-             * <li><strong>review</strong>: The content needs to be manually reviewed.</li>
-             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * <li><p><strong>pass</strong>: The content passes the moderation.</p>
+             * </li>
+             * <li><p><strong>review</strong>: The content requires manual review.</p>
+             * </li>
+             * <li><p><strong>block</strong>: The content is blocked.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>review</p>
+             * <p>block</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -1390,68 +1319,26 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The label of the moderation result.</p>
+             * <p>The label of the moderation result. Valid values:</p>
              * <ul>
-             * <li><p>Valid values in the pornographic content moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>sexy</strong>: sexy content.</li>
-             * <li><strong>porn</strong>: pornographic content.</li>
-             * </ul>
+             * <li><p><strong>normal</strong>: normal</p>
              * </li>
-             * <li><p>Valid values in the terrorist content moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>bloody</strong>: bloody content.</li>
-             * <li><strong>explosion</strong>: explosion and smoke.</li>
-             * <li><strong>outfit</strong>: special costume.</li>
-             * <li><strong>logo</strong>: special logo.</li>
-             * <li><strong>weapon</strong>: weapon.</li>
-             * <li><strong>politics</strong>: political content.</li>
-             * <li><strong>violence</strong>: violence.</li>
-             * <li><strong>crowd</strong>: crowd.</li>
-             * <li><strong>parade</strong>: parade.</li>
-             * <li><strong>carcrash</strong>: car accident.</li>
-             * <li><strong>flag</strong>: flag.</li>
-             * <li><strong>location</strong>: landmark.</li>
-             * <li><strong>others</strong>: other content.</li>
-             * </ul>
+             * <li><p><strong>spam</strong>: spam</p>
              * </li>
-             * <li><p>Valid values in the ad moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>ad</strong>: other ads.</li>
-             * <li><strong>politics</strong>: political content in text.</li>
-             * <li><strong>porn</strong>: pornographic content in text.</li>
-             * <li><strong>abuse</strong>: abuse in text.</li>
-             * <li><strong>terrorism</strong>: terrorist content in text.</li>
-             * <li><strong>contraband</strong>: prohibited content in text.</li>
-             * <li><strong>spam</strong>: spam in text.</li>
-             * <li><strong>npx</strong>: illegal ad.</li>
-             * <li><strong>qrcode</strong>: QR code.</li>
-             * <li><strong>programCode</strong>: mini program code.</li>
-             * </ul>
+             * <li><p><strong>ad</strong>: advertisement</p>
              * </li>
-             * <li><p>Valid values in the undesirable scene moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen.</li>
-             * <li><strong>PIP</strong>: picture-in-picture.</li>
-             * <li><strong>smoking</strong>: smoking.</li>
-             * <li><strong>drivelive</strong>: live broadcasting in a running vehicle.</li>
-             * </ul>
+             * <li><p><strong>abuse</strong>: abuse</p>
              * </li>
-             * <li><p>Valid values in the logo moderation scenario:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content.</li>
-             * <li><strong>TV</strong>: controlled logo.</li>
-             * <li><strong>trademark</strong>: trademark.</li>
-             * </ul>
+             * <li><p><strong>flood</strong>: flooding</p>
+             * </li>
+             * <li><p><strong>contraband</strong>: contraband</p>
+             * </li>
+             * <li><p><strong>meaningless</strong>: meaningless</p>
              * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>flood</p>
+             * <p>meaningless</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1462,7 +1349,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
              * <p>The score.</p>
              * 
              * <strong>example:</strong>
-             * <p>99.99</p>
+             * <p>99.91</p>
              */
             public Builder rate(String rate) {
                 this.rate = rate;
@@ -1470,17 +1357,10 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation scenario. Valid values:</p>
-             * <ul>
-             * <li><strong>porn</strong>: pornographic content moderation.</li>
-             * <li><strong>terrorism</strong>: terrorist content moderation.</li>
-             * <li><strong>ad</strong>: ad moderation.</li>
-             * <li><strong>live</strong>: undesirable scene moderation.</li>
-             * <li><strong>logo</strong>: logo moderation.</li>
-             * </ul>
+             * <p>The moderation scene. Set the value to <strong>antispam</strong>, which indicates text anti-spam.</p>
              * 
              * <strong>example:</strong>
-             * <p>porn</p>
+             * <p>antispam</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -1488,11 +1368,14 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended subsequent operation. Valid values:</p>
+             * <p>The moderation suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>pass</strong>: The content passes the moderation.</li>
-             * <li><strong>review</strong>: The content needs to be manually reviewed.</li>
-             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * <li><p><strong>pass</strong>: The content passes the moderation.</p>
+             * </li>
+             * <li><p><strong>review</strong>: The content requires manual review.</p>
+             * </li>
+             * <li><p><strong>block</strong>: The content is blocked.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1630,7 +1513,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The moderation results that include information such as labels and scores.</p>
+             * CensorResults.
              */
             public Builder censorResults(VideoTimelineCensorResults censorResults) {
                 this.censorResults = censorResults;
@@ -1638,13 +1521,10 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS object that is generated as the output snapshot.</p>
-             * <blockquote>
-             * <p> In the example, {Count} is a placeholder. The OSS objects that are generated as output snapshots are named <code>output00001-****.jpg</code>, <code>output00002-****.jpg</code>, and so on.</p>
-             * </blockquote>
+             * <p>The OSS object of the input file.</p>
              * 
              * <strong>example:</strong>
-             * <p>output{Count}.jpg</p>
+             * <p>test/ai/censor/test-****.mp4</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -1652,10 +1532,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The position in the video. Format: <code>hh:mm:ss[.SSS]</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>00:02:59.999</p>
+             * Timestamp.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1789,7 +1666,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A collection of moderation results. The information includes the summary about various scenarios such as pornographic content moderation and terrorist content moderation.</p>
+             * CensorResults.
              */
             public Builder censorResults(CensorResults censorResults) {
                 this.censorResults = censorResults;
@@ -1797,7 +1674,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * <p>The token for the next page.</p>
              * 
              * <strong>example:</strong>
              * <p>ea04afcca7cd4e80b9ece8fbb251****</p>
@@ -1808,7 +1685,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation results that are sorted in ascending order by time.</p>
+             * VideoTimelines.
              */
             public Builder videoTimelines(VideoTimelines videoTimelines) {
                 this.videoTimelines = videoTimelines;
@@ -1888,7 +1765,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS bucket in which the output snapshot is stored.</p>
+             * <p>The OSS bucket where the snapshot output file is stored.</p>
              * 
              * <strong>example:</strong>
              * <p>test-bucket-****</p>
@@ -1899,7 +1776,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS region in which the output snapshot resides.</p>
+             * <p>The OSS location of the OSS bucket where the snapshot output file is stored.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-shanghai</p>
@@ -1910,9 +1787,9 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS object that is generated as the output snapshot.</p>
+             * <p>The OSS object of the snapshot output file.</p>
              * <blockquote>
-             * <p> In the example, {Count} is a placeholder. The OSS objects that are generated as output snapshots are named <code>output00001-****.jpg</code>, <code>output00002-****.jpg</code>, and so on.</p>
+             * <p>In the example, {Count} is a placeholder. The image objects are sequentially named <code>output00001-****.jpg</code>, <code>output00002-****.jpg</code>, and so on.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2007,7 +1884,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about output snapshots.</p>
+             * <p>The storage address of the video snapshot results.</p>
              */
             public Builder outputFile(OutputFile outputFile) {
                 this.outputFile = outputFile;
@@ -2015,10 +1892,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the video content needs to be moderated. Default value: <strong>true</strong>. Valid values:</p>
+             * <p>Specifies whether to moderate the video content. Default value: <strong>true</strong>. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The video content needs to be moderated.</li>
-             * <li><strong>false</strong>: The video content does not need to be moderated.</li>
+             * <li><p><strong>true</strong>: Moderate the video content.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Do not moderate the video content.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2271,7 +2150,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The moderation results of live comments.</p>
+             * <p>The barrage moderation result.</p>
              */
             public Builder barrageCensorResult(BarrageCensorResult barrageCensorResult) {
                 this.barrageCensorResult = barrageCensorResult;
@@ -2279,7 +2158,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code returned if the job failed. This parameter is not returned if the job is successful.</p>
+             * <p>The error code returned when the job fails. This parameter is not returned when the job is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>InvalidParameter.ResourceNotFound</p>
@@ -2290,7 +2169,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation results of thumbnails.</p>
+             * CoverImageCensorResults.
              */
             public Builder coverImageCensorResults(CoverImageCensorResults coverImageCensorResults) {
                 this.coverImageCensorResults = coverImageCensorResults;
@@ -2298,7 +2177,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the content moderation job was created.</p>
+             * <p>The creation time. The time is in the ISO 8601 format and in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-09-13T16:32:24Z</p>
@@ -2309,7 +2188,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation results of descriptions.</p>
+             * <p>The description moderation result.</p>
              */
             public Builder descCensorResult(DescCensorResult descCensorResult) {
                 this.descCensorResult = descCensorResult;
@@ -2317,7 +2196,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the content moderation job was complete.</p>
+             * <p>The completion time. The time is in the ISO 8601 format and in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-09-13T16:38:24Z</p>
@@ -2328,7 +2207,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the job input.</p>
+             * <p>The job input.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -2347,7 +2226,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned if the job failed. This parameter is not returned if the job is successful.</p>
+             * <p>The error message returned when the job fails. This parameter is not returned when the job is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>The resource operated cannot be found</p>
@@ -2358,7 +2237,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the job was submitted.</p>
+             * <p>The pipeline ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c5b30b7c0d0e4a0abde1d5f9e751****</p>
@@ -2369,7 +2248,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job state.</p>
+             * <p>The job status.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -2380,14 +2259,17 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall result of the content moderation job. Valid values:</p>
+             * <p>The overall moderation result of the job. Valid values:</p>
              * <ul>
-             * <li><strong>pass</strong>: The content passes the moderation.</li>
-             * <li><strong>review</strong>: The content needs to be manually reviewed.</li>
-             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * <li><p><strong>pass</strong>: The content passes the moderation.</p>
+             * </li>
+             * <li><p><strong>review</strong>: The content requires manual review.</p>
+             * </li>
+             * <li><p><strong>block</strong>: The content is blocked.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> If the moderation result of any type of content is review, the overall result is review. If the moderation result of any type of content is block, the overall result is block.</p>
+             * <p>If the moderation result of any type is review, the overall result is review. If the moderation result of any type is block, the overall result is block.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2399,7 +2281,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation results of titles.</p>
+             * <p>The title moderation result.</p>
              */
             public Builder titleCensorResult(TitleCensorResult titleCensorResult) {
                 this.titleCensorResult = titleCensorResult;
@@ -2407,7 +2289,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined data.</p>
+             * <p>The custom user data.</p>
              * 
              * <strong>example:</strong>
              * <p>example userdata ****</p>
@@ -2418,7 +2300,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation results of videos.</p>
+             * <p>The video moderation results.</p>
              */
             public Builder vensorCensorResult(VensorCensorResult vensorCensorResult) {
                 this.vensorCensorResult = vensorCensorResult;
@@ -2426,7 +2308,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The video moderation configurations.</p>
+             * <p>The video moderation configuration.</p>
              */
             public Builder videoCensorConfig(VideoCensorConfig videoCensorConfig) {
                 this.videoCensorConfig = videoCensorConfig;

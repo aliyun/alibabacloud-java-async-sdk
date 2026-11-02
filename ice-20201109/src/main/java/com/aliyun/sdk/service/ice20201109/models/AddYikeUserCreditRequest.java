@@ -98,6 +98,7 @@ public class AddYikeUserCreditRequest extends Request {
         }
 
         /**
+         * <p>The number of credits to increase. The value must be greater than 0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class AddYikeUserCreditRequest extends Request {
         }
 
         /**
+         * <p>The ID of the RAM user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

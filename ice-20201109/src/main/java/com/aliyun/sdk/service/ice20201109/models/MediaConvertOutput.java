@@ -120,7 +120,10 @@ public class MediaConvertOutput extends TeaModel {
         } 
 
         /**
-         * Features.
+         * <p>The feature parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder features(String features) {
             this.features = features;
@@ -128,7 +131,10 @@ public class MediaConvertOutput extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>output-video</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -136,7 +142,7 @@ public class MediaConvertOutput extends TeaModel {
         }
 
         /**
-         * OutputFile.
+         * <p>The output file.</p>
          */
         public Builder outputFile(MediaObject outputFile) {
             this.outputFile = outputFile;
@@ -144,7 +150,10 @@ public class MediaConvertOutput extends TeaModel {
         }
 
         /**
-         * OverrideParams.
+         * <p>A JSON string containing parameters to overwrite the corresponding settings of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder overrideParams(String overrideParams) {
             this.overrideParams = overrideParams;
@@ -152,7 +161,10 @@ public class MediaConvertOutput extends TeaModel {
         }
 
         /**
-         * Priority.
+         * <p>The priority. Valid values: 1 to 10. A larger value indicates a higher priority. Default value: 6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -160,7 +172,10 @@ public class MediaConvertOutput extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the transcoding template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

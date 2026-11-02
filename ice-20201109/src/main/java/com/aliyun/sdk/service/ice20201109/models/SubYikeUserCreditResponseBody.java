@@ -80,7 +80,13 @@ public class SubYikeUserCreditResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the deduction fails. Valid values:</p>
+         * <ul>
+         * <li>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA: the credit balance of the RAM user is insufficient.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -88,7 +94,10 @@ public class SubYikeUserCreditResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +105,14 @@ public class SubYikeUserCreditResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the deduction is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

@@ -145,7 +145,7 @@ public class ListDNAFilesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the media fingerprint library.</p>
+         * <p>The ID of the DNA library.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ListDNAFilesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The paging token. Leave this parameter empty when you request the first page. To request subsequent files, set this parameter to the NextPageToken value returned in the previous paging result.</p>
          * 
          * <strong>example:</strong>
          * <p>ae0fd49c0840e14daf0d66a75b83****</p>
@@ -188,7 +188,7 @@ public class ListDNAFilesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

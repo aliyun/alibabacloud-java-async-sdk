@@ -132,7 +132,7 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
         /**
-         * <p>The input of the job.</p>
+         * <p>The task input.</p>
          * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
@@ -143,7 +143,7 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleJob</p>
@@ -155,7 +155,7 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * <p>The output of the job.</p>
+         * <p>The task output.</p>
          * <p>This parameter is required.</p>
          */
         public Builder output(Output output) {
@@ -166,7 +166,7 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * <p>The scheduling settings.</p>
+         * <p>The scheduling configuration.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -187,7 +187,7 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data.</p>
+         * <p>The custom user data.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;SampleKey&quot;: &quot;SampleValue&quot;}</p>
@@ -260,14 +260,23 @@ public class SubmitDynamicImageJobRequest extends Request {
             } 
 
             /**
-             * <p>The input file. If Type is set to OSS, set this parameter to the URL of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. The URL of an OSS object can be in one of the following formats:</p>
+             * <p>The input media.</p>
+             * <ul>
+             * <li><p>If Type is set to OSS, specify an OSS URL.</p>
+             * </li>
+             * <li><p>If Type is set to Media, specify a media asset ID.</p>
+             * </li>
+             * </ul>
+             * <p>OSS URL format:</p>
              * <ol>
-             * <li>oss://bucket/object</li>
-             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</li>
+             * <li><p>oss://bucket/object</p>
+             * </li>
+             * <li><p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</p>
+             * </li>
              * </ol>
-             * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
+             * <p>In the URL, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
              * <blockquote>
-             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+             * <p>Before you use the OSS bucket in the URL, add it to IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a>.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -280,11 +289,13 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the input file. Valid values:</p>
-             * <ol>
-             * <li>OSS: an Object Storage Service (OSS) object.</li>
-             * <li>Media: a media asset.</li>
-             * </ol>
+             * <p>The input type. Valid values:</p>
+             * <ul>
+             * <li><p>OSS: an OSS file URL.</p>
+             * </li>
+             * <li><p>Media: a media asset ID.</p>
+             * </li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -357,14 +368,15 @@ public class SubmitDynamicImageJobRequest extends Request {
             } 
 
             /**
-             * <p>The output file. The file can be an OSS object or a media asset. The URL of an OSS object can be in one of the following formats:</p>
+             * <p>The output media. Both OSS URLs and media asset IDs are supported.
+             * OSS URL format:</p>
              * <ul>
              * <li>oss://bucket/object</li>
              * <li>http(s)://bucket.oss-[regionId].aliyuncs.com/object</li>
              * </ul>
-             * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
+             * <p>In the URL, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
              * <blockquote>
-             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the IMS console.</p>
+             * <p>Before you use the OSS bucket in the URL, add it to IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a>.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -377,11 +389,13 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the output file. Valid values:</p>
-             * <ol>
-             * <li>OSS: an OSS object.</li>
-             * <li>Media: a media asset.</li>
-             * </ol>
+             * <p>The output type. Valid values:</p>
+             * <ul>
+             * <li><p>OSS: an OSS file URL.</p>
+             * </li>
+             * <li><p>Media: a media asset ID.</p>
+             * </li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -452,7 +466,7 @@ public class SubmitDynamicImageJobRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * <p>The pipeline ID.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
@@ -463,7 +477,7 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * <p>The priority. Valid values: 1 to 10. Default value: 6. A greater value specifies a higher priority.</p>
+             * <p>The priority. Valid values: 1 to 10. Default value: 6. A larger value indicates a higher priority.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -546,7 +560,7 @@ public class SubmitDynamicImageJobRequest extends Request {
             } 
 
             /**
-             * <p>The length of the clip.</p>
+             * <p>The duration.</p>
              * <ul>
              * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
              * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
@@ -561,7 +575,7 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * <p>The length of the ending part of the original clip to be cropped out. If you specify this parameter, the Duration parameter becomes invalid.</p>
+             * <p>The tail trimming duration, which specifies the length of time to trim from the end. When this parameter is set, the Duration parameter becomes invalid.</p>
              * <ul>
              * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
              * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
@@ -576,7 +590,7 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * <p>The start point of the clip.</p>
+             * <p>The start time.  </p>
              * <ul>
              * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
              * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
@@ -715,10 +729,10 @@ public class SubmitDynamicImageJobRequest extends Request {
             } 
 
             /**
-             * <p>The format of the animated image. Valid values:</p>
+             * <p>The animated image format. Valid values:</p>
              * <ul>
-             * <li><strong>gif</strong></li>
-             * <li><strong>webp</strong></li>
+             * <li>gif</li>
+             * <li>webp</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -730,7 +744,7 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * <p>The frame rate. Valid values: [1,60].</p>
+             * <p>The frame rate. Valid values: 1 to 60.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -741,7 +755,7 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * <p>The height of the animated image. Valid values: [128,4096].</p>
+             * <p>The height of the output animated image. Valid values: 128 to 4096.</p>
              * 
              * <strong>example:</strong>
              * <p>720</p>
@@ -752,14 +766,14 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the auto-rotate screen feature. Valid values:</p>
+             * <p>Specifies whether to enable auto-rotation (long-short side mode). Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Enables auto-rotation.</li>
+             * <li><strong>false</strong>: Disables auto-rotation.</li>
              * </ul>
              * <p>Default value: <strong>true</strong>.</p>
              * <blockquote>
-             * <p> If this feature is enabled, the width of the output video corresponds to the long side of the input video, which is the height of the input video in portrait mode. The height of the output video corresponds to the short side of the input video, which is the width of the input video in portrait mode.</p>
+             * <p>The width of the transcoding output corresponds to the long side of the input source (the height for portrait videos), and the height corresponds to the short side of the input source (the width for portrait videos).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -773,8 +787,10 @@ public class SubmitDynamicImageJobRequest extends Request {
             /**
              * <p>The scan mode. Valid values:</p>
              * <ul>
-             * <li><strong>interlaced</strong></li>
-             * <li><strong>progressive</strong> This is the default value.</li>
+             * <li><p><strong>interlaced</strong>: interlaced scan.</p>
+             * </li>
+             * <li><p><strong>progressive</strong>: progressive scan. This is the default value.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -794,7 +810,7 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * <p>The width of the animated image. Valid values: [128,4096].</p>
+             * <p>The width of the output animated image. Valid values: 128 to 4096.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -865,7 +881,7 @@ public class SubmitDynamicImageJobRequest extends Request {
             } 
 
             /**
-             * <p>The parameters that are used to overwrite the corresponding parameters.</p>
+             * <p>The override parameters.</p>
              */
             public Builder overwriteParams(OverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;

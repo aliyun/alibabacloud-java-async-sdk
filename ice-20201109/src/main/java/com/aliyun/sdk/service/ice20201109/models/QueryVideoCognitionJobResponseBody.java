@@ -132,7 +132,7 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Input.
+         * <p>The input media asset information of the task.</p>
          */
         public Builder input(Input input) {
             this.input = input;
@@ -142,10 +142,14 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
         /**
          * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong></li>
-         * <li><strong>Fail</strong></li>
-         * <li><strong>Processing</strong></li>
-         * <li><strong>Submitted</strong></li>
+         * <li><p><strong>Success</strong>: The task is processed successfully.</p>
+         * </li>
+         * <li><p><strong>Fail</strong>: The task fails to be processed.</p>
+         * </li>
+         * <li><p><strong>Processing</strong>: The task is being processed.</p>
+         * </li>
+         * <li><p><strong>Submitted</strong>: The task is submitted and waiting to be processed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +161,10 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The extended parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;directOssAccess&quot;:true}</p>
          */
         public Builder params(String params) {
             this.params = params;
@@ -165,7 +172,7 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -176,7 +183,7 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array of analysis result objects.</p>
+         * Results.
          */
         public Builder results(Results results) {
             this.results = results;
@@ -184,7 +191,10 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the smart tagging template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S00000101-100040</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -192,7 +202,7 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user-defined data.</p>
+         * <p>The custom user information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;userId&quot;:&quot;123432412831&quot;}</p>
@@ -261,7 +271,10 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Media.
+             * <p>The URL of the input file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example-bucket.oss-cn-hangzhou.aliyuncs.com/test/video.mp4">https://example-bucket.oss-cn-hangzhou.aliyuncs.com/test/video.mp4</a></p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -269,7 +282,10 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the input file. Valid values: OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -336,10 +352,7 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A JSON string containing the detailed analysis data. The structure of this data depends on the Type field. For details, see the Result parameters section below.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;title&quot;:&quot;example-title-****&quot;}</p>
+             * Data.
              */
             public Builder data(String data) {
                 this.data = data;
@@ -347,18 +360,10 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of analysis result. Valid values:</p>
-             * <ol>
-             * <li>TextLabel: Tags from text content.</li>
-             * <li>VideoLabel: Tags from video content.</li>
-             * <li>ASR: Raw speech recognition results. Not returned by default.</li>
-             * <li>OCR: Raw text recognition results. Not returned by default.</li>
-             * <li>NLP: Natural Language Processing results. Not returned by default.</li>
-             * <li>Process: URL to the raw algorithm output. Not returned by default.</li>
-             * </ol>
+             * <p>The type of the input file. Valid values: OSS.</p>
              * 
              * <strong>example:</strong>
-             * <p>ASR</p>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;

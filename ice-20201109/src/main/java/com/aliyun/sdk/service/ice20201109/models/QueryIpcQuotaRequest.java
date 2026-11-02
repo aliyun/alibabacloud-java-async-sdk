@@ -138,7 +138,18 @@ public class QueryIpcQuotaRequest extends Request {
         }
 
         /**
-         * Capability.
+         * <p>Capability. Default value is understand. Valid values:</p>
+         * <ul>
+         * <li><p>understand: understanding</p>
+         * </li>
+         * <li><p>understand-reid: understanding with reid</p>
+         * </li>
+         * <li><p>search: search</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>understand</p>
          */
         public Builder capability(String capability) {
             this.putQueryParameter("Capability", capability);
@@ -147,7 +158,10 @@ public class QueryIpcQuotaRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End time. UTC time in the format: yyyy-MM-ddTHH:mm:ssZ. The difference between EndTime and StartTime must not exceed 180 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-09T08:52:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -156,7 +170,10 @@ public class QueryIpcQuotaRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Page number for paging. Default Value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -165,7 +182,10 @@ public class QueryIpcQuotaRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size, which specifies the number of entries displayed per page. Default value is 10, and the maximum value is 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +194,10 @@ public class QueryIpcQuotaRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start Time. UTC time in the format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-08T08:52:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

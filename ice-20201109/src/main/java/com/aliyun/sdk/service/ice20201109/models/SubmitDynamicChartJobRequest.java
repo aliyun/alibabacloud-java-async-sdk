@@ -253,7 +253,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * <p>The axis configurations. If XAxisFontInterval is set to 0 or left empty, the system automatically determines an optimal interval.</p>
+         * <p>The axis style. If XAxisFontInterval is not specified or is set to 0, the algorithm automatically calculates the interval.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;,&quot;XAxisFontSize&quot;:&quot;30&quot;,&quot;YAxisFontSize&quot;:&quot;30&quot;,&quot;XAxisFontInterval&quot;:&quot;30&quot;,&quot;AxisColor&quot;:&quot;30&quot;}</p>
@@ -277,7 +277,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * <p>The chart configurations.</p>
+         * <p>The chart configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Style&quot;:&quot;Normal&quot;,&quot;TitleStartTime&quot;:&quot;3000&quot;,&quot;ChartStartTime&quot;:&quot;3000&quot;,&quot;VideoDuration&quot;:&quot;15000&quot;}</p>
@@ -289,7 +289,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * <p>The chart title.</p>
+         * <p>The main title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Text&quot;:&quot;ChartTitle&quot;,&quot;FontSize&quot;:&quot;30&quot;,&quot;FontColor&quot;:&quot;#000000&quot;,&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;}</p>
          */
         public Builder chartTitle(String chartTitle) {
             this.putQueryParameter("ChartTitle", chartTitle);
@@ -299,12 +302,6 @@ public class SubmitDynamicChartJobRequest extends Request {
 
         /**
          * <p>The chart type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Line: line chart</li>
-         * <li>Histogram: bar chart</li>
-         * <li>Pie: pie chart</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,6 +315,9 @@ public class SubmitDynamicChartJobRequest extends Request {
 
         /**
          * <p>The data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Text&quot;:&quot;DataSource&quot;,&quot;FontSize&quot;:&quot;30&quot;,&quot;FontColor&quot;:&quot;#000000&quot;,&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;}</p>
          */
         public Builder dataSource(String dataSource) {
             this.putQueryParameter("DataSource", dataSource);
@@ -326,7 +326,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * <p>The job description.</p>
+         * <p>The task description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Job Description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -348,7 +351,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * <p>The output configurations.</p>
+         * <p>The output settings.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -362,6 +365,9 @@ public class SubmitDynamicChartJobRequest extends Request {
 
         /**
          * <p>The subtitle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Text&quot;:&quot;Subtitle&quot;,&quot;FontSize&quot;:&quot;30&quot;,&quot;FontColor&quot;:&quot;#000000&quot;,&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;}</p>
          */
         public Builder subtitle(String subtitle) {
             this.putQueryParameter("Subtitle", subtitle);
@@ -370,7 +376,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * <p>The job title.</p>
+         * <p>The task title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Job Title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -379,7 +388,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * <p>Unit</p>
+         * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Text&quot;:&quot;Unit&quot;,&quot;FontSize&quot;:&quot;30&quot;,&quot;FontColor&quot;:&quot;#000000&quot;,&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;}</p>
          */
         public Builder unit(String unit) {
             this.putQueryParameter("Unit", unit);

@@ -158,7 +158,15 @@ public class ListAlertsRequest extends Request {
         } 
 
         /**
-         * <p>The alert type.</p>
+         * <p>The alert type. Valid values:</p>
+         * <ul>
+         * <li>Scheduling Error: An error occurred while building the schedule.</li>
+         * <li>PlayBack Warning: An exception occurred while pulling the address when adding a source.</li>
+         * <li>info: Information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduling Error</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -167,7 +175,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-22T16:10:45Z</p>
@@ -179,7 +187,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-21T16:10:45Z</p>
@@ -191,7 +199,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -203,7 +211,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -215,7 +223,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * <p>The ARN of the source or program.</p>
+         * <p>The resource ARN of the source or program.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +236,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values: asc and desc.</p>
+         * <p>The sorting parameter. By default, items are sorted in descending order of creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>asc</p>
@@ -240,7 +248,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order by modification time. Valid values: asc and desc.</p>
+         * <p>Sorts items by modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>asc</p>

@@ -111,7 +111,7 @@ public class GetCustomTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the template type that is used to query the default template. This parameter is required if TemplateId is not specified.</p>
+         * <p>The templatetype ID used when querying the default template. This parameter is required when TemplateId is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

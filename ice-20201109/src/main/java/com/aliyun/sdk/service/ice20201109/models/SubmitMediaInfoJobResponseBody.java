@@ -144,7 +144,11 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The media object. If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported. If Type is set to Media, set this parameter to the ID of a media asset.</p>
+             * <p>The media value.</p>
+             * <ul>
+             * <li>If the type is OSS, the value is a URL. The OSS and HTTP protocols are supported.</li>
+             * <li>If the type is Media, the value is a media asset ID.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>oss://bucket/path/to/video.mp4</p>
@@ -155,7 +159,11 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the media object. Valid values: OSS and Media. A value of OSS indicates an OSS object. A value of Media indicates a media asset.</p>
+             * <p>The media object type. Valid values:</p>
+             * <ul>
+             * <li>OSS: OSS file.</li>
+             * <li>Media: Media asset ID.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>
@@ -405,7 +413,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sound channel layout.</p>
+             * <p>The channel layout.</p>
              * 
              * <strong>example:</strong>
              * <p>stereo</p>
@@ -416,7 +424,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sound channels.</p>
+             * <p>The number of channels.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -427,7 +435,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the encoding format.</p>
+             * <p>The codec long name.</p>
              * 
              * <strong>example:</strong>
              * <p>AAC (Advanced Audio Coding)</p>
@@ -438,7 +446,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoding format.</p>
+             * <p>The codec name.</p>
              * 
              * <strong>example:</strong>
              * <p>aac</p>
@@ -449,7 +457,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoder tag.</p>
+             * <p>The codec tag.</p>
              * 
              * <strong>example:</strong>
              * <p>0x000f</p>
@@ -460,7 +468,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the encoder tag.</p>
+             * <p>The codec tag string.</p>
              * 
              * <strong>example:</strong>
              * <p>[15][0][0][0]</p>
@@ -471,7 +479,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time base of the encoder.</p>
+             * <p>The codec time base.</p>
              * 
              * <strong>example:</strong>
              * <p>1/44100</p>
@@ -482,7 +490,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the stream. Unit: seconds.</p>
+             * <p>The duration, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>403.039989</p>
@@ -493,7 +501,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sequence number of the stream.</p>
+             * <p>The stream index.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -504,7 +512,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language of the stream.</p>
+             * <p>The language.</p>
              * 
              * <strong>example:</strong>
              * <p>us</p>
@@ -526,7 +534,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sampling rate. Unit: Hz.</p>
+             * <p>The sample rate. Unit: Hz.</p>
              * 
              * <strong>example:</strong>
              * <p>44100</p>
@@ -537,7 +545,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the stream.</p>
+             * <p>The start time, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1.473556</p>
@@ -759,7 +767,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the video.</p>
+             * <p>The video duration.</p>
              * 
              * <strong>example:</strong>
              * <p>403.039999</p>
@@ -792,7 +800,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the file.</p>
+             * <p>The file status.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -814,7 +822,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the file.</p>
+             * <p>The file URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8">http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8</a></p>
@@ -825,7 +833,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the video format.</p>
+             * <p>The video format name.</p>
              * 
              * <strong>example:</strong>
              * <p>hls,applehttp</p>
@@ -836,7 +844,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The height of the output video.</p>
+             * <p>The height.</p>
              * 
              * <strong>example:</strong>
              * <p>478</p>
@@ -847,7 +855,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the media asset.</p>
+             * <p>The media asset ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2b36bd19c13f4145b094c0cad80dbce5</p>
@@ -858,7 +866,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region in which the file resides.</p>
+             * <p>The region where the file is located.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -869,7 +877,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the output video.</p>
+             * <p>The width.</p>
              * 
              * <strong>example:</strong>
              * <p>848</p>
@@ -1234,7 +1242,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the encoding format.</p>
+             * <p>The codec long name.</p>
              * 
              * <strong>example:</strong>
              * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
@@ -1245,7 +1253,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoding format.</p>
+             * <p>The codec name.</p>
              * 
              * <strong>example:</strong>
              * <p>h264</p>
@@ -1256,7 +1264,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the encoding format.</p>
+             * <p>The codec format tag.</p>
              * 
              * <strong>example:</strong>
              * <p>0x001b</p>
@@ -1267,7 +1275,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag string of the encoding format.</p>
+             * <p>The codec format tag string.</p>
              * 
              * <strong>example:</strong>
              * <p>[27][0][0][0]</p>
@@ -1278,7 +1286,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time base of the encoder.</p>
+             * <p>The codec time base.</p>
              * 
              * <strong>example:</strong>
              * <p>1/50</p>
@@ -1300,7 +1308,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the file.</p>
+             * <p>The duration.</p>
              * 
              * <strong>example:</strong>
              * <p>403.039989</p>
@@ -1322,11 +1330,11 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the video stream contains bidirectional frames (B-frames). Valid values:</p>
+             * <p>Specifies whether the video stream contains B-frames. Valid values:</p>
              * <ul>
-             * <li>0: The stream contains no B-frames.</li>
-             * <li>1: The stream contains one B-frame.</li>
-             * <li>2: The stream contains multiple consecutive B-frames.</li>
+             * <li>0: No B-frames.</li>
+             * <li>1: One B-frame.</li>
+             * <li>2: Multiple consecutive B-frames.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1338,7 +1346,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The height of the output video.</p>
+             * <p>The height.</p>
              * 
              * <strong>example:</strong>
              * <p>478</p>
@@ -1349,7 +1357,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sequence number of the stream.</p>
+             * <p>The stream index.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1360,7 +1368,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language of the stream.</p>
+             * <p>The language.</p>
              * 
              * <strong>example:</strong>
              * <p>zh</p>
@@ -1371,7 +1379,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec level.</p>
+             * <p>The encoding level.</p>
              * 
              * <strong>example:</strong>
              * <p>31</p>
@@ -1404,7 +1412,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoder profile.</p>
+             * <p>The encoder preset.</p>
              * 
              * <strong>example:</strong>
              * <p>High</p>
@@ -1415,7 +1423,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rotation angle of the video image.</p>
+             * <p>The video rotation angle.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1426,7 +1434,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The aspect ratio of the area from which the sampling points are collected.</p>
+             * <p>The sample aspect ratio.</p>
              * 
              * <strong>example:</strong>
              * <p>478:477</p>
@@ -1437,7 +1445,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the stream.</p>
+             * <p>The start time, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1.473556</p>
@@ -1459,7 +1467,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the output video.</p>
+             * <p>The width.</p>
              * 
              * <strong>example:</strong>
              * <p>848</p>
@@ -1542,7 +1550,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the audio stream.</p>
+             * <p>The audio stream information.</p>
              */
             public Builder audioStreamInfoList(java.util.List<AudioStreamInfoList> audioStreamInfoList) {
                 this.audioStreamInfoList = audioStreamInfoList;
@@ -1558,7 +1566,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the video stream.</p>
+             * <p>The video stream information.</p>
              */
             public Builder videoStreamInfoList(java.util.List<VideoStreamInfoList> videoStreamInfoList) {
                 this.videoStreamInfoList = videoStreamInfoList;
@@ -1625,7 +1633,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
+             * <p>The pipeline ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e37ebee5d98b4781897f6086e89f9c56</p>
@@ -1636,7 +1644,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+             * <p>The task priority. A larger value indicates a higher priority. Valid values: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1849,7 +1857,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether asynchronous processing was performed.</p>
+             * <p>Specifies whether the job is processed asynchronously.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1860,7 +1868,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was complete.</p>
+             * <p>The task completion time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-12T08:49:41Z</p>
@@ -1871,7 +1879,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input of the job.</p>
+             * <p>The task input.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -1890,7 +1898,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the media information.</p>
+             * <p>The media information details.</p>
              */
             public Builder mediaInfoProperty(MediaInfoProperty mediaInfoProperty) {
                 this.mediaInfoProperty = mediaInfoProperty;
@@ -1898,7 +1906,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job name.</p>
+             * <p>The task name.</p>
              * 
              * <strong>example:</strong>
              * <p>job-name</p>
@@ -1928,7 +1936,12 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the job. Valid values: Init (the job is submitted), Success (the job is successful), and Fail (the job failed).</p>
+             * <p>The job status. Valid values:</p>
+             * <ul>
+             * <li>Init: Submitted.</li>
+             * <li>Success: Succeeded.</li>
+             * <li>Fail: Failed.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Init</p>
@@ -1950,7 +1963,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was submitted.</p>
+             * <p>The task submission time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-12T08:49:41Z</p>
@@ -1961,7 +1974,12 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the job. Valid values: API, WorkFlow, and Console.</p>
+             * <p>The job source. Valid values:</p>
+             * <ul>
+             * <li>API: API.</li>
+             * <li>WorkFlow: Workflow.</li>
+             * <li>Console: Console.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>API</p>

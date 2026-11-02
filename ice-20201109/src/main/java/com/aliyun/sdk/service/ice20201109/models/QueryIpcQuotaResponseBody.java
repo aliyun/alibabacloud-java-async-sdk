@@ -80,7 +80,7 @@ public class QueryIpcQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * IpcQuotaInfos.
+         * <p>List of IPC usage information.</p>
          */
         public Builder ipcQuotaInfos(java.util.List<IpcQuotaInfos> ipcQuotaInfos) {
             this.ipcQuotaInfos = ipcQuotaInfos;
@@ -88,7 +88,10 @@ public class QueryIpcQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class QueryIpcQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39</p>
          */
         public Builder total(String total) {
             this.total = total;
@@ -188,7 +194,18 @@ public class QueryIpcQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * Capability.
+             * <p>Capability. Valid values:</p>
+             * <ul>
+             * <li><p>understand: understanding</p>
+             * </li>
+             * <li><p>understand-reid: understanding with reid</p>
+             * </li>
+             * <li><p>search: search</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>understand</p>
              */
             public Builder capability(String capability) {
                 this.capability = capability;
@@ -196,7 +213,10 @@ public class QueryIpcQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumedQuota.
+             * <p>Consumed quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder consumedQuota(Long consumedQuota) {
                 this.consumedQuota = consumedQuota;
@@ -204,7 +224,10 @@ public class QueryIpcQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * DateTime.
+             * <p>Corresponding time. UTC time in the format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-21T16:00:00Z</p>
              */
             public Builder dateTime(String dateTime) {
                 this.dateTime = dateTime;
@@ -212,7 +235,10 @@ public class QueryIpcQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQuota.
+             * <p>Maximum available quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder maxQuota(Long maxQuota) {
                 this.maxQuota = maxQuota;

@@ -73,7 +73,7 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
         } 
 
         /**
-         * <p>The assets that you want to ingest.</p>
+         * <p>The list of VOD packaging asset configurations.</p>
          */
         public Builder assets(java.util.List<Assets> assets) {
             String assetsShrink = shrink(assets, "Assets", "json");
@@ -83,7 +83,7 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
         }
 
         /**
-         * <p>The name of the packaging group.</p>
+         * <p>The name of the VOD packaging group.</p>
          * 
          * <strong>example:</strong>
          * <p>vod_hls</p>
@@ -154,7 +154,7 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
             } 
 
             /**
-             * <p>The URL of the media file. You can only specify a M3U8 file stored in Object Storage Service (OSS).</p>
+             * <p>The input media asset. Only Object Storage Service (OSS) paths are supported, such as OSS://test-bucket/video/202208/test.m3u8. Only inputs with the .m3u8 extension are supported.</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -245,7 +245,7 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
             } 
 
             /**
-             * <p>The name of the asset. The name must be unique and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+             * <p>The name of the asset. It must be unique per user and can be up to 128 characters in length. The value must match the regular expression [A-Za-z0-9_-]+.</p>
              * 
              * <strong>example:</strong>
              * <p>30min_movie</p>
@@ -256,7 +256,7 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
             }
 
             /**
-             * <p>The content ID in the digital rights management (DRM) system. The maximum length is 256 characters. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+             * <p>The content ID in the digital rights management (DRM) system. It can be up to 256 characters in length and must match the regular expression [A-Za-z0-9_-]+.</p>
              * 
              * <strong>example:</strong>
              * <p>movie</p>
@@ -267,7 +267,7 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
             }
 
             /**
-             * <p>The asset input configurations.</p>
+             * <p>The asset input configuration.</p>
              */
             public Builder input(Input input) {
                 this.input = input;

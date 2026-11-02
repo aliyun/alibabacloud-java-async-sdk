@@ -87,7 +87,10 @@ public class DeleteMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * InputName.
+         * <p>Input name. Required when primary/standby input is enabled for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>input</p>
          */
         public Builder inputName(String inputName) {
             this.putQueryParameter("InputName", inputName);

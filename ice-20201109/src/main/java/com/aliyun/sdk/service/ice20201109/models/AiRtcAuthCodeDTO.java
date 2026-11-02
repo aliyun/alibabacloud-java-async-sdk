@@ -158,7 +158,10 @@ public class AiRtcAuthCodeDTO extends TeaModel {
         } 
 
         /**
-         * ActivatedTime.
+         * <p>Activation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01 06:57:43</p>
          */
         public Builder activatedTime(String activatedTime) {
             this.activatedTime = activatedTime;
@@ -166,7 +169,10 @@ public class AiRtcAuthCodeDTO extends TeaModel {
         }
 
         /**
-         * AuthCode.
+         * <p>Authorization code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iU1IeJech7***</p>
          */
         public Builder authCode(String authCode) {
             this.authCode = authCode;
@@ -174,7 +180,10 @@ public class AiRtcAuthCodeDTO extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-23T13:33:49Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -182,7 +191,10 @@ public class AiRtcAuthCodeDTO extends TeaModel {
         }
 
         /**
-         * DeviceId.
+         * <p>Device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device-***</p>
          */
         public Builder deviceId(String deviceId) {
             this.deviceId = deviceId;
@@ -190,7 +202,10 @@ public class AiRtcAuthCodeDTO extends TeaModel {
         }
 
         /**
-         * License.
+         * <p>license。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a659a06659a***</p>
          */
         public Builder license(String license) {
             this.license = license;
@@ -198,7 +213,10 @@ public class AiRtcAuthCodeDTO extends TeaModel {
         }
 
         /**
-         * LicenseItemId.
+         * <p>Batch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11096067***</p>
          */
         public Builder licenseItemId(String licenseItemId) {
             this.licenseItemId = licenseItemId;
@@ -206,7 +224,10 @@ public class AiRtcAuthCodeDTO extends TeaModel {
         }
 
         /**
-         * ModificationTime.
+         * <p>Update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-23T13:33:49Z</p>
          */
         public Builder modificationTime(String modificationTime) {
             this.modificationTime = modificationTime;
@@ -214,7 +235,14 @@ public class AiRtcAuthCodeDTO extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Status:</p>
+         * <ul>
+         * <li>1 - Activated</li>
+         * <li>2 - Not activated</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -222,7 +250,14 @@ public class AiRtcAuthCodeDTO extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>Type:</p>
+         * <ul>
+         * <li>1 - Voice call</li>
+         * <li>2 - Visual understanding</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.type = type;

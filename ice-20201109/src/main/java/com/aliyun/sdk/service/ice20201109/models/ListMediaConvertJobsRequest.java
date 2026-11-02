@@ -143,7 +143,7 @@ public class ListMediaConvertJobsRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time of the creation time filter. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-15T00:00:00Z</p>
@@ -155,7 +155,7 @@ public class ListMediaConvertJobsRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>Filters the results by job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>88c6ca184c0e47098a5b665e2****</p>
@@ -167,7 +167,7 @@ public class ListMediaConvertJobsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * <p>The paging token for the next page in a continuous paged query (not present for the first page).</p>
          * 
          * <strong>example:</strong>
          * <p>ab4802364a2e49208c99efab82dfa8e8</p>
@@ -179,7 +179,11 @@ public class ListMediaConvertJobsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order. Valid values: CreateTimeDesc: sorts by create time in descending order. CreateTimeAsc: sorts by create time in ascending order.</p>
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>CreateTimeDesc: Descending order by creation time.</li>
+         * <li>CreateTimeAsc: Ascending order by creation time.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CreateTimeDesc</p>
@@ -203,7 +207,7 @@ public class ListMediaConvertJobsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time of the creation time filter. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-01T00:00:00Z</p>
@@ -215,12 +219,12 @@ public class ListMediaConvertJobsRequest extends Request {
         }
 
         /**
-         * <p>The task status.</p>
+         * <p>The job status. Valid values: </p>
          * <ul>
-         * <li>Inited: submitted</li>
-         * <li>Running</li>
-         * <li>Complete</li>
-         * <li>Error</li>
+         * <li>Inited: Submitted. </li>
+         * <li>Running: Running.</li>
+         * <li>Complete: Completed. </li>
+         * <li>Error: Error.</li>
          * </ul>
          * 
          * <strong>example:</strong>

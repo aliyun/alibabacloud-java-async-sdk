@@ -156,10 +156,10 @@ public class ListCustomTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The order in which the entries are sorted. Valid values:</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>CreateTimeDesc: sorted by creation time in descending order.</li>
-         * <li>CreateTimeAsc: sorted by creation time in ascending order.</li>
+         * <li>CreateTimeDesc: Sorts by creation time in descending order.</li>
+         * <li>CreateTimeAsc: Sorts by creation time in ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,35 +196,31 @@ public class ListCustomTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The subtype ID of the template.</p>
+         * <p>The template subtype ID. Valid values:</p>
          * <ul>
-         * <li><p>Valid values for transcoding templates:</p>
-         * <ul>
-         * <li>1 (Normal): regular template.</li>
-         * <li>2 (AudioTranscode): audio transcoding template.</li>
-         * <li>3 (Remux): container format conversion template.</li>
-         * <li>4 (NarrowBandV1): Narrowband HD 1.0 template.</li>
-         * <li>5 (NarrowBandV2): Narrowband HD 2.0 template.</li>
+         * <li>Subtypes for transcode templates:<ul>
+         * <li>1: Normal transcode template (Normal).</li>
+         * <li>2: Audio transcode template (AudioTranscode).</li>
+         * <li>3: Remux (Remux).</li>
+         * <li>4: Narrowband HD 1.0 (NarrowBandV1).</li>
+         * <li>5: Narrowband HD 2.0 (NarrowBandV2).</li>
          * </ul>
          * </li>
-         * <li><p>Valid values for snapshot templates:</p>
-         * <ul>
-         * <li>1 (Normal): regular template.</li>
-         * <li>2 (Sprite): sprite template.</li>
-         * <li>3 (WebVtt): WebVTT template.</li>
+         * <li>Subtypes for snapshot templates:<ul>
+         * <li>1: Normal snapshot or static snapshot (Normal).</li>
+         * <li>2: Sprite snapshot (Sprite).</li>
+         * <li>3: WebVTT snapshot (WebVtt).</li>
          * </ul>
          * </li>
-         * <li><p>Valid values for AI-assisted content moderation templates:</p>
-         * <ul>
-         * <li>1 (Video): video moderation template.</li>
-         * <li>2 (Audio): audio moderation template.</li>
-         * <li>3 (Image): image moderation template.</li>
+         * <li>Subtypes for AI content moderation templates:<ul>
+         * <li>1: Video moderation (Video).</li>
+         * <li>2: Audio moderation (Audio).</li>
+         * <li>3: Image moderation (Image).</li>
          * </ul>
          * </li>
-         * <li><p>Valid values for AI-assisted intelligent erasure templates:</p>
-         * <ul>
-         * <li>1 (VideoDelogo): logo erasure template.</li>
-         * <li>2 (VideoDetext): subtitle erasure template.</li>
+         * <li>Subtypes for AI intelligent erasure templates:<ul>
+         * <li>1: Logo erasure (VideoDelogo).</li>
+         * <li>2: Subtitle erasure (VideoDetext).</li>
          * </ul>
          * </li>
          * </ul>
@@ -251,17 +247,17 @@ public class ListCustomTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The template type. Valid values:</p>
+         * <p>The templatetype. Separate multiple values with commas. Valid values:</p>
          * <ul>
-         * <li>1: transcoding template.</li>
-         * <li>2: snapshot template.</li>
-         * <li>3: animated image template.</li>
-         * <li>4. image watermark template.</li>
-         * <li>5: text watermark template.</li>
-         * <li>6: subtitle template.</li>
-         * <li>7: AI-assisted content moderation template.</li>
-         * <li>8: AI-assisted intelligent thumbnail template.</li>
-         * <li>9: AI-assisted intelligent erasure template.</li>
+         * <li>1: Transcode template.</li>
+         * <li>2: Snapshot template.</li>
+         * <li>3: Animated image template.</li>
+         * <li>4: Image watermark template.</li>
+         * <li>5: Text watermark template.</li>
+         * <li>6: Subtitle template.</li>
+         * <li>7: AI content moderation.</li>
+         * <li>8: AI intelligent cover.</li>
+         * <li>9: AI intelligent erasure.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

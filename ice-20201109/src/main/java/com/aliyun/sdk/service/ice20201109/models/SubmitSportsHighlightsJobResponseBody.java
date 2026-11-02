@@ -67,7 +67,7 @@ public class SubmitSportsHighlightsJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the sports highlights job.</p>
+         * <p>The sports highlights job ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>

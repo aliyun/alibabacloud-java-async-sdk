@@ -93,7 +93,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -112,7 +112,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -192,7 +192,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The specific output information.</p>
+             * <p>The output file information.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://bucket/object</p>
@@ -203,10 +203,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the output file. Valid values:</p>
+             * <p>The media object type. Valid values: </p>
              * <ul>
-             * <li>OSS: an OSS object.</li>
-             * <li>Media: a media asset.</li>
+             * <li>OSS: OSS file.</li>
+             * <li>Media: media asset ID.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -368,7 +368,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the job.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1627357322</p>
@@ -379,7 +379,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time of the job.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>1627357322</p>
@@ -401,7 +401,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output video.</p>
+             * <p>The output of the watermarked video.</p>
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -409,7 +409,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current status of the job.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -431,7 +431,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The media ID for the trace watermark.</p>
+             * <p>The tracing media ID.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>437bd2b105d07b12a9a82</strong></strong></p>
@@ -442,7 +442,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined data.</p>
+             * <p>The user data.</p>
              * 
              * <strong>example:</strong>
              * <p>112</p>
@@ -453,7 +453,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who initiated the job.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1346693276****</p>

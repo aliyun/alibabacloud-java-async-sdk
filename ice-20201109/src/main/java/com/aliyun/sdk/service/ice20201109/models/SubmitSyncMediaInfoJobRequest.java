@@ -113,7 +113,7 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         }
 
         /**
-         * <p>The job name.</p>
+         * <p>The name of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>job-name</p>
@@ -208,15 +208,15 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             } 
 
             /**
-             * <p>The media object.</p>
+             * <p>The media value.</p>
              * <ul>
-             * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-             * </ul>
+             * <li><p>If Type is set to OSS, the value is a URL. Both OSS and HTTP protocols are supported.</p>
              * <blockquote>
-             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+             * <p>The OSS bucket in the URL must be added to <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> in IMS before use.</p>
              * </blockquote>
-             * <ul>
-             * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+             * </li>
+             * <li><p>If Type is set to Media, the value is a media asset ID.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -229,10 +229,10 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the media object.</p>
+             * <p>The media object type. Valid values:</p>
              * <ul>
-             * <li>OSS: an Object Storage Service (OSS) object.</li>
-             * <li>Media: a media asset.</li>
+             * <li>OSS: OSS file.</li>
+             * <li>Media: media asset ID.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -304,7 +304,7 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * <p>The ID of the pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p>e37ebee5d98b4781897f6086e89f9c56</p>
@@ -315,7 +315,7 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             }
 
             /**
-             * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+             * <p>The priority of the job. A larger value indicates a higher priority. Valid values: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

@@ -122,7 +122,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
         } 
 
         /**
-         * AgentUserId.
+         * <p>The name of the agent in the ARTC channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>877ae632caae49b1afc81c2e8194ffb4</p>
          */
         public Builder agentUserId(String agentUserId) {
             this.agentUserId = agentUserId;
@@ -130,7 +133,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
         }
 
         /**
-         * AuthToken.
+         * <p>The authentication token for the agent to join the channel. This must be generated using your AppKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
          */
         public Builder authToken(String authToken) {
             this.authToken = authToken;
@@ -138,7 +144,7 @@ public class AIAgentRuntimeConfig extends TeaModel {
         }
 
         /**
-         * AvatarChat3D.
+         * <p>The runtime parameters of the avatar call.</p>
          */
         public Builder avatarChat3D(AvatarChat3D avatarChat3D) {
             this.avatarChat3D = avatarChat3D;
@@ -146,7 +152,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
         }
 
         /**
-         * ChannelId.
+         * <p>The ID of the ARTC channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70f22d5784194938a7e387052f2b3208</p>
          */
         public Builder channelId(String channelId) {
             this.channelId = channelId;
@@ -154,7 +163,7 @@ public class AIAgentRuntimeConfig extends TeaModel {
         }
 
         /**
-         * VisionChat.
+         * <p>The runtime parameters of the vision call.</p>
          */
         public Builder visionChat(VisionChat visionChat) {
             this.visionChat = visionChat;
@@ -162,7 +171,7 @@ public class AIAgentRuntimeConfig extends TeaModel {
         }
 
         /**
-         * VoiceChat.
+         * <p>The runtime parameters of the voice call.</p>
          */
         public Builder voiceChat(VoiceChat voiceChat) {
             this.voiceChat = voiceChat;
@@ -241,7 +250,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
             } 
 
             /**
-             * AgentUserId.
+             * <p>Required. The name of the agent in the ARTC channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>877ae632caae49b1afc81c2e8194ffb4</p>
              */
             public Builder agentUserId(String agentUserId) {
                 this.agentUserId = agentUserId;
@@ -249,7 +261,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
             }
 
             /**
-             * AuthToken.
+             * <p>Required. The authentication token for the agent to join the channel. This must be generated using your AppKey.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -257,7 +272,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Required. The ID of the ARTC channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70f22d5784194938a7e387052f2b3208</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -337,7 +355,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
             } 
 
             /**
-             * AgentUserId.
+             * <p>Required. The name of the agent in the ARTC channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>877ae632caae49b1afc81c2e8194ffb4</p>
              */
             public Builder agentUserId(String agentUserId) {
                 this.agentUserId = agentUserId;
@@ -345,7 +366,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
             }
 
             /**
-             * AuthToken.
+             * <p>Required. The authentication token for the agent to join the channel. This must be generated using your AppKey.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -353,7 +377,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Required. The ID of the ARTC channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70f22d5784194938a7e387052f2b3208</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -433,7 +460,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
             } 
 
             /**
-             * AgentUserId.
+             * <p>Required. The name of the agent in the ARTC channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>877ae632caae49b1afc81c2e8194ffb4</p>
              */
             public Builder agentUserId(String agentUserId) {
                 this.agentUserId = agentUserId;
@@ -441,7 +471,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
             }
 
             /**
-             * AuthToken.
+             * <p>Required. The authentication token for the agent to join the channel. This must be generated using your AppKey.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -449,7 +482,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Required. The ID of the ARTC channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70f22d5784194938a7e387052f2b3208</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;

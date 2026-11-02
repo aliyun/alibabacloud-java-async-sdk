@@ -106,7 +106,7 @@ public class ListChannelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The channels.</p>
+         * <p>The channel list.</p>
          */
         public Builder channelList(java.util.List<ChannelAssemblyChannel> channelList) {
             this.channelList = channelList;
@@ -136,7 +136,7 @@ public class ListChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p><strong>Request ID</strong></p>
+         * <p><strong>The request ID.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>xxx-xxxx-xxxxx-xxxx</p>
@@ -147,7 +147,7 @@ public class ListChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of channels returned.</p>
+         * <p>The total number of channels.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>

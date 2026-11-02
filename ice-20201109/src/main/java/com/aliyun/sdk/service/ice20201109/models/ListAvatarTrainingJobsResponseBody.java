@@ -80,7 +80,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,10 +99,10 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: successful</li>
+         * <li>false: failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,6 +290,9 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
 
             /**
              * <p>The description of the digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a digital human, intended for use in a certain scenario.</p>
              */
             public Builder avatarDescription(String avatarDescription) {
                 this.avatarDescription = avatarDescription;
@@ -309,6 +312,9 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the digital human.</p>
              */
             public Builder avatarName(String avatarName) {
                 this.avatarName = avatarName;
@@ -327,10 +333,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li>The time when the job was created.</li>
-             * <li>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</li>
-             * </ul>
+             * <p>The time when the task was created, in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-23T13:33:40Z</p>
@@ -341,10 +344,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li>The time when the first training was initiated.</li>
-             * <li>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</li>
-             * </ul>
+             * <p>The time when the training was first initiated, in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-23T13:33:40Z</p>
@@ -355,7 +355,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the digital human training job.</p>
+             * <p>The ID of the digital human training task.</p>
              * 
              * <strong>example:</strong>
              * <p><em><strong><strong>aded114489ea02e0addf93</strong></strong></em></p>
@@ -366,10 +366,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li>The time when the last training was initiated.</li>
-             * <li>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</li>
-             * </ul>
+             * <p>The time of the most recent training, in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-23T13:33:40Z</p>
@@ -381,6 +378,9 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
 
             /**
              * <p>The status description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Training successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -388,7 +388,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The media asset ID of the portrait image.</p>
+             * <p>The media asset ID of the profile picture.</p>
              * 
              * <strong>example:</strong>
              * <p><em><strong><strong>aded114489ea02e0addf93</strong></strong></em></p>
@@ -399,10 +399,10 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the digital human training job.</p>
+             * <p>The status of the digital human training task.</p>
              * 
              * <strong>example:</strong>
-             * <p>Normal</p>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -469,7 +469,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of digital human training jobs.</p>
+             * <p>The list of digital human training tasks.</p>
              */
             public Builder avatarTrainingJobList(java.util.List<AvatarTrainingJobList> avatarTrainingJobList) {
                 this.avatarTrainingJobList = avatarTrainingJobList;
@@ -477,7 +477,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

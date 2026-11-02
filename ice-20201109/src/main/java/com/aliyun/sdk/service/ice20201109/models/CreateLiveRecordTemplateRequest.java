@@ -77,6 +77,9 @@ public class CreateLiveRecordTemplateRequest extends Request {
         /**
          * <p>The name of the template.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-record-template</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -195,14 +198,14 @@ public class CreateLiveRecordTemplateRequest extends Request {
             } 
 
             /**
-             * <p>The duration of the recording cycle. Unit: seconds. If you do not specify this parameter, the default value 6 hours is used.</p>
+             * <p>The duration of a recording cycle. Unit: seconds. If you do not specify this parameter, the default value is 6 hours.</p>
              * <blockquote>
+             * <ul>
+             * <li>If a live stream is interrupted during a recording cycle but resumes within 3 minutes, the recording continues in the same recording file.</li>
+             * </ul>
              * </blockquote>
              * <ul>
-             * <li><p>If a live stream is interrupted during a recording cycle but is resumed within 3 minutes, the stream is recorded in the same recording before and after the interruption.</p>
-             * </li>
-             * <li><p>If a live stream is interrupted for more than 3 minutes, a new recording is generated. To change the default stream interruption time, submit a ticket.</p>
-             * </li>
+             * <li>A live stream must be interrupted for more than 3 minutes before the last recording file is generated. If you need to change the default 3-minute interruption threshold, submit a ticket.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -216,7 +219,7 @@ public class CreateLiveRecordTemplateRequest extends Request {
             /**
              * <p>The format.</p>
              * <blockquote>
-             * <p> If you set this parameter to m3u8, you must also specify the SliceOssObjectPrefix and SliceDuration parameters.</p>
+             * <p>If you select the m3u8 format, you must also set the SliceOssObjectPrefix and SliceDuration request parameters.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -229,10 +232,12 @@ public class CreateLiveRecordTemplateRequest extends Request {
             }
 
             /**
-             * <p>The name of the recording file that is stored in Object Storage Service (OSS).</p>
+             * <p>The name of the recording file stored in OSS.</p>
              * <ul>
-             * <li>The name must be less than 256 bytes in length and can contain the {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime} variables.</li>
-             * <li>The name must contain the {StartTime} and {EndTime} variables or the {EscapedStartTime} and {EscapedEndTime} variables.</li>
+             * <li><p>The file name must be less than 256 bytes in size and supports variable matching. Supported variables include {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime}.</p>
+             * </li>
+             * <li><p>The parameter value must contain {StartTime} or {EscapedStartTime}, and {EndTime} or {EscapedEndTime}.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -244,11 +249,11 @@ public class CreateLiveRecordTemplateRequest extends Request {
             }
 
             /**
-             * <p>The duration of a single segment. Unit: seconds.</p>
+             * <p>The duration of a single slice. Unit: seconds.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if you set Format to m3u8.</p>
+             * <p>This parameter is valid only when Format is set to m3u8.</p>
              * </blockquote>
-             * <p>If you do not specify this parameter, the default value 30 seconds is used. Valid values: 5 to 30.</p>
+             * <p>If you do not specify this parameter, the default value is 30 seconds. Valid values: 5 to 30.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -259,13 +264,13 @@ public class CreateLiveRecordTemplateRequest extends Request {
             }
 
             /**
-             * <p>The name of the TS segment.</p>
+             * <p>The name of the TS slice.</p>
              * <blockquote>
-             * <p> This parameter is required only if you set Format to m3u8.</p>
+             * <p>You need to configure this parameter only when Format is set to m3u8.</p>
              * </blockquote>
              * <ul>
-             * <li>By default, the duration of a segment is 30 seconds. The segment name must be less than 256 bytes in length and can contain the {JobId}, {UnixTimestamp}, and {Sequence} variables.</li>
-             * <li>The segment name must contain the {UnixTimestamp} and {Sequence} variables.</li>
+             * <li>By default, a slice is generated every 30 seconds. The name must be less than 256 bytes in size and supports variable matching. Supported variables include {JobId}, {UnixTimestamp}, and {Sequence}.</li>
+             * <li>The parameter value must contain the {UnixTimestamp} and {Sequence} variables.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -119,7 +119,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of live stream recording jobs.</p>
+         * <p>The list of real-time recording jobs.</p>
          */
         public Builder liveRecordJobs(java.util.List<LiveRecordJobs> liveRecordJobs) {
             this.liveRecordJobs = liveRecordJobs;
@@ -160,7 +160,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
+         * <p>The sorting parameter. By default, jobs are sorted in descending order of creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -171,7 +171,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>
@@ -253,7 +253,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bucket name.</p>
+             * <p>The name of the bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>imsbucket1</p>
@@ -276,11 +276,6 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
 
             /**
              * <p>The type of the storage address.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>vod</li>
-             * <li>oss</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>oss</p>
@@ -522,7 +517,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the job was created.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard and is in UTC (ending with Z).</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -546,6 +541,9 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the recording job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Live event recording job 1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -564,7 +562,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage address of the recording.</p>
+             * <p>The storage address for the recording.</p>
              */
             public Builder recordOutput(RecordOutput recordOutput) {
                 this.recordOutput = recordOutput;
@@ -572,7 +570,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the recording job.</p>
+             * <p>The status of the recording job.</p>
              * 
              * <strong>example:</strong>
              * <p>paused</p>

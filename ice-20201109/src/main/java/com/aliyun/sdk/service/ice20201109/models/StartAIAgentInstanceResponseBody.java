@@ -67,7 +67,10 @@ public class StartAIAgentInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The unique ID of the agent instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -75,7 +78,10 @@ public class StartAIAgentInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B117AF5-2A16-412C-B127-FA6175ED1AD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

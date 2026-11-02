@@ -59,7 +59,7 @@ public class StopAIWorkflowTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workflow task.</p>
+         * <p>The ID of the intelligent workflow task.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong><strong>-266c-4bb8-b20c-6faa</strong></strong></strong></strong></p>

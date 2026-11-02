@@ -78,7 +78,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about upload jobs.</p>
+         * <p>The information about multiple jobs.</p>
          */
         public Builder uploadJobs(java.util.List<UploadJobs> uploadJobs) {
             this.uploadJobs = uploadJobs;
@@ -157,7 +157,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the upload job.</p>
+             * <p>The upload task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20ce1e05dba64576b96e9683879f0***</p>
@@ -168,7 +168,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the media asset.</p>
+             * <p>The media asset ID.</p>
              * 
              * <strong>example:</strong>
              * <p>f476988629f54a7b8a4ba90d1a6c7***</p>
@@ -179,7 +179,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the source file that is uploaded in the upload job.</p>
+             * <p>The source file URL of the upload task.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example****.mp4">http://example****.mp4</a></p>

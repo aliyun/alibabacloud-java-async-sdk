@@ -80,7 +80,7 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,10 +99,10 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The media asset ID of the sample audio file.</p>
+             * <p>The ID of the sample audio media asset.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>42d3c312402982be65975f5b</strong></strong></p>
@@ -237,8 +237,10 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
             /**
              * <p>The gender. Valid values:</p>
              * <ul>
-             * <li>female</li>
-             * <li>male</li>
+             * <li><p>female: Female.</p>
+             * </li>
+             * <li><p>male: Male.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -250,12 +252,11 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The demonstration scenario.</p>
-             * <p>Valid values:</p>
+             * <p>The demonstration scenario. Valid values:</p>
              * <ul>
-             * <li><strong>story</strong></li>
-             * <li><strong>interaction</strong></li>
-             * <li><strong>navigation</strong></li>
+             * <li><strong>story</strong>: Story.</li>
+             * <li><strong>interaction</strong>: Interaction.</li>
+             * <li><strong>navigation</strong>: Navigation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -268,6 +269,9 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
 
             /**
              * <p>The voice description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>It\&quot;s a personalized vocal</p>
              */
             public Builder voiceDesc(String voiceDesc) {
                 this.voiceDesc = voiceDesc;
@@ -286,6 +290,9 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The voice name.</p>
+             * 
+             * <strong>example:</strong>
              * <p>The voice name.</p>
              */
             public Builder voiceName(String voiceName) {
@@ -340,7 +347,7 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The personalized human voice.</p>
+             * <p>The customized voice.</p>
              */
             public Builder customizedVoice(CustomizedVoice customizedVoice) {
                 this.customizedVoice = customizedVoice;

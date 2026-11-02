@@ -80,7 +80,7 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,7 +99,11 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true false</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The operation was successful.</li>
+         * <li>false: The operation failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -168,10 +172,10 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the audio file passes the check. Valid values:</p>
+             * <p>Indicates whether the audio passed the check. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The audio passed the check.</li>
+             * <li>false: The audio failed the check.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -183,7 +187,10 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason returned if the audio file failed to pass the check.</p>
+             * <p>The specific reason why the audio failed the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pronunciation error, please read the contents of the copy accurately</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;

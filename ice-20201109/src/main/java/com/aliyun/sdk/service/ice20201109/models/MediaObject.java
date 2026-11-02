@@ -67,7 +67,14 @@ public class MediaObject extends TeaModel {
         } 
 
         /**
-         * Media.
+         * <p>The file media asset.</p>
+         * <ul>
+         * <li>If Type is OSS, Media is a URL and supports the OSS and HTTP protocols.     </li>
+         * <li>If Type is Media, Media is a media asset ID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://bucket.loction.aliyuncs.com/path/to/video.mp4">http://bucket.loction.aliyuncs.com/path/to/video.mp4</a></p>
          */
         public Builder media(String media) {
             this.media = media;
@@ -75,7 +82,15 @@ public class MediaObject extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The input type. Valid values:</p>
+         * <ul>
+         * <li>OSS: Alibaba Cloud OSS file </li>
+         * <li>Media: Media asset</li>
+         * <li>ExternalURL: External URL, not currently publicly supported</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder type(String type) {
             this.type = type;

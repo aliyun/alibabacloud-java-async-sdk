@@ -93,7 +93,7 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -112,7 +112,7 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p><em><strong><strong>ACB-44F2-5F2D-88D7-1283E70</strong></strong></em></p>
@@ -180,6 +180,9 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
 
             /**
              * <p>The copyright watermark information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Copyright extract test</p>
              */
             public Builder message(String message) {
                 this.message = message;

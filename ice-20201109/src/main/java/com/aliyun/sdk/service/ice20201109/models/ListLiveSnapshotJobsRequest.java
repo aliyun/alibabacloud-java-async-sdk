@@ -143,10 +143,10 @@ public class ListLiveSnapshotJobsRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <ul>
-         * <li>By default, EndTime is seven days later than StartTime.</li>
-         * <li>The time range specified by the StartTime and EndTime parameters cannot exceed 30 days.</li>
+         * <li>Default value: 7 days after the start time.</li>
+         * <li>The interval between StartTime and EndTime cannot exceed 30 days.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class ListLiveSnapshotJobsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: [1,n). Default value: 1.</p>
+         * <p>The page number. Valid values: [1, n). Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +171,7 @@ public class ListLiveSnapshotJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The number of entries per page. Valid values: [1, 100]. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -183,9 +183,9 @@ public class ListLiveSnapshotJobsRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. You can use the job ID or name as the keyword to search for jobs. If you search for jobs by name, fuzzy match is supported.</p>
+         * <p>The search keyword. You can search by job ID or job name. Fuzzy match is supported for job names.</p>
          * <ul>
-         * <li>It cannot exceed 128 characters in length.</li>
+         * <li>The maximum length is 128 characters.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,12 +198,7 @@ public class ListLiveSnapshotJobsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>asc: sorts the query results by creation time in ascending order.</li>
-         * <li>desc: sorts the query results by creation time in descending order.</li>
-         * </ul>
+         * <p>The sort order. Jobs are sorted by creation time. Default value: desc.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -215,10 +210,10 @@ public class ListLiveSnapshotJobsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <ul>
-         * <li>The default value is seven days ago.</li>
-         * <li>The time range specified by the StartTime and EndTime parameters cannot exceed 30 days.</li>
+         * <li>Default value: 7 days ago.</li>
+         * <li>The interval between StartTime and EndTime cannot exceed 30 days.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,13 +226,10 @@ public class ListLiveSnapshotJobsRequest extends Request {
         }
 
         /**
-         * <p>The job state filter. By default, all jobs are queried.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>init: The job is not started.</li>
-         * <li>paused: The job is paused.</li>
-         * <li>started: The job is in progress.</li>
-         * </ul>
+         * <p>The status used to filter jobs. By default, jobs in all states are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>started</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

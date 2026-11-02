@@ -144,7 +144,15 @@ public class ListChannelAlertsRequest extends Request {
         } 
 
         /**
-         * <p>The alert type.</p>
+         * <p>The alert type. Valid values:</p>
+         * <ul>
+         * <li>Scheduling Error: An error occurred while building the schedule.</li>
+         * <li>PlayBack Warning: An exception occurred when pulling the address while adding a source.</li>
+         * <li>info: Information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduling Error</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -153,7 +161,7 @@ public class ListChannelAlertsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-21T16:10:45Z</p>
@@ -165,7 +173,7 @@ public class ListChannelAlertsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-21T16:10:45Z</p>
@@ -177,7 +185,7 @@ public class ListChannelAlertsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -189,7 +197,7 @@ public class ListChannelAlertsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -214,7 +222,7 @@ public class ListChannelAlertsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order by modification time. Valid values: asc and desc.</p>
+         * <p>Sorts the results by modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>

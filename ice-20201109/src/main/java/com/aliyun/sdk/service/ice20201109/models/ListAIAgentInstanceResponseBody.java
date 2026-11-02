@@ -67,7 +67,7 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of the AI agents.</p>
+         * <p>The list of agent instance structs.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -197,7 +197,7 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentConfig.
+             * <p>The template configuration used by the agent instance.</p>
              */
             public Builder agentConfig(AIAgentConfig agentConfig) {
                 this.agentConfig = agentConfig;
@@ -205,7 +205,7 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the call log file for the AI agent. The structure of the file is CallLog in the JSON format.</p>
+             * <p>The URL of the conversation call log file for the agent instance. The file contains the CallLog structure in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/call_logs/12345.json">https://example.com/call_logs/12345.json</a></p>
@@ -216,7 +216,7 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime configurations of the AI agent.</p>
+             * <p>The runtime configuration required for the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;VoiceChat&quot;:{&quot;AgentUserId&quot;:&quot;voice_agent_001&quot;,&quot;ChannelId&quot;:&quot;voice_channel_001&quot;,&quot;AuthToken&quot;:&quot;your_voice_chat_auth_token&quot;}}</p>
@@ -227,10 +227,14 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the instance. Valid values:</p>
+             * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li>Executing</li>
-             * <li>Finished</li>
+             * <li><p>Created: The call is initiated, but the connection between both ends is not established.</p>
+             * </li>
+             * <li><p>Executing: The call executes, and the connection between both ends is established.</p>
+             * </li>
+             * <li><p>Finished: The call has ended.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -242,7 +246,7 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template configurations of the AI agent.</p>
+             * <p>The template configuration used by the agent instance.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;VoiceChat&quot;: {&quot;VoiceId&quot;: &quot;zhixiaoxia&quot;}}</p>
@@ -253,7 +257,7 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom information.</p>
+             * <p>The user-defined data.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</p>

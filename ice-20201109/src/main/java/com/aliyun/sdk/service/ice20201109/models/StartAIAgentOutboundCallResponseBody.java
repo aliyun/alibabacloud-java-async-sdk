@@ -67,7 +67,10 @@ public class StartAIAgentOutboundCallResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong><strong><strong><strong>296014bb58670940</strong></strong></strong></strong></em></p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -75,7 +78,10 @@ public class StartAIAgentOutboundCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong><strong><strong><strong><strong>-4417-BDB2</strong></strong></strong></strong></strong></em>*</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

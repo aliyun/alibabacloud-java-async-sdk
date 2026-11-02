@@ -110,7 +110,10 @@ public class SetDefaultStorageLocationRequest extends Request {
         }
 
         /**
-         * Bucket.
+         * <p>The name of the OSS bucket that you created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-test-bucket</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -119,7 +122,13 @@ public class SetDefaultStorageLocationRequest extends Request {
         }
 
         /**
-         * Path.
+         * <ul>
+         * <li>When StorageType is set to user_oss_bucket, temporary files are stored in this path. If the path is empty or set to /, files are stored in the root directory.</li>
+         * <li>This field does not take effect for VOD storage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ims/dir</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -128,7 +137,14 @@ public class SetDefaultStorageLocationRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li>vod_oss_bucket: VOD-managed bucket. You can add VOD system buckets and your own OSS buckets that have been added to the VOD system. If no bucket is available, you can create a bucket in the ApsaraVideo VOD console. The ApsaraVideo VOD system assigns a storage address in each storage region. After you activate ApsaraVideo VOD, you must enable the address before you can use it. For more information, see <a href="https://help.aliyun.com/document_detail/86097.html">Manage storage buckets</a>.</li>
+         * <li>user_oss_bucket: user-owned private bucket. Before adding an OSS storage address, you must activate OSS and create a storage bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31885.html">Create a bucket in the console</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user_oss_bucket</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

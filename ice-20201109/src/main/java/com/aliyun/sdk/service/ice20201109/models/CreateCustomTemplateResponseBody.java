@@ -75,7 +75,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -248,7 +248,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the template was created.</p>
+             * <p>The time when the template was created. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-19T02:04:31Z</p>
@@ -270,7 +270,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was last modified.</p>
+             * <p>The time when the template was modified. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-19T02:04:31Z</p>
@@ -281,7 +281,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template state.</p>
+             * <p>The status of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -292,7 +292,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtype name of the template.</p>
+             * <p>The name of the template subtype.</p>
              * 
              * <strong>example:</strong>
              * <p>Remux</p>
@@ -303,7 +303,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template configurations.</p>
+             * <p>The template configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;flv&quot;},&quot;Video&quot;:{},&quot;Audio&quot;:{}}</p>
@@ -314,7 +314,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template ID.</p>
+             * <p>The ID of the template.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -325,7 +325,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template name.</p>
+             * <p>The name of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>test-template</p>
@@ -336,7 +336,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type ID of the template.</p>
+             * <p>The templatetype ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -347,7 +347,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type name of the template.</p>
+             * <p>The templatetype name.</p>
              * 
              * <strong>example:</strong>
              * <p>TranscodeTemplate</p>

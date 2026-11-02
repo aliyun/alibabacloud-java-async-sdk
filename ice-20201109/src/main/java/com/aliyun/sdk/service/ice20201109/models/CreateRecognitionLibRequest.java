@@ -145,13 +145,18 @@ public class CreateRecognitionLibRequest extends Request {
         } 
 
         /**
-         * <p>The type of recognition algorithm. Valid values:</p>
+         * <p>The recognition type. Valid values:</p>
          * <ul>
-         * <li>landmark</li>
-         * <li>object</li>
-         * <li>logo</li>
-         * <li>face</li>
-         * <li>label</li>
+         * <li><p>landmark: custom landmark</p>
+         * </li>
+         * <li><p>object: custom object</p>
+         * </li>
+         * <li><p>logo: custom logo</p>
+         * </li>
+         * <li><p>face: custom face</p>
+         * </li>
+         * <li><p>label: custom label</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -165,7 +170,10 @@ public class CreateRecognitionLibRequest extends Request {
         }
 
         /**
-         * <p>The description of the recognition library. Max length: 128 bytes.</p>
+         * <p>The description of the recognition library. The description can be up to 128 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Used to store commodity identification samples</p>
          */
         public Builder libDescription(String libDescription) {
             this.putQueryParameter("LibDescription", libDescription);
@@ -174,8 +182,11 @@ public class CreateRecognitionLibRequest extends Request {
         }
 
         /**
-         * <p>The name of the recognition library. Max length: 64 bytes.</p>
+         * <p>The name of the recognition library. The name can be up to 64 bytes in length.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>landmark test suite</p>
          */
         public Builder libName(String libName) {
             this.putQueryParameter("LibName", libName);

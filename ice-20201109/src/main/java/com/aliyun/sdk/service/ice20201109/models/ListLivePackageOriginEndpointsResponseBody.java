@@ -119,7 +119,7 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The origin endpoints returned.</p>
+         * <p>The live packaging origin endpoints.</p>
          */
         public Builder livePackageOriginEndpoints(java.util.List<LivePackageOriginEndpoints> livePackageOriginEndpoints) {
             this.livePackageOriginEndpoints = livePackageOriginEndpoints;
@@ -149,7 +149,7 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>b9f90a7ac8904db28dc18e0c2a72c75d</p>
@@ -160,7 +160,12 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sort order. Valid values: <code>asc</code> and <code>desc</code> (default).</p>
+         * <p>The sorting order. Valid values:</p>
+         * <ul>
+         * <li><code>asc</code>: Ascending order.</li>
+         * <li><code>desc</code>: Descending order.
+         * Default value: <code>desc</code>.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -171,7 +176,7 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -394,7 +399,7 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel name.</p>
+             * <p>The name of the channel.</p>
              * 
              * <strong>example:</strong>
              * <p>channel-1</p>
@@ -405,7 +410,7 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the endpoint was created.</p>
+             * <p>The creation time. The time is displayed in the ISO 8601 standard in UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -416,7 +421,10 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint description.</p>
+             * <p>The description of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is an origin endpoint</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -424,7 +432,7 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint name.</p>
+             * <p>The name of the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>endpoint-1</p>
@@ -435,7 +443,7 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint URL.</p>
+             * <p>The URL of the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest.m3u8">https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest.m3u8</a></p>
@@ -446,7 +454,7 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel group name.</p>
+             * <p>The name of the channel group.</p>
              * 
              * <strong>example:</strong>
              * <p>channel-group-1</p>
@@ -457,7 +465,7 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address blacklist.</p>
+             * <p>The IP blacklist.</p>
              * 
              * <strong>example:</strong>
              * <p>10.21.222.1/32,192.168.100.0/24</p>
@@ -468,7 +476,7 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address whitelist.</p>
+             * <p>The IP whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.0/24,10.0.0.1/24</p>
@@ -490,7 +498,7 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The playlist name.</p>
+             * <p>The name of the manifest.</p>
              * 
              * <strong>example:</strong>
              * <p>manifest</p>
@@ -512,7 +520,7 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days that time-shifted content is available.</p>
+             * <p>The time-shift duration in days.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

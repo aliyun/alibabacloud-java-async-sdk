@@ -138,7 +138,10 @@ public class ListYikeProductionsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -147,7 +150,10 @@ public class ListYikeProductionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The next token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Token</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -156,7 +162,10 @@ public class ListYikeProductionsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -165,7 +174,10 @@ public class ListYikeProductionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +186,10 @@ public class ListYikeProductionsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-zna577pdximvztk5</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

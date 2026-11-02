@@ -93,7 +93,7 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -104,7 +104,7 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>2bcbfcfa30fccb36f72dca22</strong></strong></p>
@@ -126,7 +126,7 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job state. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
          * <li>Created</li>
          * <li>Executing</li>

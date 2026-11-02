@@ -190,12 +190,18 @@ public class ListRecognitionSamplesRequest extends Request {
         } 
 
         /**
-         * <p>The type of recognition algorithm. Valid values:</p>
+         * <p>The recognition type. Valid values:</p>
          * <ul>
-         * <li>landmark</li>
-         * <li>object</li>
-         * <li>logo</li>
-         * <li>face</li>
+         * <li><p>landmark: custom landmark</p>
+         * </li>
+         * <li><p>object: custom object</p>
+         * </li>
+         * <li><p>logo: custom logo</p>
+         * </li>
+         * <li><p>face: custom face</p>
+         * </li>
+         * <li><p>label: custom label</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -209,11 +215,11 @@ public class ListRecognitionSamplesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the entity.</p>
+         * <p>The entity ID. If you set this parameter to ANY, the system queries the entity name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>e6b985c05174412dbc77c92496b7373b</p>
+         * <p>**<strong><strong><strong><strong><strong><strong>544cb84754</strong></strong></strong></strong></strong></strong></p>
          */
         public Builder entityId(String entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -222,7 +228,10 @@ public class ListRecognitionSamplesRequest extends Request {
         }
 
         /**
-         * EntityName.
+         * <p>The entity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_person</p>
          */
         public Builder entityName(String entityName) {
             this.putQueryParameter("EntityName", entityName);
@@ -231,11 +240,11 @@ public class ListRecognitionSamplesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the recognition library.</p>
+         * <p>The library ID. If you specify this parameter, the system queries the specified library. You can specify multiple IDs and separate them with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxxxxxxx</p>
+         * <p>lib1,lib2,lib3</p>
          */
         public Builder libId(String libId) {
             this.putQueryParameter("LibId", libId);
@@ -275,7 +284,7 @@ public class ListRecognitionSamplesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

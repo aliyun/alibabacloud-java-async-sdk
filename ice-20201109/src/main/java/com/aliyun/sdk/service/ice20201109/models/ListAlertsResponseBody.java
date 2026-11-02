@@ -106,7 +106,7 @@ public class ListAlertsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The alerts.</p>
+         * <p>The alert list.</p>
          */
         public Builder alerts(java.util.List<Alerts> alerts) {
             this.alerts = alerts;
@@ -114,7 +114,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p><strong>Request ID</strong></p>
+         * <p><strong>The request ID.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>xxx-xxxx-xxxxx-xxxx</p>
@@ -147,7 +147,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that meet the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -281,7 +281,15 @@ public class ListAlertsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert type.</p>
+             * <p>The category. Valid values:</p>
+             * <ul>
+             * <li>Scheduling Error: An error occurred while building the schedule.</li>
+             * <li>PlayBack Warning: An exception occurred while pulling the address when adding a source.</li>
+             * <li>info: Information.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduling Error</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -300,7 +308,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert was received in UTC.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-16T10:03Z</p>
@@ -311,7 +319,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert was modified in UTC.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-16T10:03Z</p>
@@ -333,7 +341,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ARN of the related resource.</p>
+             * <p>The ARNs of related resources.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ims:mediaweaver:<regionId>:<userId>:vodSource/mySourceLocation/MySource</p>
@@ -344,7 +352,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ARN of the resource.</p>
+             * <p>The resource ARN.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ims:mediaweaver:<regionId>:<userId>:vodSource/mySourceLocation/MySource</p>

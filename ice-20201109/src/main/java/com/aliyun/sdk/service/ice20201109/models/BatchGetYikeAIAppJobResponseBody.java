@@ -67,7 +67,7 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
         } 
 
         /**
-         * JobList.
+         * <p>The list of tasks. Each element in the list matches the result of GetYikeAIAppJob.</p>
          */
         public Builder jobList(java.util.List<JobList> jobList) {
             this.jobList = jobList;
@@ -75,7 +75,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             } 
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bb1dfa20a0c971f08c94e7f6d6496202</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -149,7 +155,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUrl.
+             * <p>The output file URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.mp3">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.mp3</a></p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -216,7 +225,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             } 
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>318d6350a57d71f08c9ae7f7d4496302</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -224,7 +236,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUrl.
+             * <p>The output file URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg</a></p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -291,7 +306,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             } 
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ec2de25068fd71f0a48cf7e6c4596302</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -299,7 +317,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUrl.
+             * <p>The output file URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.mp4">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.mp4</a></p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -379,7 +400,7 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             } 
 
             /**
-             * AudioResult.
+             * <p>The audio task result.</p>
              */
             public Builder audioResult(java.util.List<AudioResult> audioResult) {
                 this.audioResult = audioResult;
@@ -387,7 +408,7 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * ImageResult.
+             * <p>The image task result.</p>
              */
             public Builder imageResult(java.util.List<ImageResult> imageResult) {
                 this.imageResult = imageResult;
@@ -395,7 +416,7 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * VideoResult.
+             * <p>The video task result.</p>
              */
             public Builder videoResult(java.util.List<VideoResult> videoResult) {
                 this.videoResult = videoResult;
@@ -553,7 +574,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9e09955d662a</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -561,7 +585,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * AppInputConfig.
+             * <p>The input parameters for running the AI application, formatted as a string after you serialize the parameters in JSON.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;LoadImage.1.TargetImage\&quot;:\&quot;MediaId1\&quot;}</p>
              */
             public Builder appInputConfig(String appInputConfig) {
                 this.appInputConfig = appInputConfig;
@@ -569,7 +596,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionFinishTime.
+             * <p>The task start time, in the yyyy-MM-ddTHH:mm:ssZ format (UTC time).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-06T18:53:34.001+08:00</p>
              */
             public Builder executionFinishTime(String executionFinishTime) {
                 this.executionFinishTime = executionFinishTime;
@@ -577,7 +607,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionStartTime.
+             * <p>The task end time, in the yyyy-MM-ddTHH:mm:ssZ format (UTC time).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-06T18:53:18.809+08:00</p>
              */
             public Builder executionStartTime(String executionStartTime) {
                 this.executionStartTime = executionStartTime;
@@ -585,7 +618,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * <p>The folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pd_0617169475</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -593,7 +629,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -601,7 +640,10 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * ProductionId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pd_0617169475</p>
              */
             public Builder productionId(String productionId) {
                 this.productionId = productionId;
@@ -609,7 +651,7 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The task execution result.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -617,7 +659,17 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Created: The task was just created.</li>
+             * <li>Queuing: The task is in the queue.</li>
+             * <li>Executing: The task is being executed.</li>
+             * <li>Finished: The task execution is complete.</li>
+             * <li>Failed: The task execution failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;

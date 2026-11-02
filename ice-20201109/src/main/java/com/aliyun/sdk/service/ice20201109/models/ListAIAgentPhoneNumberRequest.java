@@ -101,7 +101,10 @@ public class ListAIAgentPhoneNumberRequest extends Request {
         } 
 
         /**
-         * Number.
+         * <p>The phone number. Specify this parameter to directly query the corresponding number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139xxxxxxxxx</p>
          */
         public Builder number(String number) {
             this.putQueryParameter("Number", number);
@@ -110,7 +113,10 @@ public class ListAIAgentPhoneNumberRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -119,7 +125,10 @@ public class ListAIAgentPhoneNumberRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 50. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -128,7 +137,20 @@ public class ListAIAgentPhoneNumberRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the target phone number. Valid values:</p>
+         * <ul>
+         * <li><p>1: Activation in progress.</p>
+         * </li>
+         * <li><p>2: Normal.</p>
+         * </li>
+         * <li><p>3: Unregistering.</p>
+         * </li>
+         * <li><p>4: Unregistered.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

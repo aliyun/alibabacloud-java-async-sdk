@@ -415,7 +415,7 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If OutputMediaTarget is set to vod-media, this parameter indicates the storage location of the media asset in ApsaraVideo VOD. The storage location is the path of the file in ApsaraVideo VOD, excluding the prefix http://. Example: outin-xxxxxx.oss-cn-shanghai.aliyuncs.com.</p>
+             * <p>If OutputMediaTarget is set to vod-media, this parameter indicates the storage location of the media asset in ApsaraVideo VOD. The storage location is the path of the file in ApsaraVideo VOD, excluding the prefix http\://. Example: outin-xxxxxx.oss-cn-shanghai.aliyuncs.com.</p>
              * 
              * <strong>example:</strong>
              * <p>outin-xxxxxx.oss-cn-shanghai.aliyuncs.com</p>
@@ -679,7 +679,7 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
              * <p>The clips.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;StartTime&quot;: &quot; 2021-06-21T08:01:00Z&quot;,  &quot;EndTime&quot;: &quot; 2021-06-21T08:03:00Z&quot; }]</p>
+             * <p>[{\&quot;StartTime\&quot;: \&quot; 2021-06-21T08:01:00Z\&quot;,  \&quot;EndTime\&quot;: \&quot; 2021-06-21T08:03:00Z\&quot; }]</p>
              */
             public Builder clips(String clips) {
                 this.clips = clips;
@@ -824,7 +824,7 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
              * <p>The user-defined data.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;key&quot;: &quot;value&quot;}</p>
+             * <p>{&quot;key&quot;: &quot;value\&quot;}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

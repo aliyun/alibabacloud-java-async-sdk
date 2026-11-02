@@ -115,7 +115,7 @@ public class ListVodPackagingConfigurationsRequest extends Request {
         } 
 
         /**
-         * <p>The name of the packaging group.</p>
+         * <p>The name of the video-on-demand packaging group.</p>
          * 
          * <strong>example:</strong>
          * <p>vod_hls</p>
@@ -127,7 +127,7 @@ public class ListVodPackagingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. The names of the returned packaging configurations contain the keyword.</p>
+         * <p>The search keyword. The system returns the video-on-demand packaging configurations whose names contain the specified keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>hls</p>
@@ -139,7 +139,7 @@ public class ListVodPackagingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number for paging. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -151,7 +151,7 @@ public class ListVodPackagingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The number of entries to return on each page for paging. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -163,10 +163,10 @@ public class ListVodPackagingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order of the packaging configurations based on the time when they were created. Valid values:</p>
+         * <p>The sort order. Default value: desc. Valid values:</p>
          * <ul>
-         * <li>desc (default): descending order.</li>
-         * <li>asc: ascending order.</li>
+         * <li>desc: Sorts the list in descending order of creation time.</li>
+         * <li>asc: Sorts the list in ascending order of creation time.</li>
          * </ul>
          * 
          * <strong>example:</strong>

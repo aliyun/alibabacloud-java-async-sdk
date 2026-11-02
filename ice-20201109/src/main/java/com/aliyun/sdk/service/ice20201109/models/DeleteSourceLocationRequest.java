@@ -74,7 +74,7 @@ public class DeleteSourceLocationRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to use delete markers.</p>
+         * <p>The soft delete flag.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

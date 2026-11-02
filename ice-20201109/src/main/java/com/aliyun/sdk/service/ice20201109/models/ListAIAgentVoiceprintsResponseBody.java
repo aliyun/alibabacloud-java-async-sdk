@@ -91,7 +91,7 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of voiceprints that match the query criteria.</p>
+         * <p>The total number of voiceprints.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -102,7 +102,7 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The voiceprints.</p>
+         * <p>The list of voiceprint information.</p>
          */
         public Builder voiceprints(java.util.List<Voiceprints> voiceprints) {
             this.voiceprints = voiceprints;
@@ -181,7 +181,7 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the voiceprint.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-28T10:03:58.000+00:00</p>
@@ -192,7 +192,7 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time of the voiceprint.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-28T10:03:58.000+00:00</p>
@@ -203,7 +203,7 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier for the voiceprint.</p>
+             * <p>The unique ID for voiceprint recognition.</p>
              * 
              * <strong>example:</strong>
              * <p>vp_1699123456_8527</p>

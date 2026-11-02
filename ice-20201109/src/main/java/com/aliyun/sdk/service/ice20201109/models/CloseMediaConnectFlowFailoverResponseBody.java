@@ -104,7 +104,7 @@ public class CloseMediaConnectFlowFailoverResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The call description.</p>
+         * <p>The description of the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -115,7 +115,7 @@ public class CloseMediaConnectFlowFailoverResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>391DDF25-705C-5B38-9DB9-7A6B00D6065A</p>
@@ -126,7 +126,7 @@ public class CloseMediaConnectFlowFailoverResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error code. A value of 0 indicates the call is successful.</p>
+         * <p>The returned error code. A value of <code>0</code> indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

@@ -160,7 +160,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sorting order of the jobs by creation time.</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -171,7 +171,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -253,7 +253,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bucket of the output endpoint. If the storage type is set to oss, the OSS bucket is returned.</p>
+             * <p>The output bucket. If the storage type is OSS, the OSS bucket name is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>testbucket</p>
@@ -264,7 +264,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output endpoint. If the storage type is set to oss, the Object Storage Service (OSS) domain name is returned.</p>
+             * <p>The output endpoint. If the storage type is OSS, the OSS domain name is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-shanghai.aliyuncs.com</p>
@@ -275,7 +275,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type. The value can only be oss.</p>
+             * <p>The storage type. Only OSS is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>oss</p>
@@ -423,7 +423,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the template was created.</p>
+             * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-20T02:48:58Z</p>
@@ -445,7 +445,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the job.</p>
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Snapshot job 1</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -461,13 +464,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the job.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>init: The job is not started.</li>
-             * <li>paused: The job is paused.</li>
-             * <li>started: The job is in progress.</li>
-             * </ul>
+             * <p>The job status.</p>
              * 
              * <strong>example:</strong>
              * <p>started</p>
@@ -490,6 +487,9 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
 
             /**
              * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template 1</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -497,7 +497,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval between two adjacent snapshots. Unit: seconds.</p>
+             * <p>The snapshot interval. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

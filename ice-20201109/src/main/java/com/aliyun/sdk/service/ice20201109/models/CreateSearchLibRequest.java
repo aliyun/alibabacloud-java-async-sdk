@@ -97,7 +97,13 @@ public class CreateSearchLibRequest extends Request {
         }
 
         /**
-         * SearchLibConfig.
+         * <p>The configuration of the search library. The value is in JSON string format. Fields:</p>
+         * <ul>
+         * <li>faceGroupIds: the IDs of self-registered face libraries created by calling CreateRecognitionLib. A maximum of three self-registered face library IDs are supported, separated by commas (,).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;faceGroupIds&quot;:&quot;xxx1,xxx2,xx3&quot;}</p>
          */
         public Builder searchLibConfig(String searchLibConfig) {
             this.putQueryParameter("SearchLibConfig", searchLibConfig);
@@ -106,7 +112,7 @@ public class CreateSearchLibRequest extends Request {
         }
 
         /**
-         * <p>The name of the search library. The name can contain letters and digits and must start with a letter.</p>
+         * <p>The name of the search library. The name must be a combination of letters and digits. For network monitoring camera (IPC) scenarios, the prefix must be &quot;IPCamera_&quot;. For other scenarios, you can customize the name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

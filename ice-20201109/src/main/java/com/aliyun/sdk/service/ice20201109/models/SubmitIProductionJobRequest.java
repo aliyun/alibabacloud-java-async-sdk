@@ -174,21 +174,22 @@ public class SubmitIProductionJobRequest extends Request {
         } 
 
         /**
-         * <p>The name of the algorithm that you want to use for the job. Valid values:</p>
+         * <p>The name of the algorithm feature to be used. Valid values:</p>
          * <ul>
-         * <li><strong>Cover</strong>: This algorithm intelligently generates a thumbnail image for a video.</li>
-         * <li><strong>VideoClip</strong>: This algorithm intelligently generates a summary for a video.</li>
-         * <li><strong>VideoDelogo</strong>: This algorithm removes logos from a video.</li>
-         * <li><strong>VideoDetext</strong>: This algorithm removes captions from a video.</li>
-         * <li><strong>CaptionExtraction</strong>: This algorithm extracts captions from a video and generates the caption file.</li>
-         * <li><strong>VideoGreenScreenMatting</strong>: This algorithm performs green-screen image matting on a video and generates a new video.</li>
-         * <li><strong>FaceBeauty</strong>: This algorithm performs video retouching.</li>
-         * <li><strong>VideoH2V</strong>: This algorithm transforms a video from the landscape mode to the portrait mode.</li>
-         * <li><strong>MusicSegmentDetect</strong>: This algorithm detects the chorus of a song.</li>
-         * <li><strong>AudioBeatDetection</strong>: This algorithm detects rhythms.</li>
-         * <li><strong>AudioQualityAssessment</strong>: This algorithm assesses the audio quality.</li>
-         * <li><strong>SpeechDenoise</strong>: This algorithm performs noise reduction.</li>
-         * <li><strong>AudioMixing</strong>: This algorithm mixes audio streams.</li>
+         * <li><strong>Cover</strong>: intelligent cover</li>
+         * <li><strong>VideoClip</strong>: video synopsis</li>
+         * <li><strong>VideoDelogo</strong>: video icon removal</li>
+         * <li><strong>VideoDetext</strong>: video subtitle removal</li>
+         * <li><strong>CaptionExtraction</strong>: subtitle fetch</li>
+         * <li><strong>VideoGreenScreenMatting</strong>: image matting</li>
+         * <li><strong>FaceBeauty</strong>: video face beautification</li>
+         * <li><strong>VideoH2V</strong>: video landscape-to-portrait conversion</li>
+         * <li><strong>MusicSegmentDetect</strong>: chorus detection</li>
+         * <li><strong>AudioBeatDetection</strong>: beat detection</li>
+         * <li><strong>AudioQualityAssessment</strong>: audio quality assessment</li>
+         * <li><strong>SpeechDenoise</strong>: speech noise reduction</li>
+         * <li><strong>AudioMixing</strong>: audio mixing</li>
+         * <li><strong>MusicDemix</strong>: vocal and accompaniment separation</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -202,7 +203,8 @@ public class SubmitIProductionJobRequest extends Request {
         }
 
         /**
-         * <p>The input file. The file can be an Object Storage Service (OSS) object or a media asset.</p>
+         * <p>The input media. OSS paths and media asset IDs are supported.</p>
+         * <p>The file requirements for the input media vary based on the algorithm feature. For more information, see the supplementary instructions below.</p>
          * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
@@ -213,7 +215,7 @@ public class SubmitIProductionJobRequest extends Request {
         }
 
         /**
-         * <p>The algorithm-specific parameters. The parameters are specified as JSON objects and vary based on the algorithm. For more information, see the &quot;Parameters of JobParams&quot; section of this topic.</p>
+         * <p>The algorithm job parameters. The value is a JSON object. The parameters vary based on the algorithm. For more information, see the supplementary instructions.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Model&quot;:&quot;gif&quot;}</p>
@@ -225,7 +227,17 @@ public class SubmitIProductionJobRequest extends Request {
         }
 
         /**
-         * ModelId.
+         * <p>The algorithm model ID. If this parameter is left empty, the default model for the corresponding feature is used. You can leave this parameter empty and use the default model.</p>
+         * <p>The following algorithm features support non-default models:</p>
+         * <ul>
+         * <li>VideoDetext<ul>
+         * <li>ModelId = algo-video-detext-new: a subtitle removal algorithm that delivers better results but runs slower and costs more than the default algorithm.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-video-detext-new</p>
          */
         public Builder modelId(String modelId) {
             this.putQueryParameter("ModelId", modelId);
@@ -234,7 +246,10 @@ public class SubmitIProductionJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the intelligent production job. The name can be up to 100 characters in length.</p>
+         * <p>The name of the job. The name can be up to 100 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test job</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -243,7 +258,8 @@ public class SubmitIProductionJobRequest extends Request {
         }
 
         /**
-         * <p>The output file. The file can be an OSS object or a media asset.</p>
+         * <p>The output media. OSS paths and media asset IDs are supported.</p>
+         * <p>The output files for the Output parameter vary based on the algorithm feature. For more information, see the supplementary instructions below.</p>
          * <p>This parameter is required.</p>
          */
         public Builder output(Output output) {
@@ -254,7 +270,7 @@ public class SubmitIProductionJobRequest extends Request {
         }
 
         /**
-         * <p>The scheduling configuration.</p>
+         * <p>The job scheduling configuration.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -276,7 +292,7 @@ public class SubmitIProductionJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data that is returned in the response. The value can be up to 1,024 bytes in length.</p>
+         * <p>The custom user data. The data is returned as is when the result is obtained. The value can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;test&quot;:1}</p>
@@ -349,10 +365,12 @@ public class SubmitIProductionJobRequest extends Request {
             } 
 
             /**
-             * <p>The input file. The file can be an OSS object or a media asset. You can specify the path of an OSS object in one of the following formats:</p>
+             * <p>The input media. Both OSS URLs and media asset IDs are supported.
+             * OSS URL formats (select one of the following formats):</p>
              * <ol>
              * <li>oss://bucket/object</li>
-             * <li>http(s)://bucket.oss-[regionId].aliyuncs.com/object bucket in the path specifies an OSS bucket that resides in the same region as the intelligent production job. object in the path specifies the object path in OSS.</li>
+             * <li>http(s)://bucket.oss-[regionId].aliyuncs.com/object
+             * In the URLs, bucket is the name of the OSS bucket in the same region as the current project, and object is the file path.</li>
              * </ol>
              * <p>This parameter is required.</p>
              * 
@@ -367,8 +385,10 @@ public class SubmitIProductionJobRequest extends Request {
             /**
              * <p>The media type. Valid values:</p>
              * <ul>
-             * <li>OSS: OSS object</li>
-             * <li>Media: media asset</li>
+             * <li><p>OSS: OSS path</p>
+             * </li>
+             * <li><p>Media: media asset ID</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -468,7 +488,10 @@ public class SubmitIProductionJobRequest extends Request {
             } 
 
             /**
-             * Biz.
+             * <p>The business to which the media asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMS</p>
              */
             public Builder biz(String biz) {
                 this.biz = biz;
@@ -476,11 +499,6 @@ public class SubmitIProductionJobRequest extends Request {
             }
 
             /**
-             * <p>The output file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</p>
-             * <ol>
-             * <li>oss://bucket/object</li>
-             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object bucket in the path specifies an OSS bucket that resides in the same region as the intelligent production job. object in the path specifies the object path in OSS.</li>
-             * </ol>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -492,7 +510,10 @@ public class SubmitIProductionJobRequest extends Request {
             }
 
             /**
-             * OutputUrl.
+             * <p>The OSS URL of the output file. This parameter is required when Type is set to Media. The bucket must be registered in IMS or VOD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -502,8 +523,10 @@ public class SubmitIProductionJobRequest extends Request {
             /**
              * <p>The media type. Valid values:</p>
              * <ul>
-             * <li>OSS: OSS object</li>
-             * <li>Media: media asset</li>
+             * <li><p>OSS: OSS path</p>
+             * </li>
+             * <li><p>Media: media asset ID</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -575,7 +598,7 @@ public class SubmitIProductionJobRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the ApsaraVideo Media Processing (MPS) queue.</p>
+             * <p>The pipeline ID.</p>
              * 
              * <strong>example:</strong>
              * <p>5246b8d12a62433ab77845074039c3dc</p>

@@ -67,7 +67,7 @@ public class SubmitSegmentationJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the video splitting task.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>

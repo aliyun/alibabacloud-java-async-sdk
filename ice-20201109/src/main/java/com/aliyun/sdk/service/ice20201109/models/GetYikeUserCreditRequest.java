@@ -83,6 +83,7 @@ public class GetYikeUserCreditRequest extends Request {
         }
 
         /**
+         * <p>The user ID of the Yike sub-account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

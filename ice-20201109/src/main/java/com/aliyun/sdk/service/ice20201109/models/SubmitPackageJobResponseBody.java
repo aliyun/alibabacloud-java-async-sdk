@@ -67,7 +67,7 @@ public class SubmitPackageJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The job ID.</p>
+         * <p>The packaging job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2d705f385b704ee5b*******a36d93e0</p>

@@ -80,7 +80,10 @@ public class PrecheckYikeAIAppJobResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class PrecheckYikeAIAppJobResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returned if the precheck fails. This parameter contains only the parameters that failed the check.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,16 @@ public class PrecheckYikeAIAppJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The precheck result. Valid values are:</p>
+         * <ul>
+         * <li><p>Success: The precheck was successful.</p>
+         * </li>
+         * <li><p>Failed: The precheck failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +174,10 @@ public class PrecheckYikeAIAppJobResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The cause of the parameter validation error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImageCheckFailed</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -170,7 +185,10 @@ public class PrecheckYikeAIAppJobResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The application parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LoadImage.1.TargetImage</p>
              */
             public Builder key(String key) {
                 this.key = key;

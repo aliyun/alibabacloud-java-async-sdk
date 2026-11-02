@@ -121,8 +121,8 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         /**
          * <p>The snapshot callback URL.</p>
          * <ul>
-         * <li>It cannot exceed 255 characters in length.</li>
-         * <li>Both HTTP and HTTPS URLs are supported.</li>
+         * <li>Maximum length: 255.</li>
+         * <li>HTTP and HTTPS are supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,11 +135,14 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The task name.</p>
          * <ul>
-         * <li>It cannot exceed 128 characters in length.</li>
+         * <li>Maximum length: 128.</li>
          * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Screenshot task1</p>
          */
         public Builder jobName(String jobName) {
             this.putBodyParameter("JobName", jobName);
@@ -148,7 +151,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         }
 
         /**
-         * <p>The information about the output snapshot.</p>
+         * <p>The snapshot output information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder snapshotOutput(SnapshotOutput snapshotOutput) {
@@ -159,7 +162,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         }
 
         /**
-         * <p>The information about the input stream.</p>
+         * <p>The stream input information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder streamInput(StreamInput streamInput) {
@@ -270,7 +273,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The output endpoint of the snapshot.</p>
+             * <p>The snapshot output endpoint.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -282,7 +285,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The storage type of the snapshot. The value can only be oss.</p>
+             * <p>The snapshot storage type. Currently, only oss is supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -355,7 +358,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             } 
 
             /**
-             * <p>The type of the input stream. The value can only be rtmp.</p>
+             * <p>The stream input type. Currently, only rtmp is supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -367,9 +370,9 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             }
 
             /**
-             * <p>The URL of the input stream.</p>
+             * <p>The stream input URL.</p>
              * <ul>
-             * <li>It cannot exceed 255 characters in length.</li>
+             * <li>Maximum length: 255.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

@@ -119,7 +119,7 @@ public class SearchMediaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The media assets that meet the requirements.</p>
+         * <p>The collection of media assets that meet the requirements.</p>
          */
         public Builder mediaInfoList(java.util.List<MediaInfoList> mediaInfoList) {
             this.mediaInfoList = mediaInfoList;
@@ -138,10 +138,10 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>6F61C357-ACC0-57FB-876E-D58795335E59</p>
+         * <p>6F61C357-ACC0-57FB-876E-D5879533****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +149,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination identifier.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>F8C4F642184DBDA5D93907A70AAE****</p>
@@ -253,7 +253,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The coordinates of the bounding box.</p>
+             * <p>The position coordinates of the bounding box.</p>
              * 
              * <strong>example:</strong>
              * <p>468.0;67.0;615.0;267.0</p>
@@ -264,7 +264,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the bounding box.</p>
+             * <p>The area of the face bounding box.</p>
              * 
              * <strong>example:</strong>
              * <p>50.2</p>
@@ -450,6 +450,9 @@ public class SearchMediaResponseBody extends TeaModel {
 
             /**
              * <p>The text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pipi</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -469,6 +472,9 @@ public class SearchMediaResponseBody extends TeaModel {
 
             /**
              * <p>The fine-grained name of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Car</p>
              */
             public Builder finegrainName(String finegrainName) {
                 this.finegrainName = finegrainName;
@@ -476,7 +482,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the clip.</p>
+             * <p>The start time of the segment.</p>
              * 
              * <strong>example:</strong>
              * <p>1.4</p>
@@ -487,7 +493,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The optimal face image encoded in Base64.</p>
+             * <p>The Base64 encoding of the optimal face image.</p>
              * 
              * <strong>example:</strong>
              * <p>99C64F6287</p>
@@ -520,7 +526,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the clip.</p>
+             * <p>The end time of the segment.</p>
              * 
              * <strong>example:</strong>
              * <p>2.5</p>
@@ -539,10 +545,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the clip.</p>
+             * <p>The clip ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>5FE19530C7A422197535FE74F5DB2B9F</p>
+             * <p>5FE19530C7A422197535FE74F5DB****</p>
              */
             public Builder clipId(String clipId) {
                 this.clipId = clipId;
@@ -675,6 +681,9 @@ public class SearchMediaResponseBody extends TeaModel {
 
             /**
              * <p>The category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Means of transportation</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -685,7 +694,7 @@ public class SearchMediaResponseBody extends TeaModel {
              * <p>The face ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>5FE19530C7A422197535FE74F5DB2B9F</p>
+             * <p>5FE19530C7A422197535FE74F5DB****</p>
              */
             public Builder faceId(String faceId) {
                 this.faceId = faceId;
@@ -693,7 +702,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the entity.</p>
+             * <p>The entity ID.</p>
              * 
              * <strong>example:</strong>
              * <p>10310250338</p>
@@ -704,7 +713,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the entity.</p>
+             * <p>The entity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Car</p>
              */
             public Builder labelName(String labelName) {
                 this.labelName = labelName;
@@ -712,7 +724,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the tag.</p>
+             * <p>The label type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>object</p>
              */
             public Builder labelType(String labelType) {
                 this.labelType = labelType;
@@ -720,7 +735,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The clips.</p>
+             * <p>The list of segments.</p>
              */
             public Builder occurrences(java.util.List<Occurrences> occurrences) {
                 this.occurrences = occurrences;
@@ -837,10 +852,10 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the clip.</p>
+             * <p>The clip ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>5FE19530C7A422197535FE74F5DB2B9F</p>
+             * <p>5FE19530C7A422197535FE74F5DB****</p>
              */
             public Builder clipId(String clipId) {
                 this.clipId = clipId;
@@ -849,6 +864,9 @@ public class SearchMediaResponseBody extends TeaModel {
 
             /**
              * <p>The text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I am Pippi.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -856,7 +874,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the clip.</p>
+             * <p>The start time of the segment.</p>
              * 
              * <strong>example:</strong>
              * <p>1.4</p>
@@ -867,7 +885,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the clip.</p>
+             * <p>The timestamp of the segment.</p>
              * 
              * <strong>example:</strong>
              * <p>1.4</p>
@@ -878,7 +896,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the clip.</p>
+             * <p>The end time of the segment.</p>
              * 
              * <strong>example:</strong>
              * <p>2.5</p>
@@ -987,10 +1005,10 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the clip.</p>
+             * <p>The clip ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>5FE19530C7A422197535FE74F5DB2B9F</p>
+             * <p>5FE19530C7A422197535FE74F5DB****</p>
              */
             public Builder clipId(String clipId) {
                 this.clipId = clipId;
@@ -999,6 +1017,9 @@ public class SearchMediaResponseBody extends TeaModel {
 
             /**
              * <p>The text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I am Pippi.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1006,7 +1027,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the clip.</p>
+             * <p>The start time of the segment.</p>
              * 
              * <strong>example:</strong>
              * <p>1.4</p>
@@ -1017,7 +1038,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the clip.</p>
+             * <p>The timestamp of the segment.</p>
              * 
              * <strong>example:</strong>
              * <p>1.4</p>
@@ -1028,7 +1049,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the clip.</p>
+             * <p>The end time of the segment.</p>
              * 
              * <strong>example:</strong>
              * <p>2.5</p>
@@ -1111,7 +1132,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tags of the intelligent AI job.</p>
+             * <p>The list of AI label information.</p>
              */
             public Builder aiLabelInfo(java.util.List<AiLabelInfo> aiLabelInfo) {
                 this.aiLabelInfo = aiLabelInfo;
@@ -1119,7 +1140,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about audio files.</p>
+             * <p>The list of speech information.</p>
              */
             public Builder asrInfo(java.util.List<AsrInfo> asrInfo) {
                 this.asrInfo = asrInfo;
@@ -1127,7 +1148,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtitles.</p>
+             * <p>The list of subtitle information.</p>
              */
             public Builder ocrInfo(java.util.List<OcrInfo> ocrInfo) {
                 this.ocrInfo = ocrInfo;
@@ -1233,10 +1254,10 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>TV Series</p>
+             * <p>The TV series.</p>
              * 
              * <strong>example:</strong>
-             * <p>TV series</p>
+             * <p>Video AI classification</p>
              */
             public Builder aiCategory(String aiCategory) {
                 this.aiCategory = aiCategory;
@@ -1244,10 +1265,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AI job.</p>
+             * <p>The AI job ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>cd35b0b0025f71edbfcb472190a9xxxx</p>
+             * <p>cd35b0b0025f71edbfcb472190a9****</p>
              */
             public Builder aiJobId(String aiJobId) {
                 this.aiJobId = aiJobId;
@@ -1255,7 +1276,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of the AI job.</p>
+             * <p>The AI result.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxx.json">http://xxxx.json</a></p>
@@ -1503,7 +1524,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bitrate of the file.</p>
+             * <p>The bitrate.</p>
              * 
              * <strong>example:</strong>
              * <p>1912.13</p>
@@ -1514,7 +1535,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file was created.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-05-30T02:02:17Z</p>
@@ -1525,7 +1546,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the file.</p>
+             * <p>The duration.</p>
              * 
              * <strong>example:</strong>
              * <p>60.00000</p>
@@ -1536,7 +1557,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the file.</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
              * <p>164265080291300080527050.wav</p>
@@ -1547,7 +1568,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the file in bytes.</p>
+             * <p>The file size in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>324784</p>
@@ -1558,7 +1579,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the file.</p>
+             * <p>The file status.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -1569,7 +1590,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the file.</p>
+             * <p>The file type.</p>
              * 
              * <strong>example:</strong>
              * <p>source_file</p>
@@ -1580,10 +1601,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Object Storage Service (OSS) URL of the file.</p>
+             * <p>The OSS URL of the file.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://outin-d3f4681ddfd911ec99a600163e1403e7.oss-cn-shanghai.aliyuncs.com/sv/23d5cdd1-18180984899/23d5cdd1-18180984899.mp4">https://outin-d3f4681ddfd911ec99a600163e1403e7.oss-cn-shanghai.aliyuncs.com/sv/23d5cdd1-18180984899/23d5cdd1-18180984899.mp4</a></p>
+             * <p><a href="https://outin-d3f4681ddfd911ec99a600163e1403e7.oss-cn-shanghai.aliyuncs.com/sv/23d5cdd1-18180984899/23d5cdd1-1818098****.mp4">https://outin-d3f4681ddfd911ec99a600163e1403e7.oss-cn-shanghai.aliyuncs.com/sv/23d5cdd1-18180984899/23d5cdd1-1818098****.mp4</a></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -1591,7 +1612,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encapsulation format of the file.</p>
+             * <p>The container format.</p>
              * 
              * <strong>example:</strong>
              * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
@@ -1602,7 +1623,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The height of the file.</p>
+             * <p>The height.</p>
              * 
              * <strong>example:</strong>
              * <p>480</p>
@@ -1613,7 +1634,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * ImagesInput.
+             * <p>The image set information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder imagesInput(String imagesInput) {
                 this.imagesInput = imagesInput;
@@ -1621,7 +1645,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file was last modified.</p>
+             * <p>The last modification time. The time follows the ISO 8601 standard and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-10T12:19Z</p>
@@ -1632,7 +1656,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region in which the file is stored.</p>
+             * <p>The storage region of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -1643,7 +1667,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the file.</p>
+             * <p>The width.</p>
              * 
              * <strong>example:</strong>
              * <p>1920</p>
@@ -1700,7 +1724,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The basic information about the file, such as the duration and size.</p>
+             * <p>The basic file information, including the duration and size.</p>
              */
             public Builder fileBasicInfo(FileBasicInfo fileBasicInfo) {
                 this.fileBasicInfo = fileBasicInfo;
@@ -1767,7 +1791,15 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * IndexStatus.
+             * <p>The index status. Valid values:</p>
+             * <ul>
+             * <li>Running: running</li>
+             * <li>Fail: failed</li>
+             * <li>Success: successful</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder indexStatus(String indexStatus) {
                 this.indexStatus = indexStatus;
@@ -1775,7 +1807,15 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * IndexType.
+             * <p>The index type. Valid values:</p>
+             * <ul>
+             * <li>mm: large model</li>
+             * <li>face: face</li>
+             * <li>aiLabel: intelligent label</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mm</p>
              */
             public Builder indexType(String indexType) {
                 this.indexType = indexType;
@@ -2176,7 +2216,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the category.</p>
+             * <p>The category ID.</p>
              * 
              * <strong>example:</strong>
              * <p>44</p>
@@ -2187,7 +2227,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the category.</p>
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Subcategory1</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -2195,7 +2238,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the media asset.</p>
+             * <p>The category.</p>
              * 
              * <strong>example:</strong>
              * <p>image</p>
@@ -2206,10 +2249,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The thumbnail URL of the media asset.</p>
+             * <p>The cover URL.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/e694372e-4f5b-4821-ae09-efd064f27b63_large_cover_url.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/e694372e-4f5b-4821-ae09-efd064f27b63_large_cover_url.jpg</a></p>
+             * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/e694372e-4f5b-4821-ae09-efd064f2****_large_cover_url.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/e694372e-4f5b-4821-ae09-efd064f2****_large_cover_url.jpg</a></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -2217,7 +2260,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the media asset was created.</p>
+             * <p>The creation time of the media asset. The time follows the ISO 8601 standard and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-01T19:48Z</p>
@@ -2228,7 +2271,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the media asset was deleted.</p>
+             * <p>The deletion time of the media asset. The time follows the ISO 8601 standard and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-01T19:48Z</p>
@@ -2239,7 +2282,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the media asset.</p>
+             * <p>The content description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This video has been transcoded</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2247,10 +2293,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address of the media asset that is waiting to be registered.</p>
+             * <p>The URL of the media asset to be registered in the corresponding system.</p>
              * 
              * <strong>example:</strong>
-             * <p>oss://clipres/longvideo/material/voice/prod/20220418/07d7c799f6054dc3bbef250854cf84981650248140427</p>
+             * <p>oss://clipres/longvideo/material/voice/prod/20220418/07d7c799f6054dc3bbef250854cf8498165024814****</p>
              */
             public Builder inputURL(String inputURL) {
                 this.inputURL = inputURL;
@@ -2258,10 +2304,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the media asset.</p>
+             * <p>The media asset ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>132bd600fc3c71ec99476732a78f6402</p>
+             * <p>132bd600fc3c71ec99476732a78f****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -2269,7 +2315,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the media asset.</p>
+             * <p>The tags.</p>
              * 
              * <strong>example:</strong>
              * <p>tags,tags2</p>
@@ -2280,7 +2326,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the media asset.</p>
+             * <p>The media type of the media asset.</p>
              * 
              * <strong>example:</strong>
              * <p>video</p>
@@ -2291,7 +2337,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the media asset was modified.</p>
+             * <p>The modification time of the media asset. The time follows the ISO 8601 standard and uses UTC (ending with Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-01T19:48Z</p>
@@ -2302,7 +2348,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name-1</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -2310,7 +2359,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom ID of the media asset. The ID is a string that contains 6 to 64 characters. Only letters, digits, hyphens (-), and underscores (_) are supported. Each custom ID is unique.</p>
+             * <p>The custom ID. It must be 6 to 64 characters in length and can contain only lowercase letters, uppercase letters, digits, hyphens, and underscores. It must be unique per user.</p>
              * 
              * <strong>example:</strong>
              * <p>123-123</p>
@@ -2321,7 +2370,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The snapshots of the media asset.</p>
+             * <p>The snapshots.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;3&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>f48f0e4154976b2b8c45</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-beijing&quot;,&quot;snapshotRegular&quot;:&quot;example.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e6a6440b29eb60bd7c</strong></strong></strong>&quot;}]</p>
@@ -2332,7 +2381,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the media asset.</p>
+             * <p>The source.</p>
              * 
              * <strong>example:</strong>
              * <p>oss</p>
@@ -2343,7 +2392,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image sprite of the media asset</p>
+             * <p>The sprite images.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
@@ -2354,7 +2403,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the media asset.</p>
+             * <p>The resource status.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -2365,7 +2414,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * StreamStatus.
+             * <p>The stream status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder streamStatus(String streamStatus) {
                 this.streamStatus = streamStatus;
@@ -2373,7 +2425,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the media asset.</p>
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Smart landscape-to-portrait conversion</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -2381,7 +2436,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transcoding status of the media asset.</p>
+             * <p>The transcoding status.</p>
              * 
              * <strong>example:</strong>
              * <p>Init</p>
@@ -2392,7 +2447,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upload source of the media asset.</p>
+             * <p>The upload source.</p>
              * 
              * <strong>example:</strong>
              * <p>general</p>
@@ -2414,7 +2469,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * VisionDescription.
+             * <p>The visual description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Football goal</p>
              */
             public Builder visionDescription(String visionDescription) {
                 this.visionDescription = visionDescription;
@@ -2546,7 +2604,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the intelligent AI job.</p>
+             * <p>The detailed AI information.</p>
              */
             public Builder aiData(AiData aiData) {
                 this.aiData = aiData;
@@ -2554,7 +2612,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the AI job.</p>
+             * <p>The AI summary data.</p>
              */
             public Builder aiRoughData(AiRoughData aiRoughData) {
                 this.aiRoughData = aiRoughData;
@@ -2562,7 +2620,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CustomFields.
+             * <p>The custom filter parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;intField1\&quot;:12,\&quot;strField1\&quot;:\&quot;abc\&quot;}</p>
              */
             public Builder customFields(String customFields) {
                 this.customFields = customFields;
@@ -2570,7 +2631,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the files.</p>
+             * <p>The file information list.</p>
              */
             public Builder fileInfoList(java.util.List<FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
@@ -2578,7 +2639,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * IndexStatusList.
+             * <p>The list of index statuses.</p>
              */
             public Builder indexStatusList(java.util.List<IndexStatusList> indexStatusList) {
                 this.indexStatusList = indexStatusList;
@@ -2586,7 +2647,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The basic information about the media asset.</p>
+             * <p>The basic information of the media asset.</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;
@@ -2594,10 +2655,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the media asset.</p>
+             * <p>The media asset ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>3b187b3620c8490886cfc2a9578c3ce6</p>
+             * <p>3b187b3620c8490886cfc2a9578c****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;

@@ -59,7 +59,10 @@ public class ListSmartVoiceGroupsRequest extends Request {
         } 
 
         /**
-         * VoiceType.
+         * <p>The voice type. If this parameter is left empty, the voices of small models are returned. Valid values: Cosyvoice: returns the sample voices of the Cosyvoice large model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CosyVoice</p>
          */
         public Builder voiceType(String voiceType) {
             this.putQueryParameter("VoiceType", voiceType);

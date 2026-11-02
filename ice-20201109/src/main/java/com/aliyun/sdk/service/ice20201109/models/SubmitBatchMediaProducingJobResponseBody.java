@@ -67,7 +67,7 @@ public class SubmitBatchMediaProducingJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the quick video production job.</p>
+         * <p>The batch intelligent one-click video production job ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>

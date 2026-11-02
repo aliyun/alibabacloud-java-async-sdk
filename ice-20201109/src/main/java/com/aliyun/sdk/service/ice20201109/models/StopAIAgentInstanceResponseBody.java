@@ -54,7 +54,10 @@ public class StopAIAgentInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B117AF5-2A16-412C-B127-FA6175ED1AD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -99,7 +99,7 @@ public class ListSmartSysAvatarModelsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -111,7 +111,10 @@ public class ListSmartSysAvatarModelsRequest extends Request {
         }
 
         /**
-         * SdkVersion.
+         * <p>The SDK version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6.4</p>
          */
         public Builder sdkVersion(String sdkVersion) {
             this.putQueryParameter("SdkVersion", sdkVersion);

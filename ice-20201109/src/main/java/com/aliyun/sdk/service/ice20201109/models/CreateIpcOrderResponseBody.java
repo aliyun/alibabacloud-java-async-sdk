@@ -67,7 +67,10 @@ public class CreateIpcOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * PurchaseStatus.
+         * <p>The purchase status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder purchaseStatus(String purchaseStatus) {
             this.purchaseStatus = purchaseStatus;
@@ -75,7 +78,10 @@ public class CreateIpcOrderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

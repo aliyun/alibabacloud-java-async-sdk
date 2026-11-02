@@ -141,10 +141,10 @@ public class SubmitSceneMediaSelectionJobRequest extends Request {
         }
 
         /**
-         * <p>The editing configuration. Its structure depends on the value of JobType.</p>
+         * <p>The editing configuration, which is the same as the EditingConfig parameter for the intelligent graphic matching and highlight mashup features of one-click video production.</p>
          * <ul>
-         * <li>When JobType is set to Smart_Mix_Media_Select, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</li>
-         * <li>When JobType is set to Screen_Media_Highlights_Media_Select, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</li>
+         * <li>When JobType is set to Smart_Mix_Media_Select, see <a href="https://www.alibabacloud.com/help/en/ims/use-cases/intelligent-graphic-matching-into-a-piece/">Intelligent graphic matching parameter settings</a>.</li>
+         * <li>When JobType is set to Screen_Media_Highlights_Media_Select, see <a href="https://www.alibabacloud.com/help/en/ims/use-cases/create-highlight-videos">Highlight mashup parameter settings</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,10 +167,10 @@ public class SubmitSceneMediaSelectionJobRequest extends Request {
         }
 
         /**
-         * <p>The input configuration. Its structure and required fields depend on the value of JobType.</p>
+         * <p>The input configuration, which is the same as the InputConfig parameter for the intelligent graphic matching and highlight mashup features of one-click video production.</p>
          * <ul>
-         * <li>When JobType is set to Smart_Mix_Media_Select, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</li>
-         * <li>When JobType is set to Screen_Media_Highlights_Media_Select, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</li>
+         * <li>When JobType is set to Smart_Mix_Media_Select, see <a href="https://www.alibabacloud.com/help/en/ims/use-cases/intelligent-graphic-matching-into-a-piece/">Intelligent graphic matching parameter settings</a>.</li>
+         * <li>When JobType is set to Screen_Media_Highlights_Media_Select, see <a href="https://www.alibabacloud.com/help/en/ims/use-cases/create-highlight-videos">Highlight mashup parameter settings</a>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -181,8 +181,8 @@ public class SubmitSceneMediaSelectionJobRequest extends Request {
          *         &quot;<a href="https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a>&quot;
          *     ],
          *     &quot;SpeechTextArray&quot;: [
-         *         &quot;Grand opening! A Freshippo store opens today at the nearby mall.&quot;,
-         *         &quot;Great deals on snacks and drinks. Stop by!&quot;
+         *         &quot;A new Hema Fresh store just opened at the mall nearby, and today is its grand opening.&quot;,
+         *         &quot;There are quite a few people in the mall, and snacks and drinks are pretty affordable—come check it out!&quot;
          *     ]
          * }</p>
          */
@@ -193,15 +193,15 @@ public class SubmitSceneMediaSelectionJobRequest extends Request {
         }
 
         /**
-         * <p>The job type. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li>Smart_Mix_Media_Select</li>
-         * <li>Screen_Media_Highlights_Media_Select</li>
+         * <li>Smart_Mix_Media_Select: intelligent matching material selection.</li>
+         * <li>Screen_Media_Highlights_Media_Select: highlight mashup material selection.</li>
          * </ul>
-         * <p>Differences:</p>
+         * <p>Differences between the two scenarios:</p>
          * <ul>
-         * <li>Smart_Mix_Media_Select: Matches voiceover scripts with provided video/image materials to select the most relevant clips and returns the matching results. Two options are available: Common mode, which is suitable for general-purpose materials like lifestyle vlogs, travel videos, and marketing content; Movie collections, which is optimized for materials with a coherent plot and specific characters, such as TV series and movies.</li>
-         * <li>Screen_Media_Highlights_Media_Select: Automatically identifies and selects clips that are exciting or represent key story points from longer video materials.</li>
+         * <li>Intelligent matching: You input voiceover scripts along with video and image materials. The system selects the most matching video and image materials based on the voiceover script content and returns the matching results. This scenario includes two sub-scenarios: general edition and film and television highlight edition. The general edition is suitable for daily general-purpose materials such as lifestyle, travel, and marketing. The film and television highlight edition is more suitable for plot-driven materials such as TV series and movies.</li>
+         * <li>Highlight mashup: You input video materials (typically multi-episode short dramas). The system automatically selects appropriate highlight segments based on highlight definitions or storylines for subsequent mashup production.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -215,10 +215,10 @@ public class SubmitSceneMediaSelectionJobRequest extends Request {
         }
 
         /**
-         * <p>The output configuration. Its structure and required fields depend on the value of JobType.</p>
+         * <p>The output configuration, which is the same as the OutputConfig parameter for the intelligent graphic matching and highlight mashup features of one-click video production.</p>
          * <ul>
-         * <li>When JobType is set to Smart_Mix_Media_Select, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</li>
-         * <li>When JobType is set to Screen_Media_Highlights_Media_Select, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</li>
+         * <li>When JobType is set to Smart_Mix_Media_Select, see <a href="https://www.alibabacloud.com/help/en/ims/use-cases/intelligent-graphic-matching-into-a-piece/">Intelligent graphic matching parameter settings</a>.</li>
+         * <li>When JobType is set to Screen_Media_Highlights_Media_Select, see <a href="https://www.alibabacloud.com/help/en/ims/use-cases/create-highlight-videos">Highlight mashup parameter settings</a>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -237,7 +237,7 @@ public class SubmitSceneMediaSelectionJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="~~357745#section-urj-v3f-0s1~~">UserData</a>.</p>
+         * <p>The user business and callback configurations. For more information about the structure, see <a href="~~357745#section-urj-v3f-0s1~~">UserData configuration</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>

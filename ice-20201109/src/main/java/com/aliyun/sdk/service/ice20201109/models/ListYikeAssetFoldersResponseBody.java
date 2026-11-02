@@ -106,7 +106,7 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
         } 
 
         /**
-         * FolderList.
+         * <p>The folder list.</p>
          */
         public Builder folderList(java.util.List<FolderList> folderList) {
             this.folderList = folderList;
@@ -114,7 +114,10 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Token</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of folders.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -256,7 +268,10 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-22T02:07:06Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -264,7 +279,10 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * <p>The folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-EXRyxc5SHY</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -272,7 +290,10 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * FolderName.
+             * <p>The folder name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
@@ -280,7 +301,10 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the folder is the default folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -288,7 +312,10 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * ProductionId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pd_183320223010****</p>
              */
             public Builder productionId(String productionId) {
                 this.productionId = productionId;
@@ -296,7 +323,10 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>llm-odl2p61i4vfbph4g</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

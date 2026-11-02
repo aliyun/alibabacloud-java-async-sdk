@@ -101,7 +101,7 @@ public class SubmitTraceExtractJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -112,7 +112,7 @@ public class SubmitTraceExtractJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>

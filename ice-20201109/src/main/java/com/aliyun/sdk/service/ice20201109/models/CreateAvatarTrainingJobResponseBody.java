@@ -80,7 +80,7 @@ public class CreateAvatarTrainingJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -155,7 +155,7 @@ public class CreateAvatarTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the digital human training job.</p>
+             * <p>The ID of the digital human training task.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>

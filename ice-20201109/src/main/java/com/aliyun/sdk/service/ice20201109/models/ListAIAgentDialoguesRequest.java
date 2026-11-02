@@ -146,7 +146,7 @@ public class ListAIAgentDialoguesRequest extends Request {
         } 
 
         /**
-         * <p>Specify the end of the time range to query using a UNIX timestamp accurate to milliseconds.</p>
+         * <p>The end UNIX timestamp in milliseconds. The value is inclusive.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,11 +159,7 @@ public class ListAIAgentDialoguesRequest extends Request {
         }
 
         /**
-         * <p>The sorting order. Valid values: </p>
-         * <ul>
-         * <li>DESC: descending order (default)</li>
-         * <li>ASC: ascending order</li>
-         * </ul>
+         * <p>The sort order. Valid values: ASC for ascending order and DESC for descending order. Default value: DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>DESC</p>
@@ -187,7 +183,7 @@ public class ListAIAgentDialoguesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * <p>The page size. Maximum value: 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -199,7 +195,10 @@ public class ListAIAgentDialoguesRequest extends Request {
         }
 
         /**
-         * RoundLimit.
+         * <p>The limit on dialogue rounds. Specifies the number of most recent dialogue rounds to return. The value must be a positive integer. This parameter is mutually exclusive with pagination parameters. If this parameter is specified, pagination parameters are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder roundLimit(String roundLimit) {
             this.putQueryParameter("RoundLimit", roundLimit);
@@ -221,7 +220,7 @@ public class ListAIAgentDialoguesRequest extends Request {
         }
 
         /**
-         * <p>Specify the start of the time range to query using a UNIX timestamp accurate to milliseconds.</p>
+         * <p>The start UNIX timestamp in milliseconds. The value is inclusive.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

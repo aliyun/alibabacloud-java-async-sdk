@@ -67,7 +67,7 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * MediaInfo.
+         * <p>The media asset information.</p>
          */
         public Builder mediaInfo(MediaInfo mediaInfo) {
             this.mediaInfo = mediaInfo;
@@ -75,7 +75,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -284,7 +287,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AuditBlockedLabel.
+             * <p>The audit label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Label</p>
              */
             public Builder auditBlockedLabel(String auditBlockedLabel) {
                 this.auditBlockedLabel = auditBlockedLabel;
@@ -292,7 +298,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuditStatus.
+             * <p>The audit status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Status</p>
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -300,7 +309,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreationJobId.
+             * <p>The ID of the creation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID</p>
              */
             public Builder creationJobId(String creationJobId) {
                 this.creationJobId = creationJobId;
@@ -308,7 +320,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * <p>The folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-CBMEJaa2fA</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -316,7 +331,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsFavorite.
+             * <p>Indicates whether the media asset is marked as a favorite.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isFavorite(String isFavorite) {
                 this.isFavorite = isFavorite;
@@ -324,7 +342,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsLogicalDeleted.
+             * <p>Indicates whether the media asset is logically deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isLogicalDeleted(String isLogicalDeleted) {
                 this.isLogicalDeleted = isLogicalDeleted;
@@ -332,7 +353,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaAssetSubType.
+             * <p>The media asset subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SubType</p>
              */
             public Builder mediaAssetSubType(String mediaAssetSubType) {
                 this.mediaAssetSubType = mediaAssetSubType;
@@ -340,7 +364,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaAssetType.
+             * <p>The media asset type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Type</p>
              */
             public Builder mediaAssetType(String mediaAssetType) {
                 this.mediaAssetType = mediaAssetType;
@@ -348,7 +375,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ProductionId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID</p>
              */
             public Builder productionId(String productionId) {
                 this.productionId = productionId;
@@ -356,7 +386,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Prompt.
+             * <p>The prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Generate a summary for the above content. The content generation must be limited to 70 characters including punctuation.</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -364,7 +397,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SourceId.
+             * <p>The source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f4a26390f02371f0a1f4e6e7c758****</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -372,7 +408,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SourceName.
+             * <p>The source name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SourceName</p>
              */
             public Builder sourceName(String sourceName) {
                 this.sourceName = sourceName;
@@ -380,7 +419,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MainBody</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -655,7 +697,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -663,7 +708,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelLayout.
+             * <p>The channel layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stereo</p>
              */
             public Builder channelLayout(String channelLayout) {
                 this.channelLayout = channelLayout;
@@ -671,7 +719,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Channels.
+             * <p>The number of channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -679,7 +730,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * <p>The long name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC (Advanced Audio Coding)</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -687,7 +741,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aac</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -695,7 +752,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The codec tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x6134706d</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -703,7 +763,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The codec tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4a</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -711,7 +774,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The codec time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/44100</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -719,7 +785,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16.2</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -727,7 +796,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The audio frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -735,7 +807,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The audio stream index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -743,7 +818,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -751,7 +829,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * <p>The total number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -759,7 +840,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The codec profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -767,7 +851,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SampleFmt.
+             * <p>The sample format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fltp</p>
              */
             public Builder sampleFmt(String sampleFmt) {
                 this.sampleFmt = sampleFmt;
@@ -775,7 +862,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SampleRate.
+             * <p>The sample rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder sampleRate(String sampleRate) {
                 this.sampleRate = sampleRate;
@@ -783,7 +873,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-04T02:13:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -791,7 +884,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/44100</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -1001,7 +1097,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1009,7 +1108,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the file was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1017,7 +1119,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16.2</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1025,7 +1130,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.mp4</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -1033,7 +1141,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The file size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27007</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -1041,7 +1152,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileStatus.
+             * <p>The file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder fileStatus(String fileStatus) {
                 this.fileStatus = fileStatus;
@@ -1049,7 +1163,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_file</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -1057,7 +1174,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The OSS URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -1065,7 +1185,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FormatName.
+             * <p>The container format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4</p>
              */
             public Builder formatName(String formatName) {
                 this.formatName = formatName;
@@ -1073,7 +1196,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>540</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -1081,7 +1207,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the file was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -1089,7 +1218,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The storage region of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1097,7 +1229,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>960</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -1268,7 +1403,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CodecLongName.
+             * <p>The long name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SubRip Text</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -1276,7 +1414,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>srt</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -1284,7 +1425,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The codec tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicode</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -1292,7 +1436,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The codec tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicode</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -1300,7 +1447,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The codec time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29.97</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -1308,7 +1458,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1316,7 +1469,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The subtitle stream index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1324,7 +1480,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1332,7 +1491,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-07T01:30Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1340,7 +1502,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -1680,7 +1845,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AvgFPS.
+             * <p>The average frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24.0</p>
              */
             public Builder avgFPS(String avgFPS) {
                 this.avgFPS = avgFPS;
@@ -1688,7 +1856,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1696,7 +1867,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * <p>The long name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -1704,7 +1878,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h264</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -1712,7 +1889,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The codec tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x0000</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -1720,7 +1900,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The codec tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0][0][0][0]</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -1728,7 +1911,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The codec time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/48</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -1736,7 +1922,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Dar.
+             * <p>The display aspect ratio (DAR).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:1</p>
              */
             public Builder dar(String dar) {
                 this.dar = dar;
@@ -1744,7 +1933,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>216.206706</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1752,7 +1944,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The video frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24.0</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -1760,7 +1955,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * HasBFrames.
+             * <p>Indicates whether the video stream has B-frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hasBFrames(String hasBFrames) {
                 this.hasBFrames = hasBFrames;
@@ -1768,7 +1966,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>540</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -1776,7 +1977,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The video stream index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1784,7 +1988,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1792,7 +1999,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The codec level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1800,7 +2010,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * <p>The total number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5184</p>
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -1808,7 +2021,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PixFmt.
+             * <p>The pixel format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuv420p</p>
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -1816,7 +2032,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The codec profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -1824,7 +2043,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Rotate.
+             * <p>The rotation angle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rotate(String rotate) {
                 this.rotate = rotate;
@@ -1832,7 +2054,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Sar.
+             * <p>The sample aspect ratio (SAR).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:1</p>
              */
             public Builder sar(String sar) {
                 this.sar = sar;
@@ -1840,7 +2065,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.081706</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1848,7 +2076,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/12288</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -1856,7 +2087,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>960</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -1949,7 +2183,7 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AudioStreamInfoList.
+             * <p>The audio stream information. A media asset may have multiple audio streams.</p>
              */
             public Builder audioStreamInfoList(java.util.List<AudioStreamInfoList> audioStreamInfoList) {
                 this.audioStreamInfoList = audioStreamInfoList;
@@ -1957,7 +2191,7 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileBasicInfo.
+             * <p>The basic file information, including duration and size.</p>
              */
             public Builder fileBasicInfo(FileBasicInfo fileBasicInfo) {
                 this.fileBasicInfo = fileBasicInfo;
@@ -1965,7 +2199,7 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SubtitleStreamInfoList.
+             * <p>The subtitle stream information. A media asset may have multiple subtitle streams.</p>
              */
             public Builder subtitleStreamInfoList(java.util.List<SubtitleStreamInfoList> subtitleStreamInfoList) {
                 this.subtitleStreamInfoList = subtitleStreamInfoList;
@@ -1973,7 +2207,7 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VideoStreamInfoList.
+             * <p>The video stream information. A media asset may have multiple video streams.</p>
              */
             public Builder videoStreamInfoList(java.util.List<VideoStreamInfoList> videoStreamInfoList) {
                 this.videoStreamInfoList = videoStreamInfoList;
@@ -2326,7 +2560,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Biz.
+             * <p>The business to which the media asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AiSaas</p>
              */
             public Builder biz(String biz) {
                 this.biz = biz;
@@ -2334,7 +2571,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessType.
+             * <p>The business type of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -2342,7 +2582,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CateId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3048</p>
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -2350,7 +2593,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CateName.
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cateName</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -2358,7 +2604,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * <p>The category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -2366,7 +2615,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * <p>The cover URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg</a></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -2374,7 +2626,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the media asset was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2382,7 +2637,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DeletedTime.
+             * <p>The time when the media asset was deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:15Z</p>
              */
             public Builder deletedTime(String deletedTime) {
                 this.deletedTime = deletedTime;
@@ -2390,7 +2648,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The content description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2398,7 +2659,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InputURL.
+             * <p>The address of the media asset to be registered in the corresponding system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
              */
             public Builder inputURL(String inputURL) {
                 this.inputURL = inputURL;
@@ -2406,7 +2670,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -2414,7 +2681,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaTags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder mediaTags(String mediaTags) {
                 this.mediaTags = mediaTags;
@@ -2422,7 +2692,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>The media type of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -2430,7 +2703,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the media asset was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -2438,7 +2714,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceId.
+             * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The value must be 6 to 64 characters in length and is unique within the user scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-1234</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;
@@ -2446,7 +2725,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * <p>The snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder snapshots(String snapshots) {
                 this.snapshots = snapshots;
@@ -2454,7 +2736,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -2462,7 +2747,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SpriteImages.
+             * <p>The sprite images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
              */
             public Builder spriteImages(String spriteImages) {
                 this.spriteImages = spriteImages;
@@ -2470,7 +2758,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2478,7 +2769,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ThumbURL240P.
+             * <p>The thumbnail with a height of 240 pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ThumbURL240P</p>
              */
             public Builder thumbURL240P(String thumbURL240P) {
                 this.thumbURL240P = thumbURL240P;
@@ -2486,7 +2780,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ThumbURLWebp.
+             * <p>The thumbnail encoded in WebP format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ThumbURLWebp</p>
              */
             public Builder thumbURLWebp(String thumbURLWebp) {
                 this.thumbURLWebp = thumbURLWebp;
@@ -2494,7 +2791,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v6l82k_176822379****.jpeg</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -2502,7 +2802,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UploadSource.
+             * <p>The upload source of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder uploadSource(String uploadSource) {
                 this.uploadSource = uploadSource;
@@ -2510,7 +2813,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserData</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -2603,7 +2909,7 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * BizData.
+             * <p>The custom business information.</p>
              */
             public Builder bizData(BizData bizData) {
                 this.bizData = bizData;
@@ -2611,7 +2917,7 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileInfoList.
+             * <p>The file information.</p>
              */
             public Builder fileInfoList(java.util.List<FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
@@ -2619,7 +2925,7 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaBasicInfo.
+             * <p>The basic information of the media asset.</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;
@@ -2627,7 +2933,10 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;

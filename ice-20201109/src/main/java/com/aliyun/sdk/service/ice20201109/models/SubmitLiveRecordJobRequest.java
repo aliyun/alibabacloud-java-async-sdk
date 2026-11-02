@@ -119,7 +119,7 @@ public class SubmitLiveRecordJobRequest extends Request {
         } 
 
         /**
-         * <p>The name of the recording job.</p>
+         * <p>The name of the recording task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
-         * <p>The storage address of the recording.</p>
+         * <p>The storage URL for the recording.</p>
          * <p>This parameter is required.</p>
          */
         public Builder recordOutput(RecordOutput recordOutput) {
@@ -155,7 +155,7 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
-         * <p>The URL of the live stream.</p>
+         * <p>The live stream URL.</p>
          * <p>This parameter is required.</p>
          */
         public Builder streamInput(StreamInput streamInput) {
@@ -252,7 +252,7 @@ public class SubmitLiveRecordJobRequest extends Request {
             } 
 
             /**
-             * <p>The bucket name.</p>
+             * <p>The name of the storage space.</p>
              * 
              * <strong>example:</strong>
              * <p>imsbucket1</p>
@@ -274,7 +274,7 @@ public class SubmitLiveRecordJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the storage address.</p>
+             * <p>The type of the storage URL.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -346,7 +346,7 @@ public class SubmitLiveRecordJobRequest extends Request {
             } 
 
             /**
-             * <p>The type of the live stream URL. The value can only be rtmp.</p>
+             * <p>The type of the live stream URL. Valid value: rtmp.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -358,7 +358,7 @@ public class SubmitLiveRecordJobRequest extends Request {
             }
 
             /**
-             * <p>The URL of the live stream.</p>
+             * <p>The live stream URL.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp://example.com/live/stream1</p>

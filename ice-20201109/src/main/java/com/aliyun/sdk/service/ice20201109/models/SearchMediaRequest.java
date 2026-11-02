@@ -180,7 +180,15 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * CustomFilters.
+         * <p>The custom filters. The value is a JSON string. Supported fields include the integer field intField1 and the string fields strField1 and strField2. You can select at most one match type for the same field. Filters for different fields use the AND logical operator.</p>
+         * <ul>
+         * <li>Exact match, such as {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}.</li>
+         * <li>Multi-value match, such as {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}.</li>
+         * <li>Range match, such as {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13},&quot;strField2&quot;:[&quot;cd&quot;,&quot;de&quot;],&quot;strField1&quot;:&quot;abc&quot;}</p>
          */
         public Builder customFilters(String customFilters) {
             this.putQueryParameter("CustomFilters", customFilters);
@@ -189,10 +197,10 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * <p>The ID of the entity.</p>
+         * <p>The entity ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>2d3bf1e35a1e42b5ab338d701efa7603</p>
+         * <p>2d3bf1e35a1e42b5ab338d701efa****</p>
          */
         public Builder entityId(String entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -201,8 +209,10 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * <p>The filter conditions. For more information about the parameter syntax
-         * &lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/2584256.html">Media asset search protocols</a>.</p>
+         * <p>The filter conditions. &lt;props=&quot;china&quot;&gt;For syntax rules, see <a href="https://help.aliyun.com/document_detail/2584256.html">Media asset search protocol</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title = \&quot;China\&quot; and utcCreate = [\&quot;1693367158561\&quot;,\&quot;1693367158562\&quot;]</p>
          */
         public Builder match(String match) {
             this.putQueryParameter("Match", match);
@@ -211,7 +221,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -223,7 +233,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -235,7 +245,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * <p>The pagination identifier. The value can be up to 32 characters in length. The first time you call this operation for each new search, you do not need to specify this parameter. The value of this parameter is returned each time data records that meet the specified filter condition are found. The value is used to record the current position of queried data. Record the returned parameter value and set this parameter according to the following requirements during the next search: If you need to traverse all data that meets the filter criteria, you must set the ScrollToken parameter. If the value of the PageNo parameter exceeds 200, we recommend that you set this parameter to optimize search performance. You can only page backward. You can page a maximum of 1,000 entries in an operation.</p>
+         * <p>The scroll token, which is a 32-character string. You do not need to specify this parameter when you initiate a search request for the first time. If the search request returns data, the server returns this parameter value to record the position of the current search data. Record the returned value and specify it in subsequent searches based on the following requirements or suggestions: This parameter is required to traverse all data that matches the search conditions. If the value of the PageNo parameter exceeds 200, specify this parameter to optimize search performance. You can only scroll forward, and the maximum scroll distance is 1,000 media assets.</p>
          * 
          * <strong>example:</strong>
          * <p>F8C4F642184DBDA5D93907A70AAE****</p>
@@ -259,10 +269,10 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * <p>The sort field and order. Separate multiple parameters with commas (,).</p>
+         * <p>The sort fields and sort orders. Separate multiple values with commas (,).</p>
          * 
          * <strong>example:</strong>
-         * <p>utcCreate:Desc, utcModified:Desc</p>
+         * <p>utcCreate:Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

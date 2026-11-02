@@ -80,7 +80,7 @@ public class MediaConvertOutputGroup extends TeaModel {
         } 
 
         /**
-         * GroupConfig.
+         * <p>The output group configuration.</p>
          */
         public Builder groupConfig(MediaConvertOutputGroupConfig groupConfig) {
             this.groupConfig = groupConfig;
@@ -88,7 +88,10 @@ public class MediaConvertOutputGroup extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the output group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hls-group</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -96,7 +99,7 @@ public class MediaConvertOutputGroup extends TeaModel {
         }
 
         /**
-         * Outputs.
+         * <p>A list of individual output stream configurations. Each object in this array defines a specific rendition.</p>
          */
         public Builder outputs(java.util.List<MediaConvertOutputGroupOutput> outputs) {
             this.outputs = outputs;

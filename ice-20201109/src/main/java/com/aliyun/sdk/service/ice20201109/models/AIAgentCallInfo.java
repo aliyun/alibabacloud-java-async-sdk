@@ -132,7 +132,10 @@ public class AIAgentCallInfo extends TeaModel {
         } 
 
         /**
-         * CallDuration.
+         * <p>The duration of the call, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder callDuration(Integer callDuration) {
             this.callDuration = callDuration;
@@ -140,7 +143,10 @@ public class AIAgentCallInfo extends TeaModel {
         }
 
         /**
-         * CallEndTime.
+         * <p>The time the call ended, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-01T16:53:58.875932+00:00</p>
          */
         public Builder callEndTime(String callEndTime) {
             this.callEndTime = callEndTime;
@@ -148,7 +154,10 @@ public class AIAgentCallInfo extends TeaModel {
         }
 
         /**
-         * CallStartTime.
+         * <p>The time the call started, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-01T16:53:53.184797+00:00</p>
          */
         public Builder callStartTime(String callStartTime) {
             this.callStartTime = callStartTime;
@@ -156,7 +165,10 @@ public class AIAgentCallInfo extends TeaModel {
         }
 
         /**
-         * CalleeNumber.
+         * <p>The number of the called party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136******794</p>
          */
         public Builder calleeNumber(String calleeNumber) {
             this.calleeNumber = calleeNumber;
@@ -164,7 +176,10 @@ public class AIAgentCallInfo extends TeaModel {
         }
 
         /**
-         * CallerNumber.
+         * <p>The number of the calling party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183*****333</p>
          */
         public Builder callerNumber(String callerNumber) {
             this.callerNumber = callerNumber;
@@ -172,7 +187,13 @@ public class AIAgentCallInfo extends TeaModel {
         }
 
         /**
-         * HangupRole.
+         * <p>Indicates which party ended the call.
+         * 0: The agent ended the call.
+         * 1: The user ended the call.
+         * 2: The system ended the call for a transfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder hangupRole(Integer hangupRole) {
             this.hangupRole = hangupRole;
@@ -180,7 +201,10 @@ public class AIAgentCallInfo extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder status(String status) {
             this.status = status;

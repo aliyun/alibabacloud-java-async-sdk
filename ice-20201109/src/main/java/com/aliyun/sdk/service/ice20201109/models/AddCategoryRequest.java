@@ -113,10 +113,13 @@ public class AddCategoryRequest extends Request {
         /**
          * <p>The category name.</p>
          * <ul>
-         * <li>The value can be up to 64 bytes in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The maximum length is 64 bytes.</li>
+         * <li>UTF-8 encoding.</li>
          * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Third-level subcategory</p>
          */
         public Builder cateName(String cateName) {
             this.putQueryParameter("CateName", cateName);
@@ -125,7 +128,7 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent category.</p>
+         * <p>The parent category ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -137,10 +140,10 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * <p>The type of the category. Valid values:</p>
+         * <p>The category type. Valid values:</p>
          * <ul>
-         * <li>default: audio, video, and image files. This is the default value.</li>
-         * <li>material: short video materials.</li>
+         * <li>default (default): audio, video, and image category.                                 </li>
+         * <li>material: short video material category.</li>
          * </ul>
          * 
          * <strong>example:</strong>

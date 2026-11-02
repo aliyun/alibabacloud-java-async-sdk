@@ -119,10 +119,13 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * <p>The input URL that you specified for the media asset when you registered the media asset. For more information, see <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a>.</p>
+         * <p>The InputURL specified when the media asset was registered. For more information, see <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a>.</p>
          * <blockquote>
-         * <p> You must specify at least one of the MediaId and InputURL parameters.</p>
+         * <p>At least one of MediaId and InputURL must be specified.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a>  or  vod://<strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder inputURL(String inputURL) {
             this.putQueryParameter("InputURL", inputURL);
@@ -131,9 +134,9 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * <blockquote>
-         * <p> You must specify at least one of the MediaId and InputURL parameters.</p>
+         * <p>At least one of MediaId and InputURL must be specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
