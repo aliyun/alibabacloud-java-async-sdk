@@ -93,10 +93,7 @@ public class QueryLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>D9B3C4E7-BEC7-1E2C-86A3-EA985B4FFD73</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

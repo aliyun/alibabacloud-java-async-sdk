@@ -91,9 +91,6 @@ public class QueryLinkRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BB5953C300957</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -103,9 +100,6 @@ public class QueryLinkRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8hGb9SyJARqp7V4PGP92X</p>
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);
@@ -115,9 +109,6 @@ public class QueryLinkRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

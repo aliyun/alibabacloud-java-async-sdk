@@ -170,9 +170,6 @@ public class QueryInfoFromMdpRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALIPUBE5C3F6D091419</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -218,9 +215,6 @@ public class QueryInfoFromMdpRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
          */
         public Builder riskScene(String riskScene) {
             this.putBodyParameter("RiskScene", riskScene);
@@ -230,9 +224,6 @@ public class QueryInfoFromMdpRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

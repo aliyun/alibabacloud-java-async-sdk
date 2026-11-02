@@ -151,7 +151,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

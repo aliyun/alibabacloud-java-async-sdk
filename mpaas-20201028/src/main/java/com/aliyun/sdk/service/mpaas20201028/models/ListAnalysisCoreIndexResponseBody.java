@@ -303,7 +303,7 @@ public class ListAnalysisCoreIndexResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>0</p>
+             * ArrivalNum.
              */
             public Builder arrivalNum(String arrivalNum) {
                 this.arrivalNum = arrivalNum;
@@ -311,7 +311,7 @@ public class ListAnalysisCoreIndexResponseBody extends TeaModel {
             }
 
             /**
-             * <p>0</p>
+             * ArrivalRate.
              */
             public Builder arrivalRate(String arrivalRate) {
                 this.arrivalRate = arrivalRate;
@@ -319,7 +319,7 @@ public class ListAnalysisCoreIndexResponseBody extends TeaModel {
             }
 
             /**
-             * <p>0</p>
+             * IgnoreNum.
              */
             public Builder ignoreNum(String ignoreNum) {
                 this.ignoreNum = ignoreNum;
@@ -327,7 +327,7 @@ public class ListAnalysisCoreIndexResponseBody extends TeaModel {
             }
 
             /**
-             * <p>0</p>
+             * IgnoreRate.
              */
             public Builder ignoreRate(String ignoreRate) {
                 this.ignoreRate = ignoreRate;
@@ -335,7 +335,7 @@ public class ListAnalysisCoreIndexResponseBody extends TeaModel {
             }
 
             /**
-             * <p>0</p>
+             * OpenNum.
              */
             public Builder openNum(String openNum) {
                 this.openNum = openNum;
@@ -343,7 +343,7 @@ public class ListAnalysisCoreIndexResponseBody extends TeaModel {
             }
 
             /**
-             * <p>0</p>
+             * OpenRate.
              */
             public Builder openRate(String openRate) {
                 this.openRate = openRate;
@@ -351,7 +351,7 @@ public class ListAnalysisCoreIndexResponseBody extends TeaModel {
             }
 
             /**
-             * <p>0</p>
+             * PushNum.
              */
             public Builder pushNum(String pushNum) {
                 this.pushNum = pushNum;
@@ -359,7 +359,7 @@ public class ListAnalysisCoreIndexResponseBody extends TeaModel {
             }
 
             /**
-             * <p>0</p>
+             * PushTotalNum.
              */
             public Builder pushTotalNum(String pushTotalNum) {
                 this.pushTotalNum = pushTotalNum;

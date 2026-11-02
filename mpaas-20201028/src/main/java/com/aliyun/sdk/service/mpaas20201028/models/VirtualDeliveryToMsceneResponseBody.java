@@ -135,10 +135,7 @@ public class VirtualDeliveryToMsceneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ac1f0083177615939018778261913</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

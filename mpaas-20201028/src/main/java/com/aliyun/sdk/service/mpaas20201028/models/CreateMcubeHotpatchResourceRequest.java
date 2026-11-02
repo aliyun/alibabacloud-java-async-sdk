@@ -187,9 +187,6 @@ public class CreateMcubeHotpatchResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALIPUBE5C3F6D091419</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -199,9 +196,6 @@ public class CreateMcubeHotpatchResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://mcube-prod.oss-cn-hangzhou.aliyuncs.com/cubecard/tempFileForOnex/ONEXE99ED22171502/preProd/TPHWQYXG/8a6177ce-d7c3-434e-8c62-676a54db9667/main.zip">https://mcube-prod.oss-cn-hangzhou.aliyuncs.com/cubecard/tempFileForOnex/ONEXE99ED22171502/preProd/TPHWQYXG/8a6177ce-d7c3-434e-8c62-676a54db9667/main.zip</a></p>
          */
         public Builder fileUrl(String fileUrl) {
             this.putBodyParameter("FileUrl", fileUrl);
@@ -220,9 +214,6 @@ public class CreateMcubeHotpatchResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
          */
         public Builder onexFlag(Boolean onexFlag) {
             this.putBodyParameter("OnexFlag", onexFlag);
@@ -232,9 +223,6 @@ public class CreateMcubeHotpatchResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>iOS,Android</p>
          */
         public Builder platform(String platform) {
             this.putBodyParameter("Platform", platform);
@@ -244,9 +232,6 @@ public class CreateMcubeHotpatchResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.0.0</p>
          */
         public Builder productVersion(String productVersion) {
             this.putBodyParameter("ProductVersion", productVersion);
@@ -265,9 +250,6 @@ public class CreateMcubeHotpatchResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

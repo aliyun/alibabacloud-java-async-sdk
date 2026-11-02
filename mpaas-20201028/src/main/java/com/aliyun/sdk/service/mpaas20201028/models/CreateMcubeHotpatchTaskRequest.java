@@ -299,9 +299,6 @@ public class CreateMcubeHotpatchTaskRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1662218</p>
          */
         public Builder packageId(Long packageId) {
             this.putBodyParameter("PackageId", packageId);

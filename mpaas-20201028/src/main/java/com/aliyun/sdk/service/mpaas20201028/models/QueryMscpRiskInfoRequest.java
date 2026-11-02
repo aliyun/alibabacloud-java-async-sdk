@@ -115,10 +115,7 @@ public class QueryMscpRiskInfoRequest extends Request {
         } 
 
         /**
-         * <p>ApdidToken</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ApdidToken</p>
+         * ApdidToken.
          */
         public Builder apdidToken(String apdidToken) {
             this.putBodyParameter("ApdidToken", apdidToken);
@@ -127,10 +124,7 @@ public class QueryMscpRiskInfoRequest extends Request {
         }
 
         /**
-         * <p>AppId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AppId</p>
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -139,10 +133,7 @@ public class QueryMscpRiskInfoRequest extends Request {
         }
 
         /**
-         * <p>TenantId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TenantId</p>
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -151,10 +142,7 @@ public class QueryMscpRiskInfoRequest extends Request {
         }
 
         /**
-         * <p>TerminalType</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TerminalType</p>
+         * TerminalType.
          */
         public Builder terminalType(String terminalType) {
             this.putBodyParameter("TerminalType", terminalType);
@@ -163,10 +151,7 @@ public class QueryMscpRiskInfoRequest extends Request {
         }
 
         /**
-         * <p>WorkspaceId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>WorkspaceId</p>
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

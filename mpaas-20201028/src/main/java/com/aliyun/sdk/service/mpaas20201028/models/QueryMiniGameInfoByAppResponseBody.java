@@ -178,6 +178,270 @@ public class QueryMiniGameInfoByAppResponseBody extends TeaModel {
      *
      * <p>QueryMiniGameInfoByAppResponseBody</p>
      */
+    public static class UserProfileData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActiveRegionCodes")
+        private String activeRegionCodes;
+
+        @com.aliyun.core.annotation.NameInMap("ActiveRegions")
+        private String activeRegions;
+
+        @com.aliyun.core.annotation.NameInMap("AgeSegment")
+        private String ageSegment;
+
+        @com.aliyun.core.annotation.NameInMap("AndroidActiveModels")
+        private String androidActiveModels;
+
+        @com.aliyun.core.annotation.NameInMap("AndroidRatio")
+        private Integer androidRatio;
+
+        @com.aliyun.core.annotation.NameInMap("FemaleRatio")
+        private Integer femaleRatio;
+
+        @com.aliyun.core.annotation.NameInMap("HarmonyRatio")
+        private Integer harmonyRatio;
+
+        @com.aliyun.core.annotation.NameInMap("IosActiveModels")
+        private String iosActiveModels;
+
+        @com.aliyun.core.annotation.NameInMap("IosRatio")
+        private Integer iosRatio;
+
+        @com.aliyun.core.annotation.NameInMap("MaleRatio")
+        private Integer maleRatio;
+
+        @com.aliyun.core.annotation.NameInMap("ProfileRemark")
+        private String profileRemark;
+
+        private UserProfileData(Builder builder) {
+            this.activeRegionCodes = builder.activeRegionCodes;
+            this.activeRegions = builder.activeRegions;
+            this.ageSegment = builder.ageSegment;
+            this.androidActiveModels = builder.androidActiveModels;
+            this.androidRatio = builder.androidRatio;
+            this.femaleRatio = builder.femaleRatio;
+            this.harmonyRatio = builder.harmonyRatio;
+            this.iosActiveModels = builder.iosActiveModels;
+            this.iosRatio = builder.iosRatio;
+            this.maleRatio = builder.maleRatio;
+            this.profileRemark = builder.profileRemark;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserProfileData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return activeRegionCodes
+         */
+        public String getActiveRegionCodes() {
+            return this.activeRegionCodes;
+        }
+
+        /**
+         * @return activeRegions
+         */
+        public String getActiveRegions() {
+            return this.activeRegions;
+        }
+
+        /**
+         * @return ageSegment
+         */
+        public String getAgeSegment() {
+            return this.ageSegment;
+        }
+
+        /**
+         * @return androidActiveModels
+         */
+        public String getAndroidActiveModels() {
+            return this.androidActiveModels;
+        }
+
+        /**
+         * @return androidRatio
+         */
+        public Integer getAndroidRatio() {
+            return this.androidRatio;
+        }
+
+        /**
+         * @return femaleRatio
+         */
+        public Integer getFemaleRatio() {
+            return this.femaleRatio;
+        }
+
+        /**
+         * @return harmonyRatio
+         */
+        public Integer getHarmonyRatio() {
+            return this.harmonyRatio;
+        }
+
+        /**
+         * @return iosActiveModels
+         */
+        public String getIosActiveModels() {
+            return this.iosActiveModels;
+        }
+
+        /**
+         * @return iosRatio
+         */
+        public Integer getIosRatio() {
+            return this.iosRatio;
+        }
+
+        /**
+         * @return maleRatio
+         */
+        public Integer getMaleRatio() {
+            return this.maleRatio;
+        }
+
+        /**
+         * @return profileRemark
+         */
+        public String getProfileRemark() {
+            return this.profileRemark;
+        }
+
+        public static final class Builder {
+            private String activeRegionCodes; 
+            private String activeRegions; 
+            private String ageSegment; 
+            private String androidActiveModels; 
+            private Integer androidRatio; 
+            private Integer femaleRatio; 
+            private Integer harmonyRatio; 
+            private String iosActiveModels; 
+            private Integer iosRatio; 
+            private Integer maleRatio; 
+            private String profileRemark; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserProfileData model) {
+                this.activeRegionCodes = model.activeRegionCodes;
+                this.activeRegions = model.activeRegions;
+                this.ageSegment = model.ageSegment;
+                this.androidActiveModels = model.androidActiveModels;
+                this.androidRatio = model.androidRatio;
+                this.femaleRatio = model.femaleRatio;
+                this.harmonyRatio = model.harmonyRatio;
+                this.iosActiveModels = model.iosActiveModels;
+                this.iosRatio = model.iosRatio;
+                this.maleRatio = model.maleRatio;
+                this.profileRemark = model.profileRemark;
+            } 
+
+            /**
+             * ActiveRegionCodes.
+             */
+            public Builder activeRegionCodes(String activeRegionCodes) {
+                this.activeRegionCodes = activeRegionCodes;
+                return this;
+            }
+
+            /**
+             * ActiveRegions.
+             */
+            public Builder activeRegions(String activeRegions) {
+                this.activeRegions = activeRegions;
+                return this;
+            }
+
+            /**
+             * AgeSegment.
+             */
+            public Builder ageSegment(String ageSegment) {
+                this.ageSegment = ageSegment;
+                return this;
+            }
+
+            /**
+             * AndroidActiveModels.
+             */
+            public Builder androidActiveModels(String androidActiveModels) {
+                this.androidActiveModels = androidActiveModels;
+                return this;
+            }
+
+            /**
+             * AndroidRatio.
+             */
+            public Builder androidRatio(Integer androidRatio) {
+                this.androidRatio = androidRatio;
+                return this;
+            }
+
+            /**
+             * FemaleRatio.
+             */
+            public Builder femaleRatio(Integer femaleRatio) {
+                this.femaleRatio = femaleRatio;
+                return this;
+            }
+
+            /**
+             * HarmonyRatio.
+             */
+            public Builder harmonyRatio(Integer harmonyRatio) {
+                this.harmonyRatio = harmonyRatio;
+                return this;
+            }
+
+            /**
+             * IosActiveModels.
+             */
+            public Builder iosActiveModels(String iosActiveModels) {
+                this.iosActiveModels = iosActiveModels;
+                return this;
+            }
+
+            /**
+             * IosRatio.
+             */
+            public Builder iosRatio(Integer iosRatio) {
+                this.iosRatio = iosRatio;
+                return this;
+            }
+
+            /**
+             * MaleRatio.
+             */
+            public Builder maleRatio(Integer maleRatio) {
+                this.maleRatio = maleRatio;
+                return this;
+            }
+
+            /**
+             * ProfileRemark.
+             */
+            public Builder profileRemark(String profileRemark) {
+                this.profileRemark = profileRemark;
+                return this;
+            }
+
+            public UserProfileData build() {
+                return new UserProfileData(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryMiniGameInfoByAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMiniGameInfoByAppResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GameEngine")
         private String gameEngine;
@@ -218,6 +482,9 @@ public class QueryMiniGameInfoByAppResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Slogan")
         private String slogan;
 
+        @com.aliyun.core.annotation.NameInMap("UserProfileData")
+        private UserProfileData userProfileData;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
@@ -235,6 +502,7 @@ public class QueryMiniGameInfoByAppResponseBody extends TeaModel {
             this.miniProgramId = builder.miniProgramId;
             this.miniProgramName = builder.miniProgramName;
             this.slogan = builder.slogan;
+            this.userProfileData = builder.userProfileData;
             this.version = builder.version;
         }
 
@@ -338,6 +606,13 @@ public class QueryMiniGameInfoByAppResponseBody extends TeaModel {
         }
 
         /**
+         * @return userProfileData
+         */
+        public UserProfileData getUserProfileData() {
+            return this.userProfileData;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -358,6 +633,7 @@ public class QueryMiniGameInfoByAppResponseBody extends TeaModel {
             private Long miniProgramId; 
             private String miniProgramName; 
             private String slogan; 
+            private UserProfileData userProfileData; 
             private String version; 
 
             private Builder() {
@@ -377,6 +653,7 @@ public class QueryMiniGameInfoByAppResponseBody extends TeaModel {
                 this.miniProgramId = model.miniProgramId;
                 this.miniProgramName = model.miniProgramName;
                 this.slogan = model.slogan;
+                this.userProfileData = model.userProfileData;
                 this.version = model.version;
             } 
 
@@ -481,6 +758,14 @@ public class QueryMiniGameInfoByAppResponseBody extends TeaModel {
              */
             public Builder slogan(String slogan) {
                 this.slogan = slogan;
+                return this;
+            }
+
+            /**
+             * UserProfileData.
+             */
+            public Builder userProfileData(UserProfileData userProfileData) {
+                this.userProfileData = userProfileData;
                 return this;
             }
 

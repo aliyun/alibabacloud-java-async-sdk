@@ -135,9 +135,6 @@ public class QueryCubecardFiletokenRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
          */
         public Builder onexFlag(Boolean onexFlag) {
             this.putBodyParameter("OnexFlag", onexFlag);

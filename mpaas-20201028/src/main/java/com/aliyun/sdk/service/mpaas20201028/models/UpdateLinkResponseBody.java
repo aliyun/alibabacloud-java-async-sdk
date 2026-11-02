@@ -93,10 +93,7 @@ public class UpdateLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

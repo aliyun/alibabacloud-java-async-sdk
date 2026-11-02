@@ -172,9 +172,6 @@ public class UpdateMcubeHotpatchTaskStatusRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALIPUBE5C3F6D091419</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -184,9 +181,6 @@ public class UpdateMcubeHotpatchTaskStatusRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hotpatch</p>
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -214,9 +208,6 @@ public class UpdateMcubeHotpatchTaskStatusRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BUILDING</p>
          */
         public Builder taskStatus(Long taskStatus) {
             this.putBodyParameter("TaskStatus", taskStatus);
@@ -226,9 +217,6 @@ public class UpdateMcubeHotpatchTaskStatusRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ZXCXMAHQ</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -238,9 +226,6 @@ public class UpdateMcubeHotpatchTaskStatusRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

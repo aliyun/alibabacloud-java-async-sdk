@@ -230,10 +230,7 @@ public class UpdateMcubeHotpatchTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Id of the request</p>
-             * 
-             * <strong>example:</strong>
-             * <p>DD6844B5-279D-5FFD-BD5A-2E1F9BEC39EE</p>
+             * RequestId.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;

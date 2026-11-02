@@ -106,10 +106,7 @@ public class QueryMscpRiskInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Code</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Code</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,10 +114,7 @@ public class QueryMscpRiskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Data</p>
+         * Data.
          */
         public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
@@ -128,10 +122,7 @@ public class QueryMscpRiskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Msg</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Msg</p>
+         * Msg.
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -139,10 +130,7 @@ public class QueryMscpRiskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RequestId</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,10 +138,7 @@ public class QueryMscpRiskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

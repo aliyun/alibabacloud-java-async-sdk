@@ -133,9 +133,6 @@ public class CreateLinkRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BB5953C300957</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -172,9 +169,6 @@ public class CreateLinkRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>https://********</p>
          */
         public Builder targetUrl(String targetUrl) {
             this.putBodyParameter("TargetUrl", targetUrl);
@@ -184,9 +178,6 @@ public class CreateLinkRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

@@ -1303,10 +1303,7 @@ public class QueryMcubeHotpatchTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Id of the request</p>
-             * 
-             * <strong>example:</strong>
-             * <p>61B9F63C-4E6F-5D8E-A694-899450987B48</p>
+             * RequestId.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;

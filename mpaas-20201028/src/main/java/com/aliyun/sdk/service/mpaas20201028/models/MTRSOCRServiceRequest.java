@@ -164,9 +164,6 @@ public class MTRSOCRServiceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xydasf==ac</p>
          */
         public Builder imageRaw(String imageRaw) {
             this.putBodyParameter("ImageRaw", imageRaw);
@@ -194,9 +191,6 @@ public class MTRSOCRServiceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ID_CARD_OCR</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

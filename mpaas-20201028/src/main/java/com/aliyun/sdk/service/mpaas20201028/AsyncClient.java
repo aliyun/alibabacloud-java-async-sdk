@@ -68,6 +68,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CopyMcdpGroupResponse> copyMcdpGroup(CopyMcdpGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateGatewayApi  CreateGatewayApiRequest
+     * @return CreateGatewayApiResponse
+     */
+    CompletableFuture<CreateGatewayApiResponse> createGatewayApi(CreateGatewayApiRequest request);
+
+    /**
+     * @param request the request parameters of CreateGatewayApiGroup  CreateGatewayApiGroupRequest
+     * @return CreateGatewayApiGroupResponse
+     */
+    CompletableFuture<CreateGatewayApiGroupResponse> createGatewayApiGroup(CreateGatewayApiGroupRequest request);
+
+    /**
      * @param request the request parameters of CreateLink  CreateLinkRequest
      * @return CreateLinkResponse
      */
@@ -224,6 +236,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCubecardWhitelistContentResponse> deleteCubecardWhitelistContent(DeleteCubecardWhitelistContentRequest request);
 
     /**
+     * @param request the request parameters of DeleteGatewayApi  DeleteGatewayApiRequest
+     * @return DeleteGatewayApiResponse
+     */
+    CompletableFuture<DeleteGatewayApiResponse> deleteGatewayApi(DeleteGatewayApiRequest request);
+
+    /**
+     * @param request the request parameters of DeleteGatewayApiGroup  DeleteGatewayApiGroupRequest
+     * @return DeleteGatewayApiGroupResponse
+     */
+    CompletableFuture<DeleteGatewayApiGroupResponse> deleteGatewayApiGroup(DeleteGatewayApiGroupRequest request);
+
+    /**
      * @param request the request parameters of DeleteMcdpAim  DeleteMcdpAimRequest
      * @return DeleteMcdpAimResponse
      */
@@ -296,6 +320,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExistMcubeRsaKeyResponse> existMcubeRsaKey(ExistMcubeRsaKeyRequest request);
 
     /**
+     * @param request the request parameters of ExportGatewayApis  ExportGatewayApisRequest
+     * @return ExportGatewayApisResponse
+     */
+    CompletableFuture<ExportGatewayApisResponse> exportGatewayApis(ExportGatewayApisRequest request);
+
+    /**
      * @param request the request parameters of ExportMappCenterAppConfig  ExportMappCenterAppConfigRequest
      * @return ExportMappCenterAppConfigResponse
      */
@@ -318,6 +348,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetGameReviewByStatusResponse
      */
     CompletableFuture<GetGameReviewByStatusResponse> getGameReviewByStatus(GetGameReviewByStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetGatewayApi  GetGatewayApiRequest
+     * @return GetGatewayApiResponse
+     */
+    CompletableFuture<GetGatewayApiResponse> getGatewayApi(GetGatewayApiRequest request);
+
+    /**
+     * @param request the request parameters of GetGatewayApiGroup  GetGatewayApiGroupRequest
+     * @return GetGatewayApiGroupResponse
+     */
+    CompletableFuture<GetGatewayApiGroupResponse> getGatewayApiGroup(GetGatewayApiGroupRequest request);
 
     /**
      * @param request the request parameters of GetLogUrlInMsa  GetLogUrlInMsaRequest
@@ -386,6 +428,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserAppUploadProcessInMsaResponse> getUserAppUploadProcessInMsa(GetUserAppUploadProcessInMsaRequest request);
 
     /**
+     * @param request the request parameters of ImportGatewayApis  ImportGatewayApisRequest
+     * @return ImportGatewayApisResponse
+     */
+    CompletableFuture<ImportGatewayApisResponse> importGatewayApis(ImportGatewayApisRequest request);
+
+    /**
      * @param request the request parameters of ListAnalysisCoreIndex  ListAnalysisCoreIndexRequest
      * @return ListAnalysisCoreIndexResponse
      */
@@ -396,6 +444,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCubecardAppsResponse
      */
     CompletableFuture<ListCubecardAppsResponse> listCubecardApps(ListCubecardAppsRequest request);
+
+    /**
+     * @param request the request parameters of ListGatewayApiGroups  ListGatewayApiGroupsRequest
+     * @return ListGatewayApiGroupsResponse
+     */
+    CompletableFuture<ListGatewayApiGroupsResponse> listGatewayApiGroups(ListGatewayApiGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListGatewayApis  ListGatewayApisRequest
+     * @return ListGatewayApisResponse
+     */
+    CompletableFuture<ListGatewayApisResponse> listGatewayApis(ListGatewayApisRequest request);
 
     /**
      * @param request the request parameters of ListMappCenterApps  ListMappCenterAppsRequest
@@ -656,6 +716,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryMiniGameInfoByAppResponse> queryMiniGameInfoByApp(QueryMiniGameInfoByAppRequest request);
 
     /**
+     * @param request the request parameters of QueryMiniGameQualificationByApp  QueryMiniGameQualificationByAppRequest
+     * @return QueryMiniGameQualificationByAppResponse
+     */
+    CompletableFuture<QueryMiniGameQualificationByAppResponse> queryMiniGameQualificationByApp(QueryMiniGameQualificationByAppRequest request);
+
+    /**
      * @param request the request parameters of QueryMpsSchedulerList  QueryMpsSchedulerListRequest
      * @return QueryMpsSchedulerListResponse
      */
@@ -738,6 +804,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StartUserAppAsyncEnhanceInMsaResponse
      */
     CompletableFuture<StartUserAppAsyncEnhanceInMsaResponse> startUserAppAsyncEnhanceInMsa(StartUserAppAsyncEnhanceInMsaRequest request);
+
+    /**
+     * @param request the request parameters of UpdateGatewayApi  UpdateGatewayApiRequest
+     * @return UpdateGatewayApiResponse
+     */
+    CompletableFuture<UpdateGatewayApiResponse> updateGatewayApi(UpdateGatewayApiRequest request);
+
+    /**
+     * @param request the request parameters of UpdateGatewayApiGroup  UpdateGatewayApiGroupRequest
+     * @return UpdateGatewayApiGroupResponse
+     */
+    CompletableFuture<UpdateGatewayApiGroupResponse> updateGatewayApiGroup(UpdateGatewayApiGroupRequest request);
 
     /**
      * @param request the request parameters of UpdateLink  UpdateLinkRequest

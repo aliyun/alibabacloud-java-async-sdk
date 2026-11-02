@@ -159,9 +159,6 @@ public class UpdateMdsCubeResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALIPUBE5C3F6D091419</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -171,9 +168,6 @@ public class UpdateMdsCubeResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>url</p>
          */
         public Builder mockDataUrl(String mockDataUrl) {
             this.putBodyParameter("MockDataUrl", mockDataUrl);
@@ -183,9 +177,6 @@ public class UpdateMdsCubeResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
          */
         public Builder onexFlag(Boolean onexFlag) {
             this.putBodyParameter("OnexFlag", onexFlag);
@@ -195,9 +186,6 @@ public class UpdateMdsCubeResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
          */
         public Builder templateResourceId(Long templateResourceId) {
             this.putBodyParameter("TemplateResourceId", templateResourceId);
@@ -207,9 +195,6 @@ public class UpdateMdsCubeResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ZXCXMAHQ-zh_CN</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -219,9 +204,6 @@ public class UpdateMdsCubeResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dev</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

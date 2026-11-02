@@ -156,9 +156,6 @@ public class CreateMcubeHotpatchRollbackTaskRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALIPUBE5C3F6D091419</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -168,9 +165,6 @@ public class CreateMcubeHotpatchRollbackTaskRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1653905</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -207,9 +201,6 @@ public class CreateMcubeHotpatchRollbackTaskRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
