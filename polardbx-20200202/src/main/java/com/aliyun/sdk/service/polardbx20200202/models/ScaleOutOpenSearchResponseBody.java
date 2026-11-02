@@ -288,7 +288,7 @@ public class ScaleOutOpenSearchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission denial.</p>
+             * <p>The type of the denied permission.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>

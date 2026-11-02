@@ -1340,6 +1340,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteMetaQueryResponse> executeMetaQuery(ExecuteMetaQueryRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of PXFS tenants under a specified PolarDB-X instance and returns the tenant quota, throttling, and usage information.</p>
+     * 
+     * @param request the request parameters of ListPxfsTenants  ListPxfsTenantsRequest
+     * @return ListPxfsTenantsResponse
+     */
+    CompletableFuture<ListPxfsTenantsResponse> listPxfsTenants(ListPxfsTenantsRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -1536,6 +1545,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyPxfsSecurityIpsResponse
      */
     CompletableFuture<ModifyPxfsSecurityIpsResponse> modifyPxfsSecurityIps(ModifyPxfsSecurityIpsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Adjusts the capacity quota, file count quota, request rate limit, and write bandwidth limit for a specified PXFS tenant. Parameters that are not passed remain unchanged.</p>
+     * 
+     * @param request the request parameters of ModifyPxfsTenantQuota  ModifyPxfsTenantQuotaRequest
+     * @return ModifyPxfsTenantQuotaResponse
+     */
+    CompletableFuture<ModifyPxfsTenantQuotaResponse> modifyPxfsTenantQuota(ModifyPxfsTenantQuotaRequest request);
 
     /**
      * <b>description</b> :

@@ -3303,6 +3303,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of PXFS tenants under a specified PolarDB-X instance and returns the tenant quota, throttling, and usage information.</p>
+     * 
+     * @param request the request parameters of ListPxfsTenants  ListPxfsTenantsRequest
+     * @return ListPxfsTenantsResponse
+     */
+    @Override
+    public CompletableFuture<ListPxfsTenantsResponse> listPxfsTenants(ListPxfsTenantsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListPxfsTenants").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPxfsTenantsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPxfsTenantsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -3807,6 +3828,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyPxfsSecurityIpsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Adjusts the capacity quota, file count quota, request rate limit, and write bandwidth limit for a specified PXFS tenant. Parameters that are not passed remain unchanged.</p>
+     * 
+     * @param request the request parameters of ModifyPxfsTenantQuota  ModifyPxfsTenantQuotaRequest
+     * @return ModifyPxfsTenantQuotaResponse
+     */
+    @Override
+    public CompletableFuture<ModifyPxfsTenantQuotaResponse> modifyPxfsTenantQuota(ModifyPxfsTenantQuotaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyPxfsTenantQuota").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyPxfsTenantQuotaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyPxfsTenantQuotaResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
