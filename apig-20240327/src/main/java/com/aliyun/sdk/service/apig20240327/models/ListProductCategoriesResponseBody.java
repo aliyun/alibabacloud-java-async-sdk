@@ -123,7 +123,7 @@ public class ListProductCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>
@@ -218,7 +218,7 @@ public class ListProductCategoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The product category ID. You can use this ID as the categoryId path parameter for GetProductCategory, UpdateProductCategory, and DeleteProductCategory. You can also use it as an element in the categories parameter, which is a set of category IDs, for SetProductCategories and CreateProduct.</p>
+             * <p>The ID of the product category. You can use this ID as the categoryId path parameter in the GetProductCategory, UpdateProductCategory, and DeleteProductCategory operations, or as an element in the categories parameter in the SetProductCategories and CreateProduct operations.</p>
              * 
              * <strong>example:</strong>
              * <p>category-xxxxxxxx</p>
@@ -229,10 +229,10 @@ public class ListProductCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product category description.</p>
+             * <p>The description of the product category.</p>
              * 
              * <strong>example:</strong>
-             * <p>Product category for AI-related capabilities</p>
+             * <p>Product categories with AI-related capabilities</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -240,7 +240,7 @@ public class ListProductCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product category icon, which consists of the icon type (type) and icon information (value) fields.</p>
+             * <p>The icon of the product category. It consists of two fields: type (the icon type) and value (the icon information).</p>
              */
             public Builder icon(HiMarketIcon icon) {
                 this.icon = icon;
@@ -248,7 +248,7 @@ public class ListProductCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product category name.</p>
+             * <p>The name of the product category.</p>
              * 
              * <strong>example:</strong>
              * <p>ai-capabilities</p>
@@ -344,7 +344,7 @@ public class ListProductCategoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of product categories. Each element in the list is named category and contains the information about a product category.</p>
+             * <p>The list of product categories. Each element in the list represents a product category.</p>
              */
             public Builder content(java.util.List<Content> content) {
                 this.content = content;
@@ -363,7 +363,7 @@ public class ListProductCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -374,7 +374,7 @@ public class ListProductCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

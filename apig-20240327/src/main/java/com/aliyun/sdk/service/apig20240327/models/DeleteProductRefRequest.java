@@ -59,7 +59,7 @@ public class DeleteProductRefRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the API product. Specifies the API product from which to dissociate the API. You can obtain this ID from the productId field of a list item returned by ListProducts. This parameter shares the same /himarket/v1/products/{productId}/ref path with CreateProductRef and GetProductRef. This parameter only locates the API product and does not delete the API product itself. To delete an API product, call DeleteProduct.</p>
+         * <p>The ID of the API product. Specifies the API product from which to dissociate the API. You can obtain this ID from the productId field in the list items returned by ListProducts. This parameter uses the same /himarket/v1/products/{productId}/ref path as CreateProductRef and GetProductRef. This parameter only locates the API product and does not delete the API product itself. To delete an API product, call DeleteProduct.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>

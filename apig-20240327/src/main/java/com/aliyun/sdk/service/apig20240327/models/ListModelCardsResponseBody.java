@@ -203,7 +203,7 @@ public class ListModelCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type identifier of the available path record. The valid values are not specified in the API definition.</p>
+             * <p>The type identifier of the available path record. The valid values are not declared in the API definition.</p>
              * 
              * <strong>example:</strong>
              * <p>type-xxxxxxxx</p>
@@ -408,7 +408,7 @@ public class ListModelCardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of available paths for the model card. Each element consists of a path and a type member. The API definition does not specify the criteria for determining availability.</p>
+             * <p>The list of available paths for the model card. Each element consists of a path and a type member. The API definition does not specify the criteria for availability.</p>
              */
             public Builder availablePaths(java.util.List<AvailablePaths> availablePaths) {
                 this.availablePaths = availablePaths;
@@ -416,7 +416,7 @@ public class ListModelCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The feature configuration of the model card in a key-value pair map structure. The set of keys is not specified in the API definition.</p>
+             * <p>The feature configuration of the model card. This is a key-value pair map structure. The key set is not declared in the API definition.</p>
              */
             public Builder features(java.util.Map<String, ?> features) {
                 this.features = features;
@@ -424,7 +424,7 @@ public class ListModelCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata container of the model card. Only the description member is declared in the API definition.</p>
+             * <p>The metadata container for the model card. Only the description member is declared in the API definition.</p>
              */
             public Builder meta(Meta meta) {
                 this.meta = meta;
@@ -432,7 +432,7 @@ public class ListModelCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the model.</p>
+             * <p>The model name.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -443,7 +443,7 @@ public class ListModelCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pricing information of the model card in a key-value pair map structure. The set of keys and billing criteria are not specified in the API definition.</p>
+             * <p>The pricing information of the model card. This is a key-value pair map structure. The key set and billing criteria are not declared in the API definition.</p>
              */
             public Builder pricing(java.util.Map<String, ?> pricing) {
                 this.pricing = pricing;
@@ -451,7 +451,7 @@ public class ListModelCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the model provider for the model card.</p>
+             * <p>The model provider identifier corresponding to the model card.</p>
              * 
              * <strong>example:</strong>
              * <p>provider-xxxxxxxx</p>
@@ -462,7 +462,7 @@ public class ListModelCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of snapshots for the model card. Array items are map structures with unspecified members. The API definition does not specify the snapshot content or generation rules.</p>
+             * <p>The list of snapshots for the model card. Array items are map structures with undeclared members. The API definition does not specify the snapshot content or generation rules.</p>
              */
             public Builder snapshots(java.util.List<java.util.Map<String, ?>> snapshots) {
                 this.snapshots = snapshots;
@@ -470,7 +470,7 @@ public class ListModelCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source identifier of the model card. The valid values are not specified in the API definition.</p>
+             * <p>The source identifier of the model card. The valid values are not declared in the API definition.</p>
              * 
              * <strong>example:</strong>
              * <p>source-xxxxxxxx</p>

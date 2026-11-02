@@ -115,7 +115,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The message content.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique identifier of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -150,6 +150,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("conflictPeriodType")
+        @Deprecated
         private String conflictPeriodType;
 
         @com.aliyun.core.annotation.NameInMap("conflictType")
@@ -160,6 +161,9 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("consumerName")
         private String consumerName;
+
+        @com.aliyun.core.annotation.NameInMap("periodType")
+        private String periodType;
 
         @com.aliyun.core.annotation.NameInMap("subjectId")
         private String subjectId;
@@ -175,6 +179,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             this.conflictType = builder.conflictType;
             this.consumerId = builder.consumerId;
             this.consumerName = builder.consumerName;
+            this.periodType = builder.periodType;
             this.subjectId = builder.subjectId;
             this.subjectName = builder.subjectName;
             this.subjectType = builder.subjectType;
@@ -217,6 +222,13 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return periodType
+         */
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        /**
          * @return subjectId
          */
         public String getSubjectId() {
@@ -242,6 +254,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             private String conflictType; 
             private String consumerId; 
             private String consumerName; 
+            private String periodType; 
             private String subjectId; 
             private String subjectName; 
             private String subjectType; 
@@ -254,13 +267,14 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
                 this.conflictType = model.conflictType;
                 this.consumerId = model.consumerId;
                 this.consumerName = model.consumerName;
+                this.periodType = model.periodType;
                 this.subjectId = model.subjectId;
                 this.subjectName = model.subjectName;
                 this.subjectType = model.subjectType;
             } 
 
             /**
-             * <p>The period type of the existing conflicting rule on the consumer subject. A value of day, week, or month indicates that the period of the existing conflicting rule is day, week, or month respectively.</p>
+             * <p>The period type of the existing conflicting rule on the consumption subject. A value of day, week, or month indicates that the period of the existing conflicting rule is day, week, or month, respectively.</p>
              * 
              * <strong>example:</strong>
              * <p>week</p>
@@ -271,7 +285,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the existing conflicting rule on the consumer subject. A value of calendar indicates that the existing conflicting rule uses a calendar period. A value of epoch indicates that the existing conflicting rule uses a custom period.</p>
+             * <p>The type of the existing conflicting rule on the consumption subject. A value of calendar indicates that the existing conflicting rule is a natural period rule. A value of epoch indicates that the existing conflicting rule is a custom period rule.</p>
              * 
              * <strong>example:</strong>
              * <p>calendar</p>
@@ -282,7 +296,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conflicting consumer ID. Use subjectId instead.</p>
+             * <p>The ID of the conflicting consumer. This parameter is deprecated. Use subjectId instead.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-xxxxxx</p>
@@ -293,13 +307,21 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conflicting consumer name. Use subjectName instead.</p>
+             * <p>The name of the conflicting consumer. This parameter is deprecated. Use subjectName instead.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer-a</p>
              */
             public Builder consumerName(String consumerName) {
                 this.consumerName = consumerName;
+                return this;
+            }
+
+            /**
+             * periodType.
+             */
+            public Builder periodType(String periodType) {
+                this.periodType = periodType;
                 return this;
             }
 
@@ -409,7 +431,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The conflict hash.</p>
+             * <p>The hash of the conflict.</p>
              * 
              * <strong>example:</strong>
              * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
@@ -524,7 +546,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</p>
+             * <p>Indicates whether the semantics of the current write request can be accepted by the system. A value of false typically occurs in retryable scenarios, such as when a conflict is not confirmed for overwriting.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -543,7 +565,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request is a dry run.</p>
+             * <p>Indicates whether a dry run is performed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -554,7 +576,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule ID.</p>
+             * <p>The ID of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>qr-xxxxx</p>

@@ -171,7 +171,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>
@@ -296,7 +296,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conversation type of the session. Valid values: MODEL and AGENT. These values are defined in the talkType enumeration of the CreateChatSession request parameter, and this response parameter does not have the @enums annotation.</p>
+             * <p>The conversation type of the session. Valid values: MODEL and AGENT. These values are defined in the talkType request parameter of the CreateChatSession operation. This response parameter does not include the @enums annotation.</p>
              * 
              * <strong>example:</strong>
              * <p>MODEL</p>
@@ -411,7 +411,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

@@ -475,7 +475,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API information.</p>
+             * <p>The API information details.</p>
              */
             public Builder apiInfo(HttpApiApiInfo apiInfo) {
                 this.apiInfo = apiInfo;
@@ -524,7 +524,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer information.</p>
+             * <p>The consumer information details.</p>
              */
             public Builder consumerInfo(ConsumerInfo consumerInfo) {
                 this.consumerInfo = consumerInfo;
@@ -543,7 +543,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment status of the API in the current environment.</p>
+             * <p>The publish status of the API in the current environment.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -625,7 +625,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource information.</p>
+             * <p>The resource information details.</p>
              */
             public Builder resourceInfo(ResourceInfo resourceInfo) {
                 this.resourceInfo = resourceInfo;
@@ -740,7 +740,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of consumer authorization rules.</p>
+             * <p>The list of consumer rules.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

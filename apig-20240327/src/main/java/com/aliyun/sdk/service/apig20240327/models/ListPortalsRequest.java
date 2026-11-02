@@ -127,7 +127,7 @@ public class ListPortalsRequest extends Request {
         }
 
         /**
-         * <p>The portal name, which is the Name property of the portal resource. This corresponds to the name field in the response list items.</p>
+         * <p>The name of the portal. This corresponds to the Name property of the portal resource and matches the name field in the response list items.</p>
          * 
          * <strong>example:</strong>
          * <p>developer-portal</p>

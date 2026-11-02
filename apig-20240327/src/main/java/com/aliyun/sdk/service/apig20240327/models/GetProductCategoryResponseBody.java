@@ -232,7 +232,7 @@ public class GetProductCategoryResponseBody extends TeaModel {
              * <p>The description of the product category.</p>
              * 
              * <strong>example:</strong>
-             * <p>Product category containing AI-related capabilities</p>
+             * <p>Product category that includes AI-related capabilities</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -240,7 +240,7 @@ public class GetProductCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The icon of the product category. It consists of two fields: icon type (type) and icon value (value).</p>
+             * <p>The icon of the product category, which consists of the icon type (type) and icon information (value) fields.</p>
              */
             public Builder icon(HiMarketIcon icon) {
                 this.icon = icon;

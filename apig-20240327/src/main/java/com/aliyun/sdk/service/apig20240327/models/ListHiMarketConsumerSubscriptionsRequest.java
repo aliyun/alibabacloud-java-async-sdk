@@ -129,7 +129,7 @@ public class ListHiMarketConsumerSubscriptionsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the consumer. The API product subscriptions of this consumer are returned.</p>
+         * <p>The ID of the consumer whose API product subscriptions are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxxxxxxxxxxx</p>
@@ -153,7 +153,7 @@ public class ListHiMarketConsumerSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination cursor. Pass the nextToken returned in the previous response to retrieve the next page. Do not pass this parameter for the first query.</p>
+         * <p>The pagination token. Pass the token returned in the previous response to retrieve the next page. Do not specify this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>token-xxxxxxxx</p>
@@ -165,7 +165,7 @@ public class ListHiMarketConsumerSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from 1.</p>
+         * <p>The number of the page to return. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -189,7 +189,7 @@ public class ListHiMarketConsumerSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The subscription status used to filter subscriptions. Valid values: PENDING and APPROVED.</p>
+         * <p>The subscription status, which is used to filter subscriptions. Valid values: PENDING and APPROVED.</p>
          * 
          * <strong>example:</strong>
          * <p>APPROVED</p>

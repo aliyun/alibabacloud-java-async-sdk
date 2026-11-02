@@ -343,7 +343,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer authorization rule ID.</p>
+             * <p>The ID of the consumer authorization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>car-csgeka5lhtggrjcprok0</p>
@@ -354,7 +354,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer ID.</p>
+             * <p>The ID of the consumer.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-csheiftlhtgmp0j0hp4g</p>
@@ -395,11 +395,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration mode. Valid values:</p>
-             * <ul>
-             * <li>LongTerm: long-term</li>
-             * <li>ShortTerm: short-term</li>
-             * </ul>
+             * <p>The expiration mode. Valid values: LongTerm, ShortTerm.</p>
              * 
              * <strong>example:</strong>
              * <p>ShortTerm</p>
@@ -421,7 +417,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time.</p>
+             * <p>The expiration timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>172086834548</p>
@@ -440,7 +436,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource ID.</p>
+             * <p>The ID of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>2351944</p>
@@ -577,7 +573,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

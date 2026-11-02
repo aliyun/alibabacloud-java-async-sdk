@@ -253,7 +253,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>The consumer group ID. If specified, the authorization rules of the consumer group are queried. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</p>
+         * <p>The consumer group ID. If specified, the authorization rules of the consumer group are queried. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified as a query condition.</p>
          * 
          * <strong>example:</strong>
          * <p>csg-8c13d2b4f8a1</p>
@@ -277,7 +277,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>The consumer ID. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</p>
+         * <p>The consumer ID. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified as a query condition.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-ct21c16m1hkp64hk6qmg</p>
@@ -289,7 +289,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>The consumer name for fuzzy match.</p>
+         * <p>The consumer name.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-xxx</p>
@@ -313,7 +313,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to group results by API.</p>
+         * <p>Specifies whether to group the results by API.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -349,7 +349,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>The parent resource ID. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</p>
+         * <p>The parent resource ID. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified as a query condition.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-li942gy8p01</p>
@@ -373,7 +373,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>The resource ID. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</p>
+         * <p>The resource ID. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified as a query condition.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-li942gy8p03</p>

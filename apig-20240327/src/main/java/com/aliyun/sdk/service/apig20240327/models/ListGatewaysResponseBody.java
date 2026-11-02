@@ -104,7 +104,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query result of the gateway list.</p>
+         * <p>The gateway list query results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -405,7 +405,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol version. Valid values:</p>
+             * <p>The IP version. Valid values:</p>
              * <ul>
              * <li>ipv4: IPv4.</li>
              * <li>ipv6: IPv6.</li>
@@ -422,8 +422,8 @@ public class ListGatewaysResponseBody extends TeaModel {
             /**
              * <p>The load balancing address type. Valid values:</p>
              * <ul>
-             * <li>Internet: public network.</li>
-             * <li>Intranet: private network.</li>
+             * <li>Internet: Internet.</li>
+             * <li>Intranet: Private network.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -435,7 +435,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this is the default ingress address of the gateway.</p>
+             * <p>Indicates whether the address is the default ingress address of the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -462,7 +462,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The load balancing instance ID.</p>
+             * <p>The load balancing ID.</p>
              * 
              * <strong>example:</strong>
              * <p>nlb-xqwioje1c91r***</p>
@@ -475,7 +475,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             /**
              * <p>The load balancing provisioning pattern of the gateway. Valid values:</p>
              * <ul>
-             * <li>Managed: managed by the cloud-native API gateway.</li>
+             * <li>Managed: Managed by Cloud-native API Gateway.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -487,7 +487,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of listening ports.</p>
+             * <p>The list of listened ports.</p>
              */
             public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
@@ -495,10 +495,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the load balancing instance. Valid values:</p>
+             * <p>The status of the load balancing. Valid values:</p>
              * <ul>
-             * <li>Ready: active.</li>
-             * <li>NotCreate: No instance is associated.</li>
+             * <li>Ready: Active.</li>
+             * <li>NotCreate: Not associated with an instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -512,8 +512,8 @@ public class ListGatewaysResponseBody extends TeaModel {
             /**
              * <p>The load balancing type of the gateway. Valid values:</p>
              * <ul>
-             * <li>NLB: Network Load Balancer (NLB).</li>
-             * <li>CLB: Classic Load Balancer (CLB).</li>
+             * <li>NLB: Network load balancing.</li>
+             * <li>CLB: Classic load balancing.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -526,6 +526,462 @@ public class ListGatewaysResponseBody extends TeaModel {
 
             public LoadBalancers build() {
                 return new LoadBalancers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
+    public static class NetworkAccessConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endpointSecurityGroupId")
+        private String endpointSecurityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private NetworkAccessConfig(Builder builder) {
+            this.endpointSecurityGroupId = builder.endpointSecurityGroupId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkAccessConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endpointSecurityGroupId
+         */
+        public String getEndpointSecurityGroupId() {
+            return this.endpointSecurityGroupId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String endpointSecurityGroupId; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkAccessConfig model) {
+                this.endpointSecurityGroupId = model.endpointSecurityGroupId;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The ID of the security group configured for the internal endpoint. The security group belongs to the VPC selected by the user and is a non-managed security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1example123456789</p>
+             */
+            public Builder endpointSecurityGroupId(String endpointSecurityGroupId) {
+                this.endpointSecurityGroupId = endpointSecurityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The access ingress type of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UnionSearchMCP</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public NetworkAccessConfig build() {
+                return new NetworkAccessConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
+    public static class Zones extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("zoneId")
+        private String zoneId;
+
+        private Zones(Builder builder) {
+            this.status = builder.status;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Zones create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String status; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.status = model.status;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * <p>The status of the endpoint in the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public Zones build() {
+                return new Zones(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
+    public static class PrivateLink extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("connectionStatus")
+        private String connectionStatus;
+
+        @com.aliyun.core.annotation.NameInMap("endpointDomain")
+        private String endpointDomain;
+
+        @com.aliyun.core.annotation.NameInMap("endpointId")
+        private String endpointId;
+
+        @com.aliyun.core.annotation.NameInMap("endpointSecurityGroupId")
+        private String endpointSecurityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("endpointStatus")
+        private String endpointStatus;
+
+        @com.aliyun.core.annotation.NameInMap("lastErrorCode")
+        private String lastErrorCode;
+
+        @com.aliyun.core.annotation.NameInMap("lastErrorMessage")
+        private String lastErrorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("observedAt")
+        private String observedAt;
+
+        @com.aliyun.core.annotation.NameInMap("resourceMayBeCharged")
+        private Boolean resourceMayBeCharged;
+
+        @com.aliyun.core.annotation.NameInMap("stage")
+        private String stage;
+
+        @com.aliyun.core.annotation.NameInMap("zones")
+        private java.util.List<Zones> zones;
+
+        private PrivateLink(Builder builder) {
+            this.connectionStatus = builder.connectionStatus;
+            this.endpointDomain = builder.endpointDomain;
+            this.endpointId = builder.endpointId;
+            this.endpointSecurityGroupId = builder.endpointSecurityGroupId;
+            this.endpointStatus = builder.endpointStatus;
+            this.lastErrorCode = builder.lastErrorCode;
+            this.lastErrorMessage = builder.lastErrorMessage;
+            this.observedAt = builder.observedAt;
+            this.resourceMayBeCharged = builder.resourceMayBeCharged;
+            this.stage = builder.stage;
+            this.zones = builder.zones;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateLink create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectionStatus
+         */
+        public String getConnectionStatus() {
+            return this.connectionStatus;
+        }
+
+        /**
+         * @return endpointDomain
+         */
+        public String getEndpointDomain() {
+            return this.endpointDomain;
+        }
+
+        /**
+         * @return endpointId
+         */
+        public String getEndpointId() {
+            return this.endpointId;
+        }
+
+        /**
+         * @return endpointSecurityGroupId
+         */
+        public String getEndpointSecurityGroupId() {
+            return this.endpointSecurityGroupId;
+        }
+
+        /**
+         * @return endpointStatus
+         */
+        public String getEndpointStatus() {
+            return this.endpointStatus;
+        }
+
+        /**
+         * @return lastErrorCode
+         */
+        public String getLastErrorCode() {
+            return this.lastErrorCode;
+        }
+
+        /**
+         * @return lastErrorMessage
+         */
+        public String getLastErrorMessage() {
+            return this.lastErrorMessage;
+        }
+
+        /**
+         * @return observedAt
+         */
+        public String getObservedAt() {
+            return this.observedAt;
+        }
+
+        /**
+         * @return resourceMayBeCharged
+         */
+        public Boolean getResourceMayBeCharged() {
+            return this.resourceMayBeCharged;
+        }
+
+        /**
+         * @return stage
+         */
+        public String getStage() {
+            return this.stage;
+        }
+
+        /**
+         * @return zones
+         */
+        public java.util.List<Zones> getZones() {
+            return this.zones;
+        }
+
+        public static final class Builder {
+            private String connectionStatus; 
+            private String endpointDomain; 
+            private String endpointId; 
+            private String endpointSecurityGroupId; 
+            private String endpointStatus; 
+            private String lastErrorCode; 
+            private String lastErrorMessage; 
+            private String observedAt; 
+            private Boolean resourceMayBeCharged; 
+            private String stage; 
+            private java.util.List<Zones> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateLink model) {
+                this.connectionStatus = model.connectionStatus;
+                this.endpointDomain = model.endpointDomain;
+                this.endpointId = model.endpointId;
+                this.endpointSecurityGroupId = model.endpointSecurityGroupId;
+                this.endpointStatus = model.endpointStatus;
+                this.lastErrorCode = model.lastErrorCode;
+                this.lastErrorMessage = model.lastErrorMessage;
+                this.observedAt = model.observedAt;
+                this.resourceMayBeCharged = model.resourceMayBeCharged;
+                this.stage = model.stage;
+                this.zones = model.zones;
+            } 
+
+            /**
+             * <p>The connection status between the internal endpoint and the endpoint service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Connected</p>
+             */
+            public Builder connectionStatus(String connectionStatus) {
+                this.connectionStatus = connectionStatus;
+                return this;
+            }
+
+            /**
+             * <p>The endpoint domain name used for connection configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-bp1example123456789.epsrv-bp1example123456789.cn-hangzhou.privatelink.aliyuncs.com</p>
+             */
+            public Builder endpointDomain(String endpointDomain) {
+                this.endpointDomain = endpointDomain;
+                return this;
+            }
+
+            /**
+             * <p>The endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-bp1example123456789</p>
+             */
+            public Builder endpointId(String endpointId) {
+                this.endpointId = endpointId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the security group configured for the internal endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1example123456789</p>
+             */
+            public Builder endpointSecurityGroupId(String endpointSecurityGroupId) {
+                this.endpointSecurityGroupId = endpointSecurityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The status of the internal endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
+             */
+            public Builder endpointStatus(String endpointStatus) {
+                this.endpointStatus = endpointStatus;
+                return this;
+            }
+
+            /**
+             * <p>The error code of the most recent fault that occurred during the create or delete procedure of the private network ingress. This parameter is not returned if no error message is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Forbidden.RAM</p>
+             */
+            public Builder lastErrorCode(String lastErrorCode) {
+                this.lastErrorCode = lastErrorCode;
+                return this;
+            }
+
+            /**
+             * <p>The description of the most recent fault that occurred during the create or delete procedure of the private network ingress. You can use this description along with the error code to troubleshoot the issue. This parameter is not returned if no error message is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private ingress CheckProductOpen failed (Forbidden.RAM)</p>
+             */
+            public Builder lastErrorMessage(String lastErrorMessage) {
+                this.lastErrorMessage = lastErrorMessage;
+                return this;
+            }
+
+            /**
+             * <p>The time when the system last obtained the status of the internal endpoint. The time is in RFC 3339 format, such as 2026-11-02T10:00:00Z. This parameter is not returned if the status has not been obtained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-11-02T10:00:00Z</p>
+             */
+            public Builder observedAt(String observedAt) {
+                this.observedAt = observedAt;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the internal endpoint may continue to incur charges. A value of true indicates that the endpoint has been created and its release has not been confirmed. A value of false indicates that there is no such charge prompt currently. The actual charges are subject to the bill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder resourceMayBeCharged(Boolean resourceMayBeCharged) {
+                this.resourceMayBeCharged = resourceMayBeCharged;
+                return this;
+            }
+
+            /**
+             * <p>The current processing stage of the internal ingress. A value of Ready indicates that the internal ingress is ready.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ready</p>
+             */
+            public Builder stage(String stage) {
+                this.stage = stage;
+                return this;
+            }
+
+            /**
+             * <p>The zone names.</p>
+             */
+            public Builder zones(java.util.List<Zones> zones) {
+                this.zones = zones;
+                return this;
+            }
+
+            public PrivateLink build() {
+                return new PrivateLink(this);
             } 
 
         } 
@@ -846,14 +1302,14 @@ public class ListGatewaysResponseBody extends TeaModel {
      *
      * <p>ListGatewaysResponseBody</p>
      */
-    public static class Zones extends TeaModel {
+    public static class ItemsZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("vSwitch")
         private ZonesVSwitch vSwitch;
 
         @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
-        private Zones(Builder builder) {
+        private ItemsZones(Builder builder) {
             this.vSwitch = builder.vSwitch;
             this.zoneId = builder.zoneId;
         }
@@ -862,7 +1318,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Zones create() {
+        public static ItemsZones create() {
             return builder().build();
         }
 
@@ -887,7 +1343,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Zones model) {
+            private Builder(ItemsZones model) {
                 this.vSwitch = model.vSwitch;
                 this.zoneId = model.zoneId;
             } 
@@ -911,8 +1367,8 @@ public class ListGatewaysResponseBody extends TeaModel {
                 return this;
             }
 
-            public Zones build() {
-                return new Zones(this);
+            public ItemsZones build() {
+                return new ItemsZones(this);
             } 
 
         } 
@@ -933,6 +1389,9 @@ public class ListGatewaysResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("createTimestamp")
         private Long createTimestamp;
+
+        @com.aliyun.core.annotation.NameInMap("elasticEnabled")
+        private Boolean elasticEnabled;
 
         @com.aliyun.core.annotation.NameInMap("expireTimestamp")
         private Long expireTimestamp;
@@ -957,6 +1416,12 @@ public class ListGatewaysResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("networkAccessConfig")
+        private NetworkAccessConfig networkAccessConfig;
+
+        @com.aliyun.core.annotation.NameInMap("privateLink")
+        private PrivateLink privateLink;
 
         @com.aliyun.core.annotation.NameInMap("replicas")
         private String replicas;
@@ -995,12 +1460,13 @@ public class ListGatewaysResponseBody extends TeaModel {
         private Vpc vpc;
 
         @com.aliyun.core.annotation.NameInMap("zones")
-        private java.util.List<Zones> zones;
+        private java.util.List<ItemsZones> zones;
 
         private Items(Builder builder) {
             this.chargeType = builder.chargeType;
             this.createFrom = builder.createFrom;
             this.createTimestamp = builder.createTimestamp;
+            this.elasticEnabled = builder.elasticEnabled;
             this.expireTimestamp = builder.expireTimestamp;
             this.gatewayEdition = builder.gatewayEdition;
             this.gatewayId = builder.gatewayId;
@@ -1009,6 +1475,8 @@ public class ListGatewaysResponseBody extends TeaModel {
             this.legacy = builder.legacy;
             this.loadBalancers = builder.loadBalancers;
             this.name = builder.name;
+            this.networkAccessConfig = builder.networkAccessConfig;
+            this.privateLink = builder.privateLink;
             this.replicas = builder.replicas;
             this.resourceGroupId = builder.resourceGroupId;
             this.securityGroup = builder.securityGroup;
@@ -1051,6 +1519,13 @@ public class ListGatewaysResponseBody extends TeaModel {
          */
         public Long getCreateTimestamp() {
             return this.createTimestamp;
+        }
+
+        /**
+         * @return elasticEnabled
+         */
+        public Boolean getElasticEnabled() {
+            return this.elasticEnabled;
         }
 
         /**
@@ -1107,6 +1582,20 @@ public class ListGatewaysResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return networkAccessConfig
+         */
+        public NetworkAccessConfig getNetworkAccessConfig() {
+            return this.networkAccessConfig;
+        }
+
+        /**
+         * @return privateLink
+         */
+        public PrivateLink getPrivateLink() {
+            return this.privateLink;
         }
 
         /**
@@ -1196,7 +1685,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * @return zones
          */
-        public java.util.List<Zones> getZones() {
+        public java.util.List<ItemsZones> getZones() {
             return this.zones;
         }
 
@@ -1204,6 +1693,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             private String chargeType; 
             private String createFrom; 
             private Long createTimestamp; 
+            private Boolean elasticEnabled; 
             private Long expireTimestamp; 
             private String gatewayEdition; 
             private String gatewayId; 
@@ -1212,6 +1702,8 @@ public class ListGatewaysResponseBody extends TeaModel {
             private Boolean legacy; 
             private java.util.List<LoadBalancers> loadBalancers; 
             private String name; 
+            private NetworkAccessConfig networkAccessConfig; 
+            private PrivateLink privateLink; 
             private String replicas; 
             private String resourceGroupId; 
             private SecurityGroup securityGroup; 
@@ -1224,7 +1716,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             private VSwitch vSwitch; 
             private String version; 
             private Vpc vpc; 
-            private java.util.List<Zones> zones; 
+            private java.util.List<ItemsZones> zones; 
 
             private Builder() {
             } 
@@ -1233,6 +1725,7 @@ public class ListGatewaysResponseBody extends TeaModel {
                 this.chargeType = model.chargeType;
                 this.createFrom = model.createFrom;
                 this.createTimestamp = model.createTimestamp;
+                this.elasticEnabled = model.elasticEnabled;
                 this.expireTimestamp = model.expireTimestamp;
                 this.gatewayEdition = model.gatewayEdition;
                 this.gatewayId = model.gatewayId;
@@ -1241,6 +1734,8 @@ public class ListGatewaysResponseBody extends TeaModel {
                 this.legacy = model.legacy;
                 this.loadBalancers = model.loadBalancers;
                 this.name = model.name;
+                this.networkAccessConfig = model.networkAccessConfig;
+                this.privateLink = model.privateLink;
                 this.replicas = model.replicas;
                 this.resourceGroupId = model.resourceGroupId;
                 this.securityGroup = model.securityGroup;
@@ -1259,8 +1754,8 @@ public class ListGatewaysResponseBody extends TeaModel {
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>POSTPAY: pay-as-you-go.</li>
-             * <li>PREPAY: subscription.</li>
+             * <li>POSTPAY: Pay-as-you-go.</li>
+             * <li>PREPAY: Subscription.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1274,7 +1769,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             /**
              * <p>The source from which the gateway was created. Valid values:</p>
              * <ul>
-             * <li>Console: the console.</li>
+             * <li>Console: Alibaba Cloud Management Console.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1286,7 +1781,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation timestamp. Unit: milliseconds.</p>
+             * <p>The timestamp when the gateway was created. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1719386834548</p>
@@ -1297,7 +1792,18 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration timestamp for subscription instances. Unit: milliseconds.</p>
+             * <p>Indicates whether elastic scaling is enabled. A value of true indicates that elastic scaling is enabled. A value of false indicates that elastic scaling is disabled. A value of null or a missing value indicates that the status is unknown. This parameter is for query and display purposes only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder elasticEnabled(Boolean elasticEnabled) {
+                this.elasticEnabled = elasticEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The expiration timestamp of the subscription gateway. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>172086834548</p>
@@ -1308,12 +1814,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway instance edition. Valid values:</p>
+             * <p>The edition of the gateway instance. Valid values:</p>
              * <ul>
-             * <li><p>Professional: standard instance.</p>
-             * </li>
-             * <li><p>Serverless: Serverless instance.</p>
-             * </li>
+             * <li>Professional: Regular instance.</li>
+             * <li>Serverless: Serverless instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1339,9 +1843,9 @@ public class ListGatewaysResponseBody extends TeaModel {
              * <p>The running mode of the AI MultiTenantServerless gateway. Valid values:</p>
              * <ul>
              * <li>ENTERPRISE: Enterprise Edition.</li>
-             * <li>STANDARD: Standard Edition.</li>
+             * <li>STANDARD: Standard Edition.
+             * This parameter is returned only for AI MultiTenantServerless gateways.</li>
              * </ul>
-             * <p>This parameter is returned only for AI MultiTenantServerless gateways.</p>
              * 
              * <strong>example:</strong>
              * <p>ENTERPRISE</p>
@@ -1374,7 +1878,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of gateway ingress addresses.</p>
+             * <p>The list of ingress addresses for the gateway.</p>
              */
             public Builder loadBalancers(java.util.List<LoadBalancers> loadBalancers) {
                 this.loadBalancers = loadBalancers;
@@ -1393,7 +1897,23 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of gateway instance nodes.</p>
+             * <p>The network access configuration of the gateway, including the access ingress type and the security group used by the internal endpoint. This parameter is returned only when the gateway is configured with an internal ingress.</p>
+             */
+            public Builder networkAccessConfig(NetworkAccessConfig networkAccessConfig) {
+                this.networkAccessConfig = networkAccessConfig;
+                return this;
+            }
+
+            /**
+             * <p>The private connection information of the gateway, including the endpoint ID, access domain name, connection status, and zone information.</p>
+             */
+            public Builder privateLink(PrivateLink privateLink) {
+                this.privateLink = privateLink;
+                return this;
+            }
+
+            /**
+             * <p>The number of nodes in the gateway instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1425,7 +1945,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             /**
              * <p>The gateway specification. Valid values:</p>
              * <ul>
-             * <li>apigw.small.x1: small specification.</li>
+             * <li>apigw.small.x1: Small.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1439,15 +1959,15 @@ public class ListGatewaysResponseBody extends TeaModel {
             /**
              * <p>The gateway status. Valid values:</p>
              * <ul>
-             * <li>Running: The gateway is running.</li>
-             * <li>Creating: The gateway is being created.</li>
-             * <li>CreateFailed: The gateway failed to be created.</li>
-             * <li>Upgrading: The gateway is being upgraded.</li>
-             * <li>UpgradeFailed: The gateway failed to be upgraded.</li>
-             * <li>Restarting: The gateway is being restarted.</li>
-             * <li>RestartFailed: The gateway failed to be restarted.</li>
-             * <li>Deleting: The gateway is being released.</li>
-             * <li>DeleteFailed: The gateway failed to be released.</li>
+             * <li>Running: Running.</li>
+             * <li>Creating: Creating.</li>
+             * <li>CreateFailed: Creation failed.</li>
+             * <li>Upgrading: Upgrading.</li>
+             * <li>UpgradeFailed: Upgrade failed.</li>
+             * <li>Restarting: Restarting.</li>
+             * <li>RestartFailed: Restart failed.</li>
+             * <li>Deleting: Releasing.</li>
+             * <li>DeleteFailed: Release failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1459,7 +1979,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of second-level domain names.</p>
+             * <p>The list of subdomains.</p>
              */
             public Builder subDomainInfos(java.util.List<SubDomainInfo> subDomainInfos) {
                 this.subDomainInfos = subDomainInfos;
@@ -1475,7 +1995,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target version of the gateway. When this value differs from version, a version upgrade can be performed.</p>
+             * <p>The target version of the gateway. If this value differs from the current version, you can upgrade the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0.2</p>
@@ -1526,7 +2046,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             /**
              * <p>The zone information of the gateway.</p>
              */
-            public Builder zones(java.util.List<Zones> zones) {
+            public Builder zones(java.util.List<ItemsZones> zones) {
                 this.zones = zones;
                 return this;
             }
@@ -1647,7 +2167,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of gateways.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>

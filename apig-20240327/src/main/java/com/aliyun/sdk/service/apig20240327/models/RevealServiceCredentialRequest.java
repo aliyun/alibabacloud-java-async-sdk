@@ -1,0 +1,80 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.apig20240327.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link RevealServiceCredentialRequest} extends {@link RequestModel}
+ *
+ * <p>RevealServiceCredentialRequest</p>
+ */
+public class RevealServiceCredentialRequest extends Request {
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("serviceId")
+    private String serviceId;
+
+    private RevealServiceCredentialRequest(Builder builder) {
+        super(builder);
+        this.serviceId = builder.serviceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static RevealServiceCredentialRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return serviceId
+     */
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
+    public static final class Builder extends Request.Builder<RevealServiceCredentialRequest, Builder> {
+        private String serviceId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(RevealServiceCredentialRequest request) {
+            super(request);
+            this.serviceId = request.serviceId;
+        } 
+
+        /**
+         * <p>The unique ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-xxxxxxxx</p>
+         */
+        public Builder serviceId(String serviceId) {
+            this.putPathParameter("serviceId", serviceId);
+            this.serviceId = serviceId;
+            return this;
+        }
+
+        @Override
+        public RevealServiceCredentialRequest build() {
+            return new RevealServiceCredentialRequest(this);
+        } 
+
+    } 
+
+}

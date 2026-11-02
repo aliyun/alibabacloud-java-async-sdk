@@ -255,7 +255,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>The consumer authorization rule ID used to filter the API operation list. When specified, the response includes only authorized API operations.</p>
+         * <p>Filters the list of API operations by a specific consumer authorization rule ID. The response only includes authorized API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>cas-xxx</p>
@@ -267,7 +267,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter by authentication enablement status.</p>
+         * <p>Specifies whether to enable the authentication filter.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -291,7 +291,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>The gateway ID used to filter results.</p>
+         * <p>The ID of the gateway used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-001</p>
@@ -303,7 +303,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>Lists API operations by HTTP method.</p>
+         * <p>Filters API operations by HTTP method.</p>
          * 
          * <strong>example:</strong>
          * <p>GET</p>
@@ -315,7 +315,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>Searches for API operations by exact name match.</p>
+         * <p>Filters API operations by exact API name.</p>
          * 
          * <strong>example:</strong>
          * <p>getUserInfo</p>
@@ -327,7 +327,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>Searches for API operations by name prefix.</p>
+         * <p>Filters API operations by API name prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>GetUser</p>
@@ -339,7 +339,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>The page number to return. Pages start from 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -363,7 +363,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>Searches for API operations by path prefix match.</p>
+         * <p>Filters API operations by path prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -375,7 +375,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>The environment ID. When specified together with withConsumerInfoById, the response includes the authorization rule list of the specified consumer in the specified environment for each API operation.</p>
+         * <p>Specifies whether to include the list of authorization rules for a specific consumer in a specified environment in the response for each API operation. You must also specify the withConsumerInfoById parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>env-xxx</p>
@@ -387,7 +387,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>The consumer ID. When specified together with withConsumerInEnvironmentId, the response includes the authorization rule list of the specified consumer in the specified environment for each API operation.</p>
+         * <p>Specifies whether to include the list of authorization rules for a specific consumer in a specified environment in the response for each API operation. You must also specify the withConsumerInEnvironmentId parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxx</p>
@@ -399,7 +399,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>The plug-in ID used to retrieve plug-in deployment information.</p>
+         * <p>The ID of the plugin used to retrieve plugin release information.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-xxx</p>

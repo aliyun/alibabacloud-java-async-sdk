@@ -99,7 +99,7 @@ public class UpdateCategoryProductsRequest extends Request {
         }
 
         /**
-         * <p>The direction of this bulk operation: adds the API products specified in productIds to the category, or removes these API products from the category. The set of valid values is not declared in the API definition.</p>
+         * <p>The direction of the batch operation: adds the API products specified in productIds to the category, or removes these API products from the category. The set of valid values is not declared in the API definition.</p>
          * 
          * <strong>example:</strong>
          * <p>action-xxxxxxxx</p>
@@ -111,7 +111,7 @@ public class UpdateCategoryProductsRequest extends Request {
         }
 
         /**
-         * <p>The list of API product IDs to process. Each element is a primary ID of the API product resource.</p>
+         * <p>The list of API product IDs to process. Each element is the primary ID of the API product resource Product.</p>
          */
         public Builder productIds(java.util.List<String> productIds) {
             this.putBodyParameter("productIds", productIds);

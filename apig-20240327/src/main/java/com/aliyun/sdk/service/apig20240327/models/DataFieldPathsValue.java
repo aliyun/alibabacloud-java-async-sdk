@@ -115,7 +115,7 @@ public class DataFieldPathsValue extends TeaModel {
         }
 
         /**
-         * <p>The value source of the field, which indicates the part of the message from which the field is read, such as response_body.</p>
+         * <p>The value source of the field, which identifies the part of the message from which the field is read, such as response_body.</p>
          * 
          * <strong>example:</strong>
          * <p>response_body</p>

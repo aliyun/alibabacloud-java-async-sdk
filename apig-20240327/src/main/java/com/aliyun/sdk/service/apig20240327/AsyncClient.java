@@ -21,26 +21,32 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a consumer-based or consumer group-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.21 or later.</p>
+     * <p>This operation adds a quota rule based on consumers or consumer groups to an AI gateway. Note that this operation takes effect only for AI gateways of a version later than 2.1.21.</p>
      * <blockquote>
-     * <p> Recommended call sequence:</p>
+     * <p> Recommended call logic:</p>
      * <ul>
-     * <li>Step 1: Perform a dry run to check for rule conflicts.</li>
+     * <li><ol>
+     * <li>Perform a dry run to check for rule conflicts.</li>
+     * </ol>
+     * </li>
      * <li><ul>
-     * <li>Set dryRun to true.</li>
+     * <li>Set dryRun=true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview that contains the conflictHash value.</li>
+     * <li>The response returns a conflict preview containing a conflictHash.</li>
      * </ul>
      * </li>
-     * <li>Step 2: Submit the request after confirmation.</li>
+     * <li><ol start="2">
+     * <li>Formally submit the request after confirmation.</li>
+     * </ol>
+     * </li>
      * <li><ul>
-     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
+     * <li>If no conflicts exist: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * <li>If conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -617,7 +623,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries a specific API consumer quota rule on an AI gateway.</p>
+     * <p>Queries a consumer quota rule on an AI gateway.</p>
      * 
      * @param request the request parameters of GetGatewayQuotaRule  GetGatewayQuotaRuleRequest
      * @return GetGatewayQuotaRuleResponse
@@ -957,7 +963,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of FinOps quota rules bound to a gateway.</p>
+     * <p>This operation queries the FinOps quota rules associated with a gateway.</p>
      * 
      * @param request the request parameters of ListGatewayQuotaRules  ListGatewayQuotaRulesRequest
      * @return ListGatewayQuotaRulesResponse
@@ -1107,6 +1113,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPortalsResponse
      */
     CompletableFuture<ListPortalsResponse> listPortals(ListPortalsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>The API operation supports creating multiple services.</p>
+     * 
+     * @param request the request parameters of ListPrivateLinkSecurityGroups  ListPrivateLinkSecurityGroupsRequest
+     * @return ListPrivateLinkSecurityGroupsResponse
+     */
+    CompletableFuture<ListPrivateLinkSecurityGroupsResponse> listPrivateLinkSecurityGroups(ListPrivateLinkSecurityGroupsRequest request);
 
     /**
      * @param request the request parameters of ListProductCategories  ListProductCategoriesRequest
@@ -1279,6 +1294,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartGatewayResponse> restartGateway(RestartGatewayRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the currently active credentials for the AI service.</p>
+     * 
+     * @param request the request parameters of RevealServiceCredential  RevealServiceCredentialRequest
+     * @return RevealServiceCredentialResponse
+     */
+    CompletableFuture<RevealServiceCredentialResponse> revealServiceCredential(RevealServiceCredentialRequest request);
+
+    /**
      * @param request the request parameters of RunPluginPipeline  RunPluginPipelineRequest
      * @return RunPluginPipelineResponse
      */
@@ -1441,26 +1465,32 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Edits a quota rule on a gateway. This operation takes effect only on AI gateways running version 2.1.21 or later. Editing a rule preserves the historical usage of consumer subjects bound to the rule.</p>
+     * <p>This operation updates a quota rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The update retains the historical usage of the consumption subjects on the rule.</p>
      * <blockquote>
-     * <p> Recommended call logic:</p>
+     * <p>Recommended call logic:</p>
      * <ul>
-     * <li>Step 1: Perform a dry run to check for rule conflicts.</li>
+     * <li><ol>
+     * <li>Perform a dry run to check for rule conflicts.</li>
+     * </ol>
+     * </li>
      * <li><ul>
-     * <li>Set dryRun to true.</li>
+     * <li>Set dryRun=true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response contains a conflict preview with a conflictHash value.</li>
+     * <li>The response returns a conflict preview containing a conflictHash.</li>
      * </ul>
      * </li>
-     * <li>Step 2: Confirm and submit the request.</li>
+     * <li><ol start="2">
+     * <li>Formally submit the request after confirmation.</li>
+     * </ol>
+     * </li>
      * <li><ul>
-     * <li>No conflict: Set dryRun to false and overwrite to false.</li>
+     * <li>If no conflicts exist: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflict exists and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * <li>If conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>

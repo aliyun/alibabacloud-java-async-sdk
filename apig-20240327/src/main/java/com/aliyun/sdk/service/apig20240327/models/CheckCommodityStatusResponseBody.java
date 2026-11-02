@@ -67,7 +67,7 @@ public class CheckCommodityStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The commodity status list. Each item contains the commodity code and indicates whether the commodity capability is enabled for the current account.</p>
+         * <p>The list of commodity statuses. Each item contains the commodity code and indicates whether the commodity capability is enabled for the current account.</p>
          */
         public Builder commodities(java.util.List<Commodities> commodities) {
             this.commodities = commodities;

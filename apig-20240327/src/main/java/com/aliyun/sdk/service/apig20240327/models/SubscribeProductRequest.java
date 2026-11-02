@@ -85,7 +85,7 @@ public class SubscribeProductRequest extends Request {
         }
 
         /**
-         * <p>The ID of the API product to subscribe to. This is the primary ID of the API product resource. You can obtain this ID from the productId field in the response of the ListProducts operation.</p>
+         * <p>The ID of the API product to subscribe to. This is the primary ID of the API product resource. You can obtain this ID from the productId field in the list items returned by the ListProducts operation.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>

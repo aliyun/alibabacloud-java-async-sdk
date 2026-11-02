@@ -195,7 +195,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The subject (API consumer) ID.</p>
+             * <p>The ID of the subject (consumer).</p>
              * 
              * <strong>example:</strong>
              * <p>c-aaa</p>
@@ -206,7 +206,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subject (API consumer) name.</p>
+             * <p>The name of the subject (consumer).</p>
              * 
              * <strong>example:</strong>
              * <p>consumer-a</p>
@@ -344,6 +344,12 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consumers")
         private java.util.List<Consumers> consumers;
 
+        @com.aliyun.core.annotation.NameInMap("currentCycleResetAt")
+        private String currentCycleResetAt;
+
+        @com.aliyun.core.annotation.NameInMap("periodMultiplier")
+        private Long periodMultiplier;
+
         @com.aliyun.core.annotation.NameInMap("periodType")
         private String periodType;
 
@@ -381,6 +387,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             this.baseTimestamp = builder.baseTimestamp;
             this.consumerCount = builder.consumerCount;
             this.consumers = builder.consumers;
+            this.currentCycleResetAt = builder.currentCycleResetAt;
+            this.periodMultiplier = builder.periodMultiplier;
             this.periodType = builder.periodType;
             this.quotaDimension = builder.quotaDimension;
             this.quotaLimit = builder.quotaLimit;
@@ -421,6 +429,20 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
          */
         public java.util.List<Consumers> getConsumers() {
             return this.consumers;
+        }
+
+        /**
+         * @return currentCycleResetAt
+         */
+        public String getCurrentCycleResetAt() {
+            return this.currentCycleResetAt;
+        }
+
+        /**
+         * @return periodMultiplier
+         */
+        public Long getPeriodMultiplier() {
+            return this.periodMultiplier;
         }
 
         /**
@@ -504,6 +526,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             private Long baseTimestamp; 
             private Long consumerCount; 
             private java.util.List<Consumers> consumers; 
+            private String currentCycleResetAt; 
+            private Long periodMultiplier; 
             private String periodType; 
             private String quotaDimension; 
             private Long quotaLimit; 
@@ -523,6 +547,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
                 this.baseTimestamp = model.baseTimestamp;
                 this.consumerCount = model.consumerCount;
                 this.consumers = model.consumers;
+                this.currentCycleResetAt = model.currentCycleResetAt;
+                this.periodMultiplier = model.periodMultiplier;
                 this.periodType = model.periodType;
                 this.quotaDimension = model.quotaDimension;
                 this.quotaLimit = model.quotaLimit;
@@ -537,7 +563,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The period base timestamp.</p>
+             * <p>The base timestamp of the cycle, in UNIX seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1745846400000</p>
@@ -548,7 +574,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of API consumers associated with the rule.</p>
+             * <p>The number of consumers associated with the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -559,7 +585,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of subjects (API consumers) bound to this rule.</p>
+             * <p>The list of subjects (consumers) bound to this rule.</p>
              */
             public Builder consumers(java.util.List<Consumers> consumers) {
                 this.consumers = consumers;
@@ -567,7 +593,29 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota period type.</p>
+             * <p>The reset time of the current cycle, in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-10-25T00:00:00Z</p>
+             */
+            public Builder currentCycleResetAt(String currentCycleResetAt) {
+                this.currentCycleResetAt = currentCycleResetAt;
+                return this;
+            }
+
+            /**
+             * <p>The number of days in the custom cycle. This parameter is returned only when windowAlignment is set to epoch. Valid values: 1 to 106751. This parameter is not returned for natural cycles.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder periodMultiplier(Long periodMultiplier) {
+                this.periodMultiplier = periodMultiplier;
+                return this;
+            }
+
+            /**
+             * <p>The quota cycle type.</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -644,7 +692,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule subject type. Valid values: consumer and consumer_group.</p>
+             * <p>The subject type of the rule. Valid values: consumer and consumer_group.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer_group</p>
@@ -655,7 +703,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of general subjects bound to this rule. Returned only when withSubjects is set to true.</p>
+             * <p>The list of general subjects bound to this rule. This parameter is returned only when withSubjects is set to true.</p>
              */
             public Builder subjects(java.util.List<Subjects> subjects) {
                 this.subjects = subjects;
@@ -663,7 +711,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time zone corresponding to the calendar period, in UTC+x format.</p>
+             * <p>The time zone corresponding to the natural cycle, in UTC+x format.</p>
              * 
              * <strong>example:</strong>
              * <p>GMT+8</p>
@@ -674,7 +722,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reset period type.</p>
+             * <p>The reset cycle type.</p>
              * 
              * <strong>example:</strong>
              * <p>calendar</p>

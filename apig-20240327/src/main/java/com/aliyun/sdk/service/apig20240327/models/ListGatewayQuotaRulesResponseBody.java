@@ -197,6 +197,9 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
      * <p>ListGatewayQuotaRulesResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("periodMultiplier")
+        private Long periodMultiplier;
+
         @com.aliyun.core.annotation.NameInMap("periodType")
         private String periodType;
 
@@ -222,6 +225,7 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         private String windowAlignment;
 
         private Items(Builder builder) {
+            this.periodMultiplier = builder.periodMultiplier;
             this.periodType = builder.periodType;
             this.quotaDimension = builder.quotaDimension;
             this.quotaLimit = builder.quotaLimit;
@@ -238,6 +242,13 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return periodMultiplier
+         */
+        public Long getPeriodMultiplier() {
+            return this.periodMultiplier;
         }
 
         /**
@@ -297,6 +308,7 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long periodMultiplier; 
             private String periodType; 
             private String quotaDimension; 
             private Long quotaLimit; 
@@ -310,6 +322,7 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.periodMultiplier = model.periodMultiplier;
                 this.periodType = model.periodType;
                 this.quotaDimension = model.quotaDimension;
                 this.quotaLimit = model.quotaLimit;
@@ -319,6 +332,17 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
                 this.timezone = model.timezone;
                 this.windowAlignment = model.windowAlignment;
             } 
+
+            /**
+             * <p>The number of days in a custom period. This parameter is returned only when windowAlignment is set to epoch. Valid values: 1 to 106751. This parameter is not returned for natural periods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder periodMultiplier(Long periodMultiplier) {
+                this.periodMultiplier = periodMultiplier;
+                return this;
+            }
 
             /**
              * <p>The period type.</p>
@@ -387,7 +411,7 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time zone for the natural period, in UTC+x format.</p>
+             * <p>The time zone corresponding to the natural period, in UTC+x format.</p>
              * 
              * <strong>example:</strong>
              * <p>GMT+8</p>

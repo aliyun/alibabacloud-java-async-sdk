@@ -295,11 +295,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The type of gateway associated with the HTTP API. Valid values:</p>
-         * <ul>
-         * <li>API: cloud-native API gateway.</li>
-         * <li>AI: AI gateway.</li>
-         * </ul>
+         * <p>The type of the gateway associated with the HTTP API. Valid values: API (cloud-native API gateway) and AI (AI gateway).</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -311,7 +307,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. Supports fuzzy match by API name or exact search by API ID.</p>
+         * <p>The search keyword. Supports fuzzy search by API name or exact search by API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test-</p>
@@ -323,7 +319,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Searches for an exact match by name.</p>
+         * <p>The name for exact search.</p>
          * 
          * <strong>example:</strong>
          * <p>login</p>
@@ -335,7 +331,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The page number, starting from 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -347,7 +343,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The page size. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The page size. Valid values: 1 to 500. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -359,7 +355,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ahr5uil8raz0rq3b</p>
@@ -371,11 +367,11 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The type of the HTTP API. You can specify multiple types separated by commas (,). Valid values:</p>
+         * <p>The types of the HTTP API. You can specify multiple types separated by commas (,). Valid values:</p>
          * <ul>
          * <li>Http</li>
          * <li>Rest</li>
-         * <li>WebSocket</li>
+         * <li>Websocket</li>
          * <li>HttpIngress</li>
          * </ul>
          * 
@@ -389,7 +385,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return information about APIs published to the specified environment.</p>
+         * <p>Specifies whether to return the information about APIs published to the specified environment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -401,7 +397,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The environment ID. If specified, the response includes consumer authentication policy information for each API in the specified environment.</p>
+         * <p>The environment ID. If specified, the response includes consumer authentication policy information for the specified environment in the details of each API.</p>
          * 
          * <strong>example:</strong>
          * <p>env-xxx</p>
@@ -425,7 +421,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The consumer ID. If specified, the response includes the authorization rule list for the specified consumer for each API.</p>
+         * <p>The consumer ID. If specified, the response includes the list of authorization rules for the specified consumer in the details of each API.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxx</p>
@@ -461,7 +457,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include ingress information.</p>
+         * <p>Specifies whether to include Ingress information.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -473,7 +469,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The plug-in ID. If specified, the response includes plug-in publishing information based on this plug-in ID.</p>
+         * <p>The plugin ID. If specified, the plugin release information is retrieved based on this plugin ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-ct9qn3um1hktue8dqol0</p>

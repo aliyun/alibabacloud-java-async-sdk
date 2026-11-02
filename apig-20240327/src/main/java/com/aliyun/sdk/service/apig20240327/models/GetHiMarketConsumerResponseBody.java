@@ -229,7 +229,7 @@ public class GetHiMarketConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the consumer.</p>
+             * <p>The consumer description.</p>
              * 
              * <strong>example:</strong>
              * <p>Dedicated test consumer</p>
@@ -240,7 +240,7 @@ public class GetHiMarketConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the consumer is the primary consumer.</p>
+             * <p>Indicates whether the consumer is a primary consumer.</p>
              */
             public Builder isPrimary(Boolean isPrimary) {
                 this.isPrimary = isPrimary;
@@ -248,7 +248,7 @@ public class GetHiMarketConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the consumer.</p>
+             * <p>The consumer name.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer-1</p>

@@ -381,7 +381,7 @@ public class GetProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The icon configurations of the API product, which consist of two fields: type for the icon type and value for the icon information.</p>
+             * <p>The icon configurations of the API product, which consist of two fields: the icon type (type) and the icon information (value).</p>
              */
             public Builder icon(HiMarketIcon icon) {
                 this.icon = icon;

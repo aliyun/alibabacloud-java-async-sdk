@@ -115,10 +115,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hello, World!</p>
+         * <p>Hello, world!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,6 +150,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("conflictPeriodType")
+        @Deprecated
         private String conflictPeriodType;
 
         @com.aliyun.core.annotation.NameInMap("conflictType")
@@ -160,6 +161,9 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("consumerName")
         private String consumerName;
+
+        @com.aliyun.core.annotation.NameInMap("periodType")
+        private String periodType;
 
         @com.aliyun.core.annotation.NameInMap("subjectId")
         private String subjectId;
@@ -175,6 +179,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             this.conflictType = builder.conflictType;
             this.consumerId = builder.consumerId;
             this.consumerName = builder.consumerName;
+            this.periodType = builder.periodType;
             this.subjectId = builder.subjectId;
             this.subjectName = builder.subjectName;
             this.subjectType = builder.subjectType;
@@ -217,6 +222,13 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return periodType
+         */
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        /**
          * @return subjectId
          */
         public String getSubjectId() {
@@ -242,6 +254,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             private String conflictType; 
             private String consumerId; 
             private String consumerName; 
+            private String periodType; 
             private String subjectId; 
             private String subjectName; 
             private String subjectType; 
@@ -254,13 +267,14 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
                 this.conflictType = model.conflictType;
                 this.consumerId = model.consumerId;
                 this.consumerName = model.consumerName;
+                this.periodType = model.periodType;
                 this.subjectId = model.subjectId;
                 this.subjectName = model.subjectName;
                 this.subjectType = model.subjectType;
             } 
 
             /**
-             * <p>The period type of the existing conflicting rule on the consumer subject. Valid values: day (daily), week (weekly), and month (monthly).</p>
+             * <p>The period type of the existing conflicting rule on the consumption subject. A value of day, week, or month indicates that the period of the existing conflicting rule on the consumption subject is day, week, or month, respectively.</p>
              * 
              * <strong>example:</strong>
              * <p>week</p>
@@ -271,7 +285,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the existing conflicting rule on the consumer subject. A value of calendar indicates a calendar-period rule. A value of epoch indicates a custom-period rule.</p>
+             * <p>The type of the existing conflicting rule on the consumption subject. A value of calendar indicates that the existing conflicting rule on the consumption subject uses a natural period. A value of epoch indicates that the existing conflicting rule uses a custom period.</p>
              * 
              * <strong>example:</strong>
              * <p>calendar</p>
@@ -282,7 +296,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer ID. Use subjectId instead.</p>
+             * <p>The consumer ID. You can now uniformly use subjectId instead.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-d82n1g6m1hkm375xxxxx</p>
@@ -293,13 +307,24 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer name. Use subjectName instead.</p>
+             * <p>The consumer name. You can now uniformly use subjectName instead.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer-a</p>
              */
             public Builder consumerName(String consumerName) {
                 this.consumerName = consumerName;
+                return this;
+            }
+
+            /**
+             * <p>The period type of the existing conflicting rule. Valid values: day, week, and month, which indicate day, week, and month, respectively.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
+             */
+            public Builder periodType(String periodType) {
+                this.periodType = periodType;
                 return this;
             }
 
@@ -524,7 +549,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</p>
+             * <p>Specifies whether the semantics of the current write request can be accepted by the system. A value of false typically occurs in retryable scenarios such as unconfirmed overwrites for conflicts.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -543,7 +568,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request is a dry run.</p>
+             * <p>Specifies whether a dry run is performed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

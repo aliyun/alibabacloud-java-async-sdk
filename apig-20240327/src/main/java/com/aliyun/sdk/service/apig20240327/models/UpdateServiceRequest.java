@@ -34,6 +34,14 @@ public class UpdateServiceRequest extends Request {
     private AiServiceConfig aiServiceConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("apiKeyReferencesToAdd")
+    private java.util.List<String> apiKeyReferencesToAdd;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("apiKeysToAdd")
+    private java.util.List<String> apiKeysToAdd;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dnsServers")
     private java.util.List<String> dnsServers;
 
@@ -67,6 +75,8 @@ public class UpdateServiceRequest extends Request {
         this.addresses = builder.addresses;
         this.agentServiceConfig = builder.agentServiceConfig;
         this.aiServiceConfig = builder.aiServiceConfig;
+        this.apiKeyReferencesToAdd = builder.apiKeyReferencesToAdd;
+        this.apiKeysToAdd = builder.apiKeysToAdd;
         this.dnsServers = builder.dnsServers;
         this.healthCheckConfig = builder.healthCheckConfig;
         this.healthyPanicThreshold = builder.healthyPanicThreshold;
@@ -115,6 +125,20 @@ public class UpdateServiceRequest extends Request {
      */
     public AiServiceConfig getAiServiceConfig() {
         return this.aiServiceConfig;
+    }
+
+    /**
+     * @return apiKeyReferencesToAdd
+     */
+    public java.util.List<String> getApiKeyReferencesToAdd() {
+        return this.apiKeyReferencesToAdd;
+    }
+
+    /**
+     * @return apiKeysToAdd
+     */
+    public java.util.List<String> getApiKeysToAdd() {
+        return this.apiKeysToAdd;
     }
 
     /**
@@ -171,6 +195,8 @@ public class UpdateServiceRequest extends Request {
         private java.util.List<String> addresses; 
         private AgentServiceConfig agentServiceConfig; 
         private AiServiceConfig aiServiceConfig; 
+        private java.util.List<String> apiKeyReferencesToAdd; 
+        private java.util.List<String> apiKeysToAdd; 
         private java.util.List<String> dnsServers; 
         private HealthCheckConfig healthCheckConfig; 
         private Float healthyPanicThreshold; 
@@ -189,6 +215,8 @@ public class UpdateServiceRequest extends Request {
             this.addresses = request.addresses;
             this.agentServiceConfig = request.agentServiceConfig;
             this.aiServiceConfig = request.aiServiceConfig;
+            this.apiKeyReferencesToAdd = request.apiKeyReferencesToAdd;
+            this.apiKeysToAdd = request.apiKeysToAdd;
             this.dnsServers = request.dnsServers;
             this.healthCheckConfig = request.healthCheckConfig;
             this.healthyPanicThreshold = request.healthyPanicThreshold;
@@ -211,7 +239,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The list of domain names or fixed addresses.</p>
+         * <p>The list of domain names or static addresses.</p>
          */
         public Builder addresses(java.util.List<String> addresses) {
             this.putBodyParameter("addresses", addresses);
@@ -234,6 +262,30 @@ public class UpdateServiceRequest extends Request {
         public Builder aiServiceConfig(AiServiceConfig aiServiceConfig) {
             this.putBodyParameter("aiServiceConfig", aiServiceConfig);
             this.aiServiceConfig = aiServiceConfig;
+            return this;
+        }
+
+        /**
+         * <p>The list of KMS reference names to append. This parameter is available only in Reference mode and does not read KMS content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;my-kms-ref&quot;]</p>
+         */
+        public Builder apiKeyReferencesToAdd(java.util.List<String> apiKeyReferencesToAdd) {
+            this.putBodyParameter("apiKeyReferencesToAdd", apiKeyReferencesToAdd);
+            this.apiKeyReferencesToAdd = apiKeyReferencesToAdd;
+            return this;
+        }
+
+        /**
+         * <p>The list of API keys to append. This parameter is available only in the Custom API Key mode for AI services. It must be used with fully masked apiKeys or omitted apiKeys, and does not read or return existing keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sk-xxxxxxxx&quot;]</p>
+         */
+        public Builder apiKeysToAdd(java.util.List<String> apiKeysToAdd) {
+            this.putBodyParameter("apiKeysToAdd", apiKeysToAdd);
+            this.apiKeysToAdd = apiKeysToAdd;
             return this;
         }
 
@@ -280,7 +332,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The passive health check parameter settings.</p>
+         * <p>The parameter settings for passive health checks.</p>
          */
         public Builder outlierDetectionConfig(OutlierDetectionConfig outlierDetectionConfig) {
             this.putBodyParameter("outlierDetectionConfig", outlierDetectionConfig);
@@ -460,7 +512,7 @@ public class UpdateServiceRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable health checks for the service.</p>
+             * <p>Specifies whether to enable the health check for the service.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -471,7 +523,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The list of expected normal status codes returned by requests. This parameter is required when the protocol is HTTP.</p>
+             * <p>The list of normal HTTP status codes returned by requests. This parameter is required when the protocol is HTTP.</p>
              */
             public Builder expectedStatuses(java.util.List<String> expectedStatuses) {
                 this.expectedStatuses = expectedStatuses;
@@ -479,7 +531,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The healthy threshold for health checks.</p>
+             * <p>The healthy threshold for the health check.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -490,7 +542,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The domain name for health checks. This parameter is optional and can be configured when the protocol is HTTP.</p>
+             * <p>The domain name for the health check. This parameter is optional and can be configured when the protocol is HTTP.</p>
              * 
              * <strong>example:</strong>
              * <p>dev.itemcener.com</p>
@@ -501,7 +553,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The request path for health checks. This parameter is required when the protocol is HTTP.</p>
+             * <p>The request path for the health check. This parameter is required when the protocol is HTTP.</p>
              * 
              * <strong>example:</strong>
              * <p>/healthz</p>
@@ -523,7 +575,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The protocol used for health checks.</p>
+             * <p>The protocol for the health check.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -534,7 +586,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The response timeout period for health checks. Unit: seconds.</p>
+             * <p>The response timeout period for the health check. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -545,7 +597,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The unhealthy threshold for health checks.</p>
+             * <p>The unhealthy threshold for the health check.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -654,7 +706,7 @@ public class UpdateServiceRequest extends Request {
             } 
 
             /**
-             * <p>The base ejection time, which is the initial isolation duration after a node is ejected (for example, 30 seconds). The isolation time is calculated by using the following formula: k × base_ejection_time, where k starts at 1. Each ejection increases the isolation time by incrementing k by 1. If consecutive checks are normal, the isolation time is gradually reduced by decrementing k by 1.</p>
+             * <p>The initial isolation duration. This is the initial isolation duration after a node is ejected, such as 30 seconds. The isolation time is calculated by using the following formula: k × base_ejection_time, where the initial value of k is 1. The isolation time is extended each time the node is ejected by incrementing k by 1. If consecutive health checks are normal, the isolation time is gradually reduced by decrementing k by 1.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -676,8 +728,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The panic threshold.</p>
-             * <p>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks function normally and requests are sent only to healthy nodes, not to ejected nodes. When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled and requests are sent to all nodes, including ejected nodes.</p>
+             * <p>The panic threshold. If the proportion of healthy nodes in the service is greater than the panic threshold, the health check takes effect normally, and requests are sent only to healthy nodes rather than ejected nodes. If the proportion of healthy nodes in the service is less than or equal to the panic threshold, the health check is equivalent to being disabled, and requests are sent to all nodes, including ejected nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -688,7 +739,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The failure percentage threshold. When the proportion of failed requests on a node reaches this threshold, the system triggers the ejection mechanism for that node.</p>
+             * <p>The failure rate threshold. When the proportion of failed requests for a node reaches this threshold, the system triggers the ejection mechanism for the node.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -793,7 +844,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The port number.</p>
+             * <p>The port.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>

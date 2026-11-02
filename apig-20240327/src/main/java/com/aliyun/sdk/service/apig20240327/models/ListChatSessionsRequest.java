@@ -101,7 +101,7 @@ public class ListChatSessionsRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of entries per page. The default value and value range are not specified in the API definition.</p>
+         * <p>The maximum number of entries per page. The default value and valid values are not specified in the API definition.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -113,7 +113,7 @@ public class ListChatSessionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Pass the nextToken returned in the previous response to obtain the next page. Do not specify this parameter for the first query.</p>
+         * <p>The pagination token. Pass the nextToken returned in the previous response to retrieve the next page. Do not specify this parameter for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>token-xxxxxxxx</p>
@@ -137,7 +137,7 @@ public class ListChatSessionsRequest extends Request {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

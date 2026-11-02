@@ -141,7 +141,7 @@ public class ListGatewayQuotaRulesRequest extends Request {
         }
 
         /**
-         * <p>The rule name keyword for fuzzy match.</p>
+         * <p>The keyword used for fuzzy matching of rule names.</p>
          * 
          * <strong>example:</strong>
          * <p>daily</p>
@@ -189,7 +189,7 @@ public class ListGatewayQuotaRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

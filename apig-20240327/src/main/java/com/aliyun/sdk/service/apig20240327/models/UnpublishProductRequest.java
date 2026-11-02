@@ -73,7 +73,7 @@ public class UnpublishProductRequest extends Request {
         } 
 
         /**
-         * <p>The API product ID, which is the primary ID of the API product resource and specifies the API product to which the publication record to be unpublished belongs. It shares the /himarket/v1/products/{productId}/publications path with the PublishProduct and ListProductPublications operations. This parameter is only used to locate the product to which the publication record belongs and does not delete the API product itself.</p>
+         * <p>The API product ID, which is the primary ID of the API product resource Product. It specifies the API product to which the publication record to be taken offline belongs. It shares the same /himarket/v1/products/{productId}/publications path with the PublishProduct and ListProductPublications operations. This parameter is only used to locate the product to which the publication record belongs and does not delete the API product itself.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>
@@ -85,7 +85,7 @@ public class UnpublishProductRequest extends Request {
         }
 
         /**
-         * <p>The ID of the publication record to be unpublished, which identifies the publication relationship between the API product and a HiMarket portal. It is returned in the data.publicationId field of the response after a successful PublishProduct operation and can be queried by the ListProductPublications and ListPortalPublications operations.</p>
+         * <p>The ID of the publication record to be taken offline, which identifies the publication relationship between the API product and a HiMarket portal. It is returned in the data.publicationId field of the response after the PublishProduct operation succeeds, and can be queried by using the ListProductPublications and ListPortalPublications operations.</p>
          * 
          * <strong>example:</strong>
          * <p>publication-xxxxxxxx</p>

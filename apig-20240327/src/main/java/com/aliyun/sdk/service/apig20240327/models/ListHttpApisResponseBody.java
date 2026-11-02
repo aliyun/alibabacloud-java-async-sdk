@@ -104,7 +104,7 @@ public class ListHttpApisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The API list.</p>
+         * <p>The list of APIs.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -248,7 +248,7 @@ public class ListHttpApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

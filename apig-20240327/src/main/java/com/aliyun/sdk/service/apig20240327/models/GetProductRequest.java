@@ -60,7 +60,7 @@ public class GetProductRequest extends Request {
         } 
 
         /**
-         * <p>The API product ID, which is the primary ID of the API product resource and is used to specify the product to query.</p>
+         * <p>The ID of the API product, which is the primary ID of the API product resource and is used to specify the product to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

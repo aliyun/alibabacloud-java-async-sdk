@@ -101,7 +101,7 @@ public class ListPortalPublicationsRequest extends Request {
         } 
 
         /**
-         * <p>The portal ID. Specifies the HiMarket developer portal for which to query published API products. You can obtain this ID from the portalId parameter in the CreatePortal response or from a list item in the ListPortals response. This ID is used in the /himarket/v1/portals/{portalId} path to locate the portal, the same path used by the GetPortal, UpdatePortal, and DeletePortal operations.</p>
+         * <p>The portal ID. It specifies the HiMarket developer portal for which you want to query published API products. You can obtain the portal ID from the portalId parameter in the response of CreatePortal or from the portalId parameter of a list item in ListPortals. This ID is used in the /himarket/v1/portals/{portalId} path to locate the portal, which is the same path used by GetPortal, UpdatePortal, and DeletePortal.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>
@@ -137,7 +137,7 @@ public class ListPortalPublicationsRequest extends Request {
         }
 
         /**
-         * <p>The API product name. This corresponds to the productName field in the response list items.</p>
+         * <p>The API product name. This is the same field as productName in the response list items.</p>
          * 
          * <strong>example:</strong>
          * <p>model-service</p>

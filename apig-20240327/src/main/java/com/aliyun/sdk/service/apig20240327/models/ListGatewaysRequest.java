@@ -171,7 +171,7 @@ public class ListGatewaysRequest extends Request {
         } 
 
         /**
-         * <p>The gateway ID for exact match query.</p>
+         * <p>The gateway ID for exact match.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl****</p>
@@ -195,7 +195,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The keyword for full match search. The search is case-insensitive.</p>
+         * <p>The keyword for case-insensitive full match search.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -207,7 +207,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The gateway name for exact match query.</p>
+         * <p>The gateway name for exact match.</p>
          * 
          * <strong>example:</strong>
          * <p>itemcenter-gateway</p>
@@ -243,7 +243,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzq6bzz5uyg2q</p>
@@ -265,7 +265,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zeqrgx6jrlb063y06yjo</p>

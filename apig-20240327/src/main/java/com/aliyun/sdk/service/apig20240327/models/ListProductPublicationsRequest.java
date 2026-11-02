@@ -101,7 +101,7 @@ public class ListProductPublicationsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the API product. This is the primary ID of the API product resource and specifies the API product for which you want to query publication records.</p>
+         * <p>The ID of the API product. This is the primary ID of the API product resource and specifies the API product whose publication records you want to query.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>
@@ -125,7 +125,7 @@ public class ListProductPublicationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

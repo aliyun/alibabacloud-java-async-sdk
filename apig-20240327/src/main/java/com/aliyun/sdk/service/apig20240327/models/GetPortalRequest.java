@@ -59,7 +59,7 @@ public class GetPortalRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the portal to query. You can obtain this ID from the portalId field in the CreatePortal response or from the portalId field of an item in the ListPortals response. This ID is used in the /himarket/v1/portals/{portalId} path to locate the portal, which is the same path used by the GetPortal, UpdatePortal, and DeletePortal operations.</p>
+         * <p>The ID of the portal to query. You can obtain the portal ID from the portalId parameter in the response of the CreatePortal operation or from a list item in the response of the ListPortals operation. This ID is used in the /himarket/v1/portals/{portalId} path to locate the portal, which is the same path used by the GetPortal, UpdatePortal, and DeletePortal operations.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>

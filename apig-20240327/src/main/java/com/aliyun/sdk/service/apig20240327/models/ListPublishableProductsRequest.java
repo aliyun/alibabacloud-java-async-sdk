@@ -101,7 +101,7 @@ public class ListPublishableProductsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the HiMarket developer portal. This is the primary ID of the Portal resource and specifies the portal for which to query publishable API products. This ID refers to the same object as the portalId parameter in the PublishProduct request body.</p>
+         * <p>The ID of the HiMarket developer portal, which is the primary ID of the Portal resource. This parameter specifies the portal for which to query publishable API products. This ID refers to the same object as the portalId parameter in the PublishProduct request body.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>
@@ -113,7 +113,7 @@ public class ListPublishableProductsRequest extends Request {
         }
 
         /**
-         * <p>The name of the API product. This corresponds to the name field in the response list items.</p>
+         * <p>The name of the API product. This is the same field as the name property in the response list items.</p>
          * 
          * <strong>example:</strong>
          * <p>weather-query-api</p>

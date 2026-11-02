@@ -59,7 +59,7 @@ public class ListMcpProductToolsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the MCP Server API product for which you want to query tool details.</p>
+         * <p>The ID of the API product, which specifies the MCP Server-type API product whose tool details are to be queried. This parameter is a path parameter and is required when constructing the request URL. A valid URL cannot be constructed if this parameter is missing.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>

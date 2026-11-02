@@ -338,7 +338,7 @@ public class ListPortalsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of portal domain configurations. The list element is named domainConfig.</p>
+             * <p>The list of portal domain configurations. The list elements are named domainConfig.</p>
              */
             public Builder portalDomainConfig(java.util.List<HiMarketPortalDomainConfig> portalDomainConfig) {
                 this.portalDomainConfig = portalDomainConfig;
@@ -346,7 +346,7 @@ public class ListPortalsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The portal ID, which is the primary ID of the portal resource. It can be used in GetPortal, UpdatePortal, and DeletePortal to locate the portal at /himarket/v1/portals/{portalId}.</p>
+             * <p>The portal ID. This is the primary ID of the portal resource and can be used to locate the portal in the GetPortal, UpdatePortal, and DeletePortal operations through the /himarket/v1/portals/{portalId} path.</p>
              * 
              * <strong>example:</strong>
              * <p>portal-xxxxxxxx</p>
@@ -357,7 +357,7 @@ public class ListPortalsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The portal configuration, including whether username and password authentication is enabled, whether developer registrations are automatically approved, and whether subscription requests are automatically approved.</p>
+             * <p>The portal configuration, which specifies whether username and password authentication is enabled, whether developer registrations are automatically approved, and whether subscription requests are automatically approved.</p>
              */
             public Builder portalSettingConfig(HiMarketPortalSettingConfig portalSettingConfig) {
                 this.portalSettingConfig = portalSettingConfig;
@@ -461,7 +461,7 @@ public class ListPortalsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of portals. The list element is named portalConfig, and each element contains the information of a HiMarket developer portal.</p>
+             * <p>The portal list. Each element in the list is named portalConfig and contains information about a HiMarket developer portal.</p>
              */
             public Builder content(java.util.List<Content> content) {
                 this.content = content;
@@ -491,7 +491,7 @@ public class ListPortalsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

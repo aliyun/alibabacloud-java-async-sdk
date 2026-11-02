@@ -87,7 +87,7 @@ public class ListProductCategoriesRequest extends Request {
         } 
 
         /**
-         * <p>The keyword for the category name. This parameter is used to search for product categories by name.</p>
+         * <p>The keyword used to search for product categories by name.</p>
          * 
          * <strong>example:</strong>
          * <p>ai-capabilities</p>
@@ -99,7 +99,7 @@ public class ListProductCategoriesRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value starts from 1.</p>
+         * <p>The page number. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -111,7 +111,7 @@ public class ListProductCategoriesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. The minimum value is 1.</p>
+         * <p>The number of entries to return on each page. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -213,7 +213,7 @@ public class CreateGatewayRequest extends Request {
         } 
 
         /**
-         * <p>The billing method. This parameter is required for the Serverless edition and must be set to POSTPAY.</p>
+         * <p>The billing method. This parameter is required for Serverless instances and must be set to POSTPAY.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -227,13 +227,13 @@ public class CreateGatewayRequest extends Request {
         /**
          * <p>The gateway instance edition. Valid values:</p>
          * <ul>
-         * <li><p>Professional: standard instance.</p>
+         * <li><p>Professional: Standard instance.</p>
          * </li>
          * <li><p>Serverless: Serverless instance.</p>
          * </li>
-         * <li><p>MultiTenantServerless: multi-tenant Serverless instance.</p>
+         * <li><p>MultiTenantServerless: Multi-tenant Serverless instance.</p>
          * </li>
-         * <li><p>Unknown: unknown.</p>
+         * <li><p>Unknown: Unknown.</p>
          * </li>
          * </ul>
          * 
@@ -247,7 +247,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. This parameter can be specified only when gatewayType is set to AI and gatewayEdition is set to MultiTenantServerless.</p>
+         * <p>The operation mode for AI multi-tenant V2. The default value is ENTERPRISE. This parameter is only allowed for AI and MultiTenantServerless gateways.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -259,7 +259,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The gateway type. This parameter must be explicitly set to AI for AI Serverless or multi-tenant editions.</p>
+         * <p>The gateway type. This parameter must be explicitly set to AI for AI Serverless or multi-tenant gateways.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -271,7 +271,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The gateway log configuration.</p>
+         * <p>The log configuration for the gateway.</p>
          */
         public Builder logConfig(LogConfig logConfig) {
             this.putBodyParameter("logConfig", logConfig);
@@ -280,7 +280,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The gateway name. This parameter is required for all editions.</p>
+         * <p>The name of the gateway. This parameter is required for all gateway types.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ceshi</p>
@@ -292,7 +292,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The network access configuration. This parameter is required. If this parameter is not specified, the service returns an InvalidParameter.IsEmpty (400) error.</p>
+         * <p>The network access configuration. This parameter is actually required. If it is not provided, the service returns InvalidParameter.IsEmpty (400).</p>
          */
         public Builder networkAccessConfig(NetworkAccessConfig networkAccessConfig) {
             this.putBodyParameter("networkAccessConfig", networkAccessConfig);
@@ -301,7 +301,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ahr5uil8raz0rq3b</p>
@@ -313,7 +313,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The node specifications. This parameter is required for the Serverless edition.</p>
+         * <p>The node specifications. This parameter is required for Serverless instances.</p>
          * 
          * <strong>example:</strong>
          * <p>apigw.dev.x1</p>
@@ -334,7 +334,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID. This parameter is required for all editions.</p>
+         * <p>The ID of the virtual private cloud (VPC). This parameter is required for all gateway types.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-zm0x16tomfiat1mk9f6rs</p>
@@ -346,7 +346,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The zone configuration. This parameter is required for all editions.</p>
+         * <p>The zone configuration. This parameter is required for all gateway types.</p>
          */
         public Builder zoneConfig(ZoneConfig zoneConfig) {
             this.putBodyParameter("zoneConfig", zoneConfig);
@@ -401,7 +401,7 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable SLS log collection.</p>
+             * <p>Specifies whether to enable SLS.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -458,7 +458,7 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * <p>The Simple Log Service (SLS) configuration that controls gateway log collection.</p>
+             * <p>The Simple Log Service (SLS) configuration used to control gateway log collection.</p>
              */
             public Builder sls(Sls sls) {
                 this.sls = sls;
@@ -479,10 +479,14 @@ public class CreateGatewayRequest extends Request {
      * <p>CreateGatewayRequest</p>
      */
     public static class NetworkAccessConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endpointSecurityGroupId")
+        private String endpointSecurityGroupId;
+
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private NetworkAccessConfig(Builder builder) {
+            this.endpointSecurityGroupId = builder.endpointSecurityGroupId;
             this.type = builder.type;
         }
 
@@ -495,6 +499,13 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
+         * @return endpointSecurityGroupId
+         */
+        public String getEndpointSecurityGroupId() {
+            return this.endpointSecurityGroupId;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -502,14 +513,27 @@ public class CreateGatewayRequest extends Request {
         }
 
         public static final class Builder {
+            private String endpointSecurityGroupId; 
             private String type; 
 
             private Builder() {
             } 
 
             private Builder(NetworkAccessConfig model) {
+                this.endpointSecurityGroupId = model.endpointSecurityGroupId;
                 this.type = model.type;
             } 
+
+            /**
+             * <p>The ID of the endpoint security group. This parameter is required when a multi-tenant API gateway or multi-tenant AI gateway Enterprise Edition uses private network or dual-entry access, and must be a non-managed security group in your VPC. Do not specify this parameter for public network requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1example123456789</p>
+             */
+            public Builder endpointSecurityGroupId(String endpointSecurityGroupId) {
+                this.endpointSecurityGroupId = endpointSecurityGroupId;
+                return this;
+            }
 
             /**
              * <p>The network access type.</p>
@@ -663,7 +687,7 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The ID of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-xx</p>
@@ -757,7 +781,7 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * <p>The zone selection option.</p>
+             * <p>The zone option.</p>
              * 
              * <strong>example:</strong>
              * <p>Manual</p>
@@ -768,7 +792,7 @@ public class CreateGatewayRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The ID of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-xxx</p>

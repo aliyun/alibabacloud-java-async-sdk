@@ -171,7 +171,7 @@ public class ListProductsRequest extends Request {
         } 
 
         /**
-         * <p>The product category IDs, which correspond to the Categories property of the API product resource. The members are category IDs.</p>
+         * <p>The product category IDs, which correspond to the Categories property of the API product resource Product. The members are category IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>category-xxxxxxxx</p>
@@ -183,7 +183,7 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per request.</p>
+         * <p>The maximum number of entries to return for each request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -195,7 +195,7 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * <p>The name of the API product, which is the Name property of the API product resource. This is the same field as name in the response list items.</p>
+         * <p>The name of the API product, which is the Name property of the API product resource Product. This is the same field as name in the response list items.</p>
          * 
          * <strong>example:</strong>
          * <p>weather-query-api</p>
@@ -207,7 +207,7 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * <p>The cursor token for the next page.</p>
+         * <p>The pagination token for querying the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-xxxxxxxx</p>
@@ -243,7 +243,7 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the HiMarket developer portal where the API product is published, which corresponds to the PortalId property of the API product resource. This property is used only for list queries in the product resource definition.</p>
+         * <p>The ID of the HiMarket developer portal where the API product is published, which corresponds to the PortalId property of the API product resource Product. This property is used only for list queries in the product resource definition.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>
@@ -255,7 +255,7 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * <p>The status of the API product, which corresponds to the Status property of the API product resource. This is the same field as status in the response list items. Valid values: Pending, Ready, and Published.</p>
+         * <p>The status of the API product, which corresponds to the Status property of the API product resource Product. This is the same field as status in the response list items. Valid values: Pending, Ready, and Published.</p>
          * 
          * <strong>example:</strong>
          * <p>Published</p>
@@ -267,7 +267,7 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * <p>The type of the API product, which corresponds to the Type property of the API product resource. This is the same field as type in the response list items. The valid values are not declared in the API definition. Refer to the types displayed in the console.</p>
+         * <p>The type of the API product, which corresponds to the Type property of the API product resource Product. This is the same field as type in the response list items. The valid values are not declared in the API definition. Refer to the types displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>

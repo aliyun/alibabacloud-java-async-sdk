@@ -87,7 +87,7 @@ public class UpdateDeveloperStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the developer whose status you want to update. You can obtain this ID from the data.developerId field in the CreateDeveloper or GetDeveloper response, or from the developerId field of an item in the ListDevelopers response. This path parameter is the same as the one used in DeleteDeveloper to locate the developer.</p>
+         * <p>The ID of the developer whose status you want to update. You can obtain this ID from the data.developerId field in the CreateDeveloper response, the data.developerId field in the GetDeveloper response, or the developerId field of an item in the ListDevelopers response. This parameter uses the same path parameter as DeleteDeveloper to locate the developer.</p>
          * 
          * <strong>example:</strong>
          * <p>dev-xxxxxxxx</p>
@@ -99,7 +99,7 @@ public class UpdateDeveloperStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the portal to which the developer belongs, which is the primary ID of the portal resource. You can obtain this ID from the portalId field in the CreatePortal response or from the portalId field of an item in the ListPortals response.</p>
+         * <p>The ID of the portal to which the developer belongs. This is the primary ID of the portal resource. You can obtain this ID from the portalId field in the CreatePortal response or the portalId field of an item in the ListPortals response.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>

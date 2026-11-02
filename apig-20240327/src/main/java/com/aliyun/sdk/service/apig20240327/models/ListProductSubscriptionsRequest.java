@@ -115,7 +115,7 @@ public class ListProductSubscriptionsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the API product. This is the primary ID of the API product resource and specifies the API product for which you want to query the subscription list. You can obtain this ID from the productId field in the response of the ListProducts operation.</p>
+         * <p>The ID of the API product, which is the primary ID of the API product resource. This parameter specifies the API product whose subscription list you want to query. You can obtain the value from the productId field in the response of the ListProducts operation.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>
@@ -127,7 +127,7 @@ public class ListProductSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The keyword of the consumer name used to search the subscription records of the API product by consumer name.</p>
+         * <p>The keyword of the consumer name, which is used to search for subscription records of the API product by consumer name.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-1</p>
@@ -163,7 +163,7 @@ public class ListProductSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The subscription status used to filter subscriptions. Valid values: PENDING and APPROVED.</p>
+         * <p>The subscription status, which is used to filter subscriptions by status. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>APPROVED</p>

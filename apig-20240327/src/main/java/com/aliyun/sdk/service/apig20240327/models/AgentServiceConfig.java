@@ -43,6 +43,9 @@ public class AgentServiceConfig extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String provider;
 
+    @com.aliyun.core.annotation.NameInMap("upstreamAuthMode")
+    private String upstreamAuthMode;
+
     private AgentServiceConfig(Builder builder) {
         this.address = builder.address;
         this.customConfig = builder.customConfig;
@@ -52,6 +55,7 @@ public class AgentServiceConfig extends TeaModel {
         this.enableOutlierDetection = builder.enableOutlierDetection;
         this.protocols = builder.protocols;
         this.provider = builder.provider;
+        this.upstreamAuthMode = builder.upstreamAuthMode;
     }
 
     public static Builder builder() {
@@ -122,6 +126,13 @@ public class AgentServiceConfig extends TeaModel {
         return this.provider;
     }
 
+    /**
+     * @return upstreamAuthMode
+     */
+    public String getUpstreamAuthMode() {
+        return this.upstreamAuthMode;
+    }
+
     public static final class Builder {
         private String address; 
         private CustomConfig customConfig; 
@@ -131,6 +142,7 @@ public class AgentServiceConfig extends TeaModel {
         private Boolean enableOutlierDetection; 
         private java.util.List<String> protocols; 
         private String provider; 
+        private String upstreamAuthMode; 
 
         private Builder() {
         } 
@@ -144,6 +156,7 @@ public class AgentServiceConfig extends TeaModel {
             this.enableOutlierDetection = model.enableOutlierDetection;
             this.protocols = model.protocols;
             this.provider = model.provider;
+            this.upstreamAuthMode = model.upstreamAuthMode;
         } 
 
         /**
@@ -159,7 +172,7 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>The custom configuration. This parameter is required when provider is set to custom.</p>
+         * <p>The custom configuration. Specify this parameter when provider is set to custom.</p>
          */
         public Builder customConfig(CustomConfig customConfig) {
             this.customConfig = customConfig;
@@ -167,7 +180,7 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>The DashScope service configuration. This parameter is required when provider is set to qwen. The appCredentials parameter cannot be empty, and each entry must have non-empty appId and apiKey values.</p>
+         * <p>The DashScope service configuration. Specify this parameter when provider is set to qwen. The appCredentials parameter cannot be empty, and both appId and apiKey must be specified for each item.</p>
          */
         public Builder dashScopeConfig(DashScopeConfig dashScopeConfig) {
             this.dashScopeConfig = dashScopeConfig;
@@ -175,7 +188,7 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>The Dify service configuration. This parameter is required when provider is set to dify. The botType and apiKey parameters cannot be empty.</p>
+         * <p>The Dify service configuration. Specify this parameter when provider is set to dify. Both botType and apiKey must be specified.</p>
          */
         public Builder difyConfig(DifyConfig difyConfig) {
             this.difyConfig = difyConfig;
@@ -183,7 +196,7 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable health check.</p>
+         * <p>Specifies whether to enable the health check.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -221,6 +234,17 @@ public class AgentServiceConfig extends TeaModel {
          */
         public Builder provider(String provider) {
             this.provider = provider;
+            return this;
+        }
+
+        /**
+         * <p>Supported only for custom agents. The value api-key indicates a managed API key, and downstream-auth indicates passing through the complete client Authorization header. If this parameter is omitted or left empty during creation, the historical rule applies. If this parameter is omitted or left empty during an update, the existing mode is retained. When passing through the authorization, you can omit customConfig, and you cannot submit a non-empty key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-key</p>
+         */
+        public Builder upstreamAuthMode(String upstreamAuthMode) {
+            this.upstreamAuthMode = upstreamAuthMode;
             return this;
         }
 

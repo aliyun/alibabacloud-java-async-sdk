@@ -143,7 +143,7 @@ public class GetGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>qr-d8j7fpmm1hks65xxxxx</p>
@@ -179,7 +179,7 @@ public class GetGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the API consumer list.</p>
+         * <p>Specifies whether to output the consumer list.</p>
          */
         public Builder withConsumers(Boolean withConsumers) {
             this.putQueryParameter("withConsumers", withConsumers);
@@ -188,7 +188,7 @@ public class GetGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the general subject list. This parameter applies to both API consumer and API consumer group rules.</p>
+         * <p>Specifies whether to output the general subject list. This parameter takes effect for both consumer and consumer group rules.</p>
          */
         public Builder withSubjects(Boolean withSubjects) {
             this.putQueryParameter("withSubjects", withSubjects);

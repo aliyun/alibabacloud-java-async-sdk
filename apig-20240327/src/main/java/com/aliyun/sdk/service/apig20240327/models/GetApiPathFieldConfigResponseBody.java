@@ -192,7 +192,7 @@ public class GetApiPathFieldConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The collection of field configurations under the path, grouped by mapping key, where each group represents a set of field configuration items.</p>
+             * <p>The collection of field configurations under the path, grouped by mapping key. Each group contains a set of field configuration items.</p>
              */
             public Builder fieldPaths(java.util.Map<String, java.util.List<DataPathConfigsFieldPathsValue>> fieldPaths) {
                 this.fieldPaths = fieldPaths;

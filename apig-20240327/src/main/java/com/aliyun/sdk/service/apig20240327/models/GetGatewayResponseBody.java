@@ -205,7 +205,7 @@ public class GetGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The environment alias.</p>
+             * <p>The alias of the environment.</p>
              * 
              * <strong>example:</strong>
              * <p>Default environment</p>
@@ -310,8 +310,8 @@ public class GetGatewayResponseBody extends TeaModel {
             /**
              * <p>The protocol. Valid values:</p>
              * <ul>
-             * <li>TCP</li>
-             * <li>UDP</li>
+             * <li>TCP: TCP.</li>
+             * <li>UDP: UDP.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -525,9 +525,9 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The load balancing address type. Valid values:</p>
+             * <p>The type of the load balancing address. Valid values:</p>
              * <ul>
-             * <li>Internet: Public network.</li>
+             * <li>Internet: Internet-facing.</li>
              * <li>Intranet: Private network.</li>
              * </ul>
              * 
@@ -540,7 +540,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this is the default ingress address of the gateway.</p>
+             * <p>Indicates whether the address is the default ingress address for the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -567,7 +567,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The load balancing instance ID.</p>
+             * <p>The load balancing ID.</p>
              * 
              * <strong>example:</strong>
              * <p>nlb-xoh3pghru7c***</p>
@@ -578,7 +578,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The load balancing mode of the gateway. Valid values:</p>
+             * <p>The load balancing pattern of the gateway. Valid values:</p>
              * <ul>
              * <li>Managed: Managed by Cloud-native API Gateway.</li>
              * </ul>
@@ -592,7 +592,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of listening ports.</p>
+             * <p>The list of listener ports.</p>
              */
             public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
@@ -600,10 +600,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of load balancing. Valid values:</p>
+             * <p>The status of the load balancing. Valid values:</p>
              * <ul>
              * <li>Ready: Active.</li>
-             * <li>NotCreate: No associated instance.</li>
+             * <li>NotCreate: Not associated with an instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -615,10 +615,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The load balancing type. Valid values:</p>
+             * <p>The type of the load balancing. Valid values:</p>
              * <ul>
              * <li>NLB: Network Load Balancer (NLB).</li>
-             * <li>CLB: Classic Load Balancer (CLB).</li>
+             * <li>CLB: Classic Load Balancer.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -689,7 +689,7 @@ public class GetGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The O&amp;M end time (HH:mm).</p>
+             * <p>The end time of the O&amp;M window in the HH:mm format.</p>
              * 
              * <strong>example:</strong>
              * <p>06:00</p>
@@ -700,7 +700,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The O&amp;M start time (HH:mm).</p>
+             * <p>The start time of the O&amp;M window in the HH:mm format.</p>
              * 
              * <strong>example:</strong>
              * <p>02:00</p>
@@ -712,6 +712,466 @@ public class GetGatewayResponseBody extends TeaModel {
 
             public MaintenancePeriod build() {
                 return new MaintenancePeriod(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayResponseBody</p>
+     */
+    public static class NetworkAccessConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endpointSecurityGroupId")
+        private String endpointSecurityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private NetworkAccessConfig(Builder builder) {
+            this.endpointSecurityGroupId = builder.endpointSecurityGroupId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkAccessConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endpointSecurityGroupId
+         */
+        public String getEndpointSecurityGroupId() {
+            return this.endpointSecurityGroupId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String endpointSecurityGroupId; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkAccessConfig model) {
+                this.endpointSecurityGroupId = model.endpointSecurityGroupId;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The ID of the security group configured for the private endpoint. The security group belongs to the VPC selected by the user and is an unmanaged security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1example123456789</p>
+             */
+            public Builder endpointSecurityGroupId(String endpointSecurityGroupId) {
+                this.endpointSecurityGroupId = endpointSecurityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The access endpoint type of the gateway. Valid values:</p>
+             * <ul>
+             * <li>Intranet: Private endpoint only.</li>
+             * <li>InternetAndIntranet: Both Internet and private endpoints.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>InternetAndIntranet</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public NetworkAccessConfig build() {
+                return new NetworkAccessConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayResponseBody</p>
+     */
+    public static class Zones extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("zoneId")
+        private String zoneId;
+
+        private Zones(Builder builder) {
+            this.status = builder.status;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Zones create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String status; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.status = model.status;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * <p>The connection status of the private endpoint in the zone. A value of Connected indicates that the endpoint is connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Connected</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The zone ID of the private endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public Zones build() {
+                return new Zones(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayResponseBody</p>
+     */
+    public static class PrivateLink extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("connectionStatus")
+        private String connectionStatus;
+
+        @com.aliyun.core.annotation.NameInMap("endpointDomain")
+        private String endpointDomain;
+
+        @com.aliyun.core.annotation.NameInMap("endpointId")
+        private String endpointId;
+
+        @com.aliyun.core.annotation.NameInMap("endpointSecurityGroupId")
+        private String endpointSecurityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("endpointStatus")
+        private String endpointStatus;
+
+        @com.aliyun.core.annotation.NameInMap("lastErrorCode")
+        private String lastErrorCode;
+
+        @com.aliyun.core.annotation.NameInMap("lastErrorMessage")
+        private String lastErrorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("observedAt")
+        private String observedAt;
+
+        @com.aliyun.core.annotation.NameInMap("resourceMayBeCharged")
+        private Boolean resourceMayBeCharged;
+
+        @com.aliyun.core.annotation.NameInMap("stage")
+        private String stage;
+
+        @com.aliyun.core.annotation.NameInMap("zones")
+        private java.util.List<Zones> zones;
+
+        private PrivateLink(Builder builder) {
+            this.connectionStatus = builder.connectionStatus;
+            this.endpointDomain = builder.endpointDomain;
+            this.endpointId = builder.endpointId;
+            this.endpointSecurityGroupId = builder.endpointSecurityGroupId;
+            this.endpointStatus = builder.endpointStatus;
+            this.lastErrorCode = builder.lastErrorCode;
+            this.lastErrorMessage = builder.lastErrorMessage;
+            this.observedAt = builder.observedAt;
+            this.resourceMayBeCharged = builder.resourceMayBeCharged;
+            this.stage = builder.stage;
+            this.zones = builder.zones;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateLink create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectionStatus
+         */
+        public String getConnectionStatus() {
+            return this.connectionStatus;
+        }
+
+        /**
+         * @return endpointDomain
+         */
+        public String getEndpointDomain() {
+            return this.endpointDomain;
+        }
+
+        /**
+         * @return endpointId
+         */
+        public String getEndpointId() {
+            return this.endpointId;
+        }
+
+        /**
+         * @return endpointSecurityGroupId
+         */
+        public String getEndpointSecurityGroupId() {
+            return this.endpointSecurityGroupId;
+        }
+
+        /**
+         * @return endpointStatus
+         */
+        public String getEndpointStatus() {
+            return this.endpointStatus;
+        }
+
+        /**
+         * @return lastErrorCode
+         */
+        public String getLastErrorCode() {
+            return this.lastErrorCode;
+        }
+
+        /**
+         * @return lastErrorMessage
+         */
+        public String getLastErrorMessage() {
+            return this.lastErrorMessage;
+        }
+
+        /**
+         * @return observedAt
+         */
+        public String getObservedAt() {
+            return this.observedAt;
+        }
+
+        /**
+         * @return resourceMayBeCharged
+         */
+        public Boolean getResourceMayBeCharged() {
+            return this.resourceMayBeCharged;
+        }
+
+        /**
+         * @return stage
+         */
+        public String getStage() {
+            return this.stage;
+        }
+
+        /**
+         * @return zones
+         */
+        public java.util.List<Zones> getZones() {
+            return this.zones;
+        }
+
+        public static final class Builder {
+            private String connectionStatus; 
+            private String endpointDomain; 
+            private String endpointId; 
+            private String endpointSecurityGroupId; 
+            private String endpointStatus; 
+            private String lastErrorCode; 
+            private String lastErrorMessage; 
+            private String observedAt; 
+            private Boolean resourceMayBeCharged; 
+            private String stage; 
+            private java.util.List<Zones> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateLink model) {
+                this.connectionStatus = model.connectionStatus;
+                this.endpointDomain = model.endpointDomain;
+                this.endpointId = model.endpointId;
+                this.endpointSecurityGroupId = model.endpointSecurityGroupId;
+                this.endpointStatus = model.endpointStatus;
+                this.lastErrorCode = model.lastErrorCode;
+                this.lastErrorMessage = model.lastErrorMessage;
+                this.observedAt = model.observedAt;
+                this.resourceMayBeCharged = model.resourceMayBeCharged;
+                this.stage = model.stage;
+                this.zones = model.zones;
+            } 
+
+            /**
+             * <p>The connection status between the private endpoint and the endpoint service. A value of Connected indicates that the endpoint is connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Connected</p>
+             */
+            public Builder connectionStatus(String connectionStatus) {
+                this.connectionStatus = connectionStatus;
+                return this;
+            }
+
+            /**
+             * <p>The access domain name of the private endpoint, which can be used to access the gateway from the user VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-bp1example123456789.epsrv-bp1example123456789.cn-hangzhou.privatelink.aliyuncs.com</p>
+             */
+            public Builder endpointDomain(String endpointDomain) {
+                this.endpointDomain = endpointDomain;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the private endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-bp1example123456789</p>
+             */
+            public Builder endpointId(String endpointId) {
+                this.endpointId = endpointId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the security group configured for the private endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1example123456789</p>
+             */
+            public Builder endpointSecurityGroupId(String endpointSecurityGroupId) {
+                this.endpointSecurityGroupId = endpointSecurityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The status of the private endpoint. A value of Active indicates that the endpoint is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
+             */
+            public Builder endpointStatus(String endpointStatus) {
+                this.endpointStatus = endpointStatus;
+                return this;
+            }
+
+            /**
+             * <p>The error code of the most recent error that occurred during the creation or delete operations of the private endpoint. This parameter is not returned if no error message is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Forbidden.RAM</p>
+             */
+            public Builder lastErrorCode(String lastErrorCode) {
+                this.lastErrorCode = lastErrorCode;
+                return this;
+            }
+
+            /**
+             * <p>The description of the most recent error that occurred during the creation or delete operations of the private endpoint. You can use this description along with the error code to troubleshoot the issue. This parameter is not returned if no error message is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private ingress CheckProductOpen failed (Forbidden.RAM)</p>
+             */
+            public Builder lastErrorMessage(String lastErrorMessage) {
+                this.lastErrorMessage = lastErrorMessage;
+                return this;
+            }
+
+            /**
+             * <p>The time when the system last retrieved the status of the private endpoint. The time is in RFC 3339 format. This parameter is not returned if the status has not been retrieved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-11-02T10:00:00Z</p>
+             */
+            public Builder observedAt(String observedAt) {
+                this.observedAt = observedAt;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the private endpoint may continue to incur fees. A value of true indicates that the endpoint is created and its release is not confirmed. A value of false indicates that no fee prompt is available. The actual fees are subject to the bill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder resourceMayBeCharged(Boolean resourceMayBeCharged) {
+                this.resourceMayBeCharged = resourceMayBeCharged;
+                return this;
+            }
+
+            /**
+             * <p>The current processing stage of the private endpoint. A value of Ready indicates that the private endpoint is ready.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ready</p>
+             */
+            public Builder stage(String stage) {
+                this.stage = stage;
+                return this;
+            }
+
+            /**
+             * <p>The list of zone information for the private endpoint.</p>
+             */
+            public Builder zones(java.util.List<Zones> zones) {
+                this.zones = zones;
+                return this;
+            }
+
+            public PrivateLink build() {
+                return new PrivateLink(this);
             } 
 
         } 
@@ -770,7 +1230,7 @@ public class GetGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The security group name.</p>
+             * <p>The name of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>APIG-sg-gw-cq7ke5ll***</p>
@@ -781,7 +1241,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp16tafq9***</p>
@@ -932,7 +1392,7 @@ public class GetGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The vSwitch name.</p>
+             * <p>The name of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>Hangzhou VPC vSwitch</p>
@@ -943,7 +1403,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The ID of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1c7ggkj***</p>
@@ -1013,7 +1473,7 @@ public class GetGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The VPC name.</p>
+             * <p>The name of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>Hangzhou VPC</p>
@@ -1024,7 +1484,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1llj52lvj6xc***</p>
@@ -1094,7 +1554,7 @@ public class GetGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The vSwitch name.</p>
+             * <p>The name of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>Hangzhou VPC vSwitch</p>
@@ -1105,7 +1565,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The ID of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1c7ggkj***</p>
@@ -1128,7 +1588,7 @@ public class GetGatewayResponseBody extends TeaModel {
      *
      * <p>GetGatewayResponseBody</p>
      */
-    public static class Zones extends TeaModel {
+    public static class DataZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -1138,7 +1598,7 @@ public class GetGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
-        private Zones(Builder builder) {
+        private DataZones(Builder builder) {
             this.name = builder.name;
             this.vSwitch = builder.vSwitch;
             this.zoneId = builder.zoneId;
@@ -1148,7 +1608,7 @@ public class GetGatewayResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Zones create() {
+        public static DataZones create() {
             return builder().build();
         }
 
@@ -1181,14 +1641,14 @@ public class GetGatewayResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Zones model) {
+            private Builder(DataZones model) {
                 this.name = model.name;
                 this.vSwitch = model.vSwitch;
                 this.zoneId = model.zoneId;
             } 
 
             /**
-             * <p>The zone name.</p>
+             * <p>The name of the zone.</p>
              * 
              * <strong>example:</strong>
              * <p>Hangzhou Zone E</p>
@@ -1217,8 +1677,8 @@ public class GetGatewayResponseBody extends TeaModel {
                 return this;
             }
 
-            public Zones build() {
-                return new Zones(this);
+            public DataZones build() {
+                return new DataZones(this);
             } 
 
         } 
@@ -1239,6 +1699,9 @@ public class GetGatewayResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("createTimestamp")
         private Long createTimestamp;
+
+        @com.aliyun.core.annotation.NameInMap("elasticEnabled")
+        private Boolean elasticEnabled;
 
         @com.aliyun.core.annotation.NameInMap("environments")
         private java.util.List<Environments> environments;
@@ -1270,6 +1733,12 @@ public class GetGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("networkAccessConfig")
+        private NetworkAccessConfig networkAccessConfig;
+
+        @com.aliyun.core.annotation.NameInMap("privateLink")
+        private PrivateLink privateLink;
+
         @com.aliyun.core.annotation.NameInMap("replicas")
         private String replicas;
 
@@ -1284,6 +1753,9 @@ public class GetGatewayResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("subDomainInfos")
+        private java.util.List<SubDomainInfo> subDomainInfos;
 
         @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List<Tags> tags;
@@ -1307,12 +1779,13 @@ public class GetGatewayResponseBody extends TeaModel {
         private Vpc vpc;
 
         @com.aliyun.core.annotation.NameInMap("zones")
-        private java.util.List<Zones> zones;
+        private java.util.List<DataZones> zones;
 
         private Data(Builder builder) {
             this.chargeType = builder.chargeType;
             this.createFrom = builder.createFrom;
             this.createTimestamp = builder.createTimestamp;
+            this.elasticEnabled = builder.elasticEnabled;
             this.environments = builder.environments;
             this.expireTimestamp = builder.expireTimestamp;
             this.gatewayEdition = builder.gatewayEdition;
@@ -1323,11 +1796,14 @@ public class GetGatewayResponseBody extends TeaModel {
             this.loadBalancers = builder.loadBalancers;
             this.maintenancePeriod = builder.maintenancePeriod;
             this.name = builder.name;
+            this.networkAccessConfig = builder.networkAccessConfig;
+            this.privateLink = builder.privateLink;
             this.replicas = builder.replicas;
             this.resourceGroupId = builder.resourceGroupId;
             this.securityGroup = builder.securityGroup;
             this.spec = builder.spec;
             this.status = builder.status;
+            this.subDomainInfos = builder.subDomainInfos;
             this.tags = builder.tags;
             this.targetVersion = builder.targetVersion;
             this.tenantId = builder.tenantId;
@@ -1365,6 +1841,13 @@ public class GetGatewayResponseBody extends TeaModel {
          */
         public Long getCreateTimestamp() {
             return this.createTimestamp;
+        }
+
+        /**
+         * @return elasticEnabled
+         */
+        public Boolean getElasticEnabled() {
+            return this.elasticEnabled;
         }
 
         /**
@@ -1438,6 +1921,20 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkAccessConfig
+         */
+        public NetworkAccessConfig getNetworkAccessConfig() {
+            return this.networkAccessConfig;
+        }
+
+        /**
+         * @return privateLink
+         */
+        public PrivateLink getPrivateLink() {
+            return this.privateLink;
+        }
+
+        /**
          * @return replicas
          */
         public String getReplicas() {
@@ -1470,6 +1967,13 @@ public class GetGatewayResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return subDomainInfos
+         */
+        public java.util.List<SubDomainInfo> getSubDomainInfos() {
+            return this.subDomainInfos;
         }
 
         /**
@@ -1524,7 +2028,7 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * @return zones
          */
-        public java.util.List<Zones> getZones() {
+        public java.util.List<DataZones> getZones() {
             return this.zones;
         }
 
@@ -1532,6 +2036,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private String chargeType; 
             private String createFrom; 
             private Long createTimestamp; 
+            private Boolean elasticEnabled; 
             private java.util.List<Environments> environments; 
             private Long expireTimestamp; 
             private String gatewayEdition; 
@@ -1542,11 +2047,14 @@ public class GetGatewayResponseBody extends TeaModel {
             private java.util.List<LoadBalancers> loadBalancers; 
             private MaintenancePeriod maintenancePeriod; 
             private String name; 
+            private NetworkAccessConfig networkAccessConfig; 
+            private PrivateLink privateLink; 
             private String replicas; 
             private String resourceGroupId; 
             private SecurityGroup securityGroup; 
             private String spec; 
             private String status; 
+            private java.util.List<SubDomainInfo> subDomainInfos; 
             private java.util.List<Tags> tags; 
             private String targetVersion; 
             private String tenantId; 
@@ -1554,7 +2062,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private VSwitch vSwitch; 
             private String version; 
             private Vpc vpc; 
-            private java.util.List<Zones> zones; 
+            private java.util.List<DataZones> zones; 
 
             private Builder() {
             } 
@@ -1563,6 +2071,7 @@ public class GetGatewayResponseBody extends TeaModel {
                 this.chargeType = model.chargeType;
                 this.createFrom = model.createFrom;
                 this.createTimestamp = model.createTimestamp;
+                this.elasticEnabled = model.elasticEnabled;
                 this.environments = model.environments;
                 this.expireTimestamp = model.expireTimestamp;
                 this.gatewayEdition = model.gatewayEdition;
@@ -1573,11 +2082,14 @@ public class GetGatewayResponseBody extends TeaModel {
                 this.loadBalancers = model.loadBalancers;
                 this.maintenancePeriod = model.maintenancePeriod;
                 this.name = model.name;
+                this.networkAccessConfig = model.networkAccessConfig;
+                this.privateLink = model.privateLink;
                 this.replicas = model.replicas;
                 this.resourceGroupId = model.resourceGroupId;
                 this.securityGroup = model.securityGroup;
                 this.spec = model.spec;
                 this.status = model.status;
+                this.subDomainInfos = model.subDomainInfos;
                 this.tags = model.tags;
                 this.targetVersion = model.targetVersion;
                 this.tenantId = model.tenantId;
@@ -1591,8 +2103,8 @@ public class GetGatewayResponseBody extends TeaModel {
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>POSTPAY: pay-as-you-go.</li>
-             * <li>PREPAY: subscription.</li>
+             * <li>POSTPAY: Pay-as-you-go.</li>
+             * <li>PREPAY: Subscription.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1604,9 +2116,9 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source from which the gateway was created. Valid values:</p>
+             * <p>The creation source of the gateway. Valid values:</p>
              * <ul>
-             * <li>Console: Console.</li>
+             * <li>Console: The console.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1625,6 +2137,17 @@ public class GetGatewayResponseBody extends TeaModel {
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether elastic scaling is enabled. A value of true indicates that elastic scaling is enabled. A value of false indicates that elastic scaling is disabled. A value of null or a missing value indicates that the status is unknown. This parameter is for query and display purposes only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder elasticEnabled(Boolean elasticEnabled) {
+                this.elasticEnabled = elasticEnabled;
                 return this;
             }
 
@@ -1648,12 +2171,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway instance edition. Valid values:</p>
+             * <p>The edition of the gateway instance. Valid values:</p>
              * <ul>
-             * <li><p>Professional: Standard instance.</p>
-             * </li>
-             * <li><p>Serverless: Serverless instance.</p>
-             * </li>
+             * <li>Professional: Professional instance.</li>
+             * <li>Serverless: Serverless instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1676,11 +2197,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running mode of AI multi-tenant V2. Default value: ENTERPRISE. Only AI + MultiTenantServerless allows this parameter. Valid values:</p>
-             * <ul>
-             * <li>ENTERPRISE: default.</li>
-             * <li>STANDARD: allowed only for AI multi-tenant V2.</li>
-             * </ul>
+             * <p>The operation mode for AI multi-tenant V2. The default value is ENTERPRISE. This parameter is applicable only to AI and MultiTenantServerless gateways.</p>
              * 
              * <strong>example:</strong>
              * <p>STANDARD</p>
@@ -1706,7 +2223,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the network service provider.</p>
+             * <p>The type of the Internet service provider (ISP).</p>
              * 
              * <strong>example:</strong>
              * <p>BGP</p>
@@ -1717,7 +2234,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of ingress addresses of the gateway.</p>
+             * <p>The list of ingress addresses for the gateway.</p>
              */
             public Builder loadBalancers(java.util.List<LoadBalancers> loadBalancers) {
                 this.loadBalancers = loadBalancers;
@@ -1744,7 +2261,23 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of gateway instance nodes.</p>
+             * <p>The network access configuration of the gateway, including the access endpoint type and the security group used by the private endpoint. This parameter is returned only when the gateway is configured with a private endpoint.</p>
+             */
+            public Builder networkAccessConfig(NetworkAccessConfig networkAccessConfig) {
+                this.networkAccessConfig = networkAccessConfig;
+                return this;
+            }
+
+            /**
+             * <p>The PrivateLink information of the gateway, including the endpoint ID, access domain name, connection status, and zone information.</p>
+             */
+            public Builder privateLink(PrivateLink privateLink) {
+                this.privateLink = privateLink;
+                return this;
+            }
+
+            /**
+             * <p>The number of nodes in the gateway instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1774,9 +2307,9 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway specification. Valid values:</p>
+             * <p>The gateway specifications. Valid values:</p>
              * <ul>
-             * <li>apigw.small.x1: Small specification.</li>
+             * <li>apigw.small.x1: Small specifications.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1790,15 +2323,15 @@ public class GetGatewayResponseBody extends TeaModel {
             /**
              * <p>The gateway status. Valid values:</p>
              * <ul>
-             * <li>Running: Running.</li>
-             * <li>Creating: Being created.</li>
-             * <li>CreateFailed: Creation failed.</li>
-             * <li>Upgrading: Being upgraded.</li>
-             * <li>UpgradeFailed: Upgrade failed.</li>
-             * <li>Restarting: Being restarted.</li>
-             * <li>RestartFailed: Restart failed.</li>
-             * <li>Deleting: Being released.</li>
-             * <li>DeleteFailed: Release failed.</li>
+             * <li>Running: The gateway is running.</li>
+             * <li>Creating: The gateway is being created.</li>
+             * <li>CreateFailed: The gateway failed to be created.</li>
+             * <li>Upgrading: The gateway is being upgraded.</li>
+             * <li>UpgradeFailed: The gateway failed to be upgraded.</li>
+             * <li>Restarting: The gateway is being restarted.</li>
+             * <li>RestartFailed: The gateway failed to be restarted.</li>
+             * <li>Deleting: The gateway is being released.</li>
+             * <li>DeleteFailed: The gateway failed to be released.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1806,6 +2339,14 @@ public class GetGatewayResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The list of default access domain name information for the gateway. This parameter is not returned if no default domain name information is available.</p>
+             */
+            public Builder subDomainInfos(java.util.List<SubDomainInfo> subDomainInfos) {
+                this.subDomainInfos = subDomainInfos;
                 return this;
             }
 
@@ -1818,7 +2359,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target version of the gateway. If this value differs from version, a version upgrade can be performed.</p>
+             * <p>The target version of the gateway. If this value is different from the current version, you can upgrade the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0.2</p>
@@ -1880,7 +2421,7 @@ public class GetGatewayResponseBody extends TeaModel {
             /**
              * <p>The list of zones associated with the gateway.</p>
              */
-            public Builder zones(java.util.List<Zones> zones) {
+            public Builder zones(java.util.List<DataZones> zones) {
                 this.zones = zones;
                 return this;
             }
