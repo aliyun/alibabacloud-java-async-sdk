@@ -93,7 +93,7 @@ public class DeleteScheduledScalingRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The responses code. The value 200 indicates that the request was successful.</p>
+         * <p>The status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -115,7 +115,7 @@ public class DeleteScheduledScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>ABA4A7FD-E10F-45C7-9774-A5236015****</p>
@@ -126,7 +126,7 @@ public class DeleteScheduledScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

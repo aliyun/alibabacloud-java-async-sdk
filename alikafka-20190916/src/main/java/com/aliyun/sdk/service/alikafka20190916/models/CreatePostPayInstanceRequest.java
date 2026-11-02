@@ -215,6 +215,13 @@ public class CreatePostPayInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The deployment type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>4</strong>: Internet- and VPC-connected instance</p>
+         * </li>
+         * <li><p><strong>5</strong>: VPC-connected instance</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +234,14 @@ public class CreatePostPayInstanceRequest extends Request {
         }
 
         /**
-         * DiskSize.
+         * <p>The cloud disk capacity.</p>
+         * <p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+         * <blockquote>
+         * <p>This parameter is not required when you create a Serverless instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         public Builder diskSize(Integer diskSize) {
             this.putQueryParameter("DiskSize", diskSize);
@@ -236,7 +250,19 @@ public class CreatePostPayInstanceRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * <p>The cloud disk type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: premium performance disk</p>
+         * </li>
+         * <li><p><strong>1</strong>: SSD</p>
+         * <blockquote>
+         * <p>This parameter is not required when you create a Serverless instance.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -245,7 +271,19 @@ public class CreatePostPayInstanceRequest extends Request {
         }
 
         /**
-         * EipMax.
+         * <p>The Internet traffic.</p>
+         * <ul>
+         * <li><p>Required if <strong>DeployType</strong> is set to <strong>4</strong>.</p>
+         * </li>
+         * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is not required when you create a Serverless instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder eipMax(Integer eipMax) {
             this.putQueryParameter("EipMax", eipMax);
@@ -254,7 +292,16 @@ public class CreatePostPayInstanceRequest extends Request {
         }
 
         /**
-         * IoMaxSpec.
+         * <p>The traffic specification.</p>
+         * <ul>
+         * <li>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is not required when you create a Serverless instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka.hw.2xlarge</p>
          */
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
@@ -263,7 +310,14 @@ public class CreatePostPayInstanceRequest extends Request {
         }
 
         /**
-         * PaidType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>1 (default): pay-as-you-go for reserved instances.</li>
+         * <li>3: pay-as-you-go for reserved capacity of Serverless instances plus pay-as-you-go for Serverless elastic scaling.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder paidType(Integer paidType) {
             this.putQueryParameter("PaidType", paidType);
@@ -272,7 +326,16 @@ public class CreatePostPayInstanceRequest extends Request {
         }
 
         /**
-         * PartitionNum.
+         * <p>The number of partitions to purchase.</p>
+         * <ul>
+         * <li>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.<blockquote>
+         * <p>This parameter is not required for Serverless instances.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder partitionNum(Integer partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -281,6 +344,7 @@ public class CreatePostPayInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +357,11 @@ public class CreatePostPayInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * <p>If not specified, the instance is added to the default resource group. You can view resource group IDs in the Resource Group console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ac***********7q</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -302,7 +370,7 @@ public class CreatePostPayInstanceRequest extends Request {
         }
 
         /**
-         * ServerlessConfig.
+         * <p>The settings for the Serverless instance. Required when creating a Serverless instance.</p>
          */
         public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
             String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
@@ -312,7 +380,23 @@ public class CreatePostPayInstanceRequest extends Request {
         }
 
         /**
-         * SpecType.
+         * <p>The instance type.</p>
+         * <p>When PaidType is set to 1 (pay-as-you-go for reserved instances), valid values are:</p>
+         * <ul>
+         * <li>normal: Standard Edition (high-write)</li>
+         * <li>professional: Professional Edition (high-write)</li>
+         * <li>professionalForHighRead: Professional Edition (high-read)</li>
+         * </ul>
+         * <p>When PaidType is set to 3 (pay-as-you-go for reserved capacity of Serverless instances plus pay-as-you-go for Serverless elastic scaling), valid values are:</p>
+         * <ul>
+         * <li>basic: Serverless Basic Edition</li>
+         * <li>normal: Serverless Standard Edition</li>
+         * <li>professional: Serverless Professional Edition</li>
+         * </ul>
+         * <p>For descriptions of the above instance types, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>professional</p>
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -321,7 +405,7 @@ public class CreatePostPayInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -389,7 +473,13 @@ public class CreatePostPayInstanceRequest extends Request {
             } 
 
             /**
-             * ReservedPublishCapacity.
+             * <p>The reserved publish throughput specification. Only integers are supported. The minimum value is 60. Required for Serverless instances.</p>
+             * <blockquote>
+             * <p>The actual upper limit is subject to available inventory in the current region. Refer to the available options on the purchase page.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder reservedPublishCapacity(Long reservedPublishCapacity) {
                 this.reservedPublishCapacity = reservedPublishCapacity;
@@ -397,7 +487,13 @@ public class CreatePostPayInstanceRequest extends Request {
             }
 
             /**
-             * ReservedSubscribeCapacity.
+             * <p>The reserved subscribe throughput specification. Only integers are supported. The minimum value is 20. Required for Serverless instances.</p>
+             * <blockquote>
+             * <p>The actual upper limit is subject to available inventory in the current region. Refer to the available options on the purchase page.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder reservedSubscribeCapacity(Long reservedSubscribeCapacity) {
                 this.reservedSubscribeCapacity = reservedSubscribeCapacity;
@@ -465,6 +561,12 @@ public class CreatePostPayInstanceRequest extends Request {
             } 
 
             /**
+             * <p>The tag key of the resource.</p>
+             * <ul>
+             * <li>N ranges from 1 to 20.</li>
+             * <li>If left empty, all tag keys are matched.</li>
+             * <li>The value can be up to 128 characters in length and cannot start with aliyun or acs:, or contain http:// or https://.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -476,7 +578,15 @@ public class CreatePostPayInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the resource.</p>
+             * <ul>
+             * <li>N ranges from 1 to 20.</li>
+             * <li>If the tag key is empty, this parameter must also be empty. If empty, all tag values are matched.</li>
+             * <li>The value can be up to 128 characters in length and cannot start with aliyun or acs:, or contain http:// or https://.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

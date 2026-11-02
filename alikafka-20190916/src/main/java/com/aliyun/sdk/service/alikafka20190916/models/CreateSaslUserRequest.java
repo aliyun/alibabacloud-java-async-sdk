@@ -148,11 +148,13 @@ public class CreateSaslUserRequest extends Request {
         /**
          * <p>The encryption method. Valid values:</p>
          * <ul>
-         * <li>SCRAM-SHA-512 (default)</li>
-         * <li>SCRAM-SHA-256</li>
+         * <li><p>SCRAM-SHA-512 (default)</p>
+         * </li>
+         * <li><p>SCRAM-SHA-256</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only for ApsaraMQ for Kafka serverless instances.</p>
+         * <p>This parameter is supported only for serverless instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -165,7 +167,7 @@ public class CreateSaslUserRequest extends Request {
         }
 
         /**
-         * <p>The password of the SASL user.</p>
+         * <p>The password.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,13 +193,16 @@ public class CreateSaslUserRequest extends Request {
         }
 
         /**
-         * <p>The type of the Simple Authentication and Security Layer (SASL) user. Valid values:</p>
+         * <p>The type. Valid values:</p>
          * <ul>
-         * <li><strong>plain</strong>: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</li>
-         * <li><strong>SCRAM</strong>: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</li>
-         * <li><strong>LDAP</strong>: This value is available only for the SASL users of ApsaraMQ for Confluent instances.</li>
+         * <li><p>plain: A simple username and password authentication mechanism. MSMQ for Apache Kafka optimizes the PLAIN mechanism and supports the dynamic increase of SASL users without restarting the instance.</p>
+         * </li>
+         * <li><p>scram: A username and password authentication mechanism that provides higher security than PLAIN. MSMQ for Apache Kafka uses SCRAM-SHA-256.</p>
+         * </li>
+         * <li><p>LDAP: Applicable only to new users of Confluent instances.</p>
+         * </li>
          * </ul>
-         * <p>Default value: <strong>plain</strong>.</p>
+         * <p>Default value: plain.</p>
          * 
          * <strong>example:</strong>
          * <p>plain</p>
@@ -209,7 +214,7 @@ public class CreateSaslUserRequest extends Request {
         }
 
         /**
-         * <p>The name of the SASL user.</p>
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * <p>The response code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of instances that are managed by the Alibaba Cloud account in all the regions.</p>
+         * <p>The instance IDs of all instances across all regions under the current account.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;cn-shenzhen&quot;: [&quot;alikafka_post-cn-7pp2btvo****&quot;],&quot;us-west-1&quot;: [&quot;alikafka_pre-cn-i7m2lxid****&quot;],&quot;cn-hangzhou&quot;: [&quot;alikafka_pre-cn-i7m2hflj****&quot;,&quot;alikafka_pre-cn-zvp2hsje****&quot;,&quot;alikafka_pre-cn-zvp2kvc9****&quot;]}]</p>
@@ -128,7 +128,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -139,7 +139,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABA4A7FD-E10F-45C7-9774-A5236015****</p>
@@ -150,7 +150,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

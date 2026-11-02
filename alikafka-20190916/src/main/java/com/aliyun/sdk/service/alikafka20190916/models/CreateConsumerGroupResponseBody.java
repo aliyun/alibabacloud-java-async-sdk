@@ -93,7 +93,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * <p>The status code. A value of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -115,7 +115,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E57A8862-DF68-4055-8E55-B80CB4****</p>
@@ -126,7 +126,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

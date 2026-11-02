@@ -130,11 +130,11 @@ public class EnableAutoTopicCreationRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Valid values:</p>
+         * <p>Only the following three values are supported:</p>
          * <ul>
-         * <li>enable: enables the automatic topic creation feature.</li>
-         * <li>disable: disables the automatic topic creation feature.</li>
-         * <li>updatePartition: changes the number of partitions in topics that are automatically created.</li>
+         * <li>enable: Enables automatic automatic creation.</li>
+         * <li>disable: Disables automatic automatic creation.</li>
+         * <li>updatePartition: Modifies the number of automatically created partitions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,8 +147,10 @@ public class EnableAutoTopicCreationRequest extends Request {
         }
 
         /**
-         * <p>The changed number of partitions in topics that are automatically created.</p>
-         * <p>This parameter takes effect only if you set Operate to updatePartition.</p>
+         * <p>The default number of partitions for automatically created topics.</p>
+         * <blockquote>
+         * <p> Specify this parameter only when Operate is set to updatePartition or UpdatePartition is set to true.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -173,7 +175,13 @@ public class EnableAutoTopicCreationRequest extends Request {
         }
 
         /**
-         * UpdatePartition.
+         * <p>Specifies whether to modify the number of partitions for automatic creation.</p>
+         * <blockquote>
+         * <p> If this parameter is set to true, the Operate parameter must be set to updatePartition or left empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder updatePartition(Boolean updatePartition) {
             this.putQueryParameter("UpdatePartition", updatePartition);

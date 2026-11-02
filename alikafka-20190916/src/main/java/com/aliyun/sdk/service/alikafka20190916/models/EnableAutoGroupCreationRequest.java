@@ -90,10 +90,10 @@ public class EnableAutoGroupCreationRequest extends Request {
         } 
 
         /**
-         * <p>Specify whether to enable the flexible group creation feature. Valid values:</p>
+         * <p>Specifies whether to enable automatic group creation. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the flexible group creation feature.</li>
-         * <li><strong>false</strong>: disabled the flexible group creation feature.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -108,7 +108,7 @@ public class EnableAutoGroupCreationRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> operation to query instances.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

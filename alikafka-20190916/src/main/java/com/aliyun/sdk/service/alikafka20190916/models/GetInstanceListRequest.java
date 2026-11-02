@@ -130,7 +130,7 @@ public class GetInstanceListRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of instances.</p>
+         * <p>The list of instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>alikafka_post-cn-mp91gnw0p***</p>
@@ -142,7 +142,7 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the order. You can obtain the order ID on the <a href="https://usercenter2-intl.aliyun.com/order/list?pageIndex=1&pageSize=20&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa">Orders</a> page in Alibaba Cloud User Center.</p>
+         * <p>The order ID. You can obtain the order ID from &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list?pageIndex=1&pageSize=20">Orders</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list?pageIndex=1&pageSize=20&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa">Order Management</a> in Alibaba Cloud Expenses and Costs.&gt;Notice: Serverless instances do not support querying by order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6072673****</p>
@@ -154,7 +154,7 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. You can obtain this ID on the Resource Group page in the Resource Management console.</p>
+         * <p>The resource group ID. You can query the ID in the Resource Management console.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ac***********7q</p>
@@ -179,7 +179,7 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The instance version. You can use instance versions to filter different versions of instances. Valid values:</p>
+         * <p>The instance edition identity. You can filter instances of different editions based on the edition number. Valid values:</p>
          * <ul>
          * <li>v2</li>
          * <li>v3</li>
@@ -196,7 +196,7 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -264,10 +264,12 @@ public class GetInstanceListRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The tag key of the resource.</p>
              * <ul>
-             * <li>If you leave this parameter empty, the keys of all tags are matched.</li>
-             * <li>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li><p>If this parameter is left empty, all tag keys are matched.</p>
+             * </li>
+             * <li><p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -279,10 +281,12 @@ public class GetInstanceListRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The tag value of the resource.</p>
              * <ul>
-             * <li>If you leave Key empty, you must also leave this parameter empty. If you leave this parameter empty, the values of all tags are matched.</li>
-             * <li>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li><p>If the tag key is empty, this parameter must be empty. If this parameter is left empty, all tag values are matched.</p>
+             * </li>
+             * <li><p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

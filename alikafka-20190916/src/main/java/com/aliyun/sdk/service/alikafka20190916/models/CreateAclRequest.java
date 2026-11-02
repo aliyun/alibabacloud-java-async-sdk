@@ -192,14 +192,20 @@ public class CreateAclRequest extends Request {
         } 
 
         /**
-         * <p>The type of the operation allowed by the access control list (ACL). Valid values:</p>
+         * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li><strong>Write</strong></li>
-         * <li><strong>Read</strong></li>
-         * <li><strong>Describe</strong>: reads of transactional IDs.</li>
-         * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
-         * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
-         * <li><strong>DESCRIBE_CONFIGS</strong>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
+         * <li><p><strong>Write</strong>: write</p>
+         * </li>
+         * <li><p><strong>Read</strong>: read</p>
+         * </li>
+         * <li><p><strong>Describe</strong>: read a transactional ID</p>
+         * </li>
+         * <li><p><strong>IdempotentWrite</strong>: perform an idempotent write to a cluster</p>
+         * </li>
+         * <li><p><strong>IDEMPOTENT_WRITE</strong>: perform an idempotent write to a cluster. Available only for serverless instances.</p>
+         * </li>
+         * <li><p><strong>DESCRIBE_CONFIGS</strong>: query configurations. Available only for serverless instances.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -213,18 +219,23 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * <p>The types of operations allowed by the ACL. Separate multiple operation types with commas (,).</p>
-         * <p>Valid values:</p>
+         * <p>The operation types for batch authorization. Separate multiple operations with commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>Write</strong></li>
-         * <li><strong>Read</strong></li>
-         * <li><strong>Describe</strong>: reads of transactional IDs.</li>
-         * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
-         * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
-         * <li><strong>DESCRIBE_CONFIGS</strong>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
+         * <li><p><strong>Write</strong>: write</p>
+         * </li>
+         * <li><p><strong>Read</strong>: read</p>
+         * </li>
+         * <li><p><strong>Describe</strong>: read a transactional ID</p>
+         * </li>
+         * <li><p><strong>IdempotentWrite</strong>: perform an idempotent write to a cluster</p>
+         * </li>
+         * <li><p><strong>IDEMPOTENT_WRITE</strong>: perform an idempotent write to a cluster. Available only for serverless instances.</p>
+         * </li>
+         * <li><p><strong>DESCRIBE_CONFIGS</strong>: query configurations. Available only for serverless instances.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+         * <p>This parameter is supported only for serverless instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -239,11 +250,13 @@ public class CreateAclRequest extends Request {
         /**
          * <p>The authorization method. Valid values:</p>
          * <ul>
-         * <li><strong>DENY</strong></li>
-         * <li><strong>ALLOW</strong></li>
+         * <li><p><strong>DENY</strong>: deny.</p>
+         * </li>
+         * <li><p><strong>ALLOW</strong>: allow.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+         * <p>This parameter is supported only for serverless instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -258,11 +271,15 @@ public class CreateAclRequest extends Request {
         /**
          * <p>The resource name.</p>
          * <ul>
-         * <li>The value can be a topic name, a group ID, a cluster name, or a transaction ID.</li>
-         * <li>You can use an asterisk (*) to specify the names of all resources of the specified type.</li>
+         * <li><p>The name of the resource. It can be a topic name, a group ID, a cluster name, or a transactional ID.</p>
+         * </li>
+         * <li><p>You can use an asterisk (*) to specify all resources of this type.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>You can use an asterisk (*) to query the resources on which permissions are granted only after you grant the user the required permissions on all resources.</p>
+         * <ul>
+         * <li>You can query the authorized resources by using an asterisk (*) only after you grant permissions to all resources.</li>
+         * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -278,8 +295,10 @@ public class CreateAclRequest extends Request {
         /**
          * <p>The matching mode. Valid values:</p>
          * <ul>
-         * <li><strong>LITERAL</strong>: exact match</li>
-         * <li><strong>PREFIXED</strong>: prefix match</li>
+         * <li><p><strong>LITERAL</strong>: exact match</p>
+         * </li>
+         * <li><p><strong>PREFIXED</strong>: prefix match</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -295,10 +314,14 @@ public class CreateAclRequest extends Request {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li><strong>Topic</strong></li>
-         * <li><strong>Group</strong></li>
-         * <li><strong>Cluster</strong></li>
-         * <li><strong>TransactionalId</strong>: transactional ID</li>
+         * <li><p><strong>Topic</strong>: topic</p>
+         * </li>
+         * <li><p><strong>Group</strong>: consumer group</p>
+         * </li>
+         * <li><p><strong>Cluster</strong>: instance</p>
+         * </li>
+         * <li><p><strong>TransactionalId</strong>: transactional ID</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -312,15 +335,13 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the source.</p>
+         * <p>The source IP address.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>You can specify a specific IP address or use the asterisk (*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</p>
-         * </li>
-         * <li><p>This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
-         * </li>
+         * <li>Only specific IP addresses or an asterisk (*) (which allows all IP addresses) are supported. CIDR blocks are not supported.</li>
+         * <li>This parameter is supported only for serverless instances.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -362,10 +383,11 @@ public class CreateAclRequest extends Request {
         /**
          * <p>The username.</p>
          * <ul>
+         * <li>Before calling this API, you must create a SASL user by calling CreateSaslUser. You can query existing users by calling DescribeSaslUsers.</li>
          * <li>You can use an asterisk (*) to specify all usernames.</li>
          * </ul>
          * <blockquote>
-         * <p>You can use an asterisk (*) to query the authorized users only after you grant the required permissions to all users.</p>
+         * <p>You can query the authorized users by using an asterisk (*) only after you grant permissions to all users.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

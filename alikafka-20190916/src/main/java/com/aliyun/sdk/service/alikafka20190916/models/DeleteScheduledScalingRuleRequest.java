@@ -103,7 +103,7 @@ public class DeleteScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,9 +116,9 @@ public class DeleteScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the scheduled scaling rule.</p>
+         * <p>The policy name.</p>
          * <blockquote>
-         * <p> You can delete only rules that are disabled and rules that are scheduled only once and have been executed.</p>
+         * <p>Only disabled policies or completed one-time policies can be deleted.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

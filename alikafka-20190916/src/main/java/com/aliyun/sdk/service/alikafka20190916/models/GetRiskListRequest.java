@@ -103,6 +103,7 @@ public class GetRiskListRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class GetRiskListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,6 +128,7 @@ public class GetRiskListRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class GetRiskListRequest extends Request {
         }
 
         /**
-         * StartIndex.
+         * <p>The start index for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder startIndex(Long startIndex) {
             this.putQueryParameter("StartIndex", startIndex);

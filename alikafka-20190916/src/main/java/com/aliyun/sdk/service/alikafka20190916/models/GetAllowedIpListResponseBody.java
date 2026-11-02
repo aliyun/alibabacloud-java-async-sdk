@@ -106,7 +106,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IP address whitelist.</p>
+         * <p>The whitelist.</p>
          */
         public Builder allowedList(AllowedList allowedList) {
             this.allowedList = allowedList;
@@ -114,7 +114,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * <p>The return code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -136,7 +136,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A421CCD7-5BC5-4B32-8DD8-64668A8FCB56</p>
@@ -147,7 +147,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -281,7 +281,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The group to which the IP address whitelist belongs.</p>
+             * <p>The Internet IP address whitelist group.</p>
              */
             public Builder allowedIpGroup(java.util.Map<String, String> allowedIpGroup) {
                 this.allowedIpGroup = allowedIpGroup;
@@ -289,7 +289,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the IP address whitelist.</p>
+             * <p>The Internet IP address whitelist.</p>
              */
             public Builder allowedIpList(java.util.List<String> allowedIpList) {
                 this.allowedIpList = allowedIpList;
@@ -297,7 +297,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * BlackIPList.
+             * <p>The Internet IP blacklist.</p>
              */
             public Builder blackIPList(java.util.List<String> blackIPList) {
                 this.blackIPList = blackIPList;
@@ -305,7 +305,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * BlackIPMap.
+             * <p>The Internet IP blacklist group.</p>
              */
             public Builder blackIPMap(java.util.Map<String, String> blackIPMap) {
                 this.blackIPMap = blackIPMap;
@@ -313,7 +313,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port range. Valid value:</p>
+             * <p>The port range. Valid values:</p>
              * <p><strong>9093/9093</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -325,7 +325,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2zea4atm7fvj**********</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -333,7 +336,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * UserDefinedSharedSecurityGroup.
+             * <p>Indicates whether the security group is a shared security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder userDefinedSharedSecurityGroup(Boolean userDefinedSharedSecurityGroup) {
                 this.userDefinedSharedSecurityGroup = userDefinedSharedSecurityGroup;
@@ -465,7 +471,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The group to which the IP address whitelist belongs.</p>
+             * <p>The IP address whitelist group.</p>
              */
             public Builder allowedIpGroup(java.util.Map<String, String> allowedIpGroup) {
                 this.allowedIpGroup = allowedIpGroup;
@@ -473,7 +479,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the IP address whitelist.</p>
+             * <p>The IP address whitelist.</p>
              */
             public Builder allowedIpList(java.util.List<String> allowedIpList) {
                 this.allowedIpList = allowedIpList;
@@ -481,7 +487,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * BlackIPList.
+             * <p>The IP blacklist.</p>
              */
             public Builder blackIPList(java.util.List<String> blackIPList) {
                 this.blackIPList = blackIPList;
@@ -489,7 +495,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * BlackIPMap.
+             * <p>The IP blacklist group.</p>
              */
             public Builder blackIPMap(java.util.Map<String, String> blackIPMap) {
                 this.blackIPMap = blackIPMap;
@@ -497,7 +503,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port range. Valid value:</p>
+             * <p>The port range. Valid values:</p>
              * <p><strong>9092/9092</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -509,7 +515,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2zea4atm7fvj**********</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -517,7 +526,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * UserDefinedSharedSecurityGroup.
+             * <p>Indicates whether the security group is a shared security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder userDefinedSharedSecurityGroup(Boolean userDefinedSharedSecurityGroup) {
                 this.userDefinedSharedSecurityGroup = userDefinedSharedSecurityGroup;
@@ -597,13 +609,15 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The deployment mode of the instance. Valid values:</p>
+             * <p>The deployment type. Valid values:</p>
              * <ul>
-             * <li><strong>4</strong>: allows access from the Internet and a virtual private cloud (VPC).</li>
-             * <li><strong>5</strong>: allows access from a VPC.</li>
+             * <li><p><strong>4</strong>: Internet- and VPC-connected instance</p>
+             * </li>
+             * <li><p><strong>5</strong>: VPC-connected instance</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> Only integrators need to concern themselves with the value of this parameter.</p>
+             * <p>Regular users do not need to be concerned with this field. Integrator customers can refer to it for reference.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -615,7 +629,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The whitelist for access from the Internet.</p>
+             * <p>The Internet whitelist.</p>
              */
             public Builder internetList(java.util.List<InternetList> internetList) {
                 this.internetList = internetList;
@@ -623,7 +637,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The whitelist for access from a virtual private cloud (VPC).</p>
+             * <p>The VPC whitelist.</p>
              */
             public Builder vpcList(java.util.List<VpcList> vpcList) {
                 this.vpcList = vpcList;

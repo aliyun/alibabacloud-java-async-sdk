@@ -120,9 +120,10 @@ public class CreateConsumerGroupRequest extends Request {
         /**
          * <p>The name of the consumer group.</p>
          * <ul>
-         * <li>The value can contain only letters, digits, hyphens (-), and underscores (_), and the value must contain at least one letter or digit.</li>
-         * <li>The value must be 3 to 128 characters in length. If the value that you specify contains more than 128 characters, the system automatically truncates the value to 128 characters.</li>
-         * <li>After a consumer group is created, you cannot change the name of the consumer group.</li>
+         * <li>Reserved instances:
+         * The name can contain uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). It must be 3 to 64 characters in length.</li>
+         * <li>Serverless instances:
+         * The name can contain only letters, digits, and the special characters @._*$#^!&amp;-. It must be 1 to 249 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -162,7 +163,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The description of the consumer group.</p>
+         * <p>The remark.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -174,7 +175,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -243,10 +244,14 @@ public class CreateConsumerGroupRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The tag key of the resource.</p>
              * <ul>
-             * <li>You must specify this parameter.</li>
-             * <li>The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li><p>N ranges from 1 to 20.</p>
+             * </li>
+             * <li><p>The tag key cannot be empty.</p>
+             * </li>
+             * <li><p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -259,10 +264,14 @@ public class CreateConsumerGroupRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The tag value of the resource.</p>
              * <ul>
-             * <li>You can leave this parameter empty.</li>
-             * <li>The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li><p>N ranges from 1 to 20.</p>
+             * </li>
+             * <li><p>The tag value can be empty.</p>
+             * </li>
+             * <li><p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

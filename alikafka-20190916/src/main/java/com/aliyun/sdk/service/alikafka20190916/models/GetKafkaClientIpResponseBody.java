@@ -106,7 +106,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned status code. The status code 200 indicates that the request was successful.</p>
+         * <p>The return code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -147,7 +147,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -216,10 +216,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>58.210.117.154</p>
+             * Ip.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -227,13 +224,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics.</p>
-             * <blockquote>
-             * <p> The value of this parameter indicates the number of connections on different ports of the IP address within the specified period of time.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * Num.
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -287,7 +278,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data returned.</p>
+             * <p>The returned result.</p>
              */
             public Builder data(java.util.List<DataData> data) {
                 this.data = data;
@@ -354,7 +345,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response parameters.</p>
+             * <p>The returned result.</p>
              */
             public Builder data(DataDataData data) {
                 this.data = data;
@@ -362,13 +353,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request name.</p>
-             * <blockquote>
-             * <p> The value of this parameter indicates the type of request that the client sends to the broker within the specified period of time.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>OFFSET_COMMIT</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -422,7 +407,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response parameters.</p>
+             * <p>The returned result.</p>
              */
             public Builder data(java.util.List<GetKafkaClientIpResponseBodyDataDataData> data) {
                 this.data = data;
@@ -541,9 +526,9 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The value true indicates that the broker is not of the latest minor version.</p>
+             * <p>Indicates whether the minor version is not the latest version. A value of true indicates that the minor version is not the latest.</p>
              * <blockquote>
-             * <p> If the broker is not of the latest minor version, the sampled logs may not be accurate. This may cause inaccurate IP information. Therefore, we recommend that you update your broker to the latest version at the earliest opportunity.</p>
+             * <p>If the minor version of your server is not the latest, the sampled logs may not be accurate enough, which ultimately leads to inaccurate collected IP information. Therefore, upgrade the minor version of your server as soon as possible.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -555,7 +540,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data returned.</p>
+             * <p>The returned result.</p>
              */
             public Builder data(GetKafkaClientIpResponseBodyDataData data) {
                 this.data = data;
@@ -563,7 +548,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the date range within which data is queried.</p>
+             * <p>The end time of the query result. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1716343502000</p>
@@ -574,9 +559,9 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time range within which the client IP addresses are queried.</p>
+             * <p>The time range for querying client IP addresses.</p>
              * <blockquote>
-             * <p> The valid value is 1 hour. If the beginning of the time range to query and the end of the time range to query exceeds 1 hour, only data within 1 hour is returned.</p>
+             * <p>The time range is 1 hour. If the specified start time and end time span more than 1 hour, only the data within 1 hour is queried.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -588,7 +573,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the date range within which data is queried.</p>
+             * <p>The start time of the query result. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1716343501000</p>
@@ -599,10 +584,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The date range within which the client IP addresses are queried.</p>
-             * <blockquote>
-             * <p> The valid value is 7 days. If the beginning of the date range to query and the end of the date range to query exceeds 7 days, only data within 7 days is returned.</p>
-             * </blockquote>
+             * <p>The maximum time range for querying client IP addresses, in days. The current limit is 7 days. If the interval between the start time and the end time exceeds 7 days, only the data within 7 days is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>

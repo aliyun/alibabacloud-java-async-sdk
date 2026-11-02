@@ -228,7 +228,10 @@ public class CreatePrePayInstanceRequest extends Request {
         } 
 
         /**
-         * ConfluentConfig.
+         * <p>The configurations of Confluent components.</p>
+         * <blockquote>
+         * <p>This parameter is required when you create a Confluent instance.</p>
+         * </blockquote>
          */
         public Builder confluentConfig(ConfluentConfig confluentConfig) {
             String confluentConfigShrink = shrink(confluentConfig, "ConfluentConfig", "json");
@@ -238,7 +241,19 @@ public class CreatePrePayInstanceRequest extends Request {
         }
 
         /**
-         * DeployType.
+         * <p>The deployment type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>4</strong>: Internet- and VPC-connected instance</p>
+         * </li>
+         * <li><p><strong>5</strong>: VPC-connected instance</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If you create a Confluent instance, you cannot select the deployment type. You can only set this parameter to 5. After the purchase, you can configure whether to expose each component to the Internet.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder deployType(Integer deployType) {
             this.putQueryParameter("DeployType", deployType);
@@ -247,7 +262,14 @@ public class CreatePrePayInstanceRequest extends Request {
         }
 
         /**
-         * DiskSize.
+         * <p>The disk capacity. Unit: GB.</p>
+         * <p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+         * <blockquote>
+         * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder diskSize(Integer diskSize) {
             this.putQueryParameter("DiskSize", diskSize);
@@ -256,7 +278,19 @@ public class CreatePrePayInstanceRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * <p>The disk type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Ultra disk</p>
+         * </li>
+         * <li><p><strong>1</strong>: SSD</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -265,7 +299,14 @@ public class CreatePrePayInstanceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>The subscription duration. Unit: months. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li><strong>Confluent instances: 1 or 12</strong></li>
+         * <li><strong>ApsaraMQ for Kafka instances: 1</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -274,7 +315,19 @@ public class CreatePrePayInstanceRequest extends Request {
         }
 
         /**
-         * EipMax.
+         * <p>The Internet traffic bandwidth.</p>
+         * <ul>
+         * <li><p>If <strong>DeployType</strong> is set to <strong>4</strong>, this parameter is required.</p>
+         * </li>
+         * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/72142.html">pay-as-you-go billing method</a>.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder eipMax(Integer eipMax) {
             this.putQueryParameter("EipMax", eipMax);
@@ -283,7 +336,16 @@ public class CreatePrePayInstanceRequest extends Request {
         }
 
         /**
-         * IoMaxSpec.
+         * <p>The traffic specification.</p>
+         * <ul>
+         * <li>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.<blockquote>
+         * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka.hw.2xlarge</p>
          */
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
@@ -292,7 +354,16 @@ public class CreatePrePayInstanceRequest extends Request {
         }
 
         /**
-         * PaidType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Subscription</p>
+         * </li>
+         * <li><p><strong>4</strong>: Subscription for Confluent instances</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder paidType(Integer paidType) {
             this.putQueryParameter("PaidType", paidType);
@@ -301,7 +372,16 @@ public class CreatePrePayInstanceRequest extends Request {
         }
 
         /**
-         * PartitionNum.
+         * <p>The number of partitions to purchase.</p>
+         * <ul>
+         * <li>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.<blockquote>
+         * <p>If the instance is a Confluent instance, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder partitionNum(Integer partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -310,6 +390,7 @@ public class CreatePrePayInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +403,11 @@ public class CreatePrePayInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * <p>If you do not specify this parameter, the instance is added to the default resource group. You can view the resource group ID in the Resource Management console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ac***********7q</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -331,7 +416,27 @@ public class CreatePrePayInstanceRequest extends Request {
         }
 
         /**
-         * SpecType.
+         * <p>The edition.</p>
+         * <p>Valid values for ApsaraMQ for Kafka instances:</p>
+         * <ul>
+         * <li><p><strong>normal</strong>: Standard Edition (High Write)</p>
+         * </li>
+         * <li><p><strong>professional</strong>: Professional Edition (High Write)</p>
+         * </li>
+         * <li><p><strong>professionalForHighRead</strong>: Professional Edition (High Read)</p>
+         * </li>
+         * </ul>
+         * <p>Valid values for Confluent instances:</p>
+         * <ul>
+         * <li><p><strong>professional</strong>: Professional Edition</p>
+         * </li>
+         * <li><p><strong>enterprise</strong>: Enterprise Edition</p>
+         * </li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>professional</p>
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -340,7 +445,7 @@ public class CreatePrePayInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -447,7 +552,10 @@ public class CreatePrePayInstanceRequest extends Request {
             } 
 
             /**
-             * InternalId.
+             * <p>The identifier of the additional ksqlDB instance. It is used to distinguish multiple ksqlDB instances under the same Confluent instance and generate the corresponding service name. Each instance must use a different non-empty identifier, and the original identifier must be retained for subsequent specification changes. Example: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder internalId(String internalId) {
                 this.internalId = internalId;
@@ -455,7 +563,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * cu.
+             * <p>The number of CPU cores per node in the ksqlDB instance. Valid values: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
@@ -463,7 +574,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * replica.
+             * <p>The number of nodes in the ksqlDB instance. Valid values: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -471,7 +585,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * storage.
+             * <p>The disk capacity per node in the ksqlDB instance. Unit: GB. Valid values: 100 to 30000. The value must be a multiple of 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -479,7 +596,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The component type. Set the value to KSQLDB. Example: KSQLDB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KSQLDB</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -819,7 +939,10 @@ public class CreatePrePayInstanceRequest extends Request {
             } 
 
             /**
-             * ConfluentVersion.
+             * <p>The platform version of the Confluent instance. Valid values: 7.8.2 and 8.2.1. If you select 7.8.2, you must configure ZooKeeper. If you select 8.2.1, you must configure KRaft Controller. You can configure only one of the two metadata components in a single request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.8.2</p>
              */
             public Builder confluentVersion(String confluentVersion) {
                 this.confluentVersion = confluentVersion;
@@ -827,7 +950,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * ConnectCU.
+             * <p>The number of CPU cores for the Connect component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder connectCU(Integer connectCU) {
                 this.connectCU = connectCU;
@@ -835,7 +961,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * ConnectReplica.
+             * <p>The number of replicas for the Connect component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder connectReplica(Integer connectReplica) {
                 this.connectReplica = connectReplica;
@@ -843,7 +972,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * ControlCenterCU.
+             * <p>The number of CPU cores for the Control Center component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder controlCenterCU(Integer controlCenterCU) {
                 this.controlCenterCU = controlCenterCU;
@@ -851,7 +983,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * ControlCenterReplica.
+             * <p>The number of replicas for the Control Center component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder controlCenterReplica(Integer controlCenterReplica) {
                 this.controlCenterReplica = controlCenterReplica;
@@ -859,7 +994,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * ControlCenterStorage.
+             * <p>The disk capacity of the Control Center component. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder controlCenterStorage(Integer controlCenterStorage) {
                 this.controlCenterStorage = controlCenterStorage;
@@ -867,7 +1005,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * KafkaCU.
+             * <p>The number of CPU cores for Kafka brokers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder kafkaCU(Integer kafkaCU) {
                 this.kafkaCU = kafkaCU;
@@ -875,7 +1016,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * KafkaReplica.
+             * <p>The number of replicas for Kafka brokers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder kafkaReplica(Integer kafkaReplica) {
                 this.kafkaReplica = kafkaReplica;
@@ -883,7 +1027,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * KafkaRestProxyCU.
+             * <p>The number of CPU cores for the Kafka REST Proxy component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder kafkaRestProxyCU(Integer kafkaRestProxyCU) {
                 this.kafkaRestProxyCU = kafkaRestProxyCU;
@@ -891,7 +1038,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * KafkaRestProxyReplica.
+             * <p>The number of replicas for the Kafka REST Proxy component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder kafkaRestProxyReplica(Integer kafkaRestProxyReplica) {
                 this.kafkaRestProxyReplica = kafkaRestProxyReplica;
@@ -899,7 +1049,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * KafkaStorage.
+             * <p>The disk capacity of Kafka brokers. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder kafkaStorage(Integer kafkaStorage) {
                 this.kafkaStorage = kafkaStorage;
@@ -907,7 +1060,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * KraftControllerCU.
+             * <p>The number of CPU cores per node in the KRaft controller. Valid values: 2 to 20. When you create an instance in KRaft mode, you must configure this parameter together with KraftControllerStorage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder kraftControllerCU(Integer kraftControllerCU) {
                 this.kraftControllerCU = kraftControllerCU;
@@ -915,7 +1071,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * KraftControllerReplica.
+             * <p>The number of nodes in the KRaft controller. The value is fixed to 3. If you configure the KRaft controller but do not specify this parameter, the default value 3 is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder kraftControllerReplica(Integer kraftControllerReplica) {
                 this.kraftControllerReplica = kraftControllerReplica;
@@ -923,7 +1082,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * KraftControllerStorage.
+             * <p>The disk capacity per node in the KRaft controller. Unit: GB. Valid values: 100 to 30000. The value must be a multiple of 100. When you create an instance in KRaft mode, you must configure this parameter together with KraftControllerCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder kraftControllerStorage(Integer kraftControllerStorage) {
                 this.kraftControllerStorage = kraftControllerStorage;
@@ -931,7 +1093,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * KsqlCU.
+             * <p>The number of CPU cores for the ksqlDB component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder ksqlCU(Integer ksqlCU) {
                 this.ksqlCU = ksqlCU;
@@ -939,7 +1104,9 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * KsqlList.
+             * <p>The list of additional ksqlDB instance configurations, excluding the default ksqlDB instance. Each element configures an independent ksqlDB instance. When you use this parameter, you must also configure KsqlCU, KsqlStorage, and KsqlReplica for the default instance. Each instance in the list is configured with node resources and the number of nodes separately.</p>
+             * <p>Example (list content):
+             * ```json</p>
              */
             public Builder ksqlList(java.util.List<KsqlList> ksqlList) {
                 this.ksqlList = ksqlList;
@@ -947,7 +1114,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * KsqlReplica.
+             * <p>The number of replicas for the ksqlDB component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder ksqlReplica(Integer ksqlReplica) {
                 this.ksqlReplica = ksqlReplica;
@@ -955,7 +1125,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * KsqlStorage.
+             * <p>The disk capacity of the ksqlDB component. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ksqlStorage(Integer ksqlStorage) {
                 this.ksqlStorage = ksqlStorage;
@@ -963,7 +1136,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * SchemaRegistryCU.
+             * <p>The number of CPU cores for the Schema Registry component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder schemaRegistryCU(Integer schemaRegistryCU) {
                 this.schemaRegistryCU = schemaRegistryCU;
@@ -971,7 +1147,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * SchemaRegistryReplica.
+             * <p>The number of replicas for the Schema Registry component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder schemaRegistryReplica(Integer schemaRegistryReplica) {
                 this.schemaRegistryReplica = schemaRegistryReplica;
@@ -979,7 +1158,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * ZooKeeperCU.
+             * <p>The number of CPU cores for the ZooKeeper component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder zooKeeperCU(Integer zooKeeperCU) {
                 this.zooKeeperCU = zooKeeperCU;
@@ -987,7 +1169,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * ZooKeeperReplica.
+             * <p>The number of replicas for the ZooKeeper component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder zooKeeperReplica(Integer zooKeeperReplica) {
                 this.zooKeeperReplica = zooKeeperReplica;
@@ -995,7 +1180,10 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * ZooKeeperStorage.
+             * <p>The disk capacity of the ZooKeeper component. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder zooKeeperStorage(Integer zooKeeperStorage) {
                 this.zooKeeperStorage = zooKeeperStorage;
@@ -1063,6 +1251,15 @@ public class CreatePrePayInstanceRequest extends Request {
             } 
 
             /**
+             * <p>The tag key of the resource.</p>
+             * <ul>
+             * <li><p>N ranges from 1 to 20.</p>
+             * </li>
+             * <li><p>If this parameter is left empty, all tag keys are matched.</p>
+             * </li>
+             * <li><p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * </li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1074,7 +1271,18 @@ public class CreatePrePayInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the resource.</p>
+             * <ul>
+             * <li><p>N ranges from 1 to 20.</p>
+             * </li>
+             * <li><p>The tag value can be empty.</p>
+             * </li>
+             * <li><p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

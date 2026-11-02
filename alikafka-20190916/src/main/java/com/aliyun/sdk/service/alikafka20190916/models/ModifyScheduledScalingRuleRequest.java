@@ -105,13 +105,13 @@ public class ModifyScheduledScalingRuleRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the scheduled scaling rule. Valid values:</p>
+         * <p>Specifies whether to enable or disable the scheduled task policy. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: enables the policy.</li>
+         * <li><strong>false</strong>: disables the policy.</li>
          * </ul>
          * <blockquote>
-         * <p> If the scaling task is scheduled to execute only once and you want to enable the scheduled scaling rule, make sure that the value of this parameter is at least 30 minutes later than the current point in time.</p>
+         * <p>For a one-time scheduled policy, the start time must be at least 30 minutes later than the current time to enable the policy.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -138,7 +138,7 @@ public class ModifyScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class ModifyScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the scheduled scaling rule.</p>
+         * <p>The policy name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

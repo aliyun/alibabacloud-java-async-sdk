@@ -106,7 +106,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the call is successful.</p>
+         * <p>The response code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instances.</p>
+         * InstanceList.
          */
         public Builder instanceList(InstanceList instanceList) {
             this.instanceList = instanceList;
@@ -125,7 +125,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -136,7 +136,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4B6D821D-7F67-4CAA-9E13-A5A997C3****</p>
@@ -629,10 +629,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of CPU cores of Connect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * ConnectCU.
              */
             public Builder connectCU(Integer connectCU) {
                 this.connectCU = connectCU;
@@ -640,10 +637,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of replicas of Connect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * ConnectReplica.
              */
             public Builder connectReplica(Integer connectReplica) {
                 this.connectReplica = connectReplica;
@@ -651,10 +645,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores of Control Center.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * ControlCenterCU.
              */
             public Builder controlCenterCU(Integer controlCenterCU) {
                 this.controlCenterCU = controlCenterCU;
@@ -662,10 +653,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of replicas of Control Center.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ControlCenterReplica.
              */
             public Builder controlCenterReplica(Integer controlCenterReplica) {
                 this.controlCenterReplica = controlCenterReplica;
@@ -673,10 +661,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk capacity of Control Center. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>300</p>
+             * ControlCenterStorage.
              */
             public Builder controlCenterStorage(Integer controlCenterStorage) {
                 this.controlCenterStorage = controlCenterStorage;
@@ -684,10 +669,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores of the Kafka broker.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * KafkaCU.
              */
             public Builder kafkaCU(Integer kafkaCU) {
                 this.kafkaCU = kafkaCU;
@@ -695,10 +677,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of replicas of the Kafka broker.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * KafkaReplica.
              */
             public Builder kafkaReplica(Integer kafkaReplica) {
                 this.kafkaReplica = kafkaReplica;
@@ -706,10 +685,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores of Kafka Rest Proxy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * KafkaRestProxyCU.
              */
             public Builder kafkaRestProxyCU(Integer kafkaRestProxyCU) {
                 this.kafkaRestProxyCU = kafkaRestProxyCU;
@@ -717,10 +693,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of replicas of Kafka Rest Proxy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * KafkaRestProxyReplica.
              */
             public Builder kafkaRestProxyReplica(Integer kafkaRestProxyReplica) {
                 this.kafkaRestProxyReplica = kafkaRestProxyReplica;
@@ -728,10 +701,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk capacity of the Kafka broker. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>800</p>
+             * KafkaStorage.
              */
             public Builder kafkaStorage(Integer kafkaStorage) {
                 this.kafkaStorage = kafkaStorage;
@@ -739,10 +709,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores of ksqlDB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * KsqlCU.
              */
             public Builder ksqlCU(Integer ksqlCU) {
                 this.ksqlCU = ksqlCU;
@@ -758,10 +725,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of replicas of ksqlDB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * KsqlReplica.
              */
             public Builder ksqlReplica(Integer ksqlReplica) {
                 this.ksqlReplica = ksqlReplica;
@@ -769,10 +733,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk capacity of ksqlDB. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * KsqlStorage.
              */
             public Builder ksqlStorage(Integer ksqlStorage) {
                 this.ksqlStorage = ksqlStorage;
@@ -780,10 +741,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores of Schema Registry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * SchemaRegistryCU.
              */
             public Builder schemaRegistryCU(Integer schemaRegistryCU) {
                 this.schemaRegistryCU = schemaRegistryCU;
@@ -791,10 +749,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of replicas of Schema Registry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * SchemaRegistryReplica.
              */
             public Builder schemaRegistryReplica(Integer schemaRegistryReplica) {
                 this.schemaRegistryReplica = schemaRegistryReplica;
@@ -802,10 +757,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores of ZooKeeper.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * ZooKeeperCU.
              */
             public Builder zooKeeperCU(Integer zooKeeperCU) {
                 this.zooKeeperCU = zooKeeperCU;
@@ -813,10 +765,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of replicas of ZooKeeper.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * ZooKeeperReplica.
              */
             public Builder zooKeeperReplica(Integer zooKeeperReplica) {
                 this.zooKeeperReplica = zooKeeperReplica;
@@ -824,10 +773,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk capacity of ZooKeeper. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * ZooKeeperStorage.
              */
             public Builder zooKeeperStorage(Integer zooKeeperStorage) {
                 this.zooKeeperStorage = zooKeeperStorage;
@@ -1086,10 +1032,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1097,10 +1040,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1178,8 +1118,12 @@ public class GetInstanceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Current2OpenSourceVersion")
         private String current2OpenSourceVersion;
 
+        @com.aliyun.core.annotation.NameInMap("MinorVersion")
+        private String minorVersion;
+
         private UpgradeServiceDetailInfo(Builder builder) {
             this.current2OpenSourceVersion = builder.current2OpenSourceVersion;
+            this.minorVersion = builder.minorVersion;
         }
 
         public static Builder builder() {
@@ -1197,24 +1141,38 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.current2OpenSourceVersion;
         }
 
+        /**
+         * @return minorVersion
+         */
+        public String getMinorVersion() {
+            return this.minorVersion;
+        }
+
         public static final class Builder {
             private String current2OpenSourceVersion; 
+            private String minorVersion; 
 
             private Builder() {
             } 
 
             private Builder(UpgradeServiceDetailInfo model) {
                 this.current2OpenSourceVersion = model.current2OpenSourceVersion;
+                this.minorVersion = model.minorVersion;
             } 
 
             /**
-             * <p>The open source Apache Kafka version that corresponds to the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2.2.0</p>
+             * Current2OpenSourceVersion.
              */
             public Builder current2OpenSourceVersion(String current2OpenSourceVersion) {
                 this.current2OpenSourceVersion = current2OpenSourceVersion;
+                return this;
+            }
+
+            /**
+             * MinorVersion.
+             */
+            public Builder minorVersion(String minorVersion) {
+                this.minorVersion = minorVersion;
                 return this;
             }
 
@@ -1982,10 +1940,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configurations of the deployed ApsaraMQ for Kafka instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;enable.vpc_sasl_ssl&quot;:&quot;false&quot;,&quot;kafka.log.retention.hours&quot;:&quot;66&quot;,&quot;enable.acl&quot;:&quot;false&quot;,&quot;kafka.message.max.bytes&quot;:&quot;6291456&quot;}</p>
+             * AllConfig.
              */
             public Builder allConfig(String allConfig) {
                 this.allConfig = allConfig;
@@ -1993,10 +1948,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the flexible group creation feature is enabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * AutoCreateGroupEnable.
              */
             public Builder autoCreateGroupEnable(Boolean autoCreateGroupEnable) {
                 this.autoCreateGroupEnable = autoCreateGroupEnable;
@@ -2004,10 +1956,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the automatic topic creation feature is enabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * AutoCreateTopicEnable.
              */
             public Builder autoCreateTopicEnable(Boolean autoCreateTopicEnable) {
                 this.autoCreateTopicEnable = autoCreateTopicEnable;
@@ -2015,10 +1964,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the secondary zone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-a</p>
+             * BackupZoneId.
              */
             public Builder backupZoneId(String backupZoneId) {
                 this.backupZoneId = backupZoneId;
@@ -2026,7 +1972,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters that are returned for the ApsaraMQ for Confluent instance.</p>
+             * ConfluentConfig.
              */
             public Builder confluentConfig(ConfluentConfig confluentConfig) {
                 this.confluentConfig = confluentConfig;
@@ -2042,10 +1988,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was created. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1577961819000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -2053,10 +1996,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of partitions in a topic that is automatically created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12</p>
+             * DefaultPartitionNum.
              */
             public Builder defaultPartitionNum(Integer defaultPartitionNum) {
                 this.defaultPartitionNum = defaultPartitionNum;
@@ -2064,14 +2004,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the network in which the instance is deployed. Valid values:</p>
-             * <ul>
-             * <li><strong>4</strong>: Internet and VPC</li>
-             * <li><strong>5</strong>: VPC</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * DeployType.
              */
             public Builder deployType(Integer deployType) {
                 this.deployType = deployType;
@@ -2079,10 +2012,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size. Unit: GB</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3600</p>
+             * DiskSize.
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -2090,14 +2020,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk type of the instance. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: ultra disk</li>
-             * <li><strong>1</strong>: standard SSD</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * DiskType.
              */
             public Builder diskType(Integer diskType) {
                 this.diskType = diskType;
@@ -2105,14 +2028,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default endpoint of the instance in domain name mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
-             * <ul>
-             * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
-             * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>alikafka-pre-cn-zv**********-1-vpc.alikafka.aliyuncs.com:9092,alikafka-pre-cn-zv**********-2-vpc.alikafka.aliyuncs.com:9092,alikafka-pre-cn-zv**********-3-vpc.alikafka.aliyuncs.com:9092</p>
+             * DomainEndpoint.
              */
             public Builder domainEndpoint(String domainEndpoint) {
                 this.domainEndpoint = domainEndpoint;
@@ -2120,10 +2036,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum Internet traffic in the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * EipMax.
              */
             public Builder eipMax(Integer eipMax) {
                 this.eipMax = eipMax;
@@ -2131,14 +2044,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default endpoint of the instance in IP address mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
-             * <ul>
-             * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
-             * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.XX.XX:9092,192.168.XX.XX:9092,192.168.XX.XX:9092</p>
+             * EndPoint.
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -2146,10 +2052,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance expires. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1893581018000</p>
+             * ExpiredTime.
              */
             public Builder expiredTime(Long expiredTime) {
                 this.expiredTime = expiredTime;
@@ -2157,10 +2060,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alikafka_pre-cn-mp919o4v****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2168,10 +2068,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum traffic in the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * IoMax.
              */
             public Builder ioMax(Integer ioMax) {
                 this.ioMax = ioMax;
@@ -2179,10 +2076,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum read traffic in the instance. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * IoMaxRead.
              */
             public Builder ioMaxRead(Integer ioMaxRead) {
                 this.ioMaxRead = ioMaxRead;
@@ -2190,10 +2084,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic specification.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alikafka.hw.2xlarge</p>
+             * IoMaxSpec.
              */
             public Builder ioMaxSpec(String ioMaxSpec) {
                 this.ioMaxSpec = ioMaxSpec;
@@ -2201,10 +2092,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum write traffic. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * IoMaxWrite.
              */
             public Builder ioMaxWrite(Integer ioMaxWrite) {
                 this.ioMaxWrite = ioMaxWrite;
@@ -2212,10 +2100,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the key that is used for disk encryption in the region where the instance is deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0d24xxxx-da7b-4786-b981-9a164dxxxxxx</p>
+             * KmsKeyId.
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
@@ -2223,10 +2108,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period of messages in the instance. Unit: hours.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>72</p>
+             * MsgRetain.
              */
             public Builder msgRetain(Integer msgRetain) {
                 this.msgRetain = msgRetain;
@@ -2234,10 +2116,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alikafka_post-cn-mp91gnw0****</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2245,16 +2124,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: the subscription billing method</li>
-             * <li><strong>1</strong>: the pay-as-you-go billing method</li>
-             * <li><strong>3</strong>: the pay-as-you-go billing method for serverless ApsaraMQ for Kafka V3 instances</li>
-             * <li><strong>4</strong>: the pay-as-you-go billing method for ApsaraMQ for Confluent instances</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * PaidType.
              */
             public Builder paidType(Integer paidType) {
                 this.paidType = paidType;
@@ -2270,10 +2140,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the instance resides.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2281,13 +2148,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic reserved for message publishing. Unit: MB/s.</p>
-             * <blockquote>
-             * <p> This parameter is returned only if the instance is a serverless ApsaraMQ for Kafka V3 instance.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>60</p>
+             * ReservedPublishCapacity.
              */
             public Builder reservedPublishCapacity(Integer reservedPublishCapacity) {
                 this.reservedPublishCapacity = reservedPublishCapacity;
@@ -2295,13 +2156,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic reserved for message subscription. Unit: MB/s.</p>
-             * <blockquote>
-             * <p> This parameter is returned only if the instance is a serverless ApsaraMQ for Kafka V3 instance.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>60</p>
+             * ReservedSubscribeCapacity.
              */
             public Builder reservedSubscribeCapacity(Integer reservedSubscribeCapacity) {
                 this.reservedSubscribeCapacity = reservedSubscribeCapacity;
@@ -2309,10 +2164,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-ac***********7q</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -2320,14 +2172,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Authentication and Security Layer (SASL) endpoint of the instance in domain name mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
-             * <ul>
-             * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
-             * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>alikafka-pre-cn-zv**********-1-vpc.alikafka.aliyuncs.com:9094,alikafka-pre-cn-zv**********-2-vpc.alikafka.aliyuncs.com:9094,alikafka-pre-cn-zv**********-3-vpc.alikafka.aliyuncs.com:9094</p>
+             * SaslDomainEndpoint.
              */
             public Builder saslDomainEndpoint(String saslDomainEndpoint) {
                 this.saslDomainEndpoint = saslDomainEndpoint;
@@ -2335,14 +2180,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Authentication and Security Layer (SASL) endpoint of the instance in IP address mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
-             * <ul>
-             * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
-             * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>172.16.3.XX:9094,172.16.3.XX:9094,172.16.3.XX:9094</p>
+             * SaslEndPoint.
              */
             public Builder saslEndPoint(String saslEndPoint) {
                 this.saslEndPoint = saslEndPoint;
@@ -2358,14 +2196,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group to which the instance belongs.</p>
-             * <ul>
-             * <li>If the instance is deployed in the ApsaraMQ for Kafka console or by calling the <a href="https://help.aliyun.com/document_detail/157786.html">StartInstance</a> operation without a security group configured, no value is returned.</li>
-             * <li>If the instance is deployed by calling the <a href="https://help.aliyun.com/document_detail/157786.html">StartInstance</a> operation with a security group configured, the returned value is the configured security group.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>sg-bp13wfx7kz9pkow****</p>
+             * SecurityGroup.
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -2373,10 +2204,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance version. Valid values: v2, v3, and confluent.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v3</p>
+             * Series.
              */
             public Builder series(String series) {
                 this.series = series;
@@ -2384,28 +2212,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is out of date. We recommend that you refer to the ViewInstanceStatusCode parameter.</p>
-             * </blockquote>
-             * <p>The instance status. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: pending</li>
-             * <li><strong>1</strong>: preparing hardware resources</li>
-             * <li><strong>2</strong>: initializing</li>
-             * <li><strong>3</strong>: starting</li>
-             * <li><strong>5</strong>: running</li>
-             * <li><strong>6</strong>: migrating</li>
-             * <li><strong>7</strong>: ready for upgrade</li>
-             * <li><strong>8</strong>: upgrading</li>
-             * <li><strong>9</strong>: ready for change</li>
-             * <li><strong>10</strong>: released</li>
-             * <li><strong>11</strong>: changing</li>
-             * <li><strong>15</strong>: expired</li>
-             * <li><strong>30</strong>: scaling</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * ServiceStatus.
              */
             public Builder serviceStatus(Integer serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -2413,15 +2220,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance edition. Valid values:</p>
-             * <ul>
-             * <li><strong>professional</strong>: Professional Edition (High Write)</li>
-             * <li><strong>professionalForHighRead</strong>: Professional Edition (High Read)</li>
-             * <li><strong>normal</strong>: Standard Edition</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>professional</p>
+             * SpecType.
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -2429,14 +2228,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SSL endpoint of the instance in domain name mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
-             * <ul>
-             * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
-             * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>alikafka-pre-cn-zv**********-1.alikafka.aliyuncs.com:9093,alikafka-pre-cn-zv**********-2.alikafka.aliyuncs.com:9093,alikafka-pre-cn-zv**********-3.alikafka.aliyuncs.com:9093</p>
+             * SslDomainEndpoint.
              */
             public Builder sslDomainEndpoint(String sslDomainEndpoint) {
                 this.sslDomainEndpoint = sslDomainEndpoint;
@@ -2444,14 +2236,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Secure Sockets Layer (SSL) endpoint of the instance in IP address mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
-             * <ul>
-             * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
-             * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>192.0.XX.XX:9093,198.51.XX.XX:9093,203.0.XX.XX:9093</p>
+             * SslEndPoint.
              */
             public Builder sslEndPoint(String sslEndPoint) {
                 this.sslEndPoint = sslEndPoint;
@@ -2459,10 +2244,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-k</p>
+             * StandardZoneId.
              */
             public Builder standardZoneId(String standardZoneId) {
                 this.standardZoneId = standardZoneId;
@@ -2470,7 +2252,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -2478,10 +2260,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of topics on the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>180</p>
+             * TopicNumLimit.
              */
             public Builder topicNumLimit(Integer topicNumLimit) {
                 this.topicNumLimit = topicNumLimit;
@@ -2489,7 +2268,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upgrade information about the instance.</p>
+             * UpgradeServiceDetailInfo.
              */
             public Builder upgradeServiceDetailInfo(UpgradeServiceDetailInfo upgradeServiceDetailInfo) {
                 this.upgradeServiceDetailInfo = upgradeServiceDetailInfo;
@@ -2497,10 +2276,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of used groups.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * UsedGroupCount.
              */
             public Builder usedGroupCount(Integer usedGroupCount) {
                 this.usedGroupCount = usedGroupCount;
@@ -2508,10 +2284,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of used partitions.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>25</p>
+             * UsedPartitionCount.
              */
             public Builder usedPartitionCount(Integer usedPartitionCount) {
                 this.usedPartitionCount = usedPartitionCount;
@@ -2519,10 +2292,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of used topics.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * UsedTopicCount.
              */
             public Builder usedTopicCount(Integer usedTopicCount) {
                 this.usedTopicCount = usedTopicCount;
@@ -2530,10 +2300,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch to which the instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bp1fvuw0ljd7vzmo3****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2541,7 +2308,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch IDs.</p>
+             * VSwitchIds.
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -2549,29 +2316,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance status. The valid values are consistent with the values displayed in the ApsaraMQ for Kafka console. This parameter is used in the new version of ApsaraMQ for Kafka.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: pending</li>
-             * <li><strong>1</strong>: deploying</li>
-             * <li><strong>2</strong>: running</li>
-             * <li><strong>3</strong>: stopped</li>
-             * <li><strong>4</strong>: expiring</li>
-             * <li><strong>5</strong>: expired</li>
-             * <li><strong>6</strong>: released</li>
-             * <li><strong>7</strong>: upgrading</li>
-             * <li><strong>8</strong>: migrating</li>
-             * <li><strong>21</strong>: stopping</li>
-             * <li><strong>22</strong>: starting</li>
-             * <li><strong>23</strong>: releasing</li>
-             * <li><strong>30</strong>: auto scaling</li>
-             * <li><strong>101</strong>: deployment failed</li>
-             * <li><strong>102</strong>: upgrade failed</li>
-             * <li><strong>103</strong>: migration failed</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * ViewInstanceStatusCode.
              */
             public Builder viewInstanceStatusCode(Integer viewInstanceStatusCode) {
                 this.viewInstanceStatusCode = viewInstanceStatusCode;
@@ -2579,10 +2324,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp1ojac7bv448nifj****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2590,14 +2332,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SSL endpoint of the instance in domain name mode. You can use the endpoint to access the instance only in virtual private clouds (VPCs). ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
-             * <ul>
-             * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
-             * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>alikafka-post-cn-<strong><strong><strong>-1-vpc.alikafka.aliyuncs.com:9095,alikafka-post-cn-</strong></strong></strong>-2-vpc.alikafka.aliyuncs.com:9095,alikafka-post-cn-******-3-vpc.alikafka.aliyuncs.com:9095</p>
+             * VpcSaslDomainEndpoint.
              */
             public Builder vpcSaslDomainEndpoint(String vpcSaslDomainEndpoint) {
                 this.vpcSaslDomainEndpoint = vpcSaslDomainEndpoint;
@@ -2605,14 +2340,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Secure Sockets Layer (SSL) endpoint of the instance in IP address mode. You can use the endpoint to access the instance only in virtual private clouds (VPCs). ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
-             * <ul>
-             * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
-             * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>172.16.3.XX:9095,172.16.3.XX:9095,172.16.3.XX:9095</p>
+             * VpcSaslEndPoint.
              */
             public Builder vpcSaslEndPoint(String vpcSaslEndPoint) {
                 this.vpcSaslEndPoint = vpcSaslEndPoint;
@@ -2620,10 +2348,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zonei</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

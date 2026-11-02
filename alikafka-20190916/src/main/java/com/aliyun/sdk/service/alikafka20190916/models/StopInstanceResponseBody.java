@@ -93,7 +93,7 @@ public class StopInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned status code. If the request is successful, 200 is returned.</p>
+         * <p>Status code. A return value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class StopInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>Return message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -115,7 +115,7 @@ public class StopInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>17D425C2-4EA3-4AB8-928D-E10511ECF***</p>
@@ -126,7 +126,7 @@ public class StopInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

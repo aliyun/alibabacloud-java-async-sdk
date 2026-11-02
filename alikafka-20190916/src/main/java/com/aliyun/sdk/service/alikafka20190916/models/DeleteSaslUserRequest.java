@@ -118,7 +118,7 @@ public class DeleteSaslUserRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,13 +131,15 @@ public class DeleteSaslUserRequest extends Request {
         }
 
         /**
-         * <p>The encryption method. Valid values:</p>
+         * <p>The encryption mechanism. Valid values:</p>
          * <ul>
-         * <li>SCRAM-SHA-512. This is the default value.</li>
-         * <li>SCRAM-SHA-256</li>
+         * <li><p>SCRAM-SHA-512 (selected by default)</p>
+         * </li>
+         * <li><p>SCRAM-SHA-256</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+         * <p>This parameter is supported only for Serverless instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,7 +152,7 @@ public class DeleteSaslUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,11 +165,14 @@ public class DeleteSaslUserRequest extends Request {
         }
 
         /**
-         * <p>The type of the Simple Authentication and Security Layer (SASL) user. Valid values:</p>
+         * <p>The type. Valid values:</p>
          * <ul>
-         * <li><strong>plain</strong>: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</li>
-         * <li><strong>SCRAM</strong>: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</li>
-         * <li><strong>LDAP</strong>: This value is available only for the SASL users of ApsaraMQ for Confluent instances.</li>
+         * <li><p><strong>plain</strong>: a simple username and password verification mechanism. ApsaraMQ for Kafka has an optimization for the PLAIN mechanism to allow you to dynamically increase SASL users without restarting the instance.</p>
+         * </li>
+         * <li><p><strong>scram</strong>: a username and password verification mechanism that provides higher security than PLAIN. ApsaraMQ for Kafka uses SCRAM-SHA-256.</p>
+         * </li>
+         * <li><p><strong>LDAP</strong>: applicable only to the delete operation for Confluent instance users.</p>
+         * </li>
          * </ul>
          * <p>Default value: <strong>plain</strong>.</p>
          * 
@@ -181,7 +186,7 @@ public class DeleteSaslUserRequest extends Request {
         }
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

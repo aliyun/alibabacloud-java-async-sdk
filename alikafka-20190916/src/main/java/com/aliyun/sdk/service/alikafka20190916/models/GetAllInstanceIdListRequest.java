@@ -59,7 +59,7 @@ public class GetAllInstanceIdListRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the instance. This parameter is reserved.</p>
+         * <p>The region ID of the instance. This is a reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

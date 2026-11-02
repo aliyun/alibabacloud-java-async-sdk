@@ -106,7 +106,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The value 200 indicates that the request was successful.</p>
+         * <p>The status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -136,7 +136,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>B7A39AE5-0B36-4442-A304-E0885265***</p>
@@ -147,7 +147,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -413,10 +413,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The duration of a scheduled scaling task. Unit: minutes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>60</p>
+             * DurationMinutes.
              */
             public Builder durationMinutes(Long durationMinutes) {
                 this.durationMinutes = durationMinutes;
@@ -424,14 +421,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the scheduled scaling rule is enabled. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -439,10 +429,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated scale-in duration. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>780</p>
+             * EstimatedElasticScalingDownTimeSecs.
              */
             public Builder estimatedElasticScalingDownTimeSecs(Long estimatedElasticScalingDownTimeSecs) {
                 this.estimatedElasticScalingDownTimeSecs = estimatedElasticScalingDownTimeSecs;
@@ -450,10 +437,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated scale-out duration. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>780</p>
+             * EstimatedElasticScalingUpTimeSecs.
              */
             public Builder estimatedElasticScalingUpTimeSecs(Long estimatedElasticScalingUpTimeSecs) {
                 this.estimatedElasticScalingUpTimeSecs = estimatedElasticScalingUpTimeSecs;
@@ -461,10 +445,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that indicates the start time of the scheduled scaling task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1714467540000</p>
+             * FirstScheduledTime.
              */
             public Builder firstScheduledTime(Long firstScheduledTime) {
                 this.firstScheduledTime = firstScheduledTime;
@@ -472,16 +453,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The frequency at which the scheduled scaling task is executed. This parameter is returned only if ScheduleType is set to repeat. Valid values:</p>
-             * <ul>
-             * <li><p>Daily: The scheduled scaling task is executed every day.</p>
-             * </li>
-             * <li><p>Weekly: The scheduled scaling task is executed every week.</p>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Weekly</p>
+             * RepeatType.
              */
             public Builder repeatType(String repeatType) {
                 this.repeatType = repeatType;
@@ -489,10 +461,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reserved production capacity for scheduled scaling. Unit: MB/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>120</p>
+             * ReservedPubFlow.
              */
             public Builder reservedPubFlow(Long reservedPubFlow) {
                 this.reservedPubFlow = reservedPubFlow;
@@ -500,10 +469,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reserved consumption capacity for scheduled scaling. Unit: MB/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>120</p>
+             * ReservedSubFlow.
              */
             public Builder reservedSubFlow(Long reservedSubFlow) {
                 this.reservedSubFlow = reservedSubFlow;
@@ -511,10 +477,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the scheduled scaling rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>64</p>
+             * RuleId.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -522,10 +485,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the scheduled scaling rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * RuleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -533,14 +493,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the scheduled scaling task. Valid values:</p>
-             * <ul>
-             * <li>at: The scheduled scaling task is executed only once.</li>
-             * <li>repeat: The scheduled scaling task is repeatedly executed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>at</p>
+             * ScheduleType.
              */
             public Builder scheduleType(String scheduleType) {
                 this.scheduleType = scheduleType;
@@ -548,10 +501,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time zone in Coordinated Universal Time (UTC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>GMT+8</p>
+             * TimeZone.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -559,7 +509,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The day on which the scheduled scaling task is repeatedly executed. You can specify multiple days for this parameter.</p>
+             * WeeklyTypes.
              */
             public Builder weeklyTypes(WeeklyTypes weeklyTypes) {
                 this.weeklyTypes = weeklyTypes;
@@ -667,7 +617,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The scheduled scaling rules.</p>
+             * ScheduledScalingRules.
              */
             public Builder scheduledScalingRules(DataScheduledScalingRules scheduledScalingRules) {
                 this.scheduledScalingRules = scheduledScalingRules;

@@ -243,10 +243,12 @@ public class CreatePostPayOrderRequest extends Request {
         } 
 
         /**
-         * <p>The deployment mode of the instance. Valid values:</p>
+         * <p>The deployment type. Valid values:</p>
          * <ul>
-         * <li><strong>4</strong>: deploys the instance that allows access from the Internet and a VPC.</li>
-         * <li><strong>5</strong>: deploys the instance that allows access only from a VPC.</li>
+         * <li><p><strong>4</strong>: Internet- and VPC-connected instance</p>
+         * </li>
+         * <li><p><strong>5</strong>: VPC-connected instance</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -260,10 +262,10 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * <p>The disk size.</p>
-         * <p>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+         * <p>The disk capacity.</p>
+         * <p>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
          * <blockquote>
-         * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+         * <p>If you create a serverless instance, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -276,14 +278,16 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * <p>The disk type of the instance. Valid values:</p>
+         * <p>The disk type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: ultra disk</li>
-         * <li><strong>1</strong>: standard SSD</li>
-         * </ul>
+         * <li><p><strong>0</strong>: ultra disk</p>
+         * </li>
+         * <li><p><strong>1</strong>: standard SSD</p>
          * <blockquote>
-         * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+         * <p>If you create a serverless instance, you do not need to specify this parameter.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -297,11 +301,13 @@ public class CreatePostPayOrderRequest extends Request {
         /**
          * <p>The Internet traffic.</p>
          * <ul>
-         * <li>If you set <strong>DeployType</strong> to <strong>4</strong>, you must configure this parameter.</li>
-         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * <li><p>This parameter is required if <strong>DeployType</strong> is set to <strong>4</strong>.</p>
+         * </li>
+         * <li><p>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+         * <p>If you create a serverless instance, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -314,13 +320,15 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * <p>The maximum traffic in the instance. We recommend that you do not configure this parameter.</p>
+         * <p>The peak traffic (not recommended).</p>
          * <ul>
-         * <li>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</li>
-         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * <li><p>You must specify either the peak traffic or the traffic specification. If both are specified, the traffic specification takes precedence. We recommend that you specify only the traffic specification.</p>
+         * </li>
+         * <li><p>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+         * <p>If you create a serverless instance, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -333,13 +341,15 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
+         * <p>The traffic specification (recommended).</p>
          * <ul>
-         * <li>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</li>
-         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * <li><p>You must specify either the peak traffic or the traffic specification. If both are specified, the traffic specification takes precedence. We recommend that you specify only the traffic specification.</p>
+         * </li>
+         * <li><p>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+         * <p>If you create a serverless instance, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -352,10 +362,10 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>1: pay-as-you-go (reserved capacity).</li>
-         * <li>3: pay-as-you-go (reserved capacity) + pay-as-you-go (on-demand capacity)</li>
+         * <li>1 (default): pay-as-you-go for reserved instances</li>
+         * <li>3: pay-as-you-go for reserved specifications and elastic scaling of serverless instances</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -368,14 +378,17 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * <p>The number of partitions. We recommend that you configure this parameter.</p>
+         * <p>The number of partitions (recommended).</p>
          * <ul>
-         * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</li>
-         * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
-         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * <li><p>You must specify either the number of partitions or the topic specification. We recommend that you specify only the number of partitions.</p>
+         * </li>
+         * <li><p>If both the number of partitions and the topic specification are specified, the system verifies whether they are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the instance is purchased based on the number of partitions.</p>
+         * </li>
+         * <li><p>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+         * <p>If you create a serverless instance, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -401,8 +414,8 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
-         * <p>If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.</p>
+         * <p>The resource group ID.</p>
+         * <p>If you do not specify this parameter, the instance is added to the default resource group. You can view the resource group ID in the Resource Management console.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ac***********7q</p>
@@ -414,7 +427,7 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * <p>The parameters configured for the serverless ApsaraMQ for Kafka instance. These parameters are required only when you create a serverless instance.</p>
+         * <p>The settings for the serverless instance. This parameter is required when you create a serverless instance.</p>
          */
         public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
             String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
@@ -424,18 +437,20 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * <p>The instance edition.</p>
-         * <p>Valid values if you set PaidType to 1:</p>
+         * <p>The specification type.</p>
+         * <p>Valid values when the PaidType parameter is set to 1 (pay-as-you-go for reserved instances):</p>
          * <ul>
          * <li>normal: Standard Edition (High Write)</li>
          * <li>professional: Professional Edition (High Write)</li>
          * <li>professionalForHighRead: Professional Edition (High Read)</li>
          * </ul>
-         * <p>Valid values if you set PaidType to 3:</p>
+         * <p>Valid values when the PaidType parameter is set to 3 (pay-as-you-go for reserved specifications and elastic scaling of serverless instances):</p>
          * <ul>
+         * <li>basic: Serverless Basic Edition</li>
          * <li>normal: Serverless Standard Edition</li>
+         * <li>professional: Serverless Professional Edition</li>
          * </ul>
-         * <p>For more information about the instance editions, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+         * <p>For more information about the preceding specification types, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -456,15 +471,19 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * <p>The number of topics. We recommend that you do not configure this parameter.</p>
+         * <p>The number of topics (not recommended).</p>
          * <ul>
-         * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</li>
-         * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
-         * <li>The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you consume exceeds the default value, you are charged additional fees.</li>
-         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * <li><p>You must specify either the number of partitions or the topic specification. We recommend that you specify only the number of partitions.</p>
+         * </li>
+         * <li><p>If both the number of partitions and the topic specification are specified, the system verifies whether they are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the instance is purchased based on the number of partitions.</p>
+         * </li>
+         * <li><p>The default value varies based on the traffic specification. If the number of topics exceeds the default value, you are charged extra fees.</p>
+         * </li>
+         * <li><p>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+         * <p>If you create a serverless instance, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -536,9 +555,9 @@ public class CreatePostPayOrderRequest extends Request {
             } 
 
             /**
-             * <p>The reserved capacity for publishing messages. You can specify only an integer for this parameter. Minimum value: 60.</p>
+             * <p>The reserved publish traffic specification. Only integers are supported, and the minimum value is 60. This parameter is required for serverless instances.</p>
              * <blockquote>
-             * <p> The actual maximum reserved capacity for publishing messages varies based on available resources in the region. The actual range displayed on the buy page shall prevail.</p>
+             * <p>The actual upper limit is subject to the inventory in the current region. Refer to the available options on the buy page.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -550,13 +569,13 @@ public class CreatePostPayOrderRequest extends Request {
             }
 
             /**
-             * <p>The reserved capacity for subscribing to messages. You can specify only an integer for this parameter. Minimum value: 20.</p>
+             * <p>The reserved subscribe traffic specification. Only integers are supported, and the minimum value is 20. This parameter is required for serverless instances.</p>
              * <blockquote>
-             * <p> The actual maximum reserved capacity for subscribing to messages varies based on available resources in the region. The actual range displayed on the buy page shall prevail.</p>
+             * <p>The actual upper limit is subject to the inventory in the current region. Refer to the available options on the buy page.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>50</p>
+             * <p>60</p>
              */
             public Builder reservedSubscribeCapacity(Long reservedSubscribeCapacity) {
                 this.reservedSubscribeCapacity = reservedSubscribeCapacity;
@@ -624,11 +643,11 @@ public class CreatePostPayOrderRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N.</p>
+             * <p>The tag key of the resource.</p>
              * <ul>
-             * <li>Valid values of N: 1 to 20.</li>
-             * <li>If this parameter is left empty, the keys of all tags are matched.</li>
-             * <li>The tag key must be up to 128 characters in length. It cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></li>
+             * <li>N ranges from 1 to 20.</li>
+             * <li>If this parameter is left empty, all tag keys are matched.</li>
+             * <li>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -641,11 +660,11 @@ public class CreatePostPayOrderRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N.</p>
+             * <p>The tag value of the resource.</p>
              * <ul>
-             * <li>Valid values of N: 1 to 20.</li>
-             * <li>If you do not specify a tag key, you cannot specify a tag value. If this parameter is not configured, all tag values are matched.</li>
-             * <li>The tag value must be 1 to 128 characters in length. It cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></li>
+             * <li>N ranges from 1 to 20.</li>
+             * <li>If the tag key is empty, this parameter must be empty. If this parameter is left empty, all tag values are matched.</li>
+             * <li>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</li>
              * </ul>
              * 
              * <strong>example:</strong>

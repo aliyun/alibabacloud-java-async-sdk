@@ -116,7 +116,7 @@ public class GetTopicListRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: 1</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class GetTopicListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance to which the topic belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class GetTopicListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * <p>The page size. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -153,7 +153,7 @@ public class GetTopicListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance to which the topics that you want to query belong.</p>
+         * <p>The region ID of the instance to which the topic belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -165,7 +165,7 @@ public class GetTopicListRequest extends Request {
         }
 
         /**
-         * <p>The name of the topic that you want to query.</p>
+         * <p>The name of the topic whose information you want to retrieve.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_name</p>

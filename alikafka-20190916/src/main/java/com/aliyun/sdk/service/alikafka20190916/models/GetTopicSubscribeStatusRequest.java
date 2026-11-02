@@ -90,8 +90,8 @@ public class GetTopicSubscribeStatusRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> operation to query the list of instances.</p>
+         * <p>Instance ID.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> to obtain it.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class GetTopicSubscribeStatusRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>Region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,8 +117,8 @@ public class GetTopicSubscribeStatusRequest extends Request {
         }
 
         /**
-         * <p>The topic name.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/437677.html">GetTopicList</a> operation to query the list of topics.</p>
+         * <p>Topic name.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/437677.html">GetTopicList</a> to obtain it.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

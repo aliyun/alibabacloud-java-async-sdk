@@ -93,7 +93,7 @@ public class UpdateConsumerOffsetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned. The status code <strong>200</strong> indicates that the request is successful.</p>
+         * <p>Return code. A return value of <strong>200</strong> indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class UpdateConsumerOffsetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>Return message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -115,7 +115,7 @@ public class UpdateConsumerOffsetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>56729737-C428-4E1B-AC68-7A8C2D5****</p>

@@ -93,7 +93,7 @@ public class ModifyTopicRemarkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * <p>Return code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class ModifyTopicRemarkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>Return message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -115,7 +115,7 @@ public class ModifyTopicRemarkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DB6F1BEA-903B-4FD8-8809-46E7E9CE***</p>
@@ -126,7 +126,7 @@ public class ModifyTopicRemarkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

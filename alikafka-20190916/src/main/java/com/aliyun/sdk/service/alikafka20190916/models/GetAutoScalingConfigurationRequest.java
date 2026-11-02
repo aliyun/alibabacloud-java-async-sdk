@@ -88,7 +88,7 @@ public class GetAutoScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

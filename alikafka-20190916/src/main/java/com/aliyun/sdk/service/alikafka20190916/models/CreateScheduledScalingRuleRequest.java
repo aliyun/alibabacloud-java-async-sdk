@@ -222,9 +222,9 @@ public class CreateScheduledScalingRuleRequest extends Request {
         } 
 
         /**
-         * <p>The duration of each scheduled scaling task. Unit: minutes.</p>
+         * <p>The duration of a scheduled elastic scaling task. Unit: minutes.</p>
          * <blockquote>
-         * <p> The value of this parameter must be greater than or equal to 15.</p>
+         * <p>The value must be at least 15.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -238,10 +238,10 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the scheduled scaling rule. Valid values:</p>
+         * <p>Specifies whether to enable or disable the scheduled task policy. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: enables the policy.</li>
+         * <li><strong>false</strong>: disables the policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,10 +254,10 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The time when the scheduled scaling task is executed.</p>
-         * <p>If you set ScheduleType to at, make sure that the value of this parameter is at least 30 minutes later than the current point in time.</p>
+         * <p>The start time of the scheduled policy.</p>
+         * <p>If the schedule type is set to one-time execution, the start time must be at least 30 minutes later than the current time.</p>
          * <blockquote>
-         * <p>Notice: To prevent the broker from repeatedly executing instance upgrade and downgrade tasks, make sure that the interval between two consecutive scheduled scaling tasks is at least 60 minutes.</p>
+         * <p>Notice: To prevent the server from continuously executing scale-up and scale-down tasks, the interval between different scheduled tasks must be at least 60 minutes.</notice></p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -284,7 +284,7 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,13 +297,9 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The frequency to execute the scheduled scaling task. This parameter is required only if you set ScheduleType to repeat. Valid values:</p>
-         * <ul>
-         * <li><p>Daily: The scheduled scaling task is executed every day.</p>
-         * </li>
-         * <li><p>Weekly: The scheduled scaling task is executed every week.</p>
-         * </li>
-         * </ul>
+         * <p>The repeat type. This parameter is required when ScheduleType is set to repeat. Valid values:
+         *       <li> Daily: Daily timed scheduling.
+         *       <li> Weekly: Weekly timed scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>Weekly</p>
@@ -315,9 +311,9 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The reserved production capacity for scheduled scaling. Unit: MB/s.</p>
+         * <p>The reserved production specification for scheduled elastic scaling. Unit: MB/s.</p>
          * <blockquote>
-         * <p> You must specify a higher value than the instance specification for at least one of ReservedPubFlow and ReservedSubFlow.</p>
+         * <p>At least one of the ReservedPubFlow and ReservedSubFlow parameters must be greater than the current specification.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -331,9 +327,9 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The reserved consumption capacity for scheduled scaling. Unit: MB/s.</p>
+         * <p>The reserved consumption specification for scheduled elastic scaling. Unit: MB/s.</p>
          * <blockquote>
-         * <p> You must specify a higher value than the instance specification for at least one of ReservedPubFlow and ReservedSubFlow.</p>
+         * <p>At least one of the ReservedSubFlow and ReservedPubFlow parameters must be greater than the current specification.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -347,9 +343,9 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the scheduled scaling rule.</p>
+         * <p>The name of the scheduled policy rule.</p>
          * <blockquote>
-         * <p> The name of the scheduled scaling rule cannot be the same as the names of other rules for the instance.</p>
+         * <p>The name must be unique among all rules of the same instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -363,10 +359,12 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the scheduled scaling task. Valid values:</p>
+         * <p>The schedule type. Valid values:</p>
          * <ul>
-         * <li>at: The scheduled scaling task is executed only once.</li>
-         * <li>repeat: The scheduled scaling task is repeatedly executed.</li>
+         * <li><p>at: The policy is executed only once.</p>
+         * </li>
+         * <li><p>repeat: The policy is executed repeatedly.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -393,7 +391,7 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The day on which the scheduled scaling task is executed every week. You can specify multiple days.</p>
+         * <p>The days of the week. Multiple days can be selected for repeated execution.</p>
          */
         public Builder weeklyTypes(java.util.List<String> weeklyTypes) {
             String weeklyTypesShrink = shrink(weeklyTypes, "WeeklyTypes", "json");

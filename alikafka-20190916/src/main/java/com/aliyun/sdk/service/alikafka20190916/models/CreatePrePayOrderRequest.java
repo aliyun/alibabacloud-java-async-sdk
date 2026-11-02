@@ -256,9 +256,9 @@ public class CreatePrePayOrderRequest extends Request {
         } 
 
         /**
-         * <p>The configurations of Confluent.</p>
+         * <p>The configurations of Confluent components.</p>
          * <blockquote>
-         * <p> When you create an ApsaraMQ for Confluent instance, you must configure this parameter.</p>
+         * <p>This parameter is required when you create a Confluent instance.</p>
          * </blockquote>
          */
         public Builder confluentConfig(ConfluentConfig confluentConfig) {
@@ -269,13 +269,15 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The type of the network in which the instance is deployed. Valid values:</p>
+         * <p>The deployment type. Valid values:</p>
          * <ul>
-         * <li><strong>4</strong>: Internet and virtual private cloud (VPC)</li>
-         * <li><strong>5</strong>: VPC</li>
+         * <li><p><strong>4</strong>: Internet- and VPC-connected instance</p>
+         * </li>
+         * <li><p><strong>5</strong>: VPC-connected instance</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you create an ApsaraMQ for Confluent instance, set the value to 5. After the instance is created, you can specify whether to enable each component.</p>
+         * <p>If you create a Confluent instance, you cannot select the deployment type. You can only set this parameter to 5. After the purchase, you can configure whether to expose each component to the Internet.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -288,10 +290,10 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The disk size. Unit: GB</p>
-         * <p>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+         * <p>The disk capacity. Unit: GB.</p>
+         * <p>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
          * <blockquote>
-         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -306,11 +308,13 @@ public class CreatePrePayOrderRequest extends Request {
         /**
          * <p>The disk type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: ultra disk</li>
-         * <li><strong>1</strong>: standard SSD</li>
+         * <li><p><strong>0</strong>: Ultra disk</p>
+         * </li>
+         * <li><p><strong>1</strong>: Standard SSD</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -325,7 +329,8 @@ public class CreatePrePayOrderRequest extends Request {
         /**
          * <p>The subscription duration. Unit: months. Default value: 1. Valid values:</p>
          * <ul>
-         * <li><strong>1 to 12</strong></li>
+         * <li><strong>Confluent instances: 1 or 12</strong></li>
+         * <li><strong>ApsaraMQ for Kafka instances: 1</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,13 +343,15 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The maximum Internet traffic in the instance.</p>
+         * <p>The Internet traffic bandwidth.</p>
          * <ul>
-         * <li>If you set <strong>DeployType</strong> to <strong>4</strong>, you must configure this parameter.</li>
-         * <li>For information about the valid values, see <a href="https://help.aliyun.com/document_detail/72142.html">Pay-as-you-go</a>.</li>
+         * <li><p>If <strong>DeployType</strong> is set to <strong>4</strong>, you must specify this parameter.</p>
+         * </li>
+         * <li><p>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/72142.html">pay-as-you-go billing method</a>.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -357,13 +364,15 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The maximum traffic in the instance. We recommend that you do not configure this parameter.</p>
+         * <p>The peak traffic. We do not recommend that you specify this parameter.</p>
          * <ul>
-         * <li>You must set one of <strong>IoMax</strong> and <strong>IoMaxSpec</strong>. If both parameters are configured, the value of <strong>IoMaxSpec</strong> is used. We recommend that you configure only <strong>IoMaxSpec</strong>.</li>
-         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * <li><p>You must specify at least one of <strong>IoMax</strong> and <strong>IoMaxSpec</strong>. If you specify both, <strong>IoMaxSpec</strong> takes precedence. We recommend that you specify only <strong>IoMaxSpec</strong>.</p>
+         * </li>
+         * <li><p>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -376,14 +385,16 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
+         * <p>The traffic specification. We recommend that you specify this parameter.</p>
          * <ul>
-         * <li>You must configure one of <strong>IoMax</strong> and <strong>IoMaxSpec</strong>. If both parameters are configured, the value of <strong>IoMaxSpec</strong> is used. We recommend that you configure only <strong>IoMaxSpec</strong>.</li>
-         * <li>For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
-         * </ul>
+         * <li><p>You must specify at least one of <strong>IoMax</strong> and <strong>IoMaxSpec</strong>. If you specify both, <strong>IoMaxSpec</strong> takes precedence. We recommend that you specify only <strong>IoMaxSpec</strong>.</p>
+         * </li>
+         * <li><p>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
          * <blockquote>
-         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>alikafka.hw.2xlarge</p>
@@ -395,14 +406,16 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: the subscription billing method</li>
-         * <li><strong>4</strong>: the subscription billing method for ApsaraMQ for Confluent instances</li>
+         * <li><p><strong>0</strong>: Subscription</p>
+         * </li>
+         * <li><p><strong>4</strong>: Subscription for Confluent instances</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>0</p>
          */
         public Builder paidType(Integer paidType) {
             this.putQueryParameter("PaidType", paidType);
@@ -411,14 +424,17 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The number of partitions. We recommend that you configure this parameter.</p>
+         * <p>The number of partitions. We recommend that you specify this parameter.</p>
          * <ul>
-         * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</li>
-         * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
-         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * <li><p>You must specify either the number of partitions or the topic specification. We recommend that you specify only the number of partitions.</p>
+         * </li>
+         * <li><p>If you specify both the number of partitions and the topic specification, the system verifies whether they are equivalent based on the legacy topic billing model. If they are not equivalent, the request fails. If they are equivalent, the instance is purchased based on the number of partitions.</p>
+         * </li>
+         * <li><p>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -445,7 +461,7 @@ public class CreatePrePayOrderRequest extends Request {
 
         /**
          * <p>The ID of the resource group.</p>
-         * <p>If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.</p>
+         * <p>If you do not specify this parameter, the instance is added to the default resource group. You can view the resource group ID in the Resource Management console.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ac***********7q</p>
@@ -457,16 +473,23 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The instance edition. Valid values:</p>
+         * <p>The edition. Valid values for ApsaraMQ for Kafka instances:</p>
          * <ul>
-         * <li><strong>normal</strong>: Standard Edition (High Write)</li>
-         * <li><strong>professional</strong>: Professional Edition (High Write)</li>
-         * <li><strong>professionalForHighRead</strong>: Professional Edition (High Read)</li>
+         * <li><p><strong>normal</strong>: Standard Edition (High Write)</p>
+         * </li>
+         * <li><p><strong>professional</strong>: Professional Edition (High Write)</p>
+         * </li>
+         * <li><p><strong>professionalForHighRead</strong>: Professional Edition (High Read)</p>
+         * </li>
          * </ul>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
-         * <blockquote>
-         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
-         * </blockquote>
+         * <p>Valid values for Confluent instances:</p>
+         * <ul>
+         * <li><p><strong>professional</strong>: Professional Edition</p>
+         * </li>
+         * <li><p><strong>enterprise</strong>: Enterprise Edition</p>
+         * </li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -478,7 +501,7 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -487,16 +510,20 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The number of topics. We recommend that you do not configure this parameter.</p>
+         * <p>The number of topics. We do not recommend that you specify this parameter.</p>
          * <ul>
-         * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</li>
-         * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
-         * <li>The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you use exceeds the default value, you are charged additional fees.</li>
-         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
-         * </ul>
+         * <li><p>You must specify either the number of partitions or the topic specification. We recommend that you specify only the number of partitions.</p>
+         * </li>
+         * <li><p>If you specify both the number of partitions and the topic specification, the system verifies whether they are equivalent based on the legacy topic billing model. If they are not equivalent, the request fails. If they are equivalent, the instance is purchased based on the number of partitions.</p>
+         * </li>
+         * <li><p>The default value varies based on the traffic specification. If the specified value exceeds the default value, additional fees are charged.</p>
+         * </li>
+         * <li><p>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
          * <blockquote>
-         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -606,7 +633,10 @@ public class CreatePrePayOrderRequest extends Request {
             } 
 
             /**
-             * Cu.
+             * <p>The number of CPU cores per node in the ksqlDB instance. Valid values: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
@@ -614,7 +644,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * InternalId.
+             * <p>The identifier of the additional ksqlDB instance. This identifier is used to distinguish multiple ksqlDB instances under the same Confluent instance and to generate the corresponding service name. Each instance must use a unique, non-empty identifier. You must retain the original identifier when you change the specifications later. Example: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder internalId(String internalId) {
                 this.internalId = internalId;
@@ -622,7 +655,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * Replica.
+             * <p>The number of nodes in the ksqlDB instance. Valid values: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -630,7 +666,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * Storage.
+             * <p>The disk capacity per node in the ksqlDB instance. Unit: GB. Valid values: 100 to 30000. The value must be a multiple of 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -638,7 +677,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The component type. Set the value to KSQLDB. Example: KSQLDB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KSQLDB</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -978,7 +1020,10 @@ public class CreatePrePayOrderRequest extends Request {
             } 
 
             /**
-             * ConfluentVersion.
+             * <p>The platform version of the Confluent instance. Valid values: 7.8.2 and 8.2.1. If you select 7.8.2, you must configure ZooKeeper. If you select 8.2.1, you must configure KRaft Controller. You can configure only one of the two metadata components in a single request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.8.2</p>
              */
             public Builder confluentVersion(String confluentVersion) {
                 this.confluentVersion = confluentVersion;
@@ -986,7 +1031,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of CPU cores of Connect.</p>
+             * <p>The number of CPU cores for the Connect component.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -997,7 +1042,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of replicas of Connect.</p>
+             * <p>The number of replicas for the Connect component.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1008,7 +1053,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of CPU cores of Control Center.</p>
+             * <p>The number of CPU cores for the Control Center component.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1019,7 +1064,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of replicas of Control Center.</p>
+             * <p>The number of replicas for the Control Center component.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1030,7 +1075,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The disk capacity of Control Center. Unit: GB</p>
+             * <p>The disk capacity of the Control Center component. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -1041,7 +1086,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of CPU cores of the Kafka broker.</p>
+             * <p>The number of CPU cores for Kafka brokers.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1052,7 +1097,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of replicas of the Kafka broker.</p>
+             * <p>The number of replicas for Kafka brokers.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1063,7 +1108,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of CPU cores of Kafka Rest Proxy.</p>
+             * <p>The number of CPU cores for the Kafka REST Proxy component.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1074,7 +1119,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of replicas of Kafka Rest Proxy.</p>
+             * <p>The number of replicas for the Kafka REST Proxy component.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1085,7 +1130,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The disk capacity of the Kafka broker. Unit: GB</p>
+             * <p>The disk capacity of Kafka brokers. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>800</p>
@@ -1096,7 +1141,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * KraftControllerCU.
+             * <p>The number of CPU cores per node in the KRaft controller. Valid values: 2 to 20. When you create an instance in KRaft mode, you must specify this parameter together with KraftControllerStorage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder kraftControllerCU(Integer kraftControllerCU) {
                 this.kraftControllerCU = kraftControllerCU;
@@ -1104,7 +1152,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * KraftControllerReplica.
+             * <p>The number of nodes in the KRaft controller. Set the value to 3. If you configure the KRaft controller but do not specify this parameter, the default value 3 is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder kraftControllerReplica(Integer kraftControllerReplica) {
                 this.kraftControllerReplica = kraftControllerReplica;
@@ -1112,7 +1163,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * KraftControllerStorage.
+             * <p>The disk capacity per node in the KRaft controller. Unit: GB. Valid values: 100 to 30000. The value must be a multiple of 100. When you create an instance in KRaft mode, you must specify this parameter together with KraftControllerCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder kraftControllerStorage(Integer kraftControllerStorage) {
                 this.kraftControllerStorage = kraftControllerStorage;
@@ -1120,7 +1174,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of CPU cores of ksqIDB.</p>
+             * <p>The number of CPU cores for the ksqlDB component.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1131,7 +1185,9 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * KsqlList.
+             * <p>The list of configurations for additional ksqlDB instances, excluding the default ksqlDB instance. Each element configures an independent ksqlDB instance. When you use this parameter, you must also specify KsqlCU, KsqlStorage, and KsqlReplica for the default instance. You can configure the node resources and the number of nodes for each instance in the list.</p>
+             * <p>Example (list content):
+             * ```json</p>
              */
             public Builder ksqlList(java.util.List<KsqlList> ksqlList) {
                 this.ksqlList = ksqlList;
@@ -1139,7 +1195,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of replicas of ksqlDB.</p>
+             * <p>The number of replicas for the ksqlDB component.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1150,7 +1206,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The disk capacity of ksqlDB. Unit: GB</p>
+             * <p>The disk capacity of the ksqlDB component. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1161,7 +1217,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of CPU cores of Schema Registry.</p>
+             * <p>The number of CPU cores for the Schema Registry component.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1172,7 +1228,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of replicas of Schema Registry.</p>
+             * <p>The number of replicas for the Schema Registry component.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1183,7 +1239,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of CPU cores of ZooKeeper.</p>
+             * <p>The number of CPU cores for the ZooKeeper component.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1194,7 +1250,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The number of replicas of ZooKeeper.</p>
+             * <p>The number of replicas for the ZooKeeper component.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1205,7 +1261,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The disk capacity of ZooKeeper. Unit: GB</p>
+             * <p>The disk capacity of the ZooKeeper component. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1276,11 +1332,14 @@ public class CreatePrePayOrderRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N.</p>
+             * <p>The tag key of the resource.</p>
              * <ul>
-             * <li>Valid values of N: 1 to 20.</li>
-             * <li>If this parameter is left empty, the keys of all tags are matched.</li>
-             * <li>The tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></li>
+             * <li><p>N ranges from 1 to 20.</p>
+             * </li>
+             * <li><p>If this parameter is left empty, all tag keys are matched.</p>
+             * </li>
+             * <li><p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1293,11 +1352,14 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N.</p>
+             * <p>The tag value of the resource.</p>
              * <ul>
-             * <li>Valid values of N: 1 to 20.</li>
-             * <li>This parameter can be left empty.</li>
-             * <li>The tag value can be 1 to 128 characters in length and cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></li>
+             * <li><p>N ranges from 1 to 20.</p>
+             * </li>
+             * <li><p>The tag value can be left empty.</p>
+             * </li>
+             * <li><p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -63,7 +63,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
      * 
      * @param request the request parameters of CreatePostPayOrder  CreatePostPayOrderRequest
      * @return CreatePostPayOrderResponse
@@ -71,6 +71,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePostPayOrderResponse> createPostPayOrder(CreatePostPayOrderRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before you call this operation, make sure that you fully understand the billing methods and pricing of subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li>After you call this operation, the default subscription duration of the purchased subscription instance is one month, and auto-renewal is enabled by default with an auto-renewal epoch of one month. To modify the auto-renewal epoch or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal Management</a> page in the Alibaba Cloud Management Console. &lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Configure auto-renewal</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreatePrePayInstance  CreatePrePayInstanceRequest
      * @return CreatePrePayInstanceResponse
      */
@@ -78,9 +84,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <ul>
-     * <li>If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal</a> page in the Alibaba Cloud Management Console.</li>
+     * <li>Before you call this operation, make sure that you fully understand the billing methods and pricing of subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+     * <li>After you call this operation, the default subscription duration of the purchased subscription instance is one month, and auto-renewal is enabled by default with an auto-renewal epoch of one month. To modify the auto-renewal epoch or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal Management</a> page in the Alibaba Cloud Management Console. &lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Auto-renewal settings</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreatePrePayOrder  CreatePrePayOrderRequest
@@ -96,7 +102,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+     * <h6>Only serverless instances are supported.</h6>
      * 
      * @param request the request parameters of CreateScheduledScalingRule  CreateScheduledScalingRuleRequest
      * @return CreateScheduledScalingRuleResponse
@@ -105,9 +111,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Each Alibaba Cloud account can call this operation up to once per second.</p>
      * <ul>
-     * <li>The maximum number of topics that you can create in an instance is determined by the specification of the instance.</li>
+     * <li>The maximum request frequency per user is 20 QPS.</li>
+     * <li>The maximum number of topics that can be created for each instance depends on the instance edition you purchased.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateTopic  CreateTopicRequest
@@ -141,7 +147,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h6><a href="#-serverless-"></a>This operation is available only for serverless ApsaraMQ for Kafka instances.</h6>
+     * <h6>Only serverless instances are supported.</h6>
      * 
      * @param request the request parameters of DeleteScheduledScalingRule  DeleteScheduledScalingRuleRequest
      * @return DeleteScheduledScalingRuleResponse
@@ -191,6 +197,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DowngradePrePayOrderResponse> downgradePrePayOrder(DowngradePrePayOrderRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Currently, only reserved instances support this API operation.
+     * Serverless instances are not supported.</p>
+     * 
      * @param request the request parameters of EnableAutoGroupCreation  EnableAutoGroupCreationRequest
      * @return EnableAutoGroupCreationResponse
      */
@@ -222,7 +232,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h6><a href="#-serverless-"></a>**This operation is available only for serverless ApsaraMQ for Kafka instances.</h6>
+     * <h6><strong>Only serverless instances are supported.</strong></h6>
      * 
      * @param request the request parameters of GetAutoScalingConfiguration  GetAutoScalingConfigurationRequest
      * @return GetAutoScalingConfigurationResponse
@@ -249,10 +259,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  The IP information is obtained from the sampled logs generated for the requests that the client sends to the broker by calling the API operations of ApsaraMQ for Kafka.</p>
      * <ul>
-     * <li>Statistics refers to the number of connections on different ports of an IP address within a specific period of time.</li>
-     * <li>If the broker is not of the latest minor version, the sampled logs may not be accurate. This may cause inaccurate IP information. Therefore, we recommend that you update your broker to the latest version at the earliest opportunity.</li>
+     * <li>The collected IP information is obtained from the sampled logs of API requests sent from clients to the server through Kafka.</li>
+     * <li>The count indicates the number of connections from the same IP address to different ports recorded by the server within the specified time range.</li>
+     * <li>If the minor version of your server is not the latest, the sampled logs may not be accurate enough, which ultimately leads to inaccurate collected IP information. Therefore, upgrade the minor version of your server as soon as possible.</li>
      * </ul>
      * 
      * @param request the request parameters of GetKafkaClientIp  GetKafkaClientIpRequest
@@ -316,7 +326,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h6><a href="#-serverless-"></a>This operation is available only for serverless ApsaraMQ for Kafka instances.</h6>
+     * <h6>Only serverless instances are supported.</h6>
      * 
      * @param request the request parameters of ModifyScheduledScalingRule  ModifyScheduledScalingRuleRequest
      * @return ModifyScheduledScalingRuleResponse
@@ -343,7 +353,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.</p>
+     * <p>You cannot use this operation to release subscription instances.</p>
      * 
      * @param request the request parameters of ReleaseInstance  ReleaseInstanceRequest
      * @return ReleaseInstanceResponse
@@ -352,7 +362,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only if your instance is in the Stopped state.</p>
+     * <p>You can call this operation only when the instance is in the Stopped state.</p>
      * 
      * @param request the request parameters of ReopenInstance  ReopenInstanceRequest
      * @return ReopenInstanceResponse
@@ -362,7 +372,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation up to twice per second.</p>
+     * <p>The request frequency is limited to 2 queries per second (QPS) for each user.</p>
      * </blockquote>
      * 
      * @param request the request parameters of StartInstance  StartInstanceRequest
@@ -372,7 +382,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.</p>
+     * <p>Stopping subscription instances is not currently supported. To stop a subscription instance, submit a ticket.</p>
      * 
      * @param request the request parameters of StopInstance  StopInstanceRequest
      * @return StopInstanceResponse
@@ -399,11 +409,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:</p>
+     * <p>This operation resets the consumer offset of a specified consumer group. You can reset the consumer offset by timestamp or by a specific offset value. Using different parameter combinations, you can perform the following tasks:</p>
      * <ul>
-     * <li>Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.</li>
-     * <li>Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.</li>
-     * <li>Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.</li>
+     * <li>Consume messages from the latest offset by setting the consumer offset to the latest position. This is supported for a single topic or all topics.</li>
+     * <li>Consume messages from the offset of a specified time point by providing a timestamp. This is supported for a single topic or all topics.</li>
+     * <li>Reset the consumer offset for a specific partition by providing the target partition ID and consumer offset. This is supported only for a single topic.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateConsumerOffset  UpdateConsumerOffsetRequest
@@ -413,8 +423,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><strong>Permissions</strong></h2>
-     * <p>If a RAM user wants to call the <strong>UpdateInstanceConfig</strong> operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</p>
+     * <h2><strong>Permission information</strong></h2>
+     * <p>RAM users must obtain authorization before they can call the <strong>UpdateInstanceConfig</strong> operation. For more information, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM access policies</a>.</p>
      * <table>
      * <thead>
      * <tr>
@@ -443,8 +453,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><strong>Permissions</strong></h2>
-     * <p>A RAM user must be granted the required permissions before the RAM user calls the <strong>UpgradeInstanceVersion</strong> operation. For information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</p>
+     * <h2><strong>Permission description</strong></h2>
+     * <p>RAM users must be authorized before they can call the <strong>UpgradeInstanceVersion</strong> API. For more information about authorization, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM access policy</a>.</p>
      * <table>
      * <thead>
      * <tr>
@@ -460,7 +470,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </tr>
      * </tbody></table>
      * <h2><strong>QPS limits</strong></h2>
-     * <p>You can send a maximum of two queries per second (QPS).</p>
+     * <p>The request frequency is limited to 2 queries per second (QPS) for a single user.</p>
      * 
      * @param request the request parameters of UpgradeInstanceVersion  UpgradeInstanceVersionRequest
      * @return UpgradeInstanceVersionResponse
@@ -469,7 +479,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * 
      * @param request the request parameters of UpgradePostPayOrder  UpgradePostPayOrderRequest
      * @return UpgradePostPayOrderResponse
@@ -478,7 +488,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing method and pricing of subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * 
      * @param request the request parameters of UpgradePrePayOrder  UpgradePrePayOrderRequest
      * @return UpgradePrePayOrderResponse

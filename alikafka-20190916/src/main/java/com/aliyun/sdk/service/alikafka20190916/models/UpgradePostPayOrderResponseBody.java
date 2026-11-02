@@ -93,7 +93,7 @@ public class UpgradePostPayOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * <p>The response code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class UpgradePostPayOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -115,7 +115,7 @@ public class UpgradePostPayOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABA4A7FD-E10F-45C7-9774-A5236015A***</p>
@@ -126,7 +126,7 @@ public class UpgradePostPayOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

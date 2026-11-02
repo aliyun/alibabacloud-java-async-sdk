@@ -106,7 +106,7 @@ public class QueryMessageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned HTTP status code. If the request is successful, 200 is returned.</p>
+         * <p>The return code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The messages.</p>
+         * <p>The queried messages.</p>
          */
         public Builder messageList(java.util.List<MessageList> messageList) {
             this.messageList = messageList;
@@ -147,10 +147,10 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -376,7 +376,7 @@ public class QueryMessageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The check value of the chaincode.</p>
+             * <p>The checksum.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -387,7 +387,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message key.</p>
+             * <p>The key of the message.</p>
              * 
              * <strong>example:</strong>
              * <p>this is key</p>
@@ -409,7 +409,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer offset of the partition.</p>
+             * <p>The partition offset.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -431,7 +431,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the key after serialization. Unit: bytes.</p>
+             * <p>The size of the serialized key. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -442,7 +442,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the value after serialization. Unit: bytes.</p>
+             * <p>The size of the serialized value. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -453,7 +453,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the message was created. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time of the message. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1705482172640</p>
@@ -464,7 +464,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time type.</p>
+             * <p>The type of the message timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>CreateTime</p>
@@ -486,9 +486,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The truncated size of the message key. Unit: bytes.</p>
+             * <p>The size of the truncated key. Unit: bytes.</p>
              * <blockquote>
-             * <p> A maximum of 1 KB of content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see <a href="https://help.aliyun.com/document_detail/113172.html">Query messages</a>.</p>
+             * <p>A maximum of 1 KB of content is displayed for each queried message. Content that exceeds 1 KB is automatically truncated.
+             * <a href="https://help.aliyun.com/document_detail/113172.html">For more information, see the documentation</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -500,9 +501,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The truncated size of the message value. Unit: bytes.</p>
+             * <p>The size of the truncated value. Unit: bytes.</p>
              * <blockquote>
-             * <p> A maximum of 1 KB of content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see <a href="https://help.aliyun.com/document_detail/113172.html">Query messages</a>.</p>
+             * <p>A maximum of 1 KB of content is displayed for each queried message. Content that exceeds 1 KB is automatically truncated.
+             * <a href="https://help.aliyun.com/document_detail/113172.html">For more information, see the documentation</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -514,7 +516,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message value.</p>
+             * <p>The value of the message.</p>
              * 
              * <strong>example:</strong>
              * <p>Welcome to Ali kafka</p>

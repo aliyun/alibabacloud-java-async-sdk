@@ -149,11 +149,11 @@ public class UpdateAllowedIpRequest extends Request {
         } 
 
         /**
-         * <p>The IP addresses that you want to manage. You can specify a CIDR block. Example: <strong>192.168.0.0/16</strong>.</p>
+         * <p>The IP list. It can be a CIDR block, for example: <strong>192.168.0.0/16</strong>.</p>
          * <ul>
-         * <li>If the <strong>UpdateType</strong> parameter is set to <strong>add</strong>, specify one or more IP addresses for this parameter. Separate multiple IP addresses with commas (,).</li>
-         * <li>If the <strong>UpdateType</strong> parameter is set to <strong>delete</strong>, specify only one IP address.</li>
-         * <li>Exercise caution when you delete IP addresses.</li>
+         * <li>When <strong>UpdateType</strong> is set to <strong>add</strong>, you can specify multiple items separated by commas (,).</li>
+         * <li>When <strong>UpdateType</strong> is set to <strong>delete</strong>, you can specify only one item at a time.</li>
+         * <li>Exercise caution when deleting.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -169,8 +169,8 @@ public class UpdateAllowedIpRequest extends Request {
         /**
          * <p>The type of the whitelist. Valid values:</p>
          * <ul>
-         * <li><strong>vpc</strong>: a whitelist for access from a VPC.</li>
-         * <li><strong>internet</strong>: a whitelist for access from the Internet.</li>
+         * <li><strong>vpc</strong>: virtual private cloud (VPC).</li>
+         * <li><strong>internet</strong>: Internet.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -196,7 +196,7 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,10 +211,10 @@ public class UpdateAllowedIpRequest extends Request {
         /**
          * <p>The port range. Valid values:</p>
          * <ul>
-         * <li><strong>9092/9092</strong>: Messages are transmitted in a virtual private cloud (VPC) by using the PLAINTEXT protocol.</li>
-         * <li><strong>9093/9093</strong>: Messages are transmitted over the Internet by using the SASL_SSL protocol.</li>
-         * <li><strong>9094/9094</strong>: Messages are transmitted in a VPC by using the SASL_PLAINTEXT protocol.</li>
-         * <li><strong>9095/9095</strong>: Messages are transmitted in a VPC by using the SASL_SSL protocol.</li>
+         * <li><strong>9092/9092</strong>: virtual private cloud (VPC) - PLAINTEXT protocol.</li>
+         * <li><strong>9093/9093</strong>: Internet - SASL_SSL protocol.</li>
+         * <li><strong>9094/9094</strong>: virtual private cloud (VPC) - SASL_PLAINTEXT protocol.</li>
+         * <li><strong>9095/9095</strong>: virtual private cloud (VPC) - SASL_SSL protocol.</li>
          * </ul>
          * <p>This parameter must correspond to <strong>AllowdedListType</strong>.</p>
          * <p>This parameter is required.</p>
@@ -229,7 +229,7 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,10 +242,10 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * <p>The type of configuration change. Valid values:</p>
+         * <p>The update type. Valid values:</p>
          * <ul>
-         * <li><strong>add</strong></li>
-         * <li><strong>delete</strong></li>
+         * <li><strong>add</strong>: add.</li>
+         * <li><strong>delete</strong>: delete.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

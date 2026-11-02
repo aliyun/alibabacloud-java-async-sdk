@@ -106,7 +106,7 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. If the request is successful, 200 is returned.</p>
+         * <p>The status code. A value of 200 indicates that the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -139,7 +139,7 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0178A3A7-E87B-5E50-A16F-3E62F534****</p>
@@ -150,7 +150,7 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

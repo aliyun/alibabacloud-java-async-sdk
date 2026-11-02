@@ -148,7 +148,7 @@ public class GetKafkaClientIpRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The end time of the query range. The value is a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,9 +161,9 @@ public class GetKafkaClientIpRequest extends Request {
         }
 
         /**
-         * <p>The ID of the consumer group.</p>
+         * <p>The consumer group ID.</p>
          * <blockquote>
-         * <p> This parameter is required only if you set Type to byGroup.</p>
+         * <p>This parameter is required if Type is set to byGroup.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class GetKafkaClientIpRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance is deployed.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class GetKafkaClientIpRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The start time of the query range. The value is a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,10 +217,10 @@ public class GetKafkaClientIpRequest extends Request {
         /**
          * <p>The topic name.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li>This parameter is required only if you set Type to byTopic.</li>
+         * <li>This parameter is required if Type is set to byTopic.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>topic_name</p>
@@ -232,11 +232,11 @@ public class GetKafkaClientIpRequest extends Request {
         }
 
         /**
-         * <p>The query method that you want to use to query the client IP addresses. Valid values:</p>
+         * <p>The type of client IP address to query. Valid values:</p>
          * <ul>
-         * <li>byInstance: queries the IP addresses of the clients that are connected to the instance within a specific period of time.</li>
-         * <li>byTopic: queries the IP addresses of the clients that are connected to a specific topic on the instance within a specific period of time.</li>
-         * <li>byGroup: queries the IP addresses of the clients that are connected to a specific group on the instance within a specific period of time.</li>
+         * <li>byInstance: Queries the client IP addresses within a specified time range for the instance. </li>
+         * <li>byTopic: Queries the client IP addresses within a specified time range for the topic.</li>
+         * <li>byGroup: Queries the client IP addresses within a specified time range for the group.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

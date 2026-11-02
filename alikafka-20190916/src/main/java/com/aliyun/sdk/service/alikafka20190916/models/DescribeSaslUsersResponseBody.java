@@ -106,7 +106,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * <p>The status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9E3B3592-5994-4F65-A61E-E62A77A****</p>
@@ -139,7 +139,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Simple Authentication and Security Layer (SASL) users.</p>
+         * SaslUserList.
          */
         public Builder saslUserList(SaslUserList saslUserList) {
             this.saslUserList = saslUserList;
@@ -242,13 +242,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The encryption method.</p>
-             * <blockquote>
-             * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>SCRAM-SHA-256</p>
+             * Mechanism.
              */
             public Builder mechanism(String mechanism) {
                 this.mechanism = mechanism;
@@ -256,10 +250,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The password.</p>
-             * 
-             * <strong>example:</strong>
-             * <hr>
+             * Password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -267,16 +258,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the SASL user. Valid values:</p>
-             * <ul>
-             * <li><strong>plain</strong>: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</li>
-             * <li><strong>SCRAM</strong>: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</li>
-             * <li><strong>LDAP</strong>: This value is available only for the SASL users of ApsaraMQ for Confluent instances.</li>
-             * </ul>
-             * <p>Default value: <strong>plain</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>scram</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -284,10 +266,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test12***</p>
+             * Username.
              */
             public Builder username(String username) {
                 this.username = username;

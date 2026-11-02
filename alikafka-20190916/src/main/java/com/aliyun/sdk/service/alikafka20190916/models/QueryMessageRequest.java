@@ -147,7 +147,7 @@ public class QueryMessageRequest extends Request {
         } 
 
         /**
-         * <p>The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * <p>The start timestamp of the query range. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1672410180000</p>
@@ -172,7 +172,7 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * <p>The consumer offset of the partition.</p>
+         * <p>The partition offset.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -198,8 +198,8 @@ public class QueryMessageRequest extends Request {
         /**
          * <p>The query type. Valid values:</p>
          * <ul>
-         * <li>byOffset: queries messages by offset. If you select this value, you must configure Partition and Offset.</li>
-         * <li>byTimestamp: queries messages by time. If you select this value, you must configure BeginTime.</li>
+         * <li>byOffset: Queries messages by offset. If you select this value, you must specify the partition ID and partition offset.</li>
+         * <li>byTimestamp: Queries messages by timestamp. If you select this value, you must specify the BeginTime parameter.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -213,7 +213,7 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the resource resides.</p>
+         * <p>The region ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

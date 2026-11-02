@@ -106,7 +106,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned HTTP status code. If the request is successful, 200 is returned.</p>
+         * <p>The status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The consumer progress of the consumer group.</p>
+         * <p>The consumption status.</p>
          */
         public Builder consumerProgress(ConsumerProgress consumerProgress) {
             this.consumerProgress = consumerProgress;
@@ -147,7 +147,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -268,10 +268,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of rebalances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Generation.
              */
             public Builder generation(Long generation) {
                 this.generation = generation;
@@ -279,10 +276,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group ID of the subscriber.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>falcon-uat</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -290,10 +284,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the last rebalance occurred. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1709199270</p>
+             * LastRebalanceTimestamp.
              */
             public Builder lastRebalanceTimestamp(Long lastRebalanceTimestamp) {
                 this.lastRebalanceTimestamp = lastRebalanceTimestamp;
@@ -301,10 +292,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cause of the rebalance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>removing member consumer-1-cd14eb9c-379b-4b8e-9bbd-76f147f8536f on LeaveGroup</p>
+             * Reason.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -312,10 +300,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether new members are added to the consumer group in the rebalance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * RebalanceSuccess.
              */
             public Builder rebalanceSuccess(Boolean rebalanceSuccess) {
                 this.rebalanceSuccess = rebalanceSuccess;
@@ -323,10 +308,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the rebalance. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * RebalanceTimeConsuming.
              */
             public Builder rebalanceTimeConsuming(Long rebalanceTimeConsuming) {
                 this.rebalanceTimeConsuming = rebalanceTimeConsuming;
@@ -533,10 +515,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest offset in the partition of the topic.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>9</p>
+             * BrokerOffset.
              */
             public Builder brokerOffset(Long brokerOffset) {
                 this.brokerOffset = brokerOffset;
@@ -544,10 +523,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Client ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>client-id-KafkaConsumerDemo</p>
+             * ClientId.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -555,10 +531,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.16.11.3</p>
+             * ClientIp.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -566,10 +539,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer offset in the partition of the topic.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>9</p>
+             * ConsumerOffset.
              */
             public Builder consumerOffset(Long consumerOffset) {
                 this.consumerOffset = consumerOffset;
@@ -577,10 +547,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the last consumed message in the partition was generated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1566874931649</p>
+             * LastTimestamp.
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -588,10 +555,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Member ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>client-id-KafkaConsumerDemo-70b64883-a911-4882-8084-598b958848b4</p>
+             * MemberId.
              */
             public Builder memberId(String memberId) {
                 this.memberId = memberId;
@@ -599,10 +563,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The partition ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Partition.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -749,10 +710,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the last consumed message in the topic was generated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1566874931649</p>
+             * LastTimestamp.
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -760,7 +718,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer offsets.</p>
+             * OffsetList.
              */
             public Builder offsetList(TopicListOffsetList offsetList) {
                 this.offsetList = offsetList;
@@ -768,10 +726,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>kafka-test</p>
+             * Topic.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -779,10 +734,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of unconsumed messages in the topic to which the consumer group subscribes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * TotalDiff.
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;
@@ -942,10 +894,16 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the last message consumed by the consumer group was generated.</p>
+             * <p>The maximum storage time of the message data corresponding to all consumer offsets of the consumer group.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is not supported for all topic types in serverless instances or for topics of the local storage type in reserved instances. The value is uniformly returned as -1.</li>
+             * <li>For topics of the cloud storage type in reserved instances, the creation timestamp of the corresponding message is returned only after a consumer group created through the console or API operations submits a consumer offset. If the corresponding message does not have a creation timestamp, -1 is returned.</li>
+             * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>1566874931671</p>
+             * <p>1566874931649</p>
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -953,7 +911,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of rebalances in the consumer group.</p>
+             * RebalanceInfoList.
              */
             public Builder rebalanceInfoList(ConsumerProgressRebalanceInfoList rebalanceInfoList) {
                 this.rebalanceInfoList = rebalanceInfoList;
@@ -961,7 +919,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer progress of each topic to which the consumer group subscribes.</p>
+             * TopicList.
              */
             public Builder topicList(ConsumerProgressTopicList topicList) {
                 this.topicList = topicList;
@@ -969,7 +927,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of unconsumed messages in all topics to which the consumer group subscribes.</p>
+             * <p>The total number of unconsumed messages for all topics, which is the message accumulation.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -980,7 +938,18 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The consumption status of the consumer group. Valid values:</p>
+             * <ul>
+             * <li>UNKNOWN</li>
+             * <li>PREPARING_REBALANCE</li>
+             * <li>COMPLETING_REBALANCE</li>
+             * <li>STABLE</li>
+             * <li>DEAD</li>
+             * <li>EMPTY</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STABLE</p>
              */
             public Builder state(String state) {
                 this.state = state;

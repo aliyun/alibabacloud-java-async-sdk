@@ -205,10 +205,10 @@ public class CreateTopicRequest extends Request {
         } 
 
         /**
-         * <p>The log cleanup policy that is used for the topic. This parameter is available only when LocalTopic is set to true. Valid values:</p>
+         * <p>The cleanup policy that is configured when the storage engine of the topic is set to local storage. Valid values:</p>
          * <ul>
-         * <li>false: The topic uses the default log cleanup policy.</li>
-         * <li>true: The topic uses the log compaction policy.</li>
+         * <li>false: delete cleanup policy.</li>
+         * <li>true: compact cleanup policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -221,18 +221,30 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The additional configuration.</p>
+         * <p>The supplementary configuration.</p>
          * <ul>
-         * <li>The value must be in JSON format.</li>
-         * <li>Set Key to <strong>replications</strong>. This value specifies the number of replicas of the topic. The value must be an integer that ranges from 1 to 3.</li>
-         * <li>You can configure this parameter only if you set <strong>LocalTopic</strong> to <strong>true</strong> or specify <strong>Open Source Edition (Local Disk)</strong> as the instance edition.****</li>
+         * <li><p>The value must be in JSON format.</p>
+         * </li>
+         * <li><p>This parameter takes effect only when <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
+         * </li>
+         * <li><p>Supported configurations for reserved instances:</p>
+         * <ul>
+         * <li><strong>retention.ms</strong>: the message retention period. Valid values: 3600000 to 31536000000. Unit: milliseconds.</li>
+         * <li><strong>max.message.bytes</strong>: the maximum message size. Valid values: 1048576 to 10485760. Unit: bytes.</li>
+         * <li><strong>message.timestamp.type</strong>: the type of the message timestamp. CreateTime indicates the timestamp specified by the producer when sending a message. If not specified, the value is the creation time of the message on the client. LogAppendTime indicates the time when the message is written to disk on the server. Valid values: CreateTime or LogAppendTime. Default value: Createtime. We recommend that you use ApendTime.</li>
          * </ul>
-         * <blockquote>
-         * <p> If you specify replications in this parameter, <strong>ReplicationFactor</strong> does not take effect.</p>
-         * </blockquote>
+         * </li>
+         * <li><p>Supported configurations for Serverless instances:</p>
+         * <ul>
+         * <li><strong>retention.hours</strong>: the message retention period. The value type is String. Valid values: 24 to 8760.</li>
+         * <li><strong>max.message.bytes</strong>: the maximum message size. The value type is String. Valid values: 1048576 to 10485760.</li>
+         * <li><strong>message.timestamp.type</strong>: the type of the message timestamp. CreateTime indicates the timestamp specified by the producer when sending a message. If not specified, the value is the creation time of the message on the client. LogAppendTime indicates the time when the message is written to disk on the server. Valid values: CreateTime or LogAppendTime. Default value: Createtime. We recommend that you use ApendTime.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;replications&quot;: 3}</p>
+         * <p>{&quot;retention.ms&quot;: &quot;3600000&quot;}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -254,10 +266,10 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The type of storage that the topic uses. Valid values:</p>
+         * <p>The storage engine of the topic. Valid values:</p>
          * <ul>
-         * <li>false: The topic uses cloud storage.</li>
-         * <li>true: The topic uses local storage.</li>
+         * <li>false: cloud storage.</li>
+         * <li>true: local storage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,11 +282,14 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of in-sync replicas (ISRs).</p>
+         * <p>The minimum number of in-sync replicas (ISR).</p>
          * <ul>
-         * <li>This parameter is available only when <strong>LocalTopic</strong> is set to <strong>true</strong>, or the instance is of the <strong>Open Source Edition (Local Disk)</strong>.****</li>
-         * <li>The value of this parameter must be smaller than the value of ReplicationFactor.</li>
-         * <li>Valid values: 1 to 3.</li>
+         * <li><p>This parameter takes effect only when <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
+         * </li>
+         * <li><p>The value must be less than the number of topic replicas.</p>
+         * </li>
+         * <li><p>Valid values: 1 to 3.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,15 +302,19 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The number of partitions in the topic.</p>
+         * <p>The number of partitions for the topic.</p>
          * <ul>
-         * <li>Valid values: 1 to 360.</li>
-         * <li>In the ApsaraMQ for Kafka console, you can view the number of partitions that the system recommends based on the specifications of the instance. We recommend that you specify the number that is recommended by the system as the value of this parameter to reduce the risk of data skew.</li>
+         * <li><p>Valid values: 1 to 360.</p>
+         * </li>
+         * <li><p>The console provides different configuration suggestions based on the instance edition. Configure the number of partitions based on the console suggestions to reduce data skew risks.</p>
+         * </li>
          * </ul>
-         * <p>Default values:</p>
+         * <p>Default value:</p>
          * <ul>
-         * <li>ApsaraMQ for Kafka V2 instance: 12</li>
-         * <li>ApsaraMQ for Kafka V3 instance: 3</li>
+         * <li><p>Reserved instances: 12</p>
+         * </li>
+         * <li><p>Serverless instances: 3</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,7 +327,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance in which you want to create a topic.</p>
+         * <p>The region ID of the instance to which the topic belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,8 +342,10 @@ public class CreateTopicRequest extends Request {
         /**
          * <p>The description of the topic.</p>
          * <ul>
-         * <li>The description can contain only letters, digits, hyphens (-), and underscores (_).</li>
-         * <li>The description must be 3 to 64 characters in length.</li>
+         * <li><p>The description can contain only letters, digits, underscores (_), and hyphens (-).</p>
+         * </li>
+         * <li><p>The description must be 3 to 64 characters in length.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -340,11 +361,13 @@ public class CreateTopicRequest extends Request {
         /**
          * <p>The number of replicas for the topic.</p>
          * <ul>
-         * <li>This parameter is available only when <strong>LocalTopic</strong> is set to <strong>true</strong>, or the instance is of the <strong>Open Source Edition (Local Disk)</strong>.****</li>
-         * <li>Valid values: 1 to 3.</li>
+         * <li><p>This parameter takes effect only when <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
+         * </li>
+         * <li><p>Valid values: 1 to 3.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you set this parameter to <strong>1</strong>, data loss may occur. Exercise caution when you configure this parameter.</p>
+         * <p>If the number of replicas is set to <strong>1</strong>, data loss may occur. Proceed with caution.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -357,7 +380,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The tags that you want to add to the topic.</p>
+         * <p>The tag list.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -366,11 +389,10 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The topic name.</p>
+         * <p>The name of the topic.</p>
          * <ul>
-         * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
-         * <li>The name must be 3 to 64 characters in length. If the name that you specify contains more than 64 characters, the system automatically truncates the name.</li>
-         * <li>After a topic is created, you cannot change the name of the topic.</li>
+         * <li>Reserved instances: The name can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 3 to 64 characters in length.</li>
+         * <li>Serverless instances: The name can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 1 to 249 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -444,10 +466,14 @@ public class CreateTopicRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The tag key of the resource.</p>
              * <ul>
-             * <li>If you do not specify this parameter, the keys of all tags are matched.</li>
-             * <li>The tag key must be 1 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li><p>N ranges from 1 to 20.</p>
+             * </li>
+             * <li><p>If this parameter is left empty, all tag keys are matched.</p>
+             * </li>
+             * <li><p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -460,10 +486,14 @@ public class CreateTopicRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The tag value of the resource.</p>
              * <ul>
-             * <li>You can leave this parameter empty.</li>
-             * <li>The tag value must be 1 to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with aliyun or acs:.</li>
+             * <li><p>N ranges from 1 to 20.</p>
+             * </li>
+             * <li><p>This parameter can be left empty.</p>
+             * </li>
+             * <li><p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

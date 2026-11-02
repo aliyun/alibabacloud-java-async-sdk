@@ -106,7 +106,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * <p>The status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -128,7 +128,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E475C7E2-8C35-46EF-BE7D-5D2A9F5D****</p>
@@ -139,7 +139,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -150,7 +150,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status information about messages in the topic.</p>
+         * <p>The topic status.</p>
          */
         public Builder topicStatus(TopicStatus topicStatus) {
             this.topicStatus = topicStatus;
@@ -255,10 +255,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The last time when the partition was modified.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1566470063547</p>
+             * LastUpdateTimestamp.
              */
             public Builder lastUpdateTimestamp(Long lastUpdateTimestamp) {
                 this.lastUpdateTimestamp = lastUpdateTimestamp;
@@ -266,10 +263,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest offset in the partition of the topic.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>76</p>
+             * MaxOffset.
              */
             public Builder maxOffset(Long maxOffset) {
                 this.maxOffset = maxOffset;
@@ -277,10 +271,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The earliest offset in the partition of the topic.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * MinOffset.
              */
             public Builder minOffset(Long minOffset) {
                 this.minOffset = minOffset;
@@ -288,10 +279,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the partition.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Partition.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -299,10 +287,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the topic.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testkafka</p>
+             * Topic.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -436,7 +421,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the last consumed message was generated.</p>
+             * <p>The time when the last consumed message was generated. Unit: ms.</p>
              * 
              * <strong>example:</strong>
              * <p>1566470063575</p>
@@ -447,7 +432,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about offsets in the topic.</p>
+             * OffsetTable.
              */
             public Builder offsetTable(TopicStatusOffsetTable offsetTable) {
                 this.offsetTable = offsetTable;
@@ -455,7 +440,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of messages in the topic.</p>
+             * <p>The total number of messages.</p>
              * 
              * <strong>example:</strong>
              * <p>423</p>

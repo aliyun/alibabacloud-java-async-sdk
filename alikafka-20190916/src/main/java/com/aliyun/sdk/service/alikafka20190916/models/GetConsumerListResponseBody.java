@@ -145,7 +145,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * <p>The response code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -156,7 +156,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The consumer groups.</p>
+         * ConsumerList.
          */
         public Builder consumerList(ConsumerList consumerList) {
             this.consumerList = consumerList;
@@ -164,7 +164,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>The page number of the returned results. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -175,7 +175,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -186,7 +186,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -197,7 +197,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>808F042B-CB9A-4FBC-9009-00E7DDB6****</p>
@@ -208,7 +208,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -219,7 +219,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -288,10 +288,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -299,10 +296,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -488,10 +482,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates that the consumer group was automatically created by the system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * AutomaticallyCreatedGroup.
              */
             public Builder automaticallyCreatedGroup(Boolean automaticallyCreatedGroup) {
                 this.automaticallyCreatedGroup = automaticallyCreatedGroup;
@@ -499,10 +490,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer group ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>kafka-test</p>
+             * ConsumerId.
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -510,10 +498,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that indicates when the consumer group was created. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1729736584002</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -521,10 +506,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alikafka_post-cn-v0h18sav****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -532,10 +514,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the instance resides.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -543,10 +522,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -554,7 +530,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

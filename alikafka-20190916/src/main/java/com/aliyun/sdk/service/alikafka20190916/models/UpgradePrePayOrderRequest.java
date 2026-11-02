@@ -215,7 +215,7 @@ public class UpgradePrePayOrderRequest extends Request {
         } 
 
         /**
-         * ConfluentConfig.
+         * <p>The Confluent component configurations.</p>
          */
         public Builder confluentConfig(ConfluentConfig confluentConfig) {
             String confluentConfigShrink = shrink(confluentConfig, "ConfluentConfig", "json");
@@ -225,11 +225,16 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The size of the disk.</p>
+         * <p>The disk capacity.</p>
          * <ul>
-         * <li>The disk size that you specify must be greater than or equal to the current disk size of the instance.</li>
-         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+         * <li><p>The disk capacity that you specify must be greater than or equal to the current disk capacity of the instance.</p>
+         * </li>
+         * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+         * </li>
          * </ul>
+         * <blockquote>
+         * <p>If you upgrade a Confluent instance, you do not need to specify this parameter. This parameter is required for subscription instances.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -241,17 +246,19 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The Internet traffic for the instance.</p>
+         * <p>The public network traffic.</p>
          * <ul>
-         * <li>The Internet traffic volume that you specify must be greater than or equal to the current Internet traffic volume of the instance.</li>
-         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.<blockquote>
-         * <ul>
-         * <li>If the <strong>EipModel</strong> parameter is set to <strong>true</strong>, set the <strong>EipMax</strong> parameter to a value that is greater than 0.</li>
-         * <li>If the <strong>EipModel</strong> parameter is set to <strong>false</strong>, set the <strong>EipMax</strong> parameter to <strong>0</strong>.</li>
-         * </ul>
-         * </blockquote>
+         * <li><p>The public network traffic that you specify must be greater than or equal to the current public network traffic of the instance.</p>
+         * </li>
+         * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
          * </li>
          * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If <strong>EipModel</strong> is set to <strong>true</strong>, the value of <strong>EipMax</strong> must be greater than 0.</li>
+         * <li>If <strong>EipModel</strong> is set to <strong>false</strong>, the value of <strong>EipMax</strong> must be <strong>0</strong>.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -263,11 +270,16 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Internet access for the instance. Valid values:</p>
+         * <p>Specifies whether public network access is required. Valid values:</p>
          * <ul>
-         * <li>true: enables Internet access.</li>
-         * <li>false: disables Internet access.</li>
+         * <li><p>true: Public network access is required.</p>
+         * </li>
+         * <li><p>false: Public network access is not required.</p>
+         * </li>
          * </ul>
+         * <blockquote>
+         * <p>If you upgrade a Confluent instance, you do not need to specify this parameter. This parameter is required for subscription instances.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -279,7 +291,7 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,11 +304,14 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The maximum traffic for the instance. We recommend that you do not configure this parameter.</p>
+         * <p>The peak traffic (not recommended).</p>
          * <ul>
-         * <li>The maximum traffic volume that you specify must be greater than or equal to the current maximum traffic volume of the instance.</li>
-         * <li>You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.</li>
-         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+         * <li><p>The peak traffic that you specify must be greater than or equal to the current peak traffic of the instance.</p>
+         * </li>
+         * <li><p>You must specify one of peak traffic and traffic specification. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</p>
+         * </li>
+         * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -309,12 +324,18 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
+         * <p>The traffic specification (recommended).</p>
          * <ul>
-         * <li>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</li>
-         * <li>You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.</li>
-         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+         * <li><p>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</p>
+         * </li>
+         * <li><p>You must specify one of peak traffic and traffic specification. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</p>
+         * </li>
+         * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+         * </li>
          * </ul>
+         * <blockquote>
+         * <p>If you upgrade a Confluent instance, you do not need to specify this parameter. This parameter is required for subscription instances.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>alikafka.hw.2xlarge</p>
@@ -326,7 +347,16 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * PaidType.
+         * <p>The billing type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: subscription.</p>
+         * </li>
+         * <li><p><strong>4</strong>: Confluent series subscription.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder paidType(Integer paidType) {
             this.putQueryParameter("PaidType", paidType);
@@ -335,12 +365,18 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The number of partitions. We recommend that you configure this parameter.</p>
+         * <p>The number of partitions (recommended).</p>
          * <ul>
-         * <li>You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</li>
-         * <li>If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</li>
-         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+         * <li><p>You must specify one of the number of partitions and the topic specification. Specify only the number of partitions.</p>
+         * </li>
+         * <li><p>If you specify both the number of partitions and the topic specification, the system validates whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</p>
+         * </li>
+         * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+         * </li>
          * </ul>
+         * <blockquote>
+         * <p>If you upgrade a Confluent instance, you do not need to specify this parameter. This parameter is required for subscription instances.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -365,13 +401,24 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The edition of the instance. Valid values:</p>
+         * <p>The specification type.</p>
+         * <p>Valid values for ApsaraMQ for Kafka instances:</p>
          * <ul>
-         * <li><strong>normal</strong>: Standard Edition (High Write)</li>
-         * <li><strong>professional</strong>: Professional Edition (High Write)</li>
-         * <li><strong>professionalForHighRead</strong>: Professional Edition (High Read)</li>
+         * <li><p><strong>normal</strong>: Standard Edition (shared throughput)</p>
+         * </li>
+         * <li><p><strong>professional</strong>: Professional Edition (shared throughput)</p>
+         * </li>
+         * <li><p><strong>professionalForHighRead</strong>: Professional Edition (shared read)</p>
+         * </li>
          * </ul>
-         * <p>You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+         * <p>Valid values for Confluent instances:</p>
+         * <ul>
+         * <li><p><strong>professional</strong>: Professional Edition.</p>
+         * </li>
+         * <li><p><strong>enterprise</strong>: Enterprise Edition.</p>
+         * </li>
+         * </ul>
+         * <p>Downgrading an instance from Professional Edition to Standard Edition is not supported. For more information about the specification types, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>professional</p>
@@ -383,12 +430,16 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The number of topics. We recommend that you do not configure this parameter.</p>
+         * <p>The number of topics (not recommended).</p>
          * <ul>
-         * <li>You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</li>
-         * <li>If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</li>
-         * <li>The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.</li>
-         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+         * <li><p>You must specify one of the number of partitions and the topic specification. Specify only the number of partitions.</p>
+         * </li>
+         * <li><p>If you specify both the number of partitions and the topic specification, the system validates whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</p>
+         * </li>
+         * <li><p>The default value varies based on the traffic specification. Additional fees are charged if the value exceeds the default value.</p>
+         * </li>
+         * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -876,7 +927,10 @@ public class UpgradePrePayOrderRequest extends Request {
             } 
 
             /**
-             * ConnectCU.
+             * <p>The number of CPU cores for the Connect component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder connectCU(Integer connectCU) {
                 this.connectCU = connectCU;
@@ -884,7 +938,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * ConnectReplica.
+             * <p>The number of replicas for the Connect component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder connectReplica(Integer connectReplica) {
                 this.connectReplica = connectReplica;
@@ -892,7 +949,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * ControlCenterCU.
+             * <p>The number of CPU cores for the ControlCenter component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder controlCenterCU(Integer controlCenterCU) {
                 this.controlCenterCU = controlCenterCU;
@@ -900,7 +960,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * ControlCenterReplica.
+             * <p>The number of replicas for the ControlCenter component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder controlCenterReplica(Integer controlCenterReplica) {
                 this.controlCenterReplica = controlCenterReplica;
@@ -908,7 +971,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * ControlCenterStorage.
+             * <p>The disk capacity of the ControlCenter component. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder controlCenterStorage(Integer controlCenterStorage) {
                 this.controlCenterStorage = controlCenterStorage;
@@ -916,7 +982,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * KafkaCU.
+             * <p>The number of CPU cores for the Kafka Broker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder kafkaCU(Integer kafkaCU) {
                 this.kafkaCU = kafkaCU;
@@ -924,7 +993,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * KafkaReplica.
+             * <p>The number of replicas for the Kafka Broker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder kafkaReplica(Integer kafkaReplica) {
                 this.kafkaReplica = kafkaReplica;
@@ -932,7 +1004,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * KafkaRestProxyCU.
+             * <p>The number of CPU cores for the KafkaRestProxy component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder kafkaRestProxyCU(Integer kafkaRestProxyCU) {
                 this.kafkaRestProxyCU = kafkaRestProxyCU;
@@ -940,7 +1015,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * KafkaRestProxyReplica.
+             * <p>The number of replicas for the KafkaRestProxy component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder kafkaRestProxyReplica(Integer kafkaRestProxyReplica) {
                 this.kafkaRestProxyReplica = kafkaRestProxyReplica;
@@ -948,7 +1026,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * KafkaStorage.
+             * <p>The disk capacity of the Kafka Broker. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder kafkaStorage(Integer kafkaStorage) {
                 this.kafkaStorage = kafkaStorage;
@@ -980,7 +1061,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * KsqlCU.
+             * <p>The number of CPU cores for the KsqlDB component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder ksqlCU(Integer ksqlCU) {
                 this.ksqlCU = ksqlCU;
@@ -996,7 +1080,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * KsqlReplica.
+             * <p>The number of replicas for the KsqlDB component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder ksqlReplica(Integer ksqlReplica) {
                 this.ksqlReplica = ksqlReplica;
@@ -1004,7 +1091,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * KsqlStorage.
+             * <p>The disk capacity of the KsqlDB component. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ksqlStorage(Integer ksqlStorage) {
                 this.ksqlStorage = ksqlStorage;
@@ -1012,7 +1102,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * SchemaRegistryCU.
+             * <p>The number of CPU cores for the SchemaRegistry component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder schemaRegistryCU(Integer schemaRegistryCU) {
                 this.schemaRegistryCU = schemaRegistryCU;
@@ -1020,7 +1113,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * SchemaRegistryReplica.
+             * <p>The number of replicas for the SchemaRegistry component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder schemaRegistryReplica(Integer schemaRegistryReplica) {
                 this.schemaRegistryReplica = schemaRegistryReplica;
@@ -1028,7 +1124,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * ZooKeeperCU.
+             * <p>The number of CPU cores for the ZooKeeper component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder zooKeeperCU(Integer zooKeeperCU) {
                 this.zooKeeperCU = zooKeeperCU;
@@ -1036,7 +1135,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * ZooKeeperReplica.
+             * <p>The number of replicas for the ZooKeeper component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder zooKeeperReplica(Integer zooKeeperReplica) {
                 this.zooKeeperReplica = zooKeeperReplica;
@@ -1044,7 +1146,10 @@ public class UpgradePrePayOrderRequest extends Request {
             }
 
             /**
-             * ZooKeeperStorage.
+             * <p>The disk capacity of the ZooKeeper component. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder zooKeeperStorage(Integer zooKeeperStorage) {
                 this.zooKeeperStorage = zooKeeperStorage;

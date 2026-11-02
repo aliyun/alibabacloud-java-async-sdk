@@ -105,11 +105,14 @@ public class ModifyPartitionNumRequest extends Request {
         } 
 
         /**
-         * <p>The number of partitions that you want to add to the topic.</p>
+         * <p>The number of partitions to add.</p>
          * <ul>
-         * <li>The value must be an integer that is greater than 0.</li>
-         * <li>To reduce the risk of data skew, we recommend that you set the value to a multiple of 6.</li>
-         * <li>The number of total partitions ranges from 1 to 360.</li>
+         * <li><p>The value must be greater than 0.</p>
+         * </li>
+         * <li><p>Set the value to a multiple of 6 to reduce the risk of data skew.</p>
+         * </li>
+         * <li><p>The total number of partitions must be between 1 and 360.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

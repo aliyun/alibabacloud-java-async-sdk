@@ -93,7 +93,7 @@ public class EnableAutoTopicCreationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned status code. If the request is successful, 200 is returned.</p>
+         * <p>The response code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class EnableAutoTopicCreationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -126,7 +126,7 @@ public class EnableAutoTopicCreationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

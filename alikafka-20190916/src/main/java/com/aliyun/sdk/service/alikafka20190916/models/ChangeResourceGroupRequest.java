@@ -90,9 +90,9 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource group to which you want to transfer the cloud resource.</p>
+         * <p>The ID of the destination resource group for the instance.</p>
          * <blockquote>
-         * <p> You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></p>
+         * <p>A resource group is a mechanism for grouping and managing resources within an Alibaba Cloud account. Resource groups help you resolve complexities such as resource grouping and authorization management within a single cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -119,8 +119,8 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource to which you want to attach a tag. Only the ID of a Message Queue for Apache Kafka instance is supported.</p>
-         * <p>For example, if the ID of the instance is alikafka_post-cn-v0h1fgs2xxxx, the resource ID is alikafka_post-cn-v0h1fgs2xxxx.</p>
+         * <p>The ID of the resource. Currently, only instance-level resources are supported.</p>
+         * <p>For example, if the instance ID is alikafka_post-cn-v0h1fgs2xxxx, the resource ID is alikafka_post-cn-v0h1fgs2xxxx.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

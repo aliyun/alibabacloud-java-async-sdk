@@ -117,15 +117,13 @@ public class GetConsumerProgressRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to hide LastTimestamp. Default value: false. We recommend that you set this parameter to true.</p>
+         * <p>Specifies whether to hide LastTimestamp. Default value: false. Set this parameter to true.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If you set this parameter to true, -1 is returned for LastTimestamp. If you set this parameter to false, a specific value is returned for LastTimestamp. This parameter is supported only by topics that use cloud storage on reserved instances.</p>
-         * </li>
-         * <li><p>A large amount of data is processed by this operation, which causes performance loss. We recommend that you set this parameter to true to accelerate processing.</p>
-         * </li>
+         * <li>If you set this parameter to true, LastTimestamp in the response is returned as -1. Otherwise, the actual value is returned. This is supported only for topics of the cloud storage type in reserved instances.</li>
+         * <li>This operation processes a large amount of data and is resource-intensive. Set this parameter to true to reduce processing time.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -137,7 +135,7 @@ public class GetConsumerProgressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

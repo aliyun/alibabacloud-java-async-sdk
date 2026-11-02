@@ -106,7 +106,10 @@ public class GetRiskListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06084011-E093-46F3-A51F-4B19A8AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -386,7 +398,10 @@ public class GetRiskListResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1702545932000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -394,7 +409,15 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * GradeType.
+             * <p>The metric rating. Valid values:</p>
+             * <ul>
+             * <li>A: Healthy.</li>
+             * <li>B: Sub-healthy.</li>
+             * <li>F: Poor.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder gradeType(String gradeType) {
                 this.gradeType = gradeType;
@@ -402,7 +425,14 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * Health.
+             * <p>Indicates whether the instance is healthy. Valid values:</p>
+             * <ul>
+             * <li>true: Healthy.</li>
+             * <li>false: Unhealthy.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder health(Boolean health) {
                 this.health = health;
@@ -410,7 +440,10 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alikafka_pre-cn-m7r1tzxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -418,7 +451,10 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * LastAlarmTime.
+             * <p>The timestamp of the last alert. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683270264</p>
              */
             public Builder lastAlarmTime(Long lastAlarmTime) {
                 this.lastAlarmTime = lastAlarmTime;
@@ -426,7 +462,15 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * LevelType.
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li>0: Critical.</li>
+             * <li>1: Important.</li>
+             * <li>2: Normal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder levelType(Long levelType) {
                 this.levelType = levelType;
@@ -434,7 +478,10 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637719920000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -442,7 +489,16 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the risk item.</p>
+             * <blockquote>
+             * <p>There are 24 types of names.</p>
+             * <ul>
+             * <li>Detailed descriptions are provided in the following sections.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>inputIo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -450,7 +506,10 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The ID of the user who owns the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0123123123xxx</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -458,7 +517,7 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * RelationList.
+             * <p>The infinitely nested structure. The system determines whether to nest another layer of report data based on the outer-layer fields.</p>
              */
             public Builder relationList(java.util.List<String> relationList) {
                 this.relationList = relationList;
@@ -466,7 +525,10 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * ReportTips.
+             * <p>The remediation suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The topics in the related issues have fragmented sending problems. Refer to References for optimization</p>
              */
             public Builder reportTips(String reportTips) {
                 this.reportTips = reportTips;
@@ -474,7 +536,17 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * ReportType.
+             * <p>The report type of the risk item. Valid values:</p>
+             * <ul>
+             * <li>topic: a specific topic that requires optimization.</li>
+             * <li>group: a specific group that requires optimization.</li>
+             * <li>doc: optimization is required based on the documentation.</li>
+             * <li>commonBuy: the returned risk item requires operations such as specification upgrade.</li>
+             * <li>mdsKey: follow the suggestions in ReportTips to fix the issue.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>doc</p>
              */
             public Builder reportType(String reportType) {
                 this.reportType = reportType;
@@ -482,7 +554,19 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * ReportValue.
+             * <p>The value of the report.</p>
+             * <blockquote>
+             * <ul>
+             * <li>If ReportType is set to doc, ReportValue returns a document address. You can construct the link by replacing the returned ReportValue in the following URL: &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/$%7BreportValue%7D.html">https://help.aliyun.com/document_detail/${reportValue}.html</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/document_detail/$%7BreportValue%7D.html">https://www.alibabacloud.com/help/document_detail/${reportValue}.html</a></li>
+             * <li>If ReportType is set to commonBuy, operations such as specification upgrade are required.</li>
+             * <li>If ReportType is set to topic, check the value of reportValue. The reportValue is the topic that has issues and requires fixing.</li>
+             * <li>If ReportType is set to group, check the value of reportValue. The reportValue is the group that has issues and requires fixing.</li>
+             * <li>If ReportType is set to mdsKey, follow the suggestions in ReportTips to fix the issue.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder reportValue(String reportValue) {
                 this.reportValue = reportValue;
@@ -490,7 +574,15 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the risk item, which indicates whether the risk item has been fixed. Valid values:</p>
+             * <ul>
+             * <li>0: Pending fix.</li>
+             * <li>-1: Ignored.</li>
+             * <li>1: Fixed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -498,7 +590,16 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the risk item.</p>
+             * <blockquote>
+             * <p>There are 24 types of risk items.</p>
+             * <ul>
+             * <li>Detailed descriptions are provided in the following sections.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>inputIo</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -506,7 +607,18 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value calculated by the system.</p>
+             * <blockquote>
+             * <p>If ReportType is set to doc, check both the relationList field and the value field. The value field returns a number that indicates how many topics or groups in the relationList field require optimization.</p>
+             * <ul>
+             * <li>If ReportType is set to commonBuy, compare the Value. The Value returns a percentage.</li>
+             * <li>If ReportType is set to topic, check the Value. The value is the topic that has issues and requires fixing.</li>
+             * <li>If ReportType is set to group, check the Value. The value is the group that has issues and requires fixing.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>44</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -573,7 +685,7 @@ public class GetRiskListResponseBody extends TeaModel {
             } 
 
             /**
-             * RiskList.
+             * <p>The list of instance risk items.</p>
              */
             public Builder riskList(java.util.List<RiskList> riskList) {
                 this.riskList = riskList;
@@ -581,7 +693,10 @@ public class GetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder total(Long total) {
                 this.total = total;

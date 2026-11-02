@@ -145,7 +145,7 @@ public class GetTopicListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * <p>The response code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -156,7 +156,7 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -178,7 +178,7 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -189,7 +189,7 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C0D3DC5B-5C37-47AD-9F22-1F559880****</p>
@@ -200,7 +200,7 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -211,7 +211,7 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The topics.</p>
+         * TopicList.
          */
         public Builder topicList(TopicList topicList) {
             this.topicList = topicList;
@@ -219,7 +219,7 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of topics.</p>
+         * <p>The total number of topics.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -288,10 +288,7 @@ public class GetTopicListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -299,10 +296,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -566,10 +560,7 @@ public class GetTopicListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the topic was automatically created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * AutoCreate.
              */
             public Builder autoCreate(Boolean autoCreate) {
                 this.autoCreate = autoCreate;
@@ -577,14 +568,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log cleanup policy for the topic. This parameter is returned only if <strong>LocalTopic</strong> is set to <strong>true</strong>. Valid values:</p>
-             * <ul>
-             * <li>false: the default log cleanup policy.</li>
-             * <li>true: the Apache Kafka log compaction policy.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * CompactTopic.
              */
             public Builder compactTopic(Boolean compactTopic) {
                 this.compactTopic = compactTopic;
@@ -592,10 +576,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that indicates when the topic was created. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1576563109000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -603,10 +584,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alikafka_pre-cn-0pp1954n****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -614,14 +592,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type that is used for the topic. Valid values:</p>
-             * <ul>
-             * <li>false: cloud storage</li>
-             * <li>true: local storage</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * LocalTopic.
              */
             public Builder localTopic(Boolean localTopic) {
                 this.localTopic = localTopic;
@@ -629,10 +600,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of partitions in the topic.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6</p>
+             * PartitionNum.
              */
             public Builder partitionNum(Integer partitionNum) {
                 this.partitionNum = partitionNum;
@@ -640,10 +608,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the instance resides.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -651,14 +616,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic description. Valid values:</p>
-             * <ul>
-             * <li>The description can contain only letters, digits, hyphens (-), and underscores (_).</li>
-             * <li>The description must be 3 to 64 characters in length.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -666,12 +624,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic status. Valid value:</p>
-             * <p><strong>0</strong>: running.</p>
-             * <p>If the topic is deleted, this parameter is not returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -679,12 +632,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic status. Valid value:</p>
-             * <p><strong>Running</strong>.</p>
-             * <p>If the topic is deleted, this parameter is not returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * StatusName.
              */
             public Builder statusName(String statusName) {
                 this.statusName = statusName;
@@ -692,7 +640,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -700,14 +648,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic name. Valid values:</p>
-             * <ul>
-             * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
-             * <li>The name must be 3 to 64 characters in length. If the name contains more than 64 characters, the system automatically truncates the name.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>topic_name</p>
+             * Topic.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -715,10 +656,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic configuration.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;replication-factor&quot;:3}</p>
+             * TopicConfig.
              */
             public Builder topicConfig(String topicConfig) {
                 this.topicConfig = topicConfig;

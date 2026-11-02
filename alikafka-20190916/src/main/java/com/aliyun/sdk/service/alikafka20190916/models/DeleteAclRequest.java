@@ -192,14 +192,20 @@ public class DeleteAclRequest extends Request {
         } 
 
         /**
-         * <p>The type of the operation allowed by the access control list (ACL). Valid values:</p>
+         * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li><strong>Write</strong>: data writes.</li>
-         * <li><strong>Read</strong>: data reads.</li>
-         * <li><strong>Describe</strong>: reads of transaction IDs.</li>
-         * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
-         * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
-         * <li><strong>DESCRIBE_CONFIGS</strong>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
+         * <li><p><strong>Write</strong>: Write.</p>
+         * </li>
+         * <li><p><strong>Read</strong>: Read.</p>
+         * </li>
+         * <li><p><strong>Describe</strong>: Read a transaction ID.</p>
+         * </li>
+         * <li><p><strong>IdempotentWrite</strong>: Idempotent write to a cluster.</p>
+         * </li>
+         * <li><p><strong>IDEMPOTENT_WRITE</strong>: Idempotent write to a cluster. Available only for serverless instances.</p>
+         * </li>
+         * <li><p><strong>DESCRIBE_CONFIGS</strong>: Query configurations. Available only for serverless instances.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -213,18 +219,23 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * <p>The types of operations allowed by the ACL. Separate multiple operations with commas (,).</p>
-         * <p>Valid values:</p>
+         * <p>The operation types for batch authorization. Separate multiple operations with commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>Write</strong>: data writes.</li>
-         * <li><strong>Read</strong>: data reads.</li>
-         * <li><strong>Describe</strong>: reads of transaction IDs.</li>
-         * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
-         * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
-         * <li><strong>DESCRIBE_CONFIGS</strong>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
+         * <li><p><strong>Write</strong>: Write.</p>
+         * </li>
+         * <li><p><strong>Read</strong>: Read.</p>
+         * </li>
+         * <li><p><strong>Describe</strong>: Read a transaction ID.</p>
+         * </li>
+         * <li><p><strong>IdempotentWrite</strong>: Idempotent write to a cluster.</p>
+         * </li>
+         * <li><p><strong>IDEMPOTENT_WRITE</strong>: Idempotent write to a cluster. Available only for serverless instances.</p>
+         * </li>
+         * <li><p><strong>DESCRIBE_CONFIGS</strong>: Query configurations. Available only for serverless instances.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+         * <p>This parameter is supported only for serverless instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -239,11 +250,11 @@ public class DeleteAclRequest extends Request {
         /**
          * <p>The authorization method. Valid values:</p>
          * <ul>
-         * <li>Deny</li>
-         * <li>ALLOW</li>
+         * <li>DENY: Deny.</li>
+         * <li>ALLOW: Allow.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+         * <p>This parameter is supported only for serverless instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -256,11 +267,7 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource.</p>
-         * <ul>
-         * <li>The value can be the name of a topic or consumer group.</li>
-         * <li>You can use an asterisk (*) to indicate the names of all topics or consumer groups.</li>
-         * </ul>
+         * <p>The resource name. You can specify the name of a topic or a consumer group. An asterisk (*) indicates all topics or consumer groups.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,10 +280,12 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * <p>The mode that is used to match resources. Valid values:</p>
+         * <p>The matching mode. Valid values:</p>
          * <ul>
-         * <li><strong>LITERAL:</strong> full match</li>
-         * <li><strong>PREFIXED</strong>: prefix match</li>
+         * <li><p><strong>LITERAL</strong>: Exact match.</p>
+         * </li>
+         * <li><p><strong>PREFIXED</strong>: Prefix match.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -292,10 +301,14 @@ public class DeleteAclRequest extends Request {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li><strong>Topic</strong>: topic</li>
-         * <li><strong>Group</strong>: consumer group</li>
-         * <li><strong>Cluster</strong>: cluster</li>
-         * <li><strong>TransactionalId</strong>: transactional ID</li>
+         * <li><p><strong>Topic</strong>: Message topic.</p>
+         * </li>
+         * <li><p><strong>Group</strong>: Consumer group.</p>
+         * </li>
+         * <li><p><strong>Cluster</strong>: Instance.</p>
+         * </li>
+         * <li><p><strong>TransactionalId</strong>: Transaction ID.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -309,15 +322,13 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the source.</p>
+         * <p>The source IP address.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>You can specify only a specific IP address or use the asterisk (*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</p>
-         * </li>
-         * <li><p>This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
-         * </li>
+         * <li>Only specific IP addresses or an asterisk (*) to allow all IP addresses are supported. CIDR blocks are not supported.</li>
+         * <li>This parameter is supported only for serverless instances.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -331,7 +342,7 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -344,7 +355,7 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,7 +368,7 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

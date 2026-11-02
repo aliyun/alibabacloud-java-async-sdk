@@ -106,7 +106,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * <p>The status code. A 200 status code indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The access control lists (ACLs).</p>
+         * KafkaAclList.
          */
         public Builder kafkaAclList(KafkaAclList kafkaAclList) {
             this.kafkaAclList = kafkaAclList;
@@ -136,7 +136,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>46496E38-881E-4719-A2F3-F3DA6AE****</p>
@@ -147,7 +147,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -281,22 +281,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The types of operations allowed by the ACL. Separate multiple operation types with commas (,).</p>
-             * <ul>
-             * <li>Valid values:</li>
-             * <li>Write</li>
-             * <li>Read</li>
-             * <li>Describe: reads of transactional IDs.</li>
-             * <li>IdempotentWrite: idempotent data writes to clusters.</li>
-             * <li>IDEMPOTENT_WRITE: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
-             * <li>DESCRIBE_CONFIGS: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.<blockquote>
-             * <p>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
-             * </blockquote>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Write</p>
+             * AclOperationType.
              */
             public Builder aclOperationType(String aclOperationType) {
                 this.aclOperationType = aclOperationType;
@@ -304,17 +289,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization method. Valid values:</p>
-             * <ul>
-             * <li>DENY</li>
-             * <li>ALLOW<blockquote>
-             * <p>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
-             * </blockquote>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>DENY</p>
+             * AclPermissionType.
              */
             public Builder aclPermissionType(String aclPermissionType) {
                 this.aclPermissionType = aclPermissionType;
@@ -322,14 +297,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource name.</p>
-             * <ul>
-             * <li>The value can be the name of a topic or consumer group.</li>
-             * <li>You can use the asterisk (*) wildcard character to specify the names of all topics or consumer groups.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>demo</p>
+             * AclResourceName.
              */
             public Builder aclResourceName(String aclResourceName) {
                 this.aclResourceName = aclResourceName;
@@ -337,14 +305,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matching mode. Valid values:</p>
-             * <ul>
-             * <li><strong>LITERAL:</strong> full-name match</li>
-             * <li><strong>PREFIXED</strong>: prefix match</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>LITERAL</p>
+             * AclResourcePatternType.
              */
             public Builder aclResourcePatternType(String aclResourcePatternType) {
                 this.aclResourcePatternType = aclResourcePatternType;
@@ -352,14 +313,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. Valid values:</p>
-             * <ul>
-             * <li><strong>Topic</strong></li>
-             * <li><strong>Group</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Topic</p>
+             * AclResourceType.
              */
             public Builder aclResourceType(String aclResourceType) {
                 this.aclResourceType = aclResourceType;
@@ -367,10 +321,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The host.</p>
-             * 
-             * <strong>example:</strong>
-             * <hr>
+             * Host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -378,10 +329,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test12***</p>
+             * Username.
              */
             public Builder username(String username) {
                 this.username = username;

@@ -93,8 +93,7 @@ public class ModifyScheduledScalingRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
-         * <p>The value <strong>200</strong> indicates that the request was successful.</p>
+         * <p>The return code. A value of <strong>200</strong> indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -105,7 +104,7 @@ public class ModifyScheduledScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -116,7 +115,7 @@ public class ModifyScheduledScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>DB6F1BEA-903B-4FD8-8809-46E7E9CE***</p>
@@ -127,7 +126,7 @@ public class ModifyScheduledScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

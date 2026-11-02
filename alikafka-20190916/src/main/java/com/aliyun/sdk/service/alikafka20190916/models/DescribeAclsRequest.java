@@ -176,17 +176,19 @@ public class DescribeAclsRequest extends Request {
         } 
 
         /**
-         * <p>The types of operations allowed by the ACL. Separate multiple operation types with commas (,).</p>
+         * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li>Valid values:</li>
-         * <li>Write</li>
-         * <li>Read</li>
-         * <li>Describe: reads of transactional IDs.</li>
-         * <li>IdempotentWrite: idempotent data writes to clusters.</li>
-         * <li>IDEMPOTENT_WRITE: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
-         * <li>DESCRIBE_CONFIGS: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.<blockquote>
-         * <p>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
-         * </blockquote>
+         * <li><p><strong>Write</strong>: Writes.</p>
+         * </li>
+         * <li><p><strong>Read</strong>: Reads.</p>
+         * </li>
+         * <li><p><strong>Describe</strong>: Reads a TransactionalId.</p>
+         * </li>
+         * <li><p><strong>IdempotentWrite</strong>: Idempotently writes to a cluster. This parameter is not supported for Serverless instances. For Serverless instances, use IDEMPOTENT_WRITE.</p>
+         * </li>
+         * <li><p><strong>IDEMPOTENT_WRITE</strong>: Idempotently writes to a cluster. This parameter is available only for Serverless instances.</p>
+         * </li>
+         * <li><p><strong>DESCRIBE_CONFIGS</strong>: Queries configurations. This parameter is available only for Serverless instances.</p>
          * </li>
          * </ul>
          * 
@@ -200,14 +202,14 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * <p>The authorization method. Valid values:</p>
+         * <p>The permission type. Valid values:</p>
          * <ul>
-         * <li>DENY</li>
-         * <li>ALLOW<blockquote>
-         * <p>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
-         * </blockquote>
-         * </li>
+         * <li>DENY: Denies access.</li>
+         * <li>ALLOW: Allows access.</li>
          * </ul>
+         * <blockquote>
+         * <p>This parameter is supported only for Serverless instances.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>DENY</p>
@@ -221,11 +223,15 @@ public class DescribeAclsRequest extends Request {
         /**
          * <p>The resource name.</p>
          * <ul>
-         * <li>The value can be the name of a topic or consumer group.</li>
-         * <li>You can use an asterisk (*) to specify the names of all topics or consumer groups.</li>
+         * <li><p>The name of a topic or group.</p>
+         * </li>
+         * <li><p>You can use an asterisk (*) to represent the names of all topics or groups.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>You can query the resources on which permissions are granted only after you grant the user the required permissions on all resources.</p>
+         * <ul>
+         * <li>You can use an asterisk (*) to query authorized resources only after permissions are granted to all resources.</li>
+         * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -241,8 +247,10 @@ public class DescribeAclsRequest extends Request {
         /**
          * <p>The match mode. Valid values:</p>
          * <ul>
-         * <li>LITERAL: full-name match</li>
-         * <li>PREFIXED: prefix match</li>
+         * <li><p>LITERAL: exact match</p>
+         * </li>
+         * <li><p>PREFIXED: prefix match</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,8 +265,14 @@ public class DescribeAclsRequest extends Request {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li><strong>Topic</strong></li>
-         * <li><strong>Group</strong></li>
+         * <li><p><strong>Topic</strong></p>
+         * </li>
+         * <li><p><strong>Group</strong></p>
+         * </li>
+         * <li><p><strong>Cluster</strong></p>
+         * </li>
+         * <li><p><strong>TransactionalId</strong></p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -275,8 +289,8 @@ public class DescribeAclsRequest extends Request {
          * <p>The source IP address.</p>
          * <blockquote>
          * <ul>
-         * <li>You can specify only a specific IP address or use the asterisk (*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</li>
-         * <li>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</li>
+         * <li>Only specific IP addresses or * (all IP addresses allowed) are supported. CIDR blocks are not supported.</li>
+         * <li>This parameter is supported only for Serverless instances.</li>
          * </ul>
          * </blockquote>
          * 
@@ -292,7 +306,7 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +319,7 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,10 +334,12 @@ public class DescribeAclsRequest extends Request {
         /**
          * <p>The username.</p>
          * <ul>
-         * <li>You can use an asterisk (*) to specify all users.</li>
+         * <li>You can use an asterisk (*) to represent all users.</li>
          * </ul>
          * <blockquote>
-         * <p>You can use an asterisk (*) to query the authorized users only after you grant the required permissions to all users.</p>
+         * <ul>
+         * <li>You can use an asterisk (*) to query authorized users only after permissions are granted to all users.</li>
+         * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
