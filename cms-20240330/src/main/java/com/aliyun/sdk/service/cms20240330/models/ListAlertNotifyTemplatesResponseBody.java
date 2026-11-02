@@ -106,7 +106,7 @@ public class ListAlertNotifyTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * alertNotifyTemplates.
+         * <p>The list of notification templates.</p>
          */
         public Builder alertNotifyTemplates(java.util.List<AlertNotifyTemplates> alertNotifyTemplates) {
             this.alertNotifyTemplates = alertNotifyTemplates;
@@ -114,7 +114,10 @@ public class ListAlertNotifyTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListAlertNotifyTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListAlertNotifyTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD8BA7D6-995D-578D-9941-**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListAlertNotifyTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -243,7 +255,10 @@ public class ListAlertNotifyTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * alertNotifyTemplateId.
+             * <p>The notification template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template-abc123</p>
              */
             public Builder alertNotifyTemplateId(String alertNotifyTemplateId) {
                 this.alertNotifyTemplateId = alertNotifyTemplateId;
@@ -251,7 +266,10 @@ public class ListAlertNotifyTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * alertNotifyTemplateName.
+             * <p>The notification template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High availability alert template</p>
              */
             public Builder alertNotifyTemplateName(String alertNotifyTemplateName) {
                 this.alertNotifyTemplateName = alertNotifyTemplateName;
@@ -259,7 +277,10 @@ public class ListAlertNotifyTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * programLang.
+             * <p>The template syntax type. The current template syntax is fixed to GO and uses Go template syntax.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GO</p>
              */
             public Builder programLang(String programLang) {
                 this.programLang = programLang;
@@ -267,7 +288,10 @@ public class ListAlertNotifyTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * templates.
+             * <p>The multilingual notification templates. The key is the language code: zh (Chinese) or en (English). The value is the template configuration object for the language. When a notification is sent, the corresponding template is selected based on the recipient\&quot;s language. The body format varies by type: Markdown for DING, WEIXIN, and FEISHU; HTML for EMAIL; plain text for SMS, CALL, and SLACK; and JSON for CUSTOM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;zh&quot;:{&quot;title&quot;:&quot;云监控报警: {{.incident.title}}&quot;,&quot;content&quot;:&quot;<strong>报警标题:</strong> {{.incident.title}}\n<strong>级别:</strong> {{.incident.severity}}\n<strong>事件数:</strong> {{len .events}}&quot;,&quot;incidentLifeCycleNotifyTemplates&quot;:{&quot;IncidentCreationNotify&quot;:{&quot;title&quot;:&quot;云监控报警: {{.incident.title}}&quot;,&quot;content&quot;:&quot;<strong>报警标题:</strong> {{.incident.title}}\n<strong>级别:</strong> {{.incident.severity}}&quot;,&quot;enable&quot;:true},&quot;IncidentResolutionNotify&quot;:{&quot;title&quot;:&quot;云监控报警已解决: {{.incident.title}}&quot;,&quot;content&quot;:&quot;<strong>报警标题:</strong> {{.incident.title}}\n<strong>级别:</strong> {{.incident.severity}}&quot;,&quot;enable&quot;:true}}},&quot;en&quot;:{&quot;title&quot;:&quot;CloudMonitor Alert: {{.incident.title}}&quot;,&quot;content&quot;:&quot;<strong>Alert Title:</strong> {{.incident.title}}\n<strong>Severity:</strong> {{.incident.severity}}\n<strong>Events:</strong> {{len .events}}&quot;,&quot;incidentLifeCycleNotifyTemplates&quot;:{&quot;IncidentCreationNotify&quot;:{&quot;title&quot;:&quot;CloudMonitor Alert: {{.incident.title}}&quot;,&quot;content&quot;:&quot;<strong>Alert Title:</strong> {{.incident.title}}\n<strong>Severity:</strong> {{.incident.severity}}&quot;,&quot;enable&quot;:true},&quot;IncidentResolutionNotify&quot;:{&quot;title&quot;:&quot;CloudMonitor Alert Resolved: {{.incident.title}}&quot;,&quot;content&quot;:&quot;<strong>Alert Title:</strong> {{.incident.title}}\n<strong>Severity:</strong> {{.incident.severity}}&quot;,&quot;enable&quot;:true}}}}</p>
              */
             public Builder templates(java.util.Map<String, java.util.Map<String, ?>> templates) {
                 this.templates = templates;
@@ -275,7 +299,22 @@ public class ListAlertNotifyTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The notification channel type. Valid values:</p>
+             * <ul>
+             * <li>DING</li>
+             * <li>WEIXIN</li>
+             * <li>FEISHU</li>
+             * <li>SLACK</li>
+             * <li>CUSTOM</li>
+             * <li>TEAMS</li>
+             * <li>SMS</li>
+             * <li>EMAIL</li>
+             * <li>CALL</li>
+             * <li>PAGER_DUTY</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DING</p>
              */
             public Builder type(String type) {
                 this.type = type;

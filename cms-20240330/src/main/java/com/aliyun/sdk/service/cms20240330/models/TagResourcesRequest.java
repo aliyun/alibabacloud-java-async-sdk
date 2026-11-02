@@ -135,8 +135,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The labels.</p>
-         * <p>You can attach up to 20 labels.</p>
+         * <p>The tags.</p>
+         * <p>You can attach up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("tag", tag);

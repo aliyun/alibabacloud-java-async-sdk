@@ -199,7 +199,7 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The application\&quot;s agent ID.</p>
+         * <p>The agent ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>952730652285943809</p>
@@ -211,7 +211,7 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The Application ID.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>150130323</p>
@@ -223,7 +223,7 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The filter criteria.</p>
+         * <p>The filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;<strong>strategy_type</strong>&quot;:&quot;Fact&quot;}</p>
@@ -259,7 +259,7 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The Run ID.</p>
+         * <p>The run ID.</p>
          * 
          * <strong>example:</strong>
          * <p>jr-80ded1d6953c64ea</p>
@@ -271,7 +271,7 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The User ID.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test_user_001</p>

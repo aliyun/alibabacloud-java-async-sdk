@@ -67,7 +67,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The delivery task details.</p>
+         * <p>The details of the delivery task.</p>
          */
         public Builder deliveryTask(DeliveryTask deliveryTask) {
             this.deliveryTask = deliveryTask;
@@ -131,7 +131,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The EventBridge task list.</p>
+             * <p>The list of EventBridge tasks.</p>
              */
             public Builder taskNameList(java.util.List<String> taskNameList) {
                 this.taskNameList = taskNameList;
@@ -198,7 +198,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The detailed configuration of the delivery target. The meanings of key/value pairs vary depending on the sinkType. For more information, see CreateDeliveryTask.</p>
+             * <p>The detailed configuration of the delivery destination. The meanings of the key and value vary based on the sinkType. For more information, see the CreateDeliveryTask documentation.</p>
              */
             public Builder sinkConfigs(java.util.Map<String, String> sinkConfigs) {
                 this.sinkConfigs = sinkConfigs;
@@ -206,7 +206,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery target type.</p>
+             * <p>The type of the delivery destination.</p>
              * 
              * <strong>example:</strong>
              * <p>Prometheus</p>
@@ -276,7 +276,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the resource group.</p>
+             * <p>The key of the resource group tag.</p>
              * 
              * <strong>example:</strong>
              * <p>sourcetype</p>
@@ -287,7 +287,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the resource group.</p>
+             * <p>The value of the resource group tag.</p>
              * 
              * <strong>example:</strong>
              * <p>production</p>
@@ -513,7 +513,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time is displayed in ISO 8601 format (YYYY-MM-DDThh:mm:ssZ) in UTC.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -525,7 +525,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source ID (Managed Service for Prometheus instance ID).</p>
+             * <p>The ID of the data source, which is the Prometheus instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rw-xxxxxx</p>
@@ -536,7 +536,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The additional labels attached to all delivered metrics. The key is the label name, and the value is the label value.</p>
+             * <p>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</p>
              */
             public Builder externalLabels(java.util.Map<String, String> externalLabels) {
                 this.externalLabels = externalLabels;
@@ -552,7 +552,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric filter conditions. Used together with labelFiltersType. The key is the metric label name, and the value is the match value.</p>
+             * <p>The metric filtering conditions, used in conjunction with labelFiltersType. The key is the metric label name and the value is the matching value.</p>
              */
             public Builder labelFilters(java.util.Map<String, String> labelFilters) {
                 this.labelFilters = labelFilters;
@@ -582,7 +582,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of delivery targets.</p>
+             * <p>The list of delivery destinations.</p>
              */
             public Builder sinkList(java.util.List<SinkList> sinkList) {
                 this.sinkList = sinkList;
@@ -609,7 +609,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task description.</p>
+             * <p>The description of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>my delivery task</p>
@@ -620,7 +620,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery task ID.</p>
+             * <p>The ID of the delivery task.</p>
              * 
              * <strong>example:</strong>
              * <p>8b07eeac8249866d</p>
@@ -631,7 +631,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task name.</p>
+             * <p>The name of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>test-task</p>
@@ -642,7 +642,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The update time. The time is displayed in ISO 8601 format (YYYY-MM-DDThh:mm:ssZ) in UTC.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

@@ -229,7 +229,7 @@ public class TransformAction extends TeaModel {
         }
 
         /**
-         * <p>The value to set.</p>
+         * <p>The configured value.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

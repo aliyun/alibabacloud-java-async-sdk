@@ -46,6 +46,10 @@ public class UpdateContactRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("phone")
     private String phone;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phoneCode")
+    private String phoneCode;
+
     private UpdateContactRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -55,6 +59,7 @@ public class UpdateContactRequest extends Request {
         this.lang = builder.lang;
         this.name = builder.name;
         this.phone = builder.phone;
+        this.phoneCode = builder.phoneCode;
     }
 
     public static Builder builder() {
@@ -119,6 +124,13 @@ public class UpdateContactRequest extends Request {
         return this.phone;
     }
 
+    /**
+     * @return phoneCode
+     */
+    public String getPhoneCode() {
+        return this.phoneCode;
+    }
+
     public static final class Builder extends Request.Builder<UpdateContactRequest, Builder> {
         private String regionId; 
         private String contactId; 
@@ -127,6 +139,7 @@ public class UpdateContactRequest extends Request {
         private String lang; 
         private String name; 
         private String phone; 
+        private String phoneCode; 
 
         private Builder() {
             super();
@@ -141,6 +154,7 @@ public class UpdateContactRequest extends Request {
             this.lang = request.lang;
             this.name = request.name;
             this.phone = request.phone;
+            this.phoneCode = request.phoneCode;
         } 
 
         /**
@@ -153,6 +167,7 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
+         * <p>The ID of the contact.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +180,10 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * email.
+         * <p>The email address of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -174,7 +192,7 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * imUserIds.
+         * <p>The mapping of IM user IDs. Multiple instant messaging tools are supported.</p>
          */
         public Builder imUserIds(java.util.Map<String, String> imUserIds) {
             this.putBodyParameter("imUserIds", imUserIds);
@@ -183,7 +201,10 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * lang.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_CN</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("lang", lang);
@@ -192,7 +213,10 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -201,11 +225,26 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * phone.
+         * <p>The mobile phone number of the contact. Currently, only Chinese mobile phone numbers are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150123456789</p>
          */
         public Builder phone(String phone) {
             this.putBodyParameter("phone", phone);
             this.phone = phone;
+            return this;
+        }
+
+        /**
+         * <p>号码国家码，可带前导 +，如 86、+86。传入后 phone 必须是纯数字，服务端按 <phoneCode>-<phone> 拼号发送，因此 phone 内不能再带 +、00 或区号。不传时按手机号码原样发送。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>+86</p>
+         */
+        public Builder phoneCode(String phoneCode) {
+            this.putBodyParameter("phoneCode", phoneCode);
+            this.phoneCode = phoneCode;
             return this;
         }
 

@@ -384,7 +384,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             } 
 
             /**
-             * <p>The instance ID. Specify this parameter to query data at the instance level. This parameter depends on data in EntityStore.</p>
+             * <p>The instance ID. This field can be specified to narrow the scope to the instance level. It depends on the data in EntityStore.</p>
              * 
              * <strong>example:</strong>
              * <p>es-xxxxx</p>
@@ -395,7 +395,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The ID of the Prometheus instance.</p>
+             * <p>The Prometheus instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp122p85gthbniw8rsu9</p>
@@ -406,7 +406,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The name of the Prometheus instance.</p>
+             * <p>The Prometheus instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>category_predict</p>
@@ -417,7 +417,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>Optional. The project is determined based on the current environment type.</p>
+             * <p>The project. This optional field is determined based on the current environment type.</p>
              * 
              * <strong>example:</strong>
              * <p>datagrid_cdm</p>
@@ -439,7 +439,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The scope of storage sharing. Valid values: Environment, Region, Workspace, and Custom.</p>
+             * <p>The storage sharing scope. Valid values: Environment, Region, Workspace, and Custom.</p>
              * 
              * <strong>example:</strong>
              * <p>Region</p>
@@ -450,7 +450,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The storage type of the instance.</p>
+             * <p>The instance storage type.</p>
              * 
              * <strong>example:</strong>
              * <p>Prometheus</p>
@@ -461,7 +461,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The tags that need to be added to the destination storage. The tags are injected as system tags.</p>
+             * <p>The tags to be added to the destination storage. These tags are injected as system tags.</p>
              */
             public Builder systemTags(java.util.Map<String, String> systemTags) {
                 this.systemTags = systemTags;
@@ -469,7 +469,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The tags that need to be added to the destination storage. The tags are injected as common tags.</p>
+             * <p>The tags to be added to the destination storage. These tags are injected as regular tags.</p>
              */
             public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;
@@ -671,7 +671,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The internal URL.</p>
+             * <p>The external URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://100.100.xxxxxx">http://100.100.xxxxxx</a></p>
@@ -682,7 +682,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The name of the storage requirement.</p>
+             * <p>The storage requirement name.</p>
              * 
              * <strong>example:</strong>
              * <p>sr-xxxx</p>
@@ -693,7 +693,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The project for the storage requirement.</p>
+             * <p>The storage requirement project.</p>
              * 
              * <strong>example:</strong>
              * <p>jiuwu_algo</p>
@@ -704,7 +704,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The metric store of Prometheus.</p>
+             * <p>The Prometheus metric center.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxx</p>
@@ -726,7 +726,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The storage type of the instance.</p>
+             * <p>The instance storage type.</p>
              * 
              * <strong>example:</strong>
              * <p>Prometheus</p>
@@ -859,7 +859,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             } 
 
             /**
-             * <p>A collection of AddonRelease names.</p>
+             * <p>The collection of add-on releases.</p>
              */
             public Builder addonReleaseNames(java.util.List<String> addonReleaseNames) {
                 this.addonReleaseNames = addonReleaseNames;
@@ -878,7 +878,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The kind of the resource.</p>
+             * <p>The resource kind.</p>
              * 
              * <strong>example:</strong>
              * <p>Pod</p>
@@ -897,7 +897,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The spec of the resource.</p>
+             * <p>The specification of the resource.</p>
              */
             public Builder spec(Spec spec) {
                 this.spec = spec;
@@ -905,7 +905,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * <p>The status of the storage requirement.</p>
+             * <p>The storage requirement status.</p>
              */
             public Builder status(Status status) {
                 this.status = status;

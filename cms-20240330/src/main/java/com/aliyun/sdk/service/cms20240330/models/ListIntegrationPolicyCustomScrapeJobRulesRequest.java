@@ -116,7 +116,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Provisioning policy.</p>
+         * <p>The ID of the integration center policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the addon release.</p>
+         * <p>The name of the add-on release.</p>
          * 
          * <strong>example:</strong>
          * <p>release12345678</p>
@@ -141,7 +141,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         }
 
         /**
-         * <p>The probe identifier. If a release exists, pass the release name. If no release exists, pass the component name.</p>
+         * <p>The collector identifier. If a release exists, pass the release name. Otherwise, pass the component name.</p>
          * 
          * <strong>example:</strong>
          * <p>collector:metric-agent:policy:policy-bfd3d455fd6f4bc8</p>

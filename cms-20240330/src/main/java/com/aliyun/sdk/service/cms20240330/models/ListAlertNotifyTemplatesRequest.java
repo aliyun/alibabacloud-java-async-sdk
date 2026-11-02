@@ -152,7 +152,7 @@ public class ListAlertNotifyTemplatesRequest extends Request {
         }
 
         /**
-         * alertNotifyTemplateIds.
+         * <p>The list of notification template IDs.</p>
          */
         public Builder alertNotifyTemplateIds(java.util.List<String> alertNotifyTemplateIds) {
             String alertNotifyTemplateIdsShrink = shrink(alertNotifyTemplateIds, "alertNotifyTemplateIds", "json");
@@ -162,7 +162,10 @@ public class ListAlertNotifyTemplatesRequest extends Request {
         }
 
         /**
-         * alertNotifyTemplateName.
+         * <p>The notification template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alert notification template</p>
          */
         public Builder alertNotifyTemplateName(String alertNotifyTemplateName) {
             this.putQueryParameter("alertNotifyTemplateName", alertNotifyTemplateName);
@@ -171,7 +174,10 @@ public class ListAlertNotifyTemplatesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -180,7 +186,10 @@ public class ListAlertNotifyTemplatesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -189,7 +198,10 @@ public class ListAlertNotifyTemplatesRequest extends Request {
         }
 
         /**
-         * programLang.
+         * <p>The template locale.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GO</p>
          */
         public Builder programLang(String programLang) {
             this.putQueryParameter("programLang", programLang);
@@ -198,7 +210,10 @@ public class ListAlertNotifyTemplatesRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DING</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

@@ -111,7 +111,7 @@ public class CreateServiceObservabilityRequest extends Request {
         }
 
         /**
-         * <p>The type of application observability.</p>
+         * <p>The application observability type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

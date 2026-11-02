@@ -208,7 +208,7 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the email address is authenticated.</p>
+         * <p>Indicates whether the email address is verified.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -219,10 +219,10 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * <p>An extension field used to store additional information.</p>
+         * <p>The extension field used to store additional information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{ &quot;department&quot;: &quot;运维部&quot;, &quot;role&quot;: &quot;工程师&quot; }</p>
+         * <p>{ &quot;department&quot;: &quot;Operations Department&quot;, &quot;role&quot;: &quot;Engineer&quot; }</p>
          */
         public Builder extend(java.util.Map<String, ?> extend) {
             this.extend = extend;
@@ -230,7 +230,7 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * <p>The time when the contact was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-11T08:21:58.789Z</p>
@@ -241,7 +241,7 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * <p>The time when the contact was last modified.</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-11T08:21:58.789Z</p>
@@ -277,7 +277,7 @@ public class MergeContact extends TeaModel {
          * <p>The name of the contact.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -296,7 +296,7 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * <p>The country code for the mobile phone number.</p>
+         * <p>The country code of the mobile phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>86</p>
@@ -307,7 +307,7 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the mobile phone number is authenticated.</p>
+         * <p>Indicates whether the mobile phone number is verified.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

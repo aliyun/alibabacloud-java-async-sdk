@@ -90,7 +90,7 @@ public class DeleteContextRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DeleteContextRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the context. This can be a generated record ID or event ID.</p>
+         * <p>The ID of the generated record or event.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

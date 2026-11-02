@@ -237,7 +237,7 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the AI agent. This parameter is used to filter subscriptions of a specified AI agent.</p>
+         * <p>The UUID of the AI agent. This parameter is used to filter subscriptions for a specified AI agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-rca-001</p>
@@ -313,7 +313,7 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results.</p>
+         * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
          * <p>id</p>
@@ -349,11 +349,7 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The type of the subscription. Valid values:</p>
-         * <ul>
-         * <li>NORMAL: Standard subscription.</li>
-         * <li>AI_AGENT: AI agent subscription.</li>
-         * </ul>
+         * <p>The type of the subscription. Valid values: NORMAL (standard subscription) and AI_AGENT (AI agent subscription).</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>

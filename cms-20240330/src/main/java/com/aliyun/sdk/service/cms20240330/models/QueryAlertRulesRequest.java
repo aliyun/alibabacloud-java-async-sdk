@@ -148,7 +148,7 @@ public class QueryAlertRulesRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token that is used to ensure idempotence.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxx-xxxx-xxxx</p>
@@ -172,7 +172,7 @@ public class QueryAlertRulesRequest extends Request {
         }
 
         /**
-         * <p>The token that specifies the starting position for the current read operation. If this parameter is left empty, the read operation starts from the beginning.</p>
+         * <p>The token that marks the position from which the read operation starts. If this parameter is left empty, the read operation starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -184,7 +184,7 @@ public class QueryAlertRulesRequest extends Request {
         }
 
         /**
-         * <p>The query filter conditions in JSON string format. The field semantics are the same as those in the request body. Supported fields include filter (such as uuid, displayName, labels, status, and enabled, where sibling fields use the AND logical operator), pagination (pageNumber and pageSize), and workspace. You must specify either this parameter or the body parameter. If both are specified, the body parameter takes precedence.</p>
+         * <p>The query filter conditions in JSON string format. The field semantics are the same as those in the request body. Supported fields include filter (such as uuid, displayName, labels, status, and enabled, where sibling fields use the AND logical operator), pagination (pageNumber and pageSize), and workspace. You can specify either this parameter or the body parameter. If both are specified, the body parameter takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;filter&quot;:{&quot;displayName&quot;:{&quot;contains&quot;:&quot;my-rule&quot;}},&quot;pagination&quot;:{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:20}}</p>

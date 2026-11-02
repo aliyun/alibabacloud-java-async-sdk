@@ -228,10 +228,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The number of days that data is automatically archived after the storage period expires. A value of 0 indicates that data is not archived. Valid values for the archive duration:</p>
+         * <p>The number of days to automatically archive data after the storage period expires. A value of 0 indicates that data is not archived. Valid values:</p>
          * <ul>
          * <li>V1: 60 to 365 days.</li>
-         * <li>V2: 60 to 3650 days (3650 indicates permanent retention).</li>
+         * <li>V2: 60 to 3650 days. A value of 3650 indicates permanent retention.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</p>
+         * <p>The authentication-free read policy, which supports IP address ranges and VPC IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -286,7 +286,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable authentication-free read. This parameter is supported only for V2 instances.</p>
+         * <p>Specifies whether to enable authentication-free read access. Supported only in V2.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -298,7 +298,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable authentication-free write. This parameter is supported only for V2 instances.</p>
+         * <p>Specifies whether to enable authentication-free write access. Supported only in V2.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -310,7 +310,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the authorization token. This parameter is supported only for V1 instances.</p>
+         * <p>Specifies whether to enable the authorization token. Supported only in V1.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -322,11 +322,11 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billable methods. Valid values:</p>
+         * <p>The Billable methods. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go by metric reporting volume.</li>
-         * <li>POSTPAY_GB: pay-as-you-go by metric write volume.
-         * If this parameter is left empty, the default billing method configured by the user is used. If the user has not configured a default billing method, the system uses pay-as-you-go by metric reporting volume.</li>
+         * <li>POSTPAY: pay-as-you-go by reported metric volume.</li>
+         * <li>POSTPAY_GB: pay-as-you-go by ingested data volume.
+         * Note: An empty value uses the default Billable methods configured for the user. If no default is configured, the system defaults to billing by reported metric volume.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -339,7 +339,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -352,7 +352,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz5qqvjyatgoy</p>
@@ -376,10 +376,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The storage duration (in days):</p>
+         * <p>The storage duration in days. Valid values:</p>
          * <ul>
-         * <li>By write volume: 90 or 180.</li>
-         * <li>By metric reporting volume: 15, 30, 60, 90, or 180.</li>
+         * <li>Pay-by-ingested-data: 90 and 180.</li>
+         * <li>Pay-by-reported-metrics: 15, 30, 60, 90, and 180.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,7 +392,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag values.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);

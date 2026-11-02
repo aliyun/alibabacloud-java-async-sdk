@@ -80,7 +80,7 @@ public class GetMemoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of relations.</p>
+         * <p>The relationships.</p>
          */
         public Builder relations(java.util.List<Relations> relations) {
             this.relations = relations;
@@ -99,7 +99,7 @@ public class GetMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of results.</p>
+         * <p>The results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -178,7 +178,7 @@ public class GetMemoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The destination of the relation.</p>
+             * <p>The destination.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -189,7 +189,7 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the relation.</p>
+             * <p>The relationships.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -200,7 +200,7 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the relation.</p>
+             * <p>The source.</p>
              * 
              * <strong>example:</strong>
              * <p>test_namespace/RegistryModule-test2153b9f3-0be6-455e-9efd-05fd31f62885/alicloud</p>
@@ -424,7 +424,7 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent ID.</p>
+             * <p>The agent ID of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>980565235819266048</p>
@@ -457,7 +457,7 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory hash.</p>
+             * <p>The memory hash value.</p>
              * 
              * <strong>example:</strong>
              * <p>73ad89f2d56c2f8615e5dd0cef7b4c41c074277c91fa0e31fc5b41802c0481f2</p>
@@ -479,7 +479,7 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory content.</p>
+             * <p>The memory.</p>
              * 
              * <strong>example:</strong>
              * <p>My name is Zhang San and I live in Hangzhou.</p>
@@ -501,7 +501,7 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role that sent the message.</p>
+             * <p>The role of the message initiator.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>

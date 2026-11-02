@@ -96,7 +96,10 @@ public class ActiveContactChannelRequest extends Request {
         }
 
         /**
-         * code.
+         * <p>The activation verification code. The system sends this 32-character string to the mobile phone number or email address of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b9377d9c56b5c2ea8a41a2b3c4d5e6f</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("code", code);
@@ -105,7 +108,10 @@ public class ActiveContactChannelRequest extends Request {
         }
 
         /**
-         * site.
+         * <p>The site. Valid values: cn_hangzhou (China site) and ap_southeast_1 (International site). Default value: cn_hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn_hangzhou</p>
          */
         public Builder site(String site) {
             this.putQueryParameter("site", site);

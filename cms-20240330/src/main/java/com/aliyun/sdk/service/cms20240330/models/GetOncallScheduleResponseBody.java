@@ -132,7 +132,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
         } 
 
         /**
-         * oncallScheduleId.
+         * <p>The unique identifier of the on-call schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testId</p>
          */
         public Builder oncallScheduleId(String oncallScheduleId) {
             this.oncallScheduleId = oncallScheduleId;
@@ -140,7 +143,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * oncallScheduleName.
+         * <p>The name of the on-call schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testOncallScheduleName</p>
          */
         public Builder oncallScheduleName(String oncallScheduleName) {
             this.oncallScheduleName = oncallScheduleName;
@@ -148,7 +154,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -156,7 +165,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * rotations.
+         * <p>The list of shifts.</p>
          */
         public Builder rotations(java.util.List<Rotations> rotations) {
             this.rotations = rotations;
@@ -164,7 +173,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * shiftRobotId.
+         * <p>The ID of the shift reminder chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testId</p>
          */
         public Builder shiftRobotId(String shiftRobotId) {
             this.shiftRobotId = shiftRobotId;
@@ -172,7 +184,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * substitudes.
+         * <p>The list of substitution rules.</p>
          */
         public Builder substitudes(java.util.List<Substitudes> substitudes) {
             this.substitudes = substitudes;
@@ -180,7 +192,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-5884500827389836-cn-hangzhou</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -337,7 +352,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             } 
 
             /**
-             * activeDays.
+             * <p>The days of the week when the shift is active.</p>
              */
             public Builder activeDays(java.util.List<Integer> activeDays) {
                 this.activeDays = activeDays;
@@ -345,7 +360,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * contacts.
+             * <p>The IDs of the contacts.</p>
              */
             public Builder contacts(java.util.List<String> contacts) {
                 this.contacts = contacts;
@@ -353,7 +368,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * rotationEndTime.
+             * <p>The end time of the shift. Format: HH:mm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24:00</p>
              */
             public Builder rotationEndTime(String rotationEndTime) {
                 this.rotationEndTime = rotationEndTime;
@@ -361,7 +379,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * rotationName.
+             * <p>The name of the shift.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder rotationName(String rotationName) {
                 this.rotationName = rotationName;
@@ -369,7 +390,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * rotationStartTime.
+             * <p>The start time of the shift. Format: HH:mm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder rotationStartTime(String rotationStartTime) {
                 this.rotationStartTime = rotationStartTime;
@@ -377,7 +401,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * shiftLength.
+             * <p>The length of the shift recurrence cycle. Used in conjunction with the shift recurrence frequency. For example, rotate to the next on-call contact every 3 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder shiftLength(Integer shiftLength) {
                 this.shiftLength = shiftLength;
@@ -385,7 +412,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * shiftRecurrenceFrequency.
+             * <p>The unit of the shift recurrence frequency. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call contact every 1 week.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WEEKLY</p>
              */
             public Builder shiftRecurrenceFrequency(String shiftRecurrenceFrequency) {
                 this.shiftRecurrenceFrequency = shiftRecurrenceFrequency;
@@ -393,7 +423,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * startDate.
+             * <p>The start date of the shift. Format: yyyy-MM-dd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10</p>
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;
@@ -401,7 +434,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * timeZone.
+             * <p>The name of the time zone. Uses the IANA Time Zone Database standard, such as Asia/Shanghai.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -494,7 +530,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             } 
 
             /**
-             * contactId.
+             * <p>The contact ID of the substitute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testId</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -502,7 +541,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * <p>The end time of the substitution. Format: YYYY-MM-DD HH:mm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-15 18:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -510,7 +552,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * replacedContactId.
+             * <p>The contact ID of the replaced contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testId</p>
              */
             public Builder replacedContactId(String replacedContactId) {
                 this.replacedContactId = replacedContactId;
@@ -518,7 +563,10 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The start time of the substitution. Format: YYYY-MM-DD HH:mm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 09:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

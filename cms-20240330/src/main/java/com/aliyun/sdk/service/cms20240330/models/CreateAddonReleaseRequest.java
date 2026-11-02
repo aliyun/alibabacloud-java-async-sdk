@@ -217,7 +217,7 @@ public class CreateAddonReleaseRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the environment policy.</p>
+         * <p>The environment policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The name of the add-on that requires monitoring integration.</p>
+         * <p>The name of the add-on to be integrated for monitoring.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The catalog version of the add-on. Valid values: v1 and v2.</p>
+         * <p>The add-on catalog version. Valid values: v1 and v2.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -288,7 +288,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The environment type. If the policy type is CS or ECS, the corresponding environment type is used. For other policy types, the environment type is uniformly set to Cloud.</p>
+         * <p>The environment type. If the policy type is CS or ECS, the corresponding environment type is used. For other types, the environment type is uniformly set to Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>CS</p>
@@ -300,7 +300,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent add-on release.</p>
+         * <p>The parent AddonReleaseId.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-xxxxxxxxxxx</p>
@@ -336,7 +336,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The version of the add-on that requires monitoring integration.</p>
+         * <p>The version of the add-on to be integrated for monitoring.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

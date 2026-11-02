@@ -223,10 +223,10 @@ public class AddonMeta extends TeaModel {
         } 
 
         /**
-         * <p>The alias of the component. This is the display name.</p>
+         * <p>The component alias and display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS 监控</p>
+         * <p>ECS monitoring</p>
          */
         public Builder alias(String alias) {
             this.alias = alias;
@@ -234,7 +234,7 @@ public class AddonMeta extends TeaModel {
         }
 
         /**
-         * <p>The categorization information of the component.</p>
+         * <p>The component category information.</p>
          */
         public Builder categories(java.util.List<String> categories) {
             this.categories = categories;
@@ -242,7 +242,7 @@ public class AddonMeta extends TeaModel {
         }
 
         /**
-         * <p>A list of component diagrams.</p>
+         * <p>The list of component dashboard diagrams.</p>
          */
         public Builder dashboards(java.util.List<Dashboards> dashboards) {
             this.dashboards = dashboards;
@@ -269,7 +269,7 @@ public class AddonMeta extends TeaModel {
         }
 
         /**
-         * <p>The icon of the component.</p>
+         * <p>The component icon.</p>
          * 
          * <strong>example:</strong>
          * <p>assets/logos/ecs.svg</p>
@@ -290,10 +290,8 @@ public class AddonMeta extends TeaModel {
         /**
          * <p>The language. Valid values:</p>
          * <ul>
-         * <li><p>zh: Chinese (default)</p>
-         * </li>
-         * <li><p>en: English</p>
-         * </li>
+         * <li>zh: Chinese (default).</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,7 +303,7 @@ public class AddonMeta extends TeaModel {
         }
 
         /**
-         * <p>The last time the component was integrated.</p>
+         * <p>The last integration time of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-25 09:12:12</p>
@@ -316,7 +314,7 @@ public class AddonMeta extends TeaModel {
         }
 
         /**
-         * <p>The name of the component.</p>
+         * <p>The component name.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud-acs-ecs</p>
@@ -327,7 +325,7 @@ public class AddonMeta extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the component can be installed only once under a policy.</p>
+         * <p>Specifies whether the component can be installed only once under the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>true/false</p>
@@ -360,7 +358,7 @@ public class AddonMeta extends TeaModel {
         }
 
         /**
-         * <p>The sorting weight of the component.</p>
+         * <p>The component sorting weight.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -445,7 +443,7 @@ public class AddonMeta extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>描述信息</p>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -453,10 +451,10 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The name of the diagram.</p>
+             * <p>The dashboard diagram name.</p>
              * 
              * <strong>example:</strong>
-             * <p>ECS 监控概览大盘</p>
+             * <p>ECS monitoring overview dashboard</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -464,7 +462,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The URL of the diagram.</p>
+             * <p>The dashboard diagram URL.</p>
              * 
              * <strong>example:</strong>
              * <p>assets/dashboards/ecs.png</p>
@@ -534,7 +532,7 @@ public class AddonMeta extends TeaModel {
             } 
 
             /**
-             * <p>The group name of the CommonSchema.</p>
+             * <p>The CommonSchema group name.</p>
              * 
              * <strong>example:</strong>
              * <p>acs-ecs</p>
@@ -545,7 +543,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The group version of the CommonSchema.</p>
+             * <p>The CommonSchema group version.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1.0</p>
@@ -636,7 +634,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The probe dependency description. This is the component name. In later versions, this field is replaced by the collectors field.</p>
+             * <p>The probe dependency description and component name. This field is replaced by the collectors field in the new version.</p>
              */
             public Builder features(java.util.Map<String, Boolean> features) {
                 this.features = features;
@@ -737,7 +735,7 @@ public class AddonMeta extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether group mode is used.</p>
+             * <p>Specifies whether it is in group mode.</p>
              * 
              * <strong>example:</strong>
              * <p>true/false</p>
@@ -759,7 +757,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether single-entity mode is used.</p>
+             * <p>Specifies whether it is in single-entity mode.</p>
              * 
              * <strong>example:</strong>
              * <p>true/false</p>
@@ -770,7 +768,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The field in the entity from which to fetch the VPC ID.</p>
+             * <p>The field used to extract the VPC ID from the entity.</p>
              * 
              * <strong>example:</strong>
              * <p>vpcId</p>
@@ -827,7 +825,7 @@ public class AddonMeta extends TeaModel {
             } 
 
             /**
-             * <p>The Prometheus Query Language (PromQL) for the check rule.</p>
+             * <p>The PromQL for the check rule.</p>
              */
             public Builder promQL(java.util.List<String> promQL) {
                 this.promQL = promQL;
@@ -920,10 +918,10 @@ public class AddonMeta extends TeaModel {
             } 
 
             /**
-             * <p>The description of the protocol.</p>
+             * <p>The protocol description.</p>
              * 
              * <strong>example:</strong>
-             * <p>使用 Prometheus 协议写入指标数据</p>
+             * <p>Writes metric data by using the Prometheus protocol</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -931,7 +929,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The display icon for the protocol.</p>
+             * <p>The protocol display icon.</p>
              * 
              * <strong>example:</strong>
              * <p>assets/logos/ecs.svg</p>
@@ -942,10 +940,10 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The display name of the protocol.</p>
+             * <p>The protocol display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Prometheus 协议</p>
+             * <p>Prometheus protocol</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -953,7 +951,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The name of the protocol.</p>
+             * <p>The protocol name.</p>
              * 
              * <strong>example:</strong>
              * <p>Prometheus</p>
@@ -1114,7 +1112,7 @@ public class AddonMeta extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the alert rule is enabled by default after installation.</p>
+             * <p>Specifies whether alert rules are enabled by default after installation.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -1125,7 +1123,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The default mode. This integration mode does not require attaching an entity.</p>
+             * <p>The default mode, which is an integration mode that does not require binding entities.</p>
              * 
              * <strong>example:</strong>
              * <p>true/false</p>
@@ -1136,7 +1134,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>Information about the attached target entity.</p>
+             * <p>The bound target entity information.</p>
              */
             public Builder bindEntity(BindEntity bindEntity) {
                 this.bindEntity = bindEntity;
@@ -1144,7 +1142,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the component is installed by default.</p>
+             * <p>Specifies whether it is installed by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true/false</p>
@@ -1155,7 +1153,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to enable internal authorization token allocation.</p>
+             * <p>Specifies whether internal authorization token allocation is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true/false</p>
@@ -1174,7 +1172,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to prompt for a workload restart after integration.</p>
+             * <p>Specifies whether to prompt for a workload restart after integration.</p>
              * 
              * <strong>example:</strong>
              * <p>true/false</p>
@@ -1185,7 +1183,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The list of supported client protocols.</p>
+             * <p>The list of supported client protocol information.</p>
              */
             public Builder protocols(java.util.List<Protocols> protocols) {
                 this.protocols = protocols;
@@ -1193,7 +1191,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The name of the target component for redirection.</p>
+             * <p>The target component name for redirection.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud-acs-ecs</p>
@@ -1341,7 +1339,7 @@ public class AddonMeta extends TeaModel {
             } 
 
             /**
-             * <p>The list of attached CommonSchemas.</p>
+             * <p>The list of bound CommonSchemas.</p>
              */
             public Builder commonSchemaRefs(java.util.List<CommonSchemaRefs> commonSchemaRefs) {
                 this.commonSchemaRefs = commonSchemaRefs;
@@ -1357,10 +1355,10 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The description of the environment type.</p>
+             * <p>The environment type description.</p>
              * 
              * <strong>example:</strong>
-             * <p>支持容器集群的工作覆盖监控</p>
+             * <p>Supports workload monitoring for container clusters</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1368,7 +1366,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the environment type is enabled.</p>
+             * <p>Specifies whether it is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true/false</p>
@@ -1379,10 +1377,10 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The display name of the environment type.</p>
+             * <p>The environment type display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>容器环境</p>
+             * <p>Container environment</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1390,7 +1388,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>The name of the environment type.</p>
+             * <p>The environment type name.</p>
              * 
              * <strong>example:</strong>
              * <p>CS/ECS/Cloud/Client</p>
@@ -1401,7 +1399,7 @@ public class AddonMeta extends TeaModel {
             }
 
             /**
-             * <p>Information about the control policy group for the component.</p>
+             * <p>The control policy combination information for the component.</p>
              */
             public Builder policies(Policies policies) {
                 this.policies = policies;

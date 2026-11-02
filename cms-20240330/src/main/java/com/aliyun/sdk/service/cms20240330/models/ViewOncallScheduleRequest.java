@@ -101,7 +101,10 @@ public class ViewOncallScheduleRequest extends Request {
         } 
 
         /**
-         * oncallScheduleId.
+         * <p>The unique identifier of the on-call schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testId</p>
          */
         public Builder oncallScheduleId(String oncallScheduleId) {
             this.putPathParameter("oncallScheduleId", oncallScheduleId);
@@ -119,7 +122,10 @@ public class ViewOncallScheduleRequest extends Request {
         }
 
         /**
-         * endDate.
+         * <p>The end date of the query. Format: yyyy-MM-dd. This parameter must be specified together with startDate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-05</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("endDate", endDate);
@@ -128,7 +134,10 @@ public class ViewOncallScheduleRequest extends Request {
         }
 
         /**
-         * startDate.
+         * <p>The start date of the query. Format: yyyy-MM-dd. This parameter must be specified together with endDate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-04</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("startDate", startDate);

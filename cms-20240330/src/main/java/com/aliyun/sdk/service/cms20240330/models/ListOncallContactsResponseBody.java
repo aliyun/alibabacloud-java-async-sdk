@@ -67,7 +67,7 @@ public class ListOncallContactsResponseBody extends TeaModel {
         } 
 
         /**
-         * contactIds.
+         * <p>The IDs of the contacts.</p>
          */
         public Builder contactIds(java.util.List<String> contactIds) {
             this.contactIds = contactIds;
@@ -75,7 +75,10 @@ public class ListOncallContactsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

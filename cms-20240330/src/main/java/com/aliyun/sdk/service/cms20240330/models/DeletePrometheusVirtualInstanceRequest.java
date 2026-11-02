@@ -59,7 +59,7 @@ public class DeletePrometheusVirtualInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Prometheus virtual instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>virtual-xxxxxxxxxxxxxxxx</p>

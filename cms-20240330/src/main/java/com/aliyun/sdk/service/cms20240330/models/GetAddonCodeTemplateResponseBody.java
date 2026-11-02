@@ -75,7 +75,7 @@ public class GetAddonCodeTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0CEC5375-C554-562B-A65F-***</p>

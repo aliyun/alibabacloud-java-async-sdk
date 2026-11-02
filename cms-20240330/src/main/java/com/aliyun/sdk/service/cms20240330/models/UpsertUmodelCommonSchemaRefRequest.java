@@ -90,7 +90,7 @@ public class UpsertUmodelCommonSchemaRefRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class UpsertUmodelCommonSchemaRefRequest extends Request {
         }
 
         /**
-         * <p>The group of the common Umodel schema.</p>
+         * <p>The public Umodel schema group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

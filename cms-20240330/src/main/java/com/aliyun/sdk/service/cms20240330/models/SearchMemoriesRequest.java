@@ -229,7 +229,7 @@ public class SearchMemoriesRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The memory store name.</p>
+         * <p>The name of the memory store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The app key of the project assigned by the merchant.</p>
+         * <p>The AppKey of the project assigned to the merchant.</p>
          * 
          * <strong>example:</strong>
          * <p>mm_480d961a1b5e4efe84603f4cbc0f</p>
@@ -300,7 +300,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable reranking.</p>
+         * <p>The reranking option.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -336,7 +336,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The search type.</p>
+         * <p>The query type.</p>
          * 
          * <strong>example:</strong>
          * <p>experience</p>
@@ -360,7 +360,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The top-K entries to return in the results.</p>
+         * <p>The top-K entries to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

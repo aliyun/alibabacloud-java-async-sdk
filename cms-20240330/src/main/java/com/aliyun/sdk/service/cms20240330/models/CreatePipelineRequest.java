@@ -143,7 +143,7 @@ public class CreatePipelineRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
@@ -155,7 +155,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The pipeline description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -176,7 +176,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The pipeline configuration.</p>
+         * <p>The pipeline information.</p>
          */
         public Builder pipeline(Pipeline pipeline) {
             this.putBodyParameter("pipeline", pipeline);
@@ -185,7 +185,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The pipeline name.</p>
+         * <p>The name of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>pipeline-name-1</p>
@@ -197,7 +197,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The data sink for the processed output.</p>
+         * <p>The data sink.</p>
          */
         public Builder sink(Sink sink) {
             this.putBodyParameter("sink", sink);
@@ -366,7 +366,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The execution interval in seconds.</p>
+             * <p>The time interval.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -449,7 +449,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The execution mode. Set to <code>runOnce</code> for a single execution, or <code>scheduled</code> for a recurring execution.</p>
+             * <p>The execution mode.</p>
              * 
              * <strong>example:</strong>
              * <p>runOnce</p>
@@ -460,7 +460,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The configuration for a one-time execution. This parameter is required when <code>executePolicy.mode</code> is set to <code>runOnce</code>.</p>
+             * <p>The configuration for one-time execution.</p>
              */
             public Builder runOnce(RunOnce runOnce) {
                 this.runOnce = runOnce;
@@ -468,7 +468,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The configuration for a scheduled execution. This parameter is required when <code>executePolicy.mode</code> is set to <code>scheduled</code>.</p>
+             * <p>The configuration for scheduled execution.</p>
              */
             public Builder scheduled(Scheduled scheduled) {
                 this.scheduled = scheduled;
@@ -559,7 +559,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The node parameters.</p>
+             * <p>The parameters.</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -624,7 +624,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The pipeline nodes.</p>
+             * <p>The nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -691,7 +691,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The dataset name.</p>
+             * <p>The dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>dataset_1</p>
@@ -772,7 +772,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The destination dataset configuration. This parameter is required when <code>sink.type</code> is set to <code>dataset</code>.</p>
+             * <p>The dataset information.</p>
              */
             public Builder dataset(Dataset dataset) {
                 this.dataset = dataset;
@@ -780,7 +780,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The sink type.</p>
+             * <p>The data sink type.</p>
              * 
              * <strong>example:</strong>
              * <p>dataset</p>
@@ -863,7 +863,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The Logstore name.</p>
+             * <p>The name of the Simple Log Service Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>test-logstore</p>
@@ -874,7 +874,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The Log Service Project name.</p>
+             * <p>The name of the Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>test-project</p>
@@ -885,7 +885,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The query statement to filter logs.</p>
+             * <p>The filter statement.</p>
              * 
              * <strong>example:</strong>
              * <p>status:500 and method:GET</p>
@@ -955,7 +955,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The Log Service Logstore configuration. This parameter is required when <code>source.type</code> is set to <code>logstore</code>.</p>
+             * <p>The Simple Log Service Logstore information.</p>
              */
             public Builder logstore(Logstore logstore) {
                 this.logstore = logstore;

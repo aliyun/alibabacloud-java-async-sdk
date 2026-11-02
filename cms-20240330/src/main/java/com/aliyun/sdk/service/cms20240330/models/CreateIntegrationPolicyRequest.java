@@ -144,7 +144,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The policy creation version. Valid values: v1 and v2. If this parameter is not specified or is left empty, v2 is used. If v1 is specified, a v1-compatible environment is created for ECS and Cloud.</p>
+         * <p>The policy creation version. Valid values: v1 and v2. If you do not specify this parameter or leave it empty, v2 is used. If you specify v1, a v1-compatible environment is created for ECS and Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -156,7 +156,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>The entity group used to create the policy. You can use the entity group for quick creation. The clusterId and vpcId parameters are independent of each other.</p>
+         * <p>The entity group used to create the policy. You can quickly create the policy by using the entity group. The clusterId and vpcId parameters are independent of each other.</p>
          */
         public Builder entityGroup(EntityGroup entityGroup) {
             this.putBodyParameter("entityGroup", entityGroup);
@@ -177,7 +177,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>The policy type. Valid values: CS, ECS, and Cloud.</p>
+         * <p>The policy type, such as CS, ECS, or Cloud.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>The workspace.</p>
+         * <p>The workspace. If you do not specify this parameter, a default workspace is created or used.</p>
          * 
          * <strong>example:</strong>
          * <p>prometheus</p>
@@ -380,7 +380,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to disable the unique binding of the policy. If this parameter is set to true, you can create multiple policies for a single container cluster.</p>
+             * <p>Specifies whether to disable unique policy binding. If this feature is enabled, you can create multiple policies for a single container cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

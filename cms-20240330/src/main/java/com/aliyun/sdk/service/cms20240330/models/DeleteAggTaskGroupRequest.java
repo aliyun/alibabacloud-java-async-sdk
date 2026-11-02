@@ -75,7 +75,7 @@ public class DeleteAggTaskGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Prometheus instance from which the aggregation task reads data.</p>
+         * <p>The instance ID of the Prometheus instance to which the aggregation node group belongs. Aggregation nodes read data from this instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

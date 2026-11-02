@@ -67,7 +67,10 @@ public class ViewOncallScheduleResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class ViewOncallScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * schedule.
+         * <p>The on-call calendar. The key is the shift name, and the value is a list of on-call shifts for the shift within the query date range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;testName&quot;:[{&quot;contactId&quot;:&quot;testId&quot;,&quot;contactName&quot;:&quot;Zhang San&quot;,&quot;start&quot;:&quot;2024-10-10 09:00&quot;,&quot;end&quot;:&quot;2024-10-15 18:00&quot;}]}</p>
          */
         public Builder schedule(java.util.Map<String, java.util.List<ScheduleValue>> schedule) {
             this.schedule = schedule;

@@ -99,7 +99,7 @@ public class DeleteContextStoreAPIKeyRequest extends Request {
         }
 
         /**
-         * <p>The context store name.</p>
+         * <p>The name of the context store.</p>
          * 
          * <strong>example:</strong>
          * <p>test-context-store</p>
@@ -111,7 +111,7 @@ public class DeleteContextStoreAPIKeyRequest extends Request {
         }
 
         /**
-         * <p>The API key\&quot;s display name, which identifies its purpose.</p>
+         * <p>The display name of the API key, used to identify its purpose.</p>
          * 
          * <strong>example:</strong>
          * <p>Production Service Key</p>

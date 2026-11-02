@@ -119,7 +119,7 @@ public class CreateServiceRecordRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class CreateServiceRecordRequest extends Request {
         }
 
         /**
-         * <p>The service ID.</p>
+         * <p>The ID of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class CreateServiceRecordRequest extends Request {
         }
 
         /**
-         * <p>The entry content in JSON string format. The format may vary depending on the value of recordType.</p>
+         * <p>The content of the entry in JSON string format. The format may vary based on the recordType.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,10 +173,7 @@ public class CreateServiceRecordRequest extends Request {
         }
 
         /**
-         * <p>The type of the linked entry. Valid values:</p>
-         * <ul>
-         * <li>logCorrelation: application log association.</li>
-         * </ul>
+         * <p>The type of the association entry. Valid values: logCorrelation, which indicates application log association.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

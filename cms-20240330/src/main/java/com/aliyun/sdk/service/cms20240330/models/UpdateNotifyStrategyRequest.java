@@ -133,7 +133,7 @@ public class UpdateNotifyStrategyRequest extends Request {
         }
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>

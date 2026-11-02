@@ -111,6 +111,7 @@ public class UpdateContactGroupRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the contact group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +124,7 @@ public class UpdateContactGroupRequest extends Request {
         }
 
         /**
-         * contacts.
+         * <p>The IDs of the contacts.</p>
          */
         public Builder contacts(java.util.List<String> contacts) {
             this.putBodyParameter("contacts", contacts);
@@ -132,7 +133,10 @@ public class UpdateContactGroupRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

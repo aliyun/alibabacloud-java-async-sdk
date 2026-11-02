@@ -46,6 +46,10 @@ public class CreateContactRequest extends Request {
     private String phone;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phoneCode")
+    private String phoneCode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("workspace")
     private String workspace;
 
@@ -58,6 +62,7 @@ public class CreateContactRequest extends Request {
         this.lang = builder.lang;
         this.name = builder.name;
         this.phone = builder.phone;
+        this.phoneCode = builder.phoneCode;
         this.workspace = builder.workspace;
     }
 
@@ -124,6 +129,13 @@ public class CreateContactRequest extends Request {
     }
 
     /**
+     * @return phoneCode
+     */
+    public String getPhoneCode() {
+        return this.phoneCode;
+    }
+
+    /**
      * @return workspace
      */
     public String getWorkspace() {
@@ -138,6 +150,7 @@ public class CreateContactRequest extends Request {
         private String lang; 
         private String name; 
         private String phone; 
+        private String phoneCode; 
         private String workspace; 
 
         private Builder() {
@@ -153,6 +166,7 @@ public class CreateContactRequest extends Request {
             this.lang = request.lang;
             this.name = request.name;
             this.phone = request.phone;
+            this.phoneCode = request.phoneCode;
             this.workspace = request.workspace;
         } 
 
@@ -166,7 +180,10 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * contactId.
+         * <p>The ID of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testId</p>
          */
         public Builder contactId(String contactId) {
             this.putBodyParameter("contactId", contactId);
@@ -175,7 +192,10 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * email.
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -184,7 +204,7 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * imUserIds.
+         * <p>The instant messaging (IM) user ID mapping, which supports multi-platform integration. The key is the IM type, such as DING or WEIXIN, and the value is the corresponding user ID.</p>
          */
         public Builder imUserIds(java.util.Map<String, String> imUserIds) {
             this.putBodyParameter("imUserIds", imUserIds);
@@ -193,7 +213,10 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * lang.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_CN</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("lang", lang);
@@ -202,7 +225,10 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_07</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -211,7 +237,10 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * phone.
+         * <p>The mobile phone number. Currently, only Chinese mobile phone numbers are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13012345678</p>
          */
         public Builder phone(String phone) {
             this.putBodyParameter("phone", phone);
@@ -220,7 +249,22 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>号码国家码，可带前导 +，如 86、+86。传入后 phone 必须是纯数字，服务端按 <phoneCode>-<phone> 拼号发送，因此 phone 内不能再带 +、00 或区号。不传时按手机号码原样发送。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0086</p>
+         */
+        public Builder phoneCode(String phoneCode) {
+            this.putBodyParameter("phoneCode", phoneCode);
+            this.phoneCode = phoneCode;
+            return this;
+        }
+
+        /**
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-5884500827389836-cn-hangzhou</p>
          */
         public Builder workspace(String workspace) {
             this.putBodyParameter("workspace", workspace);

@@ -59,7 +59,7 @@ public class GetPrometheusUserSettingRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values: zh and en. Default value: zh.</p>
+         * <p>The locale. Default value: zh. Valid values: zh, en.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

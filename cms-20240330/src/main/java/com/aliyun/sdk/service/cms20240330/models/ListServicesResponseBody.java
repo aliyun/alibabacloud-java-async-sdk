@@ -106,7 +106,7 @@ public class ListServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned. Maximum value: 200.</p>
+         * <p>The maximum number of results to return. Maximum value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -344,7 +344,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the service was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-01T02:23:59Z</p>
@@ -355,7 +355,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service description. This parameter is valid only when serviceType is set to RUM.</p>
+             * <p>The description of the service. This parameter is valid only when serviceType is set to RUM.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace api monitor test</p>
@@ -377,7 +377,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ARMS application ID for backward compatibility.</p>
+             * <p>The legacy ARMS application ID for backward compatibility.</p>
              * 
              * <strong>example:</strong>
              * <p>kgcsf@192197e828d51aa</p>
@@ -388,7 +388,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aekxxzuad5zzzz</p>
@@ -399,7 +399,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service ID.</p>
+             * <p>The ID of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>jm2pl0yoqf@d4905cb11a4f218dfb0a8</p>
@@ -421,7 +421,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service status. This parameter is valid only when serviceType is set to RUM.</p>
+             * <p>The status of the service. This parameter is valid only when serviceType is set to RUM.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -432,7 +432,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service type.</p>
+             * <p>The type of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>TRACE</p>

@@ -198,7 +198,7 @@ public class TransformerForView extends TeaModel {
         } 
 
         /**
-         * <p>The transform operations.</p>
+         * <p>The transform actions.</p>
          */
         public Builder actions(java.util.List<TransformAction> actions) {
             this.actions = actions;
@@ -206,7 +206,7 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * <p>The time when the converter was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-11T08:21:58Z</p>
@@ -228,7 +228,7 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the converter is enabled.</p>
+         * <p>Indicates whether it is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -247,7 +247,7 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether to exit after a match is processed.</p>
+         * <p>Specifies whether to exit after a match is processed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -258,7 +258,7 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * <p>The sort ID.</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -269,7 +269,7 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * <p>The transformer ID.</p>
+         * <p>transformer Id</p>
          * 
          * <strong>example:</strong>
          * <p>1123123123123</p>
@@ -284,7 +284,7 @@ public class TransformerForView extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test processing flow.</p>
+         * <p>测试处理流</p>
          */
         public Builder transformerName(String transformerName) {
             this.transformerName = transformerName;
@@ -292,7 +292,7 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * <p>The time when the converter was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-16T02:27:01Z</p>
@@ -314,7 +314,7 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * <p>The workspace.</p>
+         * <p>workspace</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>

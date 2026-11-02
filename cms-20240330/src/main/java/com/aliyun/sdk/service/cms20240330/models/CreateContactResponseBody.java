@@ -67,7 +67,10 @@ public class CreateContactResponseBody extends TeaModel {
         } 
 
         /**
-         * contactId.
+         * <p>The ID of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testId</p>
          */
         public Builder contactId(String contactId) {
             this.contactId = contactId;
@@ -75,7 +78,7 @@ public class CreateContactResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>

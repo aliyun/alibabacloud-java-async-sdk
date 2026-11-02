@@ -145,7 +145,7 @@ public class ListServicesRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return in this request.</p>
+         * <p>The maximum number of records to return for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -182,7 +182,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekxxzuad5zzzz</p>
@@ -194,7 +194,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The application service name.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>app-demo</p>
@@ -206,7 +206,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The service type.</p>
+         * <p>The type of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>TRACE</p>
@@ -218,7 +218,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The array of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -287,7 +287,7 @@ public class ListServicesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>evn</p>
@@ -298,7 +298,7 @@ public class ListServicesRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>prod</p>

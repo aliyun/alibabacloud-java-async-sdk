@@ -88,7 +88,7 @@ public class GetAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The ID of the environment.</p>
+         * <p>The environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

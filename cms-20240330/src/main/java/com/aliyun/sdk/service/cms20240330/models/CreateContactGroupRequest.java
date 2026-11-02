@@ -124,7 +124,10 @@ public class CreateContactGroupRequest extends Request {
         }
 
         /**
-         * contactGroupId.
+         * <p>The unique identifier of the contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder contactGroupId(String contactGroupId) {
             this.putBodyParameter("contactGroupId", contactGroupId);
@@ -133,7 +136,7 @@ public class CreateContactGroupRequest extends Request {
         }
 
         /**
-         * contacts.
+         * <p>The contact IDs.</p>
          */
         public Builder contacts(java.util.List<String> contacts) {
             this.putBodyParameter("contacts", contacts);
@@ -142,7 +145,10 @@ public class CreateContactGroupRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -151,7 +157,10 @@ public class CreateContactGroupRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-5884500827389836-cn-hangzhou</p>
          */
         public Builder workspace(String workspace) {
             this.putBodyParameter("workspace", workspace);

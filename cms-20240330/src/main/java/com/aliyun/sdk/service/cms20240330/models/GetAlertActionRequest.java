@@ -83,6 +83,7 @@ public class GetAlertActionRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the alert action integration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

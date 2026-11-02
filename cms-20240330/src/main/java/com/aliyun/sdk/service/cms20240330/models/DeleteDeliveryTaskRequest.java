@@ -60,7 +60,7 @@ public class DeleteDeliveryTaskRequest extends Request {
         } 
 
         /**
-         * <p>The delivery task ID.</p>
+         * <p>The ID of the data delivery task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -173,7 +173,7 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * <p>The context store name.</p>
+         * <p>The name of the context store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * <p>The updated text for the long-term memory.</p>
+         * <p>The updated long-term memory text.</p>
          * 
          * <strong>example:</strong>
          * <p>Users prefer to first view the SLS error logs, index configuration, and the most recent Agent execution trace.</p>
@@ -211,7 +211,7 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * <p>The experience object.</p>
+         * <p>The experience.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -227,7 +227,7 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * <p>A set of key-value pairs to attach to an object for storing custom information.</p>
+         * <p>The metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
@@ -239,7 +239,7 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * <p>The payload to update.</p>
+         * <p>The updated payload.</p>
          * 
          * <strong>example:</strong>
          * <p>{

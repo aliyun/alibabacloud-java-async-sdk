@@ -189,7 +189,7 @@ public class ListPrometheusInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The region IDs for filtering, separated by commas. Currently, only a single region ID is supported.</p>
+         * <p>The list of region IDs used for filtering, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
@@ -225,7 +225,7 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs, separated by commas.</p>
+         * <p>The list of instance IDs, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-00001,rw-00002,rw-00003</p>
@@ -237,7 +237,7 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance name. Fuzzy match is supported.</p>
+         * <p>The name of the instance. Partial matching is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -273,7 +273,7 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -283,7 +283,7 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance version. Valid values: V1 and V2.</p>
+         * <p>The version of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>V2</p>

@@ -74,7 +74,10 @@ public class PreviewNotifyTemplateRequest extends Request {
         } 
 
         /**
-         * data.
+         * <p>The rendering context data in key-value pair format. It serves as the data source to populate Go template placeholders, such as {{.incident.title}}, in the templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;incident&quot;:{&quot;title&quot;:&quot;High CPU usage&quot;,&quot;severity&quot;:&quot;P1&quot;}}</p>
          */
         public Builder data(Object data) {
             this.putBodyParameter("data", data);
@@ -83,11 +86,11 @@ public class PreviewNotifyTemplateRequest extends Request {
         }
 
         /**
-         * <p>待渲染的模板列表，每项包含模板标识和模板内容</p>
+         * <p>The list of templates to be rendered. Each item contains a template identifier and the template content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;key&quot;:&quot;title&quot;,&quot;template&quot;:&quot;云监控报警: {{.incident.title}}&quot;},{&quot;key&quot;:&quot;content&quot;,&quot;template&quot;:&quot;&gt;- 级别: {{.incident.severity}}&quot;}]</p>
+         * <p>[{&quot;key&quot;:&quot;title&quot;,&quot;template&quot;:&quot;CloudMonitor alert: {{.incident.title}}&quot;},{&quot;key&quot;:&quot;content&quot;,&quot;template&quot;:&quot;&gt;- Severity: {{.incident.severity}}&quot;}]</p>
          */
         public Builder templates(java.util.List<Templates> templates) {
             this.putBodyParameter("templates", templates);
@@ -157,7 +160,7 @@ public class PreviewNotifyTemplateRequest extends Request {
             } 
 
             /**
-             * <p>模板标识，前端自定义，原样返回。建议使用 title / content 等语义名称</p>
+             * <p>The template identifier. It is customized by the frontend and returned as-is. Use semantic names such as title or content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -169,11 +172,11 @@ public class PreviewNotifyTemplateRequest extends Request {
             }
 
             /**
-             * <p>Go template 语法的模板内容字符串</p>
+             * <p>The template content string in Go template syntax.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>云监控报警: {{.incident.title}}</p>
+             * <p>CloudMonitor alert: {{.incident.title}}</p>
              */
             public Builder template(String template) {
                 this.template = template;

@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAlertNotifyTemplatesResponseBody</p>
  */
 public class DeleteAlertNotifyTemplatesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("deletedCount")
+    private Integer deletedCount;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private DeleteAlertNotifyTemplatesResponseBody(Builder builder) {
+        this.deletedCount = builder.deletedCount;
         this.requestId = builder.requestId;
     }
 
@@ -37,6 +41,13 @@ public class DeleteAlertNotifyTemplatesResponseBody extends TeaModel {
     }
 
     /**
+     * @return deletedCount
+     */
+    public Integer getDeletedCount() {
+        return this.deletedCount;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -44,17 +55,30 @@ public class DeleteAlertNotifyTemplatesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer deletedCount; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(DeleteAlertNotifyTemplatesResponseBody model) {
+            this.deletedCount = model.deletedCount;
             this.requestId = model.requestId;
         } 
 
         /**
-         * requestId.
+         * deletedCount.
+         */
+        public Builder deletedCount(Integer deletedCount) {
+            this.deletedCount = deletedCount;
+            return this;
+        }
+
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

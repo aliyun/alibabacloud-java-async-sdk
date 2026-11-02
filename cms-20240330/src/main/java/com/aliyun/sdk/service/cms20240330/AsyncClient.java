@@ -150,7 +150,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation creates an event integration.</p>
+     * <p>Creates an event integration.</p>
      * 
      * @param request the request parameters of CreateIntegrationPolicy  CreateIntegrationPolicyRequest
      * @return CreateIntegrationPolicyResponse
@@ -159,7 +159,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally. When you create a policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</p>
+     * <p>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally.
+     * When you create a silence policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</p>
      * 
      * @param request the request parameters of CreateMaintainWindow  CreateMaintainWindowRequest
      * @return CreateMaintainWindowResponse
@@ -182,6 +183,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNotifyPolicyResponse> createNotifyPolicy(CreateNotifyPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
      * @param request the request parameters of CreateOncallSchedule  CreateOncallScheduleRequest
      * @return CreateOncallScheduleResponse
      */
@@ -241,10 +245,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * Common use cases:</p>
      * <ul>
      * <li>heapdump: Triggers a JVM heap dump.</li>
-     * <li>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</li>
-     * <li>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</li>
-     * <li>LiveDebug Code Replace: Performs hot code replacement.
-     * After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</li>
+     * <li>LiveDebug Probe: Dynamically instruments target methods (logs, snapshots, metrics, spans, etc.).</li>
+     * <li>LiveDebug Command: One-time proactive inspection (OGNL, decompilation, thread or memory information, etc.).</li>
+     * <li>LiveDebug Code Replace: Hot code replacement.
+     * After the task is created, a taskId is returned. You can subsequently manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronized to ConfigServer.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateServiceTask  CreateServiceTaskRequest
@@ -607,7 +611,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to modify version <code>1</code> of alert template <code>123456</code>. In this example, the alert level is set to <code>Critical</code>, the statistical method is set to <code>Average</code>, the comparison operator for the alert threshold is set to <code>GreaterThanOrEqualToThreshold</code>, the alert threshold is set to <code>90</code>, and the number of retries is set to <code>3</code>. The response indicates that the alert template was successfully modified.</p>
+     * <p>This topic provides an example of modifying alert template <code>123456</code> of version <code>1</code>. The alert level is changed to <code>Critical</code>, the statistical method to <code>Average</code>, the threshold comparison operator to <code>GreaterThanOrEqualToThreshold</code>, the threshold to <code>90</code>, and the number of retries to <code>3</code>. The response indicates that the alert template was modified successfully.</p>
      * 
      * @param request the request parameters of GetAddonCodeTemplate  GetAddonCodeTemplateRequest
      * @return GetAddonCodeTemplateResponse
@@ -789,6 +793,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNotifyPolicyResponse> getNotifyPolicy(GetNotifyPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
      * @param request the request parameters of GetOncallSchedule  GetOncallScheduleRequest
      * @return GetOncallScheduleResponse
      */
@@ -847,8 +854,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a single service task based on the taskId.
-     * The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</p>
+     * <p>Queries the details of a single service task based on the task ID. The response content varies based on the task type. For heapdump, the heap dump task information is returned. For LiveDebug, the task records and fields such as taskConfig (extraInfo) are returned.</p>
      * 
      * @param request the request parameters of GetServiceTask  GetServiceTaskRequest
      * @return GetServiceTaskResponse
@@ -893,7 +899,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of add-on configurations.</p>
+     * <p>Queries the list of integration configurations.</p>
      * 
      * @param request the request parameters of ListAddonReleases  ListAddonReleasesRequest
      * @return ListAddonReleasesResponse
@@ -922,6 +928,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlertActionsResponse> listAlertActions(ListAlertActionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Uses paging to retrieve the list of alert history records for the CloudMonitor 2.0 monitoring service. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</p>
+     * 
+     * @param request the request parameters of ListAlertHistories  ListAlertHistoriesRequest
+     * @return ListAlertHistoriesResponse
+     */
+    CompletableFuture<ListAlertHistoriesResponse> listAlertHistories(ListAlertHistoriesRequest request);
+
+    /**
      * @param request the request parameters of ListAlertNotifyTemplates  ListAlertNotifyTemplatesRequest
      * @return ListAlertNotifyTemplatesResponse
      */
@@ -929,7 +944,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of alert chatbots under the current account. Alert chatbots serve as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by chatbot ID, name, type, and workspace.</p>
+     * <p>Queries the alert robots under the current account. Alert robots act as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by robot ID, name, type, and workspace.</p>
      * 
      * @param request the request parameters of ListAlertRobots  ListAlertRobotsRequest
      * @return ListAlertRobotsResponse
@@ -980,7 +995,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries data pipelines in a specified workspace by using paging.</p>
+     * <p>Performs a paged query of data streams in a specified workspace. Supports paging.</p>
      * 
      * @param request the request parameters of ListDataPipelines  ListDataPipelinesRequest
      * @return ListDataPipelinesResponse
@@ -1055,8 +1070,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When a policy is active, alert notifications are not sent for alerts that occur in the application group.
-     * This topic provides an example of creating a policy named <code>PauseNotify</code>. This policy pauses alert notifications for application group <code>7301****</code> from <code>1622949300000</code> to <code>1623208500000</code> (from <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code> UTC+8).</p>
+     * <p>During the effective period of the policy, no notifications are sent for alerts triggered in the application group.</p>
+     * <p>This topic provides an example of creating a policy named <code>PauseNotify</code> to pause alert notifications for the application group <code>7301****</code>. Alerts for this application group are paused from <code>1622949300000</code> to <code>1623208500000</code> (UTC+8 <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code>).</p>
      * 
      * @param request the request parameters of ListIntegrationPolicyStorageRequirements  ListIntegrationPolicyStorageRequirementsRequest
      * @return ListIntegrationPolicyStorageRequirementsResponse
@@ -1081,7 +1096,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of notify policies in a specified workspace with paging. You can filter results by name using fuzzy match. The response contains a list of NotifyPolicySummary lightweight views.</p>
+     * <p>Queries the list of notification policies in a specified workspace by using paging. Supports fuzzy filtering by name. Returns a list of NotifyPolicySummary lightweight views.</p>
      * 
      * @param request the request parameters of ListNotifyPolicies  ListNotifyPoliciesRequest
      * @return ListNotifyPoliciesResponse
@@ -1089,6 +1104,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNotifyPoliciesResponse> listNotifyPolicies(ListNotifyPoliciesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
+     * 
      * @param request the request parameters of ListOncallContacts  ListOncallContactsRequest
      * @return ListOncallContactsResponse
      */
@@ -1117,7 +1135,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves a list of Managed Service for Prometheus instances.</p>
+     * <p>Retrieves a list of Prometheus instances.</p>
      * 
      * @param request the request parameters of ListPrometheusInstances  ListPrometheusInstancesRequest
      * @return ListPrometheusInstancesResponse
@@ -1126,7 +1144,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries a list of Prometheus view instances.</p>
+     * <p>Retrieves a list of Prometheus view instances.</p>
      * 
      * @param request the request parameters of ListPrometheusViews  ListPrometheusViewsRequest
      * @return ListPrometheusViewsResponse
@@ -1216,7 +1234,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>传入 Go template 语法的模板内容和渲染上下文数据，返回各模板的渲染结果。支持同时预览多个模板（如 title 和 content），用于前端模板编辑器的实时预览能力。</p>
+     * <p>Renders template content in Go template syntax with the provided context data and returns the rendering results for each template. It supports previewing multiple templates, such as title and content, simultaneously to enable real-time preview in frontend template editors.</p>
      * 
      * @param request the request parameters of PreviewNotifyTemplate  PreviewNotifyTemplateRequest
      * @return PreviewNotifyTemplateResponse
@@ -1231,7 +1249,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of querying the list of alert templates. The response shows that the list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example of querying the alert template list. The response shows that the list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * @param request the request parameters of QueryAlertRules  QueryAlertRulesRequest
      * @return QueryAlertRulesResponse
@@ -1252,9 +1270,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <code>acs_ecs_dashboard</code> instance <code>i-uf6j91r34rnwawoo****</code>. The alert contact group of the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the retry count for the Critical level is <code>3</code>.</p>
+     * <p>This topic provides an example of setting a threshold alert rule for the <code>cpu_total</code> metric of the <code>i-uf6j91r34rnwawoo****</code> instance in the <code>acs_ecs_dashboard</code> namespace of Elastic Compute Service. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the number of alert retries for the Critical level is <code>3</code>.</p>
      * <blockquote>
-     * <p>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</p>
+     * <p>On August 15, 2024, Statistics validation was added. The statistical value can only be the Statistics corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">cloud service monitoring metrics</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of SearchMemories  SearchMemoriesRequest
@@ -1415,6 +1433,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateNotifyStrategyResponse> updateNotifyStrategy(UpdateNotifyStrategyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
      * @param request the request parameters of UpdateOncallSchedule  UpdateOncallScheduleRequest
      * @return UpdateOncallScheduleResponse
      */
@@ -1493,6 +1514,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpsertUmodelDataResponse> upsertUmodelData(UpsertUmodelDataRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Views the on-call calendar and returns the on-call schedule for a specified on-call schedule within a specified date range. The response is grouped by shift name, where each key is a shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</p>
+     * 
      * @param request the request parameters of ViewOncallSchedule  ViewOncallScheduleRequest
      * @return ViewOncallScheduleResponse
      */

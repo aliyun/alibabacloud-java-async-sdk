@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAlertActionsResponseBody</p>
  */
 public class DeleteAlertActionsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("deletedCount")
+    private Integer deletedCount;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private DeleteAlertActionsResponseBody(Builder builder) {
+        this.deletedCount = builder.deletedCount;
         this.requestId = builder.requestId;
     }
 
@@ -37,6 +41,13 @@ public class DeleteAlertActionsResponseBody extends TeaModel {
     }
 
     /**
+     * @return deletedCount
+     */
+    public Integer getDeletedCount() {
+        return this.deletedCount;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -44,17 +55,33 @@ public class DeleteAlertActionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer deletedCount; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(DeleteAlertActionsResponseBody model) {
+            this.deletedCount = model.deletedCount;
             this.requestId = model.requestId;
         } 
 
         /**
-         * requestId.
+         * <p>The actual number of deleted records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        public Builder deletedCount(Integer deletedCount) {
+            this.deletedCount = deletedCount;
+            return this;
+        }
+
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

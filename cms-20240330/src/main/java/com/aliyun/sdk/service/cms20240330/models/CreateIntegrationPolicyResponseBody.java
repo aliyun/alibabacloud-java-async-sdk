@@ -91,7 +91,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The uploaded policy.</p>
+         * <p>The policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
