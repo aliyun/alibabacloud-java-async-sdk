@@ -78,7 +78,7 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>IPv6 support information.</p>
+         * <p>The IPv6 support information.</p>
          */
         public Builder supportIpv6Info(SupportIpv6Info supportIpv6Info) {
             this.supportIpv6Info = supportIpv6Info;
@@ -144,7 +144,7 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the node.</p>
+             * <p>The ID of the edge zone.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-chengdu-****-4</p>
@@ -155,12 +155,10 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether IPv6 is supported. Valid values:</p>
+             * <p>Indicates whether IPv6 is supported. Valid values:</p>
              * <ul>
-             * <li><p>true</p>
-             * </li>
-             * <li><p>false</p>
-             * </li>
+             * <li>true: Supported.</li>
+             * <li>false: Not supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>

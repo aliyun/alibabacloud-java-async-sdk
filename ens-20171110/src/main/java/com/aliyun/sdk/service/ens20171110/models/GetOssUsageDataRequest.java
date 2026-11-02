@@ -103,7 +103,7 @@ public class GetOssUsageDataRequest extends Request {
         } 
 
         /**
-         * <p>The name of the logical Object Storage Service (OSS) bucket.</p>
+         * <p>The name of the OSS logical bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>ens-sink-bucketzyp1656903494</p>
@@ -115,7 +115,7 @@ public class GetOssUsageDataRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The time must be in UTC. Format: 2010-01-21T09:50:23Z.</p>
+         * <p>The end time in UTC. Format: 2010-01-21T09:50:23Z.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,8 +128,7 @@ public class GetOssUsageDataRequest extends Request {
         }
 
         /**
-         * <p>The aggregation granularity. Unit: minutes.</p>
-         * <p>Default value: 5. Valid values: 5 to 1440.</p>
+         * <p>The time aggregation granularity. Unit: minutes. Default value: 5. Valid values: 5 to 1440.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -141,7 +140,7 @@ public class GetOssUsageDataRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The time must be in UTC. Format: 2010-01-21T09:50:23Z.</p>
+         * <p>The start time in UTC. Format: 2010-01-21T09:50:23Z.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

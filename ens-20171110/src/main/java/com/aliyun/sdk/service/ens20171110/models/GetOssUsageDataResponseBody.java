@@ -78,7 +78,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The array of usage data.</p>
+         * <p>The usage array.</p>
          */
         public Builder usageList(java.util.List<UsageList> usageList) {
             this.usageList = usageList;
@@ -209,7 +209,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The inbound bandwidth over the internal network. Unit: bit/s.</p>
+             * <p>The inbound bandwidth over the internal network. Unit: Bps.</p>
              * 
              * <strong>example:</strong>
              * <p>37865147</p>
@@ -220,7 +220,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound bandwidth over the internal network. Unit: bit/s.</p>
+             * <p>The outbound bandwidth over the internal network. Unit: Bps.</p>
              * 
              * <strong>example:</strong>
              * <p>22012187890</p>
@@ -231,7 +231,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of time points within a day.</p>
+             * <p>The sequence number of the time point within a day.</p>
              * 
              * <strong>example:</strong>
              * <p>144</p>
@@ -242,7 +242,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time, in UTC. Format: 2010-01-21T09:50:23Z.</p>
+             * <p>The time point in UTC. Format: 2010-01-21T09:50:23Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-12T00:00:00Z</p>
@@ -264,7 +264,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound bandwidth over the Internet. Unit: bit/s.</p>
+             * <p>The inbound bandwidth over the Internet. Unit: Bps.</p>
              * 
              * <strong>example:</strong>
              * <p>542155715</p>
@@ -275,7 +275,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound bandwidth over the Internet. Unit: bit/s.</p>
+             * <p>The outbound bandwidth over the Internet. Unit: Bps.</p>
              * 
              * <strong>example:</strong>
              * <p>547126175217</p>

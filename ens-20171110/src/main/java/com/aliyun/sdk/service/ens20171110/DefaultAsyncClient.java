@@ -204,9 +204,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The maximum number of secondary CIDR blocks that you can add to a network is as follows:</p>
+     * <p>The maximum number of secondary CIDR blocks that can be added to a network is as follows:</p>
      * <ul>
-     * <li>A network supports up to five secondary IPv4 CIDR blocks.</li>
+     * <li>You can add up to 5 secondary IPv4 CIDR blocks to a network.</li>
      * </ul>
      * 
      * @param request the request parameters of AssociateNetworkCidrBlock  AssociateNetworkCidrBlockRequest
@@ -1532,7 +1532,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a NAS file system. Before deleting the file system, call DeleteMountTarget to delete all mount targets of the file system. After DeleteMountTarget succeeds, there is an eventual consistency window. Poll DescribeFileSystems to confirm that MountTargets is empty before calling this API operation.</p>
+     * <p>Deletes a NAS file system. Before deletion, you must call DeleteMountTarget to delete all mount targets of the file system. After a successful DeleteMountTarget call, an eventual consistency window exists. Poll DescribeFileSystems to confirm that MountTargets is empty before you call this operation.</p>
      * 
      * @param request the request parameters of DeleteFileSystem  DeleteFileSystemRequest
      * @return DeleteFileSystemResponse
@@ -1655,7 +1655,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After you delete a mount target, the mount target cannot be restored. Proceed with caution.</p>
+     * <p>A deleted mount target cannot be recovered. Proceed with caution.</p>
      * 
      * @param request the request parameters of DeleteMountTarget  DeleteMountTargetRequest
      * @return DeleteMountTargetResponse
@@ -3342,8 +3342,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeLoadBalancerListenMonitor  DescribeLoadBalancerListenMonitorRequest
@@ -3982,6 +3982,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeSharedDiskRecords  DescribeSharedDiskRecordsRequest
+     * @return DescribeSharedDiskRecordsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSharedDiskRecordsResponse> describeSharedDiskRecords(DescribeSharedDiskRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSharedDiskRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSharedDiskRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSharedDiskRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeSnapshots  DescribeSnapshotsRequest
      * @return DescribeSnapshotsResponse
      */
@@ -4452,7 +4470,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The query and aggregation granularity of bandwidth and storage usage cannot exceed one day. Data aggregation is to collect the maximum values of usage data within a period of time.</p>
+     * <p>The aggregation granularity for bandwidth and storage usage queries cannot exceed one day. Aggregate data is processed by taking the maximum value of the data points within a specified time period.</p>
      * 
      * @param request the request parameters of GetOssUsageData  GetOssUsageDataRequest
      * @return GetOssUsageDataResponse
@@ -6044,7 +6062,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Saves a Shared Data Group (SDG). SDGs in the failed status cannot be saved. Before calling this operation, call DescribeSDGs to query the current status.</p>
+     * <p>Saves an SDG. You cannot save an SDG that is in the failed state. Before calling this operation, call DescribeSDGs to check the current status.</p>
      * 
      * @param request the request parameters of SaveSDG  SaveSDGRequest
      * @return SaveSDGResponse

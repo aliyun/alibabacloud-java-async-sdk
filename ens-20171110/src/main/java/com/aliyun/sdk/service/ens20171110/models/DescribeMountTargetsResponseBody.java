@@ -106,7 +106,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the mount targets.</p>
+         * <p>The mount target information.</p>
          */
         public Builder mountTargets(java.util.List<MountTargets> mountTargets) {
             this.mountTargets = mountTargets;
@@ -122,7 +122,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -144,7 +144,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -322,10 +322,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             /**
              * <p>The status of the mount target. Valid values:</p>
              * <ul>
-             * <li>active: The mount target is available.</li>
-             * <li>inactive: The mount target is unavailable.</li>
-             * <li>pending: The task is queued.</li>
-             * <li>deleting: The mount target is being deleted.</li>
+             * <li>active: Available.</li>
+             * <li>inactive: Unavailable.</li>
+             * <li>pending: Queued.</li>
+             * <li>deleting: Deleting.</li>
              * </ul>
              * 
              * <strong>example:</strong>

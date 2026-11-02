@@ -75,7 +75,7 @@ public class UnmountInstanceSDGRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the instances.</p>
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -86,7 +86,7 @@ public class UnmountInstanceSDGRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SDG.</p>
+         * <p>The SDG ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

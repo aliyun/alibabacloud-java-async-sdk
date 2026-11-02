@@ -340,7 +340,7 @@ public class MountInstanceSDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response message. The value success is returned if the request is successful.</p>
+             * <p>The response message. The value is success if the request is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -359,10 +359,10 @@ public class MountInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether all requests are successful. Valid values:</p>
+             * <p>Indicates whether all requests were successful. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: All successful.</li>
-             * <li><strong>false</strong>: Some tasks failed.</li>
+             * <li><strong>true</strong>: All requests were successful.</li>
+             * <li><strong>false</strong>: One or more tasks failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

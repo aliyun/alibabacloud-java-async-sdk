@@ -90,7 +90,7 @@ public class DescribeDiskIopsListRequest extends Request {
         } 
 
         /**
-         * <p>The disk ID in the format of d-***********.</p>
+         * <p>The disk ID. Format: d-***********.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DescribeDiskIopsListRequest extends Request {
         }
 
         /**
-         * <p>The end time in the format of yyyy-MM-dd HH:mm:ss. The time span between the start time and end time cannot exceed one day.</p>
+         * <p>The end time. The time span between the start time and the end time cannot exceed one day. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DescribeDiskIopsListRequest extends Request {
         }
 
         /**
-         * <p>The start time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

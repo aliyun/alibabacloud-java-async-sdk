@@ -67,7 +67,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned Data object.</p>
+         * <p>The Data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the destination edge zone.</p>
+             * <p>The ID of the destination node.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-xxx</p>
@@ -257,7 +257,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful requests.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -340,7 +340,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response message. A value of success indicates a successful request.</p>
+             * <p>The response message. The value is success if the request is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -359,9 +359,9 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether all requests were successful. Valid values:</p>
+             * <p>Indicates whether all requests are successful. Valid values:</p>
              * <ul>
-             * <li>true: All requests were successful.</li>
+             * <li>true: All requests are successful.</li>
              * <li>false: Some requests failed.</li>
              * </ul>
              * 

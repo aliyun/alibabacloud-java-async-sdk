@@ -156,7 +156,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The target instance ID for scheduling.</p>
+         * <p>The ID of the target instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-5myukg7hnpbto7m024002****</p>
@@ -208,7 +208,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the resource has been created.</p>
+         * <p>Indicates whether it has been created.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -219,7 +219,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The TCP service port range of the scheduled target virtual machine instance or container. Valid values are in the ${from}-${to} format, such as 80-88.</p>
+         * <p>The TCP service port range of the scheduled target virtual machine instance or container. Format: ${from}-${to}. Example: 80-88.</p>
          * 
          * <strong>example:</strong>
          * <p>80-88</p>

@@ -67,7 +67,7 @@ public class UnmountInstanceSDGResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data object.</p>
+         * <p>The returned Data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -155,7 +155,7 @@ public class UnmountInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aic-xxxxx-0</p>
@@ -249,7 +249,7 @@ public class UnmountInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about failed tasks.</p>
+             * <p>The list of failure details.</p>
              */
             public Builder failedItems(java.util.List<FailedItems> failedItems) {
                 this.failedItems = failedItems;
@@ -340,7 +340,7 @@ public class UnmountInstanceSDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response message. Success is returned for a successful request.</p>
+             * <p>The response message. The value is success if the request is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -351,7 +351,7 @@ public class UnmountInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution result of the synchronization request.</p>
+             * <p>The execution result of the synchronous request.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -361,10 +361,8 @@ public class UnmountInstanceSDGResponseBody extends TeaModel {
             /**
              * <p>Indicates whether all tasks are successful. Valid values:</p>
              * <ul>
-             * <li><p>true: All tasks are successful.</p>
-             * </li>
-             * <li><p>false: Failed tasks exist.</p>
-             * </li>
+             * <li>true: All tasks are successful.</li>
+             * <li>false: One or more tasks failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

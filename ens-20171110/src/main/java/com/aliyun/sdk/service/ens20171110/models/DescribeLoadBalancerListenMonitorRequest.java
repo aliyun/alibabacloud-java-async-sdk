@@ -119,7 +119,7 @@ public class DescribeLoadBalancerListenMonitorRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class DescribeLoadBalancerListenMonitorRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ELB instance.</p>
+         * <p>The load balancer instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class DescribeLoadBalancerListenMonitorRequest extends Request {
         }
 
         /**
-         * <p>The network protocol, such as tcp or udp.</p>
+         * <p>The network protocol, such as TCP or UDP.</p>
          * 
          * <strong>example:</strong>
          * <p>tcp</p>
@@ -157,7 +157,7 @@ public class DescribeLoadBalancerListenMonitorRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class DescribeLoadBalancerListenMonitorRequest extends Request {
         }
 
         /**
-         * <p>The virtual IP address (VIP) port of the ELB instance.</p>
+         * <p>The VIP port of the load balancer instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

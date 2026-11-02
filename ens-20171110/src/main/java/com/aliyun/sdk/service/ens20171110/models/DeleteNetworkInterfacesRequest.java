@@ -60,7 +60,7 @@ public class DeleteNetworkInterfacesRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the elastic network interfaces (ENIs).</p>
+         * <p>The list of IDs of elastic network interface controllers (NICs).</p>
          * <p>This parameter is required.</p>
          */
         public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {

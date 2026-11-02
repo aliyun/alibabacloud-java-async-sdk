@@ -67,7 +67,7 @@ public class CopySDGResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned Data object.</p>
+         * <p>The Data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -249,7 +249,7 @@ public class CopySDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of failed edge zone details.</p>
+             * <p>The list of details about failed edge zones.</p>
              */
             public Builder failedItems(java.util.List<FailedItems> failedItems) {
                 this.failedItems = failedItems;
@@ -257,7 +257,7 @@ public class CopySDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successful operations.</p>
+             * <p>The number of successful edge zones.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -340,7 +340,7 @@ public class CopySDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response message. The value success indicates a successful request.</p>
+             * <p>The response message. The value is success if the request is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -351,7 +351,7 @@ public class CopySDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution result of the synchronous request.</p>
+             * <p>The execution result of the synchronization request.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -359,10 +359,10 @@ public class CopySDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether all requests were successful. Valid values:</p>
+             * <p>Indicates whether all requests are successful. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: All requests were successful.</li>
-             * <li><strong>false</strong>: Some tasks failed.</li>
+             * <li><strong>true</strong>: All requests are successful.</li>
+             * <li><strong>false</strong>: One or more tasks failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

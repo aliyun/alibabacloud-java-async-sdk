@@ -86,7 +86,7 @@ public class CopySDGRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SDG to copy.</p>
+         * <p>The ID of the SDG to be copied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

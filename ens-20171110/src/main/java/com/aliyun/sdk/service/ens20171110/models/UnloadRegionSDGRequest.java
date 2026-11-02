@@ -89,7 +89,7 @@ public class UnloadRegionSDGRequest extends Request {
         } 
 
         /**
-         * <p>The list of destination edge zones.</p>
+         * <p>The list of destination nodes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder destinationRegionIds(java.util.List<String> destinationRegionIds) {
@@ -110,7 +110,7 @@ public class UnloadRegionSDGRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SDG from which to delete preloaded data.</p>
+         * <p>The ID of the SDG for which preloaded data is deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
