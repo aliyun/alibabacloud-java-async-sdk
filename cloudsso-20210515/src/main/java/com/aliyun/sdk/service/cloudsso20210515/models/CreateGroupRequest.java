@@ -87,8 +87,8 @@ public class CreateGroupRequest extends Request {
         } 
 
         /**
-         * <p>The description of the group.</p>
-         * <p>The description can be up to 1,024 characters in length.</p>
+         * <p>The description of the user group.</p>
+         * <p>Length: The description can be up to 1024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a group.</p>
@@ -100,7 +100,7 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-00fc2p61****</p>
@@ -112,9 +112,9 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the group.</p>
-         * <p>The name can contain letters, digits, underscores (_), hyphens (-), and periods (.).``</p>
-         * <p>The name can be up to 128 characters in length.</p>
+         * <p>The name of the user group.</p>
+         * <p>Format: The name can contain letters, digits, and the special characters <code>_-.</code>.</p>
+         * <p>Length: The name can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>TestGroup</p>

@@ -59,7 +59,7 @@ public class GetDirectoryRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-00fc2p61****</p>

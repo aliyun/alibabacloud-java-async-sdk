@@ -73,7 +73,7 @@ public class DeleteUserRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-00fc2p61****</p>
@@ -85,7 +85,7 @@ public class DeleteUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>u-00q8wbq42wiltcrk****</p>

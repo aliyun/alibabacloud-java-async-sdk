@@ -129,7 +129,7 @@ public class ListAccessConfigurationsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-00fc2p61****</p>
@@ -142,8 +142,8 @@ public class ListAccessConfigurationsRequest extends Request {
 
         /**
          * <p>The filter condition.</p>
-         * <p>The value is not case-sensitive. You must specify the value in the &lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt; format. You can set &lt;Attribute&gt; only to AccessConfigurationName and &lt;Operator&gt; only to eq or sw. The value eq indicates Equals. The value sw indicates Starts With.</p>
-         * <p>For example, if you set Filter to AccessConfigurationName sw test, the operation queries all access configurations whose names start with test. If you set Filter to AccessConfigurationName eq TestAccessConfiguration, the operation queries the access configuration whose name is TestAccessConfiguration.</p>
+         * <p>Format: <Attribute> <Operator> <Value>. The filter is case-insensitive. Currently, <Attribute> supports only AccessConfigurationName, and <Operator> supports only eq (Equals) and sw (Start With).</p>
+         * <p>Example: Filter = &quot;AccessConfigurationName sw test&quot; queries all access configurations whose names start with test. Filter = &quot;AccessConfigurationName eq TestAccessConfiguration&quot; queries the access configuration named TestAccessConfiguration.</p>
          * 
          * <strong>example:</strong>
          * <p>AccessConfigurationName sw test</p>
@@ -155,7 +155,7 @@ public class ListAccessConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page.</p>
          * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -169,8 +169,8 @@ public class ListAccessConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
-         * <p>When you call this operation for the first time, if the total number of entries to return is larger than the value of the <code>MaxResults</code> parameter, the entries are truncated. The system returns entries based on the value of the <code>MaxResults</code> parameter, and does not return the excess entries. In this case, the value of the response parameter <code>IsTruncated</code> is <code>true</code>, and the <code>NextToken</code> parameter is returned. In the next call, you can use the value of the <code>NextToken</code> parameter and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <code>IsTruncated</code> becomes <code>false</code>. This way, all entries are returned.</p>
+         * <p>The token for the next page of results. You do not need to specify <code>NextToken</code> for the first API call.</p>
+         * <p>When you call this API operation for the first time, if the total number of results exceeds the <code>MaxResults</code> limit, the results are truncated and only <code>MaxResults</code> entries are returned. In this case, the <code>IsTruncated</code> parameter is set to <code>true</code> and a <code>NextToken</code> is returned. You can use the <code>NextToken</code> returned from the previous call to continue calling this API operation while keeping other request parameters unchanged to query the truncated results. You can repeat this process until <code>IsTruncated</code> is <code>false</code>, which indicates that all data has been retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
@@ -182,8 +182,8 @@ public class ListAccessConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The status notification. The status notification can be used to filter access configurations.</p>
-         * <p>Set the value to ReprovisionRequired, which indicates that the operation queries all access configurations that need to be re-provisioned.</p>
+         * <p>The status notification information, which is used as a filter condition for the query.</p>
+         * <p>Valid values: ReprovisionRequired, which queries access configurations that need to be reprovisioned.</p>
          * 
          * <strong>example:</strong>
          * <p>ReprovisionRequired</p>
@@ -195,7 +195,7 @@ public class ListAccessConfigurationsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -263,7 +263,10 @@ public class ListAccessConfigurationsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -271,7 +274,10 @@ public class ListAccessConfigurationsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

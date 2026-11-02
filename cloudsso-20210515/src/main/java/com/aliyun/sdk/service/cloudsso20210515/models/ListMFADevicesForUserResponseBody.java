@@ -80,7 +80,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The MFA devices.</p>
+         * <p>The MFA device list.</p>
          */
         public Builder MFADevices(java.util.List<MFADevices> MFADevices) {
             this.MFADevices = MFADevices;
@@ -220,7 +220,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the MFA device.</p>
+             * <p>The MFA device ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mfa-00ujhet8pycljj7j****</p>
@@ -231,7 +231,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the MFA device.</p>
+             * <p>The MFA device name.</p>
              * 
              * <strong>example:</strong>
              * <p>Alice-MFA1</p>
@@ -242,7 +242,12 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the MFA device. The value is fixed as TOTP, which indicates a virtual MFA device. Virtual MFA devices are based on the Time-based One-time Password (TOTP) algorithm.</p>
+             * <p>The MFA device type. Valid values:</p>
+             * <ul>
+             * <li>TOTP: a virtual MFA device based on the Time-based One-Time Password algorithm.</li>
+             * <li>CrossPlatformPasskey: a cross-platform passkey.</li>
+             * <li>PlatformPasskey: a platform built-in passkey.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>TOTP</p>
@@ -253,7 +258,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the MFA device was enabled.</p>
+             * <p>The effective period. The time is in UTC and follows the RFC 3339 format (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-29T09:14:06Z</p>
@@ -264,7 +269,10 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * LastUseTime.
+             * <p>The last time the MFA device was used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T07:26:12Z</p>
              */
             public Builder lastUseTime(String lastUseTime) {
                 this.lastUseTime = lastUseTime;
@@ -272,7 +280,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>u-00q8wbq42wiltcrk****</p>

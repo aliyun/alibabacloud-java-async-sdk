@@ -73,7 +73,7 @@ public class AddExternalSAMLIdPCertificateRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-00fc2p61****</p>
@@ -85,8 +85,8 @@ public class AddExternalSAMLIdPCertificateRequest extends Request {
         }
 
         /**
-         * <p>The X.509 certificate in the PEM format.</p>
-         * <p>The certificate is provided by the SAML identity provider (IdP).</p>
+         * <p>The X.509 certificate in PEM format.</p>
+         * <p>The certificate is provided by the SAML IdP.</p>
          * 
          * <strong>example:</strong>
          * <p>MIIC8DCCAdigAwIBAgIQP9eomUYGeoND****</p>

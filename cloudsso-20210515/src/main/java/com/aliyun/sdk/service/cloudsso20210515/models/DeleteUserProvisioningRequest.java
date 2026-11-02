@@ -87,13 +87,13 @@ public class DeleteUserProvisioningRequest extends Request {
         } 
 
         /**
-         * <p>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
+         * <p>The deletion strategy. The processing strategy for synchronized RAM users when a RAM user synchronization is deleted. Valid values:</p>
          * <ul>
-         * <li>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</li>
-         * <li>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</li>
+         * <li>Delete: Deletes the RAM users that have been synchronized from CloudSSO to Resource Access Management (RAM) user synchronization is deleted.</li>
+         * <li>Keep: Retains the RAM users that have been synchronized from CloudSSO to Resource Access Management (RAM) user synchronization is deleted.</li>
          * </ul>
          * <blockquote>
-         * <p> If you do not specify this parameter, the deletion policy that is configured when you create the RAM user provisioning is used.</p>
+         * <p>If this parameter is left empty, the deletion strategy specified when the RAM user synchronization was created is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class DeleteUserProvisioningRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-003qew84****</p>
@@ -118,7 +118,7 @@ public class DeleteUserProvisioningRequest extends Request {
         }
 
         /**
-         * <p>The ID of the RAM user provisioning.</p>
+         * <p>The ID of the Resource Access Management (RAM) user synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>up-002axzhapcbz6e63****</p>

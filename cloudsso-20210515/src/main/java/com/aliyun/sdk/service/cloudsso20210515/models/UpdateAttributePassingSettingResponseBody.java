@@ -54,7 +54,10 @@ public class UpdateAttributePassingSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63160579-2E1B-57B0-8273-B27427172385</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

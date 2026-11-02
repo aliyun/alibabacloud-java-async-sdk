@@ -54,7 +54,7 @@ public class AddUserToGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F76AF4FC-25E4-5CF1-B7CB-74F3CB72F0F0</p>

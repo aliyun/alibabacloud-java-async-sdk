@@ -78,7 +78,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the SCIM credential.</p>
+         * <p>The SCIM credential information.</p>
          */
         public Builder SCIMServerCredential(SCIMServerCredential SCIMServerCredential) {
             this.SCIMServerCredential = SCIMServerCredential;
@@ -209,7 +209,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the SCIM credential was created.</p>
+             * <p>The time when the SCIM credential was created. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-09T08:12:52Z</p>
@@ -231,9 +231,9 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SCIM credential.</p>
+             * <p>The SCIM credential secret.</p>
              * <blockquote>
-             * <p> The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.</p>
+             * <p>The SCIM credential secret is returned only when the credential is created and cannot be queried later. Keep it secure.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the directory.</p>
+             * <p>The directory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-00fc2p61****</p>
@@ -267,7 +267,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SCIM credential expires.</p>
+             * <p>The time when the SCIM credential expires. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-09T08:12:52Z</p>
@@ -278,7 +278,10 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the SCIM credential. The value is fixed as Enabled, which indicates that the SCIM credential is enabled.</p>
+             * <p>The status of the SCIM credential. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The SCIM credential is enabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>

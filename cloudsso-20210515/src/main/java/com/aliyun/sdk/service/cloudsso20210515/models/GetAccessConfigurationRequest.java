@@ -73,7 +73,7 @@ public class GetAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the access configuration.</p>
+         * <p>The access configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ac-00ccule7tadaijxc****</p>
@@ -85,7 +85,7 @@ public class GetAccessConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-00fc2p61****</p>

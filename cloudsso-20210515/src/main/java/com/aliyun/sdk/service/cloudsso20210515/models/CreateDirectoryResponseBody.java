@@ -67,7 +67,7 @@ public class CreateDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the directory.</p>
+         * <p>The directory information.</p>
          */
         public Builder directory(Directory directory) {
             this.directory = directory;
@@ -194,7 +194,7 @@ public class CreateDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the directory.</p>
+             * <p>The directory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-00fc2p61****</p>
@@ -227,7 +227,7 @@ public class CreateDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the directory was modified. The time is displayed in UTC.</p>
+             * <p>The time when the directory was updated. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-10T04:04:04Z</p>

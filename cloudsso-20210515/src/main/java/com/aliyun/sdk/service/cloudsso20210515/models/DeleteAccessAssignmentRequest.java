@@ -157,7 +157,7 @@ public class DeleteAccessAssignmentRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the access configuration.</p>
+         * <p>The access configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ac-00jhtfl8thteu6uj****</p>
@@ -169,10 +169,10 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to de-provision the access configuration when you remove the access permissions from the CloudSSO identity. The access configuration is used to assign the access permissions, and the identity is the only one that uses the access configuration and is associated with the account. Valid values:</p>
+         * <p>Specifies whether to remove the access configuration deployment when you remove the last authorization that uses the access configuration on an account in a resource directory. Valid values:</p>
          * <ul>
-         * <li>DeprovisionForLastAccessAssignmentOnAccount: de-provisions the access configuration.</li>
-         * <li>None: does not de-provision the access configuration. This is the default value.</li>
+         * <li>DeprovisionForLastAccessAssignmentOnAccount: Removes the access configuration deployment.</li>
+         * <li>None: Does not remove the access configuration deployment. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-00fc2p61****</p>
@@ -197,7 +197,10 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * OriginTargetId.
+         * <p>The Alibaba Cloud account ID of the authorization target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
          */
         public Builder originTargetId(String originTargetId) {
             this.putQueryParameter("OriginTargetId", originTargetId);
@@ -206,10 +209,10 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CloudSSO identity.</p>
+         * <p>The CloudSSO identity ID. The value varies based on the principal type:</p>
          * <ul>
-         * <li>If you set <code>PrincipalType</code> to <code>User</code>, set <code>PrincipalId</code> to the ID of the CloudSSO user.</li>
-         * <li>If you set <code>PrincipalType</code> to <code>Group</code>, set <code>PrincipalId</code> to the ID of the CloudSSO group.</li>
+         * <li>If <code>PrincipalType</code> is <code>User</code>, <code>PrincipalId</code> is the CloudSSO user ID.</li>
+         * <li>If <code>PrincipalType</code> is <code>Group</code>, <code>PrincipalId</code> is the CloudSSO group ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,10 +225,10 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * <p>The type of the CloudSSO identity. Valid values:</p>
+         * <p>The CloudSSO identity type. Valid values:</p>
          * <ul>
-         * <li>User</li>
-         * <li>Group</li>
+         * <li>User: user</li>
+         * <li>Group: group</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,7 +241,7 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task object.</p>
+         * <p>The target ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>114240524784****</p>
@@ -250,7 +253,10 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * <p>The type of the task object. Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
+         * <p>The target type of the task. Valid values:</p>
+         * <ul>
+         * <li>RD-Account: The task target is an account in a resource directory.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RD-Account</p>

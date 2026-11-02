@@ -78,7 +78,7 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the SCIM credential.</p>
+         * <p>The SCIM credential information.</p>
          */
         public Builder SCIMServerCredential(SCIMServerCredential SCIMServerCredential) {
             this.SCIMServerCredential = SCIMServerCredential;
@@ -196,7 +196,7 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the SCIM credential was created.</p>
+             * <p>The creation time of the SCIM credential. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-09T08:12:52Z</p>
@@ -229,7 +229,7 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the directory.</p>
+             * <p>The directory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-00fc2p61****</p>
@@ -240,7 +240,7 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SCIM credential expires.</p>
+             * <p>The expiration time of the SCIM credential. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-09T08:12:52Z</p>
@@ -253,8 +253,8 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             /**
              * <p>The status of the SCIM credential. Valid values:</p>
              * <ul>
-             * <li>Enabled: The SCIM credential is enabled.</li>
-             * <li>Disabled: The SCIM credential is disabled.</li>
+             * <li>Enabled: Enabled.</li>
+             * <li>Disabled: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

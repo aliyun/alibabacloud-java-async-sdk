@@ -119,7 +119,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access permissions that are assigned.</p>
+         * <p>The list of access assignments.</p>
          */
         public Builder accessAssignments(java.util.List<AccessAssignments> accessAssignments) {
             this.accessAssignments = accessAssignments;
@@ -127,10 +127,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <p>Indicates whether the returned result is truncated. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The result is truncated.</li>
+         * <li>false: The result is not truncated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -153,9 +153,9 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next page of query results.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of IsTruncated is <code>true</code>.``</p>
+         * <p>This parameter is returned only when <code>IsTruncated</code> is set to <code>true</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>66898413-EB80-556D-9429-06FE3548F672</p>
@@ -178,7 +178,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that meet the filter conditions specified in the request parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -399,7 +399,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access permissions were assigned.</p>
+             * <p>The time when the access assignment was successful. The time follows the RFC 3339 standard and is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-04T10:03:08Z</p>
@@ -410,7 +410,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * OriginTargetId.
+             * <p>The ID of the Alibaba Cloud account to which the authorization target belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114240524784****</p>
              */
             public Builder originTargetId(String originTargetId) {
                 this.originTargetId = originTargetId;
@@ -442,8 +445,8 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             /**
              * <p>The type of the CloudSSO identity. Valid values:</p>
              * <ul>
-             * <li>User</li>
-             * <li>Group</li>
+             * <li>User: user.</li>
+             * <li>Group: group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -455,7 +458,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task object.</p>
+             * <p>The ID of the task target.</p>
              * 
              * <strong>example:</strong>
              * <p>114240524784****</p>
@@ -466,7 +469,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the task object.</p>
+             * <p>The name of the task target.</p>
              * 
              * <strong>example:</strong>
              * <p>dev-test</p>
@@ -477,7 +480,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path ID of the task object in the resource directory.</p>
+             * <p>The path ID of the task target in the resource directory.</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -485,7 +488,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path name of the task object in the resource directory.</p>
+             * <p>The path name of the task target in the resource directory.</p>
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -493,8 +496,11 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the task object.</p>
-             * <p>The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+             * <p>The type of the task target.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RD-Account: The task target is an account in a resource directory.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>RD-Account</p>

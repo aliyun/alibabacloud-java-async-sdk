@@ -54,7 +54,7 @@ public class DeleteAccessConfigurationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9B13E4EE-3853-5852-9165-597C32AD8FB7</p>

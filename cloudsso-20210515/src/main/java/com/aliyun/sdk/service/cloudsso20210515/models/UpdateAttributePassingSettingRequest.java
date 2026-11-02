@@ -73,7 +73,10 @@ public class UpdateAttributePassingSettingRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * <p>The directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -82,7 +85,16 @@ public class UpdateAttributePassingSettingRequest extends Request {
         }
 
         /**
-         * SourceIdentityPassing.
+         * <p>The SourceIdentity pass-through mode. Three pass-through modes are supported. If this parameter is not specified, the existing configuration is not modified.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>IdP: Uses the SourceIdentity attribute value carried in the SAML assertion from the external identity provider (IdP). The attribute value must be 2 to 64 characters in length and can contain only letters, digits, and the following special characters: =,.@-_.</li>
+         * <li>UserName: Uses the CloudSSO username as the SourceIdentity. The system automatically adds a reserved prefix, resulting in the format acs:sso:<username>, with a total length of no more than 64 characters.</li>
+         * <li>Disabled: Does not pass through SourceIdentity.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder sourceIdentityPassing(String sourceIdentityPassing) {
             this.putQueryParameter("SourceIdentityPassing", sourceIdentityPassing);

@@ -143,7 +143,7 @@ public class CreateAccessAssignmentRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the access configuration.</p>
+         * <p>The access configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ac-00jhtfl8thteu6uj****</p>
@@ -155,7 +155,7 @@ public class CreateAccessAssignmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-00fc2p61****</p>
@@ -167,7 +167,10 @@ public class CreateAccessAssignmentRequest extends Request {
         }
 
         /**
-         * OriginTargetId.
+         * <p>The Alibaba Cloud account ID of the authorization target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
          */
         public Builder originTargetId(String originTargetId) {
             this.putQueryParameter("OriginTargetId", originTargetId);
@@ -176,10 +179,10 @@ public class CreateAccessAssignmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CloudSSO identity.</p>
+         * <p>The CloudSSO identity ID. Details:</p>
          * <ul>
-         * <li>If you set <code>PrincipalType</code> to <code>User</code>, set <code>PrincipalId</code> to the ID of the CloudSSO user.</li>
-         * <li>If you set <code>PrincipalType</code> to <code>Group</code>, set <code>PrincipalId</code> to the ID of the CloudSSO group.</li>
+         * <li>If PrincipalType is set to User, PrincipalId is the CloudSSO user ID.</li>
+         * <li>If PrincipalType is set to Group, PrincipalId is the CloudSSO group ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,10 +195,10 @@ public class CreateAccessAssignmentRequest extends Request {
         }
 
         /**
-         * <p>The type of the CloudSSO identity. Valid values:</p>
+         * <p>The CloudSSO identity type. Valid values:</p>
          * <ul>
-         * <li>User</li>
-         * <li>Group</li>
+         * <li>User: user</li>
+         * <li>Group: group</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,7 +211,7 @@ public class CreateAccessAssignmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task object.</p>
+         * <p>The ID of the deployment target.</p>
          * 
          * <strong>example:</strong>
          * <p>114240524784****</p>
@@ -220,7 +223,7 @@ public class CreateAccessAssignmentRequest extends Request {
         }
 
         /**
-         * <p>The type of the task object. Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
+         * <p>The target type of the task. Valid value: RD-Account, which indicates that the task target is an account in a resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>RD-Account</p>

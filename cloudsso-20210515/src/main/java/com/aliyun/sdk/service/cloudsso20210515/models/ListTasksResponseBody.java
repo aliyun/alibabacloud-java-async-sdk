@@ -119,10 +119,10 @@ public class ListTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <p>Indicates whether the returned results are truncated. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The returned results are truncated.</li>
+         * <li>false: The returned results are not truncated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -145,9 +145,9 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token used to return the next page of the query results.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of <code>IsTruncated</code> is <code>true</code>.</p>
+         * <p>This parameter is returned only if IsTruncated is set to true.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C0DA2DFC-EB18-59EF-BD82-C30862EBA3A3</p>
@@ -170,7 +170,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tasks.</p>
+         * <p>The list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -178,7 +178,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that meet the conditional request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -464,7 +464,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the task.</p>
+             * <p>The end time of the task. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-09T05:50:50Z</p>
@@ -475,9 +475,9 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cause of the task failure.</p>
+             * <p>The reason why the task failed.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the value of <code>Status</code> is <code>Failed</code>.</p>
+             * <p>This parameter is returned only if Status is set to Failed.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -489,7 +489,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * OriginTargetId.
+             * <p>The ID of the Alibaba Cloud account to which the authorization target belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114240524784****</p>
              */
             public Builder originTargetId(String originTargetId) {
                 this.originTargetId = originTargetId;
@@ -521,8 +524,8 @@ public class ListTasksResponseBody extends TeaModel {
             /**
              * <p>The type of the CloudSSO identity. Valid values:</p>
              * <ul>
-             * <li>User</li>
-             * <li>Group</li>
+             * <li>User: The CloudSSO user.</li>
+             * <li>Group: The CloudSSO group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -534,7 +537,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the task.</p>
+             * <p>The start time of the task. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-09T05:50:50Z</p>
@@ -545,10 +548,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status. Valid values:</p>
+             * <p>The status of the task. Valid values:</p>
              * <ul>
              * <li>InProgress: The task is running.</li>
-             * <li>Success: The task is successful.</li>
+             * <li>Success: The task succeeded.</li>
              * <li>Failed: The task failed.</li>
              * </ul>
              * 
@@ -561,7 +564,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task object.</p>
+             * <p>The ID of the task target.</p>
              * 
              * <strong>example:</strong>
              * <p>114240524784****</p>
@@ -572,7 +575,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the task object.</p>
+             * <p>The name of the task target.</p>
              * 
              * <strong>example:</strong>
              * <p>dev-test</p>
@@ -583,7 +586,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path ID of the task object in the resource directory.</p>
+             * <p>The path ID of the task target in the resource directory.</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -591,7 +594,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path name of the task object in the resource directory.</p>
+             * <p>The path name of the task target in the resource directory.</p>
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -599,8 +602,11 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the task object.</p>
-             * <p>The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+             * <p>The type of the task target.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RD-Account: The task target is an account in a resource directory.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>RD-Account</p>
@@ -611,7 +617,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the job.</p>
+             * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>t-sh5k4gesm6twlrqb****</p>
@@ -622,12 +628,12 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task type. Valid values:</p>
+             * <p>The type of the node. Valid values:</p>
              * <ul>
-             * <li>ProvisionAccessConfiguration: An access configuration is provisioned.</li>
-             * <li>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</li>
-             * <li>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</li>
-             * <li>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</li>
+             * <li>ProvisionAccessConfiguration: Access configuration deployment.</li>
+             * <li>DeprovisionAccessConfiguration: Removes access configuration provisioning.</li>
+             * <li>CreateAccessAssignment: Grants authorization to an account in a resource directory.</li>
+             * <li>DeleteAccessAssignment: Removes authorization from an account in a resource directory.</li>
              * </ul>
              * 
              * <strong>example:</strong>

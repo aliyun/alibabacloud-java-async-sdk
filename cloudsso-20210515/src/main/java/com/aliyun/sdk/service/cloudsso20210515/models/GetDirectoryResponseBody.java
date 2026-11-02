@@ -67,7 +67,7 @@ public class GetDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the directory.</p>
+         * <p>The directory information.</p>
          */
         public Builder directory(Directory directory) {
             this.directory = directory;
@@ -183,7 +183,7 @@ public class GetDirectoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the directory was created.</p>
+             * <p>The time when the directory was created. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-30T08:35:26Z</p>
@@ -194,7 +194,7 @@ public class GetDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the directory.</p>
+             * <p>The directory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-00fc2p61****</p>
@@ -216,7 +216,7 @@ public class GetDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the directory.</p>
+             * <p>The ID of the region where the directory is located.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -227,7 +227,7 @@ public class GetDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the directory was modified.</p>
+             * <p>The time when the directory was updated. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-25T07:18:46Z</p>

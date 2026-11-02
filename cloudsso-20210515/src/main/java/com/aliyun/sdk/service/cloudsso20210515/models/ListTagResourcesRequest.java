@@ -1,0 +1,287 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cloudsso20210515.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListTagResourcesRequest} extends {@link RequestModel}
+ *
+ * <p>ListTagResourcesRequest</p>
+ */
+public class ListTagResourcesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
+    private String directoryId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    private java.util.List<String> resourceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String resourceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    private ListTagResourcesRequest(Builder builder) {
+        super(builder);
+        this.directoryId = builder.directoryId;
+        this.nextToken = builder.nextToken;
+        this.resourceId = builder.resourceId;
+        this.resourceType = builder.resourceType;
+        this.tag = builder.tag;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListTagResourcesRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return directoryId
+     */
+    public String getDirectoryId() {
+        return this.directoryId;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return resourceId
+     */
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
+        private String directoryId; 
+        private String nextToken; 
+        private java.util.List<String> resourceId; 
+        private String resourceType; 
+        private java.util.List<Tag> tag; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListTagResourcesRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.nextToken = request.nextToken;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
+        } 
+
+        /**
+         * <p>The directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
+         */
+        public Builder directoryId(String directoryId) {
+            this.putQueryParameter("DirectoryId", directoryId);
+            this.directoryId = directoryId;
+            return this;
+        }
+
+        /**
+         * <p>The token that is used to retrieve the next page of results when the response is truncated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>The list of resource IDs. You can specify up to 50 resource IDs in a single call.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Supported resource types include users and access configurations:</li>
+         * <li><ul>
+         * <li>If the resource type is user, specify the user ID.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>If the resource type is access configuration, specify the access configuration ID.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * <p><notice>If the DirectoryId parameter is not specified, you must add the prefix &quot;${DirectoryId}_&quot; to the resource ID.</notice></p>
+         */
+        public Builder resourceId(java.util.List<String> resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>user: The resource is a user.</li>
+         * <li>accessConfiguration: The resource is an access configuration.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accessConfiguration</p>
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * <p>The list of tags. You can specify up to 20 tags in a single call.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        @Override
+        public ListTagResourcesRequest build() {
+            return new ListTagResourcesRequest(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * <blockquote>
+             * <ul>
+             * <li><ul>
+             * <li>The tag key cannot be an empty string.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+}

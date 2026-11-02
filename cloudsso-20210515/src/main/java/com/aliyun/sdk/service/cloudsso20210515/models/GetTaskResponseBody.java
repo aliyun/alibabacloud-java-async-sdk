@@ -361,7 +361,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the task.</p>
+             * <p>The end time of the task. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-05T02:58:08Z</p>
@@ -372,9 +372,9 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cause of the task failure.</p>
+             * <p>The reason why the task failed.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the value of <code>Status</code> is <code>Failed</code>.</p>
+             * <p>This parameter is returned only when <code>Status</code> is <code>Failed</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -386,7 +386,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OriginTargetId.
+             * <p>The ID of the Alibaba Cloud account to which the target belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17xxxxxxxxxxxx73</p>
              */
             public Builder originTargetId(String originTargetId) {
                 this.originTargetId = originTargetId;
@@ -416,10 +419,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the CloudSSO identity. Valid values:</p>
+             * <p>The CloudSSO identity type. Valid values:</p>
              * <ul>
-             * <li>User</li>
-             * <li>Group</li>
+             * <li>User: user.</li>
+             * <li>Group: user group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -431,7 +434,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the task.</p>
+             * <p>The start time of the task. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-05T02:58:07Z</p>
@@ -444,8 +447,8 @@ public class GetTaskResponseBody extends TeaModel {
             /**
              * <p>The task status. Valid values:</p>
              * <ul>
-             * <li>InProgress: The task is running.</li>
-             * <li>Success: The task is successful.</li>
+             * <li>InProgress: The task is in progress.</li>
+             * <li>Success: The task succeeded.</li>
              * <li>Failed: The task failed.</li>
              * </ul>
              * 
@@ -458,7 +461,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task object.</p>
+             * <p>The ID of the task target.</p>
              * 
              * <strong>example:</strong>
              * <p>114240524784****</p>
@@ -469,7 +472,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the task object.</p>
+             * <p>The name of the task target.</p>
              * 
              * <strong>example:</strong>
              * <p>dev-test</p>
@@ -480,7 +483,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path ID of the task object in the resource directory.</p>
+             * <p>The path ID of the task target in the resource directory.</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -488,7 +491,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path name of the task object in the resource directory.</p>
+             * <p>The path name of the task target in the resource directory.</p>
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -496,7 +499,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+             * <p>The task target type. Valid values: RD-Account, which indicates that the task target is an account in a resource directory.</p>
              * 
              * <strong>example:</strong>
              * <p>RD-Account</p>
@@ -520,10 +523,10 @@ public class GetTaskResponseBody extends TeaModel {
             /**
              * <p>The task type. Valid values:</p>
              * <ul>
-             * <li>ProvisionAccessConfiguration: An access configuration is provisioned.</li>
-             * <li>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</li>
-             * <li>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</li>
-             * <li>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</li>
+             * <li>ProvisionAccessConfiguration: Deploys the access configuration.</li>
+             * <li>DeprovisionAccessConfiguration: Removes the access configuration deployment.</li>
+             * <li>CreateAccessAssignment: Grants authorization to an account in a resource directory.</li>
+             * <li>DeleteAccessAssignment: Revokes authorization from an account in a resource directory.</li>
              * </ul>
              * 
              * <strong>example:</strong>

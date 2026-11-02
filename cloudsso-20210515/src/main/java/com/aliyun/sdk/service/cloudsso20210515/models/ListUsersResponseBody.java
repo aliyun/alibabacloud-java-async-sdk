@@ -119,10 +119,10 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <p>Indicates whether the results are truncated. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The results are truncated.</li>
+         * <li>false: The results are not truncated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -145,9 +145,9 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next page of results. </p>
          * <blockquote>
-         * <p> This parameter is returned only when the <code>IsTruncated</code> parameter is <code>true</code>.</p>
+         * <p>This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that match the request parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -181,7 +181,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The users.</p>
+         * <p>The user list.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -247,7 +247,7 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The identifier of the user that is synchronized from an external IdP.</p>
+             * <p>The user identifier from the external identity provider.</p>
              * 
              * <strong>example:</strong>
              * <p>c73******a5fdd5</p>
@@ -258,7 +258,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.</p>
+             * <p>The external identity synchronization channel. Currently, only SCIM-based user synchronization is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>SCIM</p>
@@ -328,7 +328,10 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -336,7 +339,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -546,7 +552,7 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the user was created. The value is displayed in UTC.</p>
+             * <p>The time when the user was created (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-30T09:20:08Z</p>
@@ -590,7 +596,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier information about the user synchronized from an external IdP.</p>
+             * <p>The identifier information of the user from the external identity provider.</p>
              */
             public Builder externalId(ExternalId externalId) {
                 this.externalId = externalId;
@@ -623,7 +629,7 @@ public class ListUsersResponseBody extends TeaModel {
              * <p>The type of the user. Valid values:</p>
              * <ul>
              * <li>Manual: The user is manually created.</li>
-             * <li>Synchronized: The user is synchronized from an external IdP.</li>
+             * <li>Synchronized: The user is synchronized from an external identity provider.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -637,8 +643,8 @@ public class ListUsersResponseBody extends TeaModel {
             /**
              * <p>The status of the user. Valid values:</p>
              * <ul>
-             * <li>Enabled: The logon of the user is enabled.</li>
-             * <li>Disabled: The logon of the user is disabled.</li>
+             * <li>Enabled: The user is enabled.</li>
+             * <li>Disabled: The user is disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -650,7 +656,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag list.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -658,7 +664,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
+             * <p>The time when the user was last modified (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-30T09:20:08Z</p>
@@ -669,7 +675,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>u-00bikzkuzbb58luh****</p>
@@ -680,7 +686,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:AliceLee@example.onmicrosoft.com">AliceLee@example.onmicrosoft.com</a></p>

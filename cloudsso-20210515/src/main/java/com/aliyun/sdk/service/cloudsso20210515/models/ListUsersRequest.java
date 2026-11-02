@@ -143,7 +143,7 @@ public class ListUsersRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-00fc2p61****</p>
@@ -156,8 +156,8 @@ public class ListUsersRequest extends Request {
 
         /**
          * <p>The filter condition.</p>
-         * <p>You must specify the value in the <code>&lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt;</code> format. The value is not case-sensitive. You can set <code>&lt;Attribute&gt;</code> only to <code>UserName</code> and <code>Operator</code> only to <code>eq</code> or <code>sw</code>. The value eq indicates Equals, and the value sw indicates Start With.</p>
-         * <p>For example, if you set the Filter parameter to UserName sw test, the operation queries the users whose names start with test. If you set the Filter parameter to UserName eq testuser, the operation queries the user whose name is <code>testuser</code>.</p>
+         * <p>Format: <code>&lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt;</code>. This value is case-insensitive. Currently, <code>&lt;Attribute&gt;</code> supports only <code>UserName</code>, and <code>Operator</code> supports only <code>eq</code> (Equals) and <code>sw</code> (Start With).</p>
+         * <p>Example: Filter = &quot;UserName sw test&quot; queries all users whose usernames start with test. Filter = &quot;UserName eq testuser&quot; queries the user whose username is <code>testuser</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>UserName sw test</p>
@@ -169,7 +169,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page.</p>
          * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -183,8 +183,8 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of the <code>NextToken</code> parameter.</p>
-         * <p>When you call this operation for the first time, if the total number of entries to return is larger than the value of the <code>MaxResults</code> parameter, the entries are truncated. The system returns entries based on the value of the <code>MaxResults</code> parameter, and does not return the excess entries. In this case, the value of the response parameter <code>IsTruncated</code> is <code>true</code>, and the <code>NextToken</code> parameter is returned. In the next call, you can use the value of the <code>NextToken</code> parameter and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of the <code>IsTruncated</code> parameter becomes <code>false</code>. This way, all entries are returned.</p>
+         * <p>The token for the next page of results. You do not need to specify <code>NextToken</code> for the first API call.</p>
+         * <p>When you call the API for the first time, if the total number of entries exceeds the <code>MaxResults</code> limit, the data is truncated and only <code>MaxResults</code> entries are returned. In this case, the response parameter <code>IsTruncated</code> is <code>true</code> and a <code>NextToken</code> is returned. You can use the <code>NextToken</code> returned from the previous call to continue calling the API while keeping other request parameters unchanged to query the truncated data. You can repeat this process until <code>IsTruncated</code> is <code>false</code>, which indicates that all data has been retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
@@ -196,10 +196,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The type of the user. The parameter can be used to filter users. Valid values:</p>
+         * <p>The user type. This parameter is used as a filter condition. Valid values:</p>
          * <ul>
          * <li>Manual: The user is manually created.</li>
-         * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+         * <li>Synchronized: The user is synchronized from an external identity provider.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,10 +212,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The status of the user. The parameter can be used to filter users. Valid values:</p>
+         * <p>The user status. This parameter is used as a filter condition. Valid values:</p>
          * <ul>
-         * <li>Enabled: The logon of the user is enabled.</li>
-         * <li>Disabled: The logon of the user is disabled.</li>
+         * <li>Enabled: The user is enabled.</li>
+         * <li>Disabled: The user is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tag list.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -296,7 +296,10 @@ public class ListUsersRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -304,7 +307,10 @@ public class ListUsersRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

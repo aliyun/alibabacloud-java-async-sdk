@@ -115,7 +115,7 @@ public class ProvisionAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the access configuration.</p>
+         * <p>The access configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ac-00jhtfl8thteu6uj****</p>
@@ -139,7 +139,10 @@ public class ProvisionAccessConfigurationRequest extends Request {
         }
 
         /**
-         * OriginTargetId.
+         * <p>The ID of the Alibaba Cloud account to which the deployment target belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
          */
         public Builder originTargetId(String originTargetId) {
             this.putQueryParameter("OriginTargetId", originTargetId);
@@ -148,7 +151,7 @@ public class ProvisionAccessConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task object.</p>
+         * <p>The ID of the task target.</p>
          * 
          * <strong>example:</strong>
          * <p>114240524784****</p>
@@ -160,7 +163,10 @@ public class ProvisionAccessConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The type of the task object. Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
+         * <p>The target type of the task. Valid values:</p>
+         * <ul>
+         * <li>RD-Account: The task target is an account in a resource directory.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RD-Account</p>

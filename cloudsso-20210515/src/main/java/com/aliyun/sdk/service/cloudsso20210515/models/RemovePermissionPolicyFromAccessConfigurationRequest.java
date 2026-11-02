@@ -139,8 +139,10 @@ public class RemovePermissionPolicyFromAccessConfigurationRequest extends Reques
         /**
          * <p>The type of the policy. Valid values:</p>
          * <ul>
-         * <li>System: system policy.</li>
-         * <li>Inline: inline policy.</li>
+         * <li><p>System: system policy.</p>
+         * </li>
+         * <li><p>Inline: inline policy.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

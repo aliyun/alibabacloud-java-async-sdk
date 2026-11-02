@@ -78,7 +78,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the user.</p>
+         * <p>The user information.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -144,7 +144,7 @@ public class GetUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The identifier of the user that is synchronized from an external IdP.</p>
+             * <p>The user identifier of the external identity provider.</p>
              * 
              * <strong>example:</strong>
              * <p>c73******a5fdd5</p>
@@ -155,7 +155,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.</p>
+             * <p>The external identity synchronization channel. Currently, only SCIM synchronization is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>SCIM</p>
@@ -225,7 +225,10 @@ public class GetUserResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +236,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -443,7 +449,7 @@ public class GetUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the user was created. The value is displayed in UTC.</p>
+             * <p>The time when the user was created (in UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-26T03:03:42Z</p>
@@ -487,7 +493,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier information about the user synchronized from an external IdP.</p>
+             * <p>The user identifier information of the external identity provider.</p>
              */
             public Builder externalId(ExternalId externalId) {
                 this.externalId = externalId;
@@ -519,8 +525,8 @@ public class GetUserResponseBody extends TeaModel {
             /**
              * <p>The type of the user. Valid values:</p>
              * <ul>
-             * <li>Manual: The user is manually created.</li>
-             * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+             * <li>Manual: Manually created.</li>
+             * <li>Synchronized: Synchronized from an external identity provider.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -534,8 +540,8 @@ public class GetUserResponseBody extends TeaModel {
             /**
              * <p>The status of the user. Valid values:</p>
              * <ul>
-             * <li>Enabled: The logon of the user is enabled.</li>
-             * <li>Disabled: The logon of the user is disabled.</li>
+             * <li>Enabled: Enabled.</li>
+             * <li>Disabled: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -547,7 +553,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -555,7 +561,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
+             * <p>The time when the user was last modified (in UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-26T06:43:55Z</p>
@@ -566,7 +572,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>u-00q8wbq42wiltcrk****</p>
@@ -577,7 +583,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user.</p>
+             * <p>The username of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>Alice</p>

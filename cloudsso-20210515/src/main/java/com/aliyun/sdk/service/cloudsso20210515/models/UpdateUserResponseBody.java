@@ -329,8 +329,10 @@ public class UpdateUserResponseBody extends TeaModel {
             /**
              * <p>The type of the user. Valid values:</p>
              * <ul>
-             * <li>Manual: The user is manually created.</li>
-             * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+             * <li><p>Manual: The user is manually created.</p>
+             * </li>
+             * <li><p>Synchronized: The user is synchronized from an external identity provider (IdP).</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -344,8 +346,10 @@ public class UpdateUserResponseBody extends TeaModel {
             /**
              * <p>The status of the user. Valid values:</p>
              * <ul>
-             * <li>Enabled: The logon of the user is enabled.</li>
-             * <li>Disabled: The logon of the user is disabled.</li>
+             * <li><p>Enabled: The logon of the user is enabled.</p>
+             * </li>
+             * <li><p>Disabled: The logon of the user is disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

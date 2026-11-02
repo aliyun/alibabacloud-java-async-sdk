@@ -59,7 +59,10 @@ public class GetAttributePassingSettingRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * <p>The directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);

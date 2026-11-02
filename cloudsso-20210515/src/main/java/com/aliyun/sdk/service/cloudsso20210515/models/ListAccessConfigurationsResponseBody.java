@@ -119,7 +119,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access configurations.</p>
+         * <p>The list of access configurations.</p>
          */
         public Builder accessConfigurations(java.util.List<AccessConfigurations> accessConfigurations) {
             this.accessConfigurations = accessConfigurations;
@@ -127,10 +127,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <p>Indicates whether the results are truncated. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The results are truncated.</li>
+         * <li>false: The results are not truncated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -153,9 +153,9 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next page of results.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of the <code>IsTruncated</code> parameter is <code>true</code>.</p>
+         * <p>This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that match the request parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -247,7 +247,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -255,7 +258,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -457,8 +463,8 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initial web page</p>
-             * <p>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
+             * <p>The initial access page.</p>
+             * <p>The URL of the initial page that is displayed when a CloudSSO user uses the access configuration to access an account in a resource directory.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
@@ -469,8 +475,8 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of a session</p>
-             * <p>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
+             * <p>The session duration.</p>
+             * <p>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in a resource directory.</p>
              * <p>Unit: seconds.</p>
              * 
              * <strong>example:</strong>
@@ -482,7 +488,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status notifications.</p>
+             * <p>The status notification information.</p>
              */
             public Builder statusNotifications(java.util.List<String> statusNotifications) {
                 this.statusNotifications = statusNotifications;
@@ -490,7 +496,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -498,7 +504,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information about the access configuration was modified.</p>
+             * <p>The time when the access configuration was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-02T08:44:23Z</p>

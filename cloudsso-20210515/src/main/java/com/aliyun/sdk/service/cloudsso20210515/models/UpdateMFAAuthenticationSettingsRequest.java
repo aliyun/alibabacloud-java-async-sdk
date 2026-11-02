@@ -111,7 +111,7 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-00fc2p61****</p>
@@ -123,12 +123,12 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable MFA for all users. Valid values:</p>
+         * <p>The global MFA settings. Valid values:</p>
          * <ul>
-         * <li>Enabled: enables MFA for all users.</li>
-         * <li>Byuser: uses user-specific settings. For more information about how to configure MFA for a single user, see <a href="https://help.aliyun.com/document_detail/450135.html">UpdateUserMFAAuthenticationSettings</a>.</li>
-         * <li>Disabled: disables MFA for all users.</li>
-         * <li>OnlyRiskyLogin: MFA is required only for unusual logons.</li>
+         * <li>Enabled: MFA verification is enabled for all users.</li>
+         * <li>Byuser: MFA verification depends on the individual MFA settings of each user. For more information about individual user MFA settings, see <a href="https://help.aliyun.com/document_detail/450135.html">UpdateUserMFAAuthenticationSettings</a>.</li>
+         * <li>Disabled: MFA verification is disabled for all users.</li>
+         * <li>OnlyRiskyLogin: MFA verification is required only for unusual logon attempts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,8 +141,11 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether MFA is required for users who initiated unusual logons. Valid values:</p>
-         * <p>Autonomous: MFA is prompted for users who initiated unusual logons. However, the users are allowed to skip MFA. If an MFA device is bound to a user who initiated an unusual logon, the user must pass MFA. EnforceVerify: MFA is required. If no MFA devices are bound to a user who initiated an unusual logon, the user must bind an MFA device. If an MFA device is already bound to a user who initiated an unusual logon, the user must pass MFA.</p>
+         * <p>The action to take when the MFA settings option is set to verify only for unusual logon attempts. Valid values:</p>
+         * <ul>
+         * <li>Autonomous: Users can skip MFA binding during unusual logon, but users who have already bound MFA must complete MFA verification.</li>
+         * <li>EnforceVerify: Users who have not bound MFA are required to bind it, and users who have already bound MFA must complete verification.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Autonomous</p>

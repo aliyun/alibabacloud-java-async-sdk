@@ -99,7 +99,7 @@ public class UpdateSCIMServerCredentialStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-00fc2p61****</p>
@@ -111,10 +111,10 @@ public class UpdateSCIMServerCredentialStatusRequest extends Request {
         }
 
         /**
-         * <p>The new status of the SCIM credential. Valid values:</p>
+         * <p>The status of the SCIM credential. Valid values:</p>
          * <ul>
-         * <li>Enabled: The SCIM credential is enabled.</li>
-         * <li>Disabled: The SCIM credential is disabled.</li>
+         * <li>Enabled: Enabled.</li>
+         * <li>Disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

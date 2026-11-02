@@ -211,7 +211,7 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;<em>&quot;,&quot;Effect&quot;: &quot;Allow&quot;,&quot;Resource&quot;: &quot;</em>&quot;}],&quot;Version&quot;: &quot;1&quot;}</p>
+             * <p>{\&quot;Statement\&quot;: [{\&quot;Action\&quot;: \&quot;<em>\&quot;,\&quot;Effect\&quot;: \&quot;Allow\&quot;,\&quot;Resource\&quot;: \&quot;</em>\&quot;}],\&quot;Version\&quot;: \&quot;1\&quot;}</p>
              */
             public Builder permissionPolicyDocument(String permissionPolicyDocument) {
                 this.permissionPolicyDocument = permissionPolicyDocument;

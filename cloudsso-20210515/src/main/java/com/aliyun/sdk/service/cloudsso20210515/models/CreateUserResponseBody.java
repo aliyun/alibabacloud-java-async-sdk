@@ -78,7 +78,7 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the user.</p>
+         * <p>The user information.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -144,7 +144,10 @@ public class CreateUserResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -152,7 +155,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -349,7 +355,7 @@ public class CreateUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the user was created. The value is displayed in UTC.</p>
+             * <p>The time when the user was created (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-26T03:03:42Z</p>
@@ -417,8 +423,8 @@ public class CreateUserResponseBody extends TeaModel {
             /**
              * <p>The type of the user. Valid values:</p>
              * <ul>
-             * <li>Manual: The user is manually created.</li>
-             * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+             * <li>Manual: Manually created.</li>
+             * <li>Synchronized: Synchronized from an external source.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -432,8 +438,8 @@ public class CreateUserResponseBody extends TeaModel {
             /**
              * <p>The status of the user. Valid values:</p>
              * <ul>
-             * <li>Enabled</li>
-             * <li>Disabled</li>
+             * <li>Enabled: Enabled.</li>
+             * <li>Disabled: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -445,7 +451,7 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -453,7 +459,7 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
+             * <p>The time when the user was last modified (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-26T03:03:42Z</p>
@@ -464,7 +470,7 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>u-00q8wbq42wiltcrk****</p>
@@ -475,7 +481,7 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the user.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>Alice</p>
