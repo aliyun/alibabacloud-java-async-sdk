@@ -22,6 +22,10 @@ public class UpdateInstanceRequest extends Request {
     private String autoReissue;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewalStatus")
+    private String autoRenewalStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertificateName")
     private String certificateName;
 
@@ -81,6 +85,7 @@ public class UpdateInstanceRequest extends Request {
     private UpdateInstanceRequest(Builder builder) {
         super(builder);
         this.autoReissue = builder.autoReissue;
+        this.autoRenewalStatus = builder.autoRenewalStatus;
         this.certificateName = builder.certificateName;
         this.city = builder.city;
         this.companyId = builder.companyId;
@@ -115,6 +120,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public String getAutoReissue() {
         return this.autoReissue;
+    }
+
+    /**
+     * @return autoRenewalStatus
+     */
+    public String getAutoRenewalStatus() {
+        return this.autoRenewalStatus;
     }
 
     /**
@@ -217,6 +229,7 @@ public class UpdateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String autoReissue; 
+        private String autoRenewalStatus; 
         private String certificateName; 
         private String city; 
         private Long companyId; 
@@ -239,6 +252,7 @@ public class UpdateInstanceRequest extends Request {
         private Builder(UpdateInstanceRequest request) {
             super(request);
             this.autoReissue = request.autoReissue;
+            this.autoRenewalStatus = request.autoRenewalStatus;
             this.certificateName = request.certificateName;
             this.city = request.city;
             this.companyId = request.companyId;
@@ -268,6 +282,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder autoReissue(String autoReissue) {
             this.putQueryParameter("AutoReissue", autoReissue);
             this.autoReissue = autoReissue;
+            return this;
+        }
+
+        /**
+         * AutoRenewalStatus.
+         */
+        public Builder autoRenewalStatus(String autoRenewalStatus) {
+            this.putQueryParameter("AutoRenewalStatus", autoRenewalStatus);
+            this.autoRenewalStatus = autoRenewalStatus;
             return this;
         }
 

@@ -54,7 +54,7 @@ public class AddCloudAccessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>285BBE08-F12B-5A04-97BC-09EA7FF18646</p>

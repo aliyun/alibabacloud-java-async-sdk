@@ -23,6 +23,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AutoReissueFlag")
     private Integer autoReissueFlag;
 
+    @com.aliyun.core.annotation.NameInMap("AutoRenewalStatus")
+    private String autoRenewalStatus;
+
     @com.aliyun.core.annotation.NameInMap("AverageWaitingTime")
     private String averageWaitingTime;
 
@@ -161,6 +164,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     private GetInstanceDetailResponseBody(Builder builder) {
         this.autoReissue = builder.autoReissue;
         this.autoReissueFlag = builder.autoReissueFlag;
+        this.autoRenewalStatus = builder.autoRenewalStatus;
         this.averageWaitingTime = builder.averageWaitingTime;
         this.brand = builder.brand;
         this.certIdentifier = builder.certIdentifier;
@@ -232,6 +236,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
      */
     public Integer getAutoReissueFlag() {
         return this.autoReissueFlag;
+    }
+
+    /**
+     * @return autoRenewalStatus
+     */
+    public String getAutoRenewalStatus() {
+        return this.autoRenewalStatus;
     }
 
     /**
@@ -552,6 +563,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String autoReissue; 
         private Integer autoReissueFlag; 
+        private String autoRenewalStatus; 
         private String averageWaitingTime; 
         private String brand; 
         private String certIdentifier; 
@@ -604,6 +616,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         private Builder(GetInstanceDetailResponseBody model) {
             this.autoReissue = model.autoReissue;
             this.autoReissueFlag = model.autoReissueFlag;
+            this.autoRenewalStatus = model.autoRenewalStatus;
             this.averageWaitingTime = model.averageWaitingTime;
             this.brand = model.brand;
             this.certIdentifier = model.certIdentifier;
@@ -678,6 +691,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
          */
         public Builder autoReissueFlag(Integer autoReissueFlag) {
             this.autoReissueFlag = autoReissueFlag;
+            return this;
+        }
+
+        /**
+         * AutoRenewalStatus.
+         */
+        public Builder autoRenewalStatus(String autoRenewalStatus) {
+            this.autoRenewalStatus = autoRenewalStatus;
             return this;
         }
 

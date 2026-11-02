@@ -117,7 +117,7 @@ public class BatchUpdateNoticeStatusRequest extends Request {
         } 
 
         /**
-         * <p>The list of primary key identifiers to be synchronized to Certificate Management Service. Separate multiple IDs with commas (,).</p>
+         * <p>The list of primary key IDs to be synchronized to Certificate Service. Separate multiple IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,12 +130,10 @@ public class BatchUpdateNoticeStatusRequest extends Request {
         }
 
         /**
-         * <p>The language type for the request and the received message. Valid values:</p>
+         * <p>Specifies the language of the request and response. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh</strong>: Chinese</p>
-         * </li>
-         * <li><p><strong>en</strong>: English</p>
-         * </li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +146,7 @@ public class BatchUpdateNoticeStatusRequest extends Request {
         }
 
         /**
-         * <p>The business code of message notification. The value is fixed as ssl.</p>
+         * <p>The business code of the message notification. The value is fixed to ssl.</p>
          * 
          * <strong>example:</strong>
          * <p>ssl</p>
@@ -160,9 +158,11 @@ public class BatchUpdateNoticeStatusRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable message notification.
-         * \--enable: enables message notification.
-         * \--disable: disables message notification.</p>
+         * <p>Specifies whether to enable message notification. Valid values:</p>
+         * <ul>
+         * <li>--enable: Enabled.</li>
+         * <li>--disable: Disabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class BatchUpdateNoticeStatusRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>Specifies the source IP address of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>47.98.242.200</p>

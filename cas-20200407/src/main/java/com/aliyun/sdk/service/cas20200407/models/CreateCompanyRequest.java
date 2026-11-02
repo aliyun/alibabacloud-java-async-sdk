@@ -236,7 +236,7 @@ public class CreateCompanyRequest extends Request {
         }
 
         /**
-         * <p>The address of the company.</p>
+         * <p>The company address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class CreateCompanyRequest extends Request {
         }
 
         /**
-         * <p>The email address of the company.</p>
+         * <p>The company email address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@123.com">test@123.com</a></p>
@@ -287,7 +287,7 @@ public class CreateCompanyRequest extends Request {
         }
 
         /**
-         * <p>The phone number of the company.</p>
+         * <p>The company phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

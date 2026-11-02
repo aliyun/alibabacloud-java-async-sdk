@@ -74,7 +74,7 @@ public class GetTaskAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID. This parameter specifies the task identifier returned by the ApplyCertificate asynchronous task. You can obtain the value from the TaskId field in the response after you call the ApplyCertificate operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The type of the asynchronous task. The default value is ApplyCertificate, which specifies a query for the result of a certificate application.</p>
+         * <p>Specifies the type of the asynchronous task. Set the value to ApplyCertificate to query the submission result of the ApplyCertificate asynchronous task. Default value: ApplyCertificate.</p>
          * 
          * <strong>example:</strong>
          * <p>ApplyCertificate</p>

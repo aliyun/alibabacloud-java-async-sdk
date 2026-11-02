@@ -213,7 +213,11 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether the instance is managed. Valid values: 1 (managed) and 0 (not managed).</p>
+         * <p>Specifies whether the instance is managed. Valid values:</p>
+         * <ul>
+         * <li>1: Managed.</li>
+         * <li>0: Unmanaged.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -237,11 +241,11 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The status of the certificate. Valid values:</p>
+         * <p>The certificate status. Valid values:</p>
          * <ul>
          * <li><strong>issued</strong>: Issued.</li>
          * <li><strong>revoked</strong>: Revoked.</li>
-         * <li><strong>willExpire</strong>: About to expire.</li>
+         * <li><strong>willExpire</strong>: Expiring soon.</li>
          * <li><strong>expired</strong>: Expired.</li>
          * </ul>
          * 
@@ -255,7 +259,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the certificate. Valid values: DV, OV, and EV.</p>
+         * <p>The certificate type. Valid values: DV, OV, and EV.</p>
          * 
          * <strong>example:</strong>
          * <p>DV</p>
@@ -267,7 +271,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paging query. Settings the current page number. Default value: <strong>1</strong>.</p>
+         * <p>The paging Settings for the current page number in a paged query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -279,7 +283,11 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance type. Valid values: BUY (official certificate) and TEST (test certificate).</p>
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li>BUY: Official certificate.</li>
+         * <li>TEST: Test certificate.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>
@@ -291,7 +299,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The keyword for fuzzy search. Matches domain names, instance names, or corresponding resource IDs.</p>
+         * <p>The keyword for fuzzy search. It matches domain names, instance names, or corresponding resource IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -303,7 +311,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ae******4wia</p>
@@ -315,10 +323,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return only instances that meet server deployment conditions. Valid values:</p>
+         * <p>Specifies whether to return only instances that meet the server deployment conditions. Valid values:</p>
          * <ul>
-         * <li>1: is.</li>
-         * <li>0: no.</li>
+         * <li>1: Yes.</li>
+         * <li>0: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -331,7 +339,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of instances to display per page in a paging query. Settings the number of instances displayed per page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+         * <p>The paging Settings for the number of instances to return on each page in a paged query. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -345,13 +353,13 @@ public class ListInstancesRequest extends Request {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><strong>inactive</strong>: Pending use.</li>
-         * <li><strong>pending</strong>: Under review. The latest certificate is being submitted for review.</li>
-         * <li><strong>willExpire</strong>: The instance is about to expire.</li>
-         * <li><strong>expired</strong>: The instance has expired.</li>
+         * <li><strong>inactive</strong>: Pending.</li>
+         * <li><strong>pending</strong>: Under review. The latest certificate is submitted for review.</li>
+         * <li><strong>willExpire</strong>: Expiring soon.</li>
+         * <li><strong>expired</strong>: Expired.</li>
          * <li><strong>refund</strong>: Refunded.</li>
          * <li><strong>normal</strong>: Normal.</li>
-         * <li><strong>closed</strong>: Shutdown and unavailable.</li>
+         * <li><strong>closed</strong>: Closed. The instance cannot be used.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -364,7 +372,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The version type. Valid values: basic (Basic Edition), standard (Standard Edition), professional (Professional Edition), and ultimate (Ultimate Edition).</p>
+         * <p>The edition. Valid values: basic, standard, professional, and ultimate.</p>
          * 
          * <strong>example:</strong>
          * <p>professional</p>

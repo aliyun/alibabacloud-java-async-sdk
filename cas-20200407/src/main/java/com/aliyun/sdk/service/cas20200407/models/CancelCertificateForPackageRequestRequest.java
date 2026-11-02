@@ -60,9 +60,9 @@ public class CancelCertificateForPackageRequestRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * <blockquote>
-         * <p>Call <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> to obtain this ID.</p>
+         * <p>You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
