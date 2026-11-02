@@ -174,10 +174,10 @@ public class UntagResourcesForExpressConnectRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to unbind all tags from the resource. Valid values:</p>
+         * <p>Specifies whether to remove all tags from the resource. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Unbinds all tags from the resource.</li>
-         * <li><strong>false</strong> (default): Does not unbind all tags from the resource.</li>
+         * <li><strong>true</strong>: Removes all tags from the resource.</li>
+         * <li><strong>false</strong> (default): Does not remove all tags from the resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,8 +208,7 @@ public class UntagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the resource.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,8 +253,8 @@ public class UntagResourcesForExpressConnectRequest extends Request {
          * <ul>
          * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit instance.</li>
          * <li><strong>VIRTUALBORDERROUTER</strong>: Virtual Border Router.</li>
-         * <li><strong>ROUTERINTERFACE</strong>: VBR uplink.</li>
-         * <li><strong>TRAFFICQOS</strong>: QoS policy.</li>
+         * <li><strong>ROUTERINTERFACE</strong>: VBR connection.</li>
+         * <li><strong>TRAFFICQOS</strong>: Quality of Service (QoS) policy.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -269,7 +268,7 @@ public class UntagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * <p>The list of tag keys for the resource.</p>
+         * <p>The list of tags for the resource.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

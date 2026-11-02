@@ -131,7 +131,7 @@ public class UpdateRouteTargetGroupRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters. If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -169,7 +169,7 @@ public class UpdateRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * <p>The routing target group instance ID.</p>
+         * <p>The instance ID of the routing target group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,11 +195,11 @@ public class UpdateRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * <p>The member list of the route target group.</p>
-         * <p>In active/standby mode, the following limits apply to route target group members:</p>
+         * <p>The list of members in the route target group.</p>
+         * <p>In active/standby mode, the following limits apply to the members of the route target group:</p>
          * <ol>
-         * <li>The number of route target group members must be 2.</li>
-         * <li>The route target group members must belong to different zones.</li>
+         * <li>The route target group must contain exactly two members.</li>
+         * <li>The members of the route target group must belong to different zones.</li>
          * </ol>
          */
         public Builder routeTargetMemberList(java.util.List<RouteTargetMemberList> routeTargetMemberList) {
@@ -281,7 +281,7 @@ public class UpdateRouteTargetGroupRequest extends Request {
             } 
 
             /**
-             * <p>The instance ID of the route target group member.</p>
+             * <p>The instance ID of the member in the routing target group.</p>
              * 
              * <strong>example:</strong>
              * <p>ep-xxxx</p>
@@ -292,12 +292,12 @@ public class UpdateRouteTargetGroupRequest extends Request {
             }
 
             /**
-             * <p>The member type of the route target group.</p>
-             * <p>Currently supported type:</p>
+             * <p>The type of the member in the route target group.</p>
+             * <p>Valid values:</p>
              * <ul>
              * <li><strong>GatewayLoadBalancerEndpoint</strong></li>
              * </ul>
-             * <p>In active/standby mode, all members of the route target group must be of the same type.</p>
+             * <p>In active/standby mode, all members in the route target group must be of the same type.</p>
              * 
              * <strong>example:</strong>
              * <p>GatewayLoadBalancerEndpoint</p>
@@ -308,10 +308,10 @@ public class UpdateRouteTargetGroupRequest extends Request {
             }
 
             /**
-             * <p>The weight of the route target group member. Valid values:</p>
+             * <p>The weight of the member in the route target group. Valid values:</p>
              * <ul>
-             * <li>100: The member is the active instance.</li>
-             * <li>0: The member is the standby instance.</li>
+             * <li>100: The member is the primary instance.</li>
+             * <li>0: The member is the secondary instance.</li>
              * </ul>
              * <p>The weight can only be set during creation and cannot be modified.</p>
              * 

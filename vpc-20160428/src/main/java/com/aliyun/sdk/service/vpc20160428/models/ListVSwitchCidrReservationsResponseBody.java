@@ -106,7 +106,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -117,10 +117,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. Valid values:</p>
+         * <p>The token for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
-         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query is required.</li>
+         * <li>If <strong>NextToken</strong> returns a value, the value indicates the token used to start the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -455,7 +455,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of active prefix CIDR blocks in the reserved CIDR block for a vSwitch.</p>
+             * <p>The number of available prefix CIDR blocks in the reserved CIDR block for a vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -466,7 +466,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the reserved CIDR block was created.</p>
+             * <p>The time when the reserved CIDR block was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format and is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-14T10:02:37Z</p>
@@ -494,10 +494,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             /**
              * <p>The status of the reserved CIDR block. Valid values:</p>
              * <ul>
-             * <li><strong>Assigning</strong>: being allocated.</li>
-             * <li><strong>Assigned</strong>: allocated.</li>
-             * <li><strong>Releasing</strong>: being released.</li>
-             * <li><strong>Released</strong>: released.</li>
+             * <li><strong>Assigning</strong>: The CIDR block is being allocated.</li>
+             * <li><strong>Assigned</strong>: The CIDR block is allocated.</li>
+             * <li><strong>Releasing</strong>: The CIDR block is being released.</li>
+             * <li><strong>Released</strong>: The CIDR block is released.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -583,7 +583,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC to which the reserved CIDR block for a vSwitch belongs.</p>
+             * <p>The VPC to which the reserved CIDR block for a vSwitch belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1wdz2pdhgurz1od****</p>

@@ -174,7 +174,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the Internet Shared Bandwidth instance.</p>
+         * <p>The Internet Shared Bandwidth instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,9 +188,9 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
         }
 
         /**
-         * <p>The IP type. Set the value to <strong>EIP</strong>, which specifies that EIPs are added to the Internet Shared Bandwidth instance.</p>
+         * <p>The IP address type. Valid value: <strong>EIP</strong>, which indicates that EIPs are added to the Internet Shared Bandwidth instance.</p>
          * 
          * <strong>example:</strong>
          * <p>EIP</p>
@@ -245,7 +245,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
 
         /**
          * <p>The region ID of the Internet Shared Bandwidth instance. </p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

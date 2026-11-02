@@ -93,10 +93,10 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token that is used to retrieve the next page of results. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no subsequent request exists.</li>
-         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query is required.</li>
+         * <li>If <strong>NextToken</strong> returns a value, the value indicates the token used to start the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>

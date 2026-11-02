@@ -78,7 +78,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The list of zones.</p>
+         * <p>The zones.</p>
          */
         public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
@@ -147,7 +147,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
              * <p>The zone name.</p>
              * 
              * <strong>example:</strong>
-             * <p>中东1 可用区A</p>
+             * <p>Middle East 1 Zone A</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;

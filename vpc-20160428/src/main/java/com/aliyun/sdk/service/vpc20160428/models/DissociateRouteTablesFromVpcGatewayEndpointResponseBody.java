@@ -54,7 +54,7 @@ public class DissociateRouteTablesFromVpcGatewayEndpointResponseBody extends Tea
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>30F711D5-E7E2-5D42-A247-0FA7288BEAAA</p>

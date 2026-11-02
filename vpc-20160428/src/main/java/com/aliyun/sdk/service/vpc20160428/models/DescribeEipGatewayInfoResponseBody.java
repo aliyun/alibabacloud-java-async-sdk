@@ -93,7 +93,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The operation status code.</p>
+         * <p>The status code of the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -112,7 +112,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation message.</p>
+         * <p>The message returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>

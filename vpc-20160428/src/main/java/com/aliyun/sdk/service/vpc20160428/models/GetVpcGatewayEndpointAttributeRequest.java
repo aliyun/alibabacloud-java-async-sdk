@@ -131,7 +131,7 @@ public class GetVpcGatewayEndpointAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The endpoint instance ID of the gateway endpoint.</p>
+         * <p>The gateway endpoint instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,8 +162,8 @@ public class GetVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the gateway endpoint.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where the gateway endpoint resides.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

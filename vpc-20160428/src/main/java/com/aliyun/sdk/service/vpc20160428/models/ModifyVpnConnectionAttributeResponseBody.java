@@ -289,6 +289,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the IPsec-VPN connection was created. Unit: milliseconds.</p>
+         * <p>The timestamp is in UNIX format, which indicates the total number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
          * 
          * <strong>example:</strong>
          * <p>1492753817000</p>
@@ -300,6 +301,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the customer gateway associated with the IPsec-VPN connection.</p>
+         * <p>This parameter is returned only for IPsec-VPN connections in single-tunnel mode.</p>
          * 
          * <strong>example:</strong>
          * <p>cgw-p0w2jemrcj5u61un8****</p>
@@ -321,11 +323,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the IPsec-VPN connection configuration takes effect immediately.</p>
+         * <p>Indicates whether the configuration of the IPsec-VPN connection takes effect immediately. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The system immediately initiates IPsec protocol negotiation after the configuration is complete.</p>
+         * <li><p><strong>true</strong>: Yes. The system immediately initiates IPsec negotiations after the configuration is completed.</p>
          * </li>
-         * <li><p><strong>false</strong>: The system initiates IPsec protocol negotiation only when traffic enters.</p>
+         * <li><p><strong>false</strong>: No. The system initiates IPsec negotiations only when traffic enters the connection.</p>
          * </li>
          * </ul>
          * 
@@ -338,11 +340,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether Dead Peer Detection (DPD) is enabled for the IPsec-VPN connection.</p>
+         * <p>Indicates whether dead peer detection (DPD) is enabled for the IPsec-VPN connection. Valid values:</p>
          * <ul>
-         * <li><p><strong>false</strong>: Not enabled.</p>
+         * <li><p><strong>false</strong>: DPD is disabled.</p>
          * </li>
-         * <li><p><strong>true</strong>: Enabled.</p>
+         * <li><p><strong>true</strong>: DPD is enabled.</p>
          * </li>
          * </ul>
          * <p>This parameter is returned only for IPsec-VPN connections in single-tunnel mode.</p>
@@ -357,6 +359,13 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection. Valid values:</p>
+         * <ul>
+         * <li><p><strong>false</strong>: NAT traversal is disabled.</p>
+         * </li>
+         * <li><p><strong>true</strong>: NAT traversal is enabled.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is returned only for IPsec-VPN connections in single-tunnel mode.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -367,12 +376,12 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The BGP status of the tunnel.</p>
+         * <p>The enabling status of BGP for the tunnel. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enabled.</li>
-         * <li><strong>false</strong>: disabled.</li>
+         * <li><strong>true</strong>: BGP is enabled.</li>
+         * <li><strong>false</strong>: BGP is disabled.</li>
          * </ul>
-         * <p>This parameter is returned only for IPsec-VPN connections in dual-tunnel mode.</p>
+         * <p>This parameter is returned only for IPsec-VPN connections in the dual-tunnel pattern.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -383,7 +392,8 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration of Phase 1 negotiation.</p>
+         * <p>The Phase 1 negotiation configuration.</p>
+         * <p>The parameters in the <strong>IkeConfig</strong> array are returned only for IPsec-VPN connections in single-tunnel mode.</p>
          */
         public Builder ikeConfig(IkeConfig ikeConfig) {
             this.ikeConfig = ikeConfig;
@@ -391,7 +401,8 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration of Phase 2 negotiation.</p>
+         * <p>The Phase 2 negotiation configuration.</p>
+         * <p>The parameters in the <strong>IpsecConfig</strong> array are returned only for IPsec-VPN connections in single-tunnel mode.</p>
          */
         public Builder ipsecConfig(IpsecConfig ipsecConfig) {
             this.ipsecConfig = ipsecConfig;
@@ -421,7 +432,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The CIDR block on the on-premises data center side.</p>
+         * <p>The CIDR block of the on-premises data center.</p>
          * 
          * <strong>example:</strong>
          * <p>10.2.1.0/24,10.2.2.0/24</p>
@@ -444,6 +455,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group to which the IPsec-VPN connection belongs.</p>
+         * <p>The IPsec-VPN connection belongs to the same resource group as its associated VPN gateway. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzs372yg****</p>
@@ -463,7 +475,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The health check configuration.</p>
-         * <p>Parameters in the <strong>VcoHealthCheck</strong> array are returned only for IPsec-VPN connections in single-tunnel mode.</p>
+         * <p>The parameters in the <strong>VcoHealthCheck</strong> array are returned only for IPsec-VPN connections in single-tunnel mode.</p>
          */
         public Builder vcoHealthCheck(VcoHealthCheck vcoHealthCheck) {
             this.vcoHealthCheck = vcoHealthCheck;
@@ -472,6 +484,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The BGP configuration.</p>
+         * <p>The parameters in the <strong>VpnBgpConfig</strong> array are returned only for IPsec-VPN connections in single-tunnel mode.</p>
          */
         public Builder vpnBgpConfig(VpnBgpConfig vpnBgpConfig) {
             this.vpnBgpConfig = vpnBgpConfig;
@@ -490,7 +503,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VPN gateway instance.</p>
+         * <p>The ID of the VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>vpn-bp1q8bgx4xnkm2ogj****</p>
@@ -650,7 +663,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication algorithm of the IKE phase.</p>
+             * <p>The authentication algorithm for Phase 1 negotiations.</p>
              * 
              * <strong>example:</strong>
              * <p>sha1</p>
@@ -661,7 +674,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption algorithm of the IKE phase.</p>
+             * <p>The encryption algorithm for Phase 1 negotiations.</p>
              * 
              * <strong>example:</strong>
              * <p>aes</p>
@@ -672,7 +685,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifetime of the IKE phase. Unit: seconds.</p>
+             * <p>The lifetime of the IKE SA. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -683,10 +696,10 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IKE negotiation mode.</p>
+             * <p>The IKE negotiation mode. Valid values:</p>
              * <ul>
-             * <li><strong>main</strong>: Main mode. The negotiation process is highly secure.</li>
-             * <li><strong>aggressive</strong>: Aggressive mode. Negotiation is fast and has a high success rate.</li>
+             * <li><strong>main</strong>: Main mode. This mode provides high security during negotiations.</li>
+             * <li><strong>aggressive</strong>: Aggressive mode. This mode features faster negotiations and a higher success rate.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -698,7 +711,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DH group of the IKE phase.</p>
+             * <p>The Diffie-Hellman (DH) group for Phase 1 negotiations.</p>
              * 
              * <strong>example:</strong>
              * <p>group2</p>
@@ -709,12 +722,12 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IKE protocol version.</p>
+             * <p>The IKE version. Valid values:</p>
              * <ul>
              * <li><strong>ikev1</strong></li>
              * <li><strong>ikev2</strong></li>
              * </ul>
-             * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for multi-CIDR-block scenarios.</p>
+             * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for multi-CIDR block scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>ikev1</p>
@@ -725,7 +738,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier on the VPC side. FQDN and IP formats are supported. The default value is the IP address of the selected VPN gateway.</p>
+             * <p>The identifier of the VPC. Both FQDNs and IP addresses are supported. By default, this parameter is set to the IP address of the selected VPN gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>116.64.XX.XX</p>
@@ -747,7 +760,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier on the on-premises data center side. FQDN and IP formats are supported. The default value is the IP address of the selected customer gateway.</p>
+             * <p>The identifier of the on-premises data center. Both fully qualified domain names (FQDNs) and IP addresses are supported. By default, this parameter is set to the IP address of the selected customer gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>139.18.XX.XX</p>
@@ -843,7 +856,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication algorithm of the IPsec phase.</p>
+             * <p>The authentication algorithm for Phase 2 negotiations.</p>
              * 
              * <strong>example:</strong>
              * <p>sha1</p>
@@ -854,7 +867,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption algorithm of the IPsec phase.</p>
+             * <p>The encryption algorithm for Phase 2 negotiations.</p>
              * 
              * <strong>example:</strong>
              * <p>aes</p>
@@ -865,7 +878,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifetime of the IPsec phase. Unit: seconds.</p>
+             * <p>The lifetime of the IPsec SA. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -876,7 +889,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DH group of the IPsec phase.</p>
+             * <p>The DH group for Phase 2 negotiations.</p>
              * 
              * <strong>example:</strong>
              * <p>group2</p>
@@ -1175,7 +1188,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication algorithm of the IKE phase.</p>
+             * <p>The authentication algorithm for Phase 1 negotiations.</p>
              * 
              * <strong>example:</strong>
              * <p>sha1</p>
@@ -1186,7 +1199,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption algorithm of the IKE phase.</p>
+             * <p>The encryption algorithm for Phase 1 negotiations.</p>
              * 
              * <strong>example:</strong>
              * <p>aes</p>
@@ -1197,7 +1210,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifetime of the IKE phase. Unit: seconds.</p>
+             * <p>The lifetime of the IKE SA. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -1208,10 +1221,10 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IKE negotiation mode.</p>
+             * <p>The IKE negotiation mode. Valid values:</p>
              * <ul>
-             * <li><strong>main</strong>: Main mode. The negotiation process is highly secure.</li>
-             * <li><strong>aggressive</strong>: Aggressive mode. Negotiation is fast and has a high success rate.</li>
+             * <li><strong>main</strong>: Main mode. This mode provides high security during negotiations.</li>
+             * <li><strong>aggressive</strong>: Aggressive mode. This mode features faster negotiations and a higher success rate.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1223,7 +1236,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DH group of the IKE phase.</p>
+             * <p>The Diffie-Hellman (DH) group for Phase 1 negotiations.</p>
              * 
              * <strong>example:</strong>
              * <p>group2</p>
@@ -1234,12 +1247,12 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IKE protocol version.</p>
+             * <p>The IKE version. Valid values:</p>
              * <ul>
              * <li><strong>ikev1</strong></li>
              * <li><strong>ikev2</strong></li>
              * </ul>
-             * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for multi-CIDR-block scenarios.</p>
+             * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for multi-CIDR block scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>ikev1</p>
@@ -1250,7 +1263,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier on the VPC side. FQDN and IP formats are supported. The default value is the IP address of the selected VPN gateway.</p>
+             * <p>The identifier of the VPC. Both FQDNs and IP addresses are supported. By default, this parameter is set to the IP address of the selected VPN gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>116.64.XX.XX</p>
@@ -1272,7 +1285,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier on the on-premises data center side. FQDN and IP formats are supported. The default value is the IP address of the selected customer gateway.</p>
+             * <p>The identifier of the on-premises data center. Both fully qualified domain names (FQDNs) and IP addresses are supported. By default, this parameter is set to the IP address of the selected customer gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>139.18.XX.XX</p>
@@ -1368,7 +1381,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication algorithm of the IPsec phase.</p>
+             * <p>The authentication algorithm for Phase 2 negotiations.</p>
              * 
              * <strong>example:</strong>
              * <p>sha1</p>
@@ -1379,7 +1392,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption algorithm of the IPsec phase.</p>
+             * <p>The encryption algorithm for Phase 2 negotiations.</p>
              * 
              * <strong>example:</strong>
              * <p>aes</p>
@@ -1390,7 +1403,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifetime of the IPsec phase. Unit: seconds.</p>
+             * <p>The lifetime of the IPsec SA. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -1401,7 +1414,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DH group of the IPsec phase.</p>
+             * <p>The DH group for Phase 2 negotiations.</p>
              * 
              * <strong>example:</strong>
              * <p>group2</p>
@@ -1602,6 +1615,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
             /**
              * <p>The ID of the customer gateway associated with the IPsec-VPN connection.</p>
+             * <p>This parameter is returned only for IPsec-VPN connections in single-tunnel mode.</p>
              * 
              * <strong>example:</strong>
              * <p>cgw-p0w2jemrcj5u61un8****</p>
@@ -1612,11 +1626,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Dead Peer Detection (DPD) is enabled for the IPsec-VPN connection.</p>
+             * <p>Indicates whether dead peer detection (DPD) is enabled for the IPsec-VPN connection. Valid values:</p>
              * <ul>
-             * <li><p><strong>false</strong>: Not enabled.</p>
+             * <li><p><strong>false</strong>: DPD is disabled.</p>
              * </li>
-             * <li><p><strong>true</strong>: Enabled.</p>
+             * <li><p><strong>true</strong>: DPD is enabled.</p>
              * </li>
              * </ul>
              * <p>This parameter is returned only for IPsec-VPN connections in single-tunnel mode.</p>
@@ -1631,6 +1645,13 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
             /**
              * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection. Valid values:</p>
+             * <ul>
+             * <li><p><strong>false</strong>: NAT traversal is disabled.</p>
+             * </li>
+             * <li><p><strong>true</strong>: NAT traversal is enabled.</p>
+             * </li>
+             * </ul>
+             * <p>This parameter is returned only for IPsec-VPN connections in single-tunnel mode.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1876,11 +1897,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the health check feature is enabled for the IPsec-VPN connection.</p>
+             * <p>Indicates whether the health check feature is enabled for the IPsec-VPN connection. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: Enabled.</p>
+             * <li><p><strong>true</strong>: The health check feature is enabled.</p>
              * </li>
-             * <li><p><strong>false</strong>: Not enabled.</p>
+             * <li><p><strong>false</strong>: The health check feature is disabled.</p>
              * </li>
              * </ul>
              * 
@@ -1893,7 +1914,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retry interval of the health check. Unit: seconds.</p>
+             * <p>The retry interval for health checks. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1904,7 +1925,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of retry packets sent for the health check.</p>
+             * <p>The number of health check retries.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -2050,7 +2071,13 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The enabling status of BGP.</p>
+             * <p>The enabling status of BGP. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: BGP is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: BGP is disabled.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2072,7 +2099,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The BGP address on the Alibaba Cloud side.</p>
+             * <p>The BGP IP address on the Alibaba Cloud side.</p>
              * 
              * <strong>example:</strong>
              * <p>169.254.11.1</p>
@@ -2083,7 +2110,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The autonomous system number on the on-premises data center side.</p>
+             * <p>The autonomous system number (ASN) of the on-premises data center.</p>
              * 
              * <strong>example:</strong>
              * <p>65531</p>
@@ -2094,7 +2121,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The BGP address on the on-premises data center side.</p>
+             * <p>The BGP IP address on the on-premises data center side.</p>
              * 
              * <strong>example:</strong>
              * <p>169.254.11.2</p>
@@ -2105,7 +2132,13 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The BGP negotiation status.</p>
+             * <p>The BGP negotiation status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>success</strong>: Normal.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Abnormal.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>success</p>

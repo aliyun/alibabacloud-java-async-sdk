@@ -973,7 +973,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
              * <ul>
              * <li><p><strong>Available</strong>: available.</p>
              * </li>
-             * <li><p><strong>Modifying</strong>: being modified.</p>
+             * <li><p><strong>Modifying</strong>: configuring.</p>
              * </li>
              * </ul>
              * 
@@ -986,7 +986,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC associated with the network ACL.</p>
+             * <p>The ID of the VPC with which the network ACL is associated.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-a2d33rfpl72k5xsscd****</p>

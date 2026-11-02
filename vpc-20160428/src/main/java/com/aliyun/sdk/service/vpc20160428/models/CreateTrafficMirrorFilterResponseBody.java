@@ -91,7 +91,7 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the traffic mirroring filter belongs.</p>
+         * <p>The ID of the resource group to which the traffic mirroring belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4ph****</p>

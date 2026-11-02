@@ -80,10 +80,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token. Valid values:</p>
+         * <p>The pagination token for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
-         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query is required.</li>
+         * <li>If <strong>NextToken</strong> returns a value, the value is the pagination token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -147,7 +147,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of entries in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

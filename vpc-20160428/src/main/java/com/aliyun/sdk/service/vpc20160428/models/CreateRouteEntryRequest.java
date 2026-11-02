@@ -244,9 +244,9 @@ public class CreateRouteEntryRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>Generate a parameter value from your client. Make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -293,7 +293,7 @@ public class CreateRouteEntryRequest extends Request {
         /**
          * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run without creating the route entry. The system checks required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>true</strong>: performs a dry run without creating the route entry. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
          * <li><strong>false</strong> (default): sends the request. After the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</li>
          * </ul>
          * 
@@ -331,7 +331,7 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The type of next hop for the custom route entry. Valid values: </p>
+         * <p>The type of the next hop of the custom route entry. Valid values: </p>
          * <ul>
          * <li><p><strong>Instance</strong> (default): ECS instance.</p>
          * </li>
@@ -531,7 +531,7 @@ public class CreateRouteEntryRequest extends Request {
             }
 
             /**
-             * <p>The type of next hop for the ECMP route. Set the value to <strong>RouterInterface</strong> (router interface).</p>
+             * <p>The type of the next hop of the ECMP route. Set the value to <strong>RouterInterface</strong> (router interface).</p>
              * 
              * <strong>example:</strong>
              * <p>RouterInterface</p>
@@ -542,7 +542,7 @@ public class CreateRouteEntryRequest extends Request {
             }
 
             /**
-             * <p>The weight of the next hop for the ECMP route.</p>
+             * <p>The weight of the next hop of the ECMP route.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

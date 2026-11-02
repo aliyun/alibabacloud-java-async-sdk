@@ -91,7 +91,7 @@ public class ListBusinessRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of regions where Express Connect circuits are available for purchase.</p>
+         * <p>The list of regions where Express Connect circuits can be purchased.</p>
          */
         public Builder geographicSubRegions(java.util.List<GeographicSubRegions> geographicSubRegions) {
             this.geographicSubRegions = geographicSubRegions;
@@ -168,10 +168,10 @@ public class ListBusinessRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the region where Express Connect circuits are available for purchase.</p>
+             * <p>The name of the region where Express Connect circuits can be purchased.</p>
              * 
              * <strong>example:</strong>
-             * <p>华东1(杭州)</p>
+             * <p>China (Hangzhou)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -179,7 +179,7 @@ public class ListBusinessRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID where Express Connect circuits are available for purchase.</p>
+             * <p>The ID of the region where Express Connect circuits can be purchased.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

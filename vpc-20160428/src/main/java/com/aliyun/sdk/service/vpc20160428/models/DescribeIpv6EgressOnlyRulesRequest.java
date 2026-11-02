@@ -216,7 +216,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the IPv6 address for which an IPv6 egress-only rule is configured.</p>
+         * <p>The ID of the IPv6 address for which the IPv6 egress-only rule is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6-bp12uzwhac8tv3xx6****</p>
@@ -228,10 +228,10 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * <p>The type of the instance for which you want to configure an IPv6 egress-only rule. Valid values:</p>
+         * <p>The type of the instance for which you want to configure the IPv6 egress-only rule. Valid values:</p>
          * <ul>
-         * <li>IPv6Address (default): The instance is a single IPv6 address.</li>
-         * <li>IPv6Prefix: The instance is an IPv6 CIDR block.</li>
+         * <li>IPv6Address: a single IPv6 address. This is the default value.</li>
+         * <li>IPv6Prefix: an IPv6 CIDR block.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -299,7 +299,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the list to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -311,7 +311,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for paging in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

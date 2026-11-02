@@ -160,7 +160,7 @@ public class GetVpcPrefixListEntriesRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries per page in a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -172,10 +172,10 @@ public class GetVpcPrefixListEntriesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Valid values:</p>
+         * <p>The token for the next query. Valid values:</p>
          * <ul>
-         * <li>Leave this parameter empty for the first query or if no subsequent query is required.</li>
-         * <li>If a subsequent query is required, set this parameter to the NextToken value returned in the previous API call.</li>
+         * <li>Leave this parameter empty for the first query or when no next query is required.</li>
+         * <li>If a next query is required, set the value to the NextToken value returned from the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,7 +219,7 @@ public class GetVpcPrefixListEntriesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the prefix list to query.</p>
+         * <p>The region ID of the prefix list.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 

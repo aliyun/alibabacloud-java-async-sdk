@@ -177,7 +177,7 @@ public class ModifyRouteTableAttributesRequest extends Request {
          * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>描述信息</p>
+         * <p>Description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -205,7 +205,7 @@ public class ModifyRouteTableAttributesRequest extends Request {
 
         /**
          * <p>The region ID of the VPC to which the route table belongs. </p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,10 +236,10 @@ public class ModifyRouteTableAttributesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to receive dynamic routes by enabling or disabling route propagation. Valid values:</p>
+         * <p>Specifies whether to accept dynamic routes by enabling or disabling route propagation. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default): enabled.</li>
-         * <li><strong>false</strong>: disabled.</li>
+         * <li><strong>true</strong> (default): enables route propagation.</li>
+         * <li><strong>false</strong>: disables route propagation.</li>
          * </ul>
          * 
          * <strong>example:</strong>

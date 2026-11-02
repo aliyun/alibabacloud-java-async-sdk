@@ -93,7 +93,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of DHCP options sets.</p>
+         * <p>The information about the DHCP options sets.</p>
          */
         public Builder dhcpOptionsSets(java.util.List<DhcpOptionsSets> dhcpOptionsSets) {
             this.dhcpOptionsSets = dhcpOptionsSets;
@@ -101,10 +101,10 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. Valid values:</p>
+         * <p>The token for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
-         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query is required.</li>
+         * <li>If <strong>NextToken</strong> returns a value, the value is the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -233,7 +233,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the DNS server.</p>
+             * <p>The IP addresses of the DNS servers.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.XX.XX</p>
@@ -246,9 +246,9 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             /**
              * <p>The lease time of the IPv6 DHCP options set.</p>
              * <ul>
-             * <li><p>If the lease time is in hours, the unit is h. Valid values: <strong>24h</strong> to <strong>1176h</strong> and <strong>87600h</strong> to <strong>175200h</strong>. Default value: <strong>24h</strong>.</p>
+             * <li><p>If the lease time is set in hours, the unit is h. Valid values: <strong>24h</strong> to <strong>1176h</strong> and <strong>87600h</strong> to <strong>175200h</strong>. Default value: <strong>24h</strong>.</p>
              * </li>
-             * <li><p>If the lease time is in days, the unit is d. Valid values: <strong>1d</strong> to <strong>49d</strong> and <strong>3650d</strong> to <strong>7300d</strong>. Default value: <strong>1d</strong>.</p>
+             * <li><p>If the lease time is set in days, the unit is d. Valid values: <strong>1d</strong> to <strong>49d</strong> and <strong>3650d</strong> to <strong>7300d</strong>. Default value: <strong>1d</strong>.</p>
              * </li>
              * </ul>
              * 
@@ -263,9 +263,9 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             /**
              * <p>The lease time of the IPv4 DHCP options set.</p>
              * <ul>
-             * <li><p>If the lease time is in hours, the unit is h. Valid values: <strong>24h</strong> to <strong>1176h</strong> and <strong>87600h</strong> to <strong>175200h</strong>. Default value: <strong>87600h</strong>.</p>
+             * <li><p>If the lease time is set in hours, the unit is h. Valid values: <strong>24h</strong> to <strong>1176h</strong> and <strong>87600h</strong> to <strong>175200h</strong>. Default value: <strong>87600h</strong>.</p>
              * </li>
-             * <li><p>If the lease time is in days, the unit is d. Valid values: <strong>1d</strong> to <strong>49d</strong> and <strong>3650d</strong> to <strong>7300d</strong>. Default value: <strong>3650d</strong>.</p>
+             * <li><p>If the lease time is set in days, the unit is d. Valid values: <strong>1d</strong> to <strong>49d</strong> and <strong>3650d</strong> to <strong>7300d</strong>. Default value: <strong>3650d</strong>.</p>
              * </li>
              * </ul>
              * 
@@ -544,7 +544,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DHCP options configuration.</p>
+             * <p>The configuration information of the DHCP options.</p>
              */
             public Builder dhcpOptions(DhcpOptions dhcpOptions) {
                 this.dhcpOptions = dhcpOptions;
@@ -609,13 +609,13 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             /**
              * <p>The status of the DHCP options set. Valid values:</p>
              * <ul>
-             * <li><p><strong>Available</strong>: available.</p>
+             * <li><p><strong>Available</strong>: Available.</p>
              * </li>
-             * <li><p><strong>InUse</strong>: in use.</p>
+             * <li><p><strong>InUse</strong>: In use.</p>
              * </li>
-             * <li><p><strong>Pending</strong>: being configured.</p>
+             * <li><p><strong>Pending</strong>: Being configured.</p>
              * </li>
-             * <li><p><strong>Deleted</strong>: deleted.</p>
+             * <li><p><strong>Deleted</strong>: Deleted.</p>
              * </li>
              * </ul>
              * 

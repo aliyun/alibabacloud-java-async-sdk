@@ -229,7 +229,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         } 
 
         /**
-         * <p>The list of Classless Inter-Domain Routing blocks to add to the prefix list instance.</p>
+         * <p>The list of Classless Inter-Domain Routing to be added to the prefix list instance.</p>
          */
         public Builder addPrefixListEntry(java.util.List<AddPrefixListEntry> addPrefixListEntry) {
             this.putQueryParameter("AddPrefixListEntry", addPrefixListEntry);
@@ -239,9 +239,9 @@ public class ModifyVpcPrefixListRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -254,10 +254,10 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run without modifying the prefix list configuration. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the prefix list configuration is modified.</li>
+         * <li><strong>true</strong>: prechecks the request without modifying the configuration of the prefix list. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the system returns an error. If the request passes the precheck, the system returns the <code>DryRunOperation</code> error code.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, the system returns an HTTP 2xx status code and modifies the configuration of the prefix list.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,7 +270,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * <p>The new maximum number of Classless Inter-Domain Routing block entries in the prefix list instance.</p>
+         * <p>The new maximum number of Classless Inter-Domain Routing entries in the prefix list instance.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -300,8 +300,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * <p>The new description of the prefix list.</p>
-         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The updated description of the prefix list. The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>newdescription</p>
@@ -313,7 +312,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the prefix list that you want to modify.</p>
+         * <p>The instance ID of the prefix list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -339,7 +338,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the prefix list that you want to modify.</p>
+         * <p>The region ID of the prefix list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -352,7 +351,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * <p>The list of Classless Inter-Domain Routing blocks to delete from the prefix list instance.</p>
+         * <p>The list of Classless Inter-Domain Routing to be deleted from the prefix list instance.</p>
          */
         public Builder removePrefixListEntry(java.util.List<RemovePrefixListEntry> removePrefixListEntry) {
             this.putQueryParameter("RemovePrefixListEntry", removePrefixListEntry);
@@ -438,9 +437,9 @@ public class ModifyVpcPrefixListRequest extends Request {
             } 
 
             /**
-             * <p>The Classless Inter-Domain Routing block to add to the prefix list instance.</p>
+             * <p>The Classless Inter-Domain Routing to be added to the prefix list instance.</p>
              * <blockquote>
-             * <p>If the Classless Inter-Domain Routing block already exists in the prefix list, only the value of <strong>AddPrefixListEntry.N.Description</strong> is modified, which means only the description of the Classless Inter-Domain Routing block is updated.</p>
+             * <p>If the Classless Inter-Domain Routing to be added already exists in the prefix list, only the value of <strong>AddPrefixListEntry.N.Description</strong> is modified. This means that only the description of the Classless Inter-Domain Routing is modified.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -452,7 +451,7 @@ public class ModifyVpcPrefixListRequest extends Request {
             }
 
             /**
-             * <p>The description of the Classless Inter-Domain Routing block to add to the prefix list instance.</p>
+             * <p>The description of the Classless Inter-Domain Routing to be added to the prefix list instance.</p>
              * <p>The description must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
@@ -523,7 +522,7 @@ public class ModifyVpcPrefixListRequest extends Request {
             } 
 
             /**
-             * <p>The Classless Inter-Domain Routing block to delete from the prefix list instance.</p>
+             * <p>The Classless Inter-Domain Routing to be deleted from the prefix list instance.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.0/16</p>
@@ -534,7 +533,7 @@ public class ModifyVpcPrefixListRequest extends Request {
             }
 
             /**
-             * <p>The description of the Classless Inter-Domain Routing block to delete from the prefix list.</p>
+             * <p>The description of the Classless Inter-Domain Routing to be deleted from the prefix list.</p>
              * 
              * <strong>example:</strong>
              * <p>cidr</p>

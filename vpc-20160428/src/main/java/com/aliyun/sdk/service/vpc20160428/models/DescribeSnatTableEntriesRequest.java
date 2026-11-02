@@ -259,7 +259,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         /**
          * <p>The ID of the NAT gateway to query.</p>
          * <blockquote>
-         * <p>You must specify at least one of <strong>SnatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+         * <p>You must specify at least one of the <strong>SnatTableId</strong> and <strong>NatGatewayId</strong> parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -272,7 +272,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the elastic network interfaces (ENIs) to query.</p>
+         * <p>The IDs of the elastic network interfaces (ENIs) (network interface controller (NIC)) to query.</p>
          */
         public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
@@ -311,7 +311,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -323,8 +323,8 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the NAT gateway.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>The ID of the region where the NAT gateway is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -368,7 +368,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
 
         /**
          * <p>The name of the SNAT entry.</p>
-         * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
+         * <p>The name must be 2 to 128 characters in length, and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>SnatEntry-1</p>
@@ -381,7 +381,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
 
         /**
          * <ul>
-         * <li><p>When you query SNAT entries of an Internet NAT gateway, this parameter specifies the elastic IP address (EIP) in the SNAT entry.</p>
+         * <li><p>When you query SNAT entries of an Internet NAT gateway, this parameter specifies the EIP in the SNAT entry.</p>
          * </li>
          * <li><p>When you query SNAT entries of a VPC NAT gateway, this parameter specifies the NAT IP address in the SNAT entry.</p>
          * </li>
@@ -399,7 +399,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         /**
          * <p>The ID of the SNAT table. </p>
          * <blockquote>
-         * <p>You must specify at least one of <strong>SnatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+         * <p>You must specify at least one of the <strong>SnatTableId</strong> and <strong>NatGatewayId</strong> parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -426,9 +426,9 @@ public class DescribeSnatTableEntriesRequest extends Request {
         /**
          * <p>The ID of the vSwitch.</p>
          * <ul>
-         * <li><p>When you query SNAT entries of an Internet NAT gateway, this parameter specifies the vSwitch whose ECS instances can access the Internet by using the SNAT rule.</p>
+         * <li><p>When you query SNAT entries of an Internet NAT gateway, this parameter specifies that all ECS instances in the vSwitch can access the Internet through SNAT rules.</p>
          * </li>
-         * <li><p>When you query SNAT entries of a VPC NAT gateway, this parameter specifies the vSwitch whose ECS instances can access external networks by using the SNAT rule.</p>
+         * <li><p>When you query SNAT entries of a VPC NAT gateway, this parameter specifies that all ECS instances in the vSwitch can access external networks through SNAT rules.</p>
          * </li>
          * </ul>
          * 

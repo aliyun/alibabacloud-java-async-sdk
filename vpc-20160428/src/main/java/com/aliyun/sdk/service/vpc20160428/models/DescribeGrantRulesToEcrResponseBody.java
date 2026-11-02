@@ -119,7 +119,7 @@ public class DescribeGrantRulesToEcrResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The number of queried results.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -130,7 +130,7 @@ public class DescribeGrantRulesToEcrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cross-account authorization list of Express Connect Router (ECR).</p>
+         * <p>The cross-account authorization list of the Express Connect Router (ECR).</p>
          */
         public Builder ecrGrantRules(java.util.List<EcrGrantRules> ecrGrantRules) {
             this.ecrGrantRules = ecrGrantRules;
@@ -138,7 +138,7 @@ public class DescribeGrantRulesToEcrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class DescribeGrantRulesToEcrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Maximum value: 50. Default value: 10.</p>
+         * <p>The number of entries returned per page during paging in a paged query. Maximum value: 50. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -171,7 +171,7 @@ public class DescribeGrantRulesToEcrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -253,7 +253,7 @@ public class DescribeGrantRulesToEcrResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authorization time. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</p>
+             * <p>The time when the authorization was granted. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-15T14:00:00Z</p>
@@ -264,7 +264,7 @@ public class DescribeGrantRulesToEcrResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the cross-account authorization for the Express Connect Router (ECR).</p>
+             * <p>The instance ID of the Express Connect Router (ECR) for which cross-account authorization is granted.</p>
              * 
              * <strong>example:</strong>
              * <p>ecr-xxxxxx</p>
@@ -275,7 +275,7 @@ public class DescribeGrantRulesToEcrResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorized user ID for the cross-account authorization of the Express Connect Router (ECR).</p>
+             * <p>The ID of the authorized user for the Express Connect Router (ECR) cross-account authorization.</p>
              * 
              * <strong>example:</strong>
              * <p>11111111111</p>

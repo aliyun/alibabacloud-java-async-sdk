@@ -188,9 +188,9 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value of each API request is different.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -203,10 +203,10 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run without modifying the configuration of the traffic mirror filter. The system checks the required parameters, request format, and business restrictions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the configuration of the traffic mirror filter is modified.</li>
+         * <li><strong>true</strong>: performs a dry run and does not modify the configuration of the traffic mirror filter. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the check, the corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, a 2xx HTTP status code is returned and the configuration of the traffic mirror filter is modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,7 +237,7 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the traffic mirror filter.</p>
+         * <p>The region ID of the traffic mirror.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
          * <p>This parameter is required.</p>
          * 
@@ -269,7 +269,7 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new description of the traffic mirror filter.</p>
+         * <p>The description of the traffic mirror filter to be modified.</p>
          * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the traffic mirror filter.</p>
+         * <p>The ID of the traffic mirror filter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +295,7 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new name of the traffic mirror filter.</p>
+         * <p>The name of the traffic mirror filter to be modified.</p>
          * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

@@ -187,7 +187,7 @@ public class DescribeHaVipsRequest extends Request {
         } 
 
         /**
-         * <p>The filter conditions.</p>
+         * <p>The details of the filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -214,7 +214,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -239,7 +239,7 @@ public class DescribeHaVipsRequest extends Request {
 
         /**
          * <p>The region ID of the HaVip.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -350,22 +350,22 @@ public class DescribeHaVipsRequest extends Request {
             } 
 
             /**
-             * <p>The filter condition. You can specify up to 5 filter conditions. Valid values of <strong>N</strong>: <strong>1 to 5</strong>.</p>
-             * <p>The following filter conditions are supported:</p>
+             * <p>The filter condition. You can specify up to 5 filter conditions. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>5</strong>.
+             * Supported filter conditions:</p>
              * <ul>
-             * <li><p><strong>VpcId</strong>: the virtual private cloud (VPC) ID.</p>
+             * <li><p><strong>VpcId</strong>: The ID of the virtual private cloud (VPC). </p>
              * </li>
-             * <li><p><strong>VSwitchId</strong>: the vSwitch ID.</p>
+             * <li><p><strong>VSwitchId</strong>: The vSwitch ID. </p>
              * </li>
-             * <li><p><strong>Status</strong>: the HaVip status.</p>
+             * <li><p><strong>Status</strong>: The status of the HaVip. </p>
              * </li>
-             * <li><p><strong>HaVipId</strong>: the HaVip ID.</p>
+             * <li><p><strong>HaVipId</strong>: The HaVip ID. </p>
              * </li>
-             * <li><p><strong>HaVipAddress</strong>: the IP address of the HaVip.</p>
+             * <li><p><strong>HaVipAddress</strong>: The IP address of the HaVip.</p>
              * </li>
              * </ul>
-             * <p>Each filter condition (Filter Key) can have multiple values. The values have an OR relationship, which means that a match on any value satisfies the filter condition.</p>
-             * <p>Different filter conditions (Filter Keys) have an AND relationship, which means that all parameter filter conditions must be met for a record to be returned.</p>
+             * <p>You can specify multiple values for each filter condition. The values are evaluated by using the OR operator. A resource is considered to match the filter condition of the parameter if it matches at least one of the values.</p>
+             * <p>Multiple filter conditions are evaluated by using the AND operator. A resource is returned only if it matches the filter conditions of all parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>HaVipId</p>
@@ -376,7 +376,7 @@ public class DescribeHaVipsRequest extends Request {
             }
 
             /**
-             * <p>The values of the specified filter condition. Valid values of <strong>N</strong>: <strong>1 to 5</strong>.</p>
+             * <p>The value of the specified filter condition. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>5</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>havip-bp19o63nequs01i8d****</p>
@@ -446,7 +446,7 @@ public class DescribeHaVipsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string.</p>
              * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
@@ -458,8 +458,8 @@ public class DescribeHaVipsRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string.</p>
+             * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

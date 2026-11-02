@@ -67,7 +67,7 @@ public class CreateSnatEntryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>2315DEB7-5E92-423A-91F7-4C1EC9AD****</p>

@@ -147,9 +147,9 @@ public class ModifyEipForwardModeRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class ModifyEipForwardModeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the EIP instance to modify.</p>
+         * <p>The ID of the EIP that you want to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class ModifyEipForwardModeRequest extends Request {
         }
 
         /**
-         * <p>The binding mode. Valid values:</p>
+         * <p>The association mode. Valid values:</p>
          * <ul>
          * <li><p><strong>NAT</strong> (default): NAT mode (standard mode).</p>
          * </li>
@@ -208,7 +208,7 @@ public class ModifyEipForwardModeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the EIP. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query region IDs.</p>
+         * <p>The region ID of the EIP. You can call the DescribeRegions operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -130,7 +130,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>The type of the instance for which high-precision second-level monitoring is queried. The value is <strong>EIP</strong>.</p>
+         * <p>The type of the instance for which high-precision second-level monitoring is queried. Valid value: <strong>EIP</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>EIP</p>
@@ -141,7 +141,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>The name of the LogProject.</p>
+         * <p>The name of the Simple Log Service LogProject.</p>
          * 
          * <strong>example:</strong>
          * <p>hdmonitor-cn-shenzhen-1658206966225390</p>
@@ -152,7 +152,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>The name of the LogStore.</p>
+         * <p>The name of the Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>hdmonitor</p>
@@ -163,7 +163,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>54B48E3D-DF70-471B-AA93-08E683A1B457</p>

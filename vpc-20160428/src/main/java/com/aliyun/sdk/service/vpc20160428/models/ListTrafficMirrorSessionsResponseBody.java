@@ -93,10 +93,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The token for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-         * <li>If <strong>NextToken</strong> has a value, the value is the token for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query is available.</li>
+         * <li>If <strong>NextToken</strong> returns a value, the value is the token used to start the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>739CA01C-92EB-4C69-BCC0-280149C6F41E</p>
@@ -130,7 +130,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of traffic mirror sessions.</p>
+         * <p>The details of the traffic mirror sessions.</p>
          */
         public Builder trafficMirrorSessions(java.util.List<TrafficMirrorSessions> trafficMirrorSessions) {
             this.trafficMirrorSessions = trafficMirrorSessions;
@@ -459,7 +459,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the traffic mirror session was created.</p>
+             * <p>The creation time of the traffic mirror session. The time is specified in the ISO 8601 standard in UTC. The example is accurate to the minute in the YYYY-MM-DDThh:mmZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-09-05T15:26Z</p>
@@ -470,9 +470,9 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the traffic mirror session is enabled. Valid values:</p>
+             * <p>Specifies whether the traffic mirror session is enabled. Valid values:</p>
              * <ul>
-             * <li><p><strong>false</strong> (default): The traffic mirror session is not enabled.</p>
+             * <li><p><strong>false</strong> (default): The traffic mirror session is disabled.</p>
              * </li>
              * <li><p><strong>true</strong>: The traffic mirror session is enabled.</p>
              * </li>
@@ -487,11 +487,11 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the original packet to be mirrored (excluding the VXLAN packet length). Default value: <strong>1500</strong>. Valid values: <strong>64</strong> to <strong>8500</strong>. Unit: bytes.</p>
+             * <p>The length of the original mirrored packet, excluding the length of the VXLAN packet. Default value: <strong>1500</strong>. Valid values: <strong>64</strong> to <strong>8500</strong>. Unit: bytes.</p>
              * <ul>
-             * <li><p>This parameter affects the packet length received by the traffic mirror destination. For more information, see the mirrored packet length and MTU limits in <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
+             * <li><p>The value of this parameter affects the length of the packet received by the traffic mirror destination. For more information, see the &quot;Mirrored packet length and MTU limits&quot; section in <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
              * </li>
-             * <li><p>This parameter is available only in specific regions. For more information, see the mirrored packet length parameter description in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirrors</a>.</p>
+             * <li><p>This parameter is available only in specific regions. For more information, see the description of the mirrored packet length parameter in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirroring</a>.</p>
              * </li>
              * </ul>
              * 
@@ -516,7 +516,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the traffic mirroring session belongs.</p>
+             * <p>The ID of the resource group to which the traffic mirroring belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-bp67acfmxazb4ph****</p>
@@ -527,7 +527,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -548,9 +548,9 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             /**
              * <p>The business status of the traffic mirror session. Valid values:</p>
              * <ul>
-             * <li><p><strong>Normal</strong>: Normal.</p>
+             * <li><p><strong>Normal</strong>: The traffic mirror session is working as expected.</p>
              * </li>
-             * <li><p><strong>FinancialLocked</strong>: financial lock.</p>
+             * <li><p><strong>FinancialLocked</strong>: locked due to overdue payment.</p>
              * </li>
              * </ul>
              * 
@@ -598,10 +598,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             /**
              * <p>The status of the traffic mirror session. Valid values:</p>
              * <ul>
-             * <li><strong>Creating</strong>: being created.</li>
-             * <li><strong>Created</strong>: created.</li>
-             * <li><strong>Modifying</strong>: being modified.</li>
-             * <li><strong>Deleting</strong>: being deleted.</li>
+             * <li><strong>Creating</strong>: The traffic mirror session is being created.</li>
+             * <li><strong>Created</strong>: The traffic mirror session is created.</li>
+             * <li><strong>Modifying</strong>: The traffic mirror session is being modified.</li>
+             * <li><strong>Deleting</strong>: The traffic mirror session is being deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -632,11 +632,11 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic mirror destination type. Valid values:</p>
+             * <p>The type of the traffic mirror destination. Valid values:</p>
              * <ul>
-             * <li><p><strong>NetworkInterface</strong>: network interface controller (NIC).</p>
+             * <li><p><strong>NetworkInterface</strong>: an elastic network interface (ENI).</p>
              * </li>
-             * <li><p><strong>SLB</strong>: internal-facing SLB instance.</p>
+             * <li><p><strong>SLB</strong>: an internal-facing SLB instance.</p>
              * </li>
              * </ul>
              * 
@@ -649,7 +649,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VNI used to distinguish different mirrored data.</p>
+             * <p>The VNI that is used to distinguish different mirrored traffic.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

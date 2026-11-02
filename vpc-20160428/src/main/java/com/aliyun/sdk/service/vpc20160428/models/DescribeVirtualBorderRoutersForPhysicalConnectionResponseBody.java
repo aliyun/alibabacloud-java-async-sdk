@@ -106,7 +106,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         } 
 
         /**
-         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page during paging in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +139,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

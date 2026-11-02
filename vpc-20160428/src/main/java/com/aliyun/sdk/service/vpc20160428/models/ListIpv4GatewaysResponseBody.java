@@ -93,7 +93,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of IPv4 gateway instances.</p>
+         * <p>The list of IPv4 gateways.</p>
          */
         public Builder ipv4GatewayModels(java.util.List<Ipv4GatewayModels> ipv4GatewayModels) {
             this.ipv4GatewayModels = ipv4GatewayModels;
@@ -101,10 +101,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. Valid values:</p>
+         * <p>The token that is used for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
-         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query is to be sent.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token used for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -381,10 +381,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the IPv4 gateway instance is activated. Valid values:</p>
+             * <p>Indicates whether the IPv4 gateway is activated. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: activated.</li>
-             * <li><strong>false</strong>: not activated.</li>
+             * <li><strong>true</strong>: The IPv4 gateway is activated.</li>
+             * <li><strong>false</strong>: The IPv4 gateway is not activated.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -407,7 +407,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the IPv4 gateway instance.</p>
+             * <p>The description of the IPv4 gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -429,7 +429,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the IPv4 gateway instance.</p>
+             * <p>The name of the IPv4 gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -440,7 +440,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the route table associated with the IPv4 gateway instance.</p>
+             * <p>The ID of the route table associated with the IPv4 gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>vtb-5ts0ohchwkp3dydt2****</p>
@@ -462,13 +462,13 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the IPv4 gateway instance. Valid values:</p>
+             * <p>The status of the IPv4 gateway. Valid values:</p>
              * <ul>
-             * <li><strong>Creating</strong>: being created.</li>
-             * <li><strong>Created</strong>: created and available.</li>
-             * <li><strong>Modifying</strong>: being modified.</li>
-             * <li><strong>Deleting</strong>: being deleted.</li>
-             * <li><strong>Deleted</strong>: deleted.</li>
+             * <li><strong>Creating</strong>: The IPv4 gateway is being created.</li>
+             * <li><strong>Created</strong>: The IPv4 gateway is created and available.</li>
+             * <li><strong>Modifying</strong>: The IPv4 gateway is being modified.</li>
+             * <li><strong>Deleting</strong>: The IPv4 gateway is being deleted.</li>
+             * <li><strong>Deleted</strong>: The IPv4 gateway is deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -480,7 +480,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag list.</p>
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -488,7 +488,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC associated with the IPv4 gateway instance.</p>
+             * <p>The ID of the VPC associated with the IPv4 gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-5tsrxlw7dv074gci4****</p>

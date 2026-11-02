@@ -67,7 +67,7 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody extends T
         } 
 
         /**
-         * <p>The number of EPs that can be created.</p>
+         * <p>The number of endpoints that can be created.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

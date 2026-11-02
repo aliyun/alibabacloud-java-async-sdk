@@ -288,11 +288,11 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether routing automatic propagation is enabled for BGP routes to the VPC. Valid values:</p>
+         * <p>Specifies whether BGP routes are automatically propagated to the VPC. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: automatic propagation is enabled.</p>
+         * <li><p><strong>true</strong>: automatically propagated</p>
          * </li>
-         * <li><p><strong>false</strong>: automatic propagation is not enabled.</p>
+         * <li><p><strong>false</strong>: not automatically propagated</p>
          * </li>
          * </ul>
          * 
@@ -305,10 +305,10 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The payment status of the VPN gateway instance. Valid values:</p>
+         * <p>The billing status of the VPN gateway instance. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: Normal.</li>
-         * <li><strong>FinancialLocked</strong>: locked due to overdue payment.</li>
+         * <li><strong>Normal</strong>: normal</li>
+         * <li><strong>FinancialLocked</strong>: locked due to overdue payments</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -320,8 +320,8 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp when the VPN gateway instance was created. Unit: milliseconds.</p>
-         * <p>The timestamp is in the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the VPN gateway was created. Unit: milliseconds.</p>
+         * <p>The timestamp follows the UNIX time format. It indicates the total number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1492753580000</p>
@@ -332,7 +332,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the VPN gateway instance.</p>
+         * <p>The description of the VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -343,8 +343,8 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The second IP address assigned by the system to the VPN gateway instance for creating IPsec-VPN connections.</p>
-         * <p>This parameter is returned only for VPN gateway instances that support creating dual-tunnel IPsec-VPN connections.</p>
+         * <p>The second IP address assigned by the system to the VPN gateway for creating an IPsec-VPN connection.</p>
+         * <p>This parameter is returned only for VPN gateways that support dual-tunnel IPsec-VPN connections.</p>
          * 
          * <strong>example:</strong>
          * <p>116.11.XX.XX</p>
@@ -355,8 +355,8 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the second vSwitch associated with the VPN gateway instance.</p>
-         * <p>This parameter is returned only for VPN gateway instances that support creating dual-tunnel IPsec-VPN connections.</p>
+         * <p>The ID of the second vSwitch associated with the VPN gateway.</p>
+         * <p>This parameter is returned only for VPN gateways that support dual-tunnel IPsec-VPN connections.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-p0w95ql6tmr2ludkt****</p>
@@ -367,11 +367,11 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The enabling status of the BGP feature for the VPN gateway. Valid values:</p>
+         * <p>Specifies whether the BGP feature is enabled for the VPN gateway. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: enabled.</p>
+         * <li><p><strong>true</strong>: enabled</p>
          * </li>
-         * <li><p><strong>false</strong>: not enabled.</p>
+         * <li><p><strong>false</strong>: disabled</p>
          * </li>
          * </ul>
          * 
@@ -384,8 +384,8 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp when the VPN gateway instance expires. Unit: milliseconds.</p>
-         * <p>The timestamp is in the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The UNIX timestamp of when the VPN gateway instance expires. Unit: milliseconds.</p>
+         * <p>The UNIX timestamp follows the UNIX time format. It indicates the total number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC until the VPN gateway instance expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1495382400000</p>
@@ -397,10 +397,10 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li><p>If the VPN gateway instance supports creating single-tunnel IPsec-VPN connections, this address is the IP address of the VPN gateway instance and can be used to create IPsec-VPN connections or SSL-VPN connections.</p>
+         * <li><p>If the VPN gateway supports single-tunnel IPsec-VPN connections, this parameter indicates the IP address of the VPN gateway, which can be used to create an IPsec-VPN connection or an SSL-VPN connection.</p>
          * </li>
-         * <li><p>If the VPN gateway instance supports creating dual-tunnel IPsec-VPN connections, this address is the first IP address used to create IPsec-VPN connections and cannot be used to create SSL-VPN connections.</p>
-         * <p>  If the VPN gateway instance supports creating dual-tunnel IPsec-VPN connections, the system assigns two IPsec IP addresses to the VPN gateway instance for creating dual-tunnel IPsec-VPN connections.</p>
+         * <li><p>If the VPN gateway supports dual-tunnel IPsec-VPN connections, this parameter indicates the first IP address used to create an IPsec-VPN connection. It cannot be used to create an SSL-VPN connection.</p>
+         * <p>  If the VPN gateway supports dual-tunnel IPsec-VPN connections, the system assigns two IPsec addresses to the VPN gateway for creating dual-tunnel IPsec-VPN connections.</p>
          * </li>
          * </ul>
          * 
@@ -413,8 +413,8 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The private IP address of the vSwitch occupied by the system when deploying the VPN gateway instance.</p>
-         * <p>This parameter is returned only for VPN gateway instances that support single-tunnel IPsec-VPN connections and have the IPsec-VPN feature enabled.</p>
+         * <p>The private IP address of the vSwitch that is occupied when the system deploys the VPN gateway.</p>
+         * <p>This parameter is returned only for VPN gateways that support only single-tunnel IPsec-VPN connections and have the IPsec-VPN feature enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.10.46</p>
@@ -425,7 +425,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the VPN gateway instance.</p>
+         * <p>The name of the VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -447,8 +447,8 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the VPN gateway instance belongs.</p>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource group information.</p>
+         * <p>The ID of the resource group to which the VPN gateway belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzs372yg****</p>
@@ -459,7 +459,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The bandwidth specification of the VPN gateway instance. Unit: Mbit/s.</p>
+         * <p>The bandwidth specification of the VPN gateway. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>5M</p>
@@ -471,7 +471,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The IP address of the SSL-VPN connection.</p>
-         * <p>This parameter is returned only when the SSL-VPN feature is enabled for a VPN gateway instance that supports creating dual-tunnel IPsec-VPN connections and uses the public network type.</p>
+         * <p>This parameter is returned only after the SSL-VPN feature is enabled for a VPN gateway instance of the public network type that supports dual-tunnel IPsec-VPN connections.</p>
          * 
          * <strong>example:</strong>
          * <p>116.33.XX.XX</p>
@@ -484,11 +484,11 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         /**
          * <p>The status of the VPN gateway. Valid values:</p>
          * <ul>
-         * <li><strong>init</strong>: initializing.</li>
-         * <li><strong>provisioning</strong>: preparing.</li>
-         * <li><strong>active</strong>: Normal.</li>
-         * <li><strong>updating</strong>: updating.</li>
-         * <li><strong>deleting</strong>: deleting.</li>
+         * <li><strong>init</strong>: initializing</li>
+         * <li><strong>provisioning</strong>: preparing</li>
+         * <li><strong>active</strong>: active</li>
+         * <li><strong>updating</strong>: updating</li>
+         * <li><strong>deleting</strong>: deleting</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -500,7 +500,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the vSwitch associated with the VPN gateway instance.</p>
+         * <p>The ID of the vSwitch associated with the VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1y9ovl1cu9ou4tv****</p>
@@ -511,7 +511,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VPC to which the VPN gateway instance belongs.</p>
+         * <p>The ID of the VPC to which the VPN gateway belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1ub1yt9cvakoel****</p>
@@ -522,7 +522,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VPN gateway instance.</p>
+         * <p>The ID of the VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>vpn-bp1q8bgx4xnkm2ogj****</p>

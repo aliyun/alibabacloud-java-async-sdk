@@ -190,7 +190,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the instance for which you want to configure high-definition second-level monitoring.</p>
+         * <p>The instance ID for which you want to configure high-precision second-level monitoring.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * <p>The name of the LogProject in Simple Log Service.</p>
+         * <p>The name of the LogProject.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * <p>The name of the LogStore in Simple Log Service.</p>
+         * <p>The name of the LogStore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,7 +260,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,10 +291,10 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * <p>The high-definition second-level monitoring status of the instance. Valid values:</p>
+         * <p>The status of high-precision second-level monitoring for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>ON</strong>: Enables high-definition second-level monitoring.</li>
-         * <li><strong>OFF</strong>: Disables high-definition second-level monitoring.</li>
+         * <li><strong>ON</strong>: enables high-precision second-level monitoring.</li>
+         * <li><strong>OFF</strong>: disables high-precision second-level monitoring.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

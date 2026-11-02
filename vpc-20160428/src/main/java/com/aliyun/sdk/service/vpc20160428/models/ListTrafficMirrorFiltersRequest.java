@@ -201,8 +201,7 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of entries to return in this request.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The maximum number of entries to return for the current request. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -214,10 +213,10 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query. Valid values:</p>
+         * <p>The token that indicates whether a next query is available. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request or if no next query exists.</li>
-         * <li>If a next query exists, set the value to the NextToken value returned in the previous API call.</li>
+         * <li>For the first query or when no subsequent query is required, leave this parameter empty.</li>
+         * <li>If a subsequent query is required, set the value to the NextToken value returned by the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,8 +247,8 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the traffic mirror filter.</p>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
+         * <p>The region ID of the traffic mirror.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs. For more information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +261,7 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the traffic mirroring filter belongs.</p>
+         * <p>The ID of the resource group to which the traffic mirroring belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4ph****</p>
@@ -292,7 +291,7 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -301,7 +300,7 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs of traffic mirror filters. The maximum value of <strong>N</strong> is <strong>100</strong>, which means that you can query up to 100 traffic mirror filters at a time.</p>
+         * <p>The instance IDs of the traffic mirror filters. The maximum value of <strong>N</strong> is <strong>100</strong>, which means that you can query up to 100 filters at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>tmf-j6cmls82xnc86vtpe****</p>
@@ -384,8 +383,8 @@ public class ListTrafficMirrorFiltersRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -396,8 +395,8 @@ public class ListTrafficMirrorFiltersRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+             * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

@@ -231,7 +231,7 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -243,10 +243,10 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Valid values:</p>
+         * <p>The token for the next query. Valid values:</p>
          * <ul>
-         * <li>If this is the first request or no subsequent query exists, leave this parameter empty.</li>
-         * <li>If a subsequent query exists, set this parameter to the NextToken value returned in the previous API call.</li>
+         * <li>Leave this parameter empty for the first query and when no next query is required.</li>
+         * <li>If a next query is required, set this parameter to the NextToken value returned from the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,7 +278,7 @@ public class ListVSwitchCidrReservationsRequest extends Request {
 
         /**
          * <p>The region ID of the vSwitch.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,7 +318,7 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs of the reserved CIDR block for a vSwitch. You can specify up to 10 reserved CIDR blocks.</p>
+         * <p>The instance IDs of the reserved CIDR blocks for a vSwitch. You can specify up to 10 reserved CIDR blocks.</p>
          */
         public Builder vSwitchCidrReservationIds(java.util.List<String> vSwitchCidrReservationIds) {
             this.putQueryParameter("VSwitchCidrReservationIds", vSwitchCidrReservationIds);
@@ -329,7 +329,7 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         /**
          * <p>The type of the reserved CIDR block for a vSwitch. Valid values: <strong>prefix</strong>, which indicates that addresses are allocated by CIDR block.</p>
          * <blockquote>
-         * <p>When users or cloud services automatically assign CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks must be allocated from the reserved CIDR block. If all addresses in the reserved CIDR block are allocated, the system returns an error.</p>
+         * <p>When users and cloud services automatically allocate CIDR blocks for elastic network interfaces (ENIs), the CIDR blocks must be allocated from the reserved CIDR blocks. If all addresses in the reserved CIDR blocks are allocated, the system returns an error.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -342,7 +342,7 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch to which the reserved CIDR block for a vSwitch belongs.</p>
+         * <p>The ID of the vSwitch to which the reserved CIDR block that you want to query belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-25navfgbue4g****</p>
@@ -413,8 +413,7 @@ public class ListVSwitchCidrReservationsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, the value cannot be an empty string.</p>
-             * <p>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string. A tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -425,8 +424,7 @@ public class ListVSwitchCidrReservationsRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, the value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string. A tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

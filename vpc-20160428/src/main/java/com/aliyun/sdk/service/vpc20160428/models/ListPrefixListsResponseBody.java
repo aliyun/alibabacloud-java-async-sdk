@@ -106,7 +106,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,9 +117,9 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. Valid values:</p>
+         * <p>The pagination token for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query is required.</li>
          * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
@@ -132,7 +132,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the prefix lists.</p>
+         * <p>The details of the prefix lists.</p>
          */
         public Builder prefixLists(java.util.List<PrefixLists> prefixLists) {
             this.prefixLists = prefixLists;
@@ -140,7 +140,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>DF72F7BB-5DFA-529C-887E-B0BB70D89C4F</p>
@@ -151,7 +151,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of prefix lists returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -470,7 +470,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Classless Inter-Domain Routing (CIDR) block information of the prefix list.</p>
+             * <p>The Classless Inter-Domain Routing information of the prefix list.</p>
              */
             public Builder cidrBlocks(java.util.List<String> cidrBlocks) {
                 this.cidrBlocks = cidrBlocks;
@@ -478,7 +478,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the prefix list was created.</p>
+             * <p>The time when the prefix list was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-12T14:22:32Z</p>
@@ -504,7 +504,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries for Classless Inter-Domain Routing (CIDR) blocks in the prefix list.</p>
+             * <p>The maximum number of entries of Classless Inter-Domain Routing in the prefix list.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -561,9 +561,9 @@ public class ListPrefixListsResponseBody extends TeaModel {
             /**
              * <p>The status of the prefix list. Valid values:</p>
              * <ul>
-             * <li><strong>Created</strong>: Created.</li>
-             * <li><strong>Deleted</strong>: Deleted.</li>
-             * <li><strong>Modifying</strong>: Being modified.</li>
+             * <li><strong>Created</strong>: The prefix list is created.</li>
+             * <li><strong>Deleted</strong>: The prefix list is deleted.</li>
+             * <li><strong>Modifying</strong>: The prefix list is being modified.</li>
              * </ul>
              * <blockquote>
              * <p>This parameter has the same meaning and valid values as <strong>Status</strong>.</p>
@@ -613,8 +613,8 @@ public class ListPrefixListsResponseBody extends TeaModel {
             /**
              * <p>The sharing type of the prefix list. Valid values:</p>
              * <ul>
-             * <li><strong>Shared</strong>: The prefix list is a shared prefix list.</li>
-             * <li>Empty: The prefix list is not a shared prefix list.</li>
+             * <li><strong>Shared</strong>: The prefix list is shared.</li>
+             * <li>Empty: The prefix list is not shared.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -628,9 +628,9 @@ public class ListPrefixListsResponseBody extends TeaModel {
             /**
              * <p>The status of the prefix list. Valid values:</p>
              * <ul>
-             * <li><strong>Created</strong>: Created.</li>
-             * <li><strong>Deleted</strong>: Deleted.</li>
-             * <li><strong>Modifying</strong>: Being modified.</li>
+             * <li><strong>Created</strong>: The prefix list is created.</li>
+             * <li><strong>Deleted</strong>: The prefix list is deleted.</li>
+             * <li><strong>Modifying</strong>: The prefix list is being modified.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -642,7 +642,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

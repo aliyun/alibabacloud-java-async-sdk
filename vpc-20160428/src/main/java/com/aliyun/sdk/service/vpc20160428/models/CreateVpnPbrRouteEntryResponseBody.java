@@ -185,7 +185,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the policy-based route was created. Unit: milliseconds.</p>
-         * <p>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp follows the UNIX time format. It is the total number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970 (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>1492747187000</p>
@@ -218,7 +218,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunnel protocol).</p>
+         * <p>The tunnel protocol. Set the value to <strong>Ipsec</strong> (IPsec tunnel protocol).</p>
          * 
          * <strong>example:</strong>
          * <p>Ipsec</p>
@@ -229,7 +229,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The policy priority of the policy-based routing entry.</p>
+         * <p>The policy priority of the policy-based route.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -275,9 +275,9 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         /**
          * <p>The publish status of the policy-based route.</p>
          * <ul>
-         * <li><p><strong>published</strong>: The policy-based route is published to the VPC route table.</p>
+         * <li><p><strong>published</strong>: The policy-based route is published to the route tables of the VPC.</p>
          * </li>
-         * <li><p><strong>normal</strong>: The policy-based route is not published to the VPC route table.</p>
+         * <li><p><strong>normal</strong>: The policy-based route is not published to the route tables of the VPC.</p>
          * </li>
          * </ul>
          * 
@@ -290,7 +290,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID of the VPN gateway.</p>
+         * <p>The ID of the VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>vpn-bp1cmw7jh1nfe43m9****</p>
@@ -303,8 +303,8 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         /**
          * <p>The weight of the policy-based route.</p>
          * <ul>
-         * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as the active link.</li>
-         * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as the standby link.</li>
+         * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route is the active link.</li>
+         * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route is the standby link.</li>
          * </ul>
          * 
          * <strong>example:</strong>

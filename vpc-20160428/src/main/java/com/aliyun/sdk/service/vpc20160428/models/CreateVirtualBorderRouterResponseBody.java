@@ -78,7 +78,7 @@ public class CreateVirtualBorderRouterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID of the VBR.</p>
+         * <p>The VBR instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vbr-bp1jcg5cmxjbl9xgc****</p>

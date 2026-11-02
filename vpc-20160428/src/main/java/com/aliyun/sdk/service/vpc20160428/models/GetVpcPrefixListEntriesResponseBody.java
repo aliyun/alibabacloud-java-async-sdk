@@ -117,10 +117,10 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. Valid values:</p>
+         * <p>The token for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no subsequent query is required.</li>
-         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, it indicates that no next query is available.</li>
+         * <li>If <strong>NextToken</strong> has a return value, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the prefix list.</p>
+         * <p>The information about the queried prefix list.</p>
          */
         public Builder prefixListEntry(java.util.List<PrefixListEntry> prefixListEntry) {
             this.prefixListEntry = prefixListEntry;
@@ -151,7 +151,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -246,7 +246,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Classless Inter-Domain Routing (CIDR) block of the prefix list.</p>
+             * <p>The Classless Inter-Domain Routing block of the prefix list.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.0/16</p>

@@ -179,7 +179,7 @@ public class TerminatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the Express Connect circuit.</p>
+         * <p>The instance ID of the Express Connect circuit instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

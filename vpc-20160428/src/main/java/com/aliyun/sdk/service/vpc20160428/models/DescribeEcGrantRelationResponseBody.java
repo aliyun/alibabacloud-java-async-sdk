@@ -119,7 +119,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of query results.</p>
+         * <p>The number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of authorization relationship query results.</p>
+         * <p>The list of authorization relationships.</p>
          */
         public Builder ecGrantRelations(java.util.List<EcGrantRelations> ecGrantRelations) {
             this.ecGrantRelations = ecGrantRelations;
@@ -138,7 +138,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the list.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of entries per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -171,7 +171,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -357,7 +357,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud account ID of the VPC instance owner in the authorization relationship.</p>
+             * <p>The ID of the Alibaba Cloud account to which the VPC instance in the authorization relationship belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>1250123456123456</p>
@@ -368,7 +368,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the VPC-connected instance granted authorization to the VBR instance.</p>
+             * <p>The time when the VPC-connected instance granted the authorization to the VBR instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-02T11:46Z</p>
@@ -379,10 +379,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope of VBR instances that are granted authorization. Valid values:</p>
+             * <p>The scope of VBR instances that receive the authorization. Valid values:</p>
              * <ul>
-             * <li><strong>All</strong>: The VPC-connected instance is authorized to all VBR instances under the specified region and Alibaba Cloud account.</li>
-             * <li><strong>Specify</strong>: The VPC-connected instance is authorized to a specified VBR instance.</li>
+             * <li><strong>All</strong>: Grants authorization of the VPC-connected instance to all VBR instances in the specified region and under the specified Alibaba Cloud account.</li>
+             * <li><strong>Specify</strong>: Grants authorization of the VPC-connected instance to a specified VBR instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -416,7 +416,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vRouter ID of the VPC instance in the authorization relationship.</p>
+             * <p>The ID of the vRouter of the VPC instance in the authorization relationship.</p>
              * 
              * <strong>example:</strong>
              * <p>vrt-bp1i0yzgjd8ra05ec****</p>
@@ -438,10 +438,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the authorization relationship. Valid values:</p>
+             * <p>The result of the authorization relationship query. Valid values:</p>
              * <ul>
-             * <li><strong>Created</strong>: An authorization relationship exists between the VPC-connected instance and the VBR instance.</li>
-             * <li><strong>Deleted</strong>: No authorization relationship exists between the VPC-connected instance and the VBR instance.</li>
+             * <li><strong>Created</strong>: The VPC-connected instance and the VBR instance have an authorization relationship.</li>
+             * <li><strong>Deleted</strong>: The VPC-connected instance and the VBR instance do not have an authorization relationship.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -464,7 +464,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the VBR instance owner.</p>
+             * <p>The ID of the Alibaba Cloud account to which the VBR instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>1210123456123456</p>

@@ -282,9 +282,9 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         /**
          * <p>The business status of the IPv6 Translation Service instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>Normal</strong>: normal.</p>
+         * <li><p><strong>Normal</strong>: Normal.</p>
          * </li>
-         * <li><p><strong>FinancialLocked</strong>: locked.</p>
+         * <li><p><strong>FinancialLocked</strong>: Locked.</p>
          * </li>
          * </ul>
          * 
@@ -340,7 +340,7 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -352,7 +352,7 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -364,11 +364,11 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * <p>The billing transform type of the IPv6 Translation Service instance. Valid values:</p>
+         * <p>The billing method of the IPv6 Translation Service instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>Prepay</strong>: subscription.</p>
+         * <li><p><strong>Prepay</strong>: Subscription.</p>
          * </li>
-         * <li><p><strong>Postpay</strong>: pay-as-you-go.</p>
+         * <li><p><strong>Postpay</strong>: Pay-as-you-go.</p>
          * </li>
          * </ul>
          * 
@@ -382,7 +382,7 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * <p>The region of the IPv6 Translation Service instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to obtain the region ID.</p>
+         * <p>The region of the IPv6 Translation Service instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -413,7 +413,7 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * <p>The specification of the IPv6 Translation Service instance. Valid values: <strong>small</strong>.</p>
+         * <p>The specifications of the IPv6 Translation Service instance. Valid value: <strong>small</strong> (Small).</p>
          * 
          * <strong>example:</strong>
          * <p>small</p>
@@ -427,19 +427,19 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         /**
          * <p>The status of the IPv6 Translation Service instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>init</strong>: initializing.</p>
+         * <li><p><strong>init</strong>: The instance is being initialized.</p>
          * </li>
-         * <li><p><strong>provisioning</strong>: being provisioned.</p>
+         * <li><p><strong>provisioning</strong>: The instance is being provisioned.</p>
          * </li>
-         * <li><p><strong>active</strong>: available.</p>
+         * <li><p><strong>active</strong>: The instance is active.</p>
          * </li>
-         * <li><p><strong>updating</strong>: being updated.</p>
+         * <li><p><strong>updating</strong>: The instance is being updated.</p>
          * </li>
-         * <li><p><strong>upgrading</strong>: being upgraded.</p>
+         * <li><p><strong>upgrading</strong>: The instance is being upgraded.</p>
          * </li>
-         * <li><p><strong>deleting</strong>: being deleted.</p>
+         * <li><p><strong>deleting</strong>: The instance is being deleted.</p>
          * </li>
-         * <li><p><strong>deleted</strong>: deleted.</p>
+         * <li><p><strong>deleted</strong>: The instance is deleted.</p>
          * </li>
          * </ul>
          * 

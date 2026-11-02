@@ -188,9 +188,9 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may vary for each API request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run without performing the actual operation.</p>
+         * <p>Specifies whether to perform a dry run.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -212,8 +212,11 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * <p>The ID of the EIP. </p>
-         * <p>You can call the <a href="https://www.alibabacloud.com/help/en/eip/developer-reference/api-vpc-2016-04-28-describeeipaddresses-eips">DescribeEipAddresses</a> operation to query the EIP ID.</p>
+         * <p>The ID of the public IP address instance to be removed from the Internet Shared Bandwidth instance.</p>
+         * <ul>
+         * <li>If IpType is set to <strong>EIP</strong>, specify the ID of the EIP. You can call the <a href="https://www.alibabacloud.com/help/en/eip/developer-reference/api-vpc-2016-04-28-describeeipaddresses-eips">DescribeEipAddresses</a> operation to query EIP IDs.</li>
+         * <li>If IpType is set to <strong>VpcIpv6</strong>, specify the ID of the IPv6 address in the VPC. You can call the DescribeIpv6Addresses operation to query IPv6 address IDs.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +248,7 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
 
         /**
          * <p>The region ID of the Internet Shared Bandwidth instance. </p>
-         * <p>You can call the <a href="https://www.alibabacloud.com/help/en/vpc/developer-reference/api-vpc-2016-04-28-describeregions">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>You can call the <a href="https://www.alibabacloud.com/help/en/vpc/developer-reference/api-vpc-2016-04-28-describeregions">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

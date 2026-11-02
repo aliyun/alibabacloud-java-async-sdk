@@ -93,7 +93,7 @@ public class CreateExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The QoS policy ID.</p>
+         * <p>The ID of the QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-2giu0a6vd5x0mv****</p>
@@ -104,7 +104,7 @@ public class CreateExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The QoS queue ID.</p>
+         * <p>The ID of the QoS queue.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-queue-9nyx2u7n71s2rc****</p>
@@ -115,7 +115,7 @@ public class CreateExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>606998F0-B94D-48FE-8316-ACA81BB230DA</p>
@@ -126,7 +126,7 @@ public class CreateExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The QoS rule ID.</p>
+         * <p>The ID of the QoS rule.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-rule-iugg0l9x27f2no****</p>

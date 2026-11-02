@@ -289,8 +289,8 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         /**
          * <p>Specifies whether to enable access control. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enabled.</li>
-         * <li><strong>off</strong>: Disabled.</li>
+         * <li><strong>on</strong>: yes.</li>
+         * <li><strong>off</strong>: no.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -303,11 +303,11 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The type of access control:</p>
+         * <p>The access control type. Valid values:</p>
          * <ul>
-         * <li><p><strong>white</strong>: Allows the IPv6 addresses in the access control policy group to access backend services.</p>
+         * <li><p><strong>white</strong>: allows IPv6 addresses in the access control policy group to access the backend service.</p>
          * </li>
-         * <li><p><strong>black</strong>: Denies the IPv6 addresses in the access control policy group from accessing backend services.</p>
+         * <li><p><strong>black</strong>: denies IPv6 addresses in the access control policy group from accessing the backend service.</p>
          * </li>
          * </ul>
          * 
@@ -321,7 +321,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The port used by the IPv6 address allocated by the IPv6 Translation Service instance.</p>
+         * <p>The port used by the IPv6 address assigned to the IPv6 Translation Service instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -334,7 +334,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The public IPv4 address that requires IPv6 services (the IPv4 address of the IPv4-only server).</p>
+         * <p>The public IPv4 address that requires IPv6 services, which is the IPv4 address of an IPv4-only server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -362,11 +362,11 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         /**
          * <p>The peak bandwidth of the IPv6 translation mapping entry. Valid values: </p>
          * <ul>
-         * <li>-1 (default): No bandwidth limit is imposed on the IPv6 translation mapping entry.  </li>
-         * <li>1-200Mbps: The bandwidth value of the mapping entry.</li>
+         * <li>-1: does not limit the peak bandwidth of the IPv6 translation mapping entry. This is the default value.  </li>
+         * <li>1 to 200: the bandwidth value of the mapping entry, in Mbit/s.</li>
          * </ul>
          * <blockquote>
-         * <p>The sum of peak bandwidth values of all IPv6 translation mapping entries cannot exceed the peak bandwidth of the instance.</p>
+         * <p>The sum of the peak bandwidth values of all IPv6 translation mapping entries cannot exceed the peak bandwidth of the instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -391,7 +391,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The name of the IPv6 translation mapping entry. The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name of the IPv6 translation mapping entry. The name must be 2 to 100 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>name1</p>
@@ -467,8 +467,8 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         /**
          * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li><strong>tcp</strong>: Forwards TCP packets.  </li>
-         * <li><strong>udp</strong>: Forwards UDP packets.</li>
+         * <li><strong>tcp</strong>: forwards TCP packets.  </li>
+         * <li><strong>udp</strong>: forwards UDP packets.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

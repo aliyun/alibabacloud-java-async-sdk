@@ -114,7 +114,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of NAT gateway entries in the list.</p>
+         * <p>The total number of NAT gateways queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

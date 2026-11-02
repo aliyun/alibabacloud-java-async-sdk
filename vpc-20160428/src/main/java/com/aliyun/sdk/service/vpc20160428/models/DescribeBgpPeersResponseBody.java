@@ -114,7 +114,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the list.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -132,7 +132,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of FULLNAT entries.</p>
+         * <p>The list of queried FULLNAT entries.</p>
          */
         public Builder fullNatEntries(java.util.List<FullNatEntries> fullNatEntries) {
             this.fullNatEntries = fullNatEntries;
@@ -173,10 +173,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The token that is used for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query is to be sent.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token used to start the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of FULLNAT entries returned.</p>
+         * <p>The total number of queried FULLNAT entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -437,7 +437,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The backend domain name for FULLNAT address translation in the FULLNAT entry.</p>
+             * <p>The backend domain name used for FULLNAT address translation in the FULLNAT entry.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx.com</p>
@@ -448,7 +448,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backend IP address for FULLNAT address translation in the FULLNAT entry.</p>
+             * <p>The backend IP address used for FULLNAT address translation in the FULLNAT entry.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.XX.XX</p>
@@ -459,7 +459,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backend port for port mapping in the FULLNAT entry. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+             * <p>The backend port used for port mapping in the FULLNAT entry. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -481,7 +481,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address resolved from the backend domain name for address translation in the FULLNAT entry.</p>
+             * <p>The IP address resolved from the backend domain name used for address translation in the FULLNAT entry.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.XX.XX</p>
@@ -493,7 +493,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
 
             /**
              * <p>The description of the FULLNAT entry.</p>
-             * <p>The description must be 2 to 128 characters in length, and must start with a letter or Chinese character. The description cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * <p>The description must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -515,8 +515,8 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the FULLNAT entry.</p>
-             * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). The name must start with a letter or Chinese character.</p>
+             * <p>The name of the FULLNAT entry. </p>
+             * <p>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, hyphens (-), and underscores (_).</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -529,10 +529,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             /**
              * <p>The status of the FULLNAT entry. Valid values:</p>
              * <ul>
-             * <li><strong>Pending</strong>: being configured.</li>
-             * <li><strong>Available</strong>: available.</li>
-             * <li><strong>Deleting</strong>: being deleted.</li>
-             * <li><strong>Deleted</strong>: deleted.</li>
+             * <li><strong>Pending</strong>: The entry is being configured.</li>
+             * <li><strong>Available</strong>: The entry is available.</li>
+             * <li><strong>Deleting</strong>: The entry is being deleted.</li>
+             * <li><strong>Deleted</strong>: The entry is deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -570,7 +570,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The NAT IP address that provides address translation in the FULLNAT entry.</p>
+             * <p>The NAT IP address used for address translation in the FULLNAT entry.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.XX.XX</p>
@@ -581,7 +581,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The frontend port for port mapping in the FULLNAT entry. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+             * <p>The frontend port used for port mapping in the FULLNAT entry. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -592,7 +592,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The elastic network interface (ENI) ID.</p>
+             * <p>The ID of the elastic network interfaces (ENIs), which is a network interface controller (NIC).</p>
              * 
              * <strong>example:</strong>
              * <p>eni-gw80wedm8pq0tpr2****</p>
@@ -603,7 +603,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the elastic network interface (ENI). The value is <strong>Endpoint</strong> (reverse endpoint).</p>
+             * <p>The type of the elastic network interfaces (ENIs), which is a network interface controller (NIC). Currently, only <strong>Endpoint</strong> (reverse endpoint) is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>Endpoint</p>

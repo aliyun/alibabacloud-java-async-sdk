@@ -119,7 +119,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the list.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page for paging queries.</p>
+         * <p>The number of entries returned per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -152,7 +152,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -356,6 +356,9 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextHopTunnelId")
         private String nextHopTunnelId;
 
+        @com.aliyun.core.annotation.NameInMap("PrefixListId")
+        private String prefixListId;
+
         @com.aliyun.core.annotation.NameInMap("RouteDest")
         private String routeDest;
 
@@ -380,6 +383,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.nextHop = builder.nextHop;
             this.nextHopTunnelId = builder.nextHopTunnelId;
+            this.prefixListId = builder.prefixListId;
             this.routeDest = builder.routeDest;
             this.routeEntryType = builder.routeEntryType;
             this.source = builder.source;
@@ -432,6 +436,13 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return prefixListId
+         */
+        public String getPrefixListId() {
+            return this.prefixListId;
+        }
+
+        /**
          * @return routeDest
          */
         public String getRouteDest() {
@@ -479,6 +490,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             private Long createTime; 
             private String nextHop; 
             private String nextHopTunnelId; 
+            private String prefixListId; 
             private String routeDest; 
             private String routeEntryType; 
             private String source; 
@@ -495,6 +507,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.nextHop = model.nextHop;
                 this.nextHopTunnelId = model.nextHopTunnelId;
+                this.prefixListId = model.prefixListId;
                 this.routeDest = model.routeDest;
                 this.routeEntryType = model.routeEntryType;
                 this.source = model.source;
@@ -540,6 +553,14 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
              */
             public Builder nextHopTunnelId(String nextHopTunnelId) {
                 this.nextHopTunnelId = nextHopTunnelId;
+                return this;
+            }
+
+            /**
+             * PrefixListId.
+             */
+            public Builder prefixListId(String prefixListId) {
+                this.prefixListId = prefixListId;
                 return this;
             }
 

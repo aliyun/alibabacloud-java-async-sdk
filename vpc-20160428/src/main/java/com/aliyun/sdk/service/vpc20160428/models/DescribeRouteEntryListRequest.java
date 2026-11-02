@@ -286,7 +286,7 @@ public class DescribeRouteEntryListRequest extends Request {
         } 
 
         /**
-         * <p>The list of destination CIDR blocks of routes.</p>
+         * <p>The list of destination CIDR blocks of the route.</p>
          */
         public Builder destCidrBlockList(java.util.List<String> destCidrBlockList) {
             this.putQueryParameter("DestCidrBlockList", destCidrBlockList);
@@ -307,7 +307,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The version of the IP protocol. Valid values:</p>
+         * <p>The IP version. Valid values:</p>
          * <ul>
          * <li><p><strong>ipv4</strong>: IPv4.</p>
          * </li>
@@ -325,7 +325,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -365,7 +365,7 @@ public class DescribeRouteEntryListRequest extends Request {
          * </li>
          * <li><p><strong>IPv6Gateway</strong>: IPv6 gateway.</p>
          * </li>
-         * <li><p><strong>Attachment</strong>: transit router.</p>
+         * <li><p><strong>Attachment</strong>: forwarding router.</p>
          * </li>
          * <li><p><strong>Ipv4Gateway</strong>: IPv4 gateway.</p>
          * </li>
@@ -385,10 +385,10 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token that is used to retrieve the next page of results. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request or if no subsequent request exists.</li>
-         * <li>If a subsequent request exists, set the value to the NextToken value that is returned from the last call.</li>
+         * <li>Leave this parameter empty for the first query or when no subsequent query is required.</li>
+         * <li>If a subsequent query is required, set this parameter to the value of NextToken returned from the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -420,7 +420,7 @@ public class DescribeRouteEntryListRequest extends Request {
 
         /**
          * <p>The region ID of the route table to which the route belongs.</p>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -451,7 +451,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route that you want to query.</p>
+         * <p>The ID of the route to query.</p>
          * 
          * <strong>example:</strong>
          * <p>rte-bp1mnnr2al0naomnp****</p>
@@ -495,7 +495,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route table that you want to query.</p>
+         * <p>The ID of the route table to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -508,8 +508,8 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The type of route hosting. If this field is empty, the route is not hosted.</p>
-         * <p>Valid values: <strong>TR</strong>, which indicates that the hosting type is transit router.</p>
+         * <p>The type of the managed route. If this parameter is empty, the route is not managed.</p>
+         * <p>Valid value: <strong>TR</strong>, which indicates that the route is managed by a transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>TR</p>

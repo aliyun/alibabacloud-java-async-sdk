@@ -201,7 +201,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The local BGP autonomous system (AS) number to be configured on the Smart Access Gateway device.</p>
+         * <p>The local BGP Autonomous System (AS) number to be configured on the Smart Access Gateway (SAG) device.</p>
          * 
          * <strong>example:</strong>
          * <p>sag-ejfge***</p>
@@ -213,7 +213,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * <p>The cloud-side IP address used for peering with the Smart Access Gateway device.</p>
+         * <p>The cloud-side IP address used to connect the Smart Access Gateway (SAG) device to Alibaba Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p><code>172.16.**.**</code></p>
@@ -225,7 +225,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * <p>The description of the Express Cloud Connection instance.</p>
+         * <p>The description of the Express Cloud Connection.</p>
          * 
          * <strong>example:</strong>
          * <p>ECC</p>
@@ -237,7 +237,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the Express Cloud Connection instance.</p>
+         * <p>The Express Cloud Connection instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +280,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * <p>The local IP address of the Smart Access Gateway device used for peering with the cloud.</p>
+         * <p>The local IP address of the Smart Access Gateway (SAG) device used to connect to Alibaba Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p><code>10.10.**.**</code></p>

@@ -174,8 +174,7 @@ public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends Request 
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can generate a value for this parameter on the client to ensure that the value is unique across different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
          * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
@@ -190,10 +189,10 @@ public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends Request 
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run.</li>
-         * <li><strong>false</strong> (default): sends the request.</li>
+         * <li><strong>true</strong>: sends a dry run request.</li>
+         * <li><strong>false</strong> (default): sends a normal request.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +205,7 @@ public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends Request 
         }
 
         /**
-         * <p>The endpoint instance ID of the gateway endpoint.</p>
+         * <p>The instance ID of the gateway endpoint instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,7 +236,7 @@ public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends Request 
         }
 
         /**
-         * <p>The region ID of the endpoint. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region to which the gateway endpoint belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -268,7 +267,7 @@ public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends Request 
         }
 
         /**
-         * <p>The list of route tables.</p>
+         * <p>The IDs of the route tables.</p>
          * <p>This parameter is required.</p>
          */
         public Builder routeTableIds(java.util.List<String> routeTableIds) {

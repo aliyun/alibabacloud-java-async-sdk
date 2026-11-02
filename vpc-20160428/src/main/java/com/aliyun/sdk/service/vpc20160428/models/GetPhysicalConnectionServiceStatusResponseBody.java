@@ -67,11 +67,11 @@ public class GetPhysicalConnectionServiceStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether outbound traffic billing is enabled.</p>
+         * <p>Indicates whether the outbound data transfer service is enabled.</p>
          * <ul>
          * <li><p><strong>true</strong>: Enabled.</p>
          * </li>
-         * <li><p><strong>false</strong>: Not enabled.</p>
+         * <li><p><strong>false</strong>: Disabled.</p>
          * </li>
          * </ul>
          * 

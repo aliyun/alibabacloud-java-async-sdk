@@ -131,7 +131,7 @@ public class GetIpv4GatewayAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the IPv4 gateway to query.</p>
+         * <p>The instance ID of the IPv4 gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,8 +162,7 @@ public class GetIpv4GatewayAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the IPv4 gateway to query.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the IPv4 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -93,7 +93,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the route entries in the gateway route table.</p>
+         * <p>The details of the routes in the gateway route table.</p>
          */
         public Builder gatewayRouteEntryModels(java.util.List<GatewayRouteEntryModels> gatewayRouteEntryModels) {
             this.gatewayRouteEntryModels = gatewayRouteEntryModels;
@@ -101,10 +101,10 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. Valid values:</p>
+         * <p>The pagination token that is used to retrieve the next page of results. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
-         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no more results are available.</li>
+         * <li>If <strong>NextToken</strong> returns a value, the value is the token used to start the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -237,7 +237,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the next hop.</p>
+             * <p>The next hop instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpn-bp10zyaph5cc8b7c7****</p>
@@ -254,7 +254,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
              * <li><strong>HaVip</strong>: high-availability virtual IP address.</li>
              * <li><strong>VpnGateway</strong>: VPN gateway.</li>
              * <li><strong>NatGateway</strong>: NAT gateway.</li>
-             * <li><strong>NetworkInterface</strong>: secondary elastic network interfaces (ENIs).</li>
+             * <li><strong>NetworkInterface</strong>: secondary elastic network interface (ENI).</li>
              * <li><strong>RouterInterface</strong>: vRouter interface.</li>
              * <li><strong>IPv6Gateway</strong>: IPv6 gateway.</li>
              * <li><strong>Attachment</strong>: transit router.</li>
@@ -269,7 +269,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the route entry.</p>
+             * <p>The weight of the route.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -404,7 +404,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the route entry.</p>
+             * <p>The description of the route.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -415,7 +415,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination CIDR block of the route entry.</p>
+             * <p>The destination CIDR block of the route.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.5</p>
@@ -426,8 +426,8 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the route entry.</p>
-             * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
+             * <p>The name of the route.</p>
+             * <p>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -438,7 +438,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the next hop.</p>
+             * <p>The next hop instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp11gcl0sm85t9bi****</p>
@@ -449,10 +449,10 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next hop type. Valid values:</p>
+             * <p>The type of the next hop. Valid values:</p>
              * <ul>
              * <li><strong>EcsInstance</strong>: ECS instance.</li>
-             * <li><strong>NetworkInterface</strong>: elastic network interfaces (ENIs).</li>
+             * <li><strong>NetworkInterface</strong>: elastic network interface (ENI).</li>
              * <li><strong>Local</strong>: local.</li>
              * </ul>
              * 
@@ -473,11 +473,11 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the route entry. Valid values:</p>
+             * <p>The status of the route. Valid values:</p>
              * <ul>
-             * <li><strong>Pending</strong>: being configured.</li>
-             * <li><strong>Available</strong>: available.</li>
-             * <li><strong>Modifying</strong>: being modified.</li>
+             * <li><strong>Pending</strong>: The route is being configured.</li>
+             * <li><strong>Available</strong>: The route is available.</li>
+             * <li><strong>Modifying</strong>: The route is being modified.</li>
              * </ul>
              * 
              * <strong>example:</strong>

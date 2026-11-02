@@ -106,7 +106,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the list.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +139,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +150,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The diagnostic information list of IPsec-VPN connections.</p>
+         * <p>The diagnostic information about the IPsec-VPN connections.</p>
          */
         public Builder vpnConnections(java.util.List<VpnConnections> vpnConnections) {
             this.vpnConnections = vpnConnections;
@@ -307,7 +307,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error reason.</p>
+             * <p>The cause of the error.</p>
              * 
              * <strong>example:</strong>
              * <p>Phase1 negotiation timeout</p>
@@ -330,7 +330,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
 
             /**
              * <p>The timestamp when the current error occurred on the IPsec-VPN connection. Unit: milliseconds.</p>
-             * <p>The timestamp is in UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the current error occurred on the IPsec-VPN connection.</p>
+             * <p>The timestamp follows the UNIX timestamp format, which indicates the total duration from 00:00:00 on January 1, 1970 (UTC) to the time when the current error occurred on the IPsec-VPN connection.</p>
              * 
              * <strong>example:</strong>
              * <p>1673581161000</p>
@@ -341,7 +341,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter value configured on the IPsec-VPN connection when the parameter values configured on the IPsec-VPN connection and the peer gateway device do not match.</p>
+             * <p>The parameter values configured on the IPsec-VPN connection when the parameter values configured on the IPsec-VPN connection and the peer gateway device do not match.</p>
              * 
              * <strong>example:</strong>
              * <p>SHA256</p>
@@ -352,7 +352,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter value configured on the peer gateway device when the parameter values configured on the IPsec-VPN connection and the peer gateway device do not match.</p>
+             * <p>The parameter values configured on the peer gateway device when the parameter values configured on the IPsec-VPN connection and the peer gateway device do not match.</p>
              * 
              * <strong>example:</strong>
              * <p>SHA</p>
@@ -363,10 +363,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the current error.</p>
+             * <p>The severity level of the current error. Valid values:</p>
              * <ul>
-             * <li><strong>Critical</strong>: Critical. Troubleshoot the issue immediately.</li>
-             * <li><strong>Warn</strong>: Warning. Troubleshoot the issue as soon as possible.</li>
+             * <li><strong>Critical</strong>: Critical. Troubleshoot and resolve the issue as soon as possible.</li>
+             * <li><strong>Warn</strong>: Warning. Troubleshoot and resolve the issue promptly.</li>
              * <li><strong>Normal</strong>: Normal.</li>
              * </ul>
              * 
@@ -390,7 +390,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tunnel ID.</p>
+             * <p>The ID of the tunnel.</p>
              * 
              * <strong>example:</strong>
              * <p>tun-64n1sr9dig64k6****</p>

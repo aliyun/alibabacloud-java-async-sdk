@@ -175,9 +175,9 @@ public class AssociateHaVipRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ECS instance to attach to the HaVip.</p>
+         * <p>The ID of the ECS instance to which you want to attach the HaVip.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,11 +216,11 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The type of the instance to attach to the HaVip. Valid values:</p>
+         * <p>The type of the instance to which you want to attach the HaVip. Valid values:</p>
          * <ul>
-         * <li><p><strong>EcsInstance</strong>: ECS instance.</p>
+         * <li><p><strong>EcsInstance</strong>: a cloud server ECS instance.</p>
          * </li>
-         * <li><p><strong>NetworkInterface</strong>: elastic network interface (ENI). If the instance to attach to the HaVip is an ENI, this parameter is required.</p>
+         * <li><p><strong>NetworkInterface</strong>: an elastic network interface controller (NIC) instance. When the instance to which you want to attach the HaVip is an elastic network interface controller (NIC), this parameter is required.</p>
          * </li>
          * </ul>
          * 
@@ -253,7 +253,7 @@ public class AssociateHaVipRequest extends Request {
 
         /**
          * <p>The region ID of the HaVip.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -114,7 +114,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the list.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of entries to return on each page during paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of advertised Border Gateway Protocol (BGP) networks.</p>
+         * <p>The total number of announced Border Gateway Protocol (BGP) networks.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

@@ -255,11 +255,11 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Sends a check request without querying instance information. The system checks whether the required parameters are specified, whether the request format is valid, and whether the instance status is valid. If the check fails, the corresponding error is returned. If the check succeeds, <code>DryRunOperation</code> is returned.</p>
+         * <li><p><strong>true</strong>: prechecks the request without querying the instance information. The system checks whether required parameters are specified, the request format, and the instance status. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</p>
          * </li>
-         * <li><p><strong>false</strong> (default): Sends a normal request. After the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</p>
+         * <li><p><strong>false</strong> (default): sends the request. If the request passes the precheck, the HTTP 2xx status code is returned and the operation is performed.</p>
          * </li>
          * </ul>
          * 
@@ -273,10 +273,10 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include pending subscription data. Valid values:</p>
+         * <p>Specifies whether to include subscription data that has not taken effect. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): Does not include pending subscription data.</li>
-         * <li><strong>true</strong>: Includes pending subscription data.</li>
+         * <li><strong>false</strong> (default): Does not include subscription data that has not taken effect.</li>
+         * <li><strong>true</strong>: Includes subscription data that has not taken effect.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,7 +290,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
 
         /**
          * <p>The name of the Internet Shared Bandwidth instance.
-         * The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * The name must be 0 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test123</p>
@@ -320,7 +320,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -332,7 +332,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for paging queries. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -344,8 +344,8 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the Internet Shared Bandwidth instance. </p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>The region ID of the Internet Shared Bandwidth instance. 
+         * You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -358,7 +358,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4ph****</p>
@@ -390,12 +390,10 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         /**
          * <p>Specifies whether to enable Anti-DDoS (Enhanced). Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: Disabled.</li>
-         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: does not enable Anti-DDoS (Enhanced).</li>
+         * <li><strong>true</strong>: enables Anti-DDoS (Enhanced).</li>
          * </ul>
-         * <blockquote>
-         * <p>This parameter is deprecated.</p>
-         * </blockquote>
+         * <p><strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -407,7 +405,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * <p>The list of tags associated with the Internet Shared Bandwidth instance.</p>
+         * <p>The tags of the Internet Shared Bandwidth instance.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -475,7 +473,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
              * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
@@ -487,8 +485,8 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+             * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>ValueTest</p>

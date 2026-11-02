@@ -101,10 +101,10 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The token for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no subsequent requests exist.</li>
-         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query is available.</li>
+         * <li>If <strong>NextToken</strong> returns a value, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of NAT CIDR block entries returned.</p>
+         * <p>The total number of NAT CIDR blocks returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -355,7 +355,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the NAT CIDR block. The value is <strong>Available</strong>, which indicates that the NAT CIDR block is available.</p>
+             * <p>The status of the NAT CIDR block. Valid values: <strong>Available</strong>, which indicates that the NAT CIDR block is active.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>

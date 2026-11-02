@@ -204,9 +204,9 @@ public class DescribeGrantRulesToCenRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>Generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -234,11 +234,11 @@ public class DescribeGrantRulesToCenRequest extends Request {
         /**
          * <p>The type of the network instance to query. Valid values:</p>
          * <ul>
-         * <li><p><strong>VPC</strong>: virtual private cloud (VPC).</p>
+         * <li><p><strong>VPC</strong>: virtual private cloud (VPC)</p>
          * </li>
-         * <li><p><strong>VBR</strong>: Virtual Border Router.</p>
+         * <li><p><strong>VBR</strong>: Virtual Border Router (VBR)</p>
          * </li>
-         * <li><p><strong>CCN</strong>: Cloud Connect Network.</p>
+         * <li><p><strong>CCN</strong>: Cloud Connect Network (CCN)</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -283,7 +283,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -295,7 +295,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * <p>The region of the network instance to query.</p>
+         * <p>The region ID of the network instance to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -308,7 +308,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the network instance belongs.</p>
+         * <p>The ID of the resource group that contains the network instance to query.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4p****</p>

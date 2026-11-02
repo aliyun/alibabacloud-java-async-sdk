@@ -158,7 +158,10 @@ public class CreateIPv6TranslatorAclListRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, and you must ensure that the token is unique among different requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha123456</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -185,7 +188,7 @@ public class CreateIPv6TranslatorAclListRequest extends Request {
         }
 
         /**
-         * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query region IDs.</p>
+         * <p>The region ID of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

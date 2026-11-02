@@ -34,9 +34,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>ActiveFlowLog</strong> operation is asynchronous. After you send a request, the system returns a request ID. However, the flow log is not yet activated, and the activation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the activation status of the flow log:
-     *     - If the flow log is in the <strong>Activating</strong> state, the flow log is being activated.
-     *     - If the flow log is in the <strong>Active</strong> state, the flow log is activated.</p>
+     * <p>The <strong>ActiveFlowLog</strong> operation is an asynchronous operation. The system returns a request ID, but the flow log has not been activated. The activation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the activation status of the flow log:
+     *     - When the flow log is in the <strong>Activating</strong> state, the flow log is being activated.
+     *     - When the flow log is in the <strong>Active</strong> state, the flow log is activated.</p>
      * <ul>
      * <li>The <strong>ActiveFlowLog</strong> operation does not support concurrent activation of the same flow log.</li>
      * </ul>
@@ -77,16 +77,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>When you invoke this operation to add multiple EIPs to an Internet Shared Bandwidth instance, the EIPs must meet the following conditions:<ul>
-     * <li>The EIPs use the pay-as-you-go billing method.</li>
+     * <li>When you call this operation to add multiple EIPs to an Internet Shared Bandwidth instance, the EIPs must meet the following requirements:<ul>
+     * <li>The billing method of the EIPs is pay-as-you-go.</li>
      * <li>The EIPs are in the same region as the Internet Shared Bandwidth instance.</li>
-     * <li>The line type of the EIPs is the same as that of the Internet Shared Bandwidth instance.</li>
+     * <li>The line types of the EIPs are the same as the line type of the Internet Shared Bandwidth instance.</li>
      * </ul>
      * </li>
-     * <li>The <strong>AddCommonBandwidthPackageIps</strong> operation is asynchronous. After you send a request, the system returns a request ID. However, the EIPs are not immediately added to the Internet Shared Bandwidth instance. The addition node is still running in the background. You can invoke <a href="~~DescribeCommonBandwidthPackages~~">DescribeCommonBandwidthPackages</a> to query the association status between the Internet Shared Bandwidth instance and the EIPs. <ul>
-     * <li>If the association status is <strong>BINDING</strong>, the Internet Shared Bandwidth instance is being associated with the EIPs. In this state, you can only execute query operations.</li>
-     * <li>If the association status is <strong>BINDED</strong>, the Internet Shared Bandwidth instance is associated with the EIPs.
-     * Billable methods: The EIPs must use the pay-as-you-go billing method.</li>
+     * <li><strong>AddCommonBandwidthPackageIps</strong> is an asynchronous operation. After you call this operation, the system returns a request ID, but the EIPs are not immediately added to the Internet Shared Bandwidth instance. The addition task in the background is still in progress. You can call <a href="~~DescribeCommonBandwidthPackages~~">DescribeCommonBandwidthPackages</a> to query the association status of the Internet Shared Bandwidth instance and the EIPs. <ul>
+     * <li>If the association status is <strong>BINDING</strong>, the Internet Shared Bandwidth instance is being associated with the EIPs. In this state, you can only perform query operations and cannot perform other operations.</li>
+     * <li>If the association status is <strong>BINDED</strong>, the Internet Shared Bandwidth instance is associated with the EIPs.</li>
      * </ul>
      * </li>
      * </ul>
@@ -111,16 +110,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, note the following:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <ul>
      * <li>The CIDR block and the IP address pool must belong to the same region.</li>
      * <li>The CIDR block and the IP address pool must belong to the same ISP line type.</li>
-     * <li><strong>AddPublicIpAddressPoolCidrBlock</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the CIDR block has not been added yet. The system continues to process the addition task in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool.<ul>
+     * <li>The <strong>AddPublicIpAddressPoolCidrBlock</strong> operation is asynchronous. The system returns a request ID, but the CIDR block is not immediately added. The addition task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool.<ul>
      * <li>If the CIDR block is in the <strong>Modifying</strong> state, the CIDR block is being added. In this state, you can only perform query operations.</li>
-     * <li>If the CIDR block is in the <strong>Created</strong> state, the CIDR block has been added.</li>
+     * <li>If the CIDR block is in the <strong>Created</strong> state, the CIDR block is added.</li>
      * </ul>
      * </li>
-     * <li><strong>AddPublicIpAddressPoolCidrBlock</strong> does not support concurrently adding the same CIDR block to an IP address pool.</li>
+     * <li>The <strong>AddPublicIpAddressPoolCidrBlock</strong> operation does not support concurrent requests to add the same CIDR block to an IP address pool.</li>
      * </ul>
      * 
      * @param request the request parameters of AddPublicIpAddressPoolCidrBlock  AddPublicIpAddressPoolCidrBlockRequest
@@ -131,12 +130,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>AddSourcesToTrafficMirrorSession</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the traffic mirror source is not yet added, and the addition task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror source addition:<ul>
-     * <li>If the traffic mirror session is in the <strong>Modifying</strong> state, the traffic mirror source is being added.</li>
-     * <li>If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror source is added.</li>
+     * <li>The <strong>AddSourcesToTrafficMirrorSession</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the traffic mirror sources are not added yet. The system is still adding the traffic mirror sources in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the status of the traffic mirror sources:<ul>
+     * <li>If the traffic mirror session is in the <strong>Modifying</strong> state, the traffic mirror sources are being added.</li>
+     * <li>If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror sources are added.</li>
      * </ul>
      * </li>
-     * <li><strong>AddSourcesToTrafficMirrorSession</strong> does not support concurrent requests to add traffic mirror sources to the same traffic mirror session.</li>
+     * <li>You cannot call the <strong>AddSourcesToTrafficMirrorSession</strong> operation to concurrently add traffic mirror sources to the same traffic mirror session.</li>
      * </ul>
      * 
      * @param request the request parameters of AddSourcesToTrafficMirrorSession  AddSourcesToTrafficMirrorSessionRequest
@@ -146,8 +145,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you are familiar with the billing methods and pricing of EIPs before you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
-     * After you call this operation, an EIP in the <strong>Available</strong> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. IGMP and SCTP are not supported.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of EIPs. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
+     * After you call this operation, an EIP in the <strong>Available</strong> state is randomly allocated in the specified region. At the transport layer, EIPs support only ICMP, TCP, and UDP. EIPs do not support IGMP or SCTP.</p>
      * 
      * @param request the request parameters of AllocateEipAddress  AllocateEipAddressRequest
      * @return AllocateEipAddressResponse
@@ -161,9 +160,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateEipAddressProResponse> allocateEipAddressPro(AllocateEipAddressProRequest request);
 
     /**
-     * @deprecated OpenAPI AllocateEipSegmentAddress is deprecated  * @description **AllocateEipSegmentAddress** is an asynchronous operation. After you call this operation, the system returns the instance ID of a contiguous EIP group, but the contiguous EIP group is not yet created. The creation task is still running in the background. You can call [DescribeEipSegment](https://help.aliyun.com/document_detail/156063.html) to query the status of the contiguous EIP group.
-     * - If the contiguous EIP group is in the **Allocating** state, the contiguous EIP group is being allocated. In this state, you can only perform query operations.
-     * - If the contiguous EIP group is in the **Allocated** state, the contiguous EIP group is allocated.
+     * @deprecated OpenAPI AllocateEipSegmentAddress is deprecated  * @description The **AllocateEipSegmentAddress** operation is asynchronous. The system first returns the instance ID of the contiguous EIP group, but the group is not yet fully created and the creation task is still running in the background. You can call the [DescribeEipSegment](https://help.aliyun.com/document_detail/156063.html) operation to query the status of the contiguous EIP group.
+     * - When the contiguous EIP group is in the **Allocating** state, the group is being allocated. In this state, you can only perform query operations.
+     * - When the contiguous EIP group is in the **Allocated** state, the group is allocated.
      * 
      * @param request the request parameters of AllocateEipSegmentAddress  AllocateEipSegmentAddressRequest
      * @return AllocateEipSegmentAddressResponse
@@ -173,9 +172,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Scenarios: After you enable Internet bandwidth for a free IPv6 address, configure an inbound routing rule in the IPv6 gateway route table to direct public IPv6 traffic to the data center through an Express Connect circuit. This way, data center resources can provide services over the Internet by using an Alibaba Cloud IPv6 address.</p>
+     * <p>Scenarios: After you enable Internet bandwidth for an unassociated IPv6 address, configure inbound routing in the IPv6 gateway route table to route Internet IPv6 traffic to the data center over an Express Connect circuit. This allows data center resources to provide external services by using Alibaba Cloud IPv6 addresses.</p>
      * <blockquote>
-     * <p>To allocate an IPv6 address to a network interface controller (NIC) of an ECS instance, invoke the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-assignipv6addresses">AssignIpv6Addresses</a> operation of ECS.</p>
+     * <p>To allocate an IPv6 address to an elastic network interface controller (NIC) of an Elastic Compute Service (ECS) instance, call the ECS API operation <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-assignipv6addresses">AssignIpv6Addresses</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of AllocateIpv6Address  AllocateIpv6AddressRequest
@@ -196,8 +195,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * to configure an IPv6 egress-only rule.</li>
      * <li>The <strong>AllocateIpv6InternetBandwidth</strong> operation does not support concurrent purchases of Internet bandwidth for the same IPv6 address.</li>
      * <li>Scenarios:<ul>
-     * <li>ECS instance IPv6 Internet access: Allows an ECS instance to access the Internet or provide services over IPv6.</li>
-     * <li>Unassociated IPv6 Internet access: Works with IPv6 gateway route tables to route Internet traffic to on-premises IDCs.</li>
+     * <li>IPv6 Internet access for ECS instances: Allows ECS instances to access the Internet or provide services over IPv6.</li>
+     * <li>Internet access for unassociated IPv6 addresses: Works with IPv6 gateway route tables to route Internet traffic to on-premises IDCs and other environments.</li>
      * <li>Outbound-only communication: Works with CreateIpv6EgressOnlyRule to allow public network access and reject inbound connections from the Internet.</li>
      * </ul>
      * </li>
@@ -210,10 +209,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>To assign a specified IPv6 CIDR block to a VPC, perform the following steps:</p>
+     * <p>To allocate a specified IPv6 CIDR block to a VPC, perform the following steps:</p>
      * <ol>
-     * <li>Call this operation to reserve the specified IPv6 CIDR block.</li>
-     * <li>To assign the specified IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation and set <strong>RegionId</strong>, <strong>VpcId</strong>, and <strong>IPv6CidrBlock</strong> to the specified IPv6 CIDR block, and set <strong>IpVersion</strong> to <strong>ipv6</strong>. To assign the specified IPv6 CIDR block to a new VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation and set <strong>RegionId</strong> and <strong>Ipv6CidrBlock</strong> to the specified IPv6 CIDR block, and set <strong>EnableIpv6</strong> to <strong>true</strong>.</li>
+     * <li>Call this operation to reserve a specified IPv6 CIDR block.</li>
+     * <li>To allocate a specified IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation and set <strong>RegionId</strong>, <strong>VpcId</strong>, and <strong>IPv6CidrBlock</strong> to the specified IPv6 CIDR block, and set <strong>IpVersion</strong> to <strong>ipv6</strong>. To allocate a specified IPv6 CIDR block to a new VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation and set <strong>RegionId</strong> and <strong>Ipv6CidrBlock</strong> to the specified IPv6 CIDR block, and set <strong>EnableIpv6</strong> to <strong>true</strong>.</li>
      * </ol>
      * 
      * @param request the request parameters of AllocateVpcIpv6Cidr  AllocateVpcIpv6CidrRequest
@@ -230,13 +229,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>An EIP can be associated with an Elastic Compute Service (ECS) instance of the virtual private cloud (VPC) network type, a CLB instance of the VPC network type, a secondary elastic network interface, a NAT gateway, or a high-availability virtual IP address (HAVIP) in the same region.</li>
-     * <li>The <strong>AssociateEipAddress</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the association between the EIP and the cloud resource instance is not yet complete. The association task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP:<ul>
-     * <li>If the EIP is in the <strong>Associating</strong> state, the EIP is being associated. In this state, you can only perform query operations.</li>
+     * <li>You can associate an EIP with an ECS instance in a virtual private cloud (VPC), a CLB instance in a virtual private cloud (VPC), a secondary elastic network interface controller (NIC), a NAT gateway, or a high-availability virtual IP address in the same region.</li>
+     * <li>The <strong>AssociateEipAddress</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the EIP is not immediately associated with the cloud service instance. The association task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> operation to query the status of the EIP:<ul>
+     * <li>If the EIP is in the <strong>Associating</strong> state, the EIP is being associated. In this state, you can only perform query operations and cannot perform other operations.</li>
      * <li>If the EIP is in the <strong>InUse</strong> state, the EIP is associated.</li>
      * </ul>
      * </li>
-     * <li>The <strong>AssociateEipAddress</strong> operation does not support concurrent requests to associate the same EIP with cloud resource instances.</li>
+     * <li>The <strong>AssociateEipAddress</strong> operation does not support concurrently associating the same EIP with cloud service instances.</li>
      * </ul>
      * 
      * @param request the request parameters of AssociateEipAddress  AssociateEipAddressRequest
@@ -247,13 +246,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>AssociateEipAddressBatch</strong> associates multiple EIPs with a cloud service instance in a batch. This operation supports only associating EIPs with an Internet NAT gateway instance or a secondary elastic network interface (ENI) in the same region. To associate an EIP with other cloud service instances, call <a href="https://help.aliyun.com/document_detail/120195.html">AssociateEipAddress</a>.</li>
-     * <li><strong>AssociateEipAddressBatch</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the association is not complete. The association task runs in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of an EIP:<ul>
-     * <li>If the EIP is in the <strong>Associating</strong> state, the EIP is being attached. In this state, you can only execute query operations.</li>
-     * <li>If the EIP is in the <strong>InUse</strong> state, the association is complete.</li>
+     * <li><strong>AssociateEipAddressBatch</strong> associates multiple EIPs with cloud service instances in batches. This operation only supports associating EIPs with NAT gateways or secondary elastic network interfaces (ENIs) in the same region. To associate EIPs with other cloud service instances, refer to <a href="https://help.aliyun.com/document_detail/120195.html">AssociateEipAddress</a>.</li>
+     * <li><strong>AssociateEipAddressBatch</strong> is an asynchronous operation. The system returns a request ID, but the EIPs are not immediately associated with the cloud service instances. The association tasks are still running in the background. You can call <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIPs:<ul>
+     * <li>If the EIP is in the <strong>Associating</strong> state, the EIP is being associated. In this state, you can only perform query operations.</li>
+     * <li>If the EIP is in the <strong>InUse</strong> state, the EIP is associated.</li>
      * </ul>
      * </li>
-     * <li><strong>AssociateEipAddressBatch</strong> does not support concurrent attachment of the same EIP with cloud service instances.</li>
+     * <li><strong>AssociateEipAddressBatch</strong> does not support concurrent association of the same EIP with cloud service instances.</li>
      * </ul>
      * 
      * @param request the request parameters of AssociateEipAddressBatch  AssociateEipAddressBatchRequest
@@ -263,14 +262,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation to associate an HaVip, take note of the following items:</p>
+     * <p>When you call this operation to associate a HaVip, take note of the following items:</p>
      * <ul>
-     * <li>The HaVip takes effect immediately after being attached without the need to restart the ECS instance. However, you must configure the HaVip on the elastic network interface (ENI) of the ECS instance.</li>
+     * <li>After a HaVip is attached, it takes effect immediately without the need to restart the ECS instance. However, you must configure the HaVip on the elastic network interface controller (NIC) of the ECS instance.</li>
      * <li>The HaVip and the ECS instance to be associated must belong to the same vSwitch.</li>
-     * <li>An HaVip can be attached to up to 10 ECS instances or up to 10 elastic network interfaces (ENIs) at the same time. However, an HaVip cannot be associated with both ECS instances and ENIs simultaneously.</li>
+     * <li>A single HaVip can be attached to up to 10 ECS instances or 10 elastic network interface controllers (NICs) at the same time. However, a HaVip cannot be attached to an ECS instance and an elastic network interface controller (NIC) at the same time.</li>
      * <li>The ECS instance to be associated must be in the <strong>Running</strong> or <strong>Stopped</strong> state.</li>
-     * <li>The HaVip instance must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
-     * <li><strong>AssociateHaVip</strong> is an asynchronous operation. After you call this operation, the system returns a request ID, but the HaVip is not yet associated. The association task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> to query the association status of the HaVip:<ul>
+     * <li>The HaVip must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
+     * <li>The <strong>AssociateHaVip</strong> operation is asynchronous. After the request is sent, the system returns a request ID, but the HaVip is not yet associated. The association task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the association status of the HaVip:<ul>
      * <li>If the HaVip is in the <strong>Associating</strong> state, the HaVip is being associated.</li>
      * <li>If the HaVip is in the <strong>InUse</strong> state, the HaVip is associated.</li>
      * </ul>
@@ -287,12 +286,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>To use this feature, the following conditions must be met:</p>
      * <ul>
-     * <li>The device on which the Express Connect circuit resides supports the MACsec feature.</li>
-     * <li>The Express Connect circuit payment must be completed.</li>
+     * <li>The device where the Express Connect circuit is located supports the MACsec feature.</li>
+     * <li>The Express Connect circuit has been paid for.</li>
      * <li>Only dedicated Express Connect circuits are supported.
-     * Other notes:</li>
-     * <li>A maximum of three CKN and CAK pairs can be configured.</li>
-     * <li>Associating a key that is currently in the Disassociated state disassociates the previously active key.</li>
+     * Additional notes:</li>
+     * <li>A maximum of three sets of CKN and CAK can be configured.</li>
+     * <li>Associating a key that is currently in the Disassociated state disassociates the previously effective key.</li>
      * <li>Associating a key that is currently in the AssociatedFailed state triggers the device to renegotiate the session.</li>
      * </ul>
      * 
@@ -304,12 +303,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>AssociateNetworkAcl</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the network ACL is not yet associated. The association task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> to query the association status of the network ACL:<ul>
+     * <li>The <strong>AssociateNetworkAcl</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the network ACL is not yet associated. The association task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> operation to query the association status of the network ACL:<ul>
      * <li>If the network ACL is in the <strong>BINDING</strong> state, the network ACL is being associated.</li>
      * <li>If the network ACL is in the <strong>BINDED</strong> state, the network ACL is associated.</li>
      * </ul>
      * </li>
-     * <li><strong>AssociateNetworkAcl</strong> does not support concurrent association of the same network ACL.</li>
+     * <li>The <strong>AssociateNetworkAcl</strong> operation does not support concurrent association of the same network ACL.</li>
      * </ul>
      * 
      * @param request the request parameters of AssociateNetworkAcl  AssociateNetworkAclRequest
@@ -325,7 +324,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>AssociateRouteTable</em>* is an asynchronous operation. After you call this operation, the system returns a request ID, but the association is not yet complete. The association task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the association status of the route table:</p>
+     * <p>The <strong>AssociateRouteTable</strong> operation is asynchronous. After you send the request, the system returns a request ID, but the association is not immediately complete. The system continues to process the association task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the association status of the route table:</p>
      * <ul>
      * <li>If the vSwitch is in the <strong>Pending</strong> state, the route table is being associated.</li>
      * <li>If the vSwitch is in the <strong>Available</strong> state, the route table is associated.</li>
@@ -344,20 +343,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation to associate route tables with a gateway endpoint, take note of the following items:</p>
+     * <p>When you call this operation to associate route tables with a gateway endpoint, note the following items:</p>
      * <ul>
-     * <li>The gateway endpoint instance with which you want to associate route tables cannot be in a transient state, such as <strong>Creating</strong>, <strong>Modifying</strong>, <strong>Associating</strong>, <strong>Dissociating</strong>, or <strong>Deleting</strong>.</li>
-     * <li>The route tables that you want to associate cannot be in a transient state, such as <strong>Creating</strong>, <strong>Modifying</strong>, <strong>Associating</strong>, <strong>Dissociating</strong>, or <strong>Deleting</strong>.</li>
+     * <li>The gateway endpoint instance with which you want to associate route tables cannot be in an intermediate state such as <strong>Creating</strong>, <strong>Modifying</strong>, <strong>Associating</strong>, <strong>Dissociating</strong>, or <strong>Deleting</strong>.</li>
+     * <li>The route tables that you want to associate cannot be in an intermediate state such as <strong>Creating</strong>, <strong>Modifying</strong>, <strong>Associating</strong>, <strong>Dissociating</strong>, or <strong>Deleting</strong>.</li>
      * <li>The route tables and the gateway endpoint must belong to the same VPC.</li>
-     * <li>The route tables to be associated cannot be shared route tables.</li>
-     * <li>Virtual Border Router (VBR) route tables are not supported.</li>
+     * <li>The route tables to be associated cannot be shared.</li>
+     * <li>You cannot associate VBR route tables.</li>
      * <li>You can associate up to 20 route tables at a time.</li>
-     * <li>The <strong>AssociateRouteTablesWithVpcGatewayEndpoint</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the route tables have not yet been associated with the gateway endpoint. The association task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/311017.html">GetVpcGatewayEndpointAttribute</a> to query the association status of the route tables and the gateway endpoint:<ul>
-     * <li>If the route tables and the gateway endpoint are in the <strong>Associating</strong> state, the association is in progress.</li>
-     * <li>If the route tables and the gateway endpoint are in the <strong>Created</strong> state, the association is complete.</li>
+     * <li><strong>AssociateRouteTablesWithVpcGatewayEndpoint</strong> is an asynchronous operation. After you call this operation, the system returns an instance ID, but the route tables are not yet associated with the gateway endpoint. The association task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/311017.html">GetVpcGatewayEndpointAttribute</a> to query the association status between the route tables and the gateway endpoint:<ul>
+     * <li>If the route tables and the gateway endpoint are in the <strong>Associating</strong> state, the route tables are being associated with the gateway endpoint.</li>
+     * <li>If the route tables and the gateway endpoint are in the <strong>Created</strong> state, the route tables are successfully associated with the gateway endpoint.</li>
      * </ul>
      * </li>
-     * <li>The <strong>AssociateRouteTablesWithVpcGatewayEndpoint</strong> operation does not support concurrent association of the same route table with a gateway endpoint.</li>
+     * <li>The <strong>AssociateRouteTablesWithVpcGatewayEndpoint</strong> operation does not support concurrent requests to associate the same route table with a gateway endpoint.</li>
      * </ul>
      * 
      * @param request the request parameters of AssociateRouteTablesWithVpcGatewayEndpoint  AssociateRouteTablesWithVpcGatewayEndpointRequest
@@ -385,20 +384,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>Before you associate a VPN gateway with an SSL certificate, take note of the following information:</p>
      * <ul>
-     * <li>Only ShangMi (SM) VPN gateways support SSL certificate binding. You must attach two SSL certificates to an SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</li>
-     * <li>The SSL certificates must use SM algorithms.</li>
-     * <li>You cannot specify the same SSL certificate as both the encryption certificate and the signing certificate for the same VPN gateway instance.
+     * <li>Only ShangMi (SM) VPN gateways support SSL certificates. You must associate two SSL certificates with an SM VPN gateway: one as an encrypt certificate and the other as a signing certificate.</li>
+     * <li>The SSL certificates must use ShangMi (SM) algorithms.</li>
+     * <li>You cannot specify the same SSL certificate as both the encrypt certificate and the signing certificate for the same VPN gateway instance.
      * &lt;props=&quot;china&quot;&gt;</li>
-     * <li>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy named AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</li>
-     * <li>The <strong>AssociateVpnGatewayWithCertificate</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The binding node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the binding status of the SSL certificate:<ul>
-     * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL certificate is being attached.</li>
-     * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL certificate is attached.</li>
+     * <li>The first time you associate a VPN gateway with an SSL certificate, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and attaches an access policy named AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</li>
+     * <li>The <strong>AssociateVpnGatewayWithCertificate</strong> operation is asynchronous. After you send the request, the system returns a request ID, but the SSL certificate is not immediately associated with the VPN gateway. The association node is running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the association status of the SSL certificate:<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL certificate is being associated.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL certificate is associated.</li>
      * </ul>
      * </li>
-     * <li>The <strong>AssociateVpnGatewayWithCertificate</strong> operation does not support concurrent SSL certificate binding requests for the same VPN gateway.</li>
+     * <li>You cannot use the <strong>AssociateVpnGatewayWithCertificate</strong> operation to concurrently associate SSL certificates with the same VPN gateway.</li>
      * </ul>
      * <h3>Before you begin</h3>
-     * <p>Make sure that you have two SSL certificates that use SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</p>
+     * <p>Make sure that you have two SSL certificates that use ShangMi (SM) algorithms in the Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</p>
      * 
      * @param request the request parameters of AssociateVpnGatewayWithCertificate  AssociateVpnGatewayWithCertificateRequest
      * @return AssociateVpnGatewayWithCertificateResponse
@@ -428,11 +427,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachVbrToVpconnResponse> attachVbrToVpconn(AttachVbrToVpconnRequest request);
 
     /**
+     * @param request the request parameters of CalculateNatGatewayCapacityUnits  CalculateNatGatewayCapacityUnitsRequest
+     * @return CalculateNatGatewayCapacityUnitsResponse
+     */
+    CompletableFuture<CalculateNatGatewayCapacityUnitsResponse> calculateNatGatewayCapacityUnits(CalculateNatGatewayCapacityUnitsRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>Before you begin:</p>
+     * <p>Take note of the following items when you call this operation:</p>
      * <ul>
-     * <li>After the setting is canceled, the maximum available bandwidth of the EIP becomes the same as that of the Internet Shared Bandwidth instance.</li>
-     * <li>The <strong>CancelCommonBandwidthPackageIpBandwidth</strong> operation does not support concurrent requests to cancel the maximum available bandwidth setting for the same EIP.</li>
+     * <li>After the setting is canceled, the maximum available bandwidth of the EIP is the same as that of the Internet Shared Bandwidth instance.</li>
+     * <li>The <strong>CancelCommonBandwidthPackageIpBandwidth</strong> operation does not support concurrent calls to cancel the maximum available bandwidth setting for the same EIP.</li>
      * </ul>
      * 
      * @param request the request parameters of CancelCommonBandwidthPackageIpBandwidth  CancelCommonBandwidthPackageIpBandwidthRequest
@@ -442,7 +447,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can cancel the access of an Express Connect circuit only when it is in the <strong>Initial</strong>, <strong>Approved</strong>, <strong>Allocated</strong>, or <strong>Confirmed</strong> state (not enabled). After an Express Connect circuit is created by calling CreatePhysicalConnection, it may briefly be in the <strong>Allocating</strong> state, during which it cannot be canceled. Poll the status by calling DescribePhysicalConnections and call this operation after the state changes to <strong>Allocated</strong>.</p>
+     * <p>You can cancel the connection of an Express Connect circuit only when it is in the <strong>Initial</strong>, <strong>Approved</strong>, <strong>Allocated</strong>, or <strong>Confirmed</strong> state (not activated). After an Express Connect circuit is created by calling CreatePhysicalConnection, it may briefly enter the <strong>Allocating</strong> state and cannot be canceled during this period. Call DescribePhysicalConnections to poll the state, and call this operation after the state changes to <strong>Allocated</strong>.</p>
      * 
      * @param request the request parameters of CancelPhysicalConnection  CancelPhysicalConnectionRequest
      * @return CancelPhysicalConnectionResponse
@@ -451,7 +456,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>ChangeResourceGroup</strong> operation does not support concurrent modifications of the resource group to which an Express Connect circuit resource belongs within the same Express Connect circuit instance.</p>
+     * <p>The <strong>ChangeResourceGroup</strong> operation does not support concurrent modifications to the resource group to which an Express Connect circuit resource belongs.</p>
      * 
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -461,7 +466,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The first and last 3 IPv4 addresses of each vSwitch are system reserved IP addresses, and the first and last 9 IPv6 addresses are system reserved IP addresses. These addresses cannot be allocated.</li>
+     * <li>The first and last three IPv4 addresses and the first and last nine IPv6 addresses of each vSwitch are system reserved IP addresses and cannot be allocated.</li>
      * </ul>
      * 
      * @param request the request parameters of CheckCanAllocateVpcPrivateIpAddress  CheckCanAllocateVpcPrivateIpAddressRequest
@@ -494,12 +499,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you invoke this operation, the router interface enters the <strong>Connecting</strong> state and transitions to the <strong>Active</strong> state after the connection is established.
-     * When you invoke this operation to create a VPC, note the following items: </p>
+     * <p>After you call this operation, the vRouter interface enters the <strong>Connecting</strong> state. After the connection is established, it enters the <strong>Active</strong> state.
+     * When you call this operation to create a VPC, note the following: </p>
      * <ul>
-     * <li>Only a requester VPC router interface in the <strong>Idle</strong> state can initiate a connection to the accepter VPC. </li>
-     * <li>A maximum of one pair of interconnected router interfaces can exist between any two routers. </li>
-     * <li>If your account has a router interface with an overdue payment, you cannot initiate a connection.</li>
+     * <li>Only a vRouter interface of the requester VPC in the <strong>Idle</strong> state can initiate a connection to a vRouter interface of the accepter VPC. </li>
+     * <li>A maximum of one pair of interconnected vRouter interfaces can exist between any two vRouters. </li>
+     * <li>If your account has a vRouter interface with an overdue payment, you cannot initiate a connection.</li>
      * </ul>
      * 
      * @param request the request parameters of ConnectRouterInterface  ConnectRouterInterfaceRequest
@@ -510,12 +515,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>CopyNetworkAclEntries</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the network ACL rules have not been replicated yet. The replication node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> to query the replication status of the network ACL rules:<ul>
-     * <li>If the network ACL rules are in the <strong>Modifying</strong> state, the network ACL rules are being replicated.</li>
-     * <li>If the network ACL rules are in the <strong>Available</strong> state, the network ACL rules are replicated. Copy succeeded.</li>
+     * <li>The <strong>CopyNetworkAclEntries</strong> operation is asynchronous. After you invoke this operation, the system returns a request ID, but the network ACL rules are not immediately replicated. The background replication node is still running. You can invoke the <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> operation to query the replication status of the network ACL rules:<ul>
+     * <li>When the network ACL rules are in the <strong>Modifying</strong> state, the rules are being replicated.</li>
+     * <li>When the network ACL rules are in the <strong>Available</strong> state, it indicates Copy succeeded.</li>
      * </ul>
      * </li>
-     * <li><strong>CopyNetworkAclEntries</strong> does not support concurrent replication of the same network ACL rules.</li>
+     * <li>The <strong>CopyNetworkAclEntries</strong> operation does not support concurrent replication of the same network ACL rules.</li>
      * </ul>
      * 
      * @param request the request parameters of CopyNetworkAclEntries  CopyNetworkAclEntriesRequest
@@ -525,15 +530,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can use Border Gateway Protocol (BGP) to enable communication between a VBR and an on-premises data center. Each BGP group is associated with a VBR. You only need to add the BGP peers that communicate with the VBR to the corresponding BGP group, and then advertise the Border Gateway Protocol (BGP) networks in the VBR. 
-     * BGP groups simplify BGP configurations by merging BGP peers with the same configurations into a single BGP group, which reduces configuration complexity. Create a BGP group based on the requested Autonomous System Number (ASN). 
-     * When you invoke this operation to create a BGP group, take note of the following items: </p>
+     * <p>You can use BGP to enable communication between a VBR and an on-premises data center. Each BGP group is associated with a VBR. You only need to add the BGP peers that communicate with the VBR to the corresponding BGP group, and then advertise BGP networks in the VBR. 
+     * BGP groups simplify BGP configurations by merging BGP peers with the same configurations into a single BGP group, which reduces configuration complexity. You must first create a BGP group based on the applied Autonomous System Number (ASN). 
+     * When you call this operation to create a BGP group, note the following limits: </p>
      * <ul>
-     * <li>A VBR supports establishing BGP peers only with the on-premises data center at the other end of the Express Connect circuit.</li>
-     * <li>The BGP version supported by VBRs is BGP-4.</li>
-     * <li>Each VBR supports up to 8 BGP peers.</li>
-     * <li>Each BGP peer supports up to 110 dynamic routes.</li>
-     * <li>The ASN on the Alibaba Cloud side is 45104. The ASN on the user side can be a 2-byte or 4-byte value.</li>
+     * <li>A VBR can only establish BGP peers with the on-premises data center at the peer end of an Express Connect circuit.</li>
+     * <li>VBRs support BGP-4.</li>
+     * <li>Each VBR can establish up to 8 BGP peers.</li>
+     * <li>Each BGP peer can receive a maximum of 110 dynamic route entries.</li>
+     * <li>The ASN on the Alibaba Cloud side is 45104. You can specify a 2-byte or 4-byte ASN for the user side.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateBgpGroup  CreateBgpGroupRequest
@@ -566,17 +571,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>When you call this operation to create a default vSwitch, take note of the following items:</p>
      * <ul>
-     * <li>The first and last three IP addresses of each default vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses for 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</li>
-     * <li>The number of cloud service instances in a default vSwitch cannot exceed the remaining available cloud service instances in the VPC (15,000 minus the current number of cloud service instances).</li>
+     * <li>The first and last three IP addresses of each default vSwitch CIDR block are system reserved IP addresses. For example, if the CIDR block of a default vSwitch is 192.168.1.0/24, the system reserved IP addresses are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</li>
+     * <li>The number of cloud service instances in the default vSwitch cannot exceed the number of remaining available cloud service instances in the VPC (15,000 minus the current number of cloud service instances).</li>
      * <li>Default vSwitches do not support multicast or broadcast.</li>
      * <li>After a default vSwitch is created, you cannot modify its CIDR block.</li>
-     * <li>The <strong>CreateDefaultVSwitch</strong> operation is asynchronous. After you call this operation, the system returns an instance ID, but the default vSwitch has not been created yet. The background task is still in progress. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the default vSwitch:<ul>
+     * <li>The <strong>CreateDefaultVSwitch</strong> operation is asynchronous. After you call this operation, the system returns an instance ID, but the default vSwitch is not yet created and the background node is still in progress. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the default vSwitch:<ul>
      * <li>If the default vSwitch is in the <strong>Pending</strong> state, the default vSwitch is being configured.</li>
-     * <li>If the default vSwitch is in the <strong>Available</strong> state, the default vSwitch is available.</li>
+     * <li>If the default vSwitch is in the <strong>Available</strong> state, the default vSwitch is active.</li>
      * </ul>
      * </li>
-     * <li>If a default vSwitch already exists in a zone of the specified region, the call to this operation fails.</li>
-     * <li>Before creating a default vSwitch, create a default VPC first. You can call the <a href="https://help.aliyun.com/document_detail/609152.html">CreateDefaultVpc</a> operation to create a default VPC.</li>
+     * <li>If a default vSwitch already exists in the specified zone of the specified region, calling this operation to create a default vSwitch fails.</li>
+     * <li>To create a default vSwitch, you must first create a default VPC. You can call the <a href="https://help.aliyun.com/document_detail/609152.html">CreateDefaultVpc</a> operation to create a default VPC.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDefaultVSwitch  CreateDefaultVSwitchRequest
@@ -590,13 +595,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <ul>
      * <li><p>After a default VPC is created, you cannot modify its CIDR block, but you can add secondary IPv4 CIDR blocks.</p>
      * </li>
-     * <li><p>Each default VPC supports up to 300,000 private network IP addresses for cloud resources. This quota cannot be upgraded.</p>
+     * <li><p>Each default VPC supports up to 300,000 private network addresses for cloud resources, and you cannot increase this quota.</p>
      * </li>
-     * <li><p>After a default VPC is created, a vRouter and a route table are automatically created.</p>
+     * <li><p>After a default VPC is created, the system automatically creates a vRouter and a route table.</p>
      * </li>
-     * <li><p>Each default VPC supports up to three user CIDR blocks. If one user CIDR block contains another, the CIDR block with the shorter mask takes effect. For example, if both 10.0.0.0/16 and 10.0.0.0/24 are specified, 10.0.0.0/16 takes effect.</p>
+     * <li><p>Each default VPC supports up to three user CIDR blocks. If multiple user CIDR blocks overlap, the CIDR block with the shorter mask takes effect. For example, if you specify 10.0.0.0/16 and 10.0.0.0/24, 10.0.0.0/16 takes effect.</p>
      * </li>
-     * <li><p>The <strong>CreateDefaultVpc</strong> operation is asynchronous. After you call this operation, the system returns an instance ID, but the default VPC is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> to query the creation status of the default VPC:</p>
+     * <li><p>The <strong>CreateDefaultVpc</strong> operation is asynchronous. After you send the request, the system returns an instance ID, but the default VPC is not yet created and the background creation task is still running. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the creation status of the default VPC:</p>
      * <ul>
      * <li>If the default VPC is in the <strong>Pending</strong> state, the default VPC is being configured.</li>
      * <li>If the default VPC is in the <strong>Available</strong> state, the default VPC is available.</li>
@@ -604,7 +609,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </li>
      * <li><p>The <strong>CreateDefaultVpc</strong> operation does not support concurrent creation of default VPCs in the same region.</p>
      * </li>
-     * <li><p>Only one default VPC can exist in a region.</p>
+     * <li><p>Each region can have only one default VPC.</p>
      * </li>
      * </ul>
      * 
@@ -631,9 +636,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you create an enhanced VPN gateway, we recommend that you understand the limits of VPN gateways. For more information, see <a href="https://www.alibabacloud.com/help/en/vpn/sub-product-ipsec-vpn/user-guide/vpn-gateway-instance/">Limits of VPN Gateway</a>.</li>
-     * <li>Enhanced VPN gateway instances support only dual-tunnel IPsec-VPN connections. When you call the <code>CreateEnhancedVpnGateway</code> operation to create a VPN gateway instance, in addition to the required parameters, you must also specify the <strong>VSwitchId</strong> and <strong>DisasterRecoveryVSwitchId</strong> parameters.</li>
-     * <li>The <strong>CreateEnhancedVpnGateway</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the enhanced VPN gateway is not yet created. The creation task is still running in the background. You can call <a href="https://www.alibabacloud.com/help/en/vpn/sub-product-ipsec-vpn/developer-reference/api-vpc-2016-04-28-describevpngateway-vpns">DescribeVpnGateway</a> to query the creation status of the enhanced VPN gateway:<ul>
+     * <li>Before you create an enhanced VPN gateway, review the limits of VPN gateways. For more information, see <a href="https://www.alibabacloud.com/help/en/vpn/sub-product-ipsec-vpn/user-guide/vpn-gateway-instance/">VPN gateway limits</a>.</li>
+     * <li>Enhanced VPN gateway instances support only dual-tunnel IPsec-VPN connections. When you call the CreateEnhancedVpnGateway operation to create a VPN gateway instance, you must specify the <strong>VSwitchId</strong> and <strong>DisasterRecoveryVSwitchId</strong> parameters in addition to the required parameters.</li>
+     * <li>The <strong>CreateEnhancedVpnGateway</strong> operation is asynchronous. The system returns an instance ID, but the enhanced VPN gateway is not yet created and the creation task is still running in the background. You can call the <a href="https://www.alibabacloud.com/help/en/vpn/sub-product-ipsec-vpn/developer-reference/api-vpc-2016-04-28-describevpngateway-vpns">DescribeVpnGateway</a> operation to query the creation status of the enhanced VPN gateway:<ul>
      * <li>If the enhanced VPN gateway is in the <strong>provisioning</strong> state, the enhanced VPN gateway is being created.</li>
      * <li>If the enhanced VPN gateway is in the <strong>active</strong> state, the enhanced VPN gateway is created.</li>
      * </ul>
@@ -654,8 +659,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The Express Connect QoS feature is currently in invitational preview. To call this operation, contact your account manager to be added to the whitelist.</li>
-     * <li>The number of QoS policies that each user can create is subject to a quota limit. To increase the quota, contact your account manager.</li>
+     * <li>The Express Connect QoS feature is in invitational preview. To call this operation, you must first contact your account manager to apply for whitelist access.</li>
+     * <li>Each user has a quota limit on the number of QoS policies that can be created. To increase the quota, contact your account manager.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateExpressConnectTrafficQos  CreateExpressConnectTrafficQosRequest
@@ -666,10 +671,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The default queue cannot be created.</li>
-     * <li>The number of high-priority queues has an upper limit. To increase the quota, contact your account manager.</li>
-     * <li>The number of lower-priority queues has an upper limit. To increase the quota, contact your account manager.</li>
-     * <li>The total bandwidth percentage of all lower-priority queues has an upper limit.</li>
+     * <li>You cannot create default queues.</li>
+     * <li>The number of high-priority queues is limited. To increase the quota, contact your account manager.</li>
+     * <li>The number of medium-priority queues is limited. To increase the quota, contact your account manager.</li>
+     * <li>The sum of bandwidth percentages for all medium-priority queues has an upper limit.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateExpressConnectTrafficQosQueue  CreateExpressConnectTrafficQosQueueRequest
@@ -747,24 +752,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Each DNAT entry consists of five parts: <strong>ExternalIp</strong>, <strong>ExternalPort</strong>, <strong>IpProtocol</strong>, <strong>InternalIp</strong>, and <strong>InternalPort</strong>. After you add a DNAT entry, the NAT gateway forwards packets of the specified protocol received on <strong>ExternalIp:ExternalPort</strong> to <strong>InternalIp:InternalPort</strong> and returns responses along the same path.
-     * Note the following when you call this operation to add a DNAT entry: </p>
+     * <p>Each DNAT entry consists of five components: <strong>ExternalIp</strong>, <strong>ExternalPort</strong>, <strong>IpProtocol</strong>, <strong>InternalIp</strong>, and <strong>InternalPort</strong>. After you add a DNAT entry, the NAT gateway forwards packets of the specified protocol received on <strong>ExternalIp:ExternalPort</strong> to <strong>InternalIp:InternalPort</strong>, and routes the response packets back to the original sender.
+     * When you call this operation to add a DNAT entry, take note of the following items: </p>
      * <ul>
-     * <li><p>The <strong>CreateForwardEntry</strong> operation is asynchronous. After you send a request, the system returns a DNAT entry ID, but the DNAT entry is not yet added. The system adds the entry in the background. You can call <a href="https://help.aliyun.com/document_detail/36053.html">DescribeForwardTableEntries</a> to query the status of the DNAT entry:</p>
+     * <li><p>The <strong>CreateForwardEntry</strong> operation is asynchronous. The system first returns a DNAT entry ID, but the DNAT entry is not yet added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/36053.html">DescribeForwardTableEntries</a> operation to query the status of the DNAT entry:</p>
      * <ul>
      * <li>If the DNAT entry is in the <strong>Pending</strong> state, the DNAT entry is being added. In this state, you can only perform query operations.</li>
      * <li>If the DNAT entry is in the <strong>Available</strong> state, the DNAT entry is added.</li>
      * </ul>
      * </li>
-     * <li><p>The combination of <strong>ExternalIp</strong>, <strong>ExternalPort</strong>, and <strong>IpProtocol</strong> of each DNAT entry must be unique. You cannot forward packets from the same source IP address, port, and protocol to multiple destination ECS instances.</p>
+     * <li><p>The combination of the <strong>ExternalIp</strong>, <strong>ExternalPort</strong>, and <strong>IpProtocol</strong> fields of all DNAT entries must be unique. You cannot forward packets from the same source IP address, the same port, and the same protocol to multiple destination ECS instances.</p>
      * </li>
-     * <li><p>The combination of <strong>InternalIp</strong>, <strong>InternalPort</strong>, and <strong>IpProtocol</strong> of each DNAT entry must also be unique.</p>
+     * <li><p>The combination of the <strong>InternalIp</strong>, <strong>InternalPort</strong>, and <strong>IpProtocol</strong> fields of all DNAT entries must also be unique.</p>
      * </li>
-     * <li><p>The IP addresses specified by <strong>ExternalIp</strong> and <strong>InternalIp</strong> in a DNAT entry cannot be the same. If your business requires the two IP addresses to be the same, contact your account manager.</p>
+     * <li><p>The IP addresses specified by the <strong>ExternalIp</strong> and <strong>InternalIp</strong> fields of a DNAT entry cannot be the same. If your business requires the two IP addresses to be the same, contact your account manager.</p>
      * </li>
-     * <li><p>A maximum of 100 DNAT entries can be added to a DNAT table.</p>
+     * <li><p>You can add up to 100 DNAT entries to a DNAT table.</p>
      * </li>
-     * <li><p>An IP address configured with IP mapping in a DNAT entry (an EIP used by an Internet NAT gateway or a NAT IP address used by a VPC NAT gateway) cannot be used by other DNAT entries or SNAT entries.</p>
+     * <li><p>An IP address configured with IP mapping in a DNAT entry (an EIP used by an Internet NAT gateway or a NAT IP address used by a VPC NAT gateway) cannot be used by other DNAT or SNAT entries.</p>
      * </li>
      * </ul>
      * 
@@ -775,10 +780,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateFullNatEntry</em>* is an asynchronous operation. After you send a request, the system returns a FULLNAT entry, but the FULLNAT entry has not been added yet. The addition task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/348779.html">ListFullNatEntries</a> to query the status of the FULLNAT entry:</p>
+     * <p>The <strong>CreateFullNatEntry</strong> operation is asynchronous. The system returns a FULLNAT entry, but the entry is not fully created and the background task is still running. You can call the <a href="https://help.aliyun.com/document_detail/348779.html">ListFullNatEntries</a> operation to query the creation status of the FULLNAT entry:</p>
      * <ul>
-     * <li>If the FULLNAT entry is in the <strong>Creating</strong> state, the FULLNAT entry is being added. In this state, you can only perform query operations and cannot perform other operations.</li>
-     * <li>If the FULLNAT entry is in the <strong>Available</strong> state, the FULLNAT entry has been added.</li>
+     * <li>When the FULLNAT entry is in the <strong>Creating</strong> state, the entry is being created. In this state, you can only perform query operations.</li>
+     * <li>When the FULLNAT entry is in the <strong>Available</strong> state, the entry is created.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateFullNatEntry  CreateFullNatEntryRequest
@@ -798,10 +803,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateHaVip</em>* is an asynchronous operation. After you call this operation, the system returns the HAVIP ID, but the HAVIP is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> to query the creation status of the HAVIP:</p>
+     * <p><em>CreateHaVip</em>* is an asynchronous operation. The system returns the ID of the HAVIP, but the HAVIP is not yet created and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> to query the creation status of the HAVIP:</p>
      * <ul>
-     * <li>If the HAVIP is in the <strong>Creating</strong> state, the HAVIP is being created.</li>
-     * <li>If the HAVIP is in the <strong>Available</strong> state, the HAVIP is created.</li>
+     * <li>When the HAVIP is in the <strong>Creating</strong> state, the HAVIP is being created.</li>
+     * <li>When the HAVIP is in the <strong>Available</strong> state, the HAVIP is created.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateHaVip  CreateHaVipRequest
@@ -865,12 +870,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>CreateIpv4Gateway</strong> is an asynchronous operation. After you call this operation, the system returns an instance ID, but the IPv4 gateway is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/407670.html">GetIpv4GatewayAttribute</a> to query the creation status of the IPv4 gateway:<ul>
+     * <li>The <strong>CreateIpv4Gateway</strong> operation is asynchronous. After you call this operation, the system returns an instance ID, but the IPv4 gateway is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/407670.html">GetIpv4GatewayAttribute</a> operation to query the creation status of the IPv4 gateway:<ul>
      * <li>If the IPv4 gateway is in the <strong>Creating</strong> state, the IPv4 gateway is being created.</li>
      * <li>If the IPv4 gateway is in the <strong>Created</strong> state, the IPv4 gateway is created.</li>
      * </ul>
      * </li>
-     * <li>You cannot call <strong>CreateIpv4Gateway</strong> to concurrently create IPv4 gateways in the same VPC.</li>
+     * <li>The <strong>CreateIpv4Gateway</strong> operation does not support concurrent creation of IPv4 gateways in the same VPC.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateIpv4Gateway  CreateIpv4GatewayRequest
@@ -897,14 +902,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you create an IPv6 gateway, make sure that the target VPC and vSwitch have IPv6 CIDR blocks enabled. You can call <a href="https://help.aliyun.com/document_detail/448582.html">DescribeVpcAttribute</a> to query the VPC configurations.</li>
-     * <li>You can create only one IPv6 gateway for each VPC.</li>
-     * <li><strong>CreateIpv6Gateway</strong> is an asynchronous operation. After you send a request, the system returns an instance ID but enable IPv6 gateway is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> to query the creation status of enable IPv6 gateway:<ul>
+     * <li>Before you create an IPv6 gateway, make sure that enable IPv6 CIDR block feature is enabled for the destination VPC and vSwitch. You can call the <a href="https://help.aliyun.com/document_detail/448582.html">DescribeVpcAttribute</a> operation to query the VPC configurations.</li>
+     * <li>You can create only one IPv6 gateway in a VPC.</li>
+     * <li>The <strong>CreateIpv6Gateway</strong> operation is asynchronous. After you call this operation, the system returns an instance ID, but enable IPv6 gateway is not yet created and the backend task is still running. You can call the <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> operation to query the creation status of enable IPv6 gateway:<ul>
      * <li>If enable IPv6 gateway is in the <strong>Creating</strong> state, enable IPv6 gateway is being created.</li>
      * <li>If enable IPv6 gateway is in the <strong>Created</strong> state, enable IPv6 gateway is created.</li>
      * </ul>
      * </li>
-     * <li><strong>CreateIpv6Gateway</strong> does not support concurrent creation of IPv6 gateways in the same VPC.</li>
+     * <li>The <strong>CreateIpv6Gateway</strong> operation does not support concurrent creation of IPv6 gateways in the same VPC.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateIpv6Gateway  CreateIpv6GatewayRequest
@@ -914,17 +919,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following information:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>When you create a NAT gateway for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForNatgw and associates the access policy named AliyunServiceRolePolicyForNatgw with the role. This grants the NAT gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked role</a>.</li>
-     * <li>After an enhanced Internet NAT gateway is created, the system automatically adds a route to the VPC route table with the destination CIDR block 0.0.0.0/0 and the next hop set to the NAT gateway. This route directs traffic to the NAT gateway.</li>
-     * <li>The <strong>CreateNatGateway</strong> operation is asynchronous. After you call this operation, the system returns the instance ID of a NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway.<ul>
+     * <li>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and attaches an access policy named AliyunServiceRolePolicyForNatgw to the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</li>
+     * <li>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and whose next hop is the NAT gateway to the route table of the VPC. This routes traffic to the NAT gateway.</li>
+     * <li><strong>CreateNatGateway</strong> is an asynchronous operation. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created, and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway.<ul>
      * <li>If the NAT gateway is in the <strong>Creating</strong> state, the NAT gateway is being created. In this state, you can only perform query operations.</li>
      * <li>If the NAT gateway is in the <strong>Available</strong> state, the NAT gateway is created.</li>
      * </ul>
      * </li>
      * </ul>
-     * <p> It takes 1 to 3 minutes to create a NAT gateway.</p>
+     * <p> It typically takes 1 to 3 minutes to create a NAT gateway.</p>
      * 
      * @param request the request parameters of CreateNatGateway  CreateNatGatewayRequest
      * @return CreateNatGatewayResponse
@@ -933,10 +938,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateNatIp</em>* is an asynchronous operation. After you call this operation, the system returns a NAT IP address, but the NAT IP address is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/287000.html">ListNatIps</a> to query the status of the NAT IP address:</p>
+     * <p>The <strong>CreateNatIp</strong> operation is asynchronous. The system returns a NAT IP address immediately, but the NAT IP address is not fully created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/287000.html">ListNatIps</a> operation to query the creation status of the NAT IP address:</p>
      * <ul>
-     * <li>If the NAT IP address is in the <strong>Creating</strong> state, the NAT IP address is being created. In this state, you can only perform query operations.</li>
-     * <li>If the NAT IP address is in the <strong>Available</strong> state, the NAT IP address is created.
+     * <li>When the NAT IP address is in the <strong>Creating</strong> state, the NAT IP address is being created. In this state, you can only perform query operations.</li>
+     * <li>When the NAT IP address is in the <strong>Available</strong> state, the NAT IP address is created.
      * The <strong>CreateNatIp</strong> operation does not support concurrent creation of NAT IP addresses within the same NAT gateway.</li>
      * </ul>
      * 
@@ -947,7 +952,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>CreateNatIpCidr</strong> operation does not support concurrent creation of NAT IP CIDR blocks within the same NAT gateway.</p>
+     * <p>The <strong>CreateNatIpCidr</strong> operation does not support concurrent creation of NAT CIDR blocks within the same NAT gateway.</p>
      * 
      * @param request the request parameters of CreateNatIpCidr  CreateNatIpCidrRequest
      * @return CreateNatIpCidrResponse
@@ -977,7 +982,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Only Express Connect circuits in the Waiting for Payment (<strong>Complete</strong>) state support this operation.</p>
+     * <p>You can perform this operation only on Express Connect circuits that are in the <strong>Complete</strong> state, which indicates pending user payment.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreatePhysicalConnectionOccupancyOrder  CreatePhysicalConnectionOccupancyOrderRequest
@@ -993,7 +998,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The IP address pool feature is not available by default. To use this feature, apply for the <strong>IP address pool feature</strong> privilege quota in Quota Center. For more information, see <a href="https://help.aliyun.com/document_detail/108213.html">Increase a quota in Quota Center</a>.</p>
+     * <p>The IP address pool feature is not enabled by default. To use this feature, apply for the <strong>IP address pool feature</strong> privilege quota in Quota Center. For more information, see <a href="https://help.aliyun.com/document_detail/108213.html">Increase quotas by using Quota Center</a>.</p>
      * 
      * @param request the request parameters of CreatePublicIpAddressPool  CreatePublicIpAddressPoolRequest
      * @return CreatePublicIpAddressPoolResponse
@@ -1034,44 +1039,44 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </li>
      * <li>The <strong>CreateRouteEntry</strong> operation does not support concurrent addition of custom route entries in the same VPC or the same VBR.</li>
      * <li>The <strong>CreateRouteEntry</strong> operation may return the <strong>TaskConflict</strong> error code in concurrent scenarios. Retry the request as appropriate.
-     * <strong>When you use this operation to add custom route entries to a route table of a vRouter, take note of the following items:</strong><blockquote>
-     * <p>When the route to be added is a prefix list route, the route quota is calculated based on the sum of existing routes and the maximum number of route entries in the prefix list route. The sum cannot exceed the route quota limit.</p>
+     * <strong>When you use this operation to add custom route entries to a route table of a vRouter, note the following items:</strong><blockquote>
+     * <p>When the route to be added is a prefix list route, the route quota is calculated based on the sum of existing routes and the maximum number of route entries in the prefix list. The sum cannot exceed the route quota limit.</p>
      * </blockquote>
      * </li>
      * <li>A route table can contain a maximum of 200 custom route entries.</li>
      * <li>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of a vSwitch but cannot be contained by the CIDR block of a vSwitch.</li>
-     * <li>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <code>100.64.0.0/10</code> used by cloud services, but cannot be the same as this CIDR block.
+     * <li>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry can be a more specific CIDR block than the cloud service system route CIDR block <code>100.64.0.0/10</code>, but cannot be the same as this CIDR block.
      * <notice>The system route with the destination CIDR block <code>100.64.0.0/10</code> is used for communication among cloud services within the VPC. Exercise caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></li>
-     * <li>Route entries in the same route table cannot have the same destination CIDR block (<strong>DestinationCidrBlock</strong>).</li>
+     * <li>The destination CIDR blocks (<strong>DestinationCidrBlock</strong>) of route entries in the same route table must be unique.</li>
      * <li>If the specified destination CIDR block (<strong>DestinationCidrBlock</strong>) is an IP address, the system processes it with a 32-bit mask.</li>
      * <li>Multiple custom route entries can point to the same next hop (<strong>NextHopId</strong>).</li>
      * <li>The next hop (<strong>NextHopId</strong>) of a custom route entry must be in the same VPC as the route table.</li>
      * <li>You can configure ECMP routing by using the <strong>NextHopList</strong> parameter settings:<ul>
-     * <li><p>To add a non-ECMP custom route, specify the <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong> parameters. Do not specify the <strong>NextHopList</strong> parameter.   </p>
+     * <li><p>When you add a non-ECMP custom route, specify the <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong> parameters. Do not specify the <strong>NextHopList</strong> parameter.   </p>
      * </li>
-     * <li><p>To add an ECMP route, specify the <strong>DestinationCidrBlock</strong> and <strong>NextHopList</strong> parameters. Do not specify the <strong>NextHopType</strong> or <strong>NextHopId</strong> parameter.</p>
-     * </li>
-     * </ul>
+     * <li><p>When you add an ECMP route, specify the <strong>DestinationCidrBlock</strong> and <strong>NextHopList</strong> parameters. Do not specify the <strong>NextHopType</strong> or <strong>NextHopId</strong> parameter.</p>
      * </li>
      * </ul>
-     * <p><strong>When you use this operation to add custom route entries to a route table of a Virtual Border Router (VBR), take note of the following items:</strong></p>
+     * </li>
+     * </ul>
+     * <p><strong>When you use this operation to add custom route entries to a route table of a Virtual Border Router (VBR), note the following items:</strong></p>
      * <ul>
      * <li><p>A route table can contain a maximum of 200 custom route entries.  </p>
      * </li>
      * <li><p>The <strong>NextHopList</strong> parameter is not supported.   </p>
      * </li>
-     * <li><p>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <code>100.64.0.0/10</code> used by cloud services, but cannot be the same as this CIDR block.
+     * <li><p>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry can be a more specific CIDR block than the cloud service system route CIDR block <code>100.64.0.0/10</code>, but cannot be the same as this CIDR block.
      * <notice>The system route with the destination CIDR block <code>100.64.0.0/10</code> is used for communication among cloud services within the VPC. Exercise caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></p>
      * </li>
-     * <li><p>Route entries in the same route table cannot have the same destination CIDR block (<strong>DestinationCidrBlock</strong>).   </p>
+     * <li><p>The destination CIDR blocks (<strong>DestinationCidrBlock</strong>) of route entries in the same route table must be unique.   </p>
      * </li>
      * <li><p>If the specified destination CIDR block (<strong>DestinationCidrBlock</strong>) is an IP address, the system processes it with a 32-bit mask.   </p>
      * </li>
      * <li><p>Multiple custom route entries can point to the same next hop (<strong>NextHopId</strong>).  </p>
      * </li>
-     * <li><p>The next hop (<strong>NextHopId</strong>) of a custom route entry must be the vRouter interface associated with the VBR.  </p>
+     * <li><p>The next hop (<strong>NextHopId</strong>) of a custom route entry must be a vRouter interface associated with the VBR.  </p>
      * </li>
-     * <li><p>You can add route entries to a VBR only when the VBR is in the <strong>Active</strong> state, the corresponding Express Connect circuit is in the <strong>Enabled</strong> state, and the circuit is not locked due to overdue payment.  </p>
+     * <li><p>You can create route entries on a VBR only when the VBR is in the active (<strong>Active</strong>) state, the corresponding Express Connect circuit is in the <strong>Enabled</strong> state, and the circuit is not under overdue payment lock.  </p>
      * </li>
      * <li><p>Only non-ECMP route entries are supported. Specify the <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong> parameters. Do not specify the <strong>NextHopList</strong> parameter.</p>
      * </li>
@@ -1085,12 +1090,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>CreateRouteTable</strong> is an asynchronous operation. After you call this operation, the system returns an instance ID, but the custom route table has not been created yet. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87602.html">DescribeRouteTableList</a> to query the creation status of the custom route table:<ul>
+     * <li>The <strong>CreateRouteTable</strong> operation is asynchronous. After you send the request, the system returns an instance ID, but the custom route table is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/87602.html">DescribeRouteTableList</a> operation to query the creation status of the custom route table:<ul>
      * <li>If the custom route table is in the <strong>Creating</strong> state, the custom route table is being created.</li>
      * <li>If the custom route table is in the <strong>Available</strong> state, the custom route table is created.</li>
      * </ul>
      * </li>
-     * <li><strong>CreateRouteTable</strong> does not support concurrent creation of custom route tables in the same VPC.</li>
+     * <li>The <strong>CreateRouteTable</strong> operation does not support concurrent creation of custom route tables in the same VPC.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRouteTable  CreateRouteTableRequest
@@ -1122,13 +1127,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <ul>
      * <li><p>A maximum of one pair of interconnected router interfaces can exist between any two routers.  </p>
      * </li>
-     * <li><p>A maximum of five router interfaces can be created on a router.  </p>
+     * <li><p>A maximum of five router interfaces can be created on a single router.  </p>
      * </li>
-     * <li><p>If your account has router interfaces with overdue payments, you cannot create router interfaces.  </p>
+     * <li><p>If you have overdue payments for router interfaces under your account, you cannot create new router interfaces.  </p>
      * </li>
-     * <li><p>Route entries in the same route table cannot have the same destination CIDR block (DestinationCidrBlock).   </p>
+     * <li><p>Routes in the same route table cannot have the same destination CIDR block (DestinationCidrBlock).   </p>
      * </li>
-     * <li><p>A Virtual Border Router (VBR) can only be the requester and must be in the activated state.  </p>
+     * <li><p>A Virtual Border Router (VBR) can only act as the requester and must be in the active state.  </p>
      * </li>
      * <li><p>You can use this operation to create subscription and pay-as-you-go router interfaces.</p>
      * </li>
@@ -1141,20 +1146,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation can add SNAT entries for enhanced Internet NAT gateways and VPC NAT gateways. The term <strong>NAT gateway</strong> in this topic refers to both types without distinction.
-     * Before you call this operation to add an SNAT entry, take note of the following information:</p>
+     * <p>This operation adds an SNAT entry to an enhanced Internet NAT gateway or a VPC NAT gateway. The term <strong>NAT gateway</strong> in this document refers to both types unless otherwise specified.
+     * Note the following information when you call this operation to add an SNAT entry:</p>
      * <ul>
-     * <li><p><strong>CreateSnatEntry</strong> is an asynchronous operation. After you call this operation, the system returns an SNAT entry ID but the SNAT entry is not yet added. The system adds the SNAT entry in the background. You can call <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> to query the status of the SNAT entry:</p>
+     * <li><p>The <strong>CreateSnatEntry</strong> operation is asynchronous. The system first returns an SNAT entry ID, but the SNAT entry is not yet added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</p>
      * <ul>
-     * <li>If the SNAT entry is in the <strong>Pending</strong> state, the SNAT entry is being added. In this state, you can only perform query operations and cannot perform other operations.</li>
+     * <li>If the SNAT entry is in the <strong>Pending</strong> state, the SNAT entry is being added. In this state, you can only perform query operations.</li>
      * <li>If the SNAT entry is in the <strong>Available</strong> state, the SNAT entry is added.</li>
      * </ul>
      * </li>
-     * <li><p>The vSwitch and ECS instance specified in the SNAT entry must be in the VPC to which the NAT gateway belongs.</p>
+     * <li><p>The vSwitch and ECS instance specified in the SNAT entry must belong to the VPC to which the NAT gateway belongs.</p>
      * </li>
      * <li><p>Each vSwitch and ECS instance can belong to only one SNAT entry.</p>
      * </li>
-     * <li><p>If a high-availability virtual IP address instance exists in the vSwitch, you cannot add an SNAT entry.</p>
+     * <li><p>If a high-availability virtual IP address (HaVip) is associated with the vSwitch, you cannot add an SNAT entry.</p>
      * </li>
      * </ul>
      * 
@@ -1175,17 +1180,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>CreateSslVpnServer</strong> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task continues in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<ul>
+     * <li>The <strong>CreateSslVpnServer</strong> operation is asynchronous. The system returns an instance ID, but the SSL-VPN server is not yet created. The creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and determine the creation status of the SSL-VPN server:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the SSL-VPN server is being created.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the SSL-VPN server is created.</li>
      * </ul>
      * </li>
-     * <li><strong>CreateSslVpnServer</strong> does not support concurrent creation of SSL-VPN servers under the same VPN gateway.</li>
+     * <li>The <strong>CreateSslVpnServer</strong> operation does not support concurrent creation of SSL-VPN servers under the same VPN gateway.</li>
      * </ul>
      * <h3>Before you begin</h3>
      * <ul>
-     * <li>You have created a VPN gateway with the SSL-VPN feature enabled. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</li>
-     * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
+     * <li>You have created a VPN gateway and enabled the SSL-VPN feature for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</li>
+     * <li>If you need to enable two-factor authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication for SSL-VPN supports IDaaS EIAM 2.0</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSslVpnServer  CreateSslVpnServerRequest
@@ -1195,7 +1200,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateTrafficMirrorFilter</em>* is an asynchronous operation. After you send a request, the system returns an instance ID but the traffic mirror filter is not yet created. The creation task is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> to query the creation status of the traffic mirror filter:</p>
+     * <p>The <strong>CreateTrafficMirrorFilter</strong> operation is asynchronous. After you invoke this operation, the system returns an instance ID, but the traffic mirror filter is not yet created and the creation task is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> operation to query the creation status of the traffic mirror filter:</p>
      * <ul>
      * <li>If the traffic mirror filter is in the <strong>Creating</strong> state, the traffic mirror filter is being created.</li>
      * <li>If the traffic mirror filter is in the <strong>Created</strong> state, the traffic mirror filter is created.</li>
@@ -1209,12 +1214,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>CreateTrafficMirrorFilterRules</strong> is an asynchronous operation. After a request is sent, the system returns an instance ID but the inbound or outbound traffic mirroring filter rule is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> to query the creation status of the inbound or outbound traffic mirroring filter rule:<ul>
-     * <li>If the inbound or outbound traffic mirroring filter rule is in the <strong>Creating</strong> state, the rule is being created.</li>
-     * <li>If the inbound or outbound traffic mirroring filter rule is in the <strong>Created</strong> state, the rule is created.</li>
+     * <li>The <strong>CreateTrafficMirrorFilterRules</strong> operation is asynchronous. After you invoke this operation, the system returns an instance ID, but the inbound or outbound rules for traffic mirroring are not yet created. The creation task is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> to query the creation status of the inbound or outbound rules for traffic mirroring:<ul>
+     * <li>When the inbound or outbound rules for traffic mirroring are in the <strong>Creating</strong> state, the rules are being created.</li>
+     * <li>When the inbound or outbound rules for traffic mirroring are in the <strong>Created</strong> state, the rules are created.</li>
      * </ul>
      * </li>
-     * <li><strong>CreateTrafficMirrorFilterRules</strong> does not support concurrent creation of inbound or outbound traffic mirroring filter rules for the same traffic mirror filter.</li>
+     * <li>You cannot invoke the <strong>CreateTrafficMirrorFilterRules</strong> operation to concurrently create inbound or outbound rules for the same traffic mirror filter.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateTrafficMirrorFilterRules  CreateTrafficMirrorFilterRulesRequest
@@ -1224,7 +1229,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateTrafficMirrorSession</em>* is an asynchronous operation. After you send a request, the system returns an instance ID while the traffic mirror session is still being created in the background. You can invoke <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the creation status of the traffic mirror session:</p>
+     * <p>The <strong>CreateTrafficMirrorSession</strong> operation is asynchronous. The system returns an instance ID, but the traffic mirror session is not immediately created. The creation task continues to run in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</p>
      * <ul>
      * <li>If the traffic mirror session is in the <strong>Creating</strong> state, the traffic mirror session is being created.</li>
      * <li>If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror session is created.</li>
@@ -1317,20 +1322,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, familiarize yourself with the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.
-     * Before you call this operation, make sure the following conditions are met:</p>
+     * <p>Before you call this operation, familiarize yourself with the creation process and environment requirements of shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.
+     * Before you call this operation, make sure that the following conditions are met:</p>
      * <ul>
-     * <li>The Express Connect circuit specified by PhysicalConnectionId is in the Enabled state. The complete process for an Express Connect circuit to reach the Enabled state includes payment and manual steps that cannot be fully automated through OpenAPI:<ul>
+     * <li>The Express Connect circuit specified by PhysicalConnectionId is in the Enabled state. The complete process for an Express Connect circuit to reach the Enabled state involves payment and manual steps, and cannot be fully automated by using OpenAPI:<ul>
      * <li>CreatePhysicalConnection: Creates an Express Connect circuit.</li>
-     * <li>LOA construction authorization: If you need to enter the data center for construction, call ApplyPhysicalConnectionLOA → wait for manual LOA approval → CompletePhysicalConnectionLOA (FinishWork=true). LOA approval and construction are manual/offline steps.</li>
-     * <li>ConfirmPhysicalConnection: Reports construction completion. The circuit must be in the Allocated state. After success, it enters the Confirmed state.</li>
-     * <li>After the Confirmed state, port usage fees must be paid before the circuit enters the Enabled state. For automation scenarios, call DescribePhysicalConnections first to confirm the target circuit is in the Enabled state before calling this operation.</li>
+     * <li>LOA construction authorization: If you need to enter the data center for construction, call ApplyPhysicalConnectionLOA in sequence → wait for manual LOA approval → CompletePhysicalConnectionLOA (FinishWork=true). LOA approval and construction are manual or offline steps.</li>
+     * <li>ConfirmPhysicalConnection: Reports completion. Requires the Allocated state. After success, the state changes to Confirmed.</li>
+     * <li>After the state changes to Confirmed, you must pay the port occupation fee to change the state to Enabled. In automated scenarios, we recommend that you call DescribePhysicalConnections to confirm that the target Express Connect circuit is in the Enabled state before calling this operation.</li>
      * </ul>
      * </li>
-     * <li>The VlanId is not already used by an existing VBR or shared Express Connect circuit on the Express Connect circuit (valid values: 0 to 2999).</li>
-     * <li>The Spec value does not exceed the remaining allocatable bandwidth of the Express Connect circuit or the shared circuit bandwidth limit configured for the account that owns the Express Connect circuit.</li>
-     * <li>VpconnAliUid is the tenant\&quot;s Alibaba Cloud account (RAM users or partner accounts are not supported). Cross-site pushing is not allowed by default.</li>
-     * <li>The number of shared Express Connect circuits on a single Express Connect circuit has not exceeded the quota.</li>
+     * <li>The VlanId is not occupied by existing VBRs or shared Express Connect circuits under this Express Connect circuit. Valid values: 0 to 2999.</li>
+     * <li>The Spec value does not exceed the remaining allocable bandwidth of the Express Connect circuit, and does not exceed the shared Express Connect circuit bandwidth limit configured for the account to which the Express Connect circuit belongs.</li>
+     * <li>The VpconnAliUid is the primary Alibaba Cloud account of the tenant. RAM users or partner accounts are not supported. Cross-site push is not allowed by default.</li>
+     * <li>The number of shared Express Connect circuits on a single Express Connect circuit does not exceed the quota.</li>
      * <li>The Express Connect circuit is not bound to a QoS policy, the access device supports MPBGP, and the access point allows the creation of shared Express Connect circuits.</li>
      * </ul>
      * 
@@ -1371,12 +1376,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>CreateVpcGatewayEndpoint</strong> is an asynchronous operation. After you send a request, the system returns an <strong>EndpointId</strong> but the gateway endpoint is not yet created. The creation task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/448682.html">ListVpcGatewayEndpoints</a> to query the creation status of the gateway endpoint:<ul>
+     * <li>The <strong>CreateVpcGatewayEndpoint</strong> operation is asynchronous. After you call this operation, the system returns an <strong>EndpointId</strong>, but the gateway endpoint is not yet created and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/448682.html">ListVpcGatewayEndpoints</a> to query the creation status of the gateway endpoint:<ul>
      * <li>If the gateway endpoint is in the <strong>Creating</strong> state, the gateway endpoint is being created.</li>
      * <li>If the gateway endpoint is in the <strong>Created</strong> state, the gateway endpoint is created.</li>
      * </ul>
      * </li>
-     * <li>You cannot call <strong>CreateVpcGatewayEndpoint</strong> to concurrently create gateway endpoints for the same endpoint service.</li>
+     * <li>The <strong>CreateVpcGatewayEndpoint</strong> operation does not support concurrent creation of gateway endpoints for the same endpoint service.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateVpcGatewayEndpoint  CreateVpcGatewayEndpointRequest
@@ -1386,7 +1391,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>CreateVpcPrefixList</strong> operation does not support concurrent creation of prefix lists within the same region.</p>
+     * <p>The <strong>CreateVpcPrefixList</strong> operation does not support concurrent creation of prefix lists in the same region.</p>
      * 
      * @param request the request parameters of CreateVpcPrefixList  CreateVpcPrefixListRequest
      * @return CreateVpcPrefixListResponse
@@ -1424,12 +1429,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If the VPN gateway instance supports creating IPsec-VPN connections in dual-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <code>CreateVpnConnection</code> operation:
+     * <li>If the VPN gateway instance supports creating IPsec-VPN connections in dual-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the CreateVpnConnection operation:
      *   <strong>ClientToken</strong>, <strong>Name</strong>, <strong>EffectImmediately</strong>, <strong>AutoConfigRoute</strong>, <strong>Tags</strong> array, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.
-     *   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.
+     *   For information about the regions and zones that support creating IPsec-VPN connections in dual-tunnel mode, refer to <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade IPsec-VPN connections to the dual-tunnel mode</a>.</li>
+     * <li>If the VPN gateway instance supports only creating IPsec-VPN connections in single-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the CreateVpnConnection operation:
      *    <strong>ClientToken</strong>, <strong>CustomerGatewayId</strong>, <strong>Name</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>AutoConfigRoute</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, <strong>RemoteCaCertificate</strong>, and <strong>Tags</strong> array.</li>
-     * <li>The <strong>CreateVpnConnection</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection.</li>
-     * <li>The <strong>CreateVpnConnection</strong> operation does not support concurrent creation of IPsec-VPN connections under the same VPN gateway.</li>
+     * <li>The CreateVpnConnection operation is asynchronous. The system returns an instance ID, but the IPsec-VPN connection is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and determine the creation status of the IPsec-VPN connection:<ul>
+     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the IPsec-VPN connection is being created.</li>
+     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the IPsec-VPN connection is created.</li>
+     * </ul>
+     * </li>
+     * <li>The CreateVpnConnection operation does not support creating multiple IPsec-VPN connections concurrently under the same VPN gateway.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateVpnConnection  CreateVpnConnectionRequest
@@ -1440,14 +1450,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>Before you create a VPN gateway, we recommend that you familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</p>
+     * <li><p>Before you create a VPN gateway, review the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">Limits on VPN gateways</a>.</p>
      * </li>
-     * <li><p>VPN gateway instances in some regions support only dual-tunnel mode IPsec-VPN connections by default. When you call the <code>CreateVpnGateway</code> operation to create a VPN gateway instance in these regions, you must specify the <strong>VSwitchId</strong> and <strong>DisasterRecoveryVSwitchId</strong> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel mode IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</p>
+     * <li><p>In some regions, VPN gateway instances support only dual-tunnel IPsec-VPN connections by default. When you call the CreateVpnGateway operation in these regions, you must specify the <strong>VSwitchId</strong> and <strong>DisasterRecoveryVSwitchId</strong> parameters in addition to the required parameters. For more information about the regions and zones that support dual-tunnel IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to the dual-tunnel mode</a>.</p>
      * </li>
-     * <li><p>The <strong>CreateVpnGateway</strong> operation is asynchronous. After you call this operation, the system returns an instance ID, but the VPN gateway is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the VPN gateway:</p>
+     * <li><p>The <strong>CreateVpnGateway</strong> operation is asynchronous. The system returns an instance ID, but the VPN gateway is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the creation status of the VPN gateway:</p>
      * <ul>
-     * <li>If the VPN gateway is in the <strong>provisioning</strong> state, the VPN gateway is being created.</li>
-     * <li>If the VPN gateway is in the <strong>active</strong> state, the VPN gateway is created.</li>
+     * <li>When the VPN gateway is in the <strong>provisioning</strong> state, the VPN gateway is being created.</li>
+     * <li>When the VPN gateway is in the <strong>active</strong> state, the VPN gateway is created.</li>
      * </ul>
      * </li>
      * </ul>
@@ -1462,21 +1472,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <h3>Before you begin</h3>
      * <ul>
      * <li>Before you create a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</li>
-     * <li>Before you create a policy-based route, we recommend that you familiarize yourself with the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</li>
+     * <li>Before you create a policy-based route, familiarize yourself with the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</li>
      * </ul>
      * <h3>Limits</h3>
      * <ul>
      * <li>For single-tunnel VPN gateways:<ul>
      * <li>0.0.0.0/0 is not supported as the destination CIDR block of a policy-based route.</li>
-     * <li>CIDR blocks that overlap with 100.64.0.0/10 (including 100.64.0.0/10 itself, its subnets, and parent CIDR blocks that contain it) are not supported as the destination CIDR block of a policy-based route.</li>
+     * <li>CIDR blocks that overlap with 100.64.0.0/10 (including 100.64.0.0/10 itself, its subnets, and its parent CIDR blocks) are not supported as the destination CIDR block of a policy-based route.</li>
      * </ul>
      * </li>
-     * <li><strong>CreateVpnPbrRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns the policy-based route information, but the route has not been created yet. The system continues to create the route in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the creation status of the policy-based routing node:<ul>
+     * <li>The <strong>CreateVpnPbrRouteEntry</strong> operation is asynchronous. The system returns the information of the policy-based route before the route is created. The creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and check the creation status of the policy-based route:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the policy-based route is being created.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based route is created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateVpnPbrRouteEntry</strong> operation does not support concurrent creation of policy-based routes for the same VPN gateway instance.</li>
+     * <li>The <strong>CreateVpnPbrRouteEntry</strong> operation does not support concurrent creation of policy-based routes under the same VPN gateway instance.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateVpnPbrRouteEntry  CreateVpnPbrRouteEntryRequest
@@ -1494,13 +1504,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <h3>Limits</h3>
      * <ul>
      * <li>0.0.0.0/0 is not supported as the destination CIDR block of a destination route.</li>
-     * <li>For single-tunnel VPN gateways, CIDR blocks that overlap with 100.64.0.0/10 (including 100.64.0.0/10 itself, its subnets, and parent CIDR blocks that contain it) are not supported as the destination CIDR block of a destination route.</li>
-     * <li>The <strong>CreateVpnRouteEntry</strong> operation is asynchronous. After you send a request, the system returns the destination routing configuration but the destination route is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the destination route:<ul>
-     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the destination route is being created.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the destination route is created.</li>
+     * <li>For a single-tunnel VPN gateway, a CIDR block that overlaps with 100.64.0.0/10 (including the CIDR block itself, its subnets, and its supernet) is not supported as the destination CIDR block of a destination route.</li>
+     * <li>The <strong>CreateVpnRouteEntry</strong> operation is asynchronous. The system returns the configuration information of the destination route, but the destination route is not yet created. The creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the creation status of the destination route:<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the destination route is being created.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the destination route is created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateVpnRouteEntry</strong> operation does not support concurrent creation of destination routes for the same VPN gateway.</li>
+     * <li>The <strong>CreateVpnRouteEntry</strong> operation does not support concurrent creation of destination routes under the same VPN gateway.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateVpnRouteEntry  CreateVpnRouteEntryRequest
@@ -1517,12 +1527,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeactiveFlowLog</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the flow log is not yet stopped, and the system is still processing the stop task in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the status of the flow log:<ul>
-     * <li>If the flow log is in the <strong>Deactivating</strong> state, the flow log is being stopped.</li>
-     * <li>If the flow log is in the <strong>Inactive</strong> state, the flow log is stopped.</li>
+     * <li>The <strong>DeactiveFlowLog</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the flow log is not immediately deactivated. The deactivation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> operation to query the deactivation status of the flow log:<ul>
+     * <li>If the flow log is in the <strong>Deactivating</strong> state, the flow log is being deactivated.</li>
+     * <li>If the flow log is in the <strong>Inactive</strong> state, the flow log is deactivated.</li>
      * </ul>
      * </li>
-     * <li>You cannot concurrently stop the same flow log by calling <strong>DeactiveFlowLog</strong>.</li>
+     * <li>The <strong>DeactiveFlowLog</strong> operation does not support concurrent deactivation of the same flow log.</li>
      * </ul>
      * 
      * @param request the request parameters of DeactiveFlowLog  DeactiveFlowLogRequest
@@ -1572,12 +1582,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteDhcpOptionsSet</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the DHCP options set is not yet deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/448820.html">GetDhcpOptionsSet</a> to query the deletion status of the DHCP options set:<ul>
+     * <li>The <strong>DeleteDhcpOptionsSet</strong> operation is asynchronous. After you send the request, the system returns a request ID, but the DHCP options set is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/448820.html">GetDhcpOptionsSet</a> operation to query the deletion status of the DHCP options set:<ul>
      * <li>If the DHCP options set is in the <strong>Deleting</strong> state, the DHCP options set is being deleted.</li>
      * <li>If the specified DHCP options set cannot be found, the DHCP options set is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteDhcpOptionsSet</strong> does not support concurrent deletion of the same DHCP options set.</li>
+     * <li>The <strong>DeleteDhcpOptionsSet</strong> operation does not support concurrent deletion of the same DHCP options set.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteDhcpOptionsSet  DeleteDhcpOptionsSetRequest
@@ -1604,7 +1614,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A QoS policy that is associated with an Express Connect circuit cannot be directly deleted. You must dissociate the QoS policy from the Express Connect circuit first.</p>
+     * <p>A QoS policy associated with an Express Connect circuit cannot be deleted directly. You must dissociate it first.</p>
      * 
      * @param request the request parameters of DeleteExpressConnectTrafficQos  DeleteExpressConnectTrafficQosRequest
      * @return DeleteExpressConnectTrafficQosResponse
@@ -1635,12 +1645,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteFlowLog</strong> is an asynchronous operation. After you call this operation, the system returns an instance ID, but the flow log has not been deleted yet. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the deletion status of the flow log:<ul>
+     * <li>The <strong>DeleteFlowLog</strong> operation is asynchronous. After the system returns an instance ID, the flow log is not immediately deleted because the deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> operation to query the deletion status of the flow log:<ul>
      * <li>If the flow log is in the <strong>Deleting</strong> state, the flow log is being deleted.</li>
      * <li>If the specified flow log cannot be found, the flow log is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteFlowLog</strong> does not support concurrent deletion of the same flow log.</li>
+     * <li>The <strong>DeleteFlowLog</strong> operation does not support concurrent deletion of the same flow log.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteFlowLog  DeleteFlowLogRequest
@@ -1650,11 +1660,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteForwardEntry</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the DNAT entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/36053.html">DescribeForwardTableEntries</a> to query the status of the DNAT entry:</p>
+     * <p><em>DeleteForwardEntry</em>* is an asynchronous operation. The system returns a request ID, but the DNAT entry is not immediately deleted. The deletion task continues to run in the background. You can call the <a href="https://help.aliyun.com/document_detail/36053.html">DescribeForwardTableEntries</a> operation to query the status of the DNAT entry:</p>
      * <ul>
      * <li>If the DNAT entry is in the <strong>Deleting</strong> state, the DNAT entry is being deleted. In this state, you can only perform query operations.</li>
-     * <li>If the DNAT entry is no longer found, the DNAT entry is deleted.<blockquote>
-     * <p> If a DNAT entry in the DNAT table is in the <strong>Pending</strong> state, you cannot delete any DNAT entries from the DNAT table.</p>
+     * <li>If the DNAT entry cannot be queried, the DNAT entry is deleted.<blockquote>
+     * <p>If a DNAT entry in the DNAT table is in the <strong>Pending</strong> state, you cannot delete DNAT entries in the DNAT table.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1666,10 +1676,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteFullNatEntry</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the FULLNAT entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/348779.html">ListFullNatEntries</a> to query the status of the FULLNAT entry:</p>
+     * <p>The <strong>DeleteFullNatEntry</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the FULLNAT entry is not immediately deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/348779.html">ListFullNatEntries</a> to query the status of the FULLNAT entry:</p>
      * <ul>
      * <li>If the FULLNAT entry is in the <strong>Deleting</strong> state, the FULLNAT entry is being deleted. In this state, you can only perform query operations.</li>
-     * <li>If the FULLNAT entry cannot be found, the FULLNAT entry is deleted.</li>
+     * <li>If the FULLNAT entry cannot be queried, the FULLNAT entry is deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteFullNatEntry  DeleteFullNatEntryRequest
@@ -1679,11 +1689,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, note the following: </p>
+     * <p>Before you call this operation, note the following: </p>
      * <ul>
      * <li>Only pay-as-you-go instances can be deleted.</li>
-     * <li>To delete a dedicated instance, disassociate all backend servers from the instance before deletion.</li>
-     * <li>To delete a shared instance, remove all EIPs from the instance before deletion.</li>
+     * <li>To delete a dedicated instance, disassociate the backend servers from the instance first.</li>
+     * <li>To delete a shared instance, remove the EIPs from the instance first.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteGlobalAccelerationInstance  DeleteGlobalAccelerationInstanceRequest
@@ -1693,17 +1703,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation to delete an HaVip, take note of the following items:</p>
+     * <p>When you call this operation to delete a HaVip, take note of the following items:</p>
      * <ul>
-     * <li>The HaVip must be in the available state before it can be deleted.</li>
-     * <li>Make sure that no routes point to the HaVip that you want to delete.</li>
-     * <li>Make sure that the HaVip that you want to delete is not associated with any elastic IP address (EIP).</li>
-     * <li><strong>DeleteHaVip</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the HaVip is not yet deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> to query the deletion status of the HaVip:<ul>
+     * <li>The HaVip can be deleted only when it is in the Available state.</li>
+     * <li>Ensure that no routes point to the HaVip that you want to delete.</li>
+     * <li>Ensure that no elastic IP addresses (EIPs) are associated with the HaVip that you want to delete.</li>
+     * <li>The <strong>DeleteHaVip</strong> operation is asynchronous. After you send the request, the system returns a request ID, but the HaVip is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the deletion status of the HaVip:<ul>
      * <li>If the HaVip is in the <strong>Deleting</strong> state, the HaVip is being deleted.</li>
-     * <li>If the specified HaVip cannot be found, the HaVip is deleted.</li>
+     * <li>If the specified HaVip cannot be queried, the HaVip is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteHaVip</strong> does not support concurrent deletion of the same HaVip.</li>
+     * <li>The <strong>DeleteHaVip</strong> operation does not support concurrent deletion of the same HaVip.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteHaVip  DeleteHaVipRequest
@@ -1750,13 +1760,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you delete an IPv4 gateway, make sure that the route table associated with the IPv4 gateway is disassociated.</li>
-     * <li>The <strong>DeleteIpv4Gateway</strong> operation is asynchronous. After you send a request, the system returns a <strong>RequestId</strong>, but the IPv4 gateway is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/407670.html">GetIpv4GatewayAttribute</a> to query the status of the IPv4 gateway.<ul>
+     * <li>Before deleting an IPv4 gateway, make sure that the route table associated with the IPv4 gateway is disassociated.</li>
+     * <li><strong>DeleteIpv4Gateway</strong> is an asynchronous operation. After you call this operation, the system returns a <strong>RequestId</strong>, but the IPv4 gateway is not immediately deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/407670.html">GetIpv4GatewayAttribute</a> to query the status of the IPv4 gateway.<ul>
      * <li>If the IPv4 gateway is in the <strong>Deleting</strong> state, the IPv4 gateway is being deleted.</li>
-     * <li>If the IPv4 gateway cannot be found, the IPv4 gateway is deleted.</li>
+     * <li>If the IPv4 gateway cannot be queried, the IPv4 gateway is deleted.</li>
      * </ul>
      * </li>
-     * <li>The <strong>DeleteIpv4Gateway</strong> operation does not support concurrent deletion of the same IPv4 gateway.</li>
+     * <li>You cannot call the <strong>DeleteIpv4Gateway</strong> operation to concurrently delete the same IPv4 gateway.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteIpv4Gateway  DeleteIpv4GatewayRequest
@@ -1767,12 +1777,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteIpv6EgressOnlyRule</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the IPv6 egress-only rule is not immediately deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/102208.html">DescribeIpv6EgressOnlyRules</a> to query the deletion status of the IPv6 egress-only rule:<ul>
-     * <li>If the IPv6 egress-only rule is in the <strong>Deleting</strong> state, the rule is being deleted.</li>
-     * <li>If the specified IPv6 egress-only rule cannot be found, the rule is deleted.</li>
+     * <li>The <strong>DeleteIpv6EgressOnlyRule</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the IPv6 egress-only rule is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/102208.html">DescribeIpv6EgressOnlyRules</a> operation to query the deletion status of the IPv6 egress-only rule:<ul>
+     * <li>If the IPv6 egress-only rule is in the <strong>Deleting</strong> state, the IPv6 egress-only rule is being deleted.</li>
+     * <li>If the specified IPv6 egress-only rule cannot be queried, the IPv6 egress-only rule is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteIpv6EgressOnlyRule</strong> does not support concurrent deletion of the same IPv6 egress-only rule.</li>
+     * <li>The <strong>DeleteIpv6EgressOnlyRule</strong> operation does not support concurrent deletion of the same IPv6 egress-only rule.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteIpv6EgressOnlyRule  DeleteIpv6EgressOnlyRuleRequest
@@ -1824,10 +1834,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteNatIp</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the NAT IP address is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/2522486.html">ListNatIps</a> to query the deletion status of the NAT IP address:</p>
+     * <p>The <strong>DeleteNatIp</strong> operation is asynchronous. The system returns a request ID, but the NAT IP address is not immediately deleted. The deletion task continues to run in the background. You can call the <a href="https://help.aliyun.com/document_detail/2522486.html">ListNatIps</a> operation to query the deletion status of the NAT IP address:</p>
      * <ul>
      * <li>If the NAT IP address is in the <strong>Deleting</strong> state, the NAT IP address is being deleted. In this state, you can only perform query operations.</li>
-     * <li>If the NAT IP address cannot be found, the NAT IP address is deleted.</li>
+     * <li>If the NAT IP address cannot be queried, the NAT IP address is deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteNatIp  DeleteNatIpRequest
@@ -1840,6 +1850,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteNatIpCidrResponse
      */
     CompletableFuture<DeleteNatIpCidrResponse> deleteNatIpCidr(DeleteNatIpCidrRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>The DeleteNatRateLimitRule operation is asynchronous. The system returns a request ID, but the rate limiting rule is not immediately deleted. The deletion task continues to run in the background.</p>
+     * <ul>
+     * <li>When the rate limiting rule is in the Deleting state, it indicates that the rule is being deleted. In this state, you can only perform query operations.</li>
+     * <li>When the returned list of rate limiting rules is empty, it indicates that the rule is deleted.
+     * You cannot delete a rate limiting rule that is in the Creating state.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteNatRateLimitRule  DeleteNatRateLimitRuleRequest
+     * @return DeleteNatRateLimitRuleResponse
+     */
+    CompletableFuture<DeleteNatRateLimitRuleResponse> deleteNatRateLimitRule(DeleteNatRateLimitRuleRequest request);
 
     /**
      * <b>description</b> :
@@ -1937,12 +1961,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteRouteTable</strong> is an asynchronous operation. After you call this operation, the system returns a request ID, but the custom route table is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87602.html">DescribeRouteTableList</a> to query the deletion status of the custom route table:<ul>
+     * <li>The <strong>DeleteRouteTable</strong> operation is asynchronous. After you send the request, the system returns a request ID, but the custom route table is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/87602.html">DescribeRouteTableList</a> operation to query the deletion status of the custom route table:<ul>
      * <li>If the custom route table is in the <strong>Deleting</strong> state, the custom route table is being deleted.</li>
      * <li>If the specified custom route table cannot be found, the custom route table is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteRouteTable</strong> does not support concurrent deletion of custom route tables in the same VPC.</li>
+     * <li>The <strong>DeleteRouteTable</strong> operation does not support concurrent deletion of custom route tables in the same VPC.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteRouteTable  DeleteRouteTableRequest
@@ -1967,10 +1991,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke this operation to delete a router interface, take note of the following items: </p>
+     * <p>When you call this operation to delete a vRouter interface, take note of the following items: </p>
      * <ul>
-     * <li>You can delete only router interfaces that are in the <strong>Idle</strong> or <strong>Inactive</strong> state. </li>
-     * <li>Before you delete a router interface, delete all custom route entries that point to it.</li>
+     * <li>You can delete only vRouter interfaces that are in the <strong>Idle</strong> or <strong>Inactive</strong> state. </li>
+     * <li>Before deleting a vRouter interface, delete all custom routing entries that point to it.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteRouterInterface  DeleteRouterInterfaceRequest
@@ -1980,11 +2004,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteSnatEntry</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the SNAT entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> to query the status of the SNAT entry:</p>
+     * <p>The <strong>DeleteSnatEntry</strong> operation is asynchronous. The system returns a request ID, but the SNAT entry is not immediately deleted. The deletion task continues to run in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</p>
      * <ul>
      * <li>If the SNAT entry is in the <strong>Deleting</strong> state, the SNAT entry is being deleted. In this state, you can only perform query operations.</li>
-     * <li>If the returned SNAT entry list is empty, the SNAT entry is deleted.
-     * If a SNAT entry in the SNAT table is in the <strong>Pending</strong> state, you cannot delete SNAT entries from the SNAT table.</li>
+     * <li>If the returned list of SNAT entries is empty, the SNAT entry is deleted.
+     * If a SNAT entry in the SNAT table is in the <strong>Pending</strong> state, you cannot delete SNAT entries in the SNAT table.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteSnatEntry  DeleteSnatEntryRequest
@@ -2033,12 +2057,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteTrafficMirrorFilter</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the traffic mirror filter is not yet deleted. The deletion task runs in the background. You can invoke <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> to query the deletion status of the traffic mirror filter:<ul>
+     * <li>The <strong>DeleteTrafficMirrorFilter</strong> operation is asynchronous. After you invoke this operation, the system returns a request ID, but the traffic mirror filter is not immediately deleted. The deletion task is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> operation to query the deletion status of the traffic mirror filter:<ul>
      * <li>If the traffic mirror filter is in the <strong>Deleting</strong> state, the traffic mirror filter is being deleted.</li>
      * <li>If the specified traffic mirror filter cannot be found, the traffic mirror filter is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteTrafficMirrorFilter</strong> does not support concurrent deletion of the same traffic mirror filter.</li>
+     * <li>The <strong>DeleteTrafficMirrorFilter</strong> operation does not support concurrent deletion of the same traffic mirror filter.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteTrafficMirrorFilter  DeleteTrafficMirrorFilterRequest
@@ -2049,12 +2073,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteTrafficMirrorFilterRules</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the inbound or outbound rules of the traffic mirror filter have not been deleted yet. The deletion task is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> to query the deletion status of the inbound or outbound rules of the traffic mirror filter:<ul>
+     * <li>The <strong>DeleteTrafficMirrorFilterRules</strong> operation is asynchronous. After you send the request, the system returns a request ID, but the inbound or outbound rules of the traffic mirror filter are not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> operation to query the deletion status of the inbound or outbound rules of the traffic mirror filter:<ul>
      * <li>If the inbound or outbound rules of the traffic mirror filter are in the <strong>Deleting</strong> state, the rules are being deleted.</li>
-     * <li>If the specified inbound or outbound rules of the traffic mirror filter cannot be found, the rules have been deleted.</li>
+     * <li>If the specified inbound or outbound rules of the traffic mirror filter cannot be queried, the rules are deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteTrafficMirrorFilterRules</strong> does not support concurrent deletion of inbound or outbound rules of the same traffic mirror filter.</li>
+     * <li>The <strong>DeleteTrafficMirrorFilterRules</strong> operation does not support concurrent deletion of the inbound or outbound rules of the same traffic mirror filter.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteTrafficMirrorFilterRules  DeleteTrafficMirrorFilterRulesRequest
@@ -2080,14 +2104,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation to delete a vSwitch, take note of the following items: </p>
+     * <p>When you call this operation to delete a vSwitch, take note of the following items: </p>
      * <ul>
-     * <li>Before deleting a vSwitch, release or move all resources in the VPC, including vSwitches, cloud service instances, router interfaces, and HaVips.  </li>
+     * <li>Before you delete a vSwitch, you must release or remove all resources in the VPC, including vSwitches, cloud service instances, router interfaces, and high-availability virtual IP addresses (HaVips).  </li>
      * <li>Only vSwitches in the <strong>Available</strong> state can be deleted.  </li>
-     * <li>A vSwitch cannot be deleted if the VPC to which it belongs is creating or deleting a vSwitch or route. </li>
-     * <li>The <strong>DeleteVSwitch</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the vSwitch is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the deletion status of the vSwitch:<ul>
+     * <li>You cannot delete a vSwitch if the VPC to which the vSwitch belongs is creating or deleting vSwitches or routes. </li>
+     * <li>The <strong>DeleteVSwitch</strong> operation is asynchronous. The system returns a request ID, but the vSwitch is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the deletion status of the vSwitch:<ul>
      * <li>If the vSwitch is in the <strong>Pending</strong> state, the vSwitch is being deleted.</li>
-     * <li>If the specified vSwitch cannot be found, the vSwitch is deleted.</li>
+     * <li>If the specified vSwitch cannot be queried, the vSwitch is deleted.</li>
      * </ul>
      * </li>
      * <li>The <strong>DeleteVSwitch</strong> operation does not support concurrent deletion of the same vSwitch.</li>
@@ -2101,10 +2125,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you invoke this operation to delete a reserved vSwitch CIDR block, make sure that all prefix CIDR blocks allocated from the reserved CIDR block to elastic network interfaces (ENIs) are deleted. If any exist, first invoke <a href="https://help.aliyun.com/document_detail/85919.html">UnassignPrivateIpAddresses</a> or <a href="https://help.aliyun.com/document_detail/98611.html">UnassignIpv6Addresses</a> to release the IPv4 or IPv6 addresses of the ENI.</li>
-     * <li><strong>DeleteVSwitchCidrReservation</strong> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the reserved vSwitch CIDR block is not yet deleted. The background task is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the deletion status of the reserved vSwitch CIDR block:<ul>
-     * <li>If the reserved vSwitch CIDR block is in the <strong>Releasing</strong> state, the reserved vSwitch CIDR block is being released.</li>
-     * <li>If the reserved vSwitch CIDR block is in the <strong>Released</strong> state, the reserved vSwitch CIDR block is released.</li>
+     * <li>Before you call this operation to delete a reserved CIDR block for a vSwitch, ensure that all prefix CIDR blocks allocated from this reserved CIDR block to elastic network interfaces (ENIs) are deleted. If any exist, first call the <a href="https://help.aliyun.com/document_detail/85919.html">UnassignPrivateIpAddresses</a> or <a href="https://help.aliyun.com/document_detail/98611.html">UnassignIpv6Addresses</a> operation to release the IPv4 or IPv6 addresses of the ENIs.</li>
+     * <li>The <strong>DeleteVSwitchCidrReservation</strong> operation is asynchronous. The system returns an instance ID, but the reserved CIDR block for the vSwitch is not immediately deleted and the system background task is still in progress. You can call the <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> operation to query the deletion status of the reserved CIDR block for the vSwitch:<ul>
+     * <li>If the reserved CIDR block for the vSwitch is in the <strong>Releasing</strong> state, it is being released.</li>
+     * <li>If the reserved CIDR block for the vSwitch is in the <strong>Released</strong> state, it is released.</li>
      * </ul>
      * </li>
      * </ul>
@@ -2138,11 +2162,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call the DeleteVirtualBorderRouter operation to delete a VBR instance, note the following: </p>
+     * <p>Before you call the DeleteVirtualBorderRouter operation to delete a VBR, note the following limits: </p>
      * <ul>
-     * <li>Before deleting a VBR instance, you must delete all router interfaces on the VBR instance. </li>
-     * <li>You can delete only VBR instances in the <strong>unconfirmed</strong>, <strong>active</strong>, or <strong>terminated</strong> state. </li>
-     * <li>A VBR instance owned by another account can be deleted by the Express Connect circuit owner only when the VBR instance is in the <strong>unconfirmed</strong> state.</li>
+     * <li>Before you delete a VBR, you must delete all router interfaces on the VBR. </li>
+     * <li>You can delete only VBRs that are in the <strong>unconfirmed</strong>, <strong>active</strong>, or <strong>terminated</strong> state. </li>
+     * <li>A VBR that belongs to another account can be deleted by the owner of the Express Connect circuit only when the VBR is in the <strong>unconfirmed</strong> state.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteVirtualBorderRouter  DeleteVirtualBorderRouterRequest
@@ -2203,12 +2227,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteVpnConnection</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the IPsec-VPN connection:<ul>
-     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the IPsec-VPN connection is being deleted.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the IPsec-VPN connection is deleted.</li>
+     * <li>The <strong>DeleteVpnConnection</strong> operation is asynchronous. After the system returns a request ID, the IPsec-VPN connection is not immediately deleted, and the deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> to query the status of the VPN gateway and determine the deletion status of the IPsec-VPN connection:<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the IPsec-VPN connection is being deleted.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the IPsec-VPN connection is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteVpnConnection</strong> does not support concurrent deletion of IPsec-VPN connections under the same VPN gateway.<blockquote>
+     * <li>The <strong>DeleteVpnConnection</strong> operation does not support concurrent deletion of specified IPsec-VPN connections under the same VPN gateway.<blockquote>
      * <p>After the IPsec-VPN connection is deleted, the connection between the on-premises data center and Alibaba Cloud is interrupted.</p>
      * </blockquote>
      * </li>
@@ -2233,12 +2257,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteVpnPbrRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the policy-based route is not yet deleted. The deletion node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the deletion status of the policy-based routing:<ul>
+     * <li>The <strong>DeleteVpnPbrRouteEntry</strong> operation is asynchronous. The system returns a request ID, but the policy-based routing is not immediately deleted. The deletion node continues in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the VPN gateway instance status and determine the deletion status of the policy-based routing:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the policy-based routing is being deleted.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based routing is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteVpnPbrRouteEntry</strong> does not support concurrent deletion of policy-based routing for the same VPN gateway instance.</li>
+     * <li>The <strong>DeleteVpnPbrRouteEntry</strong> operation does not support concurrent deletion of policy-based routing under the same VPN gateway instance.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteVpnPbrRouteEntry  DeleteVpnPbrRouteEntryRequest
@@ -2249,12 +2273,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteVpnRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway, and determine the deletion status of the VPN destination routing:<ul>
-     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the VPN destination route is being deleted.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the VPN destination route is deleted.</li>
+     * <li>The <strong>DeleteVpnRouteEntry</strong> operation is asynchronous. The system returns a request ID, but the VPN destination routing is not immediately deleted. The deletion node continues in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the VPN gateway instance status and determine the deletion status of the VPN destination routing:<ul>
+     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the VPN destination routing is being deleted.</li>
+     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the VPN destination routing is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteVpnRouteEntry</strong> does not support concurrent deletion of VPN destination routes for the same VPN gateway.</li>
+     * <li>The <strong>DeleteVpnRouteEntry</strong> operation does not support concurrent deletion of VPN destination routing under the same VPN gateway.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteVpnRouteEntry  DeleteVpnRouteEntryRequest
@@ -2328,7 +2352,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries information about EIPs created in a specified region, including the maximum bandwidth, billing method, and the type of instance currently attached to each EIP. If you frequently perform deep paging or page skipping, the <strong>Throttling.DeepPageSkip</strong> error code may be returned. Reduce the query frequency or use sequential pagination.</p>
+     * <p>This operation queries the information about elastic IP addresses (EIPs) created in a specified region, including the peak bandwidth, billing method, and currently attached instance type. If you frequently skip pages during deep paging, the <strong>Throttling.DeepPageSkip</strong> error code may be returned. Reduce the query frequency or use sequential paging.</p>
      * 
      * @param request the request parameters of DescribeEipAddresses  DescribeEipAddressesRequest
      * @return DescribeEipAddressesResponse
@@ -2337,7 +2361,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only EIPs that are associated with secondary elastic network interfaces (ENIs) in multi-EIP-to-ENI mode are supported.</p>
+     * <p>You can query the gateway and subnet mask information only for EIPs that are associated with secondary elastic network interfaces (ENIs) in multi-EIP-to-ENI mode.</p>
      * 
      * @param request the request parameters of DescribeEipGatewayInfo  DescribeEipGatewayInfoRequest
      * @return DescribeEipGatewayInfoResponse
@@ -2346,7 +2370,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For a better experience when retrieving monitoring data, use the DescribeMetricList operation provided by CloudMonitor to query EIP-related data. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a> and <a href="https://help.aliyun.com/document_detail/162874.html">EIP-related metrics</a>.</p>
+     * <p>To improve the experience of obtaining monitoring data, use the unified DescribeMetricList operation provided by CloudMonitor to query EIP-related data. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a> and <a href="https://help.aliyun.com/document_detail/162874.html">EIP-related data</a>.</p>
      * 
      * @param request the request parameters of DescribeEipMonitorData  DescribeEipMonitorDataRequest
      * @return DescribeEipMonitorDataResponse
@@ -2492,8 +2516,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeNatGatewayAssociateNetworkInterfacesResponse> describeNatGatewayAssociateNetworkInterfaces(DescribeNatGatewayAssociateNetworkInterfacesRequest request);
 
     /**
+     * @param request the request parameters of DescribeNatGatewayCapacityReservation  DescribeNatGatewayCapacityReservationRequest
+     * @return DescribeNatGatewayCapacityReservationResponse
+     */
+    CompletableFuture<DescribeNatGatewayCapacityReservationResponse> describeNatGatewayCapacityReservation(DescribeNatGatewayCapacityReservationRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>This operation allows you to query the details of Internet NAT gateways or VPC NAT gateways. In this topic, &quot;NAT gateway&quot; refers to both types without distinction.</p>
+     * <p>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types unless otherwise specified.</p>
      * 
      * @param request the request parameters of DescribeNatGateways  DescribeNatGatewaysRequest
      * @return DescribeNatGatewaysResponse
@@ -2529,7 +2559,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You cannot call the <strong>DescribePublicIpAddress</strong> operation to query the range of public IP addresses in the classic network.</p>
+     * <p>You cannot use the <strong>DescribePublicIpAddress</strong> operation to query the range of public IP addresses in the classic network.</p>
      * 
      * @param request the request parameters of DescribePublicIpAddress  DescribePublicIpAddressRequest
      * @return DescribePublicIpAddressResponse
@@ -2544,7 +2574,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call <a href="https://help.aliyun.com/document_detail/36013.html">DeleteRouteEntry</a> to delete a route, you can call this operation to query the next hop information of the route that you want to delete.</p>
+     * <p>Before you call the <a href="https://help.aliyun.com/document_detail/36013.html">DeleteRouteEntry</a> operation to delete a route, you can call this operation to query the next hop information of the route to be deleted.</p>
      * 
      * @param request the request parameters of DescribeRouteEntryList  DescribeRouteEntryListRequest
      * @return DescribeRouteEntryListResponse
@@ -2706,7 +2736,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>DescribeVpcs</strong> operation may return the <strong>Throttling.DeepPageSkip</strong> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</p>
+     * <p>The <strong>DescribeVpcs</strong> operation may return the <strong>Throttling.DeepPageSkip</strong> error code during frequent deep paging and page skipping. Reduce the query frequency or use sequential paging.</p>
      * 
      * @param request the request parameters of DescribeVpcs  DescribeVpcsRequest
      * @return DescribeVpcsResponse
@@ -2788,12 +2818,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DetachDhcpOptionsSetFromVpc</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the DHCP options set is not yet disassociated. The disassociation task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> to query the disassociation status of the DHCP options set:<ul>
+     * <li>The <strong>DetachDhcpOptionsSetFromVpc</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the DHCP options set is not immediately disassociated. The disassociation task continues to run in the background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the disassociation status of the DHCP options set:<ul>
      * <li>If the DHCP options set is in the <strong>Pending</strong> state, the DHCP options set is being disassociated.</li>
      * <li>If the DHCP options set is in the <strong>UnUsed</strong> state, the DHCP options set is disassociated.</li>
      * </ul>
      * </li>
-     * <li><strong>DetachDhcpOptionsSetFromVpc</strong> does not support concurrent disassociation of DHCP options sets from the same VPC.</li>
+     * <li>The <strong>DetachDhcpOptionsSetFromVpc</strong> operation does not support concurrent disassociation of DHCP options sets in the same VPC.</li>
      * </ul>
      * 
      * @param request the request parameters of DetachDhcpOptionsSetFromVpc  DetachDhcpOptionsSetFromVpcRequest
@@ -2804,9 +2834,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If the IPsec-VPN connection is in single-tunnel mode, the request parameter <code>VpnConnectionIds</code> is required when you call the <strong>DiagnoseVpnConnections</strong> operation.</li>
-     * <li>If the IPsec-VPN connection is in dual-tunnel mode, the request parameter <code>TunnelIds</code> is required when you call the <strong>DiagnoseVpnConnections</strong> operation.</li>
-     * <li>After you call the <strong>DiagnoseVpnConnections</strong> operation, if the current IPsec-VPN connection has issues, the operation returns the corresponding error code (the <strong>FailedReasonCode</strong> response parameter) and log information (the <strong>SourceLog</strong> response parameter). You can troubleshoot issues based on the error code and log information. For more information, see <a href="https://help.aliyun.com/document_detail/477862.html">Common errors and troubleshooting methods for IPsec-VPN connections</a>.</li>
+     * <li>If the IPsec-VPN connection uses the single-tunnel mode, the VpnConnectionIds request parameter is required when you call the <strong>DiagnoseVpnConnections</strong> operation.</li>
+     * <li>If the IPsec-VPN connection uses the dual-tunnel mode, the TunnelIds request parameter is required when you call the <strong>DiagnoseVpnConnections</strong> operation.</li>
+     * <li>After you call the <strong>DiagnoseVpnConnections</strong> operation, if the IPsec-VPN connection has issues, the operation returns the corresponding error code (the <strong>FailedReasonCode</strong> response parameter) and log information (the <strong>SourceLog</strong> response parameter). You can troubleshoot the issues based on the error code and log information. For more information about the troubleshooting methods, see <a href="https://help.aliyun.com/document_detail/477862.html">Common errors and troubleshooting methods for IPsec-VPN connections</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DiagnoseVpnConnections  DiagnoseVpnConnectionsRequest
@@ -2833,8 +2863,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you dissociate a key that is in the Associated state, the most recently effective key is automatically associated.</li>
-     * <li>If you dissociate a key that is in the Disassociated state, the key is deleted.</li>
+     * <li>If you disassociate a key that is currently in the Associated state, the most recently effective key is automatically associated.</li>
+     * <li>If you disassociate a key that is currently in the Disassociated state, the key is deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of DisassociateMacSecKey  DisassociateMacSecKeyRequest
@@ -2857,12 +2887,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DissociateVpnGatewayWithCertificate</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the VPN gateway has not yet been dissociated from the SSL certificate. The dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and confirm the dissociation status of the SSL certificate:<ul>
+     * <li>The <strong>DissociateVpnGatewayWithCertificate</strong> operation is asynchronous. The system returns a request ID, but the VPN gateway is not immediately dissociated from the SSL certificate. The dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway and check the dissociation status of the SSL certificate:<ul>
      * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL certificate is being dissociated.</li>
      * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL certificate is dissociated.</li>
      * </ul>
      * </li>
-     * <li><strong>DissociateVpnGatewayWithCertificate</strong> does not support concurrent dissociation of SSL certificates from the same VPN gateway.</li>
+     * <li>The <strong>DissociateVpnGatewayWithCertificate</strong> operation does not support concurrent dissociation of SSL certificates for the same VPN gateway.</li>
      * </ul>
      * 
      * @param request the request parameters of DissociateVpnGatewayWithCertificate  DissociateVpnGatewayWithCertificateRequest
@@ -2935,7 +2965,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic does not distinguish between the two types.</p>
+     * <p>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both Internet NAT gateways and VPC NAT gateways.</p>
      * 
      * @param request the request parameters of GetNatGatewayAttribute  GetNatGatewayAttributeRequest
      * @return GetNatGatewayAttributeResponse
@@ -2945,7 +2975,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
-     * <p>You can call the GetPhysicalConnectionServiceStatus operation to check whether outbound traffic billing is enabled for the current account. For more information about outbound traffic billing, see <a href="https://help.aliyun.com/document_detail/274385.html">Enable outbound traffic billing</a> and <a href="https://help.aliyun.com/document_detail/54582.html">Billing</a>.</p>
+     * <p>You can call the GetPhysicalConnectionServiceStatus operation to check whether outbound data transfer billing is enabled for the current account. For more information about outbound data transfer billing, see <a href="https://help.aliyun.com/document_detail/274385.html">Enable outbound data transfer billing</a> and <a href="https://help.aliyun.com/document_detail/54582.html">Billing</a>.</p>
      * 
      * @param request the request parameters of GetPhysicalConnectionServiceStatus  GetPhysicalConnectionServiceStatusRequest
      * @return GetPhysicalConnectionServiceStatusResponse
@@ -2960,7 +2990,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves information about a route target group instance.</p>
+     * <p>Retrieves the details of a route target group.</p>
      * 
      * @param request the request parameters of GetRouteTargetGroup  GetRouteTargetGroupRequest
      * @return GetRouteTargetGroupResponse
@@ -3015,11 +3045,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you attach a network instance that belongs to a different Alibaba Cloud account, you must grant permissions to the CEN instance under the Alibaba Cloud account to which the network instance belongs.<blockquote>
-     * <p>The <strong>GrantInstanceToCen</strong> operation is a VPC API operation. Therefore, you must use the <code>vpc.aliyuncs.com</code> endpoint to call this operation. The API version is <code>2016-04-28</code>. </p>
+     * <li>Before attaching a network instance that belongs to another Alibaba Cloud account, you must authorize the CEN instance in the account to which the network instance belongs.<blockquote>
+     * <p><strong>GrantInstanceToCen</strong> is a VPC API operation. To call this operation, you must use the <code>vpc.aliyuncs.com</code> endpoint. The API version is <code>2016-04-28</code>. </p>
      * </blockquote>
      * </li>
-     * <li>The <strong>GrantInstanceToCen</strong> operation does not support concurrent calls to grant permissions to a CEN instance for the same VPC, VBR, or CCN.</li>
+     * <li>The <strong>GrantInstanceToCen</strong> operation does not support concurrent authorization for a CEN instance within the same VPC, VBR, or CCN.</li>
      * </ul>
      * 
      * @param request the request parameters of GrantInstanceToCen  GrantInstanceToCenRequest
@@ -3073,7 +3103,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the zones available for Internet NAT gateway or VPC NAT gateway resources. In this topic, &quot;NAT gateway&quot; refers to both types without distinction.</p>
+     * <p>This operation queries the available zones for Internet NAT gateways or VPC NAT gateways. The term NAT gateway in this document does not distinguish between the two types.</p>
      * 
      * @param request the request parameters of ListEnhanhcedNatGatewayAvailableZones  ListEnhanhcedNatGatewayAvailableZonesRequest
      * @return ListEnhanhcedNatGatewayAvailableZonesResponse
@@ -3154,7 +3184,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries a list of route target groups.</p>
+     * <p>Queries the list of route target groups.</p>
      * 
      * @param request the request parameters of ListRouteTargetGroups  ListRouteTargetGroupsRequest
      * @return ListRouteTargetGroupsResponse
@@ -3266,13 +3296,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>By calling the <strong>ModifyCommonBandwidthPackageIpBandwidth</strong> operation, you can flexibly allocate the maximum available bandwidth for each EIP added to an Internet Shared Bandwidth instance, preventing the bandwidth from being consumed by a single EIP.
-     * For example, if two EIPs are added to an 800 Mbps Internet Shared Bandwidth instance, you can set the maximum available bandwidth to 500 Mbps for the first EIP and 400 Mbps for the second EIP. After the configuration, the available bandwidth of the first EIP does not exceed 500 Mbps, and the available bandwidth of the second EIP does not exceed 400 Mbps.
-     * Before you begin:</p>
+     * <p>You can call the <strong>ModifyCommonBandwidthPackageIpBandwidth</strong> operation to flexibly allocate the maximum available bandwidth for each EIP added to an Internet Shared Bandwidth instance. This prevents a single EIP from continuously occupying the bandwidth of the Internet Shared Bandwidth instance.
+     * For example, if two EIPs are added to an Internet Shared Bandwidth instance with a bandwidth of 800 Mbps, you can set the maximum available bandwidth to 500 Mbps for the first EIP and 400 Mbps for the second EIP. After the settings are applied, the available bandwidth for the first EIP will not exceed 500 Mbps, and the available bandwidth for the second EIP will not exceed 400 Mbps.
+     * Before you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>This operation takes effect only when the EIP is associated with an ECS instance. The configuration does not take effect when the EIP is attached to a CLB instance, NAT gateway, secondary elastic network interface (ENI), or high-availability virtual IP address (HAVIP). This feature is not active in those scenarios.</li>
-     * <li>This operation is in public preview and can only be used through the API to set the maximum available bandwidth for an EIP that has been added to an Internet Shared Bandwidth instance. The console does not support this feature.</li>
-     * <li>This operation does not support concurrent requests to set the maximum available bandwidth for the same EIP.</li>
+     * <li>This operation takes effect only when you associate the EIP with an ECS instance. If the EIP is associated with a Classic Load Balancer (CLB) instance, a NAT gateway, a secondary elastic network interface controller (NIC), or a high-availability virtual IP address, this feature does not take effect.</li>
+     * <li>This operation is in public preview. You can only use this operation to set the maximum available bandwidth for an EIP added to an Internet Shared Bandwidth instance. This feature is not supported in the console.</li>
+     * <li>This operation does not support concurrent configuration of the maximum available bandwidth for the same EIP.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyCommonBandwidthPackageIpBandwidth  ModifyCommonBandwidthPackageIpBandwidthRequest
@@ -3300,12 +3330,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>When you call the <strong>ModifyCustomerGatewayAttribute</strong> operation, if the <strong>AuthKey</strong> parameter is not empty, this operation is asynchronous. The system returns the customer gateway information first, but the configuration has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the customer gateway configuration:<ul>
-     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the customer gateway configuration is being modified.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the customer gateway configuration has been modified.</li>
+     * <li>When you call the <strong>ModifyCustomerGatewayAttribute</strong> operation, if the <strong>AuthKey</strong> parameter is not empty, the operation is asynchronous. The system returns the information of the customer gateway, but the configuration of the customer gateway is not yet modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the modification status of the customer gateway configuration:<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the configuration of the customer gateway is being modified.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the configuration of the customer gateway is modified.</li>
      * </ul>
      * </li>
-     * <li>When you call the <strong>ModifyCustomerGatewayAttribute</strong> operation, if the <strong>AuthKey</strong> parameter is empty, this operation is synchronous.</li>
+     * <li>When you call the <strong>ModifyCustomerGatewayAttribute</strong> operation, if the <strong>AuthKey</strong> parameter is empty, the operation is synchronous.</li>
      * <li>The <strong>ModifyCustomerGatewayAttribute</strong> operation does not support concurrent modifications to the configuration of the same customer gateway.</li>
      * </ul>
      * 
@@ -3368,12 +3398,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyFlowLogAttribute</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the flow log has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<ul>
+     * <li>The <strong>ModifyFlowLogAttribute</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the flow log is not immediately modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> operation to query the modification status of the flow log:<ul>
      * <li>If the flow log is in the <strong>Modifying</strong> state, the flow log is being modified.</li>
-     * <li>If the flow log is in the <strong>Active</strong> or <strong>Inactive</strong> state, the flow log has been modified.</li>
+     * <li>If the flow log is in the <strong>Active</strong> or <strong>Inactive</strong> state, the flow log is modified.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyFlowLogAttribute</strong> does not support concurrent modifications to the same flow log.</li>
+     * <li>The <strong>ModifyFlowLogAttribute</strong> operation does not support concurrent modifications to the attributes of the same flow log.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyFlowLogAttribute  ModifyFlowLogAttributeRequest
@@ -3400,12 +3430,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyFullNatEntryAttribute</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the FULLNAT entry is not yet modified. The modification task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/348779.html">ListFullNatEntries</a> to query the modification status of the FULLNAT entry:<ul>
-     * <li>If the FULLNAT entry is in the <strong>Modifying</strong> state, the FULLNAT entry is being modified. In this state, you can only perform query operations.</li>
-     * <li>If the FULLNAT entry is in the <strong>Available</strong> state, the FULLNAT entry is modified.</li>
+     * <li><strong>ModifyFullNatEntryAttribute</strong> is an asynchronous operation. The system returns a request ID, but the FULLNAT entry is not immediately modified. The modification task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/348779.html">ListFullNatEntries</a> to query the modification status of the FULLNAT entry:<ul>
+     * <li>When the FULLNAT entry is in the <strong>Modifying</strong> state, the entry is being modified. In this state, you can only perform query operations.</li>
+     * <li>When the FULLNAT entry is in the <strong>Available</strong> state, the entry is modified.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyFullNatEntryAttribute</strong> does not support concurrent modifications of a specified FULLNAT entry within the same FULLNAT table.</li>
+     * <li>The <strong>ModifyFullNatEntryAttribute</strong> operation does not support concurrent modifications to the same FULLNAT entry.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyFullNatEntryAttribute  ModifyFullNatEntryAttributeRequest
@@ -3422,7 +3452,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This operation does not support modifying the bandwidth of a subscription Alibaba Cloud Global Accelerator (GA) instance.</p>
+     * <p>This operation does not support modifying the bandwidth of a subscription Global Accelerator instance.</p>
      * 
      * @param request the request parameters of ModifyGlobalAccelerationInstanceSpec  ModifyGlobalAccelerationInstanceSpecRequest
      * @return ModifyGlobalAccelerationInstanceSpecResponse
@@ -3493,7 +3523,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The NAT gateways queried by this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this topic is not specific to either type.</p>
+     * <p>The NAT gateways supported by this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types without distinction.</p>
      * 
      * @param request the request parameters of ModifyNatGatewayAttribute  ModifyNatGatewayAttributeRequest
      * @return ModifyNatGatewayAttributeResponse
@@ -3502,20 +3532,29 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the <a href="https://www.alibabacloud.com/help/en/nat-gateway/user-guide/nat-resource-reservation">billing methods</a> and <a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.77e72b1bK9GnAX#/nat/detail/nat_gw">pricing</a> of NAT Gateway. This operation supports creating, updating, and deleting resource reservations.</p>
+     * 
+     * @param request the request parameters of ModifyNatGatewayCapacityReservation  ModifyNatGatewayCapacityReservationRequest
+     * @return ModifyNatGatewayCapacityReservationResponse
+     */
+    CompletableFuture<ModifyNatGatewayCapacityReservationResponse> modifyNatGatewayCapacityReservation(ModifyNatGatewayCapacityReservationRequest request);
+
+    /**
+     * <b>description</b> :
      * <ul>
-     * <li>The <strong>ModifyNatGatewaySpec</strong> operation does not support downgrading the specification of a subscription Internet NAT gateway. Perform the downgrade in the console.</li>
-     * <li>When you call the <strong>ModifyNatGatewaySpec</strong> operation to upgrade the specification of a subscription Internet NAT gateway, an upgrade order is generated. Complete the payment in the Order Center for the upgrade to take effect.</li>
-     * <li>The <strong>ModifyNatGatewaySpec</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the specification change of the Internet NAT gateway is not yet complete because the task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2522327.html">DescribeNatGateways</a> to query the status of the Internet NAT gateway:<ul>
+     * <li>The <strong>ModifyNatGatewaySpec</strong> operation does not support downgrading the specifications of a subscription Internet NAT gateway. Perform the downgrade operation in the console.</li>
+     * <li>When you use the <strong>ModifyNatGatewaySpec</strong> operation to upgrade the specifications of a subscription Internet NAT gateway, an upgrade order is generated. Complete the payment in the User Center. After the payment is completed, the upgrade of the Internet NAT gateway succeeds.</li>
+     * <li>The <strong>ModifyNatGatewaySpec</strong> operation is asynchronous. The system returns a request ID, but the specification change of the Internet NAT gateway is not immediately completed. The specification change task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2522327.html">DescribeNatGateways</a> operation to query the status of the Internet NAT gateway:<ul>
      * <li>If the Internet NAT gateway is in the <strong>Modifying</strong> state, the specification change is in progress. In this state, you can only perform query operations.</li>
-     * <li>If the Internet NAT gateway is in the <strong>Available</strong> state, the specification change is complete.</li>
+     * <li>If the Internet NAT gateway is in the <strong>Available</strong> state, the specification change is completed.</li>
      * </ul>
      * </li>
-     * <li>The <strong>ModifyNatGatewaySpec</strong> operation does not support concurrent specification changes for NAT gateway instances that are billed by specification.
-     * Internet NAT gateways are available in different specifications. The specification of an Internet NAT gateway affects the maximum number of connections and the number of new connections per second for the SNAT feature, but does not affect data throughput. The following table describes the relationship between Internet NAT gateway specifications and SNAT performance.<table>
+     * <li>The <strong>ModifyNatGatewaySpec</strong> operation does not support concurrent modification of the specifications of NAT gateway instances that are billed by specification.
+     * Internet NAT gateways provide different specifications. The specifications of an Internet NAT gateway affect the maximum number of connections and the number of new connections per second for the SNAT feature, but do not affect data throughput. The following table describes the relationship between Internet NAT gateway specifications and SNAT performance.<table>
      * <thead>
      * <tr>
      * <th>Specification</th>
-     * <th>Maximum connections</th>
+     * <th>Maximum number of connections</th>
      * <th>New connections per second</th>
      * </tr>
      * </thead>
@@ -3559,6 +3598,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyNatIpCidrAttributeResponse> modifyNatIpCidrAttribute(ModifyNatIpCidrAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The ModifyNatRateLimitRule operation is asynchronous. The system returns a request ID, but the rate limit rule is not immediately modified. The modification task continues to run in the background.</p>
+     * <ul>
+     * <li>When the rate limit rule is in the Modifying state, the rule is being modified. In this state, you can only perform query operations.</li>
+     * <li>When the rate limit rule is in the Available state, the rule is modified.
+     * You cannot modify a rate limit rule that is in the Modifying state.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyNatRateLimitRule  ModifyNatRateLimitRuleRequest
+     * @return ModifyNatRateLimitRuleResponse
+     */
+    CompletableFuture<ModifyNatRateLimitRuleResponse> modifyNatRateLimitRule(ModifyNatRateLimitRuleRequest request);
+
+    /**
      * @param request the request parameters of ModifyNetworkAclAttributes  ModifyNetworkAclAttributesRequest
      * @return ModifyNetworkAclAttributesResponse
      */
@@ -3592,11 +3645,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>ModifyRouteTableAttributes</strong> operation does not support concurrent modifications to the attributes of the same route table, such as the name, description, or whether to receive dynamic routes.
+     * <p>The <strong>ModifyRouteTableAttributes</strong> operation does not support concurrent modifications to the attributes of the same route table, such as the name, description, or whether to accept dynamic routes.
      * When you call the <strong>ModifyRouteTableAttributes</strong> operation to enable or disable route propagation, note the following:</p>
      * <ul>
      * <li>Enabling or disabling route propagation is an asynchronous operation.</li>
-     * <li>The time required to enable or disable route propagation depends on the number of propagated routes.</li>
+     * <li>The completion time for enabling or disabling route propagation depends on the number of propagated routes.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyRouteTableAttributes  ModifyRouteTableAttributesRequest
@@ -3648,14 +3701,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
-     * <li>When you modify only the <strong>Name</strong> of the SSL-VPN server, this operation is synchronous. If you modify configurations other than <strong>Name</strong>, this operation is asynchronous.</li>
-     * <li>When the <strong>ModifySslVpnServer</strong> operation is asynchronous, the system returns a request ID but the configuration of the SSL-VPN server has not been modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<ul>
-     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the configuration of the SSL-VPN server is being modified.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the configuration of the SSL-VPN server has been modified.</li>
+     * <li>To enable two-factor authentication for an SSL server, make sure that the VPN gateway supports this feature. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
+     * <li>This operation is synchronous if you modify only the <strong>Name</strong> parameter. If you modify configurations other than <strong>Name</strong>, this operation is asynchronous.</li>
+     * <li>When the <strong>ModifySslVpnServer</strong> operation is asynchronous, the system returns a request ID, but the configurations of the SSL server are not yet modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway associated with the SSL server and check the modification status:<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the configurations of the SSL server are being modified.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the configurations of the SSL server are modified.</li>
      * </ul>
      * </li>
-     * <li>The <strong>ModifySslVpnServer</strong> operation does not support concurrent modifications to the SSL-VPN server configuration under the same VPN gateway.</li>
+     * <li>The <strong>ModifySslVpnServer</strong> operation does not support concurrent modification of SSL server configurations under the same VPN gateway.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifySslVpnServer  ModifySslVpnServerRequest
@@ -3696,7 +3749,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>ModifyVSwitchCidrReservationAttribute</strong> operation does not support concurrently modifying the name and description of a reserved CIDR block within the same vSwitch.</p>
+     * <p>The <strong>ModifyVSwitchCidrReservationAttribute</strong> operation does not support concurrent modifications to the name and description of a reserved CIDR block within the same vSwitch.</p>
      * 
      * @param request the request parameters of ModifyVSwitchCidrReservationAttribute  ModifyVSwitchCidrReservationAttributeRequest
      * @return ModifyVSwitchCidrReservationAttributeResponse
@@ -3721,13 +3774,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><strong>VlanId</strong> can be modified only by the owner of the Express Connect circuit.</p>
+     * <p>Only the owner of the Express Connect circuit can modify the <strong>VlanId</strong> parameter.</p>
      * <ul>
-     * <li>The same VLAN ID on the same Express Connect circuit cannot be used by two VBRs at the same time.</li>
-     * <li>A VBR that enters the <strong>terminated</strong> state automatically retains its VLAN ID for 7 days, during which other VBRs cannot use the VLAN ID. After 7 days, the VLAN ID can be used by other VBRs.</li>
-     * <li>For VBR instances owned by other accounts, you cannot configure <strong>LocalGatewayIp</strong>, <strong>PeerGatewayIp</strong>, or <strong>PeeringSubnetMask</strong>.</li>
+     * <li>The same VLAN ID under the same Express Connect circuit cannot be used by two VBRs at the same time.</li>
+     * <li>A VBR in the <strong>terminated</strong> state automatically retains its VLAN ID for 7 days, during which the VLAN ID cannot be used by other VBRs. After 7 days, the VLAN ID can be used by other VBRs.</li>
+     * <li>For VBR instances that belong to other accounts, you cannot configure the <strong>LocalGatewayIp</strong>, <strong>PeerGatewayIp</strong>, and <strong>PeeringSubnetMask</strong> parameters.</li>
      * <li><strong>PeeringSubnetMask</strong> supports 24 to 30 bits (255.255.255.0 to 255.255.255.252).</li>
-     * <li><strong>LocalGatewayIp</strong> and <strong>PeerGatewayIp</strong> must be in the same CIDR block. For example, LocalGatewayIp: 192.168.XX.XX, PeerGatewayIp: 192.168.XX.XX, PeeringSubnetMask: 255.255.255.248.</li>
+     * <li><strong>LocalGatewayIp</strong> and <strong>PeerGatewayIp</strong> must be in the same CIDR block. For example, LocalGatewayIp: 192.168.XX.XX, PeerGatewayIp: 192.168.XX.XX, and PeeringSubnetMask: 255.255.255.248.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyVirtualBorderRouterAttribute  ModifyVirtualBorderRouterAttributeRequest
@@ -3756,13 +3809,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyVpcPrefixList</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the prefix list instance configuration has not been modified yet. The modification node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/311535.html">ListPrefixLists</a> to query the status of the prefix list instance.<ul>
-     * <li>If the prefix list instance is in the <strong>Modifying</strong> state, the configuration is being modified.</li>
-     * <li>If the prefix list instance is in the <strong>Created</strong> state, the configuration has been modified.</li>
-     * <li>After the configuration is modified, you can invoke <a href="https://help.aliyun.com/document_detail/445478.html">GetVpcPrefixListAssociations</a> to query the associations of the prefix list and check whether the associated resources use the updated Classless Inter-Domain Routing blocks. If the <strong>Status</strong> parameter of the prefix list association is <strong>Created</strong>, the associated resources use the updated Classless Inter-Domain Routing blocks.</li>
+     * <li>The <strong>ModifyVpcPrefixList</strong> operation is asynchronous. After you invoke this operation, the system returns a request ID, but the configuration of the prefix list instance is not immediately modified. The modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/311535.html">ListPrefixLists</a> operation to query the status of the prefix list instance.<ul>
+     * <li>If the prefix list instance is in the <strong>Modifying</strong> state, the configuration of the prefix list instance is being modified.</li>
+     * <li>If the prefix list instance is in the <strong>Created</strong> state, the modification of the prefix list instance configuration is complete.</li>
+     * <li>After the configuration of the prefix list instance is modified, you can invoke the <a href="https://help.aliyun.com/document_detail/445478.html">GetVpcPrefixListAssociations</a> operation to query the associations of the prefix list and check whether the associated resources use the modified Classless Inter-Domain Routing. If the association status of the prefix list, which is indicated by the <strong>Status</strong> parameter, is <strong>Created</strong>, the associated resources use the modified Classless Inter-Domain Routing.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyVpcPrefixList</strong> does not support concurrent modifications to the same prefix list instance.</li>
+     * <li>The <strong>ModifyVpcPrefixList</strong> operation does not support concurrent modifications to the configuration of the same prefix list.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyVpcPrefixList  ModifyVpcPrefixListRequest
@@ -3792,11 +3845,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>To modify a dual-tunnel mode IPsec-VPN connection, the <code>ModifyVpnConnectionAttribute</code> operation supports the following request parameters in addition to the required parameters:
+     * <li>To modify an IPsec-VPN connection in dual-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the ModifyVpnConnectionAttribute operation:
      *  <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>AutoConfigRoute</strong>, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.</li>
-     * <li>To modify a single-tunnel mode IPsec-VPN connection, the <code>ModifyVpnConnectionAttribute</code> operation supports the following request parameters in addition to the required parameters:
+     * <li>To modify an IPsec-VPN connection in single-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the ModifyVpnConnectionAttribute operation:
      *    <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>AutoConfigRoute</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, and <strong>RemoteCaCertificate</strong>.</li>
-     * <li>The <strong>ModifyVpnConnectionAttribute</strong> operation is asynchronous. After a request is sent, the system returns a request ID, but the configuration of the IPsec-VPN connection has not been modified yet. The modification node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:</li>
+     * <li>The ModifyVpnConnectionAttribute operation is asynchronous. After you send the request, the system returns a request ID, but the configurations of the IPsec-VPN connection are not immediately modified. The modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway instance and check the modification status of the IPsec-VPN connection configurations:<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the configurations of the IPsec-VPN connection are being modified.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the configurations of the IPsec-VPN connection are modified.</li>
+     * </ul>
+     * </li>
+     * <li>The ModifyVpnConnectionAttribute operation does not support concurrent modification of IPsec-VPN connection configurations under the same VPN gateway.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyVpnConnectionAttribute  ModifyVpnConnectionAttributeRequest
@@ -3807,12 +3865,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyVpnGatewayAttribute</strong> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration of the VPN gateway has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<ul>
+     * <li>The <strong>ModifyVpnGatewayAttribute</strong> operation is asynchronous. The system returns the information of the VPN gateway before the configuration is modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the modification status of the VPN gateway configuration:<ul>
      * <li>If the VPN gateway is in the <strong>updating</strong> state, the configuration is being modified.</li>
-     * <li>If the VPN gateway is in the <strong>active</strong> state, the configuration has been modified.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the configuration is modified.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyVpnGatewayAttribute</strong> does not support concurrent modifications to the configuration of the same VPN gateway.</li>
+     * <li>The <strong>ModifyVpnGatewayAttribute</strong> operation does not support concurrent modifications to the configuration of the same VPN gateway.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyVpnGatewayAttribute  ModifyVpnGatewayAttributeRequest
@@ -3823,21 +3881,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The <strong>ModifyVpnPbrRouteEntryAttribute</strong> operation is used to modify both the weight and policy priority of a policy-based route that supports policy priority.<ul>
-     * <li>If you only need to modify the weight of a policy-based route, call the <a href="https://help.aliyun.com/document_detail/127249.html">ModifyVpnPbrRouteEntryWeight</a> operation.</li>
-     * <li>If you only need to modify the policy priority of a policy-based route, call the <a href="https://help.aliyun.com/document_detail/466870.html">ModifyVpnPbrRouteEntryPriority</a> operation.</li>
-     * <li>If your policy-based route does not support policy priority, you can only call the <a href="https://help.aliyun.com/document_detail/127249.html">ModifyVpnPbrRouteEntryWeight</a> operation to modify the weight of the policy-based route.<blockquote>
-     * <p>For VPN gateway instances that support dual-tunnel mode IPsec-VPN connections, you can only call this operation to modify the priority of policy-based routes.</p>
+     * <li>The <strong>ModifyVpnPbrRouteEntryAttribute</strong> operation is used to modify both the weight and policy priority of policy-based routing that supports policy priority.<ul>
+     * <li>To modify only the weight of a policy-based route, call the <a href="https://help.aliyun.com/document_detail/127249.html">ModifyVpnPbrRouteEntryWeight</a> operation.</li>
+     * <li>To modify only policy priority of a policy-based route, call the <a href="https://help.aliyun.com/document_detail/466870.html">ModifyVpnPbrRouteEntryPriority</a> operation.</li>
+     * <li>If your policy-based route does not support route priorities, you can only call the <a href="https://help.aliyun.com/document_detail/127249.html">ModifyVpnPbrRouteEntryWeight</a> operation to modify the weight of the policy-based route.<blockquote>
+     * <p>For VPN gateway instances that support dual-tunnel IPsec-VPN connections, you can only call this operation to modify policy priority of a policy-based route.</p>
      * </blockquote>
      * </li>
      * </ul>
      * </li>
-     * <li>The <strong>ModifyVpnPbrRouteEntryAttribute</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the policy-based route has not been modified yet. The modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the modification status of the policy-based routing:<ul>
-     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the policy-based route is being modified.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based route has been modified.</li>
+     * <li>The <strong>ModifyVpnPbrRouteEntryAttribute</strong> operation is asynchronous. After you invoke this operation, the system returns a request ID, but the policy-based routing is not immediately modified. The modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway and check the modification status of the policy-based routing:<ul>
+     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the policy-based routing is being modified.</li>
+     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based routing is modified.</li>
      * </ul>
      * </li>
-     * <li>The <strong>ModifyVpnPbrRouteEntryAttribute</strong> operation does not support concurrent modifications of policy-based routes on the same VPN gateway instance.</li>
+     * <li>The <strong>ModifyVpnPbrRouteEntryAttribute</strong> operation does not support concurrent modifications of policy-based routing under the same VPN gateway instance.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyVpnPbrRouteEntryAttribute  ModifyVpnPbrRouteEntryAttributeRequest
@@ -3848,12 +3906,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyVpnPbrRouteEntryPriority</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the policy-based routing has not been modified yet because the modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway and determine the modification status of the policy-based routing:<ul>
+     * <li>The <strong>ModifyVpnPbrRouteEntryPriority</strong> operation is asynchronous. The system returns a request ID, but the policy-based routing is not yet modified. The modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway and determine the modification status of the policy-based routing:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the policy-based routing is being modified.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based routing has been modified.</li>
+     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based routing is modified.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyVpnPbrRouteEntryPriority</strong> does not support concurrent modifications of policy-based routing on the same VPN gateway instance.</li>
+     * <li>The <strong>ModifyVpnPbrRouteEntryPriority</strong> operation does not support concurrent modification of policy-based routing under the same VPN gateway instance.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyVpnPbrRouteEntryPriority  ModifyVpnPbrRouteEntryPriorityRequest
@@ -3864,16 +3922,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation applies only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if this operation is called successfully.</p>
+     * <p>This operation is applicable only to VPN gateway instances that support single-tunnel IPsec-VPN connections. For VPN gateway instances that support dual-tunnel IPsec-VPN connections, the modified weight does not take effect even if the operation is successful.</p>
      * </blockquote>
      * <ul>
-     * <li>If active/standby policy-based routing exists on a VPN gateway instance and you want to modify the weight of the active policy-based route, delete the standby policy-based route first, modify the active policy-based route, and then reconfigure the standby policy-based route. If you want to modify the weight of the standby policy-based route, delete the active policy-based route first, modify the standby policy-based route, and then reconfigure the active policy-based route. To delete a policy-based route, see <a href="https://help.aliyun.com/document_detail/2526956.html">DeleteVpnPbrRouteEntry</a>.</li>
-     * <li><strong>ModifyVpnPbrRouteEntryWeight</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the node in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway, to determine the modification status of the policy-based routing:<ul>
+     * <li>In scenarios where active and standby policy-based routing exists under a VPN gateway instance, if you want to modify the weight of the active policy-based routing, you must first delete the standby policy-based routing. After the active policy-based routing is modified, reconfigure the standby policy-based routing. If you want to modify the weight of the standby policy-based routing, you must first delete the active policy-based routing. After the standby policy-based routing is modified, reconfigure the active policy-based routing. To delete policy-based routing, refer to <a href="https://help.aliyun.com/document_detail/2526956.html">DeleteVpnPbrRouteEntry</a>.</li>
+     * <li><strong>ModifyVpnPbrRouteEntryWeight</strong> is an asynchronous operation. The system returns a request ID, but the policy-based routing is not immediately modified. The modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway and determine the modification status of the policy-based routing:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the policy-based routing is being modified.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based routing is modified.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyVpnPbrRouteEntryWeight</strong> does not support concurrent modifications of policy-based routing on the same VPN gateway instance.</li>
+     * <li>The <strong>ModifyVpnPbrRouteEntryWeight</strong> operation does not support concurrent modification of policy-based routing under the same VPN gateway instance.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyVpnPbrRouteEntryWeight  ModifyVpnPbrRouteEntryWeightRequest
@@ -3884,16 +3942,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if it is modified by calling this operation.</p>
+     * <p>This operation is applicable only to VPN gateway instances that support single-tunnel IPsec-VPN connections. For VPN gateway instances that support dual-tunnel IPsec-VPN connections, the modified weight does not take effect even if the operation is successful.</p>
      * </blockquote>
      * <ul>
-     * <li>If active/standby destination routes exist on a VPN gateway instance and you want to modify the weight of the active destination route, delete the standby destination route first. After the active destination route is modified, reconfigure the standby destination route. If you want to modify the weight of the standby destination route, delete the active destination route first. After the standby destination route is modified, reconfigure the active destination route. To delete a destination route, see <a href="https://help.aliyun.com/document_detail/2526961.html">DeleteVpnRouteEntry</a>.</li>
-     * <li><strong>ModifyVpnRouteEntryWeight</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<ul>
-     * <li>If the VPN destination route is in the <strong>updating</strong> state, the weight is being modified.</li>
-     * <li>If the VPN destination route is in the <strong>active</strong> state, the weight has been modified.</li>
+     * <li>If active/standby destination routes exist under a VPN gateway instance and you want to modify the weight of the active destination route, you must delete the standby destination route first. After the active destination route is modified, reconfigure the standby destination route. If you want to modify the weight of the standby destination route, you must delete the active destination route first. After the standby destination route is modified, reconfigure the active destination route. To delete a destination route, refer to <a href="https://help.aliyun.com/document_detail/2526961.html">DeleteVpnRouteEntry</a>.</li>
+     * <li>The <strong>ModifyVpnRouteEntryWeight</strong> operation is asynchronous. The system returns a request ID, but the weight of the VPN destination route is not immediately modified and the modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the modification status of the weight of the VPN destination route:<ul>
+     * <li>If the VPN destination route is in the <strong>updating</strong> state, the weight of the VPN destination route is being modified.</li>
+     * <li>If the VPN destination route is in the <strong>active</strong> state, the weight of the VPN destination route is modified.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyVpnRouteEntryWeight</strong> does not support concurrent modification of destination route weights on the same VPN gateway.</li>
+     * <li>The <strong>ModifyVpnRouteEntryWeight</strong> operation does not support concurrent modification of the weights of destination routes under the same VPN gateway.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyVpnRouteEntryWeight  ModifyVpnRouteEntryWeightRequest
@@ -3919,8 +3977,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The <strong>OpenFlowLogService</strong> operation does not support concurrent activation of the flow log service within the same Alibaba Cloud account.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/449624.html">GetFlowLogServiceStatus</a> operation to query the activation status of the flow log service.</li>
+     * <li>The <strong>OpenFlowLogService</strong> operation does not support concurrent activation of the flow log feature within the same Alibaba Cloud account.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/449624.html">GetFlowLogServiceStatus</a> operation to query the activation status of the flow log feature.</li>
      * </ul>
      * 
      * @param request the request parameters of OpenFlowLogService  OpenFlowLogServiceRequest
@@ -3948,7 +4006,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The traffic mirroring feature is activated on a per-region basis. The OpenTrafficMirrorService operation does not support concurrent activation of the traffic mirroring feature within the same region.</p>
+     * <p>The traffic mirroring feature is enabled at the region level. The <strong>OpenTrafficMirrorService</strong> operation does not support concurrent enabling of the traffic mirroring feature in the same region.</p>
      * 
      * @param request the request parameters of OpenTrafficMirrorService  OpenTrafficMirrorServiceRequest
      * @return OpenTrafficMirrorServiceResponse
@@ -3970,7 +4028,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
-     * <p>You can call the RecoverPhysicalConnection operation to recover the access of an Express Connect circuit that has been terminated. Currently, only shared Express Connect circuits can be recovered.</p>
+     * <p>You can call the RecoverPhysicalConnection operation to restore the connection of a terminated Express Connect circuit. Currently, only the connection of shared Express Connect circuits can be restored.</p>
      * 
      * @param request the request parameters of RecoverPhysicalConnection  RecoverPhysicalConnectionRequest
      * @return RecoverPhysicalConnectionResponse
@@ -3979,8 +4037,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation, the VBR changes from the <strong>terminated</strong> state to the <strong>recovering</strong> state. After the VBR is recovered, it enters the <strong>active</strong> state.
-     * Before you call this operation to recover a VBR, take note of the following items: </p>
+     * <p>After you call this operation, the VBR changes from the <strong>terminated</strong> state to the <strong>recovering</strong> state. After the recovery succeeds, the VBR enters the <strong>active</strong> state.
+     * Before you call this operation to recover a VBR, note the following: </p>
      * <ul>
      * <li>Only the owner of the Express Connect circuit can call this operation.  </li>
      * <li>The Express Connect circuit to which the VBR belongs must be in the <strong>Enabled</strong> state.</li>
@@ -4078,12 +4136,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ReplaceVpcDhcpOptionsSet</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the DHCP options set has not been changed yet because the change task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> to query the change status of the DHCP options set:<ul>
-     * <li>If the DHCP options set is in the <strong>Pending</strong> state, the DHCP options set is being changed.</li>
-     * <li>If the DHCP options set is in the <strong>InUse</strong> state, the DHCP options set has been changed.</li>
+     * <li>The <strong>ReplaceVpcDhcpOptionsSet</strong> operation is asynchronous. After you send the request, the system returns a request ID, but the replacement is not immediately complete. The replacement task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the replacement status of the DHCP options set:<ul>
+     * <li>If the DHCP options set is in the <strong>Pending</strong> state, the replacement is in progress.</li>
+     * <li>If the DHCP options set is in the <strong>InUse</strong> state, the replacement is successful.</li>
      * </ul>
      * </li>
-     * <li><strong>ReplaceVpcDhcpOptionsSet</strong> does not support concurrent changes to the DHCP options set associated with the same VPC.</li>
+     * <li>The <strong>ReplaceVpcDhcpOptionsSet</strong> operation does not support concurrent replacement of the associated DHCP options set for the same VPC.</li>
      * </ul>
      * 
      * @param request the request parameters of ReplaceVpcDhcpOptionsSet  ReplaceVpcDhcpOptionsSetRequest
@@ -4137,7 +4195,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>SetHighDefinitionMonitorLogStatus</strong> operation does not support concurrent configuration of high-definition second-level monitoring for the same EIP instance.</p>
+     * <p>The <strong>SetHighDefinitionMonitorLogStatus</strong> operation does not support concurrent configuration of high-precision second-level monitoring for the same EIP.</p>
      * 
      * @param request the request parameters of SetHighDefinitionMonitorLogStatus  SetHighDefinitionMonitorLogStatusRequest
      * @return SetHighDefinitionMonitorLogStatusResponse
@@ -4146,7 +4204,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only disaster recovery drill tasks in the <strong>Pending</strong> state can be started.</p>
+     * <p>Only failover test jobs in the <strong>Pending</strong> state can be started.</p>
      * 
      * @param request the request parameters of StartFailoverTestJob  StartFailoverTestJobRequest
      * @return StartFailoverTestJobResponse
@@ -4155,7 +4213,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only failover test jobs in the <strong>Testing</strong> state can be stopped.</p>
+     * <p>You can only stop failover drill tasks that are in the <strong>Drilling</strong> state.</p>
      * 
      * @param request the request parameters of StopFailoverTestJob  StopFailoverTestJobRequest
      * @return StopFailoverTestJobResponse
@@ -4173,15 +4231,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Labels are marks that you allocate to instances. Each label consists of a key-value pair. The following rules apply to labels: </p>
+     * <p>Labels are marks that you assign to instances. Each label consists of a key-value pair. Take note of the following rules for labels: </p>
      * <ul>
-     * <li>Each label key must be unique on an instance.</li>
-     * <li>Empty labels that are not attached to instances are not supported. Labels must be attached to instances.</li>
+     * <li>The key of each label on an instance must be unique.</li>
+     * <li>Labels must be attached to instances. Unattached labels are not supported.</li>
      * <li>Label information is not shared across regions. 
      *   For example, labels created in the China (Hangzhou) region are not visible in the China (Shanghai) region.</li>
      * <li>Within the same account and region, label information is shared among virtual private clouds (VPCs), route tables, vSwitches, and elastic IP addresses (EIPs). 
-     *   For example, if a virtual private cloud (VPC) is attached with a label within the same account and region, you can directly select and attach that label to a vSwitch, route table, or EIP on the label editing page without manually entering the label key-value information. You can modify the key and value of a label, or delete labels from instances at any time. If you delete an instance, all labels attached to the instance are also deleted.</li>
-     * <li>A maximum of 20 labels can be attached to a single instance. Before attaching labels, Alibaba Cloud verifies the number of existing labels on the resource. If the limit is exceeded, an error message is returned.</li>
+     *   For example, if a label is attached to a VPC within the same account and region, you can directly select and attach this label to a vSwitch, route table, or EIP on the label editing page without manually entering the key-value pair. You can modify the key and value of a label, and you can detach labels from an instance at any time. If you delete an instance, all labels attached to the instance are also deleted.</li>
+     * <li>You can attach up to 20 labels to a single instance. Before attaching labels, Alibaba Cloud verifies the number of existing labels on the resource. If the limit is exceeded, an error message is returned.</li>
      * </ul>
      * 
      * @param request the request parameters of TagResources  TagResourcesRequest
@@ -4207,11 +4265,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you call the TerminatePhysicalConnection operation, the Express Connect circuit enters the <strong>Terminating</strong> state. After the operation is complete, the circuit enters the <strong>Terminated</strong> state.
-     * When you call this operation to terminate an Express Connect circuit, note the following items:</p>
+     * <p>After you call the TerminatePhysicalConnection operation, the Express Connect circuit enters the <strong>Terminating</strong> state. After the processing is complete, the circuit enters the <strong>Terminated</strong> state.
+     * When you call this operation to terminate an Express Connect circuit, take note of the following items:</p>
      * <ul>
      * <li>You can terminate only an Express Connect circuit that is in the <strong>Enabled</strong> state.</li>
-     * <li>Before you terminate an Express Connect circuit, you must delete the VBR associated with it.</li>
+     * <li>Before you terminate an Express Connect circuit, you must delete the virtual border routers (VBRs) associated with the circuit.</li>
      * </ul>
      * 
      * @param request the request parameters of TerminatePhysicalConnection  TerminatePhysicalConnectionRequest
@@ -4267,13 +4325,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke this operation to disassociate an HaVip from an ECS instance or network interface controller (NIC) in a virtual private cloud (VPC), take note of the following items: </p>
+     * <p>When you invoke this operation to disassociate a HaVip from an ECS instance in a virtual private cloud (VPC) or an elastic network interface controller (NIC), take note of the following items: </p>
      * <ul>
      * <li>The ECS instance to be disassociated must be in the <strong>Running</strong> or <strong>Stopped</strong> state. </li>
      * <li>The HaVip to be disassociated must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
-     * <li>The <strong>UnassociateHaVip</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the HaVip is not yet disassociated. The disassociation task is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> to query the disassociation status of the HaVip:<ul>
+     * <li>The <strong>UnassociateHaVip</strong> operation is asynchronous. After you invoke this operation, the system returns a request ID, but the HaVip is not immediately disassociated. The disassociation task is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the disassociation status of the HaVip:<ul>
      * <li>If the HaVip is in the <strong>Unassociating</strong> state, the HaVip is being disassociated.</li>
-     * <li>If the HaVip is in the <strong>Inuse</strong> or <strong>Available</strong> state, the HaVip is disassociated.</li>
+     * <li>If the HaVip is in the <strong>InUse</strong> or <strong>Available</strong> state, the HaVip is disassociated.</li>
      * </ul>
      * </li>
      * <li>The <strong>UnassociateHaVip</strong> operation does not support concurrent disassociation of the same HaVip.</li>
@@ -4287,12 +4345,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>UnassociateNetworkAcl</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the network ACL is not yet disassociated from the vSwitch. The disassociation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> to query the disassociation status of the network ACL and the vSwitch:<ul>
-     * <li>If the network ACL and the vSwitch are in the <strong>UNBINDING</strong> state, the disassociation is in progress.</li>
-     * <li>If no binding record is found, the network ACL is disassociated from the vSwitch.</li>
+     * <li>The <strong>UnassociateNetworkAcl</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the network ACL is not immediately disassociated from the vSwitch. The disassociation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> to query the disassociation status of the network ACL and the vSwitch:<ul>
+     * <li>If the network ACL and the vSwitch are in the <strong>UNBINDING</strong> state, the network ACL is being disassociated from the vSwitch.</li>
+     * <li>If no association record is found, the network ACL is disassociated from the vSwitch.</li>
      * </ul>
      * </li>
-     * <li><strong>UnassociateNetworkAcl</strong> does not support concurrent disassociation of vSwitches from the same network ACL.</li>
+     * <li>The <strong>UnassociateNetworkAcl</strong> operation does not support concurrent disassociation of vSwitches from the same network ACL.</li>
      * </ul>
      * 
      * @param request the request parameters of UnassociateNetworkAcl  UnassociateNetworkAclRequest
@@ -4349,12 +4407,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>UpdateEnhancedVpnGateway</strong> is an asynchronous operation. After you call this operation, the system returns the information about the enhanced VPN gateway, but the configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the enhanced VPN gateway:<ul>
-     * <li>If the enhanced VPN gateway is in the <strong>updating</strong> state, the configuration is being modified.</li>
-     * <li>If the enhanced VPN gateway is in the <strong>active</strong> state, the configuration has been modified.</li>
+     * <li>The <strong>UpdateEnhancedVpnGateway</strong> operation is asynchronous. The system returns the information of the enhanced VPN gateway before the configuration is modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the modification status of the enhanced VPN gateway configuration:<ul>
+     * <li>If the enhanced VPN gateway is in the <strong>updating</strong> state, the configuration of the enhanced VPN gateway is being modified.</li>
+     * <li>If the enhanced VPN gateway is in the <strong>active</strong> state, the configuration of the VPN gateway is modified.</li>
      * </ul>
      * </li>
-     * <li><strong>UpdateEnhancedVpnGateway</strong> does not support concurrent modifications to the same enhanced VPN gateway.</li>
+     * <li>The <strong>UpdateEnhancedVpnGateway</strong> operation does not support concurrent modifications to the configuration of the same enhanced VPN gateway.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateEnhancedVpnGateway  UpdateEnhancedVpnGatewayRequest
@@ -4364,7 +4422,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only failover test jobs in the <strong>Pending</strong> state can be updated.</p>
+     * <p>You can update only failover test jobs that are in the <strong>Pending</strong> state.</p>
      * 
      * @param request the request parameters of UpdateFailoverTestJob  UpdateFailoverTestJobRequest
      * @return UpdateFailoverTestJobResponse
@@ -4404,15 +4462,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateIpv4GatewayAttributeResponse> updateIpv4GatewayAttribute(UpdateIpv4GatewayAttributeRequest request);
 
     /**
-     * @deprecated OpenAPI UpdateNatGatewayNatType is deprecated  * @description ## Operation description
-     * Before you invoke the UpdateNatGatewayNatType operation, take note of the following information:
-     * - **UpdateNatGatewayNatType** is an asynchronous operation. After you send a request, the system returns a request ID, but the NAT gateway type has not been upgraded yet. The upgrade node is still running in the background. You can invoke GetNatGatewayConvertStatus to query the upgrade status of the NAT gateway. For more information, see [GetNatGatewayConvertStatus](https://help.aliyun.com/document_detail/184744.html).
-     *     - If the upgrade status is **processing**, the NAT gateway is being upgraded. In this state, you can only execute query operations and cannot execute other operations.
-     *     - If the upgrade status is **successful**, the NAT gateway type has been upgraded.
-     *     - If the upgrade status is **failed**, the NAT gateway type failed to be upgraded.
-     * - The **UpdateNatGatewayNatType** operation does not support concurrent upgrades of the NAT gateway type for the same NAT gateway.
-     * - Enhanced NAT gateways and standard NAT gateways have the same billing. The billable methods do not change during or after the upgrade procedure.
-     * - Each resource upgrade procedure may take up to 5 minutes. During the upgrade, 1 to 2 transient connections that last a few seconds may occur. Use the reconnection mechanism to recover the service. Whether the reconnection mechanism is automatic or manual depends on the service itself.
+     * @deprecated OpenAPI UpdateNatGatewayNatType is deprecated  * @description ## Usage notes
+     * Before you invoke the UpdateNatGatewayNatType operation, take note of the following items:
+     * - The **UpdateNatGatewayNatType** operation is asynchronous. After you send a request, the system returns a request ID, but the upgrade of the NAT gateway is not completed. The system runs the upgrade task in the background. You can invoke the GetNatGatewayConvertStatus operation to query the upgrade status of the NAT gateway. For more information, see [GetNatGatewayConvertStatus](https://help.aliyun.com/document_detail/184744.html).
+     *     - If the upgrade status of the NAT gateway is **processing**, the NAT gateway is being upgraded. In this state, you can only execute query operations.
+     *     - If the upgrade status of the NAT gateway is **successful**, the NAT gateway is upgraded.
+     *     - If the upgrade status of the NAT gateway is **failed**, the NAT gateway fails to be upgraded.
+     * - The **UpdateNatGatewayNatType** operation does not support concurrent upgrades for the same NAT gateway.
+     * - Enhanced NAT gateways and standard NAT gateways use the same billing methods. The billing methods remain unchanged during and after the upgrade.
+     * - The upgrade procedure for each resource may take up to 5 minutes. During the upgrade, one or two transient disconnections that last for a few seconds may occur. Your service recovers after it reconnects. Whether the reconnection mechanism is automatic or manual depends on your service.
      * - You can only upgrade a standard NAT gateway to an enhanced NAT gateway. You cannot downgrade an enhanced NAT gateway to a standard NAT gateway.
      * 
      * @param request the request parameters of UpdateNatGatewayNatType  UpdateNatGatewayNatTypeRequest
@@ -4424,12 +4482,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>UpdateNetworkAclEntries</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the network ACL rules are not yet updated. The update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> to query the update status of the network ACL rules:<ul>
-     * <li>If the network ACL rules are in the <strong>Modifying</strong> state, the rules are being updated.</li>
-     * <li>If the network ACL rules are in the <strong>Available</strong> state, the rules are updated.</li>
+     * <li>The <strong>UpdateNetworkAclEntries</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the network ACL rules are not immediately updated. The update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> to query the update status of the network ACL rules:<ul>
+     * <li>If the network ACL rules are in the <strong>Modifying</strong> state, the network ACL rules are being updated.</li>
+     * <li>If the network ACL rules are in the <strong>Available</strong> state, the network ACL rules are updated.</li>
      * </ul>
      * </li>
-     * <li><strong>UpdateNetworkAclEntries</strong> does not support concurrent updates to the same network ACL rules.</li>
+     * <li>The <strong>UpdateNetworkAclEntries</strong> operation does not support concurrent updates to the same network ACL rules.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateNetworkAclEntries  UpdateNetworkAclEntriesRequest
@@ -4439,7 +4497,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>UpdatePublicIpAddressPoolAttribute</strong> operation does not support concurrent modifications to the attributes of the same IP address pool.</p>
+     * <p>The <strong>UpdatePublicIpAddressPoolAttribute</strong> operation does not support concurrent updates to the attributes of the same address pool.</p>
      * 
      * @param request the request parameters of UpdatePublicIpAddressPoolAttribute  UpdatePublicIpAddressPoolAttributeRequest
      * @return UpdatePublicIpAddressPoolAttributeResponse
@@ -4449,9 +4507,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>UpdateRouteTargetGroup</strong> is an asynchronous operation. After you call this operation, the system returns a request ID, but the route target group has not been updated yet. The update task is still running in the background. You can call ListRouteTargetGroup to query the update status of the route target group:<ul>
+     * <li>The <strong>UpdateRouteTargetGroup</strong> operation is asynchronous. The system returns a request ID, but the route target group is not yet updated. The update task is still running in the background. You can call the ListRouteTargetGroup operation to query the update status of the route target group:<ul>
      * <li>If the route target group is in the <strong>Updating</strong> state, the route target group is being updated.</li>
-     * <li>If the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, the route target group has been updated.</li>
+     * <li>If the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, the route target group is updated.</li>
      * </ul>
      * </li>
      * </ul>
@@ -4473,12 +4531,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>UpdateTrafficMirrorFilterRuleAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the node in the background. You can invoke <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> to query the status of an inbound or outbound rule of a traffic mirroring filter:<ul>
-     * <li>If the inbound or outbound rule is in the <strong>Modifying</strong> state, the configuration of the rule is being modified.</li>
-     * <li>If the inbound or outbound rule is in the <strong>Created</strong> state, the configuration of the rule is modified.</li>
+     * <li>The <strong>UpdateTrafficMirrorFilterRuleAttribute</strong> operation is asynchronous. After you invoke this operation, the system returns a request ID, but the configuration of the inbound or outbound traffic mirroring rule is not immediately updated. The update node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> operation to query the status of the inbound or outbound traffic mirroring rule:<ul>
+     * <li>If the inbound or outbound traffic mirroring rule is in the <strong>Modifying</strong> state, the configuration is being updated.</li>
+     * <li>If the inbound or outbound traffic mirroring rule is in the <strong>Created</strong> state, the configuration is updated.</li>
      * </ul>
      * </li>
-     * <li><strong>UpdateTrafficMirrorFilterRuleAttribute</strong> does not support concurrent modification of the same inbound or outbound rule of a traffic mirroring filter.</li>
+     * <li>The <strong>UpdateTrafficMirrorFilterRuleAttribute</strong> operation does not support concurrent updates to the configuration of the same inbound or outbound traffic mirroring rule.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateTrafficMirrorFilterRuleAttribute  UpdateTrafficMirrorFilterRuleAttributeRequest
@@ -4489,12 +4547,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>UpdateTrafficMirrorSessionAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the configuration of the traffic mirror session is not yet modified. The modification task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the modification status of the traffic mirror session:<ul>
-     * <li>If the traffic mirror session is in the <strong>Modifying</strong> state, the configuration is being modified.</li>
-     * <li>If the traffic mirror session is in the <strong>Created</strong> state, the configuration is modified.</li>
+     * <li>The <strong>UpdateTrafficMirrorSessionAttribute</strong> operation is asynchronous. After you send the request, the system returns a request ID, but the configuration of the traffic mirror session is not immediately modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the modification status of the traffic mirror session configuration:<ul>
+     * <li>If the traffic mirror session configuration is in the <strong>Modifying</strong> state, the configuration is being modified.</li>
+     * <li>If the traffic mirror session configuration is in the <strong>Created</strong> state, the configuration is successfully modified.</li>
      * </ul>
      * </li>
-     * <li><strong>UpdateTrafficMirrorSessionAttribute</strong> does not support concurrent modifications to the same traffic mirror session.</li>
+     * <li>The <strong>UpdateTrafficMirrorSessionAttribute</strong> operation does not support concurrent modifications to the configuration of the same traffic mirror session.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateTrafficMirrorSessionAttribute  UpdateTrafficMirrorSessionAttributeRequest
@@ -4517,12 +4575,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>UpdateVpcGatewayEndpointAttribute</strong> is an asynchronous operation. After you send a request, the system returns a <strong>RequestId</strong>, but the configuration of the gateway endpoint has not been updated yet. The update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/311017.html">GetVpcGatewayEndpointAttribute</a> to query the status of the gateway endpoint.<ul>
-     * <li>If the gateway endpoint is in the <strong>Updating</strong> state, the configuration is being updated.</li>
-     * <li>If the gateway endpoint is in the <strong>Created</strong> state, the configuration has been updated.</li>
+     * <li>The <strong>UpdateVpcGatewayEndpointAttribute</strong> operation is asynchronous. The system returns a <strong>RequestId</strong>, but the configurations of the gateway endpoint are not immediately modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/311017.html">GetVpcGatewayEndpointAttribute</a> operation to query the status of the gateway endpoint.<ul>
+     * <li>If the gateway endpoint is in the <strong>Updating</strong> state, the modification is in progress.</li>
+     * <li>If the gateway endpoint is in the <strong>Created</strong> state, the modification is complete.</li>
      * </ul>
      * </li>
-     * <li><strong>UpdateVpcGatewayEndpointAttribute</strong> does not support concurrent updates to the same gateway endpoint.</li>
+     * <li>The <strong>UpdateVpcGatewayEndpointAttribute</strong> operation does not support concurrent modifications to the same gateway endpoint.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateVpcGatewayEndpointAttribute  UpdateVpcGatewayEndpointAttributeRequest
@@ -4532,7 +4590,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you have created a VPC NAT gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2522320.html">CreateNatGateway</a>.</p>
+     * <p>Before calling this operation, make sure that you have created a VPC NAT gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2522320.html">CreateNatGateway</a>.</p>
      * 
      * @param request the request parameters of VpcDescribeVpcNatGatewayNetworkInterfaceQuota  VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest
      * @return VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponse

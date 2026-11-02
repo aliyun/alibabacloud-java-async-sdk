@@ -158,7 +158,7 @@ public class DescribePublicIpAddressRequest extends Request {
         } 
 
         /**
-         * <p>The version of the IP protocol. Valid values:</p>
+         * <p>The IP protocol version. Valid values:</p>
          * <ul>
          * <li><p><strong>ipv4</strong> (default): IPv4.</p>
          * </li>
@@ -220,7 +220,7 @@ public class DescribePublicIpAddressRequest extends Request {
 
         /**
          * <p>The region to query.
-         * You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

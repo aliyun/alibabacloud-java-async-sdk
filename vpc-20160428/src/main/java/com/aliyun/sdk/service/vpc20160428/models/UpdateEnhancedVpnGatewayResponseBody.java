@@ -275,11 +275,11 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether BGP route automatic propagation to the VPC is enabled. Valid values:</p>
+         * <p>Indicates whether BGP routes are automatically propagated to the VPC. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Automatic propagation is enabled.</p>
+         * <li><p><strong>true</strong>: automatic propagation</p>
          * </li>
-         * <li><p><strong>false</strong>: Automatic propagation is not enabled.</p>
+         * <li><p><strong>false</strong>: no automatic propagation</p>
          * </li>
          * </ul>
          * 
@@ -292,8 +292,8 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp when the enhanced VPN gateway instance was created. Unit: milliseconds.<br>
-         * The timestamp follows the UNIX time format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp of when the enhanced VPN gateway instance was created. Unit: milliseconds. <br>
+         * The timestamp follows the UNIX time format. It is the total number of milliseconds that have elapsed since the UNIX epoch (January 1, 1970, 00:00:00 UTC) to the time when the enhanced VPN gateway instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1492753580000</p>
@@ -326,11 +326,11 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The enabling status of the BGP feature for the enhanced VPN gateway. Valid values:<br></p>
+         * <p>The enabling status of the BGP feature for the enhanced VPN gateway. Valid values: <br></p>
          * <ul>
-         * <li><p><strong>true</strong>: enabled.</p>
+         * <li><p><strong>true</strong>: enabled</p>
          * </li>
-         * <li><p><strong>false</strong>: disabled.</p>
+         * <li><p><strong>false</strong>: disabled</p>
          * </li>
          * </ul>
          * 
@@ -353,7 +353,7 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
         /**
          * <p>The type of the enhanced VPN gateway. Valid values:</p>
          * <ul>
-         * <li><strong>Enhanced.SiteToSite</strong>: enhanced site-to-cloud VPN that supports only IPsec functionality.</li>
+         * <li><strong>Enhanced.SiteToSite</strong>: enhanced site-to-cloud VPN, which supports only the IPsec feature</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -378,7 +378,7 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
         /**
          * <p>The network type of the enhanced VPN gateway. Valid values:</p>
          * <ul>
-         * <li><strong>public</strong> (default): public VPN gateway.</li>
+         * <li><strong>public</strong> (default): Internet VPN gateway</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -401,8 +401,8 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the enhanced VPN gateway instance belongs.<br>
-         * You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource group information.</p>
+         * <p>The ID of the resource group to which the enhanced VPN gateway instance belongs. <br>
+         * You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzs372yg****</p>
@@ -413,13 +413,13 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the enhanced VPN gateway.</p>
+         * <p>The status of the enhanced VPN gateway. Valid values:</p>
          * <ul>
-         * <li><strong>init</strong>: initializing.</li>
-         * <li><strong>provisioning</strong>: preparing.</li>
-         * <li><strong>active</strong>: normal.</li>
-         * <li><strong>updating</strong>: updating.</li>
-         * <li><strong>deleting</strong>: deleting.</li>
+         * <li><strong>init</strong>: initializing</li>
+         * <li><strong>provisioning</strong>: preparing</li>
+         * <li><strong>active</strong>: active</li>
+         * <li><strong>updating</strong>: updating</li>
+         * <li><strong>deleting</strong>: deleting</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -483,9 +483,9 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the enhanced VPN gateway.</p>
+         * <p>The type of the enhanced VPN gateway. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong> (default): standard.</li>
+         * <li><strong>Normal</strong> (default): standard</li>
          * </ul>
          * 
          * <strong>example:</strong>
