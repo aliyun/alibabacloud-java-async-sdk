@@ -106,7 +106,10 @@ public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * accessDeniedDetail.
+         * <p>The details of the permission verification failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;1234567890123456&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;1234567890123456&quot;,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;AuthAction&quot;:&quot;milvusknowledgebase:ListDatasets&quot;}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,10 @@ public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -122,7 +128,7 @@ public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -130,7 +136,10 @@ public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -138,7 +147,10 @@ public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +229,10 @@ public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * bucketName.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>knowledgebase-fileupload</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -225,7 +240,10 @@ public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
             }
 
             /**
-             * expiresIn.
+             * <p>The validity period of the pre-signed URL in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder expiresIn(Integer expiresIn) {
                 this.expiresIn = expiresIn;
@@ -233,7 +251,7 @@ public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
             }
 
             /**
-             * preSignedUrls.
+             * <p>The list of pre-signed PUT URLs. <strong>The order corresponds one-to-one with the <code>Documents</code> in the request.</strong></p>
              */
             public Builder preSignedUrls(java.util.List<String> preSignedUrls) {
                 this.preSignedUrls = preSignedUrls;

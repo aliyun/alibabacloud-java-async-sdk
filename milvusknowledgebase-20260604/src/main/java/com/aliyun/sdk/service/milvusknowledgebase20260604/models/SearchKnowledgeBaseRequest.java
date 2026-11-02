@@ -30,8 +30,16 @@ public class SearchKnowledgeBaseRequest extends Request {
     private Boolean enableKnowledgeGraph;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("evidencePageToken")
+    private String evidencePageToken;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("image")
     private Image image;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("includeWiki")
+    private Boolean includeWiki;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pageNumber")
@@ -70,7 +78,9 @@ public class SearchKnowledgeBaseRequest extends Request {
         this.knowledgeBaseId = builder.knowledgeBaseId;
         this.documentIds = builder.documentIds;
         this.enableKnowledgeGraph = builder.enableKnowledgeGraph;
+        this.evidencePageToken = builder.evidencePageToken;
         this.image = builder.image;
+        this.includeWiki = builder.includeWiki;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.query = builder.query;
@@ -116,10 +126,24 @@ public class SearchKnowledgeBaseRequest extends Request {
     }
 
     /**
+     * @return evidencePageToken
+     */
+    public String getEvidencePageToken() {
+        return this.evidencePageToken;
+    }
+
+    /**
      * @return image
      */
     public Image getImage() {
         return this.image;
+    }
+
+    /**
+     * @return includeWiki
+     */
+    public Boolean getIncludeWiki() {
+        return this.includeWiki;
     }
 
     /**
@@ -182,7 +206,9 @@ public class SearchKnowledgeBaseRequest extends Request {
         private String knowledgeBaseId; 
         private java.util.List<String> documentIds; 
         private Boolean enableKnowledgeGraph; 
+        private String evidencePageToken; 
         private Image image; 
+        private Boolean includeWiki; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String query; 
@@ -201,7 +227,9 @@ public class SearchKnowledgeBaseRequest extends Request {
             this.knowledgeBaseId = request.knowledgeBaseId;
             this.documentIds = request.documentIds;
             this.enableKnowledgeGraph = request.enableKnowledgeGraph;
+            this.evidencePageToken = request.evidencePageToken;
             this.image = request.image;
+            this.includeWiki = request.includeWiki;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.query = request.query;
@@ -213,7 +241,7 @@ public class SearchKnowledgeBaseRequest extends Request {
         } 
 
         /**
-         * <p>待检索的知识库 ID。</p>
+         * <p>The ID of the knowledge base.</p>
          * 
          * <strong>example:</strong>
          * <p>kd-620ad908ec651</p>
@@ -225,7 +253,7 @@ public class SearchKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>限定检索的文档；空数组表示检索该知识库下的全部文档。</p>
+         * <p>The list of document IDs.</p>
          */
         public Builder documentIds(java.util.List<String> documentIds) {
             this.putBodyParameter("documentIds", documentIds);
@@ -234,7 +262,7 @@ public class SearchKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>是否在检索中使用知识图谱。</p>
+         * <p>Specifies whether to enable the knowledge graph.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -246,7 +274,19 @@ public class SearchKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>url、base64、objectKey 必须且只能填写一个。</p>
+         * <p>Optional. This parameter is returned conditionally and can be passed only when includeWiki is set to true. Omit this parameter for the first evidence page. For subsequent pages, pass the evidenceNextToken from the previous page as is. The candidate pool, subject, parameters, and page size are fixed and expire after 5 minutes without renewal. If the token expires, a 409 error is returned and no automatic re-search is performed. The pageNumber parameter only controls the legacy results. Constraints: {&quot;minLength&quot;:1,&quot;maxLength&quot;:4096}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-opaque-next-token</p>
+         */
+        public Builder evidencePageToken(String evidencePageToken) {
+            this.putBodyParameter("evidencePageToken", evidencePageToken);
+            this.evidencePageToken = evidencePageToken;
+            return this;
+        }
+
+        /**
+         * <p>The image search input.</p>
          */
         public Builder image(Image image) {
             this.putBodyParameter("image", image);
@@ -255,7 +295,19 @@ public class SearchKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>从 1 开始。</p>
+         * <p>Optional. This parameter is returned conditionally and is added for compatibility. Default value: false. If set to true, the unified evidenceResults are additionally returned, and Wiki content is not disguised as original text. Constraints: {&quot;default&quot;:false}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder includeWiki(Boolean includeWiki) {
+            this.putBodyParameter("includeWiki", includeWiki);
+            this.includeWiki = includeWiki;
+            return this;
+        }
+
+        /**
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -267,7 +319,10 @@ public class SearchKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -276,10 +331,10 @@ public class SearchKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>自然语言检索问题。与 image 至少填写一项。</p>
+         * <p>The search query.</p>
          * 
          * <strong>example:</strong>
-         * <p>发票的税额是多少？</p>
+         * <p>What is the tax amount on the invoice?</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);
@@ -288,7 +343,7 @@ public class SearchKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>租户模型服务中的数字重排模型 ID。未填写 rerankModelName 时生效。</p>
+         * <p>The ID of the rerank model.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -300,7 +355,7 @@ public class SearchKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>租户已开通的重排模型名称。同时填写 rerankModelId 时，本参数优先生效。</p>
+         * <p>The name of the rerank model activated for the tenant. If both rerankModelId and this parameter are specified, this parameter takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-rerank</p>
@@ -312,7 +367,7 @@ public class SearchKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * retrievalConfig.
+         * <p>The retrieval configuration.</p>
          */
         public Builder retrievalConfig(RetrievalConfig retrievalConfig) {
             this.putBodyParameter("retrievalConfig", retrievalConfig);
@@ -321,7 +376,7 @@ public class SearchKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>按知识库文档标签过滤检索范围。操作符填写后端实际支持值并原样执行。</p>
+         * <p>The tag filter.</p>
          */
         public Builder tagFilter(TagFilter tagFilter) {
             this.putBodyParameter("tagFilter", tagFilter);
@@ -330,7 +385,7 @@ public class SearchKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>填写 DRAFT、LATEST_PUBLISHED 或显示版本号 vN，不填写时检索编辑态。</p>
+         * <p>The version of the knowledge base.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -414,7 +469,10 @@ public class SearchKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * base64.
+             * <p>The Base64-encoded image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data:image/png;base64,iVBORw0KGgoAAA...</p>
              */
             public Builder base64(String base64) {
                 this.base64 = base64;
@@ -422,7 +480,10 @@ public class SearchKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * objectKey.
+             * <p>The object key of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uploaded/invoice.png</p>
              */
             public Builder objectKey(String objectKey) {
                 this.objectKey = objectKey;
@@ -430,7 +491,10 @@ public class SearchKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * url.
+             * <p>The URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/invoice.png">https://example.com/invoice.png</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -536,7 +600,7 @@ public class SearchKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>召回阶段候选切片数量，取值范围 1 到 2048。</p>
+             * <p>The number of recalled candidates.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -547,7 +611,7 @@ public class SearchKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>是否在检索前扩展查询关键词。</p>
+             * <p>Specifies whether to enable query expansion.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -558,7 +622,7 @@ public class SearchKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>低于该分数的结果会被过滤，取值范围 0 到 1。</p>
+             * <p>The minimum relevance score.</p>
              * 
              * <strong>example:</strong>
              * <p>0.2</p>
@@ -569,7 +633,7 @@ public class SearchKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>语义得分在混合相关度中的权重，取值范围 0 到 1。</p>
+             * <p>The weight of semantic relevance.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -580,7 +644,7 @@ public class SearchKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>需要同时检索的目标语言；空数组表示不做跨语言扩展。</p>
+             * <p>The list of translation languages.</p>
              */
             public Builder translationLanguages(java.util.List<String> translationLanguages) {
                 this.translationLanguages = translationLanguages;
@@ -660,7 +724,7 @@ public class SearchKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>知识库中已配置的标签字段名。</p>
+             * <p>The tag field.</p>
              * 
              * <strong>example:</strong>
              * <p>category</p>
@@ -671,7 +735,7 @@ public class SearchKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>后端实际操作符，例如 =、≠、contains、not contains、in、not in、start with、end with、empty、not empty、&gt;、&lt;、≥、≤。</p>
+             * <p>The operator.</p>
              * 
              * <strong>example:</strong>
              * <p>in</p>
@@ -682,7 +746,7 @@ public class SearchKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>比较值；in/not in 可填写数组，empty/not empty 可不填写。</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>invoice</p>
@@ -752,7 +816,7 @@ public class SearchKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * conditions.
+             * <p>The list of tag conditions.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
@@ -760,7 +824,7 @@ public class SearchKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>多个条件之间的关系，填写 and 或 or。</p>
+             * <p>The logical relation between conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>or</p>

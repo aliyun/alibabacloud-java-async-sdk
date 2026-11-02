@@ -132,7 +132,10 @@ public class AddDocumentsResponseBody extends TeaModel {
         } 
 
         /**
-         * accessDeniedDetail.
+         * <p>The details of the permission verification failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;1234567890123456&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;1234567890123456&quot;,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;AuthAction&quot;:&quot;milvusknowledgebase:ListDatasets&quot;}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,10 @@ public class AddDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -148,7 +154,7 @@ public class AddDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -156,7 +162,10 @@ public class AddDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +173,10 @@ public class AddDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +184,10 @@ public class AddDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DDDBE0E5-4314-156F-B7F1-C4BCFD25A509</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class AddDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -376,7 +394,10 @@ public class AddDocumentsResponseBody extends TeaModel {
             } 
 
             /**
-             * chunkCount.
+             * <p>The chunk count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder chunkCount(Integer chunkCount) {
                 this.chunkCount = chunkCount;
@@ -384,7 +405,10 @@ public class AddDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * chunkMethod.
+             * <p>The chunk method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>naive</p>
              */
             public Builder chunkMethod(String chunkMethod) {
                 this.chunkMethod = chunkMethod;
@@ -392,7 +416,10 @@ public class AddDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * datasetId.
+             * <p>The knowledge base ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kb-123</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -400,7 +427,10 @@ public class AddDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The document ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doc-123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -408,7 +438,10 @@ public class AddDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * location.
+             * <p>The object path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uploaded/doc-id/example.pdf</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -416,7 +449,10 @@ public class AddDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The document name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -424,7 +460,10 @@ public class AddDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * progress.
+             * <p>The processing progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder progress(Float progress) {
                 this.progress = progress;
@@ -432,7 +471,10 @@ public class AddDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * run.
+             * <p>The processing status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder run(String run) {
                 this.run = run;
@@ -440,7 +482,10 @@ public class AddDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>The file size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -448,7 +493,10 @@ public class AddDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * suffix.
+             * <p>The file extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder suffix(String suffix) {
                 this.suffix = suffix;
@@ -456,7 +504,10 @@ public class AddDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * thumbnail.
+             * <p>The thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder thumbnail(String thumbnail) {
                 this.thumbnail = thumbnail;
@@ -464,7 +515,10 @@ public class AddDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * tokenCount.
+             * <p>The token count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tokenCount(Integer tokenCount) {
                 this.tokenCount = tokenCount;
@@ -531,7 +585,7 @@ public class AddDocumentsResponseBody extends TeaModel {
             } 
 
             /**
-             * documents.
+             * <p>The list of documents.</p>
              */
             public Builder documents(java.util.List<Documents> documents) {
                 this.documents = documents;
@@ -539,7 +593,7 @@ public class AddDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * errors.
+             * <p>The list of errors.</p>
              */
             public Builder errors(java.util.List<String> errors) {
                 this.errors = errors;

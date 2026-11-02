@@ -171,7 +171,10 @@ public class AddDocumentsRequest extends Request {
         } 
 
         /**
-         * datasetId.
+         * <p>The knowledge base ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kd-03ec1e2385fcf</p>
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("datasetId", datasetId);
@@ -180,7 +183,7 @@ public class AddDocumentsRequest extends Request {
         }
 
         /**
-         * Dedup.
+         * <p>The deduplication configuration.</p>
          */
         public Builder dedup(Dedup dedup) {
             this.putBodyParameter("Dedup", dedup);
@@ -189,7 +192,7 @@ public class AddDocumentsRequest extends Request {
         }
 
         /**
-         * Documents.
+         * <p>The list of documents.</p>
          */
         public Builder documents(java.util.List<Documents> documents) {
             this.putBodyParameter("Documents", documents);
@@ -198,7 +201,7 @@ public class AddDocumentsRequest extends Request {
         }
 
         /**
-         * <p>当前支持 LOCAL_UPLOAD；OSS_IMPORT 和 PUBLIC_URL 为后续导入方式预留。</p>
+         * <p>The import type.</p>
          * 
          * <strong>example:</strong>
          * <p>LOCAL_UPLOAD</p>
@@ -210,7 +213,10 @@ public class AddDocumentsRequest extends Request {
         }
 
         /**
-         * KnowledgeBaseId.
+         * <p>The knowledge base ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-3bd02617e9be335f</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.putBodyParameter("KnowledgeBaseId", knowledgeBaseId);
@@ -219,7 +225,7 @@ public class AddDocumentsRequest extends Request {
         }
 
         /**
-         * <p>导入时批量设置到本批次所有知识数据的标签键值。Key 必须为知识库已定义标签字段；Value 支持 string、int64、float32、bool、list。</p>
+         * <p>The batch label configuration. The key must be a label field that is already defined in the knowledge base. The value supports string, int64, float32, bool, and list types.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;department&quot;:&quot;legal&quot;,&quot;topics&quot;:[&quot;policy&quot;,&quot;contract&quot;],&quot;reviewed&quot;:true}</p>
@@ -231,7 +237,10 @@ public class AddDocumentsRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * <p>The processing strategy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-strategy-7043984ca395eabd</p>
          */
         public Builder strategyId(String strategyId) {
             this.putBodyParameter("StrategyId", strategyId);
@@ -240,7 +249,7 @@ public class AddDocumentsRequest extends Request {
         }
 
         /**
-         * dingTalkConfiguration.
+         * <p>Not supported. Ignore this parameter.</p>
          */
         public Builder dingTalkConfiguration(DingTalkConfiguration dingTalkConfiguration) {
             this.putBodyParameter("dingTalkConfiguration", dingTalkConfiguration);
@@ -320,7 +329,10 @@ public class AddDocumentsRequest extends Request {
             } 
 
             /**
-             * ContentDedup.
+             * <p>Specifies whether to enable content deduplication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder contentDedup(Boolean contentDedup) {
                 this.contentDedup = contentDedup;
@@ -328,7 +340,10 @@ public class AddDocumentsRequest extends Request {
             }
 
             /**
-             * DocNameDedup.
+             * <p>Specifies whether to enable document name deduplication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder docNameDedup(Boolean docNameDedup) {
                 this.docNameDedup = docNameDedup;
@@ -421,7 +436,10 @@ public class AddDocumentsRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The document name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHANGELOG.md</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -429,7 +447,7 @@ public class AddDocumentsRequest extends Request {
             }
 
             /**
-             * <p>本地上传时为预签名上传使用的批次相对路径；不同 ImportType 下含义由导入类型定义。</p>
+             * <p>The document path. This is the file name or relative path used during upload, which must be consistent with the pre-signed URL request.</p>
              * 
              * <strong>example:</strong>
              * <p>2026_06_23_17_49_52WwGSUezpG2u2iHWxyYGzkf9KtormhkxN/CHANGELOG.md</p>
@@ -440,7 +458,10 @@ public class AddDocumentsRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The file size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -448,7 +469,10 @@ public class AddDocumentsRequest extends Request {
             }
 
             /**
-             * StrategyId.
+             * <p>The processing strategy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kb-strategy-7043984ca395eabd</p>
              */
             public Builder strategyId(String strategyId) {
                 this.strategyId = strategyId;
@@ -580,7 +604,10 @@ public class AddDocumentsRequest extends Request {
             } 
 
             /**
-             * appId.
+             * <p>Not supported. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -588,7 +615,10 @@ public class AddDocumentsRequest extends Request {
             }
 
             /**
-             * appPassword.
+             * <p>Not supported. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore</p>
              */
             public Builder appPassword(String appPassword) {
                 this.appPassword = appPassword;
@@ -596,7 +626,10 @@ public class AddDocumentsRequest extends Request {
             }
 
             /**
-             * dingDocMcpLink.
+             * <p>Not supported. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore</p>
              */
             public Builder dingDocMcpLink(String dingDocMcpLink) {
                 this.dingDocMcpLink = dingDocMcpLink;
@@ -604,7 +637,10 @@ public class AddDocumentsRequest extends Request {
             }
 
             /**
-             * dingTableMcpLink.
+             * <p>Not supported. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore</p>
              */
             public Builder dingTableMcpLink(String dingTableMcpLink) {
                 this.dingTableMcpLink = dingTableMcpLink;
@@ -612,7 +648,10 @@ public class AddDocumentsRequest extends Request {
             }
 
             /**
-             * knowledgeId.
+             * <p>Not supported. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore</p>
              */
             public Builder knowledgeId(String knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -620,7 +659,10 @@ public class AddDocumentsRequest extends Request {
             }
 
             /**
-             * knowledgeType.
+             * <p>Not supported. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore</p>
              */
             public Builder knowledgeType(String knowledgeType) {
                 this.knowledgeType = knowledgeType;
@@ -628,7 +670,10 @@ public class AddDocumentsRequest extends Request {
             }
 
             /**
-             * userId.
+             * <p>Not supported. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

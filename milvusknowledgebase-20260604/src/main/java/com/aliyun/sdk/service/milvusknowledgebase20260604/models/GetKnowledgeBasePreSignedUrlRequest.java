@@ -101,7 +101,10 @@ public class GetKnowledgeBasePreSignedUrlRequest extends Request {
         } 
 
         /**
-         * datasetId.
+         * <p>The knowledge base ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-3bd02617e9be335f</p>
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("datasetId", datasetId);
@@ -110,7 +113,7 @@ public class GetKnowledgeBasePreSignedUrlRequest extends Request {
         }
 
         /**
-         * Documents.
+         * <p>The list of files to upload. You can specify 1 to 100 files.</p>
          */
         public Builder documents(java.util.List<Documents> documents) {
             this.putBodyParameter("Documents", documents);
@@ -119,7 +122,10 @@ public class GetKnowledgeBasePreSignedUrlRequest extends Request {
         }
 
         /**
-         * ExpiresIn.
+         * <p>The validity period of the pre-signed URL in seconds. Default value: <code>3600</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder expiresIn(Integer expiresIn) {
             this.putBodyParameter("ExpiresIn", expiresIn);
@@ -128,7 +134,10 @@ public class GetKnowledgeBasePreSignedUrlRequest extends Request {
         }
 
         /**
-         * KnowledgeBaseId.
+         * <p>The knowledge base ID. Either this parameter or datasetId must be specified. This parameter takes priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-3bd02617e9be335f</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.putBodyParameter("KnowledgeBaseId", knowledgeBaseId);
@@ -209,7 +218,10 @@ public class GetKnowledgeBasePreSignedUrlRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The display name of the file. If not specified, the file name from Path is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHANGELOG.md</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -217,7 +229,7 @@ public class GetKnowledgeBasePreSignedUrlRequest extends Request {
             }
 
             /**
-             * <p>本地上传时为预签名上传使用的批次相对路径；不同 ImportType 下含义由导入类型定义。</p>
+             * <p>The file name or relative path for local upload scenarios. The value cannot start with <code>direct_upload/</code> or <code>uploaded/</code>, cannot contain empty segments, <code>.</code>, or <code>..</code>, and must be 1024 bytes or less.</p>
              * 
              * <strong>example:</strong>
              * <p>contract-2026.md</p>
@@ -228,7 +240,10 @@ public class GetKnowledgeBasePreSignedUrlRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The file size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder size(Long size) {
                 this.size = size;

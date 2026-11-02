@@ -33,7 +33,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>按问题或图片检索指定知识库。版本使用 DRAFT、LATEST_PUBLISHED 或 vN 展示名，标签过滤条件按后端实际操作符传入。</p>
+     * <p>Searches a specified knowledge base by using a query or an image. For the version, use the display name DRAFT, LATEST_PUBLISHED, or vN. Pass tag filter conditions based on the actual operators used by the backend.</p>
      * 
      * @param request the request parameters of SearchKnowledgeBase  SearchKnowledgeBaseRequest
      * @return SearchKnowledgeBaseResponse
