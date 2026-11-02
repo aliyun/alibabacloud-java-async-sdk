@@ -236,7 +236,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the actor. A user ID starts with usr_, and an agent ID starts with agt_. If you do not specify this parameter, all records within the current tenant are queried. If you specify a user ID, the records of the user and the agents under the user are included. If you specify an agent ID, only the records of the agent are matched. The actor must belong to the current tenant.</p>
+         * <p>The ID of the executor. User IDs start with usr_, and agent IDs start with agt_. If you do not specify this parameter, all records within the current tenant are queried. If you specify a user ID, the records of the user and their agents are included. If you specify an agent ID, only the records of the agent are matched. The executor must belong to the current tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>usr_10001</p>
@@ -248,7 +248,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The name of the actor for exact match.</p>
+         * <p>The name of the executor for exact match.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-user</p>
@@ -260,7 +260,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The type of the actor for exact match. Valid values: HUMAN and AGENT.</p>
+         * <p>The type of the executor for exact match. Valid values: HUMAN and AGENT.</p>
          * 
          * <strong>example:</strong>
          * <p>HUMAN</p>
@@ -272,7 +272,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The catalog UUID for exact match. You can obtain this value by calling ListAgenticCatalog or SearchAgenticCatalog.</p>
+         * <p>The Catalog UUID for exact match. You can obtain this value by calling ListAgenticCatalog or SearchAgenticCatalog.</p>
          * 
          * <strong>example:</strong>
          * <p>mc-HZ-OfjcNc2z***</p>
@@ -284,7 +284,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The database UUID for exact match. You can obtain this value by calling ListAgenticDatabase or SearchAgenticDatabase.</p>
+         * <p>The Database UUID for exact match. You can obtain this value by calling ListAgenticDatabase or SearchAgenticDatabase.</p>
          * 
          * <strong>example:</strong>
          * <p>md-HZ-fp9K7r***</p>
@@ -296,7 +296,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format. If you do not specify this parameter, the default end time is the current time. If the format cannot be parsed or the end time is earlier than the start time, the request fails.</p>
+         * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss. Default value: the current time. If the format cannot be parsed or the end time is earlier than the start time, the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-01 00:00:00</p>
@@ -320,12 +320,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The execution scenario for exact match. Valid values:</p>
-         * <ul>
-         * <li>AGENT_QUERY: The agent directly executes the SQL statement.</li>
-         * <li>WORKFLOW_QUERY: The SQL statement is asynchronously executed through a workflow.
-         * If you do not specify this parameter, both scenarios are queried.</li>
-         * </ul>
+         * <p>The execution scenario for exact match. Valid values: AGENT_QUERY (the agent directly executes the SQL statement) and WORKFLOW_QUERY (the SQL statement is asynchronously executed through a workflow). If you do not specify this parameter, both scenarios are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>AGENT_QUERY</p>
@@ -349,7 +344,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The keyword for fuzzy match based on the original SQL statement.</p>
+         * <p>The keyword for fuzzy match against the original SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT</p>
@@ -373,7 +368,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format. If you do not specify this parameter, the default time range is the last 7 days. If the specified time is earlier than 730 days ago or the format cannot be parsed, the query starts from 730 days ago.</p>
+         * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss. Default value: the last 7 days. If the specified time is earlier than 730 days ago or the format cannot be parsed, the query starts from 730 days ago.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01 00:00:00</p>

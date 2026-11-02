@@ -127,7 +127,7 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. This parameter is empty when the request is successful.</p>
+         * <p>The error code. This field is empty when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>INVALID_PARAMETER</p>
@@ -160,10 +160,10 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
          * </ul>
          */
         public Builder success(Boolean success) {
@@ -172,7 +172,7 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that meet the query conditions.</p>
+         * <p>The total number of entries that meet the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -497,7 +497,11 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the actor. HUMAN indicates a user, and AGENT indicates an agent.</p>
+             * <p>The type of the actor. Valid values:</p>
+             * <ul>
+             * <li>HUMAN: User.</li>
+             * <li>AGENT: Agent.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>HUMAN</p>
@@ -519,7 +523,7 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user to which the agent belongs. The ID starts with usr_.</p>
+             * <p>The ID of the user to whom the agent belongs, starting with usr_.</p>
              * 
              * <strong>example:</strong>
              * <p>usr_10001</p>
@@ -530,7 +534,7 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The catalog UUID to which the execution belongs.</p>
+             * <p>The catalog UUID to which this execution belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>mc-HZ-OfjcNc2z***</p>
@@ -541,7 +545,7 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the client that initiated the execution, excluding the port. This parameter is empty in workflow scenarios or when the IP address is not recorded.</p>
+             * <p>The IP address of the client that initiated the execution, excluding the port. This field is empty in workflow scenarios or when not recorded.</p>
              * 
              * <strong>example:</strong>
              * <p>203.0.113.10</p>
@@ -574,7 +578,7 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database UUID to which the execution belongs.</p>
+             * <p>The database UUID to which this execution belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>md-HZ-fp9K7r***</p>
@@ -585,7 +589,7 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the execution fails.</p>
+             * <p>The error message when the execution fails.</p>
              * 
              * <strong>example:</strong>
              * <p>syntax error</p>
@@ -596,7 +600,7 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual SQL statement that was executed.</p>
+             * <p>The actually executed SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>SELECT 1</p>
@@ -634,7 +638,7 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query ID of the execution.</p>
+             * <p>The query ID of this execution.</p>
              * 
              * <strong>example:</strong>
              * <p>trace-10001</p>
@@ -659,7 +663,7 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
              * <p>The execution scenario. Valid values:</p>
              * <ul>
              * <li>AGENT_QUERY: The agent directly executes the SQL statement.</li>
-             * <li>WORKFLOW_QUERY: The SQL statement is asynchronously executed through a workflow.</li>
+             * <li>WORKFLOW_QUERY: The SQL statement is executed asynchronously through a workflow.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -682,7 +686,7 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the execution. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The execution start time, in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01 00:00:00</p>
@@ -693,7 +697,7 @@ public class ListAgenticSqlExecutionHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workflow ID. This parameter may be empty in non-workflow scenarios.</p>
+             * <p>The workflow ID. This field may be empty in non-workflow scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>wf-10001</p>

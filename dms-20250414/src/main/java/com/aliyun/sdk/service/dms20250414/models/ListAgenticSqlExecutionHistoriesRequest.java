@@ -236,7 +236,7 @@ public class ListAgenticSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the actor. User IDs start with usr_, and agent IDs start with agt_. If you do not specify this parameter, a user queries their own execution history and the execution history of their agents, while an agent queries only its own execution history. If you specify this parameter, exact matching is performed, and the value must be the ID of the current user or an agent owned by the current user.</p>
+         * <p>The ID of the actor. User IDs start with usr_, and agent IDs start with agt_. If not specified, a user queries their own history and the history of their agents, while an agent queries only its own history. If specified, exact matching is applied, and the value must be the ID of the current user or an agent owned by the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>usr_10001</p>
@@ -260,7 +260,7 @@ public class ListAgenticSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The type of the actor for exact matching. Valid values: HUMAN and AGENT.</p>
+         * <p>The type of the actor for exact matching. Valid values: HUMAN, AGENT.</p>
          * 
          * <strong>example:</strong>
          * <p>HUMAN</p>
@@ -296,7 +296,7 @@ public class ListAgenticSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format. If you do not specify this parameter, the default value is the current time. If the format cannot be parsed or the end time is earlier than the start time, the request fails.</p>
+         * <p>The end time of the query, in the yyyy-MM-dd HH:mm:ss format. If not specified, the default is the current time. If the format cannot be parsed or the end time is earlier than the start time, the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-01 00:00:00</p>
@@ -308,7 +308,7 @@ public class ListAgenticSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * <p>The page number, starting from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -320,11 +320,10 @@ public class ListAgenticSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The execution scenario for exact matching. Valid values:</p>
+         * <p>The execution scenario for exact matching. If not specified, both scenarios are queried. Valid values:</p>
          * <ul>
          * <li>AGENT_QUERY: The agent directly executes the SQL statement.</li>
-         * <li>WORKFLOW_QUERY: The SQL statement is asynchronously executed through a workflow.
-         * If you do not specify this parameter, both scenarios are queried.</li>
+         * <li>WORKFLOW_QUERY: The SQL statement is executed asynchronously through a workflow.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,7 +372,7 @@ public class ListAgenticSqlExecutionHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format. If you do not specify this parameter, the default time range is the last 7 days. If the specified time is more than 730 days ago or the format cannot be parsed, the query is performed for the last 730 days.</p>
+         * <p>The start time of the query, in the yyyy-MM-dd HH:mm:ss format. If not specified, the default is the last 7 days. If the time is earlier than 730 days ago or the format cannot be parsed, the query starts from 730 days ago.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01 00:00:00</p>

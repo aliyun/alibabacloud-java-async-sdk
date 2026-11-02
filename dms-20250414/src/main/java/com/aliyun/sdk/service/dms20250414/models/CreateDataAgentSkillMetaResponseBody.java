@@ -149,7 +149,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request is successful.                                 </li>
+         * <li><strong>true</strong>: The request is successful.</li>
          * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          * 
@@ -442,7 +442,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -453,7 +453,10 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message for skill parsing. This message is returned when the skill status is INVALID.</p>
+             * <p>The skill parsing error message.</p>
+             * <ul>
+             * <li>This error message is returned when the skill status is INVALID.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>SKILL.md file not exist.</p>
@@ -510,9 +513,9 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
             /**
              * <p>The skill status. Valid values:</p>
              * <ul>
-             * <li>INIT: The skill is not ready.</li>
-             * <li>ACTIVE: The skill is active.</li>
-             * <li>INVALID: The skill is invalid.</li>
+             * <li>INIT: Not ready.</li>
+             * <li>ACTIVE: Active.</li>
+             * <li>INVALID: Invalid.</li>
              * </ul>
              * 
              * <strong>example:</strong>
