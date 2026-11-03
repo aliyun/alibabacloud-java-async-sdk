@@ -309,13 +309,13 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index status. Valid values:</p>
+             * <p>The health status of the index. Valid values:</p>
              * <ul>
              * <li><p>Green: Healthy.</p>
              * </li>
              * <li><p>Yellow: Warning.</p>
              * </li>
-             * <li><p>Red: Abnormal.</p>
+             * <li><p>Red: Error.</p>
              * </li>
              * </ul>
              * 
@@ -328,7 +328,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This field is deprecated and can be ignored.</p>
+             * <p><strong>[Deprecated]</strong> This field is deprecated and can be ignored.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -339,7 +339,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index managed status. Valid values:</p>
+             * <p>The managed status of the index. Valid values:</p>
              * <ul>
              * <li><p>following: Managed.</p>
              * </li>
@@ -358,7 +358,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data stream name.</p>
+             * <p>The name of the data stream.</p>
              * 
              * <strong>example:</strong>
              * <p>Log1</p>
@@ -504,13 +504,13 @@ public class ListDataStreamsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data stream status. Valid values:</p>
+             * <p>The health status of the data stream. Valid values:</p>
              * <ul>
              * <li><p>Green: Healthy.</p>
              * </li>
              * <li><p>Yellow: Warning.</p>
              * </li>
-             * <li><p>Red: Abnormal.</p>
+             * <li><p>Red: Error.</p>
              * </li>
              * </ul>
              * 
@@ -523,7 +523,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index lifecycle policy name.</p>
+             * <p>The life epoch Policy Name.</p>
              * 
              * <strong>example:</strong>
              * <p>rollver1</p>
@@ -534,7 +534,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index template name.</p>
+             * <p>The name of the index template.</p>
              * 
              * <strong>example:</strong>
              * <p>template1</p>
@@ -545,7 +545,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index information under the current data stream.</p>
+             * <p>The information about the indexes in the current data stream.</p>
              */
             public Builder indices(java.util.List<Indices> indices) {
                 this.indices = indices;
@@ -553,7 +553,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total storage space occupied by managed indexes under the current data stream. Unit: bytes.</p>
+             * <p>The total storage space occupied by managed indexes in the current data stream. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1788239393298</p>
@@ -564,7 +564,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index name.</p>
+             * <p>The name of the index.</p>
              * 
              * <strong>example:</strong>
              * <p>my-index-0001</p>
@@ -575,7 +575,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total storage space occupied by all indexes under the current data stream. Unit: bytes.</p>
+             * <p>The total storage space occupied by all indexes in the current data stream. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1788239393298</p>

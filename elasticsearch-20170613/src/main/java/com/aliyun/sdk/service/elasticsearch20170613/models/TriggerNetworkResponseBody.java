@@ -78,9 +78,9 @@ public class TriggerNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result. Valid values:</p>
+         * <p>The result. Valid values:</p>
          * <ul>
-         * <li>true: The operation is successful.</li>
+         * <li>true: The operation succeeded.</li>
          * <li>false: The operation failed.</li>
          * </ul>
          * 

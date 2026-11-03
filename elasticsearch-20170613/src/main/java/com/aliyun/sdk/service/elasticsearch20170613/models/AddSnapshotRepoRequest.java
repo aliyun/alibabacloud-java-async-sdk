@@ -74,7 +74,7 @@ public class AddSnapshotRepoRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the target instance for which you want to configure cross-cluster OSS repository Settings.</p>
+         * <p>The destination instance ID. This is the instance ID for which you need to configure the cross-cluster OSS repository Settings.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class AddSnapshotRepoRequest extends Request {
         }
 
         /**
-         * <p>The cross-cluster backup information, which specifies the reference instance.</p>
+         * <p>Specifies the cross-cluster backup information, namely the reference instance.</p>
          * 
          * <strong>example:</strong>
          * <p>{

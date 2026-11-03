@@ -470,9 +470,9 @@ public class DescribeCollectorResponseBody extends TeaModel {
             /**
              * <p>The configuration type. Valid values:</p>
              * <ul>
-             * <li>collectorTargetInstance: the output of the collector.</li>
-             * <li>collectorDeployMachine: the machine on which the collector is deployed.</li>
-             * <li>collectorElasticsearchForKibana: the information about the Elasticsearch instance that supports the Kibana dashboard.</li>
+             * <li>collectorTargetInstance: The output of the collector.</li>
+             * <li>collectorDeployMachine: The machine on which the collector is deployed.</li>
+             * <li>collectorElasticsearchForKibana: The information about the Elasticsearch instance that supports the Kibana dashboard.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -486,10 +486,8 @@ public class DescribeCollectorResponseBody extends TeaModel {
             /**
              * <p>Specifies whether to enable monitoring. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>. Valid values:</p>
              * <ul>
-             * <li><p>true: enables monitoring.</p>
-             * </li>
-             * <li><p>false: disables monitoring.</p>
-             * </li>
+             * <li>true: Enables monitoring.</li>
+             * <li>false: Disables monitoring.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -523,7 +521,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of host addresses of the target instance for the collector.</p>
+             * <p>The list of host addresses of the target instances for the collector.</p>
              */
             public Builder hosts(java.util.List<String> hosts) {
                 this.hosts = hosts;
@@ -572,7 +570,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transmission protocol. This protocol must be consistent with the access protocol of the instance specified in the collector output. Valid values: HTTP and HTTPS. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>.</p>
+             * <p>The transmission protocol, which must be consistent with the access protocol of the instance specified in the collector output. Valid values: HTTP and HTTPS. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -849,10 +847,10 @@ public class DescribeCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to only validate the collector without creating it. Valid values:</p>
+             * <p>Specifies whether to validate and create the collector. Valid values:</p>
              * <ul>
-             * <li>true: validates the configuration without creating the collector.</li>
-             * <li>false: validates the configuration and creates the collector.</li>
+             * <li>true: Only validates the configuration without creating the collector.</li>
+             * <li>false: Validates the configuration and creates the collector.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -951,8 +949,8 @@ public class DescribeCollectorResponseBody extends TeaModel {
             /**
              * <p>The status of the collector. Valid values:</p>
              * <ul>
-             * <li>activing: activating.</li>
-             * <li>active: activated.</li>
+             * <li>activing: Activating.</li>
+             * <li>active: Active.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -964,7 +962,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC) where the collector is deployed.</p>
+             * <p>The ID of the virtual private cloud (VPC) where the collector resides.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp16k1dvzxtma*****</p>

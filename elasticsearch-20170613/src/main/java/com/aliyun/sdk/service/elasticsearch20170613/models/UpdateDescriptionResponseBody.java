@@ -131,7 +131,7 @@ public class UpdateDescriptionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The updated instance name.</p>
+             * <p>The updated name of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyunes_test_name</p>

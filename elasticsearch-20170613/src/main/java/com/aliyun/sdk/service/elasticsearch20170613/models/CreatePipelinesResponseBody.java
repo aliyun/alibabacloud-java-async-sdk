@@ -67,7 +67,7 @@ public class CreatePipelinesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -78,10 +78,10 @@ public class CreatePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the pipeline is created. Valid values:</p>
+         * <p>Indicates whether the pipeline was created successfully. Valid values:</p>
          * <ul>
-         * <li>true: Created.</li>
-         * <li>false: Failed to create.</li>
+         * <li>true: The pipeline was created successfully.</li>
+         * <li>false: The pipeline failed to be created.</li>
          * </ul>
          * 
          * <strong>example:</strong>

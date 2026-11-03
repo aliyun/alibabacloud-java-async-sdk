@@ -103,9 +103,9 @@ public class ListDataStreamsRequest extends Request {
         /**
          * <p>Specifies whether to display only managed indexes. Valid values:</p>
          * <ul>
-         * <li><p>true: Only managed indexes are displayed.</p>
+         * <li><p>true: Displays only managed indexes.</p>
          * </li>
-         * <li><p>false (default): All indexes are displayed.</p>
+         * <li><p>false: Displays all indexes. This is the default value.</p>
          * </li>
          * </ul>
          * 
@@ -119,7 +119,7 @@ public class ListDataStreamsRequest extends Request {
         }
 
         /**
-         * <p>The data stream name.</p>
+         * <p>The name of the data stream.</p>
          * 
          * <strong>example:</strong>
          * <p>Log1</p>

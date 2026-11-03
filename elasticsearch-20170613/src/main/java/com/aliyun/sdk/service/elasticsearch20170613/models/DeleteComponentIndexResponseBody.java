@@ -78,9 +78,9 @@ public class DeleteComponentIndexResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result. Valid values:</p>
+         * <p>The result of the operation. Valid values:</p>
          * <ul>
-         * <li>true: The deletion was successful.</li>
+         * <li>true: The deletion succeeded.</li>
          * <li>false: The deletion failed.</li>
          * </ul>
          * 

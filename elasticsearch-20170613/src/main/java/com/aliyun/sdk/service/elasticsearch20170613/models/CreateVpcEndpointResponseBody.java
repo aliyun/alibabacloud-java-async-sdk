@@ -78,7 +78,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result details.</p>
+         * <p>The result details.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -170,7 +170,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint domain name, which is used for connection configuration.</p>
+             * <p>The endpoint domain name used for connection configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>ep-bp1tah7zbrwmkjef****.epsrv-bp1w0p3jdirbfmt6****.cn-hangzhou.privatelink.aliyuncs.com</p>
@@ -181,7 +181,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the service VPC endpoint.</p>
+             * <p>The ID of the endpoint on the service VPC side.</p>
              * 
              * <strong>example:</strong>
              * <p>ep-bp1tah7zbrwmkjef****</p>
@@ -192,7 +192,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service VPC endpoint.</p>
+             * <p>The name of the endpoint on the service VPC side.</p>
              * 
              * <strong>example:</strong>
              * <p>vpcElasticSearchABC</p>
@@ -203,7 +203,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user endpoint service associated with the endpoint.</p>
+             * <p>The ID of the endpoint service associated with the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>epsrv-bp1w0p3jdirbfmt6****</p>

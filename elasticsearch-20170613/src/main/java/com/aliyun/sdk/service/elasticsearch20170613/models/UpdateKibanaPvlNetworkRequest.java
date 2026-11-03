@@ -150,7 +150,7 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * <p>A client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -162,7 +162,7 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * <p>The Kibana private network connection ID.</p>
+         * <p>The ID of the Kibana private network connection.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-vo93ngti8000a****-kibana-internal-internal</p>

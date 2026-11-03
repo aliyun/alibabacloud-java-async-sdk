@@ -99,7 +99,12 @@ public class TurnOnZoneRequest extends Request {
         }
 
         /**
-         * hpAlbZoneDrained.
+         * <p>Specifies whether to drain traffic from the load balancer. Valid values:</p>
+         * <ul>
+         * <li>false: uses the default policy.</li>
+         * <li>true: drains traffic from the load balancer.
+         * Default value: false.</li>
+         * </ul>
          */
         public Builder hpAlbZoneDrained(Boolean hpAlbZoneDrained) {
             this.putQueryParameter("hpAlbZoneDrained", hpAlbZoneDrained);

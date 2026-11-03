@@ -174,7 +174,7 @@ public class ListPipelineIdsResponseBody extends TeaModel {
              * <ul>
              * <li><p>true: Available.</p>
              * </li>
-             * <li><p>false: Not available.</p>
+             * <li><p>false: Unavailable.</p>
              * </li>
              * </ul>
              * 
@@ -187,7 +187,7 @@ public class ListPipelineIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code when the pipeline is unavailable.</p>
+             * <p>The error code returned when the pipeline is unavailable.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -198,7 +198,7 @@ public class ListPipelineIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message when the pipeline is unavailable.</p>
+             * <p>The error message returned when the pipeline is unavailable.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -209,7 +209,7 @@ public class ListPipelineIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pipeline ID created on Kibana.</p>
+             * <p>The ID of the pipeline created in Kibana.</p>
              * 
              * <strong>example:</strong>
              * <p>testKibanaManagement</p>

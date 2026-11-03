@@ -87,7 +87,7 @@ public class ListDiagnoseIndicesRequest extends Request {
         }
 
         /**
-         * <p>The language configuration. Default value: browser language. Valid values:</p>
+         * <p>The language configuration. Default value: the browser language. Valid values:</p>
          * <ul>
          * <li>en: English</li>
          * <li>zh: Simplified Chinese</li>

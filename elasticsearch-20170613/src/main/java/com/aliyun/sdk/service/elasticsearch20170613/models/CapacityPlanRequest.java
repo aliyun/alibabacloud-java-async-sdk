@@ -101,10 +101,11 @@ public class CapacityPlanRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether complex aggregation query is required. Valid values:</p>
+         * <p>Indicates whether complex aggregation queries are required. Valid values:</p>
          * <ul>
-         * <li>true: Required.</li>
-         * <li>false (default): Not required.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.
+         * Default value: false.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +118,7 @@ public class CapacityPlanRequest extends Request {
         }
 
         /**
-         * <p>The disk usage information.</p>
+         * <p>The disk usage.</p>
          */
         public Builder dataInfo(java.util.List<DataInfo> dataInfo) {
             this.putBodyParameter("dataInfo", dataInfo);
@@ -126,7 +127,7 @@ public class CapacityPlanRequest extends Request {
         }
 
         /**
-         * <p>The metric information for disk usage, search and write operations, and aggregation requests.</p>
+         * <p>The metric information such as disk usage, search and write performance, and aggregate requests.</p>
          */
         public Builder metric(java.util.List<Metric> metric) {
             this.putBodyParameter("metric", metric);
@@ -137,11 +138,11 @@ public class CapacityPlanRequest extends Request {
         /**
          * <p>Scenarios. Valid values:</p>
          * <ul>
-         * <li>general: general-purpose scenario</li>
-         * <li>analysisVisualization: data analytics scenario</li>
-         * <li>dbAcceleration: database acceleration scenario</li>
-         * <li>search: search scenario</li>
-         * <li>log: log scenario</li>
+         * <li>general: general scenarios.</li>
+         * <li>analysisVisualization: data analytics scenarios.</li>
+         * <li>dbAcceleration: database acceleration scenarios.</li>
+         * <li>search: search scenarios.</li>
+         * <li>log: log scenarios.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,12 +255,12 @@ public class CapacityPlanRequest extends Request {
             /**
              * <p>The disk data metric code. Valid values:</p>
              * <ul>
-             * <li>totalRawData: source data information</li>
-             * <li>document: data document information, estimated number of documents</li>
-             * <li>dailyIncrement: daily data growth</li>
-             * <li>dailyIncrement: daily incremental documents</li>
-             * <li>retentionTime: data retention period</li>
-             * <li>replica: replica settings</li>
+             * <li>totalRawData: source data information.</li>
+             * <li>document: document information, which indicates the estimated number of documents.</li>
+             * <li>dailyIncrement: daily data increment.</li>
+             * <li>dailyIncrement: daily document increment.</li>
+             * <li>retentionTime: data retention period.</li>
+             * <li>replica: replica settings.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -271,7 +272,7 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * <p>The metric value of disk usage.</p>
+             * <p>The metric value for disk usage.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -295,8 +296,8 @@ public class CapacityPlanRequest extends Request {
             /**
              * <p>The disk data type. Valid values:</p>
              * <ul>
-             * <li>hot: hot data</li>
-             * <li>warm: warm data</li>
+             * <li>hot: hot data.</li>
+             * <li>warm: warm data.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -310,8 +311,8 @@ public class CapacityPlanRequest extends Request {
             /**
              * <p>The data unit or time unit. Valid values:</p>
              * <ul>
-             * <li>Data units: MiB, GiB, TB, PB</li>
-             * <li>Time units: DAYS, WEEKS, MONTHS, YEARS</li>
+             * <li>Data units: MiB, GiB, TB, and PB.</li>
+             * <li>Time units: DAYS, WEEKS, MONTHS, and YEARS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -460,8 +461,8 @@ public class CapacityPlanRequest extends Request {
             /**
              * <p>The search or write metric code. Valid values:</p>
              * <ul>
-             * <li>write: write</li>
-             * <li>search: search</li>
+             * <li>write: write.</li>
+             * <li>search: search.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -473,7 +474,7 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * <p>The number of concurrent connections.</p>
+             * <p>The number of concurrent requests.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -495,7 +496,7 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * <p>The expected average response time, in milliseconds.</p>
+             * <p>The expected average response time. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -506,7 +507,7 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * <p>The throughput, in MB/s.</p>
+             * <p>The throughput. Unit: MB/s.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -517,10 +518,10 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * <p>The search or write peak type. Valid values:</p>
+             * <p>The peak type for search or write operations. Valid values:</p>
              * <ul>
-             * <li>common: normal</li>
-             * <li>peak: peak</li>
+             * <li>common: normal.</li>
+             * <li>peak: peak.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -78,10 +78,10 @@ public class CancelLogstashDeletionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the instance is successfully resumed. Valid values:</p>
+         * <p>Indicates whether the instance was successfully resumed. Valid values:</p>
          * <ul>
-         * <li>true: The instance is successfully resumed.</li>
-         * <li>false: The instance failed to be resumed.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>

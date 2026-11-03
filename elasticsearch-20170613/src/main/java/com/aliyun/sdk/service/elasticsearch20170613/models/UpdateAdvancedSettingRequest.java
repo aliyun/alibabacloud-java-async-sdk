@@ -30,11 +30,16 @@ public class UpdateAdvancedSettingRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("updateStrategy")
+    private String updateStrategy;
+
     private UpdateAdvancedSettingRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.body = builder.body;
         this.clientToken = builder.clientToken;
+        this.updateStrategy = builder.updateStrategy;
     }
 
     public static Builder builder() {
@@ -71,10 +76,18 @@ public class UpdateAdvancedSettingRequest extends Request {
         return this.clientToken;
     }
 
+    /**
+     * @return updateStrategy
+     */
+    public String getUpdateStrategy() {
+        return this.updateStrategy;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAdvancedSettingRequest, Builder> {
         private String instanceId; 
         private String body; 
         private String clientToken; 
+        private String updateStrategy; 
 
         private Builder() {
             super();
@@ -85,6 +98,7 @@ public class UpdateAdvancedSettingRequest extends Request {
             this.instanceId = request.instanceId;
             this.body = request.body;
             this.clientToken = request.clientToken;
+            this.updateStrategy = request.updateStrategy;
         } 
 
         /**
@@ -121,6 +135,18 @@ public class UpdateAdvancedSettingRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>The garbage collection (GC) update strategy. Valid values: blue_green (blue-green update, default), normal (in-place update), and intelligent (intelligent recommendation).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>blue_green</p>
+         */
+        public Builder updateStrategy(String updateStrategy) {
+            this.putQueryParameter("updateStrategy", updateStrategy);
+            this.updateStrategy = updateStrategy;
             return this;
         }
 

@@ -88,7 +88,7 @@ public class DeleteComponentIndexRequest extends Request {
         }
 
         /**
-         * <p>The composite template name.</p>
+         * <p>The name of the composite template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

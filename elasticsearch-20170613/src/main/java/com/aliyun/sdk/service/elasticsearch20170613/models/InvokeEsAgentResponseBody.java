@@ -93,7 +93,7 @@ public class InvokeEsAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. A value of 200 indicates a successful call. For non-200 values, the message field contains the error description.</p>
+         * <p>The status code. A value of 200 indicates a successful call. If the value is not 200, the message field contains the specific error description.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class InvokeEsAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The JSON-RPC 2.0 response body. data.result contains the actual return content of the called ACP method. data.id is the id passed in the request. data.jsonrpc is fixed to 2.0. data.timestamp is the UNIX timestamp in milliseconds when the response was generated.</p>
+         * <p>The JSON-RPC 2.0 response body. data.result contains the actual return content of the called ACP method. data.id is the id passed in the request. data.jsonrpc is fixed to 2.0. data.timestamp is the UNIX timestamp in milliseconds when the response is generated.</p>
          */
         public Builder data(java.util.Map<String, String> data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class InvokeEsAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error description. The value is null when the call is successful. A specific error message is returned when the call fails.</p>
+         * <p>The error description. The value is null when the call is successful. If the call fails, the specific error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Agent subscription is inactive or expired</p>

@@ -157,7 +157,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the whitelist group. The default group is included by default.</p>
+             * <p>The name of the whitelist group. By default, the default group is included.</p>
              * 
              * <strong>example:</strong>
              * <p>test_group</p>
@@ -176,7 +176,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The whitelist type. The value is fixed as PRIVATE_ES, which indicates the private network access whitelist.</p>
+             * <p>The whitelist type. The value is fixed to PRIVATE_ES, which indicates a private network access whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIVATE_ES</p>
@@ -300,7 +300,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The private network access whitelist (deprecated).</p>
+             * <p><strong>[Deprecated]</strong> The private network access whitelist.</p>
              */
             public Builder esIPWhitelist(java.util.List<String> esIPWhitelist) {
                 this.esIPWhitelist = esIPWhitelist;

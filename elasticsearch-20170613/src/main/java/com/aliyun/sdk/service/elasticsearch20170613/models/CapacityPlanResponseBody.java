@@ -171,7 +171,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size, in GiB.</p>
+             * <p>The disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>2048</p>
@@ -329,7 +329,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size, in GiB.</p>
+             * <p>The disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -342,16 +342,11 @@ public class CapacityPlanResponseBody extends TeaModel {
             /**
              * <p>The disk type. Valid values:</p>
              * <ul>
-             * <li><p>cloud_essd: ESSD.</p>
-             * </li>
-             * <li><p>cloud_ssd: standard SSD.</p>
-             * </li>
-             * <li><p>cloud_efficiency: ultra cloud disk.</p>
-             * </li>
-             * <li><p>local_ssd: local SSD.</p>
-             * </li>
-             * <li><p>local_efficiency: local ultra disk.</p>
-             * </li>
+             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>local_ssd: local SSD.</li>
+             * <li>local_efficiency: local ultra disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -363,7 +358,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size of the specification for the current node role.</p>
+             * <p>The memory size for the current node role.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -376,18 +371,12 @@ public class CapacityPlanResponseBody extends TeaModel {
             /**
              * <p>The node type. Valid values:</p>
              * <ul>
-             * <li><p>WORKER: data node.</p>
-             * </li>
-             * <li><p>WORKER_WARM: warm node.</p>
-             * </li>
-             * <li><p>MASTER: dedicated master node.</p>
-             * </li>
-             * <li><p>KIBANA: Kibana node.</p>
-             * </li>
-             * <li><p>COORDINATING: client node.</p>
-             * </li>
-             * <li><p>ELASTIC_WORKER: elastic node.</p>
-             * </li>
+             * <li>WORKER: data node.</li>
+             * <li>WORKER_WARM: warm node.</li>
+             * <li>MASTER: dedicated master node.</li>
+             * <li>KIBANA: Kibana node.</li>
+             * <li>COORDINATING: client node.</li>
+             * <li>ELASTIC_WORKER: elastic node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -494,12 +483,9 @@ public class CapacityPlanResponseBody extends TeaModel {
             /**
              * <p>The edition type. Valid values:</p>
              * <ul>
-             * <li><p>advanced: Advanced Edition.</p>
-             * </li>
-             * <li><p>x-pack: Commercial Edition.</p>
-             * </li>
-             * <li><p>community: Community Edition.</p>
-             * </li>
+             * <li>advanced: Advanced Edition.</li>
+             * <li>x-pack: Commercial Edition.</li>
+             * <li>community: Community Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -519,12 +505,10 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result calculated based on capacity planning. No default value is available. Valid values:</p>
+             * <p>The result calculated based on capacity planning. No default value is provided. Valid values:</p>
              * <ul>
-             * <li><p>true: The cluster is oversized. The number of data nodes calculated by capacity planning exceeds the threshold of 50.</p>
-             * </li>
-             * <li><p>false: The number of data nodes calculated by capacity planning is within 50.</p>
-             * </li>
+             * <li>true: indicates an oversized cluster, which means the number of data nodes calculated by capacity planning exceeds the threshold of 50.</li>
+             * <li>false: indicates that the number of data nodes calculated by capacity planning is 50 or less.</li>
              * </ul>
              * 
              * <strong>example:</strong>

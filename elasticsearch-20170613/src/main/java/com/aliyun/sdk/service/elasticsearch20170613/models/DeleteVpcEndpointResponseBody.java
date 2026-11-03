@@ -78,7 +78,7 @@ public class DeleteVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the endpoint is deleted. Valid values:</p>
+         * <p>Indicates whether the endpoint was deleted. Valid values:</p>
          * <ul>
          * <li><p>true: The endpoint is deleted.</p>
          * </li>

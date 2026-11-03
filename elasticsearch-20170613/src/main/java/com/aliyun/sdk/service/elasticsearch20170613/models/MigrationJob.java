@@ -184,7 +184,7 @@ public class MigrationJob extends TeaModel {
         } 
 
         /**
-         * currentState.
+         * <p>currentState</p>
          */
         public Builder currentState(String currentState) {
             this.currentState = currentState;
@@ -192,7 +192,7 @@ public class MigrationJob extends TeaModel {
         }
 
         /**
-         * disableSourceClusterAuth.
+         * <p>disableSourceClusterAuth</p>
          */
         public Builder disableSourceClusterAuth(Boolean disableSourceClusterAuth) {
             this.disableSourceClusterAuth = disableSourceClusterAuth;
@@ -200,7 +200,7 @@ public class MigrationJob extends TeaModel {
         }
 
         /**
-         * disableTargetClusterAuth.
+         * <p>disableTargetClusterAuth</p>
          */
         public Builder disableTargetClusterAuth(Boolean disableTargetClusterAuth) {
             this.disableTargetClusterAuth = disableTargetClusterAuth;
@@ -208,7 +208,7 @@ public class MigrationJob extends TeaModel {
         }
 
         /**
-         * endTime.
+         * <p>endTime</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -216,7 +216,7 @@ public class MigrationJob extends TeaModel {
         }
 
         /**
-         * migrationJobId.
+         * <p>migrationJobId</p>
          */
         public Builder migrationJobId(String migrationJobId) {
             this.migrationJobId = migrationJobId;
@@ -224,7 +224,7 @@ public class MigrationJob extends TeaModel {
         }
 
         /**
-         * phase.
+         * <p>phase</p>
          */
         public Builder phase(String phase) {
             this.phase = phase;
@@ -232,7 +232,7 @@ public class MigrationJob extends TeaModel {
         }
 
         /**
-         * sourceCluster.
+         * <p>sourceCluster</p>
          */
         public Builder sourceCluster(SourceCluster sourceCluster) {
             this.sourceCluster = sourceCluster;
@@ -240,7 +240,7 @@ public class MigrationJob extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>startTime</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -248,7 +248,7 @@ public class MigrationJob extends TeaModel {
         }
 
         /**
-         * statusResult.
+         * <p>statusResult</p>
          */
         public Builder statusResult(java.util.List<StatusResult> statusResult) {
             this.statusResult = statusResult;
@@ -256,7 +256,7 @@ public class MigrationJob extends TeaModel {
         }
 
         /**
-         * targetCluster.
+         * <p>targetCluster</p>
          */
         public Builder targetCluster(TargetCluster targetCluster) {
             this.targetCluster = targetCluster;
@@ -264,7 +264,7 @@ public class MigrationJob extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>updateTime</p>
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;
@@ -330,7 +330,7 @@ public class MigrationJob extends TeaModel {
             } 
 
             /**
-             * instanceId.
+             * <p>instanceId</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -338,7 +338,7 @@ public class MigrationJob extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>type</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -405,7 +405,7 @@ public class MigrationJob extends TeaModel {
             } 
 
             /**
-             * code.
+             * <p>code</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -413,7 +413,7 @@ public class MigrationJob extends TeaModel {
             }
 
             /**
-             * success.
+             * <p>success</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -480,7 +480,7 @@ public class MigrationJob extends TeaModel {
             } 
 
             /**
-             * instanceId.
+             * <p>type</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -488,7 +488,7 @@ public class MigrationJob extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>type</p>
              */
             public Builder type(String type) {
                 this.type = type;

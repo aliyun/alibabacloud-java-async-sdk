@@ -116,7 +116,7 @@ public class CreateComponentIndexRequest extends Request {
         }
 
         /**
-         * <p>The template name.</p>
+         * <p>The name of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class CreateComponentIndexRequest extends Request {
         }
 
         /**
-         * <p>The metadata, which is used to store remarks and other information.</p>
+         * <p>The metadata used to store information such as remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>{       &quot;description&quot;: &quot;set number of shards to one&quot;   }</p>
@@ -222,7 +222,7 @@ public class CreateComponentIndexRequest extends Request {
             } 
 
             /**
-             * <p>The aliases configuration of the template.</p>
+             * <p>The template aliases configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -233,7 +233,7 @@ public class CreateComponentIndexRequest extends Request {
             }
 
             /**
-             * <p>The mappings configuration of the template.</p>
+             * <p>The template mappings configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{ 			&quot;properties&quot;: { 				&quot;@timestamp&quot;: { 					&quot;type&quot;: &quot;date&quot; 				} 			} 		}</p>
@@ -244,7 +244,7 @@ public class CreateComponentIndexRequest extends Request {
             }
 
             /**
-             * <p>The settings configuration of the template.</p>
+             * <p>The template settings configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{ 			&quot;index.number_of_replicas&quot;: 0 		}</p>

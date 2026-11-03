@@ -240,7 +240,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data by using OpenStore</a>.</p>
      * 
      * @param request the request parameters of CreateComponentIndex  CreateComponentIndexRequest
      * @return CreateComponentIndexResponse
@@ -320,10 +320,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, note the following:</p>
+     * <p>Before you call this operation, note the following items:</p>
      * <ul>
-     * <li>Make sure that you are familiar with the billing methods and pricing of Logstash. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/260882.html">Billing overview</a>.</ph></li>
-     * <li>To create an instance, complete real-name verification. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
+     * <li>Make sure that you fully understand the billing methods and pricing of Logstash. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/260882.html">Billing</a>.</ph></li>
+     * <li>You must complete real-name verification before creating an instance. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
      * </ul>
      * 
      * @param request the request parameters of CreateLogstash  CreateLogstashRequest
@@ -381,7 +381,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information about this API, see <a href="https://help.aliyun.com/document_detail/279559.html">Configure private network connectivity for an instance</a>.</p>
+     * <p>For more information about this API, see <a href="https://help.aliyun.com/document_detail/279559.html">Configure a private connection for an instance</a>.</p>
      * 
      * @param request the request parameters of CreateVpcEndpoint  CreateVpcEndpointRequest
      * @return CreateVpcEndpointResponse
@@ -438,7 +438,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Implement massive data storage through OpenStore</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data by using OpenStore</a>.</p>
      * 
      * @param request the request parameters of DeleteComponentIndex  DeleteComponentIndexRequest
      * @return DeleteComponentIndexResponse
@@ -479,7 +479,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Deleting a data stream also deletes its backing indexes. Proceed with caution.- To delete an index template that has associated data streams, delete the associated data streams first. On the data stream list page, view the data stream details to find the index template that the data stream matches.</li>
+     * <li>Deleting a data stream also deletes its corresponding backing indexes. Proceed with caution. - If an index template has associated data streams, you must delete the associated data streams before you can delete the index template. On the Data Streams page, view the data stream details to find the matching index template.</li>
      * </ul>
      * </blockquote>
      * 
@@ -1101,8 +1101,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
-     * <li>The Kibana specifications must be greater than 1 vCPU and 2 GB of memory.</li>
+     * <li>This API is supported only for cloud-native instances. For instances of the legacy architecture, use the TriggerNetwork method.</li>
+     * <li>The Kibana node specifications must be greater than 1 vCPU and 2 GB.</li>
      * </ol>
      * 
      * @param request the request parameters of EnableKibanaPvlNetwork  EnableKibanaPvlNetworkRequest
@@ -1790,7 +1790,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data by using OpenStore</a>.</p>
      * 
      * @param request the request parameters of ListComponentIndices  ListComponentIndicesRequest
      * @return ListComponentIndicesResponse
@@ -1883,7 +1883,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Implement massive data storage by using OpenStore</a>.</p>
      * 
      * @param request the request parameters of ListDeprecatedTemplates  ListDeprecatedTemplatesRequest
      * @return ListDeprecatedTemplatesResponse
@@ -2294,7 +2294,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Pipeline management is divided into configuration file management and Kibana pipeline management. Kibana pipeline management is not available in the console for some regions.</p>
+     * <p>Pipeline management is divided into configuration file management and Kibana pipeline management. Kibana pipeline management is not available in the console of some regions.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListPipelineIds  ListPipelineIdsRequest
@@ -2946,8 +2946,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Note the following when you invoke this operation:
-     * Before shrinking data nodes from a cluster, perform data migration from the nodes to be removed to other nodes. After you confirm that the nodes to be removed contain no data, proceed with the node shrinking operation.</p>
+     * <p>Take note of the following items when you invoke this operation:
+     * Before you remove data nodes from a cluster, you must perform data migration to transfer data from the nodes to be removed to other nodes. Make sure that no data is stored on the nodes to be removed before you remove them.</p>
      * 
      * @param request the request parameters of ShrinkNode  ShrinkNodeRequest
      * @return ShrinkNodeResponse
@@ -3076,7 +3076,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Disables an existing zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Exercise caution when performing this operation.</p>
+     * <p>Closes an existing zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Proceed with caution.</p>
      * 
      * @param request the request parameters of TurnOffZone  TurnOffZoneRequest
      * @return TurnOffZoneResponse
@@ -3097,7 +3097,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Reopens a zone that has been taken offline for a multi-zone instance. This operation is intended only for disaster recovery drills. Exercise caution when performing this operation.</p>
+     * <p>Reopens an offline zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Proceed with caution.</p>
      * 
      * @param request the request parameters of TurnOnZone  TurnOnZoneRequest
      * @return TurnOnZoneResponse
@@ -3323,7 +3323,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data by using OpenStore</a>.</p>
      * 
      * @param request the request parameters of UpdateComponentIndex  UpdateComponentIndexRequest
      * @return UpdateComponentIndexResponse
@@ -3593,7 +3593,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>When you invoke this operation, note the following:
-     * You cannot update the configuration when the instance status is activating, invalid, or inactive (freeze).</p>
+     * You cannot update the configurations when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * @param request the request parameters of UpdateInstanceSettings  UpdateInstanceSettingsRequest
      * @return UpdateInstanceSettingsResponse
@@ -3633,8 +3633,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
-     * <li>The Kibana specifications must be greater than 1 vCPU and 2 GB of memory.</li>
+     * <li>This API supports only cloud-native instances. For instances of the legacy architecture, use the TriggerNetwork operation.</li>
+     * <li>The Kibana node specifications must be 1 vCPU and 2 GiB of memory or higher.</li>
      * </ol>
      * 
      * @param request the request parameters of UpdateKibanaPvlNetwork  UpdateKibanaPvlNetworkRequest
@@ -3877,8 +3877,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Note the following when you invoke this operation:
-     * You cannot update the information when the instance status is activating, invalid, or freeze (inactive).</p>
+     * <p>When you invoke this operation, note the following:
+     * You cannot update information when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * @param request the request parameters of UpdatePublicNetwork  UpdatePublicNetworkRequest
      * @return UpdatePublicNetworkResponse
@@ -4008,15 +4008,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Before you begin</h2>
+     * <h2>Precautions</h2>
      * <ul>
-     * <li>You cannot update information when the instance status is activating, invalid, or freeze (inactive).</li>
-     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used simultaneously, and they support different parameters (except for InstanceId and clientToken). The details are as follows: <ul>
-     * <li>IP whitelist list: esIPWhitelist</li>
-     * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
+     * <li>You cannot update the information when the instance status is activating, invalid, or frozen (inactive).</li>
+     * <li>You can update the whitelist by using an IP whitelist or an IP whitelist group. You cannot use both methods at the same time. Except for InstanceId and clientToken, the parameters supported by the two methods are different. The details are as follows: <ul>
+     * <li>IP whitelist: esIPWhitelist</li>
+     * <li>IP whitelist group: modifyMode and whiteIpGroup</li>
      * </ul>
      * </li>
-     * <li>The public access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</li>
+     * <li>You cannot configure private IP addresses in the public access whitelist, and you cannot configure public IP addresses in the private network access whitelist.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateWhiteIps  UpdateWhiteIpsRequest
@@ -4098,7 +4098,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>To enable X-Pack monitoring for Logstash, configure an Elasticsearch instance. After the configuration, you can monitor the Logstash instance in the Kibana console of the corresponding Elasticsearch instance.</p>
+     * <p>To enable X-Pack monitoring for Logstash, you must configure an Elasticsearch instance. After the configuration, you can monitor the Logstash instance in Kibana of the corresponding Elasticsearch instance.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ValidateConnection  ValidateConnectionRequest
@@ -4139,7 +4139,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you use a collector to collect logs from different data sources, you must authorize the creation of a service-linked role. Call this operation to check whether the service-linked role has been created.</p>
+     * <p>When you use a collector to collect logs from different data sources, you must first authorize the creation of a service-linked role. You can call this operation to verify whether the service-linked role has been created.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ValidateSlrPermission  ValidateSlrPermissionRequest
@@ -4181,7 +4181,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Precautions</h3>
      * <ul>
-     * <li>Before you call this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Billing rules of Alibaba Cloud Elasticsearch</a>.</li>
+     * <li>Make sure that you fully understand the billing methods and pricing of Elasticsearch before you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Billing rules of Alibaba Cloud Elasticsearch</a>.</li>
      * <li>You must pass real-name verification before you create an instance. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
      * <li>You do not need to specify a zone when you create an instance. By default, the instance is deployed in the same zone as the selected VPC.</li>
      * </ul>

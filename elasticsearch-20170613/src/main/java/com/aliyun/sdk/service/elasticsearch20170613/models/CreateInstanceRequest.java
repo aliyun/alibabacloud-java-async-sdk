@@ -329,7 +329,7 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The client node configuration.</p>
+         * <p>The configuration of the client node.</p>
          */
         public Builder clientNodeConfiguration(ClientNodeConfiguration clientNodeConfiguration) {
             this.putBodyParameter("clientNodeConfiguration", clientNodeConfiguration);
@@ -338,7 +338,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>es</p>
@@ -350,7 +350,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The elastic node configuration.</p>
+         * <p>The configuration of the elastic node.</p>
          */
         public Builder elasticDataNodeConfiguration(ElasticDataNodeConfiguration elasticDataNodeConfiguration) {
             this.putBodyParameter("elasticDataNodeConfiguration", elasticDataNodeConfiguration);
@@ -372,7 +372,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance version. Valid values:</p>
+         * <p>The version of the instance. Valid values:</p>
          * <ul>
          * <li>8.5.1_with_X-Pack</li>
          * <li>7.10_with_X-Pack</li>
@@ -398,7 +398,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The index node configuration. Only instances with the AI engine type support index node configuration.</p>
+         * <p>Only instances that use the AI engine support the configuration of index nodes.</p>
          */
         public Builder indexNodeConfiguration(IndexNodeConfiguration indexNodeConfiguration) {
             this.putBodyParameter("indexNodeConfiguration", indexNodeConfiguration);
@@ -409,7 +409,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The edition type. Valid values:</p>
          * <ul>
-         * <li>x-pack: Creates a Commercial Edition instance, or an Advanced Edition instance with Indexing Service and OpenStore disabled.</li>
+         * <li>x-pack: Creates a Commercial Edition instance or an Advanced Edition instance with Indexing Service and OpenStore disabled.</li>
          * <li>IS: Creates an Advanced Edition instance with Indexing Service or OpenStore enabled.</li>
          * </ul>
          * 
@@ -423,9 +423,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The Kibana node configuration.</p>
+         * <p>The configuration of the Kibana node.</p>
          * <blockquote>
-         * <p>Enable the Kibana node.</p>
+         * <p>You are strongly advised to enable the Kibana node.</p>
          * </blockquote>
          */
         public Builder kibanaConfiguration(KibanaNodeConfiguration kibanaConfiguration) {
@@ -435,7 +435,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The dedicated master node configuration.</p>
+         * <p>The configuration of the dedicated master node.</p>
          * <blockquote>
          * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call the createInstance operation to create an instance with a new-generation cloud disk-based dedicated master node, you must specify the instance family with the <code>.new</code> suffix, such as elasticsearch.sn1ne.large.new.</p>
          * </blockquote>
@@ -473,7 +473,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The data node configuration.</p>
+         * <p>The configuration of the data node.</p>
          * <blockquote>
          * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call the createInstance operation to create an instance with a new-generation cloud disk-based data node, you must specify the instance family with the <code>.new</code> suffix, such as elasticsearch.sn1ne.large.new.</p>
          * </blockquote>
@@ -485,7 +485,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The payment details of the subscription instance. This parameter is required when you create a subscription instance.</p>
+         * <p>The billing details of the subscription instance. This parameter is required when you create a subscription instance.</p>
          */
         public Builder paymentInfo(PaymentInfo paymentInfo) {
             this.putBodyParameter("paymentInfo", paymentInfo);
@@ -522,7 +522,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The query node configuration. Only instances with the AI engine type support query node configuration.</p>
+         * <p>Only instances that use the AI engine support the configuration of query nodes.</p>
          */
         public Builder searchNodeConfiguration(SearchNodeConfiguration searchNodeConfiguration) {
             this.putBodyParameter("searchNodeConfiguration", searchNodeConfiguration);
@@ -531,7 +531,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance label group.</p>
+         * <p>The instance tag labels.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -540,7 +540,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The warm data node configuration.</p>
+         * <p>The configuration of the warm data node.</p>
          */
         public Builder warmNodeConfiguration(WarmNodeConfiguration warmNodeConfiguration) {
             this.putBodyParameter("warmNodeConfiguration", warmNodeConfiguration);
@@ -632,7 +632,7 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The key of the instance tag.</p>
              * 
              * <strong>example:</strong>
              * <p>KeyTest</p>
@@ -643,7 +643,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The value of the instance tag.</p>
              * 
              * <strong>example:</strong>
              * <p>KeyValue</p>

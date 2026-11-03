@@ -93,7 +93,7 @@ public class InterruptLogstashTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter is not returned if the call is successful.</p>
+         * <p>The error code. This parameter is not returned for successful calls.</p>
          * 
          * <strong>example:</strong>
          * <p>.</p>
@@ -104,7 +104,7 @@ public class InterruptLogstashTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned if the call is successful.</p>
+         * <p>The error message. This parameter is not returned for successful calls.</p>
          * 
          * <strong>example:</strong>
          * <p>.</p>
@@ -126,10 +126,10 @@ public class InterruptLogstashTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result. Valid values:</p>
+         * <p>The result. Valid values:</p>
          * <ul>
-         * <li>true: The task is suspended.</li>
-         * <li>false: The task failed to be suspended.</li>
+         * <li>true: The task is suspended successfully.</li>
+         * <li>false: The task fails to be suspended.</li>
          * </ul>
          * 
          * <strong>example:</strong>

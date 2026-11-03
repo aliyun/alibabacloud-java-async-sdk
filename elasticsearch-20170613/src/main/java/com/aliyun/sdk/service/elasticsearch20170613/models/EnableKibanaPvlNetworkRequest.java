@@ -144,7 +144,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The current instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * <p>The endpoint name.</p>
+         * <p>The name of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-27a3mul6l000xxx-kibana-endpoint</p>
@@ -169,7 +169,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * managedSecurityGroup.
+         * <p>Specifies whether to use a managed security group. If you use a managed security group, you do not need to specify the securityGroups parameter, and the system automatically creates a managed security group for you.</p>
          */
         public Builder managedSecurityGroup(Boolean managedSecurityGroup) {
             this.putBodyParameter("managedSecurityGroup", managedSecurityGroup);
@@ -196,7 +196,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * <p>The VPC-connected instance ID.</p>
+         * <p>The VPC instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp19ip2ocyv24w0e2****</p>
