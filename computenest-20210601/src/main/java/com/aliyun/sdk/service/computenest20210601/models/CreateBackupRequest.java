@@ -74,7 +74,7 @@ public class CreateBackupRequest extends Request {
         } 
 
         /**
-         * <p>Backup description</p>
+         * <p>The backup description.</p>
          * 
          * <strong>example:</strong>
          * <p>No description</p>
@@ -86,7 +86,7 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the service instance to be transferred to official version.</p>
+         * <p>The ID of the service instance to back up.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

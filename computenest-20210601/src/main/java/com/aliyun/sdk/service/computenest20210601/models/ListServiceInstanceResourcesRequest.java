@@ -144,28 +144,31 @@ public class ListServiceInstanceResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The filter conditions. Vaild values:</p>
+         * <p>The filter conditions. Valid values:</p>
          * <ul>
-         * <li><p>ExpireTimeStart：
-         * Query start time for Subscription resource expiration.
-         * <notice>Notice Note: Only supports querying service instances on private deployments.&gt;Notice: </p>
+         * <li><p>ExpireTimeStart: The start of the time range to query the expiration time of subscription resources.</p>
+         * <blockquote>
+         * <p>Notice: This parameter applies only to service instances in private deployments.</p>
+         * </blockquote>
          * </li>
-         * <li><p>ExpireTimeEnd：Query end time for Subscription resource expiration.
-         * <notice>Notice Note: Only supports querying service instances on private deployments.&gt;Notice: </p>
+         * <li><p>ExpireTimeEnd: The end of the time range to query the expiration time of subscription resources.</p>
+         * <blockquote>
+         * <p>Notice: This parameter applies only to service instances in private deployments.</p>
+         * </blockquote>
          * </li>
-         * <li><p>PayType：The billing method of the read-only instance. 
-         * <notice>Notice Note: Only supports querying service instances on private deployments.<notice> </p>
-         * <p> Valid values:</p>
+         * <li><p>PayType: The billing method.&gt;Notice:  This parameter applies only to service instances in private deployments.
+         * Valid values:</p>
          * <ul>
-         * <li><p>PayAsYouGo</p>
+         * <li><p>Subscription: subscription.</p>
          * </li>
-         * <li><p>Subscription</p>
+         * <li><p>PayAsYouGo: pay-as-you-go.</p>
          * </li>
          * </ul>
          * </li>
-         * <li><p>ResourceARN：The Alibaba Cloud Resource Name (ARN) of a resource.</p>
+         * <li><p>ResourceARN: The Alibaba Cloud Resource Name (ARN) of the resource.</p>
          * </li>
          * </ul>
+         * <p>resource name (ARN).</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -174,7 +177,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -186,11 +189,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. Valid values:</p>
-         * <ul>
-         * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
-         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
-         * </ul>
+         * <p>The token that is used to retrieve the next page of results. Set this to the NextToken value from a previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbAx7BkQzyYC+ONO+WudHGKEdB0uWSY7AGnM3qCgm/Ynge7zU6NWdbj0Tegyajyqyc=</p>
@@ -202,11 +201,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Valid values:</p>
-         * <ul>
-         * <li>cn-hangzhou: China (Hangzhou).</li>
-         * <li>ap-southeast-1: Singapore.</li>
-         * </ul>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -231,7 +226,13 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>Service Instance resource type，include AliyunResource and ContainerResource.</p>
+         * <p>The resource type of the service instance. Valid values:</p>
+         * <ul>
+         * <li><p>AliyunResource: an Alibaba Cloud resource.</p>
+         * </li>
+         * <li><p>ContainerResource: a container group (pod) resource.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>AliyunResource</p>
@@ -243,7 +244,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tag key and value.</p>
+         * <p>The resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -311,12 +312,16 @@ public class ListServiceInstanceResourcesRequest extends Request {
             } 
 
             /**
-             * <p>Vaild values:</p>
+             * <p>The name of the filter. Valid values:</p>
              * <ul>
-             * <li>ExpireTimeStart</li>
-             * <li>ExpireTimeEnd</li>
-             * <li>PayType</li>
-             * <li>ResourceARN</li>
+             * <li><p>ExpireTimeStart</p>
+             * </li>
+             * <li><p>ExpireTimeEnd</p>
+             * </li>
+             * <li><p>PayType</p>
+             * </li>
+             * <li><p>ResourceARN</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -328,7 +333,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of the filter condition.</p>
+             * <p>The filter condition values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -395,7 +400,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the resource tag.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -406,7 +411,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the resource tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>

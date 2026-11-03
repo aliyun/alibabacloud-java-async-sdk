@@ -522,12 +522,16 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business state of the service instance. Valid values:</p>
+         * <p>The business status of the service instance. Valid values:</p>
          * <ul>
-         * <li>Normal</li>
-         * <li>Renewing</li>
-         * <li>RenewFailed</li>
-         * <li>Expired</li>
+         * <li><p>Normal: The service instance is normal.</p>
+         * </li>
+         * <li><p>Renewing: The service instance is being renewed.</p>
+         * </li>
+         * <li><p>RenewFoiled: The renewal failed.</p>
+         * </li>
+         * <li><p>Expired: The service instance has expired.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -539,7 +543,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cloud Marketplace additional billing items.</p>
+         * <p>The extra billing items of Alibaba Cloud Marketplace.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;TiKVServerCount&quot;:&quot;3&quot;,&quot;package_version&quot;:&quot;yuncode5398300001&quot;,&quot;PDServerCount&quot;:&quot;3&quot;,&quot;TiDBServerCount&quot;:&quot;2&quot;}</p>
@@ -550,7 +554,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the serviceInstance was created.</p>
+         * <p>The time when the service instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-20T00:00:00Z</p>
@@ -561,10 +565,12 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the service instance supports the operation feature. Valid values:</p>
+         * <p>Indicates whether the service instance supports managed O\&amp;M. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The service instance supports managed O\&amp;M.</p>
+         * </li>
+         * <li><p>false: The service instance does not support managed O\&amp;M.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -576,7 +582,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to enable Prometheus monitoring.</p>
+         * <p>Indicates whether Prometheus monitoring is enabled. Valid values:</p>
+         * <ul>
+         * <li><p>true: enabled.</p>
+         * </li>
+         * <li><p>false: disabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -587,7 +599,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time of service instance.</p>
+         * <p>The time when the service instance expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-01T12:00:00</p>
@@ -617,10 +629,12 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the hosted O&amp;M feature is enabled for the service instance. Valid values:</p>
+         * <p>Indicates whether managed O\&amp;M is enabled for the service instance. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Managed O\&amp;M is enabled for the service instance.</p>
+         * </li>
+         * <li><p>false: Managed O\&amp;M is not enabled for the service instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -632,7 +646,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time of licence.</p>
+         * <p>The time when the license expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-01T12:00:00</p>
@@ -643,7 +657,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The market Instance ID.</p>
+         * <p>The Alibaba Cloud Marketplace instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>704***59</p>
@@ -657,7 +671,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          * <p>The name of the service instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestName</p>
+         * <p>Database B</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -665,9 +679,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The network configurations.</p>
+         * <p>The network configuration.</p>
          * <blockquote>
-         * <p> This parameter is discontinued.</p>
+         * <p>This parameter is deprecated.</p>
          * </blockquote>
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
@@ -676,7 +690,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The serviceInstance  to be operated.</p>
+         * <p>The ID of the service instance that is managed.</p>
          * 
          * <strong>example:</strong>
          * <p>si-d6ab3a63ccbb4b17****</p>
@@ -687,7 +701,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation end time.</p>
+         * <p>The end time of the managed O\&amp;M.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-28T06:48:56Z</p>
@@ -698,7 +712,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation start time.</p>
+         * <p>The start time of the managed O\&amp;M.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-29T06:48:56Z</p>
@@ -709,10 +723,12 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The outputs returned from creating the service instance.</p>
+         * <p>The output fields returned when the service instance is created.</p>
          * <ul>
-         * <li>If the service is deployed by using a ROS template, all output fields of the template are returned.</li>
-         * <li>If the service is deployed by calling an SPI operation, the output fields of the service provider and for the Compute Nest additional features are returned.</li>
+         * <li><p>In ROS mode, all output fields of the template are returned.</p>
+         * </li>
+         * <li><p>In Service Provider Interface (SPI) mode, the output fields from the independent software vendor (ISV) and the additional features of Compute Nest are returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -724,7 +740,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parameters configured for the service instance.</p>
+         * <p>The parameters that are entered for deploying the service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;param&quot;:&quot;value&quot;}</p>
@@ -735,12 +751,16 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The billing method of the instance for market. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>Permanent: Permanent purchase</li>
-         * <li>Subscription: Subscription.</li>
-         * <li>PayAsYouGo: Pay-as-you-go.</li>
-         * <li>CustomFixTime: Merchant custom fixed duration.</li>
+         * <li><p>Permanent: permanent.</p>
+         * </li>
+         * <li><p>Subscription: subscription.</p>
+         * </li>
+         * <li><p>PayAsYouGo: pay-as-you-go.</p>
+         * </li>
+         * <li><p>CustomFixTime: a custom fixed duration.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -760,10 +780,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The package name.</p>
+         * <p>The name of the package.</p>
          * 
          * <strong>example:</strong>
-         * <p>Package one</p>
+         * <p>Package 1</p>
          */
         public Builder predefinedParameterName(String predefinedParameterName) {
             this.predefinedParameterName = predefinedParameterName;
@@ -771,7 +791,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deployment progress of the service instance. Unit: percentage.</p>
+         * <p>The deployment progress of the service instance. Unit: %.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -804,7 +824,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources.</p>
+         * <p>The list of resources.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;StackId&quot;: &quot;stack-xxx&quot;}]</p>
@@ -815,7 +835,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The service details.</p>
+         * <p>The details of the service.</p>
          */
         public Builder service(Service service) {
             this.service = service;
@@ -823,7 +843,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the service instance.</p>
+         * <p>The service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>si-d6ab3a63ccbb4b17****</p>
@@ -834,11 +854,16 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the service. Valid values:</p>
+         * <p>The service type. Valid values:</p>
          * <ul>
-         * <li>private: The service is a private service and is deployed within the account of a customer.</li>
-         * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
-         * <li>operation: The service is a hosted O&amp;M service.</li>
+         * <li><p>private: a service instance that is deployed in the user\&quot;s account.</p>
+         * </li>
+         * <li><p>managed: a service instance that is hosted in the service provider\&quot;s account.</p>
+         * </li>
+         * <li><p>operation: a managed service instance.</p>
+         * </li>
+         * <li><p>poc: a trial service instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -850,11 +875,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The source of the serviceInstance. Valid values:</p>
+         * <p>The source of the service instance. Valid values:</p>
          * <ul>
-         * <li>User</li>
-         * <li>Market</li>
-         * <li>Supplier</li>
+         * <li><p>User: a Compute Nest user.</p>
+         * </li>
+         * <li><p>Market: Alibaba Cloud Marketplace.</p>
+         * </li>
+         * <li><p>Supplier: a Compute Nest service provider.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -866,16 +894,24 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deploy status of the serviceInstance. Valid values:</p>
+         * <p>The deployment status of the service instance. Valid values:</p>
          * <ul>
-         * <li>Created</li>
-         * <li>Deploying</li>
-         * <li>DeployedFailed</li>
-         * <li>Deployed</li>
-         * <li>Upgrading</li>
-         * <li>Deleting</li>
-         * <li>Deleted</li>
-         * <li>DeletedFailed</li>
+         * <li><p>Created: The service instance is created.</p>
+         * </li>
+         * <li><p>Deploying: The service instance is being deployed.</p>
+         * </li>
+         * <li><p>DeployedFailed: The service instance failed to be deployed.</p>
+         * </li>
+         * <li><p>Deployed: The service instance is deployed.</p>
+         * </li>
+         * <li><p>Upgrading: The service instance is being upgraded.</p>
+         * </li>
+         * <li><p>Deleting: The service instance is being deleted.</p>
+         * </li>
+         * <li><p>Deleted: The service instance is deleted.</p>
+         * </li>
+         * <li><p>DeletedFailed: The service instance failed to be deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -887,7 +923,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the deployment state of the service instance.</p>
+         * <p>The description of the deployment status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>deploy successfully</p>
@@ -909,7 +945,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Is it supported to convert from trial to private</p>
+         * <p>Indicates whether the trial service can be converted to a paid service.</p>
          */
         public Builder supportTrialToPrivate(Boolean supportTrialToPrivate) {
             this.supportTrialToPrivate = supportTrialToPrivate;
@@ -917,7 +953,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The custom tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -928,7 +964,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Template one</p>
+         * <p>Template 1</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -936,7 +972,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the serviceInstance  was last updated.</p>
+         * <p>The time when the service instance was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-20T00:00:00Z</p>
@@ -947,7 +983,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The AliUid of the user.</p>
+         * <p>The user\&quot;s Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>130920852836****</p>
@@ -1016,7 +1052,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation end time.</p>
+             * <p>The end time of the managed O\&amp;M.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-28T06:48:56Z</p>
@@ -1185,7 +1221,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bandwidth limit for the private connection established based on the private network interconnection mode of Compute Nest.</p>
+             * <p>The bandwidth limit for the connection that is established in Compute Nest intranet-connected mode.</p>
              * 
              * <strong>example:</strong>
              * <p>1536Mbps</p>
@@ -1207,7 +1243,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses of the endpoints of the private connections.</p>
+             * <p>The IP address of the PrivateLink endpoint.</p>
              */
             public Builder endpointIps(java.util.List<String> endpointIps) {
                 this.endpointIps = endpointIps;
@@ -1215,13 +1251,18 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the ingress endpoint. Valid values:</p>
+             * <p>The status of the Ingress endpoint. Valid values:</p>
              * <ul>
-             * <li>Ready: The ingress endpoint is connected.</li>
-             * <li>Pending: The ingress endpoint is being connected.</li>
-             * <li>Failed: The ingress endpoint fails to be connected.</li>
-             * <li>Deleted: The ingress endpoint is deleted.</li>
-             * <li>Deleting: The ingress endpoint is being deleted.</li>
+             * <li><p>Ready: The Ingress endpoint is connected.</p>
+             * </li>
+             * <li><p>Pending: The Ingress endpoint is being connected.</p>
+             * </li>
+             * <li><p>Failed: The Ingress endpoint failed to be connected.</p>
+             * </li>
+             * <li><p>Deleted: The Ingress endpoint is deleted.</p>
+             * </li>
+             * <li><p>Deleting: The Ingress endpoint is being deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1233,13 +1274,18 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the network service. Valid values:</p>
+             * <p>The status of the network service. Valid values:</p>
              * <ul>
-             * <li>Ready: The network service is connected.</li>
-             * <li>Pending: The network service is being connected.</li>
-             * <li>Failed: The network service fails to be connected.</li>
-             * <li>Deleted: The network service is deleted.</li>
-             * <li>Deleting: The network service is being deleted.</li>
+             * <li><p>Ready: The network service is connected.</p>
+             * </li>
+             * <li><p>Pending: The network service is being connected.</p>
+             * </li>
+             * <li><p>Failed: The network service failed to be connected.</p>
+             * </li>
+             * <li><p>Deleted: The network service is deleted.</p>
+             * </li>
+             * <li><p>Deleting: The network service is being deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1251,7 +1297,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the VPC to which the endpoint of the private connection established based on the private network interconnection mode of Compute Nest belongs.</p>
+             * <p>The region where the VPC of the endpoint is located when a private connection is established in Compute Nest intranet-connected mode.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -1262,7 +1308,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The names of the security groups.</p>
+             * <p>The security group name.</p>
              */
             public Builder securityGroups(java.util.List<String> securityGroups) {
                 this.securityGroups = securityGroups;
@@ -1270,7 +1316,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The names of the vSwitches.</p>
+             * <p>The vSwitch name.</p>
              */
             public Builder vSwitches(java.util.List<String> vSwitches) {
                 this.vSwitches = vSwitches;
@@ -1278,7 +1324,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1vwnn14rqpyiczj****</p>
@@ -1387,7 +1433,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The network configurations, which are mainly used for private connections.</p>
+             * <p>The network configurations. This parameter is used for PrivateLink connections.</p>
              */
             public Builder connectionConfigs(java.util.List<ConnectionConfigs> connectionConfigs) {
                 this.connectionConfigs = connectionConfigs;
@@ -1395,7 +1441,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint ID of the private connection.</p>
+             * <p>The endpoint ID of the PrivateLink connection.</p>
              * 
              * <strong>example:</strong>
              * <p>ep-m5ei37240541816b****</p>
@@ -1406,7 +1452,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the private zone of the custom private domain name.</p>
+             * <p>The ID of the PrivateZone for the custom private domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>cb7f214f80ac348d87daaeac1f35****</p>
@@ -1428,7 +1474,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the endpoint of the PrivateLink connection.</p>
+             * <p>The region ID of the endpoint for the PrivateLink connection.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1485,7 +1531,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint ID of the reverse private connection.</p>
+             * <p>The endpoint ID of the reverse PrivateLink connection.</p>
              * 
              * <strong>example:</strong>
              * <p>ep-m5ei42370541816b****</p>
@@ -1581,9 +1627,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the endpoint for the private connection.</p>
+             * <p>The endpoint ID of the PrivateLink connection.</p>
              * <blockquote>
-             * <p> This parameter is discontinued.</p>
+             * <p>This parameter is deprecated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1595,7 +1641,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about private connections.</p>
+             * <p>The information about the PrivateLink connection.</p>
              */
             public Builder privateVpcConnections(java.util.List<PrivateVpcConnections> privateVpcConnections) {
                 this.privateVpcConnections = privateVpcConnections;
@@ -1603,7 +1649,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PrivateZone ID.</p>
+             * <p>The ID of the PrivateZone for the custom private domain name.</p>
+             * <blockquote>
+             * <p>This parameter is deprecated.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>cb7f214f80ac348d87daaeac1f35****</p>
@@ -1614,7 +1663,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the reverse private connection.</p>
+             * <p>The information about the reverse PrivateLink connection.</p>
              */
             public Builder reversePrivateVpcConnections(java.util.List<ReversePrivateVpcConnections> reversePrivateVpcConnections) {
                 this.reversePrivateVpcConnections = reversePrivateVpcConnections;
@@ -1729,10 +1778,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Docker Community Edition</p>
+             * <p>B数据库</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1740,10 +1789,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the service.</p>
+             * <p>The summary of the service.</p>
              * 
              * <strong>example:</strong>
-             * <p>Docker Community Edition (CE) is a free version of the Docker project, aimed at developers, enthusiasts, and individuals and organizations who want to use container technology.</p>
+             * <p>B is an open-source distributed relational database independently designed and developed by Company A.</p>
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
@@ -1824,7 +1873,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
              * <p>The version name.</p>
              * 
              * <strong>example:</strong>
-             * <p>0.1.0</p>
+             * <p>20241112</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -2086,7 +2135,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
+             * <p>The information about the service deployment configuration. The information varies based on the deployment type. The data is stored in the JSON string format.</p>
              */
             public Builder deployMetadata(String deployMetadata) {
                 this.deployMetadata = deployMetadata;
@@ -2094,13 +2143,18 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment type of the service. Valid values:</p>
+             * <p>The deployment type. Valid values:</p>
              * <ul>
-             * <li>ros: The service is deployed by using Resource Orchestration Service (ROS).</li>
-             * <li>terraform: The service is deployed by using Terraform.</li>
-             * <li>ack: The service is deployed by using Container Service for Kubernetes (ACK).</li>
-             * <li>spi: The service is deployed by calling a service provider interface (SPI).</li>
-             * <li>operation: The service is deployed by using a hosted O&amp;M service.</li>
+             * <li><p>ros: The service is deployed using ROS.</p>
+             * </li>
+             * <li><p>terraform: The service is deployed using Terraform.</p>
+             * </li>
+             * <li><p>ack: The service is deployed using ACK.</p>
+             * </li>
+             * <li><p>spi: The service is deployed by calling SPI.</p>
+             * </li>
+             * <li><p>operation: The service is deployed using Alibaba Cloud Managed Services.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2112,10 +2166,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Parameters related to O&amp;M operations, including configuration change, prometheus, and log configurations.</p>
+             * <p>The parameters related to O\&amp;M operations, including service upgrade and downgrade, Prometheus, and log configurations.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;SupportBackup&quot;:false,&quot;PrometheusConfigMap&quot;:{},&quot;ModifyParametersConfig&quot;:[{&quot;TemplateName&quot;:&quot;Chinese mainland version&quot;,&quot;Operation&quot;:[{&quot;Name&quot;:&quot;Change Plan&quot;,&quot;Description&quot;:&quot;Change Plan&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:true,&quot;EnableLogging&quot;:false},{&quot;Name&quot;:&quot;Parameter configuration change&quot;,&quot;Description&quot;:&quot;Parameter configuration change&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:false,&quot;EnableLogging&quot;:false,&quot;Parameters&quot;:[&quot;DataDiskSize&quot;]}]}}</p>
+             * <p>{&quot;SupportBackup&quot;:false,&quot;PrometheusConfigMap&quot;:{},&quot;ModifyParametersConfig&quot;:[{&quot;TemplateName&quot;:&quot;China edition&quot;,&quot;Operation&quot;:[{&quot;Name&quot;:&quot;Plan modification&quot;,&quot;Description&quot;:&quot;Plan modification&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:true,&quot;EnableLogging&quot;:false},{&quot;Name&quot;:&quot;Parameter modification&quot;,&quot;Description&quot;:&quot;Parameter modification&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:false,&quot;EnableLogging&quot;:false,&quot;Parameters&quot;:[&quot;DataDiskSize&quot;]}]}]}</p>
              */
             public Builder operationMetadata(String operationMetadata) {
                 this.operationMetadata = operationMetadata;
@@ -2123,7 +2177,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the service version was published.</p>
+             * <p>The time when the service was published.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-05-21T00:00:00Z</p>
@@ -2134,7 +2188,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the service documentation.</p>
+             * <p>The URL of the product documentation.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example.com">http://example.com</a></p>
@@ -2156,7 +2210,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the service.</p>
+             * <p>The service information.</p>
              */
             public Builder serviceInfos(java.util.List<ServiceInfos> serviceInfos) {
                 this.serviceInfos = serviceInfos;
@@ -2164,7 +2218,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the service page.</p>
+             * <p>The URL of the product page.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com">https://service-info-private.oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -2175,11 +2229,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service. Valid values:</p>
+             * <p>The service type. Valid values:</p>
              * <ul>
-             * <li>private: The service is a private service and is deployed within the account of a customer.</li>
-             * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
-             * <li>operation: The service is a hosted O&amp;M service.</li>
+             * <li><p>private: The service is deployed in the user\&quot;s account.</p>
+             * </li>
+             * <li><p>managed: The service is hosted in the service provider\&quot;s account.</p>
+             * </li>
+             * <li><p>operation: The service is an Alibaba Cloud Managed Service.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2191,16 +2248,22 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the service. Valid values:</p>
+             * <p>The service status. Valid values:</p>
              * <ul>
-             * <li>Draft</li>
-             * <li>Submited</li>
-             * <li>Approved</li>
-             * <li>Online</li>
-             * <li>Offline</li>
-             * <li>Deleted</li>
-             * <li>Launching</li>
-             * <li>Beta</li>
+             * <li><p>Draft: The service is pending registration submission.</p>
+             * </li>
+             * <li><p>Submitted: The registration is submitted.</p>
+             * </li>
+             * <li><p>Approved: The registration is approved.</p>
+             * </li>
+             * <li><p>Online: The service is published.</p>
+             * </li>
+             * <li><p>Offline: The service is unpublished.</p>
+             * </li>
+             * <li><p>Deleted: The service is deleted.</p>
+             * </li>
+             * <li><p>Launching: The service is being published.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2215,7 +2278,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
              * <p>The name of the service provider.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alibaba Cloud</p>
+             * <p>Company A</p>
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -2234,7 +2297,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service versions that can be updated.</p>
+             * <p>The information about the service versions to which the service can be upgraded.</p>
              */
             public Builder upgradableServiceInfos(java.util.List<UpgradableServiceInfos> upgradableServiceInfos) {
                 this.upgradableServiceInfos = upgradableServiceInfos;
@@ -2242,7 +2305,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service version that can be updated.</p>
+             * <p>The list of service versions to which the service can be upgraded.</p>
              */
             public Builder upgradableServiceVersions(java.util.List<String> upgradableServiceVersions) {
                 this.upgradableServiceVersions = upgradableServiceVersions;
@@ -2250,10 +2313,38 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata about the upgrade.</p>
+             * <p>The upgrade metadata.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Description&quot;:&quot;Allowed Upgrade 11&quot;,&quot;SupportRollback&quot;:true,&quot;SupportUpgradeFromVersions&quot;:[],&quot;UpgradeComponents&quot;:[&quot;Configuration&quot;,&quot;Resource&quot;]}</p>
+             * <p>{
+             *   &quot;Type&quot;: &quot;OOS&quot;,
+             *   &quot;Description&quot;: &quot;Changelog or something description&quot;,
+             *   &quot;SupportUpgradeFromVersions&quot;: [1, 2],
+             *   &quot;UpgradeSteps&quot;: {
+             *     &quot;PreUpgradeStage&quot;: {
+             *       &quot;Description&quot;: &quot;Initialize database&quot;,
+             *       &quot;Type&quot;: &quot;RunCommand&quot;,
+             *       &quot;ResourceName&quot;: &quot;EcsRole1&quot;,
+             *       &quot;CommandType&quot;: &quot;runShellScript&quot;,
+             *       &quot;CommandContent&quot;: &quot;echo hello&quot;
+             *     },
+             *     &quot;UpgradeStage&quot;: [{
+             *       &quot;Description&quot;: &quot;Update EcsRole1 instance&quot;,
+             *       &quot;Type&quot;: &quot;RunCommand&quot;,
+             *       &quot;ResourceName&quot;: &quot;EcsRole1&quot;,
+             *       &quot;ArtifactsDownloadDirectory&quot;: &quot;/home/admin&quot;,
+             *       &quot;CommandType&quot;: &quot;runShellScript&quot;,
+             *       &quot;CommandContent&quot;: &quot;echo hello&quot;
+             *     }],
+             *     &quot;PostUpgradeStage&quot;: {
+             *       &quot;Description&quot;: &quot;Post-deployment check&quot;,
+             *       &quot;Type&quot;: &quot;None/RunCommand&quot;,
+             *       &quot;ResourceName&quot;: &quot;EcsRole1&quot;,
+             *       &quot;CommandType&quot;: &quot;runShellScript&quot;,
+             *       &quot;CommandContent&quot;: &quot;echo hello&quot;
+             *     }
+             *   }
+             * }</p>
              */
             public Builder upgradeMetadata(String upgradeMetadata) {
                 this.upgradeMetadata = upgradeMetadata;
@@ -2275,7 +2366,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
              * <p>The custom version name defined by the service provider.</p>
              * 
              * <strong>example:</strong>
-             * <p>1.1.0</p>
+             * <p>Version A</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;

@@ -39,7 +39,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only for service instances that belong to private services deployed by using Resource Orchestration Service (ROS).</p>
+     * <p>If a private service instance that uses the ROS deployment type fails to deploy, you can call the ContinueDeployServiceInstance operation to resume the deployment.</p>
      * 
      * @param request the request parameters of ContinueDeployServiceInstance  ContinueDeployServiceInstanceRequest
      * @return ContinueDeployServiceInstanceResponse
@@ -48,8 +48,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade/downgrade feature and configured the corresponding parameters when the service was created.</p>
      * 
      * @param request the request parameters of CreateBackup  CreateBackupRequest
      * @return CreateBackupResponse
@@ -58,8 +58,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Before you call this operation, ensure that the service provider enabled the upgrade and downgrade feature and configured its parameters when the service was created.</p>
      * 
      * @param request the request parameters of CreateRestoreTask  CreateRestoreTaskRequest
      * @return CreateRestoreTaskResponse
@@ -79,24 +79,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceUsageResponse> createServiceUsage(CreateServiceUsageRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of CreateSkill  CreateSkillRequest
      * @return CreateSkillResponse
      */
     CompletableFuture<CreateSkillResponse> createSkill(CreateSkillRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of CreateSkillFileDetect  CreateSkillFileDetectRequest
      * @return CreateSkillFileDetectResponse
      */
     CompletableFuture<CreateSkillFileDetectResponse> createSkillFileDetect(CreateSkillFileDetectRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider has enabled the modify configuration feature and set the required parameters.</p>
+     * 
      * @param request the request parameters of CreateSkillHubConfig  CreateSkillHubConfigRequest
      * @return CreateSkillHubConfigResponse
      */
     CompletableFuture<CreateSkillHubConfigResponse> createSkillHubConfig(CreateSkillHubConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of CreateSkillSpace  CreateSkillSpaceRequest
      * @return CreateSkillSpaceResponse
      */
@@ -104,8 +120,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade/downgrade feature and configured the upgrade/downgrade parameters when the service was created.</p>
      * 
      * @param request the request parameters of DeleteBackup  DeleteBackupRequest
      * @return DeleteBackupResponse
@@ -119,12 +135,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteServiceInstancesResponse> deleteServiceInstances(DeleteServiceInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of DeleteSkill  DeleteSkillRequest
      * @return DeleteSkillResponse
      */
     CompletableFuture<DeleteSkillResponse> deleteSkill(DeleteSkillRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of DeleteSkillSpace  DeleteSkillSpaceRequest
      * @return DeleteSkillSpaceResponse
      */
@@ -150,8 +174,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade and downgrade feature and configured its parameters when the service was created.</p>
      * 
      * @param request the request parameters of GetBackup  GetBackupRequest
      * @return GetBackupResponse
@@ -159,6 +183,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetBackupResponse> getBackup(GetBackupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade/downgrade feature and set the related parameters when the service was created.</p>
+     * 
      * @param request the request parameters of GetNetworkAvailableZones  GetNetworkAvailableZonesRequest
      * @return GetNetworkAvailableZonesResponse
      */
@@ -201,24 +229,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceTemplateParameterConstraintsResponse> getServiceTemplateParameterConstraints(GetServiceTemplateParameterConstraintsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of GetSkill  GetSkillRequest
      * @return GetSkillResponse
      */
     CompletableFuture<GetSkillResponse> getSkill(GetSkillRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>This operation is available only if the service provider enabled the modification feature and configured the relevant parameters during service creation.</p>
+     * 
      * @param request the request parameters of GetSkillFileDetectResult  GetSkillFileDetectResultRequest
      * @return GetSkillFileDetectResultResponse
      */
     CompletableFuture<GetSkillFileDetectResultResponse> getSkillFileDetectResult(GetSkillFileDetectResultRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider enabled the modification feature and configured its parameters when creating the service.</p>
+     * 
      * @param request the request parameters of GetSkillHubConfig  GetSkillHubConfigRequest
      * @return GetSkillHubConfigResponse
      */
     CompletableFuture<GetSkillHubConfigResponse> getSkillHubConfig(GetSkillHubConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</p>
+     * 
      * @param request the request parameters of GetSkillSpace  GetSkillSpaceRequest
      * @return GetSkillSpaceResponse
      */
@@ -232,8 +276,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade and downgrade feature and configured the related parameters when the service was created.</p>
      * 
      * @param request the request parameters of ListBackups  ListBackupsRequest
      * @return ListBackupsResponse
@@ -247,6 +291,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPoliciesResponse> listPolicies(ListPoliciesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of ListPublicSkills  ListPublicSkillsRequest
      * @return ListPublicSkillsResponse
      */
@@ -254,8 +302,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade and downgrade feature and configured its parameters when creating the service.</p>
      * 
      * @param request the request parameters of ListRestoreTasks  ListRestoreTasksRequest
      * @return ListRestoreTasksResponse
@@ -311,18 +359,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of ListSkillFiles  ListSkillFilesRequest
      * @return ListSkillFilesResponse
      */
     CompletableFuture<ListSkillFilesResponse> listSkillFiles(ListSkillFilesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of ListSkillSpaces  ListSkillSpacesRequest
      * @return ListSkillSpacesResponse
      */
     CompletableFuture<ListSkillSpacesResponse> listSkillSpaces(ListSkillSpacesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of ListSkills  ListSkillsRequest
      * @return ListSkillsResponse
      */
@@ -359,6 +419,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenewServiceInstanceResourcesResponse> renewServiceInstanceResources(RenewServiceInstanceResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the restart O\&amp;M operation when the service was created.</p>
+     * 
      * @param request the request parameters of RestartServiceInstance  RestartServiceInstanceRequest
      * @return RestartServiceInstanceResponse
      */
@@ -371,12 +435,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RollbackServiceInstanceResponse> rollbackServiceInstance(RollbackServiceInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider configured the start and stop O\&amp;M actions when creating the service.</p>
+     * 
      * @param request the request parameters of StartServiceInstance  StartServiceInstanceRequest
      * @return StartServiceInstanceResponse
      */
     CompletableFuture<StartServiceInstanceResponse> startServiceInstance(StartServiceInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider configured the Operations and Maintenance (O\&amp;M) operations for startup and shutdown when the service was created.</p>
+     * 
      * @param request the request parameters of StopServiceInstance  StopServiceInstanceRequest
      * @return StopServiceInstanceResponse
      */
@@ -402,8 +474,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Configuration change is enabled and the related parameters are configured for the service by the service provider.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the specification modification feature and configured the modification parameters when creating the service.</p>
      * 
      * @param request the request parameters of UpdateServiceInstanceSpec  UpdateServiceInstanceSpecRequest
      * @return UpdateServiceInstanceSpecResponse
@@ -417,6 +489,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateServiceUsageResponse> updateServiceUsage(UpdateServiceUsageRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of UpdateSkill  UpdateSkillRequest
      * @return UpdateSkillResponse
      */

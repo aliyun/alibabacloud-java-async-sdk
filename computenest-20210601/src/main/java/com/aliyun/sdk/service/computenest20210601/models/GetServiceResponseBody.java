@@ -522,13 +522,13 @@ public class GetServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The alert configurations of the service.</p>
+         * <p>The alert configuration of the service.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when you specify an alert policy for <strong>PolicyNames</strong>.</p>
+         * <p>This configuration takes effect only if you configure an alert policy in <strong>PolicyNames</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{ &quot;TemplateUrl&quot;: &quot;<a href="http://template.file.url">http://template.file.url</a>&quot;, &quot;ApplicationGroups&quot;: [ { &quot;Name&quot;: &quot;applicationGroup1&quot;, &quot;TemplateUrl&quot;: &quot;url1&quot; }, { &quot;Name&quot;: &quot;applicationGroup2&quot;, &quot;TemplateUrl&quot;: &quot;url2&quot; } ] }</p>
+         * <p>{ &quot;TemplateUrl&quot;: &quot;<a href="http://template.file.url">http://template.file.url</a>&quot;, // Application group level alarm metadata &quot;ApplicationGroups&quot;: [ { &quot;Name&quot;: &quot;applicationGroup1&quot;, &quot;TemplateUrl&quot;: &quot;url1&quot; }, { &quot;Name&quot;: &quot;applicationGroup2&quot;, &quot;TemplateUrl&quot;: &quot;url2&quot; } ] }</p>
          */
         public Builder alarmMetadata(String alarmMetadata) {
             this.alarmMetadata = alarmMetadata;
@@ -536,7 +536,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The categories of the Flow.</p>
+         * <p>The service category name.</p>
          * 
          * <strong>example:</strong>
          * <p>AI</p>
@@ -547,7 +547,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the order placed in Alibaba Cloud Marketplace.</p>
+         * <p>The commodity specifications.</p>
          */
         public Builder commodity(Commodity commodity) {
             this.commodity = commodity;
@@ -555,7 +555,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Compliance check metadata.</p>
+         * <p>The compliance package metadata.</p>
          */
         public Builder complianceMetadata(ComplianceMetadata complianceMetadata) {
             this.complianceMetadata = complianceMetadata;
@@ -563,11 +563,14 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Service deployment approach, Valid values：</p>
+         * <p>The deployment channel. Valid values:</p>
          * <ul>
-         * <li>NoWhere</li>
-         * <li>Marketplace</li>
-         * <li>ComputeNest</li>
+         * <li><p>NoWhere: The service has no deployment channel.</p>
+         * </li>
+         * <li><p>Marketplace: The service is deployed from Alibaba Cloud Marketplace.</p>
+         * </li>
+         * <li><p>ComputeNest: The service is deployed from Compute Nest.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -579,10 +582,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
+         * <p>The deployment configuration of the service. The configuration is stored as a JSON string. The data format of the string varies based on the deployment type.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;TemplateUrl&quot;: &quot;<a href="http://tidbRosFile%5C%22%7D">http://tidbRosFile\&quot;}</a></p>
+         * <p>{\&quot;TemplateUrl\&quot;: \&quot;<a href="http://tidbRosFile%5C%5C%22%7D">http://tidbRosFile\\&quot;}</a></p>
          */
         public Builder deployMetadata(String deployMetadata) {
             this.deployMetadata = deployMetadata;
@@ -590,10 +593,20 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deployment type of the service. Valid values:</p>
+         * <p>The deployment type. Valid values:</p>
          * <ul>
-         * <li>ros: The service is deployed by using Resource Orchestration Service (ROS).</li>
-         * <li>terraform: The service is deployed by using Terraform.</li>
+         * <li><p>ros: The service is deployed using ROS.</p>
+         * </li>
+         * <li><p>terraform: The service is deployed using Terraform.</p>
+         * </li>
+         * <li><p>spi: The service is deployed by calling a Service Provider Interface (SPI).</p>
+         * </li>
+         * <li><p>operation: The service is an Alibaba Cloud Managed Services deployment.</p>
+         * </li>
+         * <li><p>container: The service is deployed using a container.</p>
+         * </li>
+         * <li><p>pkg: The service is a package service.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -605,7 +618,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The duration for which hosted O&amp;M is implemented. Unit: seconds.</p>
+         * <p>The duration of the Alibaba Cloud Managed Services. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>259200</p>
@@ -616,7 +629,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Information about the ram role created in the service template.</p>
+         * <p>The information about the roles that are created in the service template.</p>
          */
         public Builder instanceRoleInfos(java.util.List<InstanceRoleInfos> instanceRoleInfos) {
             this.instanceRoleInfos = instanceRoleInfos;
@@ -624,13 +637,15 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the hosted O&amp;M feature is enabled for the service. Default value: false. Valid values:</p>
+         * <p>Specifies whether to enable Alibaba Cloud Managed Services. Default value: false. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: enabled.</p>
+         * </li>
+         * <li><p>false: disabled.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned if you set <strong>ServiceType</strong> to <strong>private</strong>.</p>
+         * <p>This parameter is required when <strong>ServiceType</strong> is set to <strong>private</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -645,7 +660,7 @@ public class GetServiceResponseBody extends TeaModel {
          * <p>The license metadata.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;PayType&quot;:&quot;CustomFixTime&quot;,&quot;DefaultLicenseDays&quot;:7,&quot;CustomMetadata&quot;:[{&quot;TemplateName&quot;:&quot;ECS&quot;,&quot;SpecificationName&quot;:&quot;bandwith-0&quot;,&quot;CustomData&quot;:&quot;1&quot;}]}</p>
+         * <p>{\&quot;PayType\&quot;:\&quot;CustomFixTime\&quot;,\&quot;DefaultLicenseDays\&quot;:7,\&quot;CustomMetadata\&quot;:[{\&quot;TemplateName\&quot;:\&quot; template1\&quot;,\&quot;SpecificationName\&quot;:\&quot;bandwith-0\&quot;,\&quot;CustomData\&quot;:\&quot;1\&quot;}]}</p>
          */
         public Builder licenseMetadata(String licenseMetadata) {
             this.licenseMetadata = licenseMetadata;
@@ -653,10 +668,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The logging configurations.</p>
+         * <p>The application log configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Logstores&quot;:[]}</p>
+         * <p>{\&quot;Logstores\&quot;:[]}</p>
          */
         public Builder logMetadata(String logMetadata) {
             this.logMetadata = logMetadata;
@@ -664,10 +679,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation metadata.</p>
+         * <p>The O\&amp;M configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;PrometheusConfigMap&quot;:{&quot;New_Vpc_Ack_And_Jumpserver&quot;:{}}}</p>
+         * <p>{\&quot;PrometheusConfigMap\&quot;:{\&quot;New_Vpc_Ack_And_Jumpserver\&quot;:{}}}</p>
          */
         public Builder operationMetadata(String operationMetadata) {
             this.operationMetadata = operationMetadata;
@@ -675,10 +690,12 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The permissions on the service. Valid values:</p>
+         * <p>The permission type. Valid values:</p>
          * <ul>
-         * <li>Deployable: Permissions to deploy the service.</li>
-         * <li>Accessible: Permissions to access the service.</li>
+         * <li><p>Deployable: The service is deployable.</p>
+         * </li>
+         * <li><p>Accessible: The service is accessible.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -690,7 +707,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O&amp;M policies are supported.</p>
+         * <p>The policy names. A single policy name can be up to 128 characters in length. Separate multiple names with commas (,). Only policies related to Alibaba Cloud Managed Services are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>policyName1, policyName2</p>
@@ -723,7 +740,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Service document information.</p>
+         * <p>The service documents.</p>
          */
         public Builder serviceDocumentInfos(java.util.List<ServiceDocumentInfos> serviceDocumentInfos) {
             this.serviceDocumentInfos = serviceDocumentInfos;
@@ -742,7 +759,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the service.</p>
+         * <p>The service information.</p>
          */
         public Builder serviceInfos(java.util.List<ServiceInfos> serviceInfos) {
             this.serviceInfos = serviceInfos;
@@ -750,7 +767,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceLocaleConfigs.
+         * <p>The multilingual configurations of the service.</p>
          */
         public Builder serviceLocaleConfigs(java.util.List<ServiceLocaleConfigs> serviceLocaleConfigs) {
             this.serviceLocaleConfigs = serviceLocaleConfigs;
@@ -758,7 +775,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The URL of the service page.</p>
+         * <p>The URL of the product page.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example1.com">http://example1.com</a></p>
@@ -769,11 +786,14 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the service. Valid values:</p>
+         * <p>The service type. Valid values:</p>
          * <ul>
-         * <li>private: The service is a private service and is deployed within the account of a customer.</li>
-         * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
-         * <li>operation: The service is a hosted O&amp;M service.</li>
+         * <li><p>private: The service is deployed in the user\&quot;s account.</p>
+         * </li>
+         * <li><p>managed: The service is hosted in the service provider\&quot;s account.</p>
+         * </li>
+         * <li><p>operation: The service is an Alibaba Cloud Managed Service.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -785,13 +805,18 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The permission type of the deployment URL. Valid values:</p>
+         * <p>The share type. Valid values:</p>
          * <ul>
-         * <li>Public: All users can go to the URL to create a service instance or a trial service instance.</li>
-         * <li>Restricted: Only users in the whitelist can go to the URL to create a service instance or a trial service instance.</li>
-         * <li>OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a service instance.</li>
-         * <li>OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.</li>
-         * <li>Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.</li>
+         * <li><p>Public: The service is public. Formal and trial deployments are not restricted.</p>
+         * </li>
+         * <li><p>Restricted: The service is restricted. Formal and trial deployments are restricted.</p>
+         * </li>
+         * <li><p>OnlyFormalRestricted: Only formal deployments are restricted.</p>
+         * </li>
+         * <li><p>OnlyTrialRestricted: Only trial deployments are restricted.</p>
+         * </li>
+         * <li><p>Hidden: The service is hidden, is not visible, and you cannot request permissions for deployment.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -803,16 +828,30 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deploy status of the service. Valid values:</p>
+         * <p>The status of the service. Valid values:</p>
          * <ul>
-         * <li>Draft</li>
-         * <li>Beta</li>
-         * <li>Submitted</li>
-         * <li>Approved</li>
-         * <li>Launching</li>
-         * <li>Online</li>
-         * <li>Offline</li>
-         * <li>Creating</li>
+         * <li><p>Draft: The service is in the draft state.</p>
+         * </li>
+         * <li><p>Beta: The service is in a pre-release state. The service cannot be modified but can be shared with other users.</p>
+         * </li>
+         * <li><p>Submitted: The service is submitted for approval. The service cannot be modified.</p>
+         * </li>
+         * <li><p>Approved: The service is approved. The service cannot be modified but can be published.</p>
+         * </li>
+         * <li><p>Launching: The service is being published.</p>
+         * </li>
+         * <li><p>Online: The service is published.</p>
+         * </li>
+         * <li><p>Offline: The service is unpublished.</p>
+         * </li>
+         * <li><p>Creating: The service is being created.</p>
+         * </li>
+         * <li><p>CreateFailed: The service failed to be created.</p>
+         * </li>
+         * <li><p>Updating: The service is being updated.</p>
+         * </li>
+         * <li><p>UpdateFailed: The service failed to be updated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -824,10 +863,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of service provider.</p>
+         * <p>The description of the service provider.</p>
          * 
          * <strong>example:</strong>
-         * <p>Computing Nest Community service</p>
+         * <p>Alibaba Cloud Compute Nest team</p>
          */
         public Builder supplierDesc(String supplierDesc) {
             this.supplierDesc = supplierDesc;
@@ -835,7 +874,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Logo of service provider.</p>
+         * <p>The icon of the service provider.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://service-info-public.oss-cn-hangzhou.aliyuncs.com/xxx/service-image/xxx.png">https://service-info-public.oss-cn-hangzhou.aliyuncs.com/xxx/service-image/xxx.png</a></p>
@@ -849,7 +888,7 @@ public class GetServiceResponseBody extends TeaModel {
          * <p>The name of the service provider.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud</p>
+         * <p>Company A</p>
          */
         public Builder supplierName(String supplierName) {
             this.supplierName = supplierName;
@@ -879,7 +918,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Contact information of the service provider</p>
+         * <p>The contact information of the service provider.</p>
          */
         public Builder supportContacts(java.util.List<SupportContacts> supportContacts) {
             this.supportContacts = supportContacts;
@@ -887,7 +926,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The service tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -895,10 +934,12 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the tenant. Valid values:</p>
+         * <p>The tenant type. Valid values:</p>
          * <ul>
-         * <li>SingleTenant</li>
-         * <li>MultiTenant</li>
+         * <li><p>SingleTenant: The service is a single-tenant service.</p>
+         * </li>
+         * <li><p>MultiTenant: The service is a multitenancy service.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -910,7 +951,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trial duration. Unit: day. The maximum trial duration cannot exceed 30 days.</p>
+         * <p>The trial duration in days. The maximum trial duration is 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -921,10 +962,12 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trial policy. Valid values:</p>
+         * <p>The trial type. Valid values:</p>
          * <ul>
-         * <li>Trial: Trials are supported.</li>
-         * <li>NotTrial: Trials are not supported.</li>
+         * <li><p>Trial: The service supports trial.</p>
+         * </li>
+         * <li><p>NotTrial: The service does not support trial.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1027,7 +1070,7 @@ public class GetServiceResponseBody extends TeaModel {
              * <p>The template name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Template one.</p>
+             * <p>单机版</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1081,7 +1124,7 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The mapping information about the billing items.</p>
+             * <p>The billing item mappings.</p>
              */
             public Builder componentsMappings(java.util.List<ComponentsMappings> componentsMappings) {
                 this.componentsMappings = componentsMappings;
@@ -1161,7 +1204,7 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The specification code of the service in Alibaba Cloud Marketplace.</p>
+             * <p>The specification code of the Alibaba Cloud Marketplace commodity.</p>
              * 
              * <strong>example:</strong>
              * <p>cmjj00****</p>
@@ -1175,7 +1218,7 @@ public class GetServiceResponseBody extends TeaModel {
              * <p>The package name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Package one.</p>
+             * <p>Package 1</p>
              */
             public Builder specificationName(String specificationName) {
                 this.specificationName = specificationName;
@@ -1186,7 +1229,7 @@ public class GetServiceResponseBody extends TeaModel {
              * <p>The template name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Template one.</p>
+             * <p>Standalone edition</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1240,7 +1283,7 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The mappings between the service specifications and the template or package.</p>
+             * <p>The mapping between commodity specifications and templates or packages.</p>
              */
             public Builder specificationMappings(java.util.List<SpecificationMappings> specificationMappings) {
                 this.specificationMappings = specificationMappings;
@@ -1342,7 +1385,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscription duration. Unit: week or year.</p>
+             * <p>The purchasable duration. Unit: week or year.</p>
              */
             public Builder times(java.util.List<String> times) {
                 this.times = times;
@@ -1500,11 +1543,10 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing method of the service. Valid values:</p>
-             * <ul>
-             * <li><strong>PREPAY</strong> (default): subscription.</li>
-             * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
-             * </ul>
+             * <p>The billing method.</p>
+             * <p>Valid values:</p>
+             * <p><strong>PREPAY</strong> (default): subscription.</p>
+             * <p><strong>POSTPAY</strong>: pay-as-you-go.</p>
              * 
              * <strong>example:</strong>
              * <p>POSTPAY</p>
@@ -1515,7 +1557,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The commodity code of the service in Alibaba Cloud Marketplace.</p>
+             * <p>The commodity code.</p>
              * 
              * <strong>example:</strong>
              * <p>cmjj00****</p>
@@ -1526,7 +1568,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration metadata related to Lingxiao.</p>
+             * <p>The Lingxiao configuration metadata.</p>
              */
             public Builder cssMetadata(CssMetadata cssMetadata) {
                 this.cssMetadata = cssMetadata;
@@ -1534,11 +1576,11 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deploy page.</p>
+             * <p>The deployment page.</p>
              * 
              * <strong>example:</strong>
-             * <p>Order： Order page
-             * Detail： Detail page</p>
+             * <p>Order: Order page
+             * Detail: Details page</p>
              */
             public Builder deployPage(String deployPage) {
                 this.deployPage = deployPage;
@@ -1546,7 +1588,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata of Alibaba Cloud Marketplace.</p>
+             * <p>The Alibaba Cloud Marketplace metadata.</p>
              */
             public Builder marketplaceMetadata(MarketplaceMetadata marketplaceMetadata) {
                 this.marketplaceMetadata = marketplaceMetadata;
@@ -1562,11 +1604,13 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration metadata related to Saas Boost.</p>
+             * <p>The SaasBoost configuration metadata.</p>
              * 
              * <strong>example:</strong>
              * <p>{
-             *     &quot;Enabled&quot;:false    &quot;PublicAccessUrl&quot;:&quot;<a href="https://example.com">https://example.com</a>&quot;
+             *     &quot;Enabled&quot;:false
+             *     //Public access URL
+             *     &quot;PublicAccessUrl&quot;:&quot;<a href="https://example.com">https://example.com</a>&quot;
              * }</p>
              */
             public Builder saasBoostMetadata(String saasBoostMetadata) {
@@ -1575,7 +1619,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification details of the service in Alibaba Cloud Marketplace.</p>
+             * <p>The Alibaba Cloud Marketplace specification details.</p>
              */
             public Builder specifications(java.util.List<Specifications> specifications) {
                 this.specifications = specifications;
@@ -1583,11 +1627,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service type. Valid values:</p>
-             * <ul>
-             * <li>marketplace: Alibaba Cloud Marketplace.</li>
-             * <li>Css: Lingxiao.</li>
-             * </ul>
+             * <p>The type.</p>
+             * <p>Valid values:</p>
+             * <p>Marketplace: Alibaba Cloud Marketplace.</p>
+             * <p>Css: Lingxiao.</p>
              * 
              * <strong>example:</strong>
              * <p>Marketplace</p>
@@ -1644,7 +1687,7 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compliance pack list.</p>
+             * <p>The list of compliance packages.</p>
              */
             public Builder compliancePacks(java.util.List<String> compliancePacks) {
                 this.compliancePacks = compliancePacks;
@@ -1737,10 +1780,10 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of the policy.</p>
+             * <p>The content of the control policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\n  &quot;Version&quot;: &quot;1&quot;,\n  &quot;Statement&quot;: [\n    {\n      &quot;Effect&quot;: &quot;Allow&quot;,\n      &quot;Action&quot;: &quot;<em>&quot;,\n      &quot;Principal&quot;: &quot;</em>&quot;,\n      &quot;Resource&quot;: &quot;*&quot;\n    }\n  ]\n}</p>
+             * <p>{\n  \&quot;Version\&quot;: \&quot;1\&quot;,\n  \&quot;Statement\&quot;: [\n    {\n      \&quot;Effect\&quot;: \&quot;Allow\&quot;,\n      \&quot;Action\&quot;: \&quot;<em>\&quot;,\n      \&quot;Principal\&quot;: \&quot;</em>\&quot;,\n      \&quot;Resource\&quot;: \&quot;*\&quot;\n    }\n  ]\n}</p>
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -1748,7 +1791,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information of the RAM entity.</p>
+             * <p>The information about the RAM entity.</p>
              */
             public Builder principals(java.util.List<String> principals) {
                 this.principals = principals;
@@ -1756,7 +1799,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ram role name.</p>
+             * <p>The role name.</p>
              * 
              * <strong>example:</strong>
              * <p>ram-for-dts</p>
@@ -1770,7 +1813,7 @@ public class GetServiceResponseBody extends TeaModel {
              * <p>The template name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Template one.</p>
+             * <p>Template 1</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1850,7 +1893,7 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL that is used to access the document.</p>
+             * <p>The document URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://help.aliyun.com/zh/compute-nest/use-cases/deploy-an-sd-painting-service-instance?spm=a2c4g.11186623.0.i2">https://help.aliyun.com/zh/compute-nest/use-cases/deploy-an-sd-painting-service-instance?spm=a2c4g.11186623.0.i2</a></p>
@@ -1861,7 +1904,13 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language that you use for the query. Valid values: zh-CN and en-US.</p>
+             * <p>The language of the service document. Valid values:</p>
+             * <ul>
+             * <li><p>zh-CN: Chinese.</p>
+             * </li>
+             * <li><p>en-US: English.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>zh-CN</p>
@@ -1875,7 +1924,7 @@ public class GetServiceResponseBody extends TeaModel {
              * <p>The template name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Template one.</p>
+             * <p>单机版</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -2023,7 +2072,7 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the Software.</p>
+             * <p>The software name.</p>
              * 
              * <strong>example:</strong>
              * <p>wordpress</p>
@@ -2034,7 +2083,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the software.</p>
+             * <p>The software version.</p>
              * 
              * <strong>example:</strong>
              * <p>6.0.1</p>
@@ -2156,7 +2205,7 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The agreement information about the service.</p>
+             * <p>The service agreements.</p>
              */
             public Builder agreements(java.util.List<Agreements> agreements) {
                 this.agreements = agreements;
@@ -2175,10 +2224,12 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language of the service. Valid values:</p>
+             * <p>The language of the service configuration. Valid values:</p>
              * <ul>
-             * <li>zh-CN: Chinese</li>
-             * <li>en-US: English</li>
+             * <li><p>zh-CN: Chinese.</p>
+             * </li>
+             * <li><p>en-US: English.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2193,7 +2244,7 @@ public class GetServiceResponseBody extends TeaModel {
              * <p>The service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Service document information.</p>
+             * <p>Database B</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2201,10 +2252,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the service.</p>
+             * <p>The summary of the service.</p>
              * 
              * <strong>example:</strong>
-             * <p>Docker Community Edition (CE) is a free version of the Docker project, aimed at developers, enthusiasts, and individuals and organizations who want to use container technology.</p>
+             * <p>B is an open-source distributed relational database independently designed and developed by Company A.</p>
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
@@ -2212,7 +2263,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of the software in the service.</p>
+             * <p>The service software.</p>
              */
             public Builder softwares(java.util.List<Softwares> softwares) {
                 this.softwares = softwares;
@@ -2292,7 +2343,10 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * EnValue.
+             * <p>The English value of the service information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service Name</p>
              */
             public Builder enValue(String enValue) {
                 this.enValue = enValue;
@@ -2300,7 +2354,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalValue.
+             * <p>The raw data value of the service information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service Name</p>
              */
             public Builder originalValue(String originalValue) {
                 this.originalValue = originalValue;
@@ -2308,7 +2365,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ZhValue.
+             * <p>The Chinese value of the service information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>服务名称</p>
              */
             public Builder zhValue(String zhValue) {
                 this.zhValue = zhValue;
@@ -2375,7 +2435,7 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of contact information.</p>
+             * <p>The type of the contact information.</p>
              * 
              * <strong>example:</strong>
              * <p>Email</p>
@@ -2386,7 +2446,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of contact information.</p>
+             * <p>The contact information.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:supplier@example.com">supplier@example.com</a></p>

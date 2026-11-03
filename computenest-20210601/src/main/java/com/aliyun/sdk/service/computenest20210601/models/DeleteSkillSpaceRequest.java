@@ -74,7 +74,10 @@ public class DeleteSkillSpaceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -87,7 +90,7 @@ public class DeleteSkillSpaceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ss-11111111111</p>
+         * <p>ss-xxxxx</p>
          */
         public Builder skillSpaceId(String skillSpaceId) {
             this.putQueryParameter("SkillSpaceId", skillSpaceId);

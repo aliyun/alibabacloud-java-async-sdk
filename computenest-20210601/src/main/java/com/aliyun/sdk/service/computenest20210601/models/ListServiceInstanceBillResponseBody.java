@@ -106,7 +106,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The billing information of the backup schedule.</p>
+         * <p>A list of billing information for the service instance.</p>
          */
         public Builder item(java.util.List<Item> item) {
             this.item = item;
@@ -114,7 +114,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The number of entries returned per page. Maximum value: 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token that is used to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbAx7BkQzyYC+ONO+WudHGKEdB0uWSY7AGnM3qCgm/Ynge7zU6NWdbj0Tegyajyqyc=</p>
@@ -147,7 +147,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -437,7 +437,13 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing cycle. Format: YYYY-MM.</p>
+             * <p>The billing cycle of the computing resources for the instance. This parameter is supported only for pay-as-you-go instances. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Day</strong>: daily billing.</p>
+             * </li>
+             * <li><p><strong>Month</strong>: monthly billing.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>2025-02</p>
@@ -448,7 +454,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing date. This parameter is required only if the <strong>Granularity</strong> parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+             * <p>The billing date in YYYY-MM-DD format. This parameter is returned only when <strong>Granularity</strong> is set to DAILY.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-23</p>
@@ -481,14 +487,18 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currency unit.</p>
+             * <p>The currency. Valid values:</p>
              * <ul>
-             * <li>China site: <strong>CNY</strong>.</li>
-             * <li>International site: <strong>USD</strong>.</li>
+             * <li><p>CNY: Chinese Yuan.</p>
+             * </li>
+             * <li><p>USD: US Dollar.</p>
+             * </li>
+             * <li><p>JPY: Japanese Yen.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>CNY</p>
+             * <p>RMB</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -496,7 +506,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount deducted with resource plans.</p>
+             * <p>The amount deducted by a resource plan.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -507,7 +517,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-bp1z88pb48487907u</p>
@@ -529,7 +539,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit price.</p>
+             * <p>The list price.</p>
              * 
              * <strong>example:</strong>
              * <p>0.12</p>
@@ -540,7 +550,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the unit price.</p>
+             * <p>The unit of the list price.</p>
              * 
              * <strong>example:</strong>
              * <p>CNY/GB</p>
@@ -573,7 +583,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the service.</p>
+             * <p>The product code.</p>
              * 
              * <strong>example:</strong>
              * <p>sls</p>
@@ -584,7 +594,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specific service resource.</p>
+             * <p>The product details.</p>
              * 
              * <strong>example:</strong>
              * <p>sls</p>
@@ -595,7 +605,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cloud service or the name of the service-linked role with which the cloud service is associated.</p>
+             * <p>The name of the product to which the resource belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>NLB</p>
@@ -606,7 +616,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing cycle in which the bill is split.</p>
+             * <p>The month of the split bill.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-07</p>
@@ -619,8 +629,10 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>Subscription: the subscription billing method.</li>
-             * <li>PayAsYouGo: the pay-as-you-go billing method.</li>
+             * <li><p>Subscription: subscription.</p>
+             * </li>
+             * <li><p>PayAsYouGo: pay-as-you-go.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -632,10 +644,10 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of resource usage.</p>
+             * <p>The number of input tokens.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;EmbeddingTokens&quot;: 314}</p>
+             * <p>{\&quot;EmbeddingTokens\&quot;: 314}</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -643,7 +655,7 @@ public class ListServiceInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of usage.</p>
+             * <p>The unit of the usage.</p>
              * 
              * <strong>example:</strong>
              * <p>GB</p>

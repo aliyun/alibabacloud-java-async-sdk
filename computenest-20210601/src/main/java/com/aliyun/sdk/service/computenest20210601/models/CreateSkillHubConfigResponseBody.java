@@ -54,7 +54,7 @@ public class CreateSkillHubConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3F976EF8-C10A-57DC-917C-BB7BEB508FFB</p>

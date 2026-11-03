@@ -107,7 +107,7 @@ public class ListBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the backup.</p>
+         * <p>The backups.</p>
          */
         public Builder backups(java.util.List<Backups> backups) {
             this.backups = backups;
@@ -115,7 +115,7 @@ public class ListBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records returned in this request.</p>
+         * <p>The maximum number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -126,7 +126,7 @@ public class ListBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates the read position returned by the current call. An empty value means all data has been read.</p>
+         * <p>The token that is used to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class ListBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BB58FE53-ED8F-5D12-9746-CD3A5F463D95</p>
@@ -149,7 +149,7 @@ public class ListBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total data count under the current request conditions (optional; not returned by default).</p>
+         * <p>The total number of entries that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -346,9 +346,9 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup mode. Valid values:</p>
+             * <p>The backup mode. The return value is:</p>
              * <ul>
-             * <li><strong>Manual</strong>: manual backup</li>
+             * <li><strong>Manual</strong>: The backup is created manually.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -360,7 +360,7 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the backup was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-09-03T19:54:38+08:00</p>
@@ -371,7 +371,7 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the backup task.</p>
+             * <p>The description of the backup.</p>
              * 
              * <strong>example:</strong>
              * <p>No description</p>
@@ -382,7 +382,7 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the backup task.</p>
+             * <p>The time when the backup ended.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-08-15T02:24:00Z</p>
@@ -393,7 +393,7 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The time when the backup was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-09-03T19:54:38+08:00</p>
@@ -404,7 +404,7 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Retention Days. Resources will be cleared upon expiration. Defaults to no expiration if left blank.</p>
+             * <p>The retention period in days. Backups are deleted after the retention period expires. By default, this parameter is empty, which means that the backups do not expire.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -415,7 +415,7 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the service instance.</p>
+             * <p>The service instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>si-7b6138dfce1e4c41ab71</p>
@@ -426,7 +426,7 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the backup task.</p>
+             * <p>The time when the backup started.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30T16:00:00Z</p>
@@ -437,14 +437,20 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the backup task. Valid values:</p>
+             * <p>The status.</p>
              * <ul>
-             * <li>Creating</li>
-             * <li>Created</li>
-             * <li>CreateFailed</li>
-             * <li>Deleting</li>
-             * <li>Deleted</li>
-             * <li>DeleteFailed</li>
+             * <li><p>Creating: The backup is being created.</p>
+             * </li>
+             * <li><p>Created: The backup is created.</p>
+             * </li>
+             * <li><p>CreateFailed: The backup failed to be created.</p>
+             * </li>
+             * <li><p>Deleting: The backup is being deleted.</p>
+             * </li>
+             * <li><p>Deleted: The backup is deleted.</p>
+             * </li>
+             * <li><p>DeleteFailed: The backup failed to be deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -456,7 +462,7 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the service instance deployment information.</p>
+             * <p>The details of the status.</p>
              * 
              * <strong>example:</strong>
              * <p>Disk i-xxxx backup failed, error message: error</p>

@@ -130,10 +130,10 @@ public class GetServiceProvisionsRequest extends Request {
         } 
 
         /**
-         * <p>The parameters configured for the service instance.</p>
+         * <p>The parameters for deploying the user instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;RegionId&quot;:&quot;cn-hangzhou&quot;,&quot;ZoneId&quot;:&quot;cn-hangzhou-g&quot;,&quot;EcsInstanceType&quot;:&quot;ecs.g5.large&quot;,&quot;InstancePassword&quot;:&quot;xxxxxxxx&quot;,&quot;PayType&quot;:&quot;PostPaid&quot;,&quot;PayPeriodUnit&quot;:&quot;Month&quot;,&quot;PayPeriod&quot;:1}</p>
+         * <p>{\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;ZoneId\&quot;:\&quot;cn-hangzhou-g\&quot;,\&quot;EcsInstanceType\&quot;:\&quot;ecs.g5.large\&quot;,\&quot;InstancePassword\&quot;:\&quot;xxxxxxxx\&quot;,\&quot;PayType\&quot;:\&quot;PostPaid\&quot;,\&quot;PayPeriodUnit\&quot;:\&quot;Month\&quot;,\&quot;PayPeriod\&quot;:1}</p>
          */
         public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -168,7 +168,7 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * <p>The version of the service.</p>
+         * <p>The service version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -183,7 +183,7 @@ public class GetServiceProvisionsRequest extends Request {
          * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS</p>
+         * <p>Template 1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -192,10 +192,12 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * <p>The trial policy. Valid values:</p>
+         * <p>The usage type. Valid values:</p>
          * <ul>
-         * <li>Trial: Trials are supported.</li>
-         * <li>NotTrial: Trials are not supported.</li>
+         * <li><p>Trial: The service supports trial use.</p>
+         * </li>
+         * <li><p>NotTrial: The service does not support trial use.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

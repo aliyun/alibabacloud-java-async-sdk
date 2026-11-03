@@ -60,6 +60,7 @@ public class GetSkillRequest extends Request {
         } 
 
         /**
+         * <p>The unique ID of the Skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

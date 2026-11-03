@@ -129,7 +129,7 @@ public class GetServiceRequest extends Request {
         } 
 
         /**
-         * <p>Region Id.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -153,7 +153,7 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * <p>The service instance id.</p>
+         * <p>The service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>si-b58c874912fc4294****</p>
@@ -168,7 +168,7 @@ public class GetServiceRequest extends Request {
          * <p>The service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Wordpress</p>
+         * <p>WordPress Community Edition</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -189,7 +189,7 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * <p>Whether to disclose service details.</p>
+         * <p>Specifies whether to return the detailed information of the service.</p>
          */
         public Builder showDetails(java.util.List<String> showDetails) {
             this.putQueryParameter("ShowDetails", showDetails);

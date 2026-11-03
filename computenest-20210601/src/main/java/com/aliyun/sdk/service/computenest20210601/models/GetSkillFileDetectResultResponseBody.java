@@ -119,7 +119,10 @@ public class GetSkillFileDetectResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of &quot;200&quot; indicates success. Other values indicate an error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetSkillFileDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * HashKey.
+         * <p>The unique identifier for the detection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8cfb1102cc5f56fe752f6e9b8c6f7f3d</p>
          */
         public Builder hashKey(String hashKey) {
             this.hashKey = hashKey;
@@ -135,7 +141,10 @@ public class GetSkillFileDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetSkillFileDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3F976EF8-C10A-57DC-917C-BB7BEB508FFB</p>
@@ -154,7 +163,13 @@ public class GetSkillFileDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The file detection result. Valid values:</p>
+         * <p>0: safe file</p>
+         * <p>1: suspicious file</p>
+         * <p>3: The detection is in progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder result(Integer result) {
             this.result = result;
@@ -162,7 +177,14 @@ public class GetSkillFileDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * Score.
+         * <p>The file detection score. The score ranges correspond to the following threat levels:</p>
+         * <p>0–60: safe</p>
+         * <p>61–70: risk</p>
+         * <p>71–80: suspicious</p>
+         * <p>81–100: malicious</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder score(Integer score) {
             this.score = score;

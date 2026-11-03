@@ -81,7 +81,7 @@ public class CreateSkillResponseBody extends TeaModel {
          * <p>Skill ID</p>
          * 
          * <strong>example:</strong>
-         * <p>s-051j4ot2aerr5dyc4</p>
+         * <p>s-xxxxx</p>
          */
         public Builder skillId(String skillId) {
             this.skillId = skillId;

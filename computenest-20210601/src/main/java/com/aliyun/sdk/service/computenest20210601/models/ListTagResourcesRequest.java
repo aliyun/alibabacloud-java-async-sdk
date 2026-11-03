@@ -117,7 +117,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The token to retrieve the next page of results. Set this parameter to the \<code>NextToken\\</code> value from the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
@@ -153,9 +153,12 @@ public class ListTagResourcesRequest extends Request {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>service: service</li>
-         * <li>serviceinstance: service instance</li>
-         * <li>artifact: deployment package</li>
+         * <li><p>service: a service.</p>
+         * </li>
+         * <li><p>serviceinstance: a service instance.</p>
+         * </li>
+         * <li><p>artifact: an artifact.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -169,7 +172,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>A list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

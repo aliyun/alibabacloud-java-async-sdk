@@ -101,7 +101,7 @@ public class ListServiceUsagesRequest extends Request {
         } 
 
         /**
-         * <p>The filters.</p>
+         * <p>The filter.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -110,7 +110,7 @@ public class ListServiceUsagesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -122,7 +122,7 @@ public class ListServiceUsagesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The token that is used to retrieve the next page of results. This value is the NextToken value returned from the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
@@ -134,7 +134,10 @@ public class ListServiceUsagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,12 +205,16 @@ public class ListServiceUsagesRequest extends Request {
             } 
 
             /**
-             * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>
+             * <p>The name of the filter. You can query by one or more names. Valid values:</p>
              * <ul>
-             * <li>ServiceId: the ID of the service.</li>
-             * <li>ServiceName: the service name.</li>
-             * <li>Status: the state of the service.</li>
-             * <li>SupplierName: the name of the service provider.</li>
+             * <li><p>ServiceId: The service ID.</p>
+             * </li>
+             * <li><p>ServiceName: The service name.</p>
+             * </li>
+             * <li><p>Status: The service status.</p>
+             * </li>
+             * <li><p>SupplierName: The name of the supplier.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -219,7 +226,7 @@ public class ListServiceUsagesRequest extends Request {
             }
 
             /**
-             * <p>The parameter values of the filter.</p>
+             * <p>A list of filter values.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

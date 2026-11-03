@@ -117,7 +117,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+         * <p>The resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -129,10 +129,14 @@ public class TagResourcesRequest extends Request {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>service: service</li>
-         * <li>serviceinstance: service instance</li>
-         * <li>artifact: artifact</li>
-         * <li>dataset: dataset</li>
+         * <li><p>service: a service.</p>
+         * </li>
+         * <li><p>serviceinstance: a service instance.</p>
+         * </li>
+         * <li><p>artifact: a deployment.</p>
+         * </li>
+         * <li><p>dataset: a dataset.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -146,7 +150,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tag key and value.</p>
+         * <p>The resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

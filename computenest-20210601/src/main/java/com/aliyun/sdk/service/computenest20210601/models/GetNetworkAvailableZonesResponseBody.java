@@ -67,7 +67,7 @@ public class GetNetworkAvailableZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetNetworkAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A17F9930-E2DC-5E87-B6D6-B0BCD2B00834</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,7 @@ public class GetNetworkAvailableZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * RegionIdList.
+             * <p>The list of region IDs.</p>
              */
             public Builder regionIdList(java.util.List<String> regionIdList) {
                 this.regionIdList = regionIdList;
@@ -149,7 +152,7 @@ public class GetNetworkAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneIdList.
+             * <p>The list of zone IDs.</p>
              */
             public Builder zoneIdList(java.util.List<String> zoneIdList) {
                 this.zoneIdList = zoneIdList;

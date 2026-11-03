@@ -93,7 +93,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The number of entries returned on each page. Maximum value: 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -104,7 +104,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token.</p>
+         * <p>The token to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbAx7BkQzyYC+ONO+WudHGKEdB0uWSY7AGnM3qCgm/Ynge7zU6NWdbj0Tegyajyqyc=</p>
@@ -126,7 +126,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources.</p>
+         * <p>The list of resources.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -320,8 +320,10 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>Subscription</li>
-             * <li>PayAsYouGo</li>
+             * <li><p>Subscription: subscription.</p>
+             * </li>
+             * <li><p>PayAsYouGo: pay-as-you-go.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -333,7 +335,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the cloud service.</p>
+             * <p>The product code.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -344,7 +346,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cloud service.</p>
+             * <p>The product type.</p>
              * 
              * <strong>example:</strong>
              * <p>RDS</p>
@@ -355,11 +357,14 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The renewal state. Valid values:</p>
+             * <p>The renewal status. Valid values:</p>
              * <ul>
-             * <li>AutoRenewal</li>
-             * <li>ManualRenewal</li>
-             * <li>NotRenewal</li>
+             * <li><p>AutoRenewal: auto-renewal.</p>
+             * </li>
+             * <li><p>ManualRenewal: manual renewal.</p>
+             * </li>
+             * <li><p>NotRenewal: no renewal.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -384,8 +389,10 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             /**
              * <p>The unit of the renewal period. Valid values:</p>
              * <ul>
-             * <li>Month</li>
-             * <li>Year</li>
+             * <li><p>Month: month.</p>
+             * </li>
+             * <li><p>Year: year.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -408,14 +415,17 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the resource. Valid values:</p>
+             * <p>The status of the resource. Valid values:</p>
              * <ul>
-             * <li>running</li>
-             * <li>waiting</li>
-             * <li>terminated</li>
+             * <li><p>running: The resource is running.</p>
+             * </li>
+             * <li><p>waiting: The resource is pending.</p>
+             * </li>
+             * <li><p>terminated: The resource is terminated.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is returned only for containers.</p>
+             * <p>This parameter is returned only for container resources.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

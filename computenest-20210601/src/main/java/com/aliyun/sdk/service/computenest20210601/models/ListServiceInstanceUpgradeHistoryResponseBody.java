@@ -106,7 +106,7 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The number of entries returned per page. Maximum value: 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAfu+XtuBE55iRLHEYYuojI41</p>
@@ -139,7 +139,7 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -150,7 +150,7 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The upgrade history.</p>
+         * <p>The upgrade history records.</p>
          */
         public Builder upgradeHistory(java.util.List<UpgradeHistory> upgradeHistory) {
             this.upgradeHistory = upgradeHistory;
@@ -294,7 +294,7 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the update ended.</p>
+             * <p>The time when the upgrade ended.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-26T09:09:51Z</p>
@@ -316,10 +316,10 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upgrade result.</p>
+             * <p>The upgrade results.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;PreUpgradeExecutionId&quot;:&quot;exec-123&quot;}</p>
+             * <p>{\&quot;PreUpgradeExecutionId\&quot;:\&quot;exec-123\&quot;}</p>
              */
             public Builder results(String results) {
                 this.results = results;
@@ -327,7 +327,7 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the update started.</p>
+             * <p>The time when the upgrade started.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-26T08:09:51Z</p>
@@ -338,11 +338,14 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the update. Valid values:</p>
+             * <p>The status of the upgrade. Valid values:</p>
              * <ul>
-             * <li>upgrading: The service instance is being upgraded.</li>
-             * <li>UpgradeSuccessful: The service instance is upgraded.</li>
-             * <li>UpgradeFailed: The service instance failed to be upgraded.</li>
+             * <li><p>upgrading</p>
+             * </li>
+             * <li><p>UpgradeSuccessful</p>
+             * </li>
+             * <li><p>UpgradeFailed</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -365,7 +368,13 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update type.</p>
+             * <p>The type of upgrade. Valid values:</p>
+             * <ul>
+             * <li><p>Upgrade</p>
+             * </li>
+             * <li><p>Rollback</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Upgrade</p>
@@ -376,7 +385,7 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the upgrade record.</p>
+             * <p>The ID of the upgrade history.</p>
              * 
              * <strong>example:</strong>
              * <p>exec-123</p>

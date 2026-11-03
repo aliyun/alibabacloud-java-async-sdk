@@ -183,10 +183,12 @@ public class GetUserInformationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether screencast delivery to OSS is enabled. Valid values:</p>
+             * <p>Specifies whether to use the delivery feature. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -209,10 +211,12 @@ public class GetUserInformationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether screencast delivery to Object Storage Service (OSS) is enabled. Valid values:</p>
+             * <p>Specifies whether to deliver data to Object Storage Service (OSS). Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -224,7 +228,7 @@ public class GetUserInformationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days for which the screencasts are saved.</p>
+             * <p>The number of days to save screen recordings.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -235,7 +239,7 @@ public class GetUserInformationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS path.</p>
+             * <p>The path in OSS.</p>
              * 
              * <strong>example:</strong>
              * <p>/test</p>

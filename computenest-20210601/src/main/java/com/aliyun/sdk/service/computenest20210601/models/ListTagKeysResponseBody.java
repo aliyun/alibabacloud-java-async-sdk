@@ -80,7 +80,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the tag keys.</p>
+         * <p>A list of tag keys.</p>
          */
         public Builder keys(java.util.List<String> keys) {
             this.keys = keys;
@@ -88,7 +88,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAZ9FmxgN6wKfeK/GOKRnnjU=</p>
@@ -99,7 +99,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>8872ACE6-0297-54A4-8AAD-3A8623EC6C5D</p>

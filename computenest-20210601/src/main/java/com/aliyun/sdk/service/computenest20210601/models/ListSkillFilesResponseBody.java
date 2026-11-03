@@ -106,7 +106,10 @@ public class ListSkillFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListSkillFilesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -133,7 +139,7 @@ public class ListSkillFilesResponseBody extends TeaModel {
         }
 
         /**
-         * SkillFiles.
+         * <p>The list of skill files.</p>
          */
         public Builder skillFiles(java.util.List<SkillFiles> skillFiles) {
             this.skillFiles = skillFiles;
@@ -141,7 +147,10 @@ public class ListSkillFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The actual number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -207,7 +216,10 @@ public class ListSkillFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * FilePath.
+             * <p>The relative path of the internal file in the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SKILL.md</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -215,7 +227,10 @@ public class ListSkillFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SignedUrl.
+             * <p>The accessible OSS URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/SKILL.md">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/SKILL.md</a></p>
              */
             public Builder signedUrl(String signedUrl) {
                 this.signedUrl = signedUrl;

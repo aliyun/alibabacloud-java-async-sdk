@@ -131,7 +131,10 @@ public class ValidateServiceInstanceNameRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>A client token to ensure the idempotence of the request. Generate a unique token for each request. The <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -140,7 +143,10 @@ public class ValidateServiceInstanceNameRequest extends Request {
         }
 
         /**
-         * IsTrial.
+         * <p>Specifies whether the service instance is a trial instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTrial(Boolean isTrial) {
             this.putQueryParameter("IsTrial", isTrial);
@@ -149,6 +155,7 @@ public class ValidateServiceInstanceNameRequest extends Request {
         }
 
         /**
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +168,7 @@ public class ValidateServiceInstanceNameRequest extends Request {
         }
 
         /**
+         * <p>The name of the service instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +181,10 @@ public class ValidateServiceInstanceNameRequest extends Request {
         }
 
         /**
-         * ServiceVersion.
+         * <p>The service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -182,7 +193,10 @@ public class ValidateServiceInstanceNameRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The name of the template. Specify this parameter if the service supports multiple templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template 1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

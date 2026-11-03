@@ -32,6 +32,9 @@ public class GetSkillResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SecurityScanStatus")
     private String securityScanStatus;
 
+    @com.aliyun.core.annotation.NameInMap("SecurityScanSuggestions")
+    private String securityScanSuggestions;
+
     @com.aliyun.core.annotation.NameInMap("SkillDescription")
     private String skillDescription;
 
@@ -59,6 +62,7 @@ public class GetSkillResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.requiredConnections = builder.requiredConnections;
         this.securityScanStatus = builder.securityScanStatus;
+        this.securityScanSuggestions = builder.securityScanSuggestions;
         this.skillDescription = builder.skillDescription;
         this.skillDisplayName = builder.skillDisplayName;
         this.skillId = builder.skillId;
@@ -116,6 +120,13 @@ public class GetSkillResponseBody extends TeaModel {
     }
 
     /**
+     * @return securityScanSuggestions
+     */
+    public String getSecurityScanSuggestions() {
+        return this.securityScanSuggestions;
+    }
+
+    /**
      * @return skillDescription
      */
     public String getSkillDescription() {
@@ -170,6 +181,7 @@ public class GetSkillResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> requiredConnections; 
         private String securityScanStatus; 
+        private String securityScanSuggestions; 
         private String skillDescription; 
         private String skillDisplayName; 
         private String skillId; 
@@ -187,6 +199,7 @@ public class GetSkillResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.requiredConnections = model.requiredConnections;
             this.securityScanStatus = model.securityScanStatus;
+            this.securityScanSuggestions = model.securityScanSuggestions;
             this.skillDescription = model.skillDescription;
             this.skillDisplayName = model.skillDisplayName;
             this.skillId = model.skillId;
@@ -197,7 +210,10 @@ public class GetSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -224,7 +240,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * RequiredConnections.
+         * <p>The set of connection types that the Skill depends on.</p>
          */
         public Builder requiredConnections(java.util.List<String> requiredConnections) {
             this.requiredConnections = requiredConnections;
@@ -232,7 +248,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityScanStatus.
+         * <p>The security scan status of the source file.</p>
          */
         public Builder securityScanStatus(String securityScanStatus) {
             this.securityScanStatus = securityScanStatus;
@@ -240,7 +256,21 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * SkillDescription.
+         * <p>The security scan remediation suggestions (a Markdown-formatted string containing a set of remediation suggestions). This value is meaningful only when the source file security scan status is BLOCK.</p>
+         * 
+         * <strong>example:</strong>
+         * <h4>&lt;span style=\&quot;color:#2563eb\&quot;&gt; System Shutdown Command</span>\n- &lt;span style=\&quot;color:#16a34a\&quot;&gt;✅</span> Add an explicit user confirmation requirement before executing the <code>reboot-instance</code> command, and document that the restart will cause service interruption.\n\n#### &lt;span style=\&quot;color:#2563eb\&quot;&gt; Privilege Escalation Operation</span>\n- &lt;span style=\&quot;color:#16a34a\&quot;&gt;✅</span> Document that <code>sudo</code> is required, and provide installation alternatives that do not rely on root privileges (such as user local directories or package managers).\n\n#### &lt;span style=\&quot;color:#2563eb\&quot;&gt; Hardcoded Access Keys</span>\n- &lt;span style=\&quot;color:#16a34a\&quot;&gt;✅</span> Replace realistic example credentials with obvious placeholders (such as <code>&lt;your-access-key-id&gt;</code>) to avoid confusion with real credentials.\n\n#### &lt;span style=\&quot;color:#2563eb\&quot;&gt; User Deception (Direct Execution of Remote Scripts)</span>\n- &lt;span style=\&quot;color:#16a34a\&quot;&gt;✅</span> Immediately remove the <code>curl | bash</code> pattern. Instead, download the script first, verify its integrity (checksum/signature), and then execute it: <code>curl -fsSL url -o script.sh &amp;&amp; bash script.sh</code></h4>
+         */
+        public Builder securityScanSuggestions(String securityScanSuggestions) {
+            this.securityScanSuggestions = securityScanSuggestions;
+            return this;
+        }
+
+        /**
+         * <p>The description of the Skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create new skills, modify and improve existing skills, and measure skill performance.</p>
          */
         public Builder skillDescription(String skillDescription) {
             this.skillDescription = skillDescription;
@@ -248,7 +278,10 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * SkillDisplayName.
+         * <p>The display name of the Skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI 技能创建与优化</p>
          */
         public Builder skillDisplayName(String skillDisplayName) {
             this.skillDisplayName = skillDisplayName;
@@ -259,7 +292,7 @@ public class GetSkillResponseBody extends TeaModel {
          * <p>Skill ID</p>
          * 
          * <strong>example:</strong>
-         * <p>s-04zzrgosj6xd11yah</p>
+         * <p>s-xxxxx</p>
          */
         public Builder skillId(String skillId) {
             this.skillId = skillId;
@@ -267,7 +300,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * SkillLabels.
+         * <p>The set of labels for the Skill.</p>
          */
         public Builder skillLabels(java.util.List<String> skillLabels) {
             this.skillLabels = skillLabels;
@@ -275,7 +308,10 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * SkillName.
+         * <p>The name of the Skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skill-creator</p>
          */
         public Builder skillName(String skillName) {
             this.skillName = skillName;
@@ -283,7 +319,10 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * SkillSpaceId.
+         * <p>The ID of the SkillSpace to which the Skill belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ss-xxxxx</p>
          */
         public Builder skillSpaceId(String skillSpaceId) {
             this.skillSpaceId = skillSpaceId;
@@ -291,7 +330,10 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

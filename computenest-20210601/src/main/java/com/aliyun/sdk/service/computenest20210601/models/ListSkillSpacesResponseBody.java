@@ -106,7 +106,10 @@ public class ListSkillSpacesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListSkillSpacesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -133,7 +139,7 @@ public class ListSkillSpacesResponseBody extends TeaModel {
         }
 
         /**
-         * SkillSpaces.
+         * <p>The list of SkillSpaces.</p>
          */
         public Builder skillSpaces(java.util.List<SkillSpaces> skillSpaces) {
             this.skillSpaces = skillSpaces;
@@ -141,7 +147,10 @@ public class ListSkillSpacesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -246,7 +255,10 @@ public class ListSkillSpacesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the SkillSpace was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-03T22:58:52Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -254,7 +266,10 @@ public class ListSkillSpacesResponseBody extends TeaModel {
             }
 
             /**
-             * SkillSpaceDescription.
+             * <p>The description of the SkillSpace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>All-in-one office toolkit — generate reports, process data, manage files, and streamline workflows effortlessly.</p>
              */
             public Builder skillSpaceDescription(String skillSpaceDescription) {
                 this.skillSpaceDescription = skillSpaceDescription;
@@ -265,7 +280,7 @@ public class ListSkillSpacesResponseBody extends TeaModel {
              * <p>SkillSpace ID</p>
              * 
              * <strong>example:</strong>
-             * <p>ss-111111</p>
+             * <p>ss-xxxxx</p>
              */
             public Builder skillSpaceId(String skillSpaceId) {
                 this.skillSpaceId = skillSpaceId;
@@ -273,7 +288,10 @@ public class ListSkillSpacesResponseBody extends TeaModel {
             }
 
             /**
-             * SkillSpaceName.
+             * <p>The name of the SkillSpace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>office-toolkit-skills</p>
              */
             public Builder skillSpaceName(String skillSpaceName) {
                 this.skillSpaceName = skillSpaceName;
@@ -281,7 +299,10 @@ public class ListSkillSpacesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the SkillSpace was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-03T22:57:29Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

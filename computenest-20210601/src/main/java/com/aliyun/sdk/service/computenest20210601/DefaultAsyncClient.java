@@ -30,10 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "ComputeNest";
         this.version = "2021-06-01";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-hangzhou", "computenest.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "computenest.ap-southeast-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -98,7 +95,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only for service instances that belong to private services deployed by using Resource Orchestration Service (ROS).</p>
+     * <p>If a private service instance that uses the ROS deployment type fails to deploy, you can call the ContinueDeployServiceInstance operation to resume the deployment.</p>
      * 
      * @param request the request parameters of ContinueDeployServiceInstance  ContinueDeployServiceInstanceRequest
      * @return ContinueDeployServiceInstanceResponse
@@ -119,8 +116,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade/downgrade feature and configured the corresponding parameters when the service was created.</p>
      * 
      * @param request the request parameters of CreateBackup  CreateBackupRequest
      * @return CreateBackupResponse
@@ -141,8 +138,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Before you call this operation, ensure that the service provider enabled the upgrade and downgrade feature and configured its parameters when the service was created.</p>
      * 
      * @param request the request parameters of CreateRestoreTask  CreateRestoreTaskRequest
      * @return CreateRestoreTaskResponse
@@ -198,6 +195,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of CreateSkill  CreateSkillRequest
      * @return CreateSkillResponse
      */
@@ -216,6 +217,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of CreateSkillFileDetect  CreateSkillFileDetectRequest
      * @return CreateSkillFileDetectResponse
      */
@@ -234,6 +239,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider has enabled the modify configuration feature and set the required parameters.</p>
+     * 
      * @param request the request parameters of CreateSkillHubConfig  CreateSkillHubConfigRequest
      * @return CreateSkillHubConfigResponse
      */
@@ -252,6 +261,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of CreateSkillSpace  CreateSkillSpaceRequest
      * @return CreateSkillSpaceResponse
      */
@@ -271,8 +284,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade/downgrade feature and configured the upgrade/downgrade parameters when the service was created.</p>
      * 
      * @param request the request parameters of DeleteBackup  DeleteBackupRequest
      * @return DeleteBackupResponse
@@ -310,6 +323,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of DeleteSkill  DeleteSkillRequest
      * @return DeleteSkillResponse
      */
@@ -328,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of DeleteSkillSpace  DeleteSkillSpaceRequest
      * @return DeleteSkillSpaceResponse
      */
@@ -401,8 +422,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade and downgrade feature and configured its parameters when the service was created.</p>
      * 
      * @param request the request parameters of GetBackup  GetBackupRequest
      * @return GetBackupResponse
@@ -422,6 +443,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade/downgrade feature and set the related parameters when the service was created.</p>
+     * 
      * @param request the request parameters of GetNetworkAvailableZones  GetNetworkAvailableZonesRequest
      * @return GetNetworkAvailableZonesResponse
      */
@@ -548,6 +573,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of GetSkill  GetSkillRequest
      * @return GetSkillResponse
      */
@@ -566,6 +595,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>This operation is available only if the service provider enabled the modification feature and configured the relevant parameters during service creation.</p>
+     * 
      * @param request the request parameters of GetSkillFileDetectResult  GetSkillFileDetectResultRequest
      * @return GetSkillFileDetectResultResponse
      */
@@ -584,6 +617,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider enabled the modification feature and configured its parameters when creating the service.</p>
+     * 
      * @param request the request parameters of GetSkillHubConfig  GetSkillHubConfigRequest
      * @return GetSkillHubConfigResponse
      */
@@ -602,6 +639,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</p>
+     * 
      * @param request the request parameters of GetSkillSpace  GetSkillSpaceRequest
      * @return GetSkillSpaceResponse
      */
@@ -639,8 +680,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade and downgrade feature and configured the related parameters when the service was created.</p>
      * 
      * @param request the request parameters of ListBackups  ListBackupsRequest
      * @return ListBackupsResponse
@@ -678,6 +719,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of ListPublicSkills  ListPublicSkillsRequest
      * @return ListPublicSkillsResponse
      */
@@ -697,8 +742,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade and downgrade feature and configured its parameters when creating the service.</p>
      * 
      * @param request the request parameters of ListRestoreTasks  ListRestoreTasksRequest
      * @return ListRestoreTasksResponse
@@ -862,6 +907,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of ListSkillFiles  ListSkillFilesRequest
      * @return ListSkillFilesResponse
      */
@@ -880,6 +929,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of ListSkillSpaces  ListSkillSpacesRequest
      * @return ListSkillSpacesResponse
      */
@@ -898,6 +951,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of ListSkills  ListSkillsRequest
      * @return ListSkillsResponse
      */
@@ -1006,6 +1063,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the restart O\&amp;M operation when the service was created.</p>
+     * 
      * @param request the request parameters of RestartServiceInstance  RestartServiceInstanceRequest
      * @return RestartServiceInstanceResponse
      */
@@ -1042,6 +1103,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider configured the start and stop O\&amp;M actions when creating the service.</p>
+     * 
      * @param request the request parameters of StartServiceInstance  StartServiceInstanceRequest
      * @return StartServiceInstanceResponse
      */
@@ -1060,6 +1125,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider configured the Operations and Maintenance (O\&amp;M) operations for startup and shutdown when the service was created.</p>
+     * 
      * @param request the request parameters of StopServiceInstance  StopServiceInstanceRequest
      * @return StopServiceInstanceResponse
      */
@@ -1133,8 +1202,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Configuration change is enabled and the related parameters are configured for the service by the service provider.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the specification modification feature and configured the modification parameters when creating the service.</p>
      * 
      * @param request the request parameters of UpdateServiceInstanceSpec  UpdateServiceInstanceSpecRequest
      * @return UpdateServiceInstanceSpecResponse
@@ -1172,6 +1241,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * 
      * @param request the request parameters of UpdateSkill  UpdateSkillRequest
      * @return UpdateSkillResponse
      */

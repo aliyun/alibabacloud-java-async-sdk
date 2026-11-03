@@ -102,7 +102,7 @@ public class ListPublicSkillsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>The filter.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -111,7 +111,10 @@ public class ListPublicSkillsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -120,7 +123,10 @@ public class ListPublicSkillsRequest extends Request {
         }
 
         /**
-         * NeedDownloadUrl.
+         * <p>Specifies whether to include the download URL for the skill package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needDownloadUrl(Boolean needDownloadUrl) {
             this.putQueryParameter("NeedDownloadUrl", needDownloadUrl);
@@ -129,7 +135,10 @@ public class ListPublicSkillsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -197,7 +206,22 @@ public class ListPublicSkillsRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The filter name. You can specify one or more names for the query. Valid values:</p>
+             * <ul>
+             * <li><p>SkillId: the skill ID. Exact match.</p>
+             * </li>
+             * <li><p>SkillName: the skill name.</p>
+             * </li>
+             * <li><p>MatchType: the match type that controls how SkillName is matched. Valid values: exact, prefix, and fuzzy.</p>
+             * </li>
+             * <li><p>Keyword: keyword match against the skill name or skill description. Fuzzy match.</p>
+             * </li>
+             * <li><p>SkillLabels: the skill label set. Fuzzy match.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SkillId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -205,7 +229,7 @@ public class ListPublicSkillsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The list of filter values. Valid values of N: 1 to 10.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

@@ -187,7 +187,10 @@ public class CreateSkillRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -196,7 +199,10 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * OssUrl.
+         * <p>The OSS URL of the Skill package to upload. This parameter is required when SourceType is set to UPLOAD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip</a></p>
          */
         public Builder ossUrl(String ossUrl) {
             this.putQueryParameter("OssUrl", ossUrl);
@@ -205,7 +211,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * RequiredConnections.
+         * <p>The set of connection types that the Skill depends on.</p>
          */
         public Builder requiredConnections(java.util.List<String> requiredConnections) {
             this.putQueryParameter("RequiredConnections", requiredConnections);
@@ -214,7 +220,10 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * SkillDescription.
+         * <p>The Skill description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create new skills, modify and improve existing skills, and measure skill performance</p>
          */
         public Builder skillDescription(String skillDescription) {
             this.putQueryParameter("SkillDescription", skillDescription);
@@ -232,7 +241,10 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * SkillLabels.
+         * <p>The set of Skill labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;category:frontend-development&quot;]</p>
          */
         public Builder skillLabels(java.util.List<String> skillLabels) {
             this.putQueryParameter("SkillLabels", skillLabels);
@@ -241,7 +253,10 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * SkillName.
+         * <p>The Skill name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skill-creator</p>
          */
         public Builder skillName(String skillName) {
             this.putQueryParameter("SkillName", skillName);
@@ -250,10 +265,11 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
+         * <p>The ID of the SkillSpace to which the Skill belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ss-111111</p>
+         * <p>ss-xxxxx</p>
          */
         public Builder skillSpaceId(String skillSpaceId) {
             this.putQueryParameter("SkillSpaceId", skillSpaceId);
@@ -262,7 +278,10 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * SourceSkillId.
+         * <p>The public Skill ID. This parameter is required when SourceType is set to COPY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-xxxxx</p>
          */
         public Builder sourceSkillId(String sourceSkillId) {
             this.putQueryParameter("SourceSkillId", sourceSkillId);
@@ -271,6 +290,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
+         * <p>The source type for creating the Skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

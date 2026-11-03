@@ -106,7 +106,10 @@ public class ListSkillsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -133,7 +139,7 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * Skills.
+         * <p>The list of Skills.</p>
          */
         public Builder skills(java.util.List<Skills> skills) {
             this.skills = skills;
@@ -141,7 +147,10 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -433,7 +442,10 @@ public class ListSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the Skill was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-10T02:22:18Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -441,7 +453,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * <p>The download URL for the Skill package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -457,7 +472,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * RequiredConnections.
+             * <p>The set of connection types that the Skill depends on.</p>
              */
             public Builder requiredConnections(java.util.List<String> requiredConnections) {
                 this.requiredConnections = requiredConnections;
@@ -465,7 +480,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityScanStatus.
+             * <p>The security scan status of the source file.</p>
              */
             public Builder securityScanStatus(String securityScanStatus) {
                 this.securityScanStatus = securityScanStatus;
@@ -473,7 +488,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillDescription.
+             * <p>The Skill description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create new skills, modify and improve existing skills, and measure skill performance.</p>
              */
             public Builder skillDescription(String skillDescription) {
                 this.skillDescription = skillDescription;
@@ -481,7 +499,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillDisplayName.
+             * <p>The Skill display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Java 编程专家</p>
              */
             public Builder skillDisplayName(String skillDisplayName) {
                 this.skillDisplayName = skillDisplayName;
@@ -492,7 +513,7 @@ public class ListSkillsResponseBody extends TeaModel {
              * <p>Skill ID</p>
              * 
              * <strong>example:</strong>
-             * <p>s-111111</p>
+             * <p>s-xxxxx</p>
              */
             public Builder skillId(String skillId) {
                 this.skillId = skillId;
@@ -500,7 +521,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillLabels.
+             * <p>The set of Skill labels.</p>
              */
             public Builder skillLabels(java.util.List<String> skillLabels) {
                 this.skillLabels = skillLabels;
@@ -508,7 +529,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillName.
+             * <p>The Skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skill-creator</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -516,7 +540,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillSpaceId.
+             * <p>The ID of the SkillSpace to which the Skill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ss-xxxxx</p>
              */
             public Builder skillSpaceId(String skillSpaceId) {
                 this.skillSpaceId = skillSpaceId;
@@ -524,7 +551,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the Skill was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-03T22:58:52Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

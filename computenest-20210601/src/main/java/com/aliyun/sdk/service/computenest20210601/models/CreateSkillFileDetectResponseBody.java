@@ -67,7 +67,10 @@ public class CreateSkillFileDetectResponseBody extends TeaModel {
         } 
 
         /**
-         * HashKey.
+         * <p>The unique identifier of the current detection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2aceb074-fa72-44d2-99d9-45b17cffe0e7</p>
          */
         public Builder hashKey(String hashKey) {
             this.hashKey = hashKey;

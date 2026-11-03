@@ -67,7 +67,7 @@ public class ListServiceCategoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The category list of the service.</p>
+         * <p>A list of service category names.</p>
          */
         public Builder categories(java.util.List<String> categories) {
             this.categories = categories;

@@ -67,7 +67,7 @@ public class UpdateServiceInstanceSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The order ID.</p>
+         * <p>The ID of the order.</p>
          * 
          * <strong>example:</strong>
          * <p>23396265896****</p>
@@ -78,7 +78,7 @@ public class UpdateServiceInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>06BF8F22-02DC-4750-83DF-3FFC11C065EA</p>

@@ -157,7 +157,10 @@ public class GetNetworkAvailableZonesRequest extends Request {
         } 
 
         /**
-         * IsPoc.
+         * <p>Specifies whether the service is a trial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isPoc(Boolean isPoc) {
             this.putBodyParameter("IsPoc", isPoc);
@@ -166,7 +169,10 @@ public class GetNetworkAvailableZonesRequest extends Request {
         }
 
         /**
-         * NetworkRegionId.
+         * <p>The region of the virtual network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder networkRegionId(String networkRegionId) {
             this.putBodyParameter("NetworkRegionId", networkRegionId);
@@ -175,7 +181,10 @@ public class GetNetworkAvailableZonesRequest extends Request {
         }
 
         /**
-         * PrivateVpcConnectionMode.
+         * <p>The connection mode. Valid values: \<code>PrivateLink\\</code> and \<code>OverlayLink\\</code>. \<code>OverlayLink\\</code> is an overlay link based on Application-aware Network Service Mesh (ANSM).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrivateLink</p>
          */
         public Builder privateVpcConnectionMode(String privateVpcConnectionMode) {
             this.putBodyParameter("PrivateVpcConnectionMode", privateVpcConnectionMode);
@@ -184,7 +193,10 @@ public class GetNetworkAvailableZonesRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-55fc2eabbce647fa976b</p>
          */
         public Builder serviceId(String serviceId) {
             this.putBodyParameter("ServiceId", serviceId);
@@ -193,7 +205,10 @@ public class GetNetworkAvailableZonesRequest extends Request {
         }
 
         /**
-         * ServiceInstanceEndpointServiceType.
+         * <p>The direction of the internal-facing access. Valid values: \<code>Forward\\</code> and \<code>Reverse\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder serviceInstanceEndpointServiceType(String serviceInstanceEndpointServiceType) {
             this.putBodyParameter("ServiceInstanceEndpointServiceType", serviceInstanceEndpointServiceType);
@@ -202,7 +217,10 @@ public class GetNetworkAvailableZonesRequest extends Request {
         }
 
         /**
-         * ServiceRegionId.
+         * <p>The ID of the region where the service is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putBodyParameter("ServiceRegionId", serviceRegionId);
@@ -211,7 +229,10 @@ public class GetNetworkAvailableZonesRequest extends Request {
         }
 
         /**
-         * ServiceVersion.
+         * <p>The service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putBodyParameter("ServiceVersion", serviceVersion);
@@ -220,7 +241,10 @@ public class GetNetworkAvailableZonesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone for the service deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("ZoneId", zoneId);

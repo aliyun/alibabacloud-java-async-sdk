@@ -106,7 +106,10 @@ public class GetSkillHubConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The time when the configuration was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -114,7 +117,10 @@ public class GetSkillHubConfigResponseBody extends TeaModel {
         }
 
         /**
-         * OssBucketName.
+         * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mybucket</p>
          */
         public Builder ossBucketName(String ossBucketName) {
             this.ossBucketName = ossBucketName;
@@ -122,7 +128,10 @@ public class GetSkillHubConfigResponseBody extends TeaModel {
         }
 
         /**
-         * OssRegionId.
+         * <p>The region where the OSS bucket is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder ossRegionId(String ossRegionId) {
             this.ossRegionId = ossRegionId;
@@ -130,7 +139,7 @@ public class GetSkillHubConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>2849EE73-AFFA-5AFD-9575-12FA886451DA</p>
@@ -141,7 +150,10 @@ public class GetSkillHubConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the configuration was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

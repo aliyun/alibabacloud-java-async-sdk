@@ -89,7 +89,10 @@ public class CreateSkillSpaceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -98,10 +101,11 @@ public class CreateSkillSpaceRequest extends Request {
         }
 
         /**
+         * <p>The description of the SkillSpace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>11111</p>
+         * <p>All-in-one office toolkit — generate reports, process data, manage files, and streamline workflows effortlessly.</p>
          */
         public Builder skillSpaceDescription(String skillSpaceDescription) {
             this.putQueryParameter("SkillSpaceDescription", skillSpaceDescription);
@@ -110,10 +114,11 @@ public class CreateSkillSpaceRequest extends Request {
         }
 
         /**
+         * <p>The name of the SkillSpace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>11111</p>
+         * <p>office-toolkit-skills</p>
          */
         public Builder skillSpaceName(String skillSpaceName) {
             this.putQueryParameter("SkillSpaceName", skillSpaceName);

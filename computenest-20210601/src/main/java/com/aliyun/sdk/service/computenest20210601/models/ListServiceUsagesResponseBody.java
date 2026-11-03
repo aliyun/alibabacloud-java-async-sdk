@@ -106,7 +106,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The number of entries returned on each page. The maximum value is 100. The default value is 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>A pagination token. It is returned when the results are not complete. To retrieve the next page of results, include this token in the NextToken parameter of the next request.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAYChudnQUoBH+mGWFpb6oP0=</p>
@@ -139,7 +139,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The service applications.</p>
+         * <p>The service usage details.</p>
          */
         public Builder serviceUsages(java.util.List<ServiceUsages> serviceUsages) {
             this.serviceUsages = serviceUsages;
@@ -147,10 +147,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -307,10 +307,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The review comment.</p>
+             * <p>The remarks of the approval.</p>
              * 
              * <strong>example:</strong>
-             * <p>Approved</p>
+             * <p>Review approved.</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -318,7 +318,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was created.</p>
+             * <p>The time when the request was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-05-25T02:02:02Z</p>
@@ -343,7 +343,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
              * <p>The service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>LobelChat</p>
+             * <p>Deployment link permission request</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -351,12 +351,16 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the service application. Valid values:</p>
+             * <p>The service status. Valid values:</p>
              * <ul>
-             * <li>Submitted: The application is submitted for review.</li>
-             * <li>Approved: The application is approved.</li>
-             * <li>Rejected: The application is rejected.</li>
-             * <li>Canceled: The application is canceled.</li>
+             * <li><p>Submitted: The request is submitted and pending approval.</p>
+             * </li>
+             * <li><p>Approved: The request is approved.</p>
+             * </li>
+             * <li><p>Rejected: The request is rejected.</p>
+             * </li>
+             * <li><p>Canceled: The request is canceled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -368,10 +372,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service provider.</p>
+             * <p>The name of the supplier.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestSupplier</p>
+             * <p>Acceptance test</p>
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -379,7 +383,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was updated.</p>
+             * <p>The time when the request was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-05-25T02:02:02Z</p>
@@ -390,7 +394,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The Alibaba Cloud account ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>127383705958xxxx</p>
@@ -401,7 +405,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the applicants.</p>
+             * <p>The user information.</p>
              */
             public Builder userInformation(java.util.Map<String, String> userInformation) {
                 this.userInformation = userInformation;

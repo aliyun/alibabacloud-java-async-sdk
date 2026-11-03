@@ -80,7 +80,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         } 
 
         /**
-         * <p>The package family constraints.</p>
+         * <p>The constraints on the specification family.</p>
          */
         public Builder familyConstraints(java.util.List<String> familyConstraints) {
             this.familyConstraints = familyConstraints;
@@ -88,7 +88,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         }
 
         /**
-         * <p>The constraints on the parameters.</p>
+         * <p>The parameter constraints.</p>
          */
         public Builder parameterConstraints(java.util.List<ParameterConstraints> parameterConstraints) {
             this.parameterConstraints = parameterConstraints;
@@ -304,7 +304,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The error message.</p>
+             * <p>The error details.</p>
              * 
              * <strong>example:</strong>
              * <p>record not exist</p>
@@ -482,7 +482,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * <p>The names of the associated parameters.</p>
+             * <p>The associated parameters.</p>
              */
             public Builder associationParameterNames(java.util.List<String> associationParameterNames) {
                 this.associationParameterNames = associationParameterNames;
@@ -492,12 +492,15 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             /**
              * <p>The behavior of the parameter. Valid values:</p>
              * <ul>
-             * <li>NoLimit: No limit is imposed on the value of this parameter.</li>
-             * <li>NotSupport: The value of this parameter cannot be queried.</li>
-             * <li>QueryError: This parameter failed to be queried.</li>
+             * <li><p>NoLimit: No limits are imposed on the value of this parameter.</p>
+             * </li>
+             * <li><p>NotSupport: The values of this parameter cannot be queried.</p>
+             * </li>
+             * <li><p>QueryError: The query failed.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> If AllowedValues is not returned, Behavior and BehaviorReason are returned, which indicate the behavior of the parameter and the reason for the behavior.</p>
+             * <p>If AllowedValues is not returned, Behavior and BehaviorReason are returned to describe the behavior of the parameter and the reason.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -509,7 +512,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * <p>The reason why the behavior of the parameter is returned.</p>
+             * <p>The reason for the parameter behavior.</p>
              * 
              * <strong>example:</strong>
              * <p>No resource property refer to the parameter</p>
@@ -520,7 +523,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * <p>The original constraint information.</p>
+             * <p>The original constraints.</p>
              */
             public Builder originalConstraints(java.util.List<OriginalConstraints> originalConstraints) {
                 this.originalConstraints = originalConstraints;
@@ -539,7 +542,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * <p>The error details that are returned if the request fails.</p>
+             * <p>The details of the query failure.</p>
              */
             public Builder queryErrors(java.util.List<QueryErrors> queryErrors) {
                 this.queryErrors = queryErrors;
@@ -547,7 +550,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * <p>The data type of the parameter.</p>
+             * <p>The type of the parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>String</p>

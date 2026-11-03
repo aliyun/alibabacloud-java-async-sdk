@@ -144,7 +144,7 @@ public class CheckServiceDeployableRequest extends Request {
         } 
 
         /**
-         * <p>Total amount of postpaid.</p>
+         * <p>The total pay-as-you-go amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1.29</p>
@@ -156,7 +156,7 @@ public class CheckServiceDeployableRequest extends Request {
         }
 
         /**
-         * <p>Total amount of prepayment.</p>
+         * <p>The total upfront payment amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -205,7 +205,10 @@ public class CheckServiceDeployableRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template 1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -214,10 +217,12 @@ public class CheckServiceDeployableRequest extends Request {
         }
 
         /**
-         * <p>The trial type of the service instance. Valid values:</p>
+         * <p>The trial type. Valid values:</p>
          * <ul>
-         * <li><strong>Trial</strong>: Trials are supported.</li>
-         * <li><strong>NotTrial</strong>: Trials are not supported.</li>
+         * <li><p>Trial: The service supports trial use.</p>
+         * </li>
+         * <li><p>NotTrial: The service does not support trial use.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

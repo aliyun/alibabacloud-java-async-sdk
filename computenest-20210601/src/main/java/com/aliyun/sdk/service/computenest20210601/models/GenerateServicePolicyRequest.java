@@ -145,16 +145,7 @@ public class GenerateServicePolicyRequest extends Request {
         } 
 
         /**
-         * <p>The type of operation N for which you want to generate the policy information.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CreateServiceInstance: creates a serviceInstance by calling the CreateServiceInstance operation.</li>
-         * <li>UpdateServiceInstance: updates a serviceInstance by calling the UpdateServiceInstance operation.</li>
-         * <li>DeleteServiceInstance: deletes a serviceInstance by calling the DeleteServiceInstance operation.</li>
-         * </ul>
-         * <blockquote>
-         * <p> The default value is the combination of all valid values.</p>
-         * </blockquote>
+         * <p>The operation types for which policy information needs to be generated.</p>
          */
         public Builder operationTypes(java.util.List<String> operationTypes) {
             this.putQueryParameter("OperationTypes", operationTypes);
@@ -163,7 +154,10 @@ public class GenerateServicePolicyRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The parameters required to check the deployment permissions of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;EnablePublicIp\&quot;:null,\&quot;DeploymentMode\&quot;:\&quot;ExistingECS\&quot;,\&quot;ExistingInstanceId\&quot;:\&quot;i-bp1cg4t5o9kol5tdiw1q\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;InternetChargeType\&quot;:\&quot;PayByTraffic\&quot;}</p>
          */
         public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -211,10 +205,10 @@ public class GenerateServicePolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>GPU-单机版</p>
+         * <p>模板1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -223,10 +217,12 @@ public class GenerateServicePolicyRequest extends Request {
         }
 
         /**
-         * <p>The trial policy. Valid values:</p>
+         * <p>The trial type. Default value: NotTrial. Valid values:</p>
          * <ul>
-         * <li>Trial: Trials are supported.</li>
-         * <li>NotTrial: Trials are not supported.</li>
+         * <li><p>Trial: Trial is supported.</p>
+         * </li>
+         * <li><p>NotTrial: Trial is not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

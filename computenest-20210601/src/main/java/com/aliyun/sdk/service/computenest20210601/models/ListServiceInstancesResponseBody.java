@@ -106,7 +106,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The number of entries returned per page. Maximum value: 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
@@ -139,7 +139,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about service instances.</p>
+         * <p>The information about the service instances.</p>
          */
         public Builder serviceInstances(java.util.List<ServiceInstances> serviceInstances) {
             this.serviceInstances = serviceInstances;
@@ -147,7 +147,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -291,10 +291,15 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configuration metadata related to SaaS Boost.</p>
+             * <p>The metadata of the Software as a Service (SaaS) Boost configuration.</p>
              * 
              * <strong>example:</strong>
-             * <p>{ // Specifies whether to associate the service with the SaaS Boost commodity. Default value: false. &quot;Enabled&quot;:true/false // The public endpoint of the SaaS Boost instance. &quot;PublicAccessUrl&quot;:&quot;<a href="https://example.com">https://example.com</a>&quot; }</p>
+             * <p>{
+             *      //Enable/disable SaaS Boost binding
+             *     &quot;Enabled&quot;:true/false,default is false
+             *     //Public access URL
+             *     &quot;PublicAccessUrl&quot;:&quot;<a href="https://example.com">https://example.com</a>&quot;
+             * }</p>
              */
             public Builder saasBoostMetadata(String saasBoostMetadata) {
                 this.saasBoostMetadata = saasBoostMetadata;
@@ -302,11 +307,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The platform type. Valid values:</p>
+             * <p>The type. Possible values:</p>
              * <ul>
-             * <li>marketplace: Alibaba Cloud Marketplace.</li>
-             * <li>Css: Lingxiao.</li>
-             * <li>SaasBoost: SaaS Boost.</li>
+             * <li><p>Marketplace: Alibaba Cloud Marketplace.</p>
+             * </li>
+             * <li><p>Css: Lingxiao.</p>
+             * </li>
+             * <li><p>SaasBoost: SaaS Boost.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -425,10 +433,10 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>wordpress</p>
+             * <p>Database B</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -436,10 +444,10 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the service.</p>
+             * <p>The service overview.</p>
              * 
              * <strong>example:</strong>
-             * <p>WordPress is a free and open-source website content management system (CMS).</p>
+             * <p>B is an open-source distributed relational database independently designed and developed by Company A.</p>
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
@@ -623,7 +631,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The commodity details.</p>
+             * <p>The commodity specifications.</p>
              */
             public Builder commodity(Commodity commodity) {
                 this.commodity = commodity;
@@ -631,13 +639,18 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment type of the service. Valid values:</p>
+             * <p>The deployment type. Possible values:</p>
              * <ul>
-             * <li>ros: The service is deployed by using Resource Orchestration Service (ROS).</li>
-             * <li>terraform: The service is deployed by using Terraform.</li>
-             * <li>ack: The service is deployed by using Alibaba Cloud Container Service for Kubernetes (ACK).</li>
-             * <li>spi: The service is deployed by calling the Service Provider Interface (SPI).</li>
-             * <li>operation: The service is deployed by using a hosted O&amp;M service.</li>
+             * <li><p>ros: The service is deployed using ROS.</p>
+             * </li>
+             * <li><p>terraform: The service is deployed using Terraform.</p>
+             * </li>
+             * <li><p>ack: The service is deployed using ACK.</p>
+             * </li>
+             * <li><p>spi: The service is deployed by calling SPI.</p>
+             * </li>
+             * <li><p>operation: The service is deployed using Alibaba Cloud Managed Services.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -649,7 +662,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the service was published.</p>
+             * <p>The publishing time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-05-21T00:00:00Z</p>
@@ -671,7 +684,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the service.</p>
+             * <p>The service information.</p>
              */
             public Builder serviceInfos(java.util.List<ServiceInfos> serviceInfos) {
                 this.serviceInfos = serviceInfos;
@@ -679,11 +692,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service. Valid values:</p>
+             * <p>The service type. Possible values:</p>
              * <ul>
-             * <li>private: The service is a private service and is deployed within the account of a customer.</li>
-             * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
-             * <li>operation: The service is a hosted O&amp;M service.</li>
+             * <li><p>private: The service is deployed in the user\&quot;s account.</p>
+             * </li>
+             * <li><p>managed: The service is hosted in the service provider\&quot;s account.</p>
+             * </li>
+             * <li><p>operation: The service is an Alibaba Cloud Managed Service.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -695,7 +711,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service state.</p>
+             * <p>The service status.</p>
              * 
              * <strong>example:</strong>
              * <p>Online</p>
@@ -709,7 +725,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
              * <p>The name of the service provider.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alibaba Cloud</p>
+             * <p>Company A Ltd.</p>
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -717,7 +733,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the service provider.</p>
+             * <p>The service provider\&quot;s URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example.com">http://example.com</a></p>
@@ -742,7 +758,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
              * <p>The custom version name defined by the service provider.</p>
              * 
              * <strong>example:</strong>
-             * <p>1.1.0</p>
+             * <p>Version A</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -1228,12 +1244,16 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The business state of the service instance. Valid values:</p>
+             * <p>The business status of the service instance. Possible values:</p>
              * <ul>
-             * <li>Normal</li>
-             * <li>Renewing</li>
-             * <li>RenewFailed</li>
-             * <li>Expired</li>
+             * <li><p>Normal: The service instance is running as expected.</p>
+             * </li>
+             * <li><p>Renewing: The service instance is being renewed.</p>
+             * </li>
+             * <li><p>RenewFoiled: The renewal of the service instance failed.</p>
+             * </li>
+             * <li><p>Expired: The service instance has expired.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1245,7 +1265,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the service instance was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-05-20T00:00:00Z</p>
@@ -1256,10 +1276,12 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the service instance supports the hosted O&amp;M feature. Valid values:</p>
+             * <p>Indicates whether the service instance has the Alibaba Cloud Managed Services feature. Possible values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: The service instance has the Alibaba Cloud Managed Services feature.</p>
+             * </li>
+             * <li><p>false: The service instance does not have the Alibaba Cloud Managed Services feature.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1271,7 +1293,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the service instance expires.</p>
+             * <p>The expiration time of the service instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-01T12:00:00</p>
@@ -1312,7 +1334,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the managed service instance.</p>
+             * <p>The ID of the service instance that is managed by Alibaba Cloud.</p>
              * 
              * <strong>example:</strong>
              * <p>si-d6ab3a63ccbb4b17****</p>
@@ -1323,7 +1345,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time range during which hosted O&amp;M is implemented.</p>
+             * <p>The end time of the Alibaba Cloud Managed Services.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-28T06:48:56Z</p>
@@ -1334,7 +1356,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range during which hosted O&amp;M is implemented.</p>
+             * <p>The start time of the Alibaba Cloud Managed Services.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-29T06:48:56Z</p>
@@ -1356,7 +1378,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information returned after the service instance is created.</p>
+             * <p>The output information of the service instance.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;managementUrl&quot;: &quot;<a href="http://xx.xx%22%7D">http://xx.xx&quot;}</a></p>
@@ -1367,7 +1389,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of the service instance.</p>
+             * <p>The parameter information of the service instance.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;param&quot;:&quot;value&quot;}</p>
@@ -1380,10 +1402,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>Permanent: Once you purchase the service, you can use it permanently.</li>
-             * <li>Subscription: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a subscription basis.</li>
-             * <li>PayAsYouGo: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a pay-as-you-go basis.</li>
-             * <li>CustomFixTime: You are charged for the service based on a custom duration fixed by the service provider.</li>
+             * <li><p>Permanent: The service is purchased permanently.</p>
+             * </li>
+             * <li><p>Subscription: The service is a subscription instance from Alibaba Cloud Marketplace.</p>
+             * </li>
+             * <li><p>PayAsYouGo: The service is a pay-as-you-go instance from Alibaba Cloud Marketplace.</p>
+             * </li>
+             * <li><p>CustomFixTime: The service has a custom fixed duration.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1403,7 +1429,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment progress of the service instance, in percentage.</p>
+             * <p>The deployment progress of the service instance. Unit: %.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -1425,7 +1451,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resources.</p>
+             * <p>The list of resources.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;StackId&quot;: &quot;stack-xxx&quot;}]</p>
@@ -1436,7 +1462,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The services.</p>
+             * <p>The service.</p>
              */
             public Builder service(Service service) {
                 this.service = service;
@@ -1455,12 +1481,16 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service. Valid values:</p>
+             * <p>The service type. Possible values:</p>
              * <ul>
-             * <li>private: The service is a private service and is deployed within the account of a customer.</li>
-             * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
-             * <li>operation: The service is a hosted O&amp;M service.</li>
-             * <li>poc: The service is a trial service.</li>
+             * <li><p>private: The service is deployed in the user\&quot;s account.</p>
+             * </li>
+             * <li><p>managed: The service is hosted in the service provider\&quot;s account.</p>
+             * </li>
+             * <li><p>operation: The service is an Alibaba Cloud Managed Service.</p>
+             * </li>
+             * <li><p>poc: The service instance is a trial instance.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1472,7 +1502,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source from which the service instance is created.</p>
+             * <p>The source from which the service instance was created.</p>
              * 
              * <strong>example:</strong>
              * <p>Supplier</p>
@@ -1483,16 +1513,24 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the service instance. Valid values:</p>
+             * <p>The status of the service instance. Possible values:</p>
              * <ul>
-             * <li>Created</li>
-             * <li>Deploying</li>
-             * <li>DeployedFailed</li>
-             * <li>Deployed</li>
-             * <li>Upgrading</li>
-             * <li>Deleting</li>
-             * <li>Deleted</li>
-             * <li>DeletedFailed</li>
+             * <li><p>Created: The service instance is created.</p>
+             * </li>
+             * <li><p>Deploying: The service instance is being deployed.</p>
+             * </li>
+             * <li><p>DeployedFailed: The service instance failed to be deployed.</p>
+             * </li>
+             * <li><p>Deployed: The service instance is deployed.</p>
+             * </li>
+             * <li><p>Upgrading: The service instance is being upgraded.</p>
+             * </li>
+             * <li><p>Deleting: The service instance is being deleted.</p>
+             * </li>
+             * <li><p>Deleted: The service instance is deleted.</p>
+             * </li>
+             * <li><p>DeletedFailed: The service instance failed to be deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1504,7 +1542,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the deployment of the service instance.</p>
+             * <p>The description of the deployment information of the service instance.</p>
              * 
              * <strong>example:</strong>
              * <p>deploy successfully</p>
@@ -1515,10 +1553,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Is it supported to convert from trial to formal</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * <p>Indicates whether the trial instance can be converted to a regular instance.</p>
              */
             public Builder supportTrialToPrivate(Boolean supportTrialToPrivate) {
                 this.supportTrialToPrivate = supportTrialToPrivate;
@@ -1537,7 +1572,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
              * <p>The template name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Single ECS</p>
+             * <p>Template 1</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1545,7 +1580,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the service instance was updated.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-05-20T00:00:00Z</p>

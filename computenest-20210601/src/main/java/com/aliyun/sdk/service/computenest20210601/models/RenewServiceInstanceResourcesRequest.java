@@ -130,7 +130,7 @@ public class RenewServiceInstanceResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>A client token to ensure that the request is idempotent. Generate a unique value for this parameter from your client for each request. The token can contain only ASCII characters and must not exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -142,7 +142,7 @@ public class RenewServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>The renewal duration for all prepaid resources in the service instance. The unit is specified by PeriodUnit.</p>
+         * <p>The renewal duration for all subscription resources in the service instance. The unit is specified by \<code>PeriodUnit\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +154,7 @@ public class RenewServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>The time unit for the renewal duration of all prepaid resources in the service instance, which is the unit for the Period parameter. Valid values: Month, Year. Default value: Month.</p>
+         * <p>The time unit of the renewal duration for all subscription resources in the service instance. This parameter specifies the unit for \<code>Period\\</code>. Valid values: \<code>Month\\</code> and \<code>Year\\</code>. Default value: \<code>Month\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -166,7 +166,7 @@ public class RenewServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -178,7 +178,7 @@ public class RenewServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>List of resource renewals.</p>
+         * <p>The list of resource renewals.</p>
          */
         public Builder resourcePeriod(java.util.List<ResourcePeriod> resourcePeriod) {
             this.putQueryParameter("ResourcePeriod", resourcePeriod);
@@ -187,7 +187,7 @@ public class RenewServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>Service instance ID.</p>
+         * <p>The service instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -272,7 +272,7 @@ public class RenewServiceInstanceResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The renewal duration for the resource. The unit is specified by PeriodUnit.</p>
+             * <p>The renewal duration for the resource. The unit is specified by \<code>PeriodUnit\\</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -283,7 +283,7 @@ public class RenewServiceInstanceResourcesRequest extends Request {
             }
 
             /**
-             * <p>The time unit for the renewal duration of the resource, which is the unit for the Period parameter. Valid values: Month, Year. Default value: Month.</p>
+             * <p>The time unit of the renewal duration for the resource. This parameter specifies the unit for \<code>Period\\</code>. Valid values: \<code>Month\\</code> and \<code>Year\\</code>. Default value: \<code>Month\\</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>Month</p>
@@ -294,7 +294,7 @@ public class RenewServiceInstanceResourcesRequest extends Request {
             }
 
             /**
-             * <p>Resource ARN (Aliyun Resource Name).</p>
+             * <p>The Aliyun Resource Name (ARN) of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ecs:cn-hongkong:1488317743351199:instance/i-j6c6f3lbky38o8rpeqw2</p>

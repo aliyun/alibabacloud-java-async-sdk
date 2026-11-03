@@ -67,7 +67,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The available regions.</p>
+         * <p>The list of available regions.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -144,7 +144,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The region endpoint.</p>
+             * <p>The endpoint of the region.</p>
              * 
              * <strong>example:</strong>
              * <p>computenest.cn-hangzhou.aliyuncs.com</p>

@@ -81,7 +81,7 @@ public class CreateSkillSpaceResponseBody extends TeaModel {
          * <p>SkillSpace ID</p>
          * 
          * <strong>example:</strong>
-         * <p>ss-11111</p>
+         * <p>ss-xxxxx</p>
          */
         public Builder skillSpaceId(String skillSpaceId) {
             this.skillSpaceId = skillSpaceId;

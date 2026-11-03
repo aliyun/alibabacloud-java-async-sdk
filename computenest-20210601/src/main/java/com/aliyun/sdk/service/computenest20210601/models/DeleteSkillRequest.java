@@ -74,7 +74,10 @@ public class DeleteSkillRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>Ensures the idempotence of the request. Generate a value from your client that is unique across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -87,7 +90,7 @@ public class DeleteSkillRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>s-06e9dca2-0ac9-4d2e-a965-e9db9c057e00</p>
+         * <p>s-xxxxx</p>
          */
         public Builder skillId(String skillId) {
             this.putQueryParameter("SkillId", skillId);

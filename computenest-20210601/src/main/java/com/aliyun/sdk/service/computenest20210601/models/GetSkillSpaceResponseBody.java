@@ -119,7 +119,10 @@ public class GetSkillSpaceResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The time when the SkillSpace was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -138,7 +141,10 @@ public class GetSkillSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * SkillSpaceDescription.
+         * <p>The SkillSpace description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All-in-one office toolkit — generate reports, process data, manage files, and streamline workflows effortlessly.</p>
          */
         public Builder skillSpaceDescription(String skillSpaceDescription) {
             this.skillSpaceDescription = skillSpaceDescription;
@@ -146,7 +152,10 @@ public class GetSkillSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * SkillSpaceId.
+         * <p>SkillSpace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ss-xxxxx</p>
          */
         public Builder skillSpaceId(String skillSpaceId) {
             this.skillSpaceId = skillSpaceId;
@@ -154,7 +163,10 @@ public class GetSkillSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * SkillSpaceName.
+         * <p>The SkillSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>office-toolkit-skills</p>
          */
         public Builder skillSpaceName(String skillSpaceName) {
             this.skillSpaceName = skillSpaceName;
@@ -162,7 +174,10 @@ public class GetSkillSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the SkillSpace was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

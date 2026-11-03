@@ -87,7 +87,7 @@ public class ListPoliciesRequest extends Request {
         } 
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -99,7 +99,7 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Token for the next query, an empty nextToken indicates there is no next page.</p>
+         * <p>The token that is used to retrieve the next page of results. If this parameter is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
@@ -111,7 +111,7 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

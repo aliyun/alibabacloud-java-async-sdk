@@ -67,7 +67,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>464C8CB6-A548-5206-B83C-D32A8E43EC21</p>
@@ -78,7 +78,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         }
 
         /**
-         * <p>List of resource price information.</p>
+         * <p>The list of resource price information.</p>
          */
         public Builder resourcePrices(java.util.List<ResourcePrices> resourcePrices) {
             this.resourcePrices = resourcePrices;
@@ -170,7 +170,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             } 
 
             /**
-             * <p>Discount amount.</p>
+             * <p>The discount.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -181,7 +181,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             }
 
             /**
-             * <p>Original price.</p>
+             * <p>The original price.</p>
              * 
              * <strong>example:</strong>
              * <p>900</p>
@@ -192,7 +192,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             }
 
             /**
-             * <p>Pricing module identifier.</p>
+             * <p>The identifier of the pricing module.</p>
              * 
              * <strong>example:</strong>
              * <p>instance</p>
@@ -203,7 +203,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             }
 
             /**
-             * <p>Discounted price.</p>
+             * <p>The discounted price.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -286,7 +286,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             } 
 
             /**
-             * <p>Promotion description.</p>
+             * <p>The description of the discount.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -297,7 +297,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             }
 
             /**
-             * <p>Promotion name.</p>
+             * <p>The name of the discount.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -308,7 +308,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             }
 
             /**
-             * <p>Promotion ID.</p>
+             * <p>The discount ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1021199213</p>
@@ -469,11 +469,14 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             } 
 
             /**
-             * <p>Currency. Valid values:</p>
+             * <p>The currency. Valid values:</p>
              * <ul>
-             * <li>CNY: Chinese Yuan.</li>
-             * <li>USD: US Dollar.</li>
-             * <li>JPY: Japanese Yen.</li>
+             * <li><p>CNY: Chinese Yuan.</p>
+             * </li>
+             * <li><p>USD: US Dollar.</p>
+             * </li>
+             * <li><p>JPY: Japanese Yen.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -493,7 +496,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             }
 
             /**
-             * <p>Discount.</p>
+             * <p>The discount.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -504,7 +507,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             }
 
             /**
-             * <p>Original price.</p>
+             * <p>The original price.</p>
              * 
              * <strong>example:</strong>
              * <p>900</p>
@@ -515,7 +518,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             }
 
             /**
-             * <p>Renewal duration. The unit is specified by PeriodUnit.</p>
+             * <p>The renewal duration. The unit is specified by PeriodUnit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -526,7 +529,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             }
 
             /**
-             * <p>The time unit for the renewal duration, which is the unit of the Period parameter. Valid values: Month, Year. Default value: Month.</p>
+             * <p>The unit of the renewal duration. This is the unit for the Period parameter. Valid values: Month and Year. Default value: Month.</p>
              * 
              * <strong>example:</strong>
              * <p>Month</p>
@@ -537,7 +540,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             }
 
             /**
-             * <p>Resource ARN (Aliyun Resource Name).</p>
+             * <p>The ARN of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ecs:cn-hongkong:1488317743351199:instance/i-j6c6f3lbky38o8rpeqw2</p>
@@ -548,7 +551,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             }
 
             /**
-             * <p>Promotion details.</p>
+             * <p>The discount details.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -556,7 +559,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             }
 
             /**
-             * <p>Discounted price.</p>
+             * <p>The discounted price.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>

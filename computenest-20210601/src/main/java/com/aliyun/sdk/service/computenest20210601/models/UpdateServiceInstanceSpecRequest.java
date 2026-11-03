@@ -158,7 +158,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can generate the value from your client, but you must ensure that the value is unique among different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -170,7 +170,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The information about the order placed in Alibaba Cloud Marketplace. You do not need to specify this parameter if the service is not published in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.</p>
+         * <p>The purchase order information for Alibaba Cloud Marketplace. This parameter is not required if the service is not listed in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.</p>
          */
         public Builder commodity(Commodity commodity) {
             this.putQueryParameter("Commodity", commodity);
@@ -179,11 +179,13 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. A dry run includes checks on the permissions and instance state.</p>
+         * <p>Specifies whether to perform a dry run on the request, including checks on permissions and instance status.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true: performs a dry run but does not create a service instance.</li>
-         * <li>false: performs a dry run and creates a service instance if the request passes the dry run.</li>
+         * <li><p>true: sends the request but does not create a service instance.</p>
+         * </li>
+         * <li><p>false: sends the request and creates the service instance if the check is passed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,8 +200,12 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         /**
          * <p>Specifies whether to enable Prometheus monitoring on the user side.</p>
          * <p>Valid values:</p>
-         * <p>true</p>
-         * <p>false</p>
+         * <ul>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -211,11 +217,11 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The name of the configuration change operation.</p>
-         * <p>To obtain the names and content of the configuration change operations of the service, you can call the <a href="https://help.aliyun.com/document_detail/2340828.html">GetService</a> operation. In the response, check the value of <strong>ModifyParametersConfig</strong> in the value of <strong>OperationMetadata</strong>.</p>
+         * <p>The name of the specification modification operation.</p>
+         * <p>You can obtain the name and content of the specification modification operation configured for the service by viewing the <strong>ModifyParametersConfig</strong> property of the <strong>OperationMetadata</strong> response parameter in the <a href="https://help.aliyun.com/document_detail/2340828.html">GetService - Get service details</a> operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>package modify</p>
+         * <p>Plan configuration change</p>
          */
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
@@ -224,17 +230,15 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The configuration parameter.</p>
-         * <p>This parameter is available if the service provider set <strong>Method</strong> to <strong>Change Parameter</strong> when configuring configuration change operations.</p>
+         * <p>The modification parameters of the service instance.</p>
+         * <p>You can specify this parameter if the service provider set <strong>Change Type</strong> to <strong>Parameter Change</strong> when adding a specification modification operation.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>To obtain the parameters of the service that support configuration change, you can call the <a href="https://help.aliyun.com/document_detail/2340828.html">GetService</a> operation. In the response, check the value of <strong>ModifyParametersConfig</strong> in the value of <strong>OperationMetadata</strong>.</p>
-         * </li>
-         * <li><p>You can also view the parameters of the service that support configuration change in the <strong>configuration change</strong> dialog box in the <a href="https://computenest.console.aliyun.com/service/instance/cn-hangzhou">Compute Nest console</a>.</p>
-         * </li>
+         * <li>You can obtain the modification parameters configured for the service by viewing the <strong>ModifyParametersConfig</strong> property of the <strong>OperationMetadata</strong> response parameter in the <a href="https://help.aliyun.com/document_detail/2340828.html">GetService - Get service details</a> operation.</li>
+         * <li>You can also view the modification parameters configured for the service on the <strong>Service Instance Modification</strong> page in the <a href="https://computenest.console.aliyun.com/service/instance/cn-hangzhou">Compute Nest console</a>.</li>
          * </ul>
-         * <p>For example, if the service supports Elastic Compute Service (ECS) instance type upgrade, you must specify an instance type that has higher specifications than the current one.</p>
+         * </blockquote>
+         * <p>For example, if the service is configured to upgrade the ECS instance type, you must specify an instance type that is higher than the original instance type of the service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -249,12 +253,12 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The name of the configuration plan.</p>
-         * <p>This parameter is available if the service provider set <strong>Method</strong> to <strong>Change Plan</strong> when configuring configuration change operations.</p>
-         * <p>To obtain the configuration plan names of the service, you can call the <a href="https://help.aliyun.com/document_detail/2340828.html">GetService</a> operation. In the response, check the value of <strong>PredefinedParameters</strong> in the value of <strong>DeployMetadata</strong>.</p>
+         * <p>The plan name of the service instance.</p>
+         * <p>You can specify this parameter if the service provider set <strong>Change Type</strong> to <strong>Plan Change</strong> when adding a specification modification operation.</p>
+         * <p>You can obtain the plan name configured for the service by viewing the <strong>PredefinedParameters</strong> property of the <strong>DeployMetadata</strong> response parameter in the <a href="https://help.aliyun.com/document_detail/2340828.html">GetService - Get service details</a> operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>package One</p>
+         * <p>Package 1</p>
          */
         public Builder predefinedParametersName(String predefinedParametersName) {
             this.putQueryParameter("PredefinedParametersName", predefinedParametersName);
@@ -264,7 +268,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
 
         /**
          * <p>The ID of the service instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> operation to obtain the ID of the service instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances - List service instances</a> operation to obtain the service instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,8 +297,12 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AutoPay")
         private Boolean autoPay;
 
+        @com.aliyun.core.annotation.NameInMap("CouponId")
+        private String couponId;
+
         private Commodity(Builder builder) {
             this.autoPay = builder.autoPay;
+            this.couponId = builder.couponId;
         }
 
         public static Builder builder() {
@@ -312,22 +320,33 @@ public class UpdateServiceInstanceSpecRequest extends Request {
             return this.autoPay;
         }
 
+        /**
+         * @return couponId
+         */
+        public String getCouponId() {
+            return this.couponId;
+        }
+
         public static final class Builder {
             private Boolean autoPay; 
+            private String couponId; 
 
             private Builder() {
             } 
 
             private Builder(Commodity model) {
                 this.autoPay = model.autoPay;
+                this.couponId = model.couponId;
             } 
 
             /**
              * <p>Specifies whether to enable automatic payment.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><strong>true (default)</strong>: automatically completes the payment. You must make sure that your account balance is sufficient.</li>
-             * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated. If your account balance is insufficient, you can set AutoPay to false. In this case, an unpaid order is generated. You can complete the payment in the Expenses and Costs console.<a href="https://rdsnext.console.aliyun.com/dashboard/cn-beijing"></a></li>
+             * <li><p><strong>true</strong> (default): enables automatic payment. You must ensure that your account balance is sufficient.</p>
+             * </li>
+             * <li><p><strong>false</strong>: generates an order but does not deduct the fee. If the balance of your payment method is insufficient, you can set the AutoPay parameter to false. In this case, an unpaid order is generated, and you can log on to the <a href="https://rdsnext.console.aliyun.com/dashboard/cn-beijing">ApsaraDB RDS console</a> to pay the order.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -335,6 +354,17 @@ public class UpdateServiceInstanceSpecRequest extends Request {
              */
             public Builder autoPay(Boolean autoPay) {
                 this.autoPay = autoPay;
+                return this;
+            }
+
+            /**
+             * <p>The coupon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sxs-xxx</p>
+             */
+            public Builder couponId(String couponId) {
+                this.couponId = couponId;
                 return this;
             }
 

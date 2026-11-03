@@ -60,7 +60,11 @@ public class GetSkillSpaceRequest extends Request {
         } 
 
         /**
+         * <p>SkillSpace ID</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ss-xxxxx</p>
          */
         public Builder skillSpaceId(String skillSpaceId) {
             this.putQueryParameter("SkillSpaceId", skillSpaceId);

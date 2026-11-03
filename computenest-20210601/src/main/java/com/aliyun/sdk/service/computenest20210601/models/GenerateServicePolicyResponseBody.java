@@ -80,7 +80,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The policies that are missing.</p>
+         * <p>The missing access policies.</p>
          */
         public Builder missingPolicy(java.util.List<MissingPolicy> missingPolicy) {
             this.missingPolicy = missingPolicy;
@@ -88,7 +88,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The RAM policy.</p>
+         * <p>The custom properties of the required access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>{Statement&quot;: [{ &quot;Action&quot;: [&quot;oos:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: &quot;</em>&quot;},{ &quot;Action&quot;: [&quot;ecs:DescribeInstances&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: &quot;<em>&quot;},{ &quot;Action&quot;: [&quot;ecs:RunInstance&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: &quot;</em>&quot;}], &quot;Version&quot;: &quot;1&quot;}</p>
@@ -181,7 +181,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Operations on specific resources.</p>
+             * <p>The access policy information.</p>
              */
             public Builder action(java.util.List<String> action) {
                 this.action = action;
@@ -189,7 +189,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specific objects authorized. An asterisk (*) denotes all resources.</p>
+             * <p>The specific resource that is authorized. An asterisk (*) indicates all resources.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -202,7 +202,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name to which the access policy belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs</p>

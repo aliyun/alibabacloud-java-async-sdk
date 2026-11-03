@@ -102,7 +102,7 @@ public class ListSkillsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>The filter.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -111,7 +111,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -120,7 +123,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * NeedDownloadUrl.
+         * <p>Specifies whether to include the download URL for the Skill package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needDownloadUrl(Boolean needDownloadUrl) {
             this.putQueryParameter("NeedDownloadUrl", needDownloadUrl);
@@ -200,7 +206,26 @@ public class ListSkillsRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The filter name. You can specify one or more names for the query. Valid values:</p>
+             * <ul>
+             * <li><p>SkillId: the Skill ID. Exact match.</p>
+             * </li>
+             * <li><p>SkillSpaceId: the SkillSpace ID. Exact match.</p>
+             * </li>
+             * <li><p>SkillName: the Skill name.</p>
+             * </li>
+             * <li><p>MatchType: the match type that controls how SkillName is matched. Valid values: exact, prefix, and fuzzy.</p>
+             * </li>
+             * <li><p>SkillType: the Skill type. Valid values: official and custom.</p>
+             * </li>
+             * <li><p>Keyword: keyword match for the Skill name or Skill description. Fuzzy match.</p>
+             * </li>
+             * <li><p>SkillLabels: the Skill labels. Fuzzy match.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SkillId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -208,7 +233,7 @@ public class ListSkillsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The list of filter values. Valid values of N: 1 to 10.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

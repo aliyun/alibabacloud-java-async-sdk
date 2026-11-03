@@ -186,7 +186,10 @@ public class UpdateSkillRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -195,7 +198,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * OssUrl.
+         * <p>Required when SourceType is set to UPLOAD. The OSS URL of the skill package to upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator1.zip">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator1.zip</a></p>
          */
         public Builder ossUrl(String ossUrl) {
             this.putQueryParameter("OssUrl", ossUrl);
@@ -204,7 +210,7 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * RequiredConnections.
+         * <p>The collection of connection types required by the skill.</p>
          */
         public Builder requiredConnections(java.util.List<String> requiredConnections) {
             this.putQueryParameter("RequiredConnections", requiredConnections);
@@ -213,7 +219,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * SkillDescription.
+         * <p>The description of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create new skills.</p>
          */
         public Builder skillDescription(String skillDescription) {
             this.putQueryParameter("SkillDescription", skillDescription);
@@ -231,10 +240,11 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
+         * <p>The ID of the skill to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>06e9dca2-0ac9-4d2e-a965-e9db9c057e00</p>
+         * <p>s-xxxxx</p>
          */
         public Builder skillId(String skillId) {
             this.putQueryParameter("SkillId", skillId);
@@ -243,7 +253,7 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * SkillLabels.
+         * <p>The labels of the skill.</p>
          */
         public Builder skillLabels(java.util.List<String> skillLabels) {
             this.putQueryParameter("SkillLabels", skillLabels);
@@ -252,7 +262,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * SkillName.
+         * <p>The name of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skill-creator</p>
          */
         public Builder skillName(String skillName) {
             this.putQueryParameter("SkillName", skillName);
@@ -261,7 +274,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * SourceSkillId.
+         * <p>Required when SourceType is set to COPY. The ID of the public skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-xxxxx</p>
          */
         public Builder sourceSkillId(String sourceSkillId) {
             this.putQueryParameter("SourceSkillId", sourceSkillId);
@@ -270,7 +286,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The source type for updating the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COPY</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

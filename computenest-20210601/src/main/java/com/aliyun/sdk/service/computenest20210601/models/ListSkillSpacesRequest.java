@@ -88,7 +88,7 @@ public class ListSkillSpacesRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>The filter.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -97,7 +97,10 @@ public class ListSkillSpacesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paging query. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -106,7 +109,10 @@ public class ListSkillSpacesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -174,7 +180,18 @@ public class ListSkillSpacesRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The filter name. You can specify one or more names for the query. Valid values:</p>
+             * <ul>
+             * <li><p>SkillSpaceId: the SkillSpace ID. Exact match.</p>
+             * </li>
+             * <li><p>SkillSpaceName: the SkillSpace name.</p>
+             * </li>
+             * <li><p>MatchType: the match type that controls the matching behavior of SkillSpace. Valid values: exact, prefix, and fuzzy.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SkillSpaceId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +199,7 @@ public class ListSkillSpacesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The list of filter values. Valid values of N: 1 to 10.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

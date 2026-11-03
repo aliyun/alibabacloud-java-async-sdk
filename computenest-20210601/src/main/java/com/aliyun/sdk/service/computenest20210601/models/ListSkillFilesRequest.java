@@ -103,7 +103,7 @@ public class ListSkillFilesRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>The filter.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -112,7 +112,10 @@ public class ListSkillFilesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paging query. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -121,7 +124,10 @@ public class ListSkillFilesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAVz7BQqj2xtiNSC3d3RAD38=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -134,7 +140,7 @@ public class ListSkillFilesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>06e9dca2-0ac9-4d2e-a965-e9db9c057e00</p>
+         * <p>s-xxxxx</p>
          */
         public Builder skillId(String skillId) {
             this.putQueryParameter("SkillId", skillId);
@@ -202,7 +208,10 @@ public class ListSkillFilesRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>No supported filter names are available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +219,7 @@ public class ListSkillFilesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The list of filter values. Valid values of N: 1 to 10.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

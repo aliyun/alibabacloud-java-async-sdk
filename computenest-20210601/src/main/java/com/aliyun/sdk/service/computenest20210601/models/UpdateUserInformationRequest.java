@@ -74,7 +74,7 @@ public class UpdateUserInformationRequest extends Request {
         } 
 
         /**
-         * <p>The modified delivery settings.</p>
+         * <p>The configurations to modify.</p>
          */
         public Builder deliverySettings(DeliverySettings deliverySettings) {
             this.putQueryParameter("DeliverySettings", deliverySettings);
@@ -194,10 +194,12 @@ public class UpdateUserInformationRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable screencast delivery to OSS. Valid values:</p>
+             * <p>Specifies whether to deliver ActionTrail events to OSS. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: Delivery is enabled.</p>
+             * </li>
+             * <li><p>false: Delivery is disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -220,10 +222,12 @@ public class UpdateUserInformationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable screencast delivery to Object Storage Service (OSS). Valid values:</p>
+             * <p>Specifies whether to deliver data to Object Storage Service (OSS). Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: Delivery is enabled.</p>
+             * </li>
+             * <li><p>false: Delivery is disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -235,7 +239,7 @@ public class UpdateUserInformationRequest extends Request {
             }
 
             /**
-             * <p>The number of days for which the screencasts are saved.</p>
+             * <p>The number of days to retain screen recordings.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
