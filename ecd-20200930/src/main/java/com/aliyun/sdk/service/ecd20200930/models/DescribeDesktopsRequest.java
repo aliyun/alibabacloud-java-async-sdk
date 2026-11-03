@@ -635,7 +635,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the cloud computer.</p>
+         * <p>The billing method of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -647,7 +647,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer pool ID. If you specify <code>DesktopId</code>, this <code>DesktopGroupId</code> parameter is ignored. If <code>DesktopId</code> is empty, the system retrieves the <code>DesktopId</code> of all cloud computers in the specified cloud computer pool based on <code>DesktopGroupId</code>.</p>
+         * <p>The desktop group ID. If you specify <code>DesktopId</code>, the <code>DesktopGroupId</code> parameter is ignored. If <code>DesktopId</code> is empty, the system queries the <code>DesktopId</code> of all cloud desktops in the desktop group based on <code>DesktopGroupId</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -659,7 +659,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer IDs. You can specify 1 to 100 IDs.</p>
+         * <p>The cloud desktop IDs. You can specify 1 to 100 IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -671,7 +671,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer name.</p>
+         * <p>The cloud desktop name.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoComputer01</p>
@@ -683,7 +683,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer status.</p>
+         * <p>The cloud desktop status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -695,7 +695,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud computer statuses.</p>
+         * <p>The list of cloud desktop statuses.</p>
          */
         public Builder desktopStatusList(java.util.List<String> desktopStatusList) {
             this.putQueryParameter("DesktopStatusList", desktopStatusList);
@@ -704,7 +704,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer instance type. Call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported instance type IDs.</p>
+         * <p>The cloud desktop type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the supported cloud desktop types.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.general.2c8g</p>
@@ -716,7 +716,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The directory ID. This is the same as the office network ID.</p>
+         * <p>The directory ID. This parameter is equivalent to the office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -728,9 +728,9 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The list of authorized users for the cloud computer. You can set 1 to 100 users.</p>
+         * <p>The authorized users of the cloud desktop. You can specify 1 to 100 users.</p>
          * <blockquote>
-         * <p>At any given time, only one user can connect to and use the cloud computer.</p>
+         * <p>Only one user can connect to and use the cloud desktop at a time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -743,7 +743,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The list of authorized users to exclude. You can specify 1 to 100 users.</p>
+         * <p>The authorized users of the cloud desktop to exclude. You can specify 1 to 100 users.</p>
          * 
          * <strong>example:</strong>
          * <p>andy</p>
@@ -755,7 +755,8 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The expiration time of the subscription cloud computer. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The expiration time of the subscription cloud desktop.
+         * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-31T15:59:59Z</p>
@@ -767,7 +768,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include enterprise resource group information in the response.</p>
+         * <p>Specifies whether to query the enterprise resource group information.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -779,7 +780,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to exclude pooled cloud computers (cloud computers in a cloud computer pool).</p>
+         * <p>Specifies whether to exclude pooled cloud desktops (cloud desktops in a desktop group).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -803,7 +804,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer pool ID.</p>
+         * <p>The desktop group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-boyczi8enfyc5****</p>
@@ -824,7 +825,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include automatic snapshot policy information in the response.</p>
+         * <p>Specifies whether to include the automatic snapshot policy information in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -848,10 +849,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query.</p>
+         * <p>The number of entries to return per page in a paging query.</p>
          * <ul>
-         * <li>Maximum value: 100</li>
-         * <li>Default value: 10</li>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -888,7 +889,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The token that marks the start of the next query. An empty NextToken value indicates that there are no more results.</p>
+         * <p>The token that is used to start the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -924,7 +925,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query only pooled cloud computers (cloud computers in a cloud computer pool).</p>
+         * <p>Specifies whether to query only pooled cloud desktops (cloud desktops in a desktop group).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -945,7 +946,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The page number in a paged query.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -957,7 +958,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page in a paged query.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -969,7 +970,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer policy ID.</p>
+         * <p>The cloud desktop policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>system-all-enabled-policy</p>
@@ -993,7 +994,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The public IP address of the instance. Use this parameter to filter instances by public IP address.</p>
+         * <p>The public IP address of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>121.199.28.39</p>
@@ -1017,7 +1018,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the image version information of the cloud computer.</p>
+         * <p>Specifies whether to query the image version information of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1029,7 +1030,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to retrieve the list of regions supported by Alibaba Cloud Workspace.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1042,7 +1043,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The resource reservation pool ID (rp-xxx). Filters cloud computers by reservation pool exactly. If not specified or left empty, no filtering by reservation pool is applied.</p>
+         * <p>The resource reservation pool ID (rp-xxx). This parameter is used to filter cloud desktops precisely by reservation pool. If this parameter is not specified or is empty, cloud desktops are not filtered by reservation pool.</p>
          * 
          * <strong>example:</strong>
          * <p>rp-xxx</p>
@@ -1054,7 +1055,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The enterprise resource group ID.</p>
+         * <p>The ID of the enterprise resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-4hsvzbbmqdzu3s****</p>
@@ -1078,7 +1079,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The purchase method of the cloud computer.</p>
+         * <p>The billing method for the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>monthPackage</p>
@@ -1090,7 +1091,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The list of tags. A tag consists of a key-value pair and is used to identify resources. You can use tags to group and manage cloud computers for easier search and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
+         * <p>The list of tags. A tag consists of a key-value pair and is used to identify a resource. You can use tags to manage cloud desktops in groups for easy search and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud desktops</a>.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1170,7 +1171,7 @@ public class DescribeDesktopsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. If you specify <code>Tag</code>, <code>Key</code> is required. The value cannot exceed 128 characters, cannot start with <code>aliyun</code> or <code>acs:</code>, cannot contain <code>http://</code> or <code>https://</code>, and cannot consist of spaces only.</p>
+             * <p>The tag key. If you specify <code>Tag</code>, <code>Key</code> is required. The tag key can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>, and cannot contain only spaces.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -1181,7 +1182,7 @@ public class DescribeDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The tag value. The value cannot exceed 128 characters, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. The tag value can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

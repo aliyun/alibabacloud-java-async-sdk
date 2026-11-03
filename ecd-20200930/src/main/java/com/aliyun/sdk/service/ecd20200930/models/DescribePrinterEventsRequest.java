@@ -215,7 +215,7 @@ public class DescribePrinterEventsRequest extends Request {
         } 
 
         /**
-         * <p>The cloud computer ID. If you do not specify this parameter, all cloud computers in the region are queried.</p>
+         * <p>The cloud desktop ID. If you do not specify this parameter, the system queries all cloud desktops in the specified region.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -227,7 +227,7 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer name.</p>
+         * <p>The cloud desktop name.</p>
          * 
          * <strong>example:</strong>
          * <p>desktop-001</p>
@@ -239,7 +239,7 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * <p>The end time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If you do not specify this parameter, the current time is used.</p>
+         * <p>The end time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC. If you do not specify this parameter, the current time is used.<br><a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-31T06:32:31Z</p>
@@ -251,7 +251,7 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * <p>The logon user information, which is a RAM user ID or an Active Directory (AD) username. If you do not specify this parameter, events of all users in the region are queried.</p>
+         * <p>The logon user information, which is the RAM user ID or the Active Directory (AD) username. If you do not specify this parameter, the system queries the events of all users in the specified region.</p>
          * 
          * <strong>example:</strong>
          * <p>user001</p>
@@ -272,7 +272,8 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Default value: 100.</p>
+         * <p>The number of entries to return on each page during paging.
+         * Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -284,7 +285,7 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
+         * <p>The query token. The value is the NextToken value returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -332,7 +333,7 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to query the regions supported by Elastic Desktop Service.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the list of regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -345,7 +346,7 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * <p>The start time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If you do not specify this parameter, the query starts from the time that is calculated backward from the time specified by <code>EndTime</code>.</p>
+         * <p>The start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC. If you do not specify this parameter, the system queries events prior to the time specified by <code>EndTime</code>.<br><a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-23T04:10:21Z</p>

@@ -216,7 +216,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The enterprise cloud drive ID.</p>
+         * <p>The ID of the enterprise cloud drive.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +229,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>The office network ID.</p>
+         * <p>The ID of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
@@ -241,7 +241,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>The office network name.</p>
+         * <p>The name of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>testDirectoryName</p>
@@ -253,7 +253,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>The team space status.</p>
+         * <p>The status of the team workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -265,7 +265,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether a space is added. Default value: empty, which indicates that all types are queried.</p>
+         * <p>Specifies whether a workspace is added. By default, this parameter is left empty, which indicates that all workspaces are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>binding</p>
@@ -277,7 +277,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>The list of team space IDs.</p>
+         * <p>The IDs of the team workspaces.</p>
          */
         public Builder groupId(java.util.List<String> groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -286,7 +286,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>The team space name. Fuzzy match is supported.</p>
+         * <p>The name of the team workspace. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>TestTeam1</p>
@@ -298,7 +298,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>The team type. Default value: empty, which indicates that all types are queried.</p>
+         * <p>The team type. By default, this parameter is left empty, which indicates that all types are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>org</p>
@@ -310,10 +310,10 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query.</p>
+         * <p>The number of entries to return on each page during paging in a paged query.</p>
          * <ul>
-         * <li>Maximum value: 100.</li>
-         * <li>Default value: 20.</li>
+         * <li>Maximum value: 100</li>
+         * <li>Default value: 20</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -326,7 +326,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> that was returned in the previous call. You do not need to set this parameter for the first request.</p>
+         * <p>The pagination token. Set the value to the <code>NextToken</code> value returned from the last call. You do not need to specify this parameter for the first call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lY3I2VNHLwy+nIoSXh****</p>
@@ -338,8 +338,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent node of the object to query. To query the root node, set this parameter to <code>root</code>.</p>
-         * <p>Default value: empty, which indicates that all team spaces are queried.</p>
+         * <p>The ID of the parent node of the object to be queried. To query the root node, set this parameter to <code>root</code>. By default, this parameter is left empty, which indicates that all objects are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-e70ga4ixp30ur****</p>
@@ -351,7 +350,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

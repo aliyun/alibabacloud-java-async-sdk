@@ -67,7 +67,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The entitlements collection.</p>
+         * <p>The entitlement collection.</p>
          */
         public Builder entitlements(Entitlements entitlements) {
             this.entitlements = entitlements;
@@ -176,7 +176,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The assignment result for a single cloud desktop.</p>
+             * <p>The assignment result of a single cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>FINISHED</p>

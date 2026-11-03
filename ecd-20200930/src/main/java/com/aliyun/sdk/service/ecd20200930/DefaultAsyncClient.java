@@ -353,7 +353,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <ul>
      * <li>The cloud desktop must be in the Running state.</li>
-     * <li>This operation returns a result immediately. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <code>ManagementFlags</code> response parameter to determine whether the assignment is complete. A value of <code>ASSIGNING</code> indicates that the assignment is in progress. Any other value indicates that the assignment is complete.</li>
+     * <li>This operation returns a result immediately. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the ManagementFlags response parameter to determine whether the assignment is complete. A value of ASSIGNING indicates that the assignment is in progress. Any other value indicates that the assignment is complete.</li>
      * <li>Check the assignment status every 2 to 5 seconds, up to a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</li>
      * </ul>
      * 
@@ -2633,10 +2633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>China site users must select Shanghai as the site. International site users must select Singapore.</li>
-     * <li>By default, both deleted and non-deleted cloud desktops are queried.</li>
-     * <li>Deleted cloud desktops can only be queried if they were deleted within the last three months.</li>
-     * <li>Sort conditions cannot be used together with other conditions.</li>
+     * <li>Users on the Chinese site select Shanghai, and users on the international site select Singapore.</li>
+     * <li>By default, you can query all cloud computers, including both deleted and undeleted ones.</li>
+     * <li>For deleted cloud computers, you can only query those that were deleted within the last three months.</li>
+     * <li>Sorting conditions cannot be used together with other conditions.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeGlobalDesktopRecords  DescribeGlobalDesktopRecordsRequest
@@ -3144,7 +3144,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Security alerts are classified into two dimensions: alerts and anomalies. A security alert contains multiple anomaly events.</p>
+     * <p>Security alerts are divided into two dimensions: alerts and exceptions. A single security alert contains multiple exception events.</p>
      * 
      * @param request the request parameters of DescribePrinterEvents  DescribePrinterEventsRequest
      * @return DescribePrinterEventsResponse

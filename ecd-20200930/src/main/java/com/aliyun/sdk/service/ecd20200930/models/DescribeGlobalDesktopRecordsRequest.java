@@ -58,6 +58,10 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
     private String orderBy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrgIdList")
+    private java.util.List<String> orgIdList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -106,6 +110,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         this.excludeDesktopStatusList = builder.excludeDesktopStatusList;
         this.officeSiteId = builder.officeSiteId;
         this.orderBy = builder.orderBy;
+        this.orgIdList = builder.orgIdList;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -201,6 +206,13 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
     }
 
     /**
+     * @return orgIdList
+     */
+    public java.util.List<String> getOrgIdList() {
+        return this.orgIdList;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -274,6 +286,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         private java.util.List<String> excludeDesktopStatusList; 
         private String officeSiteId; 
         private String orderBy; 
+        private java.util.List<String> orgIdList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
@@ -300,6 +313,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
             this.excludeDesktopStatusList = request.excludeDesktopStatusList;
             this.officeSiteId = request.officeSiteId;
             this.orderBy = request.orderBy;
+            this.orgIdList = request.orgIdList;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -314,8 +328,8 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         /**
          * <p>The business channel. Valid values:</p>
          * <ul>
-         * <li>Enterprise: Enterprise Edition.</li>
-         * <li>Business: Business Edition.</li>
+         * <li>Enterprise: Enterprise Edition</li>
+         * <li>Business: Business Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -328,7 +342,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The cloud desktop ID. You can specify 1 to 100 IDs.</p>
+         * <p>The ID of the cloud computer. You can specify 1 to 100 IDs.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -337,7 +351,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The name of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoComputer</p>
@@ -349,7 +363,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud desktop statuses to include.</p>
+         * <p>The list of cloud computer statuses to include.</p>
          */
         public Builder desktopStatusList(java.util.List<String> desktopStatusList) {
             this.putQueryParameter("DesktopStatusList", desktopStatusList);
@@ -358,7 +372,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The cloud desktop specifications. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the specification IDs supported by cloud desktops.</p>
+         * <p>The specifications of the cloud computer. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of the specifications supported by cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.2c4g</p>
@@ -370,7 +384,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end time. The interval between the start time and end time cannot exceed 30 days. Supported format:</p>
+         * <p>The end time. The maximum interval between the start time and the end time is 30 days. Supported format:</p>
          * <ul>
          * <li>Format: YYYY-MM-DDThh:mm:ssZ.</li>
          * </ul>
@@ -385,7 +399,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end user ID.</p>
+         * <p>The ID of the end user.</p>
          * 
          * <strong>example:</strong>
          * <p>TestUser</p>
@@ -397,7 +411,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud desktop statuses to exclude.</p>
+         * <p>The list of cloud computer statuses to exclude.</p>
          */
         public Builder excludeDesktopStatusList(java.util.List<String> excludeDesktopStatusList) {
             this.putQueryParameter("ExcludeDesktopStatusList", excludeDesktopStatusList);
@@ -418,9 +432,9 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The sort field. If this parameter is not specified, results are sorted by creation time in descending order. Valid values:</p>
+         * <p>The sorting field. If not specified, the results are sorted in descending order of creation time. Valid values:</p>
          * <ul>
-         * <li>uptime: sorts by cloud desktop uptime.</li>
+         * <li>uptime: Sorts the results by the uptime of the cloud computer.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -433,7 +447,16 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paged query.<br>Default value: 1.</p>
+         * <p>The list of organization IDs.</p>
+         */
+        public Builder orgIdList(java.util.List<String> orgIdList) {
+            this.putQueryParameter("OrgIdList", orgIdList);
+            this.orgIdList = orgIdList;
+            return this;
+        }
+
+        /**
+         * <p>The page number of the current page in a paging query.<br>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -457,7 +480,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Valid values:</p>
+         * <p>The region ID.</p>
          * <ul>
          * <li>Shanghai</li>
          * <li>Singapore</li>
@@ -474,7 +497,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-3mtuc28rx95lx****</p>
@@ -486,9 +509,9 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The query scope. This parameter is empty by default. Valid values:</p>
+         * <p>The query scope. Default value: empty. Valid values:</p>
          * <ul>
-         * <li>ADVANCED: queries statistical records such as connection duration.</li>
+         * <li>ADVANCED: Queries statistical records such as connection duration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -501,10 +524,10 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Default value: Asc. Valid values:</p>
+         * <p>The sorting order. Default value: Asc. Valid values:</p>
          * <ul>
-         * <li>Asc: ascending order.</li>
-         * <li>Desc: descending order.</li>
+         * <li>Asc: ascending order</li>
+         * <li>Desc: descending order</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -532,11 +555,11 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the cloud desktop. Valid values:</p>
+         * <p>The billing method of the cloud computer. Valid values:</p>
          * <ul>
-         * <li>prePaid: monthly subscription with unlimited usage duration.</li>
-         * <li>postPaid: pay-as-you-go.</li>
-         * <li>monthPackage: monthly duration package.</li>
+         * <li>prePaid: monthly subscription with unlimited duration</li>
+         * <li>postPaid: pay-as-you-go</li>
+         * <li>monthPackage: monthly time package</li>
          * </ul>
          * 
          * <strong>example:</strong>

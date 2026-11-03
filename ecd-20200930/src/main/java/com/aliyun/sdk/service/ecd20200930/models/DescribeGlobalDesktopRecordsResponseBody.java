@@ -168,7 +168,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The enterprise resource group ID.</p>
+             * <p>The ID of the enterprise resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-f3s3dgt8dtb0vlqc8</p>
@@ -179,7 +179,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group name.</p>
+             * <p>The name of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>dms_test</p>
@@ -249,7 +249,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end user ID.</p>
+             * <p>The ID of the end user.</p>
              * 
              * <strong>example:</strong>
              * <p>TestUser</p>
@@ -260,7 +260,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the session was created. The time is in the ISO 8601 standard (UTC): yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The creation time of the session. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-31T06:56:45Z</p>
@@ -323,6 +323,9 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LatestSessionEndTime")
         private String latestSessionEndTime;
 
+        @com.aliyun.core.annotation.NameInMap("ManagementFlags")
+        private java.util.List<String> managementFlags;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
@@ -382,6 +385,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             this.gpuSpec = builder.gpuSpec;
             this.latestConnectionTime = builder.latestConnectionTime;
             this.latestSessionEndTime = builder.latestSessionEndTime;
+            this.managementFlags = builder.managementFlags;
             this.memory = builder.memory;
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
@@ -496,6 +500,13 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
          */
         public String getLatestSessionEndTime() {
             return this.latestSessionEndTime;
+        }
+
+        /**
+         * @return managementFlags
+         */
+        public java.util.List<String> getManagementFlags() {
+            return this.managementFlags;
         }
 
         /**
@@ -617,6 +628,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             private String gpuSpec; 
             private Long latestConnectionTime; 
             private String latestSessionEndTime; 
+            private java.util.List<String> managementFlags; 
             private Long memory; 
             private String officeSiteId; 
             private String officeSiteName; 
@@ -650,6 +662,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
                 this.gpuSpec = model.gpuSpec;
                 this.latestConnectionTime = model.latestConnectionTime;
                 this.latestSessionEndTime = model.latestSessionEndTime;
+                this.managementFlags = model.managementFlags;
                 this.memory = model.memory;
                 this.officeSiteId = model.officeSiteId;
                 this.officeSiteName = model.officeSiteName;
@@ -690,7 +703,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cloud desktop was created. The time is in the ISO 8601 standard (UTC).</p>
+             * <p>The creation time of the cloud desktop. The time follows the ISO 8601 standard in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-06T08:28Z</p>
@@ -701,7 +714,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The shared cloud desktop ID.</p>
+             * <p>The ID of the shared cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>dg-iaqu3bi2xtie****</p>
@@ -712,7 +725,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The shared cloud desktop name.</p>
+             * <p>The name of the shared cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>DemoCCGroup</p>
@@ -723,7 +736,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud desktop ID.</p>
+             * <p>The ID of the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-g6t1ukbaea****</p>
@@ -734,7 +747,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud desktop name.</p>
+             * <p>The name of the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>DemoComputer</p>
@@ -756,7 +769,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end user ID.</p>
+             * <p>The ID of the end user.</p>
              * 
              * <strong>example:</strong>
              * <p>TestUser</p>
@@ -786,7 +799,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the most recent connection to the cloud desktop. Unit: seconds.</p>
+             * <p>The duration of the most recent connection to the cloud computer. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -797,7 +810,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest end time of the current session. The time is in the ISO 8601 standard (UTC): yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The latest end time of the current session. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-14T05:01:12Z</p>
@@ -808,7 +821,15 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory of the cloud desktop. Unit: MiB.</p>
+             * <p>The desktop management status.</p>
+             */
+            public Builder managementFlags(java.util.List<String> managementFlags) {
+                this.managementFlags = managementFlags;
+                return this;
+            }
+
+            /**
+             * <p>The memory of the cloud computer. Unit: MiB.</p>
              * 
              * <strong>example:</strong>
              * <p>4096</p>
@@ -830,7 +851,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The office network name.</p>
+             * <p>The name of the office network.</p>
              * 
              * <strong>example:</strong>
              * <p>TestOfficeSite</p>
@@ -867,7 +888,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specific operating system version.</p>
+             * <p>The specific operating system model.</p>
              * 
              * <strong>example:</strong>
              * <p>Windows 10</p>
@@ -904,7 +925,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The enterprise resource group names.</p>
+             * <p>The name of the enterprise resource group.</p>
              */
             public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
                 this.resourceGroups = resourceGroups;
@@ -912,7 +933,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session idle duration. Unit: minutes.</p>
+             * <p>The idle duration of the session. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -931,7 +952,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UNIX timestamp when the cloud desktop status changed. Unit: milliseconds.</p>
+             * <p>The UNIX timestamp of the time when the cloud computer status changed. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1760583xxxx</p>
@@ -942,11 +963,11 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the cloud desktop. Valid values:</p>
+             * <p>The billing method of the cloud computer. Valid values:</p>
              * <ul>
-             * <li>prePaid: monthly subscription with unlimited usage duration.</li>
-             * <li>postPaid: pay-as-you-go.</li>
-             * <li>monthPackage: monthly duration package.</li>
+             * <li>prePaid: monthly subscription with unlimited duration</li>
+             * <li>postPaid: pay-as-you-go</li>
+             * <li>monthPackage: monthly time package</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -969,7 +990,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud desktop uptime. Unit: seconds.</p>
+             * <p>The uptime of the cloud computer. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>

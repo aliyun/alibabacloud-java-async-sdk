@@ -145,7 +145,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud computer.</p>
+         * <p>The cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -157,7 +157,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The name of the cloud computer.</p>
+         * <p>The name of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-computer</p>
@@ -169,7 +169,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The maximum number of entries to return per page when paging in a paged query.</p>
          * <ul>
          * <li>Maximum value: 100</li>
          * <li>Default value: 20</li>
@@ -185,7 +185,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set the value to the <code>NextToken</code> value returned from the previous call to this operation. You do not need to specify this parameter for the first call.</p>
+         * <p>The pagination token. Set the value to the <code>NextToken</code> value returned from the last call to this operation. You do not need to specify this parameter for the first call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -197,7 +197,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the office network. You can call the <a href="https://help.aliyun.com/document_detail/216071.html">DescribeOfficeSites</a> operation to obtain this parameter.</p>
+         * <p>The office network ID. You can call the <a href="https://help.aliyun.com/document_detail/216071.html">DescribeOfficeSites</a> operation to obtain this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai+dir-428216****</p>
@@ -209,7 +209,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by cloud computers.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The information about the image upgrade task. You can call the <a href="https://help.aliyun.com/document_detail/437001.html">DescribeFotaTasks</a> operation to obtain this parameter.</p>
+         * <p>The UID of the image upgrade task. You can call the <a href="https://help.aliyun.com/document_detail/437001.html">DescribeFotaTasks</a> operation to obtain this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>aot-c4khwrp9ocml4****</p>
