@@ -75,7 +75,7 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>22C97E95-F023-56B5-8852-B1A77A1****</p>
@@ -183,7 +183,8 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the operation log was generated.</p>
+             * <p>The generation time of Operation logs.</p>
+             * <p>The format is a 13-digit number, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
@@ -194,7 +195,7 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation content.</p>
+             * <p>The content of the operation.</p>
              * 
              * <strong>example:</strong>
              * <p>Freeze tasks</p>
@@ -205,7 +206,7 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the operation.</p>
+             * <p>The sequence number of the operation.</p>
              * 
              * <strong>example:</strong>
              * <p>1111</p>
@@ -216,7 +217,7 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance on which the operation was performed.</p>
+             * <p>The ID of the node instance on which the operation was performed.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -227,7 +228,7 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID of the operator.</p>
+             * <p>The account ID of the user who performed the operation.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -323,7 +324,7 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation logs.</p>
+             * <p>The list of operation logs.</p>
              */
             public Builder operationLogs(java.util.List<OperationLogs> operationLogs) {
                 this.operationLogs = operationLogs;

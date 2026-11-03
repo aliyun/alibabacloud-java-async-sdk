@@ -80,7 +80,7 @@ public class CancelImageTestResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result of the API request.</p>
+         * <p>The API request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -171,7 +171,7 @@ public class CancelImageTestResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the canceled image test execution.</p>
+             * <p>The execution ID of the canceled image test.</p>
              * 
              * <strong>example:</strong>
              * <p>582d4896-d224-413b-b883-239eeebe0bc5</p>
@@ -182,7 +182,7 @@ public class CancelImageTestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cancellation was triggered successfully.</p>
+             * <p>Indicates whether the trigger was successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

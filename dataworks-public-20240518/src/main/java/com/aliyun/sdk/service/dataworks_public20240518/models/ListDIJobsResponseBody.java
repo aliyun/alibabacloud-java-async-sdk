@@ -67,7 +67,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The paging information.</p>
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7263E4AC-9D2E-5B29-B8AF-7C5012E92A41</p>
@@ -236,7 +236,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>This parameter is deprecated. Use the <code>Id</code> parameter instead.</p>
+             * <p><strong>[Deprecated]</strong> This field is deprecated. Use the Id field instead.</p>
              * 
              * <strong>example:</strong>
              * <p>32599</p>
@@ -247,7 +247,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the destination data source. Valid values: <code>Hologres</code>, <code>OSS-HDFS</code>, <code>OSS</code>, <code>MaxCompute</code>, <code>Loghub</code>, <code>STARROCKS</code>, <code>DataHub</code>, <code>ANALYTICDB_FOR_MYSQL</code>, <code>Kafka</code>, and <code>Hive</code>.</p>
+             * <p>The type of the destination data source. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, DataHub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive.</p>
              * 
              * <strong>example:</strong>
              * <p>Hologres</p>
@@ -258,7 +258,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Data Integration job.</p>
+             * <p>The ID of the data integration task.</p>
              * 
              * <strong>example:</strong>
              * <p>32599</p>
@@ -269,7 +269,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the job.</p>
+             * <p>The name of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql_to_holo_sync_35197</p>
@@ -280,20 +280,14 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job status. Valid values:</p>
+             * <p>The synchronization status. Valid values:</p>
              * <ul>
-             * <li><p><code>Finished</code>: The job completed successfully.</p>
-             * </li>
-             * <li><p><code>Initialized</code>: The job is initialized.</p>
-             * </li>
-             * <li><p><code>Stopped</code>: The job is stopped.</p>
-             * </li>
-             * <li><p><code>Failed</code>: The job failed.</p>
-             * </li>
-             * <li><p><code>Running</code>: The job is running.</p>
-             * </li>
-             * <li><p><code>Stopping</code>: The job is being stopped.</p>
-             * </li>
+             * <li>Finished: finished successfully</li>
+             * <li>Initialized: initialized</li>
+             * <li>Stopped: stopped</li>
+             * <li>Failed: failed</li>
+             * <li>Running: running</li>
+             * <li>Stopping: stopping</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -307,16 +301,11 @@ public class ListDIJobsResponseBody extends TeaModel {
             /**
              * <p>The synchronization type. Valid values:</p>
              * <ul>
-             * <li><p><code>FullAndRealtimeIncremental</code>: full and real-time incremental synchronization</p>
-             * </li>
-             * <li><p><code>RealtimeIncremental</code>: real-time incremental synchronization</p>
-             * </li>
-             * <li><p><code>Full</code>: full synchronization</p>
-             * </li>
-             * <li><p><code>OfflineIncremental</code>: offline incremental synchronization</p>
-             * </li>
-             * <li><p><code>FullAndOfflineIncremental</code>: full and offline incremental synchronization</p>
-             * </li>
+             * <li>FullAndRealtimeIncremental: full and real-time incremental synchronization</li>
+             * <li>RealtimeIncremental: real-time incremental synchronization</li>
+             * <li>Full: full synchronization</li>
+             * <li>OfflineIncremental: batch incremental synchronization</li>
+             * <li>FullAndOfflineIncremental: full and batch incremental synchronization</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -328,7 +317,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3726346</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -336,7 +328,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the DataWorks workspace that contains the job.</p>
+             * <p>The ID of the DataWorks workspace to which the task belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>26442</p>
@@ -347,7 +339,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source data source. Valid values: <code>PolarDB</code>, <code>MySQL</code>, <code>Kafka</code>, <code>Loghub</code>, <code>Hologres</code>, <code>Oracle</code>, <code>OceanBase</code>, <code>MongoDB</code>, <code>RedShift</code>, <code>Hive</code>, <code>SqlServer</code>, <code>Doris</code>, and <code>ClickHouse</code>.</p>
+             * <p>The type of the source data source. Valid values: PolarDB, MySQL, Kafka, Loghub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SqlServer, Doris, and ClickHouse.</p>
              * 
              * <strong>example:</strong>
              * <p>Mysql</p>
@@ -443,7 +435,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of Data Integration jobs.</p>
+             * <p>The data integration tasks.</p>
              */
             public Builder DIJobs(java.util.List<DIJobs> DIJobs) {
                 this.DIJobs = DIJobs;
@@ -451,7 +443,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned page number.</p>
+             * <p>The page number of the returned data.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -462,7 +454,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of entries returned on each page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -473,7 +465,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries that meet the filter criteria.</p>
+             * <p>The total number of entries that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>

@@ -87,7 +87,7 @@ public class ListAgentSessionsRequest extends Request {
         } 
 
         /**
-         * <p>The ID passed in by the requester. The value is returned as-is.</p>
+         * <p>The ID passed by the requester, which is returned as is.</p>
          * 
          * <strong>example:</strong>
          * <p>676303114031776</p>
@@ -99,7 +99,7 @@ public class ListAgentSessionsRequest extends Request {
         }
 
         /**
-         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+         * <p>The JSON-RPC version. Fixed to 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -258,7 +258,7 @@ public class ListAgentSessionsRequest extends Request {
             } 
 
             /**
-             * <p><strong>Agent name</strong> for exact filtering. At least one of this parameter and <code>SessionSourceList</code> must be specified.</p>
+             * <p>The exact filter for the <strong>agent name</strong>. You must specify at least one of this parameter and SessionSourceList.</p>
              * 
              * <strong>example:</strong>
              * <p>chat_cli_chatbi</p>
@@ -269,7 +269,11 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * <p>true仅返回归档会话；false或省略仅返回未归档会话。</p>
+             * <p>Specifies whether to return only archived sessions. Valid values:</p>
+             * <ul>
+             * <li>true: Only archived sessions are returned.</li>
+             * <li>false or not specified: Only unarchived sessions are returned.</li>
+             * </ul>
              */
             public Builder archived(Boolean archived) {
                 this.archived = archived;
@@ -299,7 +303,7 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * <p>The session ID for exact matching.</p>
+             * <p>The exact match for the session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sess_0f12abc34</p>
@@ -310,7 +314,7 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * <p><strong>Session source list</strong> for filtering. At least one of this parameter and <code>AgentName</code> must be specified.</p>
+             * <p>The filter for the <strong>session source list</strong>. You must specify at least one of this parameter and AgentName.</p>
              */
             public Builder sessionSourceList(java.util.List<String> sessionSourceList) {
                 this.sessionSourceList = sessionSourceList;
@@ -318,7 +322,7 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * <p>The session title for fuzzy match filtering.</p>
+             * <p>The fuzzy filter for the session title.</p>
              * 
              * <strong>example:</strong>
              * <p>Sales in the last 30 days</p>
@@ -329,7 +333,7 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * <p>The list of session tag codes for filtering.</p>
+             * <p>The filter for the session tag code list.</p>
              */
             public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;

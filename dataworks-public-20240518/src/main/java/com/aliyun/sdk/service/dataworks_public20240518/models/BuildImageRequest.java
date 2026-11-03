@@ -126,7 +126,7 @@ public class BuildImageRequest extends Request {
         }
 
         /**
-         * <p>The number of compute units (CUs) used for the build.</p>
+         * <p>The compute units (CUs) for the build.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -151,7 +151,7 @@ public class BuildImageRequest extends Request {
         }
 
         /**
-         * <p>The image build execution ID, which is used as an idempotence identifier.</p>
+         * <p>Specifies the image build execution ID, which is used as an idempotence token.</p>
          * 
          * <strong>example:</strong>
          * <p>582d4896-d224-413b-b883-239eeebe0bc5</p>
@@ -163,7 +163,7 @@ public class BuildImageRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the general-purpose resource group.</p>
+         * <p>The unique identifier of the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

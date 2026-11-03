@@ -99,7 +99,7 @@ public class GetComputeResourceAuthUserMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -168,7 +168,7 @@ public class GetComputeResourceAuthUserMappingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud UID.</p>
+             * <p>The Alibaba Cloud user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12747300953xxx62</p>
@@ -179,7 +179,7 @@ public class GetComputeResourceAuthUserMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username in the target system, such as an LDAP account.</p>
+             * <p>The username in the destination system, such as an LDAP account.</p>
              * 
              * <strong>example:</strong>
              * <p>jsmitxxxx</p>

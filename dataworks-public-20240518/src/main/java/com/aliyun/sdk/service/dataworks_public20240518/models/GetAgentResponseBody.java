@@ -67,7 +67,7 @@ public class GetAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The agent details.</p>
+         * <p>The details of the created agent.</p>
          */
         public Builder agent(Agent agent) {
             this.agent = agent;
@@ -170,7 +170,7 @@ public class GetAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The sub-agent display name.</p>
+             * <p>The display name of the sub-agent.</p>
              * 
              * <strong>example:</strong>
              * <p>Sub-assistant</p>
@@ -181,7 +181,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-agent name.</p>
+             * <p>The name of the sub-agent.</p>
              * 
              * <strong>example:</strong>
              * <p>sub-agent</p>
@@ -192,7 +192,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-agent source.</p>
+             * <p>The source of the sub-agent.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -203,7 +203,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-agent version.</p>
+             * <p>The version number of the sub-agent.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -253,6 +253,9 @@ public class GetAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
+        @com.aliyun.core.annotation.NameInMap("VersionSelector")
+        private String versionSelector;
+
         private ExpertSuites(Builder builder) {
             this.description = builder.description;
             this.displayName = builder.displayName;
@@ -262,6 +265,7 @@ public class GetAgentResponseBody extends TeaModel {
             this.source = builder.source;
             this.suiteId = builder.suiteId;
             this.version = builder.version;
+            this.versionSelector = builder.versionSelector;
         }
 
         public static Builder builder() {
@@ -328,6 +332,13 @@ public class GetAgentResponseBody extends TeaModel {
             return this.version;
         }
 
+        /**
+         * @return versionSelector
+         */
+        public String getVersionSelector() {
+            return this.versionSelector;
+        }
+
         public static final class Builder {
             private String description; 
             private String displayName; 
@@ -337,6 +348,7 @@ public class GetAgentResponseBody extends TeaModel {
             private String source; 
             private String suiteId; 
             private Integer version; 
+            private String versionSelector; 
 
             private Builder() {
             } 
@@ -350,13 +362,14 @@ public class GetAgentResponseBody extends TeaModel {
                 this.source = model.source;
                 this.suiteId = model.suiteId;
                 this.version = model.version;
+                this.versionSelector = model.versionSelector;
             } 
 
             /**
-             * <p>套件已删除、发布快照缺失或调用者无权查看时，不返回套件摘要，仅保留 ID 和版本号。</p>
+             * <p>If the suite is deleted, the release snapshot is missing, or the caller does not have permission to view it, the suite summary is not returned, and only the ID and version number are retained.</p>
              * 
              * <strong>example:</strong>
-             * <p>数据分析专家能力集合</p>
+             * <p>Data analytics expert capability set</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -364,10 +377,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-agent display name.</p>
+             * <p>The display name of the bound version.</p>
              * 
              * <strong>example:</strong>
-             * <p>Sub-assistant</p>
+             * <p>Data analytics expert suite</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -375,10 +388,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-agent name.</p>
+             * <p>The suite name of the bound version.</p>
              * 
              * <strong>example:</strong>
-             * <p>sub-agent</p>
+             * <p>analysis-suite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -386,7 +399,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>显式查询 Agent 已发布版本时返回固定的官方制品版本；查询草稿或自定义套件时不返回。</p>
+             * <p>The fixed official artifact version returned when explicitly querying a released version of the agent. This is not returned when querying a draft or a custom suite.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1.0.202610211408</p>
@@ -397,7 +410,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>可选套件摘要字段，当前新 DataAgent 应用不返回；缺省不表示版本 0。不可作为 UpdateAgent 的 Version，回写引用时必须省略。官方制品的固定版本请读取 PackageVersion。</p>
+             * <p>An optional suite summary field that is not returned by current new DataAgent applications. A default value does not indicate version 0. This cannot be used as the Version for UpdateAgent and must be omitted when writing back references. For the fixed version of official artifacts, read PackageVersion.</p>
              * 
              * <strong>example:</strong>
              * <p>1.2.0</p>
@@ -408,7 +421,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OFFICIAL 表示官方目录资源；省略或 DB 表示个人或企业资源。</p>
+             * <p>OFFICIAL indicates an official catalog resource. Omitted or DB indicates a personal or enterprise resource.</p>
              * 
              * <strong>example:</strong>
              * <p>OFFICIAL</p>
@@ -419,7 +432,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SuiteId.
+             * <p>The expert suite ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>suite_example</p>
              */
             public Builder suiteId(String suiteId) {
                 this.suiteId = suiteId;
@@ -427,13 +443,24 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>仅个人或企业套件在引用明确指定版本或读取发布快照时返回；官方套件不返回。未返回不是 0；SDK 若将缺省整数初始化为 0，回写时必须省略。官方项只回写 Source 和 SuiteId，不传 Version、SemanticVersion 或 PackageVersion。</p>
+             * <p>Returned only when a personal or enterprise suite explicitly specifies a fixed integer version in the reference. This is not returned for official suites. An unreturned value is not 0. If the SDK initializes the default integer to 0, it must be omitted when writing back. For official items, only Source and SuiteId are written back, and Version, VersionSelector, SemanticVersion, or PackageVersion are not passed.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * <p>Returned only for personal or enterprise resources to indicate the saved version selection strategy, which is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This is not returned for official resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^1.2.3</p>
+             */
+            public Builder versionSelector(String versionSelector) {
+                this.versionSelector = versionSelector;
                 return this;
             }
 
@@ -549,7 +576,7 @@ public class GetAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Additional configuration for the model.</p>
+             * <p>The additional configuration of the model.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -560,7 +587,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of tokens to generate in one response.</p>
+             * <p>The maximum number of output tokens per generation.</p>
              * 
              * <strong>example:</strong>
              * <p>8192</p>
@@ -582,7 +609,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether streaming output is enabled.</p>
+             * <p>Specifies whether streaming output is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -593,7 +620,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The temperature.</p>
+             * <p>The sampling temperature.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -604,7 +631,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The top-p.</p>
+             * <p>The nucleus sampling Top-P value.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -643,12 +670,16 @@ public class GetAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
+        @com.aliyun.core.annotation.NameInMap("VersionSelector")
+        private String versionSelector;
+
         private Skills(Builder builder) {
             this.name = builder.name;
             this.packageVersion = builder.packageVersion;
             this.skillId = builder.skillId;
             this.source = builder.source;
             this.version = builder.version;
+            this.versionSelector = builder.versionSelector;
         }
 
         public static Builder builder() {
@@ -694,12 +725,20 @@ public class GetAgentResponseBody extends TeaModel {
             return this.version;
         }
 
+        /**
+         * @return versionSelector
+         */
+        public String getVersionSelector() {
+            return this.versionSelector;
+        }
+
         public static final class Builder {
             private String name; 
             private String packageVersion; 
             private String skillId; 
             private String source; 
             private Integer version; 
+            private String versionSelector; 
 
             private Builder() {
             } 
@@ -710,6 +749,7 @@ public class GetAgentResponseBody extends TeaModel {
                 this.skillId = model.skillId;
                 this.source = model.source;
                 this.version = model.version;
+                this.versionSelector = model.versionSelector;
             } 
 
             /**
@@ -724,7 +764,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>指定 AgentVersion 查询已发布快照时返回固定的官方制品版本；查询草稿或自定义 Skill 时不返回。</p>
+             * <p>The fixed official artifact version returned when querying a released snapshot with a specified AgentVersion. This is not returned when querying a draft or a custom skill.</p>
              * 
              * <strong>example:</strong>
              * <p>0.6.0.202608201110</p>
@@ -735,7 +775,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SkillId.
+             * <p>The official skill ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataworks-semantic</p>
              */
             public Builder skillId(String skillId) {
                 this.skillId = skillId;
@@ -743,7 +786,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OFFICIAL 表示官方目录资源；省略或 DB 表示原有个人或企业资源。</p>
+             * <p>OFFICIAL indicates an official catalog resource. Omitted or DB indicates an original personal or enterprise resource.</p>
              * 
              * <strong>example:</strong>
              * <p>OFFICIAL</p>
@@ -754,7 +797,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The skill version.</p>
+             * <p>The skill version number.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -763,6 +806,17 @@ public class GetAgentResponseBody extends TeaModel {
              */
             public Builder version(Integer version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * <p>Returned only for personal or enterprise resources to indicate the saved version selection strategy, which is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This is not returned for official resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^1.2.3</p>
+             */
+            public Builder versionSelector(String versionSelector) {
+                this.versionSelector = versionSelector;
                 return this;
             }
 
@@ -852,7 +906,7 @@ public class GetAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p><strong>The name of the built-in tool. This parameter applies only when <code>Kind</code> is set to <code>builtin</code>.</strong></p>
+             * <p><strong>The built-in tool name. Valid when Kind is <code>builtin</code>.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>builtin_sql</p>
@@ -874,7 +928,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>The selected MCP tool items. This parameter applies only when <code>Kind</code> is set to <code>mcp</code>.</strong></p>
+             * <p><strong>The selected MCP tool items. Valid when Kind is <code>mcp</code>.</strong></p>
              */
             public Builder mcpItems(java.util.List<String> mcpItems) {
                 this.mcpItems = mcpItems;
@@ -882,7 +936,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>The name of the associated MCP server. This parameter applies only when <code>Kind</code> is set to <code>mcp</code>.</strong></p>
+             * <p><strong>The associated MCP server name. Valid when Kind is <code>mcp</code>.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>server-name</p>
@@ -952,7 +1006,7 @@ public class GetAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of project IDs that can view the agent.</p>
+             * <p>The list of visible project IDs.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -960,7 +1014,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of user IDs that can view the agent.</p>
+             * <p>The list of visible user IDs.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -1235,7 +1289,7 @@ public class GetAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>本次读取的定义版本。更新当前定义时，将该值作为 UpdateAgent 的 ExpectedVersion，可拒绝覆盖其他调用者已提交的新版本。读取历史快照的版本不代表当前版本。</p>
+             * <p>The definition version read in this request. When updating the current definition, use this value as the ExpectedVersion for UpdateAgent to prevent overwriting new versions submitted by other callers. The version read from a historical snapshot does not represent the current version.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1246,7 +1300,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of callable sub-agents.</p>
+             * <p>The list of callable sub-agents.</p>
              */
             public Builder callableAgents(java.util.List<CallableAgents> callableAgents) {
                 this.callableAgents = callableAgents;
@@ -1254,7 +1308,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator ID.</p>
+             * <p>The ID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -1268,7 +1322,7 @@ public class GetAgentResponseBody extends TeaModel {
              * <p><strong>The description.</strong></p>
              * 
              * <strong>example:</strong>
-             * <p>Data analysis assistant</p>
+             * <p>Data analytics assistant</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1287,7 +1341,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent 定义绑定的专家套件及固定发布版本。</p>
+             * <p>The expert suites associated with the agent definition, including a fixed integer revision number or a version selection strategy. Official resources continue to use PackageVersion to indicate the artifact version.</p>
              */
             public Builder expertSuites(java.util.List<ExpertSuites> expertSuites) {
                 this.expertSuites = expertSuites;
@@ -1295,7 +1349,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, as a Unix timestamp in milliseconds.</p>
+             * <p>The creation time (millisecond timestamp).</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -1307,7 +1361,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time, as a Unix timestamp in milliseconds.</p>
+             * <p>The last modification time (millisecond timestamp).</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -1319,7 +1373,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>Additional metadata.</strong></p>
+             * <p><strong>The extended metadata.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -1360,7 +1414,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime dependencies.</p>
+             * <p>The environment dependencies required for execution.</p>
              */
             public Builder requiredRuntime(java.util.List<String> requiredRuntime) {
                 this.requiredRuntime = requiredRuntime;
@@ -1368,7 +1422,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of skills.</p>
+             * <p>The list of skills.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;
@@ -1379,7 +1433,7 @@ public class GetAgentResponseBody extends TeaModel {
              * <p><strong>The system prompt.</strong></p>
              * 
              * <strong>example:</strong>
-             * <p>You are a data analysis assistant.</p>
+             * <p>You are a data analytics assistant.</p>
              */
             public Builder systemPrompt(String systemPrompt) {
                 this.systemPrompt = systemPrompt;
@@ -1387,7 +1441,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>A list of tools.</strong></p>
+             * <p><strong>The list of tools.</strong></p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;

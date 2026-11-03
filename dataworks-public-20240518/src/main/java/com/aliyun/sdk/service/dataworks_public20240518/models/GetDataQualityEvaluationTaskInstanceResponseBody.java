@@ -67,7 +67,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the data quality monitoring instance.</p>
+         * <p>The details of the data quality evaluation task instance.</p>
          */
         public Builder dataQualityEvaluationTaskInstance(DataQualityEvaluationTaskInstance dataQualityEvaluationTaskInstance) {
             this.dataQualityEvaluationTaskInstance = dataQualityEvaluationTaskInstance;
@@ -75,7 +75,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>8abcb91f-d266-4073-b907-2ed67****</p>
@@ -157,7 +157,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckedValue.
+             * <p>The final value used to compare with the threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder checkedValue(String checkedValue) {
                 this.checkedValue = checkedValue;
@@ -165,7 +168,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReferencedValue.
+             * <p>The referenced sample value used as the baseline for calculating the CheckedValue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder referencedValue(String referencedValue) {
                 this.referencedValue = referencedValue;
@@ -173,7 +179,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the final comparison result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Passed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -253,7 +262,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Expression.
+             * <p>The check expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -261,7 +273,19 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The comparison operator. Valid values:</p>
+             * <ul>
+             * <li>\&gt;</li>
+             * <li>\&gt;=</li>
+             * <li>&lt;</li>
+             * <li>&lt;=</li>
+             * <li>!=</li>
+             * <li>=</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <blockquote>
+             * </blockquote>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -269,7 +293,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -349,7 +376,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Expression.
+             * <p>The threshold expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -357,7 +387,19 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The comparison operator. Valid values:</p>
+             * <ul>
+             * <li>\&gt;</li>
+             * <li>\&gt;=</li>
+             * <li>&lt;</li>
+             * <li>&lt;=</li>
+             * <li>!=</li>
+             * <li>=</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <blockquote>
+             * </blockquote>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -365,7 +407,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -445,7 +490,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Expression.
+             * <p>The threshold expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -453,7 +501,19 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The comparison operator. Valid values:</p>
+             * <ul>
+             * <li>\&gt;</li>
+             * <li>\&gt;=</li>
+             * <li>&lt;</li>
+             * <li>&lt;=</li>
+             * <li>!=</li>
+             * <li>=</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <blockquote>
+             * </blockquote>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -461,7 +521,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -541,7 +604,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Critical.
+             * <p>The threshold settings for critical alerts.</p>
              */
             public Builder critical(Critical critical) {
                 this.critical = critical;
@@ -549,7 +612,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Expected.
+             * <p>The expected threshold settings.</p>
              */
             public Builder expected(Expected expected) {
                 this.expected = expected;
@@ -557,7 +620,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Warned.
+             * <p>The threshold settings for warning alerts.</p>
              */
             public Builder warned(Warned warned) {
                 this.warned = warned;
@@ -637,7 +700,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ReferencedSamplesFilter.
+             * <p>The expression that represents the query method for reference samples. Some types of thresholds require querying reference samples and aggregating their values to obtain the threshold for comparison.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
              */
             public Builder referencedSamplesFilter(String referencedSamplesFilter) {
                 this.referencedSamplesFilter = referencedSamplesFilter;
@@ -645,7 +711,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Thresholds.
+             * <p>The threshold settings.</p>
              */
             public Builder thresholds(Thresholds thresholds) {
                 this.thresholds = thresholds;
@@ -653,7 +719,18 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The threshold calculation method. Valid values:</p>
+             * <ul>
+             * <li>Fixed</li>
+             * <li>Fluctation</li>
+             * <li>FluctationDiscreate</li>
+             * <li>Auto</li>
+             * <li>Average</li>
+             * <li>Variance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Fixed</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -720,7 +797,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorDataFilter.
+             * <p>The SQL statement used to filter problematic data for custom SQL rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
              */
             public Builder errorDataFilter(String errorDataFilter) {
                 this.errorDataFilter = errorDataFilter;
@@ -728,7 +808,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The handler type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SaveErrorData</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -821,7 +904,27 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Metric.
+             * <p>The name of the sampling metric. Valid values:</p>
+             * <ul>
+             * <li>Count: The number of rows in the table.</li>
+             * <li>Min: The minimum value of the column.</li>
+             * <li>Max: The maximum value of the column.</li>
+             * <li>Avg: The average value of the column.</li>
+             * <li>DistinctCount: The number of unique values in the column.</li>
+             * <li>DistinctPercent: The ratio of the number of unique values in the column to the number of data rows.</li>
+             * <li>DuplicatedCount: The number of duplicate values in the column.</li>
+             * <li>DuplicatedPercent: The ratio of the number of duplicate values in the column to the number of data rows.</li>
+             * <li>TableSize: The size of the table.</li>
+             * <li>NullValueCount: The number of rows where the column is null.</li>
+             * <li>NullValuePercent: The ratio of rows where the column is null.</li>
+             * <li>GroupCount: The number of data rows corresponding to each value after aggregation by column value.</li>
+             * <li>CountNotIn: The number of rows that do not match the enumerated values.</li>
+             * <li>CountDistinctNotIn: The number of unique values that do not match the enumerated values.</li>
+             * <li>UserDefinedSql: Sample collection by using custom SQL statements.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Min</p>
              */
             public Builder metric(String metric) {
                 this.metric = metric;
@@ -829,7 +932,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MetricParameters.
+             * <p>The parameters required for sample collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] }</p>
              */
             public Builder metricParameters(String metricParameters) {
                 this.metricParameters = metricParameters;
@@ -837,7 +943,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingFilter.
+             * <p>The condition for secondary filtering of uninterested data during sampling. It can be up to 16,777,215 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id IS NULL</p>
              */
             public Builder samplingFilter(String samplingFilter) {
                 this.samplingFilter = samplingFilter;
@@ -845,7 +954,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SettingConfig.
+             * <p>The runtime parameter setting statements inserted before the sampling statements are executed. It can be up to 1,000 characters in length. Currently, only MaxCompute is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SET odps.sql.udf.timeout=600s;</p>
              */
             public Builder settingConfig(String settingConfig) {
                 this.settingConfig = settingConfig;
@@ -925,7 +1037,19 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * DatabaseType.
+             * <p>The database type to which the table dataset belongs. Valid values:</p>
+             * <ul>
+             * <li>maxcompute</li>
+             * <li>emr</li>
+             * <li>cdh</li>
+             * <li>hologres</li>
+             * <li>analyticdb_for_postgresql</li>
+             * <li>analyticdb_for_mysql</li>
+             * <li>starrocks</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>maxcompute</p>
              */
             public Builder databaseType(String databaseType) {
                 this.databaseType = databaseType;
@@ -933,7 +1057,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * <p>The unique ID of the table in DataWorks Data Map.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.unit_test.tb_unit_test</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -941,7 +1068,13 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The monitored object type. Valid values:</p>
+             * <ul>
+             * <li>Table</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1125,7 +1258,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckingConfig.
+             * <p>The sample check settings.</p>
              */
             public Builder checkingConfig(CheckingConfig checkingConfig) {
                 this.checkingConfig = checkingConfig;
@@ -1133,7 +1266,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the rule. It can be up to 500 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a odps _sql task</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1141,7 +1277,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Specifies whether the rule is enabled.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1149,7 +1285,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorHandlers.
+             * <p>The error handlers for quality rule check issues.</p>
              */
             public Builder errorHandlers(java.util.List<ErrorHandlers> errorHandlers) {
                 this.errorHandlers = errorHandlers;
@@ -1157,7 +1293,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The globally unique ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1165,7 +1304,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the rule. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. It can be up to 255 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Table cannot be empty</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1173,7 +1315,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1181,7 +1326,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingConfig.
+             * <p>The settings required for sample collection.</p>
              */
             public Builder samplingConfig(SamplingConfig samplingConfig) {
                 this.samplingConfig = samplingConfig;
@@ -1189,7 +1334,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * <p>The severity level of the rule for the business, which corresponds to the strong and weak rules on the page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -1197,7 +1345,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The object monitored by the rule.</p>
              */
             public Builder target(Target target) {
                 this.target = target;
@@ -1205,7 +1353,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCode.
+             * <p>The rule template referenced when the rule is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM:user_defined_sql</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -1337,7 +1488,11 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The generation time of the evaluation result.</p>
+             * <p>The value is a 13-digit number, such as <code>1708284916414</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1708284916414</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1345,7 +1500,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Details.
+             * <p>The details of this evaluation.</p>
              */
             public Builder details(java.util.List<Details> details) {
                 this.details = details;
@@ -1353,7 +1508,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the evaluation result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1361,7 +1519,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The snapshot of the rule configuration at the start of the evaluation.</p>
              */
             public Builder rule(Rule rule) {
                 this.rule = rule;
@@ -1369,7 +1527,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Sample.
+             * <p>The sample value used for this evaluation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[   {     &quot;gender&quot;: &quot;male&quot;,     &quot;_count&quot;: 100   }, {     &quot;gender&quot;: &quot;female&quot;,     &quot;_count&quot;: 100   } ]</p>
              */
             public Builder sample(String sample) {
                 this.sample = sample;
@@ -1377,7 +1538,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the evaluation result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Passed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1385,7 +1549,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskInstanceId.
+             * <p>The instance ID of the data quality check task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20001</p>
              */
             public Builder taskInstanceId(Long taskInstanceId) {
                 this.taskInstanceId = taskInstanceId;
@@ -1452,10 +1619,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cause that triggers the hook action. When this condition is met, the hook action is triggered. Only two types of conditional expressions are supported:</p>
+             * <p>The condition for triggering the hook. When this condition is met, the hook action is triggered. Currently, only two types of conditional expressions are supported:</p>
              * <ul>
-             * <li>Specify a single combination of rule severity and rule check status. For example, <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code> means that the condition is met if any rule with a severity of High has a check result of Critical.</li>
-             * <li>Specify multiple combinations of rule severity and rule check status. For example, <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code> means that the condition is met if any rule with a severity of High has a check result of Critical, or any rule with a severity of Normal has a check result of Critical, or any rule with a severity of Normal has a check result of Error. The severity enumeration values in the conditional expression are consistent with the severity enumeration values in DataQualityRule, and the status enumeration values are consistent with the status values in DataQualityResult.</li>
+             * <li>Specify only one set of rule severity and rule check status, such as <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. This means that among the rules that you execute, if a rule with the severity of High has a check result of Critical, the condition is met.</li>
+             * <li>Specify multiple sets of rule severity and rule check status, such as <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. This means that among the rules that you execute, if a rule with the severity of High has a check result of Critical, or a rule with the severity of Normal has a check result of Critical, or a rule with the severity of Normal has a check result of Error, the condition is met. The valid values for severity in the conditional expression are the same as those in DataQualityRule, and the valid values for status are the same as those in DataQualityResult.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1467,9 +1634,9 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hook type. Only one type is supported:</p>
+             * <p>The hook type. Currently, only one type is supported:</p>
              * <ul>
-             * <li>BlockTaskInstance: Blocks the scheduling node from continuing to run. If the data quality monitoring task is triggered by a scheduling node, after the data quality monitoring task is completed, the system determines whether to block the scheduling node from continuing to run based on Hook.Condition.</li>
+             * <li>BlockTaskInstance: Blocks the scheduling task from continuing to run. If the data quality evaluation task is triggered by a scheduling task, the system determines whether to block the scheduling task based on Hook.Condition after the data quality evaluation task is completed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1607,9 +1774,9 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The additional parameter settings for sending alerts, in JSON format. The following keys are supported:</p>
+             * <p>The additional parameter settings in JSON format when an alert is sent. Supported keys:</p>
              * <ul>
-             * <li>atAll: Specifies whether to @everyone in the group when sending a DingTalk alert. This parameter takes effect only when ReceiverType is set to DingdingUrl.</li>
+             * <li>atAll: Specifies whether to @all in the DingTalk group when a DingTalk alert is sent. This parameter takes effect only when ReceiverType is set to DingdingUrl.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1707,7 +1874,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The notification recipients.</p>
+             * <p>The values of the notification recipients.</p>
              */
             public Builder notificationReceivers(java.util.List<NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
@@ -1774,10 +1941,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cause that triggers a notification. When this condition is met, a message notification is sent. Only two types of conditional expressions are supported:</p>
+             * <p>The condition for triggering a notification. When this condition is met, a message notification is triggered. Currently, only two types of conditional expressions are supported:</p>
              * <ul>
-             * <li>Specify a single combination of rule severity and rule check status. For example, <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code> means that the condition is met if any rule with a severity of High has a check result of Critical. </li>
-             * <li>Specify multiple combinations of rule severity and rule check status. For example, <code>(${severity} == &quot;High&quot;AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code> means that the condition is met if any rule with a severity of High has a check result of Critical, or any rule with a severity of Normal has a check result of Critical, or any rule with a severity of Normal has a check result of Error. The severity enumeration values in the conditional expression are consistent with the severity enumeration values in DataQualityRule, and the status enumeration values are consistent with the status values in DataQualityResult.</li>
+             * <li>Specify only one set of rule severity and rule check status, such as <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. This means that among the rules that you execute, if a rule with the severity of High has a check result of Critical, the condition is met. </li>
+             * <li>Specify multiple sets of rule severity and rule check status, such as <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. This means that among the rules that you execute, if a rule with the severity of High has a check result of Critical, or a rule with the severity of Normal has a check result of Critical, or a rule with the severity of Normal has a check result of Error, the condition is met. The valid values for severity in the conditional expression are the same as those in DataQualityRule, and the valid values for status are the same as those in DataQualityResult.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1789,7 +1956,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert methods.</p>
+             * <p>The notification methods.</p>
              */
             public Builder notifications(java.util.List<Notifications> notifications) {
                 this.notifications = notifications;
@@ -1882,7 +2049,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the database to which the table belongs.</p>
+             * <p>The database type to which the table belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>maxcompute</p>
@@ -1893,7 +2060,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The partition range to monitor.</p>
+             * <p>The partition range to be monitored.</p>
              * 
              * <strong>example:</strong>
              * <p>pt=$[yyyymmdd-1]</p>
@@ -1917,7 +2084,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             /**
              * <p>The monitored object type. Valid values:</p>
              * <ul>
-             * <li>Table: table.</li>
+             * <li>Table: Table.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1988,7 +2155,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of scheduling node IDs. This parameter is valid only when Type is set to ByScheduledTaskInstance.</p>
+             * <p>The list of scheduling task IDs. This parameter takes effect only when Type is set to ByScheduledTaskInstance.</p>
              */
             public Builder taskIds(java.util.List<Long> taskIds) {
                 this.taskIds = taskIds;
@@ -1996,10 +2163,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger type of the quality monitoring task. Valid values:</p>
+             * <p>The trigger type of the data quality evaluation task. Valid values:</p>
              * <ul>
              * <li>ByManual: Manual trigger. This is the default value.</li>
-             * <li>ByScheduledTaskInstance: Triggered by an associated scheduling node.</li>
+             * <li>ByScheduledTaskInstance: Triggered by an associated scheduling task.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2161,7 +2328,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the data quality monitoring task.</p>
+             * <p>The description of the data quality evaluation task.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAPI quality monitoring test</p>
@@ -2172,7 +2339,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback settings.</p>
+             * <p>The hook settings.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -2180,7 +2347,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data quality monitoring task.</p>
+             * <p>The ID of the data quality evaluation task.</p>
              * 
              * <strong>example:</strong>
              * <p>28544990</p>
@@ -2191,7 +2358,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data quality monitoring task.</p>
+             * <p>The name of the data quality evaluation task.</p>
              * 
              * <strong>example:</strong>
              * <p>Data quality OpenAPI monitoring test</p>
@@ -2210,7 +2377,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace ID.</p>
+             * <p>The ID of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>20629</p>
@@ -2221,12 +2388,12 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extension configuration, a JSON-formatted character string. This parameter takes effect only for EMR-type data quality monitoring tasks.</p>
+             * <p>The extension configuration, a JSON-formatted character string, takes effect only for EMR data quality monitoring.</p>
              * <ul>
-             * <li>queue: The YARN queue used to execute EMR data validation. The default value is the queue configured for the current project.</li>
-             * <li>sqlEngine: The SQL engine used to execute EMR data validation. Valid values:<ul>
+             * <li>queue: The YARN queue used when you execute EMR data validation. The default value is the queue configured for the current project.</li>
+             * <li>sqlEngine: The SQL engine used when you execute EMR data validation. Valid values:<ul>
              * <li>HIVE_SQL</li>
-             * <li>SPARK_SQL.</li>
+             * <li>SPARK_SQL</li>
              * </ul>
              * </li>
              * </ul>
@@ -2240,7 +2407,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitored object of the data quality check task. Refer to the DataQualityTarget example.</p>
+             * <p>The monitored object of the data quality evaluation task. For more information, see the DataQualityTarget example and DataQualityTarget.</p>
              */
             public Builder target(TaskTarget target) {
                 this.target = target;
@@ -2248,7 +2415,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger configuration of the data quality check task.</p>
+             * <p>The trigger configurations of the data quality evaluation task.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;
@@ -2407,6 +2574,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
 
             /**
              * <p>The creation time.</p>
+             * <p>The value is a 13-digit number, such as <code>1716344665000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1716344665000</p>
@@ -2417,7 +2585,8 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the instance execution.</p>
+             * <p>The end time of the instance run.</p>
+             * <p>The value is a 13-digit number, such as <code>1716344665000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1716344665000</p>
@@ -2428,7 +2597,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data quality monitoring instance ID.</p>
+             * <p>The instance ID of the data quality monitoring.</p>
              * 
              * <strong>example:</strong>
              * <p>7234231689</p>
@@ -2439,9 +2608,9 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution parameters for the data quality check, in JSON format. The following keys are available:</p>
+             * <p>The execution parameters of the data quality evaluation task in JSON format. Available keys:</p>
              * <ul>
-             * <li>triggerTime: the millisecond-level timestamp of the trigger time. This is the base time for the $[yyyymmdd] expression in the data range of the data quality monitoring task. This key is required.</li>
+             * <li>triggerTime: The millisecond timestamp of the trigger time. This is the base time for the <code>$[yyyymmdd]</code> expression in the data range of the data quality evaluation task. This parameter is required.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2453,7 +2622,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace ID.</p>
+             * <p>The ID of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>98330</p>
@@ -2464,7 +2633,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>The list of data quality evaluation results.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;
@@ -2472,13 +2641,13 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance status of the data quality monitoring task. Valid values:</p>
+             * <p>The status of the data quality monitoring instance. Valid values:</p>
              * <ul>
              * <li>Running: The check is in progress.</li>
-             * <li>Error: A rule check encountered an error.</li>
+             * <li>Error: An error occurred while checking a rule.</li>
              * <li>Passed: All rule checks passed.</li>
-             * <li>Warned: A rule triggered a normal alert threshold.</li>
-             * <li>Critical: A rule triggered a critical alert threshold.</li>
+             * <li>Warned: A rule triggered the warning alert threshold.</li>
+             * <li>Critical: A rule triggered the critical alert threshold.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2490,7 +2659,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data quality monitoring task.</p>
+             * <p>The data quality evaluation task.</p>
              */
             public Builder task(Task task) {
                 this.task = task;
@@ -2498,10 +2667,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The context information when the instance is triggered, in JSON format. The following keys may be included:</p>
+             * <p>The context information when the instance is triggered, in JSON format. Possible keys:</p>
              * <ul>
-             * <li>TriggerClient: the trigger source of the data quality monitoring instance, such as CWF2 (scheduling system). More values may be added in the future.</li>
-             * <li>TriggerClientId: the ID of a specific business resource in the source system. For example, when TriggerClient is CWF2, this field records the scheduling task ID.</li>
+             * <li>TriggerClient: The trigger source of the data quality evaluation task instance, such as CWF2 (scheduling system). More sources may be added in the future.</li>
+             * <li>TriggerClientId: The specific business resource in the source system. For example, if TriggerClient is CWF2, this parameter records the scheduling task ID.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -163,7 +163,8 @@ public class CreateFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The unique ID of the request.
+         * You can use this ID to troubleshoot issues when an error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG</p>
@@ -174,10 +175,10 @@ public class CreateFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

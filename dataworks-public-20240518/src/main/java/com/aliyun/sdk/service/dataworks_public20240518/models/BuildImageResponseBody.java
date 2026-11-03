@@ -80,7 +80,7 @@ public class BuildImageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result of the API request.</p>
+         * <p>The API request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -91,7 +91,7 @@ public class BuildImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used for locating logs and troubleshooting issues.</p>
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -102,7 +102,7 @@ public class BuildImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -182,7 +182,7 @@ public class BuildImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the build was triggered successfully.</p>
+             * <p>Indicates whether the build was successfully triggered.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

@@ -67,7 +67,7 @@ public class StopWorkflowInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request. You can use this ID to locate logs and troubleshoot issues.</p>
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>22C97E95-F023-56B5-8852-B1A77A17****</p>
@@ -78,7 +78,7 @@ public class StopWorkflowInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result information of the batch operation. The structure is a map, where the key is the workflow instance ID and the value is the result information.</p>
+         * <p>The result information of the batch operation. The structure is a map that uses the workflow instance ID as the key and the result information as the value.</p>
          */
         public Builder successInfo(java.util.Map<String, SuccessInfoValue> successInfo) {
             this.successInfo = successInfo;

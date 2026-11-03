@@ -83,7 +83,7 @@ public class GetCrossProjectPipelineRunResponseBody extends TeaModel {
          * <p>The business response.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;RequestId&quot;:&quot;735894D1-D5E5-50B8-8A6D-041C90A98B23&quot;,&quot;PipelineRunId&quot;:&quot;fcfd4160-e2ff-4603-9719-09128fe733df&quot;,&quot;DeploymentEnvironmentId&quot;:101,&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;Status&quot;:&quot;Ready&quot;,&quot;Description&quot;:&quot;Publish objects that are published in the source project to the target project&quot;,&quot;Creator&quot;:&quot;creator&quot;,&quot;CreateTime&quot;:1788739200000}</p>
+         * <p>{&quot;RequestId&quot;:&quot;735894D1-D5E5-50B8-8A6D-041C90A98B23&quot;,&quot;PipelineRunId&quot;:&quot;fcfd4160-e2ff-4603-9719-09128fe733df&quot;,&quot;DeploymentEnvironmentId&quot;:101,&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;Status&quot;:&quot;Ready&quot;,&quot;Description&quot;:&quot;Deploy objects already deployed in the source project to the target project&quot;,&quot;Creator&quot;:&quot;creator&quot;,&quot;CreateTime&quot;:1788739200000}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -91,7 +91,7 @@ public class GetCrossProjectPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot this API call.</p>
+         * <p>The request ID, which is used to locate and troubleshoot the current API call.</p>
          * 
          * <strong>example:</strong>
          * <p>735894D1-D5E5-50B8-8A6D-041C90A98B23</p>
@@ -102,7 +102,7 @@ public class GetCrossProjectPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -392,7 +392,7 @@ public class GetCrossProjectPipelineRunResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The termination time. This value is a UNIX timestamp in milliseconds. This parameter is returned only after the flow is terminated.</p>
+             * <p>The termination time. The value is a UNIX timestamp in milliseconds. This parameter is returned only after the pipeline run is terminated.</p>
              * 
              * <strong>example:</strong>
              * <p>1788739260000</p>
@@ -403,7 +403,7 @@ public class GetCrossProjectPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user who terminated the flow.</p>
+             * <p>The user who terminated the pipeline run.</p>
              * 
              * <strong>example:</strong>
              * <p>operator</p>
@@ -425,7 +425,7 @@ public class GetCrossProjectPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1788739200000</p>
@@ -461,7 +461,7 @@ public class GetCrossProjectPipelineRunResponseBody extends TeaModel {
              * <p>The deployment description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Publish objects that are published in the source project to the target project</p>
+             * <p>Deploy objects already deployed in the source project to the target project</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -491,7 +491,7 @@ public class GetCrossProjectPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The execution time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1788739260000</p>
@@ -513,7 +513,7 @@ public class GetCrossProjectPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The completion time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The completion time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1788739320000</p>
@@ -568,7 +568,7 @@ public class GetCrossProjectPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cross-workspace deployment flow ID.</p>
+             * <p>The cross-workspace deployment pipeline run ID.</p>
              * 
              * <strong>example:</strong>
              * <p>fcfd4160-e2ff-4603-9719-09128fe733df</p>
@@ -590,15 +590,7 @@ public class GetCrossProjectPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the deployment flow. Valid values:</p>
-             * <ul>
-             * <li>Building: Building.</li>
-             * <li>Ready: Ready and waiting for execution.</li>
-             * <li>Running: Running.</li>
-             * <li>Termination: Terminated.</li>
-             * <li>Success: Execution succeeded.</li>
-             * <li>Fail: Execution failed.</li>
-             * </ul>
+             * <p>The status of the deployment pipeline run.</p>
              * 
              * <strong>example:</strong>
              * <p>Ready</p>

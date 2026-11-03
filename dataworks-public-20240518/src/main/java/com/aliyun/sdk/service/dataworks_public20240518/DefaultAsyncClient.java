@@ -90,6 +90,8 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("us-east-1", "dataworks.us-east-1.aliyuncs.com"),
             new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "dataworks.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("sa-east-1", "dataworks.sa-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "dataworks.na-south-1.aliyuncs.com"),
             new TeaPair("me-central-1", "dataworks.me-central-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
@@ -360,8 +362,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
-     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li><strong>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</strong></li>
      * </ol>
      * 
      * @param request the request parameters of BuildImage  BuildImageRequest
@@ -409,7 +411,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must purchase DataWorks Basic Edition or a more advanced edition to use this feature.</li>
      * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
      * </ol>
      * 
@@ -459,13 +461,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Request instructions</h2>
      * <ul>
      * <li><strong>Agent name</strong>: Must be unique within the current account.</li>
-     * <li><strong>Model configuration</strong>: Optional. Specifies the model used by the agent and its related settings.</li>
-     * <li><strong>Visibility level</strong>: Defines who can access the agent. Supported values include account-wide, project-specific, or user-specific visibility.</li>
-     * <li><strong>Visibility scope</strong>: When <code>PROJECT</code> or <code>USER</code> is selected as the visibility level, you must specify the specific project IDs or user IDs.</li>
-     * <li><strong>Other parameters</strong>: Parameters such as the display name and description are optional. Fill them in as needed.</li>
+     * <li><strong>Model configuration</strong>: Optional parameter used to specify the model used by the agent and its related settings.</li>
+     * <li><strong>Visibility level</strong>: Defines who can access the agent. Supports visibility within the account, project, or specific users.</li>
+     * <li><strong>Visibility scope</strong>: When <code>PROJECT</code> or <code>USER</code> is selected as the visibility level, you must further specify the specific project IDs or user ID lists.</li>
+     * <li><strong>Other parameters</strong>: Display name and description are optional and can be filled in as needed.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateAgent  CreateAgentRequest
@@ -487,17 +489,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation creates a new agent session.</li>
-     * <li>Use <code>_meta.agent.agentName</code> to specify the agent name to bind. This parameter is required.<ul>
-     * <li>dataworks_data_agent: DataWorks built-in agent — Data Agent. Provides intelligent data development AI capabilities that cover the entire workflow of data integration, development, O&amp;M, governance, and analytics.</li>
-     * <li>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI. Uses natural language processing and intelligent analytics to automate the entire analysis workflow through conversational interaction, from requirement parsing, data extraction, and automatic code generation to visual report output.</li>
-     * <li>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service. An enterprise-grade dedicated AI assistant for DataWorks built on open source frameworks such as OpenClaw and Hermes Agent.</li>
+     * <li>This operation creates an agent session.</li>
+     * <li>You must specify the name of the bound agent by using <code>_meta.agent.agentName</code>. This parameter is required.<ul>
+     * <li>dataworks_data_agent: DataWorks built-in agent - Data Agent. It provides AI capabilities for the entire data development lifecycle, including data integration, development, O&amp;M, governance, and analysis.</li>
+     * <li>dataworks_chatbi_agent: DataWorks built-in agent - ChatBI. Based on natural language processing and intelligent analysis technologies, it automates the entire analysis process from requirement parsing, data extraction, and automatic code generation to visual report output through conversational interaction.</li>
+     * <li>dataworks_ai_assistant_agent: DataWorks built-in agent - AI Assistant. An enterprise-grade AI assistant for DataWorks built on open-source frameworks such as OpenClaw and Hermes Agent.</li>
      * </ul>
      * </li>
-     * <li>Use <code>_meta.config.sessionSource</code> to pass through a session source identifier for subsequent retrieval by source.</li>
-     * <li>Use <code>_meta.config.sessionTags[].sessionTagCode</code> to pass in session tags.</li>
+     * <li>You can pass through the session source identifier by using <code>_meta.config.sessionSource</code> to facilitate subsequent retrieval by source.</li>
+     * <li>You can pass session tags by using <code>_meta.config.sessionTags[].sessionTagCode</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateAgentSession  CreateAgentSessionRequest
@@ -1914,9 +1916,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>需要购买DataWorks基础版及以上版本才能使用</p>
-     * 
      * @param request the request parameters of DeleteDataQualityRule  DeleteDataQualityRuleRequest
      * @return DeleteDataQualityRuleResponse
      */
@@ -2155,8 +2154,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
-     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</strong></li>
      * </ol>
      * 
      * @param request the request parameters of DeleteImage  DeleteImageRequest
@@ -2599,7 +2598,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
      * 
      * @param request the request parameters of DeleteTask  DeleteTaskRequest
      * @return DeleteTaskResponse
@@ -2704,8 +2703,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
-     * <li><strong>Before using this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</strong></li>
      * </ol>
      * 
      * @param request the request parameters of DisableImage  DisableImageRequest
@@ -2836,7 +2835,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <ol>
      * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
-     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
+     * <li><strong>Make sure that you have created the service-linked role AliyunServiceRoleForDataWorks before you call this API operation.</strong></li>
      * </ol>
      * 
      * @param request the request parameters of EnableImage  EnableImageRequest
@@ -2917,9 +2916,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>&lt;notice&gt;The stages of a deployment process are sequential. For more information, see the response of GetPipelineRun. You cannot skip or repeat a stage.&gt;&lt;/notice&gt;
-     * &lt;notice&gt;The execution is asynchronous. The response only indicates that the stage is triggered, not that the stage is executed. Check the response of GetPipelineRun for the execution result.&gt;&lt;/notice&gt;
-     * &lt;notice&gt;This operation may not be available in earlier SDK versions. In this case, use the ExecDeploymentStage operation. The parameters are the same as those described in this document.&gt;&lt;/notice&gt;</p>
+     * <p>Notice: The stages in a deployment pipeline are sequential. For more information, see the return values of GetPipelineRun. You cannot skip or repeatedly execute a stage.
+     * Notice: The execution process is asynchronous. The return value only indicates whether the execution is successfully triggered, not whether the stage is successfully executed. The execution result is subject to the return values of GetPipelineRun.
+     * Notice: This operation may not be available in earlier SDK versions. In this case, use the ExecDeploymentStage operation, which uses the same parameters as described in this document.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ExecPipelineRunStage  ExecPipelineRunStageRequest
@@ -2984,8 +2983,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API retrieves detailed configuration information for the specified agent name, including but not limited to the model configuration, system prompt, and tool list. You must provide the exact agent name as a request parameter.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation retrieves the detailed configuration information of an agent by its name, including but not limited to model configurations, system prompts, and tool lists. You must provide the exact agent name as a parameter in the request.</p>
      * 
      * @param request the request parameters of GetAgent  GetAgentRequest
      * @return GetAgentResponse
@@ -3158,7 +3157,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must have DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
      * </ol>
      * 
      * @param request the request parameters of GetCatalog  GetCatalogRequest
@@ -3205,7 +3204,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</li>
      * </ol>
      * 
      * @param request the request parameters of GetColumn  GetColumnRequest
@@ -3278,11 +3277,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
      * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Workspace Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</li>
+     * <li>Tenant owner, workspace administrator, deployer, developer, project owner, or operator.</li>
      * </ul>
      * 
      * @param request the request parameters of GetComputeResourceAuthUserMappings  GetComputeResourceAuthUserMappingsRequest
@@ -3424,7 +3423,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation requires DataWorks Basic Edition or later.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * @param request the request parameters of GetDIJob  GetDIJobRequest
      * @return GetDIJobResponse
@@ -3507,7 +3506,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI GetDataQualityEvaluationTaskInstance is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScanRun instead.  * @description DataWorks Basic Edition or a higher edition is required to use this operation.
+     * @deprecated OpenAPI GetDataQualityEvaluationTaskInstance is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScanRun instead.  * @description DataWorks Basic Edition or a higher edition is required.
      * 
      * @param request the request parameters of GetDataQualityEvaluationTaskInstance  GetDataQualityEvaluationTaskInstanceRequest
      * @return GetDataQualityEvaluationTaskInstanceResponse
@@ -3916,7 +3915,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must have DataWorks Standard Edition or a higher edition to use this operation.</li>
+     * <li>You must purchase DataWorks Standard Edition or a higher edition to use this operation.</li>
      * </ol>
      * 
      * @param request the request parameters of GetLineageRelationship  GetLineageRelationshipRequest
@@ -4201,7 +4200,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only in DataWorks Basic Edition and later.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * @param request the request parameters of GetProjectMember  GetProjectMemberRequest
      * @return GetProjectMemberResponse
@@ -4498,7 +4497,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this API.</li>
      * </ol>
      * 
      * @param request the request parameters of GetTable  GetTableRequest
@@ -4604,7 +4603,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>This feature requires DataWorks Basic Edition or later.</p>
      * 
      * @param request the request parameters of GetWorkflow  GetWorkflowRequest
      * @return GetWorkflowResponse
@@ -4768,13 +4767,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>At least one of <code>agentName</code> and <code>sessionSourceList</code> must be provided.</li>
-     * <li>Supports combined filtering by <code>tagList</code>, <code>sessionId</code>, and <code>sessionTitle</code>.</li>
-     * <li>The response conforms to the Alibaba Cloud OpenAPI paging specification, including <code>totalCount</code>, <code>maxResults</code>, <code>nextToken</code>, and <code>sessionList</code>.</li>
-     * <li>If <code>nextToken</code> is an invalid character string, it defaults to 1.</li>
-     * <li>By default, 50 records are returned per page. Adjust this by using the <code>maxResults</code> parameter.</li>
+     * <li>You must specify at least one of agentName and sessionSourceList.</li>
+     * <li>You can combine tagList, sessionId, and sessionTitle for filtering.</li>
+     * <li>The response follows the Alibaba Cloud OpenAPI paging specification, including totalCount, maxResults, nextToken, and sessionList.</li>
+     * <li>If nextToken is an invalid string, it is processed as 1 by default.</li>
+     * <li>By default, 50 records are returned per page. You can adjust this by using the maxResults parameter.</li>
      * </ul>
      * 
      * @param request the request parameters of ListAgentSessions  ListAgentSessionsRequest
@@ -5300,7 +5299,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation requires DataWorks Basic Edition or a later edition.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of ListDIJobs  ListDIJobsRequest
      * @return ListDIJobsResponse
@@ -5404,7 +5403,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.  * @description You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+     * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.  * @description You must purchase DataWorks Basic Edition or later to use this feature.
      * 
      * @param request the request parameters of ListDataQualityEvaluationTasks  ListDataQualityEvaluationTasksRequest
      * @return ListDataQualityEvaluationTasksResponse
@@ -5723,7 +5722,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>DataWorks Basic Edition or later is required.</p>
      * 
      * @param request the request parameters of ListDownstreamTasks  ListDownstreamTasksRequest
      * @return ListDownstreamTasksResponse
@@ -6362,7 +6361,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This feature is available in DataWorks Basic Edition and higher.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of ListProjectMembers  ListProjectMembersRequest
      * @return ListProjectMembersResponse
@@ -6758,7 +6757,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this API.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
      * </ol>
      * 
      * @param request the request parameters of ListTables  ListTablesRequest
@@ -6780,8 +6779,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.
-     * Only operation logs generated within the previous 31 days can be queried.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this API.
+     * You can only query operation logs generated within the past 31 days.</p>
      * 
      * @param request the request parameters of ListTaskInstanceOperationLogs  ListTaskInstanceOperationLogsRequest
      * @return ListTaskInstanceOperationLogsResponse
@@ -6968,13 +6967,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation retrieves session details and streams the Agent response using Server-Sent Events (SSE).</li>
-     * <li>If the target session does not exist, the operation returns an error frame with an error code of 400.</li>
-     * <li>The response includes information about the Agent\&quot;s request processing, such as message chunks, thought processes, and tool call status updates.</li>
-     * <li>The <code>stopReason</code> field indicates why the Agent stops the current turn. Possible values include reaching the maximum turn limit or being canceled.</li>
-     * <li>The returned content conforms to the Agent Client Protocol (ACP). For more information, see https\://agentclientprotocol.com.</li>
+     * <li>This operation is used to recover the details of a specified session and return the agent response in a Server-Sent Events (SSE) stream.</li>
+     * <li>If the target session does not exist, an error frame with an error code of 400 is returned.</li>
+     * <li>The response contains process information about how the agent handles the request, such as message chunks, reasoning steps, and tool call status updates.</li>
+     * <li>The stopReason field indicates the reason why the agent stops the current conversation turn. Valid values include but are not limited to reaching the maximum turn limit and being canceled.</li>
+     * <li>The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of LoadAgentSession  LoadAgentSessionRequest
@@ -7099,16 +7098,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API sends a user prompt to a specified session ID and accepts the Agent response in SSE (Server-Sent Events) streaming mode.</li>
-     * <li>The response may include message fragments, thinking procedures, tool calling status updates, and other information.</li>
-     * <li>If the specified session does not exist, a 400 fault is returned through an SSE error frame.</li>
-     * <li>The <code>stopReason</code> field indicates why the Agent stopped the current conversation turn.</li>
-     * <li>Multiple types of content blocks are supported as prompt input, such as text and OSS file download links.</li>
-     * <li>You can optionally provide additional meta information <code>Meta</code> to pass more context to the server.</li>
-     * <li>The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a></li>
-     * <li><strong>Before invoking this API, make sure you fully understand the billing methods and pricing of the Data Agent product</strong>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></li>
+     * <li>This API operation sends a user prompt to a specified session ID and accepts the response from the agent in a streaming manner by using Server-Sent Events (SSE).</li>
+     * <li>The response may include information such as message chunks, thinking procedures, and tool calling status updates.</li>
+     * <li>If the specified session does not exist, a 400 fault is returned in an SSE fault frame.</li>
+     * <li>The stopReason field indicates the reason why the agent stopped the current conversation.</li>
+     * <li>Multiple types of content blocks are supported as prompt inputs, such as text and OSS file download links.</li>
+     * <li>You can optionally provide additional metadata in the Meta field to pass more context to the server.</li>
+     * <li>The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</li>
+     * <li><strong>Before you invoke this operation, make sure that you fully understand the billing methods and pricing of the Data Agent product</strong>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></li>
      * </ul>
      * 
      * @param request the request parameters of PromptAgentSession  PromptAgentSessionRequest
@@ -7383,8 +7382,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
-     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li><strong>Before you call this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks is created.</strong></li>
      * </ol>
      * 
      * @param request the request parameters of RollbackImage  RollbackImageRequest
@@ -7698,12 +7697,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or later is required.
-     * Task instance stop mechanism and precautions:</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+     * Instance termination mechanism and precautions:</p>
      * <ol>
-     * <li>Stopping a task instance is an asynchronous operation. Sending a stop request does not mean that the instance stops immediately. Continue to query the instance status after sending the request to confirm the result. If external compute resources are involved, verify the actual status of the remote job.</li>
-     * <li>The status of a DataWorks task instance may not match the status of the remote job. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a stop request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, a DataWorks task instance may be marked as failed while the remote job is still running. Therefore, you cannot rely solely on the DataWorks task instance status to determine whether the remote job has stopped. Check the status on the corresponding computing platform and manually stop the job if necessary to prevent it from continuing to run or consuming additional resources.</li>
-     * <li>Pay special attention to MaxCompute tasks that use shared schedule resource groups. DataWorks shared schedule resource groups will soon be retired. Due to component version and compatibility limits, stop commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, perform a kill operation in MaxCompute and verify that it has stopped.</li>
+     * <li>Instance termination is an asynchronous operation. A termination request does not immediately stop the instance. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, verify the actual status of the remote job.</li>
+     * <li>The DataWorks instance status may differ from the remote job status. For tasks that depend on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions or client compatibility issues, a DataWorks instance may be marked as failed while the remote job is still running. Therefore, do not rely solely on the DataWorks instance status to determine whether the remote job has stopped. Check the corresponding compute platform and manually terminate the job if necessary to prevent it from continuing to run or consuming extra resources.</li>
+     * <li>Pay special attention to MaxCompute tasks that use shared resource groups for scheduling. DataWorks shared resource groups for scheduling will soon be retired. Due to component version and compatibility limits, termination commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, run a kill command in MaxCompute and verify that the instance has stopped.</li>
      * </ol>
      * 
      * @param request the request parameters of StopTaskInstances  StopTaskInstancesRequest
@@ -7725,7 +7724,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of StopWorkflowInstances  StopWorkflowInstancesRequest
      * @return StopWorkflowInstancesResponse
@@ -7891,7 +7890,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</p>
+     * <p>Modifies the title of an agent session accessible by the current identity without changing the task execution status.</p>
      * 
      * @param request the request parameters of UpdateAgentSessionTitle  UpdateAgentSessionTitleRequest
      * @return UpdateAgentSessionTitleResponse

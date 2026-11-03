@@ -170,7 +170,10 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The JSON-RPC error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -178,7 +181,10 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The optional additional error information. The content depends on the error type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder data(Object data) {
                 this.data = data;
@@ -186,7 +192,10 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The business error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x4883300000000019</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -194,7 +203,10 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>To create a DataAgent instance, you must specify a resource group. Pass the resource group ID in _meta.dataAgent.resourceGroupId of the request</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -248,7 +260,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the created session.</p>
+             * <p>The ID of the newly created session.</p>
              * 
              * <strong>example:</strong>
              * <p>sess_0f12abc34</p>
@@ -357,7 +369,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Error.
+             * <p>The JSON-RPC error message. This field is not returned if the request is successful.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -365,7 +377,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request ID passed by the caller. The value is returned as-is.</p>
+             * <p>The ID passed by the requester. The value is returned as is.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -376,7 +388,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+             * <p>The JSON-RPC version. This value is always 2.0.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0</p>
@@ -395,7 +407,10 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The response time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1789549200000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

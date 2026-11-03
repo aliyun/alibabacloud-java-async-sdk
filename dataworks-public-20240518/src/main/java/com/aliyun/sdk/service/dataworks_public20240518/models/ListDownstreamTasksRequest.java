@@ -125,7 +125,7 @@ public class ListDownstreamTasksRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class ListDownstreamTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number, starting from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -162,14 +162,7 @@ public class ListDownstreamTasksRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Prod: production environment</p>
-         * </li>
-         * <li><p>Dev: development environment</p>
-         * </li>
-         * </ul>
+         * <p>The project environment.</p>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>

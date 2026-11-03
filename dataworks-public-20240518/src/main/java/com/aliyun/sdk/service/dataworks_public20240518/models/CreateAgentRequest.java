@@ -251,7 +251,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The list of child agents that can be called by this agent.</p>
+         * <p>The list of sub-agents that can be called by this agent.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -290,7 +290,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>Agent 绑定的已发布专家套件。个人或企业套件使用 SuiteId，可选 Version；官方套件必须显式指定 Source=OFFICIAL 和官方目录中的 SuiteId，不传 Version。未传时创建为空，不会默认加载所有官方套件。</p>
+         * <p>The released expert suites bound to the agent. For personal or enterprise suites, use SuiteId and optionally specify a fixed Version or VersionSelector. For official suites, you must explicitly set Source to OFFICIAL and specify the SuiteId from the official catalog. Do not specify Version or VersionSelector. If this parameter is not specified, an empty list is created, and official suites are not loaded by default.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;Source&quot;:&quot;OFFICIAL&quot;,&quot;SuiteId&quot;:&quot;dataworks-data-analysis-extension&quot;},{&quot;SuiteId&quot;:&quot;suite_example&quot;,&quot;Version&quot;:1}]</p>
@@ -303,7 +303,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The extended metadata in key-value pairs.</p>
+         * <p>The extended metadata as key-value pairs.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -331,7 +331,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The name of the agent. The name must be unique within the current account.</p>
+         * <p>The name of the agent. It must be unique within the current account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -344,7 +344,12 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>是否在创建 Agent 后立即发布。true 发布创建的版本；false 或省略保持原有仅创建草稿行为。保存与发布不是原子操作，发布失败时草稿可能已存在；重试前应先查询 Agent，避免重复创建。</p>
+         * <p>Specifies whether to publish the agent immediately after creation. Valid values:</p>
+         * <ul>
+         * <li>true: Publishes the created version.</li>
+         * <li>false or omitted: Retains the original behavior of creating a draft only.
+         * Saving and publishing are not atomic operations. If publishing fails, the draft may already exist. Query the agent before retrying to avoid duplicate creation.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -374,7 +379,7 @@ public class CreateAgentRequest extends Request {
          * <p>The system prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>You are a data analytics assistant</p>
+         * <p>You are a data analytics assistant.</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.putBodyParameter("SystemPrompt", systemPrompt);
@@ -398,7 +403,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The visibility level.<br>
+         * <p>The visibility level. Valid values:<br>
          * <code>TENANT</code>: Visible within the account.<br>
          * <code>PROJECT</code>: Visible to specified projects.<br>
          * <code>USER</code>: Visible to specified users.</p>
@@ -413,7 +418,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The visibility scope. The corresponding field is used based on the visibility level.</p>
+         * <p>The visibility scope. The corresponding fields are used based on the Visibility parameter.</p>
          */
         public Builder visibilityScope(VisibilityScope visibilityScope) {
             String visibilityScopeShrink = shrink(visibilityScope, "VisibilityScope", "json");
@@ -502,10 +507,14 @@ public class CreateAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
+        @com.aliyun.core.annotation.NameInMap("VersionSelector")
+        private String versionSelector;
+
         private ExpertSuites(Builder builder) {
             this.source = builder.source;
             this.suiteId = builder.suiteId;
             this.version = builder.version;
+            this.versionSelector = builder.versionSelector;
         }
 
         public static Builder builder() {
@@ -537,10 +546,18 @@ public class CreateAgentRequest extends Request {
             return this.version;
         }
 
+        /**
+         * @return versionSelector
+         */
+        public String getVersionSelector() {
+            return this.versionSelector;
+        }
+
         public static final class Builder {
             private String source; 
             private String suiteId; 
             private Integer version; 
+            private String versionSelector; 
 
             private Builder() {
             } 
@@ -549,10 +566,11 @@ public class CreateAgentRequest extends Request {
                 this.source = model.source;
                 this.suiteId = model.suiteId;
                 this.version = model.version;
+                this.versionSelector = model.versionSelector;
             } 
 
             /**
-             * <p>OFFICIAL 表示官方目录资源；DB 表示个人或企业资源。省略时保持原有数据库资源查询语义。官方资源在 Agent 发布时固定制品版本。</p>
+             * <p>The source of the expert suite. Valid values: OFFICIAL: official catalog resources. DB: personal or enterprise resources. If this parameter is omitted, the original database resource query semantics are retained. For official resources, the artifact version is fixed when the agent is released.</p>
              * 
              * <strong>example:</strong>
              * <p>OFFICIAL</p>
@@ -563,7 +581,7 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>传入专家套件引用时，每项需提供 SuiteId，由服务端校验。Source=OFFICIAL 时为官方目录 ID；其他情况为专家套件管理返回的 ID。引用资源必须对调用者可见。</p>
+             * <p>The ID of the expert suite. When you specify expert suite references, each item must include a SuiteId, which is verified by the server. When Source is set to OFFICIAL, this is the official catalog ID. Otherwise, this is the ID returned by expert suite management. The referenced resource must be visible to the caller.</p>
              * 
              * <strong>example:</strong>
              * <p>dataworks-data-analysis-extension</p>
@@ -574,13 +592,24 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>仅用于个人或企业套件，必须为已发布快照的整数版本号。省略时在 Agent 发布时固定当前已发布版本。Source=OFFICIAL 时不传此字段。</p>
+             * <p>The fixed integer revision number of a released snapshot. This parameter applies only to personal or enterprise suites and is mutually exclusive with VersionSelector. Releasing a new version does not change the fixed reference. If both parameters are omitted, the latest version is used for each new session. Do not specify this parameter when Source is set to OFFICIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * <p>The version selection expression. This parameter applies only to personal or enterprise resources and is mutually exclusive with Version. It supports exact semantic versions, latest, and the full npm/node-semver range syntax, such as 1.2.*, ^1.2.3, ~1.2.3, &gt;=1.0.0 &lt;2.0.0, and 1.x || 2.x. If both parameters are omitted, latest is used, and the highest matching released version is selected for each new session. Existing fixed integer references remain unchanged. Do not specify this parameter when Source is set to OFFICIAL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^1.2.3</p>
+             */
+            public Builder versionSelector(String versionSelector) {
+                this.versionSelector = versionSelector;
                 return this;
             }
 
@@ -610,11 +639,15 @@ public class CreateAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
+        @com.aliyun.core.annotation.NameInMap("VersionSelector")
+        private String versionSelector;
+
         private Skills(Builder builder) {
             this.name = builder.name;
             this.skillId = builder.skillId;
             this.source = builder.source;
             this.version = builder.version;
+            this.versionSelector = builder.versionSelector;
         }
 
         public static Builder builder() {
@@ -653,11 +686,19 @@ public class CreateAgentRequest extends Request {
             return this.version;
         }
 
+        /**
+         * @return versionSelector
+         */
+        public String getVersionSelector() {
+            return this.versionSelector;
+        }
+
         public static final class Builder {
             private String name; 
             private String skillId; 
             private String source; 
             private Integer version; 
+            private String versionSelector; 
 
             private Builder() {
             } 
@@ -667,6 +708,7 @@ public class CreateAgentRequest extends Request {
                 this.skillId = model.skillId;
                 this.source = model.source;
                 this.version = model.version;
+                this.versionSelector = model.versionSelector;
             } 
 
             /**
@@ -681,7 +723,7 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>Source=OFFICIAL 时传官方目录 ID，不传 Name 或 Version。个人或企业 Skill 不传此字段。</p>
+             * <p>The official catalog ID. Specify this parameter when Source is set to OFFICIAL. Do not specify Name, Version, or VersionSelector. Do not specify this parameter for personal or enterprise skills.</p>
              * 
              * <strong>example:</strong>
              * <p>dataworks-semantic</p>
@@ -692,7 +734,7 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>OFFICIAL 表示官方目录资源；DB 表示个人或企业资源，省略时保持原有按名称查询语义。</p>
+             * <p>The source of the skill. Valid values: OFFICIAL: official catalog resources. DB: personal or enterprise resources. If this parameter is omitted, the original query-by-name semantics are retained.</p>
              * 
              * <strong>example:</strong>
              * <p>OFFICIAL</p>
@@ -703,13 +745,24 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>仅用于个人或企业 Skill，必须为已发布快照的整数版本。省略时在 Agent 发布时固定当前已发布版本；Source=OFFICIAL 时不传。</p>
+             * <p>The fixed integer revision number of a released snapshot. This parameter applies only to personal or enterprise skills and is mutually exclusive with VersionSelector. Releasing a new version does not change the fixed reference. If both parameters are omitted, the latest version is used for each new session. Do not specify this parameter when Source is set to OFFICIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * <p>The version selection expression. This parameter applies only to personal or enterprise resources and is mutually exclusive with Version. It supports exact semantic versions, latest, and the full npm/node-semver range syntax, such as 1.2.*, ^1.2.3, ~1.2.3, &gt;=1.0.0 &lt;2.0.0, and 1.x || 2.x. If both parameters are omitted, latest is used, and the highest matching released version is selected for each new session. Existing fixed integer references remain unchanged. Do not specify this parameter when Source is set to OFFICIAL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^1.2.3</p>
+             */
+            public Builder versionSelector(String versionSelector) {
+                this.versionSelector = versionSelector;
                 return this;
             }
 
@@ -760,7 +813,7 @@ public class CreateAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the McpServer.</p>
+             * <p>The name of the MCP server.</p>
              * 
              * <strong>example:</strong>
              * <p>server-1</p>

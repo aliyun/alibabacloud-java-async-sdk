@@ -125,7 +125,7 @@ public class ListTaskInstanceOperationLogsRequest extends Request {
         }
 
         /**
-         * <p>The operation date, accurate to the day. The default value is the current day. You can query only the operation logs generated within the previous 31 days. This value is a UNIX timestamp.</p>
+         * <p>The date of the operation, accurate to the day. The default value is the current day. You can query operation logs from the past 31 days. Specify the value as a timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -137,7 +137,7 @@ public class ListTaskInstanceOperationLogsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The node instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +150,7 @@ public class ListTaskInstanceOperationLogsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

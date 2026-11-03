@@ -80,7 +80,7 @@ public class ListTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The paging information.</p>
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -216,7 +216,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of tables.</p>
+             * <p>The list of data tables.</p>
              */
             public Builder tables(java.util.List<Table> tables) {
                 this.tables = tables;

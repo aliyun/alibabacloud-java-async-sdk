@@ -87,7 +87,10 @@ public class UpdateAgentSessionTitleRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The JSON-RPC correlation ID for the current request. It is specified by the caller and used to correlate the request and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>updateagentsessiontitle-rpc-001</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -96,7 +99,10 @@ public class UpdateAgentSessionTitleRequest extends Request {
         }
 
         /**
-         * Jsonrpc.
+         * <p>The JSON-RPC protocol version. Set the value to 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder jsonrpc(String jsonrpc) {
             this.putBodyParameter("Jsonrpc", jsonrpc);
@@ -105,7 +111,7 @@ public class UpdateAgentSessionTitleRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The request parameters for modifying the session title, including the target session ID and the new title.</p>
          */
         public Builder params(Params params) {
             String paramsShrink = shrink(params, "Params", "json");
@@ -176,6 +182,7 @@ public class UpdateAgentSessionTitleRequest extends Request {
             } 
 
             /**
+             * <p>The ID of the agent session that belongs to the current account.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -187,6 +194,7 @@ public class UpdateAgentSessionTitleRequest extends Request {
             }
 
             /**
+             * <p>The new title. The length must be 1 to 512 characters after leading and trailing whitespaces are removed.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

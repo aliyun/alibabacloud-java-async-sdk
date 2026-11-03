@@ -110,7 +110,7 @@ public class CancelImageTestRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image test execution to cancel.</p>
+         * <p>The execution ID of the image test to cancel.</p>
          * 
          * <strong>example:</strong>
          * <p>582d4896-d224-413b-b883-239eeebe0bc5</p>

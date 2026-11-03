@@ -75,7 +75,7 @@ public class GetLineageRelationshipResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>58D5334A-B013-430E</p>

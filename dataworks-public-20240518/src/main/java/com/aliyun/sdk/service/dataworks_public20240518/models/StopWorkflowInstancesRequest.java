@@ -109,7 +109,7 @@ public class StopWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The list of workflow instance IDs. You can call the ListWorkflowInstances operation to query workflow instance IDs.</p>
+         * <p>The IDs of the workflow instances. You can call ListWorkflowInstances to query workflow instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ids(java.util.List<Long> ids) {

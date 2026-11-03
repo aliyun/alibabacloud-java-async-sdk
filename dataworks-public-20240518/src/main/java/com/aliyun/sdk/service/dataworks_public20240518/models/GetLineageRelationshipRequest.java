@@ -83,7 +83,7 @@ public class GetLineageRelationshipRequest extends Request {
         }
 
         /**
-         * <p>The ID of the lineage relationship. You can obtain this value from the response of the ListLineageRelationships operation.</p>
+         * <p>The ID of the lineage relationship. You can obtain this ID from the response of the ListLineageRelationships operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

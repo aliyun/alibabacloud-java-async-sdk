@@ -97,7 +97,7 @@ public class GetAgentRequest extends Request {
         }
 
         /**
-         * <p>省略时读取当前定义；指定已发布版本时读取对应快照及固定的官方 Skill、套件制品版本；指定当前未发布版本时仍返回草稿，不返回固定制品版本。不是 POP 系统参数 Version。</p>
+         * <p>If omitted, the current definition is retrieved. If a published version is specified, the corresponding snapshot and the fixed versions of official skills and suite artifacts are retrieved. If a current unpublished version is specified, the draft is returned without fixed artifact versions. This is not the POP system parameter Version.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -109,7 +109,7 @@ public class GetAgentRequest extends Request {
         }
 
         /**
-         * <p>The name of the skill to retrieve.</p>
+         * <p>The name of the skill to read.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

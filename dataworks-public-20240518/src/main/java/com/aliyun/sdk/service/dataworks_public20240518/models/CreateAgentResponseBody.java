@@ -110,11 +110,15 @@ public class CreateAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
+        @com.aliyun.core.annotation.NameInMap("VersionSelector")
+        private String versionSelector;
+
         private ExpertSuites(Builder builder) {
             this.packageVersion = builder.packageVersion;
             this.source = builder.source;
             this.suiteId = builder.suiteId;
             this.version = builder.version;
+            this.versionSelector = builder.versionSelector;
         }
 
         public static Builder builder() {
@@ -153,11 +157,19 @@ public class CreateAgentResponseBody extends TeaModel {
             return this.version;
         }
 
+        /**
+         * @return versionSelector
+         */
+        public String getVersionSelector() {
+            return this.versionSelector;
+        }
+
         public static final class Builder {
             private String packageVersion; 
             private String source; 
             private String suiteId; 
             private Integer version; 
+            private String versionSelector; 
 
             private Builder() {
             } 
@@ -167,10 +179,11 @@ public class CreateAgentResponseBody extends TeaModel {
                 this.source = model.source;
                 this.suiteId = model.suiteId;
                 this.version = model.version;
+                this.versionSelector = model.versionSelector;
             } 
 
             /**
-             * <p>创建时不返回；请使用 GetAgent 显式查询已发布版本获取固定的官方套件制品版本。</p>
+             * <p>This parameter is not returned upon creation. Call GetAgent to explicitly query the published version to obtain the fixed official suite artifact version.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1.0.202610211408</p>
@@ -181,7 +194,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the expert suite.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFICIAL</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -189,7 +205,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SuiteId.
+             * <p>The ID of the expert suite.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataworks-data-analysis-extension</p>
              */
             public Builder suiteId(String suiteId) {
                 this.suiteId = suiteId;
@@ -197,10 +216,24 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The release version number of the custom suite.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * <p>The saved version selection strategy is returned only for personal or enterprise resources and is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This parameter is not returned for official resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^1.2.3</p>
+             */
+            public Builder versionSelector(String versionSelector) {
+                this.versionSelector = versionSelector;
                 return this;
             }
 
@@ -233,12 +266,16 @@ public class CreateAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
+        @com.aliyun.core.annotation.NameInMap("VersionSelector")
+        private String versionSelector;
+
         private Skills(Builder builder) {
             this.name = builder.name;
             this.packageVersion = builder.packageVersion;
             this.skillId = builder.skillId;
             this.source = builder.source;
             this.version = builder.version;
+            this.versionSelector = builder.versionSelector;
         }
 
         public static Builder builder() {
@@ -284,12 +321,20 @@ public class CreateAgentResponseBody extends TeaModel {
             return this.version;
         }
 
+        /**
+         * @return versionSelector
+         */
+        public String getVersionSelector() {
+            return this.versionSelector;
+        }
+
         public static final class Builder {
             private String name; 
             private String packageVersion; 
             private String skillId; 
             private String source; 
             private Integer version; 
+            private String versionSelector; 
 
             private Builder() {
             } 
@@ -300,10 +345,14 @@ public class CreateAgentResponseBody extends TeaModel {
                 this.skillId = model.skillId;
                 this.source = model.source;
                 this.version = model.version;
+                this.versionSelector = model.versionSelector;
             } 
 
             /**
-             * Name.
+             * <p>The name of the custom skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-business-skill</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -311,7 +360,7 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时不返回；请使用 GetAgent 显式查询已发布版本获取固定的官方制品版本。</p>
+             * <p>This parameter is not returned upon creation. Call GetAgent to explicitly query the published version to obtain the fixed official artifact version.</p>
              * 
              * <strong>example:</strong>
              * <p>0.6.0.202608201110</p>
@@ -322,7 +371,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SkillId.
+             * <p>The ID of the official skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataworks-semantic</p>
              */
             public Builder skillId(String skillId) {
                 this.skillId = skillId;
@@ -330,7 +382,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFICIAL</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -338,10 +393,24 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The release version number of the custom skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * <p>The saved version selection strategy is returned only for personal or enterprise resources and is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This parameter is not returned for official resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^1.2.3</p>
+             */
+            public Builder versionSelector(String versionSelector) {
+                this.versionSelector = versionSelector;
                 return this;
             }
 
@@ -444,7 +513,7 @@ public class CreateAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>已保存的套件引用。官方资源返回来源及目录 ID；发布后的制品版本由 PackageVersion 表示。</p>
+             * <p>The saved suite references. Official resources return the source and directory ID. The published artifact version is represented by PackageVersion.</p>
              */
             public Builder expertSuites(java.util.List<ExpertSuites> expertSuites) {
                 this.expertSuites = expertSuites;
@@ -452,7 +521,7 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time, in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -464,7 +533,7 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The last modification time, in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -487,7 +556,7 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>已保存的 Skill 引用；官方 Skill 在 Agent 发布后返回固定的 PackageVersion。</p>
+             * <p>The saved skill references. For official skills, a fixed PackageVersion is returned after the agent is published.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;

@@ -67,7 +67,7 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
         } 
 
         /**
-         * JsonRpcResponse.
+         * <p>The JSON-RPC response. Result is returned upon success, and Error is returned upon a protocol error.</p>
          */
         public Builder jsonRpcResponse(JsonRpcResponse jsonRpcResponse) {
             this.jsonRpcResponse = jsonRpcResponse;
@@ -75,7 +75,10 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the current OpenAPI request. You can use it to troubleshoot request issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01A0B6E0-E005-1465-B5DE-5CD17677426F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The JSON-RPC error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -175,7 +181,10 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The optional additional error information. The content depends on the error type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder data(Object data) {
                 this.data = data;
@@ -183,7 +192,10 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The business error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x4883300000000019</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -191,7 +203,10 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The session does not exist or the current account is not authorized to access it. Return to the session list and select another session</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -258,7 +273,10 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
             } 
 
             /**
-             * SessionId.
+             * <p>The ID of the agent session whose title is modified. It corresponds to the SessionId in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123e4567-e89b-42d3-a456-426614174000</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -266,7 +284,10 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The saved session title after modification. Leading and trailing whitespace characters are removed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>New title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -372,7 +393,7 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
             } 
 
             /**
-             * Error.
+             * <p>The JSON-RPC error message. This field is not returned upon success.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -380,7 +401,10 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The JSON-RPC correlation ID for the current request. It is passed by the caller and returned as is.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>updateagentsessiontitle-rpc-001</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -388,7 +412,10 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
             }
 
             /**
-             * Jsonrpc.
+             * <p>The JSON-RPC protocol version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder jsonrpc(String jsonrpc) {
                 this.jsonrpc = jsonrpc;
@@ -396,7 +423,7 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The operation result.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -404,7 +431,10 @@ public class UpdateAgentSessionTitleResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The response time. It is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1789549200000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
