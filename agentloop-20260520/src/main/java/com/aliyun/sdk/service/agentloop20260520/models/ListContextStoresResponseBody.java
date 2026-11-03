@@ -106,7 +106,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of results per page specified in the request.</p>
+         * <p>The maximum number of entries per page specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -128,7 +128,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used to locate the request during troubleshooting.</p>
+         * <p>The request ID, which is used to locate the request during troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -379,7 +379,7 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the context store was created, in ISO 8601 UTC format.</p>
+             * <p>The time when the context store was created. The time is in the ISO 8601 UTC format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -424,7 +424,7 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory data source type, such as manual, trajectory, or dataset. This parameter has a value only for the memory type.</p>
+             * <p>The data source type of the memory context store. Valid values: manual, trajectory, and dataset. This parameter has a value only for the memory type.</p>
              * 
              * <strong>example:</strong>
              * <p>trajectory</p>
@@ -446,7 +446,7 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory storage mode, such as event or upsert. This parameter has a value only for the memory type.</p>
+             * <p>The storage mode of the memory context store. Valid values: event and upsert. This parameter has a value only for the memory type.</p>
              * 
              * <strong>example:</strong>
              * <p>upsert</p>
@@ -457,7 +457,7 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * storageModes.
+             * <p>The actual storage modes of each policy. A hybrid context store includes both event and upsert.</p>
              */
             public Builder storageModes(java.util.List<String> storageModes) {
                 this.storageModes = storageModes;
@@ -465,7 +465,7 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the context store was last updated, in ISO 8601 UTC format.</p>
+             * <p>The time when the context store was last updated. The time is in the ISO 8601 UTC format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

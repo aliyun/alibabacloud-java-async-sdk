@@ -252,7 +252,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include memories whose sourceState is inactive. Default value: false.</p>
+         * <p>Specifies whether to include memories with sourceState=inactive. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -264,7 +264,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of returned results, which corresponds to the top N results by similarity.</p>
+         * <p>The maximum number of returned results based on the top-N similarity.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -301,7 +301,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>The recall scope. If a field with the same name conflicts with the filter, a 400 ScopeFilterConflict error is returned.</p>
+         * <p>The recall scope. If a field with the same name exists in the filter, a 400 ScopeFilterConflict error is returned.</p>
          */
         public Builder scope(Scope scope) {
             this.putBodyParameter("scope", scope);
@@ -310,7 +310,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>Filters results by extraction strategy ID. Multiple IDs in the list are evaluated with an OR condition. If this parameter is not specified, all strategies are recalled. An empty list returns a 400 error. If the format is valid but no matching IDs are found, an empty result is returned. IDs of historically removed strategies are supported.</p>
+         * <p>Filters results by extraction strategy IDs. Multiple IDs in the list are evaluated with an OR logic. If this parameter is not specified, all strategies are recalled. An empty list returns a 400 error. Valid IDs with no matches return empty results. Historical removed strategy IDs are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;preferences&quot;,&quot;profile&quot;]</p>
@@ -419,7 +419,7 @@ public class SearchContextRequest extends Request {
             } 
 
             /**
-             * <p>Agent Id</p>
+             * <p>The ID of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>sales-copilot</p>
@@ -430,7 +430,7 @@ public class SearchContextRequest extends Request {
             }
 
             /**
-             * <p>The application ID.</p>
+             * <p>The ID of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>crm-service</p>
@@ -441,7 +441,7 @@ public class SearchContextRequest extends Request {
             }
 
             /**
-             * <p>The run ID.</p>
+             * <p>The ID of the run.</p>
              * 
              * <strong>example:</strong>
              * <p>run-001</p>
@@ -452,7 +452,7 @@ public class SearchContextRequest extends Request {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>u-10001</p>

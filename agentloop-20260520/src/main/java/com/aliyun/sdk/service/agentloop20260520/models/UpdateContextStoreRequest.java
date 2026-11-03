@@ -44,6 +44,14 @@ public class UpdateContextStoreRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("expectedRuntimeRecallRevision")
+    private Long expectedRuntimeRecallRevision;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reason")
+    private String reason;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
@@ -59,6 +67,8 @@ public class UpdateContextStoreRequest extends Request {
         this.config = builder.config;
         this.contextType = builder.contextType;
         this.description = builder.description;
+        this.expectedRuntimeRecallRevision = builder.expectedRuntimeRecallRevision;
+        this.reason = builder.reason;
         this.status = builder.status;
         this.clientToken = builder.clientToken;
     }
@@ -119,6 +129,20 @@ public class UpdateContextStoreRequest extends Request {
     }
 
     /**
+     * @return expectedRuntimeRecallRevision
+     */
+    public Long getExpectedRuntimeRecallRevision() {
+        return this.expectedRuntimeRecallRevision;
+    }
+
+    /**
+     * @return reason
+     */
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -139,6 +163,8 @@ public class UpdateContextStoreRequest extends Request {
         private Config config; 
         private String contextType; 
         private String description; 
+        private Long expectedRuntimeRecallRevision; 
+        private String reason; 
         private String status; 
         private String clientToken; 
 
@@ -154,6 +180,8 @@ public class UpdateContextStoreRequest extends Request {
             this.config = request.config;
             this.contextType = request.contextType;
             this.description = request.description;
+            this.expectedRuntimeRecallRevision = request.expectedRuntimeRecallRevision;
+            this.reason = request.reason;
             this.status = request.status;
             this.clientToken = request.clientToken;
         } 
@@ -185,7 +213,7 @@ public class UpdateContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The description of the policy change. A new policy version is created when policy fields in the configuration are changed.</p>
+         * <p>The description of the policy change. A new policy version is generated when policy fields in the configuration change.</p>
          * 
          * <strong>example:</strong>
          * <p>Relax the similarity threshold</p>
@@ -197,7 +225,7 @@ public class UpdateContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The context library configuration. If specified, the entire configuration is overwritten. If omitted, the original configuration is retained.</p>
+         * <p>The context library configuration. If passed, the entire configuration is overwritten. If not passed, the original configuration is retained.</p>
          */
         public Builder config(Config config) {
             this.putBodyParameter("config", config);
@@ -206,7 +234,7 @@ public class UpdateContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The context library type. This field generally cannot be modified after creation and is provided only for exception correction.</p>
+         * <p>The context library type. This field cannot be changed after creation and is provided only for exception correction.</p>
          * 
          * <strong>example:</strong>
          * <p>experience</p>
@@ -230,7 +258,31 @@ public class UpdateContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The running status. Valid values: Active and Paused. For the memory type, pausing stops data source reading and extraction. For the experience dataset follow type, pausing retains submitted and in-flight checkpoints, and resuming continues to process new records without skipping history from the current time. You do not need to pass back the source parameter when only updating the status.</p>
+         * <p>The expected runtime recall revision. This field is required when you modify the runtime recall switch and must be equal to the config.runtimeRecallRevision value returned by GetContextStore. A 409 error is returned if a conflict occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder expectedRuntimeRecallRevision(Long expectedRuntimeRecallRevision) {
+            this.putBodyParameter("expectedRuntimeRecallRevision", expectedRuntimeRecallRevision);
+            this.expectedRuntimeRecallRevision = expectedRuntimeRecallRevision;
+            return this;
+        }
+
+        /**
+         * <p>The audit reason for modifying the runtime recall switch. The maximum length is 2,000 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pause runtime recall during experience content adjustment</p>
+         */
+        public Builder reason(String reason) {
+            this.putBodyParameter("reason", reason);
+            this.reason = reason;
+            return this;
+        }
+
+        /**
+         * <p>The running status, which can be Active or Paused. For the memory type, pausing stops data source reading and extraction. For the experience dataset follow type, pausing retains submitted and in-flight checkpoints, and resuming continues to process new records without skipping history from the current time. You do not need to pass back the source if you only update the status.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -242,7 +294,7 @@ public class UpdateContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token, which is a unique string generated by the client to ensure the idempotence of the update operation.</p>
+         * <p>The client token. This is a unique string generated by the client to ensure the idempotence of the update operation.</p>
          * 
          * <strong>example:</strong>
          * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
@@ -326,7 +378,7 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to write item events for candidates dropped during recall. Default value: false.</p>
+             * <p>Specifies whether to write item events for dropped recall candidates. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -337,7 +389,12 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The recording mode for recall queries. Valid values: raw (plaintext) and hash (HMAC only). Default value: raw.</p>
+             * <p>The recording method for recall queries. Valid values:</p>
+             * <ul>
+             * <li>raw: Plaintext.</li>
+             * <li>hash: HMAC only.
+             * Default value: raw.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>raw</p>
@@ -405,7 +462,7 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * <p>The name of the extraction model. Currently, only qwen3.8-flash is supported. The platform uses internal credentials.</p>
+             * <p>The name of the extraction model. Currently, only qwen3.8-flash is supported, which uses internal platform credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3.8-flash</p>
@@ -540,7 +597,10 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * allowedActions.
+             * <p>The allowed storage actions. Default value: all actions (ADD, UPDATE, MERGE, and DELETE).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;ADD&quot;,&quot;UPDATE&quot;,&quot;MERGE&quot;,&quot;DELETE&quot;]</p>
              */
             public Builder allowedActions(java.util.List<String> allowedActions) {
                 this.allowedActions = allowedActions;
@@ -548,7 +608,10 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * dedupe.
+             * <p>Specifies whether to enable deduplication in event mode. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dedupe(Boolean dedupe) {
                 this.dedupe = dedupe;
@@ -556,7 +619,10 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * humanEditProtection.
+             * <p>Specifies whether to enable human edit protection. Default value: true. When enabled, automatic extraction does not overwrite manually modified memories.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder humanEditProtection(Boolean humanEditProtection) {
                 this.humanEditProtection = humanEditProtection;
@@ -564,7 +630,10 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * mergeKey.
+             * <p>The merge key for upsert operations. Valid values: factKey, semantic, and both. Default value: semantic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>semantic</p>
              */
             public Builder mergeKey(String mergeKey) {
                 this.mergeKey = mergeKey;
@@ -572,7 +641,15 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * mode.
+             * <p>The storage mode. Valid values:</p>
+             * <ul>
+             * <li>event: Event append.</li>
+             * <li>upsert: Merge and update.
+             * Default value: upsert.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>upsert</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -580,7 +657,10 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * similarityThreshold.
+             * <p>The similarity threshold for semantic merging. Valid values: 0 to 1. Default value: 0.4.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.4</p>
              */
             public Builder similarityThreshold(Double similarityThreshold) {
                 this.similarityThreshold = similarityThreshold;
@@ -588,7 +668,10 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * ttlDays.
+             * <p>The number of days before memories expire. A value of 0 indicates that memories do not expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ttlDays(Integer ttlDays) {
                 this.ttlDays = ttlDays;
@@ -758,7 +841,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The custom extraction instructions. This parameter is required when preset is set to custom. The length must be 1 to 8,000 characters.</p>
+             * <p>The custom extraction instructions. This parameter is required when preset is set to custom. Length: 1 to 8000 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>Extract only user product preferences</p>
@@ -769,7 +852,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to apply this policy to new inputs. Default value: true. Disabling the policy does not delete historical memories.</p>
+             * <p>Specifies whether to execute this policy for new inputs. Default value: true. Disabling the policy does not delete historical memories.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -821,7 +904,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * storagePolicy.
+             * <p>The independent storage rule for this policy. If omitted, the original value is retained. New policies use the default value. Repeatedly confirmed memories refresh the validity period by default.</p>
              */
             public Builder storagePolicy(StoragePolicy storagePolicy) {
                 this.storagePolicy = storagePolicy;
@@ -829,7 +912,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The ID of the extraction policy. This parameter is optional. If omitted, the default value is default. The ID must start with a letter and can contain only letters, digits, underscores (_), and hyphens (-). It can be up to 64 characters in length. After default value processing, the ID must be unique within the same library. Modifying the name or instructions does not change this ID.</p>
+             * <p>The ID of the extraction policy. This parameter is optional. If omitted, the default value is used. The ID must start with a letter and can contain only letters, digits, underscores, and hyphens. Maximum length: 64 characters. After default processing, the ID must be unique within the same library. Modifying the name or instructions does not change this ID.</p>
              * 
              * <strong>example:</strong>
              * <p>preferences</p>
@@ -886,7 +969,7 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * <p>The name of the extraction model. Currently, only qwen3.8-flash is supported. The platform uses internal credentials.</p>
+             * <p>The name of the extraction model. Currently, only qwen3.8-flash is supported, which uses internal platform credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3.8-flash</p>
@@ -1006,7 +1089,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The custom extraction instructions. This parameter is required when preset is set to custom. The length must be 1 to 8,000 characters.</p>
+             * <p>The custom extraction instructions. This parameter is required when preset is set to custom. Length: 1 to 8000 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>Extract only user product preferences</p>
@@ -1093,7 +1176,7 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * <p>Specifies that at least one of the specified scope fields must be non-empty. Valid values for elements: userId, agentId, appId, and runId.</p>
+             * <p>Specifies that at least one of the scope fields must be non-empty. Valid values for the elements: userId, agentId, appId, and runId.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;userId&quot;]</p>
@@ -1202,7 +1285,7 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * <p>The field description. Required when usage is set to extraction-input.</p>
+             * <p>The description of the field. This parameter is required when usage is set to extraction-input.</p>
              * 
              * <strong>example:</strong>
              * <p>Customer tier</p>
@@ -1235,7 +1318,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The target path for writing, such as metadata.customerTier.</p>
+             * <p>The target write path, such as metadata.customerTier.</p>
              * 
              * <strong>example:</strong>
              * <p>metadata.customerTier</p>
@@ -1303,7 +1386,7 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * <p>The subset of the pipeline where clause, which is pushed down to SQL.</p>
+             * <p>The subset of the Pipeline where clause, which is pushed down to SQL.</p>
              * 
              * <strong>example:</strong>
              * <p>appId = \&quot;crm-service\&quot;</p>
@@ -1386,7 +1469,7 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * <p>The list of custom field declarations. If specified, the entire list is overwritten.</p>
+             * <p>The list of custom field declarations. If provided, the entire list is overwritten.</p>
              */
             public Builder customFields(java.util.List<CustomFields> customFields) {
                 this.customFields = customFields;
@@ -1394,7 +1477,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The row filter conditions.</p>
+             * <p>The row filter condition.</p>
              */
             public Builder filter(Filter filter) {
                 this.filter = filter;
@@ -1522,7 +1605,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to exclude degraded trajectories. Default value: false (includes degraded trajectories).</p>
+             * <p>Specifies whether to exclude degraded trajectories. Default value: false (degraded trajectories are included).</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1544,7 +1627,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The native Simple Log Service (SLS) query statement. It is combined with the preceding conditions using AND.</p>
+             * <p>The native Simple Log Service (SLS) query statement, which is combined with the preceding conditions using AND.</p>
              * 
              * <strong>example:</strong>
              * <p>tool_names:&quot;search_order&quot;</p>
@@ -1651,7 +1734,7 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * <p>The JSONPath for agentId. Default value: $.agent_name.</p>
+             * <p>The JSONPath expression for agentId. Default value: $.agent_name.</p>
              * 
              * <strong>example:</strong>
              * <p>$.agent_name</p>
@@ -1662,7 +1745,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The JSONPath for appId. Default value: $.service_names[0].</p>
+             * <p>The JSONPath expression for appId. Default value: $.service_names[0].</p>
              * 
              * <strong>example:</strong>
              * <p>$.service_names[0]</p>
@@ -1673,7 +1756,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The JSONPath for runId. Default value: $.trajectory_id.</p>
+             * <p>The JSONPath expression for runId. Default value: $.trajectory_id.</p>
              * 
              * <strong>example:</strong>
              * <p>$.trajectory_id</p>
@@ -1684,7 +1767,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The JSONPath for userId. By default, this field is not mapped.</p>
+             * <p>The JSONPath expression for userId. By default, this field is not mapped.</p>
              * 
              * <strong>example:</strong>
              * <p>$.trajectory_extensions.user_id</p>
@@ -1780,7 +1863,7 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * <p>The trajectory filter conditions. Conditions are combined with AND, and items within a list are combined with OR.</p>
+             * <p>The trajectory filter conditions. Conditions are combined with AND, while items within a list are combined with OR.</p>
              */
             public Builder filter(TrajectoryFilter filter) {
                 this.filter = filter;
@@ -1903,7 +1986,7 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * <p>The AgentSpace where the trace data source is located. Cross-AgentSpace operations are not supported in the current phase. If specified, the value must be equal to the path AgentSpace. Otherwise, a 400 parameter error is returned. The AgentSpace cannot be changed after creation.</p>
+             * <p>The AgentSpace where the trace data source is located. Cross-AgentSpace operations are not supported in the current version. If specified, the value must be equal to the path AgentSpace. Otherwise, a 400 parameter error is returned. The AgentSpace cannot be changed after creation.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent-space</p>
@@ -1922,7 +2005,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The start time for data backfill in ISO 8601 UTC format.</p>
+             * <p>The start time for data backfill, in ISO 8601 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>
@@ -2076,7 +2159,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to deduplicate data in event mode. Default value: true.</p>
+             * <p>Specifies whether to enable deduplication in event mode. Default value: true.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2109,7 +2192,12 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The storage mode. Valid values: event (event append) and upsert (merge and update). Default value: upsert.</p>
+             * <p>The storage mode. Valid values:</p>
+             * <ul>
+             * <li>event: Event append.</li>
+             * <li>upsert: Merge and update.
+             * Default value: upsert.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>upsert</p>
@@ -2167,6 +2255,9 @@ public class UpdateContextStoreRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("metadataField")
         private java.util.Map<String, String> metadataField;
 
+        @com.aliyun.core.annotation.NameInMap("runtimeRecallEnabled")
+        private Boolean runtimeRecallEnabled;
+
         @com.aliyun.core.annotation.NameInMap("scopePolicy")
         private ScopePolicy scopePolicy;
 
@@ -2181,6 +2272,7 @@ public class UpdateContextStoreRequest extends Request {
             this.extractionPolicies = builder.extractionPolicies;
             this.extractionPolicy = builder.extractionPolicy;
             this.metadataField = builder.metadataField;
+            this.runtimeRecallEnabled = builder.runtimeRecallEnabled;
             this.scopePolicy = builder.scopePolicy;
             this.source = builder.source;
             this.storagePolicy = builder.storagePolicy;
@@ -2223,6 +2315,13 @@ public class UpdateContextStoreRequest extends Request {
         }
 
         /**
+         * @return runtimeRecallEnabled
+         */
+        public Boolean getRuntimeRecallEnabled() {
+            return this.runtimeRecallEnabled;
+        }
+
+        /**
          * @return scopePolicy
          */
         public ScopePolicy getScopePolicy() {
@@ -2248,6 +2347,7 @@ public class UpdateContextStoreRequest extends Request {
             private java.util.List<ExtractionPolicies> extractionPolicies; 
             private ExtractionPolicy extractionPolicy; 
             private java.util.Map<String, String> metadataField; 
+            private Boolean runtimeRecallEnabled; 
             private ScopePolicy scopePolicy; 
             private Source source; 
             private ConfigStoragePolicy storagePolicy; 
@@ -2260,6 +2360,7 @@ public class UpdateContextStoreRequest extends Request {
                 this.extractionPolicies = model.extractionPolicies;
                 this.extractionPolicy = model.extractionPolicy;
                 this.metadataField = model.metadataField;
+                this.runtimeRecallEnabled = model.runtimeRecallEnabled;
                 this.scopePolicy = model.scopePolicy;
                 this.source = model.source;
                 this.storagePolicy = model.storagePolicy;
@@ -2274,7 +2375,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The extraction policies. You can specify 1 to 10 policies. In a request, you can specify either this field or the compatible extractionPolicy field, but not both. The strategyVersion parameter indicates the snapshot version of the entire library configuration.</p>
+             * <p>The extraction policies. You can specify 1 to 10 policies. Compatible fields returned as-is during updates are ignored. strategyVersion indicates the snapshot version of the entire library configuration.</p>
              */
             public Builder extractionPolicies(java.util.List<ExtractionPolicies> extractionPolicies) {
                 this.extractionPolicies = extractionPolicies;
@@ -2290,13 +2391,21 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The metadata field mapping. The key is the business field and the value is the storage field.</p>
+             * <p>The metadata field mapping, where the key is the business field and the value is the storage field.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;userId&quot;:&quot;user_id&quot;,&quot;sessionId&quot;:&quot;session_id&quot;}</p>
              */
             public Builder metadataField(java.util.Map<String, String> metadataField) {
                 this.metadataField = metadataField;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether runtime recall is allowed for the experience library. When modifying this parameter, you must provide expectedRuntimeRecallRevision and submit only this property in the config.</p>
+             */
+            public Builder runtimeRecallEnabled(Boolean runtimeRecallEnabled) {
+                this.runtimeRecallEnabled = runtimeRecallEnabled;
                 return this;
             }
 
@@ -2309,7 +2418,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The datasource config. This serves only as the root identity for the data source.</p>
+             * <p>The datasource config, which serves only as the root identity for the data source.</p>
              */
             public Builder source(Source source) {
                 this.source = source;
