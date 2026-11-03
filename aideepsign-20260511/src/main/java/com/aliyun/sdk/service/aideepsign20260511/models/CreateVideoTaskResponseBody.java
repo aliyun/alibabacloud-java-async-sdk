@@ -130,7 +130,7 @@ public class CreateVideoTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The <strong>HTTP status code</strong>. A value of 200 indicates that the request is successful.</p>
+         * <p><strong>HTTP status code</strong>. A value of 200 indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
