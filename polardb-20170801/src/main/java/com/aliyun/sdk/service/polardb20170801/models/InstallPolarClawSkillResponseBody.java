@@ -29,14 +29,23 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Ok")
     private Boolean ok;
 
+    @com.aliyun.core.annotation.NameInMap("Operation")
+    private String operation;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Slug")
     private String slug;
 
+    @com.aliyun.core.annotation.NameInMap("State")
+    private String state;
+
     @com.aliyun.core.annotation.NameInMap("TargetDir")
     private String targetDir;
+
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
 
     @com.aliyun.core.annotation.NameInMap("Version")
     private String version;
@@ -46,9 +55,12 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         this.code = builder.code;
         this.message = builder.message;
         this.ok = builder.ok;
+        this.operation = builder.operation;
         this.requestId = builder.requestId;
         this.slug = builder.slug;
+        this.state = builder.state;
         this.targetDir = builder.targetDir;
+        this.taskId = builder.taskId;
         this.version = builder.version;
     }
 
@@ -93,6 +105,13 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
     }
 
     /**
+     * @return operation
+     */
+    public String getOperation() {
+        return this.operation;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -107,10 +126,24 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
     }
 
     /**
+     * @return state
+     */
+    public String getState() {
+        return this.state;
+    }
+
+    /**
      * @return targetDir
      */
     public String getTargetDir() {
         return this.targetDir;
+    }
+
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
     }
 
     /**
@@ -125,9 +158,12 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private Boolean ok; 
+        private String operation; 
         private String requestId; 
         private String slug; 
+        private String state; 
         private String targetDir; 
+        private String taskId; 
         private String version; 
 
         private Builder() {
@@ -138,9 +174,12 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
             this.code = model.code;
             this.message = model.message;
             this.ok = model.ok;
+            this.operation = model.operation;
             this.requestId = model.requestId;
             this.slug = model.slug;
+            this.state = model.state;
             this.targetDir = model.targetDir;
+            this.taskId = model.taskId;
             this.version = model.version;
         } 
 
@@ -156,7 +195,7 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response status code.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -167,7 +206,7 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -178,13 +217,24 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the operation is successful. This parameter is returned when Async is set to false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
+            return this;
+        }
+
+        /**
+         * <p>The operation name. This parameter is returned when Async is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstallPolarClawSkill</p>
+         */
+        public Builder operation(String operation) {
+            this.operation = operation;
             return this;
         }
 
@@ -200,7 +250,7 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The identifier of the installed Skill.</p>
+         * <p>The identifier of the installed skill. This parameter is returned during synchronous execution.</p>
          * 
          * <strong>example:</strong>
          * <p>alibacloud-rds-copilot</p>
@@ -211,7 +261,18 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The installation directory.</p>
+         * <p>The initial state of the task. This parameter is returned when Async is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pending</p>
+         */
+        public Builder state(String state) {
+            this.state = state;
+            return this;
+        }
+
+        /**
+         * <p>The installation directory. This parameter is returned during synchronous execution.</p>
          * 
          * <strong>example:</strong>
          * <p>/home/node/.openclaw/skills/alibacloud-rds-copilot</p>
@@ -222,7 +283,18 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number of the installed Skill.</p>
+         * <p>The ID of the asynchronous task. This parameter is returned when Async is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9f1c2e3d-xxxx</p>
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * <p>The installed version number. This parameter is returned during synchronous execution.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.0</p>

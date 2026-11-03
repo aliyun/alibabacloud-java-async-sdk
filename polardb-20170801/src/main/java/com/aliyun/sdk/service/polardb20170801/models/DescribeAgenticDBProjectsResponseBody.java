@@ -170,6 +170,9 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
      * <p>DescribeAgenticDBProjectsResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BranchCount")
+        private Long branchCount;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -201,6 +204,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         private String tenantId;
 
         private Items(Builder builder) {
+            this.branchCount = builder.branchCount;
             this.createTime = builder.createTime;
             this.DBClusterId = builder.DBClusterId;
             this.defaultBranchId = builder.defaultBranchId;
@@ -219,6 +223,13 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return branchCount
+         */
+        public Long getBranchCount() {
+            return this.branchCount;
         }
 
         /**
@@ -292,6 +303,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long branchCount; 
             private String createTime; 
             private String DBClusterId; 
             private String defaultBranchId; 
@@ -307,6 +319,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.branchCount = model.branchCount;
                 this.createTime = model.createTime;
                 this.DBClusterId = model.DBClusterId;
                 this.defaultBranchId = model.defaultBranchId;
@@ -320,7 +333,19 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time. The time is in ISO 8601 format and the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The number of all undeleted branches in the project, including hibernated branches and branches not bound to compute nodes. This parameter is empty if not provided by earlier backend versions, which does not indicate zero branches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder branchCount(Long branchCount) {
+                this.branchCount = branchCount;
+                return this;
+            }
+
+            /**
+             * <p>The creation time.</p>
+             * <p>The time follows the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T11:00:00Z</p>
@@ -375,7 +400,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period for recent records of the project. This field may be empty for older projects. To query the current effective value, call DescribeAgenticDBProjectHistoryRetention.</p>
+             * <p>The retention period of recent records for the project. This parameter may be empty for earlier projects. To query the current effective value, call DescribeAgenticDBProjectHistoryRetention.</p>
              * 
              * <strong>example:</strong>
              * <p>604800</p>
@@ -408,12 +433,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The project status. Valid values:</p>
-             * <ul>
-             * <li>Active: Normal.</li>
-             * <li>Destroying: Being destroyed.</li>
-             * <li>Destroyed: Destroyed.</li>
-             * </ul>
+             * <p>The status of the project. Valid values: Active (normal), Destroying (being destroyed), and Destroyed (destroyed).</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -424,7 +444,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tenant ID.</p>
+             * <p>The ID of the tenant.</p>
              * 
              * <strong>example:</strong>
              * <p>t-4b83e0da66674951</p>

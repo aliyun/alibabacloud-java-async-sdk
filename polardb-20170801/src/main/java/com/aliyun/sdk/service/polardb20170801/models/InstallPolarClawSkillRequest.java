@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class InstallPolarClawSkillRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentId")
+    private String agentId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
@@ -25,6 +29,10 @@ public class InstallPolarClawSkillRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
+    private String scope;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SkillVersion")
@@ -44,8 +52,10 @@ public class InstallPolarClawSkillRequest extends Request {
 
     private InstallPolarClawSkillRequest(Builder builder) {
         super(builder);
+        this.agentId = builder.agentId;
         this.applicationId = builder.applicationId;
         this.force = builder.force;
+        this.scope = builder.scope;
         this.skillVersion = builder.skillVersion;
         this.slug = builder.slug;
         this.source = builder.source;
@@ -66,6 +76,13 @@ public class InstallPolarClawSkillRequest extends Request {
     }
 
     /**
+     * @return agentId
+     */
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
      * @return applicationId
      */
     public String getApplicationId() {
@@ -77,6 +94,13 @@ public class InstallPolarClawSkillRequest extends Request {
      */
     public Boolean getForce() {
         return this.force;
+    }
+
+    /**
+     * @return scope
+     */
+    public String getScope() {
+        return this.scope;
     }
 
     /**
@@ -108,8 +132,10 @@ public class InstallPolarClawSkillRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<InstallPolarClawSkillRequest, Builder> {
+        private String agentId; 
         private String applicationId; 
         private Boolean force; 
+        private String scope; 
         private String skillVersion; 
         private String slug; 
         private String source; 
@@ -121,13 +147,27 @@ public class InstallPolarClawSkillRequest extends Request {
 
         private Builder(InstallPolarClawSkillRequest request) {
             super(request);
+            this.agentId = request.agentId;
             this.applicationId = request.applicationId;
             this.force = request.force;
+            this.scope = request.scope;
             this.skillVersion = request.skillVersion;
             this.slug = request.slug;
             this.source = request.source;
             this.url = request.url;
         } 
+
+        /**
+         * <p>The target agent in the workspace. If not specified, the default agent is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
+        public Builder agentId(String agentId) {
+            this.putQueryParameter("AgentId", agentId);
+            this.agentId = agentId;
+            return this;
+        }
 
         /**
          * <p>The application ID.</p>
@@ -143,7 +183,7 @@ public class InstallPolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to force a reinstallation.</p>
+         * <p>Specifies whether to force reinstallation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -151,6 +191,18 @@ public class InstallPolarClawSkillRequest extends Request {
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
             this.force = force;
+            return this;
+        }
+
+        /**
+         * <p>The scope. Valid values: workspace (default) and global (shared directory). This parameter is mutually exclusive with AgentId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
+         */
+        public Builder scope(String scope) {
+            this.putQueryParameter("Scope", scope);
+            this.scope = scope;
             return this;
         }
 
@@ -167,7 +219,7 @@ public class InstallPolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>The Skill identifier.</p>
+         * <p>The skill identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>alibacloud-rds-copilot</p>
@@ -179,7 +231,7 @@ public class InstallPolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>The source.</p>
+         * <p>The source. Default value: polarhub.</p>
          * 
          * <strong>example:</strong>
          * <p>clawhub</p>

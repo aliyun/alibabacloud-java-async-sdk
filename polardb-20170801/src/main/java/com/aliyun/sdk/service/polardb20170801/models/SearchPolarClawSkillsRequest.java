@@ -23,6 +23,10 @@ public class SearchPolarClawSkillsRequest extends Request {
     private String applicationId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Exact")
+    private Boolean exact;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Limit")
     private Integer limit;
 
@@ -30,11 +34,17 @@ public class SearchPolarClawSkillsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
     private SearchPolarClawSkillsRequest(Builder builder) {
         super(builder);
         this.applicationId = builder.applicationId;
+        this.exact = builder.exact;
         this.limit = builder.limit;
         this.query = builder.query;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -58,6 +68,13 @@ public class SearchPolarClawSkillsRequest extends Request {
     }
 
     /**
+     * @return exact
+     */
+    public Boolean getExact() {
+        return this.exact;
+    }
+
+    /**
      * @return limit
      */
     public Integer getLimit() {
@@ -71,10 +88,19 @@ public class SearchPolarClawSkillsRequest extends Request {
         return this.query;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<SearchPolarClawSkillsRequest, Builder> {
         private String applicationId; 
+        private Boolean exact; 
         private Integer limit; 
         private String query; 
+        private String source; 
 
         private Builder() {
             super();
@@ -83,8 +109,10 @@ public class SearchPolarClawSkillsRequest extends Request {
         private Builder(SearchPolarClawSkillsRequest request) {
             super(request);
             this.applicationId = request.applicationId;
+            this.exact = request.exact;
             this.limit = request.limit;
             this.query = request.query;
+            this.source = request.source;
         } 
 
         /**
@@ -101,6 +129,18 @@ public class SearchPolarClawSkillsRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to perform an exact search by matching the slug.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder exact(Boolean exact) {
+            this.putQueryParameter("Exact", exact);
+            this.exact = exact;
+            return this;
+        }
+
+        /**
          * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +153,7 @@ public class SearchPolarClawSkillsRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. If this parameter is not specified, popular or recommended results are returned.</p>
+         * <p>The search keyword. If this parameter is not specified, popular or recommended skills are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -121,6 +161,18 @@ public class SearchPolarClawSkillsRequest extends Request {
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
             this.query = query;
+            return this;
+        }
+
+        /**
+         * <p>The source of the skill. Valid values: clawhub and polarhub.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarhub</p>
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

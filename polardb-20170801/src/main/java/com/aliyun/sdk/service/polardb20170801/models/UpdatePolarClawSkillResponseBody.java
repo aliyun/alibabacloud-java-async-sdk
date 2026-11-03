@@ -143,7 +143,7 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -162,7 +162,7 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

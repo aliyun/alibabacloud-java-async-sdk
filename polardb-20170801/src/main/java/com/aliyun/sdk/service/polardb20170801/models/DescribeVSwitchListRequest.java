@@ -218,7 +218,7 @@ public class DescribeVSwitchListRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be an integer that is greater than 0. It cannot exceed the maximum value of the Integer data type.</p>
+         * <p>The page number. The value must be an integer greater than 0 and no greater than the maximum value of the Integer type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -232,12 +232,9 @@ public class DescribeVSwitchListRequest extends Request {
         /**
          * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><p><strong>30</strong></p>
-         * </li>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>100</strong></p>
-         * </li>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
          * </ul>
          * <p>Default value: 30.</p>
          * 
@@ -251,9 +248,9 @@ public class DescribeVSwitchListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the vSwitch resides.</p>
+         * <p>The region ID of the vSwitch.</p>
          * <blockquote>
-         * <p>Call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query the IDs of all regions that support vSwitches.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all region IDs supported by vSwitches.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -294,7 +291,7 @@ public class DescribeVSwitchListRequest extends Request {
         }
 
         /**
-         * <p>A list of vSwitches in the VPC.</p>
+         * <p>The list of vSwitches in the VPC.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
@@ -303,9 +300,9 @@ public class DescribeVSwitchListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          * <blockquote>
-         * <p>Call <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> to view the details of the VPC.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to view VPC details.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -318,7 +315,7 @@ public class DescribeVSwitchListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone where the vSwitch resides.</p>
+         * <p>The zone ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>

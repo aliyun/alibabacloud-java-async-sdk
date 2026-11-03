@@ -27,6 +27,10 @@ public class CreateBatchTaskRequest extends Request {
     private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceParams")
+    private String instanceParams;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Param")
     private String param;
 
@@ -49,6 +53,7 @@ public class CreateBatchTaskRequest extends Request {
         super(builder);
         this.applicationType = builder.applicationType;
         this.instanceIds = builder.instanceIds;
+        this.instanceParams = builder.instanceParams;
         this.param = builder.param;
         this.regionId = builder.regionId;
         this.taskName = builder.taskName;
@@ -83,6 +88,13 @@ public class CreateBatchTaskRequest extends Request {
     }
 
     /**
+     * @return instanceParams
+     */
+    public String getInstanceParams() {
+        return this.instanceParams;
+    }
+
+    /**
      * @return param
      */
     public String getParam() {
@@ -113,6 +125,7 @@ public class CreateBatchTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateBatchTaskRequest, Builder> {
         private String applicationType; 
         private java.util.List<String> instanceIds; 
+        private String instanceParams; 
         private String param; 
         private String regionId; 
         private String taskName; 
@@ -126,6 +139,7 @@ public class CreateBatchTaskRequest extends Request {
             super(request);
             this.applicationType = request.applicationType;
             this.instanceIds = request.instanceIds;
+            this.instanceParams = request.instanceParams;
             this.param = request.param;
             this.regionId = request.regionId;
             this.taskName = request.taskName;
@@ -145,13 +159,25 @@ public class CreateBatchTaskRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs.</p>
+         * <p>The machine instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * <p>The per-instance parameter overrides (JSON object: instanceId -&gt; param). This parameter is used in scenarios where multiple instances have different targets, such as different agent workspaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;pa-xxx1&quot;:{&quot;agentId&quot;:&quot;test1&quot;},&quot;pa-xxx2&quot;:{&quot;scope&quot;:&quot;global&quot;}}</p>
+         */
+        public Builder instanceParams(String instanceParams) {
+            this.putQueryParameter("InstanceParams", instanceParams);
+            this.instanceParams = instanceParams;
             return this;
         }
 
@@ -168,10 +194,7 @@ public class CreateBatchTaskRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
-         * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the region information of all clusters under the target account.</p>
-         * </blockquote>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the regions of all clusters under the target account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

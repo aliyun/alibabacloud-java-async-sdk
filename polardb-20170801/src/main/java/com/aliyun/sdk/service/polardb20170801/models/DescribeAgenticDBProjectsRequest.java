@@ -145,7 +145,7 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         } 
 
         /**
-         * <p>The AgenticDB cluster ID.</p>
+         * <p>The ID of the AgenticDB cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
-         * <p>The project ID used for exact matching.</p>
+         * <p>The project ID for exact match.</p>
          * 
          * <strong>example:</strong>
          * <p>proj-a1b2c3d4e5f6</p>
@@ -194,7 +194,7 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
-         * <p>The project name used for fuzzy matching.</p>
+         * <p>The project name for fuzzy match.</p>
          * 
          * <strong>example:</strong>
          * <p>analytics</p>
@@ -219,7 +219,7 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The ID of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>t-4b83e0da66674951</p>

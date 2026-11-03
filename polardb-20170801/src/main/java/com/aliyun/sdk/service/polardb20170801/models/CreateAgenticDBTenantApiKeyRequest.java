@@ -36,8 +36,11 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TenantName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantName;
 
     private CreateAgenticDBTenantApiKeyRequest(Builder builder) {
@@ -46,6 +49,7 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
         this.description = builder.description;
         this.expireTime = builder.expireTime;
         this.regionId = builder.regionId;
+        this.tenantId = builder.tenantId;
         this.tenantName = builder.tenantName;
     }
 
@@ -91,6 +95,13 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return tenantName
      */
     public String getTenantName() {
@@ -102,6 +113,7 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
         private String description; 
         private String expireTime; 
         private String regionId; 
+        private String tenantId; 
         private String tenantName; 
 
         private Builder() {
@@ -114,6 +126,7 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
             this.description = request.description;
             this.expireTime = request.expireTime;
             this.regionId = request.regionId;
+            this.tenantId = request.tenantId;
             this.tenantName = request.tenantName;
         } 
 
@@ -131,7 +144,7 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The description of the purpose.</p>
+         * <p>The usage description.</p>
          * 
          * <strong>example:</strong>
          * <p>Dedicated key for MCP server</p>
@@ -168,8 +181,19 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The name of the tenant. The name must be unique within the same cluster and be 2 to 64 characters in length.</p>
-         * <p>This parameter is required.</p>
+         * <p>Specifies the ID of an existing tenant. If you specify this parameter, an API key is created only for the existing tenant in the current cluster. If the tenant does not exist, an error is returned and no tenant is created. If TenantName is also specified, the name must match the name of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-4b83e0da66674951</p>
+         */
+        public Builder tenantId(String tenantId) {
+            this.putQueryParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * <p>The name of the tenant. The name must be unique within the cluster and must be 2 to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>my-tenant</p>
