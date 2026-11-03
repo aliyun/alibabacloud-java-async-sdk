@@ -74,7 +74,7 @@ public class DeleteAllCustomizeFlowStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The region ID.</p>
+         * <p>regionId</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

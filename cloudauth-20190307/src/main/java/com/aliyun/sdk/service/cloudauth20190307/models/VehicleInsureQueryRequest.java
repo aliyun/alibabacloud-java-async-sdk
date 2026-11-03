@@ -126,8 +126,8 @@ public class VehicleInsureQueryRequest extends Request {
         /**
          * <p>The parameter type. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: not encrypted.</li>
-         * <li><strong>md5</strong>: MD5-encrypted.</li>
+         * <li><strong>normal</strong>: No encryption.</li>
+         * <li><strong>md5</strong>: MD5 encryption.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,8 +143,8 @@ public class VehicleInsureQueryRequest extends Request {
          * <p>The license plate number.</p>
          * <blockquote>
          * <ul>
-         * <li>If ParamType is set to normal, enter the plaintext value.</li>
-         * <li>If ParamType is set to md5, enter the plaintext of the license plate number excluding the last two characters, concatenated with the MD5-encrypted value of the last two characters (32-bit lowercase MD5).</li>
+         * <li>If paramType is set to normal, enter the plaintext.</li>
+         * <li>If paramType is set to md5, enter the plaintext of the license plate number excluding the last two characters, followed by the MD5 hash (32-character lowercase) of the last two characters.</li>
          * </ul>
          * </blockquote>
          * 
@@ -158,7 +158,7 @@ public class VehicleInsureQueryRequest extends Request {
         }
 
         /**
-         * <p>The vehicle type on the driving license.</p>
+         * <p>The permitted vehicle type of the driver\&quot;s license.</p>
          * 
          * <strong>example:</strong>
          * <p>02</p>
@@ -173,8 +173,8 @@ public class VehicleInsureQueryRequest extends Request {
          * <p>The vehicle identification number (VIN).</p>
          * <blockquote>
          * <ul>
-         * <li>If ParamType is set to normal, enter the plaintext value.</li>
-         * <li>If ParamType is set to md5, enter the plaintext of the VIN excluding the last 4 characters, concatenated with the MD5-encrypted value of the last 4 characters (32-bit lowercase MD5).</li>
+         * <li>If paramType is set to normal, enter the plaintext.</li>
+         * <li>If paramType is set to md5, enter the plaintext of the VIN excluding the last four characters, followed by the MD5 hash (32-character lowercase) of the last four characters.</li>
          * </ul>
          * </blockquote>
          * 

@@ -231,7 +231,7 @@ public class DescribeCloudauthstSceneListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Marketplace commodity code.</p>
+             * <p>The commodity code in Alibaba Cloud Marketplace.</p>
              * 
              * <strong>example:</strong>
              * <p>SMART_VERIFY</p>
@@ -269,7 +269,7 @@ public class DescribeCloudauthstSceneListResponseBody extends TeaModel {
              * <p>The scenario name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试场景</p>
+             * <p>Test scenario</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -277,7 +277,7 @@ public class DescribeCloudauthstSceneListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to deliver files generated during authentication to the customer\&quot;s OSS. Valid values:</p>
+             * <p>Specifies whether to deliver the files generated during verification to the customer\&quot;s OSS. Valid values:</p>
              * <ul>
              * <li><strong>Y</strong>: Enabled.</li>
              * <li><strong>N</strong>: Disabled.</li>

@@ -90,7 +90,7 @@ public class CreateSceneConfigRequest extends Request {
         } 
 
         /**
-         * <p>The willingness authentication configuration, in JSON string format.</p>
+         * <p>The intent authentication configuration, which is a JSON string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

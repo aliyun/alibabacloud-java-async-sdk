@@ -112,8 +112,8 @@ public class Vehicle5ItemQueryRequest extends Request {
         /**
          * <p>The parameter type. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: Not encrypted.</li>
-         * <li><strong>md5</strong>: MD5-encrypted.</li>
+         * <li><strong>normal</strong>: no encryption</li>
+         * <li><strong>md5</strong>: MD5 encryption</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,12 +127,10 @@ public class Vehicle5ItemQueryRequest extends Request {
 
         /**
          * <p>The license plate number.</p>
-         * <blockquote>
          * <ul>
-         * <li>If ParamType is set to normal, enter the plaintext value.</li>
-         * <li>If ParamType is set to md5, enter the plaintext of the license plate number excluding the last two characters, concatenated with the MD5-encrypted last two characters (32-bit lowercase MD5).</li>
+         * <li>When paramType is set to normal, enter the plaintext.</li>
+         * <li>When paramType is set to md5, enter the plaintext of the license plate number excluding the last two characters, followed by the 32-bit lowercase MD5 hash of the last two characters.</li>
          * </ul>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>陕A9****</p>
@@ -144,13 +142,11 @@ public class Vehicle5ItemQueryRequest extends Request {
         }
 
         /**
-         * <p>The vehicle type.</p>
-         * <blockquote>
+         * <p>The vehicle type. Valid values:</p>
          * <ul>
-         * <li>02: standard passenger car</li>
-         * <li>52: new energy passenger car.</li>
+         * <li>02: regular small passenger vehicle</li>
+         * <li>52: new energy small passenger vehicle</li>
          * </ul>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>02</p>

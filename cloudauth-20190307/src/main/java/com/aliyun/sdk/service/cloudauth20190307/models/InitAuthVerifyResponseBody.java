@@ -93,7 +93,7 @@ public class InitAuthVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class InitAuthVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -179,8 +179,8 @@ public class InitAuthVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The verification request ID, which is the unique identifier of the verification service authentication request.
-             * You must pass in the verification request ID when querying the authentication result.</p>
+             * <p>The verification request ID, which is the unique identifier of the authentication request for the verification service.
+             * This ID is required when you query the authentication result.</p>
              * 
              * <strong>example:</strong>
              * <p>shif9d1a185b8dde7cd07bf0943a448b</p>

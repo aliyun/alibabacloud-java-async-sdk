@@ -96,7 +96,7 @@ public class RemoveWhiteListSettingRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the whitelists to delete in batch.</p>
+         * <p>The IDs of the whitelists to delete in batches.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -106,7 +106,7 @@ public class RemoveWhiteListSettingRequest extends Request {
         }
 
         /**
-         * <p>The ServiceCode of the ID Verification service. Set this parameter to <strong>antcloudauth</strong>.</p>
+         * <p>The service code of the ID Verification service. Valid values: <strong>antcloudauth</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>antcloudauth</p>

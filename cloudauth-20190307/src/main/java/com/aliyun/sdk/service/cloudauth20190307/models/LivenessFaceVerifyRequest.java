@@ -264,7 +264,7 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>The unique identity of the ID Verification request.</p>
+         * <p>The unique identifier for ID Verification.</p>
          * 
          * <strong>example:</strong>
          * <p>91707dc296d469ad38e4c5efa6a0f24b</p>
@@ -276,11 +276,11 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow trim of the face image. Valid values:</p>
+         * <p>Specifies whether to allow cropping of face images. Valid values:</p>
          * <ul>
-         * <li><p>T: Trim is allowed.</p>
+         * <li><p>T: Cropping is allowed.</p>
          * </li>
-         * <li><p>F (default): Trim is not allowed.</p>
+         * <li><p>F: Cropping is not allowed. This is the default value.</p>
          * </li>
          * </ul>
          * 
@@ -306,7 +306,7 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>The Base64 encoding of the photo.</p>
+         * <p>The Base64-encoded photo.</p>
          * 
          * <strong>example:</strong>
          * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
@@ -330,7 +330,7 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the user network.</p>
+         * <p>The IP address of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>114.xxx.xxx.xxx</p>
@@ -354,7 +354,7 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>The liveness detection parameter.</p>
+         * <p>The liveness detection parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>FRONT_CAMERA_LIVENESS</p>
@@ -366,7 +366,7 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>The bucket name of the authorization-granted OSS bucket.</p>
+         * <p>The name of the authorized OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-aliyun-cloudauth-1494517779820665</p>
@@ -378,7 +378,7 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>The file name in the authorization-granted OSS bucket.</p>
+         * <p>The name of the object in the authorized OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>facedetect/17483113370916034.jpg</p>
@@ -390,7 +390,8 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>The custom business unique identity on the client side, which is used for subsequent troubleshooting. The value can contain up to 32 alphanumeric characters. Make sure the value is unique.</p>
+         * <p>The custom unique business identifier on the customer\&quot;s server, which is used for subsequent troubleshooting.
+         * The value can be up to 32 characters in length and can contain letters and digits. Make sure that the value is unique.</p>
          * 
          * <strong>example:</strong>
          * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -402,7 +403,7 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>Fixed value: LR_FR_MIN.</p>
+         * <p>The fixed value: LR_FR_MIN.</p>
          * 
          * <strong>example:</strong>
          * <p>LR_FR_MIN</p>
@@ -426,7 +427,7 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>The custom user ID (up to 100 characters). Make sure the value is unique.</p>
+         * <p>The custom user ID. The value can be up to 100 characters in length. Make sure that the value is unique.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>

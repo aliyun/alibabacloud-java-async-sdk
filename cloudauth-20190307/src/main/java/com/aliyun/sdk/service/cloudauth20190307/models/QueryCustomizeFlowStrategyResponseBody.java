@@ -119,7 +119,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+         * <p>The return code. 200 indicates success, and other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -171,7 +171,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the response is successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -344,7 +344,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rate limiting statistical window. Unit: <strong>minutes</strong>.</p>
+             * <p>The throttling statistics window, in <strong>minutes</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -368,10 +368,10 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
             /**
              * <p>The flow type. Valid values:</p>
              * <ul>
-             * <li><strong>ACCUMULATE</strong>: repeated occurrence of an ID card number.</li>
-             * <li><strong>PASSED_RATE</strong>: pass rate less than the threshold.</li>
-             * <li><strong>SUB_CODE_205</strong>: authentication failed and the proportion of liveness attack 205 is greater than the threshold.</li>
-             * <li><strong>SUB_CODE_206</strong>: authentication failed and the proportion of liveness attack 206 is greater than the threshold.</li>
+             * <li><strong>ACCUMULATE</strong>: Repeated occurrence of ID cards.</li>
+             * <li><strong>PASSED_RATE</strong>: Pass rate is less than.</li>
+             * <li><strong>SUB_CODE_205</strong>: Authentication fails and the proportion of liveness attack 205 is greater than.</li>
+             * <li><strong>SUB_CODE_206</strong>: Authentication fails and the proportion of liveness attack 206 is greater than.</li>
              * </ul>
              * 
              * <strong>example:</strong>

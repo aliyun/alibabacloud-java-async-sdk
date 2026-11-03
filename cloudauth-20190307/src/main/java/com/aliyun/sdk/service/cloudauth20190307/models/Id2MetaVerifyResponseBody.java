@@ -93,7 +93,7 @@ public class Id2MetaVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. <strong>200</strong> indicates that the request was successful.</p>
+         * <p>The return code. <strong>200</strong> indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -126,7 +126,7 @@ public class Id2MetaVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result information.</p>
+         * <p>The response result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -181,9 +181,9 @@ public class Id2MetaVerifyResponseBody extends TeaModel {
             /**
              * <p>The verification result code. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Consistent.</li>
-             * <li><strong>2</strong>: Inconsistent.</li>
-             * <li><strong>3</strong>: No record found.</li>
+             * <li><strong>1</strong>: consistent</li>
+             * <li><strong>2</strong>: inconsistent</li>
+             * <li><strong>3</strong>: no record found</li>
              * </ul>
              * 
              * <strong>example:</strong>

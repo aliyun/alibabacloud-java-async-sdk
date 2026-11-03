@@ -97,7 +97,7 @@ public class DetectFaceAttributesRequest extends Request {
         }
 
         /**
-         * <p>The business scenario identifier for the ID Verification service.</p>
+         * <p>The business scenario identifier for ID Verification.</p>
          * 
          * <strong>example:</strong>
          * <p>RPBasicTest</p>
@@ -109,7 +109,7 @@ public class DetectFaceAttributesRequest extends Request {
         }
 
         /**
-         * <p>The photo to be detected. For format details, see the notes on uploading image addresses. A maximum of 5 faces can be detected in a single image.</p>
+         * <p>The photo to be detected. For the format description, see the image URL description. A maximum of five faces in the same image can be detected.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

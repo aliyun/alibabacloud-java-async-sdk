@@ -93,7 +93,7 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. <strong>200</strong> indicates that the request was successful.</p>
+         * <p>The return code. A value of <strong>200</strong> indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result information.</p>
+         * <p>The returned result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -229,8 +229,8 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The device risk probability predicted by the device assistant algorithm. A higher score indicates a higher device risk.</p>
-             * <p>Value range: 0 to 100.</p>
+             * <p>The device risk probability predicted by the Device Assistant algorithm. A higher score indicates a higher device risk.</p>
+             * <p>Valid values: 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -241,7 +241,7 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended information in JSON format. The returned content is customized based on tenant requirements.</p>
+             * <p>The extended information in JSON format. This information is customized and returned based on tenant requirements.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -261,11 +261,11 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The device risk labels.</p>
+             * <p>The device risk tags.</p>
              * <ul>
-             * <li><p>Multiple device risk labels are separated by commas (,), such as &quot;ROOT,VPN,HOOK&quot;.</p>
+             * <li><p>Multiple device risk tags are separated by commas (,), such as ROOT,VPN,HOOK.</p>
              * </li>
-             * <li><p>For more information about device risk labels and their descriptions, see the Face Guard label description in the official documentation.</p>
+             * <li><p>For more information about device risk tags and their meanings, refer to the Face Guard tag description in the official documentation.</p>
              * </li>
              * </ul>
              * 

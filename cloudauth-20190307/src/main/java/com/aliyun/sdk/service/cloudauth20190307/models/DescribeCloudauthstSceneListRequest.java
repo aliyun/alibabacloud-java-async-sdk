@@ -59,7 +59,7 @@ public class DescribeCloudauthstSceneListRequest extends Request {
         } 
 
         /**
-         * <p>The commodity code.</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>SMART_CARD</p>

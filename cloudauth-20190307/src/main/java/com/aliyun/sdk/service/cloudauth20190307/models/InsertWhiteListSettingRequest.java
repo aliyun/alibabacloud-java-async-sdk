@@ -152,7 +152,7 @@ public class InsertWhiteListSettingRequest extends Request {
         }
 
         /**
-         * <p>The certificate number.</p>
+         * <p>The ID number.</p>
          * 
          * <strong>example:</strong>
          * <p>330103xxxxxxxxxxxx</p>
@@ -164,7 +164,7 @@ public class InsertWhiteListSettingRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the ID Verification request.</p>
+         * <p>The unique identifier for ID Verification.</p>
          * 
          * <strong>example:</strong>
          * <p>shsf57a4e0d9981c3bd66dc754f3d3cd</p>
@@ -176,7 +176,7 @@ public class InsertWhiteListSettingRequest extends Request {
         }
 
         /**
-         * <p>The remarks. The maximum length is 32 characters.</p>
+         * <p>The remark. The value must be less than 32 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -188,7 +188,7 @@ public class InsertWhiteListSettingRequest extends Request {
         }
 
         /**
-         * <p>The verification scenario ID. This ID is automatically generated after you create a verification scenario in the console. For information about how to create a verification scenario, see Add a verification scenario.</p>
+         * <p>The ID of the verification scenario. This ID is automatically generated after you create a verification scenario in the console. For more information about how to create a verification scenario, see Add a verification scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>100000xxxx</p>
@@ -200,7 +200,7 @@ public class InsertWhiteListSettingRequest extends Request {
         }
 
         /**
-         * <p>The ServiceCode of the ID Verification cloud service. Set this parameter to <strong>antcloudauth</strong>.</p>
+         * <p>The service code of the ID Verification cloud service. Valid values: <strong>antcloudauth</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>antcloudauth</p>
@@ -212,7 +212,7 @@ public class InsertWhiteListSettingRequest extends Request {
         }
 
         /**
-         * <p>The number of days the whitelist entry is valid. Valid values: 3, 7, and 30.</p>
+         * <p>The number of days that the whitelist remains valid. Valid values: 3, 7, and 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

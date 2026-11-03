@@ -93,7 +93,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of 200 indicates success. Other values indicate failure.</p>
+         * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result information.</p>
+         * <p>The returned result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -192,7 +192,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the Qwen interpretation is successful. Valid values:</p>
+             * <p>Indicates whether the Qwen explanation is successful. Valid values:</p>
              * <ul>
              * <li>true: Successful.</li>
              * <li>false: Failed.</li>
@@ -207,10 +207,10 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Qwen interpretation content.</p>
+             * <p>The content of the Qwen explanation.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;这张图有没有明显的PS特征\&quot;:0,\&quot;图片是否为正常经营照片\&quot;:1,\&quot;图片中有没有58、美团、大众点评字样\&quot;:0,\&quot;这张图有没有网站信息\&quot;:0,\&quot;图片经营的场景是否为酒店\&quot;:0}</p>
+             * <p>{&quot;Does this image have obvious Photoshop features&quot;:0,&quot;Is the image a normal business photo&quot;:1,&quot;Does the image contain the words 58, Meituan, or Dianping&quot;:0,&quot;Does this image contain website information&quot;:0,&quot;Is the business scene in the image a hotel&quot;:0}</p>
              */
             public Builder vlContent(String vlContent) {
                 this.vlContent = vlContent;
@@ -355,14 +355,14 @@ public class CredentialVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The additional information in JSON format.</p>
+             * <p>The other information in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{</p>
              * <p>&quot;sameBackgroundDetail&quot;: {</p>
-             * <p>// 相似背景对于的原始图请求RequestId</p>
+             * <p>// The request ID of the original image for the similar background</p>
              * <p>&quot;originalRequestId&quot;: &quot;130A2C10-B9EE-4D84-88E3-5384FF03****&quot;;</p>
-             * <p>// 相似背景对于的原始图请求商户ID</p>
+             * <p>// The merchant ID of the original image request for the similar background</p>
              * <p>&quot;originalMerchantId&quot;: &quot;xxxxxxxx&quot;</p>
              * <p>}</p>
              * <p>}</p>
@@ -373,15 +373,15 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OCR recognition result.</p>
+             * <p>The OCR result.</p>
              * 
              * <strong>example:</strong>
              * <p>{
              *    &quot;certNo&quot;:&quot;20216*********&quot;,
-             *   &quot;certType&quot;:&quot;小学教师资格&quot;,
-             *    &quot;gender&quot;:&quot;男&quot;,
-             *    &quot;subject&quot;:&quot;美术&quot;,
-             *     &quot;name&quot;:&quot;李**&quot;,
+             *   &quot;certType&quot;:&quot;Primary School Teacher Qualification&quot;,
+             *    &quot;gender&quot;:&quot;Male&quot;,
+             *    &quot;subject&quot;:&quot;Fine Arts&quot;,
+             *     &quot;name&quot;:&quot;Li**&quot;,
              *     &quot;ext_info&quot;:&quot;{}&quot;,
              *     &quot;birthDate&quot;:&quot;1998-07-28&quot;,
              *     &quot;idNo&quot;:&quot;620************&quot;,
@@ -398,7 +398,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
              * <ul>
              * <li><strong>0</strong>: Low risk.</li>
              * <li><strong>1</strong>: High risk.</li>
-             * <li><strong>2</strong>: Suspicious.</li>
+             * <li><strong><strong>2</strong></strong>: Suspicious.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -410,7 +410,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk score map.</p>
+             * <p>The map of risk scores.</p>
              */
             public Builder riskScore(java.util.Map<String, String> riskScore) {
                 this.riskScore = riskScore;
@@ -418,16 +418,16 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk tags, separated by commas (,). Valid values:</p>
+             * <p>The risk tags. Multiple tags are separated by commas (,). Valid values:</p>
              * <ul>
-             * <li>PS: image manipulation.</li>
-             * <li>SCREEN_PHOTO: screen recapture.</li>
-             * <li>SCREENSHOT: screenshot.</li>
-             * <li>WATERMARK: watermark.</li>
-             * <li>COLOR_PRINT: color print copy.</li>
-             * <li>WEB_IMAGE: web image.</li>
-             * <li>SAME_FACE: similar face.</li>
-             * <li>SAME_BACKGROUND: similar background.</li>
+             * <li>PS: The image is photoshopped.</li>
+             * <li>SCREEN_PHOTO: The image is a photo of a screen.</li>
+             * <li>SCREENSHOT: The image is a screenshot.</li>
+             * <li>WATERMARK: The image contains a watermark.</li>
+             * <li>COLOR_PRINT: The image is a color print or copy.</li>
+             * <li>WEB_IMAGE: The image is a web image.</li>
+             * <li>SAME_FACE: The face is similar to another face.</li>
+             * <li>SAME_BACKGROUND: The background is similar to another background.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -463,7 +463,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Qwen interpretation.</p>
+             * <p>The Qwen explanation.</p>
              */
             public Builder vlResult(VlResult vlResult) {
                 this.vlResult = vlResult;

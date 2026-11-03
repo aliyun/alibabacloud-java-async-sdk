@@ -21,6 +21,10 @@ public class DeepfakeDetectRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceAttributeCheck")
+    private String faceAttributeCheck;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FaceBase64")
     private String faceBase64;
@@ -40,6 +44,7 @@ public class DeepfakeDetectRequest extends Request {
     private DeepfakeDetectRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.faceAttributeCheck = builder.faceAttributeCheck;
         this.faceBase64 = builder.faceBase64;
         this.faceInputType = builder.faceInputType;
         this.faceUrl = builder.faceUrl;
@@ -64,6 +69,13 @@ public class DeepfakeDetectRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return faceAttributeCheck
+     */
+    public String getFaceAttributeCheck() {
+        return this.faceAttributeCheck;
     }
 
     /**
@@ -96,6 +108,7 @@ public class DeepfakeDetectRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeepfakeDetectRequest, Builder> {
         private String regionId; 
+        private String faceAttributeCheck; 
         private String faceBase64; 
         private String faceInputType; 
         private String faceUrl; 
@@ -108,6 +121,7 @@ public class DeepfakeDetectRequest extends Request {
         private Builder(DeepfakeDetectRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.faceAttributeCheck = request.faceAttributeCheck;
             this.faceBase64 = request.faceBase64;
             this.faceInputType = request.faceInputType;
             this.faceUrl = request.faceUrl;
@@ -124,9 +138,21 @@ public class DeepfakeDetectRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded face image.</p>
+         * <p>Specifies whether to enable facial attribute detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
+        public Builder faceAttributeCheck(String faceAttributeCheck) {
+            this.putQueryParameter("FaceAttributeCheck", faceAttributeCheck);
+            this.faceAttributeCheck = faceAttributeCheck;
+            return this;
+        }
+
+        /**
+         * <p>The Base64-encoded string of the facial image.</p>
          * <blockquote>
-         * <p>Specify either FaceUrl or FaceBase64.</p>
+         * <p>You must specify either FaceUrl or FaceBase64.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -139,13 +165,13 @@ public class DeepfakeDetectRequest extends Request {
         }
 
         /**
-         * <p>The input type of the face material. Valid values:</p>
+         * <p>The input type of the facial material. Valid values:</p>
          * <ul>
-         * <li>IMAGE (default): face image</li>
-         * <li>VIDEO: face video</li>
+         * <li>IMAGE (default): facial image.</li>
+         * <li>VIDEO: facial video.</li>
          * </ul>
          * <blockquote>
-         * <p>Video processing takes longer. Set the timeout to more than 3 seconds.</p>
+         * <p>Video processing takes a long time. Set the timeout period to greater than 3 seconds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -158,9 +184,9 @@ public class DeepfakeDetectRequest extends Request {
         }
 
         /**
-         * <p>The URL of the face image.</p>
+         * <p>The URL of the facial image.</p>
          * <blockquote>
-         * <p>Specify either FaceUrl or FaceBase64.</p>
+         * <p>You must specify either FaceUrl or FaceBase64.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -173,7 +199,7 @@ public class DeepfakeDetectRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the merchant request. The value is a 32-character alphanumeric string. The first few characters consist of a custom merchant abbreviation, the middle part can contain a time segment, and the last part can use a random or incremental sequence.</p>
+         * <p>The unique identifier of the merchant request. The value is a 32-character alphanumeric string. The first few characters consist of a custom abbreviation defined by the merchant, the middle part can contain a time period, and the latter part can be a random or incremental sequence.</p>
          * 
          * <strong>example:</strong>
          * <p>e0c34a77f5ac40a5aa5e6ed20c******</p>

@@ -93,7 +93,7 @@ public class DeepfakeDetectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+         * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DeepfakeDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class DeepfakeDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result information.</p>
+         * <p>The returned result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -146,6 +146,9 @@ public class DeepfakeDetectResponseBody extends TeaModel {
      * <p>DeepfakeDetectResponseBody</p>
      */
     public static class ResultObject extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FaceAttributeInfo")
+        private String faceAttributeInfo;
+
         @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
@@ -156,6 +159,7 @@ public class DeepfakeDetectResponseBody extends TeaModel {
         private String riskTag;
 
         private ResultObject(Builder builder) {
+            this.faceAttributeInfo = builder.faceAttributeInfo;
             this.result = builder.result;
             this.riskScore = builder.riskScore;
             this.riskTag = builder.riskTag;
@@ -167,6 +171,13 @@ public class DeepfakeDetectResponseBody extends TeaModel {
 
         public static ResultObject create() {
             return builder().build();
+        }
+
+        /**
+         * @return faceAttributeInfo
+         */
+        public String getFaceAttributeInfo() {
+            return this.faceAttributeInfo;
         }
 
         /**
@@ -191,6 +202,7 @@ public class DeepfakeDetectResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String faceAttributeInfo; 
             private String result; 
             private java.util.Map<String, String> riskScore; 
             private String riskTag; 
@@ -199,17 +211,29 @@ public class DeepfakeDetectResponseBody extends TeaModel {
             } 
 
             private Builder(ResultObject model) {
+                this.faceAttributeInfo = model.faceAttributeInfo;
                 this.result = model.result;
                 this.riskScore = model.riskScore;
                 this.riskTag = model.riskTag;
             } 
 
             /**
+             * <p>The facial attribute output fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;age\&quot;:49,\&quot;env\&quot;:\&quot;other\&quot;,\&quot;expression\&quot;:0,\&quot;gender\&quot;:1,\&quot;glasses\&quot;:1,\&quot;hat\&quot;:0,\&quot;mask\&quot;:0,\&quot;others\&quot;:0,\&quot;smoking\&quot;:0,\&quot;tattoo\&quot;:0}</p>
+             */
+            public Builder faceAttributeInfo(String faceAttributeInfo) {
+                this.faceAttributeInfo = faceAttributeInfo;
+                return this;
+            }
+
+            /**
              * <p>The risk result. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Low risk.</li>
-             * <li><strong>1</strong>: High risk.</li>
-             * <li><strong>2</strong>: Suspicious.</li>
+             * <li><strong>0</strong>: low risk.</li>
+             * <li><strong>1</strong>: high risk.</li>
+             * <li><strong>2</strong>: suspicious.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -221,7 +245,7 @@ public class DeepfakeDetectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk score map.</p>
+             * <p>The map of risk scores.</p>
              */
             public Builder riskScore(java.util.Map<String, String> riskScore) {
                 this.riskScore = riskScore;
@@ -229,11 +253,11 @@ public class DeepfakeDetectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk labels. Multiple labels are separated by commas (,). Valid values:</p>
+             * <p>The risk tags. Multiple tags are separated by commas (,). Valid values:</p>
              * <ul>
-             * <li>SuspectDeepForgery: suspected deepfake</li>
-             * <li>SuspectPSFace: suspected synthetic attack</li>
-             * <li>SuspectTemple: suspected fraudulent attack</li>
+             * <li>SuspectDeepForgery: suspected deepfake.</li>
+             * <li>SuspectPSFace: suspected synthetic attack.</li>
+             * <li>SuspectTemple: suspected black market attack.</li>
              * <li>SuspectRemake: suspected recaptured face.</li>
              * </ul>
              * 

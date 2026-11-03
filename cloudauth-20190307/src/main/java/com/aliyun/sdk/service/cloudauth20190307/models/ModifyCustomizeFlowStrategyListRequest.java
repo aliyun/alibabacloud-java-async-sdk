@@ -73,7 +73,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
         } 
 
         /**
-         * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (financial-grade ID Verification) is supported. All other types have been discontinued.</p>
+         * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (Financial-grade ID Verification) is supported. All other product types are retired.</p>
          * 
          * <strong>example:</strong>
          * <p>ANT_CLOUD_AUTH</p>
@@ -85,7 +85,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
         }
 
         /**
-         * <p>The policy list.</p>
+         * <p>The list of policies.</p>
          */
         public Builder strategyObject(java.util.List<StrategyObject> strategyObject) {
             String strategyObjectShrink = shrink(strategyObject, "StrategyObject", "json");
@@ -272,7 +272,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             }
 
             /**
-             * <p>The API name, which is the same as <strong>ProductCode</strong>.</p>
+             * <p>The API name. This parameter is the same as <strong>ProductCode</strong>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -286,10 +286,10 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             /**
              * <p>The flow type. Valid values:</p>
              * <ul>
-             * <li><strong>ACCUMULATE</strong>: repeated occurrence of an ID card.</li>
-             * <li><strong>PASSED_RATE</strong>: pass rate is less than.</li>
-             * <li><strong>SUB_CODE_205</strong>: authentication failed and the proportion of liveness attack 205 is greater than.</li>
-             * <li><strong>SUB_CODE_206</strong>: authentication failed and the proportion of liveness attack 206 is greater than.</li>
+             * <li><strong>ACCUMULATE</strong>: Duplicate ID cards.</li>
+             * <li><strong>PASSED_RATE</strong>: The pass rate is less than the specified value.</li>
+             * <li><strong>SUB_CODE_205</strong>: Authentication fails and the proportion of liveness attack 205 is greater than the specified value.</li>
+             * <li><strong>SUB_CODE_206</strong>: Authentication fails and the proportion of liveness attack 206 is greater than the specified value.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -301,7 +301,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             }
 
             /**
-             * <p>The rule ID.</p>
+             * <p>The ID of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>38</p>
@@ -327,8 +327,8 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             /**
              * <p>The status. Valid values:</p>
              * <ul>
-             * <li><strong>disabled</strong>: disabled.</li>
-             * <li><strong>normal</strong>: enabled.</li>
+             * <li><strong>disabled</strong>: Disabled.</li>
+             * <li><strong>normal</strong>: Enabled.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -353,7 +353,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>126005125163xxxx</p>

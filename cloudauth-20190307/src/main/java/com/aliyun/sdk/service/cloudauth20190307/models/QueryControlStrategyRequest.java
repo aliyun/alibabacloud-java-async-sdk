@@ -73,7 +73,7 @@ public class QueryControlStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The product type. Currently, only ANT_CLOUD_AUTH (financial-grade ID Verification) is supported. All other product types have been discontinued.</p>
+         * <p>The product type. Only ANT_CLOUD_AUTH (Financial-grade ID Verification) is supported. All other product types are retired.</p>
          * 
          * <strong>example:</strong>
          * <p>ANT_CLOUD_AUTH</p>

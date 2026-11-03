@@ -116,7 +116,7 @@ public class DeleteCustomizeFlowStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The API name, same as <strong>ProductCode</strong>.</p>
+         * <p>The API name, which is the same as <strong>ProductCode</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_PRO</p>
@@ -141,7 +141,7 @@ public class DeleteCustomizeFlowStrategyRequest extends Request {
         }
 
         /**
-         * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (financial-grade ID Verification) is supported. All other types have been discontinued.</p>
+         * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (financial-grade ID Verification) is supported. All other types are retired.</p>
          * 
          * <strong>example:</strong>
          * <p>ANT_CLOUD_AUTH</p>
@@ -153,7 +153,7 @@ public class DeleteCustomizeFlowStrategyRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>regionId</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

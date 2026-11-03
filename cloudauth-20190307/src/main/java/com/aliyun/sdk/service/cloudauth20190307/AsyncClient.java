@@ -27,15 +27,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Verifies bank card information consistency, including two-element verification (name + bank card number), three-element verification (name + ID card number + bank card number), and four-element verification (name + ID card number + phone number + bank card number).</p>
+     * <p>Bank card consistency verification, including two-element verification (name and bank card number), three-element verification (name, ID card number, and bank card number), and four-element verification (name, ID card number, mobile phone number, and bank card number).</p>
      * <ul>
-     * <li>Service endpoint:<ul>
-     * <li>Singapore region: cloudauth.ap-southeast-1.aliyuncs.com (IPv4) or cloudauth-dualstack.ap-southeast-1.aliyuncs.com (IPv6).</li>
-     * <li>Malaysia region: cloudauth.ap-southeast-3.aliyuncs.com (IPv4) or cloudauth-dualstack.ap-southeast-3.aliyuncs.com (IPv6).</li>
+     * <li>Service endpoints:<ul>
+     * <li>China (Beijing) region: cloudauth.cn-beijing.aliyuncs.com (IPv4) or cloudauth-dualstack.cn-beijing.aliyuncs.com (IPv6).</li>
+     * <li>China (Shanghai) region: cloudauth.cn-shanghai.aliyuncs.com (IPv4) or cloudauth-dualstack.cn-shanghai.aliyuncs.com (IPv6).</li>
      * </ul>
      * </li>
-     * <li>Request method: POST and GET.</li>
-     * <li>Transfer protocol: HTTPS.</li>
+     * <li>Request methods: POST and GET.</li>
+     * <li>Transport protocol: HTTPS.</li>
      * </ul>
      * 
      * @param request the request parameters of BankMetaVerify  BankMetaVerifyRequest
@@ -48,17 +48,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <ul>
      * <li>API operation: CompareFaceVerify.</li>
      * <li>Endpoint: cloudauth.aliyuncs.com.</li>
-     * <li>Request method: HTTPS POST and GET.</li>
+     * <li>Request methods: HTTPS POST and GET.</li>
      * <li>Operation description: Implements ID Verification through server-side integration.</li>
      * </ul>
-     * <h4>Photo format requirements</h4>
-     * <p>When performing face comparison, submit two face photos that meet all of the following conditions:</p>
+     * <h4>Requirements for uploaded photos</h4>
+     * <p>When you perform face comparison, upload two face photos that meet all the following conditions.</p>
      * <ul>
-     * <li>Recent photos or recent reference photos with a complete, clear, and unobstructed face, a natural expression, and the subject facing the camera directly.</li>
-     * <li>Clear photos with normal exposure. The face must not be too dark, too bright, or have lens flare, and the angle must not deviate significantly.</li>
-     * <li>Resolution must not exceed 1920×1080 and must be at least 640×480. The short side is recommended to be scaled to 720 pixels with a compression ratio greater than 0.9.</li>
-     * <li>Photo size: &lt; 1 MB.</li>
-     * <li>Photos rotated 90, 180, and 270 degrees are supported. If multiple faces are detected, the largest face is selected.</li>
+     * <li>The photos must be recent photos or recent photos from the base library. The faces must be complete, clear, and unobstructed, with natural expressions and facing the camera directly.</li>
+     * <li>The photos must be clear and properly exposed. The faces must not be too dark, too bright, or have halos. The angle must not deviate significantly.</li>
+     * <li>The resolution must not exceed 1920×1080 and must be at least 640×480. We recommend that you scale the short side to 720 pixels and use a compression ratio greater than 0.9.</li>
+     * <li>Photo size: less than 1 MB.</li>
+     * <li>Photos rotated by 90, 180, and 270 degrees are supported. If multiple faces are detected, the largest face is selected.</li>
      * </ul>
      * 
      * @param request the request parameters of CompareFaceVerify  CompareFaceVerifyRequest
@@ -69,19 +69,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>Request method: Only HTTPS POST requests are supported.
-     * Operation description: Specifies two face images for comparison and returns a similarity score between the faces in the two images.</p>
+     * API description: Compares two specified face images and returns the similarity score of the faces in the two images.</p>
      * <ul>
-     * <li>At least one of the specified comparison images must be of the face photo type (FacePic).</li>
-     * <li>If an image contains multiple faces, the algorithm automatically selects the face that occupies the largest area in the image.</li>
-     * <li>If no face is detected in one of the two comparison images, the system returns a &quot;No face detected&quot; error.
-     * When you submit images, you must provide the corresponding HTTP URL or Base64 encoding of each image.</li>
-     * <li>HTTP URL: A publicly accessible HTTP URL. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
-     * <li>Base64 encoding: A Base64-encoded image in the format <code>base64://&lt;Base64-encoded image string&gt;</code>.
+     * <li>At least one of the specified images must be a face photo (FacePic).</li>
+     * <li>If an image contains multiple faces, the algorithm automatically selects the largest face in the image.</li>
+     * <li>If no face is detected in one of the two images, the system returns a &quot;No face detected&quot; error message.
+     * When you pass images, you must upload the HTTP URL or Base64 encoding of the image.</li>
+     * <li>HTTP URL: A publicly accessible HTTP URL. Example: <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
+     * <li>Base64 encoding: A Base64-encoded image in the format of <code>base64://&lt;Base64 string of the image&gt;</code>.
      * Image limits.</li>
-     * <li>Relative paths or absolute paths of local images are not supported.</li>
-     * <li>Keep the size of each image within 2 MB to avoid algorithm retrieval timeout.</li>
-     * <li>The body of a single request has a size limit of 8 MB. Make sure that the total size of all images and other information in the request does not exceed this limit.</li>
-     * <li>When you use Base64 to transmit images, set the request method to POST. Remove the header description from the Base64 character string, such as <code>data:image/png;base64,</code>.</li>
+     * <li>The relative path or absolute path of local images is not supported.</li>
+     * <li>The size of a single image must be less than 2 MB to prevent algorithm pull timeouts.</li>
+     * <li>The body of a single request is limited to 8 MB. Make sure that the total size of all images and other information in the request does not exceed this limit.</li>
+     * <li>When you use Base64 to pass images, the request method must be POST. You must remove the header description from the Base64 character string, such as the data URI prefix.</li>
      * </ul>
      * 
      * @param request the request parameters of CompareFaces  CompareFacesRequest
@@ -127,8 +127,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Request method: Send requests by using the HTTPS POST method.
-     * Request URL: cloudauth.aliyuncs.com.</p>
+     * <p>Request method: HTTPS POST.
+     * Request endpoint: cloudauth.aliyuncs.com.</p>
      * <blockquote>
      * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
@@ -160,8 +160,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Service endpoint: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
-     * <li>Request method: POST and GET.</li>
-     * <li>Transfer protocol: HTTPS.</li>
+     * <li>Request methods: POST and GET.</li>
+     * <li>Transport protocol: HTTPS.</li>
      * </ul>
      * 
      * @param request the request parameters of CredentialVerify  CredentialVerifyRequest
@@ -172,12 +172,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The face deepfake detection operation is currently in free public preview. The free public preview ends at 23:59:59 on August 30, 2024. During the public preview, the QPS cannot exceed 3 queries per second.</p>
+     * <p>The facial deepfake detection API is currently in the free public preview phase. The free public preview ends at 23:59:59 on August 30, 2024. During the public preview, the queries per second (QPS) cannot exceed 3.</p>
      * </blockquote>
      * <ul>
      * <li>Service endpoint: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
-     * <li>Request method: POST and GET.</li>
-     * <li>Transfer protocol: HTTPS.</li>
+     * <li>Request methods: POST and GET.</li>
+     * <li>Transport protocol: HTTPS.</li>
      * </ul>
      * 
      * @param request the request parameters of DeepfakeDetect  DeepfakeDetectRequest
@@ -187,7 +187,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Request method: Supports sending requests by using the HTTPS POST and GET methods.</p>
+     * <p>Request method: You can send requests by using the HTTPS POST and GET methods.</p>
      * <blockquote>
      * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
@@ -232,8 +232,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Request method: Supports sending requests using the HTTPS POST method.
-     * Request URL: cloudauth.aliyuncs.com.</p>
+     * <p>Request method: You can send requests by using the HTTPS POST method.
+     * Request endpoint: cloudauth.aliyuncs.com.</p>
      * 
      * @param request the request parameters of DeleteControlStrategy  DeleteControlStrategyRequest
      * @return DeleteControlStrategyResponse
@@ -242,9 +242,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
+     * <p>Request method: You can send requests by using the HTTPS POST and GET methods.</p>
      * <blockquote>
-     * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
+     * <p>An authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteCustomizeFlowStrategy  DeleteCustomizeFlowStrategyRequest
@@ -254,7 +254,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes all personal information fields from the request, including name, ID card number, phone number, IP address, images, videos, device information, etc.</p>
+     * <p>Deletes all fields related to personal information in the request, such as the name, ID card number, mobile phone number, IP address, images, videos, and device information.</p>
      * 
      * @param request the request parameters of DeleteFaceVerifyResult  DeleteFaceVerifyResultRequest
      * @return DeleteFaceVerifyResultResponse
@@ -264,9 +264,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request method: HTTPS POST and GET methods are supported.</li>
-     * <li>Request URL: cloudauth.aliyuncs.com.<blockquote>
-     * <p>The authorization code is valid for 30 minutes and cannot be reused. Obtain a new authorization code before each activation.</p>
+     * <li>Request method: Supports HTTPS POST and GET methods.</li>
+     * <li>Endpoint: cloudauth.aliyuncs.com.<blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -305,7 +305,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you receive a callback notification, you can call this operation on the server side to obtain the corresponding verification status and verification materials.</p>
+     * <p>After you receive a callback notification, you can call this operation on your server to retrieve the authentication status and materials.</p>
      * 
      * @param request the request parameters of DescribeCardVerify  DescribeCardVerifyRequest
      * @return DescribeCardVerifyResponse
@@ -314,7 +314,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
+     * <p>Request method: You can send requests by using the HTTPS POST or GET method.</p>
      * <blockquote>
      * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
@@ -447,8 +447,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request method: HTTPS POST and GET methods are supported.</li>
-     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request methods: Supports HTTPS POST and GET methods.</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeOssStatusV2  DescribeOssStatusV2Request
@@ -566,12 +566,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you begin: Before calling this API, make sure that you have completed the required preparations. For more information, see <a href="https://help.aliyun.com/document_detail/127471.html">ID Verification server-side integration preparations</a> and <a href="https://help.aliyun.com/document_detail/127717.html">Face liveness verification server-side integration preparations</a>.</p>
+     * <p>Before you begin: Before integrating this API, make sure that you have completed the required preparations. For more information, see <a href="https://help.aliyun.com/document_detail/127471.html">Preparations for integrating the ID Verification server</a> and <a href="https://help.aliyun.com/document_detail/127717.html">Preparations for integrating the face liveness verification server</a>.</p>
      * <blockquote>
-     * <p>Alibaba Cloud ID Verification retains verification data for only the last 180 days. To use verification data for subsequent business purposes, call this operation promptly to retrieve and store the data to avoid data loss.
-     * Request method: HTTPS POST and GET.
-     * Operation description: After the caller\&quot;s mobile client receives a callback, the server can call this operation to obtain the corresponding verification status and verification materials.
-     * Applicable scope: This operation is applicable to the SDK + server-side integration verification solution.</p>
+     * <p>Alibaba Cloud ID Verification stores verification data only for the last 180 days. To use the verification data for subsequent business purposes, call this API to retrieve and store the data promptly to prevent service interruptions.
+     * Request methods: HTTPS POST and GET.
+     * Operation description: After the mobile client of the integrator receives a callback, the server can call this API to retrieve the corresponding verification status and materials.
+     * Applicable scope: This API applies to the verification solution that integrates the SDK and the server.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeVerifyResult  DescribeVerifyResultRequest
@@ -615,17 +615,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Preparations: Before calling this operation, make sure that you have completed the required preparations. For more information, see <a href="https://help.aliyun.com/document_detail/127536.html">Overview of the ID Verification scheme integration process</a> and <a href="https://help.aliyun.com/document_detail/127687.html">Overview of the face liveness verification scheme (liveness detection scheme) integration process</a>.
-     * Request method: HTTPS POST and GET.
-     * Operation description: Before each authentication, call this operation to obtain an authentication token (VerifyToken), which is used to connect the various operations in the authentication request.
-     * Scope of application: This operation is applicable to mobile SDK integration.
-     * Image URL: Use a publicly accessible HTTP or HTTPS URL. Example: <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.
+     * <p>Preparations: Before integrating this API, make sure that you have completed the corresponding preparations. For more information, see <a href="https://help.aliyun.com/document_detail/127536.html">Overview of the integration process for ID Verification solutions</a> and <a href="https://help.aliyun.com/document_detail/127687.html">Overview of the integration process for face liveness verification solutions (liveness detection solutions)</a>.
+     * Request methods: HTTPS POST and GET.
+     * Operation description: Before each authentication, call this operation to obtain an authentication token (VerifyToken). The token is used to link all operations in the authentication request.
+     * Applicable scope: This operation applies to mobile SDK integration.
+     * Image URL: You must use an HTTP or HTTPS URL that is accessible over the Internet. Example: <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.
      * Image limits:</p>
      * <ul>
      * <li>The relative path or absolute path of local images is not supported.</li>
-     * <li>Keep the size of a single image within 2 MB to avoid algorithm fetch timeout.</li>
-     * <li>The face area in the image must be at least 64 × 64 pixels (px).</li>
-     * <li>The body of a single request has a size limit of 8 MB. Make sure that the total size of all images and other information in the request does not exceed this limit.</li>
+     * <li>The size of a single image must not exceed 2 MB to prevent algorithm pull timeouts.</li>
+     * <li>The face area in the image must be at least 64 × 64 pixels.</li>
+     * <li>The body of a single request is limited to 8 MB. Calculate the total size of all images and other information in the request to ensure that the limit is not exceeded.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeVerifyToken  DescribeVerifyTokenRequest
@@ -645,16 +645,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>Request method: Only HTTPS POST requests are supported.
-     * Operation description: Detects validity-related attributes of faces in an input photo, helping you determine whether the photo meets your business requirements for retention or comparison. Currently supported face validity attributes include: whether a face is present, whether the face is blurry, whether glasses are worn, facial pose, and whether the face is smiling.
-     * Notes on uploading image addresses: When submitting an image, provide its HTTP URL, OSS address, or Base64 encoding.</p>
+     * API description: Detects the validity-related attributes of faces in the input photo to help you determine whether the photo meets your business requirements for retention or comparison. Currently supported face validity attributes include whether it is a face, whether it is blurred, whether glasses are worn, face pose, and whether it is a smiling face.
+     * Image URL description: When you pass an image, you must provide its HTTP URL, OSS URL, or Base64-encoded string.</p>
      * <ul>
-     * <li>HTTP address: A publicly accessible HTTP URL. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
-     * <li>Base64 encoding: A Base64-encoded image in the format <code>base64://&lt;Base64-encoded image string&gt;</code>.
+     * <li>HTTP URL: A publicly accessible HTTP URL. Example: <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
+     * <li>Base64 encoding: A Base64-encoded image in the format of <code>base64://&lt;Base64 string of the image&gt;</code>.
      * Image limits:</li>
-     * <li>Relative paths or absolute paths of local images are not supported.</li>
-     * <li>Keep the size of a single image within 2 MB to avoid algorithm fetch timeouts.</li>
-     * <li>The request body has a size limit of 8 MB. Make sure the total size of all images and other information in the request does not exceed this limit.</li>
-     * <li>When using Base64 to transmit images, set the request method to POST. Remove the header description from the Base64 character string, such as <code>data:image/png,base64</code>.</li>
+     * <li>Neither a relative path nor an absolute path is supported for local images.</li>
+     * <li>The size of a single image must not exceed 2 MB to prevent algorithm pulling timeouts.</li>
+     * <li>The body of a single request is limited to 8 MB. Calculate the total size of all images and other information in the request to ensure it does not exceed the limit.</li>
+     * <li>When you use Base64 to pass an image, the request method of the API must be POST. The header description, such as the data:image/png prefix, must be removed from the Base64 character string of the image.</li>
      * </ul>
      * 
      * @param request the request parameters of DetectFaceAttributes  DetectFaceAttributesRequest
@@ -664,11 +664,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the download link for the statistical call data file under a product plan based on the specified query conditions.</p>
+     * <p>Retrieves the download link for the statistical call data file of a product solution based on query conditions.</p>
      * <ul>
      * <li>Method: HTTPS POST</li>
      * <li>Endpoint: cloudauth.aliyuncs.com<blockquote>
-     * <p>ID Verification counts call volume by CertifyId. To facilitate reconciliation, retain the CertifyId field in your system.</p>
+     * <p>ID Verification products calculate call volumes based on CertifyId. To facilitate reconciliation, retain the CertifyId field in your system.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -694,8 +694,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Service endpoint: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
-     * <li>Request method: POST and GET.</li>
-     * <li>Transfer protocol: HTTPS.</li>
+     * <li>Request methods: POST and GET.</li>
+     * <li>Transport protocol: HTTPS.</li>
      * </ul>
      * 
      * @param request the request parameters of Id2MetaVerify  Id2MetaVerifyRequest
@@ -711,7 +711,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves a CertifyId before each authentication session. The CertifyId links all API operations within the authentication request.</p>
+     * <p>Retrieves a CertifyId by calling this API before each authentication session. The CertifyId is used to link all API calls within the authentication request.</p>
      * 
      * @param request the request parameters of InitCardVerify  InitCardVerifyRequest
      * @return InitCardVerifyResponse
@@ -721,18 +721,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com</li>
+     * <li>Endpoint: cloudauth.aliyuncs.com</li>
      * <li>Request method: HTTPS POST and GET.</li>
-     * <li>This operation uses different parameters for different product plans. For more information, refer to the <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/product-overview/introduction/">official documentation</a>.</li>
+     * <li>This API operation uses different parameters for different product solutions. For more information, see <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/product-overview/introduction/">official documentation</a>.</li>
      * </ul>
      * <h4>Image format requirements</h4>
-     * <p>When performing ID Verification, submit images that meet all of the following conditions:</p>
+     * <p>When you perform ID Verification, make sure that the uploaded image meets all the following conditions:</p>
      * <ul>
-     * <li>A recent photo with a complete, clear, and unobstructed face, natural expression, and facing the camera directly.</li>
-     * <li>Clear photo with normal exposure. The face must not be too dark, too bright, or have glare, and the angle must not deviate significantly.</li>
-     * <li>Resolution must not exceed 1920×1080, must be at least 640×480. We recommend scaling the short edge to 720 pixels with a compression ratio greater than 0.9.</li>
-     * <li>Photo size: &lt; 1 MB.</li>
-     * <li>Photos rotated 90, 180, and 270 degrees are supported. For multiple faces, the largest face is selected.</li>
+     * <li>The photo is recent, the face is complete, clear, and unobstructed, the expression is natural, and the face is directly facing the camera.</li>
+     * <li>The photo is clear and properly exposed. The face is not too dark, too bright, or surrounded by halos. The angle does not have significant deviation.</li>
+     * <li>The resolution does not exceed 1920×1080 and is at least 640×480. We recommend that you scale the short side to 720 pixels and set the compression ratio to greater than 0.9.</li>
+     * <li>Image size: less than 1 MB.</li>
+     * <li>Photos rotated by 90, 180, or 270 degrees are supported. If multiple faces are detected, the largest face is selected.</li>
      * </ul>
      * 
      * @param request the request parameters of InitFaceVerify  InitFaceVerifyRequest
@@ -748,7 +748,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calls the LivenessFaceVerify operation to perform liveness detection on a face image.</p>
+     * <p>Calls the LivenessFaceVerify operation to perform liveness detection on face images.</p>
      * 
      * @param request the request parameters of LivenessFaceVerify  LivenessFaceVerifyRequest
      * @return LivenessFaceVerifyResponse
@@ -757,7 +757,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Passes in a mobile phone number and a name, and verifies their authenticity and consistency through an authoritative data source.</p>
+     * <p>Verifies the authenticity and consistency of a mobile phone number and name against authoritative data sources.</p>
      * 
      * @param request the request parameters of Mobile2MetaVerify  Mobile2MetaVerifyRequest
      * @return Mobile2MetaVerifyResponse
@@ -766,7 +766,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Passes in a phone number, name, and ID card number, and verifies their authenticity and consistency through an authoritative data source. If the information is inconsistent, the reason for the inconsistency is returned.</p>
+     * <p>Verifies the authenticity and consistency of a mobile phone number, name, and ID card number through authoritative data sources. If the information is inconsistent, the system returns the reason for the inconsistency.</p>
      * 
      * @param request the request parameters of Mobile3MetaDetailStandardVerify  Mobile3MetaDetailStandardVerifyRequest
      * @return Mobile3MetaDetailStandardVerifyResponse
@@ -776,9 +776,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
-     * <li>Request method: POST and GET.</li>
-     * <li>Transfer protocol: HTTPS.</li>
+     * <li>Endpoint: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
+     * <li>HTTP method: POST and GET.</li>
+     * <li>Transport protocol: HTTPS.</li>
      * </ul>
      * 
      * @param request the request parameters of Mobile3MetaDetailVerify  Mobile3MetaDetailVerifyRequest
@@ -788,7 +788,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Passes in a phone number, name, and ID card number, and verifies their authenticity and consistency through an authoritative data source.</p>
+     * <p>Verifies the authenticity and consistency of a mobile phone number, name, and ID card number by using authoritative data sources.</p>
      * 
      * @param request the request parameters of Mobile3MetaSimpleStandardVerify  Mobile3MetaSimpleStandardVerifyRequest
      * @return Mobile3MetaSimpleStandardVerifyResponse
@@ -798,9 +798,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
-     * <li>Request method: POST and GET.</li>
-     * <li>Transfer protocol: HTTPS.</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
+     * <li>Request methods: POST and GET.</li>
+     * <li>Transport protocol: HTTPS.</li>
      * </ul>
      * 
      * @param request the request parameters of Mobile3MetaSimpleVerify  Mobile3MetaSimpleVerifyRequest
@@ -828,7 +828,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Passes in a phone number and its registration date, and verifies the authenticity and consistency of the information through an authoritative data source.</p>
+     * <p>Verifies the authenticity and consistency of a mobile phone number and its registration time by using an authoritative data source.</p>
      * 
      * @param request the request parameters of MobileRecycledMetaVerify  MobileRecycledMetaVerifyRequest
      * @return MobileRecycledMetaVerifyResponse
@@ -838,9 +838,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Endpoint: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST and GET.</li>
-     * <li>Operation description: Creates or modifies a blacklist rule.</li>
+     * <li>Operation description: Creates or modifies blacklist rules.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyBlackListStrategy  ModifyBlackListStrategyRequest
@@ -851,8 +851,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request method: HTTPS POST.</li>
-     * <li>Request URL: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: Requests are sent by using the HTTPS POST method.</li>
+     * <li>Request endpoint: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyControlStrategy  ModifyControlStrategyRequest
@@ -863,8 +863,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request method: HTTPS POST and GET methods are supported.</li>
-     * <li>Endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: You can send requests by using the HTTPS POST and GET methods.</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyCustomizeFlowStrategyList  ModifyCustomizeFlowStrategyListRequest
@@ -890,10 +890,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request endpoint: cloudauth.aliyuncs.com</li>
+     * <li>Request URL: cloudauth.aliyuncs.com</li>
      * <li>Request method: HTTPS POST and GET.<blockquote>
-     * <p>You can configure blacklists for IP addresses, ID card numbers, phone numbers, and bank card numbers. When a request matches a blacklist entry, the system rejects the request and returns a fixed error code.
-     * You can configure blacklists for IP addresses, ID card numbers, phone numbers, and bank card numbers. When a request matches a blacklist entry, the system rejects the request and returns a fixed error code.</p>
+     * <p>You can configure blacklists for IP addresses, ID card numbers, mobile phone numbers, and bank card numbers. When a request matches a blacklist, the system rejects the request and returns a fixed error code.
+     * You can configure blacklists for IP addresses, ID card numbers, mobile phone numbers, and bank card numbers. When a request matches a blacklist, the system rejects the request and returns a fixed error code.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -906,8 +906,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request method: HTTPS POST and GET.</li>
-     * <li>Request URL: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: The HTTPS POST and GET methods are supported.</li>
+     * <li>Request endpoint: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryControlStrategy  QueryControlStrategyRequest
@@ -918,9 +918,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com</li>
+     * <li>Endpoint: cloudauth.aliyuncs.com</li>
      * <li>Request method: HTTPS POST and GET.</li>
-     * <li>Security rules: monitoring rules that ensure system security, such as API abuse and abnormal account theft. When a threshold is triggered, the system sends an alert.</li>
+     * <li>Security rules: monitoring rules that ensure system security, such as API abuse and abnormal account theft. When a threshold is reached, the system triggers an alert.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryCustomizeFlowStrategy  QueryCustomizeFlowStrategyRequest
@@ -931,8 +931,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com.</li>
-     * <li>Request method: HTTPS POST and GET.</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Request methods: HTTPS POST and GET.</li>
      * </ul>
      * 
      * @param request the request parameters of QuerySceneConfigs  QuerySceneConfigsRequest
@@ -942,11 +942,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the download link of a statistical call data file under a product plan based on query conditions.</p>
+     * <p>Retrieves the download URL for the statistical call data file of a product plan based on query conditions.</p>
      * <ul>
      * <li>Method: HTTPS POST</li>
      * <li>Endpoint: cloudauth.aliyuncs.com<blockquote>
-     * <p>ID Verification uses CertifyId to calculate the call volume. To facilitate reconciliation, retain the CertifyId field in your system.</p>
+     * <p>The ID Verification product calculates the call volume based on CertifyId. To facilitate reconciliation, retain the CertifyId field in your system.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1007,7 +1007,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Request method: HTTPS POST.</li>
-     * <li>Request URL: cloudauth.aliyuncs.com.</li>
+     * <li>Request endpoint: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateSceneConfig  UpdateSceneConfigRequest
@@ -1017,7 +1017,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries basic vehicle information by license plate number and vehicle type.</p>
+     * <p>Queries the basic vehicle information based on the license plate number and vehicle type.</p>
      * 
      * @param request the request parameters of Vehicle5ItemQuery  Vehicle5ItemQueryRequest
      * @return Vehicle5ItemQueryResponse
@@ -1044,7 +1044,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Verifies the consistency of the name, ID card number, license plate number, and vehicle type, and supports returning vehicle details.</p>
+     * <p>Verifies the consistency of the name, ID card number, license plate number, and vehicle type, and returns vehicle details.</p>
      * 
      * @param request the request parameters of VehicleMetaVerifyV2  VehicleMetaVerifyV2Request
      * @return VehicleMetaVerifyV2Response
@@ -1053,7 +1053,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries detailed vehicle information by license plate number and vehicle type.</p>
+     * <p>Queries the detailed information of a vehicle by license plate number and vehicle type.</p>
      * 
      * @param request the request parameters of VehicleQuery  VehicleQueryRequest
      * @return VehicleQueryResponse
@@ -1062,19 +1062,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you begin: Before calling this API, ensure that you have completed the required preparations. For more information, see <a href="https://help.aliyun.com/document_detail/127471.html">Server-side integration preparations</a>.
-     * Request method: HTTPS POST and GET.
-     * Operation description: The caller\&quot;s server submits verification materials to the ID Verification service for comparison and validation. The result is returned synchronously.
-     * Applicable scope: This operation is applicable only to server-side-only verification solutions.
+     * <p>Preparations: Before integrating this API, ensure that you have completed the required preparations. For more information, see <a href="https://help.aliyun.com/document_detail/127471.html">Server-side integration preparations</a>.
+     * Request methods: HTTPS POST and GET.
+     * API description: The integrator\&quot;s server submits authentication materials to the ID Verification service for verification and comparison, and the result is returned synchronously.
+     * Applicable scope: This API is applicable only to server-only integration authentication solutions.
      * Image URL description:</p>
      * <ul>
-     * <li>HTTP or HTTPS URL: Publicly accessible HTTP or HTTPS URLs are supported. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
-     * <li>OSS URL: If the caller\&quot;s images are local files, Alibaba Cloud provides an upload SDK that allows you to upload images to the OSS bucket designated by the ID Verification service and obtain the corresponding OSS URL to use as the image URL parameter. If your business requires the upload SDK, <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">submit a ticket</a> to contact us.
-     * Image restrictions:</li>
-     * <li>Relative paths or absolute paths of local images are not supported.</li>
-     * <li>Keep each image within 2 MB to avoid algorithm fetch timeouts.</li>
+     * <li>HTTP or HTTPS URL: Publicly accessible HTTP or HTTPS URLs are supported. Example: <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
+     * <li>OSS URL: If the integrator\&quot;s images are local files, Alibaba Cloud provides corresponding upload SDKs. You can use the SDK to upload images to the OSS bucket specified by the ID Verification service, obtain the corresponding OSS URL, and use it as the image URL parameter for the API. If your business requires the upload SDK, submit a <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">ticket</a> to contact us.
+     * Image limits:</li>
+     * <li>The relative path or absolute path of a local image is not supported.</li>
+     * <li>Keep the size of a single image within 2 MB to prevent timeouts when the algorithm pulls the image.</li>
      * <li>The face area in the image must be at least 64 × 64 pixels.</li>
-     * <li>The request body has an 8 MB size limit. Ensure that the total size of all images and other information in the request does not exceed this limit.</li>
+     * <li>The body of a single request is limited to 8 MB. Calculate the total size of all images and other information in the request to ensure it does not exceed the limit.</li>
      * </ul>
      * 
      * @param request the request parameters of VerifyMaterial  VerifyMaterialRequest

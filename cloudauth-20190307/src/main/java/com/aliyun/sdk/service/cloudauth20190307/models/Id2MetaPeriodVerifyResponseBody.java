@@ -93,7 +93,7 @@ public class Id2MetaPeriodVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+         * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class Id2MetaPeriodVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class Id2MetaPeriodVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result information.</p>
+         * <p>The returned result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -181,9 +181,9 @@ public class Id2MetaPeriodVerifyResponseBody extends TeaModel {
             /**
              * <p>The verification result code. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Consistent.</li>
-             * <li><strong>2</strong>: Inconsistent.</li>
-             * <li><strong>3</strong>: No record found.</li>
+             * <li><strong>1</strong>: The verification is consistent.</li>
+             * <li><strong>2</strong>: The verification is inconsistent.</li>
+             * <li><strong>3</strong>: No record is found.</li>
              * </ul>
              * 
              * <strong>example:</strong>
