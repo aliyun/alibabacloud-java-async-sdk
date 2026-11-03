@@ -85,7 +85,7 @@ public class DescribeSlrGrantRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The source IP address of the caller.</p>
          * 
          * <strong>example:</strong>
          * <p>113.225.22.XXX</p>

@@ -129,7 +129,7 @@ public class DescribeNatFirewallTrafficTrendRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1739330580</p>
@@ -141,12 +141,10 @@ public class DescribeNatFirewallTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The time granularity for the query. Unit: seconds. Valid values:</p>
+         * <p>Specifies the time granularity of the queried data. Unit: seconds. Valid values:</p>
          * <ul>
-         * <li><p><strong>60</strong>: 1 minute.</p>
-         * </li>
-         * <li><p><strong>1800</strong>: 30 minutes.</p>
-         * </li>
+         * <li><strong>60</strong>: 1 minute.</li>
+         * <li><strong>1800</strong>: 30 minutes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +157,7 @@ public class DescribeNatFirewallTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The ID of the NAT Gateway.</p>
+         * <p>The ID of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-xxxxxx</p>
@@ -171,7 +169,7 @@ public class DescribeNatFirewallTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The private source IP address.</p>
+         * <p>The source private IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10.100.134.60</p>
@@ -183,7 +181,7 @@ public class DescribeNatFirewallTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The source IP address on the Internet.</p>
+         * <p>The source public IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>47.112.210.136</p>
@@ -195,7 +193,7 @@ public class DescribeNatFirewallTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1739326980</p>

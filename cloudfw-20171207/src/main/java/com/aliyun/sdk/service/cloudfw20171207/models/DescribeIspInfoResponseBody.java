@@ -168,7 +168,7 @@ public class DescribeIspInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ISP.</p>
+             * <p>The ISP ID.</p>
              * 
              * <strong>example:</strong>
              * <p>isp-dhyw2lxfpc****</p>
@@ -179,7 +179,7 @@ public class DescribeIspInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ISP.</p>
+             * <p>The ISP name.</p>
              * 
              * <strong>example:</strong>
              * <p>telecom</p>

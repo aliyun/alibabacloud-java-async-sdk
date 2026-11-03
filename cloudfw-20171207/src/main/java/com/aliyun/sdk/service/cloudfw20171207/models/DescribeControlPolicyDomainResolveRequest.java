@@ -115,7 +115,7 @@ public class DescribeControlPolicyDomainResolveRequest extends Request {
         } 
 
         /**
-         * <p>The domain name. This parameter is required and must be specified when you call this operation.</p>
+         * <p>The domain name. This parameter is required and must be provided when you call the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -127,7 +127,7 @@ public class DescribeControlPolicyDomainResolveRequest extends Request {
         }
 
         /**
-         * <p>The type of the cloud firewall.</p>
+         * <p>The Cloud Firewall type.</p>
          * 
          * <strong>example:</strong>
          * <p>internet</p>
@@ -139,9 +139,9 @@ public class DescribeControlPolicyDomainResolveRequest extends Request {
         }
 
         /**
-         * <p>The IP address version. Valid values: <strong>4</strong> (IPv4) and <strong>6</strong> (IPv6).</p>
+         * <p>The IP address version. Valid values: <strong>4</strong> (IPv4) or <strong>6</strong> (IPv6).</p>
          * <blockquote>
-         * <p>This parameter is unconditionally required and has no dependency on RegionNo. If this parameter is not specified, the error MissingParameter.IpVersion is returned (-200157). If the value is invalid, the error ErrorParameterIpVersion is returned (-200135).</p>
+         * <p>This parameter is unconditionally required and has no dependency on RegionNo. If this parameter is missing, the MissingParameter.IpVersion (-200157) error is returned. If the value is invalid, the ErrorParameterIpVersion (-200135) error is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class DescribeControlPolicyDomainResolveRequest extends Request {
         }
 
         /**
-         * <p>The region ID. This parameter is required. If this parameter is not specified, the error MissingParameter.RegionNo is returned (-200155, The required parameter \&quot;RegionNo\&quot; is not provided.).</p>
+         * <p>The region ID. This parameter is required. If this parameter is missing, the MissingParameter.RegionNo (-200155, The required parameter \&quot;RegionNo\&quot; is not provided.) error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

@@ -129,7 +129,7 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1747792853</p>
@@ -143,10 +143,8 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends Request {
         /**
          * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li><p><strong>asc</strong>: ascending order.</p>
-         * </li>
-         * <li><p><strong>desc</strong>: descending order. This is the default value.</p>
-         * </li>
+         * <li><strong>asc</strong>: ascending order</li>
+         * <li><strong>desc</strong> (default): descending order</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,7 +181,7 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1656664560</p>
@@ -195,7 +193,7 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The time point of the traffic. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The traffic time point. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1739337840</p>

@@ -87,7 +87,7 @@ public class ListTlsInspectCACertificatesRequest extends Request {
         } 
 
         /**
-         * <p>The CA certificate ID.</p>
+         * <p>The ID of the CA certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>C3E91391-16CD-1BFC-A133-******D429</p>
@@ -111,7 +111,7 @@ public class ListTlsInspectCACertificatesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for paging. Default value: 20.</p>
+         * <p>The maximum number of entries to return on each page during paging. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

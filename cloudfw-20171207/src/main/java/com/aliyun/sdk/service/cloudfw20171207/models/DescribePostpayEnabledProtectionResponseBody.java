@@ -117,7 +117,7 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of asset for which protection is disabled.</p>
+         * <p>The type of protection that is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>nat</p>
@@ -139,7 +139,7 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the protection feature is activated but currently disabled.</p>
+         * <p>Indicates whether the protection feature is activated but disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

@@ -306,7 +306,8 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>Specifies the page number to return in a paged query.</p>
+         * <p>Settings for the paged query. Specifies the page number to return for paging.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -318,7 +319,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>Specifies the end time of the query. The value is a UNIX timestamp in seconds. If this parameter is not specified, the current time is used.</p>
+         * <p>Specifies the end time of the query. The value is a UNIX timestamp in seconds. If you do not specify this parameter, the query ends at the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>1656837360</p>
@@ -330,7 +331,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the compromise awareness event.</p>
+         * <p>The ID of the breach awareness event.</p>
          * 
          * <strong>example:</strong>
          * <p>69d189e2-ec17-4676-a2fe-02969234****</p>
@@ -342,7 +343,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The name of the compromise awareness event.</p>
+         * <p>The name of the breach awareness event.</p>
          * 
          * <strong>example:</strong>
          * <p>event_test</p>
@@ -354,7 +355,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the compromise awareness event.</p>
+         * <p>The UUID of the breach awareness event.</p>
          * 
          * <strong>example:</strong>
          * <p>fadd-dfdd-****</p>
@@ -366,7 +367,13 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the compromise awareness event is ignored. Valid values:</p>
+         * <p>Specifies whether the breach awareness event is ignored. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Ignored.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not ignored.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -378,7 +385,11 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The language type of the received message. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -402,7 +413,8 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>Specifies the number of entries per page in a paged query.</p>
+         * <p>Settings for the paged query. Specifies the number of entries to return on each page for paging.</p>
+         * <p>Default value: 6. Maximum value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -417,7 +429,7 @@ public class DescribeInvadeEventListRequest extends Request {
          * <p>The list of processing statuses.</p>
          * 
          * <strong>example:</strong>
-         * <p>1358090477156271</p>
+         * <p>[0]</p>
          */
         public Builder processStatusList(java.util.List<Integer> processStatusList) {
             this.putQueryParameter("ProcessStatusList", processStatusList);
@@ -447,7 +459,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>Specifies the start time of the query. The value is a UNIX timestamp in seconds. If this parameter is not specified, the query starts from the last 30 days.</p>
+         * <p>Specifies the start time of the query. The value is a UNIX timestamp in seconds. If you do not specify this parameter, the query starts from 30 days ago.</p>
          * 
          * <strong>example:</strong>
          * <p>1656750960</p>

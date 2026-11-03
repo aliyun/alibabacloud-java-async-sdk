@@ -119,7 +119,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of regions in China.</p>
+         * <p>The number of regions in the Chinese mainland.</p>
          * 
          * <strong>example:</strong>
          * <p>340</p>
@@ -130,7 +130,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of regions in China.</p>
+         * <p>The list of regions in the Chinese mainland.</p>
          */
         public Builder cnList(java.util.List<CnList> cnList) {
             this.cnList = cnList;
@@ -138,7 +138,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about provinces and cities in China.</p>
+         * <p>The province and city information in the Chinese mainland.</p>
          */
         public Builder cnProvinceList(java.util.List<CnProvinceList> cnProvinceList) {
             this.cnProvinceList = cnProvinceList;
@@ -146,7 +146,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of regions outside China.</p>
+         * <p>The number of regions outside the Chinese mainland.</p>
          * 
          * <strong>example:</strong>
          * <p>238</p>
@@ -157,7 +157,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of regions outside China.</p>
+         * <p>The list of regions outside the Chinese mainland.</p>
          */
         public Builder overseasList(java.util.List<OverseasList> overseasList) {
             this.overseasList = overseasList;
@@ -234,7 +234,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3301</p>
@@ -245,7 +245,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region.</p>
+             * <p>The region name.</p>
              * 
              * <strong>example:</strong>
              * <p>Hangzhou City</p>
@@ -315,7 +315,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -326,7 +326,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region.</p>
+             * <p>The region name.</p>
              * 
              * <strong>example:</strong>
              * <p>Hangzhou</p>
@@ -404,7 +404,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the province.</p>
+             * <p>The province name.</p>
              * 
              * <strong>example:</strong>
              * <p>Zhejiang</p>
@@ -474,7 +474,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>US</p>
@@ -485,7 +485,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region.</p>
+             * <p>The region name.</p>
              * 
              * <strong>example:</strong>
              * <p>United States</p>

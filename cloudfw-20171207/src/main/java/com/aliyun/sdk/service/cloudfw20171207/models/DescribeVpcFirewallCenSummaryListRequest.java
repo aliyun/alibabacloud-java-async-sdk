@@ -115,7 +115,7 @@ public class DescribeVpcFirewallCenSummaryListRequest extends Request {
         } 
 
         /**
-         * <p>The page number for a paged query. The default value is 1.</p>
+         * <p>The page number of the current page in a paging query. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,7 +127,7 @@ public class DescribeVpcFirewallCenSummaryListRequest extends Request {
         }
 
         /**
-         * <p>The language of the content. Valid values:</p>
+         * <p>The language. Valid values:</p>
          * <ul>
          * <li><p><strong>zh</strong> (default): Chinese.</p>
          * </li>
@@ -145,7 +145,7 @@ public class DescribeVpcFirewallCenSummaryListRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member account.</p>
+         * <p>The UID of the member account of the current Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>135809047715****</p>
@@ -157,7 +157,7 @@ public class DescribeVpcFirewallCenSummaryListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -170,8 +170,8 @@ public class DescribeVpcFirewallCenSummaryListRequest extends Request {
 
         /**
          * <p>The type of the CEN transit router. Valid values:</p>
-         * <p><strong>Basic</strong>: Basic Edition</p>
-         * <p><strong>Enterprise</strong>: Enterprise Edition</p>
+         * <p><strong>Basic</strong>: Basic Edition.</p>
+         * <p><strong>Enterprise</strong>: Enterprise Edition.</p>
          * 
          * <strong>example:</strong>
          * <p>Basic</p>

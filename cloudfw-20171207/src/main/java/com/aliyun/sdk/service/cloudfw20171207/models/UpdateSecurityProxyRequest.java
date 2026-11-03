@@ -103,11 +103,11 @@ public class UpdateSecurityProxyRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language type. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
          * </li>
-         * <li><p><strong>en</strong>: English.</p>
+         * <li><p><strong>en</strong>: English</p>
          * </li>
          * </ul>
          * 
@@ -134,7 +134,7 @@ public class UpdateSecurityProxyRequest extends Request {
         }
 
         /**
-         * <p>The name of the NAT firewall. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</p>
+         * <p>The name of the NAT firewall. The name must be 4 to 50 characters in length and can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It cannot start with an underscore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,8 +149,8 @@ public class UpdateSecurityProxyRequest extends Request {
         /**
          * <p>Specifies whether to enable strict mode. Valid values:</p>
          * <ul>
-         * <li>1: strict mode.</li>
-         * <li>0: loose mode.</li>
+         * <li>1: strict mode</li>
+         * <li>0: loose mode</li>
          * </ul>
          * 
          * <strong>example:</strong>

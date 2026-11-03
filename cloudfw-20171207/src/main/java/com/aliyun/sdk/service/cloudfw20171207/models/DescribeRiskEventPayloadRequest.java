@@ -174,7 +174,7 @@ public class DescribeRiskEventPayloadRequest extends Request {
         } 
 
         /**
-         * <p>The destination IP address to query. If you specify this parameter, all intrusion events with the specified destination IP address are queried.</p>
+         * <p>The destination IP address to query. If you specify this parameter, the query returns intrusion prevention events that involve this destination IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>203.0.113.2</p>
@@ -186,7 +186,7 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination VPC to query. If you specify this parameter, all intrusion events that contain the specified ID of the destination VPC are queried.</p>
+         * <p>The destination VPC ID to query. If you specify this parameter, the query returns intrusion prevention events that involve this destination VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6jr1klwqb60dyn2****</p>
@@ -198,7 +198,7 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a timestamp. Unit: seconds.</p>
+         * <p>Specifies the end time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,10 +211,10 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * <p>The type of the firewall. Valid values:</p>
+         * <p>The type of Cloud Firewall. Valid values:</p>
          * <ul>
-         * <li><strong>VpcFirewall</strong>: virtual private cloud (VPC) firewall</li>
-         * <li><strong>InternetFirewall</strong> (default): Internet firewall</li>
+         * <li><strong>VpcFirewall</strong>: virtual private cloud (VPC) firewalls.</li>
+         * <li><strong>InternetFirewall</strong> (default): the Internet Border firewall.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * <p>The public IP address. If you specify this parameter, all intrusion events that contain the specified public IP address are queried.</p>
+         * <p>The IP address of the public asset to query. If you specify this parameter, the query returns compromise detection events that involve this asset IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>203.0.113.3</p>
@@ -239,7 +239,7 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * <p>The source IP address to query. If you specify this parameter, all intrusion events from the specified source IP address are queried.</p>
+         * <p>The source IP address to query. If you specify this parameter, the query returns intrusion prevention events that involve this source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>203.0.113.1</p>
@@ -251,7 +251,7 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source VPC to query. If you specify this parameter, all intrusion events that contain the specified ID of the source VPC are queried.</p>
+         * <p>The source VPC ID to query. If you specify this parameter, the query returns intrusion prevention events that involve this source VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9j2lqyo15udw5nt****</p>
@@ -263,7 +263,7 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a timestamp. Unit: seconds.</p>
+         * <p>Specifies the start time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the intrusion event.</p>
+         * <p>The UUID of the intrusion prevention event.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

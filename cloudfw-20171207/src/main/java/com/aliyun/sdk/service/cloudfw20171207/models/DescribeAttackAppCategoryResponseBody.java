@@ -75,7 +75,7 @@ public class DescribeAttackAppCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID of the returned result.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B14757D0-4640-4B44-AC67-7F558FE****</p>

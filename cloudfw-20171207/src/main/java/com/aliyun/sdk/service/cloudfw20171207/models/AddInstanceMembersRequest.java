@@ -60,11 +60,11 @@ public class AddInstanceMembersRequest extends Request {
         } 
 
         /**
-         * <p>The list of Cloud Firewall member accounts to add. Call DescribeInstanceRdAccounts to obtain the available MemberUid values. You can add up to 20 members at a time, subject to the instance member quota.</p>
+         * <p>The list of Cloud Firewall member accounts to add. You can call the DescribeInstanceRdAccounts operation to obtain the MemberUid of the accounts that can be added. You can add up to 20 member accounts at a time, subject to the maximum number of members allowed for the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>AddInstanceMembers</p>
+         * <p>[{&quot;MemberUid&quot;:&quot;258039427902****&quot;,&quot;MemberDesc&quot;:&quot;renewal&quot;}]</p>
          */
         public Builder members(java.util.List<Members> members) {
             this.putQueryParameter("Members", members);
@@ -133,7 +133,7 @@ public class AddInstanceMembersRequest extends Request {
             } 
 
             /**
-             * <p>The remarks of the Cloud Firewall member account. The value must be 1 to 256 characters in length. You can add up to 20 member accounts.</p>
+             * <p>The description of the Cloud Firewall member account. The description must be 1 to 256 characters in length. You can add up to 20 member accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>renewal</p>

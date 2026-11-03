@@ -106,7 +106,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of traffic statistics.</p>
+         * <p>The list of traffic statistics information.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -114,7 +114,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The peak inbound network throughput. Unit: bps.</p>
+         * <p>The peak network throughput in the inbound direction. Unit: bit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>18038632</p>
@@ -125,7 +125,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The peak outbound network throughput. Unit: bps.</p>
+         * <p>The peak network throughput in the outbound direction. Unit: bit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>122596487</p>
@@ -136,7 +136,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The peak total network throughput for inbound and outbound traffic. Unit: bps.</p>
+         * <p>The peak network throughput in both the outbound and inbound directions. Unit: bit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>66953194</p>
@@ -147,7 +147,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>87F23A3A-6F57-59C3-8237-A090D0613D71</p>
@@ -242,7 +242,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The peak inbound network throughput. Unit: bps.</p>
+             * <p>The peak network throughput in the inbound direction. Unit: bit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>18038632</p>
@@ -253,7 +253,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peak outbound network throughput. Unit: bps.</p>
+             * <p>The peak network throughput in the outbound direction. Unit: bit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>122596487</p>
@@ -264,7 +264,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peak total network throughput for inbound and outbound traffic. Unit: bps.</p>
+             * <p>The peak network throughput in both the outbound and inbound directions. Unit: bit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>66953194</p>
@@ -275,7 +275,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the query. This value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The query time. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1734418980</p>

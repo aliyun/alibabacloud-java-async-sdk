@@ -116,7 +116,7 @@ public class UpdateAclCheckDetailStatusRequest extends Request {
         }
 
         /**
-         * <p>The modified status.</p>
+         * <p>The new status.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateAclCheckDetailStatusRequest extends Request {
         }
 
         /**
-         * <p>The ACL check task ID.</p>
+         * <p>The ID of the ACL check task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class UpdateAclCheckDetailStatusRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier ID of the ACL policy in the ACL check details.</p>
+         * <p>The UUID of the ACL policy in the ACL check detail.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

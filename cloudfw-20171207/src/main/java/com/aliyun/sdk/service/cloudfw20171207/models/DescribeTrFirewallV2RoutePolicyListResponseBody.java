@@ -80,7 +80,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>95EB5F3A-67FE-5780-92BD-5ECBA772AB7E</p>
@@ -102,7 +102,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of firewall routing policies.</p>
+         * <p>The list of firewall route policies.</p>
          */
         public Builder trFirewallRoutePolicies(java.util.List<TrFirewallRoutePolicies> trFirewallRoutePolicies) {
             this.trFirewallRoutePolicies = trFirewallRoutePolicies;
@@ -403,7 +403,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy description.</p>
+             * <p>The description of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>Point to multipoint</p>
@@ -425,19 +425,19 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy status. Valid values:</p>
+             * <p>The status of the policy. Valid values:</p>
              * <ul>
-             * <li><p>creating: being created</p>
+             * <li><p>creating: The policy is being created.</p>
              * </li>
-             * <li><p>deleting: being deleted</p>
+             * <li><p>deleting: The policy is being deleted.</p>
              * </li>
-             * <li><p>opening: being enabled</p>
+             * <li><p>opening: The policy is being enabled.</p>
              * </li>
-             * <li><p>opened: enabled</p>
+             * <li><p>opened: The policy is enabled.</p>
              * </li>
-             * <li><p>closing: being disabled</p>
+             * <li><p>closing: The policy is being disabled.</p>
              * </li>
-             * <li><p>closed: disabled</p>
+             * <li><p>closed: The policy is disabled.</p>
              * </li>
              * </ul>
              * 
@@ -450,13 +450,13 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic redirection scenario type for the virtual private cloud (VPC) firewall on CEN Enterprise Edition. Valid values:</p>
+             * <p>The traffic redirection scenario type for virtual private cloud (VPC) firewalls in Cloud Enterprise Network (CEN) Enterprise Edition. Valid values:</p>
              * <ul>
-             * <li><p><strong>fullmesh</strong>: multi-point interconnection</p>
+             * <li><p><strong>fullmesh</strong>: full mesh interconnection.</p>
              * </li>
-             * <li><p><strong>one_to_one</strong>: point-to-point</p>
+             * <li><p><strong>one_to_one</strong>: point-to-point.</p>
              * </li>
-             * <li><p><strong>end_to_end</strong>: point-to-multipoint</p>
+             * <li><p><strong>end_to_end</strong>: point-to-multipoint.</p>
              * </li>
              * </ul>
              * 
@@ -477,7 +477,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the firewall routing policy.</p>
+             * <p>The ID of the firewall route policy.</p>
              * 
              * <strong>example:</strong>
              * <p>policy-7b66257c14e141fb****</p>

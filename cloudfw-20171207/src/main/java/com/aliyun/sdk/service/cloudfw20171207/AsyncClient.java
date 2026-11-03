@@ -27,9 +27,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</p>
-     * <h2>Rate limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
+     * <p>This operation is typically used to create an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable rate.</p>
      * 
      * @param request the request parameters of AddAddressBook  AddAddressBookRequest
      * @return AddAddressBookResponse
@@ -38,9 +38,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create a policy that allows, denies, or monitors traffic that passes through Cloud Firewall.</p>
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation properly.</p>
+     * <p>You can use this operation to create a policy that allows, blocks, or monitors traffic that passes through Cloud Firewall.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of AddControlPolicy  AddControlPolicyRequest
      * @return AddControlPolicyResponse
@@ -50,10 +50,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>Creates a DNS firewall access control policy to allow, deny, or monitor traffic that passes through the DNS firewall.</p>
-     * <h2>Quota description</h2>
-     * <p>DNS firewall policies are counted independently in the DNS policy table (counted separately by IP version), but they <strong>share the same quota upper limit</strong> with Internet access control policies (determined by the Cloud Firewall edition). If the number of address combinations after a single policy is expanded exceeds the limit, or the total number of user policies exceeds the limit, the error ErrorAclExtendedCountExceed (-200139) is returned.</p>
+     * <h2>Quotas</h2>
+     * <p>DNS firewall policies are counted independently in the DNS policy table (counted separately by IP version), but <strong>share the same quota limit</strong> with Internet access control policies (determined by the Cloud Firewall edition). If the number of address combinations expanded from a single policy exceeds the limit, or the total number of policies exceeds the limit, the system returns ErrorAclExtendedCountExceed (-200139).</p>
      * <blockquote>
-     * <p>The value returned by DescribeAclCheckQuota is the quota for ACL policy check (inspection) times, which is unrelated to firewall policy count quota and cannot be used to predict whether the quota for this operation is sufficient. Confirm firewall policy count quota in the Cloud Firewall console.</p>
+     * <p>The DescribeAclCheckQuota operation returns the quota for the number of ACL policy checks, which is unrelated to firewall policy count quota and cannot be used to predict whether the quota for this operation is sufficient. Check firewall policy count quota in the Cloud Firewall console.</p>
      * </blockquote>
      * 
      * @param request the request parameters of AddDnsFirewallPolicy  AddDnsFirewallPolicyRequest
@@ -72,11 +72,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p>Adds member accounts to Cloud Firewall.</p>
      * <h2>Before you begin</h2>
      * <ul>
-     * <li>The caller\&quot;s Alibaba Cloud account must be a delegated administrator (DA) or management account (MA) of a resource directory. Otherwise, the error ErrorInstanceAliuidNotDaMa (-103313) is returned. Call DescribeInstanceRdAccounts to verify the identity of the current account.</li>
-     * <li>The member UID to be added must belong to the same resource directory. Otherwise, the error ErrorInstanceMemberNotBelongRd (-103308) is returned.</li>
+     * <li>The caller\&quot;s Alibaba Cloud account must be a delegated administrator (DA) or management account (MA) of a resource directory. Otherwise, the ErrorInstanceAliuidNotDaMa (-103313) error is returned. You can call the DescribeInstanceRdAccounts operation to verify the identity of the current account.</li>
+     * <li>The UID of the member account to be added must belong to the same resource directory. Otherwise, the ErrorInstanceMemberNotBelongRd (-103308) error is returned.</li>
      * </ul>
      * <h2>Rate limit</h2>
-     * <p>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation within the limit.</p>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Call this operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of AddInstanceMembers  AddInstanceMembersRequest
      * @return AddInstanceMembersResponse
@@ -85,9 +85,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to obtain DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS before you can obtain its resolution results.</p>
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
+     * <p>This operation is typically used to retrieve the DNS resolution results of a domain name. Currently, only Alibaba Cloud DNS is supported for retrieving resolution results. The domain name to be queried must use Alibaba Cloud DNS to retrieve its resolution results.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit per user for this operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of AddPrivateDnsDomainName  AddPrivateDnsDomainNameRequest
      * @return AddPrivateDnsDomainNameResponse
@@ -95,12 +95,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddPrivateDnsDomainNameResponse> addPrivateDnsDomainName(AddPrivateDnsDomainNameRequest request);
 
     /**
-     * @deprecated OpenAPI BatchCopyVpcFirewallControlPolicy is deprecated  * @description This operation is used to copy all policies from a source virtual private cloud (VPC) firewall policy group to a destination VPC firewall policy group.
-     * Before performing this operation, back up your policies. For more information, see [policy backup](https://help.aliyun.com/document_detail/170363.html).
-     * After this operation is complete, the policies in the destination VPC firewall policy group are completely replaced with the policies from the source VPC firewall policy group.
-     * The source VPC firewall policy group and the destination VPC firewall policy group must belong to the same Alibaba Cloud account.
+     * @deprecated OpenAPI BatchCopyVpcFirewallControlPolicy is deprecated  * @description This API operation copies all firewall policies from a policy group of the source virtual private cloud (VPC) border firewalls to a policy group of the destination virtual private cloud (VPC) border firewalls.
+     * Before performing this operation, back up your firewall policies. For more information about policy backup, see [Policy backup](https://help.aliyun.com/document_detail/170363.html).
+     * After this operation is complete, the firewall policies in the policy group of the destination virtual private cloud (VPC) border firewalls are completely replaced by those in the policy group of the source virtual private cloud (VPC) border firewalls.
+     * The policy groups of the source and destination virtual private cloud (VPC) border firewalls must belong to the same Alibaba Cloud account.
      * ## QPS limit
-     * The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation as appropriate.
+     * The queries per second (QPS) limit on this API operation is 10 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable rate.
      * 
      * @param request the request parameters of BatchCopyVpcFirewallControlPolicy  BatchCopyVpcFirewallControlPolicyRequest
      * @return BatchCopyVpcFirewallControlPolicyResponse
@@ -122,8 +122,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit for a single user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of CreateAckClusterConnector  CreateAckClusterConnectorRequest
      * @return CreateAckClusterConnectorResponse
@@ -150,11 +150,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates an IPS Private IP Tracing association for an Internet NAT gateway that is already protected by Cloud Firewall.</p>
+     * <p>Creates an IPS private IP tracing association for an Internet NAT gateway that is protected by Cloud Firewall.</p>
      * <h2>Before you begin</h2>
      * <ul>
-     * <li>The target NAT gateway must already be managed by Cloud Firewall and asset synchronization must be complete. Asset synchronization is an asynchronous task. If you call this operation before synchronization is complete for a newly created NAT gateway, error code -103204 is returned.</li>
-     * <li>If SNAT is configured for the NAT gateway, you must enable session logs first. Otherwise, error code -103583 is returned.</li>
+     * <li>The target NAT gateway must be managed by Cloud Firewall and asset synchronization must be completed. Asset synchronization is an asynchronous task. If you call this operation before the synchronization of a newly created NAT gateway is completed, the error code -103204 is returned.</li>
+     * <li>If SNAT is configured for the NAT gateway, you must enable session logging first. Otherwise, the error code -103583 is returned.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateIpsPrivateAssoc  CreateIpsPrivateAssocRequest
@@ -164,7 +164,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API creates a policy to allow, deny, or observe traffic through the NAT Firewall.</p>
+     * <p>Creates a policy to allow, deny, or monitor traffic that passes through a NAT firewall.</p>
      * 
      * @param request the request parameters of CreateNatFirewallControlPolicy  CreateNatFirewallControlPolicyRequest
      * @return CreateNatFirewallControlPolicyResponse
@@ -188,7 +188,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a policy to allow, deny, or monitor traffic that passes through a NAT firewall.</p>
+     * <p>Creates a private DNS firewall endpoint. When you call this operation, you must specify PrimaryVSwitchId, and the region and zone of the primary and secondary vSwitches must support private DNS firewalls.</p>
      * 
      * @param request the request parameters of CreatePrivateDnsEndpoint  CreatePrivateDnsEndpointRequest
      * @return CreatePrivateDnsEndpointResponse
@@ -209,7 +209,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before calling this operation, create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the TR to Cloud Firewall. Then call this operation with the CEN ID, TransitRouterId, RegionNo, and RouteMode parameters.</p>
+     * <p>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before calling this operation, you must create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the transit router to Cloud Firewall. Then, call this operation by using the CEN ID, TransitRouterId, RegionNo, and RouteMode parameters.</p>
      * 
      * @param request the request parameters of CreateTrFirewallV2  CreateTrFirewallV2Request
      * @return CreateTrFirewallV2Response
@@ -224,9 +224,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to create a virtual private cloud (VPC) firewall for VPC-connected instances in a CEN instance. The virtual private cloud (VPC) firewall protects traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in the CEN instance and a specified VPC. The virtual private cloud (VPC) firewall does not protect traffic between VBRs, between CCNs, or between VBRs and CCNs. <strong>Prerequisites</strong>: (1) Invoke the Cbn CreateCen operation to create a CEN instance. (2) Create at least two VPCs. (3) Invoke the Cbn AttachCenChildInstance operation to associate the VPCs with the CEN instance. (4) Make sure no conflicting RouteMaps or transit router (TR) routing entries exist in the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC border firewall limits</a>.</p>
-     * <h2>Rate limit</h2>
-     * <p>The single-user queries per second (QPS) limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</p>
+     * <p>This operation is typically used to create virtual private cloud (VPC) firewalls at the border for VPC-connected instances in a CEN. The virtual private cloud (VPC) firewalls protect mutual access traffic between network instances (including VPCs, VBRs, and CCNs) in the CEN and a specified VPC. It does not protect mutual access traffic between VBRs, between CCNs, or between a VBR and a CCN. Prerequisites: (1) Invoke the CreateCen operation to create a CEN. (2) Create a VPC (at least two VPCs are required). (3) Invoke the AttachCenChildInstance operation to associate the VPCs with the CEN. (4) The CEN has no conflicting route maps or transit router (TR) routing. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">Limits on virtual private cloud (VPC) firewalls</a>.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit per user is 10 calls per second. If you exceed the limit, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</p>
      * 
      * @param request the request parameters of CreateVpcFirewallCenConfigure  CreateVpcFirewallCenConfigureRequest
      * @return CreateVpcFirewallCenConfigureResponse
@@ -234,9 +234,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVpcFirewallCenConfigureResponse> createVpcFirewallCenConfigure(CreateVpcFirewallCenConfigureRequest request);
 
     /**
-     * @deprecated OpenAPI CreateVpcFirewallCenManualConfigure is deprecated  * @description This operation creates a VPC border firewall for a VPC within a Cloud Enterprise Network (CEN) instance. The VPC border firewall protects traffic between the specified VPC and other network instances that are connected to the CEN instance. These network instances include virtual private clouds (VPCs), virtual border routers (VBRs), and Cloud Connect Network (CCN) instances. The VPC border firewall does not protect traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see [VPC border firewall limits](https://help.aliyun.com/document_detail/172295.html).
-     * ## QPS limit
-     * The queries per second (QPS) limit for a single user is 10. If you exceed this limit, API calls are throttled. This can affect your business operations. We recommend that you adhere to this limit.
+     * @deprecated OpenAPI CreateVpcFirewallCenManualConfigure is deprecated  * @description This operation is generally used to create a VPC firewall for VPC-connected instances in a Cloud Enterprise Network (CEN). The virtual private cloud (VPC) firewalls protect the mutual access traffic between VPC-connected instances in the CEN and the specified VPC. VPC-connected instances include VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs). It does not protect traffic between VBRs, between CCNs, or between a VBR and a CCN. For more information, see [Limits on virtual private cloud (VPC) firewalls](https://help.aliyun.com/document_detail/172295.html).
+     * ## QPS limits
+     * The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Invoke this operation at a reasonable frequency.
      * 
      * @param request the request parameters of CreateVpcFirewallCenManualConfigure  CreateVpcFirewallCenManualConfigureRequest
      * @return CreateVpcFirewallCenManualConfigureResponse
@@ -652,9 +652,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is generally used for paging query of information about assets protected by Cloud Firewall.</p>
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
+     * <p>This operation is typically used to perform a paged query for information about assets protected by Cloud Firewall by using paging.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit per user for this operation is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your services. Invoke the operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeAttackAppCategory  DescribeAttackAppCategoryRequest
      * @return DescribeAttackAppCategoryResponse
@@ -677,7 +677,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3>QPS limits</h3>
-     * <p>The queries per second (QPS) limit for this API is 10 per user. Exceeding this limit triggers throttling, which may impact your business. Call this API at a reasonable rate.</p>
+     * <p>The QPS limit per user for this API operation is 10 calls per second. If you exceed the limit, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeClearAuthInfo  DescribeClearAuthInfoRequest
      * @return DescribeClearAuthInfoResponse
@@ -698,7 +698,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is typically used for paging query of access control policy information.</p>
+     * <p>This operation is generally used for paging and paged query of access control policy information.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit per user is 10 calls per second. If you invoke the API and exceed the limit, API calls are throttled, which may affect your business. Invoke the operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeControlPolicy  DescribeControlPolicyRequest
      * @return DescribeControlPolicyResponse
@@ -741,9 +743,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDnsFirewallPolicyResponse> describeDnsFirewallPolicy(DescribeDnsFirewallPolicyRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeDomainResolve is deprecated  * @description This operation retrieves the DNS resolution result for a domain name. You can retrieve resolution results only for domain names that use Alibaba Cloud DNS.
-     * ## QPS limit
-     * The queries per second (QPS) limit for this operation is 10 calls per second per user. If you exceed this limit, your API calls are throttled, which may impact your business. Call this operation at a reasonable rate to avoid throttling.
+     * @deprecated OpenAPI DescribeDomainResolve is deprecated  * @description This operation is generally used to retrieve the DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name to be queried must use Alibaba Cloud DNS to retrieve its resolution results.
+     * ## QPS limits
+     * The QPS limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.
      * 
      * @param request the request parameters of DescribeDomainResolve  DescribeDomainResolveRequest
      * @return DescribeDomainResolveResponse
@@ -764,6 +766,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDownloadTaskTypeResponse> describeDownloadTaskType(DescribeDownloadTaskTypeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the event logs of Cloud Firewall. This operation supports five types of logs: application access control (app_ctl), web filtering (web_filter), TLS inspection (tls), intrusion prevention (ips), and threat intelligence (threat_intelligence). You can filter logs by time range, source IP address, destination IP address, URL, action, rule result, and attack type. Log details are returned in pages. StartTime and EndTime are UNIX timestamps in seconds. The time span of a single query cannot exceed 8 days. If FirewallType is not specified, the Internet Border firewall (InternetFirewall) is queried by default. To query the VPC firewall, set FirewallType to VpcFirewall.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</p>
+     * 
+     * @param request the request parameters of DescribeEventLog  DescribeEventLogRequest
+     * @return DescribeEventLogResponse
+     */
+    CompletableFuture<DescribeEventLogResponse> describeEventLog(DescribeEventLogRequest request);
+
+    /**
      * @deprecated OpenAPI DescribeFirewallDropStatistics is deprecated  * @description ### QPS limit
      * The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, your API calls are throttled. This may affect your business operations. We recommend that you make API calls at a reasonable rate.
      * 
@@ -782,7 +795,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</p>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeFirewallTask  DescribeFirewallTaskRequest
      * @return DescribeFirewallTaskResponse
@@ -797,8 +810,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3>QPS limit</h3>
-     * <p>The queries per second (QPS) limit for this operation is 10 per user. If you exceed the limit, API calls are throttled, which may affect your business. Therefore, call this operation at a reasonable rate.</p>
+     * <h3>Rate limit</h3>
+     * <p>The rate limit for this API operation is 10 queries per second (QPS) per user. If you exceed this limit, throttling is triggered, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeFirewallVSwitch  DescribeFirewallVSwitchRequest
      * @return DescribeFirewallVSwitchResponse
@@ -1018,7 +1031,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the priority range of an access control policy for outbound traffic on a NAT firewall.</p>
+     * <p>This operation is typically used to query the effective policy priority range for an access control policy that manages outbound traffic of a NAT firewall.</p>
      * 
      * @param request the request parameters of DescribeNatFirewallPolicyPriorUsed  DescribeNatFirewallPolicyPriorUsedRequest
      * @return DescribeNatFirewallPolicyPriorUsedResponse
@@ -1177,7 +1190,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For pay-as-you-go users, the bill details are accurate to the specific resource instance granularity. For subscription users, only overall queries are supported.</p>
+     * <p>The details are accurate to the specific resource instance level for pay-as-you-go users. For subscription users, only overall queries are supported.</p>
      * 
      * @param request the request parameters of DescribePostpayBill  DescribePostpayBillRequest
      * @return DescribePostpayBillResponse
@@ -1234,7 +1247,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The statistics cover the current Cloud Firewall instance of the user, including all data since the purchase date.</p>
+     * <p>The statistical scope covers the current Cloud Firewall instances of the user, including all data since the purchase date.</p>
      * 
      * @param request the request parameters of DescribePrepayBillTotal  DescribePrepayBillTotalRequest
      * @return DescribePrepayBillTotalResponse
@@ -1243,7 +1256,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of domain names that require private DNS endpoints for domain name resolution.</p>
+     * <p>Queries the list of domain names that require resolution by using private DNS endpoints.</p>
      * 
      * @param request the request parameters of DescribePrivateDnsDomainNameList  DescribePrivateDnsDomainNameListRequest
      * @return DescribePrivateDnsDomainNameListResponse
@@ -1283,9 +1296,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to retrieve DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS. Otherwise, the resolution results cannot be retrieved.</p>
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
+     * <p>This operation is typically used to retrieve the DNS resolution results of a domain name. Currently, only Alibaba Cloud DNS is supported for retrieving resolution results. The domain name to be queried must use Alibaba Cloud DNS to obtain its resolution results.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeRegionResourceTypeAutoEnable  DescribeRegionResourceTypeAutoEnableRequest
      * @return DescribeRegionResourceTypeAutoEnableResponse
@@ -1294,9 +1307,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to retrieve DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS. Otherwise, the resolution results cannot be retrieved.</p>
+     * <p>This operation is generally used to obtain the DNS resolution results of a domain name. Currently, only Alibaba Cloud DNS is supported for obtaining resolution results. The domain name to be queried must use Alibaba Cloud DNS to retrieve its resolution results.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * <p>The queries per second (QPS) limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeResourceTypeAutoEnable  DescribeResourceTypeAutoEnableRequest
      * @return DescribeResourceTypeAutoEnableResponse
@@ -1305,9 +1318,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to query and download the details of intrusion prevention events. We recommend querying 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if you do not need IP geolocation information.</p>
-     * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for a single user is 10. If you exceed the limit, your API calls are throttled. This may affect your business. Make calls to this operation at a reasonable rate.</p>
+     * <p>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if IP geolocation information is not required.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeRiskEventGroup  DescribeRiskEventGroupRequest
      * @return DescribeRiskEventGroupResponse
@@ -1397,9 +1410,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to query the safe mode of Cloud Firewall.</p>
-     * <h2>QPS limits</h2>
-     * <p>This operation is limited to 10 queries per second (QPS) for each user. If you exceed this limit, your API calls are throttled. Throttling can affect your business operations. We recommend that you plan your API calls accordingly.</p>
+     * <p>This operation is typically used to perform a paged query for information about assets protected by Cloud Firewall. You can use paging to retrieve the data.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit per user for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Invoke this operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeSecurityMode  DescribeSecurityModeRequest
      * @return DescribeSecurityModeResponse
@@ -1578,9 +1591,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries information about all access control policy groups for VPC firewalls.</p>
+     * <p>This operation is used to query all access control policy groups of a VPC firewall.</p>
      * <h2>QPS limit</h2>
-     * <p>The QPS limit for this operation is 10 requests per second per user. API calls that exceed this limit are throttled, potentially affecting your business. Plan your calls accordingly.</p>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeVpcFirewallAclGroupList  DescribeVpcFirewallAclGroupListRequest
      * @return DescribeVpcFirewallAclGroupListResponse
@@ -1624,7 +1637,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for a single user is 10. If you exceed this limit, API calls are throttled, which can affect your business. Plan your calls accordingly.</p>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeVpcFirewallCenSummaryList  DescribeVpcFirewallCenSummaryListRequest
      * @return DescribeVpcFirewallCenSummaryListResponse
@@ -1692,9 +1705,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries a paginated list of VPC firewalls. These firewalls protect traffic between two VPCs that are connected using Express Connect.</p>
-     * <h3>QPS limit</h3>
-     * <p>Each Alibaba Cloud account can send up to 10 queries per second (QPS). If this limit is exceeded, API calls are throttled. This may affect your business. Plan your calls accordingly.</p>
+     * <p>This operation is generally used to perform a paging query on the information about virtual private cloud (VPC) border firewalls. The virtual private cloud (VPC) border firewalls protect traffic between two VPCs connected by Express Connect.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke the API operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeVpcFirewallList  DescribeVpcFirewallListRequest
      * @return DescribeVpcFirewallListResponse
@@ -1712,9 +1725,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the effective priority range for access control policies in a specified VPC firewall policy group.</p>
-     * <h2>Limits</h2>
-     * <p>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled. This may impact your business. Call this operation an appropriate number of times to prevent interruptions.</p>
+     * <p>This operation is typically used to query the effective policy priority range of the access control policy in a specified VPC firewall policy group.</p>
+     * <h2>QPS limit</h2>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeVpcFirewallPolicyPriorUsed  DescribeVpcFirewallPolicyPriorUsedRequest
      * @return DescribeVpcFirewallPolicyPriorUsedResponse
@@ -1723,8 +1736,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
+     * <h2>Rate limits</h2>
+     * <p>The rate limit for this API operation is 10 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeVpcFirewallPrecheckDetail  DescribeVpcFirewallPrecheckDetailRequest
      * @return DescribeVpcFirewallPrecheckDetailResponse
@@ -1743,7 +1756,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries asset information for VPC Access. When calling this operation, set IsAITraffic to &quot;true&quot;. Otherwise, error code -340103 is returned.</p>
+     * <p>Queries the information about assets involved in VPC mutual access. When you call this operation, you must set IsAITraffic to &quot;true&quot;. Otherwise, the -340103 error is returned.</p>
      * 
      * @param request the request parameters of DescribeVpcFirewallTrafficAssetList  DescribeVpcFirewallTrafficAssetListRequest
      * @return DescribeVpcFirewallTrafficAssetListResponse
@@ -1788,7 +1801,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Enables data leak detection (SDL) protection for specified assets.</p>
+     * <p>Enables data leak detection (SDL) protection for the specified assets.</p>
      * 
      * @param request the request parameters of EnableSdlProtectedAsset  EnableSdlProtectedAssetRequest
      * @return EnableSdlProtectedAssetResponse
@@ -1812,9 +1825,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to modify an address book.</p>
-     * <h2>QPS limits</h2>
-     * <p>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * <p>This operation is typically used to modify an address book.</p>
+     * <h2>Rate limits</h2>
+     * <p>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</p>
      * 
      * @param request the request parameters of ModifyAddressBook  ModifyAddressBookRequest
      * @return ModifyAddressBookResponse
@@ -1984,7 +1997,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the configuration of a virtual private cloud (VPC) firewall. Although this operation is named ModifyTrFirewallV2Configuration, it supports all VPC firewall types and is not limited to VPC firewalls for Enterprise Edition transit routers. The FirewallId format is not restricted to the vfw-tr-* prefix. Before calling this operation, create a VPC firewall instance. For transit router-type firewalls, call CreateTrFirewallV2 to create the firewall, and call DescribeTrFirewallsV2List to query the FirewallId.</p>
+     * <p>Modifies the configuration of a virtual private cloud (VPC) firewall. Although the API operation is named ModifyTrFirewallV2Configuration, it supports all types of VPC firewalls and is not limited to CEN Enterprise Edition TR firewalls. The FirewallId format is not limited to the vfw-tr-* prefix. Before you call this API operation, you must create a VPC firewall instance. You can create a TR firewall by calling CreateTrFirewallV2 and query its FirewallId by calling DescribeTrFirewallsV2List.</p>
      * 
      * @param request the request parameters of ModifyTrFirewallV2Configuration  ModifyTrFirewallV2ConfigurationRequest
      * @return ModifyTrFirewallV2ConfigurationResponse
@@ -1993,7 +2006,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Supports modifications for <em>point-to-multipoint</em> and <em>multipoint interconnection</em> scenarios. Modifications for <em>point-to-point</em> scenarios are not supported.</p>
+     * <p>Supports modifications for <em>point-to-multipoint</em> and <em>multipoint interconnection</em> scenarios. Does not support modifications for <em>point-to-point</em> scenarios.</p>
      * 
      * @param request the request parameters of ModifyTrFirewallV2RoutePolicyScope  ModifyTrFirewallV2RoutePolicyScopeRequest
      * @return ModifyTrFirewallV2RoutePolicyScopeResponse
@@ -2061,10 +2074,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to modify the configurations of a virtual private cloud (VPC) firewall that controls traffic between two VPCs connected by using an Express Connect circuit.
-     * Before you invoke this operation, make sure that you have created a virtual private cloud (VPC) firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</p>
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Invoke this operation within the limit.</p>
+     * <p>This operation is generally used to modify the configuration of a VPC border firewall. The VPC border firewall protects traffic between two VPCs connected over Express Connect.
+     * Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create a VPC border firewall.</p>
+     * <h2>Rate limit</h2>
+     * <p>You can call this operation up to 10 times per second. Requests that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</p>
      * 
      * @param request the request parameters of ModifyVpcFirewallConfigure  ModifyVpcFirewallConfigureRequest
      * @return ModifyVpcFirewallConfigureResponse
@@ -2073,9 +2086,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation modifies the configuration of an access control policy for a specified VPC firewall policy group. VPC firewall instances use different access control policies to protect Cloud Enterprise Network (CEN) instances and Express Connect circuits.</p>
-     * <h2>QPS limits</h2>
-     * <p>The queries per second (QPS) limit for this operation is 10 for a single user. If the number of calls to this operation per second exceeds the limit, rate limiting is triggered. This may affect your business. Plan your calls accordingly.</p>
+     * <p>This operation is typically used to modify the configuration of an access control policy for a specified VPC firewall policy group. VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and VPC firewall instances that protect Express Connect circuits use different access control policies.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</p>
      * 
      * @param request the request parameters of ModifyVpcFirewallControlPolicy  ModifyVpcFirewallControlPolicyRequest
      * @return ModifyVpcFirewallControlPolicyResponse
@@ -2112,10 +2125,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to modify the status of a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs connected through an Express Connect circuit. After you enable the VPC firewall, mutual access traffic between the two VPCs connected through the Express Connect circuit is protected by the VPC firewall. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between the two VPCs connected through the Express Connect circuit.
-     * Before you invoke this operation, make sure that you have invoked the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create a VPC firewall.</p>
+     * <p>This operation modifies the switch status of virtual private cloud (VPC) firewalls at the border. The virtual private cloud (VPC) firewalls at the border protect traffic between two VPCs connected over Express Connect. After you enable the virtual private cloud (VPC) firewalls at the border, the mutual access traffic between the two VPCs connected over Express Connect is protected by the virtual private cloud (VPC) firewalls at the border. After the shutdown of the virtual private cloud (VPC) firewalls at the border, the virtual private cloud (VPC) firewalls at the border no longer protect the mutual access traffic between the two VPCs connected over Express Connect.
+     * Before you invoke this operation, you must have invoked the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create virtual private cloud (VPC) firewalls at the border.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls to this operation accordingly.</p>
+     * <p>The QPS limit per user for this operation is 10. If the number of invocations per second exceeds the limit, throttling is triggered, which may affect your services. Make invocations at a reasonable rate.</p>
      * 
      * @param request the request parameters of ModifyVpcFirewallSwitchStatus  ModifyVpcFirewallSwitchStatusRequest
      * @return ModifyVpcFirewallSwitchStatusResponse
@@ -2125,8 +2138,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>This operation disables all firewall switches.</p>
-     * <h2>QPS limit</h2>
-     * <p>Each user can send up to 10 queries per second (QPS). If you exceed this limit, API calls are throttled, which may affect your business. Plan your calls accordingly.</p>
+     * <h2>Rate limit</h2>
+     * <p>The rate limit for a single user is 10 queries per second (QPS). If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</p>
      * 
      * @param request the request parameters of PutDisableAllFwSwitch  PutDisableAllFwSwitchRequest
      * @return PutDisableAllFwSwitchResponse
@@ -2157,9 +2170,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Enables a firewall switch. Traffic passes through Cloud Firewall only after the firewall switch is enabled.</p>
+     * <p>This operation enables the firewall switch. Traffic passes through Cloud Firewall only after the firewall switch is enabled.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as appropriate.</p>
+     * <p>The QPS limit for a single user is 5 requests per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API at a reasonable frequency.</p>
      * 
      * @param request the request parameters of PutEnableFwSwitch  PutEnableFwSwitchRequest
      * @return PutEnableFwSwitchResponse
@@ -2238,8 +2251,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>QPS Limit</h2>
-     * <p>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this API appropriately.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * @param request the request parameters of UpdateAclCheckDetailStatus  UpdateAclCheckDetailStatusRequest
      * @return UpdateAclCheckDetailStatusResponse

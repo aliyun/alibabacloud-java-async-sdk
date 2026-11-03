@@ -73,7 +73,7 @@ public class DescribeCreatedNatFirewallRequest extends Request {
         } 
 
         /**
-         * <p>The language of the request and response.</p>
+         * <p>The language of the request and response messages.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

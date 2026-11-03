@@ -73,7 +73,7 @@ public class EnableSdlProtectedAssetRequest extends Request {
         } 
 
         /**
-         * <p>The list of IP assets. At least one IP address is required to enable protection.</p>
+         * <p>The list of IP addresses of the assets. At least one IP address is required to enable protection.</p>
          */
         public Builder ipList(java.util.List<String> ipList) {
             this.putQueryParameter("IpList", ipList);

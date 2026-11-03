@@ -103,7 +103,7 @@ public class ModifySensitiveSwitchRequest extends Request {
         }
 
         /**
-         * <p>The type.</p>
+         * <p>The category.</p>
          * 
          * <strong>example:</strong>
          * <p>id_card</p>
@@ -117,8 +117,8 @@ public class ModifySensitiveSwitchRequest extends Request {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enabled.</li>
-         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

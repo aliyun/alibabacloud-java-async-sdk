@@ -132,7 +132,7 @@ public class DescribeVpcFirewallTrafficTrendRequest extends Request {
         } 
 
         /**
-         * <p>The end time. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,8 +147,8 @@ public class DescribeVpcFirewallTrafficTrendRequest extends Request {
         /**
          * <p>The language of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class DescribeVpcFirewallTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the peer VPC instance.</p>
+         * <p>The instance ID of the peer VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-j6c7mscdg4hfqanfi****</p>
@@ -185,7 +185,7 @@ public class DescribeVpcFirewallTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The start time. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

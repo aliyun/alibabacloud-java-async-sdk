@@ -67,7 +67,7 @@ public class DescribeCreatedNatFirewallResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of the created NAT firewalls.</p>
+         * <p>The list of created NAT firewalls.</p>
          */
         public Builder createdNatFirewalls(java.util.List<CreatedNatFirewalls> createdNatFirewalls) {
             this.createdNatFirewalls = createdNatFirewalls;
@@ -168,7 +168,7 @@ public class DescribeCreatedNatFirewallResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the NAT Gateway.</p>
+             * <p>The ID of the NAT gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>ngw-uf6i0zkjtz4t2sttf****</p>
@@ -179,7 +179,7 @@ public class DescribeCreatedNatFirewallResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the NAT Gateway.</p>
+             * <p>The name of the NAT gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>ngw-text</p>

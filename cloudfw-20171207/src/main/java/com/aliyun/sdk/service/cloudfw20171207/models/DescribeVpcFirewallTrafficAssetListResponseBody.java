@@ -80,7 +80,7 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data list.</p>
+         * <p>The list of returned data.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,7 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C5BE1AA4-934A-5085-89CC-9AD1CAC3****</p>
@@ -231,7 +231,7 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of IPS hits.</p>
+             * <p>The number of Intrusion Prevention System (IPS) hits.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

@@ -67,7 +67,7 @@ public class DescribeResourceTypeAutoEnableResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7447795A-39AB-52CB-8F92-128DF******</p>
@@ -78,7 +78,10 @@ public class DescribeResourceTypeAutoEnableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether default traffic redirection is enabled.</p>
+         * <p>Indicates whether traffic redirection is enabled by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;eip&quot;:true,&quot;SlbEIP&quot;:false}</p>
          */
         public Builder resourceTypeAutoEnable(java.util.Map<String, Boolean> resourceTypeAutoEnable) {
             this.resourceTypeAutoEnable = resourceTypeAutoEnable;

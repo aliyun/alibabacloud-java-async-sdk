@@ -87,7 +87,7 @@ public class UpdatePostpayUserVpcStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Cloud Firewall instance.</p>
+         * <p>The ID of the Cloud Firewall instance. This parameter is required. If you do not specify this parameter, the API returns a 400 error. You can call the DescribeUserBuyVersion operation to obtain the Cloud Firewall instance ID of the current account.</p>
          * 
          * <strong>example:</strong>
          * <p>cfw_elasticity_public_cn-************</p>
@@ -115,9 +115,9 @@ public class UpdatePostpayUserVpcStatusRequest extends Request {
         }
 
         /**
-         * <p>The operation type. Currently, only the activation operation is supported. Valid values:</p>
+         * <p>The operation type. Only the enable operation is supported. Valid values:</p>
          * <ul>
-         * <li>open: activation</li>
+         * <li>open: Enables the module.</li>
          * </ul>
          * 
          * <strong>example:</strong>

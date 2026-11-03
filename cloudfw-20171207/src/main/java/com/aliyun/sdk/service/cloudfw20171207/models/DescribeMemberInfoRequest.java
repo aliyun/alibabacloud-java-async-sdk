@@ -59,7 +59,7 @@ public class DescribeMemberInfoRequest extends Request {
         } 
 
         /**
-         * <p>The UID of the member account.</p>
+         * <p>The UID of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>150795602499****</p>

@@ -80,7 +80,7 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A1562A68-99FA-5D6B-BD5B-2F959F25****</p>
@@ -168,7 +168,7 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID of the firewall.</p>
+             * <p>The firewall instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vfw-tr-37145c8f5ede45e9****</p>
@@ -416,7 +416,7 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC instance.</p>
+             * <p>The VPC-connected instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2zeez7gymz5r4pi****am</p>

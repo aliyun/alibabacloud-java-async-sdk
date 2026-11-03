@@ -245,9 +245,9 @@ public class AddAddressBookRequest extends Request {
         } 
 
         /**
-         * <p>The ACK cluster connector ID. You can obtain the value from the following operation:</p>
+         * <p>The ID of the ACK cluster connector. You can obtain the value from the following operation:</p>
          * <ul>
-         * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Lists ACK cluster connectors.</li>
+         * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Queries the list of ACK cluster connectors.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,7 +284,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The addresses in the address book. Separate multiple addresses with commas (,). Use a space to separate an address from its description within a single address element.</p>
+         * <p>The list of addresses in the address book. Separate multiple addresses with commas (,). For each address element, separate the address and the description with a space.</p>
          * <blockquote>
          * <p>This parameter is required when GroupType is set to <code>ip</code>, <code>port</code>, or <code>domain</code>.</p>
          * </blockquote>
@@ -317,7 +317,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The list of regions and resource types for the asset address book.</p>
+         * <p>The asset address book, region, and resource type list.</p>
          */
         public Builder assetRegionResourceTypes(java.util.List<AssetRegionResourceTypes> assetRegionResourceTypes) {
             String assetRegionResourceTypesShrink = shrink(assetRegionResourceTypes, "AssetRegionResourceTypes", "json");
@@ -327,7 +327,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether to automatically add the public IP addresses of Elastic Compute Service (ECS) instances that match the specified tags to the address book.</p>
+         * <p>Specifies whether the address book is automatically updated to include the public IP addresses of Elastic Compute Service (ECS) instances that match new labels.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -378,7 +378,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The language type of the address book description.</p>
+         * <p>The language of the address book description.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -390,7 +390,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The source IP address of the requester.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
@@ -402,7 +402,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The ECS tag list.</p>
+         * <p>The list of ECS tags.</p>
          */
         public Builder tagList(java.util.List<TagList> tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -411,7 +411,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The logical relationship among multiple ECS tags to match.</p>
+         * <p>The relationship between multiple ECS tags to be matched.</p>
          * 
          * <strong>example:</strong>
          * <p>and</p>
@@ -1082,7 +1082,7 @@ public class AddAddressBookRequest extends Request {
             } 
 
             /**
-             * <p>The asset type: AIGatewayEIPv6.</p>
+             * <p>The AIGatewayEIPv6 asset type.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1093,7 +1093,7 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * <p>The asset type: AlbIPv6.</p>
+             * <p>The AlbIPv6 asset type.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1104,7 +1104,7 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * <p>The asset type: ApigEIPv6.</p>
+             * <p>The ApigEIPv6 asset type.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1115,7 +1115,7 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * <p>The asset type: EcsIPv6.</p>
+             * <p>The EcsIPv6 asset type.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1126,7 +1126,7 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * <p>The asset type: EniEIPv6.</p>
+             * <p>The EniEIPv6 asset type.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1137,7 +1137,7 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * <p>The asset type: GaEIPv6.</p>
+             * <p>The GaEIPv6 asset type.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1148,7 +1148,7 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * <p>The asset type: NlbIPv6.</p>
+             * <p>The NlbIPv6 asset type.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1159,7 +1159,7 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * <p>The asset type: SlbIPv6.</p>
+             * <p>The SlbIPv6 asset type.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1304,7 +1304,7 @@ public class AddAddressBookRequest extends Request {
             } 
 
             /**
-             * <p>The region ID of the asset.</p>
+             * <p>The asset region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>all</p>

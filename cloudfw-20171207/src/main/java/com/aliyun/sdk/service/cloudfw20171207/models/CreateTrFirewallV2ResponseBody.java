@@ -67,7 +67,7 @@ public class CreateTrFirewallV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) firewalls at the border.</p>
          * 
          * <strong>example:</strong>
          * <p>vfw-tr-37e22bf0d9b34870****</p>
@@ -78,7 +78,7 @@ public class CreateTrFirewallV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>822B9125-6E1A-551C-8EAF-6E7AE7444B00</p>

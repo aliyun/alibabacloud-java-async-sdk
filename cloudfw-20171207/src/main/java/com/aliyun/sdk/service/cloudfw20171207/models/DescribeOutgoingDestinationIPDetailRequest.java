@@ -258,7 +258,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         } 
 
         /**
-         * <p>The status of the access control policy.</p>
+         * <p>The policy coverage status.</p>
          * 
          * <strong>example:</strong>
          * <p>FullCoverage</p>
@@ -270,7 +270,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -295,7 +295,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -308,7 +308,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * <p>Describes the outbound connections from a private network through a NAT gateway.</p>
+         * <p>Specifies whether to query outbound connections from the private network of a NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>NatPrivate</p>
@@ -320,7 +320,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * <p>The language of the response message.</p>
+         * <p>The language type for receiving messages.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -332,7 +332,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the NAT Gateway.</p>
+         * <p>The ID of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-2zed6z6qkd7ogc****</p>
@@ -356,7 +356,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -392,7 +392,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * <p>The field to use for sorting.</p>
+         * <p>The field by which to sort the results.</p>
          * 
          * <strong>example:</strong>
          * <p>InBytes</p>
@@ -416,7 +416,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -429,7 +429,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tag.</p>
+         * <p>The tag ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FirstFlow</p>

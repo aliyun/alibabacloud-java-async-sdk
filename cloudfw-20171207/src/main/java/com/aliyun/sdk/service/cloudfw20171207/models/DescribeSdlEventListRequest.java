@@ -227,7 +227,7 @@ public class DescribeSdlEventListRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -251,7 +251,7 @@ public class DescribeSdlEventListRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. This value is a UNIX timestamp representing seconds.</p>
+         * <p>The end time. Specify a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1756433077</p>
@@ -263,7 +263,7 @@ public class DescribeSdlEventListRequest extends Request {
         }
 
         /**
-         * <p>The language of the response.</p>
+         * <p>The language in which messages are received.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -287,7 +287,7 @@ public class DescribeSdlEventListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return only events detected by AI.</p>
+         * <p>Specifies whether to query only AI events.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -299,7 +299,7 @@ public class DescribeSdlEventListRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values: <code>asc</code> (ascending) and <code>desc</code> (descending).</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -323,7 +323,7 @@ public class DescribeSdlEventListRequest extends Request {
         }
 
         /**
-         * <p>The sensitivity level of the data in the event.</p>
+         * <p>The sensitive data level.</p>
          * 
          * <strong>example:</strong>
          * <p>S3</p>
@@ -335,7 +335,7 @@ public class DescribeSdlEventListRequest extends Request {
         }
 
         /**
-         * <p>The field to sort by.</p>
+         * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
          * <p>TotalBytes</p>
@@ -359,7 +359,7 @@ public class DescribeSdlEventListRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. This value is a UNIX timestamp representing seconds.</p>
+         * <p>The start time. Specify a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1759198702</p>
@@ -371,7 +371,7 @@ public class DescribeSdlEventListRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the event.</p>
+         * <p>The unique identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>aa58cdf6-6cf8-493c-912d-97619a24****</p>

@@ -136,7 +136,7 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of threat domain names.</p>
+         * <p>The total number of risky domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -147,7 +147,7 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of threat IP addresses.</p>
+         * <p>The total number of risky IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -229,7 +229,7 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of threat domain names.</p>
+             * <p>The number of risky domain names.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -240,7 +240,7 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of threat IP addresses.</p>
+             * <p>The number of risky IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

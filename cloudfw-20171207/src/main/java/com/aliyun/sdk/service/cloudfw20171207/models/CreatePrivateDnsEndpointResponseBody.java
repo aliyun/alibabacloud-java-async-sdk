@@ -102,7 +102,7 @@ public class CreatePrivateDnsEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID, which uniquely identifies the task.</p>
+         * <p>The task ID, which is the unique identifier of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>132</p>

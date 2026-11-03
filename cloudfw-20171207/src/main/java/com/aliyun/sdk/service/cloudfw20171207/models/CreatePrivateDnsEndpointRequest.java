@@ -259,7 +259,7 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * <p>The type of the cloud firewall. Valid values:</p>
+         * <p>The Cloud Firewall type. Valid values:</p>
          * <ul>
          * <li><strong>internet</strong></li>
          * <li><strong>vpc</strong></li>
@@ -290,7 +290,7 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * <p>The UID of the Alibaba Cloud member accounts.</p>
+         * <p>The UID of Alibaba Cloud member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -316,7 +316,7 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         /**
          * <p>The primary DNS server.</p>
          * <blockquote>
-         * <p>When PrivateDnsType is set to Custom, you must specify PrimaryDns and StandbyDns.</p>
+         * <p>If PrivateDnsType is set to Custom, you must provide PrimaryDns and StandbyDns.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -329,7 +329,7 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * <p>The ID of the primary vSwitch. The zone of PrimaryVSwitchId and StandbyVSwitchId must be a zone that supports private DNS. Otherwise, an error is returned. The region must also be in the supported list.</p>
+         * <p>The ID of the primary vSwitch. This parameter is required. If this parameter is not specified, -200103 is returned. The region and zone of the primary and secondary vSwitches specified by PrimaryVSwitchId and StandbyVSwitchId must support private DNS firewalls.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf6b0dkyryer8******</p>
@@ -353,7 +353,7 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * <p>The type of private DNS. When PrivateDnsType is set to Custom, Port and IpProtocol are required. When PrivateDnsType is set to PrivateZone, the backend automatically sets the port to 53 and uses the default protocol. Valid values:</p>
+         * <p>The private DNS type. If PrivateDnsType is set to Custom, Port and IpProtocol are conditionally required. If PrivateDnsType is set to PrivateZone, the backend automatically populates the values with 53 and the default protocol. Valid values:</p>
          * <ul>
          * <li><strong>PrivateZone</strong></li>
          * <li><strong>Custom</strong> (default)</li>
@@ -385,7 +385,7 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         /**
          * <p>The secondary DNS server.</p>
          * <blockquote>
-         * <p>When PrivateDnsType is set to Custom, you must specify PrimaryDns and StandbyDns.</p>
+         * <p>If PrivateDnsType is set to Custom, you must provide PrimaryDns and StandbyDns.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -398,7 +398,7 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * <p>The ID of the secondary vSwitch. The zone of PrimaryVSwitchId and StandbyVSwitchId must be a zone that supports private DNS. Otherwise, error code -200534 is returned. The region must also be in the supported list.</p>
+         * <p>The ID of the secondary vSwitch. The zones of the primary and secondary vSwitches specified by PrimaryVSwitchId and StandbyVSwitchId must support private DNS. Otherwise, -200534 is returned. The region must also be in the support list.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-8vb6jk75wfcwn******</p>
@@ -422,7 +422,7 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the VPC-connected instance.</p>
+         * <p>The VPC-connected instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

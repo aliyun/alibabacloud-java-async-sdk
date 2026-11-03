@@ -91,7 +91,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array of data leakage events.</p>
+         * <p>The list of data leak events.</p>
          */
         public Builder sdlEventDetailList(java.util.List<SdlEventDetailList> sdlEventDetailList) {
             this.sdlEventDetailList = sdlEventDetailList;
@@ -506,7 +506,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The asset name.</p>
+             * <p>The name of the asset.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -539,14 +539,11 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The intelligence tag category. Valid values:</p>
+             * <p>The categorization of intelligence labels. Valid values:</p>
              * <ul>
-             * <li><p><strong>Suspicious</strong>: suspicious</p>
-             * </li>
-             * <li><p><strong>Malicious</strong>: malicious</p>
-             * </li>
-             * <li><p><strong>Trusted</strong>: trusted</p>
-             * </li>
+             * <li><strong>Suspicious</strong>: Suspicious.</li>
+             * <li><strong>Malicious</strong>: Malicious.</li>
+             * <li><strong>Trusted</strong>: Trusted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -558,7 +555,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category name.</p>
+             * <p>The name of the category.</p>
              * 
              * <strong>example:</strong>
              * <p>Trusted</p>
@@ -569,7 +566,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The city ID.</p>
+             * <p>The ID of the city.</p>
              * 
              * <strong>example:</strong>
              * <p>000</p>
@@ -580,7 +577,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The country ID.</p>
+             * <p>The ID of the country.</p>
              * 
              * <strong>example:</strong>
              * <p>cn</p>
@@ -602,7 +599,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination port.</p>
+             * <p>The destination ports.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -624,7 +621,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event\&quot;s risk level.</p>
+             * <p>The risk level of the event.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -635,7 +632,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event name.</p>
+             * <p>The name of the event.</p>
              * 
              * <strong>example:</strong>
              * <p>Sensitive ID card data leakage</p>
@@ -646,7 +643,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The first time the event occurred, as a Unix timestamp in seconds.</p>
+             * <p>The time when the event first occurred. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1735697768</p>
@@ -657,7 +654,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last time the event occurred, as a Unix timestamp in seconds.</p>
+             * <p>The time when the event last occurred. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1738636157</p>
@@ -668,7 +665,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The location of the destination IP address.</p>
+             * <p>The name of the region to which the destination IP address belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>Yuhang District, Hangzhou City, Zhejiang Province</p>
@@ -679,7 +676,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The payload of the intrusion prevention event.</p>
+             * <p>The attack payload of the intrusion prevention event.</p>
              * 
              * <strong>example:</strong>
              * <p>3082002f02010004067075626c6963a082002002044c33a756020100020100308200103082000c06082b060102010105000500</p>
@@ -690,7 +687,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol.</p>
+             * <p>The protocols.</p>
              * 
              * <strong>example:</strong>
              * <p>TCP</p>
@@ -734,7 +731,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sensitive data items.</p>
+             * <p>The amount of sensitive data.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -745,7 +742,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array of sensitive data.</p>
+             * <p>The list of sensitive data.</p>
              */
             public Builder sensitiveDataList(java.util.List<String> sensitiveDataList) {
                 this.sensitiveDataList = sensitiveDataList;
@@ -764,7 +761,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive data type.</p>
+             * <p>The type of sensitive data.</p>
              * 
              * <strong>example:</strong>
              * <p>Identity Card</p>
@@ -786,7 +783,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source port.</p>
+             * <p>The source ports.</p>
              * 
              * <strong>example:</strong>
              * <p>443</p>
@@ -797,7 +794,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic volume in bytes.</p>
+             * <p>The traffic volume.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -808,7 +805,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier for the event.</p>
+             * <p>The UUID.</p>
              * 
              * <strong>example:</strong>
              * <p>b91035dc-8be4-411d-bec5-e6320af9****</p>

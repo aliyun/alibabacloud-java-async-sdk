@@ -466,7 +466,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The recommended ACL content.</p>
+             * <p>The ACL recommendation details.</p>
              * 
              * <strong>example:</strong>
              * <p>RecommendedRelease</p>
@@ -488,7 +488,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name business.</p>
+             * <p>The business of the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -565,7 +565,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a recommended ACL exists.</p>
+             * <p>Indicates whether an ACL is recommended.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -587,7 +587,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the entry is manually marked as normal by the user.</p>
+             * <p>Indicates whether the destination is manually marked as normal by the user.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

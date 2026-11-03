@@ -73,7 +73,7 @@ public class DescribeNatFirewallQuotaRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response.</p>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -85,7 +85,7 @@ public class DescribeNatFirewallQuotaRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>113.132.26.XXX</p>

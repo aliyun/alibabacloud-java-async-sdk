@@ -106,7 +106,7 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of nodes that are in an abnormal state.</p>
+         * <p>The number of abnormal nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of quotas.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -139,7 +139,7 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of unprotected assets.</p>
+         * <p>The number of unprotected items.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

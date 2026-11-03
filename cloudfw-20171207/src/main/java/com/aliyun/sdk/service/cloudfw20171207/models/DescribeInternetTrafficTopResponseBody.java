@@ -93,7 +93,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of traffic data entries.</p>
+         * <p>The number of traffic data records.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -104,7 +104,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of traffic data.</p>
+         * <p>The traffic data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -112,7 +112,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of traffic data.</p>
+         * <p>The traffic data type.</p>
          * 
          * <strong>example:</strong>
          * <p>in_src_ip</p>
@@ -123,7 +123,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
@@ -244,7 +244,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the country.</p>
+             * <p>The country name.</p>
              * 
              * <strong>example:</strong>
              * <p>US</p>
@@ -255,7 +255,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inbound traffic percentage.</p>
+             * <p>The inbound percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>47.12</p>
@@ -266,7 +266,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the data is subscribed.</p>
+             * <p>Indicates whether the item is subscribed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -277,7 +277,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of labels.</p>
+             * <p>The label list.</p>
              */
             public Builder labelList(java.util.List<String> labelList) {
                 this.labelList = labelList;

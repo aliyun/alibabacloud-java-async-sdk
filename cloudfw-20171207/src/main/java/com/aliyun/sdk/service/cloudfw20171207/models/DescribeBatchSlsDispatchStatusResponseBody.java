@@ -119,7 +119,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of detailed information about the Logstores.</p>
+         * <p>The detailed information list of Logstores.</p>
          */
         public Builder infoList(java.util.List<InfoList> infoList) {
             this.infoList = infoList;
@@ -127,7 +127,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of Simple Log Service projects.</p>
+         * <p>The list of log services.</p>
          */
         public Builder itemList(java.util.List<ItemList> itemList) {
             this.itemList = itemList;
@@ -135,7 +135,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The log version. A value of 1 indicates that there is one Logstore. A value of 2 indicates that there are two Logstores.</p>
+         * <p>The log version. A value of 1 indicates only one Logstore, and a value of 2 indicates two Logstores.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID of the returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>7036EBAB-F85F-5AAE-976F-C75AEE59****</p>
@@ -300,7 +300,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the delivery type.</p>
+             * <p>The Chinese name of the delivery type.</p>
              * 
              * <strong>example:</strong>
              * <p>internet-traffic-log</p>
@@ -311,7 +311,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key for the log categorization. Valid values:</p>
+             * <p>The key for classified logs. Valid values:</p>
              * <p><strong>internet_log</strong></p>
              * <p><strong>vpc_firewall_log</strong></p>
              * <p><strong>nat_firewall_log</strong></p>
@@ -327,7 +327,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this delivery type is enabled.</p>
+             * <p>The switch status of the delivery type.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -338,7 +338,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed delivery configurations for the Internet and VPCs.</p>
+             * <p>The detailed delivery configurations for the Internet and VPC.</p>
              */
             public Builder filterKeys(java.util.List<String> filterKeys) {
                 this.filterKeys = filterKeys;
@@ -346,7 +346,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value is fixed to log_type. You can ignore this parameter.</p>
+             * <p>The value is fixed as log_type and can be ignored.</p>
              * 
              * <strong>example:</strong>
              * <p>log_type</p>
@@ -442,7 +442,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the log delivery configuration.</p>
+             * <p>The log delivery configuration details.</p>
              */
             public Builder itemList(java.util.List<InfoListItemList> itemList) {
                 this.itemList = itemList;
@@ -472,7 +472,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>\<code>cn\\</code> indicates the Chinese mainland. \<code>intl\\</code> indicates regions outside the Chinese mainland. \<code>global\\</code> indicates global.</p>
+             * <p>The site. A value of cn represents the Chinese mainland, intl represents regions outside the Chinese mainland, and global represents global.</p>
              * 
              * <strong>example:</strong>
              * <p>cn</p>
@@ -594,7 +594,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the delivery configuration.</p>
+             * <p>The delivery configuration status.</p>
              * 
              * <strong>example:</strong>
              * <p>success_finished</p>
@@ -605,7 +605,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the log delivery.</p>
+             * <p>The delivery name.</p>
              * 
              * <strong>example:</strong>
              * <p>internet-traffic-log</p>
@@ -616,7 +616,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the log to be delivered.</p>
+             * <p>The value of the delivery log.</p>
              * 
              * <strong>example:</strong>
              * <p>internet_log</p>

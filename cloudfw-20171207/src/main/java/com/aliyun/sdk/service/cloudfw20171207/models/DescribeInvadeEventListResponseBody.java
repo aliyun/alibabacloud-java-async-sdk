@@ -119,7 +119,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of compromise awareness events.</p>
+         * <p>The list of compromised host events.</p>
          */
         public Builder eventList(java.util.List<EventList> eventList) {
             this.eventList = eventList;
@@ -127,7 +127,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The percentage of high-risk level events.</p>
+         * <p>The proportion of high-risk levels.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -138,7 +138,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The percentage of low-risk level events.</p>
+         * <p>The proportion of low-risk levels.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -149,7 +149,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The percentage of medium-risk level events.</p>
+         * <p>The proportion of medium-risk levels.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -441,7 +441,20 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the affected asset. Valid values:</p>
+             * <p>The affected asset type. Valid values:</p>
+             * <ul>
+             * <li><strong>BastionHostIP</strong>: the egress IP address of Bastionhost.</li>
+             * <li><strong>BastionHostIngressIP</strong>: the ingress IP address of Bastionhost.</li>
+             * <li><strong>EcsEIP</strong>: the EIP of an ECS instance.</li>
+             * <li><strong>EcsPublicIP</strong>: the public IP addresses of Elastic Compute Service (ECS) instances.</li>
+             * <li><strong>EIP</strong>: an EIP.</li>
+             * <li><strong>EniEIP</strong>: the EIP of an elastic network interface controller (NIC).</li>
+             * <li><strong>NatEIP</strong>: the EIP of a NAT gateway.</li>
+             * <li><strong>SlbEIP</strong>: the EIP of an SLB instance.</li>
+             * <li><strong>SlbPublicIP</strong>: the public IP address of an SLB instance.</li>
+             * <li><strong>NatPublicIP</strong>: the public IP address of a NAT gateway.</li>
+             * <li><strong>HAVIP</strong>: a high-availability (active) virtual IP address.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>EcsPublicIp</p>
@@ -452,7 +465,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the compromise awareness event.</p>
+             * <p>The ID of the breach awareness event.</p>
              * 
              * <strong>example:</strong>
              * <p>69d189e2-ec17-4676-a2fe-02969234****</p>
@@ -463,7 +476,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the compromise awareness event.</p>
+             * <p>The name of the breach awareness event.</p>
              * 
              * <strong>example:</strong>
              * <p>event_test</p>
@@ -474,7 +487,13 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the compromise awareness event. Valid values:</p>
+             * <p>The source of the compromised host event. Valid values:</p>
+             * <ul>
+             * <li><p><strong>IPS</strong>: intrusion prevention event.</p>
+             * </li>
+             * <li><p><strong>offline</strong>: offline event.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>IPS</p>
@@ -485,7 +504,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the compromise awareness event.</p>
+             * <p>The UUID of the breach awareness event.</p>
              * 
              * <strong>example:</strong>
              * <p>fadd-dfdd-****</p>
@@ -496,7 +515,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the compromise awareness event first occurred. The value is a UNIX timestamp in seconds.</p>
+             * <p>The time when the compromised host event first occurred. The value is a UNIX timestamp accurate to seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1656750960</p>
@@ -507,7 +526,13 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the compromise awareness event is ignored. Valid values:</p>
+             * <p>Indicates whether the compromised host event is ignored. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: ignored.</p>
+             * </li>
+             * <li><p><strong>false</strong>: not ignored.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -518,7 +543,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the compromise awareness event last occurred. The value is a UNIX timestamp in seconds.</p>
+             * <p>The time when the compromised host event last occurred. The value is a UNIX timestamp accurate to seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1656837360</p>
@@ -551,7 +576,11 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing status of the compromise awareness event. Valid values:</p>
+             * <p>The processing status of the compromised host event. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unhandled.</li>
+             * <li><strong>20</strong>: resolved.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -573,7 +602,20 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the affected asset. Valid values:</p>
+             * <p>The affected asset type. Valid values:</p>
+             * <ul>
+             * <li><strong>BastionHostIP</strong>: the egress IP address of Bastionhost.</li>
+             * <li><strong>BastionHostIngressIP</strong>: the ingress IP address of Bastionhost.</li>
+             * <li><strong>EcsEIP</strong>: the EIP of an ECS instance.</li>
+             * <li><strong>EcsPublicIP</strong>: the public IP addresses of Elastic Compute Service (ECS) instances.</li>
+             * <li><strong>EIP</strong>: an EIP.</li>
+             * <li><strong>EniEIP</strong>: the EIP of an elastic network interface controller (NIC).</li>
+             * <li><strong>NatEIP</strong>: the EIP of a NAT gateway.</li>
+             * <li><strong>SlbEIP</strong>: the EIP of an SLB instance.</li>
+             * <li><strong>SlbPublicIP</strong>: the public IP address of an SLB instance.</li>
+             * <li><strong>NatPublicIP</strong>: the public IP address of a NAT gateway.</li>
+             * <li><strong>HAVIP</strong>: a high-availability (active) virtual IP address.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>EcsPublicIp</p>
@@ -585,6 +627,11 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
 
             /**
              * <p>The risk assessment level. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Low risk.</li>
+             * <li><strong>2</strong>: Medium risk.</li>
+             * <li><strong>3</strong>: High risk.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -667,7 +714,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the current page in a paging query.</p>
+             * <p>The current page number returned for a paging query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -678,7 +725,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries per page in a paging query.</p>
+             * <p>The maximum number of entries returned per page for a paging query.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -689,7 +736,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of compromise awareness events.</p>
+             * <p>The total number of compromised host events.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>

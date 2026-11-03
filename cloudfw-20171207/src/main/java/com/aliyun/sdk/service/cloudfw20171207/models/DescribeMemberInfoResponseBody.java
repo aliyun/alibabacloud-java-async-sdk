@@ -106,7 +106,7 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the Alibaba Cloud account.</p>
+         * <p>The name of the main account.</p>
          * 
          * <strong>example:</strong>
          * <p>tianzhuang</p>
@@ -117,7 +117,7 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The UID of the Alibaba Cloud account.</p>
+         * <p>The UID of the main account.</p>
          * 
          * <strong>example:</strong>
          * <p>164705101205****</p>
@@ -128,7 +128,7 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the account is a member account.</p>
+         * <p>Indicates whether the account is one of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -139,7 +139,7 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The UID of the member account.</p>
+         * <p>The UID of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>128720273643****</p>
@@ -150,7 +150,7 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F2665618-3C41-51A4-8DAF-586FB68****</p>

@@ -59,7 +59,7 @@ public class DescribeNatAclPageStatusRequest extends Request {
         } 
 
         /**
-         * <p>The language of the request and the response. Valid values:</p>
+         * <p>The language of the request and response messages. Valid values:</p>
          * <ul>
          * <li><p><strong>zh</strong> (default): Chinese.</p>
          * </li>

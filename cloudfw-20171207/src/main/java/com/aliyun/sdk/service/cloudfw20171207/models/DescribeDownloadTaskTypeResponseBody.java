@@ -99,7 +99,7 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -179,7 +179,7 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the task.</p>
+             * <p>The task type.</p>
              * 
              * <strong>example:</strong>
              * <p>InternetFirewallAsset</p>

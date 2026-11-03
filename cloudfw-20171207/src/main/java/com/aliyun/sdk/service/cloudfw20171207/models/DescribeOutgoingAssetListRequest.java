@@ -271,7 +271,7 @@ public class DescribeOutgoingAssetListRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the asset.</p>
+         * <p>The region to which the asset belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -295,7 +295,7 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * <p>Queries outbound connections routed from a private network through a NAT gateway.</p>
+         * <p>Specifies whether to query outbound connections over the NAT private network.</p>
          * 
          * <strong>example:</strong>
          * <p>NatPrivate</p>
@@ -332,7 +332,7 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * <p>The language of the content.</p>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -344,7 +344,7 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the NAT Gateway.</p>
+         * <p>The ID of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-bp123456g******</p>
@@ -356,7 +356,7 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * <p>The name of the NAT Gateway.</p>
+         * <p>The name of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-test</p>
@@ -368,7 +368,7 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * <p>The sorting order.</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -380,7 +380,7 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -440,7 +440,7 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * <p>The sorting basis.</p>
+         * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
          * <p>InBytes</p>
@@ -452,7 +452,7 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

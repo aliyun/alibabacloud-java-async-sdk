@@ -103,7 +103,7 @@ public class DescribeDomainResolveRequest extends Request {
         } 
 
         /**
-         * <p>The domain name to resolve.</p>
+         * <p>The domain name to be resolved.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,12 +116,10 @@ public class DescribeDomainResolveRequest extends Request {
         }
 
         /**
-         * <p>The IP version of the asset that is protected by Cloud Firewall. Valid values:</p>
+         * <p>The IP version of the asset protected by Cloud Firewall. Valid values:</p>
          * <ul>
-         * <li><p><strong>4</strong> (default): IPv4</p>
-         * </li>
-         * <li><p><strong>6</strong>: IPv6</p>
-         * </li>
+         * <li><strong>4</strong> (default): IPv4</li>
+         * <li><strong>6</strong>: IPv6</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,13 +132,11 @@ public class DescribeDomainResolveRequest extends Request {
         }
 
         /**
-         * <p>The language of the response message.</p>
+         * <p>The language for receiving messages.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p><strong>zh</strong> (default): Chinese</p>
-         * </li>
-         * <li><p><strong>en</strong>: English</p>
-         * </li>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +149,7 @@ public class DescribeDomainResolveRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the visitor.</p>
+         * <p>The source IP address of the requester.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>

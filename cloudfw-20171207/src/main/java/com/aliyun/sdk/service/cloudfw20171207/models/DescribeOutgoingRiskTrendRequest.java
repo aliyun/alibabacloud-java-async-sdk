@@ -101,7 +101,7 @@ public class DescribeOutgoingRiskTrendRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Use a UNIX timestamp in seconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1755051062</p>
@@ -113,7 +113,7 @@ public class DescribeOutgoingRiskTrendRequest extends Request {
         }
 
         /**
-         * <p>The language of the response message.</p>
+         * <p>The language type for receiving messages.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -125,7 +125,7 @@ public class DescribeOutgoingRiskTrendRequest extends Request {
         }
 
         /**
-         * <p>The source IP address.</p>
+         * <p>The source IP address of the visitor.</p>
          * 
          * <strong>example:</strong>
          * <p>219.145.94.XXX</p>
@@ -137,7 +137,7 @@ public class DescribeOutgoingRiskTrendRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. Use a UNIX timestamp in seconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733882648</p>

@@ -158,7 +158,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of rules that have the <code>drop</code> action.</p>
+         * <p>The total number of rules with the block action.</p>
          * 
          * <strong>example:</strong>
          * <p>976</p>
@@ -202,7 +202,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -243,7 +243,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of user-defined rules.</p>
+         * <p>The total number of rules with custom actions.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -468,7 +468,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The target application.</p>
+             * <p>The attacked application.</p>
              * 
              * <strong>example:</strong>
              * <p>SMB</p>
@@ -523,7 +523,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A description of the rule.</p>
+             * <p>The rule description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -534,8 +534,8 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine mode.</p>
-             * <p>This parameter takes effect only when <code>DefaultMode</code> is set to <code>drop</code>.</p>
+             * <p>The supported engine mode.</p>
+             * <p>This value is valid only when DefaultMode is set to drop (Block). In other modes, this value is meaningless.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -571,7 +571,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
              * <p>The rule name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Nmap扫描探测</p>
+             * <p>Nmap scan detection</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -579,7 +579,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule UUID.</p>
+             * <p>The UUID of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>d401b0cb-dc64-4bbe-bba0-3e7c744****</p>
@@ -590,7 +590,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UNIX timestamp for when the rule was last updated.</p>
+             * <p>The timestamp when the rule was modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1775101028</p>
@@ -601,7 +601,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the rule is user-defined.</p>
+             * <p>Specifies whether the rule is a custom rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -612,7 +612,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined status of the rule.</p>
+             * <p>The user status.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

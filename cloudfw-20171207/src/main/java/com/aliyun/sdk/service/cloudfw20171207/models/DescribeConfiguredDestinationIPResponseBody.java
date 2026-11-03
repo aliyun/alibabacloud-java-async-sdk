@@ -106,7 +106,7 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of destinations.</p>
+         * <p>The list of destinations returned.</p>
          */
         public Builder destinations(java.util.List<Destinations> destinations) {
             this.destinations = destinations;
@@ -114,7 +114,7 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -136,7 +136,7 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F0AE91F8-E6C5-50D4-983F-FC53672****</p>
@@ -255,7 +255,7 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The remarks.</p>
+             * <p>The comment.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -277,7 +277,7 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ISP of the destination.</p>
+             * <p>The destination ISP.</p>
              * 
              * <strong>example:</strong>
              * <p>telecom</p>
@@ -299,7 +299,7 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the operation. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The operation time. The value is a UNIX timestamp accurate to seconds, such as 1672502400.</p>
              * 
              * <strong>example:</strong>
              * <p>1534408189</p>

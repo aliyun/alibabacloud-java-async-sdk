@@ -80,7 +80,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9C50C2A9-4BBB-5504-8ADA-C41A79B8C946</p>
@@ -91,7 +91,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>132</p>
@@ -181,7 +181,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the signature library.</p>
+             * <p>The type.</p>
              * 
              * <strong>example:</strong>
              * <p>ips</p>
@@ -192,7 +192,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the signature library was updated. This value is a Unix timestamp in seconds.</p>
+             * <p>The update time of the signature library version. The value is a UNIX timestamp accurate to seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1741067915</p>
@@ -203,7 +203,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the signature library.</p>
+             * <p>The version.</p>
              * 
              * <strong>example:</strong>
              * <p>IPS-2307-02</p>

@@ -80,7 +80,7 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the exception.</p>
+         * <p>The error details.</p>
          * 
          * <strong>example:</strong>
          * <p>proxy_not_exist</p>
@@ -91,7 +91,7 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a separate page is supported for NAT ACL.</p>
+         * <p>Indicates whether the dedicated page for NAT ACLs is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

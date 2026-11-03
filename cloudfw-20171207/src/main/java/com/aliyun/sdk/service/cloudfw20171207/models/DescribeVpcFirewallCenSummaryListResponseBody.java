@@ -80,7 +80,7 @@ public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of CEN instances.</p>
+         * <p>The list of Cloud Enterprise Network (CEN) instances.</p>
          */
         public Builder cenList(java.util.List<CenList> cenList) {
             this.cenList = cenList;
@@ -99,7 +99,7 @@ public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -203,7 +203,7 @@ public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of region IDs for the VPC border firewall.</p>
+             * <p>The list of region IDs for the VPC firewall.</p>
              */
             public Builder regionNoList(java.util.List<String> regionNoList) {
                 this.regionNoList = regionNoList;

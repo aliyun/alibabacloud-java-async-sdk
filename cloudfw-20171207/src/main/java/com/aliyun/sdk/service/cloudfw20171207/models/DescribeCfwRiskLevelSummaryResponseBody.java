@@ -78,7 +78,7 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of threats.</p>
+         * <p>The risk list.</p>
          */
         public Builder riskList(java.util.List<RiskList> riskList) {
             this.riskList = riskList;
@@ -157,9 +157,9 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The threat level. Valid value:</p>
+             * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li><strong>medium</strong>: medium</li>
+             * <li><strong>medium</strong>: Medium</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of ECS instances at risk.</p>
+             * <p>The number of at-risk ECS instances.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>

@@ -88,7 +88,7 @@ public class DescribeIspInfoRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response message.</p>
+         * <p>The language type for receiving messages.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -100,7 +100,7 @@ public class DescribeIspInfoRequest extends Request {
         }
 
         /**
-         * <p>The source tracking code.</p>
+         * <p>The tracing code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

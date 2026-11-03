@@ -392,15 +392,11 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The action that Cloud Firewall performs on traffic that matches the access control policy.</p>
-         * <p>Valid values:</p>
+         * <p>The action that Cloud Firewall performs on traffic in the access control policy. Valid values:</p>
          * <ul>
-         * <li><p><strong>accept</strong>: Allows the traffic.</p>
-         * </li>
-         * <li><p><strong>drop</strong>: Drops the traffic.</p>
-         * </li>
-         * <li><p><strong>log</strong>: Logs the traffic.</p>
-         * </li>
+         * <li><strong>accept</strong>: allows the traffic</li>
+         * <li><strong>drop</strong>: denies the traffic</li>
+         * <li><strong>log</strong>: monitors the traffic</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -414,7 +410,7 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The list of applications to which the access control policy applies.</p>
+         * <p>The list of application types supported by the access control policy.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applicationNameList(java.util.List<String> applicationNameList) {
@@ -428,7 +424,7 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>放行流量</p>
+         * <p>Allow traffic</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -437,21 +433,21 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The destination port for the traffic. The value of this parameter depends on the <code>Proto</code> and <code>DestPortType</code> parameters.</p>
+         * <p>The destination port in the access control policy. Valid values:</p>
          * <ul>
-         * <li>If <code>Proto</code> is <code>ICMP</code>, leave this parameter empty.</li>
+         * <li>If the protocol is ICMP, leave this parameter empty.</li>
          * </ul>
          * <blockquote>
-         * <p>Access control cannot be configured based on the destination port for ICMP traffic.</p>
+         * <p>Access control based on destination ports is not supported when the protocol is ICMP.</p>
          * </blockquote>
          * <ul>
-         * <li>If the destination port type (<code>DestPortType</code>) is <code>group</code>, leave this parameter empty.</li>
+         * <li>If the protocol is TCP, UDP, or ANY and the destination Protocol Type (DestPortType) is group, leave this parameter empty.</li>
          * </ul>
          * <blockquote>
-         * <p>If <code>DestPortType</code> is set to <code>group</code>, you do not need to specify a destination port because the required ports are defined in the selected port address book.</p>
+         * <p>If you set DestPortType to group, you do not need to specify a destination port. All ports managed by this policy are included in the destination port address book.</p>
          * </blockquote>
          * <ul>
-         * <li>If the protocol is TCP, UDP, or ANY and the destination port type (<code>DestPortType</code>) is <code>port</code>, specify the destination port number.</li>
+         * <li>If the protocol is TCP, UDP, or ANY and the destination Protocol Type (DestPortType) is port, set this parameter to the destination port number.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -464,9 +460,9 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the destination port address book.</p>
+         * <p>The name of the destination port address book in the access control policy.</p>
          * <blockquote>
-         * <p>This parameter is required if <code>DestPortType</code> is set to <code>group</code>.</p>
+         * <p>If you set DestPortType to group, you must specify the name of the destination port address book.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -479,12 +475,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the destination port.</p>
+         * <p>The type of the destination port in the access control policy. Valid values:</p>
          * <ul>
-         * <li><p><strong>port</strong>: Port or port range</p>
-         * </li>
-         * <li><p><strong>group</strong>: Port address book</p>
-         * </li>
+         * <li><strong>port</strong>: a port</li>
+         * <li><strong>group</strong>: a port address book</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -497,20 +491,19 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The destination address in the access control policy.</p>
-         * <p>The value of this parameter varies based on the value of <code>DestinationType</code>:</p>
+         * <p>The destination address in the access control policy. Valid values:</p>
          * <ul>
-         * <li><p>If <code>DestinationType</code> is <code>net</code>, set this parameter to the destination CIDR.</p>
-         * <p>Example: <code>1.2.XX.XX/24</code></p>
+         * <li><p>If DestinationType is set to net, set Destination to the destination CIDR block.</p>
+         * <p>Example: 1.2.XX.XX/24</p>
          * </li>
-         * <li><p>If <code>DestinationType</code> is <code>group</code>, set this parameter to the name of the destination address book.</p>
-         * <p>Example: <code>db_group</code></p>
+         * <li><p>If DestinationType is set to group, set Destination to the name of the destination address book.</p>
+         * <p>Example: db_group</p>
          * </li>
-         * <li><p>If <code>DestinationType</code> is <code>domain</code>, set this parameter to the destination domain.</p>
-         * <p>Example: \*.aliyuncs.com</p>
+         * <li><p>If DestinationType is set to domain, set Destination to the destination domain name.</p>
+         * <p>Example: *.aliyuncs.com</p>
          * </li>
-         * <li><p>If <code>DestinationType</code> is <code>location</code>, set this parameter to the destination location.</p>
-         * <p>Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</p>
+         * <li><p>If DestinationType is set to location, set Destination to the destination region.</p>
+         * <p>Example: [&quot;BJ11&quot;, &quot;ZB&quot;\]</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -525,15 +518,11 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the destination address in the access control policy.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the destination address in the access control policy. Valid values:</p>
          * <ul>
-         * <li><p><strong>net</strong>: Destination CIDR</p>
-         * </li>
-         * <li><p><strong>group</strong>: Destination address book</p>
-         * </li>
-         * <li><p><strong>domain</strong>: Destination domain</p>
-         * </li>
+         * <li><strong>net</strong>: a destination CIDR block</li>
+         * <li><strong>group</strong>: a destination address book</li>
+         * <li><strong>domain</strong>: a destination domain name</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -547,7 +536,7 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The traffic direction for the access control policy. Valid values:</p>
+         * <p>The traffic direction of the access control policy. Valid values:</p>
          * <ul>
          * <li><strong>out</strong>: outbound traffic</li>
          * </ul>
@@ -563,17 +552,14 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The domain name resolution method. Valid values:</p>
+         * <p>The domain name parse method of the access control policy. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: FQDN-based resolution</p>
-         * </li>
-         * <li><p><strong>1</strong>: Dynamic DNS-based resolution</p>
-         * </li>
-         * <li><p><strong>2</strong>: FQDN-based and dynamic DNS-based resolution</p>
-         * </li>
+         * <li><strong>0</strong>: FQDN-based parse</li>
+         * <li><strong>1</strong>: DNS-based dynamic parse</li>
+         * <li><strong>2</strong>: FQDN-based and DNS-based dynamic parse</li>
          * </ul>
          * <blockquote>
-         * <p>If the resolution method includes FQDN, you can set the protocol only to TCP. The supported applications are HTTP, HTTPS, SMTP, SMTPS, and SSL.</p>
+         * <p>If the domain name identification mode includes FQDN, you can only configure the TCP protocol. The supported applications are HTTP, HTTPS, SMTP, SMTPS, SSL, IMAPS, and POPS.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -586,9 +572,9 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The end time of the policy\&quot;s validity period, specified as a Unix timestamp. The time must be on the hour or half-hour and be at least 30 minutes after the start time.</p>
+         * <p>The end time for the Policy Validity Period of the access control policy. The value is in the format of a UNIX timestamp in seconds. The time must be on the hour or half hour, and must be at least 30 minutes later than the start time.</p>
          * <blockquote>
-         * <p>This parameter is required if <code>RepeatType</code> is <code>None</code>, <code>Daily</code>, <code>Weekly</code>, or <code>Monthly</code>. If <code>RepeatType</code> is <code>Permanent</code>, leave this parameter empty.</p>
+         * <p>If RepeatType is set to Permanent, leave EndTime empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must have a value, and you must specify the Settings for the end time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -601,9 +587,9 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The IP version for the access control policy. Valid values:</p>
+         * <p>The IP address version. Valid values:</p>
          * <ul>
-         * <li><strong>4</strong> (default): IPv4</li>
+         * <li><strong>4</strong>: IPv4 (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -616,13 +602,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The language of the response messages.</p>
-         * <p>Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh</strong>: Chinese (default)</p>
-         * </li>
-         * <li><p><strong>en</strong>: English</p>
-         * </li>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -635,7 +618,7 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the NAT Gateway.</p>
+         * <p>The instance ID of the NAT gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -648,7 +631,7 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The priority of the access control policy. Values start from 1. A smaller value indicates a higher priority.</p>
+         * <p>The priority of the access control policy. The priority value starts from 1 and increases sequentially. A smaller value indicates a higher priority.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -661,20 +644,15 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The protocol for the traffic in the access control policy.</p>
-         * <p>Valid values:</p>
+         * <p>The protocol type of the traffic in the access control policy. Valid values:</p>
          * <ul>
-         * <li><p>ANY: all protocols</p>
-         * </li>
-         * <li><p>TCP</p>
-         * </li>
-         * <li><p>UDP</p>
-         * </li>
-         * <li><p>ICMP</p>
-         * </li>
+         * <li>ANY: all protocols</li>
+         * <li>TCP</li>
+         * <li>UDP</li>
+         * <li>ICMP</li>
          * </ul>
          * <blockquote>
-         * <p>If the destination is a domain, a threat intelligence address book, or a cloud service address book, you can only set this parameter to <code>TCP</code>. The supported application types are HTTP, HTTPS, SMTP, SMTPS, and SSL.</p>
+         * <p>If the destination address is a threat intelligence address book or a cloud service address book of the domain name type, you can only configure the TCP protocol. The supported applications are HTTP, HTTPS, SMTP, SMTPS, and SSL.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -688,12 +666,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the access control policy is enabled. By default, policies are enabled upon creation. Valid values:</p>
+         * <p>Specifies whether to enable the access control policy. By default, the policy is enabled after it is created. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Enables the policy.</p>
-         * </li>
-         * <li><p><strong>false</strong>: Disables the policy.</p>
-         * </li>
+         * <li><strong>true</strong>: enables the access control policy</li>
+         * <li><strong>false</strong>: does not enable the access control policy</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -706,22 +682,21 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The days of the week or month on which the policy recurs.</p>
+         * <p>The set of recurrence days for the Policy Validity Period of the access control policy.</p>
          * <ul>
-         * <li><p>If <code>RepeatType</code> is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, leave this parameter empty. Example: <code>[]</code></p>
+         * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, leave RepeatDays empty.
+         * Example: []</li>
+         * <li>If RepeatType is set to Weekly, RepeatDays cannot be empty.
+         * Example: [0, 6]<blockquote>
+         * <p>When the RepeatType Settings are Weekly, the values in RepeatDays cannot be duplicate.</p>
+         * </blockquote>
          * </li>
-         * <li><p>If <code>RepeatType</code> is <code>Weekly</code>, this parameter is required. Example: <code>[0, 6]</code></p>
+         * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays cannot be empty.
+         * Example: [1, 31]<blockquote>
+         * <p>When the RepeatType Settings are Monthly, the values in RepeatDays cannot be duplicate.</p>
+         * </blockquote>
          * </li>
          * </ul>
-         * <blockquote>
-         * <p>If <code>RepeatType</code> is <code>Weekly</code>, the values in <code>RepeatDays</code> must be unique.</p>
-         * </blockquote>
-         * <ul>
-         * <li>If <code>RepeatType</code> is <code>Monthly</code>, this parameter is required. Example: <code>[1, 31]</code></li>
-         * </ul>
-         * <blockquote>
-         * <p>If <code>RepeatType</code> is <code>Monthly</code>, the values in <code>RepeatDays</code> must be unique.</p>
-         * </blockquote>
          */
         public Builder repeatDays(java.util.List<Long> repeatDays) {
             this.putQueryParameter("RepeatDays", repeatDays);
@@ -730,10 +705,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The end time of the recurrence. The time must be on the hour or half-hour, and must be at least 30 minutes later than the start time.</p>
+         * <p>The recurrence end time for the Policy Validity Period of the access control policy. Example: 23:30. The time must be on the hour or half hour, and must be at least 30 minutes later than the recurrence start time.</p>
          * <blockquote>
-         * <p>This parameter is required if <code>RepeatType</code> is set to <code>Daily</code>, <code>Weekly</code>, or <code>Monthly</code>. If <code>RepeatType</code> is <code>Permanent</code> or <code>None</code>, leave this parameter empty.
-         * The time is in the HH:mm format (24-hour). For example, <code>08:00</code> or <code>23:30</code>.</p>
+         * <p>If RepeatType is set to Permanent or None, leave RepeatEndTime empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must have a value, and you must specify the Settings for the recurrence end time.
+         * The time format is HH:mm (24-hour clock), such as 08:00 and 23:30.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -746,10 +721,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The start time of the recurrence. The time must be on the hour or half-hour, and must be at least 30 minutes earlier than the end time.</p>
+         * <p>The recurrence start time for the Policy Validity Period of the access control policy. Example: 08:00. The time must be on the hour or half hour, and must be at least 30 minutes earlier than the recurrence end time.</p>
          * <blockquote>
-         * <p>This parameter is required if <code>RepeatType</code> is set to <code>Daily</code>, <code>Weekly</code>, or <code>Monthly</code>. If <code>RepeatType</code> is <code>Permanent</code> or <code>None</code>, leave this parameter empty.
-         * The time is in the HH:mm format (24-hour). For example, <code>08:00</code> or <code>23:30</code>.</p>
+         * <p>If RepeatType is set to Permanent or None, leave RepeatStartTime empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime must have a value, and you must specify the Settings for the recurrence start time.
+         * The time format is HH:mm (24-hour clock), such as 08:00 and 23:30.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -762,18 +737,13 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The recurrence type for the policy validity period. Valid values:</p>
+         * <p>The recurrence type of the Policy Validity Period for the access control policy. Valid values:</p>
          * <ul>
-         * <li><p><strong>Permanent</strong> (default): The policy is always active.</p>
-         * </li>
-         * <li><p><strong>None</strong>: The policy runs once for a specified duration.</p>
-         * </li>
-         * <li><p><strong>Daily</strong>: The policy recurs daily.</p>
-         * </li>
-         * <li><p><strong>Weekly</strong>: The policy recurs weekly within a specified time range.</p>
-         * </li>
-         * <li><p><strong>Monthly</strong>: The policy recurs monthly within a specified time range.</p>
-         * </li>
+         * <li><strong>Permanent</strong>: always (default)</li>
+         * <li><strong>None</strong>: a specific single time</li>
+         * <li><strong>Daily</strong>: every day</li>
+         * <li><strong>Weekly</strong>: every week</li>
+         * <li><strong>Monthly</strong>: every month</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -786,13 +756,12 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The source address in the access control policy.</p>
-         * <p>The value of this parameter varies based on the value of <code>SourceType</code>:</p>
+         * <p>The source address in the access control policy. Valid values:</p>
          * <ul>
-         * <li><p>If <strong>SourceType</strong> is <code>net</code>, set this parameter to the source CIDR.</p>
+         * <li><p>If <strong>SourceType</strong> is set to <code>net</code>, set Source to the source CIDR block.</p>
          * <p>Example: 10.2.4.0/24</p>
          * </li>
-         * <li><p>If <strong>SourceType</strong> is <code>group</code>, set this parameter to the name of the source address book.</p>
+         * <li><p>If <strong>SourceType</strong> is set to <code>group</code>, set Source to the name of the source address book.</p>
          * <p>Example: db_group</p>
          * </li>
          * </ul>
@@ -808,13 +777,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the source address in the access control policy.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the source address in the access control policy. Valid values:</p>
          * <ul>
-         * <li><p><strong>net</strong>: Source CIDR</p>
-         * </li>
-         * <li><p><strong>group</strong>: Source address book</p>
-         * </li>
+         * <li><strong>net</strong>: a source CIDR block</li>
+         * <li><strong>group</strong>: a source address book</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -828,9 +794,9 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The start time of the policy\&quot;s validity period, specified as a Unix timestamp. The time must be on the hour or half-hour and be at least 30 minutes before the end time.</p>
+         * <p>The start time for the Policy Validity Period of the access control policy. The value is in the format of a UNIX timestamp in seconds. The time must be on the hour or half hour, and must be at least 30 minutes earlier than the end time.</p>
          * <blockquote>
-         * <p>This parameter is required if <code>RepeatType</code> is <code>None</code>, <code>Daily</code>, <code>Weekly</code>, or <code>Monthly</code>. If <code>RepeatType</code> is <code>Permanent</code>, leave this parameter empty.</p>
+         * <p>If RepeatType is set to Permanent, leave StartTime empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must have a value, and you must specify the Settings for the start time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

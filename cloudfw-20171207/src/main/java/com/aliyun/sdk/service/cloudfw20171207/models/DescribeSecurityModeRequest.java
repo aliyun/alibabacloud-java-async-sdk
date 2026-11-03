@@ -73,7 +73,7 @@ public class DescribeSecurityModeRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language type. Valid values:</p>
          * <ul>
          * <li><p><strong>zh</strong> (default): Chinese.</p>
          * </li>
@@ -91,7 +91,7 @@ public class DescribeSecurityModeRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the visitor.</p>
+         * <p>The source IP address of the requester.</p>
          * 
          * <strong>example:</strong>
          * <p>218.108.54.XX</p>

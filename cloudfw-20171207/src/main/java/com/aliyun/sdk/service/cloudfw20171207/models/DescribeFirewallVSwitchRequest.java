@@ -157,7 +157,7 @@ public class DescribeFirewallVSwitchRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the VPC border firewall.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>vfw-tr-5b202e7f0be64611****</p>
@@ -169,7 +169,7 @@ public class DescribeFirewallVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -193,7 +193,7 @@ public class DescribeFirewallVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -205,7 +205,7 @@ public class DescribeFirewallVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -229,7 +229,7 @@ public class DescribeFirewallVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC instance.</p>
+         * <p>The VPC-connected instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6b5lyul0x******</p>

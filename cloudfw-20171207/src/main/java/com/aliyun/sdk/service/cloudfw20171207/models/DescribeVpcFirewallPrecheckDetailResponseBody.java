@@ -91,7 +91,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The precheck details.</p>
+         * <p>The details of the precheck.</p>
          */
         public Builder precheckDetail(PrecheckDetail precheckDetail) {
             this.precheckDetail = precheckDetail;
@@ -99,7 +99,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>4FB718F0-CC04-5A12-B17B-188CFC3F****</p>
@@ -194,7 +194,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the precheck failure.</p>
+             * <p>The information about the failed check.</p>
              * 
              * <strong>example:</strong>
              * <p>VPC Firewall Quota Full</p>
@@ -205,7 +205,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The precheck item name.</p>
+             * <p>The name of the precheck item.</p>
              * 
              * <strong>example:</strong>
              * <p>Precheck test</p>
@@ -216,11 +216,11 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of each precheck item. Valid values:</p>
+             * <p>The status of the precheck item. Valid values:</p>
              * <ul>
              * <li><p><strong>running</strong>: The precheck is in progress.</p>
              * </li>
-             * <li><p><strong>passed</strong>: The precheck passed.</p>
+             * <li><p><strong>passed</strong>: The precheck is passed.</p>
              * </li>
              * <li><p><strong>failed</strong>: The precheck failed.</p>
              * </li>
@@ -235,7 +235,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The suggested action.</p>
+             * <p>The troubleshooting suggestion.</p>
              * 
              * <strong>example:</strong>
              * <p>The VPC firewall quota is full. We recommend that you increase the firewall quota</p>
@@ -331,7 +331,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of precheck rules that failed.</p>
+             * <p>The number of rules that failed the precheck.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -342,7 +342,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The precheck instance name.</p>
+             * <p>The name of the precheck instance.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -353,7 +353,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution details of each precheck item.</p>
+             * <p>The execution status of each precheck item.</p>
              */
             public Builder precheckEntities(java.util.List<PrecheckEntities> precheckEntities) {
                 this.precheckEntities = precheckEntities;
@@ -361,7 +361,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The precheck status. Valid values:</p>
+             * <p>The status of the precheck. Valid values:</p>
              * <ul>
              * <li><p><strong>running</strong></p>
              * </li>
@@ -525,7 +525,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
              * <ul>
              * <li><p><strong>running</strong>: The precheck is in progress.</p>
              * </li>
-             * <li><p><strong>passed</strong>: The precheck passed.</p>
+             * <li><p><strong>passed</strong>: The precheck is passed.</p>
              * </li>
              * <li><p><strong>failed</strong>: The precheck failed.</p>
              * </li>
@@ -540,7 +540,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The precheck timestamp.</p>
+             * <p>The timestamp of the precheck.</p>
              * 
              * <strong>example:</strong>
              * <p>1715136000</p>
@@ -551,7 +551,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
+             * <p>The ID of the region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>

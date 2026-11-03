@@ -87,9 +87,9 @@ public class ModifyTrFirewallV2ConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the VPC firewall. You can call DescribeTrFirewallsV2List to obtain the ID.</p>
+         * <p>The ID of the VPC firewall instance. You can obtain the ID by calling DescribeTrFirewallsV2List.</p>
          * <blockquote>
-         * <p>Note: FirewallId and FirewallName are jointly required. Both parameters must be provided at the same time. If either parameter is missing, the operation returns a 400 error.</p>
+         * <p>Note: FirewallId and FirewallName are jointly required. You must specify both parameters. If either parameter is missing, the API operation returns a 400 error.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,9 +102,9 @@ public class ModifyTrFirewallV2ConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The instance name of the VPC firewall.</p>
+         * <p>The name of the VPC firewall instance.</p>
          * <blockquote>
-         * <p>Note: FirewallId and FirewallName are jointly required. Both parameters must be provided at the same time. If either parameter is missing, the operation returns a 400 error.</p>
+         * <p>Note: FirewallId and FirewallName are jointly required. You must specify both parameters. If either parameter is missing, the API operation returns a 400 error.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ModifyTrFirewallV2ConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>

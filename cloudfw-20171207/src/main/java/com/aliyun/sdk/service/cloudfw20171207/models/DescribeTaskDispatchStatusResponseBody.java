@@ -67,7 +67,7 @@ public class DescribeTaskDispatchStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>71209DFE-XXX-XXX-52B4A4E9DA3B</p>
@@ -78,13 +78,13 @@ public class DescribeTaskDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution status of the task. Valid values:</p>
+         * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li>PENDING: pending execution.</li>
-         * <li>RUNNING: running.</li>
-         * <li>SUCCESS: succeeded.</li>
-         * <li>FAILED: failed.</li>
-         * <li>CANCELLED: cancelled.</li>
+         * <li>PENDING: Pending.</li>
+         * <li>RUNNING: Running.</li>
+         * <li>SUCCESS: Successful.</li>
+         * <li>FAILED: Failed.</li>
+         * <li>CANCELLED: Cancelled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

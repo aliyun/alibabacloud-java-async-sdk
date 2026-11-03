@@ -169,7 +169,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7D5483BF-2262-586D-8706-BDDB8B42****</p>
@@ -191,7 +191,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>189997648</p>
@@ -202,7 +202,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>egressgw</p>
@@ -224,7 +224,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The status of the task. Valid values:</p>
          * <ul>
          * <li><p><strong>init</strong></p>
          * </li>
@@ -255,7 +255,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The waiting time, in minutes.</p>
+         * <p>The waiting time. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -361,7 +361,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Cloud Firewall security step.</p>
+             * <p>Creating Cloud Firewall security.</p>
              * 
              * <strong>example:</strong>
              * <p>Create Firewall</p>
@@ -383,7 +383,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task step status. Valid values:</p>
+             * <p>The status of the task step. Valid values:</p>
              * <ul>
              * <li><p><strong>init</strong> </p>
              * </li>

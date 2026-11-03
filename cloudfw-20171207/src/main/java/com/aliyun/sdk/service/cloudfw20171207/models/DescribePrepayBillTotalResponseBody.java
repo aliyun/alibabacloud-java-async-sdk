@@ -80,7 +80,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The bill list, aggregated by day.</p>
+         * <p>The bill list aggregated by day.</p>
          */
         public Builder billList(java.util.List<BillList> billList) {
             this.billList = billList;
@@ -99,7 +99,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>132</p>
@@ -335,7 +335,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive data detection traffic of the day.</p>
+             * <p>The sensitive data detection traffic on the day.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -346,7 +346,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total elastic traffic of the day. Unit: GB.</p>
+             * <p>The total elastic traffic on the day. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -368,7 +368,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The elastic bandwidth value. Unit: Mbit/s.</p>
+             * <p>The elastic bandwidth. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -379,7 +379,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the day. The value is a UNIX timestamp in seconds.</p>
+             * <p>The end time of the day. The value is a UNIX timestamp accurate to seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1761667200</p>
@@ -390,7 +390,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended bandwidth. Unit: Mbit/s.</p>
+             * <p>The extra bandwidth. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -412,7 +412,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monthly free traffic for sensitive data detection. Unit: GB.</p>
+             * <p>The monthly free quota for sensitive data detection. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -434,7 +434,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the maximum bandwidth (Internet + VPC + NAT) of the day occurred.</p>
+             * <p>The timestamp when the total bandwidth (Internet, VPC, and NAT) reaches the maximum value on the day.</p>
              * 
              * <strong>example:</strong>
              * <p>1761588300</p>
@@ -445,7 +445,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the day. The value is a UNIX timestamp in seconds.</p>
+             * <p>The start time of the day. The value is a UNIX timestamp accurate to seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1761580800</p>
@@ -456,7 +456,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The temporary upgrade bandwidth. Unit: Mbit/s.</p>
+             * <p>The temporary bandwidth upgrade. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

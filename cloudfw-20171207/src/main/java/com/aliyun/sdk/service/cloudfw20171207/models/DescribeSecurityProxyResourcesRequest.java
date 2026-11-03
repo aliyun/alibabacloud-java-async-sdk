@@ -87,7 +87,7 @@ public class DescribeSecurityProxyResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response.</p>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -99,7 +99,7 @@ public class DescribeSecurityProxyResourcesRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member account.</p>
+         * <p>The UID of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>136481150091****</p>
@@ -111,7 +111,7 @@ public class DescribeSecurityProxyResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the NAT Gateway.</p>
+         * <p>The NAT gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-uf6y16l23fm8hq0****</p>

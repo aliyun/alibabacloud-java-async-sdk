@@ -67,7 +67,10 @@ public class DescribeRegionResourceTypeAutoEnableResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The traffic redirection settings for asset types in each region.</p>
+         * <p>The traffic redirection switch for asset types in a region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cn-shenzhen&quot;:{&quot;SlbEIP&quot;:false,&quot;EIP&quot;:true}}</p>
          */
         public Builder regionResourceAutoEnable(java.util.Map<String, java.util.Map<String, ?>> regionResourceAutoEnable) {
             this.regionResourceAutoEnable = regionResourceAutoEnable;
@@ -75,7 +78,7 @@ public class DescribeRegionResourceTypeAutoEnableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B2841452-CB8D-4F7D-B247-38E1CF7334F8</p>

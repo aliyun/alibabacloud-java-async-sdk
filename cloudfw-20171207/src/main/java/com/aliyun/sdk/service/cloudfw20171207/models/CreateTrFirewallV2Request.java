@@ -314,9 +314,9 @@ public class CreateTrFirewallV2Request extends Request {
         } 
 
         /**
-         * <p>The ID of the CEN instance. Create a CEN instance in the CEN console first and make sure that an Enterprise Edition transit router has been created.</p>
+         * <p>The ID of the CEN instance. Create a CEN instance in the CEN console and make sure that an Enterprise Edition transit router is created.</p>
          * <blockquote>
-         * <p>Note: Although this parameter is marked as not required in the schema, it is actually required. If this parameter is not specified, the ErrorParameters (400) error is returned.</p>
+         * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -329,7 +329,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The zone ID used by the firewall connection.</p>
+         * <p>The zone ID used for the firewall connection.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -367,11 +367,11 @@ public class CreateTrFirewallV2Request extends Request {
         /**
          * <p>The deployment mode of the firewall service. Valid values:</p>
          * <ul>
-         * <li><strong>PrimaryStandby</strong>: Primary/standby mode.</li>
-         * <li><strong>MultiPrimary</strong>: Active-active mode.</li>
+         * <li><strong>PrimaryStandby</strong>: primary/secondary mode</li>
+         * <li><strong>MultiPrimary</strong>: active-active mode</li>
          * </ul>
          * <blockquote>
-         * <p>If this parameter is not specified, the system automatically selects a deployment mode based on the capabilities of the transit router. If an invalid value is specified, the ErrorFwServiceMode (-360437) error is returned. The MultiPrimary mode does not support specifying zones.</p>
+         * <p>If this parameter is not specified, the system automatically selects the deployment mode based on the capabilities of the transit router. If the value is invalid, ErrorFwServiceMode (-360437) is returned. The MultiPrimary mode does not support specifying zones.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -393,7 +393,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The subnet CIDR block used to store the firewall elastic network interface (ENI) in the firewall VPC in automatic mode.</p>
+         * <p>The CIDR block of the subnet that stores the firewall elastic network interface (ENI) in the firewall VPC in automatic mode.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.1.0/24</p>
@@ -417,7 +417,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The ID of the VPC in which the firewall ENI is created in manual mode.</p>
+         * <p>The ID of the VPC where the firewall ENI is created in manual mode.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9r5qvryn0lg3atb****</p>
@@ -429,7 +429,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch in which the firewall ENI is created in manual mode.</p>
+         * <p>The ID of the vSwitch where the firewall ENI is created in manual mode.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf6ydz3vqj77mr5l6****</p>
@@ -441,7 +441,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -459,7 +459,7 @@ public class CreateTrFirewallV2Request extends Request {
         /**
          * <p>The region ID of the Enterprise Edition transit router.</p>
          * <blockquote>
-         * <p>Note: Although this parameter is marked as not required in the schema, it is actually required. If this parameter is not specified, the ErrorParameters (400) error is returned.</p>
+         * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -472,9 +472,17 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The routing mode. Valid values: managed (automatic mode) and manual (manual mode). In managed mode, only FirewallVpcCidr is required. The FirewallSubnetCidr, TrAttachmentSlaveCidr, and TrAttachmentMasterCidr parameters are deprecated and do not need to be specified. In manual mode, specify FirewallVpcId, FirewallVswitchId, TrAttachmentSlaveZone, and TrAttachmentMasterZone.</p>
+         * <p>The routing mode. Valid values: managed (automatic mode), manual (manual mode for custom VPCs), and semi-managed (manual mode for managed VPCs).</p>
+         * <ul>
+         * <li><p>In managed mode, you only need to specify FirewallVpcCidr. The FirewallSubnetCidr, TrAttachmentSlaveCidr, and TrAttachmentMasterCidr parameters are deprecated (deprecated:true) and do not need to be specified.</p>
+         * </li>
+         * <li><p>In manual mode, you must specify FirewallVpcId, FirewallVswitchId, TrAttachmentSlaveZone, and TrAttachmentMasterZone.</p>
+         * </li>
+         * <li><p>In semi-managed mode, you only need to specify FirewallVpcCidr.</p>
+         * </li>
+         * </ul>
          * <blockquote>
-         * <p>Note: Although this parameter is marked as not required in the schema, it is actually required. If this parameter is not specified, the ErrorParameters (400) error is returned.</p>
+         * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -487,7 +495,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The primary subnet CIDR block used to connect to the TR in the firewall VPC in automatic mode.</p>
+         * <p>The primary CIDR block of the subnet used to connect to the transit router in the firewall VPC in automatic mode.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.3.0/24</p>
@@ -511,7 +519,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The secondary subnet CIDR block used to connect to the TR in the firewall VPC in automatic mode.</p>
+         * <p>The secondary CIDR block of the subnet used to connect to the transit router in the firewall VPC in automatic mode.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.16/28</p>
@@ -535,7 +543,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The list of zone IDs used by the TR connection.</p>
+         * <p>The list of zone IDs used for the transit router connection.</p>
          */
         public Builder trAttachmentZones(java.util.List<String> trAttachmentZones) {
             this.putQueryParameter("TrAttachmentZones", trAttachmentZones);
@@ -546,7 +554,7 @@ public class CreateTrFirewallV2Request extends Request {
         /**
          * <p>The ID of the Enterprise Edition transit router instance. The transit router must belong to the CEN instance specified by CenId.</p>
          * <blockquote>
-         * <p>Note: Although this parameter is marked as not required in the schema, it is actually required. If this parameter is not specified, the ErrorParameters (400) error is returned.</p>
+         * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

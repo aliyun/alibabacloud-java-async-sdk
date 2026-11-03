@@ -155,7 +155,7 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * <p>The language type. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><p><strong>zh</strong> (default): Chinese.</p>
          * </li>
@@ -187,9 +187,9 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         /**
          * <p>The type of the network instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>cen_firewall</strong>: CEN basic edition firewall</p>
+         * <li><p><strong>cen_firewall</strong>: CEN Basic Edition firewall.</p>
          * </li>
-         * <li><p><strong>cen_tr_firewall</strong>: CEN-TR firewall</p>
+         * <li><p><strong>cen_tr_firewall</strong>: CEN-TR firewall.</p>
          * </li>
          * </ul>
          * 
@@ -203,7 +203,7 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * <p>The region ID. This parameter is required. If it is not specified, ErrorParameters is returned.</p>
+         * <p>The region ID. This parameter is required. If this parameter is missing or invalid, ErrorRegionNoError (Region is error, please reselect) is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -215,7 +215,7 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * <p>The transit router instance ID. You must specify at least one of VpcId and TransitRouterId. Specify VpcId when querying a basic edition firewall, or specify TransitRouterId when querying a transit router (TR) scenario. If neither is specified, ErrorParameters is returned.</p>
+         * <p>The transit router instance ID. You must specify at least one of VpcId and TransitRouterId. Specify VpcId to query the Basic Edition firewall, and specify TransitRouterId to query the transit router (TR) firewall for forward routing. If neither parameter is specified, ErrorParameters is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-2vcn4u2g86tm72****</p>
@@ -227,7 +227,7 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * <p>The VPC-connected instance ID. You must specify at least one of VpcId and TransitRouterId. Specify VpcId when querying a basic edition firewall, or specify TransitRouterId when querying a forward routing (TR) scenario. If neither is specified, ErrorParameters is returned.</p>
+         * <p>The VPC-connected instance ID. You must specify at least one of VpcId and TransitRouterId. Specify VpcId to query the Basic Edition firewall, and specify TransitRouterId to query the transit router (TR) firewall for forward routing. If neither parameter is specified, ErrorParameters is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zev8s8rxao33xt****</p>

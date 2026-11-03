@@ -54,7 +54,7 @@ public class ModifyDefaultIPSConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>65885B52-00EC-5728-96******</p>

@@ -74,7 +74,7 @@ public class DescribePrefixListsRequest extends Request {
         } 
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * <p>The source IP address.</p>
+         * <p>The source IP address of the caller.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX</p>
