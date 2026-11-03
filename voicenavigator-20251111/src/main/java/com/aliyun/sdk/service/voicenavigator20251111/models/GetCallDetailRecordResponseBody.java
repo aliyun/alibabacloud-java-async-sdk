@@ -130,7 +130,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The call detail record.</p>
+         * <p>The call record.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of parameters related to the error.</p>
+         * <p>The list of error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -168,7 +168,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>a2c26e67-5984-4935-984e-bcee52971993</p>
@@ -432,10 +432,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bot\&quot;s response. This parameter is valid when <code>Role</code> is <code>ASSISTANT</code>.</p>
+             * <p>The assistant response. Valid when the role is ASSISTANT.</p>
              * 
              * <strong>example:</strong>
-             * <p>不好意思，</p>
+             * <p>Sorry,</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -443,7 +443,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the user\&quot;s utterance is a backchannel (for example, &quot;uh-huh&quot; or &quot;okay&quot;). This parameter is valid when <code>Role</code> is <code>USER</code>.</p>
+             * <p>Indicates whether the backchannel is interactive feedback from the customer to the assistant. Valid when the role is USER.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -454,7 +454,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start timestamp of the turn, in milliseconds since the Unix epoch.</p>
+             * <p>The start timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1748945414222</p>
@@ -465,7 +465,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of control parameters. This parameter is valid when <code>Role</code> is <code>ASSISTANT</code>.</p>
+             * <p>The list of control parameters. Valid when the role is ASSISTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;endSilenceTimeout&quot;:500,&quot;interruptible&quot;:false,&quot;silenceDetectionTimeout&quot;:5,&quot;type&quot;:&quot;Voice&quot;}]</p>
@@ -476,7 +476,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end timestamp of the turn, in milliseconds since the Unix epoch.</p>
+             * <p>The end timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1767315903531</p>
@@ -487,7 +487,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event timestamp, in milliseconds since the Unix epoch.</p>
+             * <p>The timestamp when the event occurred. Format: UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1774859592165</p>
@@ -498,7 +498,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Additional input from the user other than speech. This parameter is valid when <code>Role</code> is <code>USER</code>.</p>
+             * <p>The user input other than speech. Valid when the role is USER.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;dataType&quot;:&quot;Silence&quot;}]</p>
@@ -509,7 +509,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the turn was interrupted.</p>
+             * <p>Indicates whether the speech was interrupted.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -520,7 +520,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the bot\&quot;s response is obsolete. This parameter is valid when <code>Role</code> is <code>ASSISTANT</code>.</p>
+             * <p>Indicates whether the assistant response is invalidated. Valid when the role is ASSISTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -531,7 +531,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybackStatus.
+             * <p>The playback status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INTERRUPTED</p>
              */
             public Builder playbackStatus(String playbackStatus) {
                 this.playbackStatus = playbackStatus;
@@ -539,7 +542,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * PlayedAnswer.
+             * <p>The played content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Okay</p>
              */
             public Builder playedAnswer(String playedAnswer) {
                 this.playedAnswer = playedAnswer;
@@ -547,7 +553,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of words played from the bot\&quot;s response. This parameter is valid when <code>Role</code> is <code>USER</code>.</p>
+             * <p>The assistant speech heard by the user. Valid when the role is USER.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -558,7 +564,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the speaker.</p>
+             * <p>The role.</p>
              * 
              * <strong>example:</strong>
              * <p>USER</p>
@@ -569,7 +575,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates if this is the final part of a streamed response.</p>
+             * <p>The end identifier for text streaming output.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -580,7 +586,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the conversation turn.</p>
+             * <p>The conversation turn ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -591,10 +597,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user\&quot;s utterance. This parameter is valid when <code>Role</code> is <code>USER</code>.</p>
+             * <p>The user speech. Valid when the role is USER.</p>
              * 
              * <strong>example:</strong>
-             * <p>你要说你快点说不说，我挂了哈。</p>
+             * <p>If you have something to say, say it quickly, otherwise I\&quot;m hanging up</p>
              */
             public Builder utterance(String utterance) {
                 this.utterance = utterance;
@@ -602,7 +608,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Vendor-specific data sent from the client. This parameter is valid when <code>Role</code> is <code>USER</code>.</p>
+             * <p>The user-side pass-through data. Valid when the role is USER.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;test1&quot;:&quot;1234&quot;}</p>
@@ -854,7 +860,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The phone number of the callee.</p>
+             * <p>The called number.</p>
              * 
              * <strong>example:</strong>
              * <p>15100000001</p>
@@ -865,7 +871,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phone number of the caller.</p>
+             * <p>The calling number.</p>
              * 
              * <strong>example:</strong>
              * <p>15929990193</p>
@@ -876,7 +882,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disposition code for the call.</p>
+             * <p>The disposition code.</p>
              * 
              * <strong>example:</strong>
              * <p>Answered</p>
@@ -887,7 +893,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the call\&quot;s disposition.</p>
+             * <p>The call connection status.</p>
              * 
              * <strong>example:</strong>
              * <p>ConcurrentLimitExceeded</p>
@@ -898,7 +904,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session duration, in seconds.</p>
+             * <p>The session duration. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>160</p>
@@ -920,7 +926,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the user\&quot;s issue was resolved.</p>
+             * <p>Indicates whether the customer issue is resolved.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -931,7 +937,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The party that ended the call.</p>
+             * <p>The hang-up initiator.</p>
              * 
              * <strong>example:</strong>
              * <p>Customer</p>
@@ -942,7 +948,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The basis for the resolution judgment.</p>
+             * <p>The resolution evidence.</p>
              * 
              * <strong>example:</strong>
              * <p>unknown</p>
@@ -975,7 +981,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The talk time, in seconds.</p>
+             * <p>The talk time. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1016,7 +1022,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transfer type.</p>
+             * <p>The transfer target.</p>
              * 
              * <strong>example:</strong>
              * <p>SkillGroup</p>
