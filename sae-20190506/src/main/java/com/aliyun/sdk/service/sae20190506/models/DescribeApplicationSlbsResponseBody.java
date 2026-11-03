@@ -132,10 +132,12 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the information about the SLB instances that are associated with an application was obtained successfully. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: indicates that the information was obtained successfully.</li>
-         * <li><strong>false</strong>: indicates that the information failed to be obtained.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Client error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +149,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -155,13 +157,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The error code. Description:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidApplication.NotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,7 +172,11 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It can be used to query the details of a request.</p>
+         * <p>The additional information. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong>: The request is successful.</li>
+         * <li>Specific error code: The request failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -180,11 +187,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
-         * <ul>
-         * <li><strong>success</strong> is returned when the request succeeds.</li>
-         * <li>An error code is returned when the request fails.</li>
-         * </ul>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -195,7 +198,16 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the SLB configuration of the application was successfully retrieved. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The configuration was successfully retrieved.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The configuration failed to be retrieved.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -203,7 +215,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The trace ID used to precisely query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -423,7 +435,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * Cookie.
+             * <p>The cookie configured on the server.</p>
+             * <p>The cookie must be 1 to 200 characters in length and can contain only ASCII letters and digits. It cannot contain commas (,), semicolons (;), or spaces, and cannot start with a dollar sign ($).</p>
+             * <blockquote>
+             * <p>This parameter is required and valid only when <strong>StickySession</strong> is set to <strong>on</strong> and <strong>StickySessionType</strong> is set to <strong>server</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>wwe</p>
              */
             public Builder cookie(String cookie) {
                 this.cookie = cookie;
@@ -431,7 +450,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * CookieTimeout.
+             * <p>The cookie timeout period. Unit: seconds. Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
+             * <blockquote>
+             * <p>This parameter is required and valid only when <strong>StickySession</strong> is set to <strong>on</strong> and <strong>StickySessionType</strong> is set to <strong>insert</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>56</p>
              */
             public Builder cookieTimeout(Integer cookieTimeout) {
                 this.cookieTimeout = cookieTimeout;
@@ -439,7 +464,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the canary release rule was created.</p>
+             * <p>The timestamp when the rule was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1741247308294</p>
@@ -458,7 +483,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsCaCertId.
+             * <p>The ID of the Alibaba Cloud CA certificate for the HTTPS protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1513561019707729_16f37aae5f3_-375882821_-169099****</p>
              */
             public Builder httpsCaCertId(String httpsCaCertId) {
                 this.httpsCaCertId = httpsCaCertId;
@@ -466,7 +494,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported protocol.</p>
+             * <p>The ID of the Alibaba Cloud certificate for the HTTPS protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>1513561019707729_16f37aae5f3_-375882821_-169099****</p>
@@ -477,7 +505,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the internal-facing SLB instance.</p>
+             * <p>The SLB listener port.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -488,7 +516,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The container port.</p>
+             * <p>The supported protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>TCP</p>
@@ -499,7 +527,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * StickySession.
+             * <p>Indicates whether session persistence is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder stickySession(Boolean stickySession) {
                 this.stickySession = stickySession;
@@ -507,7 +538,19 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * StickySessionType.
+             * <p>The cookie processing method. Valid values:</p>
+             * <ul>
+             * <li><p><strong>insert</strong>: Inserts a cookie. When a client accesses the service for the first time, load balancing inserts a cookie into the response. The next time the client accesses the service with this cookie, the load balancing service forwards the request to the previously recorded backend server.</p>
+             * </li>
+             * <li><p><strong>server</strong>: Rewrites a cookie. When load balancing detects a user-defined cookie, it rewrites the original cookie. The next time the client accesses the service with the new cookie, the load balancing service forwards the request to the previously recorded backend server.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is required and valid only when <strong>StickySession</strong> is set to <strong>on</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>insert</p>
              */
             public Builder stickySessionType(String stickySessionType) {
                 this.stickySessionType = stickySessionType;
@@ -515,7 +558,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port specified for the SLB listener.</p>
+             * <p>The container port.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -744,7 +787,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * Cookie.
+             * <p>The cookie configured on the server.</p>
+             * <p>The cookie must be 1 to 200 characters in length and can contain only ASCII letters and digits. It cannot contain commas (,), semicolons (;), or spaces, and cannot start with a dollar sign ($).</p>
+             * <blockquote>
+             * <p>This parameter is required and valid only when <strong>StickySession</strong> is set to <strong>on</strong> and <strong>StickySessionType</strong> is set to <strong>server</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>wwe</p>
              */
             public Builder cookie(String cookie) {
                 this.cookie = cookie;
@@ -752,7 +802,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * CookieTimeout.
+             * <p>The cookie timeout period. Unit: seconds. Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
+             * <blockquote>
+             * <p>This parameter is required and valid only when <strong>StickySession</strong> is set to <strong>on</strong> and <strong>StickySessionType</strong> is set to <strong>insert</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>56</p>
              */
             public Builder cookieTimeout(Integer cookieTimeout) {
                 this.cookieTimeout = cookieTimeout;
@@ -760,7 +816,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the canary release rule was created.</p>
+             * <p>The timestamp when the rule was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1741247308294</p>
@@ -779,7 +835,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsCaCertId.
+             * <p>The ID of the Alibaba Cloud CA certificate for the HTTPS protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1513561019707729_16f37aae5f3_-375882821_-169099****</p>
              */
             public Builder httpsCaCertId(String httpsCaCertId) {
                 this.httpsCaCertId = httpsCaCertId;
@@ -787,7 +846,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported protocol.</p>
+             * <p>The ID of the Alibaba Cloud certificate for the HTTPS protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>1513561019707729_16f37aae5f3_-375882821_-169099****</p>
@@ -798,7 +857,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the Internet-facing SLB instance.</p>
+             * <p>The SLB listener port.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -809,7 +868,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The container port.</p>
+             * <p>The supported protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>TCP</p>
@@ -820,7 +879,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * StickySession.
+             * <p>Indicates whether session persistence is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder stickySession(Boolean stickySession) {
                 this.stickySession = stickySession;
@@ -828,7 +890,19 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * StickySessionType.
+             * <p>The cookie processing method. Valid values:</p>
+             * <ul>
+             * <li><p><strong>insert</strong>: Inserts a cookie. When a client accesses the service for the first time, load balancing inserts a cookie into the response. The next time the client accesses the service with this cookie, the load balancing service forwards the request to the previously recorded backend server.</p>
+             * </li>
+             * <li><p><strong>server</strong>: Rewrites a cookie. When load balancing detects a user-defined cookie, it rewrites the original cookie. The next time the client accesses the service with the new cookie, the load balancing service forwards the request to the previously recorded backend server.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is required and valid only when <strong>StickySession</strong> is set to <strong>on</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>insert</p>
              */
             public Builder stickySessionType(String stickySessionType) {
                 this.stickySessionType = stickySessionType;
@@ -836,7 +910,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port specified for the SLB listener.</p>
+             * <p>The container port.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -1057,7 +1131,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1065,7 +1142,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -1073,7 +1153,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>495fc79c-ae61-4600-866d-a09d68******</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -1081,7 +1164,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the Internet-facing SLB instance.</p>
+             * <p>The Internet-facing SLB configuration.</p>
              */
             public Builder internet(java.util.List<Internet> internet) {
                 this.internet = internet;
@@ -1089,7 +1172,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Internet-facing SLB instance.</p>
+             * <p>The Internet-facing SLB address.</p>
              * 
              * <strong>example:</strong>
              * <p><code>59.74.**.**</code></p>
@@ -1100,7 +1183,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetSlbChargeType.
+             * <p>The billing method of Internet-facing load balancing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PayBySpec</p>
              */
             public Builder internetSlbChargeType(String internetSlbChargeType) {
                 this.internetSlbChargeType = internetSlbChargeType;
@@ -1108,7 +1194,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetSlbExpired.
+             * <p>Indicates whether the Internet-facing SLB instance has expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder internetSlbExpired(Boolean internetSlbExpired) {
                 this.internetSlbExpired = internetSlbExpired;
@@ -1116,7 +1205,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Configurations of Internet-facing SLB instances.</p>
+             * <p>The ID of the Internet-facing SLB instance.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-uf6xc7wybefehnv45****</p>
@@ -1127,7 +1216,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the internal-facing SLB instance.</p>
+             * <p>The internal SLB configuration.</p>
              */
             public Builder intranet(java.util.List<Intranet> intranet) {
                 this.intranet = intranet;
@@ -1135,14 +1224,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code.</p>
-             * <ul>
-             * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-             * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
-             * </ul>
+             * <p>The internal IP address of the SLB instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>192.168.0.0</p>
+             * <p>192.168.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -1150,7 +1235,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetSlbChargeType.
+             * <p>The billing method of internal load balancing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PayBySpec</p>
              */
             public Builder intranetSlbChargeType(String intranetSlbChargeType) {
                 this.intranetSlbChargeType = intranetSlbChargeType;
@@ -1158,7 +1246,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetSlbExpired.
+             * <p>Indicates whether the internal SLB instance has expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder intranetSlbExpired(Boolean intranetSlbExpired) {
                 this.intranetSlbExpired = intranetSlbExpired;
@@ -1166,7 +1257,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the internal-facing SLB instance.</p>
+             * <p>The ID of the internal SLB instance.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-uf6xc7wybefehnv45****</p>

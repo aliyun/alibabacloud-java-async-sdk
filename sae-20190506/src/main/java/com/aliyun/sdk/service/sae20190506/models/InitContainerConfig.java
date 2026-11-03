@@ -145,7 +145,10 @@ public class InitContainerConfig extends TeaModel {
         } 
 
         /**
-         * Command.
+         * <p>Start command for the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         public Builder command(String command) {
             this.command = command;
@@ -153,7 +156,10 @@ public class InitContainerConfig extends TeaModel {
         }
 
         /**
-         * CommandArgs.
+         * <p>Arguments for the image start command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;-c\&quot;,\&quot;/bin/bash /home/admin/bin/start.sh\&quot;]</p>
          */
         public Builder commandArgs(String commandArgs) {
             this.commandArgs = commandArgs;
@@ -161,7 +167,10 @@ public class InitContainerConfig extends TeaModel {
         }
 
         /**
-         * ConfigMapMountDesc.
+         * <p>ConfigMap mount description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;configMapId&quot;:16,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
          */
         public Builder configMapMountDesc(String configMapMountDesc) {
             this.configMapMountDesc = configMapMountDesc;
@@ -169,7 +178,10 @@ public class InitContainerConfig extends TeaModel {
         }
 
         /**
-         * EmptyDirDesc.
+         * <p>EmptyDir mount description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;name\&quot;:\&quot;workdir\&quot;,\&quot;mountPath\&quot;:\&quot;/usr/local/tomcat/webapps\&quot;}]</p>
          */
         public Builder emptyDirDesc(String emptyDirDesc) {
             this.emptyDirDesc = emptyDirDesc;
@@ -177,7 +189,10 @@ public class InitContainerConfig extends TeaModel {
         }
 
         /**
-         * Envs.
+         * <p>Environment variable parameters for the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;TEST_ENV_KEY&quot;,&quot;value&quot;:&quot;TEST_ENV_VAR&quot;}]</p>
          */
         public Builder envs(String envs) {
             this.envs = envs;
@@ -185,7 +200,10 @@ public class InitContainerConfig extends TeaModel {
         }
 
         /**
-         * ImageUrl.
+         * <p>The address of the image registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
@@ -193,7 +211,10 @@ public class InitContainerConfig extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Container name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;

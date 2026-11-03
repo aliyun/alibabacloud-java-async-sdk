@@ -132,12 +132,12 @@ public class ListIngressesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirect.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class ListIngressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result returned.</p>
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,11 +157,14 @@ public class ListIngressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li><strong>ErrorCode</strong> is not returned if a request is successful.</li>
-         * <li><strong>ErrorCode</strong> is returned if a request failed. For more information, see <strong>Error codes</strong>.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +172,10 @@ public class ListIngressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned. Valid values:</p>
+         * <p>The additional information. The value is described as follows:</p>
          * <ul>
-         * <li><strong>success</strong> is returned when a request is successful.</li>
-         * <li>An error code is returned when a request failed.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request fails, the specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +187,7 @@ public class ListIngressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of a request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -195,10 +198,10 @@ public class ListIngressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the list of Ingresses was obtained. Valid values:</p>
+         * <p>Specifies whether the ingress list was successfully retrieved. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The list were obtained.</li>
-         * <li><strong>false</strong>: The list failed to be queried.</li>
+         * <li><strong>true</strong>: The ingress list was successfully retrieved.</li>
+         * <li><strong>false</strong>: The ingress list failed to be retrieved.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class ListIngressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of a trace. The ID is used to query the details of a request.</p>
+         * <p>The trace ID used to query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -344,7 +347,10 @@ public class ListIngressesResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowCredentials.
+             * <p>Specifies whether credentials are allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder allowCredentials(String allowCredentials) {
                 this.allowCredentials = allowCredentials;
@@ -352,7 +358,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * AllowHeaders.
+             * <p>The allowed headers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_123</p>
              */
             public Builder allowHeaders(String allowHeaders) {
                 this.allowHeaders = allowHeaders;
@@ -360,7 +369,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * AllowMethods.
+             * <p>The allowed methods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder allowMethods(String allowMethods) {
                 this.allowMethods = allowMethods;
@@ -368,7 +380,12 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * AllowOrigin.
+             * <p>The allowed origins.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder allowOrigin(String allowOrigin) {
                 this.allowOrigin = allowOrigin;
@@ -376,7 +393,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Specifies whether the feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -384,7 +404,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * ExposeHeaders.
+             * <p>The allowed exposed headers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_123</p>
              */
             public Builder exposeHeaders(String exposeHeaders) {
                 this.exposeHeaders = exposeHeaders;
@@ -392,7 +415,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAge.
+             * <p>The max age.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxAge(String maxAge) {
                 this.maxAge = maxAge;
@@ -485,7 +511,10 @@ public class ListIngressesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -493,7 +522,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -501,7 +533,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * BackendProtocol.
+             * <p>The backend protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder backendProtocol(String backendProtocol) {
                 this.backendProtocol = backendProtocol;
@@ -509,7 +544,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerPort.
+             * <p>The container port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder containerPort(Integer containerPort) {
                 this.containerPort = containerPort;
@@ -576,7 +614,10 @@ public class ListIngressesResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionConfig.
+             * <p>The action configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;host\&quot;:\&quot;<a href="http://www.example.com%5C%5C%22,%5C%5C%22path%5C%5C%22:%5C%5C%22/example/text%5C%5C%22,%5C%5C%22query%5C%5C%22:%5C%5C%22x=1%5C%5C%22%7D">www.example.com\\&quot;,\\&quot;path\\&quot;:\\&quot;/example/text\\&quot;,\\&quot;query\\&quot;:\\&quot;x=1\\&quot;}</a></p>
              */
             public Builder actionConfig(String actionConfig) {
                 this.actionConfig = actionConfig;
@@ -584,7 +625,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * ActionType.
+             * <p>The action type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rewrite</p>
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -729,7 +773,10 @@ public class ListIngressesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -737,7 +784,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -745,7 +795,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * BackendProtocol.
+             * <p>The backend protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder backendProtocol(String backendProtocol) {
                 this.backendProtocol = backendProtocol;
@@ -753,7 +806,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerPort.
+             * <p>The container port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder containerPort(Integer containerPort) {
                 this.containerPort = containerPort;
@@ -761,7 +817,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas.site</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -769,7 +828,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/Path</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -777,7 +839,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * RewritePath.
+             * <p>The rewrite path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/${1}</p>
              */
             public Builder rewritePath(String rewritePath) {
                 this.rewritePath = rewritePath;
@@ -785,7 +850,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleActions.
+             * <p>The list of rule actions.</p>
              */
             public Builder ruleActions(java.util.List<RuleActions> ruleActions) {
                 this.ruleActions = ruleActions;
@@ -1086,7 +1151,7 @@ public class ListIngressesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the certificate that is associated with a Classic Load Balancer (<strong>CLB</strong>) instance.</p>
+             * <p>The <strong>CLB</strong> certificate ID.</p>
              * 
              * <strong>example:</strong>
              * <p>13624*<strong><strong>73809_16f8e549a20_1175189789_12</strong></strong>3210</p>
@@ -1097,7 +1162,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the certificate that is associated with an Application Load Balancer <strong>ALB</strong> instance.</p>
+             * <p>The <strong>ALB</strong> certificate IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>87<em><strong>35-cn-hangzhou,812</strong></em>3-cn-hangzhou</p>
@@ -1108,7 +1173,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * CorsConfig.
+             * <p>The CORS configuration.</p>
              */
             public Builder corsConfig(CorsConfig corsConfig) {
                 this.corsConfig = corsConfig;
@@ -1116,7 +1181,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593746835111</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1124,7 +1192,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultRule.
+             * <p>The default rule.</p>
              */
             public Builder defaultRule(DefaultRule defaultRule) {
                 this.defaultRule = defaultRule;
@@ -1132,7 +1200,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of a routing rule.</p>
+             * <p>The name of the routing rule.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1143,7 +1211,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of a routing rule.</p>
+             * <p>The routing rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>18</p>
@@ -1154,7 +1222,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * IdleTimeout.
+             * <p>The idle connection timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder idleTimeout(Long idleTimeout) {
                 this.idleTimeout = idleTimeout;
@@ -1162,7 +1233,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listener ports for an SLB instance.</p>
+             * <p>The SLB listener port.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -1173,12 +1244,12 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol that is supported by SLB to forward requests. Valid values:</p>
+             * <p>The request forwarding protocol supported by the load balancing SLB. Valid values:</p>
              * <ul>
-             * <li><strong>HTTP</strong>: HTTP is suitable for applications that need to identify the transmitted data.</li>
-             * <li><strong>HTTPS</strong>: HTTPS is suitable for applications that require encrypted data transmission.</li>
+             * <li><strong>HTTP</strong>: Applicable to applications that need to identify data content.</li>
+             * <li><strong>HTTPS</strong>: Applicable to applications that require encrypted transmission.</li>
              * </ul>
-             * <p>This parameter is optional in the <strong>CreateIngress</strong> and <strong>UpadateIngress</strong> operations. If you do not configure this parameter when you call the CreateIngress or UpdateIngress operation to create or update a gateway routing rule, this parameter is not returned for the corresponding response.</p>
+             * <p>This parameter is optional in <strong>CreateIngress</strong> and <strong>UpdateIngress</strong>. If you do not specify this parameter when you create or update a gateway routing rule, this parameter is not returned when you invoke this API.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -1189,10 +1260,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of SLB instances. Valid values:</p>
+             * <p>The type of the load balancing SLB. Valid values:</p>
              * <ul>
-             * <li><strong>clb</strong>: Classic Load Balancer (formerly known as SLB).</li>
-             * <li><strong>alb</strong>: Application Load Balancer.</li>
+             * <li><strong>clb</strong>: Classic Load Balancer (CLB), formerly known as SLB.</li>
+             * <li><strong>alb</strong>: Application Load Balancer (ALB).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1204,7 +1275,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of an MSE cloud-native gateway.</p>
+             * <p>The MSE cloud-native gateway instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>gw-d5df01a1bae748f1a7c4e325d2fd****</p>
@@ -1215,7 +1286,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port of a service.</p>
+             * <p>The port corresponding to the service.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -1226,10 +1297,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol that is supported by an MSE cloud-native gateway to forward requests. Valid values:</p>
+             * <p>The request forwarding protocol supported by the MSE cloud-native gateway. Valid values:</p>
              * <ul>
-             * <li><strong>HTTP</strong>: HTTP is suitable for applications that need to identify transmitted data.</li>
-             * <li><strong>HTTPS</strong>: HTTPS is suitable for applications that require encrypted data transmission.</li>
+             * <li><strong>HTTP</strong>: Applicable to applications that need to identify data content.</li>
+             * <li><strong>HTTPS</strong>: Applicable to applications that require encrypted transmission.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1241,7 +1312,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of a routing rule.</p>
+             * <p>The name of the routing rule.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-uf6jt0nu4z6ior943****-80-f5****</p>
@@ -1252,7 +1323,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of a namespace.</p>
+             * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -1263,7 +1334,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * RequestTimeout.
+             * <p>The request timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder requestTimeout(Long requestTimeout) {
                 this.requestTimeout = requestTimeout;
@@ -1271,7 +1345,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -1279,7 +1353,7 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of a Server Load Balancer (SLB) instance.</p>
+             * <p>The SLB ID.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-uf62****6d13tq2u5</p>
@@ -1290,10 +1364,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of SLB instances. Valid values:</p>
+             * <p>The SLB type. Valid values:</p>
              * <ul>
-             * <li><strong>internet</strong>: an Internet-facing SLB instance</li>
-             * <li><strong>intranet</strong>: an Intranet-facing SLB instance</li>
+             * <li><strong>internet</strong>: Internet.</li>
+             * <li><strong>intranet</strong>: Internal network.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1390,7 +1464,10 @@ public class ListIngressesResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -1406,7 +1483,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1414,7 +1494,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>The total number of queried entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

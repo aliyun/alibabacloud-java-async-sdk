@@ -60,7 +60,7 @@ public class ListSecretsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the namespace in which the Secrets reside. By default, the namespace ID is the same as the region ID.</p>
+         * <p>The ID of the namespace where the Secret instance resides. If the Secret instance resides in the default namespace, specify only the region ID, such as <code>cn-beijing</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

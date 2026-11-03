@@ -87,7 +87,10 @@ public class AbortChangeOrderRequest extends Request {
         }
 
         /**
-         * Rollback.
+         * <p>Specifies whether to roll back.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder rollback(Boolean rollback) {
             this.putQueryParameter("Rollback", rollback);

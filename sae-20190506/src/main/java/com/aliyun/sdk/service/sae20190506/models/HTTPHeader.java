@@ -67,7 +67,10 @@ public class HTTPHeader extends TeaModel {
         } 
 
         /**
-         * name.
+         * <p>The header name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Content-Type</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -75,7 +78,10 @@ public class HTTPHeader extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The header value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/json</p>
          */
         public Builder value(String value) {
             this.value = value;

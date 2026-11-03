@@ -67,7 +67,10 @@ public class WebApplicationWithInstanceCount extends TeaModel {
         } 
 
         /**
-         * InstanceCount.
+         * <p>The number of application instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instanceCount(Long instanceCount) {
             this.instanceCount = instanceCount;
@@ -75,7 +78,7 @@ public class WebApplicationWithInstanceCount extends TeaModel {
         }
 
         /**
-         * WebApplication.
+         * <p>The application information.</p>
          */
         public Builder webApplication(WebApplication webApplication) {
             this.webApplication = webApplication;

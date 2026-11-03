@@ -90,7 +90,7 @@ public class ListLogConfigsRequest extends Request {
         } 
 
         /**
-         * <p>10</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class ListLogConfigsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class ListLogConfigsRequest extends Request {
         }
 
         /**
-         * <p>1</p>
+         * <p>The number of entries to return on each page. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,7 +75,7 @@ public class DescribeNamespacesRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

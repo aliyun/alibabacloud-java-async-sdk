@@ -88,7 +88,10 @@ public class DescribeVSwitchesRequest extends Request {
         } 
 
         /**
-         * VSwitchId.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp165bn1eu4fyztdvbfvo,vsw-bp1iof8x4ypzrwfwg1h08</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -97,7 +100,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VSwitchName.
+         * <p>The name of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KKKK</p>
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
@@ -106,6 +112,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the VPC to which the vSwitch belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

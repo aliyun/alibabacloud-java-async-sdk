@@ -1281,7 +1281,7 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) required for a RAM role to obtain images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</p>
+         * <p>The ARN of the RAM role required to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Use RAM roles to authorize access across Alibaba Cloud accounts</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/adminrole</p>
@@ -1293,7 +1293,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of Container Registry Enterprise Edition instance N. This parameter is required when the <strong>ImageUrl</strong> parameter is set to the URL of an image in an ACR Enterprise Edition instance.</p>
+         * <p>The Container Registry ACR Enterprise instance ID. This parameter is required when <strong>ImageUrl</strong> is set to a Container Registry Enterprise instance image.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-xxxxxx</p>
@@ -1305,7 +1305,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AgentVersion.
+         * <p>The Aliyun Agent version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.4.2</p>
          */
         public Builder agentVersion(String agentVersion) {
             this.putQueryParameter("AgentVersion", agentVersion);
@@ -1314,7 +1317,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The description of the template. The description cannot exceed 1,024 characters in length.</p>
+         * <p>The description of the application. The description can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a test description.</p>
@@ -1326,7 +1329,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The name of the application. The name can contain digits, letters, and hyphens (-). The name must start with a letter and cannot end with a hyphen (-). It cannot exceed 36 characters in length.</p>
+         * <p>The name of the application. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name can be up to 36 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1339,7 +1342,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Select micro_service, which is the application.</p>
+         * <p>The source of the application. A value of micro_service indicates a microservice application.</p>
          * 
          * <strong>example:</strong>
          * <p>micro_service</p>
@@ -1351,10 +1354,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to associate an EIP with the node pool. Take note of the following rules:</p>
+         * <p>Specifies whether to associate an elastic IP address (EIP). Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The EIP is associated with the application instance.</li>
-         * <li><strong>false</strong>: The EIP is not associated with the application instance.</li>
+         * <li><strong>true</strong>: associates an EIP.</li>
+         * <li><strong>false</strong>: does not associate an EIP.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1369,11 +1372,11 @@ public class CreateApplicationRequest extends Request {
         /**
          * <p>Specifies whether to automatically configure the network environment. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: SAE automatically configures the network environment when you create the application. If you set this parameter to true, the values of the <strong>NamespaceId</strong>, <strong>VpcId</strong>, <strong>vSwitchId</strong>, and <strong>SecurityGroupId</strong> parameters are ignored.</li>
-         * <li><strong>false</strong>: SAE configures the network environment based on your settings when you create the application.</li>
+         * <li><strong>true</strong>: SAE automatically configures the network environment when the application is created. The values of <strong>NamespaceId</strong>, <strong>VpcId</strong>, <strong>vSwitchId</strong>, and <strong>SecurityGroupId</strong> are ignored.</li>
+         * <li><strong>false</strong>: SAE manually configures the network environment when the application is created.</li>
          * </ul>
          * <blockquote>
-         * <p> If you select <strong>true</strong>, other <strong>NamespaceId</strong> will be ignored.</p>
+         * <p>If you set this parameter to <strong>true</strong>, other <strong>NamespaceId</strong> values passed are ignored.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1386,7 +1389,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the basic application.</p>
+         * <p>The ID of the base application.</p>
          * 
          * <strong>example:</strong>
          * <p>ee99cce6-1c8e-4bfa-96c3-3e2fa9de8a41</p>
@@ -1398,14 +1401,17 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The command that is used to start the image. The command must be an existing executable object in the container. Sample statements:</p>
+         * <p>The startup command of the image. The command must be an executable object that exists in the container. Example:</p>
          * <pre><code>command:
          *       - echo
          *       - abc
          *       - &gt;
          *       - file0
          * </code></pre>
-         * <p>In this example, the Command parameter is set to <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
+         * <p>Based on the preceding example, Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;].</p>
+         * <blockquote>
+         * <p>Notice: This parameter is required when PackageType is set to DotnetZip.</notice></p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>echo</p>
@@ -1417,9 +1423,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The parameters of the image startup command. The CommandArgs parameter specifies the parameters that are required for the <strong>Command</strong> parameter. You can specify the name in one of the following formats:</p>
+         * <p>The arguments for the image startup command, which are required by the startup command <strong>Command</strong>. The format is as follows:</p>
          * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
-         * <p>In the preceding example, the CommandArgs parameter is set to <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The data type of <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be an array of strings in the JSON format. This parameter is optional.</p>
+         * <p>In the preceding example, <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>, where <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be converted to a string in JSON array format. If no arguments are required, leave this parameter empty.
+         * <notice>This parameter is required when PackageType is set to DotnetZip.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;a&quot;,&quot;b&quot;]</p>
@@ -1431,16 +1438,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The description of the <strong>ConfigMap</strong> instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following table describes the parameters that are used in the preceding statements.</p>
+         * <p>The mount description of the <strong>ConfigMap</strong>. Uses the configuration item created on the configuration item page of the namespace to inject configuration information into the container. Parameter description:</p>
          * <ul>
-         * <li><strong>congfigMapId</strong>: the ID of the ConfigMap instance. You can call the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the ID.</li>
-         * <li><strong>key</strong>: the key.</li>
+         * <li><strong>configMapId</strong>: instance ID of the ConfigMap instance. You can invoke the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the instance ID.</li>
+         * <li><strong>key</strong>: the key value.</li>
          * </ul>
          * <blockquote>
-         * <p>You can use <code>sae-sys-configmap-all</code> to mount all keys.</p>
+         * <p>You can mount all keys by passing the sae-sys-configmap-all parameter.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>mountPath</strong>: the mount path in the container.</li>
+         * <li><strong>mountPath</strong>: the mount path.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1453,14 +1460,13 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+         * <p>The number of CPU cores required for each instance. Unit: millicore. The value cannot be 0. Only the following defined specifications are supported:</p>
          * <ul>
          * <li><strong>500</strong></li>
          * <li><strong>1000</strong></li>
          * <li><strong>2000</strong></li>
          * <li><strong>4000</strong></li>
          * <li><strong>8000</strong></li>
-         * <li><strong>12000</strong></li>
          * <li><strong>16000</strong></li>
          * <li><strong>32000</strong></li>
          * </ul>
@@ -1475,7 +1481,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The custom mappings between hostnames and IP addresses in the container. Take note of the following rules:</p>
+         * <p>The custom host mapping in the container. Valid values:</p>
          * <ul>
          * <li><strong>hostName</strong>: the domain name or hostname.</li>
          * <li><strong>ip</strong>: the IP address.</li>
@@ -1491,12 +1497,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Custom image type. To it to empty string to use pre-built image.</p>
+         * <p>The custom image type. If the image is not a custom image, set this parameter to an empty string:</p>
          * <ul>
-         * <li><p>internet: Public network image</p>
-         * </li>
-         * <li><p>intranet: Private network image</p>
-         * </li>
+         * <li>internet: public network image.</li>
+         * <li>intranet: private network image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1509,10 +1513,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Whether to deploy now.</p>
+         * <p>Specifies whether to deploy the application immediately. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default): Deploy now.</li>
-         * <li><strong>false</strong>: Deploy later.</li>
+         * <li><strong>true</strong>: deploys the application immediately. This is the default value.</li>
+         * <li><strong>false</strong>: deploys the application later.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1525,7 +1529,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The disk size. Unit: GB.</p>
+         * <p>The disk storage size, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -1537,7 +1541,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>. NET Framework version number:</p>
+         * <p>The version number of the .NET framework:</p>
          * <ul>
          * <li>.NET 3.1</li>
          * <li>.NET 5.0</li>
@@ -1556,7 +1560,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The version of the container in HSF.</p>
+         * <p>The version of the application runtime environment in the High-Speed Service Framework (HSF), such as the Ali-Tomcat container.</p>
          * 
          * <strong>example:</strong>
          * <p>3.5.3</p>
@@ -1568,7 +1572,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * EmptyDirDesc.
+         * <p>The shared ephemeral storage configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;name\&quot;:\&quot;workdir\&quot;,\&quot;mountPath\&quot;:\&quot;/usr/local/tomcat/webapps\&quot;}]</p>
          */
         public Builder emptyDirDesc(String emptyDirDesc) {
             this.putBodyParameter("EmptyDirDesc", emptyDirDesc);
@@ -1577,10 +1584,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Enable CPU Burst.</p>
+         * <p>Specifies whether to enable the CPU Burst feature:</p>
          * <ul>
-         * <li>true: enable</li>
-         * <li>false: disable</li>
+         * <li>true: enables the feature.</li>
+         * <li>false: disables the feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1593,10 +1600,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Enable application monitoring for non-Java applications based on eBPF technology. The value options are as follows:</p>
+         * <p>Specifies whether to enable application monitoring for non-Java applications based on eBPF technology. Valid values:</p>
          * <ul>
-         * <li>true: Enable.</li>
-         * <li>false: Disable (default).</li>
+         * <li><strong>true</strong>: enables the feature.</li>
+         * <li><strong>false</strong>: disables the feature. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1609,7 +1616,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * EnableNamespaceAgentVersion.
+         * <p>Specifies whether to reuse the namespace agent version configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableNamespaceAgentVersion(Boolean enableNamespaceAgentVersion) {
             this.putQueryParameter("EnableNamespaceAgentVersion", enableNamespaceAgentVersion);
@@ -1618,7 +1628,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * EnableNamespaceSlsConfig.
+         * <p>Specifies whether to reuse the namespace Simple Log Service (SLS) log configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableNamespaceSlsConfig(Boolean enableNamespaceSlsConfig) {
             this.putQueryParameter("EnableNamespaceSlsConfig", enableNamespaceSlsConfig);
@@ -1627,10 +1640,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether to enable the new ARMS feature:</p>
+         * <p>Specifies whether to enable the new Application Real-Time Monitoring Service (ARMS) features:</p>
          * <ul>
-         * <li>true: enables this parameter.</li>
-         * <li>false: disables this parameter.</li>
+         * <li>true: enables the features.</li>
+         * <li>false: disables the features.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1643,7 +1656,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * EnablePrometheus.
+         * <p>Specifies whether to enable Prometheus custom metric collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enablePrometheus(Boolean enablePrometheus) {
             this.putQueryParameter("EnablePrometheus", enablePrometheus);
@@ -1652,10 +1668,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Enable Sidecar resource isolation.</p>
+         * <p>Specifies whether to enable sidecar resource isolation:</p>
          * <ul>
-         * <li>true: enable</li>
-         * <li>false: disable</li>
+         * <li>true: enables isolation.</li>
+         * <li>false: disables isolation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1668,26 +1684,49 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. Before you can reference a ConfigMap, you must create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
+         * <p>The environment variables of the container. You can customize environment variables or reference ConfigMaps. To reference a ConfigMap, you must create a ConfigMap instance first. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
          * <ul>
-         * <li><p>Custom configuration</p>
-         * <ul>
+         * <li>Custom configuration<ul>
          * <li><strong>name</strong>: the name of the environment variable.</li>
-         * <li><strong>value</strong>: the value of the environment variable. The priority of the custom configuration is higher than valueFrom.</li>
+         * <li><strong>value</strong>: the value of the environment variable. The priority of this parameter is higher than that of valueFrom.</li>
          * </ul>
          * </li>
-         * <li><p>Reference a ConfigMap (valueFrom)</p>
-         * <ul>
-         * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. To reference all keys, specify <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>. Example: <code>sae-sys-configmap-all-test1</code>.</li>
-         * <li><strong>valueFrom</strong>: the reference of the environment variable. Valid value: <code>configMapRef</code>.</li>
+         * <li>Reference a ConfigMap (valueFrom)<ul>
+         * <li><strong>name</strong>: the name of the environment variable. You can reference a single key or all keys. To reference all keys, enter sae-sys-configmap-all-<ConfigMap name>, for example, sae-sys-configmap-all-test1.</li>
+         * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to configMapRef.<ul>
          * <li><strong>configMapId</strong>: the ID of the ConfigMap.</li>
-         * <li><strong>key</strong>: the key. If you want to reference all key values, you do not need to configure this parameter.</li>
+         * <li><strong>key</strong>: the key. If you reference all key-value pairs, do not set this field.</li>
+         * </ul>
+         * </li>
          * </ul>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</p>
+         * <p>[
+         *     {
+         *         &quot;name&quot;: &quot;sae-sys-configmap-all-hello&quot;,
+         *         &quot;valueFrom&quot;: {
+         *             &quot;configMapRef&quot;: {
+         *                 &quot;configMapId&quot;: 100,
+         *                 &quot;key&quot;: &quot;&quot;
+         *             }
+         *         }
+         *     },
+         *     {
+         *         &quot;name&quot;: &quot;hello&quot;,
+         *         &quot;valueFrom&quot;: {
+         *             &quot;configMapRef&quot;: {
+         *                 &quot;configMapId&quot;: 101,
+         *                 &quot;key&quot;: &quot;php-fpm&quot;
+         *             }
+         *         }
+         *     },
+         *     {
+         *         &quot;name&quot;: &quot;envtmp&quot;,
+         *         &quot;value&quot;: &quot;newenv&quot;
+         *     }
+         * ]</p>
          */
         public Builder envs(String envs) {
             this.putQueryParameter("Envs", envs);
@@ -1696,7 +1735,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * GpuConfig.
+         * <p>The GPU configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\n\&quot;gpuType\&quot;:\&quot;PPU810E\&quot;,\n\&quot;gpuCount\&quot;:\&quot;1\&quot;\n}</p>
          */
         public Builder gpuConfig(String gpuConfig) {
             this.putQueryParameter("GpuConfig", gpuConfig);
@@ -1705,7 +1747,14 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * HeadlessPvtzDiscoverySvc.
+         * <p>The Kubernetes headless service registration and discovery configuration.</p>
+         * <ul>
+         * <li>serviceName: The service name.</li>
+         * <li>namespaceId: The namespace ID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;serviceName\&quot;:\&quot;leaf-test-headless\&quot;,\&quot;namespaceId\&quot;:\&quot;cn-zhangjiakou:prod\&quot;}</p>
          */
         public Builder headlessPvtzDiscoverySvc(String headlessPvtzDiscoverySvc) {
             this.putQueryParameter("HeadlessPvtzDiscoverySvc", headlessPvtzDiscoverySvc);
@@ -1714,7 +1763,17 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Html.
+         * <p>The NGINX version. Valid values:</p>
+         * <ul>
+         * <li>nginx 1.20</li>
+         * <li>nginx 1.22</li>
+         * <li>nginx 1.24</li>
+         * <li>nginx 1.26</li>
+         * <li>nginx 1.28</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx 1.28</p>
          */
         public Builder html(String html) {
             this.putQueryParameter("Html", html);
@@ -1735,7 +1794,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The URL of the image. This parameter is required if you set the <code>PackageType</code> parameter to <code>Image</code>.</p>
+         * <p>The URL of the image. This parameter is required when <strong>PackageType</strong> is set to <strong>Image</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
@@ -1747,7 +1806,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Initialize container configuration.</p>
+         * <p>The init container configuration.</p>
          */
         public Builder initContainersConfig(java.util.List<InitContainerConfig> initContainersConfig) {
             String initContainersConfigShrink = shrink(initContainersConfig, "InitContainersConfig", "json");
@@ -1757,7 +1816,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * IsStateful.
+         * <p>Specifies whether the application is stateful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isStateful(Boolean isStateful) {
             this.putQueryParameter("IsStateful", isStateful);
@@ -1766,7 +1828,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+         * <p>The startup arguments for the JAR package. Default startup command: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
          * 
          * <strong>example:</strong>
          * <p>custom-args</p>
@@ -1778,7 +1840,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The option settings in the JAR package. The settings are used to start the application container. The default startup command for application deployment is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+         * <p>The startup options for the JAR package. Default startup command: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
          * 
          * <strong>example:</strong>
          * <p>-Xms4G -Xmx4G</p>
@@ -1790,7 +1852,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The version of the Java development kit (JDK) on which the deployment package of the application depends. The following versions are supported:</p>
+         * <p>The JDK version on which the deployment package depends. Valid values:</p>
          * <ul>
          * <li><strong>Open JDK 8</strong></li>
          * <li><strong>Open JDK 7</strong></li>
@@ -1799,7 +1861,7 @@ public class CreateApplicationRequest extends Request {
          * <li><strong>openjdk-8u191-jdk-alpine3.9</strong></li>
          * <li><strong>openjdk-7u201-jdk-alpine3.9</strong></li>
          * </ul>
-         * <p>This parameter is not returned if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+         * <p>This parameter is not supported when <strong>PackageType</strong> is set to <strong>Image</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Open JDK 8</p>
@@ -1811,11 +1873,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The logging configurations of Message Queue for Apache Kafka. Take note of the following rules:</p>
+         * <p>The summary configuration for collecting logs to Kafka. Valid values:</p>
          * <ul>
-         * <li><strong>kafkaEndpoint</strong>: the endpoint of the Message Queue for Apache Kafka API.</li>
-         * <li><strong>kafkaInstanceId</strong>: the ID of the Message Queue for Apache Kafka instance.</li>
-         * <li><strong>kafkaConfigs</strong>: One or more logging configurations of Message Queue for Apache Kafka. For information about sample values and parameters, see the request parameter <strong>KafkaLogfileConfig</strong> in this topic.</li>
+         * <li><strong>kafkaEndpoint</strong>: the service registration address of the Kafka API.</li>
+         * <li><strong>kafkaInstanceId</strong>: the Kafka instance ID.</li>
+         * <li><strong>kafkaConfigs</strong>: the summary configuration for one or more logs. For value description, see the <strong>kafkaConfigs</strong> request parameter in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1828,7 +1890,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The application labels. Both keys and values are strings.</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
@@ -1838,26 +1900,26 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Container health check. If the container fails this check, it will be revoked and relaunch again. Use one of the following methods to perform the health check:</p>
+         * <p>The liveness probe of the container. A container that failed the health check undergoes shutdown and recovers. The following methods are supported:</p>
          * <ul>
-         * <li>Example of <strong>exec</strong>: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat/home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</code></li>
-         * <li>Sample code of the <strong>httpGet</strong> method: <code>{&quot;httpGet&quot;:{&quot;path&quot;:&quot;/&quot;,&quot;port&quot;:18091,&quot;scheme&quot;:&quot;HTTP&quot;,&quot;isContainKeyWord&quot;:true,&quot;keyWord&quot;:&quot;SAE&quot;},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</code></li>
-         * <li>Sample code of the <strong>tcpSocket</strong> method: <code>{&quot;tcpSocket&quot;:{&quot;port&quot;:18091},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</code></li>
+         * <li><strong>exec</strong>: for example, {&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat/home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</li>
+         * <li><strong>httpGet</strong>: for example, {&quot;httpGet&quot;:{&quot;path&quot;:&quot;/&quot;,&quot;port&quot;:18091,&quot;scheme&quot;:&quot;HTTP&quot;,&quot;isContainKeyWord&quot;:true,&quot;keyWord&quot;:&quot;SAE&quot;},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</li>
+         * <li><strong>tcpSocket</strong>: for example, {&quot;tcpSocket&quot;:{&quot;port&quot;:18091},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</li>
          * </ul>
          * <blockquote>
-         * <p>You can use only one method to perform the health check.</p>
+         * <p>You can select only one method for the health check.</p>
          * </blockquote>
-         * <p>The following table describes the parameters that are used in the preceding statements.</p>
+         * <p>Parameter description:</p>
          * <ul>
-         * <li><strong>exec.command</strong>: the health check command.</li>
-         * <li><strong>httpGet.path</strong>: the request path.</li>
-         * <li><strong>httpGet.scheme</strong>: the protocol that is used to perform the health check. Valid values: <strong>HTTP</strong> and <strong>HTTPS</strong>.</li>
-         * <li><strong>httpGet.isContainKeyWord</strong>: indicates whether the response contains keywords. Valid values: <strong>true</strong> and <strong>false</strong>. If this field is not returned, the advanced settings are not used.</li>
-         * <li><strong>httpGet.keyWord</strong>: the custom keyword. This parameter is available only if the <strong>isContainKeyWord</strong> field is returned.</li>
-         * <li><strong>tcpSocket.port</strong>: the port that is used to check the status of TCP connections.</li>
-         * <li><strong>initialDelaySeconds</strong>: the delay of the health check. Default value: 10. Unit: seconds.</li>
-         * <li><strong>periodSeconds</strong>: the interval at which health checks are performed. Default value: 30. Unit: seconds.</li>
-         * <li><strong>timeoutSeconds</strong>: the timeout period of the health check. Default value: 1. Unit: seconds. If you set this parameter to 0 or leave this parameter empty, the timeout period is automatically set to 1 second.</li>
+         * <li><strong>exec.command</strong>: Settings for the health check command.</li>
+         * <li><strong>httpGet.path</strong>: the access path.</li>
+         * <li><strong>httpGet.scheme</strong>: <strong>HTTP</strong> or <strong>HTTPS</strong>.</li>
+         * <li><strong>httpGet.isContainKeyWord</strong>: <strong>true</strong> indicates that the keyword is included, and <strong>false</strong> indicates that the keyword is not included. If this field is missing, the advanced feature is not used.</li>
+         * <li><strong>httpGet.keyWord</strong>: the custom keyword. The <strong>isContainKeyWord</strong> field is required when this field is used.</li>
+         * <li><strong>tcpSocket.port</strong>: the port for TCP connection detection.</li>
+         * <li><strong>initialDelaySeconds</strong>: Settings for the delay before the health check starts. Default value: 10. Unit: seconds.</li>
+         * <li><strong>periodSeconds</strong>: Settings for the health check epoch. Default value: 30. Unit: seconds.</li>
+         * <li><strong>timeoutSeconds</strong>: Settings for the timeout period of the health check. Default value: 1. Unit: seconds. If this parameter is set to 0 or not set, the default timeout period is 1 second.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1870,7 +1932,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * LokiConfigs.
+         * <p>LokiConfigs</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder lokiConfigs(String lokiConfigs) {
             this.putQueryParameter("LokiConfigs", lokiConfigs);
@@ -1879,18 +1944,18 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+         * <p>The memory size required for each instance. Unit: MB. The value cannot be 0. The memory size has a one-to-one correspondence with the number of CPU cores. Only the following defined specifications are supported:</p>
          * <ul>
-         * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
-         * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
-         * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
-         * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8,000.</li>
-         * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
-         * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
-         * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
-         * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
-         * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
-         * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+         * <li><strong>1024</strong>: corresponds to 500 and 1,000 millicores.</li>
+         * <li><strong>2048</strong>: corresponds to 500, 1,000, and 2,000 millicores.</li>
+         * <li><strong>4096</strong>: corresponds to 1,000, 2,000, and 4,000 millicores.</li>
+         * <li><strong>8192</strong>: corresponds to 2,000, 4,000, and 8,000 millicores.</li>
+         * <li><strong>12288</strong>: corresponds to 12,000 millicores.</li>
+         * <li><strong>16384</strong>: corresponds to 4,000, 8,000, and 16,000 millicores.</li>
+         * <li><strong>24576</strong>: corresponds to 12,000 millicores.</li>
+         * <li><strong>32768</strong>: corresponds to 16,000 millicores.</li>
+         * <li><strong>65536</strong>: corresponds to 8,000, 16,000, and 32,000 millicores.</li>
+         * <li><strong>131072</strong>: corresponds to 32,000 millicores.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1905,9 +1970,9 @@ public class CreateApplicationRequest extends Request {
         /**
          * <p>The Nacos registry. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: SAE built-in Nacos registry</li>
-         * <li><strong>1</strong>: self-managed Nacos registry</li>
-         * <li><strong>2</strong> : MSE enterprise edition Nacos registry</li>
+         * <li><strong>0</strong>: the built-in Nacos of SAE.</li>
+         * <li><strong>1</strong>: a self-managed Nacos.</li>
+         * <li><strong>2</strong>: Microservices Engine (MSE) Nacos.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1920,10 +1985,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The Registry configurations.</p>
+         * <p>The configuration of the registry.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;instanceId&quot;:&quot;mse-cn-zvp2bh6h70r&quot;,&quot;namespace&quot;:&quot;4c0aa74f-57cb-423c-b6af-5d9f2d0e3dbd&quot;}</p>
+         * <p>{\&quot;instanceId\&quot;:\&quot;mse-cn-zvp2bh6h70r\&quot;,\&quot;namespace\&quot;:\&quot;4c0aa74f-57cb-423c-b6af-5d9f2d0e3dbd\&quot;}</p>
          */
         public Builder microRegistrationConfig(String microRegistrationConfig) {
             this.putBodyParameter("MicroRegistrationConfig", microRegistrationConfig);
@@ -1932,29 +1997,21 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Configure microservices governance</p>
-         * <p>Whether to enable microservices governance (enable):</p>
+         * <p>Configures microservice governance features.</p>
          * <ul>
-         * <li>true: Enable</li>
-         * <li>false: Disable</li>
+         * <li>enable: Specifies whether to enable microservice governance. Valid values:<ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
-         * <p>Configure lossless online/offline deployment (mseLosslessRule):</p>
-         * <p>delayTime: Delay duration (unit: seconds)</p>
-         * <p>enable: Whether to enable lossless deployment</p>
-         * <ul>
-         * <li><p>true: Enable</p>
          * </li>
-         * <li><p>false: Disable</p>
-         * </li>
+         * <li>mseLosslessRule: Configures lossless online and offline rules.<ul>
+         * <li>delayTime: The delay time.</li>
+         * <li>enable: Specifies whether to enable the lossless online feature. Valid values: true (enabled) and false (disabled).</li>
+         * <li>notice: Specifies whether to enable the notification feature. Valid values: true (enabled) and false (disabled).</li>
+         * <li>warmupTime: The warm-up duration for low traffic, in seconds.</li>
          * </ul>
-         * <p>notice: Whether to enable notifications</p>
-         * <ul>
-         * <li><p>true: Enable</p>
-         * </li>
-         * <li><p>false: Disable</p>
          * </li>
          * </ul>
-         * <p>warmupTime: Small-traffic warm-up duration (unit: seconds)</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enable&quot;: true,&quot;mseLosslessRule&quot;: {&quot;delayTime&quot;: 0,&quot;enable&quot;: false,&quot;notice&quot;: false,&quot;warmupTime&quot;: 120}}</p>
@@ -1966,7 +2023,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>It is not recommended to configure this field; configuring NasConfigs instead. This field specifies the NAS mount description. When deploying, if the configuration has not changed, you do not need to set this parameter (i.e., the MountDesc field does not need to be included in the request). If you need to clear the NAS configuration, set the value of this field to an empty string in the request (i.e., set the value of the MountDesc field to &quot;&quot;).</p>
+         * <p>Do not configure this field. Configure <strong>NasConfigs</strong> instead. The mount description of the NAS file system. If the configuration remains unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>MountDesc</strong> field in the request. If you need to clear the NAS configuration, set the value of this field to an empty string in the request. That is, set the <strong>MountDesc</strong> field to &quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
@@ -1978,7 +2035,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>It is not recommended to configure this field; configuring NasConfigs instead. This field specifies the NAS mount point within the application&quot;s VPC. When deploying, if the configuration has not changed, you do not need to set this parameter (i.e., the MountHost field does not need to be included in the request). If you need to clear the NAS configuration, set the value of this field to an empty string in the request (i.e., set the value of the MountHost field to &quot;&quot;).</p>
+         * <p>Do not configure this field. Configure <strong>NasConfigs</strong> instead. The mount target of the NAS file system in the VPC of the application. If the configuration remains unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>MountHost</strong> field in the request. If you need to clear the NAS configuration, set the value of this field to an empty string in the request. That is, set the <strong>MountHost</strong> field to &quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -1990,7 +2047,8 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>SAE namespace ID. Only namespaces consisting of lowercase letters and hyphens (-) are supported, and the name must start with a letter.</p>
+         * <p>The ID of the Serverless App Engine (SAE) namespace. Only namespaces whose names contain lowercase letters and hyphens (-) are supported. The name must start with a letter.
+         * You can obtain the namespace by calling the <a href="https://help.aliyun.com/document_detail/126547.html">DescribeNamespaceList</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>
@@ -2002,13 +2060,13 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The configurations of mounting the NAS file system. Take note of the following rules:</p>
+         * <p>The configuration for mounting the NAS file system. Valid values:</p>
          * <ul>
          * <li><strong>mountPath</strong>: the mount path of the container.</li>
-         * <li><strong>readOnly</strong>: If you set the value to <strong>false</strong>, the application has the read and write permissions.</li>
+         * <li><strong>readOnly</strong>: A value of <strong>false</strong> indicates read and write permissions.</li>
          * <li><strong>nasId</strong>: the ID of the NAS file system.</li>
-         * <li><strong>mountDomain</strong>: the domain name of the mount target. For more information, see <a href="https://help.aliyun.com/document_detail/62626.html">DescribeMountTargets</a>.</li>
-         * <li><strong>nasPath</strong>: the directory in the NAS file system.</li>
+         * <li><strong>mountDomain</strong>: the mount target address of the container. For more information, see <a href="https://help.aliyun.com/document_detail/62626.html">DescribeMountTargets</a>.</li>
+         * <li><strong>nasPath</strong>: the relative file directory of the NAS file system.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2021,8 +2079,8 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>It is not recommended to configure this field; configuring NasConfigs instead. The ID of the mounted NAS must be in the same region as the cluster. The NAS must have available mount point quota or its mount point must already be on a switch within the VPC. If this field is not specified and the mountDescs field exists, a NAS will be automatically purchased and mounted to a switch within the VPC by default.</p>
-         * <p>When deploying, if the configuration has not changed, you do not need to set this parameter (i.e., the NASId field does not need to be included in the request). If you need to clear the NAS configuration, set the value of this field to an empty string in the request (i.e., set the value of the NASId field to &quot;&quot;).</p>
+         * <p>Do not configure this field. Configure <strong>NasConfigs</strong> instead. The ID of the mounted Apsara File Storage NAS file system. The NAS file system must reside in the same region as the cluster. It must have an available quota for creating mount targets, or its mount targets must already exist on a vSwitch in the VPC. If you do not specify this parameter and the <strong>mountDescs</strong> field exists, a NAS file system is automatically purchased and mounted to a vSwitch in the VPC by default.</p>
+         * <p>If the configuration remains unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>NASId</strong> field in the request. If you need to clear the NAS configuration, set the value of this field to an empty string in the request. That is, set the <strong>NASId</strong> field to &quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>KSAK****</p>
@@ -2034,14 +2092,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>SAE edition.</p>
+         * <p>The application version. Valid values:</p>
          * <ul>
-         * <li><p>lite: the lightweight edition.</p>
-         * </li>
-         * <li><p>std: the standard edition.</p>
-         * </li>
-         * <li><p>pro: the professional edition.</p>
-         * </li>
+         * <li>lite: Lite Edition.</li>
+         * <li>std: Standard Edition.</li>
+         * <li>pro: Professional Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2054,9 +2109,9 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role used to authenticate the user identity.</p>
+         * <p>The RAM role for the identity authentication service.</p>
          * <blockquote>
-         * <p> You need to create an OpenID Connect (OIDC) identity provider (IdP) and an identity provider (IdP) for role-based single sign-on (SSO) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/2331022.html">Creates an OpenID Connect (OIDC) identity provider (IdP)</a> and <a href="https://help.aliyun.com/document_detail/2331016.html">Creates an identity provider (IdP) for role-based single sign-on (SSO)</a>.</p>
+         * <p>You must create an OIDC identity provider and an identity provider role in the same region in advance. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ram/developer-reference/api-ims-2019-08-15-createoidcprovider">Create an OIDC identity provider</a> and <a href="https://www.alibabacloud.com/help/en/ram/developer-reference/api-ims-2019-08-15-createsamlprovider">Create a role-based SSO identity provider</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/ram/developer-reference/api-ims-2019-08-15-createoidcprovider">Create an OIDC identity provider</a> and <a href="https://www.alibabacloud.com/help/zh/ram/developer-reference/api-ims-2019-08-15-createsamlprovider">Create a role-based SSO identity provider</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2069,7 +2124,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The Accesskey ID that the OSS reads and writes from.</p>
+         * <p>The AccessKey ID used to read and write OSS data.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -2081,7 +2136,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey Secret that the OSS reads and writes from.</p>
+         * <p>The AccessKey Secret used to read and write OSS data.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -2093,18 +2148,14 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Information of the Object Storage Service (OSS) bucket mounted to the application. The following table describes the parameters that are used in the preceding statements.</p>
+         * <p>The OSS mount description. Parameter description:</p>
          * <ul>
-         * <li><p><strong>bucketName</strong>: the name of the OSS bucket.</p>
-         * </li>
-         * <li><p><strong>bucketPath</strong>: the directory or object in OSS. If the specified directory or object does not exist, an error is returned.</p>
-         * </li>
-         * <li><p><strong>mountPath</strong>: the directory of the container in SAE. If the path already exists, the newly specified path overwrites the previous one. If the path does not exist, it is created.</p>
-         * </li>
-         * <li><p><strong>readOnly</strong>: specifies whether to only allow the container path to read data from the OSS directory. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The container path only has read permission on the OSS directory.</li>
-         * <li><strong>false</strong>: The application has read and write permissions.</li>
+         * <li><strong>bucketName</strong>: the name of the bucket.</li>
+         * <li><strong>bucketPath</strong>: the folder or object that you created in OSS. If the OSS mount folder does not exist, an exception is triggered.</li>
+         * <li><strong>mountPath</strong>: the container path in SAE. If the path already exists, it will overwrite the existing content. If the path does not exist, it is created.</li>
+         * <li><strong>readOnly</strong>: specifies whether the container path has read permissions on the mounted folder resources. Valid values:<ul>
+         * <li><strong>true</strong>: read-only permissions.</li>
+         * <li><strong>false</strong>: read and write permissions.</li>
          * </ul>
          * </li>
          * </ul>
@@ -2119,14 +2170,36 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The type of the deployment package. Take note of the following rules:</p>
+         * <p>The type of the application package. Valid values:</p>
          * <ul>
-         * <li>If you deploy the application by using a Java Archive (JAR) package, you can set this parameter to <strong>FatJar</strong>, <strong>War</strong>, or <strong>Image</strong>.</li>
-         * <li>If you deploy the application by using a PHP package, you can set this parameter to one of the following values:</li>
+         * <li><p>When you deploy the application by using Java, <strong>FatJar</strong>, <strong>War</strong>, and <strong>Image</strong> are supported.</p>
+         * </li>
+         * <li><p>When you deploy the application by using PHP, the following types are supported:</p>
+         * <ul>
+         * <li><strong>PhpZip</strong></li>
+         * <li><strong>IMAGE_PHP_5_4</strong></li>
+         * <li><strong>IMAGE_PHP_5_4_ALPINE</strong></li>
+         * <li><strong>IMAGE_PHP_5_5</strong></li>
+         * <li><strong>IMAGE_PHP_5_5_ALPINE</strong></li>
+         * <li><strong>IMAGE_PHP_5_6</strong></li>
+         * <li><strong>IMAGE_PHP_5_6_ALPINE</strong></li>
+         * <li><strong>IMAGE_PHP_7_0</strong></li>
+         * <li><strong>IMAGE_PHP_7_0_ALPINE</strong></li>
+         * <li><strong>IMAGE_PHP_7_1</strong></li>
+         * <li><strong>IMAGE_PHP_7_1_ALPINE</strong></li>
+         * <li><strong>IMAGE_PHP_7_2</strong></li>
+         * <li><strong>IMAGE_PHP_7_2_ALPINE</strong></li>
+         * <li><strong>IMAGE_PHP_7_3</strong></li>
+         * <li><strong>IMAGE_PHP_7_3_ALPINE</strong></li>
          * </ul>
-         * <p><strong>PhpZip</strong> <strong>IMAGE_PHP_5_4</strong> <strong>IMAGE_PHP_5_4_ALPINE</strong> <strong>IMAGE_PHP_5_5</strong> <strong>IMAGE_PHP_5_5_ALPINE</strong> <strong>IMAGE_PHP_5_6</strong> <strong>IMAGE_PHP_5_6_ALPINE</strong> <strong>IMAGE_PHP_7_0</strong> <strong>IMAGE_PHP_7_0_ALPINE</strong> <strong>IMAGE_PHP_7_1</strong> <strong>IMAGE_PHP_7_1_ALPINE</strong> <strong>IMAGE_PHP_7_2</strong> <strong>IMAGE_PHP_7_2_ALPINE</strong> <strong>IMAGE_PHP_7_3</strong> <strong>IMAGE_PHP_7_3_ALPINE</strong></p>
-         * <ul>
-         * <li>If you deploy the application by using a <strong>Python</strong> package, you can set this parameter to <strong>PythonZip</strong> or <strong>Image</strong>:</li>
+         * </li>
+         * <li><p>When you deploy the application by using Python, <strong>PythonZip</strong> and <strong>Image</strong> are supported.</p>
+         * </li>
+         * <li><p>When you deploy the application by using .NET Core, <strong>DotnetZip</strong> and <strong>Image</strong> are supported.</p>
+         * <blockquote>
+         * <p>If you select DotnetZip, Dotnet specifies the version number of the .NET Core environment. .NET 3.1, .NET 5.0, .NET 6.0, .NET 7.0, and .NET 8.0 are supported. In this case, the Dotnet, Command, and CommandArgs parameters are required.</p>
+         * </blockquote>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -2140,7 +2213,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The address of the deployment package. This parameter is required if you set <strong>PackageType</strong> to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
+         * <p>The URL of the deployment package. This parameter is required when <strong>PackageType</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar</a></p>
@@ -2152,7 +2225,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The version of the deployment package. This parameter is required when the <strong>PackageType</strong> parameter is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
+         * <p>The version number of the deployment package. This parameter is required when <strong>PackageType</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -2164,7 +2237,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The dependent PHP version of PHP package. Image is not supported.</p>
+         * <p>The PHP version on which the PHP deployment package depends. Images are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>PHP-FPM 7.0</p>
@@ -2176,7 +2249,8 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The path on which the PHP configuration file for application monitoring is mounted. Make sure that the PHP server loads the configuration file. SAE automatically generates the corresponding configuration file. No manual operations are required.</p>
+         * <p>The mount path for PHP application monitoring. You must ensure that the PHP server loads the configuration file in this path.
+         * You do not need to pay attention to the configuration content. SAE automatically renders the correct configuration file.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/local/etc/php/conf.d/arms.ini</p>
@@ -2188,7 +2262,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The details of the PHP configuration file.</p>
+         * <p>The content of the PHP configuration file.</p>
          * 
          * <strong>example:</strong>
          * <p>k1=v1</p>
@@ -2200,7 +2274,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The path on which the PHP configuration file for application startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</p>
+         * <p>The mount path for the PHP application startup configuration. You must ensure that the PHP server uses this configuration file to start.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/local/etc/php/php.ini</p>
@@ -2212,7 +2286,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Control whether to run a script after the container is initialized. Example: {&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
+         * <p>The script to execute after the container starts. A script is triggered and executed immediately after the container is created. Format: {&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
@@ -2224,7 +2298,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>To controle whether to run a script before the container stops. Example: {&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
+         * <p>The script to execute before the container stops. A script is triggered and executed before the container is deleted. Format: {&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
@@ -2236,13 +2310,13 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The programming language for the application’s technology stack. The value options are as follows:</p>
+         * <p>The programming language used to create the application. Valid values:</p>
          * <ul>
-         * <li>java: Java language</li>
-         * <li>php: PHP language</li>
-         * <li>python: Python language</li>
-         * <li>dotnet: .NET Core language</li>
-         * <li>other: Multi-language, such as C++, Go, Node.js, etc.</li>
+         * <li><strong>java</strong>: Java.</li>
+         * <li><strong>php</strong>: PHP.</li>
+         * <li><strong>python</strong>: Python.</li>
+         * <li><strong>dotnet</strong>: .NET Core.</li>
+         * <li><strong>other</strong>: multiple languages, such as C++, Go, and Node.js.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2255,16 +2329,17 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The configurations of Kubernetes Service-based service registration and discovery. Take note of the following rules:</p>
+         * <p>Enables Kubernetes Service registration and discovery. Valid values:</p>
          * <ul>
-         * <li><strong>serviceName</strong>: the name of the Alibaba Cloud service. Format: <code>&lt;Custom content&gt;-&lt;Namespace ID&gt;</code>. <code>-&lt;Namespace ID&gt;</code> is automatically specified based on the namespace in which an application resides and cannot be changed. For example, if you select the default namespace in the China (Beijing) region, <code>-cn-beijing-default</code> is automatically specified.</li>
-         * <li><strong>namespaceId</strong>: the namespace ID.</li>
-         * <li><strong>portAndProtocol</strong>: the port number and protocol. Valid values of the port number: 1 to 65535. Valid values of the protocol: <strong>TCP</strong> and <strong>UDP</strong>.</li>
-         * <li><strong>enable</strong>: enables the Kubernetes Service-based registration and discovery feature.</li>
+         * <li><strong>serviceName</strong>: the service name. The format is custom-namespace ID. The suffix -namespace ID cannot be customized and must be filled in based on the namespace where the application resides. For example, if you select the default namespace in the China (Beijing) region, the value is -cn-beijing-default.</li>
+         * <li><strong>namespaceId</strong>: the ID of the namespace.</li>
+         * <li><strong>portProtocols</strong>: the port and protocol. The port value ranges from 1 to 65535. The protocol supports <strong>TCP</strong> and <strong>UDP</strong>.</li>
+         * <li><strong>portAndProtocol</strong>: the port and protocol. The port value ranges from 1 to 65535. The protocol supports <strong>TCP</strong> and <strong>UDP</strong>. <strong>We recommend that you use portProtocols. If portProtocols Settings are configured, only portProtocols takes effect</strong>.</li>
+         * <li><strong>enable</strong>: enables Kubernetes Service registration and discovery.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;serviceName&quot;:&quot;bwm-poc-sc-gateway-cn-beijing-front&quot;,&quot;namespaceId&quot;:&quot;cn-beijing:front&quot;,&quot;portAndProtocol&quot;:{&quot;18012&quot;:&quot;TCP&quot;},&quot;enable&quot;:true}</p>
+         * <p>{&quot;serviceName&quot;:&quot;bwm-poc-sc-gateway-cn-beijing-front&quot;,&quot;namespaceId&quot;:&quot;cn-beijing:front&quot;,&quot;portAndProtocol&quot;:{&quot;18012&quot;:&quot;TCP&quot;},&quot;enable&quot;:true,&quot;portProtocols&quot;:[{&quot;port&quot;:18012,&quot;protocol&quot;:&quot;TCP&quot;}]}</p>
          */
         public Builder pvtzDiscoverySvc(String pvtzDiscoverySvc) {
             this.putQueryParameter("PvtzDiscoverySvc", pvtzDiscoverySvc);
@@ -2273,7 +2348,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The Python environment. Set the value to <strong>PYTHON 3.9.15</strong>.</p>
+         * <p>The Python environment. <strong>PYTHON 3.9.15</strong> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>PYTHON 3.9.15</p>
@@ -2285,7 +2360,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The configurations for installing custom module dependencies. By default, the dependencies defined by the requirements.txt file in the root directory are installed. If the package does not contain this file and you do not configure custom dependencies in the package, specify the dependencies that you want to install in the text box.</p>
+         * <p>The custom installation module dependencies. By default, the dependencies defined in the requirements.txt file in the root folder are installed. If no dependencies are configured or custom software packages are used, you can specify the dependencies to install.</p>
          * 
          * <strong>example:</strong>
          * <p>Flask==2.0</p>
@@ -2297,7 +2372,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * RaspConfig.
+         * <p>The application runtime security protection (RASP) configuration.</p>
          */
         public Builder raspConfig(RaspConfig raspConfig) {
             String raspConfigShrink = shrink(raspConfig, "RaspConfig", "json");
@@ -2307,9 +2382,9 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Check the launch status of the container. Containers that fail health checks more than once will not receive traffic from Server Load Balancer (SLB) instances any loner. You can use the <strong>exec</strong>, <strong>httpGet</strong>, or <strong>tcpSocket</strong> method to perform health checks. For more information, see the description of the <strong>Liveness</strong> parameter.</p>
+         * <p>The readiness probe of the application. A container that fails multiple health checks is stopped and restarted. Traffic from Server Load Balancer (SLB) is not routed to containers that fail the health check. The <strong>exec</strong>, <strong>httpGet</strong>, and <strong>tcpSocket</strong> methods are supported. For specific examples, see the <strong>Liveness</strong> parameter.</p>
          * <blockquote>
-         * <p>You can use only one method to perform the health check.</p>
+         * <p>You can select only one method for the health check.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2322,7 +2397,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The number of instances when initialized.</p>
+         * <p>The initial number of instances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -2335,10 +2410,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Supports NULL (default) and haiguang (haiguang server).</p>
+         * <p>The resource type. Valid values: NULL (default), default (default), and haiguang (Hygon servers).</p>
          * 
          * <strong>example:</strong>
-         * <p>UNLL</p>
+         * <p>NULL</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -2347,7 +2422,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The SAE version. Supported versions:</p>
+         * <p>The SAE version. Valid values:</p>
          * <ul>
          * <li><strong>v1</strong></li>
          * <li><strong>v2</strong></li>
@@ -2363,15 +2438,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Secret Mount Description
-         * Use the secret dictionaries created in the Namespace Secret Dictionary page to inject information into containers. Parameter descriptions are as follows:</p>
+         * <p>The mount description of the <strong>Secret</strong>. Uses the Secret created on the Secret page of the namespace to inject confidential information into the container. Parameter description:</p>
          * <ul>
-         * <li><p>secretId: Secret instance ID. Obtain via the ListSecrets interface.</p>
-         * </li>
-         * <li><p>key: Key-value pair. Note: Set the parameter sae-sys-secret-all to mount all keys.</p>
-         * </li>
-         * <li><p>mountPath: Mount path.</p>
-         * </li>
+         * <li><strong>secretId</strong>: instance ID of the Secret instance. You can obtain the instance ID by invoking the ListSecrets operation.</li>
+         * <li><strong>key</strong>: the key value.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can mount all keys by passing the sae-sys-secret-all parameter.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>mountPath</strong>: the mount path.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2384,7 +2460,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Security group ID.</p>
+         * <p>The ID of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-wz969ngg2e49q5i4****</p>
@@ -2396,10 +2472,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The canary tag configured for the application.</p>
+         * <p>The canary release tags configured for the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</p>
+         * <p>{\&quot;alicloud.service.tag\&quot;:\&quot;g1\&quot;}</p>
          */
         public Builder serviceTags(String serviceTags) {
             this.putBodyParameter("ServiceTags", serviceTags);
@@ -2408,7 +2484,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the container.</p>
+         * <p>The container configuration.</p>
          */
         public Builder sidecarContainersConfig(java.util.List<SidecarContainerConfig> sidecarContainersConfig) {
             String sidecarContainersConfigShrink = shrink(sidecarContainersConfig, "SidecarContainersConfig", "json");
@@ -2418,22 +2494,22 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The logging configurations of Log Service.</p>
+         * <p>The configuration for collecting logs to Simple Log Service (SLS).</p>
          * <ul>
-         * <li>To use Log Service resources that are automatically created by SAE, set this parameter to <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
-         * <li>To use custom Log Service resources, set this parameter to <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
+         * <li>Use SLS resources from automatic creation by SAE: [{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}].</li>
+         * <li>Use custom SLS resources: [{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}].</li>
          * </ul>
-         * <p>The following table describes the parameters that are used in the preceding statements.</p>
+         * <p>Parameter description:</p>
          * <ul>
-         * <li><strong>projectName</strong>: the name of the Log Service project.</li>
-         * <li><strong>logDir</strong>: the path in which logs are stored.</li>
-         * <li><strong>logType</strong>: the log type. <strong>stdout</strong>: the standard output log of the container. You can specify only one stdout value for this parameter. If you leave this parameter empty, file logs are collected.</li>
-         * <li><strong>logstoreName</strong>: the name of the Logstore in Log Service.</li>
-         * <li><strong>logtailName</strong>: the name of the Logtail configuration in Log Service. If you do not configure this parameter, a new Logtail configuration is created.</li>
+         * <li><strong>projectName</strong>: the name of the SLS project.  </li>
+         * <li><strong>logDir</strong>: the log path.</li>
+         * <li><strong>logType</strong>: the log type. <strong>stdout</strong> indicates container standard output logs. Only one stdout log Settings can be configured. If Settings are not specified, file logs are collected.</li>
+         * <li><strong>logstoreName</strong>: the name of the SLS Logstore.</li>
+         * <li><strong>logtailName</strong>: the name of the SLS Logtail. If this parameter is not specified, a new Logtail is created.</li>
          * </ul>
-         * <p>If you do not need to modify the logging configurations when you deploy the application, configure the <strong>SlsConfigs</strong> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you no longer need to use Log Service, leave the <strong>SlsConfigs</strong> parameter empty in the request.</p>
+         * <p>If the SLS collection configuration remains unchanged during multiple deployments, you do not need to set this parameter. That is, you do not need to include the <strong>SlsConfigs</strong> field in the request. If you no longer need the SLS collection feature, you must set the value of this field to an empty string in the request. That is, set the <strong>SlsConfigs</strong> field to &quot;&quot;.</p>
          * <blockquote>
-         * <p>A Log Service project that is automatically created by SAE when you create an application is deleted when the application is deleted. Therefore, when you create an application, you cannot select a Log Service project that is automatically created by SAE for log collection.</p>
+         * <p>Projects from automatic creation with the application are deleted when the application is deleted. Therefore, when selecting an existing project, you cannot select a project from automatic creation by SAE.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2446,7 +2522,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * SlsLogEnvTags.
+         * <p>sls log tags</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder slsLogEnvTags(String slsLogEnvTags) {
             this.putQueryParameter("SlsLogEnvTags", slsLogEnvTags);
@@ -2455,15 +2534,17 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Enable application startup probe.</p>
-         * <p>Check succeeded: Indicates that the application has started successfully. If you have configured Liveness and Readiness checks, they will be performed after the application startup is successful.
-         * Check failed: Indicates that the application failed to start; an exception will be reported and the application will be automatically restarted.</p>
-         * <blockquote>
+         * <p>Enables application startup probes.</p>
          * <ul>
-         * <li>exec, httpGet, and tcpSocket methods are supported. For specific examples, see the Liveness parameter documentation.</li>
-         * <li>Only one health check method can be selected.</li>
+         * <li>Success: Indicates that the application is started. If you configure liveness and readiness probes, the liveness and readiness probes are executed after the application is started.</li>
+         * <li>Failure: Indicates that the application fails to start. An exception is reported and the application is automatically restarted.<blockquote>
+         * <ul>
+         * <li>The exec, httpGet, and tcpSocket methods are supported. For specific examples, refer to the Liveness parameter.</li>
+         * <li>You can select only one method for health checks.</li>
          * </ul>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
@@ -2475,7 +2556,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for a graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.</p>
+         * <p>The timeout period for graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -2487,7 +2568,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Time zone. Default to time zone of Asia/Shanghai.</p>
+         * <p>The time zone. Default value: <strong>Asia/Shanghai</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
@@ -2499,13 +2580,13 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The Tomcat configuration. If you want to cancel this configuration, set this parameter to &quot;&quot; or &quot;{}&quot;. The following variables are included in the configuration: Take note of the following rules:</p>
+         * <p>The Tomcat file configuration. Set the value to &quot;&quot; or &quot;{}&quot; to delete the configuration:</p>
          * <ul>
-         * <li><strong>port</strong>: the port number. The port number ranges from 1024 to 65535. Though the admin permissions are configured for the container, the root permissions are required to perform operations on ports whose number is smaller than 1024. Enter a value that ranges from 1025 to 65535 because the container has only the admin permissions. If you do not specify this parameter, the default port number 8080 is used.</li>
-         * <li><strong>contextPath</strong>: the path. Default value: /. This value indicates the root directory.</li>
-         * <li><strong>maxThreads</strong>: the maximum number of connections in the connection pool. Default value: 400.</li>
-         * <li><strong>uriEncoding</strong>: the URI encoding scheme in the Tomcat container. Valid values: UTF-8, ISO-8859-1, GBK, and GB2312.************ If you do not specify this parameter, the default value <strong>ISO-8859-1</strong> is used.</li>
-         * <li><strong>useBodyEncoding</strong>: specifies whether to use the encoding scheme specified in the request body for URI query parameters. Default value: true.</li>
+         * <li><strong>port</strong>: the port range is 1024 to 65535. Ports smaller than 1024 require root permissions. Because the container is configured with admin permissions, specify a port greater than 1024. If this parameter is not configured, the default value is 8080.</li>
+         * <li><strong>contextPath</strong>: the access path. The default value is the root directory &quot;/&quot;.</li>
+         * <li><strong>maxThreads</strong>: the maximum number of connections in the connection pool. The default value is 400.</li>
+         * <li><strong>uriEncoding</strong>: the encoding format of Tomcat. Valid values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and <strong>GB2312</strong>. If this parameter is not set, the default value is <strong>ISO-8859-1</strong>.</li>
+         * <li><strong>useBodyEncodingForUri</strong>: specifies whether to use <strong>BodyEncoding for URL</strong>. Default value: <strong>true</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2518,7 +2599,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch to which the elastic network interface (ENI) of the application instance is connected. The vSwitch must be located in the VPC specified by the VpcId parameter. The SAE namespace is bound with this vSwitch. The default value is the ID of the vSwitch that is bound to the namespace.</p>
+         * <p>The ID of the vSwitch to which the elastic network interface controllers (NICs) of the application instance belong. The vSwitch must reside in the preceding VPC. The vSwitch is also attached to the SAE namespace. If you do not specify this parameter, the ID of the vSwitch attached to the namespace is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp12mw1f8k3jgygk9****</p>
@@ -2530,7 +2611,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) that corresponds to the SAE namespace. In SAE, once correspondence is configured between a namespace and a VPC, the namespace cannot correspond to other VPCs. When the SAE application is created within the namespace, the application is bound with the VPC. Multiple namespaces can correspond to the same VPC. The default value is the ID of the VPC that is bound to the namespace.</p>
+         * <p>The ID of the virtual private cloud (VPC) that corresponds to the SAE namespace. In SAE, a namespace can correspond to only one VPC, and the correspondence cannot be modified. The binding relationship is established when you create the first SAE application in the namespace. Multiple namespaces can correspond to one VPC. If you do not specify this parameter, the ID of the VPC bound to the namespace is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1aevy8sofi8mh1q****</p>
@@ -2542,10 +2623,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The startup command of the WAR package. For information about how to configure the startup command, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure startup commands</a>.</p>
+         * <p>The startup command for the application deployed by using a WAR package. The procedure is the same as that for configuring the startup command for image deployment. For more information, see <a href="https://help.aliyun.com/document_detail/96677.html">Set a startup command</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>CATALINA_OPTS=&quot;$CATALINA_OPTS $Options&quot; catalina.sh run</p>
+         * <p>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</p>
          */
         public Builder warStartOptions(String warStartOptions) {
             this.putQueryParameter("WarStartOptions", warStartOptions);
@@ -2554,12 +2635,12 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The version of the Tomcat container on which the deployment package depends. Valid values:</p>
+         * <p>The Tomcat version on which the WebContainer deployment package depends. Valid values:</p>
          * <ul>
          * <li><strong>apache-tomcat-7.0.91</strong></li>
          * <li><strong>apache-tomcat-8.5.42</strong></li>
          * </ul>
-         * <p>This parameter is not returned if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+         * <p>This parameter is not supported when <strong>PackageType</strong> is set to <strong>Image</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>apache-tomcat-7.0.91</p>
@@ -2643,7 +2724,7 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * EnableRasp.
+             * <p>Specifies whether the application runtime security protection (RASP) is enabled.</p>
              */
             public Builder enableRasp(Boolean enableRasp) {
                 this.enableRasp = enableRasp;
@@ -2651,7 +2732,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * RaspAppKey.
+             * <p>The RASP application key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder raspAppKey(String raspAppKey) {
                 this.raspAppKey = raspAppKey;
@@ -2659,7 +2743,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * RaspAppName.
+             * <p>The RASP application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sae-test</p>
              */
             public Builder raspAppName(String raspAppName) {
                 this.raspAppName = raspAppName;

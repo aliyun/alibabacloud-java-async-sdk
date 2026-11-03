@@ -90,7 +90,7 @@ public class UpdateSecretRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the namespace where the Secret resides. If the namespace is the default namespace, you need to only enter the region ID, such as <code>cn-beijing</code>.</p>
+         * <p>The ID of the namespace where the Secret instance resides. If the Secret instance resides in the default namespace, specify only the RegionId, such as <code>cn-beijing</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +114,7 @@ public class UpdateSecretRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the Secret.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,9 +174,9 @@ public class UpdateSecretRequest extends Request {
             } 
 
             /**
-             * <p>The information about the key-value pairs of the Secret. This parameter is required. The following formats are supported:</p>
-             * <p>{&quot;Data&quot;:&quot;{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}&quot;}</p>
-             * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/463383.html">Manage a Kubernetes Secret</a>.</p>
+             * <p>The key-value pair data of the Secret. This parameter is required. The format is as follows:</p>
+             * <p>{&quot;Data&quot;:&quot;{\&quot;k1\&quot;:\&quot;v1\&quot;, \&quot;k2\&quot;:\&quot;v2\&quot;}&quot;}</p>
+             * <p>k represents the key, and v represents the value. For more information about configuration items, see <a href="https://help.aliyun.com/document_detail/463383.html">Manage and use Secrets</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

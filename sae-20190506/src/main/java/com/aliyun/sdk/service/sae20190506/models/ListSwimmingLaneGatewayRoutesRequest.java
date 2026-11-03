@@ -85,7 +85,7 @@ public class ListSwimmingLaneGatewayRoutesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>

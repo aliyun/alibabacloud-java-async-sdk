@@ -132,12 +132,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Client error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the application.</p>
+         * <p>The application information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,14 +157,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error code. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>InvalidApplication.NotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -172,7 +172,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned information.</p>
+         * <p>The additional information about the call result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -183,7 +183,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3****</p>
@@ -194,10 +194,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the configurations of an application were obtained. Valid values:</p>
+         * <p>Indicates whether the application configuration information was obtained. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The configurations were obtained.</li>
-         * <li><strong>false</strong>: The configurations failed to be obtained.</li>
+         * <li><strong>true</strong>: The application configuration information was obtained.</li>
+         * <li><strong>false</strong>: The application configuration information failed to be obtained.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The trace ID, which is used to accurately query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>ac1a0b2215622246421415014e****</p>
@@ -304,7 +304,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ConfigMap.</p>
+             * <p>The ConfigMap ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -315,7 +315,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ConfigMap.</p>
+             * <p>The ConfigMap name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -326,7 +326,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key-value pair that is stored in the ConfigMap.</p>
+             * <p>The ConfigMap key-value pair.</p>
              * 
              * <strong>example:</strong>
              * <p>k1</p>
@@ -337,7 +337,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path on which the ConfigMap is mounted.</p>
+             * <p>The container mount path.</p>
              * 
              * <strong>example:</strong>
              * <p>/tmp</p>
@@ -407,10 +407,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The path on which the ConfigMap is mounted.</p>
+             * <p>The mount path.</p>
              * 
              * <strong>example:</strong>
-             * <p>/tmp</p>
+             * <p>/usr/local/tomcat/webapps</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -418,7 +418,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The ephemeral storage name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workdir</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -511,7 +514,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>ConfigMap ID。</p>
+             * <p>The ConfigMap ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -522,7 +525,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ConfigMap.</p>
+             * <p>The ConfigMap name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -533,7 +536,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key.</p>
+             * <p>The ConfigMap key-value pair.</p>
              * 
              * <strong>example:</strong>
              * <p>k1</p>
@@ -544,7 +547,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount path.</p>
+             * <p>The container mount path.</p>
              * 
              * <strong>example:</strong>
              * <p>/tmp</p>
@@ -614,10 +617,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The mount path.</p>
+             * <p>The mount path of the data volume in the container.</p>
              * 
              * <strong>example:</strong>
-             * <p>/tmp</p>
+             * <p>/usr/local/tomcat/webapps</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -625,7 +628,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The ephemeral storage name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workdir</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -721,7 +727,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              * <p>The key.</p>
              * 
              * <strong>example:</strong>
-             * <p>k1</p>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -740,7 +746,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SecretId.
+             * <p>The Secret instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder secretId(Long secretId) {
                 this.secretId = secretId;
@@ -748,7 +757,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SecretName.
+             * <p>The Secret instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-auth</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -893,14 +905,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The command that is used to start the image. The command must be an existing executable object in the container. Sample statements:</p>
+             * <p>The image startup command. The command must be an executable object that exists in the container. Example:</p>
              * <pre><code>command:
              *       - echo
              *       - abc
              *       - &gt;
              *       - file0
              * </code></pre>
-             * <p>In this example, the Command parameter is set to <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
+             * <p>Based on the preceding example, <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>/bin/sh</p>
@@ -911,9 +923,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of the image startup command. The CommandArgs parameter specifies the parameters that are required for the <strong>Command</strong> parameter. You can specify the name in one of the following formats:</p>
+             * <p>The image startup command parameters. The parameters required by the <strong>Command</strong> startup command. Format:</p>
              * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
-             * <p>In the preceding example, the CommandArgs parameter is set to <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The data type of <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be an array of strings in the JSON format. This parameter is optional.</p>
+             * <p>In the preceding example, <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>, where <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be converted to a string in JSON array format. If this parameter is not required, leave it empty.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;a&quot;,&quot;b&quot;]</p>
@@ -924,7 +936,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information of ConfigMap.</p>
+             * <p>The ConfigMap information.</p>
              */
             public Builder configMapMountDesc(java.util.List<InitContainersConfigConfigMapMountDesc> configMapMountDesc) {
                 this.configMapMountDesc = configMapMountDesc;
@@ -932,7 +944,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EmptyDirDesc.
+             * <p>The shared ephemeral storage.</p>
              */
             public Builder emptyDirDesc(java.util.List<InitContainersConfigEmptyDirDesc> emptyDirDesc) {
                 this.emptyDirDesc = emptyDirDesc;
@@ -940,20 +952,25 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Take note of the following rules:</p>
+             * <p>The container environment variable parameters. You can customize the parameters or reference configuration items. To reference configuration items, create a ConfigMap instance first. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
              * <ul>
-             * <li><p>Customize</p>
-             * <ul>
-             * <li><strong>name</strong>: the name of the environment variable.</li>
-             * <li><strong>value</strong>: the value of the environment variable.</li>
+             * <li>Custom configuration<ul>
+             * <li><strong>name</strong>: The environment variable name.</li>
+             * <li><strong>value</strong>: The environment variable value. The priority is higher than valueFrom.</li>
              * </ul>
              * </li>
-             * <li><p>Reference ConfigMap</p>
-             * <ul>
-             * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>. Example: <code>sae-sys-configmap-all-test1</code>.</li>
-             * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>configMapRef</code>.</li>
-             * <li><strong>configMapId</strong>: the ConfigMap ID.</li>
-             * <li><strong>key</strong>: the key. If you want to reference all keys, do not configure this parameter.</li>
+             * <li>Reference configuration items (valueFrom)<ul>
+             * <li><strong>name</strong>: The environment variable name. You can reference a single key or all keys. To reference all keys, enter <code>sae-sys-configmap-all-&lt;Configuration item name&gt;</code>, for example, <code>sae-sys-configmap-all-test1</code>.</li>
+             * <li><strong>valueFrom</strong>: The environment variable reference. Set the value to <code>configMapRef</code>.</li>
+             * <li><strong>configMapId</strong>: The configuration item ID.</li>
+             * <li><strong>key</strong>: The key. If all key-value pairs are referenced, do not set this field.</li>
+             * </ul>
+             * </li>
+             * <li>Reference Secrets (valueFrom)<ul>
+             * <li><strong>name</strong>: The environment variable name. You can reference a single key or all keys. To reference all keys, enter <code>sae-sys-secret-all-&lt;Secret name&gt;</code>, for example, <code>sae-sys-secret-all-test1</code>.</li>
+             * <li><strong>valueFrom</strong>: The environment variable reference. Set the value to <code>secretRef</code>.</li>
+             * <li><strong>secretId</strong>: The Secret ID.</li>
+             * <li><strong>key</strong>: The key. If all key-value pairs are referenced, do not set this field.</li>
              * </ul>
              * </li>
              * </ul>
@@ -967,7 +984,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image URL of the initialized container.</p>
+             * <p>The image address used by the init container.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-shenzhen.aliyuncs.com/sae-serverless-demo/sae-demo:microservice-java-provider-v1.0</p>
@@ -978,7 +995,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the initialized container.</p>
+             * <p>The init container name.</p>
              * 
              * <strong>example:</strong>
              * <p>init-container</p>
@@ -989,7 +1006,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SecretMountDesc.
+             * <p>The Secret mount description.</p>
              */
             public Builder secretMountDesc(java.util.List<SecretMountDesc> secretMountDesc) {
                 this.secretMountDesc = secretMountDesc;
@@ -1056,7 +1073,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The path on which the NAS file system is mounted.</p>
+             * <p>The container mount path.</p>
              * 
              * <strong>example:</strong>
              * <p>/tmp</p>
@@ -1067,7 +1084,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory in the NAS file system.</p>
+             * <p>The relative NAS file directory.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -1163,7 +1180,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the OSS bucket.</p>
+             * <p>The bucket name.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-bucket</p>
@@ -1174,7 +1191,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory or object in OSS. If the specified directory or object does not exist, an error is returned.</p>
+             * <p>The directory or OSS object that you created in OSS. If the OSS mount directory does not exist, an exception is triggered.</p>
              * 
              * <strong>example:</strong>
              * <p>data/user.data</p>
@@ -1185,7 +1202,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the container in SAE. The parameter value that you specified overwrites the original value. If the specified path does not exist, SAE automatically creates the path.</p>
+             * <p>The container path in SAE. If the path already exists, it is overwritten. If the path does not exist, it is created.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/data/user.data</p>
@@ -1196,10 +1213,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application can use the container path to read data from or write data to resources in the directory of the OSS bucket. Valid values:</p>
+             * <p>Specifies whether the container path has read-only permissions for the mounted directory resources. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The application has the read-only permissions.</li>
-             * <li><strong>false</strong>: The application has the read and write permissions.</li>
+             * <li><strong>true</strong>: Read-only permissions.</li>
+             * <li><strong>false</strong>: Read and write permissions.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1283,7 +1300,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * EnableRasp.
+             * <p>Specifies whether to enable RASP.</p>
              */
             public Builder enableRasp(Boolean enableRasp) {
                 this.enableRasp = enableRasp;
@@ -1291,7 +1308,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RaspAppKey.
+             * <p>The RASP application key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder raspAppKey(String raspAppKey) {
                 this.raspAppKey = raspAppKey;
@@ -1299,7 +1319,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RaspAppName.
+             * <p>The RASP application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sae-test</p>
              */
             public Builder raspAppName(String raspAppName) {
                 this.raspAppName = raspAppName;
@@ -1392,7 +1415,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key to Base64 encode values.</p>
+             * <p>The key whose data value is Base64-encoded.</p>
              * 
              * <strong>example:</strong>
              * <p>task-center</p>
@@ -1414,7 +1437,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secret ID of the instance.</p>
+             * <p>The instance ID of the queried Secret.</p>
              * 
              * <strong>example:</strong>
              * <p>520</p>
@@ -1425,7 +1448,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the secret.</p>
+             * <p>The Secret instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>dummy-name-opaque-894</p>
@@ -1521,7 +1544,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ConfigMap ID.</p>
+             * <p>The ConfigMap instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7361</p>
@@ -1543,7 +1566,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ConfigMap key</p>
+             * <p>The ConfigMap key.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -1554,7 +1577,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount path.</p>
+             * <p>The container mount path.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/test</p>
@@ -1624,7 +1647,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Mount path of the data volume within the container.</p>
+             * <p>The mount path of the data volume in the container.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/cache</p>
@@ -1635,7 +1658,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the shared temporary storage.</p>
+             * <p>The ephemeral storage name.</p>
              * 
              * <strong>example:</strong>
              * <p>sidecar-container</p>
@@ -1731,10 +1754,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ConfigMap key</p>
+             * <p>The key whose data value is Base64-encoded.</p>
              * 
              * <strong>example:</strong>
-             * <p>key</p>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1742,10 +1765,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Mount path of the data volume within the container.</p>
+             * <p>The mount path.</p>
              * 
              * <strong>example:</strong>
-             * <p>/mnt/cache</p>
+             * <p>/tmp</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1753,10 +1776,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secret ID of the instance.</p>
+             * <p>The Secret instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>520</p>
+             * <p>16</p>
              */
             public Builder secretId(Long secretId) {
                 this.secretId = secretId;
@@ -1764,10 +1787,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the secret.</p>
+             * <p>The Secret instance name.</p>
              * 
              * <strong>example:</strong>
-             * <p>dummy-name-opaque-894</p>
+             * <p>registry-auth</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -1833,6 +1856,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecretMountDesc")
         private java.util.List<SidecarContainersConfigSecretMountDesc> secretMountDesc;
 
+        @com.aliyun.core.annotation.NameInMap("SlsConfigs")
+        private String slsConfigs;
+
         private SidecarContainersConfig(Builder builder) {
             this.acrInstanceId = builder.acrInstanceId;
             this.command = builder.command;
@@ -1849,6 +1875,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.preStop = builder.preStop;
             this.readiness = builder.readiness;
             this.secretMountDesc = builder.secretMountDesc;
+            this.slsConfigs = builder.slsConfigs;
         }
 
         public static Builder builder() {
@@ -1964,6 +1991,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.secretMountDesc;
         }
 
+        /**
+         * @return slsConfigs
+         */
+        public String getSlsConfigs() {
+            return this.slsConfigs;
+        }
+
         public static final class Builder {
             private String acrInstanceId; 
             private String command; 
@@ -1980,6 +2014,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String preStop; 
             private String readiness; 
             private java.util.List<SidecarContainersConfigSecretMountDesc> secretMountDesc; 
+            private String slsConfigs; 
 
             private Builder() {
             } 
@@ -2000,10 +2035,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.preStop = model.preStop;
                 this.readiness = model.readiness;
                 this.secretMountDesc = model.secretMountDesc;
+                this.slsConfigs = model.slsConfigs;
             } 
 
             /**
-             * <p>The ID of Container Registry Enterprise Edition instance. This parameter is required when the <strong>ImageUrl</strong> parameter is set to the URL of an image in an ACR Enterprise Edition instance.</p>
+             * <p>The instance ID of the Container Registry Enterprise instance. This parameter is required when <strong>ImageUrl</strong> is set to a Container Registry Enterprise instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-fhzlneorxala66ip</p>
@@ -2014,14 +2050,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command that is used to start the image. The command must be an existing executable object in the container. Sample statements:</p>
+             * <p>The image startup command. The command must be an executable object that exists in the container. Example:</p>
              * <pre><code>command:
              *       - echo
              *       - abc
              *       - &gt;
              *       - file0
              * </code></pre>
-             * <p>In this example, the Command parameter is set to <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
+             * <p>Based on the preceding example, <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>/bin/sh</p>
@@ -2032,12 +2068,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of the image startup command. The CommandArgs parameter specifies the parameters that are required for the <strong>Command</strong> parameter. You can specify the name in one of the following formats:</p>
+             * <p>The image startup command parameters. The parameters required by the <strong>Command</strong> startup command. Format:</p>
              * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
-             * <p>In the preceding example, the CommandArgs parameter is set to <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The data type of <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be an array of strings in the JSON format. This parameter is optional.</p>
+             * <p>In the preceding example, <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>, where <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be converted to a string in JSON array format. If this parameter is not required, leave it empty.</p>
              * 
              * <strong>example:</strong>
-             * <p>[&quot;-c&quot;,&quot;echo \&quot;test\&quot; &gt; /home/nas/test.log &amp;&amp; sleep 10000000s&quot;]</p>
+             * <p>[\&quot;-c\&quot;,\&quot;echo \\\&quot;test\\\&quot; &gt; /home/nas/test.log &amp;&amp; sleep 10000000s\&quot;]</p>
              */
             public Builder commandArgs(String commandArgs) {
                 this.commandArgs = commandArgs;
@@ -2045,16 +2081,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the <strong>ConfigMap</strong> instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following table describes the parameters that are used in the preceding statements.</p>
+             * <p>The ConfigMap mount description. Uses the ConfigMap created on the namespace configuration item page to inject configuration information into the container. The metric description is as follows:</p>
              * <ul>
-             * <li><strong>congfigMapId</strong>: the ID of the ConfigMap instance. You can call the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the ID.</li>
-             * <li><strong>key</strong>: the key.</li>
-             * </ul>
-             * <blockquote>
-             * <p>You can use the <code>sae-sys-configmap-all</code> key to mount all keys.</p>
+             * <li><strong>configMapId</strong>: The ConfigMap instance ID. You can invoke the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the ID.</li>
+             * <li><strong>key</strong>: The key value.<blockquote>
+             * <p>You can pass the <code>sae-sys-configmap-all</code> parameter to mount all keys.</p>
              * </blockquote>
-             * <ul>
-             * <li><strong>mountPath</strong>: the mount path in the container.</li>
+             * </li>
+             * <li><strong>mountPath</strong>: The mount path.</li>
+             * <li><strong>ConfigMapName</strong>: The ConfigMap name.</li>
              * </ul>
              */
             public Builder configMapMountDesc(java.util.List<SidecarContainersConfigConfigMapMountDesc> configMapMountDesc) {
@@ -2063,7 +2098,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Set the CPU resource limit of the primary container that can be used by Sidecar container.</p>
+             * <p>The maximum CPU resources that the sidecar container can use from the main container.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -2074,7 +2109,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Shared temporary storage mounted to the primary container and the Sidecar container.</p>
+             * <p>The shared ephemeral storage. Sets the ephemeral storage directory and mounts it to the main container and the sidecar container.</p>
              */
             public Builder emptyDirDesc(java.util.List<SidecarContainersConfigEmptyDirDesc> emptyDirDesc) {
                 this.emptyDirDesc = emptyDirDesc;
@@ -2082,26 +2117,26 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Take note of the following rules:</p>
+             * <p>The container environment variable parameters. You can define custom variables or reference configuration items. To reference configuration items, you must first create a ConfigMap instance. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
              * <ul>
-             * <li><p>Customize</p>
-             * <ul>
-             * <li><strong>name</strong>: the name of the environment variable.</li>
-             * <li><strong>value</strong>: the value of the environment variable.</li>
+             * <li>Custom configuration<ul>
+             * <li><strong>name</strong>: The name of the environment variable.</li>
+             * <li><strong>value</strong>: The value of the environment variable. This parameter has a higher priority than valueFrom.</li>
              * </ul>
              * </li>
-             * <li><p>Reference ConfigMap</p>
-             * <ul>
-             * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>. Example: <code>sae-sys-configmap-all-test1</code>.</li>
-             * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>configMapRef</code>.</li>
-             * <li><strong>configMapId</strong>: the ConfigMap ID.</li>
-             * <li><strong>key</strong>: the key. If you want to reference all keys, do not configure this parameter.</li>
+             * <li>Reference configuration items (valueFrom)<ul>
+             * <li><strong>name</strong>: The name of the environment variable. You can reference a single key or all keys. To reference all keys, enter <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>, such as <code>sae-sys-configmap-all-test1</code>.</li>
+             * <li><strong>valueFrom</strong>: The reference of the environment variable. Set the value to <code>configMapRef</code>.<ul>
+             * <li><strong>configMapId</strong>: The ID of the ConfigMap.</li>
+             * <li><strong>key</strong>: The key. If you reference all key-value pairs, do not set this field.</li>
+             * </ul>
+             * </li>
              * </ul>
              * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;name&quot;:&quot;k1&quot;,&quot;value&quot;:&quot;c8e3a815-e5d3-4adf-abb3-98b106a607c4&quot;}]</p>
+             * <p>[{\&quot;name\&quot;:\&quot;k1\&quot;,\&quot;value\&quot;:\&quot;c8e3a815-e5d3-4adf-abb3-98b106a607c4\&quot;}]</p>
              */
             public Builder envs(String envs) {
                 this.envs = envs;
@@ -2109,7 +2144,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the image.</p>
+             * <p>The image address.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-beijing.aliyuncs.com/sae-dev-test/nginx:stable</p>
@@ -2120,7 +2155,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Liveness.
+             * <p>The container health check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
              */
             public Builder liveness(String liveness) {
                 this.liveness = liveness;
@@ -2128,7 +2166,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Set the memory limit of the primary container that can be used by Sidecar container.</p>
+             * <p>The upper limit of memory resources that the sidecar container can use from the main container.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -2150,7 +2188,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PostStart.
+             * <p>The script to execute after the container starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</p>
              */
             public Builder postStart(String postStart) {
                 this.postStart = postStart;
@@ -2158,7 +2199,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PreStop.
+             * <p>The script to execute before the container stops.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</p>
              */
             public Builder preStop(String preStop) {
                 this.preStop = preStop;
@@ -2166,7 +2210,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Readiness.
+             * <p>The application startup status check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
              */
             public Builder readiness(String readiness) {
                 this.readiness = readiness;
@@ -2174,10 +2221,21 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SecretMountDesc.
+             * <p>The Secret mount description.</p>
              */
             public Builder secretMountDesc(java.util.List<SidecarContainersConfigSecretMountDesc> secretMountDesc) {
                 this.secretMountDesc = secretMountDesc;
+                return this;
+            }
+
+            /**
+             * <p>The configuration for collecting sidecar logs to Simple Log Service (SLS). The structure is aligned with SlsConfigs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
+             */
+            public Builder slsConfigs(String slsConfigs) {
+                this.slsConfigs = slsConfigs;
                 return this;
             }
 
@@ -2241,7 +2299,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>k1</p>
@@ -2252,7 +2310,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -3635,7 +3693,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/190675.html">Pull images across Alibaba Cloud accounts</a> and <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</p>
+             * <p>The ARN of the RAM role required to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/190675.html">Pull Alibaba Cloud images across accounts</a> and <a href="https://help.aliyun.com/document_detail/223585.html">Implement cross-account authorization by using RAM roles</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::123456789012****:role/adminrole</p>
@@ -3646,7 +3704,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+             * <p>The ACR Enterprise instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-xxxxxx</p>
@@ -3657,7 +3715,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AgentVersion.
+             * <p>The agent version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.4.2</p>
              */
             public Builder agentVersion(String agentVersion) {
                 this.agentVersion = agentVersion;
@@ -3665,7 +3726,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AlbIngressReadinessGate.
+             * <p>The ALB gateway readiness gate configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder albIngressReadinessGate(String albIngressReadinessGate) {
                 this.albIngressReadinessGate = albIngressReadinessGate;
@@ -3673,10 +3737,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the application.</p>
+             * <p>The application description.</p>
              * 
              * <strong>example:</strong>
-             * <p>The application description.</p>
+             * <p>Sample application</p>
              */
             public Builder appDescription(String appDescription) {
                 this.appDescription = appDescription;
@@ -3684,7 +3748,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -3695,7 +3759,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>demo-app</p>
@@ -3706,7 +3770,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SAE application type.</p>
+             * <p>The SAE application type. Valid values:</p>
              * <ul>
              * <li>micro_service</li>
              * <li>web</li>
@@ -3722,10 +3786,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an elastic IP address (EIP) is associated with the application instance. Valid values:</p>
+             * <p>Specifies whether to associate an EIP. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The EIP is associated with the application instance.</li>
-             * <li><strong>false</strong>: The EIP is not associated with the application instance.</li>
+             * <li><strong>true</strong>: Associate an EIP.</li>
+             * <li><strong>false</strong>: Do not associate an EIP.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3737,7 +3801,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The base app ID.</p>
+             * <p>The baseline application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>8c573618-8d72-4407-baf4-f7b64b******</p>
@@ -3748,7 +3812,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval between batches in a phased release. Unit: seconds.</p>
+             * <p>The wait time between batches during a phased release, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3770,7 +3834,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CmsServiceId.
+             * <p>The CloudMonitor service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms-id</p>
              */
             public Builder cmsServiceId(String cmsServiceId) {
                 this.cmsServiceId = cmsServiceId;
@@ -3778,15 +3845,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command that is used to start the image. The command must be an existing executable object in the container. Example:</p>
-             * <pre><code>
-             * command:
+             * <p>The image startup command. The command must be an executable object that exists in the container. Example:</p>
+             * <pre><code>command:
              *       - echo
              *       - abc
              *       - &gt;
              *       - file0
              * </code></pre>
-             * <p>In this example, the Command parameter is set to <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
+             * <p>Based on the preceding example, <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>echo</p>
@@ -3797,9 +3863,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of the image startup command. The CommandArgs parameter contains the parameters that are required for the <strong>Command</strong> parameter. Format:</p>
+             * <p>The image startup command parameters. The parameters required by the <strong>Command</strong> startup command. Format:</p>
              * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
-             * <p>In the preceding <strong>Command</strong> example, the CommandArgs parameter is set to <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The data type of <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be an array of strings in the JSON format. You do not need to configure this parameter if it does not exist in the Command parameter.</p>
+             * <p>In the example of the <strong>Command</strong> parameter, <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>, where <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be converted to a string in JSON array format. If this parameter is not required, leave it empty.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;a&quot;,&quot;b&quot;]</p>
@@ -3810,7 +3876,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the ConfigMap.</p>
+             * <p>The ConfigMap information.</p>
              */
             public Builder configMapMountDesc(java.util.List<ConfigMapMountDesc> configMapMountDesc) {
                 this.configMapMountDesc = configMapMountDesc;
@@ -3818,7 +3884,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU specifications that are required for each instance. Unit: millicores. You cannot set this parameter to 0. Valid values:</p>
+             * <p>The CPU required for each instance, in millicores. The value cannot be 0. Only the following defined specifications are supported:</p>
              * <ul>
              * <li><strong>500</strong></li>
              * <li><strong>1000</strong></li>
@@ -3838,10 +3904,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom mappings between hostnames and IP addresses in the container. Valid values:</p>
+             * <p>The custom host mapping in the container. Valid values:</p>
              * <ul>
-             * <li><strong>hostName</strong>: the domain name or hostname.</li>
-             * <li><strong>ip</strong>: the IP address.</li>
+             * <li><strong>hostName</strong>: The domain name or hostname.</li>
+             * <li><strong>ip</strong>: The IP address.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3853,12 +3919,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of custom image. Set to empty string if using pre-built image.</p>
+             * <p>The custom image type. If the image is not a custom image, set this parameter to an empty string. Valid values:</p>
              * <ul>
-             * <li><p>internet: public network image.</p>
-             * </li>
-             * <li><p>intranet: private network image.</p>
-             * </li>
+             * <li>internet: Public image.</li>
+             * <li>intranet: Private image.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3870,7 +3934,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DeploymentName.
+             * <p>The instance name of the application in the ASI cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-b0cdce9b-3d1f-4168-b206-b59f348f1a8a</p>
              */
             public Builder deploymentName(String deploymentName) {
                 this.deploymentName = deploymentName;
@@ -3878,7 +3945,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size. Unit: GB.</p>
+             * <p>The disk storage size, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -3889,7 +3956,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of .NET.</p>
+             * <p>The .NET framework version. Valid values:</p>
              * <ul>
              * <li>.NET 3.1</li>
              * <li>.NET 5.0</li>
@@ -3907,7 +3974,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.</p>
+             * <p>The application runtime environment version in the HSF framework, such as the Ali-Tomcat container.</p>
              * 
              * <strong>example:</strong>
              * <p>3.5.3</p>
@@ -3918,7 +3985,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Shared temporary storage mounted to the primary container and the Sidecar container.</p>
+             * <p>The shared ephemeral storage.</p>
              */
             public Builder emptyDirDesc(java.util.List<EmptyDirDesc> emptyDirDesc) {
                 this.emptyDirDesc = emptyDirDesc;
@@ -3926,10 +3993,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether access to Application High Availability Service (AHAS) is enabled. Valid values:</p>
+             * <p>Specifies whether to connect to AHAS. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Access to AHAS is enabled.</li>
-             * <li><strong>false</strong>: Access to AHAS is disabled.</li>
+             * <li><strong>true</strong>: Connect to AHAS.</li>
+             * <li><strong>false</strong>: Do not connect to AHAS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3941,12 +4008,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Enable CPU Burst.</p>
+             * <p>Specifies whether to enable the CPU Burst feature. Valid values:</p>
              * <ul>
-             * <li><p>true: enable</p>
-             * </li>
-             * <li><p>false: disable</p>
-             * </li>
+             * <li>true: Enable.</li>
+             * <li>false: Disable.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3958,10 +4023,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether canary release rules are enabled. Canary release rules apply only to applications in Spring Cloud and Dubbo frameworks. Valid values:</p>
+             * <p>Specifies whether to enable traffic canary release rules. This rule applies only to applications that use the Spring Cloud and Dubbo frameworks. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The canary release rules are enabled.</li>
-             * <li><strong>false</strong>: The canary release rules are disabled.</li>
+             * <li><strong>true</strong>: Enable canary release rules.</li>
+             * <li><strong>false</strong>: Disable canary release rules.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3973,12 +4038,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Enable idle mode.</p>
+             * <p>Specifies whether to enable the idle mode. Valid values:</p>
              * <ul>
-             * <li><p>true: enable</p>
-             * </li>
-             * <li><p>false: disable</p>
-             * </li>
+             * <li>true: Enable.</li>
+             * <li>false: Disable.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3990,7 +4053,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableNamespaceAgentVersion.
+             * <p>Specifies whether to reuse the namespace agent version configuration.</p>
              */
             public Builder enableNamespaceAgentVersion(Boolean enableNamespaceAgentVersion) {
                 this.enableNamespaceAgentVersion = enableNamespaceAgentVersion;
@@ -3998,12 +4061,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Enable new ARMS feature.</p>
+             * <p>Specifies whether to enable the new ARMS features. Valid values:</p>
              * <ul>
-             * <li><p>true: enable</p>
-             * </li>
-             * <li><p>false: disable</p>
-             * </li>
+             * <li>true: Enable.</li>
+             * <li>false: Disable.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4015,7 +4076,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnablePrometheus.
+             * <p>Specifies whether to enable Prometheus custom metric collection.</p>
              */
             public Builder enablePrometheus(Boolean enablePrometheus) {
                 this.enablePrometheus = enablePrometheus;
@@ -4023,10 +4084,20 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment variables. Variable description:</p>
+             * <p>The container environment variable parameters. You can customize the parameters or reference configuration items. To reference configuration items, create a ConfigMap instance first. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
              * <ul>
-             * <li><strong>name</strong>: the name of the environment variable.</li>
-             * <li><strong>value</strong>: the value or reference of the environment variable.</li>
+             * <li>Custom configuration<ul>
+             * <li><strong>name</strong>: The environment variable name.</li>
+             * <li><strong>value</strong>: The environment variable value.</li>
+             * </ul>
+             * </li>
+             * <li>Reference configuration items<ul>
+             * <li><strong>name</strong>: The environment variable name. You can reference a single key or all keys. To reference all keys, enter <code>sae-sys-configmap-all-&lt;Configuration item name&gt;</code>, for example, <code>sae-sys-configmap-all-test1</code>.</li>
+             * <li><strong>valueFrom</strong>: The environment variable reference. Set the value to <code>configMapRef</code>.</li>
+             * <li><strong>configMapId</strong>: The configuration item ID.</li>
+             * <li><strong>key</strong>: The key. If all key-value pairs are referenced, do not set this field.</li>
+             * </ul>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4038,7 +4109,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GpuCount.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gpuCount(String gpuCount) {
                 this.gpuCount = gpuCount;
@@ -4046,7 +4120,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GpuType.
+             * <p>The GPU type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PPU810E</p>
              */
             public Builder gpuType(String gpuType) {
                 this.gpuType = gpuType;
@@ -4054,7 +4131,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * HeadlessPvtzDiscovery.
+             * <p>The headless PrivateZone service discovery configuration for stateful applications. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;enable&quot;:&quot;true&quot;,&quot;serviceName&quot;:&quot;svc1&quot;,&quot;namespaceId&quot;:&quot;cn-shenzhen&quot;}</p>
              */
             public Builder headlessPvtzDiscovery(String headlessPvtzDiscovery) {
                 this.headlessPvtzDiscovery = headlessPvtzDiscovery;
@@ -4062,7 +4142,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Html.
+             * <p>The NGINX runtime environment version used by the HTML application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx 1.28</p>
              */
             public Builder html(String html) {
                 this.html = html;
@@ -4070,7 +4153,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IdleHour.
+             * <p>The application idle time period configuration. The value is a JSON array string that contains startTime and endTime. Specify the time on the hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;startTime&quot;:&quot;1:00&quot;,&quot;endTime&quot;:&quot;16:00&quot;}]</p>
              */
             public Builder idleHour(String idleHour) {
                 this.idleHour = idleHour;
@@ -4078,7 +4164,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the corresponding secret dictionary.</p>
+             * <p>The ID of the corresponding Secret.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4089,7 +4175,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the image. This parameter is returned only if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+             * <p>The image address. This parameter is required when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>docker.io/library/nginx:1.14.2</p>
@@ -4100,7 +4186,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Initialize container configuration.</p>
+             * <p>The init container configuration.</p>
              */
             public Builder initContainersConfig(java.util.List<InitContainersConfig> initContainersConfig) {
                 this.initContainersConfig = initContainersConfig;
@@ -4108,7 +4194,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IsStateful.
+             * <p>Specifies whether the application is a stateful application.</p>
              */
             public Builder isStateful(Boolean isStateful) {
                 this.isStateful = isStateful;
@@ -4116,7 +4202,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+             * <p>The application startup parameters for the JAR package. Default application startup command: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
              * 
              * <strong>example:</strong>
              * <p>start</p>
@@ -4127,7 +4213,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The option settings in the JAR package. The settings are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+             * <p>The application startup options for the JAR package. Default application startup command: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
              * 
              * <strong>example:</strong>
              * <p>-Dtest=true</p>
@@ -4138,7 +4224,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the Java development kit (JDK) on which the deployment package of the application depends. The following versions are supported:</p>
+             * <p>The JDK version on which the deployment package depends. Supported versions:</p>
              * <ul>
              * <li><strong>Open JDK 8</strong></li>
              * <li><strong>Open JDK 7</strong></li>
@@ -4147,7 +4233,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              * <li><strong>openjdk-8u191-jdk-alpine3.9</strong></li>
              * <li><strong>openjdk-7u201-jdk-alpine3.9</strong></li>
              * </ul>
-             * <p>This parameter is not returned if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+             * <p>This parameter is not supported when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>Open JDK 8</p>
@@ -4158,29 +4244,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logging configurations of Message Queue for Apache Kafka. The following parameters are involved:</p>
+             * <p>The summary information of the configuration for collecting logs to Kafka. Valid values:</p>
              * <ul>
-             * <li><p><strong>KafkaConfigs</strong>: the configurations of Message Queue for Apache Kafka.</p>
-             * </li>
-             * <li><p><strong>createTime</strong>: the time when the Message Queue for Apache Kafka instance was created.</p>
-             * </li>
-             * <li><p><strong>kafkaTopic</strong>: the message topic that is used to classify messages.</p>
-             * </li>
-             * <li><p><strong>logDir</strong>: the path in which logs are stored.</p>
-             * </li>
-             * <li><p><strong>logType</strong>: the type of collected logs. Valid values:</p>
-             * <ul>
-             * <li><strong>file_log</strong>: the file log that is stored in the container. The path of the file logs in the container is returned.</li>
-             * <li><strong>stdout</strong>: the standard output log of the container. You can specify only one stdout value.</li>
+             * <li><strong>kafkaEndpoint</strong>: The service registration address of the Kafka API.</li>
+             * <li><strong>kafkaInstanceId</strong>: The Kafka instance ID.</li>
+             * <li><strong>kafkaConfigs</strong>: The summary information of the configuration for one or more logs. For example values and metric descriptions, see the <strong>kafkaConfigs</strong> request parameter in this topic.</li>
              * </ul>
-             * </li>
-             * <li><p><strong>kafkaEndpoint</strong>: the endpoint of the Message Queue for Apache Kafka service.</p>
-             * </li>
-             * <li><p><strong>kafkaInstanceId</strong>: the ID of the Message Queue for Apache Kafka instance.</p>
-             * </li>
-             * <li><p><strong>region</strong>: the region where the Message Queue for Apache Kafka instance resides.</p>
-             * </li>
-             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;kafkaEndpoint&quot;:&quot;10.0.X.XXX:XXXX,10.0.X.XXX:XXXX,10.0.X.XXX:XXXX&quot;,&quot;kafkaInstanceId&quot;:&quot;alikafka_pre-cn-7pp2l8kr****&quot;,&quot;kafkaConfigs&quot;:[{&quot;logType&quot;:&quot;file_log&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;kafkaTopic&quot;:&quot;test2&quot;},{&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;kafkaTopic&quot;:&quot;test&quot;}]}</p>
              */
             public Builder kafkaConfigs(String kafkaConfigs) {
                 this.kafkaConfigs = kafkaConfigs;
@@ -4188,7 +4260,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The tags.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -4196,26 +4268,26 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the availability check that was performed on the container. If the container fails this health check multiple times, the system disables and restarts the container. You can use one of the following methods to perform the health check:</p>
+             * <p>The container health check. Containers that failed the health check are shutdown and recover. Supported methods:</p>
              * <ul>
-             * <li>Sample code of the <strong>exec</strong> method: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat/home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</code></li>
-             * <li>Sample code of the <strong>httpGet</strong> method: <code>{&quot;httpGet&quot;:{&quot;path&quot;:&quot;/&quot;,&quot;port&quot;:18091,&quot;scheme&quot;:&quot;HTTP&quot;,&quot;isContainKeyWord&quot;:true,&quot;keyWord&quot;:&quot;SAE&quot;},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</code></li>
-             * <li>Sample code of the <strong>tcpSocket</strong> method: <code>{&quot;tcpSocket&quot;:{&quot;port&quot;:18091},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</code></li>
+             * <li><strong>exec</strong>: Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat/home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</code></li>
+             * <li><strong>httpGet</strong>: Example: <code>{&quot;httpGet&quot;:{&quot;path&quot;:&quot;/&quot;,&quot;port&quot;:18091,&quot;scheme&quot;:&quot;HTTP&quot;,&quot;isContainKeyWord&quot;:true,&quot;keyWord&quot;:&quot;SAE&quot;},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</code></li>
+             * <li><strong>tcpSocket</strong>: Example: <code>{&quot;tcpSocket&quot;:{&quot;port&quot;:18091},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</code></li>
              * </ul>
              * <blockquote>
-             * <p> You can use only one method to perform the health check.</p>
+             * <p>You can select only one method for the health check.</p>
              * </blockquote>
-             * <p>The following parameters are involved:</p>
+             * <p>Metric descriptions:</p>
              * <ul>
-             * <li><strong>exec.command</strong>: the health check command.</li>
-             * <li><strong>httpGet.path</strong>: the request path.</li>
-             * <li><strong>httpGet.scheme</strong>: the protocol that is used to perform the health check. Valid values: <strong>HTTP</strong> and <strong>HTTPS</strong>.</li>
-             * <li><strong>httpGet.isContainKeyWord</strong>: indicates whether the response contains keywords. Valid values: <strong>true</strong> and <strong>false</strong>. If this field is not returned, the advanced settings are not used.</li>
-             * <li><strong>httpGet.keyWord</strong>: the custom keyword. This parameter is available only if the <strong>isContainKeyWord</strong> field is returned.</li>
-             * <li><strong>tcpSocket.port</strong>: the port that is used to check the status of TCP connections.</li>
-             * <li><strong>initialDelaySeconds</strong>: the delay of the health check. Default value: 10. Unit: seconds.</li>
-             * <li><strong>periodSeconds</strong>: the interval at which health checks are performed. Default value: 30. Unit: seconds.</li>
-             * <li><strong>timeoutSeconds</strong>: the timeout period of the health check. Default value: 1. Unit: seconds. If you set this parameter to 0 or leave this parameter empty, the timeout period is automatically set to 1 second.</li>
+             * <li><strong>exec.command</strong>: Settings for the health check command.</li>
+             * <li><strong>httpGet.path</strong>: The access path.</li>
+             * <li><strong>httpGet.scheme</strong>: <strong>HTTP</strong> or <strong>HTTPS</strong>.</li>
+             * <li><strong>httpGet.isContainKeyWord</strong>: <strong>true</strong> indicates that the keyword is included, and <strong>false</strong> indicates that the keyword is not included. If this field is missing, the advanced feature is not used.</li>
+             * <li><strong>httpGet.keyWord</strong>: The custom keyword. The <strong>isContainKeyWord</strong> field is required when this field is used.</li>
+             * <li><strong>tcpSocket.port</strong>: The port for TCP connection detection.</li>
+             * <li><strong>initialDelaySeconds</strong>: Settings for the health check delay detection time. Default value: 10. Unit: seconds.</li>
+             * <li><strong>periodSeconds</strong>: Settings for the health check epoch. Default value: 30. Unit: seconds.</li>
+             * <li><strong>timeoutSeconds</strong>: Settings for the health check timeout waiting time. Default value: 1. Unit: seconds. If this parameter is set to 0 or not set, the default timeout waiting time is 1 second.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4227,7 +4299,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LokiConfigs.
+             * <p>LokiConfigs</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder lokiConfigs(String lokiConfigs) {
                 this.lokiConfigs = lokiConfigs;
@@ -4235,7 +4310,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSurgeInstanceRatio.
+             * <p>The peak volume ratio of surge instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder maxSurgeInstanceRatio(Integer maxSurgeInstanceRatio) {
                 this.maxSurgeInstanceRatio = maxSurgeInstanceRatio;
@@ -4243,7 +4321,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSurgeInstances.
+             * <p>The peak volume of surge instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder maxSurgeInstances(Integer maxSurgeInstances) {
                 this.maxSurgeInstances = maxSurgeInstances;
@@ -4251,18 +4332,18 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of memory required by each instance. Unit: MB. You cannot set this parameter to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+             * <p>The memory required for each instance, in MB. The value cannot be 0. The memory has a one-to-one mapping with the CPU. Only the following defined specifications are supported:</p>
              * <ul>
-             * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
-             * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 1000.</li>
-             * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
-             * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8000.</li>
-             * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
-             * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
-             * <li>This parameter is set to <strong>24567</strong> if the Cpu parameter is set to 12000.</li>
-             * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
-             * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
-             * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+             * <li><strong>1024</strong>: corresponds to 500 millicores and 1000 millicores.</li>
+             * <li><strong>2048</strong>: corresponds to 500, 1000, and 2000 millicores.</li>
+             * <li><strong>4096</strong>: corresponds to 1000, 2000, and 4000 millicores.</li>
+             * <li><strong>8192</strong>: corresponds to 2000, 4000, and 8000 millicores.</li>
+             * <li><strong>12288</strong>: corresponds to 12000 millicores.</li>
+             * <li><strong>16384</strong>: corresponds to 4000, 8000, and 16000 millicores.</li>
+             * <li><strong>24576</strong>: corresponds to 12000 millicores.</li>
+             * <li><strong>32768</strong>: corresponds to 16000 millicores.</li>
+             * <li><strong>65536</strong>: corresponds to 8000, 16000, and 32000 millicores.</li>
+             * <li><strong>131072</strong>: corresponds to 32000 millicores.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4274,11 +4355,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Nacos registry. Valid values:</p>
+             * <p>The Nacos registry center. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: SAE built-in Nacos registry</li>
-             * <li><strong>1</strong>: self-managed Nacos registry</li>
-             * <li><strong>2</strong> : MSE Nacos registry</li>
+             * <li><strong>0</strong>: SAE built-in Nacos.</li>
+             * <li><strong>1</strong>: User-managed Nacos.</li>
+             * <li><strong>2</strong>: MSE Nacos Commercial Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4290,10 +4371,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of registration center. Takes effect only the type of registration center is MSE enterprise Nacos.</p>
+             * <p>The registry center configuration. This parameter takes effect only when the registry center type is MSE Nacos Enterprise Edition.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;instanceId&quot;:&quot;mse-cn-1ls43******&quot;,&quot;namespace&quot;:&quot;62ee12fb-c279-4da4-be96-21**********&quot;}</p>
+             * <p>{\&quot;instanceId\&quot;:\&quot;mse-cn-1ls43******\&quot;,\&quot;namespace\&quot;:\&quot;62ee12fb-c279-4da4-be96-21**********\&quot;}</p>
              */
             public Builder microRegistrationConfig(String microRegistrationConfig) {
                 this.microRegistrationConfig = microRegistrationConfig;
@@ -4301,22 +4382,32 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Configure microservices governance</p>
-             * <p>enable: Whether to enable microservices governance</p>
+             * <p>Configures the microservice governance feature.</p>
              * <ul>
-             * <li>true: Enable</li>
-             * <li>false: Disable</li>
+             * <li><p>Whether to enable microservice governance (enable):</p>
+             * <ul>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false: Disabled.</p>
+             * </li>
              * </ul>
-             * <p>mseLosslessRule: Configure lossless online/offline deployment</p>
+             * </li>
+             * <li><p>Configure lossless online and offline (mseLosslessRule):</p>
              * <ul>
-             * <li>delayTime: Delay duration (unit: seconds)</li>
-             * <li>enable: Whether to enable lossless deployment. Set to &quot;true&quot; to enable; set to &quot;false&quot; to disable.</li>
-             * <li>notice: Whether to enable notifications. Set to &quot;true&quot; to enable; set to &quot;false&quot; to disable.</li>
-             * <li>warmupTime: Small-traffic warm-up duration (unit: seconds)</li>
+             * <li><p>delayTime: The delay time.</p>
+             * </li>
+             * <li><p>enable: Specifies whether to enable the lossless online feature. Valid values: true (enabled) and false (disabled).</p>
+             * </li>
+             * <li><p>notice: Specifies whether to enable the notification feature. Valid values: true (enabled) and false (disabled).</p>
+             * </li>
+             * <li><p>warmupTime: The warm-up duration for small traffic, in seconds.</p>
+             * </li>
+             * </ul>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Enable&quot;:true,&quot;MseLosslessRule&quot;:{&quot;enable&quot;:true,&quot;notice&quot;:true,&quot;delayTime&quot;:10,&quot;warmupTime&quot;:120,&quot;funcType&quot;:2,&quot;aligned&quot;:false,&quot;related&quot;:false,&quot;lossLessDetail&quot;:false}}</p>
+             * <p>{\&quot;Enable\&quot;:true,\&quot;MseLosslessRule\&quot;:{\&quot;enable\&quot;:true,\&quot;notice\&quot;:true,\&quot;delayTime\&quot;:10,\&quot;warmupTime\&quot;:120,\&quot;funcType\&quot;:2,\&quot;aligned\&quot;:false,\&quot;related\&quot;:false,\&quot;lossLessDetail\&quot;:false}}</p>
              */
             public Builder microserviceEngineConfig(String microserviceEngineConfig) {
                 this.microserviceEngineConfig = microserviceEngineConfig;
@@ -4324,13 +4415,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of the minimum number of available instances. Valid values:</p>
+             * <p>The minimum percentage of ready instances. Valid values:</p>
              * <ul>
-             * <li><strong>-1</strong>: the default value. This value indicates that the minimum number of available instances is not measured by percentage. If you do not configure this parameter, the default value <strong>-1</strong> is used.</li>
-             * <li><strong>0 to 100</strong>: indicates that the minimum number of available instances is calculated by using the following formula: Current number of instances × (Value of MinReadyInstanceRatio × 100%). If the calculated result is not an integer, the result is rounded up to the nearest integer. For example, if the percentage is set to <strong>50</strong>% and five instances are available, the minimum number of available instances is 3.</li>
+             * <li><strong>-1</strong>: The default value, which indicates that the percentage is not used. If you do not specify this parameter, the system defaults to <strong>-1</strong>.</li>
+             * <li><strong>0 to 100</strong>: The unit is percentage, rounded up. For example, if you set this parameter to <strong>50</strong> and the current number of instances is 5, the minimum number of ready instances is 3.</li>
              * </ul>
              * <blockquote>
-             * <p> If the <strong>MinReadyInstance</strong> and <strong>MinReadyInstanceRatio</strong> parameters are returned and the value of the <strong>MinReadyInstanceRatio</strong> parameter is not <strong>-1</strong>, the value of the <strong>MinReadyInstanceRatio</strong> parameter takes effect. If the <strong>MinReadyInstances</strong> parameter is set to <strong>5</strong> and the <strong>MinReadyInstanceRatio</strong> parameter is set to <strong>50</strong>, the value of the <strong>MinReadyInstanceRatio</strong> parameter determines the minimum number of available instances.</p>
+             * <p>If both <strong>MinReadyInstance</strong> and <strong>MinReadyInstanceRatio</strong> are specified and the value of <strong>MinReadyInstanceRatio</strong> is not <strong>-1</strong>, the <strong>MinReadyInstanceRatio</strong> parameter prevails. For example, if <strong>MinReadyInstances</strong> is set to <strong>5</strong> and <strong>MinReadyInstanceRatio</strong> is set to <strong>50</strong>, the system uses <strong>MinReadyInstanceRatio</strong> to calculate the minimum number of ready instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4342,13 +4433,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of available instances. Valid values:</p>
+             * <p>The minimum number of ready instances. Valid values:</p>
              * <ul>
-             * <li>If you set the value to <strong>0</strong>, business interruptions occur when the application is updated.</li>
-             * <li>If you set the value to <strong>-1</strong>, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</li>
+             * <li>If you set this parameter to <strong>0</strong>, services are interrupted during the application upgrade.</li>
+             * <li>If you set this parameter to <strong>-1</strong>, the minimum number of ready instances uses the system-recommended value, which is 25% of the existing instances. For example, if the current number of instances is 5, 5 × 25% = 1.25. After rounding up, the minimum number of ready instances is 2.</li>
              * </ul>
              * <blockquote>
-             * <p> Make sure that at least one instance is available during application deployment and rollback to prevent business interruptions.</p>
+             * <p>Set the minimum number of ready instances for each rolling deployment to a value greater than or equal to 1 to ensure service continuity.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4360,7 +4451,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the mounted NAS file system.</p>
+             * <p>The mount description.</p>
              */
             public Builder mountDesc(java.util.List<MountDesc> mountDesc) {
                 this.mountDesc = mountDesc;
@@ -4368,7 +4459,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount target of the NAS file system in the VPC where the application is deployed. If you do not need to modify this configuration during the deployment, configure the <strong>MountHost</strong> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you need to remove this configuration, leave the <strong>MountHost</strong> parameter empty in the request.</p>
+             * <p>The NAS mount target within the application VPC. If the configuration remains unchanged during deployment, you do not need to set this parameter (that is, the <strong>MountHost</strong> field is not required in the request). To clear the NAS configuration, set the value of this field to an empty string in the request (that is, set the <strong>MountHost</strong> field to &quot;&quot;).</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -4379,7 +4470,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the microservice application.</p>
+             * <p>The application ID on the MSE side.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxxxx@xxxxx</p>
@@ -4390,7 +4481,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application name of SAE service registered in MSE.</p>
+             * <p>The application name after the SAE service is registered with MSE.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen-alb-demo-5c****</p>
@@ -4401,7 +4492,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace.</p>
+             * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing:test</p>
@@ -4412,7 +4503,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations for mounting the NAS file system.</p>
+             * <p>The NAS mount configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;mountPath&quot;:&quot;/test1&quot;,&quot;readOnly&quot;:false,&quot;nasId&quot;:&quot;nasId1&quot;,&quot;mountDomain&quot;:&quot;nasId1.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;nasPath&quot;:&quot;/test1&quot;},{&quot;nasId&quot;:&quot;nasId2&quot;,&quot;mountDomain&quot;:&quot;nasId2.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;readOnly&quot;:false,&quot;nasPath&quot;:&quot;/test2&quot;,&quot;mountPath&quot;:&quot;/test2&quot;}]</p>
@@ -4423,10 +4514,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the NAS file system.</p>
+             * <p>The NAS ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>AKSN89**</p>
+             * <p>AKSN****</p>
              */
             public Builder nasId(String nasId) {
                 this.nasId = nasId;
@@ -4434,11 +4525,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SAE application edition.</p>
+             * <p>The application edition. Valid values:</p>
              * <ul>
-             * <li>lite: The lightweight edition.</li>
-             * <li>std: The standard edition.</li>
-             * <li>pro: The professional edition.</li>
+             * <li>lite: Lite Edition.</li>
+             * <li>std: Standard Edition.</li>
+             * <li>pro: Professional Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4450,9 +4541,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM role used to authenticate the user identity.</p>
+             * <p>The RAM role for the identity authentication service.</p>
              * <blockquote>
-             * <p> You need to create an OpenID Connect (OIDC) identity provider (IdP) and an identity provider (IdP) for role-based single sign-on (SSO) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/2331022.html">Creates an OpenID Connect (OIDC) identity provider (IdP)</a> and <a href="https://help.aliyun.com/document_detail/2331016.html">Creates an identity provider (IdP) for role-based single sign-on (SSO)</a>.</p>
+             * <p>You must create an OIDC identity provider and an identity provider role in the same region in advance. For more information, see <a href="https://help.aliyun.com/document_detail/2331022.html">Create an OIDC identity provider</a> and <a href="https://help.aliyun.com/document_detail/2331016.html">Create a role-based SSO identity provider</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4464,7 +4555,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AccessKey ID that is used to read data from and write data to Object Storage Service (OSS) buckets.</p>
+             * <p>The AccessKey ID used to read and write OSS data.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxxx</p>
@@ -4475,7 +4566,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AccessKey secret that is used to read data from and write data to OSS buckets.</p>
+             * <p>The AccessKey Secret used to read and write OSS data.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxxx</p>
@@ -4486,7 +4577,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the mounted OSS bucket.</p>
+             * <p>The OSS mount description.</p>
              */
             public Builder ossMountDescs(java.util.List<OssMountDescs> ossMountDescs) {
                 this.ossMountDescs = ossMountDescs;
@@ -4494,12 +4585,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the deployment package. Valid values:</p>
+             * <p>The application package type. Valid values:</p>
              * <ul>
-             * <li><p>If you deploy the application by using a Java Archive (JAR) package, you can set this parameter to <strong>FatJar</strong>, <strong>War</strong>, or <strong>Image</strong>.</p>
-             * </li>
-             * <li><p>If you deploy the application by using a PHP package, you can set this parameter to one of the following values:</p>
-             * <ul>
+             * <li>When you deploy a Java application, valid values are <strong>FatJar</strong>, <strong>War</strong>, and <strong>Image</strong>.</li>
+             * <li>When you deploy a PHP application, valid values are:<ul>
              * <li><strong>PhpZip</strong></li>
              * <li><strong>IMAGE_PHP_5_4</strong></li>
              * <li><strong>IMAGE_PHP_5_4_ALPINE</strong></li>
@@ -4528,7 +4617,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the deployment package. This parameter is returned only if the <strong>PackageType</strong> parameter is set to <strong>FatJar</strong> or <strong>War</strong>.</p>
+             * <p>The deployment package URL. If your deployment package is uploaded through SAE, note the following points:</p>
+             * <ul>
+             * <li>The URL cannot be used to download the package directly. You must call the GetPackageVersionAccessableUrl operation to obtain a downloadable URL, which is valid for 10 minutes.</li>
+             * <li>SAE retains the package for a maximum of 90 days. After 90 days, the URL is not returned and the package cannot be downloaded.</li>
+             * </ul>
              */
             public Builder packageUrl(String packageUrl) {
                 this.packageUrl = packageUrl;
@@ -4536,7 +4629,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the deployment package. This parameter is returned only if the <strong>PackageType</strong> parameter is set to <strong>FatJar</strong> or <strong>War</strong>.</p>
+             * <p>The version number of the deployment package. This parameter is required when <strong>PackageType</strong> is set to <strong>FatJar</strong> or <strong>War</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -4547,7 +4640,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of PHP supporting PHP deployment packages. Image is not supported.</p>
+             * <p>The PHP version required by the PHP deployment package. Images are not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>PHP-FPM 7.0</p>
@@ -4558,8 +4651,8 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path on which the PHP configuration file for application monitoring is mounted. Make sure that the PHP server loads the configuration file.</p>
-             * <p>SAE automatically generates the corresponding configuration file. No manual operations are required.</p>
+             * <p>The mount path for PHP application monitoring. You must ensure that the PHP server loads the configuration file from this path.</p>
+             * <p>You do not need to focus on the configuration content because SAE automatically renders the correct configuration file.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/local/etc/php/conf.d/arms.ini</p>
@@ -4570,7 +4663,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the PHP configuration file.</p>
+             * <p>The content of the PHP configuration file.</p>
              * 
              * <strong>example:</strong>
              * <p>k1=v1</p>
@@ -4581,7 +4674,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path on which the PHP configuration file for application startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</p>
+             * <p>The mount path for the PHP application startup configuration. You must ensure that the PHP server uses this configuration file to start.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/local/etc/php/php.ini</p>
@@ -4592,7 +4685,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The script that is run immediately after the container is started. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</code></p>
+             * <p>The script to execute after the container starts. A script is executed immediately after the container is created. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
@@ -4603,7 +4696,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The script that is run before the container is stopped. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</code></p>
+             * <p>The script to execute before the container stops. A script is executed before the container is deleted. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
@@ -4614,11 +4707,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The programming language that is used to create the application. Valid values:</p>
+             * <p>The programming language used to create the application. Valid values:</p>
              * <ul>
-             * <li><strong>java</strong>: Java</li>
-             * <li><strong>php</strong>: PHP</li>
-             * <li><strong>other</strong>: Other programming languages, such as Python, C++, Go, .NET, and Node.js.</li>
+             * <li><strong>java</strong>: Java.</li>
+             * <li><strong>php</strong>: PHP.</li>
+             * <li><strong>other</strong>: Multiple languages, such as Python, C++, Go, .NET, and Node.js.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4630,10 +4723,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Enable K8s Service discovery and registration.</p>
+             * <p>Specifies whether to enable Kubernetes Service registration and discovery.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;serviceName&quot;:&quot;bwm-poc-sc-gateway-cn-beijing-front&quot;,&quot;namespaceId&quot;:&quot;cn-beijing:front&quot;,&quot;portAndProtocol&quot;:{&quot;18012&quot;:&quot;TCP&quot;},&quot;enable&quot;:true}</p>
+             * <p>{     &quot;serviceName&quot;: &quot;bwm-poc-sc-gateway-cn-beijing-front&quot;,     &quot;namespaceId&quot;: &quot;cn-beijing:front&quot;,     &quot;portAndProtocol&quot;: {         &quot;18012&quot;: &quot;TCP&quot;     },     &quot;portProtocols&quot;: [         {             &quot;port&quot;: &quot;18012&quot;,             &quot;protocol&quot;: &quot;TCP&quot;         }     ],     &quot;enable&quot;: true }</p>
              */
             public Builder pvtzDiscovery(String pvtzDiscovery) {
                 this.pvtzDiscovery = pvtzDiscovery;
@@ -4641,7 +4734,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Python environment. PYTHON 3.9.15 is supported.</p>
+             * <p>The Python environment. Python 3.9.15 is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>PYTHON 3.9.15</p>
@@ -4652,7 +4745,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations for installing custom module dependencies. By default, the dependencies defined by the requirements.txt file in the root directory are installed. If no software package is configured, you can specify dependencies based on your business requirements.</p>
+             * <p>The module dependencies for custom installation. By default, the dependencies defined in the requirements.txt file in the root folder are installed. If no dependencies are configured or custom packages are used, you can specify the dependencies to install.</p>
              * 
              * <strong>example:</strong>
              * <p>Flask==2.0</p>
@@ -4663,7 +4756,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RaspConfig.
+             * <p>The RASP configuration items.</p>
              */
             public Builder raspConfig(java.util.List<RaspConfig> raspConfig) {
                 this.raspConfig = raspConfig;
@@ -4671,9 +4764,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the health check that was performed on the container. If the container fails this health check multiple times, the system disables and restarts the container. Containers that fail health checks cannot receive traffic from Server Load Balancer (SLB) instances. You can use the <strong>exec</strong>, <strong>httpGet</strong>, or <strong>tcpSocket</strong> method to perform health checks. For more information, see the description of the <strong>Liveness</strong> parameter.</p>
+             * <p>The application startup status check. Containers that fail the health check multiple times are stopped and restarted. Traffic from SLB is not routed to containers that fail the health check. The <strong>exec</strong>, <strong>httpGet</strong>, and <strong>tcpSocket</strong> methods are supported. For specific examples, see the <strong>Liveness</strong> parameter.</p>
              * <blockquote>
-             * <p> You can use only one method to perform the health check.</p>
+             * <p>You can select only one method for the health check.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4685,7 +4778,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -4707,7 +4800,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. Set the value to <code>application</code>.</p>
+             * <p>The resource type. Only <code>application</code> is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>application</p>
@@ -4718,7 +4811,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Secret mount description.</p>
+             * <p>The Secret mount description.</p>
              */
             public Builder secretMountDesc(java.util.List<DataSecretMountDesc> secretMountDesc) {
                 this.secretMountDesc = secretMountDesc;
@@ -4726,7 +4819,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group.</p>
+             * <p>The security group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-wz969ngg2e49q5i4****</p>
@@ -4737,7 +4830,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The canary tag configured for the application.</p>
+             * <p>The canary release tags configured for the application.</p>
              */
             public Builder serviceTags(java.util.Map<String, String> serviceTags) {
                 this.serviceTags = serviceTags;
@@ -4745,7 +4838,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the Sidecar container.</p>
+             * <p>The sidecar container configuration.</p>
              */
             public Builder sidecarContainersConfig(java.util.List<SidecarContainersConfig> sidecarContainersConfig) {
                 this.sidecarContainersConfig = sidecarContainersConfig;
@@ -4753,20 +4846,20 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logging configurations of Log Service.</p>
+             * <p>The configuration for collecting logs to Simple Log Service (SLS).</p>
              * <ul>
-             * <li>To use Log Service resources that are automatically created by SAE, set this parameter to <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
-             * <li>To use custom Log Service resources, set this parameter to <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
+             * <li>To use SLS resources with automatic creation by Serverless App Engine (SAE): <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
+             * <li>To use custom SLS resources: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
              * </ul>
-             * <p>The following parameters are involved:</p>
+             * <p>Metric description:</p>
              * <ul>
-             * <li><strong>projectName</strong>: the name of the Log Service project.</li>
-             * <li><strong>logDir</strong>: the path in which logs are stored.</li>
-             * <li><strong>logType</strong>: the log type. <strong>stdout</strong>: the standard output log of the container. You can specify only one stdout value for this parameter. If you leave this parameter empty, file logs are collected.</li>
-             * <li><strong>logstoreName</strong>: the name of the Logstore in Log Service.</li>
-             * <li><strong>logtailName</strong>: the name of the Logtail configuration in Log Service. If you do not configure this parameter, a new Logtail configuration is created.</li>
+             * <li><strong>projectName</strong>: The name of the SLS project.  </li>
+             * <li><strong>logDir</strong>: The log path character string.</li>
+             * <li><strong>logType</strong>: The log type. <strong>stdout</strong> indicates container standard output logs. You can set only one stdout log. If the Settings are not specified, file logs are collected.</li>
+             * <li><strong>logstoreName</strong>: The name of the SLS Logstore.</li>
+             * <li><strong>logtailName</strong>: The name of the SLS Logtail. If this parameter is not specified, a new Logtail is created.</li>
              * </ul>
-             * <p>If you do not need to modify the logging configurations when you deploy the application, configure the <strong>SlsConfigs</strong> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you no longer need to use Log Service, leave the <strong>SlsConfigs</strong> parameter empty in the request.</p>
+             * <p>If the SLS collection configuration remains unchanged during multiple deployments, you do not need to set this parameter. That is, you do not need to include the <strong>SlsConfigs</strong> field in the request. If you no longer need the SLS collection feature, you must set the value of this field to an empty string in the request. That is, set the <strong>SlsConfigs</strong> field to &quot;&quot;.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
@@ -4777,7 +4870,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SlsLogEnvTags.
+             * <p>sls log env tags</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder slsLogEnvTags(String slsLogEnvTags) {
                 this.slsLogEnvTags = slsLogEnvTags;
@@ -4785,10 +4881,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Enable startup probe.</p>
+             * <p>The application startup probe.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;/bin/sh&quot;,&quot;-c&quot;,&quot;#!Note: If microservice config is enabled, the application will be automatically injected with the prestop configuration for lossless offline. If you delete this prestop configuration, lossless offline will not be effective.\n echo stop &gt; /tmp/prestop; /home/admin/.tools/curl <a href="http://127.0.0.1:54199/offline">http://127.0.0.1:54199/offline</a>; sleep 30&quot;]}}</p>
+             * <p>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;/bin/sh\&quot;,\&quot;-c\&quot;,\&quot;#!Note: If microservice config is enabled, the application will be automatically injected with the prestop configuration for lossless offline. If you delete this prestop configuration, lossless offline will not be effective.\\n echo stop &gt; /tmp/prestop; /home/admin/.tools/curl <a href="http://127.0.0.1:54199/offline">http://127.0.0.1:54199/offline</a>; sleep 30\&quot;]}}</p>
              */
             public Builder startupProbe(String startupProbe) {
                 this.startupProbe = startupProbe;
@@ -4796,10 +4892,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Configuration of K8s Service discovery and registration, and full-chain gray-release feature.</p>
+             * <p>The configuration for service registration and discovery and end-to-end canary release based on Kubernetes Services.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;enable&quot;:&quot;false&quot;,&quot;namespaceId&quot;:&quot;cn-beijing:test&quot;,&quot;portAndProtocol&quot;:{&quot;2000:TCP&quot;:&quot;18081&quot;},&quot;portProtocols&quot;:[{&quot;port&quot;:2000,&quot;protocol&quot;:&quot;TCP&quot;,&quot;targetPort&quot;:18081}],&quot;pvtzDiscoveryName&quot;:&quot;cn-beijing-1421801774382676&quot;,&quot;serviceId&quot;:&quot;3513&quot;,&quot;serviceName&quot;:&quot;demo-gray.test&quot;}</p>
+             * <p>{\&quot;enable\&quot;:\&quot;false\&quot;,\&quot;namespaceId\&quot;:\&quot;cn-beijing:test\&quot;,\&quot;portAndProtocol\&quot;:{\&quot;2000:TCP\&quot;:\&quot;18081\&quot;},\&quot;portProtocols\&quot;:[{\&quot;port\&quot;:2000,\&quot;protocol\&quot;:\&quot;TCP\&quot;,\&quot;targetPort\&quot;:18081}],\&quot;pvtzDiscoveryName\&quot;:\&quot;cn-beijing-1421801774382676\&quot;,\&quot;serviceId\&quot;:\&quot;3513\&quot;,\&quot;serviceName\&quot;:\&quot;demo-gray.test\&quot;}</p>
              */
             public Builder swimlanePvtzDiscovery(String swimlanePvtzDiscovery) {
                 this.swimlanePvtzDiscovery = swimlanePvtzDiscovery;
@@ -4807,7 +4903,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the tags.</p>
+             * <p>The tag information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -4815,7 +4911,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period for a graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.</p>
+             * <p>The timeout period for graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4837,13 +4933,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Tomcat configuration. If you want to delete the configuration, set this parameter to {} or leave this parameter empty. The following parameters are involved:</p>
+             * <p>The Tomcat file configuration. Set the value to &quot;&quot; or &quot;{}&quot; to delete the configuration. Valid values:</p>
              * <ul>
-             * <li><strong>port</strong>: the port number. Valid values: 1024 to 65535. The root permissions are required to perform operations on ports whose number is smaller than 1024. Enter a value that ranges from 1025 to 65535 because the container has only the admin permissions. If you do not configure this parameter, the default port number 8080 is used.</li>
-             * <li><strong>contextPath</strong>: the path. Default value: /. This value indicates the root directory.</li>
-             * <li><strong>maxThreads</strong>: the maximum number of connections in the connection pool. Default value: 400.</li>
-             * <li><strong>uriEncoding</strong>: the URI encoding scheme in the Tomcat container. Valid values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and <strong>GB2312</strong>. If you do not configure this parameter, the default value <strong>ISO-8859-1</strong> is used.</li>
-             * <li><strong>useBodyEncoding</strong>: indicates whether to use the encoding scheme that is specified by <strong>BodyEncoding for URL</strong>. Default value: <strong>true</strong>.</li>
+             * <li><strong>port</strong>: The port number. Valid values: 1024 to 65535. Ports smaller than 1024 require root permissions. Because the container is configured with admin permissions, specify a port greater than 1024. Default value: 8080.</li>
+             * <li><strong>contextPath</strong>: The access path. Default value: the root directory &quot;/&quot;.</li>
+             * <li><strong>maxThreads</strong>: The maximum number of connections in the connection pool. Default value: 400.</li>
+             * <li><strong>uriEncoding</strong>: The Tomcat encoding format. Valid values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and <strong>GB2312</strong>. Default value: <strong>ISO-8859-1</strong>.</li>
+             * <li><strong>useBodyEncoding</strong>: Specifies whether to use <strong>BodyEncoding for URL</strong>. Default value: <strong>true</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4855,25 +4951,25 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment policy. If the minimum number of available instances is 1, the value of the <strong>UpdateStrategy</strong> parameter is an empty string (&quot;&quot;). If the minimum number of available instances is greater than 1, the following strategies can be configured:</p>
+             * <p>The deployment policy. When the minimum number of surviving instances is 1, the value of the <strong>UpdateStrategy</strong> field is &quot;&quot;. When the minimum number of surviving instances is greater than 1, examples are as follows:</p>
              * <ul>
-             * <li>The application is deployed on an instance. The remaining instances are automatically classified into two release batches whose interval is set to 1. In this case, the parameter is set to <code>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:1},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</code>.</li>
-             * <li>The application is deployed on an instance. The remaining instances are manually classified into two release batches. In this case, the parameter is set to <code>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;manual&quot;},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</code>.</li>
-             * <li>All instances are automatically classified into two release batches. The application is deployed on the instances of the two batches in parallel. In this case, the parameter is set to <code>{&quot;type&quot;:&quot;BatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:0}}</code></li>
+             * <li><p>Grayscale 1 instance, followed by 2 batches, automatic batching, and a batch interval of 1 minute: <code>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:1},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</code></p>
+             * </li>
+             * <li><p>Grayscale 1 instance, followed by 2 batches, and manual batching: <code>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;manual&quot;},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</code></p>
+             * </li>
+             * <li><p>2 batches, automatic batching, and a batch interval of 0 minutes: <code>{&quot;type&quot;:&quot;BatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:0}}</code></p>
+             * </li>
              * </ul>
-             * <p>The following parameters are involved:</p>
+             * <p>Metric description:</p>
              * <ul>
-             * <li><p><strong>type</strong>: the type of the release policy. Valid values: <strong>GrayBatchUpdate</strong> and <strong>BatchUpdate</strong>.</p>
-             * </li>
-             * <li><p><strong>batchUpdate</strong>: the phased release policy.</p>
-             * <ul>
-             * <li><strong>batch</strong>: the number of release batches.</li>
-             * <li><strong>releaseType</strong>: the processing method for the batches. Valid values: <strong>auto</strong> and <strong>manual</strong>.</li>
-             * <li><strong>batchWaitTime</strong>: the interval between release batches. Unit: seconds.</li>
+             * <li><strong>type</strong>: The publish policy type. Valid values: <strong>GrayBatchUpdate</strong> for grayscale publish and <strong>BatchUpdate</strong> for batch publish.</li>
+             * <li><strong>batchUpdate</strong>: The batch publish policy.<ul>
+             * <li><strong>batch</strong>: The number of publish batches.</li>
+             * <li><strong>releaseType</strong>: The processing method between batches. Valid values: <strong>auto</strong> for automatic and <strong>manual</strong> for manual.</li>
+             * <li><strong>batchWaitTime</strong>: The deployment interval between batches. Unit: seconds.</li>
              * </ul>
              * </li>
-             * <li><p><strong>grayUpdate</strong>: the number of release batches in the phased release after a canary release. This parameter is returned only if the <strong>type</strong> parameter is set to <strong>GrayBatchUpdate</strong>.</p>
-             * </li>
+             * <li><strong>grayUpdate</strong>: The remaining batches after the grayscale publish. This parameter is required when <strong>type</strong> is set to <strong>GrayBatchUpdate</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4885,7 +4981,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-2ze559r1z1bpwqxwp****</p>
@@ -4896,7 +4992,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2ze0i263cnn311nvj****</p>
@@ -4907,7 +5003,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The option settings in the WAR package. The settings are used to start the application container. The default startup command is <code>java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap &quot;$@&quot; start</code>.</p>
+             * <p>The startup options for WAR package applications. Default application startup command: <code>java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap &quot;$@&quot; start</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>custom-option</p>
@@ -4918,12 +5014,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the Tomcat container on which the deployment package depends. Valid values:</p>
+             * <p>The Tomcat version on which the deployment package depends. Valid values:</p>
              * <ul>
              * <li><strong>apache-tomcat-7.0.91</strong></li>
              * <li><strong>apache-tomcat-8.5.42</strong></li>
              * </ul>
-             * <p>This parameter is not returned if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+             * <p>This parameter is not supported when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>apache-tomcat-7.0.91</p>

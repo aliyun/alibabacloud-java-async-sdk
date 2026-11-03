@@ -184,7 +184,10 @@ public class WebCustomDomain extends TeaModel {
         } 
 
         /**
-         * CreatedTime.
+         * <p>The time when the custom domain name was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-30T08:02:19Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -192,7 +195,10 @@ public class WebCustomDomain extends TeaModel {
         }
 
         /**
-         * DefaultForwardingAppName.
+         * <p>The name of the application that is forwarded by the domain name by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appxxxxx</p>
          */
         public Builder defaultForwardingAppName(String defaultForwardingAppName) {
             this.defaultForwardingAppName = defaultForwardingAppName;
@@ -200,7 +206,10 @@ public class WebCustomDomain extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -208,7 +217,10 @@ public class WebCustomDomain extends TeaModel {
         }
 
         /**
-         * LastModifiedTime.
+         * <p>The time when the custom domain name was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-30T08:02:19Z</p>
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -216,7 +228,10 @@ public class WebCustomDomain extends TeaModel {
         }
 
         /**
-         * NamespaceId.
+         * <p>The ID of the namespace to which the domain name belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
@@ -224,7 +239,10 @@ public class WebCustomDomain extends TeaModel {
         }
 
         /**
-         * Protocol.
+         * <p>The protocol type that is supported by the custom domain name. HTTP: Only HTTP is supported. HTTPS: Only HTTPS is supported. HTTP, HTTPS: Both HTTP and HTTPS are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -232,7 +250,7 @@ public class WebCustomDomain extends TeaModel {
         }
 
         /**
-         * RouteConfig.
+         * <p>The route configurations.</p>
          */
         public Builder routeConfig(RouteConfig routeConfig) {
             this.routeConfig = routeConfig;
@@ -240,7 +258,7 @@ public class WebCustomDomain extends TeaModel {
         }
 
         /**
-         * WebCertConfig.
+         * <p>The information about the HTTPS certificate.</p>
          */
         public Builder webCertConfig(WebCertConfig webCertConfig) {
             this.webCertConfig = webCertConfig;
@@ -248,7 +266,7 @@ public class WebCustomDomain extends TeaModel {
         }
 
         /**
-         * WebTLSConfig.
+         * <p>The Transport Layer Security (TLS) configurations.</p>
          */
         public Builder webTLSConfig(WebTLSConfig webTLSConfig) {
             this.webTLSConfig = webTLSConfig;
@@ -256,7 +274,7 @@ public class WebCustomDomain extends TeaModel {
         }
 
         /**
-         * WebWAFConfig.
+         * <p>The WAF configurations.</p>
          */
         public Builder webWAFConfig(WebWAFConfig webWAFConfig) {
             this.webWAFConfig = webWAFConfig;
@@ -264,7 +282,10 @@ public class WebCustomDomain extends TeaModel {
         }
 
         /**
-         * accountId.
+         * <p>The ID of your Alibaba Cloud account</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxx</p>
          */
         public Builder accountId(String accountId) {
             this.accountId = accountId;

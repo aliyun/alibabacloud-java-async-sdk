@@ -312,11 +312,11 @@ public class UpdateIngressRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the <strong>CLB</strong> certificate. Valid values:</p>
+         * <p>The ID of the Classic Load Balancer (CLB) certificate. Valid values:</p>
          * <ul>
-         * <li>If the <strong>LoadBalanceType</strong> is <strong>clb</strong>, use this field to configure the HTTPS listener certificate.</li>
+         * <li>If <strong>LoadBalanceType</strong> is set to <strong>clb</strong>, use this field to configure the certificate for the HTTPS listener.</li>
          * </ul>
-         * <p>For more information about how to use SSL certificate IDs for CLB, see <a href="https://help.aliyun.com/document_detail/90792.html">Manage certificates (CLB)</a>.</p>
+         * <p>For more information about using SSL certificate IDs in CLB, see <a href="https://help.aliyun.com/document_detail/90792.html">Manage certificates (CLB)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>188077086902****_176993d****_181437****_108724****</p>
@@ -328,10 +328,12 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the multi-certificate <strong>ALB</strong>. Valid values:</p>
+         * <p>The IDs of multiple Application Load Balancer (ALB) certificates. Valid values:</p>
          * <ul>
-         * <li>If the <strong>LoadBalanceType</strong> is <strong>alb</strong>, use this field to configure multiple certificates for HTTPS listeners. Separate multiple certificate IDs with commas (,).</li>
-         * <li>The ID of the SSL certificate used by ALB must be obtained from the digital certificate product. For example, in the configuration <code>756***-cn-hangzhou</code>, the <code>756***</code> is the certificate ID obtained from the product page, and the <code>-cn-hangzhou</code> is a fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</li>
+         * <li><p>If <strong>LoadBalanceType</strong> is set to <strong>alb</strong>, use this field to configure multiple certificates for the HTTPS listener. Separate multiple certificate IDs with commas (,).</p>
+         * </li>
+         * <li><p>You must obtain the SSL certificate IDs used by ALB from the Certificate Management Service. For example, if you configure <code>756***-cn-hangzhou</code>, <code>756***</code> is the certificate ID obtained from the product page, and <code>-cn-hangzhou</code> is a fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates (ALB)</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -344,7 +346,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * CorsConfig.
+         * <p>The cross-origin resource sharing (CORS) configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Enable\&quot;:\&quot;true\&quot;}</p>
          */
         public Builder corsConfig(String corsConfig) {
             this.putQueryParameter("CorsConfig", corsConfig);
@@ -353,13 +358,13 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The default forwarding rule. Forwards traffic to a specified application through a specified port based on the IP address. The following table describes the parameters.</p>
+         * <p>The default forwarding rule. Traffic is forwarded to a specified application through a specified port based on the IP address. The parameters are described as follows:</p>
          * <ul>
          * <li><strong>appId</strong>: the ID of the application.</li>
-         * <li><strong>containerPort</strong>: the container port of the application.</li>
+         * <li><strong>containerPort</strong>: the port of the application instance.</li>
          * </ul>
          * <blockquote>
-         * <p> All requests that do not match the forwarding rules specified for Rules are forwarded over the port to the application.</p>
+         * <p>All requests that do not match or meet the forwarding rules in <strong>Rules</strong> are forwarded to the specified application.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -384,7 +389,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * EnableGzip.
+         * <p>Specifies whether to enable data compression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableGzip(Boolean enableGzip) {
             this.putQueryParameter("EnableGzip", enableGzip);
@@ -393,7 +401,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * EnableXForwardedFor.
+         * <p>Specifies whether to enable the retrieval of the client IP address through the X-Forwarded-For header field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableXForwardedFor(Boolean enableXForwardedFor) {
             this.putQueryParameter("EnableXForwardedFor", enableXForwardedFor);
@@ -402,7 +413,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * EnableXForwardedForClientSrcPort.
+         * <p>Specifies whether to retrieve the listening port of the load balancing instance through the X-Forwarded-Port header field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableXForwardedForClientSrcPort(Boolean enableXForwardedForClientSrcPort) {
             this.putQueryParameter("EnableXForwardedForClientSrcPort", enableXForwardedForClientSrcPort);
@@ -411,7 +425,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * EnableXForwardedForProto.
+         * <p>Specifies whether to retrieve the listening protocol of the load balancing instance through the X-Forwarded-Proto header field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableXForwardedForProto(Boolean enableXForwardedForProto) {
             this.putQueryParameter("EnableXForwardedForProto", enableXForwardedForProto);
@@ -420,7 +437,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * EnableXForwardedForSlbId.
+         * <p>Specifies whether to retrieve the instance ID of the load balancing instance through the SLB-ID header field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableXForwardedForSlbId(Boolean enableXForwardedForSlbId) {
             this.putQueryParameter("EnableXForwardedForSlbId", enableXForwardedForSlbId);
@@ -429,7 +449,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * EnableXForwardedForSlbPort.
+         * <p>Specifies whether to retrieve the listening port of the load balancing instance through the X-Forwarded-Port header field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableXForwardedForSlbPort(Boolean enableXForwardedForSlbPort) {
             this.putQueryParameter("EnableXForwardedForSlbPort", enableXForwardedForSlbPort);
@@ -438,9 +461,9 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The timeout period of idle connections. Unit: seconds.</p>
+         * <p>The idle connection timeout period, in seconds.</p>
          * <blockquote>
-         * <p> A value of 0 indicates that the default value is used.</p>
+         * <p>A value of 0 indicates that the default idle timeout value is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -466,7 +489,7 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The SLB listening port. This port cannot be occupied.</p>
+         * <p>The listening port of the Server Load Balancer (SLB) instance. The port must not be occupied.</p>
          * 
          * <strong>example:</strong>
          * <p>443</p>
@@ -478,10 +501,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The protocol that is used to forward requests. Valid values:</p>
+         * <p>The request forwarding protocol. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong>: HTTP is suitable for applications that need to identify transmitted data.</li>
-         * <li><strong>HTTPS</strong>: HTTPS is suitable for applications that require encrypted data transmission.</li>
+         * <li><strong>HTTP</strong>: applicable to applications that need to identify data content.</li>
+         * <li><strong>HTTPS</strong>: applicable to applications that require encrypted transmission.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -494,7 +517,7 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The parameter is deprecated and cannot be updated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and updates are no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <p>clb</p>
@@ -506,7 +529,7 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The request timed out. Unit: seconds.</p>
+         * <p>The request timeout period, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -518,10 +541,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The forwarding rule. Forwards traffic to a specified application through a specified port based on the domain name and request path. The following table describes the parameters.</p>
+         * <p>The forwarding rules. Traffic is forwarded to a specified application through a specified port based on the domain name and request path. The parameters are described as follows:</p>
          * <ul>
          * <li><strong>appId</strong>: the ID of the application.</li>
-         * <li><strong>containerPort</strong>: The port of the application instance.</li>
+         * <li><strong>containerPort</strong>: the port of the application instance.</li>
          * <li><strong>domain</strong>: the domain name.</li>
          * <li><strong>path</strong>: the request path.</li>
          * </ul>
@@ -536,7 +559,7 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The ID of a security policy.</p>
+         * <p>The ID of the security policy instance.</p>
          * 
          * <strong>example:</strong>
          * <p>tls_cipher_policy_1_2_strict_with_1_3</p>

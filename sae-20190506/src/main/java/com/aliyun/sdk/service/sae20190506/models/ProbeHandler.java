@@ -67,7 +67,7 @@ public class ProbeHandler extends TeaModel {
         } 
 
         /**
-         * HttpGet.
+         * <p>The action that specifies the HTTP request to execute.</p>
          */
         public Builder httpGet(HTTPGetAction httpGet) {
             this.httpGet = httpGet;
@@ -75,7 +75,7 @@ public class ProbeHandler extends TeaModel {
         }
 
         /**
-         * TcpSocket.
+         * <p>The action that specifies the involved TCP port.</p>
          */
         public Builder tcpSocket(TCPSocketAction tcpSocket) {
             this.tcpSocket = tcpSocket;

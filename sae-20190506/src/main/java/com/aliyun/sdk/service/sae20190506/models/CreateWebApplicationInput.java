@@ -122,6 +122,7 @@ public class CreateWebApplicationInput extends TeaModel {
         } 
 
         /**
+         * <p>The name of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +134,10 @@ public class CreateWebApplicationInput extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my sae app</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -141,6 +145,7 @@ public class CreateWebApplicationInput extends TeaModel {
         }
 
         /**
+         * <p>The configuration on the application revision.</p>
          * <p>This parameter is required.</p>
          */
         public Builder revisionConfig(RevisionConfig revisionConfig) {
@@ -149,7 +154,10 @@ public class CreateWebApplicationInput extends TeaModel {
         }
 
         /**
-         * WebNetworkConfig.
+         * <p>The network configurations.</p>
+         * <blockquote>
+         * <p> This field is used to configure network for the application.</p>
+         * </blockquote>
          */
         public Builder webNetworkConfig(WebNetworkConfig webNetworkConfig) {
             this.webNetworkConfig = webNetworkConfig;
@@ -157,7 +165,7 @@ public class CreateWebApplicationInput extends TeaModel {
         }
 
         /**
-         * WebScalingConfig.
+         * <p>The scaling configurations of the applications.</p>
          */
         public Builder webScalingConfig(WebScalingConfig webScalingConfig) {
             this.webScalingConfig = webScalingConfig;
@@ -165,7 +173,7 @@ public class CreateWebApplicationInput extends TeaModel {
         }
 
         /**
-         * WebTrafficConfig.
+         * <p>The traffic configurations of the applications.</p>
          */
         public Builder webTrafficConfig(WebTrafficConfig webTrafficConfig) {
             this.webTrafficConfig = webTrafficConfig;

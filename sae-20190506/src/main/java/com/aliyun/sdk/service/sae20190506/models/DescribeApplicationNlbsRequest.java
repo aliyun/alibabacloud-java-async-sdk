@@ -59,7 +59,7 @@ public class DescribeApplicationNlbsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>

@@ -67,7 +67,10 @@ public class DescribeWebStaticsQueryOutput extends TeaModel {
         } 
 
         /**
-         * Length.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder length(Integer length) {
             this.length = length;
@@ -75,7 +78,7 @@ public class DescribeWebStaticsQueryOutput extends TeaModel {
         }
 
         /**
-         * WebStatics.
+         * <p>The statistics.</p>
          */
         public Builder webStatics(java.util.List<WebStaticsInfo> webStatics) {
             this.webStatics = webStatics;

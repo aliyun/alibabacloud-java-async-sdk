@@ -95,10 +95,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><p><strong>2xx</strong>: Success.</p>
+         * </li>
+         * <li><p><strong>3xx</strong>: Redirection.</p>
+         * </li>
+         * <li><p><strong>4xx</strong>: Client error.</p>
+         * </li>
+         * <li><p><strong>5xx</strong>: Server error.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +114,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>Additional information about the response.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -121,7 +125,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The regions.</p>
+         * Regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -278,18 +282,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The region name. Valid values:</p>
-             * <ul>
-             * <li><strong>China (Hangzhou)</strong></li>
-             * <li><strong>China (Shanghai)</strong></li>
-             * <li><strong>China (Beijing)</strong></li>
-             * <li><strong>China (Zhangjiakou)</strong></li>
-             * <li><strong>China (Shenzhen)</strong></li>
-             * <li><strong>China (Guangzhou)</strong></li>
-             * <li><strong>China (Hong Kong)</strong></li>
-             * <li><strong>Singapore</strong></li>
-             * <li><strong>US (Silicon Valley)</strong></li>
-             * </ul>
+             * LocalName.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -297,7 +290,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended zones.</p>
+             * RecommendZones.
              */
             public Builder recommendZones(RecommendZones recommendZones) {
                 this.recommendZones = recommendZones;
@@ -305,21 +298,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint for the region. Valid values:</p>
-             * <ul>
-             * <li><strong>sae.cn-hangzhou.aliyuncs.com</strong></li>
-             * <li><strong>sae.cn-shanghai.aliyuncs.com</strong></li>
-             * <li><strong>sae.cn-beijing.aliyuncs.com</strong></li>
-             * <li><strong>sae.cn-zhangjiakou.aliyuncs.com</strong></li>
-             * <li><strong>sae.cn-shenzhen.aliyuncs.com</strong></li>
-             * <li><strong>sae.cn-guangzhou.aliyuncs.com</strong></li>
-             * <li><strong>sae.cn-hongkong.aliyuncs.com</strong></li>
-             * <li><strong>sae.ap-southeast-1.aliyuncs.com</strong></li>
-             * <li><strong>sae.us-west-1.aliyuncs.com</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>sae.cn-shanghai.aliyuncs.com</p>
+             * RegionEndpoint.
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -327,21 +306,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID. Valid values:</p>
-             * <ul>
-             * <li><strong>cn-hangzhou</strong>: the ID of the China (Hangzhou) region</li>
-             * <li><strong>cn-shanghai</strong>: the ID of the China (Shanghai) region</li>
-             * <li><strong>cn-beijing</strong>: the ID of the China (Beijing) region</li>
-             * <li><strong>cn-zhangjiakou</strong>: the ID of the China (Zhangjiakou) region</li>
-             * <li><strong>cn-shenzhen</strong>: the ID of the China (Shenzhen) region</li>
-             * <li><strong>cn-guangzhou</strong>: the ID of the China (Guangzhou) region</li>
-             * <li><strong>cn-hongkong</strong>: the ID of the China (Hong Kong) region</li>
-             * <li><strong>ap-southeast-1</strong>: the ID of the Singapore region</li>
-             * <li><strong>us-west-1</strong>: the ID of the US (Silicon Valley) region</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shanghai</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -60,7 +60,7 @@ public class ListNamespacedConfigMapsRequest extends Request {
         } 
 
         /**
-         * <p>cn-hangzhou</p>
+         * <p>The namespace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

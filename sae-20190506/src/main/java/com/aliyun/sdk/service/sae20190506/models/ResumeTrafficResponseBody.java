@@ -132,12 +132,16 @@ public class ResumeTrafficResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><p><strong>2xx</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>3xx</strong>: Redirection.</p>
+         * </li>
+         * <li><p><strong>4xx</strong>: A client-side error occurred.</p>
+         * </li>
+         * <li><p><strong>5xx</strong>: A server-side error occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +161,13 @@ public class ResumeTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
+         * <ul>
+         * <li><p>This parameter is empty if the request is successful.</p>
+         * </li>
+         * <li><p>If the request fails, this parameter contains an error code. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</p>
+         * </li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -165,10 +175,12 @@ public class ResumeTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the operation. Valid values:</p>
+         * <p>The returned message.</p>
          * <ul>
-         * <li>If the request is successful, <strong>success</strong> is returned.</li>
-         * <li>If the request fails, a specific error code is returned.</li>
+         * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+         * </li>
+         * <li><p>If the request fails, an error message is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,11 +203,7 @@ public class ResumeTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <ul>
-         * <li><strong>True</strong>: The traffic was resumed.</li>
-         * <li><strong>False</strong>: The traffic failed to be resumed.</li>
-         * </ul>
+         * <p>Indicates whether the traffic was resumed. <strong>True</strong> indicates that the traffic was resumed, and <strong>False</strong> indicates that the traffic was not resumed.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -206,7 +214,7 @@ public class ResumeTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID.</p>
+         * <p>The trace ID of the request. You can use this ID to troubleshoot the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ac1a0b2215622920113732501e****</p>
@@ -275,7 +283,7 @@ public class ResumeTrafficResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the returned code.</p>
+             * <p>Details about the operation\&quot;s result.</p>
              * 
              * <strong>example:</strong>
              * <p>succeed in handling request</p>
@@ -286,14 +294,16 @@ public class ResumeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the traffic was removed. Valid values:</p>
+             * <p>Indicates whether the traffic was resumed.</p>
              * <ul>
-             * <li><strong>true</strong>: The traffic was removed.</li>
-             * <li><strong>false</strong>: The traffic failed to be removed.</li>
+             * <li><p><strong>True</strong>: The traffic was resumed.</p>
+             * </li>
+             * <li><p><strong>False</strong>: The traffic was not resumed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

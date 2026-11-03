@@ -60,11 +60,11 @@ public class DescribeIngressRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the routing rule to be queried.</p>
+         * <p>The ID of the routing rule. Call the <a href="https://help.aliyun.com/document_detail/2834910.html">ListIngresses</a> operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>87</p>
+         * <p>16263</p>
          */
         public Builder ingressId(Long ingressId) {
             this.putQueryParameter("IngressId", ingressId);

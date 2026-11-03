@@ -101,10 +101,12 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information returned. Valid values:</p>
+         * <p>The response message.</p>
          * <ul>
-         * <li>When a request is successful, <strong>success</strong>is returned.</li>
-         * <li>An error code is returned when a request failed.</li>
+         * <li><p>If the request is successful, the value is <strong>success</strong>.</p>
+         * </li>
+         * <li><p>If the request fails, the value is a specific error code.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +118,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3****</p>
@@ -127,7 +129,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * <p>The trace ID used to query the details of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ac1a0b2215622920113732501e****</p>
@@ -365,7 +367,10 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the application.</p>
+             * <p>The application description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder appDescription(String appDescription) {
                 this.appDescription = appDescription;
@@ -395,7 +400,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the basic application.</p>
+             * <p>The base application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ee99cce6-1c8e-4bfa-96c3-3e2fa9******</p>
@@ -406,16 +411,24 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+             * <p>The CPU required for each instance, in millicores. This value cannot be 0. Valid values:</p>
              * <ul>
-             * <li><strong>500</strong></li>
-             * <li><strong>1000</strong></li>
-             * <li><strong>2000</strong></li>
-             * <li><strong>4000</strong></li>
-             * <li><strong>8000</strong></li>
-             * <li><strong>12000</strong></li>
-             * <li><strong>16000</strong></li>
-             * <li><strong>32000</strong></li>
+             * <li><p><strong>500</strong></p>
+             * </li>
+             * <li><p><strong>1000</strong></p>
+             * </li>
+             * <li><p><strong>2000</strong></p>
+             * </li>
+             * <li><p><strong>4000</strong></p>
+             * </li>
+             * <li><p><strong>8000</strong></p>
+             * </li>
+             * <li><p><strong>12000</strong></p>
+             * </li>
+             * <li><p><strong>16000</strong></p>
+             * </li>
+             * <li><p><strong>32000</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -427,10 +440,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of application instances.</p>
+             * <p>The total number of application instances.</p>
              * 
              * <strong>example:</strong>
-             * <p>i-8ps2o182102o1jv05bys</p>
+             * <p>6</p>
              */
             public Builder instances(Integer instances) {
                 this.instances = instances;
@@ -438,7 +451,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * IsStateful.
+             * <p>Indicates whether the application is stateful.</p>
              */
             public Builder isStateful(Boolean isStateful) {
                 this.isStateful = isStateful;
@@ -446,18 +459,28 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+             * <p>The memory required for each instance, in MB. This value cannot be 0. The memory specification is coupled with the CPU specification. The following configurations are supported:</p>
              * <ul>
-             * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
-             * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
-             * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
-             * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8000.</li>
-             * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
-             * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
-             * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
-             * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
-             * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
-             * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+             * <li><p><strong>1024</strong>: corresponds to 500 or 1,000 millicores of CPU.</p>
+             * </li>
+             * <li><p><strong>2048</strong>: corresponds to 500, 1,000, or 2,000 millicores of CPU.</p>
+             * </li>
+             * <li><p><strong>4096</strong>: corresponds to 1,000, 2,000, or 4,000 millicores of CPU.</p>
+             * </li>
+             * <li><p><strong>8192</strong>: corresponds to 2,000, 4,000, or 8,000 millicores of CPU.</p>
+             * </li>
+             * <li><p><strong>12288</strong>: corresponds to 12,000 millicores of CPU.</p>
+             * </li>
+             * <li><p><strong>16384</strong>: corresponds to 4,000, 8,000, or 16,000 millicores of CPU.</p>
+             * </li>
+             * <li><p><strong>24576</strong>: corresponds to 12,000 millicores of CPU.</p>
+             * </li>
+             * <li><p><strong>32768</strong>: corresponds to 16,000 millicores of CPU.</p>
+             * </li>
+             * <li><p><strong>65536</strong>: corresponds to 8,000, 16,000, or 32,000 millicores of CPU.</p>
+             * </li>
+             * <li><p><strong>131072</strong>: corresponds to 32,000 millicores of CPU.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -469,10 +492,12 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable WebAssembly Filter. Valid values:</p>
+             * <p>Indicates whether WebAssemblyFilter is enabled. Valid values:</p>
              * <ul>
-             * <li>true: enables this parameter.</li>
-             * <li>false: disables this parameter.</li>
+             * <li><p><strong>true</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -484,7 +509,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace to which the MSE instance belongs.</p>
+             * <p>The namespace ID of the MSE instance.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -506,11 +531,14 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The programming language that is used to create the application. Valid values:</p>
+             * <p>The programming language of the application. Valid values:</p>
              * <ul>
-             * <li><strong>java</strong> :Java.</li>
-             * <li><strong>php</strong>: PHP.</li>
-             * <li><strong>other</strong>: other programming languages, such as Python, C++, Go, .NET, and Node.js</li>
+             * <li><p><strong>java</strong>: Java.</p>
+             * </li>
+             * <li><p><strong>php</strong>: PHP.</p>
+             * </li>
+             * <li><p><strong>other</strong>: other languages, such as Python, C++, Go, .NET, and Node.js.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -522,10 +550,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of application instances that are running.</p>
+             * <p>The number of running instances.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>6</p>
              */
             public Builder runningInstances(Integer runningInstances) {
                 this.runningInstances = runningInstances;
@@ -535,8 +563,10 @@ public class GetApplicationResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The auto scaling policy is enabled.</li>
-             * <li><strong>false</strong>: The auto scaling policy is disabled.</li>
+             * <li><p><strong>true</strong>: The policy is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The policy is disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -550,9 +580,12 @@ public class GetApplicationResponseBody extends TeaModel {
             /**
              * <p>The type of the auto scaling policy. Valid values:</p>
              * <ul>
-             * <li><strong>timing</strong>: a scheduled auto scaling policy.</li>
-             * <li><strong>metric</strong>: a metric-based auto scaling policy.</li>
-             * <li><strong>mix</strong>: a hybrid auto scaling policy.</li>
+             * <li><p><strong>timing</strong>: scheduled auto scaling.</p>
+             * </li>
+             * <li><p><strong>metric</strong>: metric-based auto scaling.</p>
+             * </li>
+             * <li><p><strong>mix</strong>: hybrid auto scaling.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

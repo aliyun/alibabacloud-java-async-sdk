@@ -55,6 +55,7 @@ public class AclEntryConfig extends TeaModel {
         } 
 
         /**
+         * <p>CIDR</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

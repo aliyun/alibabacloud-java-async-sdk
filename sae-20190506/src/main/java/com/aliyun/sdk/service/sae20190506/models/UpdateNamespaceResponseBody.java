@@ -132,12 +132,12 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about a namespace.</p>
+         * <p>The namespace information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,14 +157,14 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned. Take note of the following rules:</p>
+         * <p>The error code. The following rules apply:</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>InvalidNamespaceName.Format</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -172,7 +172,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the operation.</p>
+         * <p>The additional information about the request result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -183,7 +183,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -194,10 +194,10 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the information about the namespace was updated. Valid values:</p>
+         * <p>Indicates whether the namespace information is updated. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The instance was updated.</li>
-         * <li><strong>false</strong>: The instance failed to be updated.</li>
+         * <li><strong>true</strong>: The update is successful.</li>
+         * <li><strong>false</strong>: The update fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The trace ID. You can use this ID to precisely query invocation information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -330,7 +330,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether to enable SAE built-in registry:</p>
+             * <p>Indicates whether the built-in registry of SAE is enabled. Valid values:</p>
              * <ul>
              * <li><strong>true</strong></li>
              * <li><strong>false</strong></li>
@@ -345,7 +345,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The short ID of the namespace.</p>
+             * <p>The short namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -356,7 +356,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the namespace.</p>
+             * <p>The namespace description.</p>
              * 
              * <strong>example:</strong>
              * <p>desc</p>
@@ -367,7 +367,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace.</p>
+             * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing:test</p>
@@ -378,7 +378,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the namespace.</p>
+             * <p>The namespace name.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -389,7 +389,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region where the namespace resides.</p>
+             * <p>The region where the namespace is located.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>

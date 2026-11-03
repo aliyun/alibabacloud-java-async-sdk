@@ -75,7 +75,7 @@ public class BatchRestartApplicationsRequest extends Request {
         } 
 
         /**
-         * <p>The application IDs. Separate multiple IDs with commas (,).</p>
+         * <p>The list of application IDs. Separate multiple IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

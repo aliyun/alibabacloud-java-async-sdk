@@ -116,7 +116,7 @@ public class UpdateGreyTagRouteRequest extends Request {
         } 
 
         /**
-         * <p>The canary release rule of the application for which ALB gateway routing is configured.</p>
+         * <p>The canary release rules for ALB gateway routing.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;condition&quot;:&quot;AND&quot;,&quot;items&quot;:[{&quot;cond&quot;:&quot;==&quot;,&quot;name&quot;:&quot;grey&quot;,&quot;operator&quot;:&quot;rawvalue&quot;,&quot;type&quot;:&quot;sourceIp&quot;,&quot;value&quot;:&quot;127.0.0.1&quot;},{&quot;cond&quot;:&quot;==&quot;,&quot;name&quot;:&quot;grey&quot;,&quot;operator&quot;:&quot;rawvalue&quot;,&quot;type&quot;:&quot;cookie&quot;,&quot;value&quot;:&quot;true&quot;},{&quot;cond&quot;:&quot;==&quot;,&quot;name&quot;:&quot;grey&quot;,&quot;operator&quot;:&quot;rawvalue&quot;,&quot;type&quot;:&quot;header&quot;,&quot;value&quot;:&quot;true&quot;}],&quot;path&quot;:&quot;/post-echo/hi&quot;}]</p>
@@ -128,10 +128,10 @@ public class UpdateGreyTagRouteRequest extends Request {
         }
 
         /**
-         * <p>The description of the canary release rule.</p>
+         * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
-         * <p>灰度发布-地域灰度</p>
+         * <p>Canary Release - Regions</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -140,7 +140,7 @@ public class UpdateGreyTagRouteRequest extends Request {
         }
 
         /**
-         * <p>The canary release rule of the Dubbo application.</p>
+         * <p>The canary release rules for Dubbo applications.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;condition&quot;:&quot;OR&quot;,&quot;group&quot;:&quot;DUBBO&quot;,&quot;items&quot;:[{&quot;cond&quot;:&quot;==&quot;,&quot;expr&quot;:&quot;.key1&quot;,&quot;index&quot;:0,&quot;operator&quot;:&quot;rawvalue&quot;,&quot;value&quot;:&quot;value1&quot;},{&quot;cond&quot;:&quot;==&quot;,&quot;expr&quot;:&quot;.key2&quot;,&quot;index&quot;:0,&quot;operator&quot;:&quot;rawvalue&quot;,&quot;value&quot;:&quot;value2&quot;}],&quot;methodName&quot;:&quot;echo&quot;,&quot;serviceName&quot;:&quot;com.alibaba.edas.boot.EchoService&quot;,&quot;version&quot;:&quot;1.0.0&quot;}]</p>
@@ -152,7 +152,7 @@ public class UpdateGreyTagRouteRequest extends Request {
         }
 
         /**
-         * <p>The ID of the canary release rule.</p>
+         * <p>The canary release rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class UpdateGreyTagRouteRequest extends Request {
         }
 
         /**
-         * <p>The canary release rule of the Spring Cloud application.</p>
+         * <p>The canary release rules for Spring Cloud applications.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;condition&quot;:&quot;OR&quot;,&quot;items&quot;:[{&quot;cond&quot;:&quot;==&quot;,&quot;name&quot;:&quot;grey&quot;,&quot;operator&quot;:&quot;rawvalue&quot;,&quot;type&quot;:&quot;param&quot;,&quot;value&quot;:&quot;true&quot;},{&quot;cond&quot;:&quot;==&quot;,&quot;name&quot;:&quot;grey&quot;,&quot;operator&quot;:&quot;rawvalue&quot;,&quot;type&quot;:&quot;cookie&quot;,&quot;value&quot;:&quot;true&quot;},{&quot;cond&quot;:&quot;==&quot;,&quot;name&quot;:&quot;grey&quot;,&quot;operator&quot;:&quot;rawvalue&quot;,&quot;type&quot;:&quot;header&quot;,&quot;value&quot;:&quot;true&quot;}],&quot;path&quot;:&quot;/post-echo/hi&quot;}]</p>

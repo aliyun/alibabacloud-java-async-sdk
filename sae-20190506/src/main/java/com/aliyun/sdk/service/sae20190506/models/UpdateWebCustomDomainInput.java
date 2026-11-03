@@ -119,7 +119,10 @@ public class UpdateWebCustomDomainInput extends TeaModel {
         } 
 
         /**
-         * DefaultForwardingAppName.
+         * <p>The name of the application to which data is forwarded by the domain name by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-app</p>
          */
         public Builder defaultForwardingAppName(String defaultForwardingAppName) {
             this.defaultForwardingAppName = defaultForwardingAppName;
@@ -127,7 +130,15 @@ public class UpdateWebCustomDomainInput extends TeaModel {
         }
 
         /**
-         * Protocol.
+         * <p>The protocol type that is supported by the custom domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP</strong>: Only HTTP is supported.</li>
+         * <li><strong>HTTPS</strong>: Only HTTPS is supported.</li>
+         * <li><strong>HTTP,HTTPS</strong>: Both HTTP and HTTPS are supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -135,7 +146,7 @@ public class UpdateWebCustomDomainInput extends TeaModel {
         }
 
         /**
-         * RouteConfig.
+         * <p>The route configuration.</p>
          */
         public Builder routeConfig(RouteConfig routeConfig) {
             this.routeConfig = routeConfig;
@@ -143,7 +154,7 @@ public class UpdateWebCustomDomainInput extends TeaModel {
         }
 
         /**
-         * WebCertConfig.
+         * <p>The information about the HTTPS certificate.</p>
          */
         public Builder webCertConfig(WebCertConfig webCertConfig) {
             this.webCertConfig = webCertConfig;
@@ -151,7 +162,7 @@ public class UpdateWebCustomDomainInput extends TeaModel {
         }
 
         /**
-         * WebTLSConfig.
+         * <p>The Transport Layer Security (TLS) configurations.</p>
          */
         public Builder webTLSConfig(WebTLSConfig webTLSConfig) {
             this.webTLSConfig = webTLSConfig;
@@ -159,7 +170,7 @@ public class UpdateWebCustomDomainInput extends TeaModel {
         }
 
         /**
-         * WebWAFConfig.
+         * <p>The Web Application Firewall (WAF) configurations.</p>
          */
         public Builder webWAFConfig(WebWAFConfig webWAFConfig) {
             this.webWAFConfig = webWAFConfig;

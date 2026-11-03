@@ -67,7 +67,10 @@ public class DescribeWebAppStaticsOutput extends TeaModel {
         } 
 
         /**
-         * Length.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder length(Integer length) {
             this.length = length;
@@ -75,7 +78,7 @@ public class DescribeWebAppStaticsOutput extends TeaModel {
         }
 
         /**
-         * WebAppStatics.
+         * <p>The static resources in the web application.</p>
          */
         public Builder webAppStatics(java.util.List<WebStaticsInfo> webAppStatics) {
             this.webAppStatics = webAppStatics;

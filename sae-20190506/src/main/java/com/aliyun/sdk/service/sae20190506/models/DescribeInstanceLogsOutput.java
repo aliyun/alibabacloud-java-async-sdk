@@ -54,7 +54,7 @@ public class DescribeInstanceLogsOutput extends TeaModel {
         } 
 
         /**
-         * WebLogEntrys.
+         * <p>The log entries.</p>
          */
         public Builder webLogEntrys(java.util.List<WebLogEntry> webLogEntrys) {
             this.webLogEntrys = webLogEntrys;

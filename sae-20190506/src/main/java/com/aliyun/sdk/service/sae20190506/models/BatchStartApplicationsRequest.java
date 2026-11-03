@@ -88,10 +88,10 @@ public class BatchStartApplicationsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the applications that you want to start. Separate multiple IDs with commas (,).</p>
+         * <p>The application IDs. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
-         * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a****</p>
+         * <p>00893b3a-0e24-45ed-be0c-1f20e07b****</p>
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -100,7 +100,7 @@ public class BatchStartApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The namespace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

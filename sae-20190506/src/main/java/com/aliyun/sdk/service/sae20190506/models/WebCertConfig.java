@@ -83,7 +83,10 @@ public class WebCertConfig extends TeaModel {
         } 
 
         /**
-         * CertName.
+         * <p>The certificate name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-certname</p>
          */
         public Builder certName(String certName) {
             this.certName = certName;
@@ -91,7 +94,12 @@ public class WebCertConfig extends TeaModel {
         }
 
         /**
-         * Certificate.
+         * <p>The public key of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         *  …… 
+         * -----END CERTIFICATE-----</p>
          */
         public Builder certificate(String certificate) {
             this.certificate = certificate;
@@ -99,7 +107,11 @@ public class WebCertConfig extends TeaModel {
         }
 
         /**
-         * PrivateKey.
+         * <p>The private key of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEA5SIfpNCBoiDrZhX1H39CHwQMVD0kBNeBTWfP9xkeesvfzbOz ******* POVNFfDf9h7pJtQ5fRZNTYTDs/d+cH62Z3+nS74mNnEfff0nkvne 
+         * -----END RSA PRIVATE KEY-----</p>
          */
         public Builder privateKey(String privateKey) {
             this.privateKey = privateKey;

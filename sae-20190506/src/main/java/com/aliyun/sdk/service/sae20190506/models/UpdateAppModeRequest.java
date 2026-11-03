@@ -115,7 +115,7 @@ public class UpdateAppModeRequest extends Request {
         } 
 
         /**
-         * <p>The app ID.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -127,7 +127,10 @@ public class UpdateAppModeRequest extends Request {
         }
 
         /**
-         * AppIds.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****,7802c49a-67bc-4167-8369-9a9c003c****</p>
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -136,12 +139,7 @@ public class UpdateAppModeRequest extends Request {
         }
 
         /**
-         * <p>Enable Idle Mode?</p>
-         * <p>Enumeration value:</p>
-         * <ul>
-         * <li>true: enables.</li>
-         * <li>false: disables.</li>
-         * </ul>
+         * <p>Specifies whether to enable the idle mode.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -162,7 +160,10 @@ public class UpdateAppModeRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

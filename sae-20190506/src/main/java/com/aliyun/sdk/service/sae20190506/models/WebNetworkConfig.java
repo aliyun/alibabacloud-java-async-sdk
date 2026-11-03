@@ -81,7 +81,14 @@ public class WebNetworkConfig extends TeaModel {
         } 
 
         /**
-         * InternetAccess.
+         * <p>Specifies whether to enable Internet access for the application. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables Internet access.</li>
+         * <li><strong>false</strong>: disables Internet access.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder internetAccess(Boolean internetAccess) {
             this.internetAccess = internetAccess;
@@ -89,7 +96,10 @@ public class WebNetworkConfig extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of a security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp18hj1wtxgy3b0***</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -97,7 +107,7 @@ public class WebNetworkConfig extends TeaModel {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The list of vSwitches.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;

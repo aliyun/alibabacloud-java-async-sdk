@@ -119,10 +119,16 @@ public class ListAppVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the historical versions of the application were obtained. Valid values:</p>
+         * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: indicates that the historical versions of the application were obtained.</li>
-         * <li><strong>false</strong>: indicates that the historical versions of the application could not be obtained.</li>
+         * <li><p><strong>2xx</strong>: The call is successful.</p>
+         * </li>
+         * <li><p><strong>3xx</strong>: The call is redirected.</p>
+         * </li>
+         * <li><p><strong>4xx</strong>: A request error occurred.</p>
+         * </li>
+         * <li><p><strong>5xx</strong>: A server error occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +140,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the versions.</p>
+         * <p>The version information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -142,13 +148,16 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The error code.</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li><p>This parameter is not returned if the request is successful.</p>
+         * </li>
+         * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+         * </li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidApplication.NotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +165,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Additional information about the call.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -167,7 +176,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the versions.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3****</p>
@@ -178,7 +187,16 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the historical versions of the application were successfully queried. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The query was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The query failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -283,10 +301,12 @@ public class ListAppVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL of the code package. If you use the SAE console to upload the code package, take note of the following items:</p>
+             * <p>The download URL of the code package. If you uploaded the package using SAE, note the following:</p>
              * <ul>
-             * <li>You cannot download the URL. You must call the GetPackageVersionAccessableUrl operation to obtain the URL. The obtained URL is valid for 10 minutes.</li>
-             * <li>SAE can retain the package up to 90 days. After 90 days, the URL cannot be returned or downloaded.</li>
+             * <li><p>This URL is not a direct download link. You must call the GetPackageVersionAccessableUrl operation to obtain a downloadable URL that is valid for 10 minutes.</p>
+             * </li>
+             * <li><p>SAE stores the package for a maximum of 90 days. After this period, the URL is not returned and the package cannot be downloaded.</p>
+             * </li>
              * </ul>
              */
             public Builder buildPackageUrl(String buildPackageUrl) {
@@ -295,7 +315,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download link of the WAR or JAR package. This parameter is returned when the <strong>Type</strong> parameter is set to <strong>url</strong>.</p>
+             * <p>The time when the version was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1590124643553</p>
@@ -306,11 +326,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code.</p>
-             * <ul>
-             * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-             * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
-             * </ul>
+             * <p>The version ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a0ce266c-d354-423a-9bd6-4083405a****</p>
@@ -321,10 +337,12 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment method of the application. Valid values:</p>
+             * <p>The application type. Valid values:</p>
              * <ul>
-             * <li><strong>image</strong>: indicates that the application is deployed by using an image.</li>
-             * <li><strong>url</strong>: indicates that the application is deployed by using a code package.</li>
+             * <li><p><strong>image</strong>: The application is deployed using an image.</p>
+             * </li>
+             * <li><p><strong>url</strong>: The application is deployed using a code package.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -336,7 +354,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the image.</p>
+             * <p>The URL of the WAR package.</p>
              */
             public Builder warUrl(String warUrl) {
                 this.warUrl = warUrl;

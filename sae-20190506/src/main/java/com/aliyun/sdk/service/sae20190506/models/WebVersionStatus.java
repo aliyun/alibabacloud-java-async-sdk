@@ -67,7 +67,10 @@ public class WebVersionStatus extends TeaModel {
         } 
 
         /**
-         * ErrorMessage.
+         * <p>The error message of the application execution. If the execution is successful, a null value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>空</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -75,7 +78,15 @@ public class WebVersionStatus extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The state of the application execution. Valid values:</p>
+         * <ul>
+         * <li><strong>Completed</strong>: The execution is successful.</li>
+         * <li><strong>Updating</strong>:The instance is being updated.</li>
+         * <li><strong>Updating</strong>:The execution failed and a non-null error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
          */
         public Builder status(String status) {
             this.status = status;

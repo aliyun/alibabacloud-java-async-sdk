@@ -118,10 +118,12 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to remove all the specified tags. This parameter takes effect only if the TagKeys parameter is specified. Valid values:</p>
+         * <p>Specifies whether to remove all tags. This parameter applies only when TagKeys is not specified. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: All tags are removed.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Only the tags specified in the TagKeys parameter are removed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +149,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of resources. Separate multiple resource IDs with comma (,).</p>
+         * <p>The resource IDs. To specify multiple resource IDs, separate them with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +162,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Set the value to <code>application</code>.</p>
+         * <p>The resource type. Only <code>application</code> is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +175,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tag keys. Separate multiple tag keys with commas (,).</p>
+         * <p>The tag keys. To specify multiple tag keys, separate them with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;k1&quot;,&quot;k2&quot;]</p>

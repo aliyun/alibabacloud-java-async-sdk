@@ -132,12 +132,16 @@ public class ListAppServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned. Valid values:</p>
+         * <p>The HTTP status code or a POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><p><strong>2xx</strong>: The request is successful.</p>
+         * </li>
+         * <li><p><strong>3xx</strong>: The request is redirected.</p>
+         * </li>
+         * <li><p><strong>4xx</strong>: The request is invalid.</p>
+         * </li>
+         * <li><p><strong>5xx</strong>: A server error occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +153,7 @@ public class ListAppServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the microservice.</p>
+         * <p>The list of services.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -157,11 +161,16 @@ public class ListAppServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code. Valid values:</p>
+         * <p>The error code. This parameter is returned only if the request fails. For more information, see the <strong>Error codes</strong> section.</p>
          * <ul>
-         * <li>If the request was successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li><p>Successful requests do not return the <strong>ErrorCode</strong> field.</p>
+         * </li>
+         * <li><p>Failed requests return the <strong>ErrorCode</strong> field. For more information, see the <strong>error code</strong> list in this topic.</p>
+         * </li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Micro.Service.NotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +178,12 @@ public class ListAppServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned. Valid values:</p>
+         * <p>The response message.</p>
          * <ul>
-         * <li>If the request was successful, <strong>success</strong> is returned.</li>
-         * <li>If the request failed, an error message is returned.</li>
+         * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+         * </li>
+         * <li><p>If the request fails, an error message is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,10 +206,12 @@ public class ListAppServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><p><strong>true</strong>: The call was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +223,7 @@ public class ListAppServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * <p>The trace ID. You can use this ID to query the details of a call.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -435,7 +448,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application ID.</p>
+             * <p>The app ID.</p>
              * 
              * <strong>example:</strong>
              * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
@@ -446,7 +459,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The name of the app.</p>
              * 
              * <strong>example:</strong>
              * <p>demo-app</p>
@@ -457,7 +470,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances of the microservice.</p>
+             * <p>The number of instances of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -468,7 +481,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace to which the application belongs.</p>
+             * <p>The ID of the namespace that contains the app.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing:test</p>
@@ -480,6 +493,9 @@ public class ListAppServicesResponseBody extends TeaModel {
 
             /**
              * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test namespace</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -487,12 +503,16 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The registry type. Valid values:</p>
+             * <p>The type of the service registry. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>：SAE Nacos</li>
-             * <li><strong>1</strong>: SAE built-in Nacos</li>
-             * <li><strong>2</strong>: MSE Nacos</li>
-             * <li><strong>9</strong>: SAE Kubernets service</li>
+             * <li><p><strong>0</strong>: SAE Nacos</p>
+             * </li>
+             * <li><p><strong>1</strong>: self-managed registry</p>
+             * </li>
+             * <li><p><strong>2</strong>: MSE Nacos</p>
+             * </li>
+             * <li><p><strong>9</strong>: SAE K8s Service</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -504,7 +524,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the security groups.</p>
+             * <p>The security group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-wz969ngg2e49q5i4****</p>
@@ -515,7 +535,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group to which the microservice belongs.</p>
+             * <p>The service group.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP</p>
@@ -526,7 +546,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the microservice.</p>
+             * <p>The name of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>frontend</p>
@@ -537,7 +557,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ports and protocols.</p>
+             * <p>A map of ports and protocols.</p>
              */
             public Builder servicePortAndProtocol(java.util.Map<String, String> servicePortAndProtocol) {
                 this.servicePortAndProtocol = servicePortAndProtocol;
@@ -545,7 +565,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of ports.</p>
+             * <p>A list of ports.</p>
              */
             public Builder servicePorts(java.util.List<Integer> servicePorts) {
                 this.servicePorts = servicePorts;
@@ -553,7 +573,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol used by the microservice.</p>
+             * <p>The protocol used by the service.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -564,12 +584,16 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the microservice. Valid values:</p>
+             * <p>The type of the service. Valid values:</p>
              * <ul>
-             * <li><strong>dubbo</strong></li>
-             * <li><strong>springCloud</strong></li>
-             * <li><strong>hsf</strong></li>
-             * <li><strong>k8sService</strong></li>
+             * <li><p><strong>dubbo</strong></p>
+             * </li>
+             * <li><p><strong>springCloud</strong></p>
+             * </li>
+             * <li><p><strong>hsf</strong></p>
+             * </li>
+             * <li><p><strong>k8sService</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -581,7 +605,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the microservice.</p>
+             * <p>The version of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>

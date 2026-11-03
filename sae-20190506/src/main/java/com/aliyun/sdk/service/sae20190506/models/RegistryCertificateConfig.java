@@ -67,7 +67,10 @@ public class RegistryCertificateConfig extends TeaModel {
         } 
 
         /**
-         * CertBase64.
+         * <p>The Base64-encoded certificate of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCmZha2VDZXJ0aWZpY2F0ZQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t</p>
          */
         public Builder certBase64(String certBase64) {
             this.certBase64 = certBase64;
@@ -75,7 +78,10 @@ public class RegistryCertificateConfig extends TeaModel {
         }
 
         /**
-         * Insecure.
+         * <p>Specifies whether to access the image repository in an insecure manner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder insecure(Boolean insecure) {
             this.insecure = insecure;

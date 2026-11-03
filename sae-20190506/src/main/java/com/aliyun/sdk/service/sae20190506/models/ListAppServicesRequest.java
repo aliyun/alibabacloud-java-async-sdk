@@ -171,7 +171,7 @@ public class ListAppServicesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. You must specify only one of the following parameters: vpcId, namespace ID, and application ID.</p>
+         * <p>The application ID. Specify exactly one of the following parameters: <code>VpcId</code>, <code>NamespaceId</code>, or <code>AppId</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1****</p>
@@ -183,7 +183,7 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the MSE Nacos instance. This parameter is required when the registry type is set to MSE Nacos.</p>
+         * <p>The instance ID of MSE Nacos. This parameter is required if the service registry is MSE Nacos.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-cn-sco3r0u****</p>
@@ -195,7 +195,7 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the MSE Nacos namespace. This parameter is required when the registry type is set to MSE Nacos.</p>
+         * <p>The namespace ID of MSE Nacos. This parameter is required if the service registry is MSE Nacos.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-test</p>
@@ -207,7 +207,7 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace. You must specify only one of the following parameters: VPC ID, namespace ID, and application ID.</p>
+         * <p>The namespace ID. Specify exactly one of the following parameters: <code>VpcId</code>, <code>NamespaceId</code>, or <code>AppId</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>
@@ -219,7 +219,7 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -243,12 +243,16 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * <p>The registry type. Valid values:</p>
+         * <p>The service registry type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: SAE Nacos</li>
-         * <li><strong>1</strong>: SAE built-in Nacos</li>
-         * <li><strong>2</strong> :MSE Nacos</li>
-         * <li><strong>9</strong>: SAE Kubernetes service</li>
+         * <li><p><strong>0</strong>: SAE Nacos</p>
+         * </li>
+         * <li><p><strong>1</strong>: self-managed service registry</p>
+         * </li>
+         * <li><p><strong>2</strong>: MSE Nacos</p>
+         * </li>
+         * <li><p><strong>9</strong>: SAE K8s Service</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,10 +267,14 @@ public class ListAppServicesRequest extends Request {
         /**
          * <p>The service type. Valid values:</p>
          * <ul>
-         * <li><strong>dubbo</strong></li>
-         * <li><strong>springCloud</strong></li>
-         * <li><strong>hsf</strong></li>
-         * <li><strong>k8sService</strong></li>
+         * <li><p><strong>dubbo</strong></p>
+         * </li>
+         * <li><p><strong>springCloud</strong></p>
+         * </li>
+         * <li><p><strong>hsf</strong></p>
+         * </li>
+         * <li><p><strong>k8sService</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -279,7 +287,7 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the VPC. You must specify only one of the following parameters: VPC ID, namespace ID, and application ID.</p>
+         * <p>The ID of the VPC. Specify exactly one of the following parameters: <code>VpcId</code>, <code>NamespaceId</code>, or <code>AppId</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2ze0i263cnn311nvj****</p>

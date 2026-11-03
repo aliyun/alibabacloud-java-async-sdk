@@ -60,7 +60,7 @@ public class DescribeChangeOrderRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the change order. You can call the <a href="https://help.aliyun.com/document_detail/126615.html">ListChangeOrders</a> operation to obtain the ID.</p>
+         * <p>The change order ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/126615.html">ListChangeOrders</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

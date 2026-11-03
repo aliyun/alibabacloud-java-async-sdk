@@ -54,7 +54,14 @@ public class WebLogEntry extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The message returned. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.</li>
+         * <li>If the request failed, an error code is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

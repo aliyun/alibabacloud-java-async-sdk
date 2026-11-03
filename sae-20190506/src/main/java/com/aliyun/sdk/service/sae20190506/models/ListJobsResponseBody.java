@@ -158,12 +158,12 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The HTTP status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: success</li>
+         * <li><strong>3xx</strong>: redirection</li>
+         * <li><strong>4xx</strong>: client error</li>
+         * <li><strong>5xx</strong>: server error</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -186,7 +186,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job templates.</p>
+         * <p>The list of job templates.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -194,14 +194,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned. Take note of the following rules:</p>
+         * <p>The error code. Take note of the following items:</p>
          * <ul>
-         * <li>If the call is successful, <strong>ErrorCode</strong> is not returned.</li>
-         * <li>If the call fails, <strong>ErrorCode</strong> is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section of this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>InvalidAppId.NotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -209,7 +209,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The additional information about the operation result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -220,7 +220,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -231,7 +231,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B4D805CA-926D-41B1-8E63-7AD0C1ED****</p>
@@ -242,10 +242,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the applications were obtained. Valid values:</p>
+         * <p>Specifies whether the job template list was queried successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The query was successful.</li>
+         * <li><strong>false</strong>: The query failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -326,7 +326,7 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -337,7 +337,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>
@@ -672,7 +672,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was last completed.</p>
+             * <p>The completion time of the last job.</p>
              * 
              * <strong>example:</strong>
              * <p>1657522839</p>
@@ -683,7 +683,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+             * <p>The CPU required for each instance. Unit: millicores. The value cannot be 0. Currently, only the following defined specifications are supported:</p>
              * <ul>
              * <li><strong>500</strong></li>
              * <li><strong>1000</strong></li>
@@ -703,7 +703,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances that failed to run.</p>
+             * <p>The number of failed instances.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -714,7 +714,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The image URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-beijing.aliyuncs.com/sae-dev-test/nginx:stable</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -722,10 +725,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the latest change order was executed. Valid values:</p>
+             * <p>Specifies whether the last change order was executed successfully. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The latest change order failed to be executed.</li>
-             * <li><strong>1</strong>: The latest change order was executed.</li>
+             * <li><strong>0</strong>: The change order failed.</li>
+             * <li><strong>1</strong>: The change order succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -737,12 +740,12 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the latest job. Valid values:</p>
+             * <p>The running status of the last job. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The job is not executed.</li>
-             * <li><strong>1</strong>: The job was executed.</li>
-             * <li><strong>2</strong>: The job failed to be executed.</li>
-             * <li><strong>3</strong>: The job is being executed.</li>
+             * <li><strong>0</strong>: not executed</li>
+             * <li><strong>1</strong>: executed successfully</li>
+             * <li><strong>2</strong>: execution failed</li>
+             * <li><strong>3</strong>: executing</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -754,7 +757,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was last started.</p>
+             * <p>The start time of the last job.</p>
              * 
              * <strong>example:</strong>
              * <p>1657522800</p>
@@ -765,18 +768,18 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of memory that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+             * <p>The memory required for each instance. Unit: MB. The value cannot be 0. The memory has a one-to-one mapping with the CPU. Currently, only the following defined specifications are supported:</p>
              * <ul>
-             * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
-             * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
-             * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
-             * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8000.</li>
-             * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
-             * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
-             * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
-             * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
-             * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
-             * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+             * <li><strong>1024</strong>: corresponds to 500 and 1000 millicores</li>
+             * <li><strong>2048</strong>: corresponds to 500, 1000, and 2000 millicores</li>
+             * <li><strong>4096</strong>: corresponds to 1000, 2000, and 4000 millicores</li>
+             * <li><strong>8192</strong>: corresponds to 2000, 4000, and 8000 millicores</li>
+             * <li><strong>12288</strong>: corresponds to 12000 millicores</li>
+             * <li><strong>16384</strong>: corresponds to 4000, 8000, and 16000 millicores</li>
+             * <li><strong>24576</strong>: corresponds to 12000 millicores</li>
+             * <li><strong>32768</strong>: corresponds to 16000 millicores</li>
+             * <li><strong>65536</strong>: corresponds to 8000, 16000, and 32000 millicores</li>
+             * <li><strong>131072</strong>: corresponds to 32000 millicores</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -788,7 +791,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned message.</p>
+             * <p>The additional information about the operation result.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -821,7 +824,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances that were successfully run.</p>
+             * <p>The number of successful instances.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -832,7 +835,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the job template is suspended.</p>
+             * <p>Specifies whether the job template is paused.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -944,7 +947,7 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The job templates.</p>
+             * <p>The list of job templates.</p>
              */
             public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
@@ -952,7 +955,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -963,7 +966,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned on each page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

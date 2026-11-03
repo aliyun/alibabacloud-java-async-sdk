@@ -132,9 +132,9 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code or the error code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
+         * <li><strong>2xx</strong>: Success.</li>
          * <li><strong>3xx</strong>: Redirection.</li>
          * <li><strong>4xx</strong>: Request error.</li>
          * <li><strong>5xx</strong>: Server error.</li>
@@ -149,7 +149,7 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Responses.</p>
+         * <p>The returned results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -157,11 +157,14 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the request is successful, no <strong>ErrorCode</strong> fields are returned.</li>
-         * <li>Request failed: <strong>ErrorCode</strong> fields are returned. For more information, see <strong>Error codes</strong>.</li>
+         * <li>Successful request: The <strong>ErrorCode</strong> field is not returned.</li>
+         * <li>Failed request: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +172,10 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Additional information. Valid values:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>The error message returned because the request is normal and <strong>success</strong> is returned.</li>
-         * <li>If the request is abnormal, the specific exception error code is returned.</li>
+         * <li><strong>success</strong>: The request is successful.</li>
+         * <li>Specific error code: The request is abnormal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +187,7 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30375C38-F4ED-4135-A0AE-5C75DC7F****</p>
@@ -195,9 +198,9 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the data is successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>true</strong>: Successful.</li>
          * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
@@ -210,7 +213,7 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+         * <p>The trace ID used to precisely query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>ac1a0b2215622920113732501e****</p>
@@ -282,7 +285,7 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
              * <p>The metadata.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;version&quot;:&quot;1.0.0&quot;,&quot;owner&quot;:&quot;team-a&quot;}</p>
+             * <p>{\&quot;tag\&quot;:\&quot;g1\&quot;,\&quot;priority\&quot;:100,\&quot;type\&quot;:\&quot;tag\&quot;,\&quot;desc\&quot;:\&quot;sys-label\&quot;}</p>
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
@@ -290,10 +293,10 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label of the lane.</p>
+             * <p>The lane tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</p>
+             * <p>g1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

@@ -67,7 +67,10 @@ public class PathConfig extends TeaModel {
         } 
 
         /**
-         * applicationName.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>applicationName</p>
          */
         public Builder applicationName(String applicationName) {
             this.applicationName = applicationName;
@@ -75,7 +78,10 @@ public class PathConfig extends TeaModel {
         }
 
         /**
-         * path.
+         * <p>The path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/packages</p>
          */
         public Builder path(String path) {
             this.path = path;

@@ -132,12 +132,12 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Client error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the canary release rule.</p>
+         * <p>The canary release rule information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -159,9 +159,12 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         /**
          * <p>The error code. Valid values:</p>
          * <ul>
-         * <li><strong>ErrorCode</strong> is not returned if a request is successful.</li>
-         * <li><strong>ErrorCode</strong> is returned if a request failed. For more information, see <strong>Error code</strong> section of this topic.</li>
+         * <li>Successful request: The <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>Failed request: The <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,7 +172,7 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the operation.</p>
+         * <p>The additional information about the call result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -180,7 +183,7 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9D29CBD0-45D3-410B-9826-52F86F90****</p>
@@ -191,10 +194,10 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the information of the change order was queried. Valid values:</p>
+         * <p>Indicates whether the change order information was queried successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The information was queried.</li>
-         * <li><strong>false</strong>: The information failed to be queried.</li>
+         * <li><strong>true</strong>: The query was successful.</li>
+         * <li><strong>false</strong>: The query failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +209,7 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * <p>The trace ID, which is used to accurately query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -262,7 +265,7 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the canary release rule. The ID is globally unique.</p>
+             * <p>The canary release rule ID, which is globally unique.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>

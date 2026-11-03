@@ -60,7 +60,7 @@ public class DeleteJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the job template that you want to delete.</p>
+         * <p>The ID of the task template to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

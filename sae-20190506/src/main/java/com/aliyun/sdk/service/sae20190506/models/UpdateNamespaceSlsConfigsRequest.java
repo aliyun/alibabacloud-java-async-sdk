@@ -101,7 +101,7 @@ public class UpdateNamespaceSlsConfigsRequest extends Request {
         } 
 
         /**
-         * <p>The short ID of the namespace. No need to specify a region ID. We recommend configuring this parameter.</p>
+         * <p>The short ID of the namespace. The region is not required. This parameter is recommended.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -113,7 +113,7 @@ public class UpdateNamespaceSlsConfigsRequest extends Request {
         }
 
         /**
-         * <p>The namespace ID.</p>
+         * <p>The ID of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>
@@ -125,22 +125,22 @@ public class UpdateNamespaceSlsConfigsRequest extends Request {
         }
 
         /**
-         * <p>The logging configurations of Simple Log Service.</p>
+         * <p>The configuration for collecting logs to Simple Log Service (SLS).</p>
          * <ul>
-         * <li><code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>: Simple Log Service resources automatically created by Serverless App Engine (SAE) are used.</li>
-         * <li>To use custom Simple Log Service resources, set this parameter to <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
+         * <li>To use SLS resources automatically created by Serverless App Engine (SAE): <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
+         * <li>To use custom SLS resources: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
          * </ul>
-         * <p>Take note of the following subparameters:</p>
+         * <p>The parameter settings are as follows:</p>
          * <ul>
-         * <li><strong>projectName</strong>: the name of the Simple Log Service project.</li>
-         * <li><strong>logDir</strong>: the path in which logs are stored.</li>
-         * <li><strong>logType</strong>: the log type. <strong>stdout</strong> indicates the standard output (stdout) logs of the container. You can specify only one stdout value for this parameter. If not specified, file logs are collected.</li>
-         * <li><strong>logstoreName</strong>: the name of the Logstore in Simple Log Service.</li>
-         * <li><strong>logtailName</strong>: the name of the Logtail in Simple Log Service. If not specified, a new Logtail is created.</li>
+         * <li><strong>projectName</strong>: the name of the SLS project.  </li>
+         * <li><strong>logDir</strong>: the log path.</li>
+         * <li><strong>logType</strong>: the log type. <strong>stdout</strong> indicates container standard output logs. Only one stdout log can be set. If it is not set, file logs are collected.</li>
+         * <li><strong>logstoreName</strong>: the name of the SLS Logstore.</li>
+         * <li><strong>logtailName</strong>: the name of the SLS Logtail. If this parameter is not specified, a new Logtail is created.</li>
          * </ul>
-         * <p>If logging configuration changes are not needed during job template deployment, specify <strong>SlsConfigs</strong> only in the first request. Omit this parameter in later requests. To stop using Simple Log Service, leave <strong>SlsConfigs</strong> empty.</p>
+         * <p>If the SLS collection configuration remains unchanged during multiple deployments, you do not need to set this parameter (that is, the <strong>SlsConfigs</strong> field is not required in the request). If you no longer need the SLS collection feature, you must set the value of this field to an empty string (that is, set the <strong>SlsConfigs</strong> field to &quot;&quot;) in the request.</p>
          * <blockquote>
-         * <p>Projects automatically created by SAE for job templates are deleted when their corresponding job templates are deleted. Therefore, you should not select an existing SAE-created project for log collection.</p>
+         * <p>A project automatically created with a job template is deleted when the job template is deleted. Therefore, when you select an existing project, you cannot select a project automatically created by SAE.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,10 @@ public class UpdateNamespaceSlsConfigsRequest extends Request {
         }
 
         /**
-         * SlsLogEnvTags.
+         * <p>sls log tags</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder slsLogEnvTags(String slsLogEnvTags) {
             this.putQueryParameter("SlsLogEnvTags", slsLogEnvTags);

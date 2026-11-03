@@ -119,12 +119,12 @@ public class EnableApplicationScalingRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Take note of the following rules:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirect.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,14 +136,14 @@ public class EnableApplicationScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed. Take note of the following rules:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>user.indebt</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -151,10 +151,10 @@ public class EnableApplicationScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned. Take note of the following rules:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code: If the call fails, an error code is returned.</li>
+         * <li><strong>success</strong>: The request is normal.</li>
+         * <li>A specific error code: The request is abnormal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class EnableApplicationScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -177,10 +177,10 @@ public class EnableApplicationScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the instances are successfully restarted. Take note of the following rules:</p>
+         * <p>Indicates whether the application instance is restarted successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong>: The restart failed.</li>
+         * <li><strong>true</strong>: The application instance is restarted successfully.</li>
+         * <li><strong>false</strong>: The application instance fails to be restarted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class EnableApplicationScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The trace ID used to accurately query the call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>

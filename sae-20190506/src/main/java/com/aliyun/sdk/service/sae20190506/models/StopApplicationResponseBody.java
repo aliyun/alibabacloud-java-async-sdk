@@ -132,7 +132,20 @@ public class StopApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status of the API call or a POP error code. Valid values:</p>
+         * <ul>
+         * <li><p><strong>2xx</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>3xx</strong>: The request was redirected.</p>
+         * </li>
+         * <li><p><strong>4xx</strong>: A request error occurred.</p>
+         * </li>
+         * <li><p><strong>5xx</strong>: A server error occurred.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,11 +153,7 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
-         * <ul>
-         * <li>If the request is successful, this parameter is not returned.****</li>
-         * <li>This parameter is returned only if the request failed.**** For more information, see <strong>Error codes</strong> in this topic.</li>
-         * </ul>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -152,11 +161,16 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the specified application is stopped. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p>This parameter is not returned if the request is successful.</p>
+         * </li>
+         * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+         * </li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidApplication.NotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -164,7 +178,13 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+         * </li>
+         * <li><p>If the request fails, an error code is returned.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -175,7 +195,7 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It can be used to query the details of a request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -186,7 +206,16 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the application was stopped. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The application was stopped.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The application failed to be stopped.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +223,7 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the change order.</p>
+         * <p>The ID of the call chain. Use this ID to query detailed information about the call.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc3b6e215637275918588187d****</p>
@@ -250,13 +279,7 @@ public class StopApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP status code. Valid values:</p>
-             * <ul>
-             * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-             * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-             * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-             * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
-             * </ul>
+             * <p>The ID of the change order.</p>
              * 
              * <strong>example:</strong>
              * <p>4a815998-b468-4bea-b7d8-59f52a44****</p>

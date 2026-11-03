@@ -134,10 +134,14 @@ public class SuspendTrafficResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><p><strong>2xx</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>3xx</strong>: The request was redirected.</p>
+         * </li>
+         * <li><p><strong>4xx</strong>: A client-side error occurred.</p>
+         * </li>
+         * <li><p><strong>5xx</strong>: A server-side error occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,14 +161,7 @@ public class SuspendTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. </p>
-         * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>The error code. This parameter is returned only if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -172,10 +169,12 @@ public class SuspendTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned. Valid values:</p>
+         * <p>The response message.</p>
          * <ul>
-         * <li>If the request was successful, <strong>success</strong> is returned.</li>
-         * <li>If the request failed, an error code is returned.</li>
+         * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+         * </li>
+         * <li><p>If the request fails, a specific error code is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,11 +197,7 @@ public class SuspendTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the traffic was removed. Valid values: </p>
-         * <ul>
-         * <li><strong>true</strong>: The traffic was removed.</li>
-         * <li><strong>false</strong>: The traffic failed to be removed.</li>
-         * </ul>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -282,7 +277,7 @@ public class SuspendTrafficResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the returned code.</p>
+             * <p>A detailed description of the result.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -293,10 +288,12 @@ public class SuspendTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the traffic was removed. Valid values:</p>
+             * <p>Indicates whether the traffic was successfully removed. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The traffic was removed.</li>
-             * <li><strong>false</strong>: The traffic failed to be removed.</li>
+             * <li><p><strong>true</strong>: The traffic was removed.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The traffic was not removed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

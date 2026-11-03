@@ -119,12 +119,12 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code or the error code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,11 +136,14 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code. Value values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -148,10 +151,10 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>null null</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>null****</li>
-         * <li>null</li>
+         * <li><strong>success</strong>: The request is successful.</li>
+         * <li>A specific error code: The request is abnormal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,7 +166,7 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>null</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -174,10 +177,10 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+         * <p>Indicates whether the deletion is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The policy was deleted.</li>
-         * <li><strong>false</strong>: Delete failed.</li>
+         * <li><strong>true</strong>: The deletion is successful.</li>
+         * <li><strong>false</strong>: The deletion fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +192,7 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>null</p>
+         * <p>The trace ID used to query invocation details.</p>
          * 
          * <strong>example:</strong>
          * <p>ac1a0b2215622920113732501e****</p>

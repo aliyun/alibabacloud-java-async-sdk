@@ -106,12 +106,12 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. The following limits are imposed on the ID:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Client error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of applications.</p>
+         * <p>The list of application information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -131,10 +131,10 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned. The following limits are imposed on the ID:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code: If the call fails, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
+         * <p>3B763F98-0BA2-5C23-B6B8-558568D2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,10 +157,10 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the microservice list was obtained. The following limits are imposed on the ID:</p>
+         * <p>Indicates whether the service list was retrieved. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The namespaces were obtained.</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong>: The service list was retrieved.</li>
+         * <li><strong>false</strong>: The retrieval failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -345,7 +345,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             }
 
             /**
-             * AvgTimeCostMs.
+             * <p>The average time consumed, in milliseconds.</p>
              */
             public Builder avgTimeCostMs(Float avgTimeCostMs) {
                 this.avgTimeCostMs = avgTimeCostMs;
@@ -364,7 +364,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of change failures.</p>
+             * <p>The percentage of failed change orders.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -375,7 +375,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTimeCostMs.
+             * <p>The maximum time consumed, in milliseconds.</p>
              */
             public Builder maxTimeCostMs(Float maxTimeCostMs) {
                 this.maxTimeCostMs = maxTimeCostMs;
@@ -394,7 +394,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             }
 
             /**
-             * OptimizeSuggestions.
+             * <p>The optimization suggestions.</p>
              */
             public Builder optimizeSuggestions(String optimizeSuggestions) {
                 this.optimizeSuggestions = optimizeSuggestions;
@@ -413,7 +413,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTimeCostMsAvg.
+             * <p>The average time consumed by the task, in milliseconds.</p>
              */
             public Builder taskTimeCostMsAvg(String taskTimeCostMsAvg) {
                 this.taskTimeCostMsAvg = taskTimeCostMsAvg;

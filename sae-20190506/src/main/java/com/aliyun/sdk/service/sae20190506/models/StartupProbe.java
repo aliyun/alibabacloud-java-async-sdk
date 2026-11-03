@@ -106,7 +106,10 @@ public class StartupProbe extends TeaModel {
         } 
 
         /**
-         * FailureThreshold.
+         * <p>The minimum number of consecutive failures that is considered a failure after a successful probe. Default value: 3. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder failureThreshold(Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
@@ -114,7 +117,10 @@ public class StartupProbe extends TeaModel {
         }
 
         /**
-         * InitialDelaySeconds.
+         * <p>The duration after the container is started before health checks are initiated. For more information, see <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes">Probes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder initialDelaySeconds(Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
@@ -122,7 +128,10 @@ public class StartupProbe extends TeaModel {
         }
 
         /**
-         * PeriodSeconds.
+         * <p>The health check interval. Default value: 10. Unit: seconds. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder periodSeconds(Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
@@ -130,7 +139,7 @@ public class StartupProbe extends TeaModel {
         }
 
         /**
-         * ProbeHandler.
+         * <p>The operation to determine the health of the container.</p>
          */
         public Builder probeHandler(ProbeHandler probeHandler) {
             this.probeHandler = probeHandler;
@@ -138,7 +147,10 @@ public class StartupProbe extends TeaModel {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>The timeout period of a health check. Default value: 1. Minimum value: 1. For more information, see <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes">Container probes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;

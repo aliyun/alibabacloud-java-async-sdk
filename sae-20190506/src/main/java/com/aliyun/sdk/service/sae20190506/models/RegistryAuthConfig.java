@@ -80,7 +80,10 @@ public class RegistryAuthConfig extends TeaModel {
         } 
 
         /**
-         * password.
+         * <p>password</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc***</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -88,7 +91,10 @@ public class RegistryAuthConfig extends TeaModel {
         }
 
         /**
-         * role.
+         * <p>role to get c</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::142xxxx:role/xxxxxx</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -96,7 +102,10 @@ public class RegistryAuthConfig extends TeaModel {
         }
 
         /**
-         * userName.
+         * <p>userName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

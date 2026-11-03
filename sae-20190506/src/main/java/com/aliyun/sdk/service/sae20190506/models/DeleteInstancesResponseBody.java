@@ -132,12 +132,12 @@ public class DeleteInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code or the error code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class DeleteInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Responses.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,11 +157,14 @@ public class DeleteInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidApplication.NotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +172,10 @@ public class DeleteInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Additional information about the call result. Valid values:</p>
+         * <p>The additional information about the call result. Valid values:</p>
          * <ul>
-         * <li>If the request is normal, success is returned.</li>
-         * <li>If the request is abnormal, the specific exception error code is returned.</li>
+         * <li>success: The request is successful.</li>
+         * <li>A specific error code: The request is abnormal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,10 +198,10 @@ public class DeleteInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the instance is deleted successfully. Valid values:</p>
+         * <p>Indicates whether the instance is deleted. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The namespace was deleted.</li>
-         * <li><strong>false</strong>: The namespace failed to be deleted.</li>
+         * <li><strong>true</strong>: The instance is deleted.</li>
+         * <li><strong>false</strong>: The instance fails to be deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class DeleteInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+         * <p>The trace ID used to accurately query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a981dd515966966104121683d****</p>
@@ -266,7 +269,7 @@ public class DeleteInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the release order.</p>
+             * <p>The change order ID.</p>
              * 
              * <strong>example:</strong>
              * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>

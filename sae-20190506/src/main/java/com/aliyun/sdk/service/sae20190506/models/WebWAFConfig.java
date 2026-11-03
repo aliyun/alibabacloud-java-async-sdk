@@ -54,7 +54,14 @@ public class WebWAFConfig extends TeaModel {
         } 
 
         /**
-         * EnableWAF.
+         * <p>Specifies whether to enable Web Application Firewall (WAF). Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables WAF.</li>
+         * <li><strong>false</strong>: disables WAF.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableWAF(Boolean enableWAF) {
             this.enableWAF = enableWAF;

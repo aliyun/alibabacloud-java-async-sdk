@@ -225,7 +225,10 @@ public class Container extends TeaModel {
         } 
 
         /**
-         * Args.
+         * <p>Container startup arguments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</p>
          */
         public Builder args(String args) {
             this.args = args;
@@ -233,7 +236,10 @@ public class Container extends TeaModel {
         }
 
         /**
-         * Command.
+         * <p>Container start command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/bin/sh&quot;]</p>
          */
         public Builder command(String command) {
             this.command = command;
@@ -241,7 +247,7 @@ public class Container extends TeaModel {
         }
 
         /**
-         * EnvironmentVariables.
+         * <p>Container environment variables.</p>
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
@@ -249,6 +255,7 @@ public class Container extends TeaModel {
         }
 
         /**
+         * <p>Container image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,7 +267,7 @@ public class Container extends TeaModel {
         }
 
         /**
-         * ImageRegistryConfig.
+         * <p>Image repository configuration.</p>
          */
         public Builder imageRegistryConfig(ImageRegistryConfig imageRegistryConfig) {
             this.imageRegistryConfig = imageRegistryConfig;
@@ -268,7 +275,7 @@ public class Container extends TeaModel {
         }
 
         /**
-         * MetricsCollectConfig.
+         * <p>Monitoring collection configuration.</p>
          */
         public Builder metricsCollectConfig(MetricsCollectConfig metricsCollectConfig) {
             this.metricsCollectConfig = metricsCollectConfig;
@@ -276,7 +283,10 @@ public class Container extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>Container port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -284,7 +294,10 @@ public class Container extends TeaModel {
         }
 
         /**
-         * RequestConcurrency.
+         * <p>Maximum concurrent requests per instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder requestConcurrency(Integer requestConcurrency) {
             this.requestConcurrency = requestConcurrency;
@@ -292,7 +305,10 @@ public class Container extends TeaModel {
         }
 
         /**
-         * RequestTimeout.
+         * <p>Container request timeout, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.requestTimeout = requestTimeout;
@@ -300,6 +316,7 @@ public class Container extends TeaModel {
         }
 
         /**
+         * <p>Container resource configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resources(ContainerResources resources) {
@@ -308,7 +325,7 @@ public class Container extends TeaModel {
         }
 
         /**
-         * SLSCollectConfigs.
+         * <p>Container log collection configuration.</p>
          */
         public Builder SLSCollectConfigs(SLSCollectConfigs SLSCollectConfigs) {
             this.SLSCollectConfigs = SLSCollectConfigs;
@@ -316,7 +333,7 @@ public class Container extends TeaModel {
         }
 
         /**
-         * StartupProbe.
+         * <p>Container startup probe configuration.</p>
          */
         public Builder startupProbe(StartupProbe startupProbe) {
             this.startupProbe = startupProbe;
@@ -324,7 +341,7 @@ public class Container extends TeaModel {
         }
 
         /**
-         * WebNASConfig.
+         * <p>Container NAS configuration.</p>
          */
         public Builder webNASConfig(WebNASConfig webNASConfig) {
             this.webNASConfig = webNASConfig;
@@ -332,7 +349,7 @@ public class Container extends TeaModel {
         }
 
         /**
-         * WebOSSConfig.
+         * <p>Container OSS mount configuration.</p>
          */
         public Builder webOSSConfig(WebOSSConfig webOSSConfig) {
             this.webOSSConfig = webOSSConfig;

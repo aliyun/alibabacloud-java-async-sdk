@@ -200,7 +200,11 @@ public class WebApplication extends TeaModel {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -208,7 +212,11 @@ public class WebApplication extends TeaModel {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-app</p>
          */
         public Builder applicationName(String applicationName) {
             this.applicationName = applicationName;
@@ -216,7 +224,10 @@ public class WebApplication extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * <p>The time when the application was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-11 15:54:49</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -224,7 +235,10 @@ public class WebApplication extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The application description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my sae app</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -232,7 +246,10 @@ public class WebApplication extends TeaModel {
         }
 
         /**
-         * InternetURL.
+         * <p>The public URL for accessing the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://****.cn-hangzhou.sae.run</p>
          */
         public Builder internetURL(String internetURL) {
             this.internetURL = internetURL;
@@ -240,7 +257,10 @@ public class WebApplication extends TeaModel {
         }
 
         /**
-         * IntranetURL.
+         * <p>The internal URL for accessing the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://****.cn-hangzhou-vpc.sae.run</p>
          */
         public Builder intranetURL(String intranetURL) {
             this.intranetURL = intranetURL;
@@ -248,7 +268,10 @@ public class WebApplication extends TeaModel {
         }
 
         /**
-         * LastModifiedTime.
+         * <p>The time when the application was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-11 20:12:58</p>
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -256,7 +279,10 @@ public class WebApplication extends TeaModel {
         }
 
         /**
-         * NamespaceId.
+         * <p>The ID of the namespace to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
@@ -264,7 +290,7 @@ public class WebApplication extends TeaModel {
         }
 
         /**
-         * RevisionConfig.
+         * <p>The configurations of the revision version.</p>
          */
         public Builder revisionConfig(RevisionConfig revisionConfig) {
             this.revisionConfig = revisionConfig;
@@ -272,7 +298,10 @@ public class WebApplication extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The Virtual Private Cloud (VPC) ID of the application namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze0i263cnn311nvj****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -280,7 +309,7 @@ public class WebApplication extends TeaModel {
         }
 
         /**
-         * WebScalingConfig.
+         * <p>The scaling configurations of the application.</p>
          */
         public Builder webScalingConfig(WebScalingConfig webScalingConfig) {
             this.webScalingConfig = webScalingConfig;
@@ -288,7 +317,7 @@ public class WebApplication extends TeaModel {
         }
 
         /**
-         * WebTrafficConfig.
+         * <p>The traffic configurations of the application.</p>
          */
         public Builder webTrafficConfig(WebTrafficConfig webTrafficConfig) {
             this.webTrafficConfig = webTrafficConfig;

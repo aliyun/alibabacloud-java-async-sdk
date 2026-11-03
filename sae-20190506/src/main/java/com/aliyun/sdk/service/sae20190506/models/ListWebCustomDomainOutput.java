@@ -67,7 +67,10 @@ public class ListWebCustomDomainOutput extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2RN</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -75,7 +78,7 @@ public class ListWebCustomDomainOutput extends TeaModel {
         }
 
         /**
-         * WebCustomDomains.
+         * <p>The custom domain names.</p>
          */
         public Builder webCustomDomains(java.util.List<WebCustomDomain> webCustomDomains) {
             this.webCustomDomains = webCustomDomains;

@@ -95,6 +95,7 @@ public class PublishWebApplicationRevisionInput extends TeaModel {
         } 
 
         /**
+         * <p>The container configurations of the revision version.</p>
          * <p>This parameter is required.</p>
          */
         public Builder containers(java.util.List<Container> containers) {
@@ -103,7 +104,10 @@ public class PublishWebApplicationRevisionInput extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The version description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test version</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -111,7 +115,10 @@ public class PublishWebApplicationRevisionInput extends TeaModel {
         }
 
         /**
-         * EnableArmsMetrics.
+         * <p>Specifies whether to enable Application Real-Time Monitoring Service (ARMS) monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableArmsMetrics(Boolean enableArmsMetrics) {
             this.enableArmsMetrics = enableArmsMetrics;
@@ -119,7 +126,10 @@ public class PublishWebApplicationRevisionInput extends TeaModel {
         }
 
         /**
-         * TakeEffect.
+         * <p>Specifies whether to switch all traffic to a new version after the new version is released. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder takeEffect(Boolean takeEffect) {
             this.takeEffect = takeEffect;

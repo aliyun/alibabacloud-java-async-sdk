@@ -132,11 +132,11 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>2xx</strong>: The request is successful.</li>
+         * <li><strong>3xx</strong>: The request is redirected.</li>
+         * <li><strong>4xx</strong>: A request error occurred.</li>
          * <li><strong>5xx</strong>: A server error occurred.</li>
          * </ul>
          * 
@@ -149,7 +149,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the microservices.</p>
+         * <p>The information about the microservice list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -159,9 +159,12 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         /**
          * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.Obviously</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +172,10 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Valid values:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code: If the call fails, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request is abnormal, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,10 +198,10 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the list of microservices was queried. Valid values:</p>
+         * <p>Indicates whether the list of published microservices is successfully retrieved. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The list was queried.</li>
-         * <li><strong>false</strong>: The list failed to be queried.</li>
+         * <li><strong>true</strong>: The list is successfully retrieved.</li>
+         * <li><strong>false</strong>: The list fails to be retrieved.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The trace ID used to accurately query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -344,7 +347,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>b2a8a925-477a-4ed7-b825-d5e22500****</p>
@@ -355,7 +358,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reserved parameter. This parameter does not take effect.</p>
+             * <p>A reserved field. This field is currently meaningless.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -366,7 +369,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service group that corresponds to the consumed service.</p>
+             * <p>The group to which the consumed service belongs.</p>
              */
             public Builder groups(java.util.List<String> groups) {
                 this.groups = groups;
@@ -374,7 +377,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The addresses where services can be subscribed to.</p>
+             * <p>The service subscription addresses.</p>
              */
             public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
@@ -382,7 +385,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the published service.</p>
+             * <p>The published service name.</p>
              * 
              * <strong>example:</strong>
              * <p>com.alibaba.nodejs.ItemService</p>
@@ -404,7 +407,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the published services.</p>
+             * <p>The version of the published service.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>

@@ -134,10 +134,14 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><p><strong>2xx</strong>: success</p>
+         * </li>
+         * <li><p><strong>3xx</strong>: redirection</p>
+         * </li>
+         * <li><p><strong>4xx</strong>: request error</p>
+         * </li>
+         * <li><p><strong>5xx</strong>: server error</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +153,7 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The components.</p>
+         * <p>A list of components.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -157,10 +161,12 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. Valid values:</p>
+         * <p>The error code. This parameter is returned only if the request fails. For more information, see the <strong>Error codes</strong> section of this topic.</p>
          * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * <li><p>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</p>
+         * </li>
+         * <li><p>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section.</p>
+         * </li>
          * </ul>
          */
         public Builder errorCode(String errorCode) {
@@ -169,7 +175,7 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -191,10 +197,12 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the list of container components of a microservices application was obtained. Valid values:</p>
+         * <p>Indicates whether the request was successful.</p>
          * <ul>
-         * <li><strong>true</strong>: The list was obtained.</li>
-         * <li><strong>false</strong>: The list failed to be obtained.</li>
+         * <li><p><strong>true</strong>: The operation succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +214,7 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -277,8 +285,10 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the component is disabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The component is disabled.</li>
-             * <li><strong>false</strong>: The component is not disabled.</li>
+             * <li><p><strong>true</strong>: The component is disabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The component is not disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -290,7 +300,7 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the container, such as Ali-Tomcat, in which an application that is developed based on High-speed Service Framework (HSF) is deployed.</p>
+             * <p>The version of the application container provided by the HSF framework, such as the Ali-Tomcat container.</p>
              * 
              * <strong>example:</strong>
              * <p>3.5.3</p>

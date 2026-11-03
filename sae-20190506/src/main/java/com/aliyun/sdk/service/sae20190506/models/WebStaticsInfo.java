@@ -93,7 +93,10 @@ public class WebStaticsInfo extends TeaModel {
         } 
 
         /**
-         * CpuUsage.
+         * <p>CPU usage</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1327</p>
          */
         public Builder cpuUsage(Long cpuUsage) {
             this.cpuUsage = cpuUsage;
@@ -101,7 +104,10 @@ public class WebStaticsInfo extends TeaModel {
         }
 
         /**
-         * InternetTrafficOut.
+         * <p>Indicates outbound traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2792</p>
          */
         public Builder internetTrafficOut(Long internetTrafficOut) {
             this.internetTrafficOut = internetTrafficOut;
@@ -109,7 +115,10 @@ public class WebStaticsInfo extends TeaModel {
         }
 
         /**
-         * Invocations.
+         * <p>The number of times that the SQL statement is invoked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder invocations(Long invocations) {
             this.invocations = invocations;
@@ -117,7 +126,10 @@ public class WebStaticsInfo extends TeaModel {
         }
 
         /**
-         * MemoryUsage.
+         * <p>The peak memory usage for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5045929297920</p>
          */
         public Builder memoryUsage(Long memoryUsage) {
             this.memoryUsage = memoryUsage;

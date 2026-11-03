@@ -119,12 +119,16 @@ public class ListAppEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The HTTP status code returned for the request. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><p><strong>2xx</strong>: Success.</p>
+         * </li>
+         * <li><p><strong>3xx</strong>: Redirection.</p>
+         * </li>
+         * <li><p><strong>4xx</strong>: Client error.</p>
+         * </li>
+         * <li><p><strong>5xx</strong>: Server error.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +140,7 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The events.</p>
+         * <p>The event list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,11 +148,16 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed. Take note of the following rules:</p>
+         * <p>The error code.</p>
          * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+         * <li><p>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</p>
+         * </li>
+         * <li><p>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error Codes</strong> section.</p>
+         * </li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>get.event.error</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +165,7 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>Additional information about the request result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -178,10 +187,12 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the events that occurred in the application were queried. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The events were queried.</li>
-         * <li><strong>false</strong>: The events failed to be queried.</li>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,7 +340,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * CauseAnalysis.
+             * <p>The cause analysis.</p>
              */
             public Builder causeAnalysis(String causeAnalysis) {
                 this.causeAnalysis = causeAnalysis;
@@ -337,7 +348,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the event. Valid values:</p>
+             * <p>The event type.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -348,7 +359,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the first occurrence of the event.</p>
+             * <p>The timestamp of the event\&quot;s first occurrence.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-02-19T05:01:28Z</p>
@@ -359,7 +370,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the last occurrence of the event.</p>
+             * <p>The timestamp of the event\&quot;s last occurrence.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-02-19T05:01:28Z</p>
@@ -370,7 +381,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the event.</p>
+             * <p>The event message.</p>
              * 
              * <strong>example:</strong>
              * <p>Created container</p>
@@ -381,7 +392,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the object.</p>
+             * <p>The object kind.</p>
              * 
              * <strong>example:</strong>
              * <p>Pod</p>
@@ -392,7 +403,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the object.</p>
+             * <p>The object name.</p>
              * 
              * <strong>example:</strong>
              * <p>errew-b86bf540-b4dc-47d8-a42f-b4997c14bd8f-5595cbddd6-2****</p>
@@ -403,7 +414,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cause of the event.</p>
+             * <p>The reason for the event.</p>
              * 
              * <strong>example:</strong>
              * <p>Created</p>
@@ -499,7 +510,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The events.</p>
+             * <p>An array of application events.</p>
              */
             public Builder appEventEntity(java.util.List<AppEventEntity> appEventEntity) {
                 this.appEventEntity = appEventEntity;
@@ -507,7 +518,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -529,7 +540,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of events that occurred in an application.</p>
+             * <p>The total count of application events.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

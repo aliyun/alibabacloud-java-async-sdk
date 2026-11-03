@@ -82,7 +82,14 @@ public class MetricsCollectConfig extends TeaModel {
         } 
 
         /**
-         * EnablePushToUserSLS.
+         * <p>Specifies whether to push metric data to Simple Log Service. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enablePushToUserSLS(Boolean enablePushToUserSLS) {
             this.enablePushToUserSLS = enablePushToUserSLS;
@@ -90,7 +97,10 @@ public class MetricsCollectConfig extends TeaModel {
         }
 
         /**
-         * LogstoreName.
+         * <p>The name of the Logstore in Simple Log Service to which the metric data is pushed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-sls-logstorename</p>
          */
         public Builder logstoreName(String logstoreName) {
             this.logstoreName = logstoreName;
@@ -98,7 +108,10 @@ public class MetricsCollectConfig extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project in Simple Log Service to which the metric data is pushed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-sls-project</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;

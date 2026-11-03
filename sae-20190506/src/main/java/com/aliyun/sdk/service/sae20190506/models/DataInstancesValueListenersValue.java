@@ -117,7 +117,7 @@ public class DataInstancesValueListenersValue extends TeaModel {
         }
 
         /**
-         * <p>The listener port of the NLB instance.</p>
+         * <p>The load balancing listener port.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -128,11 +128,11 @@ public class DataInstancesValueListenersValue extends TeaModel {
         }
 
         /**
-         * <p>The status of the NLB listener.</p>
+         * <p>The NLB listener status. Valid values:</p>
          * <ul>
          * <li><strong>Creating</strong>: The listener is being created.</li>
          * <li><strong>Configuring</strong>: The listener is being configured.</li>
-         * <li><strong>Bounded</strong>: The listener runs as expected.</li>
+         * <li><strong>Bounded</strong>: The listener is running normally.</li>
          * <li><strong>Unbinding</strong>: The listener is being deleted.</li>
          * <li><strong>Failed</strong>: The listener is unavailable.</li>
          * </ul>
@@ -146,7 +146,7 @@ public class DataInstancesValueListenersValue extends TeaModel {
         }
 
         /**
-         * <p>The open ports of the NLB instance.</p>
+         * <p>The Open Ports of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -157,7 +157,7 @@ public class DataInstancesValueListenersValue extends TeaModel {
         }
 
         /**
-         * <p>The server certificates.</p>
+         * <p>The server certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>123157******</p>

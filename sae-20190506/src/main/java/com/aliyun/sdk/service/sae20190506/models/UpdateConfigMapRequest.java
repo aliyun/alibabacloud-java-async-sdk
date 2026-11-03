@@ -74,7 +74,7 @@ public class UpdateConfigMapRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Instance ID of the ConfigMap instance to be updated. To obtain instance ID, call the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,10 @@ public class UpdateConfigMapRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-desc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

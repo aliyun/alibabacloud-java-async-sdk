@@ -67,7 +67,10 @@ public class WebScalingConfig extends TeaModel {
         } 
 
         /**
-         * MaximumInstanceCount.
+         * <p>The maximum number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maximumInstanceCount(Long maximumInstanceCount) {
             this.maximumInstanceCount = maximumInstanceCount;
@@ -75,7 +78,10 @@ public class WebScalingConfig extends TeaModel {
         }
 
         /**
-         * MinimumInstanceCount.
+         * <p>The minimum number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minimumInstanceCount(Long minimumInstanceCount) {
             this.minimumInstanceCount = minimumInstanceCount;

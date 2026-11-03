@@ -160,7 +160,10 @@ public class GetChangeOrderMetricRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -169,7 +172,7 @@ public class GetChangeOrderMetricRequest extends Request {
         }
 
         /**
-         * <p>The SAE application type. Valid values:</p>
+         * <p>The type of the Serverless App Engine (SAE) application.</p>
          * <ul>
          * <li><strong>micro_service</strong></li>
          * <li><strong>web</strong></li>
@@ -186,7 +189,10 @@ public class GetChangeOrderMetricRequest extends Request {
         }
 
         /**
-         * CoType.
+         * <p>The change order type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CoCreateApp</p>
          */
         public Builder coType(String coType) {
             this.putQueryParameter("CoType", coType);
@@ -195,10 +201,10 @@ public class GetChangeOrderMetricRequest extends Request {
         }
 
         /**
-         * <p>The CPU allocation policy. Valid values:</p>
+         * <p>The CPU allocation strategy. Valid values:</p>
          * <ul>
-         * <li><strong>request</strong>: CPU cores are allocated only when a request is initiated.</li>
-         * <li><strong>always</strong>: Fixed CPU cores are always allocated.</li>
+         * <li><strong>request</strong>: Allocates CPU resources only when requests are received.</li>
+         * <li><strong>always</strong>: Always allocates a fixed amount of CPU resources.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,7 +217,7 @@ public class GetChangeOrderMetricRequest extends Request {
         }
 
         /**
-         * <p>The start time when the change order was created.</p>
+         * <p>The start time of change order creation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,7 +243,7 @@ public class GetChangeOrderMetricRequest extends Request {
         }
 
         /**
-         * <p>The field based on which you want to sort the returned entries.</p>
+         * <p>The field used to sort the query results.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

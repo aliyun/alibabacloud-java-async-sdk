@@ -82,7 +82,10 @@ public class WebNASMountPoint extends TeaModel {
         } 
 
         /**
-         * MountDir.
+         * <p>The local mount directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/consumer/log</p>
          */
         public Builder mountDir(String mountDir) {
             this.mountDir = mountDir;
@@ -90,7 +93,10 @@ public class WebNASMountPoint extends TeaModel {
         }
 
         /**
-         * NasAddr.
+         * <p>The mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home</p>
          */
         public Builder nasAddr(String nasAddr) {
             this.nasAddr = nasAddr;
@@ -98,7 +104,10 @@ public class WebNASMountPoint extends TeaModel {
         }
 
         /**
-         * NasPath.
+         * <p>The mount directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder nasPath(String nasPath) {
             this.nasPath = nasPath;

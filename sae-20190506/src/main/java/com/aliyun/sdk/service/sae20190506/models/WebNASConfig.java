@@ -54,7 +54,7 @@ public class WebNASConfig extends TeaModel {
         } 
 
         /**
-         * MountPoints.
+         * <p>The mount targets.</p>
          */
         public Builder mountPoints(java.util.List<WebNASMountPoint> mountPoints) {
             this.mountPoints = mountPoints;

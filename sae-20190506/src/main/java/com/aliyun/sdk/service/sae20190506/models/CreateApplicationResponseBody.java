@@ -132,12 +132,12 @@ public class CreateApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Client error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,11 +157,14 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. Valid values:</p>
+         * <p>The error code.</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Application.MissingJdk</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +172,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Valid values:</p>
+         * <p>The additional information.</p>
          * <ul>
-         * <li>If the request was successful, a success message is returned.</li>
-         * <li>If the request failed, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +187,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -195,10 +198,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the application is created. Valid values:</p>
+         * <p>Specifies whether the application was created. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The application was created.</li>
+         * <li><strong>false</strong>: The application failed to be created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * <p>The trace ID, which is used to accurately query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -279,7 +282,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application that is created.</p>
+             * <p>The ID of the created application.</p>
              * 
              * <strong>example:</strong>
              * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1****</p>
@@ -290,7 +293,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the change order. It can be used to query the task status.</p>
+             * <p>The ID of the returned change order, which is used to query the task execution status.</p>
              * 
              * <strong>example:</strong>
              * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>

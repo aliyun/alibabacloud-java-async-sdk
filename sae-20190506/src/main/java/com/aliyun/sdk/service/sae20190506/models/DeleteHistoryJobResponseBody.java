@@ -132,12 +132,12 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,10 +149,10 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result returned.</p>
+         * <p>The returned result.</p>
          * 
          * <strong>example:</strong>
-         * <p>{msg: &quot;&quot;, code: 200, success: true}</p>
+         * <p>{&quot;msg&quot;: &quot;&quot;,&quot;code&quot;: 200,&quot;success&quot;: true}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -162,12 +162,12 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
         /**
          * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>InvalidAppId.NotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -175,10 +175,10 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned information. Valid values:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code: If the call fails, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -201,10 +201,11 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the job was deleted. Valid values:</p>
+         * <p>Indicates whether the job is deleted successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The job was deleted.</li>
-         * <li><strong>false</strong>: The job failed to be deleted.</li>
+         * <li><strong>true</strong>: The job is deleted.</li>
+         * <li><strong>false</strong>: The deletion failed.
+         * [_single.error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +217,7 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The trace ID used to query invocation details.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>

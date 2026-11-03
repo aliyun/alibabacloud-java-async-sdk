@@ -75,7 +75,7 @@ public class DeleteHistoryJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the job template to which the job that you want to delete belongs.</p>
+         * <p>The ID of the job template to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteHistoryJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

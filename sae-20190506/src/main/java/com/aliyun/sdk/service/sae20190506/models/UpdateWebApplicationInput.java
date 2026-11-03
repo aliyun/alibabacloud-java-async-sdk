@@ -68,7 +68,10 @@ public class UpdateWebApplicationInput extends TeaModel {
         } 
 
         /**
-         * Description.
+         * <p>The application description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-app</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -76,7 +79,7 @@ public class UpdateWebApplicationInput extends TeaModel {
         }
 
         /**
-         * WebNetworkConfig.
+         * <p>The network configurations of the application.</p>
          */
         public Builder webNetworkConfig(WebNetworkConfig webNetworkConfig) {
             this.webNetworkConfig = webNetworkConfig;

@@ -158,7 +158,7 @@ public class ListChangeOrdersRequest extends Request {
         } 
 
         /**
-         * <p>1</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,19 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The status of the change order. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: preparing</li>
+         * <li><strong>1</strong>: executing</li>
+         * <li><strong>2</strong>: executed successfully</li>
+         * <li><strong>3</strong>: execution failed</li>
+         * <li><strong>6</strong>: terminated</li>
+         * <li><strong>8</strong>: waiting for manual batch confirmation</li>
+         * <li><strong>9</strong>: waiting for automatic batch confirmation</li>
+         * <li><strong>10</strong>: execution failed due to a system exception</li>
+         * <li><strong>11</strong>: waiting for approval</li>
+         * <li><strong>12</strong>: approved and waiting for execution</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -185,26 +197,26 @@ public class ListChangeOrdersRequest extends Request {
         /**
          * <p>The type of the change order. Valid values:</p>
          * <ul>
-         * <li><strong>CoBindSlb</strong>: associates the Server Load Balancer (SLB) instance with the application.</li>
-         * <li><strong>CoUnbindSlb</strong>: disassociates an SLB instance from the application.</li>
-         * <li><strong>CoCreateApp</strong>: creates the application.</li>
-         * <li><strong>CoDeleteApp</strong>: deletes the application.</li>
-         * <li><strong>CoDeploy</strong>: deploys the application.</li>
-         * <li><strong>CoRestartApplication</strong>: restarts the application.</li>
-         * <li><strong>CoRollback</strong>: rolls back the application.</li>
-         * <li><strong>CoScaleIn</strong>: scales in the application.</li>
-         * <li><strong>CoScaleOut</strong>: scales out the application.</li>
-         * <li><strong>CoStartApplication</strong>: starts the application.</li>
-         * <li><strong>CoStopApplication</strong>: stops the application.</li>
-         * <li><strong>CoRescaleApplicationVertically</strong>: modifies the instance type.</li>
-         * <li><strong>CoDeployHistroy</strong>: rolls back the application to an earlier version.</li>
-         * <li><strong>CoBindNas</strong>: associates a network-attached storage (NAS) file system with the application.</li>
-         * <li><strong>CoUnbindNas</strong>: disassociates a NAS file system from the application.</li>
-         * <li><strong>CoBatchStartApplication</strong>: starts multiple applications concurrently.</li>
-         * <li><strong>CoBatchStopApplication</strong>: stops multiple applications concurrently.</li>
-         * <li><strong>CoRestartInstances</strong>: restarts the instance.</li>
-         * <li><strong>CoDeleteInstances</strong>: deletes the instance.</li>
-         * <li><strong>CoScaleInAppWithInstances</strong>: reduces the specified number of application instances.</li>
+         * <li><strong>CoBindSlb</strong>: bind an SLB instance</li>
+         * <li><strong>CoUnbindSlb</strong>: unbind an SLB instance</li>
+         * <li><strong>CoCreateApp</strong>: create an application</li>
+         * <li><strong>CoDeleteApp</strong>: delete an application</li>
+         * <li><strong>CoDeploy</strong>: deploy an application</li>
+         * <li><strong>CoRestartApplication</strong>: restart an application</li>
+         * <li><strong>CoRollback</strong>: roll back an application</li>
+         * <li><strong>CoScaleIn</strong>: scale in an application</li>
+         * <li><strong>CoScaleOut</strong>: scale out an application</li>
+         * <li><strong>CoStartApplication</strong>: start an application</li>
+         * <li><strong>CoStopApplication</strong>: stop an application</li>
+         * <li><strong>CoRescaleApplicationVertically</strong>: change instance specifications</li>
+         * <li><strong>CoDeployHistroy</strong>: roll back to a historical version</li>
+         * <li><strong>CoBindNas</strong>: bind a NAS file system</li>
+         * <li><strong>CoUnbindNas</strong>: unbind a NAS file system</li>
+         * <li><strong>CoBatchStartApplication</strong>: start applications in batches</li>
+         * <li><strong>CoBatchStopApplication</strong>: stop applications in batches</li>
+         * <li><strong>CoRestartInstances</strong>: restart instances</li>
+         * <li><strong>CoDeleteInstances</strong>: delete instances</li>
+         * <li><strong>CoScaleInAppWithInstances</strong>: scale in specified instances</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +229,7 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * <p>20</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,7 +241,7 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * <p>CoCreateApp</p>
+         * <p>The keyword used for fuzzy match of the change order description. Change orders whose descriptions contain the keyword are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -241,7 +253,10 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The sorting condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create_time</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -250,7 +265,7 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * <p>test</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -262,7 +277,11 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * <p>Specifies whether to sort the results in ascending order based on the field specified by the <strong>OrderBy</strong> parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: sort in ascending order</li>
+         * <li><strong>false</strong>: sort in descending order</li>
+         * </ul>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);

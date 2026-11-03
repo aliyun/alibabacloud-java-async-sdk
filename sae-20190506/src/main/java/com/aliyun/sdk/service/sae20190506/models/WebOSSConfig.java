@@ -54,7 +54,7 @@ public class WebOSSConfig extends TeaModel {
         } 
 
         /**
-         * MountPoints.
+         * <p>The mount point.</p>
          */
         public Builder mountPoints(java.util.List<WebOSSMountPoint> mountPoints) {
             this.mountPoints = mountPoints;

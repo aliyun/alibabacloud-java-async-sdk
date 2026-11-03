@@ -145,7 +145,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         } 
 
         /**
-         * <p>d700e680-aa4d-4ec1-afc2-6566b5ff****</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * <p>1</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -170,7 +170,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * <p>b2a8a925-477a-4ed7-b825-d5e22500****</p>
+         * <p>The application group ID. You can call the <a href="https://help.aliyun.com/document_detail/126249.html">DescribeApplicationGroups</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application instance.</p>
+         * <p>The application instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-faaca66c-5959-45cc-b3bf-d26093b2e9c0******</p>
@@ -195,7 +195,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * <p>10</p>
+         * <p>The paging Settings for the number of entries per page in a paged query. Default value: <strong>10</strong>. Valid values: (0, 1000000000).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -207,7 +207,10 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * <p>The batch ID. You can call the <a href="https://help.aliyun.com/document_detail/126617.html">DescribeChangeOrder</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85750d48-6cfc-4dbf-8ea0-840397******</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -216,7 +219,25 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * <p>true</p>
+         * <p>Specifies the sorting order of application instances based on their running status. If the status is the same, the instances are sorted by instance ID. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Descending order.</li>
+         * <li><strong>false</strong>: Ascending order.</li>
+         * </ul>
+         * <p>The following list shows the instance statuses in ascending order:</p>
+         * <ol>
+         * <li><strong>Error</strong>: An error occurred during instance startup.</li>
+         * <li><strong>CrashLoopBackOff</strong>: The container failed to start. An error occurred during startup, and the error persisted after a restart.</li>
+         * <li><strong>ErrImagePull</strong>: An error occurred while pulling the container image for the instance.</li>
+         * <li><strong>ImagePullBackOff</strong>: The container image cannot be retrieved.</li>
+         * <li><strong>Pending</strong>: The instance is waiting to be scheduled.</li>
+         * <li><strong>Unknown</strong>: An unknown exception occurred.</li>
+         * <li><strong>Terminating</strong>: The instance is being terminated.</li>
+         * <li><strong>NotFound</strong>: The instance cannot be found.</li>
+         * <li><strong>PodInitializing</strong>: The instance is being initialized.</li>
+         * <li><strong>Init:0/1</strong>: The instance is initializing.</li>
+         * <li><strong>Running</strong>: The instance is running.</li>
+         * </ol>
          * 
          * <strong>example:</strong>
          * <p>true</p>

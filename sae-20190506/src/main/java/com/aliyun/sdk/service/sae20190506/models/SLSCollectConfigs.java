@@ -54,7 +54,7 @@ public class SLSCollectConfigs extends TeaModel {
         } 
 
         /**
-         * CollectConfigs.
+         * <p>The configurations of log collection.</p>
          */
         public Builder collectConfigs(java.util.List<SLSCollectConfig> collectConfigs) {
             this.collectConfigs = collectConfigs;

@@ -93,7 +93,17 @@ public class WebTrafficConfig extends TeaModel {
         } 
 
         /**
-         * AuthType.
+         * <p>The authentication type. Valid values:</p>
+         * <ul>
+         * <li><strong>Anonymous</strong>: does not require authentication.</li>
+         * <li><strong>Application</strong>: requires authentication.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is <strong>Anonymous</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Anonymous</p>
          */
         public Builder authType(String authType) {
             this.authType = authType;
@@ -101,7 +111,10 @@ public class WebTrafficConfig extends TeaModel {
         }
 
         /**
-         * DisableInternetURL.
+         * <p>Specifies whether to disable access to the default Internet domain. If you set this parameter to true, a 403 error is returned if you access the default public URL provided by the function. A value of false does not have affect the running of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableInternetURL(Boolean disableInternetURL) {
             this.disableInternetURL = disableInternetURL;
@@ -109,7 +122,7 @@ public class WebTrafficConfig extends TeaModel {
         }
 
         /**
-         * RevisionsTrafficWeight.
+         * <p>Specifies the traffic weight of applications in different versions. The sum of traffic weight for all versions must be 100%.</p>
          */
         public Builder revisionsTrafficWeight(java.util.Map<String, Float> revisionsTrafficWeight) {
             this.revisionsTrafficWeight = revisionsTrafficWeight;
@@ -117,7 +130,7 @@ public class WebTrafficConfig extends TeaModel {
         }
 
         /**
-         * WebAclConfig.
+         * <p>The configurations of IP ACL whitelist.</p>
          */
         public Builder webAclConfig(WebAclConfig webAclConfig) {
             this.webAclConfig = webAclConfig;

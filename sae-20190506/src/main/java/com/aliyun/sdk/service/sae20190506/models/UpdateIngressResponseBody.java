@@ -132,12 +132,12 @@ public class UpdateIngressResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code or the error code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: success.</li>
+         * <li><strong>3xx</strong>: redirection.</li>
+         * <li><strong>4xx</strong>: request error.</li>
+         * <li><strong>5xx</strong>: server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class UpdateIngressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Responses.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,11 +157,14 @@ public class UpdateIngressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code. Value values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see the <strong>Error codes</strong> section of this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +172,10 @@ public class UpdateIngressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Additional information. Valid values:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>The error message returned because the request is normal and <strong>success</strong> is returned.</li>
-         * <li>If the request is abnormal, the specific exception error code is returned.</li>
+         * <li>If the request is normal, <strong>success</strong> is returned.</li>
+         * <li>If the request is abnormal, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,10 +198,10 @@ public class UpdateIngressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the configuration of the Ingress instance is updated. Valid values:</p>
+         * <p>Indicates whether the Ingress instance configuration was updated successfully. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: The update was successful.</li>
-         * <li><strong>false</strong>: Update failed.</li>
+         * <li><strong>false</strong>: The update failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class UpdateIngressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace.</p>
+         * <p>The trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>

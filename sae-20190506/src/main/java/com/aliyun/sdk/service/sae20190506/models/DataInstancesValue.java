@@ -80,7 +80,7 @@ public class DataInstancesValue extends TeaModel {
         } 
 
         /**
-         * <p>The domain name.</p>
+         * <p>The DNS domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>nlb-wb7r6dlwetvt5j****.cn-hangzhou.nlb.aliyuncs.com</p>
@@ -91,7 +91,7 @@ public class DataInstancesValue extends TeaModel {
         }
 
         /**
-         * <p>The listeners.</p>
+         * <p>The listener information.</p>
          */
         public Builder listeners(java.util.Map<String, DataInstancesValueListenersValue> listeners) {
             this.listeners = listeners;
@@ -99,10 +99,10 @@ public class DataInstancesValue extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the instance is created by SAE.</p>
+         * <p>Specifies whether the instance is purchased by Serverless App Engine (SAE). Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The instance is created by SAE.</li>
-         * <li><strong>false</strong>: The existing instance is reused.</li>
+         * <li><strong>true</strong>: The instance is created by SAE on your behalf.</li>
+         * <li><strong>false</strong>: An existing instance is reused.</li>
          * </ul>
          * 
          * <strong>example:</strong>

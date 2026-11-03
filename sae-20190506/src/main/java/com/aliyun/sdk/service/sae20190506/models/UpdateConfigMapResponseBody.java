@@ -132,10 +132,12 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the ConfigMap instance was updated. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The instance was updated.</li>
-         * <li><strong>false</strong>: The instance failed to be updated.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Client error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +149,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the ConfigMap instance.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -155,13 +157,14 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx:</strong>: indicates that the call was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the call failed.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li>Successful request: The <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>Failed request: The <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,7 +172,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * <p>The additional information about the call result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -180,7 +183,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned information.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -191,7 +194,14 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the ConfigMap instance was updated successfully. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The update succeeded.</li>
+         * <li><strong>false</strong>: The update failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -199,7 +209,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The trace ID used to accurately query the call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -255,11 +265,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The returned error code. Valid values:</p>
-             * <ul>
-             * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-             * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
-             * </ul>
+             * <p>The ConfigMap instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

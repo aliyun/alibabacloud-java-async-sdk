@@ -67,7 +67,7 @@ public class WebApplicationWithStatus extends TeaModel {
         } 
 
         /**
-         * Status.
+         * <p>The status of the application.</p>
          */
         public Builder status(WebApplicationStatus status) {
             this.status = status;
@@ -75,7 +75,7 @@ public class WebApplicationWithStatus extends TeaModel {
         }
 
         /**
-         * WebApplication.
+         * <p>The details of the application.</p>
          */
         public Builder webApplication(WebApplication webApplication) {
             this.webApplication = webApplication;

@@ -96,7 +96,10 @@ public class WebOSSMountPoint extends TeaModel {
         } 
 
         /**
-         * BucketName.
+         * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gcx-pic-test</p>
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;
@@ -104,7 +107,10 @@ public class WebOSSMountPoint extends TeaModel {
         }
 
         /**
-         * BucketPath.
+         * <p>The storage path in an OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>billing-2023-11-06_17:30:18-rn7wG8</p>
          */
         public Builder bucketPath(String bucketPath) {
             this.bucketPath = bucketPath;
@@ -112,7 +118,10 @@ public class WebOSSMountPoint extends TeaModel {
         }
 
         /**
-         * MountDir.
+         * <p>The local mount directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/k8s-prod/oms-api-yy-prod/log</p>
          */
         public Builder mountDir(String mountDir) {
             this.mountDir = mountDir;
@@ -120,7 +129,10 @@ public class WebOSSMountPoint extends TeaModel {
         }
 
         /**
-         * ReadOnly.
+         * <p>Specifies whether it is read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = readOnly;

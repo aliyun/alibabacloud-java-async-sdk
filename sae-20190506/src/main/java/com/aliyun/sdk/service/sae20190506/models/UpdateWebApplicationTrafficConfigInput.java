@@ -93,7 +93,10 @@ public class UpdateWebApplicationTrafficConfigInput extends TeaModel {
         } 
 
         /**
-         * AuthType.
+         * <p>The authentication type. Valid values: Anonymous (default): does not require authentication. Application: requires authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Anonymous</p>
          */
         public Builder authType(String authType) {
             this.authType = authType;
@@ -101,7 +104,10 @@ public class UpdateWebApplicationTrafficConfigInput extends TeaModel {
         }
 
         /**
-         * DisableURLInternet.
+         * <p>Specifies whether to disable access to the default Internet domain. If you set this parameter to true, a 403 error is returned if you access the default public URL provided by the application. A value of false does not have affect the running of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableURLInternet(Boolean disableURLInternet) {
             this.disableURLInternet = disableURLInternet;
@@ -109,7 +115,7 @@ public class UpdateWebApplicationTrafficConfigInput extends TeaModel {
         }
 
         /**
-         * RevisionsTrafficWeight.
+         * <p>The traffic distribution for the application versions. The sum of traffic percentages for all versions must be equal to 1.</p>
          */
         public Builder revisionsTrafficWeight(java.util.Map<String, Float> revisionsTrafficWeight) {
             this.revisionsTrafficWeight = revisionsTrafficWeight;
@@ -117,7 +123,7 @@ public class UpdateWebApplicationTrafficConfigInput extends TeaModel {
         }
 
         /**
-         * WebAclConfig.
+         * <p>The configurations of the access control list (ACL) that consists of IP addresses.</p>
          */
         public Builder webAclConfig(WebAclConfig webAclConfig) {
             this.webAclConfig = webAclConfig;

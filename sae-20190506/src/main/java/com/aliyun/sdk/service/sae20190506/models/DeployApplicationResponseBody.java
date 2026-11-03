@@ -132,12 +132,12 @@ public class DeployApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Take note of the following rules:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Client error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class DeployApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,14 +157,14 @@ public class DeployApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed. Take note of the following rules:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>Application.MissingJdk</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -172,10 +172,10 @@ public class DeployApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned. Take note of the following rules:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code: If the call fails, an error code is returned.</li>
+         * <li>If the request is normal, <strong>success</strong> is returned.</li>
+         * <li>If the request is abnormal, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class DeployApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3***</p>
@@ -198,10 +198,10 @@ public class DeployApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the application deployment is successful. Take note of the following rules:</p>
+         * <p>Indicates whether the application deployment is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The deployment is successful.</li>
+         * <li><strong>false</strong>: The deployment fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class DeployApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The trace ID, which is used to accurately query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>ac1a0b2215622246421415014e****</p>
@@ -306,7 +306,7 @@ public class DeployApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the change order. It can be used to query the task status.</p>
+             * <p>The returned change order ID, which is used to query the task execution status.</p>
              * 
              * <strong>example:</strong>
              * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>
@@ -317,10 +317,10 @@ public class DeployApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether approval is required when a RAM user performs release. Take note of the following rules:</p>
+             * <p>Specifies whether the change publish by a Resource Access Management (RAM) user requires approval. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Approval is required.</li>
+             * <li><strong>false</strong>: Approval is not required.</li>
              * </ul>
              * 
              * <strong>example:</strong>

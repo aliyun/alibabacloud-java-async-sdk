@@ -132,12 +132,12 @@ public class RestartApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Take note of the following rules:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: success.</li>
+         * <li><strong>3xx</strong>: redirection.</li>
+         * <li><strong>4xx</strong>: request error.</li>
+         * <li><strong>5xx</strong>: server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class RestartApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,14 +157,14 @@ public class RestartApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed. Take note of the following rules:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>InvalidApplication.NotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -172,10 +172,10 @@ public class RestartApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned. Take note of the following rules:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code: If the call fails, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,10 +198,10 @@ public class RestartApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the instance is successfully restarted. Take note of the following rules:</p>
+         * <p>Indicates whether the instance was restarted successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The instance was restarted successfully.</li>
+         * <li><strong>false</strong>: The instance failed to be restarted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class RestartApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The trace ID, which is used to query invocation details.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -269,7 +269,7 @@ public class RestartApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the change process.</p>
+             * <p>The ID of the change order.</p>
              * 
              * <strong>example:</strong>
              * <p>4a815998-b468-4bea-b7d8-59f52a44****</p>

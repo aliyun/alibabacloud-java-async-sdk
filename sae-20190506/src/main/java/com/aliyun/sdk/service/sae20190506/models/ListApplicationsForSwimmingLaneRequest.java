@@ -100,7 +100,7 @@ public class ListApplicationsForSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The ID of a namespace.</p>
+         * <p>The namespace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class ListApplicationsForSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The canary tag</p>
+         * <p>The canary tag.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;alicloud.service.tag&quot;:&quot;gray&quot;}</p>

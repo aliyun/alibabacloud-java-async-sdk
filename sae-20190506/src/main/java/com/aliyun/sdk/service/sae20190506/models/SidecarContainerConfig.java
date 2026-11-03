@@ -236,7 +236,10 @@ public class SidecarContainerConfig extends TeaModel {
         } 
 
         /**
-         * AcrInstanceId.
+         * <p>The ID of the Container Registry ACR Enterprise instance. This parameter is required when ImageUrl is a Container Registry Enterprise instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xxxxxx</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.acrInstanceId = acrInstanceId;
@@ -244,7 +247,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * Command.
+         * <p>The image startup command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python</p>
          */
         public Builder command(String command) {
             this.command = command;
@@ -252,7 +258,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * CommandArgs.
+         * <p>The image startup command arguments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;a&quot;,&quot;b&quot;]</p>
          */
         public Builder commandArgs(String commandArgs) {
             this.commandArgs = commandArgs;
@@ -260,7 +269,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * ConfigMapMountDesc.
+         * <p>The ConfigMap mount description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;configMapId&quot;:16,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
          */
         public Builder configMapMountDesc(String configMapMountDesc) {
             this.configMapMountDesc = configMapMountDesc;
@@ -268,7 +280,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * Cpu.
+         * <p>Cpu</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder cpu(Integer cpu) {
             this.cpu = cpu;
@@ -276,7 +291,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * EmptyDirDesc.
+         * <p>The EmptyDir description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;name\&quot;:\&quot;workdir\&quot;,\&quot;mountPath\&quot;:\&quot;/usr/local/tomcat/webapps\&quot;}]</p>
          */
         public Builder emptyDirDesc(String emptyDirDesc) {
             this.emptyDirDesc = emptyDirDesc;
@@ -284,7 +302,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * Envs.
+         * <p>The container environment variable parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;TEST_ENV_KEY&quot;,&quot;value&quot;:&quot;TEST_ENV_VAR&quot;}]</p>
          */
         public Builder envs(String envs) {
             this.envs = envs;
@@ -292,7 +313,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * ImageUrl.
+         * <p>The image URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/demo/nginx:latest</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
@@ -300,7 +324,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * Liveness.
+         * <p>The liveness probe configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
          */
         public Builder liveness(String liveness) {
             this.liveness = liveness;
@@ -308,7 +335,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>Memory</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -316,7 +346,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The container name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -324,7 +357,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * PostStart.
+         * <p>The PostStart configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</p>
          */
         public Builder postStart(String postStart) {
             this.postStart = postStart;
@@ -332,7 +368,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * PreStop.
+         * <p>The PreStop configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</p>
          */
         public Builder preStop(String preStop) {
             this.preStop = preStop;
@@ -340,7 +379,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * Readiness.
+         * <p>The readiness probe configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
          */
         public Builder readiness(String readiness) {
             this.readiness = readiness;
@@ -348,7 +390,10 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
-         * SecretMountDesc.
+         * <p>The Secret mount description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;secretId&quot;:10,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
          */
         public Builder secretMountDesc(String secretMountDesc) {
             this.secretMountDesc = secretMountDesc;

@@ -132,11 +132,11 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code or the error code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
          * <li><strong>2xx</strong>: Success.</li>
          * <li><strong>3xx</strong>: Redirection.</li>
-         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>4xx</strong>: Client error.</li>
          * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
@@ -157,11 +157,14 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code. Value values:</p>
+         * <p>The error code. Description:</p>
          * <ul>
-         * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +172,10 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned. Value description:</p>
+         * <p>The additional information. Description:</p>
          * <ul>
-         * <li>If the request was successful, a success message is returned.</li>
-         * <li>An error code is returned if the request failed.</li>
+         * <li>If the request is normal, success is returned.</li>
+         * <li>If the request is abnormal, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +187,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -195,10 +198,10 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the creation or update was successful. Valid values:</p>
+         * <p>Specifies whether the traffic lane is created or updated successfully. Valid values:</p>
          * <ul>
-         * <li>true: created.</li>
-         * <li>false: failed to create.</li>
+         * <li>true: The traffic lane is created or updated successfully.</li>
+         * <li>false: The traffic lane fails to be created or updated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * <p>The trace ID used to query call information accurately.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -266,7 +269,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the lane.</p>
+             * <p>The ID of the traffic lane.</p>
              * 
              * <strong>example:</strong>
              * <p>22318</p>

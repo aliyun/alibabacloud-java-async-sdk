@@ -55,6 +55,10 @@ public class WebAclEntryConfig extends TeaModel {
         } 
 
         /**
+         * <p>The IP address.</p>
+         * <blockquote>
+         * <p> CIDR notation is not supported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

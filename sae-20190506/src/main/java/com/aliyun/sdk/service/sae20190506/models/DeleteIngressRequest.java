@@ -60,7 +60,7 @@ public class DeleteIngressRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the routing rule that you want to delete. You can call the <a href="https://help.aliyun.com/document_detail/153934.html">ListIngresses</a> operation to obtain the ID of a routing rule.</p>
+         * <p>The ID of the ingress rule to delete. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/153934.html">ListIngresses</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

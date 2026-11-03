@@ -144,7 +144,7 @@ public class BindSlbRequest extends Request {
         } 
 
         /**
-         * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
+         * <p>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * <p>lb-bp1tg0k6d9nqaw7l1****</p>
+         * <p>lb-bp1tg0k6d9nqaw7l1\<em>\</em>\<em>\</em></p>
          * 
          * <strong>example:</strong>
          * <p>lb-bp1tg0k6d9nqaw7l1****</p>
@@ -225,7 +225,7 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * <p>lb-bp1tg0k6d9nqaw7l1****</p>
+         * <p>lb-bp1tg0k6d9nqaw7l1\<em>\</em>\<em>\</em></p>
          * 
          * <strong>example:</strong>
          * <p>lb-bp1tg0k6d9nqaw7l1****</p>

@@ -130,7 +130,15 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         } 
 
         /**
-         * <p>2</p>
+         * <p>The status of the change order. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: preparing</li>
+         * <li><strong>1</strong>: executing</li>
+         * <li><strong>2</strong>: succeeded</li>
+         * <li><strong>3</strong>: failed</li>
+         * <li><strong>6</strong>: terminated</li>
+         * <li><strong>10</strong>: failed due to a system exception</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -142,7 +150,11 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * <p>CoBatchStartApplication</p>
+         * <p>The type of the change order. Valid values:</p>
+         * <ul>
+         * <li><strong>CoBatchStartApplication</strong>: Starts applications in batches.</li>
+         * <li><strong>CoBatchStopApplication</strong>: Stops applications in batches.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CoBatchStartApplication</p>
@@ -154,7 +166,7 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * <p>1</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -166,7 +178,7 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * <p>test</p>
+         * <p>The keyword used for fuzzy matching of the change order description. All change orders whose descriptions contain this <strong>key</strong> are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -178,7 +190,7 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * <p>cn-shanghai:test</p>
+         * <p>The namespace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +203,7 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * <p>20</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

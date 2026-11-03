@@ -80,7 +80,7 @@ public class WebTLSConfig extends TeaModel {
         } 
 
         /**
-         * CipherSuites.
+         * <p>The supported cipher suites.</p>
          */
         public Builder cipherSuites(java.util.List<String> cipherSuites) {
             this.cipherSuites = cipherSuites;
@@ -88,7 +88,10 @@ public class WebTLSConfig extends TeaModel {
         }
 
         /**
-         * MaxVersion.
+         * <p>The supported maximum TLS protocol version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLSv1.3</p>
          */
         public Builder maxVersion(String maxVersion) {
             this.maxVersion = maxVersion;
@@ -96,7 +99,10 @@ public class WebTLSConfig extends TeaModel {
         }
 
         /**
-         * MinVersion.
+         * <p>The supported minimum TLS protocol version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLSv1.0</p>
          */
         public Builder minVersion(String minVersion) {
             this.minVersion = minVersion;

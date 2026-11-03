@@ -67,7 +67,10 @@ public class TCPSocketAction extends TeaModel {
         } 
 
         /**
-         * Host.
+         * <p>Optional. The hostname to which you want to connect. The default value is the IP address of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -75,7 +78,10 @@ public class TCPSocketAction extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>The port number that you want to access on the container. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder port(Integer port) {
             this.port = port;

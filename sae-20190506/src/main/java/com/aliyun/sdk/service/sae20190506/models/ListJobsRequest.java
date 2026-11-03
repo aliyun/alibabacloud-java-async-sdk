@@ -197,7 +197,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The parameter value is a positive integer that is greater than or equal to 1.</p>
+         * <p>The current page number. Valid values start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -209,10 +209,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The dimension by which applications are filtered. Valid values:</p>
+         * <p>The dimension used to filter job templates. Valid values:</p>
          * <ul>
-         * <li><strong>appName</strong>: Applications are filtered by job template name.</li>
-         * <li><strong>appIds</strong>: Applications are filtered by job template ID.</li>
+         * <li><strong>appName</strong>: the job template name</li>
+         * <li><strong>appIds</strong>: the job template ID</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,7 +225,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Enter the name and ID of the job template.</p>
+         * <p>The value used to filter job templates based on the dimension specified by the <strong>FieldType</strong> parameter. Enter the job template name or job template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-app</p>
@@ -237,7 +237,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The namespace ID.</p>
+         * <p>The ID of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:demo</p>
@@ -249,10 +249,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Specifies how applications are sorted. Valid values:</p>
+         * <p>The field used to sort job templates. Valid values:</p>
          * <ul>
-         * <li><strong>running</strong>: The applications are sorted based on the number of running instances.</li>
-         * <li><strong>instances</strong>: The applications are sorted based on the number of destination instances.</li>
+         * <li><strong>running</strong>: sort by the current number target instances</li>
+         * <li><strong>instances</strong>: sort by the target number target instances</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid value: 0 to 200.</p>
+         * <p>The number of entries per page. Valid values: 0 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -277,10 +277,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to sort the field names that are passed by <strong>OrderBy</strong> in ascending order. Valid values:</p>
+         * <p>Specifies whether to reverse the sort order based on the field specified by the <strong>OrderBy</strong> parameter. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: in ascending order</li>
-         * <li><strong>false</strong>: in descending order</li>
+         * <li><strong>true</strong>: sort in ascending order</li>
+         * <li><strong>false</strong>: sort in descending order</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -293,7 +293,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The tags that are displayed in a JSON string. Valid values:</p>
+         * <p>The list of tags. The value is a JSON string that contains the following fields:</p>
          * <ul>
          * <li><strong>key</strong>: the tag key</li>
          * <li><strong>value</strong>: the tag value</li>
@@ -309,7 +309,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Set the value to <code>job</code>.</p>
+         * <p>The workload type. Set the value to <code>job</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>job</p>

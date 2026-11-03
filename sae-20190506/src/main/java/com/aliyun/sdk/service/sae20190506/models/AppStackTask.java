@@ -145,7 +145,10 @@ public class AppStackTask extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1706518652</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -153,7 +156,10 @@ public class AppStackTask extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1706518652</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -161,7 +167,10 @@ public class AppStackTask extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-789y</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -169,7 +178,10 @@ public class AppStackTask extends TeaModel {
         }
 
         /**
-         * StackId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>palworld</p>
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -177,7 +189,10 @@ public class AppStackTask extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1706518652</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -185,7 +200,10 @@ public class AppStackTask extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WAIT</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -193,7 +211,7 @@ public class AppStackTask extends TeaModel {
         }
 
         /**
-         * Steps.
+         * <p>The step list.</p>
          */
         public Builder steps(java.util.List<Steps> steps) {
             this.steps = steps;
@@ -201,7 +219,10 @@ public class AppStackTask extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-789y-deploy</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -345,7 +366,10 @@ public class AppStackTask extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -353,7 +377,10 @@ public class AppStackTask extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The step duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -361,7 +388,10 @@ public class AppStackTask extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1706518652</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -369,7 +399,10 @@ public class AppStackTask extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The step ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC_CREATE_NETWORK</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -377,7 +410,10 @@ public class AppStackTask extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -385,7 +421,10 @@ public class AppStackTask extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The step name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Initialize VPC network</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -393,7 +432,10 @@ public class AppStackTask extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1706518652</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -401,7 +443,10 @@ public class AppStackTask extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The step status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WAIT</p>
              */
             public Builder status(String status) {
                 this.status = status;

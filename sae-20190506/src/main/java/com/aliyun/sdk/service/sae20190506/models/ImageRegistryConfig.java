@@ -67,7 +67,7 @@ public class ImageRegistryConfig extends TeaModel {
         } 
 
         /**
-         * AuthConfig.
+         * <p>The authentication configuration for the image repository.</p>
          */
         public Builder authConfig(RegistryAuthenticationConfig authConfig) {
             this.authConfig = authConfig;
@@ -75,7 +75,7 @@ public class ImageRegistryConfig extends TeaModel {
         }
 
         /**
-         * CertConfig.
+         * <p>The certificate configuration for the image repository.</p>
          */
         public Builder certConfig(RegistryCertificateConfig certConfig) {
             this.certConfig = certConfig;

@@ -106,7 +106,10 @@ public class HTTPGetAction extends TeaModel {
         } 
 
         /**
-         * Host.
+         * <p>The hostname to which you want to connect. The default value is the IP address of the pod. You may need to specify Host in HttpHeaders.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.22.XX.XX</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -114,7 +117,7 @@ public class HTTPGetAction extends TeaModel {
         }
 
         /**
-         * HttpHeaders.
+         * <p>The custom headers that you need to specify in the request. Duplicate headers are allowed in an HTTP request.</p>
          */
         public Builder httpHeaders(java.util.List<HTTPHeader> httpHeaders) {
             this.httpHeaders = httpHeaders;
@@ -122,7 +125,10 @@ public class HTTPGetAction extends TeaModel {
         }
 
         /**
-         * Path.
+         * <p>The path of a URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path1</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -130,7 +136,10 @@ public class HTTPGetAction extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>The port range. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -138,7 +147,10 @@ public class HTTPGetAction extends TeaModel {
         }
 
         /**
-         * Scheme.
+         * <p>The scheme that you want to use to connect to the host. Default value: http.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         public Builder scheme(String scheme) {
             this.scheme = scheme;

@@ -132,12 +132,12 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Take note of the following rules:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirect.</li>
+         * <li><strong>4xx</strong>: Client error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,11 +149,7 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
-         * <ul>
-         * <li>If the request is successful, this parameter is not returned.****</li>
-         * <li>This parameter is returned only if the request failed.**** For more information, see <strong>Error codes</strong> in this topic.</li>
-         * </ul>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,14 +157,14 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed. Take note of the following rules:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>The ErrorCode parameter is not returned if the request succeeds.</li>
-         * <li>If the call fails, the ErrorCode parameter is returned. For more information, see the &quot;Error codes&quot; section of this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>NULL</p>
+         * <p>System.Upgrading</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -176,7 +172,11 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The additional information. Valid values:</p>
+         * <ul>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If an exception occurs, a specific error code is returned.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -187,7 +187,7 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -198,10 +198,10 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the application deployment is successful. Take note of the following rules:</p>
+         * <p>Indicates whether the applications were started successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The applications were started successfully.</li>
+         * <li><strong>false</strong>: The applications failed to start.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the change order.</p>
+         * <p>The trace ID used to query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -269,13 +269,7 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP status code. Valid values:</p>
-             * <ul>
-             * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-             * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-             * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-             * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
-             * </ul>
+             * <p>The change order ID.</p>
              * 
              * <strong>example:</strong>
              * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>

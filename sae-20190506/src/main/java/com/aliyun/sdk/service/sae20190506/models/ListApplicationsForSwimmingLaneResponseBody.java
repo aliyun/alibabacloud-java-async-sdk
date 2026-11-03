@@ -119,12 +119,16 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code or the error code. Valid values:</p>
+         * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><p><strong>2xx</strong>: Success.</p>
+         * </li>
+         * <li><p><strong>3xx</strong>: Redirection.</p>
+         * </li>
+         * <li><p><strong>4xx</strong>: Client error.</p>
+         * </li>
+         * <li><p><strong>5xx</strong>: Server error.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +140,7 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of applications.</p>
+         * <p>The application list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -144,11 +148,16 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code. Value values:</p>
+         * <p>The error code.</p>
          * <ul>
-         * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-         * <li>If the request failed, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> section in this topic.</li>
+         * <li><p>The parameter is an empty string if the request is successful.</p>
+         * </li>
+         * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+         * </li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,10 +165,12 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned. The following limits are imposed on the ID:</p>
+         * <p>The response message. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, <strong>success</strong> is returned.</li>
-         * <li>An error code is returned when a request failed.</li>
+         * <li><p><strong>success</strong> is returned if the request is successful.</p>
+         * </li>
+         * <li><p>A specific error code is returned if the request fails.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +182,7 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * <p>The trace ID used to query the details of a request.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -182,10 +193,12 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the list of application instances was queried. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The instance groups were obtained.</li>
-         * <li><strong>false</strong>: The instance groups failed to be obtained.</li>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -333,7 +346,7 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
@@ -344,7 +357,7 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>demo-app</p>
@@ -388,7 +401,7 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>MSE Instance Name</p>
+             * <p>The name of the MSE instance.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -399,7 +412,7 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace to which the MSE instance belongs.</p>
+             * <p>The ID of the namespace in which the MSE instance resides.</p>
              * 
              * <strong>example:</strong>
              * <p>sae-test</p>
@@ -410,7 +423,7 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The canary tag configured for the application.</p>
+             * <p>The canary tags configured for the application.</p>
              */
             public Builder serviceTags(java.util.Map<String, String> serviceTags) {
                 this.serviceTags = serviceTags;

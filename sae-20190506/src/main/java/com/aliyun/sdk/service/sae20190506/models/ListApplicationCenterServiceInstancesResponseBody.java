@@ -132,7 +132,10 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
         } 
 
         /**
-         * Code.
+         * <p>The API status code or POP error code. Valid values: 2xx: Success. 3xx: Redirection. 4xx: Client error. 5xx: Server error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
         }
 
         /**
-         * Data.
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the Error codes section in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Empty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +162,10 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
         }
 
         /**
-         * Message.
+         * <p>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -175,7 +184,10 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -183,7 +195,10 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a981dd515966966104121683d****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -288,7 +303,10 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10-28T02:18:51Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -296,7 +314,10 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
             }
 
             /**
-             * Name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tftestacc54</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -304,7 +325,10 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
             }
 
             /**
-             * ServiceInstanceId.
+             * <p>The service instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>si-2063aea4b23b4781a26b</p>
              */
             public Builder serviceInstanceId(String serviceInstanceId) {
                 this.serviceInstanceId = serviceInstanceId;
@@ -312,7 +336,10 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
             }
 
             /**
-             * ServiceName.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-service</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -320,7 +347,10 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dify HA</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -374,7 +404,7 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
             } 
 
             /**
-             * ServiceInstances.
+             * <p>The list of service instances.</p>
              */
             public Builder serviceInstances(java.util.List<ServiceInstances> serviceInstances) {
                 this.serviceInstances = serviceInstances;

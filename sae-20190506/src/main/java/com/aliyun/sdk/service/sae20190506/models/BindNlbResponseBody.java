@@ -134,10 +134,10 @@ public class BindNlbResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: success.</li>
+         * <li><strong>3xx</strong>: redirection.</li>
+         * <li><strong>4xx</strong>: request error.</li>
+         * <li><strong>5xx</strong>: server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class BindNlbResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,10 +157,10 @@ public class BindNlbResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code. Value values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          */
         public Builder errorCode(String errorCode) {
@@ -169,10 +169,10 @@ public class BindNlbResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned. Valid values:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, <strong>success</strong> is returned.</li>
-         * <li>If the request failed, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,9 +195,9 @@ public class BindNlbResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the applications were stopped. Valid values:</p>
+         * <p>Indicates whether the applications were stopped in batches successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The applications were stopped.</li>
+         * <li><strong>true</strong>: The applications were stopped successfully.</li>
          * <li><strong>false</strong>: The applications failed to be stopped.</li>
          * </ul>
          * 
@@ -210,7 +210,7 @@ public class BindNlbResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * <p>The trace ID, which is used to accurately query the call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a06dfe717389800573793090e0589</p>
@@ -266,7 +266,7 @@ public class BindNlbResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the change order. The ID can be used to query the status of the change task.</p>
+             * <p>The ID of the change order, which is used to query the execution status of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>ba386059-69b1-4e65-b1e5-0682d9fa****</p>

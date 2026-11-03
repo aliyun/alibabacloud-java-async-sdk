@@ -88,7 +88,10 @@ public class UpdateNamespaceVpcRequest extends Request {
         } 
 
         /**
-         * NameSpaceShortId.
+         * <p>The short-format namespace ID. You do not need to include the region ID. We recommend that you use this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nameSpaceShortId(String nameSpaceShortId) {
             this.putQueryParameter("NameSpaceShortId", nameSpaceShortId);
@@ -97,7 +100,7 @@ public class UpdateNamespaceVpcRequest extends Request {
         }
 
         /**
-         * <p>vpc-2ze0i263cnn311nvj****</p>
+         * <p>The long-format namespace ID. If you set this parameter, it takes precedence over NameSpaceShortId. This parameter is for backward compatibility. Use the short-format namespace ID to simplify the request.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>
@@ -109,7 +112,7 @@ public class UpdateNamespaceVpcRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the VPC. This VPC replaces the original VPC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

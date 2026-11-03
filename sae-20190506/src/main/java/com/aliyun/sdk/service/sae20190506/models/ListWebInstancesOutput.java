@@ -80,7 +80,10 @@ public class ListWebInstancesOutput extends TeaModel {
         } 
 
         /**
-         * CurrentError.
+         * <p>The error message of instance creation. If the instance creation was successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder currentError(String currentError) {
             this.currentError = currentError;
@@ -88,7 +91,7 @@ public class ListWebInstancesOutput extends TeaModel {
         }
 
         /**
-         * WebInstances.
+         * <p>The application instance.</p>
          */
         public Builder webInstances(java.util.List<WebInstanceInfo> webInstances) {
             this.webInstances = webInstances;
@@ -96,7 +99,7 @@ public class ListWebInstancesOutput extends TeaModel {
         }
 
         /**
-         * WebVersionStatus.
+         * <p>The instance status.</p>
          */
         public Builder webVersionStatus(java.util.Map<String, WebVersionStatus> webVersionStatus) {
             this.webVersionStatus = webVersionStatus;

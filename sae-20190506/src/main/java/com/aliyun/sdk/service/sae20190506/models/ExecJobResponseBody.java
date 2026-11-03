@@ -132,12 +132,12 @@ public class ExecJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values: </p>
+         * <p>The HTTP status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Client error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,9 +159,12 @@ public class ExecJobResponseBody extends TeaModel {
         /**
          * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidApplication.NotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +172,10 @@ public class ExecJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Valid values:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code: If the call fails, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,10 +198,10 @@ public class ExecJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the job was executed successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The execution was successful.</li>
+         * <li><strong>false</strong>: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class ExecJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+         * <p>The trace ID, which is used to precisely query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0b87b7e716575071334387401e****</p>
@@ -305,12 +308,12 @@ public class ExecJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP status code. Valid values: </p>
+             * <p>The HTTP status code or POP error code. Valid values:</p>
              * <ul>
-             * <li><strong>2xx</strong>: The call was successful.</li>
-             * <li><strong>3xx</strong>: The call was redirected.</li>
-             * <li><strong>4xx</strong>: The call failed.</li>
-             * <li><strong>5xx</strong>: A server error occurred.</li>
+             * <li><strong>2xx</strong>: Success.</li>
+             * <li><strong>3xx</strong>: Redirection.</li>
+             * <li><strong>4xx</strong>: Client error.</li>
+             * <li><strong>5xx</strong>: Server error.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -333,10 +336,10 @@ public class ExecJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned message. Valid values:</p>
+             * <p>The additional information. Valid values:</p>
              * <ul>
-             * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-             * <li>An error code: If the call fails, an error code is returned.</li>
+             * <li>If the request is successful, <strong>success</strong> is returned.</li>
+             * <li>If the request fails, a specific error code is returned.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -348,10 +351,10 @@ public class ExecJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <p>Indicates whether the job was executed successfully. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: The execution was successful.</li>
+             * <li><strong>false</strong>: The execution failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -75,7 +75,7 @@ public class DisableApplicationScalingRuleRequest extends Request {
         } 
 
         /**
-         * <p>timer-0800-2100</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DisableApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The elastic scaling policy name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -132,12 +132,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirect.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,11 +157,14 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. Valid values:</p>
+         * <p>The error code.</p>
          * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.Obviously</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +172,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Valid values:</p>
+         * <p>The additional information.</p>
          * <ul>
-         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code: If the call fails, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If an exception occurs, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,10 +198,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the mapping relationships between applications and tags were queried. Valid values:</p>
+         * <p>Indicates whether the mapping between applications and tags was successfully queried. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The mapping relationships were queried.</li>
-         * <li><strong>false</strong>: The mapping relationships failed to be queried.</li>
+         * <li><strong>true</strong>: The query was successful.</li>
+         * <li><strong>false</strong>: The query failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The trace ID. You can use this ID to precisely query the call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc5f84e15916043198032146d****</p>
@@ -305,7 +308,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d42921c4-5433-4abd-8075-0e536f8b****</p>
@@ -316,7 +319,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. Valid value: <code>application</code>.</p>
+             * <p>The resource type. Only <code>application</code> is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN::SAE::APPLICATION</p>
@@ -327,7 +330,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>k1</p>
@@ -338,7 +341,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -408,7 +411,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A maximum of 50 entries can be returned for a query. If a query generates more than 50 entries, the NextToken parameter is returned with the first 50 entries. You can use the NextToken parameter value to retrieve the subsequent entries that are not returned in the current query result.</p>
+             * <p>The pagination token. A single query returns up to 50 results. If the total number of results exceeds 50, a NextToken is returned. You can use this token in the next query to retrieve the remaining results.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;&quot;</p>
@@ -419,7 +422,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mapping relationships between applications and tags.</p>
+             * <p>The mapping between applications and tags.</p>
              */
             public Builder tagResources(java.util.List<TagResources> tagResources) {
                 this.tagResources = tagResources;

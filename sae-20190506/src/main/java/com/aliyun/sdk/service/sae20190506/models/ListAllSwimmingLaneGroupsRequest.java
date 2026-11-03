@@ -59,7 +59,7 @@ public class ListAllSwimmingLaneGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of a namespace.</p>
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>

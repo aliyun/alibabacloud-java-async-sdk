@@ -132,7 +132,16 @@ public class UpdateSecretResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code or POP error code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +149,7 @@ public class UpdateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +157,14 @@ public class UpdateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. Take note of the following items:</p>
+         * <ul>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +172,10 @@ public class UpdateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information about the call result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +183,10 @@ public class UpdateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +194,14 @@ public class UpdateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the Secret instance was updated successfully. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The update was successful.</li>
+         * <li><strong>false</strong>: The update failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +209,10 @@ public class UpdateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID used to query the call information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -233,7 +265,10 @@ public class UpdateSecretResponseBody extends TeaModel {
             } 
 
             /**
-             * SecretId.
+             * <p>The instance ID of the Secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder secretId(Long secretId) {
                 this.secretId = secretId;

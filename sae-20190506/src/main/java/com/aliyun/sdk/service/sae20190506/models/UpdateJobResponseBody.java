@@ -132,12 +132,12 @@ public class UpdateJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: success.</li>
+         * <li><strong>3xx</strong>: redirection.</li>
+         * <li><strong>4xx</strong>: client error.</li>
+         * <li><strong>5xx</strong>: server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class UpdateJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,14 +157,14 @@ public class UpdateJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>Application.MissingJdk</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -172,10 +172,10 @@ public class UpdateJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned. Valid values:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code: If the call fails, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class UpdateJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3***</p>
@@ -198,10 +198,10 @@ public class UpdateJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the application deployment is successful. Valid values:</p>
+         * <p>Indicates whether the job template was updated. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The job template was updated.</li>
+         * <li><strong>false</strong>: The job template failed to be updated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class UpdateJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The trace ID used to accurately query the call information.</p>
          * 
          * <strong>example:</strong>
          * <p>ac1a0b2215622246421415014e****</p>
@@ -282,7 +282,7 @@ public class UpdateJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application ID.</p>
+             * <p>The ID of the job template.</p>
              * 
              * <strong>example:</strong>
              * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -293,7 +293,7 @@ public class UpdateJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the change order. It can be used to query the task status.</p>
+             * <p>The ID of the returned change order, which is used to query the job execution status.</p>
              * 
              * <strong>example:</strong>
              * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>

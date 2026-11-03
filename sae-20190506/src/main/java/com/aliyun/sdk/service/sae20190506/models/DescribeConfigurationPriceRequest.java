@@ -159,7 +159,15 @@ public class DescribeConfigurationPriceRequest extends Request {
         } 
 
         /**
-         * BestEffortType.
+         * <p>The BestEffort policy. Valid values:</p>
+         * <ul>
+         * <li>besteffort: BestEffort.</li>
+         * <li>try-besteffort: BestEffort preferred.</li>
+         * <li>default: Default.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder bestEffortType(String bestEffortType) {
             this.putQueryParameter("BestEffortType", bestEffortType);
@@ -168,7 +176,7 @@ public class DescribeConfigurationPriceRequest extends Request {
         }
 
         /**
-         * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+         * <p>The required CPU for each instance, in millicores. The value cannot be 0. Only the following defined specifications are supported:</p>
          * <ul>
          * <li><strong>500</strong></li>
          * <li><strong>1000</strong></li>
@@ -191,7 +199,10 @@ public class DescribeConfigurationPriceRequest extends Request {
         }
 
         /**
-         * GpuA10.
+         * <p>The number of A10 GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder gpuA10(String gpuA10) {
             this.putQueryParameter("GpuA10", gpuA10);
@@ -200,7 +211,10 @@ public class DescribeConfigurationPriceRequest extends Request {
         }
 
         /**
-         * GpuPpu810e.
+         * <p>The number of PPU 810E units.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder gpuPpu810e(String gpuPpu810e) {
             this.putQueryParameter("GpuPpu810e", gpuPpu810e);
@@ -209,18 +223,18 @@ public class DescribeConfigurationPriceRequest extends Request {
         }
 
         /**
-         * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+         * <p>The required memory for each instance, in MB. The value cannot be 0. Memory has a one-to-one mapping with CPU. Only the following defined specifications are supported:</p>
          * <ul>
-         * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
-         * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
-         * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
-         * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8,000.</li>
-         * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
-         * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
-         * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
-         * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
-         * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
-         * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+         * <li><strong>1024</strong>: Corresponds to 500 and 1000 millicores.</li>
+         * <li><strong>2048</strong>: Corresponds to 500, 1000, and 2000 millicores.</li>
+         * <li><strong>4096</strong>: Corresponds to 1000, 2000, and 4000 millicores.</li>
+         * <li><strong>8192</strong>: Corresponds to 2000, 4000, and 8000 millicores.</li>
+         * <li><strong>12288</strong>: Corresponds to 12000 millicores.</li>
+         * <li><strong>16384</strong>: Corresponds to 4000, 8000, and 16000 millicores.</li>
+         * <li><strong>24576</strong>: Corresponds to 12000 millicores.</li>
+         * <li><strong>32768</strong>: Corresponds to 16000 millicores.</li>
+         * <li><strong>65536</strong>: Corresponds to 8000, 16000, and 32000 millicores.</li>
+         * <li><strong>131072</strong>: Corresponds to 32000 millicores.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -234,7 +248,15 @@ public class DescribeConfigurationPriceRequest extends Request {
         }
 
         /**
-         * NewSaeVersion.
+         * <p>The application edition. Valid values:</p>
+         * <ul>
+         * <li>lite: Lite Edition.</li>
+         * <li>std: Standard Edition.</li>
+         * <li>pro: Professional Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>std</p>
          */
         public Builder newSaeVersion(String newSaeVersion) {
             this.putQueryParameter("NewSaeVersion", newSaeVersion);
@@ -243,7 +265,10 @@ public class DescribeConfigurationPriceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values: NULL (default), default (default), and haiguang (Hygon server).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -252,10 +277,12 @@ public class DescribeConfigurationPriceRequest extends Request {
         }
 
         /**
-         * <p>Scenarios:</p>
+         * <p>Common scenarios. Valid values:</p>
          * <ul>
-         * <li>Web</li>
-         * <li>micro_service</li>
+         * <li><p>web</p>
+         * </li>
+         * <li><p>micro_service</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

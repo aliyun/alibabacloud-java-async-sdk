@@ -132,10 +132,12 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the list of change orders was obtained. Valid values:</p>
+         * <p>The HTTP status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: indicates that the list was obtained.</li>
-         * <li><strong>false</strong>: indicates that the list could not be obtained.</li>
+         * <li><strong>2xx</strong>: success</li>
+         * <li><strong>3xx</strong>: redirection</li>
+         * <li><strong>4xx</strong>: client error</li>
+         * <li><strong>5xx</strong>: server error</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +149,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about change orders.</p>
+         * <p>The information about the change order list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -155,13 +157,14 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The error code. Take note of the following items:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the error codes in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,7 +172,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * <p>The additional information about the call result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -180,7 +183,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>65E1F-43BA-4D0C-8E61-E4D1337F****</p>
@@ -191,7 +194,14 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the change order list was successfully queried. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: the query was successful</li>
+         * <li><strong>false</strong>: the query failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -199,7 +209,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about change orders.</p>
+         * <p>The trace ID, which is used to accurately query the call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0bb6f815638568884597879d****</p>
@@ -424,7 +434,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on each page.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>164341c-9708-4967-b3ec-24933767****</p>
@@ -435,7 +445,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who created the change order.</p>
+             * <p>The number of batches.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -446,7 +456,11 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the group.</p>
+             * <p>The batch type. Valid values:</p>
+             * <ul>
+             * <li><strong>auto</strong>: automatic</li>
+             * <li><strong>manual</strong>: manual</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>auto</p>
@@ -457,11 +471,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode in which the release batches are determined. Valid values:</p>
-             * <ul>
-             * <li><strong>auto</strong>: SAE automatically determines the release batches.</li>
-             * <li><strong>manual</strong>: You must manually determine the release batches.</li>
-             * </ul>
+             * <p>The change order ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7fa5c0-9ebb-4bb4-b383-1f885447****</p>
@@ -472,7 +482,10 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The change type, which is the description of the <strong>CoTypeCode</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create Application</p>
              */
             public Builder coType(String coType) {
                 this.coType = coType;
@@ -480,28 +493,28 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the change order. Valid values:</p>
+             * <p>The code of the change type. Valid values:</p>
              * <ul>
-             * <li><strong>CoBindSlb</strong>: associates the Server Load Balancer (SLB) instance with the application.</li>
-             * <li><strong>CoUnbindSlb</strong>: disassociates an SLB instance from the application.</li>
-             * <li><strong>CoCreateApp</strong>: creates the application.</li>
-             * <li><strong>CoDeleteApp</strong>: deletes the application.</li>
-             * <li><strong>CoDeploy</strong>: deploys the application.</li>
-             * <li><strong>CoRestartApplication</strong>: restarts the application.</li>
-             * <li><strong>CoRollback</strong>: rolls back the application.</li>
-             * <li><strong>CoScaleIn</strong>: scales in the application.</li>
-             * <li><strong>CoScaleOut</strong>: scales out the application.</li>
-             * <li><strong>CoStartApplication</strong>: starts the application.</li>
-             * <li><strong>CoStopApplication</strong>: stops the application.</li>
-             * <li><strong>CoRescaleApplicationVertically</strong>: modifies the instance type.</li>
-             * <li><strong>CoDeployHistroy</strong>: rolls back the application to an earlier version.</li>
-             * <li><strong>CoBindNas</strong>: associates a network-attached storage (NAS) file system with the application.</li>
-             * <li><strong>CoUnbindNas</strong>: disassociates a NAS file system from the application.</li>
-             * <li><strong>CoBatchStartApplication</strong>: starts multiple applications concurrently.</li>
-             * <li><strong>CoBatchStopApplication</strong>: stops multiple applications concurrently.</li>
-             * <li><strong>CoRestartInstances</strong>: restarts the instance.</li>
-             * <li><strong>CoDeleteInstances</strong>: deletes the instance.</li>
-             * <li><strong>CoScaleInAppWithInstances</strong>: reduces the specified number of application instances.</li>
+             * <li><strong>CoBindSlb</strong>: bind an SLB instance</li>
+             * <li><strong>CoUnbindSlb</strong>: unbind an SLB instance</li>
+             * <li><strong>CoCreateApp</strong>: create an application</li>
+             * <li><strong>CoDeleteApp</strong>: delete an application</li>
+             * <li><strong>CoDeploy</strong>: deploy an application</li>
+             * <li><strong>CoRestartApplication</strong>: restart an application</li>
+             * <li><strong>CoRollback</strong>: roll back an application</li>
+             * <li><strong>CoScaleIn</strong>: scale in an application</li>
+             * <li><strong>CoScaleOut</strong>: scale out an application</li>
+             * <li><strong>CoStartApplication</strong>: start an application</li>
+             * <li><strong>CoStopApplication</strong>: stop an application</li>
+             * <li><strong>CoRescaleApplicationVertically</strong>: change instance specifications</li>
+             * <li><strong>CoDeployHistroy</strong>: roll back to a historical version</li>
+             * <li><strong>CoBindNas</strong>: bind a NAS file system</li>
+             * <li><strong>CoUnbindNas</strong>: unbind a NAS file system</li>
+             * <li><strong>CoBatchStartApplication</strong>: start applications in batches</li>
+             * <li><strong>CoBatchStopApplication</strong>: stop applications in batches</li>
+             * <li><strong>CoRestartInstances</strong>: restart instances</li>
+             * <li><strong>CoDeleteInstances</strong>: delete instances</li>
+             * <li><strong>CoScaleInAppWithInstances</strong>: scale in specified instances</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -513,7 +526,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-07-11 15:54:49</p>
@@ -524,29 +537,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the change type. Valid values:</p>
-             * <ul>
-             * <li><strong>CoBindSlb</strong>: associates an SLB instance with the application.</li>
-             * <li><strong>CoUnbindSlb</strong>: disassociates the SLB instance from the application.</li>
-             * <li><strong>CoCreateApp</strong>: creates the application.</li>
-             * <li><strong>CoDeleteApp</strong>: deletes the application.</li>
-             * <li><strong>CoDeploy</strong>: deploys the application.</li>
-             * <li><strong>CoRestartApplication</strong>: restarts the application.</li>
-             * <li><strong>CoRollback</strong>: rolls back the application.</li>
-             * <li><strong>CoScaleIn</strong>: scales in the application.</li>
-             * <li><strong>CoScaleOut</strong>: scales out the application.</li>
-             * <li><strong>CoStart</strong>: starts the application.</li>
-             * <li><strong>CoStop</strong>: stops the application.</li>
-             * <li><strong>CoRescaleApplicationVertically</strong>: modifies the instance specifications.</li>
-             * <li><strong>CoDeployHistroy</strong>: rolls back the application to a historical version.</li>
-             * <li><strong>CoBindNas</strong>: associates a NAS file system with the application.</li>
-             * <li><strong>CoUnbindNas</strong>: disassociates the NAS file system from the application.</li>
-             * <li><strong>CoBatchStartApplication</strong>: starts multiple applications concurrently.</li>
-             * <li><strong>CoBatchStopApplication</strong>: stops multiple applications concurrently.</li>
-             * <li><strong>CoRestartInstances</strong>: restarts the instances.</li>
-             * <li><strong>CoDeleteInstances</strong>: deletes the instances.</li>
-             * <li><strong>CoScaleInAppWithInstances</strong>: reduces the number of the specified application instances.</li>
-             * </ul>
+             * <p>The ID of the user who created the change order.</p>
              * 
              * <strong>example:</strong>
              * <p>sae-beta-test</p>
@@ -557,7 +548,10 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The change type, which corresponds to the <strong>CoTypeCode</strong> parameter.</p>
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Version: 1.0 | Image name: nginx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -565,7 +559,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the change order was created.</p>
+             * <p>The end time.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-07-11 20:12:58</p>
@@ -576,7 +570,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description about the application.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c9ecd2-cf6c-46c3-9f20-525de202****</p>
@@ -587,7 +581,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of release batches.</p>
+             * <p>The source of the change order operation.</p>
              * 
              * <strong>example:</strong>
              * <p>console</p>
@@ -598,7 +592,19 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the change order was completed.</p>
+             * <p>The status of the change order. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: preparing</li>
+             * <li><strong>1</strong>: executing</li>
+             * <li><strong>2</strong>: executed successfully</li>
+             * <li><strong>3</strong>: execution failed</li>
+             * <li><strong>6</strong>: terminated</li>
+             * <li><strong>8</strong>: waiting for manual batch confirmation</li>
+             * <li><strong>9</strong>: waiting for automatic batch confirmation</li>
+             * <li><strong>10</strong>: execution failed due to a system exception</li>
+             * <li><strong>11</strong>: waiting for approval</li>
+             * <li><strong>12</strong>: approved and waiting for execution</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -609,7 +615,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the change order.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sae-beta-test</p>
@@ -705,7 +711,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The change orders.</p>
+             * <p>The list of change orders.</p>
              */
             public Builder changeOrderList(java.util.List<ChangeOrderList> changeOrderList) {
                 this.changeOrderList = changeOrderList;
@@ -713,7 +719,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of change orders.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -724,11 +730,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code.</p>
-             * <ul>
-             * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-             * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
-             * </ul>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -739,7 +741,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of change orders.</p>
+             * <p>The total number of change orders.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -80,7 +80,10 @@ public class PortProtocol extends TeaModel {
         } 
 
         /**
-         * Port.
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -88,7 +91,10 @@ public class PortProtocol extends TeaModel {
         }
 
         /**
-         * Protocol.
+         * <p>The protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -96,7 +102,10 @@ public class PortProtocol extends TeaModel {
         }
 
         /**
-         * TargetPort.
+         * <p>The destination port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder targetPort(Integer targetPort) {
             this.targetPort = targetPort;

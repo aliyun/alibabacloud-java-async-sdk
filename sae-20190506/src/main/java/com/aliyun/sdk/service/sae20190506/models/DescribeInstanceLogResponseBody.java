@@ -132,12 +132,16 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The interface state or POP error code. Valid values:</p>
+         * <p>The HTTP status code.</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li><p><strong>2xx</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>3xx</strong>: The request was redirected.</p>
+         * </li>
+         * <li><p><strong>4xx</strong>: A request error occurred.</p>
+         * </li>
+         * <li><p><strong>5xx</strong>: A server error occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +153,7 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of instance logs.</p>
+         * <p>The instance log.</p>
          * 
          * <strong>example:</strong>
          * <p>hello\nsae\n</p>
@@ -160,16 +164,16 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * <ul>
-         * <li><p>No error code returned if the request succeeded.</p>
+         * <li><p>This parameter is not returned if the request is successful.</p>
          * </li>
-         * <li><p>Error code returned if the request failed. Refer to error code list below for details.</p>
+         * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -177,9 +181,13 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
-         * <p>success is returned when the request succeeds.
-         * An error code is returned when the request fails.</p>
+         * <p>The message returned.</p>
+         * <ul>
+         * <li><p><strong>success</strong> is returned if the request is successful.</p>
+         * </li>
+         * <li><p>An error code is returned if the request fails.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -190,7 +198,7 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -201,11 +209,11 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the logs of the instance is obtained.</p>
+         * <p>Indicates whether the instance log was obtained. Valid values:</p>
          * <ul>
-         * <li><p>true: logs obtained.</p>
+         * <li><p><strong>true</strong>: The instance log was obtained.</p>
          * </li>
-         * <li><p>false: failed to obtain logs.</p>
+         * <li><p><strong>false</strong>: The instance log failed to be obtained.</p>
          * </li>
          * </ul>
          * 
@@ -218,7 +226,7 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Trace ID.</p>
+         * <p>The trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>

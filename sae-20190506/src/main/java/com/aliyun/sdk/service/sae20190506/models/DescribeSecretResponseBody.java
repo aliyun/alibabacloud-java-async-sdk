@@ -132,12 +132,12 @@ public class DescribeSecretResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class DescribeSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,14 +157,14 @@ public class DescribeSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned. Valid values:</p>
+         * <p>The error code.</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -172,10 +172,10 @@ public class DescribeSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned. Valid values:</p>
+         * <p>The additional information.</p>
          * <ul>
-         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code: If the call fails, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class DescribeSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -198,10 +198,10 @@ public class DescribeSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the details of the Secret instance are successfully queried. Valid values:</p>
+         * <p>Indicates whether the details of the Secret instance were queried successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The information was queried.</li>
-         * <li><strong>false</strong>: The image failed to be found.</li>
+         * <li><strong>true</strong>: The query was successful.</li>
+         * <li><strong>false</strong>: The query failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class DescribeSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The trace ID used to precisely query invocation information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -441,7 +441,7 @@ public class DescribeSecretResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1593746835111</p>
@@ -452,7 +452,7 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace.</p>
+             * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing:test</p>
@@ -463,7 +463,7 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The associated application.</p>
+             * <p>The associated applications.</p>
              */
             public Builder relateApps(java.util.List<RelateApps> relateApps) {
                 this.relateApps = relateApps;
@@ -471,7 +471,7 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Secret key-value pair data.</p>
+             * <p>The key-value pair data of the Secret.</p>
              */
             public Builder secretData(java.util.Map<String, String> secretData) {
                 this.secretData = secretData;
@@ -479,7 +479,7 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Secret instance.</p>
+             * <p>The Secret instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>
@@ -512,7 +512,7 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was updated.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1593746835111</p>

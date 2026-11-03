@@ -119,12 +119,12 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: success</li>
+         * <li><strong>3xx</strong>: redirection</li>
+         * <li><strong>4xx</strong>: request error</li>
+         * <li><strong>5xx</strong>: server error</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,11 +136,14 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. Valid values:</p>
+         * <p>The error code.</p>
          * <ul>
-         * <li>If the request was successful, this parameter is not returned.****</li>
-         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error code</strong> section of this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -148,10 +151,10 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned. Valid values:</p>
+         * <p>The additional information.</p>
          * <ul>
-         * <li>If the request was successful, <strong>success</strong> is returned.</li>
-         * <li>If the request failed, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If an exception occurs, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,7 +166,7 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -174,10 +177,10 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the list of applications was obtained. Valid values:</p>
+         * <p>Indicates whether the application list is retrieved. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The applications were obtained.</li>
-         * <li><strong>false</strong>: The applications failed to be queried.</li>
+         * <li><strong>true</strong>: The application list is retrieved.</li>
+         * <li><strong>false</strong>: The application list fails to be retrieved.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +192,7 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * <p>The trace ID used to precisely query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>

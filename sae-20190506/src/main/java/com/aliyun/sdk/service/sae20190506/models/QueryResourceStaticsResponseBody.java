@@ -132,12 +132,12 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource usage.</p>
+         * <p>The resource usage information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,14 +157,14 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. </p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>InvalidServerlessRegion.Unsupported</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -172,10 +172,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong> is returned when the request succeeds.</li>
-         * <li>An error code is returned when the request fails.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If an exception occurs, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7CCF7092-72CA-4431-90D6-C7D98752****</p>
@@ -198,10 +198,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the resource usage of an application was obtained. Valid values:</p>
+         * <p>Indicates whether the application resource usage was retrieved successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: indicates that the resource usage was obtained.</li>
-         * <li><strong>false</strong>: indicates that the resource usage could not be obtained.</li>
+         * <li><strong>true</strong>: The retrieval was successful.</li>
+         * <li><strong>false</strong>: The retrieval failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It can be used to query the details of a request.</p>
+         * <p>The trace ID used to query invocation details.</p>
          * 
          * <strong>example:</strong>
          * <p>ac1a08a015623098794277264e****</p>
@@ -295,7 +295,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CPU usage. Unit: core per minute.</p>
+             * <p>The CPU usage. Unit: Core*min.</p>
              * 
              * <strong>example:</strong>
              * <p>13</p>
@@ -306,7 +306,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage size of the temporary storage space. Unit: GiB.</p>
+             * <p>The ephemeral storage usage. Unit: GiB·min.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -317,7 +317,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory usage. Unit: GiB per minute.</p>
+             * <p>The memory usage. Unit: GiB*min.</p>
              * 
              * <strong>example:</strong>
              * <p>26</p>
@@ -465,7 +465,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The usage of active vCPU. Unit: Core*min.</p>
+             * <p>The active vCPU usage. Unit: Core·min.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -476,7 +476,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU usage. Unit: core per minute.</p>
+             * <p>The CPU usage. Unit: Core*min.</p>
              * 
              * <strong>example:</strong>
              * <p>3354</p>
@@ -487,7 +487,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CU usage.</p>
+             * <p>The amount of used compute units (CUs).</p>
              * 
              * <strong>example:</strong>
              * <p>2312145</p>
@@ -498,7 +498,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage size of the temporary storage space. Unit: GiB.</p>
+             * <p>The ephemeral storage usage. Unit: GiB·min.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -509,7 +509,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * GpuA10.
+             * <p>GpuA10</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gpuA10(Float gpuA10) {
                 this.gpuA10 = gpuA10;
@@ -517,7 +520,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * GpuPpu810e.
+             * <p>GpuPpu810e</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gpuPpu810e(Float gpuPpu810e) {
                 this.gpuPpu810e = gpuPpu810e;
@@ -525,7 +531,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage of idle CPU. Unit: Core*min.</p>
+             * <p>The idle vCPU usage. Unit: Core·min.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -536,7 +542,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory usage. Unit: GiB per minute.</p>
+             * <p>The memory usage. Unit: GiB*min.</p>
              * 
              * <strong>example:</strong>
              * <p>6708</p>
@@ -614,7 +620,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource usage of the current month.</p>
+             * <p>The resource usage information for the current month.</p>
              */
             public Builder summary(Summary summary) {
                 this.summary = summary;

@@ -119,7 +119,7 @@ public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code or error code. Valid values: 2xx: The request was successful. 3xx: The request was redirected. 4xx: The request was invalid. 5xx: A server error occurred.</p>
+         * <p>The API status code or POP error code. Valid values: 2xx: success. 3xx: redirection. 4xx: request error. 5xx: server error.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,10 +130,10 @@ public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. Value description:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, this field is not returned.</li>
-         * <li>For more information, see the <strong>Error codes</strong> section of this topic.</li>
+         * <li>Successful request: The <strong>ErrorCode</strong> field is not returned.</li>
+         * <li>Failed request: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,11 @@ public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the Simple Log Service configuration for the namespace was updated. Valid values: true and false.</p>
+         * <p>Indicates whether the SLS configuration for the namespace was updated successfully. Valid values:</p>
+         * <ul>
+         * <li>true: The configuration was updated successfully.</li>
+         * <li>false: The configuration failed to be updated.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -167,7 +171,7 @@ public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace, which is used to query the exact call information.</p>
+         * <p>The trace ID used to precisely query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -178,7 +182,7 @@ public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>AD0286B2-F4A4-5D43-9329-97DEF1019F06</p>

@@ -132,12 +132,12 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Client error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the canary release rule.</p>
+         * <p>The canary release rule information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,11 +157,14 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error code. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +172,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned information. Valid values:</p>
+         * <p>The additional information.</p>
          * <ul>
-         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code: If the call fails, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +187,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9D29CBD0-45D3-410B-9826-52F86F90****</p>
@@ -195,10 +198,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the information of the change order was queried. Valid values:</p>
+         * <p>Indicates whether the change order information was queried successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The information was queried.</li>
-         * <li><strong>false</strong>: The information failed to be queried.</li>
+         * <li><strong>true</strong>: The query was successful.</li>
+         * <li><strong>false</strong>: The query failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The trace ID used to precisely query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -344,7 +347,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             } 
 
             /**
-             * cond.
+             * <p>The comparison operator. Currently, only <strong>==</strong> is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>==</p>
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -352,7 +358,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * expr.
+             * <p>Not required for ALB applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -360,7 +369,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * <p>Not required for ALB applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -368,7 +380,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -376,7 +391,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * operator.
+             * <p>The operator. Currently, only <strong>rawvalue</strong> (direct comparison) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rawvalue</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -384,7 +402,15 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The comparison type. Valid values:</p>
+             * <ul>
+             * <li><strong>sourceIp</strong>: Source IP address.</li>
+             * <li><strong>cookie</strong>: Cookie.</li>
+             * <li><strong>header</strong>: Header.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cookie</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -392,7 +418,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The parameter value. The value obtained based on type and name is compared with this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -485,7 +514,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             } 
 
             /**
-             * condition.
+             * <p>The condition mode of the canary release rule. Currently, only <strong>AND</strong> is supported, which means all conditions in the condition list must be met.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -493,7 +525,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * ingressId.
+             * <p>The gateway route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder ingressId(String ingressId) {
                 this.ingressId = ingressId;
@@ -501,7 +536,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * items.
+             * <p>The condition list.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -509,7 +544,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * serviceName.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-6366-e3****-99**</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -641,7 +679,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The comparison operator. Valid values: <strong>&gt;</strong>, <strong>&lt;**, **&gt;=</strong>, <strong>&lt;=</strong>, <strong>==</strong>, and <strong>! =</strong>.</p>
+             * <p>The comparison operator. Valid values: <strong>&gt;</strong>, <strong>&lt;**, **&gt;=</strong>, <strong>&lt;=</strong>, <strong>==</strong>, and <strong>!=</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>==</p>
@@ -652,14 +690,14 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expression that is used to obtain the value of the parameter. The syntax of the expression must follow the standard of the SpEL. Valid values:</p>
+             * <p>The expression used to obtain the parameter value. The syntax follows Spring Expression Language (SpEL). Valid values:</p>
              * <ul>
-             * <li><strong>Empty</strong>: obtains the value of the parameter.</li>
-             * <li><strong>.name</strong>: obtains the name property of the parameter. This expression works the same way as args0.getName().</li>
-             * <li><strong>.isEnabled()</strong>: obtains the enabled property of the parameter. This expression works the same way as args0.isEnabled().</li>
-             * <li><strong>[0]</strong>: indicates that the value of the parameter is an array and obtains the first value of the array. This expression works the same way as args0[0]. This expression does not start with a period (.).</li>
-             * <li><strong>.get(0)</strong>: indicates that the value of the parameter is a list and obtains the first value of the list. This expression works the same way as args0.get(0).</li>
-             * <li><strong>.get(&quot;key&quot;)</strong>: indicates that the value of the parameter is a map and obtains the value of the key in the map. This expression works the same way as args0.get(&quot;key&quot;).  &gt;  For more information about the expressions that are used to obtain parameter values, see  <a href="https://docs.spring.io/spring-integration/docs/current/reference/html/spel.html">Spring Expression Language (SpEL)</a>.</li>
+             * <li><strong>Empty</strong>: Obtains the value of the current parameter directly.</li>
+             * <li><strong>.name</strong>: Obtains the name property of the parameter, which is equivalent to args0.getName().</li>
+             * <li><strong>.isEnabled()</strong>: Obtains the enabled property of the parameter, which is equivalent to args0.isEnabled().</li>
+             * <li><strong>[0]</strong>: Specifies that the current parameter is an array and obtains the first value of the array, which is equivalent to args0[0]. Note that there is no period (.) at the beginning.</li>
+             * <li><strong>.get(0)</strong>: Specifies that the current parameter is a list and obtains the first value of the list, which is equivalent to args0.get(0).</li>
+             * <li><strong>.get(&quot;key&quot;)</strong>: Specifies that the current parameter is a map and obtains the value corresponding to the key, which is equivalent to args0.get(&quot;key&quot;).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -671,7 +709,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index of the parameter. The value 0 indicates the first parameter.</p>
+             * <p>The parameter index. A value of 0 indicates the first parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -682,7 +720,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is not returned for Dubbo services.</p>
+             * <p>Not applicable to Dubbo services.</p>
              * 
              * <strong>example:</strong>
              * <p>N/A</p>
@@ -695,10 +733,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             /**
              * <p>The operator. Valid values:</p>
              * <ul>
-             * <li><strong>rawvalue</strong>: direct comparison.</li>
-             * <li><strong>list</strong>: whitelist.</li>
-             * <li><strong>mod</strong>: mods 100.</li>
-             * <li><strong>deterministic_proportional_steaming_division</strong>: percentage.</li>
+             * <li><strong>rawvalue</strong>: Direct comparison.</li>
+             * <li><strong>list</strong>: Whitelist.</li>
+             * <li><strong>mod</strong>: Modulo 100.</li>
+             * <li><strong>deterministic_proportional_steaming_division</strong>: Percentage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -710,7 +748,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is not returned for Dubbo services.</p>
+             * <p>Not applicable to Dubbo services.</p>
              * 
              * <strong>example:</strong>
              * <p>N/A</p>
@@ -721,7 +759,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter. This value is compared with the value that is obtained based on the <strong>expr</strong> and <strong>index</strong> parameters.</p>
+             * <p>The parameter value. The value obtained based on <strong>expr</strong> and <strong>index</strong> is compared with this value.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -843,10 +881,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The relationship between the conditions in the canary release rule. Valid values:</p>
+             * <p>The condition mode of the canary release rule. Valid values:</p>
              * <ul>
-             * <li><strong>AND</strong>: The conditions are in the logical AND relation. All conditions must be met at the same time.</li>
-             * <li><strong>OR</strong>: The conditions are in the logical OR relation. At least one of the conditions must be met.</li>
+             * <li><strong>AND</strong>: The logical AND operation. All conditions in the condition list must be met.</li>
+             * <li><strong>OR</strong>: The logical OR operation. Any condition in the condition list must be met.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -858,7 +896,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group of the Dubbo service that corresponds to the canary release rule.</p>
+             * <p>The group of the Dubbo service corresponding to the canary release rule.</p>
              * 
              * <strong>example:</strong>
              * <p>DUBBO</p>
@@ -869,7 +907,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditions.</p>
+             * <p>The condition list.</p>
              */
             public Builder items(java.util.List<DubboRulesItems> items) {
                 this.items = items;
@@ -888,7 +926,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Dubbo service.</p>
+             * <p>The Dubbo service name.</p>
              * 
              * <strong>example:</strong>
              * <p>com.alibaba.edas.boot.EchoService</p>
@@ -899,7 +937,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the Dubbo service.</p>
+             * <p>The Dubbo service version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -1034,7 +1072,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The comparison operator. Valid values: <strong>&gt;</strong>, <strong>&lt;**, **&gt;=</strong>, <strong>&lt;=</strong>, <strong>==</strong>, and <strong>! =</strong>.</p>
+             * <p>The comparison operator. Valid values: <strong>&gt;</strong>, <strong>&lt;**, **&gt;=</strong>, <strong>&lt;=</strong>, <strong>==</strong>, and <strong>!=</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>==</p>
@@ -1045,7 +1083,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is not returned for Spring Cloud applications.</p>
+             * <p>Not applicable to Spring Cloud applications.</p>
              * 
              * <strong>example:</strong>
              * <p>N/A</p>
@@ -1056,7 +1094,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is not returned for Spring Cloud applications.</p>
+             * <p>Not applicable to Spring Cloud applications.</p>
              * 
              * <strong>example:</strong>
              * <p>N/A</p>
@@ -1067,7 +1105,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter.</p>
+             * <p>The parameter name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1080,10 +1118,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             /**
              * <p>The operator. Valid values:</p>
              * <ul>
-             * <li><strong>rawvalue</strong>: direct comparison.</li>
-             * <li><strong>list</strong>: whitelist.</li>
-             * <li><strong>mod</strong>: mods 100.</li>
-             * <li><strong>deterministic_proportional_steaming_division</strong>: percentage.</li>
+             * <li><strong>rawvalue</strong>: Direct comparison.</li>
+             * <li><strong>list</strong>: Whitelist.</li>
+             * <li><strong>mod</strong>: Modulo 100.</li>
+             * <li><strong>deterministic_proportional_steaming_division</strong>: Percentage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1095,11 +1133,11 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the comparison. Valid values:</p>
+             * <p>The comparison type. Valid values:</p>
              * <ul>
-             * <li><strong>param</strong>: parameter</li>
-             * <li><strong>cookie</strong>: cookie</li>
-             * <li><strong>header</strong>: header</li>
+             * <li><strong>param</strong>: Parameter.</li>
+             * <li><strong>cookie</strong>: Cookie.</li>
+             * <li><strong>header</strong>: Header.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1111,7 +1149,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter. This value is compared with the value that is obtained based on the <strong>type</strong> and <strong>name</strong> parameters.</p>
+             * <p>The parameter value. The value obtained based on <strong>type</strong> and <strong>name</strong> is compared with this value.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1194,10 +1232,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The relationship between the conditions in the canary release rule. Valid values:</p>
+             * <p>The condition mode of the canary release rule. Valid values:</p>
              * <ul>
-             * <li><strong>AND</strong>: The conditions are in the logical AND relation. All conditions must be met at the same time.</li>
-             * <li><strong>OR</strong>: The conditions are in the logical OR relation. At least one of the conditions must be met.</li>
+             * <li><strong>AND</strong>: The logical AND operation. All conditions in the condition list must be met.</li>
+             * <li><strong>OR</strong>: The logical OR operation. Any condition in the condition list must be met.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1209,7 +1247,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditions.</p>
+             * <p>The condition list.</p>
              */
             public Builder items(java.util.List<ScRulesItems> items) {
                 this.items = items;
@@ -1217,7 +1255,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the canary release rule of the Spring Cloud application.</p>
+             * <p>The path corresponding to the canary release rule for the Spring Cloud application.</p>
              * 
              * <strong>example:</strong>
              * <p>/path</p>
@@ -1365,7 +1403,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             } 
 
             /**
-             * AlbRules.
+             * <p>The canary release rules created for applications with configured Application Load Balancer (ALB) gateway routes.</p>
              */
             public Builder albRules(java.util.List<AlbRules> albRules) {
                 this.albRules = albRules;
@@ -1373,7 +1411,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the canary release rule was created. Unit: milliseconds.</p>
+             * <p>The timestamp when the rule was created. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1619007592013</p>
@@ -1384,7 +1422,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the canary release rule.</p>
+             * <p>The rule description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1395,7 +1433,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The canary release rule of the Dubbo service.</p>
+             * <p>The Dubbo service canary release rules.</p>
              */
             public Builder dubboRules(java.util.List<DubboRules> dubboRules) {
                 this.dubboRules = dubboRules;
@@ -1403,7 +1441,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the canary release rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1414,7 +1452,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the canary release rule.</p>
+             * <p>The rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>rule-name</p>
@@ -1425,7 +1463,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The canary release rule of the Spring Cloud application.</p>
+             * <p>The Spring Cloud canary release rules.</p>
              */
             public Builder scRules(java.util.List<ScRules> scRules) {
                 this.scRules = scRules;
@@ -1433,7 +1471,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the canary release rule was updated. Unit: milliseconds.</p>
+             * <p>The timestamp when the rule was updated. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1609434061000</p>
@@ -1529,7 +1567,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1540,7 +1578,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned on each page. Valid value: <strong>1</strong>.</p>
+             * <p>The number of entries per page in a paged query. Currently, only <strong>1</strong> is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1559,7 +1597,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of canary release rules. Valid value: <strong>1</strong>.</p>
+             * <p>The total number of entries. Currently, only <strong>1</strong> is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

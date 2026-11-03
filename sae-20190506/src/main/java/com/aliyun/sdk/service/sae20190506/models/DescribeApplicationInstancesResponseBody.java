@@ -132,12 +132,12 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li><strong>2xx</strong>: Successful.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the application instance.</p>
+         * <p>The application instance information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,10 +157,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. </p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>Request succeeded: The <strong>ErrorCode</strong> field is not returned.</li>
+         * <li>Request failed: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          */
         public Builder errorCode(String errorCode) {
@@ -169,7 +169,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The additional information about the call result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -180,7 +180,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -191,10 +191,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the list of application instances was obtained. Valid values:</p>
+         * <p>Indicates whether the application instance list was successfully retrieved. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: indicates that the list was obtained.</li>
-         * <li><strong>false</strong>: indicates that the list could not be obtained.</li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * <p>The trace ID used to query the exact call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -288,7 +288,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the sidecar container.</p>
+             * <p>The sidecar container ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sidecar-test-01</p>
@@ -299,7 +299,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the container.</p>
+             * <p>The container status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -310,7 +310,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the image.</p>
+             * <p>The image address.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-beijing.aliyuncs.com/sae-dev-test/******</p>
@@ -380,7 +380,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -388,7 +391,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -676,7 +682,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The start time of the instance creation process. Unit: milliseconds.</p>
+             * <p>The timestamp when the instance started to be created. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1558442609000</p>
@@ -687,7 +693,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DebugStatus.
+             * <p>Specifies whether the instance is being debugged. Valid values:</p>
+             * <ul>
+             * <li><strong>True</strong>: Yes.</li>
+             * <li><strong>False</strong>: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder debugStatus(Boolean debugStatus) {
                 this.debugStatus = debugStatus;
@@ -695,7 +708,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The elastic IP address (EIP).</p>
+             * <p>The elastic IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>8.129.XX.XXX</p>
@@ -706,7 +719,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the instance creation process. Unit: milliseconds.</p>
+             * <p>The timestamp when the instance was created. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1642757283000</p>
@@ -728,9 +741,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address of the repository.</p>
+             * <p>The image repository address.</p>
              * <blockquote>
-             * <p> If you deploy the application by using a JAR or WAR package, the image generated by SAE is not available for download.</p>
+             * <p>If you deploy the application by using a JAR package or a WAR package, the image generated by the Serverless App Engine (SAE) platform is not available for public download.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -753,7 +766,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the instance restarted.</p>
+             * <p>The number of times the instance has been restarted.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -764,18 +777,18 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the instance. Valid values:</p>
+             * <p>The running status of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>Error</strong>: An error occurred during the instance startup.</li>
-             * <li><strong>CrashLoopBackOff</strong>: The container failed to start. An error occurred during the startup process and persisted after the restart.</li>
-             * <li><strong>ErrImagePull</strong>: An error occurred while the container image was being pulled from the instance.</li>
-             * <li><strong>ImagePullBackOff</strong>: The container image could not be obtained.</li>
+             * <li><strong>Error</strong>: An error occurred during instance startup.</li>
+             * <li><strong>CrashLoopBackOff</strong>: The container failed to start. An error occurred during startup, and the error persisted after a restart.</li>
+             * <li><strong>ErrImagePull</strong>: An error occurred while pulling the container image for the instance.</li>
+             * <li><strong>ImagePullBackOff</strong>: The container image cannot be retrieved.</li>
              * <li><strong>Pending</strong>: The instance is waiting to be scheduled.</li>
              * <li><strong>Unknown</strong>: An unknown exception occurred.</li>
-             * <li><strong>Terminating</strong>: The instance creation process is being terminated.</li>
+             * <li><strong>Terminating</strong>: The instance is being terminated.</li>
              * <li><strong>NotFound</strong>: The instance cannot be found.</li>
              * <li><strong>PodInitializing</strong>: The instance is being initialized.</li>
-             * <li><strong>Init:0/1</strong>: The instance is initialized.</li>
+             * <li><strong>Init:0/1</strong>: The instance is initializing.</li>
              * <li><strong>Running</strong>: The instance is running.</li>
              * </ul>
              * 
@@ -788,16 +801,16 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of health checks. Valid values:</p>
+             * <p>The health check configuration information. Valid values:</p>
              * <ul>
-             * <li><strong>WithoutHealthCheckConfig</strong>: Liveness and readiness checks are not configured.</li>
-             * <li><strong>WithoutLivenessConfig</strong>: The liveness check is not configured.</li>
-             * <li><strong>WithoutReadinessConfig</strong>: The readiness check is not configured.</li>
-             * <li><strong>NotCheckedYet</strong>: The health checks are not performed or are in progress.</li>
-             * <li><strong>LivenessUnhealthy</strong>: The instance failed the liveness check.</li>
-             * <li><strong>ReadinessUnhealthy</strong>: The instance failed the readiness check.</li>
-             * <li><strong>Unhealthy</strong>: The instance failed both liveness and readiness checks.</li>
-             * <li><strong>Healthy</strong>: The instance passed both liveness and readiness checks.</li>
+             * <li><strong>WithoutHealthCheckConfig</strong>: Neither liveness nor readiness health checks are configured.</li>
+             * <li><strong>WithoutLivenessConfig</strong>: The liveness health check is not configured.</li>
+             * <li><strong>WithoutReadinessConfig</strong>: The readiness health check is not configured.</li>
+             * <li><strong>NotCheckedYet</strong>: The instance is undergoing or waiting for a health check.</li>
+             * <li><strong>LivenessUnhealthy</strong>: The liveness health check failed, and the instance is unhealthy.</li>
+             * <li><strong>ReadinessUnhealthy</strong>: The readiness health check failed, and the instance is unhealthy.</li>
+             * <li><strong>Unhealthy</strong>: Both liveness and readiness health checks failed, and the instance is unhealthy.</li>
+             * <li><strong>Healthy</strong>: The health checks passed, and the instance is healthy.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -809,7 +822,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>b2a8a925-477a-4ed7-b825-d5e22500****</p>
@@ -820,7 +833,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the main container.</p>
+             * <p>The main container status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -831,7 +844,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the package.</p>
+             * <p>The version information.</p>
              * 
              * <strong>example:</strong>
              * <p>1609939496200</p>
@@ -842,7 +855,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the sidecar container.</p>
+             * <p>The status information of the sidecar containers.</p>
              */
             public Builder sidecarContainersStatus(java.util.List<SidecarContainersStatus> sidecarContainersStatus) {
                 this.sidecarContainersStatus = sidecarContainersStatus;
@@ -850,7 +863,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -858,7 +871,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1750061980000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -866,7 +882,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficStatus.
+             * <p>The traffic status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>suspend</p>
              */
             public Builder trafficStatus(String trafficStatus) {
                 this.trafficStatus = trafficStatus;
@@ -874,10 +893,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If the health check of an application instance fails, the detailed failure cause or error message is returned. If the health check of an application instance passes, no response is returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Null</p>
+             * <p>The specific cause or error message returned when the health check of the application instance fails. If the health check passes, no information is returned in this field.</p>
              */
             public Builder unhealthyMessage(String unhealthyMessage) {
                 this.unhealthyMessage = unhealthyMessage;
@@ -885,7 +901,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone where the instance is deployed.</p>
+             * <p>The zone where the instance resides.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-***</p>
@@ -981,7 +997,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -992,7 +1008,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application instances.</p>
+             * <p>The list of application instances.</p>
              */
             public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
@@ -1000,7 +1016,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned on each page.</p>
+             * <p>The paging Settings for the number of entries per page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1011,7 +1027,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned instances.</p>
+             * <p>The total number of instances.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

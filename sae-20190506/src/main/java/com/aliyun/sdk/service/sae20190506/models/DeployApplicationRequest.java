@@ -1251,7 +1251,7 @@ public class DeployApplicationRequest extends Request {
         } 
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) required for a RAM role to obtain images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</p>
+         * <p>The ARN of the RAM role required to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Use RAM roles to authorize access across Alibaba Cloud accounts</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/adminrole</p>
@@ -1263,7 +1263,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of Container Registry Enterprise Edition instance N. This parameter is required when the <strong>ImageUrl</strong> parameter is set to the URL of an image in an ACR Enterprise Edition instance.</p>
+         * <p>The ACR Enterprise instance ID. This parameter is required when <strong>ImageUrl</strong> is set to an ACR Enterprise instance image.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-xxxxxx</p>
@@ -1275,7 +1275,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * AgentVersion.
+         * <p>The AliyunAgent version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.4.2</p>
          */
         public Builder agentVersion(String agentVersion) {
             this.putQueryParameter("AgentVersion", agentVersion);
@@ -1284,7 +1287,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * AlbIngressReadinessGate.
+         * <p>The Application Load Balancer (ALB) gateway readiness gate configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder albIngressReadinessGate(String albIngressReadinessGate) {
             this.putQueryParameter("AlbIngressReadinessGate", albIngressReadinessGate);
@@ -1293,7 +1299,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The ID of the application to be deployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1306,10 +1312,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to associate an EIP with the node pool. Take note of the following rules:</p>
+         * <p>Specifies whether to associate an elastic IP address (EIP). Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The EIP is associated with the application instance.</li>
-         * <li><strong>false</strong>: The EIP is not associated with the application instance.</li>
+         * <li><strong>true</strong>: associates an EIP.</li>
+         * <li><strong>false</strong>: does not associate an EIP.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1322,10 +1328,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically enable an auto scaling policy for the application. Take note of the following rules:</p>
+         * <p>Specifies whether the elastic scaling policy for the application is automatically enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: turns on Logon-free Sharing</li>
-         * <li><strong>false</strong>: turns off Logon-free Sharing</li>
+         * <li><strong>true</strong>: enables the policy.</li>
+         * <li><strong>false</strong>: shutdown.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1338,7 +1344,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The interval between batches during a batch release. Unit: minutes.</p>
+         * <p>The interval between deployment batches. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1353,7 +1359,7 @@ public class DeployApplicationRequest extends Request {
          * <p>The description of the change order.</p>
          * 
          * <strong>example:</strong>
-         * <p>Start the application</p>
+         * <p>Start application</p>
          */
         public Builder changeOrderDesc(String changeOrderDesc) {
             this.putQueryParameter("ChangeOrderDesc", changeOrderDesc);
@@ -1362,14 +1368,14 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The command that is used to start the image. The command must be an existing executable object in the container. Sample statements:</p>
+         * <p>The startup command of the image. The command must be an executable object that exists in the container. Example:</p>
          * <pre><code>command:
          *       - echo
          *       - abc
          *       - &gt;
          *       - file0
          * </code></pre>
-         * <p>In this example, the Command parameter is set to <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
+         * <p>Based on the preceding example, <code>Command=&quot;echo&quot;</code> and <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>echo</p>
@@ -1381,9 +1387,9 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The parameters of the image startup command. The CommandArgs parameter specifies the parameters that are required for the <strong>Command</strong> parameter. You can specify the name in one of the following formats:</p>
+         * <p>The arguments for the image startup command. These are the arguments required by the <strong>Command</strong> startup command. Format:</p>
          * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
-         * <p>In the preceding example, the CommandArgs parameter is set to <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The data type of <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be an array of strings in the JSON format. This parameter is optional.</p>
+         * <p>In the preceding example, <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> part must be converted to a string in JSON array format. If this parameter is not required, leave it empty.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;a&quot;,&quot;b&quot;]</p>
@@ -1395,16 +1401,16 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The description of the <strong>ConfigMap</strong> instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following table describes the parameters that are used in the preceding statements.</p>
+         * <p>The mount description of the <strong>ConfigMap</strong>. Uses the configuration item created on the configuration item page of the namespace to inject configuration information into the container. Parameter description:</p>
          * <ul>
-         * <li><strong>congfigMapId</strong>: the ID of the ConfigMap instance. You can call the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the ID.</li>
-         * <li><strong>key</strong>: the key.</li>
+         * <li><strong>configMapId</strong>: the instance ID of the ConfigMap instance. You can invoke the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the instance ID.</li>
+         * <li><strong>key</strong>: the key value.</li>
          * </ul>
          * <blockquote>
-         * <p>You can use <code>sae-sys-configmap-all</code> to mount all keys.</p>
+         * <p>You can mount all keys by passing the <code>sae-sys-configmap-all</code> parameter.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>mountPath</strong>: the mount path in the container.</li>
+         * <li><strong>mountPath</strong>: the mount path.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1417,7 +1423,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+         * <p>The CPU required for each instance. Unit: millicores. The value cannot be 0. Only the following defined specifications are supported:</p>
          * <ul>
          * <li><strong>500</strong></li>
          * <li><strong>1000</strong></li>
@@ -1439,7 +1445,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The custom mappings between hostnames and IP addresses in the container. Take note of the following rules:</p>
+         * <p>The custom host mappings in the container. Valid values:</p>
          * <ul>
          * <li><strong>hostName</strong>: the domain name or hostname.</li>
          * <li><strong>ip</strong>: the IP address.</li>
@@ -1455,12 +1461,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Custom image type. To it to empty string to use pre-built image.</p>
+         * <p>The custom image network type. If the image is not a custom image, set this parameter to an empty string. Valid values:</p>
          * <ul>
-         * <li><p>internet: Public network image</p>
-         * </li>
-         * <li><p>intranet: Private network image</p>
-         * </li>
+         * <li>internet: public image.</li>
+         * <li>intranet: private image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1473,10 +1477,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>This parameter takes effect only for applications that are in the Stopped state. If you call the <strong>DeployApplication</strong> operation to manage a running application, the application is immediately redeployed.</p>
+         * <p>This parameter takes effect only for applications in the stopped state. If a running application calls the <strong>DeployApplication</strong> operation, the application is immediately redeployed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default): specifies that the system immediately deploys the application, enables new configurations, and pulls application instances.</li>
-         * <li><strong>false</strong>: specifies that the system only enables the new configurations.</li>
+         * <li><strong>true</strong>: the default value. Deploys the application immediately, applies the new deployment configurations, and immediately starts the instances.</li>
+         * <li><strong>false</strong>: applies only the new deployment configurations without starting the application instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1489,7 +1493,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The version of .NET</p>
+         * <p>The version of the .NET framework. Valid values: </p>
          * <ul>
          * <li>.NET 3.1</li>
          * <li>.NET 5.0</li>
@@ -1508,7 +1512,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.</p>
+         * <p>The version of the application runtime environment in the HSF framework, such as the Ali-Tomcat container.</p>
          * 
          * <strong>example:</strong>
          * <p>3.5.3</p>
@@ -1520,7 +1524,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * EmptyDirDesc.
+         * <p>The shared ephemeral storage configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;name\&quot;:\&quot;workdir\&quot;,\&quot;mountPath\&quot;:\&quot;/usr/local/tomcat/webapps\&quot;}]</p>
          */
         public Builder emptyDirDesc(String emptyDirDesc) {
             this.putBodyParameter("EmptyDirDesc", emptyDirDesc);
@@ -1529,10 +1536,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether access to Application High Availability Service (AHAS) is enabled. Take note of the following rules:</p>
+         * <p>Specifies whether to connect to AHAS. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Access to AHAS is enabled.</li>
-         * <li><strong>false</strong>: Access to AHAS is disabled.</li>
+         * <li><strong>true</strong>: connects to AHAS.</li>
+         * <li><strong>false</strong>: does not connect to AHAS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1545,9 +1552,11 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Enable CPU Burst.</p>
-         * <p>true: enable</p>
-         * <p>false: disable</p>
+         * <p>Specifies whether to enable the CPU Burst feature. Valid values:</p>
+         * <ul>
+         * <li>true: enables the feature.</li>
+         * <li>false: disables the feature.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1559,10 +1568,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether canary release rules are enabled. Canary release rules apply only to applications in Spring Cloud and Dubbo frameworks. Take note of the following rules:</p>
+         * <p>Specifies whether to enable the canary release rules for traffic. This rule applies only to applications that use the Spring Cloud and Dubbo frameworks. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The canary release rules are enabled.</li>
-         * <li><strong>false</strong>: The canary release rules are disabled.</li>
+         * <li><strong>true</strong>: enables the canary release rules.</li>
+         * <li><strong>false</strong>: disables the canary release rules.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1575,7 +1584,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * EnableNamespaceAgentVersion.
+         * <p>Specifies whether to reuse the agent version configuration of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableNamespaceAgentVersion(Boolean enableNamespaceAgentVersion) {
             this.putQueryParameter("EnableNamespaceAgentVersion", enableNamespaceAgentVersion);
@@ -1584,12 +1596,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Enable new ARMS features.</p>
+         * <p>Specifies whether to enable the new ARMS features. Valid values:</p>
          * <ul>
-         * <li><p>true: enable</p>
-         * </li>
-         * <li><p>false: disable</p>
-         * </li>
+         * <li>true: enables the features.</li>
+         * <li>false: disables the features.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1602,7 +1612,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * EnablePrometheus.
+         * <p>Specifies whether to enable Prometheus custom metric collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enablePrometheus(Boolean enablePrometheus) {
             this.putQueryParameter("EnablePrometheus", enablePrometheus);
@@ -1611,9 +1624,11 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Enable Sidecar resource isolation.</p>
-         * <p>true: enable</p>
-         * <p>false: disable</p>
+         * <p>Specifies whether to enable sidecar resource isolation. Valid values:</p>
+         * <ul>
+         * <li>true: enables isolation.</li>
+         * <li>false: disables isolation.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1625,34 +1640,31 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Take note of the following rules:</p>
+         * <p>The environment variables for the container. You can specify custom environment variables or reference ConfigMaps. To reference a ConfigMap, you must create a ConfigMap instance first. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
          * <ul>
-         * <li><p>Customize</p>
-         * <ul>
+         * <li>Custom environment variables<ul>
          * <li><strong>name</strong>: the name of the environment variable.</li>
-         * <li><strong>value</strong>: the value of the environment variable.</li>
+         * <li><strong>value</strong>: the value of the environment variable. This parameter has a higher priority than valueFrom.</li>
          * </ul>
          * </li>
-         * <li><p>Reference ConfigMap</p>
-         * <ul>
-         * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>. Example: <code>sae-sys-configmap-all-test1</code>.</li>
+         * <li>Reference a ConfigMap (valueFrom)<ul>
+         * <li><strong>name</strong>: the name of the environment variable. You can reference a single key or all keys. To reference all keys, enter <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>, such as <code>sae-sys-configmap-all-test1</code>.</li>
          * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>configMapRef</code>.</li>
-         * <li><strong>configMapId</strong>: the ConfigMap ID.</li>
-         * <li><strong>key</strong>: the key. If you want to reference all keys, do not configure this parameter.</li>
+         * <li><strong>configMapId</strong>: the ID of the ConfigMap.</li>
+         * <li><strong>key</strong>: the key. If you reference all key-value pairs, do not set this field.</li>
          * </ul>
          * </li>
-         * <li><p>Reference secret dictionary</p>
-         * <ul>
-         * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <code>sae-sys-secret-all-&lt;Secret dictionary name&gt;</code>. Example: <code>sae-sys-secret-all-test1</code>.</li>
+         * <li>Reference a secret (valueFrom)<ul>
+         * <li><strong>name</strong>: the name of the environment variable. You can reference a single key or all keys. To reference all keys, enter <code>sae-sys-secret-all-&lt;secret name&gt;</code>, such as <code>sae-sys-secret-all-test1</code>.</li>
          * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>secretRef</code>.</li>
-         * <li><strong>secretId</strong>: the secret dictionary ID.</li>
-         * <li><strong>key</strong>: the key. If you want to reference all keys, do not configure this parameter.</li>
+         * <li><strong>secretId</strong>: the ID of the secret.</li>
+         * <li><strong>key</strong>: the key. If you reference all key-value pairs, do not set this field.</li>
          * </ul>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</p>
+         * <p>[ { &quot;name&quot;: &quot;sae-sys-configmap-all-hello&quot;, &quot;valueFrom&quot;: { &quot;configMapRef&quot;: { &quot;configMapId&quot;: 100, &quot;key&quot;: &quot;&quot; } } }, { &quot;name&quot;: &quot;hello&quot;, &quot;valueFrom&quot;: { &quot;configMapRef&quot;: { &quot;configMapId&quot;: 101, &quot;key&quot;: &quot;php-fpm&quot; } } }, { &quot;name&quot;: &quot;sae-sys-secret-all-hello&quot;, &quot;valueFrom&quot;: { “secretRef&quot;: { “secretId&quot;: 100, &quot;key&quot;: &quot;&quot; } } }, { &quot;name&quot;: “password”, &quot;valueFrom&quot;: { “secretRef&quot;: { “secretId&quot;: 101, &quot;key&quot;: “password” } } }, { &quot;name&quot;: &quot;envtmp&quot;, &quot;value&quot;: &quot;newenv&quot; } ]</p>
          */
         public Builder envs(String envs) {
             this.putQueryParameter("Envs", envs);
@@ -1661,7 +1673,13 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * GpuConfig.
+         * <p>The GPU configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         * &quot;gpuType&quot;:&quot;PPU810E&quot;,
+         * &quot;gpuCount&quot;:&quot;1&quot;
+         * }</p>
          */
         public Builder gpuConfig(String gpuConfig) {
             this.putQueryParameter("GpuConfig", gpuConfig);
@@ -1670,7 +1688,17 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * Html.
+         * <p>The NGINX version. Valid values:</p>
+         * <ul>
+         * <li>nginx 1.20</li>
+         * <li>nginx 1.22</li>
+         * <li>nginx 1.24</li>
+         * <li>nginx 1.26</li>
+         * <li>nginx 1.28</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx 1.28</p>
          */
         public Builder html(String html) {
             this.putQueryParameter("Html", html);
@@ -1679,7 +1707,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the corresponding Secret.</p>
+         * <p>The ID of the corresponding secret.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1691,7 +1719,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The URL of the image. This parameter is returned only if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+         * <p>The URL of the image. This parameter is required when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
@@ -1703,7 +1731,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Initialize container configuration.</p>
+         * <p>The init container configuration.</p>
          */
         public Builder initContainersConfig(java.util.List<InitContainerConfig> initContainersConfig) {
             String initContainersConfigShrink = shrink(initContainersConfig, "InitContainersConfig", "json");
@@ -1713,7 +1741,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+         * <p>The startup arguments for the JAR package. Default startup command: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>-Xms4G -Xmx4G</p>
@@ -1725,7 +1753,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The option settings in the JAR package. The settings are used to start the application container. The default startup command for application deployment is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+         * <p>The startup options for the JAR package. Default startup command: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>custom-option</p>
@@ -1737,7 +1765,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The version of the Java development kit (JDK) on which the deployment package of the application depends. The following versions are supported:</p>
+         * <p>The JDK version required by the deployment package. Valid values:</p>
          * <ul>
          * <li><strong>Open JDK 8</strong></li>
          * <li><strong>Open JDK 7</strong></li>
@@ -1746,7 +1774,7 @@ public class DeployApplicationRequest extends Request {
          * <li><strong>openjdk-8u191-jdk-alpine3.9</strong></li>
          * <li><strong>openjdk-7u201-jdk-alpine3.9</strong></li>
          * </ul>
-         * <p>This parameter is not returned if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+         * <p>This parameter is not supported when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Open JDK 8</p>
@@ -1758,11 +1786,11 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The logging configurations of Message Queue for Apache Kafka. Take note of the following rules:</p>
+         * <p>The summary of configurations for collecting logs to Kafka. Valid values:</p>
          * <ul>
-         * <li><strong>kafkaEndpoint</strong>: the endpoint of the Message Queue for Apache Kafka API.</li>
-         * <li><strong>kafkaInstanceId</strong>: the ID of the Message Queue for Apache Kafka instance.</li>
-         * <li><strong>kafkaConfigs</strong>: One or more logging configurations of Message Queue for Apache Kafka. For information about sample values and parameters, see the request parameter <strong>KafkaLogfileConfig</strong> in this topic.</li>
+         * <li><strong>kafkaEndpoint</strong>: the service registration address of the Kafka API.</li>
+         * <li><strong>kafkaInstanceId</strong>: the Kafka instance ID.</li>
+         * <li><strong>kafkaConfigs</strong>: the summary of configurations for one or more logs. For example values and parameter description, see the <strong>kafkaConfigs</strong> request parameter in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1775,7 +1803,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The application labels. Both keys and values are strings.</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
@@ -1785,26 +1813,26 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The details of the availability check that was performed on the container. If the container fails this health check multiple times, the system disables and restarts the container. You can use one of the following methods to perform the health check:</p>
+         * <p>The liveness probe for the container. Containers that fail the health check are shutdown and recovered. Valid values:</p>
          * <ul>
-         * <li>Example of <strong>exec</strong>: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat/home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</code></li>
-         * <li>Sample code of the <strong>httpGet</strong> method: <code>{&quot;httpGet&quot;:{&quot;path&quot;:&quot;/&quot;,&quot;port&quot;:18091,&quot;scheme&quot;:&quot;HTTP&quot;,&quot;isContainKeyWord&quot;:true,&quot;keyWord&quot;:&quot;SAE&quot;},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</code></li>
-         * <li>Sample code of the <strong>tcpSocket</strong> method: <code>{&quot;tcpSocket&quot;:{&quot;port&quot;:18091},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</code></li>
+         * <li><strong>exec</strong>: Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat/home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</code>.</li>
+         * <li><strong>httpGet</strong>: Example: <code>{&quot;httpGet&quot;:{&quot;path&quot;:&quot;/&quot;,&quot;port&quot;:18091,&quot;scheme&quot;:&quot;HTTP&quot;,&quot;isContainKeyWord&quot;:true,&quot;keyWord&quot;:&quot;SAE&quot;},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</code>.</li>
+         * <li><strong>tcpSocket</strong>: Example: <code>{&quot;tcpSocket&quot;:{&quot;port&quot;:18091},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</code>.</li>
          * </ul>
          * <blockquote>
-         * <p>You can use only one method to perform the health check.</p>
+         * <p>You can select only one method for the health check.</p>
          * </blockquote>
-         * <p>The following table describes the parameters that are used in the preceding statements.</p>
+         * <p>Parameter description:</p>
          * <ul>
-         * <li><strong>exec.command</strong>: the health check command.</li>
-         * <li><strong>httpGet.path</strong>: the request path.</li>
-         * <li><strong>httpGet.scheme</strong>: the protocol that is used to perform the health check. Valid values: <strong>HTTP</strong> and <strong>HTTPS</strong>.</li>
-         * <li><strong>httpGet.isContainKeyWord</strong>: indicates whether the response contains keywords. Valid values: <strong>true</strong> and <strong>false</strong>. If this field is not returned, the advanced settings are not used.</li>
-         * <li><strong>httpGet.keyWord</strong>: the custom keyword. This parameter is available only if the <strong>isContainKeyWord</strong> field is returned.</li>
-         * <li><strong>tcpSocket.port</strong>: the port that is used to check the status of TCP connections.</li>
-         * <li><strong>initialDelaySeconds</strong>: the delay of the health check. Default value: 10. Unit: seconds.</li>
-         * <li><strong>periodSeconds</strong>: the interval at which health checks are performed. Default value: 30. Unit: seconds.</li>
-         * <li><strong>timeoutSeconds</strong>: the timeout period of the health check. Default value: 1. Unit: seconds. If you set this parameter to 0 or leave this parameter empty, the timeout period is automatically set to 1 second.</li>
+         * <li><strong>exec.command</strong>: Settings for the health check command.</li>
+         * <li><strong>httpGet.path</strong>: the access path.</li>
+         * <li><strong>httpGet.scheme</strong>: <strong>HTTP</strong> or <strong>HTTPS</strong>.</li>
+         * <li><strong>httpGet.isContainKeyWord</strong>: <strong>true</strong> indicates that the keyword is included, and <strong>false</strong> indicates that the keyword is not included. If this field is missing, the advanced feature is not used.</li>
+         * <li><strong>httpGet.keyWord</strong>: the custom keyword. The <strong>isContainKeyWord</strong> field is required when this field is used.</li>
+         * <li><strong>tcpSocket.port</strong>: the port for TCP connection detection.</li>
+         * <li><strong>initialDelaySeconds</strong>: Settings for the health check delay detection time. Default value: 10. Unit: seconds.</li>
+         * <li><strong>periodSeconds</strong>: Settings for the health check epoch. Default value: 30. Unit: seconds.</li>
+         * <li><strong>timeoutSeconds</strong>: Settings for the health check timeout waiting time. Default value: 1. Unit: seconds. If this parameter is set to 0 or not set, the default timeout waiting time is 1 second.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1817,7 +1845,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * LokiConfigs.
+         * <p>LokiConfigs</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder lokiConfigs(String lokiConfigs) {
             this.putQueryParameter("LokiConfigs", lokiConfigs);
@@ -1826,7 +1857,11 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * MaxSurgeInstanceRatio.
+         * <p>The maximum surge instance ratio. Note the following rules:</p>
+         * <p>If the minimum number of available instances is 100%, the Peak Volume Settings cannot be 0. If the Settings are <strong>-1</strong>, the system uses the recommended value of 30%, which is 30% of the current number of instances. For example, if the current number of instances is 10, the maximum number of surge instances is 10 × 30% = 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder maxSurgeInstanceRatio(Integer maxSurgeInstanceRatio) {
             this.putQueryParameter("MaxSurgeInstanceRatio", maxSurgeInstanceRatio);
@@ -1835,7 +1870,12 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * MaxSurgeInstances.
+         * <p>The maximum number of surge instances. Note the following rules:</p>
+         * <p>If the minimum number of available instances is 100%, the Peak Volume Settings cannot be 0.
+         * If the Settings are <strong>-1</strong>, the maximum number of surge instances uses the recommended Peak Volume ratio of 30%, which is 30% of the current number of instances. For example, if the current number of instances is 10, the maximum number of surge instances is 10 × 30% = 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder maxSurgeInstances(Integer maxSurgeInstances) {
             this.putQueryParameter("MaxSurgeInstances", maxSurgeInstances);
@@ -1844,18 +1884,18 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+         * <p>The memory required for each instance. Unit: MB. The value cannot be 0. The memory has a one-to-one mapping with the CPU. Only the following defined specifications are supported:</p>
          * <ul>
-         * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
-         * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
-         * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
-         * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8,000.</li>
-         * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
-         * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
-         * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
-         * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
-         * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
-         * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+         * <li><strong>1024</strong>: corresponds to 500 and 1000 millicores.</li>
+         * <li><strong>2048</strong>: corresponds to 500, 1000, and 2000 millicores.</li>
+         * <li><strong>4096</strong>: corresponds to 1000, 2000, and 4000 millicores.</li>
+         * <li><strong>8192</strong>: corresponds to 2000, 4000, and 8000 millicores.</li>
+         * <li><strong>12288</strong>: corresponds to 12000 millicores.</li>
+         * <li><strong>16384</strong>: corresponds to 4000, 8000, and 16000 millicores.</li>
+         * <li><strong>24576</strong>: corresponds to 12000 millicores.</li>
+         * <li><strong>32768</strong>: corresponds to 16000 millicores.</li>
+         * <li><strong>65536</strong>: corresponds to 8000, 16000, and 32000 millicores.</li>
+         * <li><strong>131072</strong>: corresponds to 32000 millicores.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1870,10 +1910,13 @@ public class DeployApplicationRequest extends Request {
         /**
          * <p>The Nacos registry. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: SAE built-in Nacos registry</li>
-         * <li><strong>1</strong>: self-managed Nacos registry</li>
-         * <li><strong>2</strong> : MSE Nacos registry</li>
+         * <li><strong>0</strong>: the built-in Nacos of SAE.</li>
+         * <li><strong>1</strong>: a self-managed Nacos.</li>
+         * <li><strong>2</strong>: Microservices Engine (MSE) Nacos Commercial Edition.</li>
          * </ul>
+         * <blockquote>
+         * <p>If you select the built-in Nacos of SAE, you cannot obtain the configurations of the built-in Nacos.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>&quot;0&quot;</p>
@@ -1885,18 +1928,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Select the edition of Nacos.</p>
-         * <ul>
-         * <li><p>0: SAE built-in Nacos. Unable to get the configuration of SAE built-in Nacos.</p>
-         * </li>
-         * <li><p>1: Self-built Nacos from users.</p>
-         * </li>
-         * <li><p>2: MSE enterprise Nacos.</p>
-         * </li>
-         * </ul>
+         * <p>The registry configurations. This parameter takes effect only when the registry type is MSE Nacos Enterprise Edition.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;instanceId&quot;:&quot;mse-cn-zvp2bh6h70r&quot;,&quot;namespace&quot;:&quot;4c0aa74f-57cb-423c-b6af-5d9f2d0e3dbd&quot;}</p>
+         * <p>{\&quot;instanceId\&quot;:\&quot;mse-cn-zvp2bh6h70r\&quot;,\&quot;namespace\&quot;:\&quot;4c0aa74f-57cb-423c-b6af-5d9f2d0e3dbd\&quot;}</p>
          */
         public Builder microRegistrationConfig(String microRegistrationConfig) {
             this.putBodyParameter("MicroRegistrationConfig", microRegistrationConfig);
@@ -1905,29 +1940,29 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Configure Microservices Governance</p>
-         * <p>Whether to enable microservices governance (enable):</p>
+         * <p>Configures microservice governance features.</p>
          * <ul>
-         * <li>true: Enable</li>
-         * <li>false: Disable</li>
+         * <li>enable: Specifies whether to enable microservice governance. Valid values:<ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
-         * <p>Configure lossless online/offline deployment (mseLosslessRule):</p>
-         * <p>delayTime: Delay duration (unit: seconds)</p>
-         * <p>enable: Whether to enable lossless deployment</p>
-         * <ul>
-         * <li><p>true: Enable</p>
          * </li>
-         * <li><p>false: Disable</p>
+         * <li>mseLosslessRule: Configures lossless online and offline rules.<ul>
+         * <li>delayTime: The delay time.</li>
+         * <li>enable: Specifies whether to enable the lossless online feature. Valid values:<ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * </li>
+         * <li>notice: Specifies whether to enable the notification feature. Valid values:<ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * </li>
+         * <li>warmupTime: The warm-up duration for low traffic, in seconds.</li>
+         * </ul>
          * </li>
          * </ul>
-         * <p>notice: Whether to enable notifications</p>
-         * <ul>
-         * <li><p>true: Enable</p>
-         * </li>
-         * <li><p>false: Disable</p>
-         * </li>
-         * </ul>
-         * <p>warmupTime: Small-traffic warm-up duration (unit: seconds)</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enable&quot;: true,&quot;mseLosslessRule&quot;: {&quot;delayTime&quot;: 0,&quot;enable&quot;: false,&quot;notice&quot;: false,&quot;warmupTime&quot;: 120}}</p>
@@ -1939,13 +1974,13 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The percentage of the minimum number of available instances. Take note of the following rules:</p>
+         * <p>The percentage of the minimum number of ready instances. Valid values:</p>
          * <ul>
-         * <li>If you set the value to <strong>-1</strong>, the minimum number of available instances is not determined based on this parameter. Default value: -1.</li>
-         * <li>If you set the value to a number <strong>from 0 to 100</strong>, the minimum number of available instances is calculated by using the following formula: Current number of instances × (Value of MinReadyInstanceRatio × 100%). The value is the nearest integer rounded up from the calculated result. For example, if the percentage is set to <strong>50</strong>% and five instances are available, the minimum number of available instances is 3.</li>
+         * <li><strong>-1</strong>: the initial value, which indicates that the percentage is not used.</li>
+         * <li><strong>0~100</strong>: the percentage, rounded up. For example, if you set this parameter to <strong>50</strong> and the current number of instances is 5, the minimum number of ready instances is 3.</li>
          * </ul>
          * <blockquote>
-         * <p>When both <strong>MinReadyInstance</strong> and <strong>MinReadyInstanceRatio</strong> are specified and <strong>MinReadyInstanceRatio</strong> is set to a number from 0 to 100, the value of <strong>MinReadyInstanceRatio</strong>** takes precedence. For example, if <strong>MinReadyInstances</strong> is set to **5, and <strong>MinReadyInstanceRatio</strong> is set to <strong>50</strong>, the minimum number of available instances is set to the nearest integer rounded up from the calculated result of the following formula: Current number of instances × <strong>50%</strong>.</p>
+         * <p>When both <strong>MinReadyInstance</strong> and <strong>MinReadyInstanceRatio</strong> are passed and the value of <strong>MinReadyInstanceRatio</strong> is not <strong>-1</strong>, the <strong>MinReadyInstanceRatio</strong> parameter prevails. For example, if <strong>MinReadyInstances</strong> is set to <strong>5</strong> and <strong>MinReadyInstanceRatio</strong> is set to <strong>50</strong>, <strong>50</strong> is used to calculate the minimum number of ready instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1958,13 +1993,13 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of available instances. Special values:</p>
+         * <p>The minimum number of ready instances. Valid values:</p>
          * <ul>
-         * <li>If you set the value to <strong>0</strong>, business interruptions occur when the application is updated.</li>
-         * <li>If you set the value to **-1**, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</li>
+         * <li>If you set this parameter to <strong>0</strong>, services are interrupted during the application upgrade.</li>
+         * <li>If you set this parameter to <strong>-1</strong>, the system recommended value is used, which is 25% of the current number of instances. For example, if the current number of instances is 5, 5 × 25% = 1.25. After rounding up, the minimum number of ready instances is 2.</li>
          * </ul>
          * <blockquote>
-         * <p>Make sure that at least one instance is available during application deployment and rollback to prevent business interruptions.</p>
+         * <p>Set the minimum number of ready instances to a value greater than or equal to 1 for each rolling deployment to ensure service continuity.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1977,7 +2012,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The configurations for mounting the NAS file system. After the application is created, you may want to call other operations to manage the application. If you do not want to change the NAS configurations in these subsequent operations, you can omit the <strong>MountDesc</strong> parameter in the requests. If you want to unmount the NAS file system, you must set the <strong>MountDesc</strong> values in the subsequent requests to an empty string (&quot;&quot;).</p>
+         * <p>This field is not recommended. Configure <strong>NasConfigs</strong> instead. The description of the NAS mount. If the configurations remain unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>MountDesc</strong> field in the request. If you need to clear the NAS configurations, you must set the value of this field to an empty string in the request. That is, set the <strong>MountDesc</strong> field to &quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
@@ -1989,7 +2024,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The mount target of the NAS file system in the VPC where the application is deployed. If you do not need to modify this configuration during the deployment, configure the <strong>MountHost</strong> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you need to remove this configuration, leave the <strong>MountHost</strong> parameter empty in the request.</p>
+         * <p>This field is not recommended. Configure <strong>NasConfigs</strong> instead. The mount target of the NAS file system in the VPC of the application. If the configurations remain unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>MountHost</strong> field in the request. If you need to clear the NAS configurations, you must set the value of this field to an empty string in the request. That is, set the <strong>MountHost</strong> field to &quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>10d3b4bc9****.com</p>
@@ -2001,13 +2036,13 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The configurations of mounting the NAS file system. Take note of the following rules:</p>
+         * <p>The configurations for mounting a NAS file system. Valid values:</p>
          * <ul>
-         * <li><strong>mountPath</strong>: the mount path of the container.</li>
-         * <li><strong>readOnly</strong>: If you set the value to <strong>false</strong>, the application has the read and write permissions.</li>
+         * <li><strong>mountPath</strong>: the mount path in the container.</li>
+         * <li><strong>readOnly</strong>: A value of <strong>false</strong> indicates read and write permissions.</li>
          * <li><strong>nasId</strong>: the ID of the NAS file system.</li>
-         * <li><strong>mountDomain</strong>: the domain name of the mount target. For more information, see <a href="https://help.aliyun.com/document_detail/62626.html">DescribeMountTargets</a>.</li>
-         * <li><strong>nasPath</strong>: the directory in the NAS file system.</li>
+         * <li><strong>mountDomain</strong>: the mount target address of the container. For more information, see <a href="https://help.aliyun.com/document_detail/62626.html">DescribeMountTargets</a>.</li>
+         * <li><strong>nasPath</strong>: the relative file directory of the NAS file system.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2020,7 +2055,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the File Storage NAS file system. After the application is created, you may want to call other operations to manage the application. If you do not want to change the NAS configurations in these subsequent operations, you can omit the <strong>NasId</strong> parameter in the requests. If you want to unmount the NAS file system, you must set the <strong>NasId</strong> values in the subsequent requests to an empty string (&quot;&quot;).</p>
+         * <p>This field is not recommended. Configure <strong>NasConfigs</strong> instead. The ID of the NAS file system. If the configurations remain unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>NasId</strong> field in the request. If you need to clear the NAS configurations, you must set the value of this field to an empty string in the request. That is, set the <strong>NasId</strong> field to &quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>10d3b4****</p>
@@ -2032,14 +2067,11 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>SAE edition.</p>
+         * <p>The application edition. Valid values:</p>
          * <ul>
-         * <li><p>lite: the lightweight edition.</p>
-         * </li>
-         * <li><p>std: the standard edition.</p>
-         * </li>
-         * <li><p>pro: the professional edition.</p>
-         * </li>
+         * <li>lite: Lite Edition.</li>
+         * <li>std: Standard Edition.</li>
+         * <li>pro: Professional Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2052,9 +2084,9 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role used to authenticate the user identity.</p>
+         * <p>The RAM role for the identity authentication service.</p>
          * <blockquote>
-         * <p> You need to create an OpenID Connect (OIDC) identity provider (IdP) and an identity provider (IdP) for role-based single sign-on (SSO) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/2331022.html">Creates an OpenID Connect (OIDC) identity provider (IdP)</a> and <a href="https://help.aliyun.com/document_detail/2331016.html">Creates an identity provider (IdP) for role-based single sign-on (SSO)</a>.</p>
+         * <p>You must create an OIDC identity provider and an identity provider role in the same region in advance. For more information, see <a href="https://help.aliyun.com/document_detail/2331022.html">Create an OIDC identity provider</a> and <a href="https://help.aliyun.com/document_detail/2331016.html">Create an IdP for role-based SSO</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2067,7 +2099,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey ID that is used to read data from and write data to Object Storage Service (OSS) buckets.</p>
+         * <p>The AccessKey ID used to read and write OSS data.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -2079,7 +2111,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey secret that is used to read data from and write data to OSS buckets.</p>
+         * <p>The AccessKey Secret used to read and write OSS data.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -2091,18 +2123,14 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Information of the Object Storage Service (OSS) bucket mounted to the application. The following table describes the parameters that are used in the preceding statements.</p>
+         * <p>The OSS mount description. Parameter description:</p>
          * <ul>
-         * <li><p><strong>bucketName</strong>: the name of the OSS bucket.</p>
-         * </li>
-         * <li><p><strong>bucketPath</strong>: the directory or object in OSS. If the specified directory or object does not exist, an error is returned.</p>
-         * </li>
-         * <li><p><strong>mountPath</strong>: the directory of the container in SAE. If the path already exists, the newly specified path overwrites the previous one. If the path does not exist, it is created.</p>
-         * </li>
-         * <li><p><strong>readOnly</strong>: specifies whether to only allow the container path to read data from the OSS directory. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The container path only has read permission on the OSS directory.</li>
-         * <li><strong>false</strong>: The application has read and write permissions.</li>
+         * <li><strong>bucketName</strong>: the name of the bucket.</li>
+         * <li><strong>bucketPath</strong>: the folder or object that you created in OSS. If the OSS mount folder does not exist, an exception is triggered.</li>
+         * <li><strong>mountPath</strong>: the container path in SAE. If the path already exists, it is an overwrite relationship. If the path does not exist, it is created.</li>
+         * <li><strong>readOnly</strong>: specifies whether the container path has read permissions on the mount directory resources. Valid values:<ul>
+         * <li><strong>true</strong>: read-only permissions.</li>
+         * <li><strong>false</strong>: read and write permissions.</li>
          * </ul>
          * </li>
          * </ul>
@@ -2117,26 +2145,28 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The package type.</p>
-         * <p>When using Java, FatJar, War and Image are supported.
-         * When using Python, PythonZip and Image are supported.
-         * When using PHP, the followings are supported:</p>
+         * <p>The type of the application package. Valid values:</p>
          * <ul>
-         * <li>PhpZip</li>
-         * <li>IMAGE_PHP_5_4</li>
-         * <li>IMAGE_PHP_5_4_ALPINE</li>
-         * <li>IMAGE_PHP_5_5</li>
-         * <li>IMAGE_PHP_5_5_ALPINE</li>
-         * <li>IMAGE_PHP_5_6</li>
-         * <li>IMAGE_PHP_5_6_ALPINE</li>
-         * <li>IMAGE_PHP_7_0</li>
-         * <li>IMAGE_PHP_7_0_ALPINE</li>
-         * <li>IMAGE_PHP_7_1</li>
-         * <li>IMAGE_PHP_7_1_ALPINE</li>
-         * <li>IMAGE_PHP_7_2</li>
-         * <li>IMAGE_PHP_7_2_ALPINE</li>
-         * <li>IMAGE_PHP_7_3</li>
-         * <li>IMAGE_PHP_7_3_ALPINE</li>
+         * <li>If you use Java for deployment, valid values are <strong>FatJar</strong>, <strong>War</strong>, and <strong>Image</strong>.</li>
+         * <li>If you use PHP for deployment, valid values are:<ul>
+         * <li><strong>PhpZip</strong></li>
+         * <li><strong>IMAGE_PHP_5_4</strong></li>
+         * <li><strong>IMAGE_PHP_5_4_ALPINE</strong></li>
+         * <li><strong>IMAGE_PHP_5_5</strong></li>
+         * <li><strong>IMAGE_PHP_5_5_ALPINE</strong></li>
+         * <li><strong>IMAGE_PHP_5_6</strong></li>
+         * <li><strong>IMAGE_PHP_5_6_ALPINE</strong></li>
+         * <li><strong>IMAGE_PHP_7_0</strong></li>
+         * <li><strong>IMAGE_PHP_7_0_ALPINE</strong></li>
+         * <li><strong>IMAGE_PHP_7_1</strong></li>
+         * <li><strong>IMAGE_PHP_7_1_ALPINE</strong></li>
+         * <li><strong>IMAGE_PHP_7_2</strong></li>
+         * <li><strong>IMAGE_PHP_7_2_ALPINE</strong></li>
+         * <li><strong>IMAGE_PHP_7_3</strong></li>
+         * <li><strong>IMAGE_PHP_7_3_ALPINE</strong></li>
+         * </ul>
+         * </li>
+         * <li>If you use Python for deployment, valid values are <strong>PythonZip</strong> and <strong>Image</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2149,7 +2179,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The address of the deployment package. This parameter is required when the <strong>PackageType</strong> parameter is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
+         * <p>The URL of the deployment package. This parameter is required when <strong>Package Type</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://myoss.oss-cn-hangzhou.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-hangzhou.aliyuncs.com/my-buc/2019-06-30/****.jar</a></p>
@@ -2161,7 +2191,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The version of the deployment package. This parameter is required when the <strong>PackageType</strong> parameter is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
+         * <p>The version number of the deployment package. This parameter is required when <strong>Package Type</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.1</p>
@@ -2173,7 +2203,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The dependent PHP version of PHP package. Image is not supported.</p>
+         * <p>The PHP version required by the PHP deployment package. Images are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>PHP-FPM 7.0</p>
@@ -2185,7 +2215,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The path on which the PHP configuration file for application monitoring is mounted. Make sure that the PHP server loads the configuration file. SAE automatically generates the corresponding configuration file. No manual operations are required.</p>
+         * <p>The mount path for PHP application monitoring. You must ensure that the PHP server loads the configuration file in this path. You do not need to pay attention to the configuration content. SAE automatically renders the correct configuration file.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/local/etc/php/conf.d/arms.ini</p>
@@ -2197,7 +2227,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The details of the PHP configuration file.</p>
+         * <p>The content of the PHP configuration file.</p>
          * 
          * <strong>example:</strong>
          * <p>k1=v1</p>
@@ -2209,7 +2239,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The path on which the PHP configuration file for application startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</p>
+         * <p>The mount path for the PHP application startup configuration. You must ensure that the PHP server uses this configuration file to start.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/local/etc/php/php.ini</p>
@@ -2221,7 +2251,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The script that is run immediately after the container is started. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;\]}}</code></p>
+         * <p>The script to execute after the container starts. A script is triggered immediately after the container is created. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</p>
@@ -2233,7 +2263,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The script that is run before the container is stopped. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;\]}}</code></p>
+         * <p>The script to execute before the container stops. A script is triggered before the container is deleted. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</p>
@@ -2245,16 +2275,15 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The configurations of Kubernetes Service-based service registration and discovery. Take note of the following rules:</p>
+         * <p>Enables service registration and discovery for Kubernetes Services. Valid values:</p>
          * <ul>
-         * <li><strong>serviceName</strong>: the name of the Alibaba Cloud service. Format: <code>&lt;Custom content&gt;-&lt;Namespace ID&gt;</code>. <code>-&lt;Namespace ID&gt;</code> is automatically specified based on the namespace in which an application resides and cannot be changed. For example, if you select the default namespace in the China (Beijing) region, <code>-cn-beijing-default</code> is automatically specified.</li>
-         * <li><strong>namespaceId</strong>: the namespace ID.</li>
-         * <li><strong>portAndProtocol</strong>: the port number and protocol. Valid values of the port number: 1 to 65535. Valid values of the protocol: <strong>TCP</strong> and <strong>UDP</strong>.</li>
-         * <li><strong>enable</strong>: enables the Kubernetes Service-based registration and discovery feature.</li>
+         * <li><strong>portProtocols</strong>: the port and protocol. Valid values for the port: 1 to 65535. Valid values for the protocol: <strong>TCP</strong> and <strong>UDP</strong>.</li>
+         * <li><strong>portAndProtocol</strong>: the port and protocol. Valid values for the port: 1 to 65535. Valid values for the protocol: <strong>TCP</strong> and <strong>UDP</strong>. <strong>Use portProtocols instead. If portProtocols is set, only portProtocols takes effect</strong>.</li>
+         * <li><strong>enable</strong>: enables service registration and discovery for Kubernetes Services.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;serviceName&quot;:&quot;bwm-poc-sc-gateway-cn-beijing-front&quot;,&quot;namespaceId&quot;:&quot;cn-beijing:front&quot;,&quot;portAndProtocol&quot;:{&quot;18012&quot;:&quot;TCP&quot;},&quot;enable&quot;:true}</p>
+         * <p>{&quot;portProtocols&quot;:[{&quot;port&quot;:18012,&quot;protocol&quot;:&quot;TCP&quot;}],&quot;portAndProtocol&quot;:{&quot;18012&quot;:&quot;TCP&quot;},&quot;enable&quot;:true}</p>
          */
         public Builder pvtzDiscoverySvc(String pvtzDiscoverySvc) {
             this.putQueryParameter("PvtzDiscoverySvc", pvtzDiscoverySvc);
@@ -2263,7 +2292,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The Python environment. Set the value to <strong>PYTHON 3.9.15</strong>.</p>
+         * <p>The Python environment. <strong>PYTHON 3.9.15</strong> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>PYTHON 3.9.15</p>
@@ -2275,7 +2304,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The configurations for installing custom module dependencies. By default, the dependencies defined by the requirements.txt file in the root directory are installed. If the package does not contain this file and you do not configure custom dependencies in the package, specify the dependencies that you want to install in the text box.</p>
+         * <p>The custom installation module dependencies. By default, the dependencies defined in the requirements.txt file in the root folder are installed. If this parameter is not configured or a custom software package is used, you can specify the dependencies to install.</p>
          * 
          * <strong>example:</strong>
          * <p>Flask==2.0</p>
@@ -2287,7 +2316,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * RaspConfig.
+         * <p>The application runtime security protection (RASP) configuration.</p>
          */
         public Builder raspConfig(RaspConfig raspConfig) {
             String raspConfigShrink = shrink(raspConfig, "RaspConfig", "json");
@@ -2297,9 +2326,9 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The details of the health check that was performed on the container. If the container fails this health check multiple times, the system disables and restarts the container. Containers that fail health checks cannot receive traffic from Server Load Balancer (SLB) instances. You can use the <strong>exec</strong>, <strong>httpGet</strong>, or <strong>tcpSocket</strong> method to perform health checks. For more information, see the description of the <strong>Liveness</strong> parameter.</p>
+         * <p>The readiness probe for the application. Containers that fail multiple health checks are stopped and restarted. Traffic from the SLB instance is not routed to containers that fail the health check. The <strong>exec</strong>, <strong>httpGet</strong>, and <strong>tcpSocket</strong> methods are supported. For specific examples, see the <strong>Liveness</strong> parameter.</p>
          * <blockquote>
-         * <p>You can use only one method to perform the health check.</p>
+         * <p>You can select only one method for the health check.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2324,15 +2353,16 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Secret Mount Description
-         * Use the secret dictionaries created in the Namespace Secret Dictionary page to inject information into containers. Parameter descriptions are as follows:</p>
+         * <p>The mount description of the <strong>Secret</strong>. Uses the secret created on the Secret page of the namespace to inject confidential information into the container. Parameter description:</p>
          * <ul>
-         * <li><p>secretId: Secret instance ID. Obtain via the ListSecrets interface.</p>
-         * </li>
-         * <li><p>key: Key-value pair. Note: Set the parameter sae-sys-secret-all to mount all keys.</p>
-         * </li>
-         * <li><p>mountPath: Mount path.</p>
-         * </li>
+         * <li><strong>secretId</strong>: the instance ID of the secret instance. You can obtain the instance ID by calling the ListSecrets operation.</li>
+         * <li><strong>key</strong>: the key value.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can mount all keys by passing the <code>sae-sys-secret-all</code> parameter.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>mountPath</strong>: the mount path.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2345,7 +2375,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Security group ID.</p>
+         * <p>The ID of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-wz969ngg2e49q5i4****</p>
@@ -2357,10 +2387,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The gray-release tag of the application.</p>
+         * <p>The canary tags configured for the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</p>
+         * <p>{\&quot;alicloud.service.tag\&quot;:\&quot;g1\&quot;}</p>
          */
         public Builder serviceTags(String serviceTags) {
             this.putBodyParameter("ServiceTags", serviceTags);
@@ -2369,7 +2399,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the container.</p>
+         * <p>The container configuration information.</p>
          */
         public Builder sidecarContainersConfig(java.util.List<SidecarContainerConfig> sidecarContainersConfig) {
             String sidecarContainersConfigShrink = shrink(sidecarContainersConfig, "SidecarContainersConfig", "json");
@@ -2379,22 +2409,22 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The logging configurations of Log Service.</p>
+         * <p>The Settings for collecting logs to Simple Log Service (SLS).</p>
          * <ul>
-         * <li>To use Log Service resources that are automatically created by SAE, set this parameter to <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
-         * <li>To use custom Log Service resources, set this parameter to <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
+         * <li>Use SLS resources automatically created by SAE: <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
+         * <li>Use custom SLS resources: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
          * </ul>
-         * <p>The following table describes the parameters that are used in the preceding statements.</p>
+         * <p>Parameter description:</p>
          * <ul>
-         * <li><strong>projectName</strong>: the name of the Log Service project.</li>
-         * <li><strong>logDir</strong>: the path in which logs are stored.</li>
-         * <li><strong>logType</strong>: the log type. <strong>stdout</strong>: the standard output log of the container. You can specify only one stdout value for this parameter. If you leave this parameter empty, file logs are collected.</li>
-         * <li><strong>logstoreName</strong>: the name of the Logstore in Log Service.</li>
-         * <li><strong>logtailName</strong>: the name of the Logtail configuration in Log Service. If you do not configure this parameter, a new Logtail configuration is created.</li>
+         * <li><strong>projectName</strong>: the name of the SLS project.  </li>
+         * <li><strong>logDir</strong>: the log path.</li>
+         * <li><strong>logType</strong>: the log type. <strong>stdout</strong> indicates container standard output logs. You can set only 1 standard output log. If this parameter is not set, file logs are collected.</li>
+         * <li><strong>logstoreName</strong>: the name of the SLS Logstore.</li>
+         * <li><strong>logtailName</strong>: the name of the SLS Logtail. If this parameter is not specified, a new Logtail is created.</li>
          * </ul>
-         * <p>If you do not need to modify the logging configurations when you deploy the application, configure the <strong>SlsConfigs</strong> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you no longer need to use Log Service, leave the <strong>SlsConfigs</strong> parameter empty in the request.</p>
+         * <p>If the SLS collection Settings remain unchanged during multiple deployments, you do not need to set this parameter. That is, you do not need to include the <strong>SlsConfigs</strong> field in the request. If you no longer need the SLS collection feature, you must set the value of this field to an empty string in the request. That is, set the <strong>SlsConfigs</strong> field to &quot;&quot;.</p>
          * <blockquote>
-         * <p>A Log Service project that is automatically created by SAE when you create an application is deleted when the application is deleted. Therefore, when you create an application, you cannot select a Log Service project that is automatically created by SAE for log collection.</p>
+         * <p>Projects that are automatically created with the application are deleted when the application is deleted. Therefore, when you select an existing project, you cannot select a project that is automatically created by SAE.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2407,7 +2437,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * SlsLogEnvTags.
+         * <p>sls log tags</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder slsLogEnvTags(String slsLogEnvTags) {
             this.putQueryParameter("SlsLogEnvTags", slsLogEnvTags);
@@ -2416,10 +2449,18 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Check Failure: Indicates that the application failed to start. The system will report the exception and automatically restart it.</p>
-         * <p>Note: </p>
-         * <p>Supports exec, httpGet, and tcpSocket methods. For specific examples, see Liveness Parameters.
-         * Only one method can be selected for health checks.</p>
+         * <p>Enables application startup probing.</p>
+         * <ul>
+         * <li>Check succeeded: indicates that the application is started. If you configure liveness and readiness probes, the liveness and readiness probes are executed after the application is started.</li>
+         * <li>Check failed: indicates that the application fails to start. An exception is reported and the application is automatically restarted.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Note</p>
+         * <ul>
+         * <li>The exec, httpGet, and tcpSocket methods are supported. For specific examples, refer to the Liveness parameter.</li>
+         * <li>You can select only one method for health checks.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
@@ -2431,29 +2472,28 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>Configure K8s Service-based Service Registration/Discovery and Full-Chain Grayscale Capabilities</p>
+         * <p>Configures service registration and discovery and end-to-end canary release based on Kubernetes Services:</p>
          * <ul>
-         * <li><p>enable: Whether to enable full-link grayscale based on K8s Service (set to &quot;true&quot; to enable; set to &quot;false&quot; to disable).</p>
+         * <li>enable: specifies whether to enable the end-to-end canary release feature based on Kubernetes Services.<ul>
+         * <li>true: enables the feature.</li>
+         * <li>false: disables the feature.</li>
+         * </ul>
          * </li>
-         * <li><p>namespaceId: Namespace ID</p>
+         * <li>namespaceId: the ID of the namespace.</li>
+         * <li>portAndProtocol: the listening port and protocol. Format: {&quot;port:protocol type&quot;:&quot;container port&quot;}.</li>
+         * <li>portProtocols: defines the port and protocol of the service.<ul>
+         * <li>port: the port.</li>
+         * <li>protocol: the protocol.</li>
+         * <li>targetPort: the container port.</li>
+         * </ul>
          * </li>
-         * <li><p>portAndProtocol: Listener port and protocol. Format: {&quot;Port:Protocol Type&quot;:&quot;Container Port&quot;}</p>
-         * </li>
-         * <li><p>portProtocols: Define service ports and protocols
-         * port: Port
-         * protocol: Protocol
-         * targetPort: Container port</p>
-         * </li>
-         * <li><p>pvtzDiscoveryName: Service discovery name</p>
-         * </li>
-         * <li><p>serviceId: Service ID</p>
-         * </li>
-         * <li><p>serviceName: Service name</p>
-         * </li>
+         * <li>pvtzDiscoveryName: service name of the service discovery.</li>
+         * <li>serviceId: the ID of the service.</li>
+         * <li>serviceName: service name of the service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;enable&quot;:&quot;false&quot;,&quot;namespaceId&quot;:&quot;cn-beijing:test&quot;,&quot;portAndProtocol&quot;:{&quot;2000:TCP&quot;:&quot;18081&quot;},&quot;portProtocols&quot;:[{&quot;port&quot;:2000,&quot;protocol&quot;:&quot;TCP&quot;,&quot;targetPort&quot;:18081}],&quot;pvtzDiscoveryName&quot;:&quot;cn-beijing-1421801774382676&quot;,&quot;serviceId&quot;:&quot;3513&quot;,&quot;serviceName&quot;:&quot;demo-gray.test&quot;}</p>
+         * <p>{\&quot;enable\&quot;:\&quot;false\&quot;,\&quot;namespaceId\&quot;:\&quot;cn-beijing:test\&quot;,\&quot;portAndProtocol\&quot;:{\&quot;2000:TCP\&quot;:\&quot;18081\&quot;},\&quot;portProtocols\&quot;:[{\&quot;port\&quot;:2000,\&quot;protocol\&quot;:\&quot;TCP\&quot;,\&quot;targetPort\&quot;:18081}],\&quot;pvtzDiscoveryName\&quot;:\&quot;cn-beijing-1421801774382676\&quot;,\&quot;serviceId\&quot;:\&quot;3513\&quot;,\&quot;serviceName\&quot;:\&quot;demo-gray.test\&quot;}</p>
          */
         public Builder swimlanePvtzDiscoverySvc(String swimlanePvtzDiscoverySvc) {
             this.putBodyParameter("SwimlanePvtzDiscoverySvc", swimlanePvtzDiscoverySvc);
@@ -2462,7 +2502,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for a graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.</p>
+         * <p>The timeout period for graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -2486,13 +2526,13 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The Tomcat configuration. If you want to cancel this configuration, set this parameter to &quot;&quot; or &quot;{}&quot;. The following variables are included in the configuration: Take note of the following rules:</p>
+         * <p>The Tomcat file configuration. Set the value to &quot;&quot; or &quot;{}&quot; to delete the configuration. Valid values:</p>
          * <ul>
-         * <li><strong>port</strong>: the port number. The port number ranges from 1024 to 65535. Though the admin permissions are configured for the container, the root permissions are required to perform operations on ports whose number is smaller than 1024. Enter a value that ranges from 1025 to 65535 because the container has only the admin permissions. If you do not specify this parameter, the default port number 8080 is used.</li>
-         * <li><strong>contextPath</strong>: the path. Default value: /. This value indicates the root directory.</li>
+         * <li><strong>port</strong>: the port range is 1024 to 65535. Ports smaller than 1024 require root permissions. Because the container is configured with admin permissions, specify a port greater than 1024. If this parameter is not configured, the default value is 8080.</li>
+         * <li><strong>contextPath</strong>: the access path. Default value: the root directory &quot;/&quot;.</li>
          * <li><strong>maxThreads</strong>: the maximum number of connections in the connection pool. Default value: 400.</li>
-         * <li><strong>uriEncoding</strong>: the URI encoding scheme in the Tomcat container. Valid values: UTF-8, ISO-8859-1, GBK, and GB2312.************ If you do not specify this parameter, the default value <strong>ISO-8859-1</strong> is used.</li>
-         * <li><strong>useBodyEncoding</strong>: specifies whether to use the encoding scheme specified in the request body for URI query parameters. Default value: true.</li>
+         * <li><strong>uriEncoding</strong>: the encoding format of Tomcat. Valid values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and <strong>GB2312</strong>. If this parameter is not set, the default value is <strong>ISO-8859-1</strong>.</li>
+         * <li><strong>useBodyEncodingForUri</strong>: specifies whether to use <strong>BodyEncoding for URL</strong>. Default value: <strong>true</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2505,24 +2545,24 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The deployment policy. If the minimum number of available instances is 1, the value of the <strong>UpdateStrategy</strong> parameter is an empty string (&quot;&quot;). If the minimum number of available instances is greater than 1, the following strategies can be configured:</p>
+         * <p>The deployment policy. When the minimum number of ready instances is 1, the value of the <strong>UpdateStrategy</strong> field is &quot;&quot;. When the minimum number of ready instances is greater than 1, examples are as follows:</p>
          * <ul>
-         * <li>The application is deployed on an instance. The remaining instances are automatically classified into two release batches whose interval is set to 1. In this case, the parameter is set to <code>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:1},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</code>.</li>
-         * <li>The application is deployed on an instance. The remaining instances are manually classified into two release batches. In this case, the parameter is set to <code>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;manual&quot;},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</code>.</li>
-         * <li>All instances are automatically classified into two release batches. The application is deployed on the instances of the two batches in parallel. In this case, the parameter is set to <code>{&quot;type&quot;:&quot;BatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:0}}</code></li>
+         * <li>grayscale 1 instance + 2 subsequent batches + automatic batching + 1-minute interval between batches: <code>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:1},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</code></li>
+         * <li>grayscale 1 instance + 2 subsequent batches + manual batching: <code>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;manual&quot;},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</code></li>
+         * <li>2 batches + automatic batching + 0-minute interval between batches: <code>{&quot;type&quot;:&quot;BatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:0}}</code></li>
          * </ul>
-         * <p>The following table describes the parameters that are used in the preceding statements.</p>
+         * <p>Parameter description:</p>
          * <ul>
-         * <li><p><strong>type</strong>: the type of the release policy. Valid values: <strong>GrayBatchUpdate</strong> and <strong>BatchUpdate</strong>.</p>
+         * <li><p><strong>type</strong>: the type of the publish policy. Valid values: <strong>GrayBatchUpdate</strong> for grayscale publish and <strong>BatchUpdate</strong> for batch publish.</p>
          * </li>
-         * <li><p><strong>batchUpdate</strong>: the phased release policy.</p>
+         * <li><p><strong>batchUpdate</strong>: the batch publish policy.</p>
          * <ul>
-         * <li><strong>batch</strong>: the number of release batches.</li>
-         * <li><strong>releaseType</strong>: the processing method for the batches. Valid values: <strong>auto</strong> and <strong>manual</strong>.</li>
-         * <li><strong>batchWaitTime</strong>: the interval between release batches. Unit: seconds.</li>
+         * <li><strong>batch</strong>: the number of publish batches.</li>
+         * <li><strong>releaseType</strong>: the processing method between batches. Valid values: <strong>auto</strong> for automatic and <strong>manual</strong> for manual.</li>
+         * <li><strong>batchWaitTime</strong>: the interval between batches. Unit: minutes.</li>
          * </ul>
          * </li>
-         * <li><p><strong>grayUpdate</strong>: the number of release batches in the phased release after a canary release. This parameter is returned only if the <strong>type</strong> parameter is set to <strong>GrayBatchUpdate</strong>.</p>
+         * <li><p><strong>grayUpdate</strong>: the number of grayscale instances. This parameter is required when <strong>type</strong> is set to <strong>GrayBatchUpdate</strong>.</p>
          * </li>
          * </ul>
          * 
@@ -2536,7 +2576,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch, where the EIP of the application instances resides. The vSwitch must reside in the VPC above.</p>
+         * <p>The vSwitch where the network interface controller (NIC) of the application instance resides. The vSwitch must be located in the preceding VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp12mw1f8k3jgygk9****</p>
@@ -2548,10 +2588,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The startup command of the WAR package. For information about how to configure the startup command, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure startup commands</a>.</p>
+         * <p>The startup command for the application deployed by using a WAR package. The procedure is the same as that for configuring the startup command for image deployment. For more information, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure a startup command</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>CATALINA_OPTS=&quot;$CATALINA_OPTS $Options&quot; catalina.sh run</p>
+         * <p>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</p>
          */
         public Builder warStartOptions(String warStartOptions) {
             this.putQueryParameter("WarStartOptions", warStartOptions);
@@ -2560,12 +2600,12 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The version of the Tomcat container on which the deployment package depends. Valid values:</p>
+         * <p>The Tomcat version required by the deployment package. Valid values:</p>
          * <ul>
          * <li><strong>apache-tomcat-7.0.91</strong></li>
          * <li><strong>apache-tomcat-8.5.42</strong></li>
          * </ul>
-         * <p>This parameter is not returned if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+         * <p>This parameter is not supported when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>apache-tomcat-7.0.91</p>
@@ -2649,7 +2689,7 @@ public class DeployApplicationRequest extends Request {
             } 
 
             /**
-             * EnableRasp.
+             * <p>Specifies whether the application runtime security protection (RASP) is enabled.</p>
              */
             public Builder enableRasp(Boolean enableRasp) {
                 this.enableRasp = enableRasp;
@@ -2657,7 +2697,10 @@ public class DeployApplicationRequest extends Request {
             }
 
             /**
-             * RaspAppKey.
+             * <p>The RASP application key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder raspAppKey(String raspAppKey) {
                 this.raspAppKey = raspAppKey;
@@ -2665,7 +2708,10 @@ public class DeployApplicationRequest extends Request {
             }
 
             /**
-             * RaspAppName.
+             * <p>The RASP application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sae-test</p>
              */
             public Builder raspAppName(String raspAppName) {
                 this.raspAppName = raspAppName;

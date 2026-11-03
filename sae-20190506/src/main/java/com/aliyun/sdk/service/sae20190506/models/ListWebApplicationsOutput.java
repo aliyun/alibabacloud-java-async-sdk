@@ -67,7 +67,10 @@ public class ListWebApplicationsOutput extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2RN</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -75,7 +78,7 @@ public class ListWebApplicationsOutput extends TeaModel {
         }
 
         /**
-         * WebApplicationWithInstanceCount.
+         * <p>The applications.</p>
          */
         public Builder webApplicationWithInstanceCount(java.util.List<WebApplicationWithInstanceCount> webApplicationWithInstanceCount) {
             this.webApplicationWithInstanceCount = webApplicationWithInstanceCount;

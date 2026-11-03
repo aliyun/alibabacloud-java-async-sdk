@@ -55,6 +55,7 @@ public class WebAclConfig extends TeaModel {
         } 
 
         /**
+         * <p>The IP addresses.</p>
          * <p>This parameter is required.</p>
          */
         public Builder webAclEntries(java.util.List<WebAclEntryConfig> webAclEntries) {

@@ -145,7 +145,10 @@ public class AppStackInstance extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1706518652</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -153,7 +156,7 @@ public class AppStackInstance extends TeaModel {
         }
 
         /**
-         * Endpoints.
+         * <p>The endpoints.</p>
          */
         public Builder endpoints(java.util.List<Endpoints> endpoints) {
             this.endpoints = endpoints;
@@ -161,7 +164,10 @@ public class AppStackInstance extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-789y</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -169,7 +175,10 @@ public class AppStackInstance extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>palworld</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -177,7 +186,7 @@ public class AppStackInstance extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The instance parameters.</p>
          */
         public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
@@ -185,7 +194,10 @@ public class AppStackInstance extends TeaModel {
         }
 
         /**
-         * StackId.
+         * <p>The stack ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>palworld</p>
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -193,7 +205,10 @@ public class AppStackInstance extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WAIT</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -201,7 +216,10 @@ public class AppStackInstance extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1706518652</p>
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;
@@ -280,7 +298,10 @@ public class AppStackInstance extends TeaModel {
             } 
 
             /**
-             * Address.
+             * <p>The address and port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1:8211</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -288,7 +309,10 @@ public class AppStackInstance extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The endpoint name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>game</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -296,7 +320,10 @@ public class AppStackInstance extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The endpoint protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UDP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -363,7 +390,10 @@ public class AppStackInstance extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regionId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -371,7 +401,10 @@ public class AppStackInstance extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;

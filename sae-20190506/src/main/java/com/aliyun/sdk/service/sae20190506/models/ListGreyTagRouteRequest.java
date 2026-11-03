@@ -60,7 +60,7 @@ public class ListGreyTagRouteRequest extends Request {
         } 
 
         /**
-         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

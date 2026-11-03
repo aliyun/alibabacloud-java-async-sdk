@@ -132,12 +132,12 @@ public class ListSecretsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirect.</li>
+         * <li><strong>4xx</strong>: Client error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,14 +157,14 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned. Take note of the following rules:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+         * <li>Success: The <strong>ErrorCode</strong> field is not returned.</li>
+         * <li>Failure: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Null</p>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -172,10 +172,10 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Take note of the following rules:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>If the call fails, an error code is returned.</li>
+         * <li><strong>success</strong>: The request is successful.</li>
+         * <li>Specific error code: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,10 +198,10 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <p>Indicates whether the Secret instance list was successfully queried. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The query was successful.</li>
+         * <li><strong>false</strong>: The query failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>The trace ID used to precisely query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -428,7 +428,7 @@ public class ListSecretsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the Secret was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1593760185111</p>
@@ -458,7 +458,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Secret ID.</p>
+             * <p>The Secret instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>
@@ -469,7 +469,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Secret name.</p>
+             * <p>The name of the Secret instance.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-auth</p>
@@ -480,8 +480,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Secret type.</p>
-             * <p>Set the value to <strong>kubernetes.io/dockerconfigjson</strong>. The value indicates the secret for the username and password of the image repository and is used for authentication when images are pulled during application deployment.</p>
+             * <p>The type of the Secret instance. Valid values:</p>
+             * <ul>
+             * <li><strong>kubernetes.io/dockerconfigjson</strong>: A secret that stores the username and password of an image repository. It is used for image pull authentication during deployment.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>kubernetes.io/dockerconfigjson</p>
@@ -492,7 +494,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the Secret was updated.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1593760185111</p>
@@ -549,7 +551,7 @@ public class ListSecretsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Secrets.</p>
+             * <p>The list of Secret instances.</p>
              */
             public Builder secrets(java.util.List<Secrets> secrets) {
                 this.secrets = secrets;

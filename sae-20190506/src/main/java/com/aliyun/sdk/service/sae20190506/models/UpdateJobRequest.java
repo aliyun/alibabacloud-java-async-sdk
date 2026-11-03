@@ -705,7 +705,7 @@ public class UpdateJobRequest extends Request {
         } 
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</p>
+         * <p>The ARN of the RAM role required to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Implement cross-account authorization by using RAM roles</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/adminrole</p>
@@ -717,7 +717,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of Container Registry Enterprise Edition instance N. This parameter is required when the <strong>ImageUrl</strong> parameter is set to the URL of an image in an ACR Enterprise Edition instance.</p>
+         * <p>The ACR Enterprise instance ID. This parameter is required when <strong>ImageUrl</strong> is a Container Registry Enterprise instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-xxxxxx</p>
@@ -729,7 +729,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The ID of the job template to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -742,7 +742,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The number of times the job is retried.</p>
+         * <p>The number of retries for the job.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -754,7 +754,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * BestEffortType.
+         * <p>The BestEffort policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>besteffort</p>
          */
         public Builder bestEffortType(String bestEffortType) {
             this.putQueryParameter("BestEffortType", bestEffortType);
@@ -763,14 +766,14 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The command that is used to start the image. The command must be an existing executable object in the container. Example:</p>
+         * <p>The startup command of the image. The command must be an executable object that exists in the container. Example:</p>
          * <pre><code>command:
          *       - echo
          *       - abc
          *       - &gt;
          *       - file0
          * </code></pre>
-         * <p>In this example, the Command parameter is set to <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
+         * <p>Based on the preceding example, <code>Command=&quot;echo&quot;</code> and <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>echo</p>
@@ -782,9 +785,9 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The parameters of the image startup command. The CommandArgs parameter specifies the parameters that are required for the <strong>Command</strong> parameter. The name must meet the following format requirements:</p>
+         * <p>The arguments for the image startup command. These are the arguments required by the <strong>Command</strong> parameter. Format:</p>
          * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
-         * <p>In the preceding example, the CommandArgs parameter is set to <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The data type of <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be an array of strings in the JSON format. This parameter is optional.</p>
+         * <p>In the preceding example, <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> part must be converted to a string in JSON array format. If this parameter is not required, leave it empty.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;a&quot;,&quot;b&quot;]</p>
@@ -798,9 +801,9 @@ public class UpdateJobRequest extends Request {
         /**
          * <p>The concurrency policy of the job. Valid values:</p>
          * <ul>
-         * <li><strong>Forbid</strong>: Prohibits concurrent running. If the previous job is not completed, no new job is created.</li>
-         * <li><strong>Allow</strong>: Allows concurrent running.</li>
-         * <li><strong>Replace</strong>: If the previous job is not completed when the time to create a new job is reached, the new job replaces the previous job.</li>
+         * <li><strong>Forbid</strong>: Forbids concurrent execution. A new job is not created if the previous job is not completed.</li>
+         * <li><strong>Allow</strong>: Allows concurrent execution of jobs.</li>
+         * <li><strong>Replace</strong>: Replaces the previous job with a new job if the previous job is not completed when the new job is scheduled to be created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -813,16 +816,16 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The description of the <strong>ConfigMap</strong> instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following parameters are involved:</p>
+         * <p>The mount description of the <strong>ConfigMap</strong>. Use the ConfigMaps created on the namespace configuration item page to inject configuration information into the container. Parameter descriptions:</p>
          * <ul>
-         * <li><strong>congfigMapId</strong>: the ID of the ConfigMap instance. You can call the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the ID.</li>
-         * <li><strong>key</strong>: the key.</li>
+         * <li><strong>congfigMapId</strong>: The instance ID of the ConfigMap instance. You can invoke the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the instance ID.</li>
+         * <li><strong>key</strong>: The key value.</li>
          * </ul>
          * <blockquote>
-         * <p>You can use the <code>sae-sys-configmap-all</code> key to mount all keys.</p>
+         * <p>You can mount all keys by passing the <code>sae-sys-configmap-all</code> parameter.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>mountPath</strong>: the mount path.</li>
+         * <li><strong>mountPath</strong>: The mount path.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -835,10 +838,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The custom mappings between hostnames and IP addresses in the container. Valid values:</p>
+         * <p>The custom host mappings in the container. Valid values:</p>
          * <ul>
-         * <li><strong>hostName</strong>: the domain name or hostname.</li>
-         * <li><strong>ip</strong>: the IP address.</li>
+         * <li><strong>hostName</strong>: The domain name or hostname.</li>
+         * <li><strong>ip</strong>: The IP address.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -851,7 +854,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.</p>
+         * <p>The runtime environment version for the job in the HSF framework, such as the Ali-Tomcat container.</p>
          * 
          * <strong>example:</strong>
          * <p>3.5.3</p>
@@ -863,7 +866,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * EnableImageAccl.
+         * <p>Specifies whether to enable image acceleration.</p>
          */
         public Builder enableImageAccl(Boolean enableImageAccl) {
             this.putBodyParameter("EnableImageAccl", enableImageAccl);
@@ -872,20 +875,18 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
+         * <p>The environment variables for the container. You can specify custom environment variables or reference ConfigMaps. To reference a ConfigMap, you must create a ConfigMap instance first. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
          * <ul>
-         * <li><p>Configure custom environment variables</p>
-         * <ul>
-         * <li><strong>name</strong>: the name of the environment variable.</li>
-         * <li><strong>value</strong>: the value of the environment variable.</li>
+         * <li>Custom configuration<ul>
+         * <li><strong>name</strong>: The name of the environment variable.</li>
+         * <li><strong>value</strong>: The value of the environment variable.</li>
          * </ul>
          * </li>
-         * <li><p>Reference ConfigMap</p>
-         * <ul>
-         * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>. Example: <code>sae-sys-configmap-all-test1</code>.</li>
-         * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>configMapRef</code>.</li>
-         * <li><strong>configMapId</strong>: the ConfigMap ID.</li>
-         * <li><strong>key</strong>: the key. If you want to reference all keys, do not configure this parameter.</li>
+         * <li>Reference a ConfigMap<ul>
+         * <li><strong>name</strong>: The name of the environment variable. You can reference a single key or all keys. To reference all keys, enter <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>, for example, <code>sae-sys-configmap-all-test1</code>.</li>
+         * <li><strong>valueFrom</strong>: The reference of the environment variable. Set the value to <code>configMapRef</code>.</li>
+         * <li><strong>configMapId</strong>: The ID of the ConfigMap.</li>
+         * <li><strong>key</strong>: The key. If you reference all key-value pairs, do not set this field.</li>
          * </ul>
          * </li>
          * </ul>
@@ -900,7 +901,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the corresponding Secret.</p>
+         * <p>The ID of the corresponding secret.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -912,7 +913,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The URL of the image. This parameter is returned only if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+         * <p>The URL of the image. This parameter is required when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
@@ -924,7 +925,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+         * <p>The startup arguments for the JAR package job. Default job startup command: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
          * 
          * <strong>example:</strong>
          * <p>-Xms4G -Xmx4G</p>
@@ -936,7 +937,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The option settings in the JAR package. The settings are used to start the application container. The default startup command for application deployment is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+         * <p>The startup options for the JAR package job. Default job startup command: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
          * 
          * <strong>example:</strong>
          * <p>custom-option</p>
@@ -948,7 +949,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The version of the Java development kit (JDK) on which the deployment package of the application depends. The following versions are supported:</p>
+         * <p>The JDK version required by the deployment package. Valid values:</p>
          * <ul>
          * <li><strong>Open JDK 8</strong></li>
          * <li><strong>Open JDK 7</strong></li>
@@ -957,7 +958,7 @@ public class UpdateJobRequest extends Request {
          * <li><strong>openjdk-8u191-jdk-alpine3.9</strong></li>
          * <li><strong>openjdk-7u201-jdk-alpine3.9</strong></li>
          * </ul>
-         * <p>This parameter is not returned if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+         * <p>This parameter is not supported when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Open JDK 8</p>
@@ -969,7 +970,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The configurations for mounting the NAS file system. If you do not need to modify the NAS configurations when you deploy the application, configure <strong>MountDesc</strong> only in the first request. If you no longer need to use NAS, leave <strong>MountDesc</strong> empty in the request.</p>
+         * <p>The description of the NAS mount. If the configuration remains unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>MountDesc</strong> field in the request. To clear the NAS configuration, you must set this field to an empty string in the request. That is, set the value of <strong>MountDesc</strong> to &quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
@@ -981,7 +982,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The mount target of the NAS file system in the VPC where the application is deployed. If you do not need to modify this configuration during the deployment, configure the <strong>MountHost</strong> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you need to remove this configuration, leave the <strong>MountHost</strong> parameter empty in the request.</p>
+         * <p>The mount target of the NAS file system in the VPC of the job template. If the configuration remains unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>MountHost</strong> field in the request. To clear the NAS configuration, you must set this field to an empty string in the request. That is, set the value of <strong>MountHost</strong> to &quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>10d3b4bc9****.com</p>
@@ -993,7 +994,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * NasConfigs.
+         * <p>The configuration for mounting the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;mountPath&quot;:&quot;/test1&quot;,&quot;readOnly&quot;:false,&quot;nasId&quot;:&quot;nasId1&quot;,&quot;mountDomain&quot;:&quot;nasId1.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;nasPath&quot;:&quot;/test1&quot;},{&quot;nasId&quot;:&quot;nasId2&quot;,&quot;mountDomain&quot;:&quot;nasId2.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;readOnly&quot;:false,&quot;nasPath&quot;:&quot;/test2&quot;,&quot;mountPath&quot;:&quot;/test2&quot;}]</p>
          */
         public Builder nasConfigs(String nasConfigs) {
             this.putQueryParameter("NasConfigs", nasConfigs);
@@ -1002,7 +1006,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Apsara File Storage NAS file system. If you do not need to modify the NAS configurations when you deploy the application, configure <strong>NasId</strong> only in the first request. If you no longer need to use NAS, leave <strong>NasId</strong> empty in the request.</p>
+         * <p>The ID of the Apsara File Storage NAS file system. If the configuration remains unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>NasId</strong> field in the request. To clear the NAS configuration, you must set this field to an empty string in the request. That is, set the value of <strong>NasId</strong> to &quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>10d3b4****</p>
@@ -1014,7 +1018,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey ID that is used to read data from and write data to OSS.</p>
+         * <p>The AccessKey ID used to read and write OSS data.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -1026,7 +1030,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey secret that is used to read data from and write data to OSS.</p>
+         * <p>The AccessKey Secret used to read and write OSS data.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -1038,18 +1042,14 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The information about the mounted Object Storage Service (OSS) bucket. The following parameters are involved:</p>
+         * <p>The OSS mount description. Parameter descriptions:</p>
          * <ul>
-         * <li><p><strong>bucketName</strong>: the name of the OSS bucket.</p>
-         * </li>
-         * <li><p><strong>bucketPath</strong>: the directory or object in OSS. If the specified directory or object does not exist, an error is returned.</p>
-         * </li>
-         * <li><p><strong>mountPath</strong>: the directory of the container in SAE. If the path already exists, the newly specified path overwrites the previous one. If the path does not exist, it is created.</p>
-         * </li>
-         * <li><p><strong>readOnly</strong>: specifies whether to only allow the container path to read data from the OSS directory. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The container path only has read permission on the OSS directory.</li>
-         * <li><strong>false</strong>: The application has read and write permissions.</li>
+         * <li><strong>bucketName</strong>: The name of the bucket.</li>
+         * <li><strong>bucketPath</strong>: The folder or object that you created in OSS. If the OSS mount folder does not exist, an exception is triggered.</li>
+         * <li><strong>mountPath</strong>: The container path in SAE. If the path already exists, it overwrites the existing content. If the path does not exist, it is created.</li>
+         * <li><strong>readOnly</strong>: Specifies whether the container path has read permissions on the mount folder resources. Valid values:<ul>
+         * <li><strong>true</strong>: Read-only permissions.</li>
+         * <li><strong>false</strong>: Read and write permissions.</li>
          * </ul>
          * </li>
          * </ul>
@@ -1064,7 +1064,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The address of the deployment package. This parameter is required if you set <strong>PackageType</strong> to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
+         * <p>The URL of the deployment package. This parameter is required when <strong>Package Type</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://myoss.oss-cn-hangzhou.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-hangzhou.aliyuncs.com/my-buc/2019-06-30/****.jar</a></p>
@@ -1076,7 +1076,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The version of the deployment package. This parameter is required if you set <strong>PackageType</strong> to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
+         * <p>The version number of the deployment package. This parameter is required when <strong>Package Type</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.1</p>
@@ -1088,7 +1088,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of Container Registry Enterprise Edition instance N.</p>
+         * <p>The ACR Enterprise instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-xxxxxx</p>
@@ -1100,7 +1100,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The details of the PHP configuration file.</p>
+         * <p>The content of the PHP configuration file.</p>
          * 
          * <strong>example:</strong>
          * <p>k1=v1</p>
@@ -1112,7 +1112,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The path on which the PHP configuration file for application startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</p>
+         * <p>The mount path for the PHP job startup configuration. You must ensure that the PHP server uses this configuration file to start.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/local/etc/php/php.ini</p>
@@ -1124,7 +1124,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The script to be run after the container is started. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;\]}}</code></p>
+         * <p>The script to execute after the container starts. A script is executed immediately after the container is created. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</code></p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</p>
@@ -1136,7 +1136,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The script that is run before the container is stopped. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;\]}}</code></p>
+         * <p>The script to execute before the container stops. A script is executed before the container is deleted. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</code></p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</p>
@@ -1160,7 +1160,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The Python environment. Set the value to <strong>PYTHON 3.9.15</strong>.</p>
+         * <p>The Python environment. Supported version: <strong>PYTHON 3.9.15</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>PYTHON 3.9.15</p>
@@ -1172,7 +1172,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The configurations for installing custom module dependencies. By default, the dependencies defined by the requirements.txt file in the root directory are installed. If the package does not contain this file and you do not configure custom dependencies in the package, specify the dependencies that you want to install in the text box.</p>
+         * <p>The custom installation module dependencies. By default, the dependencies defined in the requirements.txt file in the root folder are installed. If the file is not configured or you use a custom software package, you can specify the dependencies to install.</p>
          * 
          * <strong>example:</strong>
          * <p>Flask==2.0</p>
@@ -1184,7 +1184,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the job that you reference.</p>
+         * <p>The ID of the referenced job.</p>
          * 
          * <strong>example:</strong>
          * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -1196,7 +1196,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The number of concurrent instances.</p>
+         * <p>The number of concurrent instances for the job.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1208,7 +1208,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable job sharding.</p>
+         * <p>Specifies whether to enable job slicing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1220,7 +1220,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The parameters of job sharding.</p>
+         * <p>The job slicing parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>[0,1,2]</p>
@@ -1232,22 +1232,22 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The configurations of Log Service.</p>
+         * <p>The configuration for collecting logs to Simple Log Service (SLS).</p>
          * <ul>
-         * <li>To use Log Service resources that are automatically created by SAE, set this parameter to <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
-         * <li>To use custom Log Service resources, set this parameter to <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
+         * <li>To use SLS resources automatically created by Serverless App Engine (SAE): <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
+         * <li>To use custom SLS resources: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
          * </ul>
-         * <p>The following parameters are involved:</p>
+         * <p>Parameter descriptions:</p>
          * <ul>
-         * <li><strong>projectName</strong>: the name of the Log Service project.</li>
-         * <li><strong>logDir</strong>: the path in which logs are stored.</li>
-         * <li><strong>logType</strong>: the log type. <strong>stdout</strong>: the standard output log of the container. You can specify only one stdout value for this parameter. If you leave this parameter empty, file logs are collected.</li>
-         * <li><strong>logstoreName</strong>: the name of the Logstore in Log Service.</li>
-         * <li><strong>logtailName</strong>: the name of the Logtail configuration in Log Service. If you do not configure this parameter, a new Logtail configuration is created.</li>
+         * <li><strong>projectName</strong>: The name of the SLS project.  </li>
+         * <li><strong>logDir</strong>: The log path.</li>
+         * <li><strong>logType</strong>: The log type. <strong>stdout</strong> indicates container standard output logs. Only one entry is allowed. If no entry is specified, file logs are collected.</li>
+         * <li><strong>logstoreName</strong>: The name of the SLS Logstore.</li>
+         * <li><strong>logtailName</strong>: The name of the SLS Logtail. If this parameter is not specified, a new Logtail is created.</li>
          * </ul>
-         * <p>If you do not need to modify the logging configurations when you deploy the application, configure the <strong>SlsConfigs</strong> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you no longer need to use Log Service, leave the <strong>SlsConfigs</strong> parameter empty in the request.</p>
+         * <p>If the SLS collection configuration remains unchanged during multiple deployments, you do not need to configure this parameter. That is, you do not need to include the <strong>SlsConfigs</strong> field in the request. If you no longer need the SLS collection feature, you must set the value of this field to an empty string in the request. That is, set the value of <strong>SlsConfigs</strong> to &quot;&quot;.</p>
          * <blockquote>
-         * <p>A Log Service project that is automatically created by SAE when you create an application is deleted when the application is deleted. Therefore, when you create an application, you cannot select a Log Service project that is automatically created by SAE for log collection.</p>
+         * <p>The project automatically created with the job template is deleted when the job template is deleted. Therefore, when selecting an existing project, you cannot select a project automatically created by SAE.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1260,7 +1260,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for a graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.</p>
+         * <p>The timeout period for graceful shutdown. Unit: seconds. Default value: 30. Valid values: 1 to 300.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1272,7 +1272,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The timeout period. Unit: seconds.</p>
+         * <p>The timeout period of the job. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -1296,13 +1296,13 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The Tomcat configuration. If you want to delete the configuration, set this parameter to {} or leave this parameter empty. Valid values:</p>
+         * <p>The Tomcat file configuration. Set the value to &quot;&quot; or &quot;{}&quot; to delete the configuration. Valid values:</p>
          * <ul>
-         * <li><strong>port</strong>: the port number. The port number ranges from 1024 to 65535. Though the admin permissions are configured for the container, the root permissions are required to perform operations on ports whose number is smaller than 1024. Enter a value that ranges from 1025 to 65535 because the container has only the admin permissions. If you do not specify this parameter, the default port number 8080 is used.</li>
-         * <li><strong>contextPath</strong>: the path. Default value: /. This value indicates the root directory.</li>
-         * <li><strong>maxThreads</strong>: the maximum number of connections in the connection pool. Default value: 400.</li>
-         * <li><strong>uriEncoding</strong>: the URI encoding scheme in the Tomcat container. Valid values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and GB2312. If you do not specify this parameter, the default value <strong>ISO-8859-1</strong> is used.</li>
-         * <li><strong>useBodyEncoding</strong>: specifies whether to use the encoding scheme that is specified by <strong>BodyEncoding for URL</strong>. Default value: <strong>true</strong>.</li>
+         * <li><strong>port</strong>: The port number. Valid values: 1024 to 65535. Ports smaller than 1024 require root permissions. Because the container is configured with admin permissions, specify a port greater than 1024. Default value: 8080.</li>
+         * <li><strong>contextPath</strong>: The access path. Default value: the root directory &quot;/&quot;.</li>
+         * <li><strong>maxThreads</strong>: The maximum number of connections in the connection pool. Default value: 400.</li>
+         * <li><strong>uriEncoding</strong>: The encoding format of Tomcat. Valid values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and <strong>GB2312</strong>. Default value: <strong>ISO-8859-1</strong>.</li>
+         * <li><strong>useBodyEncoding</strong>: Specifies whether to use <strong>BodyEncoding for URL</strong>. Default value: <strong>true</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1324,10 +1324,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The startup command of the WAR package. For information about how to configure the startup command, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure startup commands</a>.</p>
+         * <p>The startup command for the WAR package deployment job. The procedure is the same as configuring the startup command for image deployment. For more information, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure a startup command</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>CATALINA_OPTS=&quot;$CATALINA_OPTS $Options&quot; catalina.sh run</p>
+         * <p>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</p>
          */
         public Builder warStartOptions(String warStartOptions) {
             this.putQueryParameter("WarStartOptions", warStartOptions);
@@ -1336,12 +1336,12 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The version of the Tomcat container on which the deployment package depends. The following versions are supported:</p>
+         * <p>The Tomcat version required by the deployment package. Valid values:</p>
          * <ul>
          * <li><strong>apache-tomcat-7.0.91</strong></li>
          * <li><strong>apache-tomcat-8.5.42</strong></li>
          * </ul>
-         * <p>This parameter is not returned if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+         * <p>This parameter is not supported when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>apache-tomcat-7.0.91</p>

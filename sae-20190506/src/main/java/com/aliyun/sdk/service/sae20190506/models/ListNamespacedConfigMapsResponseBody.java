@@ -132,12 +132,12 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the call was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the call failed.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,11 +157,14 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error code. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * <li>Successful request: The <strong>ErrorCode</strong> field is not returned.</li>
+         * <li>Failed request: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +172,10 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned information. Valid values:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li>If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>If the call fails, an error code is returned.</li>
+         * <li><strong>success</strong>: The request is successful.</li>
+         * <li>Specific error code: An exception occurred during the request.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +187,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -195,10 +198,10 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the ConfigMap instances were obtained. Valid values:</p>
+         * <p>Indicates whether the list of ConfigMap instances is successfully retrieved. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The instances were obtained.</li>
-         * <li><strong>false</strong>: The instances failed to be obtained.</li>
+         * <li><strong>true</strong>: The list is successfully retrieved.</li>
+         * <li><strong>false</strong>: The list fails to be retrieved.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * <p>The trace ID used to query call details.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -279,7 +282,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>f16b4000-9058-4c22-a49d-49a28f0b****</p>
@@ -290,7 +293,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-app</p>
@@ -438,7 +441,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ConfigMap instance.</p>
+             * <p>The ConfigMap instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -449,7 +452,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1593760185111</p>
@@ -460,9 +463,9 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data of ConfigMap key-value pairs. Format:</p>
+             * <p>The key-value pair data of the ConfigMap instance. The format is as follows:</p>
              * <p>{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}</p>
-             * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage and use configurations</a>.</p>
+             * <p>k indicates the key, and v indicates the value. For more information about configuration items, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage and use configuration items</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
@@ -473,7 +476,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the instance.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>test-desc</p>
@@ -484,7 +487,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ConfigMap instance.</p>
+             * <p>The ConfigMap instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-name</p>
@@ -495,7 +498,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace.</p>
+             * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -506,7 +509,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application that is associated with the instance.</p>
+             * <p>The associated applications.</p>
              */
             public Builder relateApps(java.util.List<RelateApps> relateApps) {
                 this.relateApps = relateApps;
@@ -514,7 +517,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was last modified.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1593760185111</p>
@@ -571,7 +574,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ConfigMap instances.</p>
+             * <p>The list of ConfigMap instances.</p>
              */
             public Builder configMaps(java.util.List<ConfigMaps> configMaps) {
                 this.configMaps = configMaps;

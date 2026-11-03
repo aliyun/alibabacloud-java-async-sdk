@@ -60,7 +60,7 @@ public class DescribeApplicationStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The ID of the target application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

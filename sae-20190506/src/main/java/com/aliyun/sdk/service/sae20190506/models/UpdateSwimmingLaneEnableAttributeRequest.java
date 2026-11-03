@@ -101,10 +101,10 @@ public class UpdateSwimmingLaneEnableAttributeRequest extends Request {
         } 
 
         /**
-         * <p>Lane status:</p>
+         * <p>Specifies whether the traffic lane is enabled. Valid values:</p>
          * <ul>
-         * <li>true: enabled</li>
-         * <li>false: disabled</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class UpdateSwimmingLaneEnableAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the lane group.</p>
+         * <p>The traffic lane group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2074</p>
@@ -129,7 +129,7 @@ public class UpdateSwimmingLaneEnableAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the lane.</p>
+         * <p>The traffic lane ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9637</p>
@@ -141,7 +141,7 @@ public class UpdateSwimmingLaneEnableAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of a namespace.</p>
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>

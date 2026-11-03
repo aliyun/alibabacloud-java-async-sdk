@@ -115,10 +115,10 @@ public class BindNlbRequest extends Request {
         } 
 
         /**
-         * <p>The type of the IP addresses. Valid values:</p>
+         * <p>The address type. Valid values:</p>
          * <ul>
-         * <li>Internet: public endpoint.</li>
-         * <li>Intranet: private endpoint.</li>
+         * <li>Internet: public network address.</li>
+         * <li>Intranet: private network address.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class BindNlbRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application to which the NLB instance is bound.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -143,13 +143,20 @@ public class BindNlbRequest extends Request {
         }
 
         /**
-         * <p>The listener that you want to manage. The value is a string that consists of JSON arrays. Each listener contains the following fields:</p>
+         * <p>The JSON array string of the listeners to be configured. The structure of each listener is as follows:</p>
          * <ul>
-         * <li><strong>port</strong>: the port number of the NLB listener. This field is required. Data type: integer. Valid values: 0 to 65535.</li>
-         * <li><strong>TargetPort</strong>: the port number of the container listener. This field is required. Data type: integer. Valid values: 0 to 65535.</li>
-         * <li><strong>Protocol</strong>: the listener protocol. This field is required. Data type: string. Valid values: TCP, UDP, and TCPSSL.</li>
-         * <li><strong>CertIds</strong>: the IDs of the server certificates. This field is optional. Data type: string. This field is supported only by TCPSSL listeners.</li>
+         * <li><p><strong>Port</strong>: Integer type, required. The load balancing listener port. Valid values: 0 to 65535.</p>
+         * </li>
+         * <li><p><strong>TargetPort</strong>: Integer type, required. The listening port of the container in the instance. Valid values: 0 to 65535.</p>
+         * </li>
+         * <li><p><strong>Protocol</strong>: String type, required. The listening protocol. Valid values: TCP, UDP, and TCPSSL.</p>
+         * </li>
+         * <li><p><strong>CertIds</strong>: String type, optional. The list of server certificates. This parameter takes effect only for TCPSSL listeners.</p>
+         * </li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Port&quot;:80,&quot;TargetPort&quot;:8080,&quot;Protocol&quot;:&quot;TCP&quot;}]</p>
          */
         public Builder listeners(String listeners) {
             this.putQueryParameter("Listeners", listeners);
@@ -170,10 +177,12 @@ public class BindNlbRequest extends Request {
         }
 
         /**
-         * <p>The mappings between zones and vSwitches. The value is a JSON string. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones. A ZoneMapping contains the following fields:</p>
+         * <p>The JSON string of the zone and vSwitch mapping list. You can add up to 10 zones. If the current region supports two or more zones, you must add at least two zones. The structure of a ZoneMapping is as follows:</p>
          * <ul>
-         * <li>The ID of the vSwitch in the zone. Each zone can contain only one vSwitch and one subnet. Data type: string.</li>
-         * <li>The zone ID of the NLB instance. Data type: string.</li>
+         * <li><p>VSwitchId: String type. The vSwitch corresponding to the zone. Each zone can use only one vSwitch and one subnet.</p>
+         * </li>
+         * <li><p>ZoneId: String type. The zone ID of the Network Load Balancer (NLB) instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

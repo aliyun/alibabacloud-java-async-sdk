@@ -75,7 +75,7 @@ public class DeleteSecretRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the namespace in which the Secret resides. By default, the namespace ID is the same as the region ID.</p>
+         * <p>The ID of the namespace to which the secret instance belongs. If the namespace is the default namespace, you only need to specify RegionId, such as <code>cn-beijing</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Secret to be deleted. You can call the <a href="https://help.aliyun.com/document_detail/466929.html">ListSecrets</a> operation to view the Secret IDs.</p>
+         * <p>Instance ID of the secret instance to be deleted. You can call the <a href="https://help.aliyun.com/document_detail/466929.html">ListSecrets</a> operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

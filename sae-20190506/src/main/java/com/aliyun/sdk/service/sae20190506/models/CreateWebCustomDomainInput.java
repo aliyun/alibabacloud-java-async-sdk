@@ -133,7 +133,10 @@ public class CreateWebCustomDomainInput extends TeaModel {
         } 
 
         /**
-         * DefaultForwardingAppName.
+         * <p>The name of the application to which data is forwarded by the domain name by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-app</p>
          */
         public Builder defaultForwardingAppName(String defaultForwardingAppName) {
             this.defaultForwardingAppName = defaultForwardingAppName;
@@ -141,6 +144,7 @@ public class CreateWebCustomDomainInput extends TeaModel {
         }
 
         /**
+         * <p>The domain name. Enter a custom domain name that has obtained an Internet content provider (ICP) filing in the Alibaba Cloud ICP Filing system, or a custom domain name whose ICP filing information includes Alibaba Cloud as a service provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +156,15 @@ public class CreateWebCustomDomainInput extends TeaModel {
         }
 
         /**
-         * Protocol.
+         * <p>The protocol type that is supported by the custom domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP</strong>: Only HTTP is supported.</li>
+         * <li><strong>HTTPS</strong>: Only HTTPS is supported.</li>
+         * <li><strong>HTTP,HTTPS</strong>: Both HTTP and HTTPS are supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -160,7 +172,7 @@ public class CreateWebCustomDomainInput extends TeaModel {
         }
 
         /**
-         * RouteConfig.
+         * <p>The route configurations.</p>
          */
         public Builder routeConfig(RouteConfig routeConfig) {
             this.routeConfig = routeConfig;
@@ -168,7 +180,7 @@ public class CreateWebCustomDomainInput extends TeaModel {
         }
 
         /**
-         * WebCertConfig.
+         * <p>The information about the HTTPS certificate.</p>
          */
         public Builder webCertConfig(WebCertConfig webCertConfig) {
             this.webCertConfig = webCertConfig;
@@ -176,7 +188,7 @@ public class CreateWebCustomDomainInput extends TeaModel {
         }
 
         /**
-         * WebTLSConfig.
+         * <p>The Transport Layer Security (TLS) configurations.</p>
          */
         public Builder webTLSConfig(WebTLSConfig webTLSConfig) {
             this.webTLSConfig = webTLSConfig;
@@ -184,7 +196,7 @@ public class CreateWebCustomDomainInput extends TeaModel {
         }
 
         /**
-         * WebWAFConfig.
+         * <p>The Web Application Firewall (WAF) configurations.</p>
          */
         public Builder webWAFConfig(WebWAFConfig webWAFConfig) {
             this.webWAFConfig = webWAFConfig;

@@ -235,6 +235,9 @@ public class ListWebApplicationInstancesRequest extends Request {
 
         /**
          * <p>The status of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             String statusesShrink = shrink(statuses, "Statuses", "json");

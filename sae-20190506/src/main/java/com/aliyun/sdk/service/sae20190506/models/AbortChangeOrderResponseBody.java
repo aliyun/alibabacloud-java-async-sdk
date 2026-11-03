@@ -132,12 +132,12 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,11 +157,14 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. Value values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li><strong>ErrorCode</strong> is not returned if a request is successful.</li>
-         * <li><strong>ErrorCode</strong> is returned if a request failed. For more information, see <strong>Error code</strong> section of this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,7 +172,7 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the operation.</p>
+         * <p>The additional information about the call result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -191,10 +194,10 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the change order was terminated. Valid values:</p>
+         * <p>Indicates whether the change order was aborted successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The change order was terminated.</li>
-         * <li><strong>false</strong>: The change order failed to be terminated.</li>
+         * <li><strong>true</strong>: The change order was aborted successfully.</li>
+         * <li><strong>false</strong>: The change order failed to be aborted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +209,7 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace.</p>
+         * <p>The trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>

@@ -73,7 +73,10 @@ public class DescribeNamespaceResourcesRequest extends Request {
         } 
 
         /**
-         * NameSpaceShortId.
+         * <p>The short namespace ID. The region ID is not required. This parameter is recommended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nameSpaceShortId(String nameSpaceShortId) {
             this.putQueryParameter("NameSpaceShortId", nameSpaceShortId);
@@ -82,7 +85,7 @@ public class DescribeNamespaceResourcesRequest extends Request {
         }
 
         /**
-         * <p>cn-shanghai:test</p>
+         * <p>The long namespace ID. If this parameter is specified, it takes effect and NameSpaceShortId is ignored. This parameter is retained for compatibility. Use the short namespace ID to simplify parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai:test</p>

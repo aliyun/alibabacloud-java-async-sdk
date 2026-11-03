@@ -102,7 +102,7 @@ public class ListIngressesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of an application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bbf3a590-6d13-46fe-8ca9-c947a20b****</p>
@@ -114,7 +114,10 @@ public class ListIngressesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -123,7 +126,7 @@ public class ListIngressesRequest extends Request {
         }
 
         /**
-         * <p>The ID of a namespace.</p>
+         * <p>The namespace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +139,10 @@ public class ListIngressesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

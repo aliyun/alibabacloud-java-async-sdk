@@ -132,12 +132,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The price.</p>
+         * <p>The pricing information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,11 +157,14 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. Valid values:</p>
+         * <p>The error code. The value is described as follows:</p>
          * <ul>
-         * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.Obviously</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +172,10 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned. Valid values:</p>
+         * <p>The additional information. The value is described as follows:</p>
          * <ul>
-         * <li>If the request was successful, <strong>success</strong> is returned.</li>
-         * <li>If the request failed, an error code is returned.</li>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +187,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ADCEC067-86AD-19E2-BD43-E83F3841****</p>
@@ -195,10 +198,10 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the configuration price was obtained.</p>
+         * <p>Indicates whether the configuration pricing information is successfully retrieved. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The price was obtained.</li>
-         * <li><strong>false</strong>: The price failed to be queried.</li>
+         * <li><strong>true</strong>: The pricing information is successfully retrieved.</li>
+         * <li><strong>false</strong>: The pricing information fails to be retrieved.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace.</p>
+         * <p>The trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1a0dcc771722848598056771******</p>
@@ -292,7 +295,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The available CPU capacity. Unit: cores *.</p>
+             * <p>The remaining CPU quota, in core-hours.</p>
              * 
              * <strong>example:</strong>
              * <p>497570.450009</p>
@@ -303,7 +306,10 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Cu.
+             * <p>The remaining CU quota of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder cu(Float cu) {
                 this.cu = cu;
@@ -311,7 +317,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The available memory size. Unit: GiB ×.</p>
+             * <p>The remaining memory quota, in GiB-hours.</p>
              * 
              * <strong>example:</strong>
              * <p>989802.563546</p>
@@ -407,7 +413,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The discount amount.</p>
+             * <p>The discount amount of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0009259</p>
@@ -429,7 +435,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the discount rule.</p>
+             * <p>The rule ID.</p>
              */
             public Builder ruleIds(java.util.List<String> ruleIds) {
                 this.ruleIds = ruleIds;
@@ -437,7 +443,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The final price of the order.</p>
+             * <p>The actual transaction price of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0037037</p>
@@ -507,7 +513,10 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of discount rule.</p>
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20% discount on pay-as-you-go</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -515,7 +524,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the discount rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2000010******</p>
@@ -585,7 +594,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about pricing.</p>
+             * <p>The pricing information.</p>
              */
             public Builder order(Order order) {
                 this.order = order;
@@ -593,7 +602,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount rules.</p>
+             * <p>The campaign rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -686,7 +695,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The discount amount.</p>
+             * <p>The discount amount of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0018518</p>
@@ -708,7 +717,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the promotion rule.</p>
+             * <p>The campaign ID.</p>
              */
             public Builder ruleIds(java.util.List<String> ruleIds) {
                 this.ruleIds = ruleIds;
@@ -716,7 +725,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price.</p>
+             * <p>The transaction amount of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0074074</p>
@@ -812,7 +821,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The discount amount.</p>
+             * <p>The discount amount of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0009259</p>
@@ -834,7 +843,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the discount rule.</p>
+             * <p>The rule ID.</p>
              */
             public Builder ruleIds(java.util.List<String> ruleIds) {
                 this.ruleIds = ruleIds;
@@ -842,7 +851,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual price of the order.</p>
+             * <p>The actual transaction price of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0037037</p>
@@ -912,7 +921,10 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the discount rule.</p>
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20% discount on pay-as-you-go</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -920,7 +932,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the discount policy.</p>
+             * <p>The policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2000010******</p>
@@ -990,7 +1002,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about pricing.</p>
+             * <p>The pricing information.</p>
              */
             public Builder order(RequestPriceOrder order) {
                 this.order = order;
@@ -998,7 +1010,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount rule.</p>
+             * <p>The campaign rules.</p>
              */
             public Builder rules(java.util.List<RequestPriceRules> rules) {
                 this.rules = rules;
@@ -1065,7 +1077,10 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the promotion rule.</p>
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20% discount on pay-as-you-go</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1073,7 +1088,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the promotion rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2000010******</p>
@@ -1169,7 +1184,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The discount amount.</p>
+             * <p>The discount amount of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0009259</p>
@@ -1191,7 +1206,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the discount rule.</p>
+             * <p>The campaign ID.</p>
              */
             public Builder ruleIds(java.util.List<String> ruleIds) {
                 this.ruleIds = ruleIds;
@@ -1199,7 +1214,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The final price of the order.</p>
+             * <p>The actual transaction price of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0037037</p>
@@ -1269,7 +1284,10 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the discount rule.</p>
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20% discount on pay-as-you-go</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1277,7 +1295,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the discount rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2000010******</p>
@@ -1347,7 +1365,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about pricing.</p>
+             * <p>The pricing information.</p>
              */
             public Builder order(TrafficPriceOrder order) {
                 this.order = order;
@@ -1355,7 +1373,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount rule.</p>
+             * <p>The campaign rules.</p>
              */
             public Builder rules(java.util.List<TrafficPriceRules> rules) {
                 this.rules = rules;
@@ -1474,7 +1492,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The remaining capacity of the resource plan.</p>
+             * <p>The remaining quota of the resource plan.</p>
              */
             public Builder bagUsage(BagUsage bagUsage) {
                 this.bagUsage = bagUsage;
@@ -1482,7 +1500,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price of CPU and memory.</p>
+             * <p>The CPU and memory pricing.</p>
              */
             public Builder cpuMemPrice(CpuMemPrice cpuMemPrice) {
                 this.cpuMemPrice = cpuMemPrice;
@@ -1490,7 +1508,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about pricing.</p>
+             * <p>The pricing information.</p>
              */
             public Builder order(DataOrder order) {
                 this.order = order;
@@ -1498,7 +1516,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price based on the number of requests.</p>
+             * <p>The pricing based on the number of requests.</p>
              */
             public Builder requestPrice(RequestPrice requestPrice) {
                 this.requestPrice = requestPrice;
@@ -1506,7 +1524,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The promotion rules.</p>
+             * <p>The campaign rules.</p>
              */
             public Builder rules(java.util.List<DataRules> rules) {
                 this.rules = rules;
@@ -1514,7 +1532,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic price.</p>
+             * <p>The traffic pricing.</p>
              */
             public Builder trafficPrice(TrafficPrice trafficPrice) {
                 this.trafficPrice = trafficPrice;

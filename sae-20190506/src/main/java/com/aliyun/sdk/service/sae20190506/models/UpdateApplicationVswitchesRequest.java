@@ -130,7 +130,14 @@ public class UpdateApplicationVswitchesRequest extends Request {
         }
 
         /**
-         * Deploy.
+         * <p>Specifies whether to deploy the application immediately. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Deploys the application immediately. This is the default value.</li>
+         * <li><strong>false</strong>: Deploys the application later.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deploy(Boolean deploy) {
             this.putQueryParameter("Deploy", deploy);
@@ -139,7 +146,10 @@ public class UpdateApplicationVswitchesRequest extends Request {
         }
 
         /**
-         * MinReadyInstanceRatio.
+         * <p>The minimum percentage of ready instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder minReadyInstanceRatio(Integer minReadyInstanceRatio) {
             this.putQueryParameter("MinReadyInstanceRatio", minReadyInstanceRatio);
@@ -148,7 +158,10 @@ public class UpdateApplicationVswitchesRequest extends Request {
         }
 
         /**
-         * MinReadyInstances.
+         * <p>The minimum number of ready instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minReadyInstances(Integer minReadyInstances) {
             this.putQueryParameter("MinReadyInstances", minReadyInstances);
@@ -157,7 +170,7 @@ public class UpdateApplicationVswitchesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

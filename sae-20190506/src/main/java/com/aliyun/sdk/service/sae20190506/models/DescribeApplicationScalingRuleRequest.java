@@ -75,7 +75,7 @@ public class DescribeApplicationScalingRuleRequest extends Request {
         } 
 
         /**
-         * <p>a0d2e04c-159d-40a8-b240-d2f2c263****</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>test</p>
+         * <p>The name of the auto scaling policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -145,7 +145,10 @@ public class AppStackResource extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1706518652000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -153,7 +156,10 @@ public class AppStackResource extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-78yt</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -161,7 +167,10 @@ public class AppStackResource extends TeaModel {
         }
 
         /**
-         * ProductCode.
+         * <p>The product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder productCode(String productCode) {
             this.productCode = productCode;
@@ -169,7 +178,10 @@ public class AppStackResource extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-qwe112233</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -177,7 +189,10 @@ public class AppStackResource extends TeaModel {
         }
 
         /**
-         * ResourceName.
+         * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-palworld-a</p>
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
@@ -185,7 +200,10 @@ public class AppStackResource extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VSWITCH</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -193,7 +211,10 @@ public class AppStackResource extends TeaModel {
         }
 
         /**
-         * StackId.
+         * <p>The stack ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>palworld</p>
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -201,7 +222,10 @@ public class AppStackResource extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The resource status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder status(String status) {
             this.status = status;

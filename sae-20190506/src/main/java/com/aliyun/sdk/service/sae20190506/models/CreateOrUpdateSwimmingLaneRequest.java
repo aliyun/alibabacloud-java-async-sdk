@@ -171,9 +171,9 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * <p>The route configuration of the gateway.</p>
+         * <p>The gateway routing configuration.</p>
          * <blockquote>
-         * <p> This parameter is required if the gateway entry of the lane group is Java.</p>
+         * <p>This parameter is required when the gateway entry of the traffic lane group is Java.</p>
          * </blockquote>
          */
         public Builder appEntryRule(AppEntryRule appEntryRule) {
@@ -184,10 +184,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>Full-link Grayscale Mode:</p>
+         * <p>The end-to-end canary release mode. Valid values:</p>
          * <ul>
-         * <li>0: The request is routed based on the content of the request.</li>
-         * <li>1: routing based on percentages</li>
+         * <li><p>0: Routes traffic based on request content.</p>
+         * </li>
+         * <li><p>1: Routes traffic based on proportion.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,10 +202,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>Lane Status</p>
+         * <p>Specifies whether the traffic lane is enabled. Valid values:</p>
          * <ul>
-         * <li>true: enabled</li>
-         * <li>false: disabled</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +218,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the lane group to which the lane belongs.</p>
+         * <p>The ID of the traffic lane group to which the traffic lane belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>b2a8a925-477a-eswa-b823-d5e22500****</p>
@@ -228,7 +230,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the lane.</p>
+         * <p>The ID of the traffic lane.</p>
          * 
          * <strong>example:</strong>
          * <p>13857</p>
@@ -240,7 +242,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The name of the lane.</p>
+         * <p>The name of the traffic lane.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -252,10 +254,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The tag of the lane.</p>
+         * <p>The tag of the traffic lane.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</p>
+         * <p>g1</p>
          */
         public Builder laneTag(String laneTag) {
             this.putQueryParameter("LaneTag", laneTag);
@@ -264,9 +266,9 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The route configuration of the MSE gateway.</p>
+         * <p>The MSE gateway routing configuration.</p>
          * <blockquote>
-         * <p> If the <strong>EntryAppType</strong> is set to <strong>apig</strong> or <strong>mse-gw</strong>, it is required.</p>
+         * <p>This parameter is required when <strong>EntryAppType</strong> is set to <strong>apig</strong> or <strong>mse-gw</strong>.</p>
          * </blockquote>
          */
         public Builder mseGatewayEntryRule(MseGatewayEntryRule mseGatewayEntryRule) {
@@ -277,7 +279,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The namespace ID.</p>
+         * <p>The ID of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>
@@ -374,13 +376,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             } 
 
             /**
-             * <p>Matching Rule:</p>
+             * <p>The matching rule. Valid values:</p>
              * <ul>
-             * <li>The exact match. The condition is met if the traffic value and the condition value are exactly the same.</li>
-             * <li>The exact match. The condition is met if the traffic value and the condition value are exactly the same.</li>
-             * <li>The inclusive match. The condition is met if the traffic value is included in the specified list.</li>
-             * <li>The percentage match. Principle: The condition is met if &quot;hash(get(<code>key</code>)) % 100 &lt; value&quot;.</li>
-             * <li>Regular match: a regular expression match. The condition is met when the match is based on regular expression rules.</li>
+             * <li>==: Exact match. The traffic value must be exactly equal to the condition value.</li>
+             * <li>!=: Exact match. The traffic value must be exactly equal to the condition value.</li>
+             * <li>in: Inclusion match. The condition is met when the traffic value is in the specified list.</li>
+             * <li>百分比: Percentage match. The condition is met when <code>hash(get(key)) % 100 &lt; value</code> evaluates to true.</li>
+             * <li>正则匹配: Regular expression match. The condition is met when the value matches the regular expression.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -405,9 +407,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             /**
              * <p>The parameter type. Valid values:</p>
              * <ul>
-             * <li>header</li>
-             * <li>param</li>
-             * <li>Cookie: forwards requests based on cookies.</li>
+             * <li><p>header: Header</p>
+             * </li>
+             * <li><p>param: Parameter</p>
+             * </li>
+             * <li><p>cookie: Cookie</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -419,7 +424,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>The match value of the condition.</p>
+             * <p>The matching value of the condition.</p>
              * 
              * <strong>example:</strong>
              * <p>g1</p>
@@ -541,10 +546,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             } 
 
             /**
-             * <p>Logical connectors between conditions:</p>
+             * <p>The logical operator between conditions. Valid values:</p>
              * <ul>
-             * <li>AND: All conditions are met at the same time.</li>
-             * <li>OR: Any condition is met.</li>
+             * <li>AND: All conditions must be met.</li>
+             * <li>OR: Any condition must be met.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -556,7 +561,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>The conditions that trigger circuit breaking.</p>
+             * <p>The matching conditions.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
@@ -564,10 +569,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>Whether to enable proportional grayscale.</p>
+             * <p>Specifies whether to enable proportion-based canary release. Valid values:</p>
              * <ul>
-             * <li>true: enabled. After you enable this parameter, you must configure the PercentageByPath.</li>
-             * <li>false: disables the service.</li>
+             * <li>true: Enabled. If enabled, you must configure PercentageByPath.</li>
+             * <li>false: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -579,7 +584,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>The matched request path.</p>
+             * <p>The matched URI of the request paths.</p>
              */
             public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
@@ -587,7 +592,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>The traffic ratio. Valid values: 0 to 100.</p>
+             * <p>The traffic proportion used for proportion-based routing. Valid values: 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -691,13 +696,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             } 
 
             /**
-             * <p>The matching rule.</p>
+             * <p>The matching rule. Valid values:</p>
              * <ul>
-             * <li>==: exact match.</li>
-             * <li>! =: exact match.</li>
-             * <li>in: contains matches.</li>
-             * <li>Percentage: Percentage matching.</li>
-             * <li>Regular matching: specifies whether a regular expression is used to search for the original string.</li>
+             * <li>==: Exact match.</li>
+             * <li>!=: Exact match.</li>
+             * <li>in: Inclusion match.</li>
+             * <li>百分比: Percentage match.</li>
+             * <li>正则匹配: Regular expression match.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -709,7 +714,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>The parameter name.</p>
+             * <p>The name of the condition parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -722,9 +727,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             /**
              * <p>The parameter type. Valid values:</p>
              * <ul>
-             * <li>header</li>
-             * <li>param</li>
-             * <li>Cookie: forwards requests based on cookies.</li>
+             * <li><p>header: Header</p>
+             * </li>
+             * <li><p>param: Parameter</p>
+             * </li>
+             * <li><p>cookie: Cookie</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -736,7 +744,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>The match value of the condition.</p>
+             * <p>The matching value of the condition.</p>
              * 
              * <strong>example:</strong>
              * <p>g1</p>
@@ -858,10 +866,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             } 
 
             /**
-             * <p>Logical connectors between conditions:</p>
+             * <p>The logical operator between conditions. Valid values:</p>
              * <ul>
-             * <li>AND: All conditions are met at the same time.</li>
-             * <li>OR: Any condition is met.</li>
+             * <li>AND: All conditions must be met.</li>
+             * <li>OR: Any condition must be met.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -873,7 +881,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>Routing Condition</p>
+             * <p>The routing conditions.</p>
              */
             public Builder conditions(java.util.List<MseGatewayEntryRuleConditions> conditions) {
                 this.conditions = conditions;
@@ -881,9 +889,9 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>Whether to enable proportional grayscale.</p>
+             * <p>Specifies whether to enable proportion-based canary release. Valid values:</p>
              * <ul>
-             * <li>true: Enabled. After you enable this parameter, you must configure the PercentageByPath.</li>
+             * <li>true: Enabled. If enabled, you must configure PercentageByPath.</li>
              * <li>false: Disabled.</li>
              * </ul>
              * 
@@ -896,7 +904,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>The percentage of traffic replication. Valid values: 0 to 100.</p>
+             * <p>The traffic replication proportion (%). Valid values: 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -915,7 +923,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>The ID of the route.</p>
+             * <p>The route IDs.</p>
              */
             public Builder routeIds(java.util.List<Long> routeIds) {
                 this.routeIds = routeIds;

@@ -67,7 +67,10 @@ public class ListWebApplicationRevisionsOutput extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2RN</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -75,7 +78,7 @@ public class ListWebApplicationRevisionsOutput extends TeaModel {
         }
 
         /**
-         * Revisions.
+         * <p>The versions.</p>
          */
         public Builder revisions(java.util.List<Revision> revisions) {
             this.revisions = revisions;

@@ -144,7 +144,7 @@ public class DescribeAppServiceDetailRequest extends Request {
         } 
 
         /**
-         * <p>6dcc8c9e-d3da-478a-a066-86dcf820****</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace for the MSE Nacos instance.</p>
+         * <p>The ID of the MSE Nacos namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>public</p>
@@ -181,7 +181,7 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * <p>springCloud</p>
+         * <p>The service group. This is a custom parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>springCloud</p>
@@ -193,7 +193,7 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * <p>edas.service.provider</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>edas.service.provider</p>
@@ -205,7 +205,13 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * <p>springCloud</p>
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>dubbo</strong></p>
+         * </li>
+         * <li><p><strong>springCloud</strong></p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>springCloud</p>
@@ -217,7 +223,7 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * <p>1.0.0</p>
+         * <p>The service version. This is a custom parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

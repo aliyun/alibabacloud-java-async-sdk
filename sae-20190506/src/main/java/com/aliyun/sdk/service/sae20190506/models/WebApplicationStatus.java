@@ -67,7 +67,10 @@ public class WebApplicationStatus extends TeaModel {
         } 
 
         /**
-         * InstanceCount.
+         * <p>The number of application instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder instanceCount(Long instanceCount) {
             this.instanceCount = instanceCount;
@@ -75,7 +78,7 @@ public class WebApplicationStatus extends TeaModel {
         }
 
         /**
-         * WebScalingConfig.
+         * <p>The scaling configurations of the application.</p>
          */
         public Builder webScalingConfig(WebScalingConfig webScalingConfig) {
             this.webScalingConfig = webScalingConfig;

@@ -132,7 +132,16 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code or POP error code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: Success.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +149,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +157,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. Valid values:</p>
+         * <ul>
+         * <li>Successful request: The <strong>ErrorCode</strong> field is not returned.</li>
+         * <li>Failed request: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +172,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong>: The request is successful.</li>
+         * <li>Specific error code: The request is abnormal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +187,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D7E6B28-27C9-5EEA-B0A3-FC0D2F5B2263</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +198,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Specifies whether the creation or update is successful. Valid values:</p>
+         * <ul>
+         * <li>Successful.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +209,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a001a0817594572118465681d2341</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -298,7 +330,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableIpAddressCount.
+             * <p>The number of available IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>246</p>
              */
             public Builder availableIpAddressCount(String availableIpAddressCount) {
                 this.availableIpAddressCount = availableIpAddressCount;
@@ -306,7 +341,13 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The batch status. Valid values:</p>
+             * <ul>
+             * <li>Available: Available.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -314,7 +355,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2vc18rvxe1hk5dcsyy650</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -322,7 +366,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -330,7 +377,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>vpcid。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2ze7b7cfxmxypkodyg5io</p>
@@ -341,7 +388,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-l</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

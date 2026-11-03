@@ -67,7 +67,7 @@ public class RegistryConfig extends TeaModel {
         } 
 
         /**
-         * authConfig.
+         * <p>authConfig</p>
          */
         public Builder authConfig(RegistryAuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -75,7 +75,7 @@ public class RegistryConfig extends TeaModel {
         }
 
         /**
-         * certConfig.
+         * <p>certConfig</p>
          */
         public Builder certConfig(RegistryCertConfig certConfig) {
             this.certConfig = certConfig;

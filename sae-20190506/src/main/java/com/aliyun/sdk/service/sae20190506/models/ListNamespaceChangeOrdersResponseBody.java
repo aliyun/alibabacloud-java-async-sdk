@@ -132,12 +132,12 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The API status code or POP error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li><strong>2xx</strong>: success</li>
+         * <li><strong>3xx</strong>: redirection</li>
+         * <li><strong>4xx</strong>: client error</li>
+         * <li><strong>5xx</strong>: server error</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,11 +157,14 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>Request succeeded: The <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>Request failed: The <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Resouce.no.permission</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,7 +172,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The additional information about the API call result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -180,7 +183,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc3915638507554994370d****</p>
@@ -191,10 +194,10 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the list of change orders was obtained. Valid values:</p>
+         * <p>Indicates whether the change order list was successfully retrieved. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: indicates that the list was obtained.</li>
-         * <li><strong>false</strong>: indicates that the list could not be obtained.</li>
+         * <li><strong>true</strong>: The list was successfully retrieved.</li>
+         * <li><strong>false</strong>: The retrieval failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +209,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * <p>The trace ID used to query the exact call information.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc3915638507554994370d****</p>
@@ -444,7 +447,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of release batches.</p>
+             * <p>The number of batches.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -455,11 +458,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode in which the release batches are determined. Valid values:</p>
-             * <ul>
-             * <li><strong>auto</strong>: SAE automatically determines the release batches.</li>
-             * <li><strong>manual</strong>: You must manually determine the release batches.</li>
-             * </ul>
+             * <p>The batch type.</p>
              */
             public Builder batchType(String batchType) {
                 this.batchType = batchType;
@@ -467,7 +466,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the change order.</p>
+             * <p>The change order ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7fa5c0-9ebb-4bb4-b383-1f885447****</p>
@@ -478,7 +477,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the change order, which corresponds the <strong>CoTypeCode</strong> parameter.</p>
+             * <p>The type of the change order, which is the description of <strong>CoTypeCode</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>msg.docker.app.actions.CoBatchStartApplication</p>
@@ -491,8 +490,8 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             /**
              * <p>The code of the change order type. Valid values:</p>
              * <ul>
-             * <li><strong>CoBatchStartApplication</strong>: starts multiple applications concurrently.</li>
-             * <li><strong>CoBatchStopApplication</strong>: stops multiple applications concurrently.</li>
+             * <li><strong>CoBatchStartApplication</strong>: Starts applications in batches.</li>
+             * <li><strong>CoBatchStopApplication</strong>: Stops applications in batches.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -504,7 +503,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the change order was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-07-11 15:54:49</p>
@@ -527,6 +526,9 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
 
             /**
              * <p>The description of the change order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Batch Start Applications</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -534,7 +536,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the change order was completed.</p>
+             * <p>The end time.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-07-11 20:12:58</p>
@@ -545,7 +547,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the group.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c9ecd2-cf6c-46c3-9f20-525de202****</p>
@@ -556,7 +558,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace.</p>
+             * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai:test</p>
@@ -567,7 +569,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about release batches.</p>
+             * <p>The change pipelines.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxx</p>
@@ -578,7 +580,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the change order.</p>
+             * <p>The source from which the change order was initiated.</p>
              * 
              * <strong>example:</strong>
              * <p>console</p>
@@ -591,12 +593,12 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             /**
              * <p>The status of the change order. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The change order is being prepared.</li>
-             * <li><strong>1</strong>: The change order is being executed.</li>
-             * <li><strong>2</strong>: The change order was executed.</li>
-             * <li><strong>3</strong>: The change order could not be executed.</li>
-             * <li><strong>6</strong>: The change order was terminated.</li>
-             * <li><strong>10</strong>: The change order could not be executed due to a system exception.</li>
+             * <li><strong>0</strong>: preparing</li>
+             * <li><strong>1</strong>: executing</li>
+             * <li><strong>2</strong>: succeeded</li>
+             * <li><strong>3</strong>: failed</li>
+             * <li><strong>6</strong>: terminated</li>
+             * <li><strong>10</strong>: failed due to a system exception</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -608,7 +610,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>test_sae</p>
@@ -712,7 +714,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -723,7 +725,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned on each page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

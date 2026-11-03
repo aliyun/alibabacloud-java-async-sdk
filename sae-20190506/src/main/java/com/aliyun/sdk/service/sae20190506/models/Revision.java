@@ -106,7 +106,10 @@ public class Revision extends TeaModel {
         } 
 
         /**
-         * CreatedTime.
+         * <p>The time when the revision version was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-09T14:24:42</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -114,7 +117,10 @@ public class Revision extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the revision version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -122,7 +128,7 @@ public class Revision extends TeaModel {
         }
 
         /**
-         * RevisionConfig.
+         * <p>The configurations of the revision version.</p>
          */
         public Builder revisionConfig(RevisionConfig revisionConfig) {
             this.revisionConfig = revisionConfig;
@@ -130,7 +136,10 @@ public class Revision extends TeaModel {
         }
 
         /**
-         * RevisionId.
+         * <p>The ID of the revision version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001</p>
          */
         public Builder revisionId(String revisionId) {
             this.revisionId = revisionId;
@@ -138,7 +147,10 @@ public class Revision extends TeaModel {
         }
 
         /**
-         * Weight.
+         * <p>The traffic weight of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder weight(Float weight) {
             this.weight = weight;

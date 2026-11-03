@@ -132,12 +132,16 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code or the error code. Valid values:</p>
+         * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The request was successful.</li>
-         * <li><strong>3xx</strong>: The request was redirected.</li>
-         * <li><strong>4xx</strong>: The request failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * <li><p><strong>2xx</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>3xx</strong>: The request was redirected.</p>
+         * </li>
+         * <li><p><strong>4xx</strong>: The request was invalid.</p>
+         * </li>
+         * <li><p><strong>5xx</strong>: A server error occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +153,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Responses.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -157,11 +161,16 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code. Value values:</p>
+         * <p>The error code.</p>
          * <ul>
-         * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li><p>This parameter is not returned if the request is successful.</p>
+         * </li>
+         * <li><p>For a list of error codes, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</p>
+         * </li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NotEmpty</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -169,10 +178,12 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Additional information. Valid values:</p>
+         * <p>The response message.</p>
          * <ul>
-         * <li>The error message returned because the request is normal and <strong>success</strong> is returned.</li>
-         * <li>If the request is abnormal, the specific exception error code is returned.</li>
+         * <li><p><strong>success</strong> is returned if the request is successful.</p>
+         * </li>
+         * <li><p>An error message is returned if the request fails.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +195,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30375C38-F4ED-4135-A0AE-5C75DC7F****</p>
@@ -195,10 +206,12 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The information was queried.</li>
-         * <li><strong>false</strong>: The information failed to be queried.</li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +223,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+         * <p>The trace ID that is used to query the details of a request.</p>
          * 
          * <strong>example:</strong>
          * <p>ac1a0b2215622246421415014e****</p>
@@ -318,7 +331,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>f5aad0d0-3e56-44cd-8199-9887a0******</p>
@@ -329,7 +342,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -365,7 +378,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
              * <p>The ID of the namespace to which the MSE instance belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>6733e538-d52f-48e6-91a4-192f91******</p>
+             * <p>sae-ent</p>
              */
             public Builder mseNamespaceId(String mseNamespaceId) {
                 this.mseNamespaceId = mseNamespaceId;
@@ -484,7 +497,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>09805e5d-9b8d-42cd-9442-03c498******</p>
@@ -495,7 +508,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -506,7 +519,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the application.</p>
+             * <p>The application type.</p>
              * 
              * <strong>example:</strong>
              * <p>mse</p>
@@ -528,7 +541,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>MSE Instance Name</p>
+             * <p>The name of the MSE instance.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -542,7 +555,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
              * <p>The ID of the namespace to which the MSE instance belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>demo</p>
+             * <p>sae-ent</p>
              */
             public Builder mseNamespaceId(String mseNamespaceId) {
                 this.mseNamespaceId = mseNamespaceId;
@@ -726,7 +739,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of the applications associated with the lane group.</p>
+             * <p>The IDs of the applications that are associated with the swimming lane group.</p>
              */
             public Builder appIds(java.util.List<String> appIds) {
                 this.appIds = appIds;
@@ -734,7 +747,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application information.</p>
+             * <p>The information about the applications.</p>
              */
             public Builder apps(java.util.List<Apps> apps) {
                 this.apps = apps;
@@ -742,10 +755,12 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Full-link Grayscale Mode:</p>
+             * <p>The canary release mode.</p>
              * <ul>
-             * <li>0: The request is routed based on the content of the request.</li>
-             * <li>1: Proportional routing</li>
+             * <li><p>0: content-based routing</p>
+             * </li>
+             * <li><p>1: percentage-based routing</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -757,7 +772,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entry application.</p>
+             * <p>The ingress application.</p>
              */
             public Builder entryApp(EntryApp entryApp) {
                 this.entryApp = entryApp;
@@ -768,7 +783,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
              * <p>The ID of the gateway.</p>
              * 
              * <strong>example:</strong>
-             * <p>mse_ingresspost-cn-axc49******</p>
+             * <p>bq4g5bumop@e05bd4328******</p>
              */
             public Builder entryAppId(String entryAppId) {
                 this.entryAppId = entryAppId;
@@ -776,11 +791,14 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application entry type (gateway type).</p>
+             * <p>The type of the ingress application. This parameter is equivalent to the gateway type.</p>
              * <ul>
-             * <li><strong>apig:</strong> cloud-native API Gateway</li>
-             * <li><strong>mse-gw:</strong> an MSE cloud original gateway</li>
-             * <li><strong>mse:</strong> Java Services Gateway</li>
+             * <li><p><strong>apig:</strong> API Gateway</p>
+             * </li>
+             * <li><p><strong>mse-gw:</strong> cloud-native gateway</p>
+             * </li>
+             * <li><p><strong>mse:</strong> Java service gateway</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -792,10 +810,10 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the lane group.</p>
+             * <p>The ID of the swimming lane group.</p>
              * 
              * <strong>example:</strong>
-             * <p>2074</p>
+             * <p>110283</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -803,7 +821,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of a lane group.</p>
+             * <p>The name of the swimming lane group.</p>
              * 
              * <strong>example:</strong>
              * <p>mse-test</p>
@@ -817,7 +835,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
              * <p>The ID of the namespace to which the MSE instance belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>sae-test</p>
+             * <p>sae-ent</p>
              */
             public Builder mseNamespaceId(String mseNamespaceId) {
                 this.mseNamespaceId = mseNamespaceId;
@@ -825,7 +843,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace.</p>
+             * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing:test</p>
@@ -836,7 +854,7 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end-to-end grayscale version. Valid values: 0 and 2 (recommended).</p>
+             * <p>The version of the canary release. Valid values: 0 and 2. We recommend that you use 2.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

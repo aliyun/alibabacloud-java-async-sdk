@@ -60,7 +60,7 @@ public class DescribeConfigMapRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ConfigMap whose details you want to query. You can call the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the ID of a ConfigMap.</p>
+         * <p>The ID of the ConfigMap. You can call the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -93,7 +93,10 @@ public class WebInstanceInfo extends TeaModel {
         } 
 
         /**
-         * ImageUrl.
+         * <p>The instance image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/******:0.0.1</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
@@ -101,7 +104,10 @@ public class WebInstanceInfo extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-66691780-1522405d-3021e1******</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -109,7 +115,10 @@ public class WebInstanceInfo extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Idle</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -117,7 +126,10 @@ public class WebInstanceInfo extends TeaModel {
         }
 
         /**
-         * VersionId.
+         * <p>The ID of the application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

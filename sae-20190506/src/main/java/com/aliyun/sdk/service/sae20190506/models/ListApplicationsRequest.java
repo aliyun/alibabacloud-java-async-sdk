@@ -239,11 +239,11 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The SAE application type. Valid values:</p>
+         * <p>The Serverless App Engine (SAE) application type.</p>
          * <ul>
-         * <li><strong>micro_service</strong></li>
-         * <li><strong>web</strong></li>
-         * <li><strong>job</strong></li>
+         * <li><strong>micro_service.</strong></li>
+         * <li><strong>web.</strong></li>
+         * <li><strong>job.</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,12 +268,12 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Set the filtering criteria for applications. The value options are as follows:</p>
+         * <p>The dimension by which to filter applications. Valid values:</p>
          * <ul>
-         * <li>appName: Application name.</li>
-         * <li>appIds: Application IDs.</li>
-         * <li>slbIps: SLB IP addresses.</li>
-         * <li>instanceIps: Instance IP addresses.</li>
+         * <li><strong>appName</strong>: application name.</li>
+         * <li><strong>appIds</strong>: application ID.</li>
+         * <li><strong>slbIps</strong>: SLB IP address.</li>
+         * <li><strong>instanceIps</strong>: instance IP address.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The name, ID, SLB IP, or instance IP of the target application.</p>
+         * <p>The application name, application ID, SLB IP address, or instance IP address of the target application.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-app</p>
@@ -298,7 +298,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * IsStateful.
+         * <p>Specifies whether the application is stateful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isStateful(String isStateful) {
             this.putQueryParameter("IsStateful", isStateful);
@@ -319,7 +322,15 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * NewSaeVersion.
+         * <p>The application version. Valid values:</p>
+         * <ul>
+         * <li>lite: Lite Edition</li>
+         * <li>std: Standard Edition</li>
+         * <li>pro: Professional Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pro</p>
          */
         public Builder newSaeVersion(String newSaeVersion) {
             this.putQueryParameter("NewSaeVersion", newSaeVersion);
@@ -328,14 +339,14 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Specifies how applications are sorted. Valid values:</p>
+         * <p>The field by which to sort applications. Valid values:</p>
          * <ul>
-         * <li><strong>running</strong>: The applications are sorted based on the number of running instances.</li>
-         * <li><strong>instances</strong>: The applications are sorted based on the number of destination instances.</li>
+         * <li><strong>runnings</strong>: sorts by the current number target instances.</li>
+         * <li><strong>instances</strong>: sorts by the target number target instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>running</p>
+         * <p>runnings</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -344,7 +355,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The number of records in each page. Value range: [0,10000]</p>
+         * <p>The number of entries per page in a paging query. Valid values: [0,10000].</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -365,11 +376,25 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Sort by the running status of application instances. If the statuses are the same, sort by instance ID. The value options are as follows:</p>
+         * <p>Specifies whether to sort application instances by running status. If instances have the same status, they are sorted by instance ID. Valid values:</p>
          * <ul>
-         * <li>true: Sort in ascending order. Instances are arranged according to the startup process, for example: to ultimately reach the running state, an instance must first go through steps such as starting containers, pulling images, and initializing the instance.</li>
-         * <li>false: Sort in descending order.</li>
+         * <li><strong>true</strong>: sorts in ascending order. Instances are arranged based on the startup sequence. For example, to reach the running state, an instance must go through steps such as starting the container, pulling the image, and initializing the instance.</li>
+         * <li><strong>false</strong>: sorts in descending order.</li>
          * </ul>
+         * <p>The ascending order of instances is as follows:</p>
+         * <ol>
+         * <li><strong>Error</strong>: an error occurred during instance startup.</li>
+         * <li><strong>CrashLoopBackOff</strong>: the container failed to start, encountered an error during startup, and encountered an error again after restart.</li>
+         * <li><strong>ErrImagePull</strong>: an error occurred while pulling the container image for the instance.</li>
+         * <li><strong>ImagePullBackOff</strong>: the container image cannot be obtained.</li>
+         * <li><strong>Pending</strong>: the instance is waiting to be scheduled.</li>
+         * <li><strong>Unknown</strong>: an unknown exception occurred.</li>
+         * <li><strong>Terminating</strong>: the instance is being terminated.</li>
+         * <li><strong>NotFound</strong>: the instance cannot be found.</li>
+         * <li><strong>PodInitializing</strong>: the instance is being initialized.</li>
+         * <li><strong>Init:0/1</strong>: the instance is initializing.</li>
+         * <li><strong>Running</strong>: the instance is running.</li>
+         * </ol>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -381,13 +406,13 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The tag in the format of a key-value pair.</p>
+         * <p>The tag key-value pairs. Valid values:</p>
          * <ul>
-         * <li><strong>key</strong>: the tag key. It cannot exceed 128 characters in length.</li>
-         * <li><strong>value</strong>: the tag value. It cannot exceed 128 characters in length.</li>
+         * <li><strong>key</strong>: the tag key. The length must be in the range of [1,128].</li>
+         * <li><strong>value</strong>: the tag value. The length must be in the range of [1,128].</li>
          * </ul>
-         * <p>Tag keys and tag values are case-sensitive. If you specify multiple tags, the system adds all the tags to the specified resources. Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</p>
-         * <p>Tag keys and tag values cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Tags are case-sensitive. If you specify multiple tags, all specified tags are created and attached to the resource. Each tag key on the same resource can have only one tag value. If you add a tag key that already exists, the corresponding tag value is updated to the new value.</p>
+         * <p>Tags cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;key&quot;:&quot;key&quot;,&quot;value&quot;:&quot;value&quot;}]</p>

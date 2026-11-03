@@ -73,7 +73,10 @@ public class DeleteNamespaceRequest extends Request {
         } 
 
         /**
-         * NameSpaceShortId.
+         * <p>The short namespace ID. This ID does not require a region prefix. Use this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nameSpaceShortId(String nameSpaceShortId) {
             this.putQueryParameter("NameSpaceShortId", nameSpaceShortId);
@@ -82,7 +85,7 @@ public class DeleteNamespaceRequest extends Request {
         }
 
         /**
-         * <p>cn-beijing:test</p>
+         * <p>The long namespace ID. If specified, this parameter takes precedence and NameSpaceShortId is ignored. This parameter is retained for backward compatibility. Use the short namespace ID to simplify the request.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>

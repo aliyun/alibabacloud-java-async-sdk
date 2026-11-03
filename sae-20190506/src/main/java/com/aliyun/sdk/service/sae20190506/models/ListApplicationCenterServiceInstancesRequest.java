@@ -73,7 +73,10 @@ public class ListApplicationCenterServiceInstancesRequest extends Request {
         } 
 
         /**
-         * NamespaceId.
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -82,7 +85,10 @@ public class ListApplicationCenterServiceInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

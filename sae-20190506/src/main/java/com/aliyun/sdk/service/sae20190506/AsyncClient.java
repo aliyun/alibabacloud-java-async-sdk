@@ -75,13 +75,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Precautions</h2>
+     * <h2>Before you begin</h2>
      * <ul>
-     * <li>You can create up to five auto scaling policies for one application.</li>
-     * <li>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</li>
-     * <li>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</li>
-     * <li>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</li>
-     * <li>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</li>
+     * <li>You can create up to 5 auto scaling policies for a single application.</li>
+     * <li>You can create up to 20 trigger time points within a single day for a single scheduled auto elastic policy.</li>
+     * <li>When an auto elastic policy is enabled, do not manually perform application lifecycle management operations, such as scaling the application, deploying the application, changing specifications, restarting the application, or stopping the application. If you need to perform these operations, disable the auto elastic policy first.</li>
+     * <li>If the application is currently being scaled, deployed (in a single batch, multiple batches, or canary release), having its specifications changed, restarted, or stopped, you cannot add or start an auto elastic policy for the application.</li>
+     * <li>If a single application needs to scale out to more than 50 instances, contact Serverless App Engine (SAE) technical support and apply for a whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateApplicationScalingRule  CreateApplicationScalingRuleRequest
@@ -98,7 +98,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can configure only one canary release rule for each application.</p>
+     * <p>Currently, you can configure only one canary release rule for an application.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateGreyTagRoute  CreateGreyTagRouteRequest
@@ -655,7 +655,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can configure only one canary release rule for each application.</p>
+     * <p>Currently, you can configure only one canary release rule for each application.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListGreyTagRoute  ListGreyTagRouteRequest
@@ -919,8 +919,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
-     * <p>If you want to configure more than 50 instances for an application, you must submit a <a href="https://workorder.console.aliyun.com/#/ticket/createIndex">ticket</a> to add your account to the whitelist.</p>
+     * <h2>Usage notes</h2>
+     * <p>To scale an application beyond 50 instances, contact SAE technical support to be added to the allowlist. For details, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</p>
      * 
      * @param request the request parameters of UpdateApplicationScalingRule  UpdateApplicationScalingRuleRequest
      * @return UpdateApplicationScalingRuleResponse
