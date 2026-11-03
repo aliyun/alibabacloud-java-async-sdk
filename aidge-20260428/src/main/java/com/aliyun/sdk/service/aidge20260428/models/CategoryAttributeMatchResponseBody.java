@@ -106,7 +106,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter is not returned for successful calls.</p>
+         * <p>The error code. This parameter is not returned when the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned for successful calls.</p>
+         * <p>The error message. This parameter is not returned when the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -318,7 +318,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matching confidence score, ranging from 0 to 100.</p>
+             * <p>The matching confidence level. Valid values: 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -340,7 +340,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the attribute is successfully matched. Valid values: true and false.</p>
+             * <p>Indicates whether the attribute is matched successfully. Valid values: true and false.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -373,7 +373,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The explanation for the matching result.</p>
+             * <p>The description of the matching reason.</p>
              * 
              * <strong>example:</strong>
              * <p>a_reason</p>
@@ -384,7 +384,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;\].</p>
+             * <p>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;].</p>
              */
             public Builder selectedValues(java.util.List<String> selectedValues) {
                 this.selectedValues = selectedValues;
@@ -392,7 +392,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of selected attribute value IDs, such as [30127,30128\].</p>
+             * <p>The list of selected attribute value IDs, such as [30127,30128].</p>
              */
             public Builder selectedVids(java.util.List<Integer> selectedVids) {
                 this.selectedVids = selectedVids;
@@ -446,7 +446,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of processing times.</p>
+             * <p>The processing count.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -616,7 +616,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
              * <p>The category name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Cat Collars</p>
+             * <p>Cat collar</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -624,10 +624,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full path of the category, separated by &quot;/&quot;.</p>
+             * <p>The full path of the category, separated by forward slashes (/).</p>
              * 
              * <strong>example:</strong>
-             * <p>Pet Supplies/Cat Supplies/Cat Charms, Collars &amp; Leashes/Cat Collars</p>
+             * <p>Pet Supplies/Cat Supplies/Cat Pendants, Collars, Leashes/Cat Collar</p>
              */
             public Builder categoryPath(String categoryPath) {
                 this.categoryPath = categoryPath;
@@ -635,7 +635,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of attributes that are successfully filled.</p>
+             * <p>The number of successfully filled attributes.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -646,7 +646,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the attribute is successfully matched. Valid values: true and false.</p>
+             * <p>Indicates whether the attribute is matched successfully. Valid values: true and false.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>

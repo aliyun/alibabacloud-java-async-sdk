@@ -217,7 +217,10 @@ public class GenerateProductContentRequest extends Request {
         } 
 
         /**
-         * BulletPointCount.
+         * <p>Takes effect only when contentType is set to bulletPoint. Valid values: 1 to 5. Default value in generate mode: 1. In rewrite mode, if manually specified, the value must match the number of non-empty paragraphs in sourceText. This parameter is ignored for other copy types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder bulletPointCount(Integer bulletPointCount) {
             this.putQueryParameter("BulletPointCount", bulletPointCount);
@@ -226,6 +229,7 @@ public class GenerateProductContentRequest extends Request {
         }
 
         /**
+         * <p>The copy type. Valid values: title, highlight, keywords, bulletPoint, and description. When a platform is specified, you must select a type supported by the platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +242,10 @@ public class GenerateProductContentRequest extends Request {
         }
 
         /**
-         * EnableTranslation.
+         * <p>Specifies whether to enable translation. Default value: false. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder enableTranslation(Boolean enableTranslation) {
             this.putQueryParameter("EnableTranslation", enableTranslation);
@@ -247,7 +254,10 @@ public class GenerateProductContentRequest extends Request {
         }
 
         /**
-         * MaxLength.
+         * <p>The maximum number of characters for the final output text. If specified, the value must be an integer greater than or equal to 30. If a platform is specified and this parameter is not provided, the configured upper limit for the content type on the platform is used. Example: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxLength(Integer maxLength) {
             this.putQueryParameter("MaxLength", maxLength);
@@ -256,7 +266,10 @@ public class GenerateProductContentRequest extends Request {
         }
 
         /**
-         * MinLength.
+         * <p>The minimum number of characters for the final output text. If specified, the value must be an integer greater than or equal to 10. If a platform is specified and this parameter is not provided, the configured lower limit for the content type on the platform is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder minLength(Integer minLength) {
             this.putQueryParameter("MinLength", minLength);
@@ -265,6 +278,11 @@ public class GenerateProductContentRequest extends Request {
         }
 
         /**
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li>generate: Generates copy.</li>
+         * <li>rewrite: Rewrites copy.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,7 +295,10 @@ public class GenerateProductContentRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>The target platform. Valid values: amazon, temu, tiktok, shopify, Wildberries, and tmall. If this parameter is not provided, the request is processed as a general scenario. Enum values are case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amazon</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -286,7 +307,10 @@ public class GenerateProductContentRequest extends Request {
         }
 
         /**
-         * ProductAttributes.
+         * <p>The product attribute information. Default value: empty. The length must be 0 to 500 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;brand&quot;:&quot;Supor&quot;,&quot;material&quot;:&quot;304 stainless steel&quot;}</p>
          */
         public Builder productAttributes(String productAttributes) {
             this.putQueryParameter("ProductAttributes", productAttributes);
@@ -295,7 +319,10 @@ public class GenerateProductContentRequest extends Request {
         }
 
         /**
-         * ProductCategory.
+         * <p>The product category. Default value: an empty string. The length must be 0 to 100 characters. This parameter helps understand the category during generation and eliminates ambiguity during rewriting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Kitchen utensils</p>
          */
         public Builder productCategory(String productCategory) {
             this.putQueryParameter("ProductCategory", productCategory);
@@ -304,6 +331,7 @@ public class GenerateProductContentRequest extends Request {
         }
 
         /**
+         * <p>The source language. Valid values: zh and en. Automatic language detection is not supported. Supported source languages: Chinese (zh) and English (en).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,10 +344,11 @@ public class GenerateProductContentRequest extends Request {
         }
 
         /**
+         * <p>The product information or copy to be rewritten. The length must be 20 to 3,000 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>不锈钢蒸锅28cm三层大容量家用厨房必备蒸煮两用锅具</p>
+         * <p>Stainless steel 28 cm 3-tier large-capacity steamer for home kitchens</p>
          */
         public Builder sourceText(String sourceText) {
             this.putQueryParameter("SourceText", sourceText);
@@ -328,7 +357,10 @@ public class GenerateProductContentRequest extends Request {
         }
 
         /**
-         * TargetLanguage.
+         * <p>Required when enableTranslation is set to true. For valid values, see the multilingual processing section. If translation is disabled, this parameter is optional. If provided, it must be the same as the source language. Supported target languages: Chinese (zh), English (en), Russian (ru), German (de), French (fr), Korean (ko), Italian (it), Thai (th), Arabic (ar), Turkish (tr), Hebrew (he), Ukrainian (uk), Polish (pl), Japanese (ja), Dutch (nl), Portuguese (pt), Spanish (es), Malay (ms), Bulgarian (bg), Indonesian (id), and Vietnamese (vi).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putQueryParameter("TargetLanguage", targetLanguage);

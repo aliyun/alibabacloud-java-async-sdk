@@ -125,7 +125,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message or failure description.</p>
+         * <p>The return message or failure description.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -237,7 +237,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target category. For valid values, see the table below.</p>
+             * <p>The target category. For enumerations, see the following table.</p>
              * 
              * <strong>example:</strong>
              * <p>product</p>
@@ -248,7 +248,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The confirmed short name or text of up to 24 characters. This value is an empty string if the text is unreadable.</p>
+             * <p>The confirmed short name or text of up to 24 characters. This is an empty string if the text is unclear.</p>
              * 
              * <strong>example:</strong>
              * <p>Product</p>
@@ -318,10 +318,10 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The coverage of the localization. Valid values:</p>
+             * <p>The coverage. Valid values:</p>
              * <ul>
-             * <li>complete: All relevant visible targets are fully covered.</li>
-             * <li>partial: Only some targets are valid or recognizable.</li>
+             * <li><code>complete</code>: The relevant visible targets are complete.</li>
+             * <li><code>partial</code>: Only some targets are valid or recognizable.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -333,7 +333,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of targets. A maximum of 12 items are returned. This value can be empty if no relevant targets exist.</p>
+             * <p>The target array. It contains up to 12 items and can be empty if no relevant targets are found.</p>
              */
             public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;
@@ -421,7 +421,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image is a recaptured photo.</p>
+             * <p>Indicates whether the image is recaptured.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -432,7 +432,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detection type. The value is fixed as general.</p>
+             * <p>The detection type. The value is fixed to general.</p>
              * 
              * <strong>example:</strong>
              * <p>general</p>
@@ -502,7 +502,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The business result. This value is an empty object if the request fails.</p>
+             * <p>The business result. This is an empty object if the call fails.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -510,7 +510,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage information. The value is <code>{&quot;ProcessingCount&quot;:1}</code> on success, or an empty object on failure.</p>
+             * <p>The usage information. The value is <code>{&quot;ProcessingCount&quot;:1}</code> if the call is successful, or an empty object if the call fails.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;ProcessingCount&quot;:1}</p>

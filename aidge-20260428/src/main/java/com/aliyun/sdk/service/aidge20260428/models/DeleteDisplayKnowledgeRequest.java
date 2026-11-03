@@ -88,7 +88,7 @@ public class DeleteDisplayKnowledgeRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the records to delete. You can specify up to 500 record IDs.</p>
+         * <p>The IDs of the records to be deleted. A maximum of 500 records can be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder recordIds(java.util.List<Long> recordIds) {

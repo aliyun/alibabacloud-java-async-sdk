@@ -106,7 +106,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter is not returned if the call is successful.</p>
+         * <p>The error code. This parameter is not returned when the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned if the call is successful.</p>
+         * <p>The error message. This parameter is not returned when the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -147,7 +147,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -372,7 +372,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The border pixel information, returned as a comma-separated string.</p>
+             * <p>The border pixel information, which is a comma-separated string.</p>
              * 
              * <strong>example:</strong>
              * <p>8,10,0,1,330,330</p>
@@ -471,7 +471,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of products.</p>
+             * <p>The product quantity.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -482,7 +482,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The proportion of the product in the image.</p>
+             * <p>The product proportion.</p>
              * 
              * <strong>example:</strong>
              * <p>74.15%</p>
@@ -501,7 +501,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The proportion of text in the image.</p>
+             * <p>The text proportion.</p>
              * 
              * <strong>example:</strong>
              * <p>7.52%</p>

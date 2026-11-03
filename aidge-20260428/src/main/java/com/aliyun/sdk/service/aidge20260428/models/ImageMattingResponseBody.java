@@ -117,7 +117,7 @@ public class ImageMattingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The matting result.</p>
+         * <p>The image matting result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,8 +149,8 @@ public class ImageMattingResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li>true: Successful.</li>
-         * <li>false: Failed.</li>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,6 +183,9 @@ public class ImageMattingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Score")
         private Double score;
 
+        @com.aliyun.core.annotation.NameInMap("StructData")
+        private Object structData;
+
         @com.aliyun.core.annotation.NameInMap("UsageMap")
         private java.util.Map<String, Long> usageMap;
 
@@ -193,6 +196,7 @@ public class ImageMattingResponseBody extends TeaModel {
             this.height = builder.height;
             this.imageUrl = builder.imageUrl;
             this.score = builder.score;
+            this.structData = builder.structData;
             this.usageMap = builder.usageMap;
             this.width = builder.width;
         }
@@ -227,6 +231,13 @@ public class ImageMattingResponseBody extends TeaModel {
         }
 
         /**
+         * @return structData
+         */
+        public Object getStructData() {
+            return this.structData;
+        }
+
+        /**
          * @return usageMap
          */
         public java.util.Map<String, Long> getUsageMap() {
@@ -244,6 +255,7 @@ public class ImageMattingResponseBody extends TeaModel {
             private Integer height; 
             private String imageUrl; 
             private Double score; 
+            private Object structData; 
             private java.util.Map<String, Long> usageMap; 
             private Integer width; 
 
@@ -254,12 +266,13 @@ public class ImageMattingResponseBody extends TeaModel {
                 this.height = model.height;
                 this.imageUrl = model.imageUrl;
                 this.score = model.score;
+                this.structData = model.structData;
                 this.usageMap = model.usageMap;
                 this.width = model.width;
             } 
 
             /**
-             * <p>The height of the result image in pixels.</p>
+             * <p>The height of the result image. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>800</p>
@@ -270,7 +283,7 @@ public class ImageMattingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the image matting result.</p>
+             * <p>The URL of the result image.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a></p>
@@ -281,13 +294,35 @@ public class ImageMattingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quality score of the image matting result.</p>
+             * <p>The matting quality score.</p>
              * 
              * <strong>example:</strong>
              * <p>0.11</p>
              */
             public Builder score(Double score) {
                 this.score = score;
+                return this;
+            }
+
+            /**
+             * <p>The returned layer information. This includes the URL of the original image, the URL of the matting result, and the matting area information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;origin_url&quot;: &quot;xxx&quot;,
+             *                     &quot;score&quot;: &quot;xxx&quot;,
+             *                     &quot;file&quot;: &quot;xxxx&quot;,
+             *                     &quot;extra_info&quot;: &quot;&quot;,
+             *                     &quot;pass&quot;: &quot;xx&quot;,
+             *                     &quot;bbox&quot;: &quot;xxx&quot;,
+             *                     &quot;plain_url&quot;: &quot;xxxxxx&quot;,
+             *                     &quot;image_shape&quot;: [
+             *                         xxx,
+             *                         xxx
+             *                     ],
+             *                     &quot;url&quot;: &quot;xxx&quot;</p>
+             */
+            public Builder structData(Object structData) {
+                this.structData = structData;
                 return this;
             }
 
@@ -303,7 +338,7 @@ public class ImageMattingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the result image in pixels.</p>
+             * <p>The width of the result image. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>800</p>

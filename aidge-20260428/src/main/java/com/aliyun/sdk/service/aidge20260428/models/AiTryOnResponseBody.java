@@ -136,7 +136,7 @@ public class AiTryOnResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to identify a unique request.</p>
+         * <p>The ID of the request. It is used to identify a unique API call.</p>
          * 
          * <strong>example:</strong>
          * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -147,11 +147,7 @@ public class AiTryOnResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
-         * <ul>
-         * <li>true: The call is successful.</li>
-         * <li>false: The call fails.</li>
-         * </ul>
+         * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

@@ -136,7 +136,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>70CBEFDF-BB17-1EB3-8A21-569F3124738F</p>
@@ -307,10 +307,10 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the failure cause. This parameter is returned only when the status is FAILED.</p>
+             * <p>The description of the failure reason. This parameter is returned only when the status is FAILED.</p>
              * 
              * <strong>example:</strong>
-             * <p>Image is inaccessible</p>
+             * <p>Image not accessible</p>
              */
             public Builder failureMessage(String failureMessage) {
                 this.failureMessage = failureMessage;
@@ -318,10 +318,10 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the failure cause. This parameter is returned only when the status is FAILED.</p>
+             * <p>The code of the failure reason. This parameter is returned only when the status is FAILED.</p>
              * 
              * <strong>example:</strong>
-             * <p>Image is inaccessible</p>
+             * <p>Image not accessible</p>
              */
             public Builder failureReason(String failureReason) {
                 this.failureReason = failureReason;
@@ -362,7 +362,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The record ID.</p>
+             * <p>The ID of the record.</p>
              * 
              * <strong>example:</strong>
              * <p>4410879640480000</p>
@@ -384,7 +384,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SKU name.</p>
+             * <p>The name of the SKU.</p>
              * 
              * <strong>example:</strong>
              * <p>Product side image</p>
@@ -395,7 +395,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The record status.</p>
+             * <p>The status of the record.</p>
              * 
              * <strong>example:</strong>
              * <p>UPDATING - Updating
@@ -619,7 +619,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The knowledge base status.</p>
+             * <p>The status of the knowledge base.</p>
              * 
              * <strong>example:</strong>
              * <p>AVAILABLE - Available</p>
@@ -652,7 +652,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The knowledge base ID.</p>
+             * <p>The ID of the knowledge base.</p>
              * 
              * <strong>example:</strong>
              * <p>rag_xxx</p>
@@ -682,7 +682,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asynchronous task ID. This parameter is empty for synchronous API operations.</p>
+             * <p>The ID of the asynchronous task. This parameter is empty for synchronous API operations.</p>
              * 
              * <strong>example:</strong>
              * <p>a8323ada-a196-9061-976f-90e38b27323a</p>

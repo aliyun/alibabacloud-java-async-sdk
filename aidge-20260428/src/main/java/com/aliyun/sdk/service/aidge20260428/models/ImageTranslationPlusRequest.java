@@ -171,7 +171,7 @@ public class ImageTranslationPlusRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to translate text on the product body. This parameter is optional. Default value: false.</p>
+         * <p>Specifies whether to translate the text on the product subject. This parameter is optional. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -209,7 +209,7 @@ public class ImageTranslationPlusRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to translate brand text on the product. This parameter is optional. Default value: false.</p>
+         * <p>Specifies whether to translate the text on the brand. This parameter is optional. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

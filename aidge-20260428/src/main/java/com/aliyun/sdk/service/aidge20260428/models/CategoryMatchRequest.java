@@ -148,11 +148,11 @@ public class CategoryMatchRequest extends Request {
         } 
 
         /**
-         * <p>The product description.</p>
+         * <p>The product details.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Silk, Spring New Arrival</p>
+         * <p>Silk, new spring arrival</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -161,10 +161,10 @@ public class CategoryMatchRequest extends Request {
         }
 
         /**
-         * <p>The product attributes that describe the characteristics of the product, such as material. Provide the attribute names and values.</p>
+         * <p>The product attributes and feature descriptions, such as the material of the product. Enter the product attribute name and attribute value.</p>
          * 
          * <strong>example:</strong>
-         * <p>Material:Polyester,Target Audience:General,Brand:AMASON PET</p>
+         * <p>Material:Polyester,Target user:Universal,Brand:AMASON PET</p>
          */
         public Builder itemSpec(String itemSpec) {
             this.putQueryParameter("ItemSpec", itemSpec);
@@ -173,10 +173,10 @@ public class CategoryMatchRequest extends Request {
         }
 
         /**
-         * <p>The SKU title of the product.</p>
+         * <p>The product SKU title.</p>
          * 
          * <strong>example:</strong>
-         * <p>0:0:Color:Black(without locator);0:1:Color:Smart Locator(without collar);0:2:Color:Range Locator(without collar);0:3:Color:Blue(without locator);0:4:Color:Orange(without locator);0:5:Color:Pink(without locator);0:6:Color:Red(without locator);0:7:Color:Yellow(without locator);0:8:Color:Purple(without locator)</p>
+         * <p>0:0:Color:Black (without tracker);0:1:Color:Smart tracking (without collar);0:2:Color:Range tracking (without collar);0:3:Color:Blue (without tracker);0:4:Color:Orange (without tracker);0:5:Color:Pink (without tracker);0:6:Color:Red (without tracker);0:7:Color:Yellow (without tracker);0:8:Color:Purple (without tracker)</p>
          */
         public Builder sku(String sku) {
             this.putQueryParameter("Sku", sku);
@@ -185,7 +185,7 @@ public class CategoryMatchRequest extends Request {
         }
 
         /**
-         * <p>The product category on the source platform.</p>
+         * <p>The product category.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class CategoryMatchRequest extends Request {
         }
 
         /**
-         * <p>The source platform from which products are sourced.</p>
+         * <p>The source platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class CategoryMatchRequest extends Request {
         }
 
         /**
-         * <p>The target listing platform. Currently, only temu is supported.</p>
+         * <p>The target platform. Currently, only TEMU is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class CategoryMatchRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Women\&quot;s Spring New Arrival Clothing</p>
+         * <p>Women\&quot;s new spring clothing</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

@@ -117,7 +117,7 @@ public class DiduiAreaDeductionProResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The submit status of the asynchronous task.</p>
+         * <p>The submission result of the asynchronous task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class DiduiAreaDeductionProResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message or failure description.</p>
+         * <p>The returned message or failure description.</p>
          * 
          * <strong>example:</strong>
          * <p>Task submitted</p>
@@ -147,7 +147,7 @@ public class DiduiAreaDeductionProResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -203,7 +203,7 @@ public class DiduiAreaDeductionProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the asynchronous task, which is used to call QueryAsyncTaskResult to query the task result.</p>
+             * <p>The ID of the asynchronous task used to query the result by calling QueryAsyncTaskResult.</p>
              * 
              * <strong>example:</strong>
              * <p>task_778xxxxxxxxxxx</p>

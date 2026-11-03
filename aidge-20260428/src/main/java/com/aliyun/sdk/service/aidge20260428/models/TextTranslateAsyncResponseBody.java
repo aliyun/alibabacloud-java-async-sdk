@@ -106,7 +106,7 @@ public class TextTranslateAsyncResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code of the submission call. Example: success.</p>
+         * <p>The response code for the submission call. A success example is success.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -125,7 +125,7 @@ public class TextTranslateAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The invocation message. Example of a successful call: Success. If the call fails, check the actual error message.</p>
+         * <p>The call description. A success example is Success. If the call fails, read the actual error message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -147,7 +147,7 @@ public class TextTranslateAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the submission call is successful. A successful call does not mean that the translation is complete.</p>
+         * <p>Indicates whether the submission call is successful. It does not indicate that the translation is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

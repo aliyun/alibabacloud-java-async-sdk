@@ -88,7 +88,7 @@ public class UpdateDisplayKnowledgeRequest extends Request {
         }
 
         /**
-         * <p>The records to update. A maximum of 500 records can be specified.</p>
+         * <p>The records to be modified. A maximum of 500 records can be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder records(java.util.List<Records> records) {

@@ -60,7 +60,7 @@ public class GeneralRephotographyDetectionRequest extends Request {
         } 
 
         /**
-         * <p>The HTTPS URL of the original image to recognize. The URL must be accessible and must not contain whitespace or URL-embedded usernames or passwords.</p>
+         * <p>The HTTPS URL of the original image to be recognized. The URL must be accessible and cannot contain spaces or URL usernames and passwords.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

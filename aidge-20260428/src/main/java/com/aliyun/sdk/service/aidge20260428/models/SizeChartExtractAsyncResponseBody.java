@@ -117,7 +117,7 @@ public class SizeChartExtractAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The commit result of the size chart fetch asynchronous task node.</p>
+         * <p>The submission result of the asynchronous task for size chart extraction.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -147,7 +147,7 @@ public class SizeChartExtractAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values: true for success and false for failure.</p>
+         * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

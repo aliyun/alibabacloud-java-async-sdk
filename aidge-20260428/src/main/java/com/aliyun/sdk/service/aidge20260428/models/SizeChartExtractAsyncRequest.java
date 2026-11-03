@@ -114,7 +114,7 @@ public class SizeChartExtractAsyncRequest extends Request {
         }
 
         /**
-         * <p>The list of column names to extract, such as Size, Bust, and Length.</p>
+         * <p>The list of column names to be extracted, such as Size, Bust, and Length.</p>
          */
         public Builder columnNameList(java.util.List<String> columnNameList) {
             String columnNameListShrink = shrink(columnNameList, "ColumnNameList", "json");
@@ -124,7 +124,7 @@ public class SizeChartExtractAsyncRequest extends Request {
         }
 
         /**
-         * <p>The image URL. The image must be in the JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 pixels and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</p>
+         * <p>The image URL. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class SizeChartExtractAsyncRequest extends Request {
         }
 
         /**
-         * <p>The output language format. If you do not specify this parameter, the original language is used. If the original image language is Chinese or English, specifying en outputs English, and specifying cn outputs Chinese.</p>
+         * <p>The output language. If you do not specify this parameter, the original language is used. If the original image language is Chinese or English, entering en outputs English, and entering cn outputs Chinese.</p>
          * 
          * <strong>example:</strong>
          * <p>en</p>
