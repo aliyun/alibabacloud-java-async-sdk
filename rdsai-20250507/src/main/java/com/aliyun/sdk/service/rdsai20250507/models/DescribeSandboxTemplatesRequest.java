@@ -159,7 +159,7 @@ public class DescribeSandboxTemplatesRequest extends Request {
         } 
 
         /**
-         * BranchName.
+         * <p>The reserved parameter.</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("BranchName", branchName);
@@ -181,7 +181,7 @@ public class DescribeSandboxTemplatesRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter. You can ignore this parameter.</p>
+         * <p>The backup parameter. You can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -217,7 +217,7 @@ public class DescribeSandboxTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -242,7 +242,7 @@ public class DescribeSandboxTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The sandbox template name.</p>
+         * <p>The name of the sandbox template.</p>
          * 
          * <strong>example:</strong>
          * <p>code-interpreter</p>

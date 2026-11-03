@@ -101,7 +101,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request result.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -244,7 +244,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance type.</p>
+             * <p>The billing method of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>PREPAY</p>
@@ -255,7 +255,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the instance. Format: Timestamp.</p>
+             * <p>The end time of the instance (format: timestamp).</p>
              * 
              * <strong>example:</strong>
              * <p>1775145600000</p>
@@ -277,7 +277,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rds_copilot***_public_cn-*********6</p>
@@ -288,7 +288,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the instance. Format: Timestamp.</p>
+             * <p>The start time of the instance (format: timestamp).</p>
              * 
              * <strong>example:</strong>
              * <p>1772439028000</p>
@@ -380,7 +380,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of instances.</p>
+             * <p>The instance list.</p>
              */
             public Builder instanceList(java.util.List<InstanceList> instanceList) {
                 this.instanceList = instanceList;

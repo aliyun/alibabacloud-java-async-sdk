@@ -88,7 +88,7 @@ public class DescribeInstanceSSLRequest extends Request {
         } 
 
         /**
-         * BranchName.
+         * <p>Reserved parameter.</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("BranchName", branchName);

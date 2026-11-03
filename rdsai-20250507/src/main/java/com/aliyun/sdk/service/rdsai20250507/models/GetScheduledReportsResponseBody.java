@@ -132,7 +132,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successfully retrieved the inspection report list</p>
@@ -184,7 +184,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request result.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -366,7 +366,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inspection end time. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
+             * <p>The end time of the inspection. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-01T23:59:59Z</p>
@@ -385,7 +385,10 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -409,7 +412,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inspection start time. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
+             * <p>The start time of the inspection. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-01T00:00:00Z</p>
@@ -431,7 +434,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inspection report ID.</p>
+             * <p>The ID of the inspection report.</p>
              * 
              * <strong>example:</strong>
              * <p>65f0053b-f933-49f5-bf65-4e4593e1****</p>

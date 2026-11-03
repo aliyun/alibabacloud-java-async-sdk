@@ -127,7 +127,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A reserved parameter. You can ignore this parameter.</p>
+         * <p>A reserved parameter. You can ignore it.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -171,7 +171,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -240,7 +240,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The component status.</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -248,7 +248,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The component type.</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -467,7 +467,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Components.
+             * <p>The list of components.</p>
              */
             public Builder components(java.util.List<Components> components) {
                 this.components = components;
@@ -475,7 +475,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the ApsaraDB RDS for PostgreSQL database that is connected to the AI application.</p>
+             * <p>The instance ID of the RDS PostgreSQL database to which the AI application is connected.</p>
              * 
              * <strong>example:</strong>
              * <p>pgm-2ze49qv594vi****</p>

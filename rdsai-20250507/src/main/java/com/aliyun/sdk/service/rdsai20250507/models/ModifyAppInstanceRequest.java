@@ -143,7 +143,7 @@ public class ModifyAppInstanceRequest extends Request {
         } 
 
         /**
-         * BranchName.
+         * <p>The reserved parameter.</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("BranchName", branchName);
@@ -152,7 +152,7 @@ public class ModifyAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>The idempotency parameter.</p>
+         * <p>The client token that is used to ensure idempotence.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -183,7 +183,10 @@ public class ModifyAppInstanceRequest extends Request {
         }
 
         /**
-         * InstanceClass.
+         * <p>The instance type. Currently, only <strong>rdsai.supabase.basic</strong> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rdsai.supabase.basic</p>
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);

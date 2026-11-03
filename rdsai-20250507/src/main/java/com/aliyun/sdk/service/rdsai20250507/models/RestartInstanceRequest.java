@@ -88,7 +88,7 @@ public class RestartInstanceRequest extends Request {
         } 
 
         /**
-         * BranchName.
+         * <p>Reserved parameter.</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("BranchName", branchName);
@@ -110,7 +110,7 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

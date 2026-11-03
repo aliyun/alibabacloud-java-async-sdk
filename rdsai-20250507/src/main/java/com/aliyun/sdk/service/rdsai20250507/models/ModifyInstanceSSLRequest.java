@@ -145,7 +145,7 @@ public class ModifyInstanceSSLRequest extends Request {
         } 
 
         /**
-         * BranchName.
+         * <p>The reserved parameter.</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("BranchName", branchName);
@@ -154,7 +154,7 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * <p>The certificate type. Currently, only <strong>custom</strong> is supported, which indicates that a custom certificate is used.</p>
+         * <p>The certificate type. Only <strong>custom</strong> is supported, which indicates that a custom certificate is used.</p>
          * <blockquote>
          * <p>This parameter is required when <strong>SSLEnabled</strong> is set to <strong>1</strong>.</p>
          * </blockquote>
@@ -194,10 +194,10 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable or disable SSL. Valid values:</p>
+         * <p>Specifies whether to enable SSL. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Enable.</li>
-         * <li><strong>0</strong>: Disable.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -211,7 +211,7 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * <p>The custom certificate content.</p>
+         * <p>The content of the custom certificate.</p>
          * <blockquote>
          * <p>This parameter is required when <strong>CAType</strong> is set to <strong>custom</strong>.</p>
          * </blockquote>

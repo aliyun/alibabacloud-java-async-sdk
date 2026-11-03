@@ -93,7 +93,10 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchName.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder branchName(String branchName) {
             this.branchName = branchName;

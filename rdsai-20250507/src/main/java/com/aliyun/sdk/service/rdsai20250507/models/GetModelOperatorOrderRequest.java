@@ -59,7 +59,10 @@ public class GetModelOperatorOrderRequest extends Request {
         } 
 
         /**
-         * Region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

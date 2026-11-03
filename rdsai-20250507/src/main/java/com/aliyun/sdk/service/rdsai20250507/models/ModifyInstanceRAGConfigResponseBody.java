@@ -93,7 +93,10 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchName.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder branchName(String branchName) {
             this.branchName = branchName;
@@ -123,7 +126,7 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The RAG Agent status.</p>
+         * <p>The status of the RAG Agent.</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
          * <li><strong>false</strong>: Disabled.</li>

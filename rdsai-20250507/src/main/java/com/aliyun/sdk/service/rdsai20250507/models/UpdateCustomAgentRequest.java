@@ -130,7 +130,7 @@ public class UpdateCustomAgentRequest extends Request {
         } 
 
         /**
-         * <p>AgentId。</p>
+         * <p>The agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,10 +155,10 @@ public class UpdateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The name of the dedicated agent.</p>
+         * <p>The name of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Query Instance List Agent</p>
+         * <p>Query instance list agent</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -167,7 +167,7 @@ public class UpdateCustomAgentRequest extends Request {
         }
 
         /**
-         * SkillIds.
+         * <p>The list of associated skill IDs.</p>
          */
         public Builder skillIds(java.util.List<String> skillIds) {
             String skillIdsShrink = shrink(skillIds, "SkillIds", "json");
@@ -180,7 +180,7 @@ public class UpdateCustomAgentRequest extends Request {
          * <p>The system prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>I am your dedicated Agent for querying instance lists</p>
+         * <p>I am your custom agent for querying the instance list</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.putQueryParameter("SystemPrompt", systemPrompt);

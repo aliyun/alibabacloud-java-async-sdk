@@ -103,7 +103,10 @@ public class ListContextDatabaseSyncRunLogsRequest extends Request {
         } 
 
         /**
-         * Page.
+         * <p>The page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -112,7 +115,10 @@ public class ListContextDatabaseSyncRunLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -121,6 +127,7 @@ public class ListContextDatabaseSyncRunLogsRequest extends Request {
         }
 
         /**
+         * <p>The run ID, which is a system-generated UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +140,7 @@ public class ListContextDatabaseSyncRunLogsRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

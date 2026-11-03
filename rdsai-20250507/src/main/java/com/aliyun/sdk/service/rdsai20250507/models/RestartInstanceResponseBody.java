@@ -80,7 +80,10 @@ public class RestartInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchName.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder branchName(String branchName) {
             this.branchName = branchName;

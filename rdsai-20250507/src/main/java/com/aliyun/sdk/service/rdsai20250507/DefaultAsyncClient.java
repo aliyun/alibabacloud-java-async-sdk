@@ -33,10 +33,8 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("cn-wulanchabu", "rdsai.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "rdsai.aliyuncs.com"),
             new TeaPair("cn-beijing", "rdsai.aliyuncs.com"),
             new TeaPair("cn-shanghai", "rdsai.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "rdsai.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "rdsai.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
@@ -158,7 +156,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * @param request the request parameters of CreateApiKey  CreateApiKeyRequest
@@ -180,11 +178,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+     * <p>Warning: This API operation incurs fees. Read the related feature documentation carefully before you proceed.
      * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * </blockquote>
      * 
@@ -695,9 +693,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of DescribeAppInstanceAttribute  DescribeAppInstanceAttributeRequest
@@ -719,7 +717,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -785,9 +783,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of DescribeInstanceAuthInfo  DescribeInstanceAuthInfoRequest
@@ -875,8 +873,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
@@ -899,9 +897,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * <blockquote>
      * <p>Currently, only Object Storage Service (OSS) is supported.</p>
@@ -1082,9 +1080,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Disables the sandbox and Edge Routine capabilities of a Supabase instance.</p>
+     * <p>Disables the sandbox and Edge Routine capabilities of Supabase.</p>
      * <blockquote>
-     * <p>Notice: This operation deletes all sandboxes and Edge Routines of the Supabase instance. Fully assess the business risks before performing this operation.</p>
+     * <p>Notice: This operation deletes all sandboxes and Edge Routines of the Supabase instance. Evaluate business risks before you perform this operation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DisableAgentRuntime  DisableAgentRuntimeRequest
@@ -1106,9 +1104,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>During the public preview, the sandbox and Edge Routine features are free of charge.</p>
+     * <p>During the public preview, the sandbox and Edge Routine features are provided free of charge.</p>
      * <h3>Before you begin</h3>
-     * <p>Before you use this feature, <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">authorize the service-linked role</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</p>
+     * <p>Before you use this feature, you must <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">authorize the service-linked role</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</p>
      * 
      * @param request the request parameters of EnableAgentRuntime  EnableAgentRuntimeRequest
      * @return EnableAgentRuntimeResponse
@@ -1719,8 +1717,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>列表接口默认分页返回，Page 与 PageSize 为可选参数。
-     * 响应中的 Data 列表字段使用数组返回，Total 表示符合条件的总条数。</p>
+     * <p>The list API returns paginated results by default. Page and PageSize are optional parameters.
+     * The Data list field in the response is returned as an array, and Total indicates the total number of matching entries.</p>
      * 
      * @param request the request parameters of ListContextDatabaseSyncRunLogs  ListContextDatabaseSyncRunLogsRequest
      * @return ListContextDatabaseSyncRunLogsResponse
@@ -1944,8 +1942,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
@@ -1986,7 +1984,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -2028,7 +2026,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -2052,7 +2050,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -2274,12 +2272,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * <blockquote>
-     * <p>Currently, only the password of the RDS Supabase Dashboard user can be modified.</p>
+     * <p>Currently, only the password of the RDS Supabase Dashboard user can be changed.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ResetInstancePassword  ResetInstancePasswordRequest
@@ -2301,7 +2299,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -2325,7 +2323,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 重试会基于失败项生成新的 Run，原 Run 状态保持不变。</p>
+     * <p>For write operations, you can pass a ClientToken to ensure idempotence. If not provided, the backend automatically generates one. The retry generates a new run based on the failed items, and the status of the original run remains unchanged.</p>
      * 
      * @param request the request parameters of RetryFailedContextDatabaseSyncRun  RetryFailedContextDatabaseSyncRunRequest
      * @return RetryFailedContextDatabaseSyncRunResponse
@@ -2409,9 +2407,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of StartInstance  StartInstanceRequest
@@ -2458,7 +2456,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3>Applicable engine</h3>
-     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">Ultimate Edition of RDS AI Assistant</a></p>
      * 
      * @param request the request parameters of UpdateApiKeyQuota  UpdateApiKeyQuotaRequest
      * @return UpdateApiKeyQuotaResponse
@@ -2521,7 +2519,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</p>
+     * <p>For write operations, you can specify a ClientToken to ensure idempotence. If you do not specify it, the backend automatically generates one.</p>
      * 
      * @param request the request parameters of UpdateContextDatabaseSyncConnection  UpdateContextDatabaseSyncConnectionRequest
      * @return UpdateContextDatabaseSyncConnectionResponse
@@ -2542,7 +2540,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</p>
+     * <p>You can specify the ClientToken parameter to ensure idempotence for write operations. If you do not specify this parameter, the backend automatically generates one.</p>
      * 
      * @param request the request parameters of UpdateContextDatabaseSyncConnectionCredential  UpdateContextDatabaseSyncConnectionCredentialRequest
      * @return UpdateContextDatabaseSyncConnectionCredentialResponse
@@ -2563,7 +2561,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 Target 为隐含概念，调用方只需传入 KnowledgeBaseId，后端自动创建/匹配 Target。</p>
+     * <p>For write operations, you can pass in a ClientToken to ensure idempotency. If it is not provided, the backend automatically generates one. Target is an implicit concept. The invoker only needs to pass in the KnowledgeBaseId, and the backend performs automatic creation or matching of the target.</p>
      * 
      * @param request the request parameters of UpdateContextDatabaseSyncJob  UpdateContextDatabaseSyncJobRequest
      * @return UpdateContextDatabaseSyncJobResponse
@@ -2584,7 +2582,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</p>
+     * <p>You can specify a ClientToken for write operations to ensure idempotence. If no ClientToken is provided, the backend automatically generates one.</p>
      * 
      * @param request the request parameters of UpdateContextDatabaseSyncJobSchedule  UpdateContextDatabaseSyncJobScheduleRequest
      * @return UpdateContextDatabaseSyncJobScheduleResponse

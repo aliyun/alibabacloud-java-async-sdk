@@ -142,7 +142,7 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * <p>The list of instances.</p>
+         * <p>The list of instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>r-uf6ce0r08lr7xn****</p>
@@ -166,7 +166,7 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -87,7 +87,7 @@ public class StartInstanceRequest extends Request {
         } 
 
         /**
-         * BranchName.
+         * <p>The reserved parameter.</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("BranchName", branchName);

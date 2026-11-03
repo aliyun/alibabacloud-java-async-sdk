@@ -145,7 +145,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchName.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder branchName(String branchName) {
             this.branchName = branchName;
@@ -153,7 +156,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The certificate type. The value is <strong>custom</strong>, which indicates that a custom certificate is used.</p>
+         * <p>The certificate type. A value of <strong>custom</strong> indicates that a custom certificate is used.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>
@@ -209,7 +212,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The custom certificate content.</p>
+         * <p>The content of the custom certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</p>

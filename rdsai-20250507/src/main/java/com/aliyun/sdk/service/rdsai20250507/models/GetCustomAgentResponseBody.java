@@ -158,7 +158,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the dedicated agent was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-04T02:25:43Z</p>
@@ -194,7 +194,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
          * <p>The name of the dedicated agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Query Instance List Agent</p>
+         * <p>Instance list query agent</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -213,7 +213,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Skills.
+         * <p>The list of associated skill details.</p>
          */
         public Builder skills(java.util.List<Skills> skills) {
             this.skills = skills;
@@ -240,7 +240,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the dedicated agent was last modified.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-27 16:02:28</p>
@@ -335,7 +335,10 @@ public class GetCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL query optimization skill</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -343,10 +346,10 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup set ID.</p>
+             * <p>The unique identifier of the skill.</p>
              * 
              * <strong>example:</strong>
-             * <p>17053</p>
+             * <p>82cf3d62-0add-47bd-869f-877131f7****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -354,10 +357,10 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the dedicated agent.</p>
+             * <p>The name of the skill.</p>
              * 
              * <strong>example:</strong>
-             * <p>Query Instance List Agent</p>
+             * <p>query-optimization</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -365,7 +368,10 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SkillType.
+             * <p>The skill type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder skillType(String skillType) {
                 this.skillType = skillType;

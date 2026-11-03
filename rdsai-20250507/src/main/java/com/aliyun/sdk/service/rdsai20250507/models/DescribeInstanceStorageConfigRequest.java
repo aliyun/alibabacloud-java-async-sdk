@@ -88,7 +88,7 @@ public class DescribeInstanceStorageConfigRequest extends Request {
         } 
 
         /**
-         * BranchName.
+         * <p>A reserved parameter.</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("BranchName", branchName);

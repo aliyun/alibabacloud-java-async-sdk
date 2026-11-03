@@ -87,7 +87,7 @@ public class DescribeAppInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -111,7 +111,7 @@ public class DescribeAppInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

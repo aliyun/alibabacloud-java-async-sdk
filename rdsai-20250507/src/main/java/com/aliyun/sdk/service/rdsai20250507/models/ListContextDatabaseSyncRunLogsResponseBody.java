@@ -119,7 +119,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id-001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +276,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-23T10:00:00+08:00</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -272,7 +287,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Synchronization completed. 12 documents uploaded</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -280,7 +298,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The run ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000000000000</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -288,7 +309,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The log level. Valid values: debug, info, warn, and error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -296,7 +320,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The response message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Operation successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -389,7 +416,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Logs.
+             * <p>The list of logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;Id&quot;:1000000000000000, &quot;Level&quot;:&quot;info&quot;, &quot;Message&quot;:&quot;Operation successful&quot;, &quot;Detail&quot;:&quot;Synchronization completed. 12 documents uploaded.&quot;}]</p>
              */
             public Builder logs(java.util.List<Logs> logs) {
                 this.logs = logs;
@@ -397,7 +427,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * <p>The page number, starting from 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -405,7 +438,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -413,7 +449,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
