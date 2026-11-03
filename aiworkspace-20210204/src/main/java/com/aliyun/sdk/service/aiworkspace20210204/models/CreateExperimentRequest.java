@@ -117,12 +117,7 @@ public class CreateExperimentRequest extends Request {
         } 
 
         /**
-         * <p>The visibility of the experiment. Valid values:</p>
-         * <ul>
-         * <li>PUBLIC: Visible to all users.</li>
-         * <li>PRIVATE: Visible only to the creator and the Alibaba Cloud account.</li>
-         * </ul>
-         * <p>Default value: PRIVATE.</p>
+         * <p>The visibility of the experiment. It can be set to private (visible only to the creator and their Alibaba Cloud account) or public (visible to all users). This parameter is optional. Default value: private.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -134,7 +129,7 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>The default artifact output path for all tasks associated with the experiment. Currently, only OSS paths are supported.</p>
+         * <p>The default artifact output path for all nodes associated with the experiment. Only OSS paths are currently supported.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/test</p>
@@ -155,11 +150,11 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>The name of the experiment. The name must meet the following rules:</p>
+         * <p>The name of the experiment. The naming rules are as follows:</p>
          * <ul>
-         * <li>The name must start with a lowercase or uppercase letter.</li>
-         * <li>The name can contain uppercase letters, lowercase letters, digits, underscores (_), or hyphens (-).</li>
-         * <li>The name must be 1 to 63 characters in length.</li>
+         * <li>Must start with a lowercase or uppercase letter.</li>
+         * <li>Can contain lowercase and uppercase letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>Must be 1 to 63 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

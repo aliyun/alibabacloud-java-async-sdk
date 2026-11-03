@@ -106,7 +106,7 @@ public class GetDatasetFileMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the dataset file metadata.</p>
+         * <p>The details of the retrieved dataset file metadata.</p>
          */
         public Builder datasetFileMeta(DatasetFileMetaContentGet datasetFileMeta) {
             this.datasetFileMeta = datasetFileMeta;
@@ -125,7 +125,7 @@ public class GetDatasetFileMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the dataset version.</p>
+         * <p>The dataset version name.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

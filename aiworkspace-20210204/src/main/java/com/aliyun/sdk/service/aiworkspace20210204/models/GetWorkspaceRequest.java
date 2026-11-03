@@ -23,12 +23,17 @@ public class GetWorkspaceRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtraVerboseFields")
+    private String extraVerboseFields;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Verbose")
     private Boolean verbose;
 
     private GetWorkspaceRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
+        this.extraVerboseFields = builder.extraVerboseFields;
         this.verbose = builder.verbose;
     }
 
@@ -53,6 +58,13 @@ public class GetWorkspaceRequest extends Request {
     }
 
     /**
+     * @return extraVerboseFields
+     */
+    public String getExtraVerboseFields() {
+        return this.extraVerboseFields;
+    }
+
+    /**
      * @return verbose
      */
     public Boolean getVerbose() {
@@ -61,6 +73,7 @@ public class GetWorkspaceRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetWorkspaceRequest, Builder> {
         private String workspaceId; 
+        private String extraVerboseFields; 
         private Boolean verbose; 
 
         private Builder() {
@@ -70,11 +83,12 @@ public class GetWorkspaceRequest extends Request {
         private Builder(GetWorkspaceRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
+            this.extraVerboseFields = request.extraVerboseFields;
             this.verbose = request.verbose;
         } 
 
         /**
-         * <p>The workspace ID. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,12 +101,23 @@ public class GetWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return additional information, such as the workspace owner. Valid values:</p>
+         * <p>A comma-separated string used to specify additional information to return. This field does not take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NotSupport</p>
+         */
+        public Builder extraVerboseFields(String extraVerboseFields) {
+            this.putQueryParameter("ExtraVerboseFields", extraVerboseFields);
+            this.extraVerboseFields = extraVerboseFields;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to display supplementary information such as the workspace owner. Valid values:</p>
          * <ul>
-         * <li><p>false (default): Does not return additional information.</p>
-         * </li>
-         * <li><p>true: Returns additional information.</p>
-         * </li>
+         * <li>false: Does not display supplementary information.</li>
+         * <li>true: Displays supplementary information.
+         * Default value: false.</li>
          * </ul>
          * 
          * <strong>example:</strong>

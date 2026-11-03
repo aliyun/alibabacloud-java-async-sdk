@@ -267,7 +267,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The time when the instance was created. The time follows the ISO 8601 standard in UTC. Format: YYYY-MM-DDTHH:mm:ss.sssZ.</p>
+         * <p>The time when the instance was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.sssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-30T12:51:33.028Z</p>
@@ -279,10 +279,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The labels of the task for exact match. Supported formats:</p>
+         * <p>The labels of the task for exact matching. Supported formats:</p>
          * <ul>
          * <li>Single-label query: &quot;is_evaluation:true&quot;</li>
-         * <li>Multi-label scenario (not recommended except in special cases due to potential performance issues): &quot;is_evaluation:true,LLM_evaluation:true&quot; separated by commas (,), indicating that multiple label key-value pairs must all match.</li>
+         * <li>Multi-label scenario (not recommended for common scenarios due to potential performance issues): &quot;is_evaluation:true,LLM_evaluation:true&quot;. Use commas (,) to separate multiple labels, which means all specified label key-value pairs must be matched at the same time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,7 +295,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return. Default value: 10.</p>
+         * <p>The maximum number of results to return for the request. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -307,7 +307,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The run name.</p>
+         * <p>The name of the run.</p>
          * 
          * <strong>example:</strong>
          * <p>myName</p>
@@ -319,10 +319,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order for the specified field in a paging query. Used together with SortBy. Valid values:</p>
+         * <p>Specifies the sorting of the specified field during a paged query. This parameter is used together with SortBy for paging. Valid values:</p>
          * <ul>
-         * <li>ASC: Ascending order.</li>
-         * <li>DESC (default): Descending order.</li>
+         * <li>ASC: ascending order.</li>
+         * <li>DESC (default): descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>A comma-separated list of sorting strings. Supported fields: GmtCreateTime and Name. Supported sorting orders: DESC and ASC. Default: ASC. Separate multiple fields with commas (,).</p>
+         * <p>The list of strings that specify the sort order. Supported fields for sorting include GmtCreateTime and Name. The sort orders include DESC and ASC. Default value: ASC. You can specify multiple fields and separate them with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>GmtCreateTime DESC,Name ASC</p>
@@ -347,7 +347,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: greater than 0. Default value: 1.</p>
+         * <p>The current page number. Valid values: integers greater than 0. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -359,7 +359,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -371,7 +371,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Starts from 0. Default value: 0.</p>
+         * <p>The pagination token. The value starts from 0. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -383,10 +383,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting. Valid values:</p>
+         * <p>The name of the field used for sorting. Valid values:</p>
          * <ul>
-         * <li>Name: The run name.</li>
-         * <li>GmtCreateTime (default): The run creation time.</li>
+         * <li>Name: the name of the run.</li>
+         * <li>GmtCreateTime (default): the time when the run was created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -425,8 +425,8 @@ public class ListRunsRequest extends Request {
         /**
          * <p>Specifies whether to display detailed information, including Metrics, Params, and Labels. Valid values:</p>
          * <ul>
-         * <li>true: Detailed information is displayed.</li>
-         * <li>false (default): Detailed information is not displayed.</li>
+         * <li>true: Displays detailed information.</li>
+         * <li>false (default): Does not display detailed information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -439,10 +439,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace where the experiment resides. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
-         * <blockquote>
-         * <p>If you do not specify a workspace ID, the system returns the run list of the default workspace.</p>
-         * </blockquote>
+         * <p>The ID of the workspace to which the experiment belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>. If you do not specify the workspace ID, the system returns the runs in the default workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>228**</p>

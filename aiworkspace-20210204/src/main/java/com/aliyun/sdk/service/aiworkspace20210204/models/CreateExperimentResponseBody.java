@@ -67,10 +67,10 @@ public class CreateExperimentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the experiment. If the creation operation is asynchronous, a specific job ID is returned.</p>
+         * <p>The Job ID returned if the creation API is implemented asynchronously.</p>
          * 
          * <strong>example:</strong>
-         * <p>ExperimentId</p>
+         * <p>ID of the experiment created by the API request</p>
          */
         public Builder experimentId(String experimentId) {
             this.experimentId = experimentId;
@@ -81,7 +81,7 @@ public class CreateExperimentResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>RequestId</p>
+         * <p>Request ID</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

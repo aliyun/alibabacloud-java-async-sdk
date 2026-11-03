@@ -305,6 +305,9 @@ public class Trial extends TeaModel {
 
         /**
          * <p>UserId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557702098******</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

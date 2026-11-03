@@ -221,7 +221,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * <p>The default artifact output path for tasks associated with the experiment. Currently, only OSS paths are supported.</p>
+         * <p>The default artifact output path for the jobs associated with the experiment. Only OSS paths are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/test</p>
@@ -244,6 +244,9 @@ public class Experiment extends TeaModel {
 
         /**
          * <p>The time when the experiment was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -252,6 +255,9 @@ public class Experiment extends TeaModel {
 
         /**
          * <p>The time when the experiment was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -259,7 +265,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * <p>The list of experiment labels.</p>
+         * <p>The list of labels for the experiment.</p>
          */
         public Builder labels(java.util.List<ExperimentLabel> labels) {
             this.labels = labels;
@@ -275,7 +281,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * <p>The experiment name.</p>
+         * <p>The name of the experiment.</p>
          * 
          * <strong>example:</strong>
          * <p>exp-test</p>
@@ -286,7 +292,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the experiment owner.</p>
+         * <p>The Alibaba Cloud account ID of the owner of the experiment.</p>
          * 
          * <strong>example:</strong>
          * <p>1631044****3440</p>
@@ -308,7 +314,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * <p>The default OSS storage path for TensorBoard logs of each trial in the experiment.</p>
+         * <p>The default OSS storage path for the TensorBoard logs of each trial in the experiment.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/tensorboard/</p>
@@ -319,7 +325,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * <p>The user ID of the experiment creator.</p>
+         * <p>The user ID of the creator of the experiment.</p>
          * 
          * <strong>example:</strong>
          * <p>1557702098******</p>
