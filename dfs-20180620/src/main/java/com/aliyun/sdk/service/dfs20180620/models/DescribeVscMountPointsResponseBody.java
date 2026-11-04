@@ -80,7 +80,7 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         } 
 
         /**
-         * MountPoints.
+         * <p>The mount point information.</p>
          */
         public Builder mountPoints(java.util.List<MountPoints> mountPoints) {
             this.mountPoints = mountPoints;
@@ -88,7 +88,10 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -188,7 +194,10 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * VscId.
+             * <p>VSC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsc-asjodjoio****</p>
              */
             public Builder vscId(String vscId) {
                 this.vscId = vscId;
@@ -204,7 +213,15 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * VscStatus.
+             * <p>The mount status of the VSC. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The mount operation succeeded.</li>
+             * <li>CREATING: The mount operation is in progress.</li>
+             * <li>INVALID: The mount operation failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder vscStatus(String vscStatus) {
                 this.vscStatus = vscStatus;
@@ -212,7 +229,14 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * VscType.
+             * <p>The VSC type. Valid values:</p>
+             * <ul>
+             * <li>Primary (default): The reserved default VSC on the ECS instance.</li>
+             * <li>Secondary: The reusable VSC on the ECS instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder vscType(String vscType) {
                 this.vscType = vscType;
@@ -292,7 +316,10 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the ECS instance on which the HDFS file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1g6zv0ce8oghu7****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -300,7 +327,15 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status of the ECS instance on which the HDFS file system is mounted. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The mount operation succeeded.</li>
+             * <li>CREATING: The mount operation is in progress.</li>
+             * <li>INVALID: The mount operation failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -308,7 +343,7 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Vscs.
+             * <p>The list of VSCs on which the HDFS file system is mounted.</p>
              */
             public Builder vscs(java.util.List<Vscs> vscs) {
                 this.vscs = vscs;
@@ -414,7 +449,10 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the mount point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The HDFS file system mounted on the internal instance</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -422,7 +460,10 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTotalCount.
+             * <p>The number of ECS instances to which the HDFS file system is to be mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceTotalCount(Integer instanceTotalCount) {
                 this.instanceTotalCount = instanceTotalCount;
@@ -430,7 +471,7 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Instances.
+             * <p>The ECS instances on which the HDFS file system is mounted.</p>
              */
             public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
@@ -438,7 +479,10 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointAlias.
+             * <p>The alias of the mount point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdfs1</p>
              */
             public Builder mountPointAlias(String mountPointAlias) {
                 this.mountPointAlias = mountPointAlias;
@@ -446,7 +490,10 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointId.
+             * <p>The mount point ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-037cb49e1d-c****.dfs.aliyuncs.com</p>
              */
             public Builder mountPointId(String mountPointId) {
                 this.mountPointId = mountPointId;

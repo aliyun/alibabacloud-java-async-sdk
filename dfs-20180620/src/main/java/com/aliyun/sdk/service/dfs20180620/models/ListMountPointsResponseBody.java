@@ -93,7 +93,7 @@ public class ListMountPointsResponseBody extends TeaModel {
         } 
 
         /**
-         * MountPoints.
+         * <p>The mount point information.</p>
          */
         public Builder mountPoints(java.util.List<MountPoints> mountPoints) {
             this.mountPoints = mountPoints;
@@ -101,7 +101,11 @@ public class ListMountPointsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page.</p>
+         * <p>If a query does not return all results, a non-empty NextToken is returned. You can include the NextToken in a subsequent query to retrieve the remaining results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYR6sz6qkmauspAy8oxjHP-tOLtD4KSv3DzI7G6iywTx1ZCExO50GtSuiTB9z0JppvYQ2iUa8s4HbcFanMQfDIlds4da87_Ax4UJMva****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +113,10 @@ public class ListMountPointsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +124,10 @@ public class ListMountPointsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of mount points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -313,7 +323,10 @@ public class ListMountPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessGroupId.
+             * <p>The permission group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
              */
             public Builder accessGroupId(String accessGroupId) {
                 this.accessGroupId = accessGroupId;
@@ -321,7 +334,10 @@ public class ListMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the mount point was created. The time is displayed in UTC and follows the ISO 8601 standard. Example: 2022-09-19T03:22:32.550267Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-19T03:22:32.550267Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -329,7 +345,10 @@ public class ListMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the mount point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mount the production DFS to a vSwitch in the VPC log cluster</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -337,7 +356,10 @@ public class ListMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * <p>The file system ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -345,7 +367,10 @@ public class ListMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointAlias.
+             * <p>The alias of the mount point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdfs1</p>
              */
             public Builder mountPointAlias(String mountPointAlias) {
                 this.mountPointAlias = mountPointAlias;
@@ -353,7 +378,11 @@ public class ListMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointDomain.
+             * <p>The domain name of the mount point.</p>
+             * <p>You can use this domain name to access the Apsara File Storage for HDFS file system within the CIDR block of the VPC to which the mount point is attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-37af8f42f****.cn-hangzhou.dfs.aliyuncs.com</p>
              */
             public Builder mountPointDomain(String mountPointDomain) {
                 this.mountPointDomain = mountPointDomain;
@@ -361,7 +390,10 @@ public class ListMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointId.
+             * <p>The mount point ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-37af8f42f****.cn-hangzhou.dfs.aliyuncs.com</p>
              */
             public Builder mountPointId(String mountPointId) {
                 this.mountPointId = mountPointId;
@@ -369,7 +401,10 @@ public class ListMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type of the mount point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -377,7 +412,10 @@ public class ListMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -385,7 +423,15 @@ public class ListMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the mount point.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Inactive: The mount point is disabled.</li>
+             * <li>Active: The mount point is enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Inactive</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -393,7 +439,10 @@ public class ListMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-iq8fymi327krd14mt****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -401,7 +450,10 @@ public class ListMountPointsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-iq8hhsk3ymzv9m4wn****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

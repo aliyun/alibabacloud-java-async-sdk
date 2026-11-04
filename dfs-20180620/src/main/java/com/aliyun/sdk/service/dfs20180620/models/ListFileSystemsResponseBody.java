@@ -93,7 +93,7 @@ public class ListFileSystemsResponseBody extends TeaModel {
         } 
 
         /**
-         * FileSystems.
+         * <p>The collection of file system information.</p>
          */
         public Builder fileSystems(java.util.List<FileSystems> fileSystems) {
             this.fileSystems = fileSystems;
@@ -101,7 +101,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>tCSKxtX5z_fW0-Q0ug8Df1oSXGiamAjmrtaDFAj6sZW-YhN1lRC7TEIkcFfMuj-6uR9wSW4b_PS2ze70k269qy8bMVHDfRW0Tvhmyh-k47g</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tCSKxtX5z_fW0-Q0ug8Df1oSXGiamAjmrtaDFAj6sZW-YhN1lRC7TEIkcFfMuj-6uR9wSW4b_PS2ze70k269qy8bMVHDfRW0Tvhmyh-****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +112,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -148,6 +157,9 @@ public class ListFileSystemsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("FileSystemName")
         private String fileSystemName;
+
+        @com.aliyun.core.annotation.NameInMap("MeteringMode")
+        private String meteringMode;
 
         @com.aliyun.core.annotation.NameInMap("MeteringSpaceSize")
         private Float meteringSpaceSize;
@@ -196,6 +208,7 @@ public class ListFileSystemsResponseBody extends TeaModel {
             this.description = builder.description;
             this.fileSystemId = builder.fileSystemId;
             this.fileSystemName = builder.fileSystemName;
+            this.meteringMode = builder.meteringMode;
             this.meteringSpaceSize = builder.meteringSpaceSize;
             this.mountPointCount = builder.mountPointCount;
             this.numberOfDirectories = builder.numberOfDirectories;
@@ -246,6 +259,13 @@ public class ListFileSystemsResponseBody extends TeaModel {
          */
         public String getFileSystemName() {
             return this.fileSystemName;
+        }
+
+        /**
+         * @return meteringMode
+         */
+        public String getMeteringMode() {
+            return this.meteringMode;
         }
 
         /**
@@ -351,6 +371,7 @@ public class ListFileSystemsResponseBody extends TeaModel {
             private String description; 
             private String fileSystemId; 
             private String fileSystemName; 
+            private String meteringMode; 
             private Float meteringSpaceSize; 
             private Long mountPointCount; 
             private Long numberOfDirectories; 
@@ -374,6 +395,7 @@ public class ListFileSystemsResponseBody extends TeaModel {
                 this.description = model.description;
                 this.fileSystemId = model.fileSystemId;
                 this.fileSystemName = model.fileSystemName;
+                this.meteringMode = model.meteringMode;
                 this.meteringSpaceSize = model.meteringSpaceSize;
                 this.mountPointCount = model.mountPointCount;
                 this.numberOfDirectories = model.numberOfDirectories;
@@ -391,7 +413,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time of the file system. The time is displayed in UTC and follows the ISO 8601 standard. Example: 2022-04-18T06:03:15.836222Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-18T06:03:15.836222Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -399,7 +424,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is the first Apsara File Storage for HDFS instance of my company</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -407,7 +435,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -415,7 +446,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemName.
+             * <p>The name of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyFirstHDFS</p>
              */
             public Builder fileSystemName(String fileSystemName) {
                 this.fileSystemName = fileSystemName;
@@ -423,7 +457,23 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MeteringSpaceSize.
+             * <p>The billing method of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UsageBased,CapacityBased</p>
+             */
+            public Builder meteringMode(String meteringMode) {
+                this.meteringMode = meteringMode;
+                return this;
+            }
+
+            /**
+             * <p>The billable capacity of the file system. Unit: bytes.
+             * Billable capacity = MAX [(Number of files + Number of directories) × 5 MiB, Used capacity].
+             * This is statistical data and is for reference only, and is not used for billing. Apsara File Storage for HDFS is billed based on the peak billable capacity of the previous hour. For more detailed metering data, see <a href="https://help.aliyun.com/document_detail/419001.html">View billing details</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107374182400</p>
              */
             public Builder meteringSpaceSize(Float meteringSpaceSize) {
                 this.meteringSpaceSize = meteringSpaceSize;
@@ -431,7 +481,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointCount.
+             * <p>The number of mount points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder mountPointCount(Long mountPointCount) {
                 this.mountPointCount = mountPointCount;
@@ -439,7 +492,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * NumberOfDirectories.
+             * <p>The number of directories.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder numberOfDirectories(Long numberOfDirectories) {
                 this.numberOfDirectories = numberOfDirectories;
@@ -447,7 +503,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * NumberOfFiles.
+             * <p>The number of files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder numberOfFiles(Long numberOfFiles) {
                 this.numberOfFiles = numberOfFiles;
@@ -455,7 +514,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * <p>The protocol type. Only Hadoop Distributed File System (HDFS) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HDFS</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -463,7 +525,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ProvisionedThroughputInMiBps.
+             * <p>The provisioned throughput. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder provisionedThroughputInMiBps(Long provisionedThroughputInMiBps) {
                 this.provisionedThroughputInMiBps = provisionedThroughputInMiBps;
@@ -471,7 +536,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -479,7 +547,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * SpaceCapacity.
+             * <p>The capacity of the file system. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder spaceCapacity(Long spaceCapacity) {
                 this.spaceCapacity = spaceCapacity;
@@ -487,7 +558,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * StoragePackageId.
+             * <p>The ID of the storage plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder storagePackageId(String storagePackageId) {
                 this.storagePackageId = storagePackageId;
@@ -495,7 +569,14 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage medium type. Valid values:</p>
+             * <ul>
+             * <li>STANDARD: standard</li>
+             * <li>PERFORMANCE: performance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -503,7 +584,14 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ThroughputMode.
+             * <p>The throughput mode. Valid values:</p>
+             * <ul>
+             * <li>Standard: standard throughput</li>
+             * <li>Provisioned: provisioned throughput</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder throughputMode(String throughputMode) {
                 this.throughputMode = throughputMode;
@@ -511,7 +599,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedSpaceSize.
+             * <p>The used space of the file system. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder usedSpaceSize(Float usedSpaceSize) {
                 this.usedSpaceSize = usedSpaceSize;
@@ -519,7 +610,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of Apsara File Storage for HDFS. This is not the Hadoop version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -527,7 +621,10 @@ public class ListFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

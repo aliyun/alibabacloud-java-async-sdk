@@ -139,6 +139,7 @@ public class DescribeMountPointsVscAttachInfoRequest extends Request {
         }
 
         /**
+         * <p>The region where the file system resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +152,10 @@ public class DescribeMountPointsVscAttachInfoRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return per page during paging in a paged query. Maximum value: 100. Default value: 10. If you do not specify a value in the Settings or the value in the Settings is less than 10, the default value 10 is used. If the value in the Settings is greater than 100, the default value 100 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -160,7 +164,10 @@ public class DescribeMountPointsVscAttachInfoRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. If a query does not return all results, a non-empty NextToken is returned. You can use the returned NextToken in a subsequent query to retrieve the remaining results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYR6sz6qkmauspAy8oxjHP-tOLtD4KSv3DzI7G6iywTx1ZCExO50GtSuiTB9z0JppvYQ2iUa8s4HbcFanMQfDIlds4da87_Ax4UJMva****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -169,7 +176,7 @@ public class DescribeMountPointsVscAttachInfoRequest extends Request {
         }
 
         /**
-         * QueryInfos.
+         * <p>The list of query information.</p>
          */
         public Builder queryInfos(java.util.List<QueryInfos> queryInfos) {
             String queryInfosShrink = shrink(queryInfos, "QueryInfos", "json");
@@ -179,7 +186,14 @@ public class DescribeMountPointsVscAttachInfoRequest extends Request {
         }
 
         /**
-         * UseAssumeRoleChkServerPerm.
+         * <p>Specifies whether to use the assumed role to check the permissions of the compute node. Valid values:</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false (default): No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useAssumeRoleChkServerPerm(Boolean useAssumeRoleChkServerPerm) {
             this.putQueryParameter("UseAssumeRoleChkServerPerm", useAssumeRoleChkServerPerm);
@@ -260,7 +274,10 @@ public class DescribeMountPointsVscAttachInfoRequest extends Request {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the ECS instance on which the HDFS file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zehyz70ednszl6rrfj6</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -268,7 +285,10 @@ public class DescribeMountPointsVscAttachInfoRequest extends Request {
             }
 
             /**
-             * MountPointId.
+             * <p>The ID of the mount point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-9dd3c6bajmy110.cn-zhangjiakou.dfs.aliyuncs.com</p>
              */
             public Builder mountPointId(String mountPointId) {
                 this.mountPointId = mountPointId;
@@ -276,7 +296,10 @@ public class DescribeMountPointsVscAttachInfoRequest extends Request {
             }
 
             /**
-             * VscId.
+             * <p>The ID of the VSC on which the HDFS file system is mounted. You must specify either InstanceId or VscId, but not both.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsc-bp19yqmujug2r18z0h9qal</p>
              */
             public Builder vscId(String vscId) {
                 this.vscId = vscId;

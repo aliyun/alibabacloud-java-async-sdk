@@ -67,7 +67,7 @@ public class GetAccessGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessGroup.
+         * <p>The access group information.</p>
          */
         public Builder accessGroup(AccessGroup accessGroup) {
             this.accessGroup = accessGroup;
@@ -75,7 +75,10 @@ public class GetAccessGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +235,10 @@ public class GetAccessGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessGroupId.
+             * <p>The access group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
              */
             public Builder accessGroupId(String accessGroupId) {
                 this.accessGroupId = accessGroupId;
@@ -240,7 +246,10 @@ public class GetAccessGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AccessGroupName.
+             * <p>The name of the access group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-cluster-policy</p>
              */
             public Builder accessGroupName(String accessGroupName) {
                 this.accessGroupName = accessGroupName;
@@ -248,7 +257,10 @@ public class GetAccessGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the access group was created. The time is displayed in UTC and follows the ISO 8601 standard. Example: 2022-04-18T08:02:09.986217Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-18T08:02:09.986217Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -256,7 +268,10 @@ public class GetAccessGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the access group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dedicated access group for test clusters</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -264,7 +279,14 @@ public class GetAccessGroupResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the access group is the default access group. Valid values:</p>
+             * <ul>
+             * <li>true: The access group is the default access group. When the access group is the default access group, all IP addresses are allowed to access it, and you cannot delete the default access group or the permission rules in the access group.</li>
+             * <li>false: The access group is not the default access group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -272,7 +294,10 @@ public class GetAccessGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointCount.
+             * <p>The number of mount points associated with the access group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mountPointCount(Integer mountPointCount) {
                 this.mountPointCount = mountPointCount;
@@ -280,7 +305,10 @@ public class GetAccessGroupResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type of the access group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -288,7 +316,10 @@ public class GetAccessGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -296,7 +327,10 @@ public class GetAccessGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * <p>The number of permission rules in the access group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;

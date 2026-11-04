@@ -93,7 +93,7 @@ public class ListAccessGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessGroups.
+         * <p>The access group information.</p>
          */
         public Builder accessGroups(java.util.List<AccessGroups> accessGroups) {
             this.accessGroups = accessGroups;
@@ -101,7 +101,11 @@ public class ListAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * <p>If a single query does not return all results, a non-empty NextToken is returned. You can include the NextToken in the next request to continue the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PtHVCBwpddbWVRCFe3wlB_-tOLtD4KSv3DzI7G6iywQSm69vY0lvOlDTzqVWqXWApvYQ2iUa8s4HbcFanMQfDIlds4da87_Ax4UJMva****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +113,10 @@ public class ListAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +124,10 @@ public class ListAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -274,7 +284,10 @@ public class ListAccessGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessGroupId.
+             * <p>The ID of the access group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
              */
             public Builder accessGroupId(String accessGroupId) {
                 this.accessGroupId = accessGroupId;
@@ -282,7 +295,10 @@ public class ListAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessGroupName.
+             * <p>The name of the access group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-cluster-policy</p>
              */
             public Builder accessGroupName(String accessGroupName) {
                 this.accessGroupName = accessGroupName;
@@ -290,7 +306,10 @@ public class ListAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the access group was created. The time is displayed in UTC and follows the ISO 8601 standard. Example: 2022-04-18T08:02:09.986217Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-18T08:02:09.986217Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -298,7 +317,10 @@ public class ListAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the access group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dedicated access group for test clusters</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +328,15 @@ public class ListAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Specifies whether the access group is the default access group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: The access group is the default access group. A default access group allows access from all IP addresses. You cannot delete a default access group or the rules within it.</li>
+             * <li>false: The access group is not the default access group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -314,7 +344,10 @@ public class ListAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointCount.
+             * <p>The number of mount points associated with the access group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mountPointCount(Integer mountPointCount) {
                 this.mountPointCount = mountPointCount;
@@ -322,7 +355,10 @@ public class ListAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type of the access group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -330,7 +366,10 @@ public class ListAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -338,7 +377,10 @@ public class ListAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * <p>The number of rules in the access group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;

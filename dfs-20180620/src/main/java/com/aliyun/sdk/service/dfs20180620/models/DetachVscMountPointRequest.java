@@ -169,7 +169,10 @@ public class DetachVscMountPointRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>A reserved parameter. This parameter has no practical effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -178,10 +181,11 @@ public class DetachVscMountPointRequest extends Request {
         }
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>037****e1d</p>
+         * <p>e389e5c7-bcb4-4558-846a-e5afc444****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -190,6 +194,7 @@ public class DetachVscMountPointRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +207,13 @@ public class DetachVscMountPointRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The IDs of the ECS instances from which the HDFS file system is to be disassociated. Separate multiple ECS instance IDs with commas (,). Specify a maximum of 50 ECS instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       &quot;i-bp1g6zv0ce8oghu7****&quot;,
+         *       &quot;i-bp1g6zv0ce8oghu1****&quot;
+         * ]</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -212,10 +223,11 @@ public class DetachVscMountPointRequest extends Request {
         }
 
         /**
+         * <p>The mount point ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>037cb49e1d-c***5</p>
+         * <p>f-037cb49e1d-c****.dfs.aliyuncs.com</p>
          */
         public Builder mountPointId(String mountPointId) {
             this.putQueryParameter("MountPointId", mountPointId);
@@ -224,7 +236,15 @@ public class DetachVscMountPointRequest extends Request {
         }
 
         /**
-         * UseAssumeRoleChkServerPerm.
+         * <p>Specifies whether to use the assumed role to verify the permissions of the compute node. Valid values:</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false: No.
+         * Default value: false.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useAssumeRoleChkServerPerm(Boolean useAssumeRoleChkServerPerm) {
             this.putQueryParameter("UseAssumeRoleChkServerPerm", useAssumeRoleChkServerPerm);
@@ -233,7 +253,7 @@ public class DetachVscMountPointRequest extends Request {
         }
 
         /**
-         * VscIds.
+         * <p>The IDs of the VSCs from which the HDFS file system is to be disassociated. Specify a maximum of 50 VSC IDs.</p>
          */
         public Builder vscIds(java.util.List<String> vscIds) {
             String vscIdsShrink = shrink(vscIds, "VscIds", "json");

@@ -154,10 +154,11 @@ public class DescribeVscMountPointsRequest extends Request {
         }
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>037****e1d</p>
+         * <p>e389e5c7-bcb4-4558-846a-e5afc444****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -166,6 +167,7 @@ public class DescribeVscMountPointsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +180,10 @@ public class DescribeVscMountPointsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the ECS instance on which the HDFS file system is mounted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1g6zv0ce8oghu7****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,7 +192,10 @@ public class DescribeVscMountPointsRequest extends Request {
         }
 
         /**
-         * MountPointId.
+         * <p>The mount point ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-037cb49e1d-c****.dfs.aliyuncs.com</p>
          */
         public Builder mountPointId(String mountPointId) {
             this.putQueryParameter("MountPointId", mountPointId);
@@ -196,7 +204,16 @@ public class DescribeVscMountPointsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The instance status of the ECS instance on which the HDFS file system is mounted. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: The mount operation succeeded.</li>
+         * <li>CREATING: The mount operation is in progress.</li>
+         * <li>INVALID: The mount operation failed.</li>
+         * <li>OK: Returns instances in the NORMAL, CREATING, and INVALID states.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -205,7 +222,10 @@ public class DescribeVscMountPointsRequest extends Request {
         }
 
         /**
-         * VscId.
+         * <p>The ID of the VSC on which the HDFS file system is mounted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsc-asjodjoio****</p>
          */
         public Builder vscId(String vscId) {
             this.putQueryParameter("VscId", vscId);

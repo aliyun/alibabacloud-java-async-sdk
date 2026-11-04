@@ -93,7 +93,7 @@ public class ListAccessRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessRules.
+         * <p>The access group rules.</p>
          */
         public Builder accessRules(java.util.List<AccessRules> accessRules) {
             this.accessRules = accessRules;
@@ -101,7 +101,11 @@ public class ListAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page.</p>
+         * <p>If a single query does not return all entries, a non-empty NextToken is returned. You can specify the NextToken in a subsequent query to continue the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PtHVCBwpddbWVRCFe3wlB_-tOLtD4KSv3DzI7G6iywQSm69vY0lvOlDTzqVWqXWApvYQ2iUa8s4HbcFanMQfDIlds4da87_Ax4UJMva****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +113,10 @@ public class ListAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +124,10 @@ public class ListAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -261,7 +271,10 @@ public class ListAccessRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessGroupId.
+             * <p>The ID of the access group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
              */
             public Builder accessGroupId(String accessGroupId) {
                 this.accessGroupId = accessGroupId;
@@ -269,7 +282,10 @@ public class ListAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AccessRuleId.
+             * <p>The ID of the access group rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acr-c38028f0-f313-4385-9456-3501b1f5****</p>
              */
             public Builder accessRuleId(String accessRuleId) {
                 this.accessRuleId = accessRuleId;
@@ -277,7 +293,10 @@ public class ListAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the access group rule was created. The time is displayed in UTC and follows the ISO 8601 standard. Example: 2022-04-18T08:02:09.986217Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-18T08:02:09.986217Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -285,7 +304,10 @@ public class ListAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the access group rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CIDR block of the log upload server</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -293,7 +315,10 @@ public class ListAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkSegment.
+             * <p>The IP address or CIDR block of the authorized object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.0/24</p>
              */
             public Builder networkSegment(String networkSegment) {
                 this.networkSegment = networkSegment;
@@ -301,7 +326,12 @@ public class ListAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the access group rule.</p>
+             * <p>If an authorized object matches multiple rules, the rule with the highest priority takes effect.</p>
+             * <p>Valid values: 1 to 100. A value of 1 indicates the highest priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -309,7 +339,15 @@ public class ListAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RWAccessType.
+             * <p>The read and write permissions of the authorized object on the file system.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RDWR: read and write</li>
+             * <li>RDONLY: read-only</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RDWR</p>
              */
             public Builder RWAccessType(String RWAccessType) {
                 this.RWAccessType = RWAccessType;
@@ -317,7 +355,10 @@ public class ListAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

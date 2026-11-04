@@ -156,6 +156,7 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the permission group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +169,7 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the permission group rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +182,11 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the permission group rule.</p>
+         * <p>The description can be up to 32 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CIDR block of the log upload server</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -189,6 +195,7 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +208,11 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the permission group rule.</p>
+         * <p>Valid values: 1 to 100. A value of 1 indicates the highest priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -210,7 +221,15 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
-         * RWAccessType.
+         * <p>The read and write permissions that the authorized object has on the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RDWR: read and write</li>
+         * <li>RDONLY: read-only</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RDWR</p>
          */
         public Builder RWAccessType(String RWAccessType) {
             this.putQueryParameter("RWAccessType", RWAccessType);

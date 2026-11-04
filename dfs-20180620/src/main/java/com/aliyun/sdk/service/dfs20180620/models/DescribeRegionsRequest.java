@@ -73,7 +73,18 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>Specifies the language supported by the region. Valid values:</p>
+         * <ul>
+         * <li><p>zh: Chinese. This is the default value.</p>
+         * </li>
+         * <li><p>en: English.</p>
+         * </li>
+         * <li><p>ja: Japanese.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -82,7 +93,10 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * InputRegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder inputRegionId(String inputRegionId) {
             this.putQueryParameter("InputRegionId", inputRegionId);

@@ -155,6 +155,7 @@ public class ListAccessGroupsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +168,11 @@ public class ListAccessGroupsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -176,7 +181,11 @@ public class ListAccessGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * <p>If a single query does not return all results, a non-empty NextToken is returned. You can include the NextToken in the next request to continue the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYR6sz6qkmauspAy8oxjHP-tOLtD4KSv3DzI7G6iywTx1ZCExO50GtSuiTB9z0JppvYQ2iUa8s4HbcFanMQfDIlds4da87_Ax4UJMva****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -185,7 +194,15 @@ public class ListAccessGroupsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The field by which to sort the returned results.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CreateTime (default): sorts the results by creation time.</li>
+         * <li>AccessGroupName: sorts the results by access group name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -194,7 +211,15 @@ public class ListAccessGroupsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort order of the returned results.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ASC (default): ascending order.</li>
+         * <li>DESC: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -203,7 +228,11 @@ public class ListAccessGroupsRequest extends Request {
         }
 
         /**
-         * StartOffset.
+         * <p>Specifies the starting position of the query.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder startOffset(Integer startOffset) {
             this.putQueryParameter("StartOffset", startOffset);

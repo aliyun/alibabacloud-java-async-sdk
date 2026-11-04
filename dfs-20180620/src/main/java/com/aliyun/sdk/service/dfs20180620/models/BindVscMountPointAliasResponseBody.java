@@ -67,7 +67,10 @@ public class BindVscMountPointAliasResponseBody extends TeaModel {
         } 
 
         /**
-         * MountPointAlias.
+         * <p>The mount point alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdfe</p>
          */
         public Builder mountPointAlias(String mountPointAlias) {
             this.mountPointAlias = mountPointAlias;
@@ -75,7 +78,10 @@ public class BindVscMountPointAliasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

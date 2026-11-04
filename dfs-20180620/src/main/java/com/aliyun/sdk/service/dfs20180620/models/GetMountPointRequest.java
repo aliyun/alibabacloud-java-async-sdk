@@ -113,7 +113,11 @@ public class GetMountPointRequest extends Request {
         }
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -122,6 +126,7 @@ public class GetMountPointRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +139,11 @@ public class GetMountPointRequest extends Request {
         }
 
         /**
+         * <p>The mount point ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-37af8f42f****.cn-hangzhou.dfs.aliyuncs.com</p>
          */
         public Builder mountPointId(String mountPointId) {
             this.putQueryParameter("MountPointId", mountPointId);

@@ -44,6 +44,10 @@ public class CreateFileSystemRequest extends Request {
     private String inputRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MeteringMode")
+    private String meteringMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PartitionNumber")
     private Integer partitionNumber;
 
@@ -87,6 +91,7 @@ public class CreateFileSystemRequest extends Request {
         this.description = builder.description;
         this.fileSystemName = builder.fileSystemName;
         this.inputRegionId = builder.inputRegionId;
+        this.meteringMode = builder.meteringMode;
         this.partitionNumber = builder.partitionNumber;
         this.protocolType = builder.protocolType;
         this.provisionedThroughputInMiBps = builder.provisionedThroughputInMiBps;
@@ -153,6 +158,13 @@ public class CreateFileSystemRequest extends Request {
     }
 
     /**
+     * @return meteringMode
+     */
+    public String getMeteringMode() {
+        return this.meteringMode;
+    }
+
+    /**
      * @return partitionNumber
      */
     public Integer getPartitionNumber() {
@@ -215,6 +227,7 @@ public class CreateFileSystemRequest extends Request {
         private String description; 
         private String fileSystemName; 
         private String inputRegionId; 
+        private String meteringMode; 
         private Integer partitionNumber; 
         private String protocolType; 
         private Long provisionedThroughputInMiBps; 
@@ -236,6 +249,7 @@ public class CreateFileSystemRequest extends Request {
             this.description = request.description;
             this.fileSystemName = request.fileSystemName;
             this.inputRegionId = request.inputRegionId;
+            this.meteringMode = request.meteringMode;
             this.partitionNumber = request.partitionNumber;
             this.protocolType = request.protocolType;
             this.provisionedThroughputInMiBps = request.provisionedThroughputInMiBps;
@@ -256,7 +270,15 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * DataRedundancyType.
+         * <p>The redundancy mode of the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>LRS: locally redundant storage. This is the default value.</li>
+         * <li>ZRS: zone-redundant storage. If you select ZRS, ZoneId must be a string that consists of multiple zone IDs for zone-redundant storage, such as <codeph> <code>zoneId1,zoneId2</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LRS</p>
          */
         public Builder dataRedundancyType(String dataRedundancyType) {
             this.putQueryParameter("DataRedundancyType", dataRedundancyType);
@@ -265,7 +287,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * DedicatedClusterId.
+         * <p>The ID of the dedicated cluster for Apsara File Storage for HDFS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alidfs-DC-f76f7ca5-*****</p>
          */
         public Builder dedicatedClusterId(String dedicatedClusterId) {
             this.putQueryParameter("DedicatedClusterId", dedicatedClusterId);
@@ -274,7 +299,11 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the file system.</p>
+         * <p>The description can be up to 32 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the first Apsara File Storage for HDFS instance for our company</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -283,6 +312,12 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
+         * <p>The name of the file system. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 6 to 64 characters in length. </li>
+         * <li>The name must be globally unique and cannot be an empty string.</li>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,6 +330,7 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -307,7 +343,22 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * PartitionNumber.
+         * <p>The metering mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UsageBased,CapacityBased</p>
+         */
+        public Builder meteringMode(String meteringMode) {
+            this.putQueryParameter("MeteringMode", meteringMode);
+            this.meteringMode = meteringMode;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is reserved and does not require configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder partitionNumber(Integer partitionNumber) {
             this.putQueryParameter("PartitionNumber", partitionNumber);
@@ -316,6 +367,8 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
+         * <p>The protocol type.</p>
+         * <p>Only Hadoop Distributed File System (HDFS) is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -328,7 +381,12 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * ProvisionedThroughputInMiBps.
+         * <p>The provisioned throughput. This parameter is required when ThroughputMode is set to Provisioned.</p>
+         * <p>Unit: MB/s.</p>
+         * <p>Valid values: 1 to 5120.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder provisionedThroughputInMiBps(Long provisionedThroughputInMiBps) {
             this.putQueryParameter("ProvisionedThroughputInMiBps", provisionedThroughputInMiBps);
@@ -337,6 +395,9 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
+         * <p>The capacity of the file system.</p>
+         * <p>You cannot write data when the amount of stored data reaches the file system capacity.</p>
+         * <p>Unit: GiB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -349,7 +410,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * StorageSetName.
+         * <p>This parameter is reserved and does not require configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AligroupStorageSet</p>
          */
         public Builder storageSetName(String storageSetName) {
             this.putQueryParameter("StorageSetName", storageSetName);
@@ -358,6 +422,12 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
+         * <p>The storage medium type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>STANDARD: standard storage. This is the default value.</li>
+         * <li>PERFORMANCE: performance storage.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -370,7 +440,15 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * ThroughputMode.
+         * <p>The throughput mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Standard: standard throughput. This is the default value.</li>
+         * <li>Provisioned: provisioned throughput.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder throughputMode(String throughputMode) {
             this.putQueryParameter("ThroughputMode", throughputMode);
@@ -379,7 +457,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

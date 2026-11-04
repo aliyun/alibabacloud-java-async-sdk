@@ -67,7 +67,10 @@ public class CreateFileSystemResponseBody extends TeaModel {
         } 
 
         /**
-         * FileSystemId.
+         * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -75,7 +78,10 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

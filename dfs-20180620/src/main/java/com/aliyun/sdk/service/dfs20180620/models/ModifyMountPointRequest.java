@@ -155,7 +155,10 @@ public class ModifyMountPointRequest extends Request {
         }
 
         /**
-         * AccessGroupId.
+         * <p>The permission group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
          */
         public Builder accessGroupId(String accessGroupId) {
             this.putQueryParameter("AccessGroupId", accessGroupId);
@@ -164,7 +167,10 @@ public class ModifyMountPointRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the mount point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mount the production DFS to the vSwitch of the VPC log cluster</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -173,7 +179,11 @@ public class ModifyMountPointRequest extends Request {
         }
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -182,6 +192,7 @@ public class ModifyMountPointRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +205,11 @@ public class ModifyMountPointRequest extends Request {
         }
 
         /**
+         * <p>The mount point ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-37af8f42f****.cn-hangzhou.dfs.aliyuncs.com</p>
          */
         public Builder mountPointId(String mountPointId) {
             this.putQueryParameter("MountPointId", mountPointId);
@@ -203,7 +218,14 @@ public class ModifyMountPointRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the mount point. Valid values:</p>
+         * <ul>
+         * <li>Inactive: Disables the mount point.</li>
+         * <li>Active: Enables the mount point.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Inactive</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

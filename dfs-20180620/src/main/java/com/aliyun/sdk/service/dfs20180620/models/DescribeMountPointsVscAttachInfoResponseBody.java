@@ -106,7 +106,7 @@ public class DescribeMountPointsVscAttachInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AttachInfos.
+         * <p>The list of mount information.</p>
          */
         public Builder attachInfos(java.util.List<AttachInfos> attachInfos) {
             this.attachInfos = attachInfos;
@@ -114,7 +114,10 @@ public class DescribeMountPointsVscAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return per page during paging in a paged query. Maximum value: 100. Default value: 10. If you do not specify a value in the Settings or the value in the Settings is less than 10, the default value 10 is used. If the value in the Settings is greater than 100, the default value 100 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class DescribeMountPointsVscAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. If a query does not return all results, a non-empty NextToken is returned. You can use the returned NextToken in a subsequent query to retrieve the remaining results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asd0daj****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class DescribeMountPointsVscAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeMountPointsVscAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of mount points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -256,7 +268,10 @@ public class DescribeMountPointsVscAttachInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the ECS instance on which the HDFS file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsc-agent-f5a9bb4b041541f595a0c239c9e0f971-cn-shanghai</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -264,7 +279,10 @@ public class DescribeMountPointsVscAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointId.
+             * <p>The ID of the mount point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-9dd3c6bajmy110.cn-zhangjiakou.dfs.aliyuncs.com</p>
              */
             public Builder mountPointId(String mountPointId) {
                 this.mountPointId = mountPointId;
@@ -272,7 +290,10 @@ public class DescribeMountPointsVscAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VscId.
+             * <p>The ID of the VSC on which the HDFS file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsc-bp18fhqie89loyqixyieal</p>
              */
             public Builder vscId(String vscId) {
                 this.vscId = vscId;
@@ -280,7 +301,10 @@ public class DescribeMountPointsVscAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VscName.
+             * <p>The custom name of the VSC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cxc</p>
              */
             public Builder vscName(String vscName) {
                 this.vscName = vscName;
@@ -288,7 +312,14 @@ public class DescribeMountPointsVscAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VscStatus.
+             * <p>The mount status of the VSC.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>NORMAL: Mounted successfully.</li>
+             * <li>CREATING: Mounting.</li>
+             * <li>INVALID: Mount failed</li>
+             * </ul>
              */
             public Builder vscStatus(String vscStatus) {
                 this.vscStatus = vscStatus;
@@ -296,7 +327,14 @@ public class DescribeMountPointsVscAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VscType.
+             * <p>The type of the VSC. Valid values: </p>
+             * <ul>
+             * <li>Primary (default): the default reserved VSC on the ECS instance. </li>
+             * <li>Secondary: a reusable VSC on the ECS instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder vscType(String vscType) {
                 this.vscType = vscType;

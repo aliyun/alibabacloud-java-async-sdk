@@ -67,7 +67,10 @@ public class CreateAccessGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessGroupId.
+         * <p>The ID of the access group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
          */
         public Builder accessGroupId(String accessGroupId) {
             this.accessGroupId = accessGroupId;
@@ -75,7 +78,10 @@ public class CreateAccessGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

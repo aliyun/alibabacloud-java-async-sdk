@@ -186,6 +186,7 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
+         * <p>The access group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +199,10 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the mount target. The value can be up to 32 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mount the online HDFS to the vSwitch of the VPC log cluster</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -207,7 +211,11 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -216,6 +224,7 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,6 +237,7 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
+         * <p>The network type of the mount target. Only VPC is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +250,14 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
-         * UsePerformanceMode.
+         * <p>Specifies whether to use the high-performance mount target mode. Valid values:</p>
+         * <ul>
+         * <li>true: Uses the mode.</li>
+         * <li>false: Does not use the mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder usePerformanceMode(Boolean usePerformanceMode) {
             this.putQueryParameter("UsePerformanceMode", usePerformanceMode);
@@ -249,6 +266,7 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,6 +279,7 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
+         * <p>The VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

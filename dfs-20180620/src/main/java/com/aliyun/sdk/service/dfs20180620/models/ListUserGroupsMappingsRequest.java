@@ -126,6 +126,7 @@ public class ListUserGroupsMappingsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the Apsara File Storage for HDFS file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +139,7 @@ public class ListUserGroupsMappingsRequest extends Request {
         }
 
         /**
+         * <p>The region where the file system resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +152,10 @@ public class ListUserGroupsMappingsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The number of users to return per query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -159,7 +164,10 @@ public class ListUserGroupsMappingsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The starting point for the next page in a paged query. Set this parameter to an empty string for the first query. If paged queries are required, the response to each request includes the NextToken value for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

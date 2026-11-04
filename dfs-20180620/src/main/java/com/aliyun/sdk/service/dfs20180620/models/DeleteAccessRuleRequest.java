@@ -113,6 +113,7 @@ public class DeleteAccessRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the permission group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class DeleteAccessRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the permission group rule to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class DeleteAccessRuleRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

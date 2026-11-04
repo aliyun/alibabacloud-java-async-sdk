@@ -93,7 +93,10 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
         } 
 
         /**
-         * HasMore.
+         * <p>Indicates whether more data is available when paging is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasMore(Boolean hasMore) {
             this.hasMore = hasMore;
@@ -101,7 +104,10 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The NextToken value for the next paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,10 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * UserGroupsMappings.
+         * <p>The mappings between users and groups in the file system.</p>
          */
         public Builder userGroupsMappings(java.util.List<UserGroupsMappings> userGroupsMappings) {
             this.userGroupsMappings = userGroupsMappings;
@@ -183,7 +192,7 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupNames.
+             * <p>The list of groups to which the user belongs.</p>
              */
             public Builder groupNames(java.util.List<String> groupNames) {
                 this.groupNames = groupNames;
@@ -191,7 +200,10 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -67,7 +67,7 @@ public class GetRegionResponseBody extends TeaModel {
         } 
 
         /**
-         * AvailableZones.
+         * <p>The collection of zone information.</p>
          */
         public Builder availableZones(java.util.List<AvailableZones> availableZones) {
             this.availableZones = availableZones;
@@ -75,7 +75,10 @@ public class GetRegionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AEC07154-5A4C-4B34-BB74-0893C6E9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * ProtocolType.
+             * <p>The protocol type. Only Hadoop Distributed File System (HDFS) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HDFS</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -149,7 +155,14 @@ public class GetRegionResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage medium type. Valid values:</p>
+             * <ul>
+             * <li>STANDARD: Standard.</li>
+             * <li>PERFORMANCE: Performance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -216,7 +229,7 @@ public class GetRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * Options.
+             * <p>The list of configurations.</p>
              */
             public Builder options(java.util.List<Options> options) {
                 this.options = options;
@@ -224,7 +237,10 @@ public class GetRegionResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -111,7 +111,7 @@ public class AttachVscToMountPointsRequest extends Request {
         }
 
         /**
-         * AttachInfos.
+         * <p>The mount information list.</p>
          */
         public Builder attachInfos(java.util.List<AttachInfos> attachInfos) {
             String attachInfosShrink = shrink(attachInfos, "AttachInfos", "json");
@@ -121,6 +121,7 @@ public class AttachVscToMountPointsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +134,14 @@ public class AttachVscToMountPointsRequest extends Request {
         }
 
         /**
-         * UseAssumeRoleChkServerPerm.
+         * <p>Specifies whether to use an assumed role to check the permissions of the compute node. Valid values:</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false (default): No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useAssumeRoleChkServerPerm(Boolean useAssumeRoleChkServerPerm) {
             this.putQueryParameter("UseAssumeRoleChkServerPerm", useAssumeRoleChkServerPerm);
@@ -240,7 +248,10 @@ public class AttachVscToMountPointsRequest extends Request {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the ECS instance to which the HDFS file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zehyz70ednszl6rrfj6</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -248,7 +259,10 @@ public class AttachVscToMountPointsRequest extends Request {
             }
 
             /**
-             * MountPointId.
+             * <p>The mount point ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-cfea9ae2ref87.cn-zhangjiakou.dfs.aliyuncs.com</p>
              */
             public Builder mountPointId(String mountPointId) {
                 this.mountPointId = mountPointId;
@@ -256,7 +270,10 @@ public class AttachVscToMountPointsRequest extends Request {
             }
 
             /**
-             * VscId.
+             * <p>The VSC ID. You must specify either InstanceId or VscId, but not both.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsc-bp19yqmujug2r762cnabal</p>
              */
             public Builder vscId(String vscId) {
                 this.vscId = vscId;
@@ -264,7 +281,10 @@ public class AttachVscToMountPointsRequest extends Request {
             }
 
             /**
-             * VscName.
+             * <p>The custom name of the VSC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xc</p>
              */
             public Builder vscName(String vscName) {
                 this.vscName = vscName;
@@ -272,7 +292,14 @@ public class AttachVscToMountPointsRequest extends Request {
             }
 
             /**
-             * VscType.
+             * <p>The VSC type. Valid values:</p>
+             * <ul>
+             * <li>Primary (default): the reserved default VSC on an ECS instance.</li>
+             * <li>Secondary: a repeatable VSC on an ECS instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder vscType(String vscType) {
                 this.vscType = vscType;

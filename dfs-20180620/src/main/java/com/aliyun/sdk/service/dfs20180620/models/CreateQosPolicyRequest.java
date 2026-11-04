@@ -58,6 +58,10 @@ public class CreateQosPolicyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ZoneIds")
     private java.util.List<String> zoneIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("storageType")
+    private String storageType;
+
     private CreateQosPolicyRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
@@ -70,6 +74,7 @@ public class CreateQosPolicyRequest extends Request {
         this.maxMetaQps = builder.maxMetaQps;
         this.reqTags = builder.reqTags;
         this.zoneIds = builder.zoneIds;
+        this.storageType = builder.storageType;
     }
 
     public static Builder builder() {
@@ -155,6 +160,13 @@ public class CreateQosPolicyRequest extends Request {
         return this.zoneIds;
     }
 
+    /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
     public static final class Builder extends Request.Builder<CreateQosPolicyRequest, Builder> {
         private String description; 
         private String federationId; 
@@ -166,6 +178,7 @@ public class CreateQosPolicyRequest extends Request {
         private Long maxMetaQps; 
         private java.util.List<String> reqTags; 
         private java.util.List<String> zoneIds; 
+        private String storageType; 
 
         private Builder() {
             super();
@@ -183,6 +196,7 @@ public class CreateQosPolicyRequest extends Request {
             this.maxMetaQps = request.maxMetaQps;
             this.reqTags = request.reqTags;
             this.zoneIds = request.zoneIds;
+            this.storageType = request.storageType;
         } 
 
         /**
@@ -275,6 +289,15 @@ public class CreateQosPolicyRequest extends Request {
             String zoneIdsShrink = shrink(zoneIds, "ZoneIds", "json");
             this.putQueryParameter("ZoneIds", zoneIdsShrink);
             this.zoneIds = zoneIds;
+            return this;
+        }
+
+        /**
+         * storageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("storageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 

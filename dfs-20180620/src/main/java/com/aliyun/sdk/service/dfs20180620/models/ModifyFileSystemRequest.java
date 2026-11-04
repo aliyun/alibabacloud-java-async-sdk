@@ -40,6 +40,10 @@ public class ModifyFileSystemRequest extends Request {
     private String inputRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MeteringMode")
+    private String meteringMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProvisionedThroughputInMiBps")
     @com.aliyun.core.annotation.Validation(maximum = 51200, minimum = 1)
     private Long provisionedThroughputInMiBps;
@@ -60,6 +64,7 @@ public class ModifyFileSystemRequest extends Request {
         this.fileSystemId = builder.fileSystemId;
         this.fileSystemName = builder.fileSystemName;
         this.inputRegionId = builder.inputRegionId;
+        this.meteringMode = builder.meteringMode;
         this.provisionedThroughputInMiBps = builder.provisionedThroughputInMiBps;
         this.spaceCapacity = builder.spaceCapacity;
         this.throughputMode = builder.throughputMode;
@@ -114,6 +119,13 @@ public class ModifyFileSystemRequest extends Request {
     }
 
     /**
+     * @return meteringMode
+     */
+    public String getMeteringMode() {
+        return this.meteringMode;
+    }
+
+    /**
      * @return provisionedThroughputInMiBps
      */
     public Long getProvisionedThroughputInMiBps() {
@@ -140,6 +152,7 @@ public class ModifyFileSystemRequest extends Request {
         private String fileSystemId; 
         private String fileSystemName; 
         private String inputRegionId; 
+        private String meteringMode; 
         private Long provisionedThroughputInMiBps; 
         private Long spaceCapacity; 
         private String throughputMode; 
@@ -155,6 +168,7 @@ public class ModifyFileSystemRequest extends Request {
             this.fileSystemId = request.fileSystemId;
             this.fileSystemName = request.fileSystemName;
             this.inputRegionId = request.inputRegionId;
+            this.meteringMode = request.meteringMode;
             this.provisionedThroughputInMiBps = request.provisionedThroughputInMiBps;
             this.spaceCapacity = request.spaceCapacity;
             this.throughputMode = request.throughputMode;
@@ -170,7 +184,11 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the file system.</p>
+         * <p>The description can be up to 32 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the first Apsara File Storage for HDFS instance for my company</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -179,7 +197,11 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
+         * <p>The ID of the file system.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -188,7 +210,15 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * FileSystemName.
+         * <p>The name of the file system. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 6 to 64 characters in length.</li>
+         * <li>The name must be globally unique and cannot be an empty string.</li>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MyFirstModDFS</p>
          */
         public Builder fileSystemName(String fileSystemName) {
             this.putQueryParameter("FileSystemName", fileSystemName);
@@ -197,6 +227,7 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +240,24 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * ProvisionedThroughputInMiBps.
+         * <p>The metering mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UsageBased,CapacityBased</p>
+         */
+        public Builder meteringMode(String meteringMode) {
+            this.putQueryParameter("MeteringMode", meteringMode);
+            this.meteringMode = meteringMode;
+            return this;
+        }
+
+        /**
+         * <p>The provisioned throughput. This parameter is required when ThroughputMode is set to Provisioned.</p>
+         * <p>Unit: MB/s.</p>
+         * <p>Valid values: 1 to 5120.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder provisionedThroughputInMiBps(Long provisionedThroughputInMiBps) {
             this.putQueryParameter("ProvisionedThroughputInMiBps", provisionedThroughputInMiBps);
@@ -218,7 +266,12 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * SpaceCapacity.
+         * <p>The capacity budget of the file system.</p>
+         * <p>When the actual data storage reaches the file system capacity, no more data can be written. The file system capacity cannot be reduced.</p>
+         * <p>Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder spaceCapacity(Long spaceCapacity) {
             this.putQueryParameter("SpaceCapacity", spaceCapacity);
@@ -227,7 +280,14 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * ThroughputMode.
+         * <p>The throughput mode. Valid values:</p>
+         * <ul>
+         * <li>Standard: standard throughput</li>
+         * <li>Provisioned: provisioned throughput</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder throughputMode(String throughputMode) {
             this.putQueryParameter("ThroughputMode", throughputMode);

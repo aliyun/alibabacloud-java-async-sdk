@@ -157,6 +157,7 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the access group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +170,10 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the access group rule. The description can be up to 32 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CIDR block of log upload servers</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -178,6 +182,7 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +195,7 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
+         * <p>The IP address or CIDR block of the authorized object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +208,7 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
+         * <p>The priority of the access group rule. When an authorized object matches multiple rules, the rule with the highest priority takes effect. Valid values: 1 to 100. A value of 1 indicates the highest priority.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +221,11 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
+         * <p>The read and write permissions of the authorized object on the file system. Valid values:</p>
+         * <ul>
+         * <li>RDWR: Read and write.</li>
+         * <li>RDONLY: Read-only.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

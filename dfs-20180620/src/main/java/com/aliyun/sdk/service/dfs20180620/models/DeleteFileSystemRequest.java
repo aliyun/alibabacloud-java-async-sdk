@@ -98,7 +98,11 @@ public class DeleteFileSystemRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the file system to be deleted.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -107,6 +111,7 @@ public class DeleteFileSystemRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

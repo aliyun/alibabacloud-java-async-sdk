@@ -67,7 +67,7 @@ public class GetAccessRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessRule.
+         * <p>Collection of permission group rule information.</p>
          */
         public Builder accessRule(AccessRule accessRule) {
             this.accessRule = accessRule;
@@ -75,7 +75,10 @@ public class GetAccessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +222,10 @@ public class GetAccessRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessGroupId.
+             * <p>Permission group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
              */
             public Builder accessGroupId(String accessGroupId) {
                 this.accessGroupId = accessGroupId;
@@ -227,7 +233,10 @@ public class GetAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * AccessRuleId.
+             * <p>Permission group rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acr-c38028f0-f313-4385-9456-3501b1f5****</p>
              */
             public Builder accessRuleId(String accessRuleId) {
                 this.accessRuleId = accessRuleId;
@@ -235,7 +244,10 @@ public class GetAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation Time of the permission group rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-18T08:02:09.986217Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -243,7 +255,10 @@ public class GetAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Description of the permission group rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>日志上传机器网段</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -251,7 +266,10 @@ public class GetAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkSegment.
+             * <p>IP address or network segment of the authorization object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.0/24</p>
              */
             public Builder networkSegment(String networkSegment) {
                 this.networkSegment = networkSegment;
@@ -259,7 +277,12 @@ public class GetAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>Priority of the permission group rule.</p>
+             * <p>When the same authorization object matches multiple rules, the rule with the higher priority takes effect.</p>
+             * <p>Valid values: 1 to 100. A value of 1 indicates the highest priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -267,7 +290,15 @@ public class GetAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RWAccessType.
+             * <p>Read and write permission of the authorization object on the file system.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RDWR: read-write</li>
+             * <li>RDONLY: read-only</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RDWR</p>
              */
             public Builder RWAccessType(String RWAccessType) {
                 this.RWAccessType = RWAccessType;
@@ -275,7 +306,10 @@ public class GetAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

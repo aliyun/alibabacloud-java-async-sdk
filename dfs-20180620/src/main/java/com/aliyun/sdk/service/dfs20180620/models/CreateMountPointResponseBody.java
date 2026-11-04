@@ -67,7 +67,10 @@ public class CreateMountPointResponseBody extends TeaModel {
         } 
 
         /**
-         * MountPointId.
+         * <p>The mount target ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-37af8f42f****.cn-hangzhou.dfs.aliyuncs.com</p>
          */
         public Builder mountPointId(String mountPointId) {
             this.mountPointId = mountPointId;
@@ -75,7 +78,10 @@ public class CreateMountPointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

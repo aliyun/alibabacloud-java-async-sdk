@@ -128,6 +128,7 @@ public class BindVscMountPointAliasRequest extends Request {
         }
 
         /**
+         * <p>The mount point alias.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,10 +141,11 @@ public class BindVscMountPointAliasRequest extends Request {
         }
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>037****e1d</p>
+         * <p>e389e5c7-bcb4-4558-846a-e5afc444****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -152,6 +154,7 @@ public class BindVscMountPointAliasRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,10 +167,11 @@ public class BindVscMountPointAliasRequest extends Request {
         }
 
         /**
+         * <p>The mount point ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>037cb49e1d-c***5</p>
+         * <p>f-037cb49e1d-c****.dfs.aliyuncs.com</p>
          */
         public Builder mountPointId(String mountPointId) {
             this.putQueryParameter("MountPointId", mountPointId);

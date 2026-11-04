@@ -126,7 +126,11 @@ public class CreateVscMountPointRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the mount target.</p>
+         * <p>The description must be 0 to 100 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS file system mounted on internal instances</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,6 +139,7 @@ public class CreateVscMountPointRequest extends Request {
         }
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +152,7 @@ public class CreateVscMountPointRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +165,14 @@ public class CreateVscMountPointRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The IDs of the ECS instances to which you want to mount the Apsara File Storage for HDFS file system. </p>
+         * <p>Separate multiple ECS instance IDs with commas (,). You can specify up to 100 ECS instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       &quot;i-bp1g6zv0ce8oghu7****&quot;,
+         *       &quot;i-bp1g6zv0ce8oghu1****&quot;
+         * ]</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");

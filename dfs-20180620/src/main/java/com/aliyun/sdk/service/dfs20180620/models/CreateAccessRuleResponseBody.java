@@ -67,7 +67,10 @@ public class CreateAccessRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessRuleId.
+         * <p>The ID of the access group rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acr-c38028f0-f313-4385-9456-3501b1f5****</p>
          */
         public Builder accessRuleId(String accessRuleId) {
             this.accessRuleId = accessRuleId;
@@ -75,7 +78,10 @@ public class CreateAccessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

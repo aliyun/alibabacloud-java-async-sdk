@@ -197,7 +197,10 @@ public class AttachVscMountPointRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>A reserved field. This field has no practical meaning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -206,10 +209,11 @@ public class AttachVscMountPointRequest extends Request {
         }
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>037****e1d</p>
+         * <p>e389e5c7-bcb4-4558-846a-e5afc444****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -218,6 +222,7 @@ public class AttachVscMountPointRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +235,13 @@ public class AttachVscMountPointRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The IDs of the ECS instances to which you want to mount the Apsara File Storage for HDFS file system. Separate multiple ECS instance IDs with commas (,). You can specify up to 100 ECS instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       &quot;i-bp1g6zv0ce8oghu7****&quot;,
+         *       &quot;i-bp1g6zv0ce8oghu1****&quot;
+         * ]</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -240,10 +251,11 @@ public class AttachVscMountPointRequest extends Request {
         }
 
         /**
+         * <p>The mount point ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>037cb49e1d-c***5</p>
+         * <p>f-037cb49e1d-c****.dfs.aliyuncs.com</p>
          */
         public Builder mountPointId(String mountPointId) {
             this.putQueryParameter("MountPointId", mountPointId);
@@ -252,7 +264,14 @@ public class AttachVscMountPointRequest extends Request {
         }
 
         /**
-         * UseAssumeRoleChkServerPerm.
+         * <p>Specifies whether to use the assumed role to verify the permissions of the compute node. Valid values:</p>
+         * <ul>
+         * <li>true: yes.</li>
+         * <li>false: no. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useAssumeRoleChkServerPerm(Boolean useAssumeRoleChkServerPerm) {
             this.putQueryParameter("UseAssumeRoleChkServerPerm", useAssumeRoleChkServerPerm);
@@ -261,7 +280,7 @@ public class AttachVscMountPointRequest extends Request {
         }
 
         /**
-         * VscIds.
+         * <p>The IDs of the VSCs to which you want to mount the HDFS file system. Specify up to 100 VSC IDs.</p>
          */
         public Builder vscIds(java.util.List<String> vscIds) {
             String vscIdsShrink = shrink(vscIds, "VscIds", "json");
@@ -271,7 +290,10 @@ public class AttachVscMountPointRequest extends Request {
         }
 
         /**
-         * VscName.
+         * <p>The custom name of the VSC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1fb6b247-4c4a-4fb9-b3b5-7ea38b167bb5</p>
          */
         public Builder vscName(String vscName) {
             this.putQueryParameter("VscName", vscName);
@@ -280,7 +302,14 @@ public class AttachVscMountPointRequest extends Request {
         }
 
         /**
-         * VscType.
+         * <p>The VSC type. Valid values:</p>
+         * <ul>
+         * <li>Primary: the reserved default VSC on the ECS instance. This is the default value.</li>
+         * <li>Secondary: a repeatable VSC on the ECS instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         public Builder vscType(String vscType) {
             this.putQueryParameter("VscType", vscType);

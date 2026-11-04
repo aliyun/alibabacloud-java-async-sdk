@@ -98,6 +98,7 @@ public class GetAccessGroupRequest extends Request {
         }
 
         /**
+         * <p>The access group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class GetAccessGroupRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class GetMountPointResponseBody extends TeaModel {
         } 
 
         /**
-         * MountPoint.
+         * <p>The mount point information.</p>
          */
         public Builder mountPoint(MountPoint mountPoint) {
             this.mountPoint = mountPoint;
@@ -75,7 +75,10 @@ public class GetMountPointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -271,7 +274,10 @@ public class GetMountPointResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessGroupId.
+             * <p>The ID of the permission group associated with the mount point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
              */
             public Builder accessGroupId(String accessGroupId) {
                 this.accessGroupId = accessGroupId;
@@ -279,7 +285,10 @@ public class GetMountPointResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the mount point was created. The time is in UTC and follows the ISO 8601 standard. Example: 2022-09-19T03:22:32.550267Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-19T03:22:32.550267Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -287,7 +296,10 @@ public class GetMountPointResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the mount point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mount the production DFS to a vSwitch in the VPC log cluster</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -295,7 +307,10 @@ public class GetMountPointResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * <p>The file system ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -303,7 +318,10 @@ public class GetMountPointResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointAlias.
+             * <p>The alias of the mount point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdfs1</p>
              */
             public Builder mountPointAlias(String mountPointAlias) {
                 this.mountPointAlias = mountPointAlias;
@@ -311,7 +329,11 @@ public class GetMountPointResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointDomain.
+             * <p>The domain name of the mount point.</p>
+             * <p>You can use this domain name to access the Apsara File Storage for HDFS file system within the CIDR block of the VPC to which the mount point is attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-37af8f42f****.cn-hangzhou.dfs.aliyuncs.com</p>
              */
             public Builder mountPointDomain(String mountPointDomain) {
                 this.mountPointDomain = mountPointDomain;
@@ -319,7 +341,10 @@ public class GetMountPointResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointId.
+             * <p>The mount point ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-37af8f42f****.cn-hangzhou.dfs.aliyuncs.com</p>
              */
             public Builder mountPointId(String mountPointId) {
                 this.mountPointId = mountPointId;
@@ -327,7 +352,10 @@ public class GetMountPointResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type of the mount point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -335,7 +363,10 @@ public class GetMountPointResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -343,7 +374,14 @@ public class GetMountPointResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the mount point. Valid values:</p>
+             * <ul>
+             * <li>Inactive: The mount point is disabled.</li>
+             * <li>Active: The mount point is enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Inactive</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -351,7 +389,10 @@ public class GetMountPointResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-iq8fymi327krd14mt****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -359,7 +400,10 @@ public class GetMountPointResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-iq8hhsk3ymzv9m4wn****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
