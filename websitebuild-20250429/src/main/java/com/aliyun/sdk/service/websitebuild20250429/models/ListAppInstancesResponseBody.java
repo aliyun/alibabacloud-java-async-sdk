@@ -383,8 +383,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of results returned per query.</p>
-         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * <p>The maximum number of results returned per query. Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -450,7 +449,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is set to <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is set to <strong>false</strong>.</p>
+         * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>

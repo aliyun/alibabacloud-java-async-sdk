@@ -206,7 +206,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the application to query.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>

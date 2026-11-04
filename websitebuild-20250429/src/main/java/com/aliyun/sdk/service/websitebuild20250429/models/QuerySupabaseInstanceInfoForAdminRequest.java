@@ -194,7 +194,7 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends Request {
         }
 
         /**
-         * <p>The sort field.</p>
+         * <p>The field used for sorting.</p>
          * 
          * <strong>example:</strong>
          * <p>gmtCreated</p>
@@ -206,7 +206,7 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values: ASC, DESC.</p>
+         * <p>The sort order. Valid values: ASC and DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>ASC</p>

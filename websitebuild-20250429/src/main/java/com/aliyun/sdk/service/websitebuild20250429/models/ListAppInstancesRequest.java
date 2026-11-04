@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAppInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationType")
+    private String applicationType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
@@ -75,6 +79,7 @@ public class ListAppInstancesRequest extends Request {
 
     private ListAppInstancesRequest(Builder builder) {
         super(builder);
+        this.applicationType = builder.applicationType;
         this.bizId = builder.bizId;
         this.bizIds = builder.bizIds;
         this.endTimeBegin = builder.endTimeBegin;
@@ -102,6 +107,13 @@ public class ListAppInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return applicationType
+     */
+    public String getApplicationType() {
+        return this.applicationType;
     }
 
     /**
@@ -203,6 +215,7 @@ public class ListAppInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAppInstancesRequest, Builder> {
+        private String applicationType; 
         private String bizId; 
         private java.util.List<String> bizIds; 
         private String endTimeBegin; 
@@ -224,6 +237,7 @@ public class ListAppInstancesRequest extends Request {
 
         private Builder(ListAppInstancesRequest request) {
             super(request);
+            this.applicationType = request.applicationType;
             this.bizId = request.bizId;
             this.bizIds = request.bizIds;
             this.endTimeBegin = request.endTimeBegin;
@@ -239,6 +253,23 @@ public class ListAppInstancesRequest extends Request {
             this.queryMode = request.queryMode;
             this.statusList = request.statusList;
         } 
+
+        /**
+         * <p>The application type. Valid values: </p>
+         * <ul>
+         * <li>PC_WebSite: web application. </li>
+         * <li>Mini_Program: mini program. 
+         * If this parameter is not specified or left empty, applications are not filtered by type. For compatibility, historical missing, NULL, or empty types are treated as PC_WebSite.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PC_WebSite</p>
+         */
+        public Builder applicationType(String applicationType) {
+            this.putQueryParameter("ApplicationType", applicationType);
+            this.applicationType = applicationType;
+            return this;
+        }
 
         /**
          * <p>The business ID.</p>
@@ -299,8 +330,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results returned per query.</p>
-         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * <p>The maximum number of results returned per query. Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -372,7 +402,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The query parameters.</p>
+         * <p>The query parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;RequestId\&quot;:\&quot;\&quot;}</p>
@@ -384,7 +414,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The query mode. A value of CONTENT_CREATION indicates a lightweight query for the content creation site selector, which queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</p>
+         * <p>The query mode. Valid values: </p>
+         * <ul>
+         * <li>CONTENT_CREATION: specifies a lightweight query for the content creation site selector. It queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CONTENT_CREATION</p>

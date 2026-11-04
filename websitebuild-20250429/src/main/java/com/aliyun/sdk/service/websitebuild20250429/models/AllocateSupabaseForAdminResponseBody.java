@@ -184,7 +184,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The details of the permission check failure.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -206,7 +206,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the app.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -277,10 +277,10 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The exception message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>System exception</p>
+         * <p>System error</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -722,7 +722,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The additional information.</p>
+             * <p>The extra information.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</p>
@@ -766,7 +766,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access password of the RDS database.</p>
+             * <p>The access password for the RDS database.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -777,7 +777,10 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The read-only business schema name parsed by the Builder trusted binding. This name cannot be used as input for tenant switching.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tenant_00000000-0000-4000-8000-000000000001_schema</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -796,11 +799,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance. Valid values:</p>
-             * <ul>
-             * <li>0: Paused.</li>
-             * <li>1: Running.</li>
-             * </ul>
+             * <p>The status. Valid values: 0 (Paused) and 1 (Running).</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -866,7 +865,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private endpoint of the Supabase instance.</p>
+             * <p>The private network endpoint of the Supabase instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1111</p>
@@ -877,7 +876,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint of the Supabase instance.</p>
+             * <p>The public network connection endpoint of the Supabase instance.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -888,7 +887,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public URL of the Supabase instance.</p>
+             * <p>The public URL of Supabase.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -910,7 +909,10 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * TenantMode.
+             * <p>The read-only tenant mode: schema indicates the legacy Builder pool, and db or agenticdb indicates the new platform. The history record can be empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>schema</p>
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;

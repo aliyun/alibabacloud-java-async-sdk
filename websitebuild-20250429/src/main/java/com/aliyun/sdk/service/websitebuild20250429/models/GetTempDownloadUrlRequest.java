@@ -17,12 +17,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTempDownloadUrlRequest</p>
  */
 public class GetTempDownloadUrlRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    private String bizId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OssKey")
     private String ossKey;
 
     private GetTempDownloadUrlRequest(Builder builder) {
         super(builder);
+        this.bizId = builder.bizId;
         this.ossKey = builder.ossKey;
     }
 
@@ -40,6 +45,13 @@ public class GetTempDownloadUrlRequest extends Request {
     }
 
     /**
+     * @return bizId
+     */
+    public String getBizId() {
+        return this.bizId;
+    }
+
+    /**
      * @return ossKey
      */
     public String getOssKey() {
@@ -47,6 +59,7 @@ public class GetTempDownloadUrlRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetTempDownloadUrlRequest, Builder> {
+        private String bizId; 
         private String ossKey; 
 
         private Builder() {
@@ -55,11 +68,24 @@ public class GetTempDownloadUrlRequest extends Request {
 
         private Builder(GetTempDownloadUrlRequest request) {
             super(request);
+            this.bizId = request.bizId;
             this.ossKey = request.ossKey;
         } 
 
         /**
-         * <p>The key of the OSS object.</p>
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
+         */
+        public Builder bizId(String bizId) {
+            this.putQueryParameter("BizId", bizId);
+            this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * <p>The OSS object key.</p>
          * 
          * <strong>example:</strong>
          * <p>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</p>

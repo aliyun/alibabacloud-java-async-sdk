@@ -21,7 +21,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the information about the Supabase instance associated with a resource.</p>
+     * <p>Queries the Supabase instance information of a resource.</p>
      * 
      * @param request the request parameters of AllocateSupabaseForAdmin  AllocateSupabaseForAdminRequest
      * @return AllocateSupabaseForAdminResponse
@@ -458,7 +458,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of application instances.</p>
+     * <p>Queries application instance information.</p>
      * 
      * @param request the request parameters of GetAppInstanceForAdmin  GetAppInstanceForAdminRequest
      * @return GetAppInstanceForAdminResponse
@@ -575,7 +575,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the information about an application instance.</p>
      * 
      * @param request the request parameters of GetAppSupabaseInstance  GetAppSupabaseInstanceRequest
      * @return GetAppSupabaseInstanceResponse
