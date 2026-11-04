@@ -54,7 +54,10 @@ public class SetAgentCreditQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B353D6D-53C9-1C24-95D5-2D24596DBCF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

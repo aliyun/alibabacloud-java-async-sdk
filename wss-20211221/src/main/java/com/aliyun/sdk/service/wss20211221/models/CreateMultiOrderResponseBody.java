@@ -67,7 +67,7 @@ public class CreateMultiOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderIds.
+         * <p>The list of order IDs.</p>
          */
         public Builder orderIds(java.util.List<Long> orderIds) {
             this.orderIds = orderIds;
@@ -75,7 +75,10 @@ public class CreateMultiOrderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>833C4D2C-09C7-5CE6-8159-06758B964970</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

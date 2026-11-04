@@ -115,7 +115,10 @@ public class DescribeDeductionStatisticRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time of the query. UNIX timestamp, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1749176040000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -124,7 +127,7 @@ public class DescribeDeductionStatisticRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of instance IDs in JSON array format.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -133,7 +136,7 @@ public class DescribeDeductionStatisticRequest extends Request {
         }
 
         /**
-         * Periods.
+         * <p>The list of time periods in JSON array format. Each element is a <code>PeriodParam</code> object.</p>
          */
         public Builder periods(java.util.List<Periods> periods) {
             this.putQueryParameter("Periods", periods);
@@ -142,7 +145,7 @@ public class DescribeDeductionStatisticRequest extends Request {
         }
 
         /**
-         * ResourceTypes.
+         * <p>The list of resource types in JSON array format.</p>
          */
         public Builder resourceTypes(java.util.List<String> resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
@@ -151,7 +154,10 @@ public class DescribeDeductionStatisticRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. UNIX timestamp, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1774022400000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -219,7 +225,10 @@ public class DescribeDeductionStatisticRequest extends Request {
             } 
 
             /**
-             * BaseTime.
+             * <p>The base time in the YYYY-MM-DD format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01</p>
              */
             public Builder baseTime(String baseTime) {
                 this.baseTime = baseTime;
@@ -227,7 +236,10 @@ public class DescribeDeductionStatisticRequest extends Request {
             }
 
             /**
-             * PeriodUnit.
+             * <p>The time period unit. For more information, see the <code>PeriodUnit</code> enumeration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Year</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;

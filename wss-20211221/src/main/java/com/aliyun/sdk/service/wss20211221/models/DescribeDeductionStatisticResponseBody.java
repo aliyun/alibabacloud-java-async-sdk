@@ -67,7 +67,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The deduction data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -297,7 +300,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The Alibaba Cloud UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568857911493620</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -305,7 +311,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -313,7 +322,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-31 23:59:59</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -321,7 +333,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The expiration time in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-31 23:59:59</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -329,7 +344,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-xxxxx</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -337,7 +355,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * GroupResourceType.
+             * <p>The group resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CoreHour</p>
              */
             public Builder groupResourceType(String groupResourceType) {
                 this.groupResourceType = groupResourceType;
@@ -345,7 +366,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * NoLx.
+             * <p>Indicates whether LingXiao is excluded.</p>
              */
             public Builder noLx(Boolean noLx) {
                 this.noLx = noLx;
@@ -353,7 +374,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * NoLxSource.
+             * <p>The source when LingXiao is excluded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无凌霄来源示例值</p>
              */
             public Builder noLxSource(String noLxSource) {
                 this.noLxSource = noLxSource;
@@ -361,7 +385,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>res-xxxxx</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -369,7 +396,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The group resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CoreHour</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -377,7 +407,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -385,7 +418,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -393,7 +429,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTime.
+             * <p>The total duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder totalTime(Long totalTime) {
                 this.totalTime = totalTime;
@@ -401,7 +440,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * UsedTime.
+             * <p>The used duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40000</p>
              */
             public Builder usedTime(Long usedTime) {
                 this.usedTime = usedTime;
@@ -481,7 +523,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * ConsumeSecond.
+             * <p>The consumption duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7000</p>
              */
             public Builder consumeSecond(Long consumeSecond) {
                 this.consumeSecond = consumeSecond;
@@ -489,7 +534,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * DeductionDate.
+             * <p>The deduction date in the YYYY-MM-DD format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01</p>
              */
             public Builder deductionDate(String deductionDate) {
                 this.deductionDate = deductionDate;
@@ -497,7 +545,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudDesktop</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -577,7 +628,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * ConsumeSecond.
+             * <p><strong>The consumption duration, in seconds.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000</p>
              */
             public Builder consumeSecond(Long consumeSecond) {
                 this.consumeSecond = consumeSecond;
@@ -585,7 +639,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * <p><strong>The time period.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01</p>
              */
             public Builder period(String period) {
                 this.period = period;
@@ -593,7 +650,10 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p><strong>The resource type.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudDesktop</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -673,7 +733,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableCorePackages.
+             * <p><strong>The list of available core-hour package resources.</strong></p>
              */
             public Builder availableCorePackages(java.util.List<AvailableCorePackages> availableCorePackages) {
                 this.availableCorePackages = availableCorePackages;
@@ -681,7 +741,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Deductions.
+             * <p>The deduction details.</p>
              */
             public Builder deductions(java.util.List<Deductions> deductions) {
                 this.deductions = deductions;
@@ -689,7 +749,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Usages.
+             * <p><strong>The list of usage records.</strong></p>
              */
             public Builder usages(java.util.List<Usages> usages) {
                 this.usages = usages;

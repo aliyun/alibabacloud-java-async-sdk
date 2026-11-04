@@ -67,7 +67,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68BD3312-53D8-123E-BB32-1A9F25E07A03</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * UsageInfoList.
+         * <p>The business data array.</p>
          */
         public Builder usageInfoList(java.util.List<UsageInfoList> usageInfoList) {
             this.usageInfoList = usageInfoList;
@@ -141,7 +144,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * TimePoint.
+             * <p>The time point in the <code>yyyy-MM-dd HH</code> format, accurate to the hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-02 10</p>
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -149,7 +155,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCredit.
+             * <p>The number of credits consumed in the hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder usedCredit(Long usedCredit) {
                 this.usedCredit = usedCredit;
@@ -216,7 +225,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * DeductingAmount.
+             * <p>The number of instances being deducted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder deductingAmount(Integer deductingAmount) {
                 this.deductingAmount = deductingAmount;
@@ -224,7 +236,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PendingAmount.
+             * <p>The number of instances pending to take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder pendingAmount(Integer pendingAmount) {
                 this.pendingAmount = pendingAmount;
@@ -275,8 +290,20 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastTriggeredAt")
         private String lastTriggeredAt;
 
+        @com.aliyun.core.annotation.NameInMap("PeriodCreditQuota")
+        private Long periodCreditQuota;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodPayGoUsedCredit")
+        private Long periodPayGoUsedCredit;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodSharedUsedCredit")
+        private Long periodSharedUsedCredit;
+
         @com.aliyun.core.annotation.NameInMap("PeriodTotalCredit")
         private Long periodTotalCredit;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodTotalUsedCredit")
+        private Long periodTotalUsedCredit;
 
         @com.aliyun.core.annotation.NameInMap("PeriodUsedCredit")
         private Long periodUsedCredit;
@@ -316,7 +343,11 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             this.currentUsedCredit = builder.currentUsedCredit;
             this.dayUsedCredit = builder.dayUsedCredit;
             this.lastTriggeredAt = builder.lastTriggeredAt;
+            this.periodCreditQuota = builder.periodCreditQuota;
+            this.periodPayGoUsedCredit = builder.periodPayGoUsedCredit;
+            this.periodSharedUsedCredit = builder.periodSharedUsedCredit;
             this.periodTotalCredit = builder.periodTotalCredit;
+            this.periodTotalUsedCredit = builder.periodTotalUsedCredit;
             this.periodUsedCredit = builder.periodUsedCredit;
             this.remainCredit = builder.remainCredit;
             this.remainCreditInfo = builder.remainCreditInfo;
@@ -407,10 +438,38 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return periodCreditQuota
+         */
+        public Long getPeriodCreditQuota() {
+            return this.periodCreditQuota;
+        }
+
+        /**
+         * @return periodPayGoUsedCredit
+         */
+        public Long getPeriodPayGoUsedCredit() {
+            return this.periodPayGoUsedCredit;
+        }
+
+        /**
+         * @return periodSharedUsedCredit
+         */
+        public Long getPeriodSharedUsedCredit() {
+            return this.periodSharedUsedCredit;
+        }
+
+        /**
          * @return periodTotalCredit
          */
         public Long getPeriodTotalCredit() {
             return this.periodTotalCredit;
+        }
+
+        /**
+         * @return periodTotalUsedCredit
+         */
+        public Long getPeriodTotalUsedCredit() {
+            return this.periodTotalUsedCredit;
         }
 
         /**
@@ -487,7 +546,11 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             private Long currentUsedCredit; 
             private Long dayUsedCredit; 
             private String lastTriggeredAt; 
+            private Long periodCreditQuota; 
+            private Long periodPayGoUsedCredit; 
+            private Long periodSharedUsedCredit; 
             private Long periodTotalCredit; 
+            private Long periodTotalUsedCredit; 
             private Long periodUsedCredit; 
             private Long remainCredit; 
             private RemainCreditInfo remainCreditInfo; 
@@ -512,7 +575,11 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
                 this.currentUsedCredit = model.currentUsedCredit;
                 this.dayUsedCredit = model.dayUsedCredit;
                 this.lastTriggeredAt = model.lastTriggeredAt;
+                this.periodCreditQuota = model.periodCreditQuota;
+                this.periodPayGoUsedCredit = model.periodPayGoUsedCredit;
+                this.periodSharedUsedCredit = model.periodSharedUsedCredit;
                 this.periodTotalCredit = model.periodTotalCredit;
+                this.periodTotalUsedCredit = model.periodTotalUsedCredit;
                 this.periodUsedCredit = model.periodUsedCredit;
                 this.remainCredit = model.remainCredit;
                 this.remainCreditInfo = model.remainCreditInfo;
@@ -525,7 +592,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableAmount.
+             * <p>The number of currently available instances for the reported resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9976.00</p>
              */
             public Builder availableAmount(Integer availableAmount) {
                 this.availableAmount = availableAmount;
@@ -533,7 +603,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ContactGroupNames.
+             * <p>The list of contact group names.</p>
              */
             public Builder contactGroupNames(java.util.List<String> contactGroupNames) {
                 this.contactGroupNames = contactGroupNames;
@@ -541,7 +611,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreditTrendList.
+             * <p>The hourly consumption samples of the current credit package.</p>
              */
             public Builder creditTrendList(java.util.List<CreditTrendList> creditTrendList) {
                 this.creditTrendList = creditTrendList;
@@ -549,7 +619,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentInstanceExpiredTime.
+             * <p>The time when the current instance expires, in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-12-02 00:00:00</p>
              */
             public Builder currentInstanceExpiredTime(String currentInstanceExpiredTime) {
                 this.currentInstanceExpiredTime = currentInstanceExpiredTime;
@@ -557,7 +630,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentInstanceId.
+             * <p>The instance ID of the currently active credit package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-inst-001</p>
              */
             public Builder currentInstanceId(String currentInstanceId) {
                 this.currentInstanceId = currentInstanceId;
@@ -565,7 +641,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentRemainCredit.
+             * <p>The remaining amount of the currently active credit package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Remaining credits for the current period</p>
              */
             public Builder currentRemainCredit(Long currentRemainCredit) {
                 this.currentRemainCredit = currentRemainCredit;
@@ -573,7 +652,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentTotalCredit.
+             * <p>The total amount of the currently active credit package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Credit quota for the current period</p>
              */
             public Builder currentTotalCredit(Long currentTotalCredit) {
                 this.currentTotalCredit = currentTotalCredit;
@@ -581,7 +663,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentUsedCredit.
+             * <p>The used amount of the currently active credit package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Credits consumed in the current period</p>
              */
             public Builder currentUsedCredit(Long currentUsedCredit) {
                 this.currentUsedCredit = currentUsedCredit;
@@ -589,7 +674,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DayUsedCredit.
+             * <p>The credit usage in the last day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Credits consumed in the last day</p>
              */
             public Builder dayUsedCredit(Long dayUsedCredit) {
                 this.dayUsedCredit = dayUsedCredit;
@@ -597,7 +685,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LastTriggeredAt.
+             * <p>The last trigger time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-02 10:10:10</p>
              */
             public Builder lastTriggeredAt(String lastTriggeredAt) {
                 this.lastTriggeredAt = lastTriggeredAt;
@@ -605,7 +696,43 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodTotalCredit.
+             * <p>The credit quota for the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
+             */
+            public Builder periodCreditQuota(Long periodCreditQuota) {
+                this.periodCreditQuota = periodCreditQuota;
+                return this;
+            }
+
+            /**
+             * <p>The pay-as-you-go credits consumed in the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240</p>
+             */
+            public Builder periodPayGoUsedCredit(Long periodPayGoUsedCredit) {
+                this.periodPayGoUsedCredit = periodPayGoUsedCredit;
+                return this;
+            }
+
+            /**
+             * <p>The shared credits consumed in the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
+             */
+            public Builder periodSharedUsedCredit(Long periodSharedUsedCredit) {
+                this.periodSharedUsedCredit = periodSharedUsedCredit;
+                return this;
+            }
+
+            /**
+             * <p>The shared credit quota in the current active period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder periodTotalCredit(Long periodTotalCredit) {
                 this.periodTotalCredit = periodTotalCredit;
@@ -613,7 +740,21 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodUsedCredit.
+             * <p>The total credits consumed in the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>360</p>
+             */
+            public Builder periodTotalUsedCredit(Long periodTotalUsedCredit) {
+                this.periodTotalUsedCredit = periodTotalUsedCredit;
+                return this;
+            }
+
+            /**
+             * <p>The shared credit usage in the current active period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder periodUsedCredit(Long periodUsedCredit) {
                 this.periodUsedCredit = periodUsedCredit;
@@ -621,7 +762,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RemainCredit.
+             * <p>The cumulative remaining billable credits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Remaining credits</p>
              */
             public Builder remainCredit(Long remainCredit) {
                 this.remainCredit = remainCredit;
@@ -629,7 +773,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RemainCreditInfo.
+             * <p>The remaining credit information.</p>
              */
             public Builder remainCreditInfo(RemainCreditInfo remainCreditInfo) {
                 this.remainCreditInfo = remainCreditInfo;
@@ -637,7 +781,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TodayUsed.
+             * <p>The used quota for today.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder todayUsed(String todayUsed) {
                 this.todayUsed = todayUsed;
@@ -645,7 +792,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCredit.
+             * <p>The cumulative total credits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Credit quota</p>
              */
             public Builder totalCredit(Long totalCredit) {
                 this.totalCredit = totalCredit;
@@ -653,7 +803,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUsed.
+             * <p>The cumulative used quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalUsed(String totalUsed) {
                 this.totalUsed = totalUsed;
@@ -661,7 +814,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUsedCredit.
+             * <p>The cumulative credit usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Total credits consumed</p>
              */
             public Builder totalUsedCredit(Long totalUsedCredit) {
                 this.totalUsedCredit = totalUsedCredit;
@@ -669,7 +825,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WarnPercent.
+             * <p>The alert threshold percentage, ranging from 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder warnPercent(Integer warnPercent) {
                 this.warnPercent = warnPercent;
@@ -677,7 +836,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WeekUsedCredit.
+             * <p>The credit usage in the last week.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Credits consumed in the last week</p>
              */
             public Builder weekUsedCredit(Long weekUsedCredit) {
                 this.weekUsedCredit = weekUsedCredit;
@@ -744,7 +906,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * UsageInfo.
+             * <p>The usage data details.</p>
              */
             public Builder usageInfo(UsageInfo usageInfo) {
                 this.usageInfo = usageInfo;
@@ -752,7 +914,10 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UsageInfoKey.
+             * <p>The primary key for usage. The value is <code>aliUid</code> when <code>UsageType</code> is <code>User</code>, the credit package instance ID when <code>UsageType</code> is <code>CreditPackage</code>, and the agent ID when <code>UsageType</code> is <code>Agent</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-abc</p>
              */
             public Builder usageInfoKey(String usageInfoKey) {
                 this.usageInfoKey = usageInfoKey;

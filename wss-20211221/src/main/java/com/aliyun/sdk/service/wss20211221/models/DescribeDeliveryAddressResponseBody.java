@@ -80,7 +80,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * Addresses.
+         * <p>The list of addresses.</p>
          */
         public Builder addresses(java.util.List<Addresses> addresses) {
             this.addresses = addresses;
@@ -88,7 +88,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72481C12-69AB-5CE1-8A35-A8EFA921****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of addresses. A maximum of 20 addresses are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +168,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * AreaId.
+             * <p>The district ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33****</p>
              */
             public Builder areaId(Long areaId) {
                 this.areaId = areaId;
@@ -170,7 +179,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             }
 
             /**
-             * AreaName.
+             * <p>The district name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Xihu District</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -237,7 +249,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * CityId.
+             * <p>The city ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33****</p>
              */
             public Builder cityId(Long cityId) {
                 this.cityId = cityId;
@@ -245,7 +260,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             }
 
             /**
-             * CityName.
+             * <p>The city name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -312,7 +330,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * ProvinceId.
+             * <p>The province ID. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes for regions, countries, and areas in China</a>. For example, <strong>110000</strong> indicates Beijing, and <strong>120000</strong> indicates Tianjin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>330000</p>
              */
             public Builder provinceId(Long provinceId) {
                 this.provinceId = provinceId;
@@ -320,7 +341,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             }
 
             /**
-             * ProvinceName.
+             * <p>The province name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang Province</p>
              */
             public Builder provinceName(String provinceName) {
                 this.provinceName = provinceName;
@@ -387,7 +411,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * TownId.
+             * <p>The town ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3001****</p>
              */
             public Builder townId(Long townId) {
                 this.townId = townId;
@@ -395,7 +422,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             }
 
             /**
-             * TownName.
+             * <p>The town name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sandun Town</p>
              */
             public Builder townName(String townName) {
                 this.townName = townName;
@@ -553,7 +583,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * Area.
+             * <p>The district.</p>
              */
             public Builder area(Area area) {
                 this.area = area;
@@ -561,7 +591,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * <p>The city.</p>
              */
             public Builder city(City city) {
                 this.city = city;
@@ -569,7 +599,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             }
 
             /**
-             * Contacts.
+             * <p>The contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder contacts(String contacts) {
                 this.contacts = contacts;
@@ -577,7 +610,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultAddress.
+             * <p>Indicates whether the address is the default address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultAddress(Boolean defaultAddress) {
                 this.defaultAddress = defaultAddress;
@@ -585,7 +621,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The detailed address, which must be accurate down to the street and building number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Center, Building 2, Cloud Park, No. 1008 Dengcai Street</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -593,7 +632,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The mobile phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -601,7 +643,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             }
 
             /**
-             * PostalCode.
+             * <p>The postal code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03****</p>
              */
             public Builder postalCode(String postalCode) {
                 this.postalCode = postalCode;
@@ -609,7 +654,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province.</p>
              */
             public Builder province(Province province) {
                 this.province = province;
@@ -617,7 +662,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             }
 
             /**
-             * Town.
+             * <p>The town.</p>
              */
             public Builder town(Town town) {
                 this.town = town;

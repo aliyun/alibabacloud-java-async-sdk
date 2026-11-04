@@ -67,7 +67,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * PriceInfo.
+         * <p>The detailed pricing information.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -75,7 +75,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>833C4D2C-09C7-5CE6-8159-06758B964970</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>734.65</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -214,7 +220,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleCode.
+             * <p>The module code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DesktopType</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -222,7 +231,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>The module name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enterprise Office - 8C32G</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -230,7 +242,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleValue.
+             * <p>The module value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eds.enterprise_office.8c32g</p>
              */
             public Builder moduleValue(String moduleValue) {
                 this.moduleValue = moduleValue;
@@ -238,7 +253,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10900</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -246,7 +264,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * SavingPlanDiscountPrice.
+             * <p>The savings plan discount price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder savingPlanDiscountPrice(Float savingPlanDiscountPrice) {
                 this.savingPlanDiscountPrice = savingPlanDiscountPrice;
@@ -254,7 +275,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The actual payment price. The value is the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>292.2</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -360,7 +384,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20.00</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -368,7 +395,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -376,7 +406,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DurationPackage</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -384,7 +417,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * SavingPlanRecommendPrice.
+             * <p>The savings plan recommended price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder savingPlanRecommendPrice(Float savingPlanRecommendPrice) {
                 this.savingPlanRecommendPrice = savingPlanRecommendPrice;
@@ -392,7 +428,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The actual payment price. The value is the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80.00</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -472,7 +511,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * ModuleDetails.
+             * <p>The pricing details of the billing module.</p>
              */
             public Builder moduleDetails(java.util.List<ModuleDetails> moduleDetails) {
                 this.moduleDetails = moduleDetails;
@@ -480,7 +519,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderItem.
+             * <p>The sorting attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder orderItem(Integer orderItem) {
                 this.orderItem = orderItem;
@@ -488,7 +530,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PriceDetail.
+             * <p>The pricing details.</p>
              */
             public Builder priceDetail(PriceDetail priceDetail) {
                 this.priceDetail = priceDetail;
@@ -672,7 +714,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * ActivityId.
+             * <p>The promotion activity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456****</p>
              */
             public Builder activityId(String activityId) {
                 this.activityId = activityId;
@@ -680,7 +725,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Effective.
+             * <p>Indicates whether the promotion activity is in effect.</p>
              */
             public Builder effective(Boolean effective) {
                 this.effective = effective;
@@ -688,7 +733,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimestamp.
+             * <p>The end time of the promotion activity. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1790784000000</p>
              */
             public Builder endTimestamp(String endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -696,7 +744,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionCode.
+             * <p>The description of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -704,7 +755,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PriceBreakReduceValue.
+             * <p>The discount amount after the spend-and-save promotion threshold is reached. Unit: CNY. Two decimal places are retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.00</p>
              */
             public Builder priceBreakReduceValue(String priceBreakReduceValue) {
                 this.priceBreakReduceValue = priceBreakReduceValue;
@@ -712,7 +766,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PriceBreakThreshold.
+             * <p>The threshold amount for the spend-and-save promotion. Unit: CNY. Two decimal places are retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder priceBreakThreshold(String priceBreakThreshold) {
                 this.priceBreakThreshold = priceBreakThreshold;
@@ -720,7 +777,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionDesc.
+             * <p>The description of the promotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Promotion</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -728,7 +788,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionId.
+             * <p>The promotion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_promotion_option_id_for_blank</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -736,7 +799,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The promotion name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Promotion name</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -744,7 +810,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Selected.
+             * <p>Indicates whether the promotion is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -752,7 +821,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * StartTimestamp.
+             * <p>The start time of the promotion activity. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1788192000000</p>
              */
             public Builder startTimestamp(String startTimestamp) {
                 this.startTimestamp = startTimestamp;
@@ -897,7 +969,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>The currency unit. CNY for the China site. USD for the international site.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -905,7 +980,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>534.6</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -913,7 +991,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6800</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -921,7 +1002,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PriceDetails.
+             * <p>The pricing details.</p>
              */
             public Builder priceDetails(java.util.List<PriceDetails> priceDetails) {
                 this.priceDetails = priceDetails;
@@ -929,7 +1010,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Promotions.
+             * <p>The promotion information.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -937,7 +1018,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RefundInstanceIdPriceMap.
+             * <p>The unsubscribed instances and pricing details.</p>
              */
             public Builder refundInstanceIdPriceMap(java.util.Map<String, Float> refundInstanceIdPriceMap) {
                 this.refundInstanceIdPriceMap = refundInstanceIdPriceMap;
@@ -945,7 +1026,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RefundPrice.
+             * <p>The refund price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60.00</p>
              */
             public Builder refundPrice(Float refundPrice) {
                 this.refundPrice = refundPrice;
@@ -953,7 +1037,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The actual payment price. The value is the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>82.6</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -1020,7 +1107,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accounts_suspect_users</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1028,7 +1118,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The pricing rule ID. The value is an integer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -1095,7 +1188,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Price.
+             * <p>The pricing information.</p>
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -1103,7 +1196,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The promotion rule information.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

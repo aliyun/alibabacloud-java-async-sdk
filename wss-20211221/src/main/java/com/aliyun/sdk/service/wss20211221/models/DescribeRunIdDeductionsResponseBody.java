@@ -158,7 +158,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Deductions.
+         * <p>The deduction details.</p>
          */
         public Builder deductions(java.util.List<Deductions> deductions) {
             this.deductions = deductions;
@@ -166,7 +166,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -174,7 +177,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, use the nextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJvZmZzZXQiOjIwfQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -182,7 +188,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The current page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -190,7 +199,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The Settings for the number of entries per page during paging in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -198,7 +210,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique identifier of the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>68BD3312-53D8-123E-BB32-1A9F25E07A03</p>
@@ -209,7 +221,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of core-hour package deduction details returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +232,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalUsedTime.
+         * <p>The total usage duration. Unit: seconds. Do not use this field in AI scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder totalUsedTime(Long totalUsedTime) {
             this.totalUsedTime = totalUsedTime;
@@ -225,7 +243,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalUsedTimeDecimal.
+         * <p>The total used credits that meet the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.23</p>
          */
         public Builder totalUsedTimeDecimal(String totalUsedTimeDecimal) {
             this.totalUsedTimeDecimal = totalUsedTimeDecimal;
@@ -434,7 +455,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentType.
+             * <p>The agent type. Valid values: CREDIT_PACKAGE, JVS_CLAW, OPEN_CLAW, and JVS_COPILOT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenClaw</p>
              */
             public Builder agentType(String agentType) {
                 this.agentType = agentType;
@@ -442,7 +466,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the period. The time is in ISO 8601 format and displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-31T03:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -450,7 +477,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupResourceType.
+             * <p>The grouped resource type to which the deduction record belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GROUP_CREDIT_PACKAGE</p>
              */
             public Builder groupResourceType(String groupResourceType) {
                 this.groupResourceType = groupResourceType;
@@ -458,7 +488,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jvs-xxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -466,7 +499,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The identifier of the called large language model. This field is used to distinguish the consumption of each model when grouping by model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-3.7</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -474,7 +510,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageId.
+             * <p>The ID of the credit or package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crp-xxx</p>
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -482,7 +521,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sunwyic.com</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -490,7 +532,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreditPackage、BusinessCreditPackage</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -498,7 +543,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             }
 
             /**
-             * RunId.
+             * <p>The unique ID of the run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>run-szwB1fYHCTocjGkFAIf6V8A</p>
              */
             public Builder runId(String runId) {
                 this.runId = runId;
@@ -506,7 +554,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. The time is in ISO 8601 format and displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-16T02:10:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -514,7 +565,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>The summary of the large language model call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>How is the weather today?</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -522,7 +576,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedTime.
+             * <p>The usage duration. Unit: seconds. Do not use this field in AI scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>360000000</p>
              */
             public Builder usedTime(Long usedTime) {
                 this.usedTime = usedTime;
@@ -530,7 +587,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedTimeDecimal.
+             * <p>The used credits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.23</p>
              */
             public Builder usedTimeDecimal(String usedTimeDecimal) {
                 this.usedTimeDecimal = usedTimeDecimal;

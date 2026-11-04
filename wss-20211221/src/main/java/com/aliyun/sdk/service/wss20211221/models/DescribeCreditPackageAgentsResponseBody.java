@@ -93,7 +93,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * Agents.
+         * <p>The agent list.</p>
          */
         public Builder agents(java.util.List<Agents> agents) {
             this.agents = agents;
@@ -101,7 +101,10 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +112,10 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to an empty string for the first request. For subsequent requests, use the <code>nextToken</code> value from the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJvZmZzZXQiOjIwfQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +123,10 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request trace ID, which is used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -272,7 +281,10 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the instance was created, in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-01 10:00:00</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -280,7 +292,10 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * CreditPackageId.
+             * <p><strong>The ID of the currently active credit package instance.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-inst-001</p>
              */
             public Builder creditPackageId(String creditPackageId) {
                 this.creditPackageId = creditPackageId;
@@ -288,7 +303,10 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The time when the instance expires, in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-10-01 10:00:00</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -296,7 +314,10 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jvs-copilot.standard</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -304,7 +325,10 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCredit.
+             * <p><strong>The total number of credits.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder totalCredit(Long totalCredit) {
                 this.totalCredit = totalCredit;
@@ -312,7 +336,10 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCredit.
+             * <p><strong>The number of credits used.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder usedCredit(Long usedCredit) {
                 this.usedCredit = usedCredit;
@@ -320,7 +347,10 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * WarnPercent.
+             * <p><strong>The alert threshold percentage (0–100).</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder warnPercent(Integer warnPercent) {
                 this.warnPercent = warnPercent;

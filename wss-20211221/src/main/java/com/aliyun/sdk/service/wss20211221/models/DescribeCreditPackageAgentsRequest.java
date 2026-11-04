@@ -115,7 +115,7 @@ public class DescribeCreditPackageAgentsRequest extends Request {
         } 
 
         /**
-         * AgentIds.
+         * <p>A JSON string of the AgentId list. Example: <code>[&quot;agent-1&quot;,&quot;agent-2&quot;]</code>.</p>
          */
         public Builder agentIds(java.util.List<String> agentIds) {
             this.putQueryParameter("AgentIds", agentIds);
@@ -124,7 +124,10 @@ public class DescribeCreditPackageAgentsRequest extends Request {
         }
 
         /**
-         * AgentType.
+         * <p>The agent type. Valid values: <code>CREDIT_PACKAGE</code>, <code>JVS_CLAW</code>, <code>OPEN_CLAW</code>, and <code>JVS_COPILOT</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JVS_COPILOT</p>
          */
         public Builder agentType(String agentType) {
             this.putQueryParameter("AgentType", agentType);
@@ -133,7 +136,10 @@ public class DescribeCreditPackageAgentsRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUSINESS</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -142,7 +148,10 @@ public class DescribeCreditPackageAgentsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -151,7 +160,10 @@ public class DescribeCreditPackageAgentsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to an empty string for the first request. For subsequent requests, use the <code>nextToken</code> value from the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJvZmZzZXQiOjIwfQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
